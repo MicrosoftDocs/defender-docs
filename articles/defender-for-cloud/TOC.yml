@@ -177,7 +177,7 @@
             - name: Connect ServiceNow to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
-          - name:: Mend.io
+          - name: Mend.io
             items:
             - name: Overview Mend.io integration
               displayName: CSPM, cloud security, posture, management, Mend.io
