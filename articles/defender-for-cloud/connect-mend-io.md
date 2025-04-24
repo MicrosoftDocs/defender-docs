@@ -11,12 +11,9 @@ ai-usage: ai-assisted
 
 # Connect Mend.io to Defender for Cloud
 
+Microsoft Defender for Cloud integrates with Mend.io to enhance software application security by identifying and mitigating vulnerabilities in partner dependencies. The integration streamlines discovery and remediation processes, improving overall security.
 
-# Connect Mend.io to Defender for Cloud
-
-Microsoft Defender for Cloud integrates with Mend.io to enhance software application security by identifying and mitigating vulnerabilities in partner dependencies. This integration streamlines discovery and remediation processes, improving overall security.
-
-This article explains the benefits and procedures to connect Mend.io to Defender for Cloud. By following the steps, security teams gain enhanced visibility and control over potential threats, from code development to runtime.
+This article explains the benefits and procedures to connect Mend.io to Defender for Cloud. Following the steps, security teams gain enhanced visibility and control over potential threats, from code development to runtime.
 
 ## Prerequisites
 
@@ -33,19 +30,19 @@ This article explains the benefits and procedures to connect Mend.io to Defender
 
 - Have an account with [Mend.io](https://www.mend.io/).
 
-- Have an API key from Mend.io with read-only permissions. We recommend setting the expiration date to be 180 days.
+- Obtain an API key from Mend.io with read-only permissions and an expiration date set to 180 days.
 
 - You must have the appropriate role to:
 
     | Task | Role |
     |--|--|
-    | Create DevOps connectors | Security Admin or Contributor assigned at the subscription level through Azure role-based-access control (RBAC) |
+    | Create DevOps connectors | Security Admin or Contributor assigned at the subscription level through Azure role-based-access control |
     | Create the Mend.io connector | Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra. Permissions can be granted through Privileged Identity Management |
-    | View reachability analysis findings | Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector |
+    | View reachability analysis findings | Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control on the subscription that hosts the DevOps connector |
 
 - Connect only one Mend.io connector per tenant.
 
-- Ensure the corresponding repository is connected to Defender for Cloud. Failing to connect the corresponding repository will prevent findings from appearing in Defender for Cloud.
+- Connect the corresponding repository to Defender for Cloud. Findings won't appear if you don't connect the corresponding repository to Defender for Cloud.
 
 ## Connect Mend.io
 
@@ -64,13 +61,13 @@ To connect your Mend.io account to Defender for Cloud:
    :::image type="content" border="true" source="./media/connect-mend-io/add-mend-io.png" alt-text="Screenshot that shows where the Add Integration button is and the ServiceNow option." lightbox="media/connect-mend-io/add-mend-io.png":::
 
     > [!NOTE] 
-    > The option to add the Mend.io integration is not available if you don't have the appropriate permissions, or if you already have an existing connector to Mend.io.
+    > The option to add the Mend.io integration isn't available if you don't have the appropriate permissions, or if you already have an existing connector to Mend.io.
 
 1. Enter a Mend.io namespace, API key ID, and API secret.
 
 1. Select **Create**.
 
-A notice appears after the integration is successfully created. Defender for Cloud scans repositories connected to Mend.io and populates results after six hours.
+After the integration is successfully created, a notice appears. Defender for Cloud scans repositories connected to Mend.io and populates results after six hours.
 
 ## Related content
 
