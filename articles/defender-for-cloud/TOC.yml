@@ -533,9 +533,6 @@
         href: remediate-cloud-deployment-secrets.md
     - name: Improve security posture with Microsoft Security Copilot
       items:
-        - name: Analyze recommendations with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, analyze
-          href: analyze-with-copilot.md
         - name: Summarize recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, summarize
           href: summarize-with-copilot.md
