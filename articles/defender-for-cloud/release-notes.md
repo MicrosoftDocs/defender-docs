@@ -38,7 +38,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 April 28, 2025
 
-
 Defender for Cloud's AI security posture management features now support AI workloads in Google Cloud Platform (GCP) Vertex AI (Preview).
 
 Key features for this release include:
