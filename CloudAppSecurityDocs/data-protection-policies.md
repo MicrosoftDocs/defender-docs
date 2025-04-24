@@ -247,7 +247,6 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
 
     > [!TIP]
     > You can filter the list of policies by type. The following table lists, per risk type, which filter type to use:
-    >
     > | Risk type | Filter type |
     > | --- | --- |
     > | DLP | File policy |
@@ -266,7 +265,6 @@ You can view more information about each file, by selecting the file itself in t
 
 The fields in the File drawer provide contextual links to additional files and drill downs you may want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
 
-![File drawer.](media/file-drawer.png "File drawer")
 
 For a list of governance actions available, see [File governance actions](governance-actions.md#file-governance-actions).
 
