@@ -1,5 +1,5 @@
 ---
-title: Before you being using the Microsoft Defender Experts for Hunting service
+title: Before you begin using the Microsoft Defender Experts for Hunting service
 ms.reviewer:
 description: To enable us to get started with this defender experts managed service, we require the following prerequisites
 ms.service: defender-experts-for-hunting
