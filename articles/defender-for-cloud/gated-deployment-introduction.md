@@ -16,31 +16,27 @@ A security rule defines an action to take if certain conditions are met within a
 
 Multiple security rules may affect the deployment of a container image. The conditions of all of the security rules are evaluated from the most severe to the least severe vulnerability. The evaluation stops at the first condition fulfilled by a vulnerability and the action specified by that security rule is taken.
 
-
-
 ## Prerequisites
 
 | Aspect   | Details |
 | -------- | -------- |
-| **Required Environmental Requirements** | Defender for Containers plan should be enabled. Defender sensor in Azure toggle under the Defender for Containers plan must be activated.  This feature currently works on Azure AKS and Azure ACR only.   AKS must be on version 1.31 or higher to use this feature.
-| **Required Roles & Permissions**| Subscription owner permissions.   Cluster owner permissions
-| **Supported Clouds**| Available on Azure, Commercial Cloud only| 
-
-The following new preview recommendations report on runtime container vulnerabilities and registry image vulnerabilities, and don't count toward secure score while in preview.  The scan engine for the new recommendations is the same as the current GA recommendations, and provides the same findings. The new recommendations are best suited for customers that use the new risk-based view for recommendations and have the Defender CSPM plan enabled.
+| **Required Environmental Requirements** | <br> * **Defender for Containers plan** should be enabled. <br> * **Defender sensor** in Azure toggle under the Defender for Containers plan must be activated. <br> *  This feature currently works on **Azure AKS** and **Azure ACR** only.  <br> *  **AKS** must be on version **1.31 ** or higher to use this feature.
+| **Required Roles & Permissions**| <br> *  Subscription owner permissions. <br> *  Cluster owner permissions
+| **Supported Clouds**| <br> * Available on **Azure**, **Commercial Cloud** only| 
 
 > [!NOTE] Limitations
-> Current release available under the following limitations 
+> Current release available for **Azure AKS 1.31 and higher** , and **Azure ACR** as a container registry, under the following limitations:
 
-- If the image is been deployed prior to the MDVM scan for vulnerability assessment no gating applied, and image would  be deployed.
-- **Kubelet Identity Requirement: ** Automatic installation cannot be applied to clusters without a kubelet identity. 
-Clusters using service principals instead of identities are not supported due to the lack of pod identity support.
-- **Registry Support:** Initially, only registries with Azure Active Directory (AAD) authentication are supported. Customers need to enable secret access.
- ( This feature will be added in the future when CLI support is available. In the meantime, ARM configuration can be used)
+## Limitations
+- If the image has been deployed prior to the MDVM scan for vulnerability assessment no gating applied, and image would be deployed.
+- **Kubelet Identity Requirement:** Automatic installation cannot be applied to clusters without a kubelet identity. Clusters using service principals instead of identities are not supported due to the lack of pod identity support.
+- **Registry Support:** Initially, only registries with Azure Active Directory (AAD) authentication are supported. Customers need to enable secret access.(This feature will be added in the future when CLI support is available. In the meantime, ARM configuration can be used)
 - **OIDC and Workload Identity:** During installation, we enable OpenID Connect (OIDC) and workload identity on the cluster, and add federated credentials to the kubelet identity. 
 - **Agent Deletion:** Automatic deletion of agents (Tivan and Gating) is not supported. Tivan has indicated that we cannot determine if the agents were installed by us or via CLI/ARM, so we do not delete them.
 - **Multi-Arch Image Support:** Currently, there is no support for multi-architecture images.
 
 ## Next steps
+- Learn how to enable your [Gated Deployment functionality](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/enable-gated-deployment.md).
 - Learn more about the Defender for Cloud [Defender plans](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/defender-for-cloud-introduction.md#protect-cloud-workloads).
 - Check out [common questions](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/faq-defender-for-containers.yml) about Defender for Containers.
 
