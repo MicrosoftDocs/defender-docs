@@ -26,6 +26,7 @@ Multiple security rules may affect the deployment of a container image. The cond
 
 > [!NOTE] Limitations
 > Current release available for **Azure AKS 1.31 and higher** , and **Azure ACR** as a container registry, under the following limitations:
+>
 
 ## Limitations
 - If the image has been deployed prior to the MDVM scan for vulnerability assessment no gating applied, and image would be deployed.
