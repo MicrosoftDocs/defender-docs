@@ -1043,7 +1043,7 @@
           href: defender-for-sql-autoprovisioning.md
         - name: Disable Defender for SQL Servers on Machines
           displayName: SQL, SQL servers, defender, machines, disable
-          href: disable-sql-machine-protection.md
+          href: disable-sql-on-machines.md
         - name: Government clouds
           items:
           - name: Enable Defender for SQL Servers on Machines government

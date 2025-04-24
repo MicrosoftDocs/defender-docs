@@ -20,8 +20,6 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 - You must have the Defender for SQL Servers on Machines plan enabled in your Defender for Cloud environment.
 
-- 
-
 ## Disable Defender for SQL Servers on Machines
 
 Once you disable Defender for SQL Servers on Machines, the Defender for SQL Servers on Machines plan will no longer be applied to your virtual machines and SQL servers. This means that the security features and protections provided by this plan will be disabled.
