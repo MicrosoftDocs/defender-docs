@@ -31,7 +31,7 @@ appliesto:
 
 Microsoft Security Copilot agents are available in Microsoft Defender to help you perform your security tasks efficiently. Security Copilot agents are AI-powered assistants that can help you with various tasks by working seamlessly with Microsoft security products.
 
-## Available agents in Microsoft Defender
+## Agents in Microsoft Defender
 
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
