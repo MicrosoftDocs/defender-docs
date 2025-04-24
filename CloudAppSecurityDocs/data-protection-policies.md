@@ -148,9 +148,6 @@ You can go to the Policy center to review file policy violations.
 Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters. For example, access level, file type.
 The Defender for Cloud Apps built in DLP engines perform content inspection by extracting text from common file types, such as PDF, Office files, RTF, HTML, and code files.
 
-When creating a policy, you can also set it to run on specific files by setting the **Apply to** filter. Filter to either **all files**, **selected folders** (subfolders included), or **all files excluding selected folders**. Then select the files or folders that are relevant.
-
-
 Below is a list of the file filters that can be applied. To provide you with a powerful tool for policy creation, most filters support multiple values and a NOT.
 
 * Access level – Sharing access level; public, external, internal, or private.
@@ -217,7 +214,12 @@ Labels include:
 | - **starts with:** text/ | Text |
 | All other file MIME types | Other |
 
+
+:::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
+
 - **In trash** – Exclude/include files in the trash folder. These files may still be shared and pose a risk.This filter does not apply to files on SharePoint and OneDrive.
+
+:::image type="content" source="media/file-policies/screenshot-showing-multiple-file-filters.png" alt-text="Screenshot showing multiple filter types for file policies" lightbox="media/file-policies/screenshot-showing-multiple-file-filters.png":::
 
 - **Last modified** – File modification time. The filter supports before and after dates, date range, and relative time expressions. For example, all files that weren't modified in the last six months.
 
@@ -235,6 +237,9 @@ Labels include:
   > Defender for Cloud Apps only detects new SharePoint and OneDrive folders after some file activity has been performed in them.
 - **Quarantined** – If the file quarantined by the service. For example, show me all files that are quarantined.
 
+When creating a policy, you can also set it to run on specific files by setting the **Apply to** filter. Filter to either **all files**, **selected folders** (subfolders included), or **all files excluding selected folders**. Then select the files or folders that are relevant.
+
+:::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
 
 ## Authorizing files
 
