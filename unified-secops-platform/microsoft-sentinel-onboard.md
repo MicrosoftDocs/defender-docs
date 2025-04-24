@@ -29,13 +29,11 @@ ms.date: 03/17/2025
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
 
-Microsoft Sentinel is generally available within Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal. When you onboard Microsoft Sentinel to the Defender portal with Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
+Microsoft Sentinel is generally available within Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. When you onboard Microsoft Sentinel to the Defender portal together Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
 
 - [What is Microsoft's unified security operations platform?](overview-unified-security.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
-
-For preview, Microsoft Sentinel is available in the Defender portal without Microsoft Defender XDR or an E5 license.
 
 ## Prerequisites
 
@@ -110,7 +108,7 @@ After your workspace is connected, the banner on the **Overview** page shows tha
 
 ## Explore Microsoft Sentinel features in the Defender portal
 
-After you connect your workspace to the Defender portal, **Microsoft Sentinel** is on the left-hand side navigation pane. If you have Defender XDR enabled, pages like  **Overview**, **Incidents**, and **Advanced Hunting** have unified data from the primary workspace for Microsoft Sentinel and Defender XDR. If you don't have Defender XDR enabled, these pages just include data from Microsoft Sentinel (preview). For more information about the unified capabilities and differences between portals, see  [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
+After you connect your workspace to the Defender portal, **Microsoft Sentinel** is on the left-hand side navigation pane. If you have Defender XDR enabled, pages like  **Overview**, **Incidents**, and **Advanced Hunting** have unified data from the primary workspace for Microsoft Sentinel and Defender XDR. If you don't have Defender XDR enabled, these pages just include data from Microsoft Sentinel. For more information about the unified capabilities and differences between portals, see  [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
 
 Many of the existing Microsoft Sentinel features are integrated into the Defender portal. For these features, notice that the experience between Microsoft Sentinel in the Azure portal and Defender portal are similar. Use the following articles to help you start working with Microsoft Sentinel in the Defender portal. When using these articles, keep in mind that your starting point in this context is the [Defender portal](https://security.microsoft.com/) instead of the Azure portal.
 
