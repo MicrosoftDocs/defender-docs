@@ -55,9 +55,10 @@ Once you disable Defender for SQL Servers on Machines, the Defender for SQL Serv
 
     :::image type="content" source="media/disable-sql-on-machines/extension-application.png" alt-text="Screenshot that shows where to locate Defender for Cloud under the security section." lightbox="media/disable-sql-on-machines/extension-application.png":::
 
-1. Select **MicrosoftDefenderforSQL**.
+1. Select the following extension(s):
+    - **Defender for SQL (IaaS and Arc)**
+        - Publisher: Microsoft.Azure.AzureDefenderForSQL
+        - Type: AdvancedThreatProtection.Windows
 
 1. Select **Uninstall**.
-
-
 
