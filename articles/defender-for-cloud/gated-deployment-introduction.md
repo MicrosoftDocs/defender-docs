@@ -24,10 +24,6 @@ Multiple security rules may affect the deployment of a container image. The cond
 | **Required Roles & Permissions**| <br> *  Subscription owner permissions. <br> *  Cluster owner permissions
 | **Supported Clouds**| <br> * Available on **Azure**, **Commercial Cloud** only| 
 
-> [!NOTE] Limitations
-> Current release available for **Azure AKS 1.31 and higher** , and **Azure ACR** as a container registry, under the following limitations:
->
-
 ## Limitations
 - If the image has been deployed prior to the MDVM scan for vulnerability assessment no gating applied, and image would be deployed.
 - **Kubelet Identity Requirement:** Automatic installation cannot be applied to clusters without a kubelet identity. Clusters using service principals instead of identities are not supported due to the lack of pod identity support.
