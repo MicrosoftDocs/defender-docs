@@ -68,6 +68,12 @@ The following articles describe how to schedule antivirus scans using crontab or
 
 ### The Defender for Endpoint portal
 
+The following screenshots show how to trigger an antivirus scan on a device from the Defender for Endpoint portal - 
+
+![Screenshot 2025-04-25 070817](https://github.com/user-attachments/assets/e1952535-e55e-4333-8380-f2b527a8afb7)
+
+![Screenshot 2025-04-25 070855](https://github.com/user-attachments/assets/6a454f88-6be6-42ef-b0a1-372248e6f511)
+
 ## Performance optimizations for antivirus scans
 
 Running antivirus scans on your device is crucial for maintaining security, but it's important to balance this with the impact on device performance. Naturally, running a full scan on a device with extensive and complex content will result in higher system resource usage and longer completion times.
