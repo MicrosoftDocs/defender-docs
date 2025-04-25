@@ -199,7 +199,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## November-December 2019
 
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
 
 - [Threat & Vulnerability Management application and application version end-of-life information](/defender-vulnerability-management/tvm-security-recommendation) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you're aware that they'll no longer be supported, and can take action to either uninstall or replace. Doing so helps lessen the risks related to various vulnerability exposures due to unpatched applications.
 
