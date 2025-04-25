@@ -30,7 +30,7 @@ search.appverid: met150
 - Windows
 - Windows Server
 
-This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Use PowerShell cmdlets for scheduling daily quick scans
 
@@ -58,8 +58,11 @@ Use the following cmdlets:
 ```PowerShell
 Set-MpPreference -ScanParameters
 Set-MpPreference -ScanScheduleDay
-Set-MpPreference -ScanScheduleTime
+Set-MpPreference -ScanScheduleOffset
 ```
+
+> [!TIP]
+> We recommend using the ScanScheduleOffset instead of ScanScheduleTime.
 
 -ScanParameters,  specifies the scan type to use during a scheduled scan. The acceptable values for this parameter are:
 
@@ -91,9 +94,9 @@ Specifies the day of the week on which to perform a scheduled scan. Alternativel
 
 The default value is 8, never. If you specify a value of 8 or don't specify a value, Windows Defender doesn't perform scheduled scans.
 
--ScanScheduleTime
+-ScanScheduleOffset
 
-Specifies the time of day to run a scheduled scan. The time refers to the local time on the computer. Specify the number of minutes after midnight (for example, enter 60 for AM). This parameter has a default time of two hours after midnight (2 AM).
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 For example, setting the weekly scheduled scan for a quick scan, that runs every Wednesday at 12:00 PM (lunch time)
 
@@ -101,7 +104,7 @@ For example, setting the weekly scheduled scan for a quick scan, that runs every
 ```powershell
 Set-MpPreference -ScanParameters 1
 Set-MpPreference -ScanScheduleDay 4
-Set-MpPreference -ScanScheduleTime 720
+Set-MpPreference -ScanScheduleOffset 720
 ```
 
 > [!TIP]
