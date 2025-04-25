@@ -70,11 +70,11 @@ This client secret value is used by Microsoft Graph APIs to authenticate this ap
     Go **to Event Hub \> Add** and select the pricing tier, throughput units and Auto-Inflate (requires standard pricing and under features) appropriate for the load you're expecting. For more information, see [Pricing - Event Hubs \| Microsoft Azure](https://azure.microsoft.com/pricing/details/event-hubs/).
 
     > [!NOTE]
-    > You can use an existing event-hub, but the throughput and scaling are set at the namespace level so it is recommended to place an event-hub in its own namespace.
+    > You can use an existing event-hub, but the throughput and scaling are set at the namespace level. Microsoft recommends to place an event-hub in its own namespace.
 
    :::image type="content" source="/defender/media/ebc4ca37c342ad1da75c4aee4018e51a.png" alt-text="The event hubs section in the Microsoft Azure portal" lightbox="/defender/media/ebc4ca37c342ad1da75c4aee4018e51a.png":::
 
-1. You'll also need the Resource ID of this Event Hubs Namespace. Go to your Azure Event Hubs namespace page \> Properties. Copy the text under Resource ID and record it for use during the Microsoft 365 Configuration section below.
+1. You need the Resource ID of this Event Hubs Namespace. Go to your Azure Event Hubs namespace page \> Properties. Copy the text under Resource ID and record it for use during the Microsoft 365 Configuration.
 
     :::image type="content" source="/defender/media/759498162a4e93cbf17c4130d704d164.png" alt-text="The event hubs properties section in the Microsoft Azure portal" lightbox="/defender/media/759498162a4e93cbf17c4130d704d164.png":::
 
@@ -85,7 +85,7 @@ You're required to add permissions to the following roles to entities that are i
 - **Contributor**: The permissions related to this role are added to entity who logs in to the Microsoft Defender portal.
 - **Reader** and **Azure Event Hub data Receiver**: The permissions related to these roles are assigned to the entity who is already assigned the role of a **Service Principal** and logs in to the Microsoft Entra application.
 
-To ensure that these roles have been added, perform the following step:
+To ensure that these roles are added, perform the following step:
 
 Go to **Event Hub Namespace** \> **Access Control (IAM)** \> **Add** and verify under **Role assignments**.
 
@@ -95,16 +95,16 @@ Go to **Event Hub Namespace** \> **Access Control (IAM)** \> **Add** and verify 
 
 **Option 1:**
 
-You can create an Event Hubs within your Namespace and **all** the Event Types (Tables) you select to export will be written into this **one** Event Hub.
+You can create Event Hubs within your Namespace and **all** the Event Types (Tables) you select to export are written into this **one** Event Hub.
 
 **Option 2:**
 
 Instead of exporting all the Event Types (Tables) into one Event Hub, you can export each table into different Event Hubs inside your Event Hubs Namespace (one Event Hub per Event Type).
 
-In this option, Microsoft Defender XDR will create Event Hubs for you.
+In this option, Microsoft Defender XDR creates Event Hubs for you.
 
 > [!NOTE]
-> If you are using an Event Hub Namespace that is **not** part of an Event Hub Cluster, you will only be able to choose up to 10 Event Types (Tables) to export in each Export Settings you define, due to an Azure limitation of 10 Event Hub per Event Hub Namespace.
+> If you are using an Event Hub Namespace that is **not** part of an Event Hub Cluster, you're only able to choose up to 10 Event Types (Tables) to export in each Export Settings you define, due to an Azure limitation of 10 Event Hub per Event Hub Namespace.
 
 For example:
 
@@ -118,7 +118,7 @@ The Partition Count allows for more throughput via parallelism, so it's recommen
 
 :::image type="content" source="/defender/media/1db04b8ec02a6298d7cc70419ac6e6a9.png" alt-text="An event hubs creation section in the Microsoft Azure portal" lightbox="/defender/media/1db04b8ec02a6298d7cc70419ac6e6a9.png":::
 
-For these Event Hubs (not namespace), you'll need to configure a Shared Access Policy with Send, Listen Claims. Click on your **Event Hub** \> **Shared access policies** \> **+ Add** and then give it a Policy name (not used elsewhere) and check **Send** and **Listen**.
+For these Event Hubs (not namespace), you need to configure a Shared Access Policy with Send, Listen Claims. Click on your **Event Hub** \> **Shared access policies** \> **+ Add** and then give it a Policy name (not used elsewhere) and check **Send** and **Listen**.
 
 :::image type="content" source="/defender/media/1867d13f46dc6a0f4cdae6cf00df24db.png" alt-text="The Shared access policies page in the Microsoft Azure portal" lightbox="/defender/media/1867d13f46dc6a0f4cdae6cf00df24db.png":::
 
@@ -132,7 +132,7 @@ For these Event Hubs (not namespace), you'll need to configure a Shared Access P
 
 1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> with an account that meets all the following role requirements:
 
-    - Contributor role at the Event Hubs *Namespace* Resource level or higher for the Event Hubs that you'll be exporting to. Without this permission, you'll get an export error when you try to save the settings.
+    - Contributor role at the Event Hubs *Namespace* Resource level or higher for the Event Hubs that you're be exporting to. An export error occurs when you try to save the settings without this permission.
 
     - Security Admin Role on the tenant tied to Microsoft Defender XDR and Azure.
 
@@ -140,7 +140,7 @@ For these Event Hubs (not namespace), you'll need to configure a Shared Access P
 
 1. Click on **Raw Data Export \> +Add**.
 
-    You'll now use the data that you recorded above.
+    Use the data that you previously recorded.
 
     **Name**: This value is local and should be whatever works in your environment.
 
@@ -148,7 +148,7 @@ For these Event Hubs (not namespace), you'll need to configure a Shared Access P
 
     **Event-Hub Resource ID**: This value is the Event Hubs Namespace Resource ID you recorded when you set up the Event Hubs.
 
-    **Event-Hub name**: If you created an Event Hubs inside your Event Hubs Namespace, paste the Event Hubs name you recorded above.
+    **Event-Hub name**: If you created an Event Hubs inside your Event Hubs Namespace, paste the Event Hubs name you previously recorded.
 
     If you choose to let Microsoft Defender XDR to create Event Hubs per Event Types (Tables) for you, leave this field empty.
 
@@ -171,15 +171,14 @@ EmailEvents
 |count
 ```
 
-This query will show you how many emails were received in the last hour joined across all the other tables. It will also show you if you're seeing events that could be exported to the event hubs. If this count shows 0, then you won't see any data going out to the Event Hubs.
+This query shows you how many emails were received in the last hour joined across all the other tables. It also shows you if you're seeing events that could be exported to the event hubs. If this count shows 0, then you won't see any data going out to the Event Hubs.
 
 :::image type="content" source="/defender/media/c305e57dc6f72fa9eb035943f244738e.png" alt-text="The advanced hunting page in the Microsoft Azure portal" lightbox="/defender/media/c305e57dc6f72fa9eb035943f244738e.png":::
 
 Once you've verified there's data to export, you can view the Event Hubs page to verify that messages are incoming. This process can take up to one hour.
 
 1. In Azure, go to **Event Hub** \> Click on the **Namespace** \> **Event Hub** \> Click on the **Event Hub**.
-1. Under **Overview**, scroll down and in the Messages graph you should see Incoming Messages. If you don't see any results, then there will be no messages
-for your custom app to ingest.
+1. Under **Overview**, scroll down and in the Messages graph you should see Incoming Messages. If you don't see any results, then there are no messages for your custom app to ingest.
 
 :::image type="content" source="/defender/media/e88060e315d76e74269a3fc866df047f.png" alt-text=" The Overview page in the Microsoft 365 Azure portal" lightbox="/defender/media/e88060e315d76e74269a3fc866df047f.png":::
 
