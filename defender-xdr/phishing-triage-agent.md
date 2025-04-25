@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 - security-copilot
 - magic-ai-copilot 
-ms.topic: how-to
+ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
@@ -36,9 +36,9 @@ Phishing remains one of the most common ways attackers gain initial access. It a
 
 To help security teams address phishing efficiently, Microsoft Security Copilot is introducing the Phishing Triage Agent in Microsoft Defender. This AI-powered virtual agent is designed to scale security teams' response in triaging and classifying user-submitted phishing incidents, allowing organizations to improve their efficiency by reducing manual effort and streamlining their phishing response.
 
-The Phishing Triage Agent uses advanced large language model (LLM)-based analysis to understand the content of reported emails and autonomously determine whether a submission is a genuine phishing attempt or a false alarm. Unlike rule-based systems, it does not rely on predefined input or code to operate. Instead, it applies dynamic reasoning to analyze and act on incoming reports at scale.
+The Phishing Triage Agent uses advanced large language model (LLM)-based analysis to understand the content of reported emails and autonomously determine whether a submission is a genuine phishing attempt or a false alarm. Unlike rule-based systems, it doesn't rely on predefined input or code to operate. Instead, it applies dynamic reasoning to analyze and act on incoming reports at scale.
 
-By removing false positives from the queue, the agent significantly reduces the team's manual workload and allows them to focus on higher-priority tasks. With this automation, security teams can more efficiently process hundreds or thousands of phishing submissions, accelerating detection and response for incidents that require immediate attention
+By removing false alarms from the queue, the agent significantly reduces the team's manual workload and allows them to focus on higher-priority tasks. With this automation, security teams can more efficiently process hundreds or thousands of phishing submissions, accelerating detection and response for incidents that require immediate attention.
 
 ## Overview
 
