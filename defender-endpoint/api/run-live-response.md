@@ -88,7 +88,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
 - **Windows Server 2025**
 
-  - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
+  - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac-overview.md)
       - 13 (Ventura)
       - 12 (Monterey)
       - 11 (Big Sur)
