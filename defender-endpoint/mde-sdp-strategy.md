@@ -19,14 +19,21 @@ ms.collection:
 
 # Use safe deployment practices to safeguard and manage your environment
 
-Microsoft follows safe deployment practices (SDP) to minimize the risk of security updates having an unexpected impact. This article describes Microsoft Defender for Endpoint's approach to SDP and what customers can do to manage their own roll-out processes to add an extra layer of control.
+<!-- Added introductory text to emphasize why updates are important. Mirrors language from https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/microsoft-defender-for-endpoint%e2%80%99s-safe-deployment-practices/4220342 -->
+
+Microsoft Defender for Endpoint helps protect organizations against sophisticated adversaries while optimizing for resiliency, performance, and compatibility, following [best practices for managing security tools in Windows](https://www.microsoft.com/en-us/security/blog/2024/07/27/windows-security-best-practices-for-integrating-and-managing-security-tools/). Keeping Microsoft Defender for Endpoint up to date is critical to assure your devices have the latest technology and features needed to protect against new malware and attack techniques.
+
+Microsoft follows safe deployment practices (SDP) to deliver critical new product capabilities while minimizing the risk of updates having unexpected impacts to endpoint performance and availability. This article describes Defender for Endpoint's approach to SDP and how customers can manage their own roll-out processes to add extra layers of control to meet their own business, technical, and security requirements.
+
+## Approach and update types
 
 Microsoft Defender for Endpoint ships updates externally only after all the certification and validation tests are completed across multiple iterations of internal devices.
 
 Defender for Endpoint applies SDP to two distinct update mechanisms:
 
-- Software and driver updates that are updated monthly (can potentially update kernel-mode components).
-- Security intelligence and detection logic updates that can be updated multiple times a day (updates only apply to user-mode components).
+- Software and driver updates that are updated monthly and can potentially update kernel-mode components.
+
+- Security intelligence and detection logic updates that can be updated multiple times a day and apply only to user-mode components.
 
 ## Monthly SDP software and driver updates
 
