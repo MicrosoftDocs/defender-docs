@@ -70,7 +70,8 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     - _Move messages in and delete messages from mailboxes_: Requires the **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
   - _Read-only access_: Membership in the **Security Reader** role group.
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-  - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
+  - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.  More permissions are required to do all available actions:
+    - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default.
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
