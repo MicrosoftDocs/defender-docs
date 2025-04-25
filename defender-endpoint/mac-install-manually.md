@@ -40,7 +40,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on macOS ma
 
 ## Prerequisites and system requirements
 
-Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac-overview.md) for a description of prerequisites and system requirements for the current software version.
 
 ## Download installation and onboarding packages
 
@@ -265,7 +265,7 @@ See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove M
 
 ## Recommended content
 
-- [Learn how to install, configure, update, and use Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md).
+- [Learn how to install, configure, update, and use Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md).
 - [Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf](mac-jamfpro-policies.md).
 - [Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md).
 - [Learn how to troubleshoot license issues in Microsoft Defender for Endpoint on Mac](mac-support-license.md).

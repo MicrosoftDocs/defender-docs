@@ -84,7 +84,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
-- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
+- [macOS supported versions](microsoft-defender-endpoint-mac-overview.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
 
 > [!IMPORTANT]

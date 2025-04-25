@@ -24,7 +24,7 @@ ms.date: 04/16/2025
 
 
 **Applies to:**
-- [Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 

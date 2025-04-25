@@ -32,7 +32,7 @@ ms.date: 04/16/2025
  
 ## Prerequisites and system requirements
 
-Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac-overview.md) for a description of prerequisites and system requirements for the current software version.
 
 
 ## Approach
