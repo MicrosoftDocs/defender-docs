@@ -14,16 +14,15 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-ms.date: 06/21/2024
+ms.topic: concept-article
+ms.date: 04/25/2025
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Configure your Event Hubs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
