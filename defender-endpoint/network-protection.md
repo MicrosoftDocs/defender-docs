@@ -160,7 +160,7 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 By default, SmartScreen verdicts for malicious sites result in a warning that can be overridden by the user. A policy can be set to convert the warning to blocks, preventing such overrides.
 
 For non-Edge browsers, see [Defender CSP: Configuration/EnableConvertWarnToBlock](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock).
-For Edge browsers, see [Edge Policy: Prevent SmartScreen Prompt Override](/en-us/deployedge/microsoft-edge-policies#preventsmartscreenpromptoverride).
+For Edge browsers, see [Edge Policy: Prevent SmartScreen Prompt Override](/deployedge/microsoft-edge-policies#preventsmartscreenpromptoverride).
 
 #### Use Group Policy to enable Convert warn verdict to block
 
