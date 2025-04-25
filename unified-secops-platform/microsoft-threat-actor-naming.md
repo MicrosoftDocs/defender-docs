@@ -109,7 +109,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Moonstone Sleet](https://www.microsoft.com/en-us/security/blog/2024/05/28/moonstone-sleet-emerges-as-new-north-korean-threat-actor-with-new-bag-of-tricks/)|North Korea|Storm-1789|
 |Mulberry Typhoon|China|MANGANESE, Backdoor-DPD, COVENANT, CYSERVICE, Bottle, Red Horus, Red Naga, Auriga, KEYHOLE PANDA, APT5, ATG48, TG-2754, tabcteng|
 |Mustard Tempest|Financially motivated|DEV-0206|
-|[Neva Flood](https://blogs.microsoft.com/on-the-issues/2024/09/17/russian-election-interference-efforts-focus-on-the-harris-walz-campaign/)|Russia, Influence operations|Storm-1516|
+|[Neva Flood](https://blogs.microsoft.com/on-the-issues/2024/09/17/russian-election-interference-efforts-focus-on-the-harris-walz-campaign/)|Russia, Influence operations|Storm-1516, CopyCop|
 |Night Tsunami|Israel|DEV-0336|
 |Nylon Typhoon|China|NICKEL, Playful Dragon, RedRiver, ke3chang, VIXEN PANDA, APT15, Mirage|
 |[Octo Tempest](https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/)|Financially motivated|0ktapus, Scattered Spider|
