@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
-description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
+description: An introducttion and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -56,7 +56,7 @@ The following table describes capabilities in Defender for Endpoint on macOS:
 |Live response| Perform live response actions on devices to investigate and remediate threats. |
 
 > [!CAUTION]
-> Running other non-Microsoft security products (such as antivirus and anti-malware software) alongside Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you should configure antivirus functionality in Defender for Endpoint on macOS to run in [Passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
+> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can still safely take advantage of Defender for Endpoint on macOS EDR functionality after configuring the antivirus functionality to run in [Passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
 
 ## Resources
 
