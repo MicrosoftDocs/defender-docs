@@ -146,7 +146,7 @@ A similar message occurs if you're using Internet Explorer:
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 >
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)

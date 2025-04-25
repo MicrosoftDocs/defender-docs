@@ -1,8 +1,8 @@
 ---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: denisebmsft
-ms.author: deniseb 
+author: emmwalshh
+ms.author: ewalsh 
 manager: deniseb 
 ms.topic: how-to
 ms.service: defender-endpoint
@@ -73,7 +73,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 **Defender Antivirus versions (macOS/Linux)**
 
-- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
+- [macOS supported versions](microsoft-defender-endpoint-mac-overview.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
 
 **Supported Operating Systems**

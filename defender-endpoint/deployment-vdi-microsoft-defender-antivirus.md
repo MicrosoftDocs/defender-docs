@@ -352,7 +352,7 @@ If you're also deploying [endpoint detection and response](overview-endpoint-det
 
 If you're looking for information about Defender for Endpoint on non-Windows platforms, see the following resources:
 
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
