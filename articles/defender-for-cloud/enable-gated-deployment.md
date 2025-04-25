@@ -19,7 +19,7 @@ Gated deployment is an important practice to ensure that only container images m
 - The Kubernetes cluster has permissions to access container registries used to deploy container images to the cluster.
 
 > [!NOTE]
-> Gated deployment is currently available for Azure Kubernetes Services (AKS) based on container image vulnerability assessment.
+> Gated deployment is currently available for **Azure Kubernetes Services (AKS)** version **1.31** and higher , based on container image vulnerability assessment, available for **ACR** container registries.
 
 While gated deployment is available when the prerequisites are fulfilled, the predefined security rules must be activated using the security rules wizard in the portal for gated deployment to be activated.
 
