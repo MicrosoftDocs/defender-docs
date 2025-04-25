@@ -2,8 +2,8 @@
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
 search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb 
 ms.topic: overview
 ms.service: defender-endpoint
@@ -51,7 +51,7 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 |:---|:---|
 | Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
 | Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
-| Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
+| Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](mmicrosoft-defender-endpoint-mac-overview.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
 | Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>[Linux](microsoft-defender-endpoint-linux.md)   |
 | Datacenter | One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States |
 

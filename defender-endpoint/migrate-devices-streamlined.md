@@ -120,7 +120,7 @@ Follow the guidance in [Onboard non-persistent virtual desktop infrastructure (V
 
 ### macOS
 
-For general information on onboarding macOS devices, see [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md).
+For general information on onboarding macOS devices, see [Microsoft Defender for Endpoint on macOS](mmicrosoft-defender-endpoint-mac-overview.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 

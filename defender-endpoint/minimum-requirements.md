@@ -2,8 +2,8 @@
 title: Minimum requirements for Microsoft Defender for Endpoint
 description: Understand licensing and other requirements for onboarding devices to Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 ms.date: 03/14/2025
@@ -112,7 +112,7 @@ To add anti-malware protection to these older operating systems, you can use [Sy
 
 ### Other supported operating systems
 
-- [Mac](microsoft-defender-endpoint-mac.md) (client devices)
+- [Mac](microsoft-defender-endpoint-mac-overview.md) (client devices)
 - [Linux](microsoft-defender-endpoint-linux.md)
 - [Windows Subsystem for Linux](mde-plugin-wsl.md)
 - [Android](microsoft-defender-endpoint-android.md)

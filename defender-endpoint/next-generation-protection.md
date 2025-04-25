@@ -45,7 +45,7 @@ To configure next-generation protection services, see [Configure Microsoft Defen
 If you're looking for Microsoft Defender Antivirus-related information for other platforms, see one of the following articles:
 
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
 - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)

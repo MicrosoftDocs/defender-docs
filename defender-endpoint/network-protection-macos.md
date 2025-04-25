@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 04/08/2025
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr
@@ -398,7 +398,7 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 
 ## See also
 
-- [Microsoft Defender XDR for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender XDR for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
 - [Microsoft Defender XDR for Endpoint integration with Microsoft Microsoft Defender XDR for Cloud Apps](/defender-cloud-apps/mde-integration)
 - [Get to know the innovative features in Microsoft Edge](https://www.microsoft.com/edge/features)
 - [Protect your network](network-protection.md)

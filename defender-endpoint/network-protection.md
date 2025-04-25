@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 04/08/2025
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr
@@ -76,7 +76,7 @@ Network protection requires devices running one of the following operating syste
 
 - Windows 10 or 11 (Pro or Enterprise) (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
 - Windows Server, version 1803 or later (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
-- macOS version 12 (Monterey) or later (see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md))
+- macOS version 12 (Monterey) or later (see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md))
 - A supported Linux version (see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md))
 
 Network protection also requires Microsoft Defender Antivirus with real-time protection enabled.
