@@ -39,7 +39,7 @@ This article describes how to configure scheduled scans using Group Policy. To l
 
 3. Specify the settings for the Group Policy Object, and then select **OK**. 
 
-4. Repeat steps 1-4 for each setting you want to configure.
+1. Repeat steps for each setting you want to configure.
 
 5. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
@@ -53,8 +53,11 @@ For more information, see the [Manage when protection updates should be download
 
 | Location | Setting | Description | Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
-| Scan | Specify the interval to run quick scans per day | Specify how many hours should elapse before the next quick scan. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
-| Scan | Specify the time for a daily quick scan | Specify the number of minutes after midnight (for example, enter **60** for 1 AM.)  Note that if this setting is set to 0, daily quick scans don't run.| 2 AM. |
+| Scan |Specify the interval to run quick scans per day |Specify how many hours should elapse before the next quick scan. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
+| Scan |Specify the time for a daily quick scan |Specify the number of minutes after midnight (for example, enter **60** for 1 AM.)  Note that if this setting is set to 0, daily quick scans don't run.| 120 (2 AM) |
+
+> [!TIP]
+> When scheduling a scan, depending on your environment, if your client devices are shutdown after-hours, you might want to consider setting the daily quick scans during lunch time (720). 
 
 ## Group Policy settings for scheduling weekly scans (quick or full)
 
@@ -64,6 +67,12 @@ For more information, see the [Manage when protection updates should be download
 | Scan | Specify the day of the week to run a scheduled scan| Specify the day (or never) to run a scan.| Never |
 | Scan | Specify the time of day to run a scheduled scan| Specify the number of minutes after midnight to run a scan (for example, enter 60 for 1 AM).| 2 AM. |
 
+> [!TIP]
+> Our recommendation for scheduled scans is to configure **quick** scan together with always-on [real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) and [cloud protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware.
+
+> [!WARNING]
+>  In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
+
 ## Group Policy settings for general scheduling scans
 
 | Location | Setting | Description | Default setting (if not configured) |
@@ -71,11 +80,17 @@ For more information, see the [Manage when protection updates should be download
 | Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from **0 to 23 hours**. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
 | Root | Configure scheduled task times randomization window |- This setting lets you set the start time for scheduled task scans and security updates. <br> - When enabled, you can choose a randomization window between **1 and 23 hours**. <br> - The Randomize Scheduled Task Times uses the specified window. <br> - If disabled or not configured, it randomizes times between **0 and 4 hours**. | Not configured (Disabled)|
 
+> [!TIP]
+> Use the randomization for Virtual Machines (VMs), Virtual Desktop Infrastructure (VDI), and Azure Virtual Desktop (AVD) devices so that the scheduled scans all do not run at the same exact time, and thus causing a cpu and/or disk i/o bottleneck on the parent partition (aka Host).
+
 ## Group Policy settings for scheduling scans for specifying the maximum percentage of CPU utilization during a scan
 
-| Location | Setting | Description | Default setting (if not configured) |
+| Location | Setting |Description |Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
-| Scan |Specify the maximum percentage of CPU utilization during a scan| Configure the maximum percentage CPU utilization permitted during a scan.  Valid values for this setting are a percentage represented by integers 5 to 100.  A value of 0 indicates that there should be no throttling of CPU utilization.| Enabled - 50|
+| Scan |Specify the maximum percentage of CPU utilization during a scan|Configure the maximum percentage CPU utilization permitted during a scan.  Valid values for this setting are a percentage represented by integers 5 to 100.  A value of 0 indicates that there should be no throttling of CPU utilization.|Enabled - 50|
+
+> [!NOTE]
+> Lowering the maximum percentage of CPU utilization during a scan to 5 thru 30, it will cause the scheduled scan to run longer.  For environments that have a maintenance window, please keep that in mind.
 
 ## Group Policy settings for scheduling scans for lowering the CPU priority
 
@@ -94,16 +109,16 @@ For more information, see the [Manage when protection updates should be download
 
 ## Group Policy settings for scheduling remediation-required scans
 
-| Location | Setting | Description | Default setting (if not configured) |
+|Location |Setting |Description |Default setting (if not configured) |
 |---|---|---|---|
-| Remediation | Specify the day of the week to run a scheduled full scan to complete remediation | Specify the day (or never) to run a scan. | Never |
-| Remediation | Specify the time of day to run a scheduled full scan to complete remediation | Specify the number of minutes after midnight (for example, enter **60** for 1 AM.) | 2 AM. |
+| Remediation |Specify the day of the week to run a scheduled full scan to complete remediation |Specify the day (or never) to run a scan. |Never |
+| Remediation |Specify the time of day to run a scheduled full scan to complete remediation |Specify the number of minutes after midnight (for example, enter **60** for 1 AM.) |120 (2 AM)|
 
 ## Group Policy settings for scheduling scans after protection updates
 
-| Location | Setting | Description | Default setting (if not configured)|
+|Location |Setting |Description |Default setting (if not configured)|
 |:---|:---|:---|:---|
-| Signature updates | Turn on scan after Security intelligence update | A process scan will occur immediately after a new protection update is downloaded | Enabled |
+|Signature updates |Turn on scan after Security intelligence update |A process scan will occur immediately after a new protection update is downloaded |Enabled |
 
 ## See also
 
