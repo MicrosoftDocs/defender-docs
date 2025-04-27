@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # File policies in Microsoft Defender for Cloud Apps
 
-File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, DLP for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters (for example, access level, file type).
+File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, (Data loss prevention) DLP for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters (for example, access level, file type).
 
 ## Supported file types
 
@@ -24,7 +24,7 @@ The engine combines three aspects under each policy:
 * Automated actions for governance and remediation.
 
   > [!NOTE]
-  > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has already applied a sensitivity label to a file, a second file policy cannot apply another sensitivity label to it.
+  > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has a a sensitivity label applied to a file, a second file policy can't apply another sensitivity label to it.
 
 Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and apply the requested automated actions. These policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
 
@@ -57,12 +57,12 @@ To create a new file policy, follow this procedure:
 
 1. Give your policy a **Policy severity**. If you have set Defender for Cloud Apps to send you notifications on policy matches for a specific policy severity level, this level is used to determine whether the policy's matches trigger a notification.
 
-1. Within **Category**, link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type.  The risk may already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
+1. Within **Category**, link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type.  The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
 
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
 
    > [!NOTE]
-   > When using the policy filters, **Contains**  searches only for full words – separated by commas, dots, spaces, or underscores. For example if you search for **malware** or **virus**, it finds virus_malware_file.exe but it does not find malwarevirusfile.exe. If you search for **malware.exe**, then you find ALL files with either malware or exe in their filename, whereas if you search for **"malware.exe"** (with the quotation marks) you find only files that contain exactly "malware.exe". **Equals** searches only for the complete string, for example if you search for **malware.exe** it finds malware.exe but not malware.exe.txt.
+   > When using the policy filters, **Contains**  searches only for full words – separated by commas, dots, spaces, or underscores. For example if you search for **malware** or **virus**, it finds virus_malware_file.exe but it doesn't find malwarevirusfile.exe. If you search for **malware.exe**, then you find ALL files with either malware or exe in their filename, whereas if you search for **"malware.exe"** (with the quotation marks) you find only files that contain exactly "malware.exe". **Equals** searches only for the complete string, for example if you search for **malware.exe** it finds malware.exe but not malware.exe.txt.
    >
    > For more information about File Policy Filters, see [File filters in Microsoft Defender for Cloud Apps](file-filters.md#file-filters).
 
@@ -156,13 +156,13 @@ Below is a list of the file filters that can be applied. To provide you with a p
 
 **Access level** – Sharing access level; public, external, internal, or private.
 
-    - Internal - Any files within the Internal domains you set in General setup.
-    - External - Any files saved in locations that aren't within the internal domains you set.
-    - Shared - Files that have a sharing level above private. Shared includes:
-    - Internal sharing - Files shared within your internal domains.
-    - External sharing - Files shared in domains that aren't listed in your internal domains.
-    - Public with a link - Files that can be shared with anyone via a link.
-    - Public - Files that can be found by searching the Internet.
+- Internal - Any files within the Internal domains you set in General setup.
+- External - Any files saved in locations that aren't within the internal domains you set.
+- Shared - Files that have a sharing level above private. Shared includes:
+- Internal sharing - Files shared within your internal domains.
+- External sharing - Files shared in domains that aren't listed in your internal domains.
+- Public with a link - Files that can be shared with anyone via a link.
+- Public - Files that can be found by searching the Internet.
 
 * **App** – Search only for files within these apps.
 
@@ -170,9 +170,9 @@ Below is a list of the file filters that can be applied. To provide you with a p
 
 > [!NOTE]
 > When using the file policy filters, the 'Contains' search only looks for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
-> * Spaces or hyphens between words function like OR. For example, if you search for malware virus it will find all files with either malware or virus in the name, so it will find both malware-virus.exe and virus.exe.
-> * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus", it will find virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it will search for the exact string. If you search for "malware virus", it will not find "virus" or "virus-malware".\
-> **Equals** will search only for the complete string. For example, if you search for malware.exe it will find malware.exe but not *malware.exe.txt.*
+> * Spaces or hyphens between words function like OR. For example, if you search for malware virus it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
+> * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware".\
+> **Equals** will search only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
 **Any from domain** – If any user from this domain has direct access to the file.
 > [!NOTE]
@@ -186,7 +186,7 @@ Below is a list of the file filters that can be applied. To provide you with a p
       >[!NOTE]
       >
       > - This filter is used to search for a collaborator group as a whole. It doesn't match for individual group members.
-  - **Users** – Certain set of users that may have access to the file.
+  - **Users** – Certain set of users that might have access to the file.
 
 - **Created** – File creation time. The filter supports before/after dates and a date range.
 
@@ -198,7 +198,7 @@ Below is a list of the file filters that can be applied. To provide you with a p
 
 - **File name** – File name or sub string of the name as defined in the cloud app. For example, all files with a password in their name.
 
-- **Sensitivity label** - Search for files with specific labels set. If this filter is used in a file policy, the policy will apply to Microsoft Office files only, and will ignore other file types.
+- **Sensitivity label** - Search for files with specific labels set. If this filter is used in a file policy, the policy applies to Microsoft Office files only, and ignores other file types.
 Labels include:
   - **Microsoft Purview Information Protection** - Requires integration with Microsoft Purview Information Protection.
    - **Defender for Cloud Apps** - Provides more insight into the files it scans. For each file scanned by Defender for Cloud Apps DLP, you can know if inspection was blocked because the file is encrypted or corrupted. For example, you can set up policies to alert and quarantine password-protected files that are shared externally.
@@ -220,7 +220,7 @@ Labels include:
 
 
 
-- **In trash** – Exclude/include files in the trash folder. These files may still be shared and pose a risk.This filter does not apply to files on SharePoint and OneDrive.
+- **In trash** – Exclude/include files in the trash folder. These files might still be shared and pose a risk. This filter doesn't apply to files on SharePoint and OneDrive.
 
 :::image type="content" source="media/file-policies/screenshot-showing-multiple-file-filters.png" alt-text="Screenshot showing multiple filter types for file policies" lightbox="media/file-policies/screenshot-showing-multiple-file-filters.png":::
 
@@ -263,15 +263,15 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
 
 ## Working with the File drawer
 
-You can view more information about each file, by selecting the file itself in the file log. Selecting it opens the **File drawer** that provides the following additional actions you can take on the file:
+You can view more information about each file, by selecting the file itself in the file log. Selecting it opens the **File drawer** that provides the following actions you can take on the file:
 
 - **URL** - Takes you to the file location.
-- **File identifiers** - Opens a pop-up with raw data details about the file including file ID and encryption keys when they are available.
+- **File identifiers** - Opens a pop-up with raw data details about the file including file ID and encryption keys when they're available.
 - **Owner** - View the user page for the owner of this file.
 - **Matched policies** - See a list of policies the file matched.
 - **Sensitivity labels** - View the list of sensitivity labels from Microsoft Purview Information Protection found in this file. You can then filter by all files matching this label.
 
-The fields in the File drawer provide contextual links to additional files and drill downs you may want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
+The fields in the File drawer provide contextual links to additional files and drill downs you might want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
 
 :::image type="content" source="media/file-policies/file-drawer.png" alt-text="Screenshot showing the file drawer" lightbox="media/file-policies/file-drawer.png":::
 

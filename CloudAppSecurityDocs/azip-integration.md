@@ -144,7 +144,7 @@ Follow these instructions to create the file policy:
 
 1. You can get more information about these files and their sensitivity labels in the file drawer. Just select the relevant file in the **Files** page and check whether it has a sensitivity label.
 
-    ![File drawer.](media/file-drawer.png)
+    :::image type="content" source="media/file-policies/file-drawer.png" alt-text="Screenshot showing the file drawer" lightbox="media/file-policies/file-drawer.png":::
 
 1. Then, you can create file policies in Defender for Cloud Apps to control files that are shared inappropriately and find files that are labeled and were recently modified.
 
