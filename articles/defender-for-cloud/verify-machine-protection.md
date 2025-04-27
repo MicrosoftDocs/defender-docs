@@ -37,7 +37,7 @@ Defender for Cloud presents [The status of Microsoft SQL Servers on Machines sho
 
 1. Follow the troubleshooting guide steps starting at [Step 3: Identify and resolve protection misconfigurations at the SQL Server instance Level](troubleshoot-sql-machines-guide.md#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level).
 
-Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected server instance. After resolving the server instance protection status, view the immediate change in the server's status through the recommendation.
+Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
 
 ## Verify protection on a single SQL server VM
 
@@ -60,7 +60,7 @@ You can also verify the protection status of a single SQL server VM or Azure Arc
 
 1. (Optional) Resolve the unprotected server instance status with the [troubleshooting SQL Server on Machines guide](troubleshoot-sql-machines-guide.md).
 
-Defender for Cloud updates the status of the recommendation every 12 hours. After resolving the server instance protection status, view the immediate change in the server's status on the SQL servers status page through the recommendation.
+Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
 
 ## Next step
 
