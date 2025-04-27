@@ -36,6 +36,11 @@ ms.date: 11/04/2024
     - **Initiative name**
     - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
     - **Current score** of the initiative
+    
+    [!NOTE]
+
+    Initiative scores are calculated based on user's scope.
+
     - **Programs** or workloads contributing to or required by this initiative
 
 1. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
@@ -67,7 +72,7 @@ The changes in your score provide you with useful feedback about how well you're
 
 ## Check history
 
-1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time.
+1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time. The history reasoning is calculated based on the user's scope.
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
@@ -81,6 +86,9 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. To review metrics associated with your initiative, select **Exposure insights -> Initiatives-> Security metrics**.
 1. Sort by heading, as needed.
+
+   The metric's progress for security metrics related to Endpoints is calcuated based on the user's scope.
+
 1. Select **Exposure insights -> Initiatives-> Security recommendations** to view recommendations related to your initiative.
 
     You only see those recommendations that are *currently* applied to assets and active in Microsoft Secure Score or Microsoft Defender for Cloud.

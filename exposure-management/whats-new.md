@@ -24,6 +24,16 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## April 2025
+
+### Enhanced support for device group scoping
+
+The device groups scoping within Exposure Management has been expanded. This update introduces the ability to filter the list of affected devices based on your assigned scope. With this enhancement, initiative scores, metric progress, security events, and historical insights will now be calculated and displayed according to your specific user scope. As a result, the data presented, including on the Overview page, will be tailored to align with your designated scope.
+
+We will also support the device groups scope filter from Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly. Note that this capability applies only to data associated with Endpoint devices.
+
+For more information, see [Review security initiatives](initiatives.md)
+
 ## March 2025
 
 ### New predefined classifications
