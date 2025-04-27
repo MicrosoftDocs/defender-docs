@@ -7,11 +7,11 @@ ms.topic: how-to
 
 # File policies in Microsoft Defender for Cloud Apps
 
-File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, (Data loss prevention) DLP for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters (for example, access level, file type).
+File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, DLP (Data loss prevention) for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters. For example, access level and file type.
 
 ## Supported file types
 
-The Defender for Cloud Apps engines perform content inspection by extracting text from all common file types (100+) including Office, Open Office, compressed files, various rich text formats, XML, HTML, and more.
+Defender for Cloud Apps engines perform content inspection by extracting text from (100+) common file types including Office, Open Office, compressed files, various rich text formats, XML, HTML, and more.
 
 ## Policies
 
@@ -24,9 +24,9 @@ The engine combines three aspects under each policy:
 * Automated actions for governance and remediation.
 
   > [!NOTE]
-  > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has a a sensitivity label applied to a file, a second file policy can't apply another sensitivity label to it.
+  > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has a sensitivity label applied to a file, a second file policy can't apply another sensitivity label to it.
 
-Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and apply the requested automated actions. These policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
+Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and applies the requested automated actions. These policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
 
 The following are examples of file policies that can be created:
 
@@ -41,7 +41,7 @@ The following are examples of file policies that can be created:
 
 * **Sharing with unauthorized users** - Receive an alert about files shared with unauthorized group of users in your organization. Select the users for whom sharing is unauthorized.
 
-* **Sensitive file extension** - Receive an alert about files with specific extensions that are potentially highly exposed. Select the specific extension (for example, crt for certificates) or filename and exclude those files with private sharing level.
+* **Sensitive file extension** - Receive an alert about files with specific extensions that are highly exposed. Select the specific extension (for example, crt for certificates) or filename and exclude those files with private sharing level.
 
 ## Create a new file policy
 
@@ -53,24 +53,25 @@ To create a new file policy, follow this procedure:
 
    ![Create a Information Protection policy.](media/create-policy-from-information-protection-tab.png)
    
-1. Give your policy a name and description, if you want you can base it on a template, for more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
+1. Give your policy a name and description. You can also base it on a template. For more information about policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
-1. Give your policy a **Policy severity**. If you have set Defender for Cloud Apps to send you notifications on policy matches for a specific policy severity level, this level is used to determine whether the policy's matches trigger a notification.
+1. Assign a **Policy severity** to your policy. If Defender for Cloud Apps is configured to send notifications based on a specific policy severity level, this level determines whether matches for the policy trigger a notification.
 
-1. Within **Category**, link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type.  The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
+1. Select a **Category** and link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type. The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
 
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
 
    > [!NOTE]
-   > When using the policy filters, **Contains**  searches only for full words – separated by commas, dots, spaces, or underscores. For example if you search for **malware** or **virus**, it finds virus_malware_file.exe but it doesn't find malwarevirusfile.exe. If you search for **malware.exe**, then you find ALL files with either malware or exe in their filename, whereas if you search for **"malware.exe"** (with the quotation marks) you find only files that contain exactly "malware.exe". **Equals** searches only for the complete string, for example if you search for **malware.exe** it finds malware.exe but not malware.exe.txt.
-   >
-   > For more information about File Policy Filters, see [File filters in Microsoft Defender for Cloud Apps](file-filters.md#file-filters).
+> The file policy filter,'Contains' search only looks for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
+> * Spaces or hyphens between words function like OR. For example, if you search for malware virus it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
+> * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware."\
+> * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
 1. Under the first **Apply to** filter, select **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive, where you can enforce your file policy over all files on the app or on specific folders. You're redirected to sign in the cloud app, and then add the relevant folders.
 
 1. Under the second **Apply to** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
 
-1. Select the **Content inspection method**. You can select either [**Built-in DLP**](content-inspection-built-in.md) or [**Data Classification Services**](content-inspection.md). We recommend using **Data Classification Services**.
+1. Select the **Content inspection method**.  We recommend using the [**Data Classification Services**](content-inspection.md).
 
     Once content inspection is enabled, you can choose to use preset expressions or to search for other customized expressions.
 
@@ -82,7 +83,7 @@ To create a new file policy, follow this procedure:
 
 1. Choose the **Governance** actions you want Defender for Cloud Apps to take when a match is detected.
 
-1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately.  Take extra care when you set governance actions, they could lead to irreversible loss of access permissions to your files. It's recommended to narrow down the filters to exactly represent the files that you wish to act upon, using multiple search fields. The narrower the filters, the better. For guidance, you can use the **Edit and preview results** button next to the filters.
+1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately. Take extra care when you set governance actions, they could lead to irreversible loss of access permissions to your files. It's recommended to narrow down the filters to exactly represent the files that you wish to act upon, using multiple search fields. The narrower the filters, the better. For guidance, you can use the **Edit and preview results** button next to the filters.
 
     ![File policy edit and preview results.](media/file-policy-edit-and-preview-results.png)
    
@@ -97,7 +98,7 @@ To create a new file policy, follow this procedure:
 
 ## File policy best practices
 
-1. Avoid resetting the file policy (by using the **Reset results and apply actions again** checkbox) in production environments unless it's absolutely necessary, as doing so will initiate a full scan of the files covered by the policy, which can have a negative impact on its performance.
+1. Avoid resetting the file policy using the **Reset results and apply actions again** checkbox in production environments unless it's absolutely necessary. Doing so initiates a full scan of all files covered by the policy, which can negatively impact performance.
 
 1. When applying labels to files in a specific parent folder **and** its subfolders, use the **Apply to** -> **Selected folders** option. Then add each of the parent folders.
 
@@ -133,11 +134,11 @@ You can go to the Policy center to review file policy violations.
 
 1. For each file policy, you can see the file policy violations by selecting the **matches**.  
 
-   :::image type="content" alt-text="Screenshot of sample PCI matches." source="media/pci-matches.png" lightbox="media/pci-matches.png":::
+   :::image type="content" alt-text="Screenshot of sample policy matches." source="media/pci-matches.png" lightbox="media/pci-matches.png":::
 
 1. You can select the file itself to get information about the files.  
 
-   :::image type="content" alt-text="Screenshot of sample PCI content matches." source="media/pci-content-matches.png" lightbox="media/pci-content-matches.png":::
+   :::image type="content" alt-text="Screenshot of sample policy content matches." source="media/pci-content-matches.png" lightbox="media/pci-content-matches.png":::
 
 1. For example, you can select **Collaborators** to see who has access to this file, and you can select **Matches** to see the Social Security numbers. 
 
@@ -145,10 +146,9 @@ You can go to the Policy center to review file policy violations.
 
 ## File filters 
 
-Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters. For example, access level, file type.
 The Defender for Cloud Apps built in DLP engines perform content inspection by extracting text from common file types, such as PDF, Office files, RTF, HTML, and code files.
 
-Below is a list of the file filters that can be applied. To provide you with a powerful tool for policy creation, most filters support multiple values and a NOT.
+Below is a list of the file filters that can be applied.
 
 
 :::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
@@ -156,27 +156,29 @@ Below is a list of the file filters that can be applied. To provide you with a p
 
 **Access level** – Sharing access level; public, external, internal, or private.
 
-- Internal - Any files within the Internal domains you set in General setup.
-- External - Any files saved in locations that aren't within the internal domains you set.
-- Shared - Files that have a sharing level above private. Shared includes:
-- Internal sharing - Files shared within your internal domains.
-- External sharing - Files shared in domains that aren't listed in your internal domains.
-- Public with a link - Files that can be shared with anyone via a link.
-- Public - Files that can be found by searching the Internet.
+- **Internal**- Any files within the Internal domains you set in General setup.
+- **External** - Any files saved in locations that aren't within the internal domains you set.
+- **Shared** - Files that have a sharing level above private. Shared includes:
+    - Internal sharing - Files shared within your internal domains.
+    - External sharing - Files shared in domains that aren't listed in your internal domains.
+    - Public with a link - Files that can be shared with anyone via a link.
+    - Public - Files that can be found by searching the Internet.
+
+     > [!NOTE]
+      > Files shared into your connected storage apps by external users are handled as follows by Defender for Cloud Apps:
+      >
+      > - **OneDrive:** OneDrive assigns an internal user as the owner of any file placed into your OneDrive by an external user. Because these files are then considered owned by your organization, Defender for Cloud Apps scans these files and applies policies as it does to any other file in your OneDrive.
+      > - **Google Drive:** Google Drive considers these as being owned by the external user, and because of legal restrictions on files and data that your organization doesn't own, Defender for Cloud Apps doesn't have access to these files.
+      > - **Box:** Because Box considers externally owned files to be private information, Box Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
+      > - **Dropbox:** Because Dropbox considers externally owned files to be private information, Dropbox Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
 
 * **App** – Search only for files within these apps.
 
 * **Collaborators** – Include/exclude specific collaborators or groups. 
 
-> [!NOTE]
-> When using the file policy filters, the 'Contains' search only looks for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
-> * Spaces or hyphens between words function like OR. For example, if you search for malware virus it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
-> * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware".\
-> **Equals** will search only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
-
 **Any from domain** – If any user from this domain has direct access to the file.
 > [!NOTE]
-> - This filter does not support files that were shared with a group, only with specific users.
+> - This filter doesn't support files that were shared with a group, only with specific users.
 > - For SharePoint and OneDrive, the filter doesn't support files shared with a specific user through a shared link.
 
   - **Entire organization** – If the entire organization has access to the file.
@@ -184,7 +186,6 @@ Below is a list of the file filters that can be applied. To provide you with a p
   - **Groups** – If a specific group has access to the file. Groups can be imported from Active Directory, cloud apps or manually created in the service.
 
       >[!NOTE]
-      >
       > - This filter is used to search for a collaborator group as a whole. It doesn't match for individual group members.
   - **Users** – Certain set of users that might have access to the file.
 
@@ -255,10 +256,10 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
 
     > [!TIP]
     > You can filter the list of policies by type. The following table lists, per risk type, which filter type to use:
-    > | Risk type | Filter type |
-    > | DLP | File policy |
-    > | Malware | Malware detection policy |
-
+    > |Risk type  |Filter type  |
+    >|DLP |File policy|
+    >|Malware      | Malware detection policy |
+   
 1. In the list of matched files, on the row in which the file under investigation appears, select the ✓ to **Authorize**.
 
 ## Working with the File drawer
@@ -271,7 +272,7 @@ You can view more information about each file, by selecting the file itself in t
 - **Matched policies** - See a list of policies the file matched.
 - **Sensitivity labels** - View the list of sensitivity labels from Microsoft Purview Information Protection found in this file. You can then filter by all files matching this label.
 
-The fields in the File drawer provide contextual links to additional files and drill downs you might want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
+The fields in the File drawer provide contextual links to files and drill downs you might want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
 
 :::image type="content" source="media/file-policies/file-drawer.png" alt-text="Screenshot showing the file drawer" lightbox="media/file-policies/file-drawer.png":::
 
