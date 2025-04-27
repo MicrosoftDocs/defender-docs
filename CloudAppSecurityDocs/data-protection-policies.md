@@ -39,7 +39,7 @@ The following are examples of file policies that can be created:
 
 * **Quarantine shared files not modified during the last period** - Receive an alert about shared files that no one modified recently, to quarantine them or choose to turn on an automated action. Exclude all the Private files that  weren't modified during a specified date range. On Google Workspace, you can choose to quarantine these files, using the 'quarantine file' checkbox on the policy creation page.
 
-* **Sharing with unauthorized users** - Receive an alert about files shared with unauthorized group of users in your organization. Select the users for whom sharing is unauthorized.
+* **Sharing with unauthorized users** - Receive an alert about files shared with an unauthorized group of users in your organization. Select the users for whom sharing is unauthorized.
 
 * **Sensitive file extension** - Receive an alert about files with specific extensions that are highly exposed. Select the specific extension (for example, crt for certificates) or filename and exclude those files with private sharing level.
 
@@ -51,7 +51,7 @@ To create a new file policy, follow this procedure:
 
 1. Select **Create policy** and select **File policy**.
 
-   ![Create a Information Protection policy.](media/create-policy-from-information-protection-tab.png)
+   ![Create an Information Protection policy.](media/create-policy-from-information-protection-tab.png)
    
 1. Give your policy a name and description. You can also base it on a template. For more information about policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
@@ -62,12 +62,14 @@ To create a new file policy, follow this procedure:
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
 
    > [!NOTE]
-> The file policy filter,'Contains' search only looks for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
-> * Spaces or hyphens between words function like OR. For example, if you search for malware virus it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
+> The file policy,'Contains' filter searches only for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
+> * Spaces or hyphens between words function like OR. For example, if you search for 'malware virus' it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
 > * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware."\
 > * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
-1. Under the first **Apply to** filter, select **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive, where you can enforce your file policy over all files on the app or on specific folders. You're redirected to sign in the cloud app, and then add the relevant folders.
+1. Under the first **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You are then prompted to sign in to the cloud app and add the relevant folders.
+
+    :::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
 
 1. Under the second **Apply to** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
 
@@ -77,7 +79,7 @@ To create a new file policy, follow this procedure:
 
     In addition, you can specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
 
-    You can decide set the minimum number of content violations that you want to match before the file is considered a violation. For example, you can choose 10 if you want to be alerted on files with at least 10 credit card numbers found within its content.
+    You can set the minimum number of content violations that you want to match before the file is considered a violation. For example, you can choose 10 if you want to be alerted on files with at least 10 credit card numbers found within its content.
 
     When content is matched against the selected expression, the violation text is replaced with "X" characters. By default, violations are masked and shown in their context displaying 100 characters before and after the violation. Numbers in the context of the expression are replaced with "#" characters and are never stored within Defender for Cloud Apps. You can select the option to **Unmask the last four characters of a violation** to unmask the last four characters of the violation itself. It's necessary to set which data types the regular expression searches: content, metadata and/or file name. By default it searches the content and the metadata.
 
@@ -126,7 +128,7 @@ Each policy is composed of the following parts:
 
 * **Extensions** - Content inspection can be performed via 3rd-party engines for improved DLP or anti-malware capabilities.
 
-## View files policies results
+## View file policy results
 
 You can go to the Policy center to review file policy violations.
 
@@ -238,10 +240,6 @@ Labels include:
   > Defender for Cloud Apps only detects new SharePoint and OneDrive folders after some file activity has been performed in them.
 - **Quarantined** – If the file quarantined by the service. For example, show me all files that are quarantined.
 
-When creating a policy, you can also set it to run on specific files by setting the **Apply to** filter. Filter to either **all files**, **selected folders** (subfolders included), or **all files excluding selected folders**. Then select the files or folders that are relevant.
-
-:::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
-
 ## Authorizing files
 
 After Defender for Cloud Apps has identified files as posing a malware or DLP risk, we recommend you investigate the files. If you determine the files are safe, you can authorize them. Authorizing a file removes it from the malware detection report and suppresses future matches on this file.
@@ -261,7 +259,7 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
 
 ## Working with the File drawer
 
-You can view more information about each file, by selecting the file itself in the file log. Selecting it opens the **File drawer** that provides the following actions you can take on the file:
+You can view more information about each file, by selecting the file itself in the file log. Selecting a file opens the **File drawer** which provides the following actions you can take on the file:
 
 - **URL** - Takes you to the file location.
 - **File identifiers** - Opens a pop-up with raw data details about the file including file ID and encryption keys when they're available.
