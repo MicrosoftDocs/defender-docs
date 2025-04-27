@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#New-default-cap-for-on-upload-malware-scanning-in-Microsoft-Defender-for-Storage) |
+| April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
 
