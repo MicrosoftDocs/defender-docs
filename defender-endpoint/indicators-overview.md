@@ -6,7 +6,7 @@ ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
-ms.reviewer: 
+ms.reviewer: ericlaw
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/03/2025
+ms.date: 04/08/2025
 ---
 
 # Overview of indicators in Microsoft Defender for Endpoint
@@ -30,7 +30,7 @@ ms.date: 04/03/2025
 
 ## Indicator of compromise (IoC) overview
 
-An Indicator of compromise (IoC) is a forensic artifact, observed on the network or host. An IoC indicates--with high confidence--that a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
+An Indicator of compromise (IoC) is a forensic artifact observed on the network or host. An IoC indicates--with high confidence--that a computer or network intrusion has occurred. IoCs are observable, which links them directly to measurable events. Some IoC examples include:
 
 - hashes of known malware
 - signatures of malicious network traffic
@@ -48,17 +48,19 @@ This video shows a walkthrough of creating and adding indicators:
 
 As a general rule, you should only create indicators for known bad IoCs, or for any files / websites that should be explicitly allowed in your organization. For more information on the types of sites that Defender for Endpoint can block by default, see [Microsoft Defender SmartScreen overview](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
 
-A false positive (FP) refers to a SmartScreen false positive. It's considered to be malware or phish, but actually isn't a threat, so you might want to create an allow policy for it.
+A false positive (FP) refers to a false positive in Microsoft's threat intelligence. If a given resource is not actually a threat, you can create an Allow IoC to allow the resource. You can also help drive improvements to Microsoft's security intelligence by submitting false positives, and suspicious or known-bad IoCs for analysis. If a warning or block is incorrectly shown for a file or application, or if you suspect an undetected file is malware, you can submit a file to Microsoft for review. For more information, see [Submit files for analysis](https://www.microsoft.com/en-us/wdsi/filesubmission/).
 
-You can also help drive improvements to Microsoft's security intelligence by submitting false positives, and suspicious or known-bad IoCs for analysis. If a warning or block is incorrectly shown for a file or application, or if you suspect an undetected file is malware, you can submit a file to Microsoft for review. For more information, see [Submit files for analysis](https://www.microsoft.com/en-us/wdsi/filesubmission/).
+#### IP/URL/Domain indicators
 
-#### IP/URL indicators
+You can use IP and URL/Domain indicators to manage site access.
 
-You can use IP/URL indicators to unblock users from a SmartScreen false positive (FP) or to override a Web Content Filtering (WFC) block.
+To block connections to an IP address, type the IPv4 address in dotted-quad form (e.g. `8.8.8.8`). For IPv6 addresses, specify all 8 segments (e.g. `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges are not supported.
 
-You can use URL and IP indicators to manage site access. You can create interim IP and URL indicators to temporarily unblock users from a SmartScreen block. You might also have indicators that you keep for a long period of time to selectively bypass web content filtering blocks.
+To block connections to a domain and any of its subdomains, specify the domain (e.g. `example.com`). This indicator will match `example.com` as well as `sub.example.com` and `anything.sub.example.com`.
 
-Consider the case where you have a web content filtering categorization for a particular site that is correct. In this example, you have web content filtering set to block all social media, which is correct for your overall organizational goals. However, the marketing team has a real need to use a specific social media site for advertising and announcements. In that case, you can unblock the specific social media site using IP or URL indicators for the specific group (or groups) to use.
+To block a specific URL path, specify the URL path (e.g. `https://example.com/block`). This indicator will match resources under the `/block` path on `example.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
+
+You can also create IP and URL indicators to unblock users from a SmartScreen block or selectively bypass web content filtering blocks of sites that you'd like to allow to load. For example, consider a case where you have web content filtering set to block all social media websites. However, the marketing team has a requirement to use a specific social media site to monitor their ad placements. In this case, you can unblock the specific social media site by creating a domain Allow indicator and assigning it to the marketing team's device group.
 
 See [Web protection](web-protection-overview.md) and [Web content filtering](web-content-filtering.md)
 
@@ -84,7 +86,7 @@ Because each version of an application has a different file hash, using indicato
 
 #### Certificate indicators
 
-In some cases, a specific certificate that's used to sign a file or application that your organization is set to allow or block. Certificate indicators are supported in Defender for Endpoint, if they use the .CER or .PEM file format. See [Create indicators based on certificates](indicator-certificates.md) for more details.
+You may create an IoC to allow or block files and applications signed by that certificate. Certificate indicators can be supplied in the .CER or .PEM file format. See [Create indicators based on certificates](indicator-certificates.md) for more details.
 
 ## IoC detection engines
 
@@ -100,13 +102,13 @@ The cloud detection engine of Defender for Endpoint regularly scans collected da
 
 ## Endpoint prevention engine
 
-The same list of indicators is honored by the prevention agent. Meaning, if Microsoft Defender Antivirus is the primary antivirus configured, the matched indicators are treated according to the settings. For example, if the action is *Alert and Block*, Microsoft Defender Antivirus prevents file executions (block and remediate) and a corresponding alert appears. On the other hand, if the Action is set to *Allow*, Microsoft Defender Antivirus doesn't detect or block the file.
+The same list of indicators is honored by the prevention agent. Meaning, if Microsoft Defender Antivirus is the primary antivirus configured, the matched indicators are treated according to the settings. For example, if the action is *block and remediate*, Microsoft Defender Antivirus prevents file executions and a corresponding alert appears. On the other hand, if the Action is set to *Allow*, Microsoft Defender Antivirus doesn't detect or block the file.
 
 ## Automated investigation and remediation engine
 
 The automated investigation and remediation behave similarly to the endpoint prevention engine. If an indicator is set to *Allow*, automated investigation and remediation ignores a *bad* verdict for it. If set to *Block*, automated investigation and remediation treats it as *bad*.
 
-The `EnableFileHashComputation` setting computes the file hash for the cert and file IoC during file scans. It supports IoC enforcement of hashes and certs belong to trusted applications. It's concurrently enabled with the allow or block file setting. `EnableFileHashComputation` is enabled manually through Group Policy, and is disabled by default.
+The `EnableFileHashComputation` setting computes the file hash during file scans. It supports IoC enforcement against hashes belonging to trusted applications. It's concurrently enabled with the allow or block file setting. `EnableFileHashComputation` is enabled manually through Group Policy, and is disabled by default.
 
 ## Enforcement types for Indicators 
 
@@ -128,7 +130,7 @@ You can create an indicator for:
 - [URLs/domains](indicator-ip-domain.md)
 - [Certificates](indicator-certificates.md)
 
-The table below shows exactly which actions are available per indicator (IoC) type:
+The table below shows which actions are available per indicator (IoC) type:
 
 | IoC type | Available actions |
 |:---|:---|
@@ -137,12 +139,12 @@ The table below shows exactly which actions are available per indicator (IoC) ty
 | [URLs and domains](indicator-ip-domain.md) | Allow <br> Audit <br> Warn <br> Block execution |
 | [Certificates](indicator-certificates.md) | Allow <br> Block and remediate |
 
-The functionality of preexisting IoCs doesn't change. However, the indicators are renamed to match the current supported response actions:
+The functionality of preexisting IoCs doesn't change. However, the indicators are renamed to match the currently-supported response actions:
 
 - The *alert only* response action was renamed to *audit* with the generated alert setting enabled.
 - The *alert and block* response was renamed to *block and remediate* with the optional generate alert setting.
 
-The IoC API schema and the threat IDs in advance hunting are updated to align with the renaming of the IoC response actions. The API scheme changes apply to all IoC Types.
+The IoC API schema and the threat IDs in Advanced Hunting are updated to align with the renaming of the IoC response actions. The API scheme changes apply to all IoC Types.
 
 > [!NOTE]
 > There is a limit of 15,000 indicators per tenant. Increases to this limit are not supported.
@@ -155,15 +157,15 @@ The IoC API schema and the threat IDs in advance hunting are updated to align wi
 
 ## Known issues and limitations
 
-Customers might experience issues with alerts for Indicators of Compromise. The following scenarios are situations where alerts aren't created or are created with inaccurate information. Each issue is investigated by our engineering team.
+Microsoft Store apps cannot be blocked by Microsoft Defender because they're signed by Microsoft.
+
+Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. Each issue is investigated by our engineering team.
 
 - **Block indicators**: Generic alerts with informational severity only are created. Custom alerts (that is, custom title and severity) aren't fired in these cases.
 - **Warn indicators**: Generic alerts and custom alerts are possible in this scenario; however, the results aren't deterministic due to an issue with the alert detection logic. In some cases, customers might see a generic alert, whereas a custom alert might show in other cases.
 - **Allow**: No alerts are generated (by design).
-- **Audit**: Alerts are generated based on the severity provided by the customer.
+- **Audit**: Alerts are generated based on the severity provided by the customer (by design).
 - In some cases, alerts coming from EDR detections might take precedence over alerts stemming from antivirus blocks, in which case an information alert is generated.
-
-Microsoft Store apps cannot be blocked by Microsoft Defender because they're signed by Microsoft.
 
 ## Related articles
 
