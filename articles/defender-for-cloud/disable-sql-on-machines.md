@@ -61,4 +61,3 @@ Once you disable Defender for SQL Servers on Machines, the Defender for SQL Serv
         - Type: AdvancedThreatProtection.Windows
 
 1. Select **Uninstall**.
-
