@@ -26,7 +26,8 @@ To enable and configure Microsoft Defender for Storage and ensure maximum protec
 
 - Enable/disable Microsoft Defender for Storage at the subscription and storage account levels.
 - Enable/disable the malware scanning or sensitive data threat detection configurable features.
-- Set a monthly cap ("capping") on the malware scanning per storage account per month for controlling costs (default value is 5,000 GB).
+- Set a monthly cap ("capping") on the malware scanning per storage account per month for controlling costs (default value is 10,000 GB).
+
 - Configure methods to set up response to malware scanning results.
 - Configure methods for saving malware scanning results logging.
 
