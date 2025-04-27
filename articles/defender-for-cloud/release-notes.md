@@ -31,8 +31,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#New-default-cap-for-on-upload-malware-scanning-in-Microsoft-Defender-for-Storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
+
+### New default cap for on-upload malware scanning in Microsoft Defender for Storage
+
+April 27, 2025
+
+The default cap value for on-upload malware scanning has been updated from 5,000GB to 10,000GB. This new cap applies to the following scenarios:
+
+- **New Subscriptions:** Subscriptions where Defender for Storage is enabled for the first time.
+
+- **Re-enabled Subscriptions:** Subscriptions where Defender for Storage was previously disabled and is now re-enabled.
+
+When Defender for Storage Malware Scanning is enabled for these subscriptions, the default cap for on-upload malware scanning will be set to 10,000GB. This cap is adjustable to meet your specific needs.
+
+For more detailed information, please refer to the section on [Malware scanning - billing per GB, monthly capping, and configuration](/azure/defender-for-cloud/defender-for-storage-introduction)
+
 
 ### General Availability of API Security Posture Management native integration within Defender CSPM Plan
 
