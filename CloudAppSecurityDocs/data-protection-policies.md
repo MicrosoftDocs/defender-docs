@@ -150,7 +150,11 @@ The Defender for Cloud Apps built in DLP engines perform content inspection by e
 
 Below is a list of the file filters that can be applied. To provide you with a powerful tool for policy creation, most filters support multiple values and a NOT.
 
-* Access level – Sharing access level; public, external, internal, or private.
+
+:::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
+
+
+**Access level** – Sharing access level; public, external, internal, or private.
 
     - Internal - Any files within the Internal domains you set in General setup.
     - External - Any files saved in locations that aren't within the internal domains you set.
@@ -215,7 +219,6 @@ Labels include:
 | All other file MIME types | Other |
 
 
-:::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
 
 - **In trash** – Exclude/include files in the trash folder. These files may still be shared and pose a risk.This filter does not apply to files on SharePoint and OneDrive.
 
@@ -253,9 +256,9 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
     > [!TIP]
     > You can filter the list of policies by type. The following table lists, per risk type, which filter type to use:
     > | Risk type | Filter type |
-    > | --- | --- |
     > | DLP | File policy |
     > | Malware | Malware detection policy |
+
 1. In the list of matched files, on the row in which the file under investigation appears, select the ✓ to **Authorize**.
 
 ## Working with the File drawer
@@ -269,6 +272,8 @@ You can view more information about each file, by selecting the file itself in t
 - **Sensitivity labels** - View the list of sensitivity labels from Microsoft Purview Information Protection found in this file. You can then filter by all files matching this label.
 
 The fields in the File drawer provide contextual links to additional files and drill downs you may want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
+
+:::image type="content" source="media/file-policies/file-drawer.png" alt-text="Screenshot showing the file drawer" lightbox="media/file-policies/file-drawer.png":::
 
 
 For a list of governance actions available, see [File governance actions](governance-actions.md#file-governance-actions).
