@@ -81,13 +81,11 @@ Use the corresponding unhealthy reason and recommended actions to resolve the mi
 
 ### Multiple SQL Server instances on the same virtual machine
 
-If you have multiple SQL Server instances installed on the same virtual machine, the Defender for SQL extension is installed on the virtual machine and not on each SQL Server instance. If your SQL Server instance is unprotected, it might be due to the following reasons:
+If you have multiple SQL Server instances installed on the same virtual machine, the recommendation `The status of Microsoft SQL Servers on Machines should be protected` can't differentiate between instances. To correlate the error message with the corresponding SQL Server instance, check the error message under the Defender for SQL extension. The Defender for SQL extension can display the following reasons for each instance:
 
 - Restart the SQL Server
 - Check permissions
 - Ensure the SQL Server instance is active
-
-In this situation, the recommendation `The status of Microsoft SQL Servers on Machines should be protected`, can't differentiate between instances. Investigate each extension to determine the reason for the unhealthy status and check which instance has which error message.
 
 1. In the Azure portal, search for and select **SQL virtual machine**.
 
@@ -97,11 +95,11 @@ In this situation, the recommendation `The status of Microsoft SQL Servers on Ma
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extensions.png" alt-text="Screenshot that shows where to locate the Extensions and applications section." lightbox="media/troubleshoot-sql-machines-guide/extensions.png":::
 
-1. To view the status, select the relevant extension.
+1. Select the relevant extension to view its protection status.
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extension-status.png" alt-text="Screenshot that shows the information screen for the selected extension." lightbox="media/troubleshoot-sql-machines-guide/extension-status.png":::
 
-Based on the status, take the appropriate action to remediate the issue.
+Based on the [unhealthy reason listed, take the appropriate action](#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level) to remediate the issue.
 
 ## Step 4: Reverify protection status
 
