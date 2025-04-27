@@ -4,7 +4,7 @@ description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/23/2025
+ms.date: 04/27/2025
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ---
 
@@ -112,7 +112,9 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 
-## Next step
+## Related content
 
-> [!div class="nextstepaction"]
-> [Verify that all machines are protected](verify-machine-protection.md)
+- [Verify that all machines are protected](verify-machine-protection.md)
+- [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)
+- [Enable Microsoft Defender for SQL Servers on Machines at scale](enable-defender-sql-at-scale.md)
+- [Disable Defender for SQL Servers on Machines](disable-sql-on-machines.md)
