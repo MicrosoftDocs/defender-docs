@@ -146,13 +146,11 @@ You can go to the Policy center to review file policy violations.
 
 ## File filters 
 
-The Defender for Cloud Apps built in DLP engines perform content inspection by extracting text from common file types, such as PDF, Office files, RTF, HTML, and code files.
+File filters allow you to apply specific criteria to your file policies, focusing on files that meet conditions such as file type, access level, and sharing status. This includes file types such as PDF, Office files, RTF, HTML, and code files.
 
-Below is a list of the file filters that can be applied.
-
+Below is a list of the file filters that can be applied:
 
 :::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
-
 
 **Access level** – Sharing access level; public, external, internal, or private.
 
@@ -164,13 +162,12 @@ Below is a list of the file filters that can be applied.
     - Public with a link - Files that can be shared with anyone via a link.
     - Public - Files that can be found by searching the Internet.
 
-     > [!NOTE]
-      > Files shared into your connected storage apps by external users are handled as follows by Defender for Cloud Apps:
-      >
-      > - **OneDrive:** OneDrive assigns an internal user as the owner of any file placed into your OneDrive by an external user. Because these files are then considered owned by your organization, Defender for Cloud Apps scans these files and applies policies as it does to any other file in your OneDrive.
-      > - **Google Drive:** Google Drive considers these as being owned by the external user, and because of legal restrictions on files and data that your organization doesn't own, Defender for Cloud Apps doesn't have access to these files.
-      > - **Box:** Because Box considers externally owned files to be private information, Box Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
-      > - **Dropbox:** Because Dropbox considers externally owned files to be private information, Dropbox Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
+> [!NOTE]
+> Files shared into your connected storage apps by external users are handled as follows by Defender for Cloud Apps:
+> - **OneDrive:** OneDrive assigns an internal user as the owner of any file placed into your OneDrive by an external user. Because these files are then considered owned by your organization, Defender for Cloud Apps scans these files and applies policies as it does to any other file in your OneDrive.
+> - **Google Drive:** Google Drive considers these as being owned by the external user, and because of legal restrictions on files and data that your organization doesn't own, Defender for Cloud Apps doesn't have access to these files.
+> - **Box:** Because Box considers externally owned files to be private information, Box Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
+> - **Dropbox:** Because Dropbox considers externally owned files to be private information, Dropbox Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
 
 * **App** – Search only for files within these apps.
 
