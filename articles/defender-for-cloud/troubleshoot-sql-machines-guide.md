@@ -63,7 +63,7 @@ Follow the [verification process](verify-machine-protection.md) to identify prot
 
 The recommendation `The status of Microsoft SQL Servers on Machines should be protected` can be used to verify the protection status of SQL Servers, but the recommendation should be remediated at the resource level. Any SQL server that is unprotected is identified in the unhealthy resource section of the recommendation with a protection status listed and a reason.
 
-The recommendation is only updated every 12 hours. To check the realtime status of your machine, you must [verify the protection status of each SQL server](verify-machine-protection.md#verify-protection-on-a-single-sql-server-vm) and perform any troubleshooting if necessary.
+The recommendation is only updated every 12 hours. To check the real-time status of your machine, you must [verify the protection status of each SQL server](verify-machine-protection.md#verify-protection-on-a-single-sql-server-vm) and perform any troubleshooting if necessary.
 
 Use the corresponding unhealthy reason and recommended actions to resolve the misconfiguration:
 
