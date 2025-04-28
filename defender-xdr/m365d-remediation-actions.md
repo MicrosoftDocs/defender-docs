@@ -16,16 +16,17 @@ ms.collection:
 ms.topic: concept-article
 ms.custom: autoir
 ms.reviewer: evaldm, isco
-ms.date: 08/06/2024
+ms.date: 04/28/2025
 appliesto:
   - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand the remediation actions that follow automated investigations in Microsoft Defender XDR
 ---
 
 # Get notified about remediation actions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-During and after an automated investigation in Microsoft Defender XDR, remediation actions are identified for malicious or suspicious items. Some kinds of remediation actions are taken on devices, also referred to as endpoints. Other remediation actions are taken on identities, accounts, and email content. In addition, some types of remediation actions can occur automatically, whereas other types of remediation actions are taken manually by your organization's security team. When an automated investigation results in one or more remediation actions, the investigation completes only when the remediation actions are taken, approved, or rejected.
+During and after an automated investigation, remediation actions are identified for malicious or suspicious items. Some kinds of remediation actions are taken on devices, also referred to as endpoints. Other remediation actions are taken on identities, accounts, and email content. In addition, some types of remediation actions can occur automatically, whereas other types of remediation actions are taken manually by your organization's security team. When an automated investigation results in one or more remediation actions, the investigation completes only when the remediation actions are taken, approved, or rejected.
 
 > [!IMPORTANT]
 > Whether remediation actions are taken automatically or only upon approval depends on certain settings, such as automation levels. To learn more, see the following articles:
