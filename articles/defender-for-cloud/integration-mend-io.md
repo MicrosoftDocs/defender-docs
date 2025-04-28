@@ -4,12 +4,12 @@ description: Learn how to enhance vulnerability analysis and provide comprehensi
 author: ElazarK
 ms.author: elkrieger
 ms.topic: overview
-ms.date: 04/27/2025
+ms.date: 04/28/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between Mend.io and Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided when Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
 ---
 
-# Overview of Mend.io integration
+# Overview of Mend.io integration (Preview)
 
 Microsoft Defender for Cloud integrates with Mend.io to improve vulnerability analysis using reachability-based Software Composition Analysis (SCA). SCA shows exploitable vulnerabilities from code to runtime.
 
