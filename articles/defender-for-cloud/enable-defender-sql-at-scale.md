@@ -4,11 +4,14 @@ description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 12/17/2024
+ms.date: 04/28/2025
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---
 
 # Enable Microsoft Defender for SQL Servers on Machines at scale
+
+> [!IMPORTANT]
+> This article applies to government clouds. If you're using commercial clouds, see the [Troubleshoot Defender for SQL on Machines deployment](troubleshoot-sql-machines-guide.md) article.
 
 Microsoft Defender for Cloud's SQL Servers on Machines component of the Defender for Databases plan protects SQL IaaS and Defender for SQL extensions. The SQL Servers on Machines component identify and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
 
