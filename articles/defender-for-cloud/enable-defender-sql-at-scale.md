@@ -11,7 +11,7 @@ ms.date: 04/28/2025
 # Enable Microsoft Defender for SQL Servers on Machines at scale
 
 > [!IMPORTANT]
-> This article applies to government clouds. If you're using commercial clouds, see the [Troubleshoot Defender for SQL on Machines deployment](troubleshoot-sql-machines-guide.md) article.
+> This article applies to government clouds only.
 
 Microsoft Defender for Cloud's SQL Servers on Machines component of the Defender for Databases plan protects SQL IaaS and Defender for SQL extensions. The SQL Servers on Machines component identify and mitigates potential database vulnerabilities while detecting anomalous activity that could indicate threats to your databases.
 
