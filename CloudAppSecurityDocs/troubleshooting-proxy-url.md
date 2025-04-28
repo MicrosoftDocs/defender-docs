@@ -44,9 +44,6 @@ So even though Fabrikam doesn't actually use Defender for Cloud Apps, they see t
 
 This kind of URL is expected and indicates that your organization applies extra security controls to protect business-critical data.
 
-> [!IMPORTANT]
-> Access and session policies support IPv4 only. If a request is made over IPv6, IP-based policy rules are not supported. This limitation applies when using both reverse proxy and Edge in-browser protection.
-
 They do this by using Defender for Cloud Apps, a solution for protecting your organization's cloud environment, to replace all relevant URLs, and cookies relating to cloud apps that you use.
 
 So when you try accessing a cloud app such as Salesforce, SharePoint Online, or AWS, you notice that its URL is suffixed with `.mcas.ms`, `.mcas-gov.us`, or `.mcas-gov.ms`. For example, when using the XYZ app, the URL you're used to seeing changes from `XYZ.com` to `XYZ.com.mcas.ms`.
@@ -60,6 +57,7 @@ If you don't recognize the remaining portion of the URL, such as **myurl.com**.m
 
 ## Related content
 
+- [Known limitations in Conditional Access app control].(caac-known-issues.md)
 - [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](proxy-intro-aad.md)
 - [Troubleshooting access and session controls for admin users](troubleshooting-proxy.md)
 - [Troubleshooting access and session controls for end-users](troubleshooting-proxy-end-users.md)
