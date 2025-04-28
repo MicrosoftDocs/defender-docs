@@ -57,7 +57,7 @@ If you don't recognize the remaining portion of the URL, such as **myurl.com**.m
 
 ## Related content
 
-- [Known limitations in Conditional Access app control].(caac-known-issues.md)
+- [Known limitations in Conditional Access app control](caac-known-issues.md)
 - [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](proxy-intro-aad.md)
 - [Troubleshooting access and session controls for admin users](troubleshooting-proxy.md)
 - [Troubleshooting access and session controls for end-users](troubleshooting-proxy-end-users.md)
