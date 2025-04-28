@@ -31,9 +31,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| April 28 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
 | April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
+
+### Update to Defender for SQL servers on Machines plan
+
+April 28, 2025
+
+The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
+
+Starting today, we're gradually releasing an enhanced agent solution for the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to make the onboarding processes easier and improve protection coverage.
+
+**Required customer actions**
+
+1. [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): Customers who enabled Defender for SQL Server on machines plan before today are required to follow these instructions to update their configuration, following the enhanced agent release.
+
+1. [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2025, customers must verify the protection status of their SQL Server instances across their environments. Learn how to [troubleshoot any deployment issues Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
+
+> [!NOTE]
+> After the agent upgrade occurs, you might experience a billing increase if additional SQL Server instances are protected with your enabled Defender for SQL Servers on Machines plan. For billing information, review the 
+[Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ### New default cap for on-upload malware scanning in Microsoft Defender for Storage
 
@@ -49,7 +68,6 @@ When Defender for Storage Malware Scanning is enabled for these subscriptions, t
 
 For more detailed information, please refer to the section on [Malware scanning - billing per GB, monthly capping, and configuration](/azure/defender-for-cloud/defender-for-storage-introduction)
 
-
 ### General Availability of API Security Posture Management native integration within Defender CSPM Plan
 
 April 24, 2025
@@ -59,6 +77,8 @@ API Security Posture Management is now generally available as part of the Defend
 With this update, new risk factors have been added, including risk factors for unauthenticated APIs (AllowsAnonymousAccess) and APIs lacking encryption (UnencryptedAccess). Additionally, APIs published through Azure API Management now allow mapping back to any connected Kubernetes Ingresses and VMs, providing end-to-end visibility into API exposure and support risk remediation through Attack path analysis.
 
 ### Enhancements for Defender for app service alerts
+
+April 7, 2025
 
 On April 30, 2025, Defender for App Service alerting capabilities will be enhanced. We will add alerts for suspicious code executions and access to internal or remote endpoints. Additionally, we have improved coverage and reduced noise from relevant alerts by expanding our logic and removing alerts that were causing unnecessary noise. As part of this process, the alert "Suspicious WordPress theme invocation detected" will be deprecated.
 

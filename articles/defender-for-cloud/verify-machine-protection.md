@@ -1,53 +1,54 @@
 ---
 title: Verify SQL machine protection
-description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected, ensuring that all security measures are properly implemented.
-ms.author: dacurwin
-author: dcurwin
+description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected. Ensure that all security measures are properly implemented.
+ms.author: elkrieger
+author: Elazark
 ms.topic: how-to
-ms.date: 02/25/2025
+ms.date: 04/27/2025
 #customer intent: As a customer, I want to verify that my SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
 ---
 
 # Verify SQL machine protection
 
-After enabling protection for SQL VMs with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
+> [!IMPORTANT]
+> This article applies to commercial clouds. If you're using Government clouds, see the [Verify SQL machine protection government](verify-machine-protection-gov.md) article.
 
-## Verify protection on multiple Azure VMs
+After enabling protection for SQL Servers installed on Virtual Machines (VM), on-premises machines, and multicloud resources with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
 
-Retrieve and review the Defender for SQL Servers on Machines protection status report for all SQL VMs within a specified Azure subscription by running the [Get-SqlVMProtectionStatusReport.ps1 PowerShell script](https://aka.ms/DfSQLprotectionverificationscale). The script applies to Azure VMs only.
+## Verify protection on an entire Azure subscription
 
-## Verify protection on multiple Azure Arc-enabled VMs
+Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation) recommendation. This recommendation allows you to review the protection status of Defender for SQL Servers on Machines. The recommendation identifies all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription, and presents the protection status of each SQL Server instance.
 
-1. In the Azure portal, Search for and select **Azure Resource Graph**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Copy and run the following query to identify Azure Arc-enabled VMs that aren't in a protected state.
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-    ```kusto   
-    resources
-    | where type == "microsoft.azurearcdata/sqlserverinstances"
-    | extend SQLonArcProtection= tostring(properties.azureDefenderStatus)
-    | extend ProtectionStatusLastUpdate = tostring(properties.azureDefenderStatusLastUpdated)
-    | project name, SQLonArcProtection, ProtectionStatusLastUpdate, resourceGroup, location, type, tenantId, subscriptionId, properties
-    | order by ['name'] asc
-    ```
+1. Search for and select [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation).
 
-1. Review the results, specifically checking the **SQLonArcProtection** status. Any result that doesn't state `Protected` indicates that the SQL Server VM, or Azure Arc-enabled SQL Server isn't protected.
+1. Select **View recommendation for all resources**.
 
-    :::image type="content" source="media/verify-machines-protection/script-results.png" alt-text="Screenshot of the results screen once the script runs." lightbox="media/verify-machines-protection/script-results.png":::
+    :::image type="content" source="media/verify-machines-protection/view-recommendation.png" alt-text="Screenshot that shows were to locate the View recommendation for all resources button is located. " lightbox="media/verify-machines-protection/view-recommendation.png":::
 
-1. If the `ProtectionStatusLastUpdate` field doesn't show a date within the last day, the machine might not be protected. [Verify the protection of the single SQL server VM](#verify-protection-on-a-single-sql-server-vm).
+1. Review the the protection status and the unhealthy reason.
 
-    :::image type="content" source="media/verify-machines-protection/status-update.png" alt-text="Screenshot that shows the last status update for the SQL instance." lightbox="media/verify-machines-protection/status-update.png":::
+    :::image type="content" source="media/verify-machines-protection/protection-status-reason.png" alt-text="Screenshot that shows where to locate the protection status and the reason for that status." lightbox="media/verify-machines-protection/protection-status-reason.png":::
 
-The script can return the following possible protection statuses:
-- **Protected**: Defender for SQL actively protects the instance. Ensure the information isn't outdated by checking the  Last Update field.
-- **Not Protected**: Defender for SQL encountered issues while protecting the instance. This status indicates that some intervention is required to enable successful protection.
-- **Inactive**: Defender for SQL runs on the machine, but the SQL instance is either paused or stopped.
-- **Empty** or **Unknown**: The protection status couldn't be retrieved or doesn't exist on the machine. In this case, assume that the instance isn't protected by Defender for SQL.
+1. Select the unhealthy resource.
+
+1. Follow the troubleshooting guide steps starting at [Step 3: Identify and resolve protection misconfigurations at the SQL Server instance Level](troubleshoot-sql-machines-guide.md#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level).
+
+Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
 
 ## Verify protection on a single SQL server VM
 
-1. Depending on the resources in your environment, search for and select **SQL virtual machines** or **SQL Server - Azure Arc** in the Azure portal.
+You can also verify the protection status of a single SQL server VM or Azure Arc SQL Server instance.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Depending on the resources in your environment, search for and select either:
+    - **SQL virtual machines**
+    <br> 
+    or
+    - **SQL Server - Azure Arc**
 
 1. Locate and select the relevant resource.
 
@@ -55,8 +56,13 @@ The script can return the following possible protection statuses:
 
 1. Check the **Protection status**. If the status is **Protected**, the deployment was successful.
 
-    :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot showing protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
+    :::image type="content" source="media/verify-machines-protection/protection-status-protected.png" alt-text="Screenshot showing protection status as protected." lightbox="media/verify-machines-protection/protection-status-protected.png":::
 
-## Troubleshoot unprotected machines
+1. (Optional) Resolve the unprotected server instance status with the [troubleshooting SQL Server on Machines guide](troubleshoot-sql-machines-guide.md).
 
-If databases aren't protected, follow the instructions in the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to remediate.
+Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Troubleshoot SQL machines protection](troubleshoot-sql-machines-guide.md)
