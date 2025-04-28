@@ -488,7 +488,7 @@ Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md
 
 November 26, 2024
 
-You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview portal.
 
 With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
 
@@ -503,7 +503,7 @@ Until recently, Defender for Cloud imported all sensitivity labels from the Micr
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.
