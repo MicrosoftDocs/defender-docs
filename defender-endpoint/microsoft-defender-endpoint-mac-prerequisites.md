@@ -38,7 +38,9 @@ This article lists the prerequisites for installing and configuring Microsoft De
 
 - A Defender for Endpoint subscription and access to the Microsoft Defender portal
 - Beginner-level experience in macOS and BASH scripting
-- Administrative privileges on the device (in manual deployment)
+- For [manual deployments](#manual-deployment-requirements), administrative privileges on the device
+- For [enterprise deployments](#enterprise-deployment-requirements), a Mobile Device Management (MDM) solution such as Microsoft Intune
+- [Network connectivity](#network-connectivity) to the Microsoft Defenender for Endpoint service.
 
 ### System requirements
 
@@ -47,26 +49,31 @@ These three most recent major releases of macOS are supported.
 - 14 (Sonoma)
 - 13 (Ventura)
 
+> [!NOTE]
+> Beta versions of macOS aren't supported, but new releases of macOS are supported from day 1.
+
 - Supported processors: x64 and ARM64
 
 - Disk space: 1 GB
 
-- Beta versions of macOS aren't supported.
+> [!CAUTION]
+> We recommend that you keep [System Integrity Protection](https://support.apple.com/HT204899) (SIP) enabled on client devices. SIP is a built-in macOS security feature that prevents low-level tampering with the OS, and is enabled by default.
 
-### Deployment methods
 
-There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on macOS.
+### Enterprise deployment requirements
+
+There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across 
 
 - [Microsoft Intune-based deployment](mac-install-with-intune.md)
 - Non-Microsoft management tools:
     - [Security Settings Management](mde-security-settings-management.md)
     - [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
+ 
+### Manual deployment requirements
+
+You can also configure Defender for Endpoint on macOS locally
+
 - Command-line tool: [Manual deployment](mac-install-manually.md)
-
-> [!IMPORTANT]
-> On macOS 11 (Big Sur) and later, Microsoft Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#deployment-methods).
-
-After you've enabled the service, you might need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
 ### Licensing requirements
 
@@ -101,6 +108,19 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 > Authenticated proxies aren't supported. Ensure that only PAC, WPAD, or a static proxy is being used.
 > SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store won't allow for interception.
 
+## Next steps
+
+### Onboard client devices to Microsoft Defender for Endpoint
+
+Onboarding Microsoft Defender for Endpoint for macOS requires the following steps:
+
+- Install the .pkg containing the software
+- Test the [network connectivity](#test-network-connectivity)
+- Install the required system extensions 
+- On-board the device to Microsoft Defender for Endpoint
+
+See  [Onboard client devices running macOS to Microsoft Defender for Endpoint](onboard-client.md) for details.
+
 #### Test network connectivity
 
 To test that a connection isn't blocked, open `https://x.cp.wd.microsoft.com/api/report` and `https://cdn.x.cp.wd.microsoft.com/ping` in a browser.
@@ -117,8 +137,6 @@ The output from this command should be similar to the following:
 
  `OK https://cdn.x.cp.wd.microsoft.com/ping`
 
-> [!CAUTION]
-> We recommend that you keep [System Integrity Protection](https://support.apple.com/HT204899) (SIP) enabled on client devices. SIP is a built-in macOS security feature that prevents low-level tampering with the OS, and is enabled by default.
 
 Once Microsoft Defender for Endpoint is installed, connectivity can be validated by running the following command in Terminal:
 
@@ -126,15 +144,6 @@ Once Microsoft Defender for Endpoint is installed, connectivity can be validated
 mdatp connectivity test
 ```
 
-## Next steps
-
-### How to update Microsoft Defender for Endpoint on macOS
-
-Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. To update Microsoft Defender for Endpoint on macOS devices, a program named Microsoft AutoUpdate (MAU) is used. To learn more, see [Deploy updates for Microsoft Defender for Endpoint on macOS](mac-updates.md).
-
-### How to configure Microsoft Defender for Endpoint on macOS
-
-Guidance for how to configure the product in enterprise environments is available in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
 
 ## Resources
 
