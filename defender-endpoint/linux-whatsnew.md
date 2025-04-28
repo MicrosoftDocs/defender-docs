@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 04/18/2025
+ms.date: 04/23/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -31,7 +31,7 @@ search.appverid: met150
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
 
 > [!IMPORTANT]
-> Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support has been available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
+> Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
 > 
 > 1. Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 >
@@ -81,6 +81,28 @@ What's new
 
 - Other stability improvements and bug fixes.
 
+Known Issues
+
+- There's a known issue where MDE is deleting the configuration file located at /etc/system/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
+
+  To set the file to be unmodifiable, execute the following command:
+    
+```bash
+
+  sudo chattr +i /etc/systemd/system/mdatp.service.d/[file name]
+  ```
+  
+ This command makes the file unchangeable. T If you need to restore modification permissions, use the following command:
+  
+  ```bash
+  
+  sudo chattr -i /etc/systemd/system/mdatp.service.d/[file name]
+  ```
+  
+  Please note that the chattr command can only be used on supported file systems, such as ext4.
+  
+ If you need further assistance, you can reach out to our support team with your organization ID, and we can implement a temporary mitigation to prevent deletion. A permanent fix for this issue will be available in MDE version 101.25032.0000.
+  
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
 | Build:             | **101.24122.0008**    |
@@ -132,7 +154,7 @@ What's new
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor
-    - When eBPF isn't present and we fallback to Netlink as supplementary event provider
+    - When eBPF isn't present and we fallback to Net link as supplementary event provider
     - There's no supplementary sensor present.
 
 - Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast, and insiderSlow, are unaffected by this change.
@@ -185,7 +207,7 @@ What's new
 
 #### What's new
 
-- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Netlink as a fallback supplementary event provider. Netlink provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
+- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Net link as a fallback supplementary event provider. Net link provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
 
 - Stability and performance improvements
 
@@ -457,7 +479,7 @@ There are multiple fixes and new changes in this release:
   ```bash
   sudo mdatp threat quarantine restore threat-path --path [threat-original-path] --destination-path [destination-folder]
   ```
-- Starting with this release, Microsoft Defender for Endpoint on Linux will no longer be shipping a solution for RHEL 6.
+- From this release, Microsoft Defender for Endpoint on Linux will no longer be shipping a solution for RHEL 6.
   
     RHEL 6 'Extended end of life support' is poised to end by June 30, 2024 and customers are advised to plan their RHEL upgrades accordingly aligned with guidance from Red Hat. Customers who need to run Defender for Endpoint on RHEL 6 servers can continue to use version 101.23082.0011 (doesn't expire before June 30, 2024) supported on kernel versions 2.6.32-754.49.1.el6.x86_64 or prior.
   - Engine Update to `1.1.23080.2007` and Signatures Ver: `1.395.1560.0`.
@@ -482,7 +504,7 @@ There are multiple fixes and new changes in this release:
 
 - This new release is build over October 2023 release (101.23082.0009) with addition of following changes. There's no change for other customers and upgrading is optional.
 
-- Fix for immutable mode of auditd when supplementary subsystem is ebpf:  In ebpf mode all mdatp audit rules should be cleaned after switching to ebpf and rebooting.  After reboot, mdatp audit rules weren't cleaned due to which it was resulting in hang of the server.  The fix cleans these rules, user shouldn't see any mdatp rules loaded on reboot
+- Fix for immutable mode of auditd when supplementary subsystem is ebpf:  In ebpf mode all mdatp audit rules should be cleaned after switching to ebpf and rebooting.  After the reboot, mdatp audit rules weren't cleaned due to which it was resulting in hang of the server.  The fix cleans these rules, user shouldn't see any mdatp rules loaded on reboot
 
 - Fix for MDE not starting up on RHEL 6.
 
@@ -571,7 +593,7 @@ sudo systemctl disable mdatp
   - Defender for Endpoint is now available for Debian 12 and Amazon Linux 2023
   
   - Support to enable Signature verification of updates downloaded
-    - You must update the manajed.json as shown below
+    - You must update the manajed.json as shown:
       ```
         "features":{
           "OfflineDefinitionUpdateVerifySig":"enabled"
@@ -691,7 +713,7 @@ There are multiple fixes and new changes in this release
    - Files
    - Executables
     
-- Network Protection: Connections that are blocked by Network Protection and have the block overridden by users are now correctly reported to Microsoft Defender XDR
+- Network Protection: Connections that is blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
 
 - Improved logging in Network Protection block and audit events for debugging
 |
@@ -700,7 +722,7 @@ There are multiple fixes and new changes in this release
    - From this version, enforcementLevel are in passive mode by default giving admins more control over where they want 'RTP on' within their estate
    - This change only applies to fresh MDE deployments, for example, servers where Defender for Endpoint is being deployed for the first time. In update scenarios, servers that have Defender for Endpoint deployed with RTP ON, continue operating with RTP ON even post update to version 101.23062.0010
 
-- Bug fix: RPM database corruption issue in Defender Vulnerability Management baseline has been fixed
+- Bug fix: RPM database corruption issue in Defender Vulnerability Management baseline is fixed.
 
 - Other performance improvements
 
@@ -790,7 +812,7 @@ There are multiple fixes and new changes in this release
 
 - In Passive mode, Defender for Endpoint no longer scans when Definition update happens.
 
-- Devices continue to be protected even after Defender for Endpoint agent has expired. We recommend upgrading the Defender for Endpoint Linux agent to the latest available version to receive bug fixes, features, and performance improvements.
+- Devices continue to be protected even after Defender for Endpoint agent is expired. We recommend upgrading the Defender for Endpoint Linux agent to the latest available version to receive bug fixes, features, and performance improvements.
     
 - Removed semanage package dependency.
     
@@ -956,7 +978,7 @@ sudo systemctl disable mdatp
 
 - With mdatp version 101.98.30 you might see a health false issue in some of the cases, because SELinux rules aren't defined for certain scenarios. The health warning could look something like this:
 
-*found SELinux denials within last one day. If the MDATP is recently installed, clear the existing audit logs or wait for a day for this issue to autoresolve. Use command: \"sudo ausearch -i -c 'mdatp_audisp_pl' | grep \"type=AVC\" | grep \" denied\" to find details*
+*Found SELinux denials within last one day. If the MDATP is recently installed, clear the existing audit logs or wait for a day for this issue to autoresolve. Use command: \"sudo ausearch -i -c 'mdatp_audisp_pl' | grep \"type=AVC\" | grep \" denied\" to find details*
 
 The issue could be mitigated by running the following commands.
 
@@ -1096,7 +1118,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative to the above, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
+As an alternative, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -1164,7 +1186,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) aren't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
+- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) isn't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
 
 #### Known issues
 
@@ -1345,7 +1367,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 #### What's new
 
-- Fixed a product crash introduced in 101.53.02 and that has impacted multiple customers
+- Fixed a product crash introduced in 101.53.02 that affected multiple customers
 
 ### Jan-2022 Build: 101.53.02 | Release version: 30.121112.15302.0
 
