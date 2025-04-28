@@ -39,15 +39,22 @@ The deployment tool you use influences how you onboard endpoints to the service.
 
 If you're onboarding devices in the Microsoft Defender portal, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
+
+2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
    :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot showing device onboarding in the Microsoft Defender portal for Defender for Endpoint.":::
 
-2. Under **Select operating system to start onboarding process**, select the operating system for the device.
+3. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
-3. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
 
-4. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there is one available). Follow the instructions to onboard your devices.
+5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
+
+   - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+   - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+
+## Video: Device onboarding
 
 The following video provides a quick overview of the onboarding process and the different tools and methods: 
 

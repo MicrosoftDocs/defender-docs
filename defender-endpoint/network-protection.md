@@ -3,7 +3,7 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/08/2025
+ms.date: 04/25/2025
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -40,6 +40,10 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial](h
 Network protection helps protect devices by preventing connections to malicious or suspicious sites. Examples of dangerous domains are domains that host phishing scams, malicious downloads, tech scams, or other malicious content. Network protection expands the scope of [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(S) traffic that attempts to connect to poor-reputation sources (based on the domain or hostname).
 
 Network protection extends the protection in [Web protection](web-protection-overview.md) to the operating system level, and is a core component for [Web Content Filtering](web-content-filtering.md) (WCF). It provides the web protection functionality found in Microsoft Edge to other supported browsers and nonbrowser applications. Network protection also provides visibility and blocking of indicators of compromise (IOCs) when used with [Endpoint detection and response](overview-endpoint-detection-response.md). For example, network protection works with your [custom indicators](indicators-overview.md) to block specific domains or host names.
+ 
+Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
 
 ### Network protection coverage
 
@@ -51,9 +55,11 @@ The following table summarizes network protection areas of coverage.
 | [Custom Indicators](indicators-overview.md) | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
 | [Web Content Filtering](web-content-filtering.md) | SmartScreen must be enabled | Network protection must be in block mode | Not supported |
 
+To ensure that SmartScreen is enabled for Microsoft Edge, use [Edge Policy: SmartScreen Enabled](/deployedge/microsoft-edge-policies#smartscreenenabled).
+
 > [!NOTE]
-> On Mac and Linux, you must have network protection in block mode for these features to be supported in the Microsoft Edge browser.
 > On Windows, network protection doesn't monitor Microsoft Edge. For processes other than Microsoft Edge and Internet Explorer, web protection scenarios leverage network protection for inspection and enforcement.
+> On Mac and Linux, the Microsoft Edge browser only integrates Web Threat Protection. Network protection must be enabled in block mode to support Custom Indicators and Web Content Filtering in Edge and other browsers.
 
 ### Known issues & limitations
 - IP addresses are supported for all three protocols (TCP, HTTP, and HTTPS (TLS))
@@ -64,11 +70,7 @@ The following table summarizes network protection areas of coverage.
 - FQDNs loaded via HTTP2 connection coalescing can only be blocked in Microsoft Edge
 - Network Protection will block connections on all ports (not just 80 and 443).
 
-There might be up to two hours of latency (usually less) between the time when the action is taken and the URL/IP is blocked.
- 
-Watch this video to learn how network protection helps reduce the attack surface of your devices from phishing scams, exploits, and other malicious content:
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2d0270f9-f216-4e9e-85c7-5e2b183c6d73]
+There might be up to two hours of latency (usually less) between when an indicator/policy is added and a matching URL/IP is blocked.
 
 ## Requirements for network protection
 
@@ -84,7 +86,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 | Windows version | Microsoft Defender Antivirus |
 |:---|:---|
 | Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md), and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
-| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution) | Platform update version `4.18.2001.x.x` or newer |
+| Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) | Platform update version `4.18.2001.x.x` or newer |
 
 ## Why network protection is important
 
@@ -112,7 +114,7 @@ The network protection component of Defender for Endpoint identifies and blocks 
 
 #### Network protection: C2 detection and remediation
 
-In its initial form, ransomware is a commodity threat that's preprogrammed and focused on limited, specific outcomes (like encrypting a computer). However, ransomware has evolved into a sophisticated threat that is human-driven, adaptive, and focused on larger scale and more widespread outcomes, like holding an entire organization's assets or data for ransom.
+Ransomware has evolved into a sophisticated threat that is human-driven, adaptive, and focused on large scale outcomes, like holding an entire organization's assets or data for ransom.
 
 Support for Command and Control servers (C2) is an important part of this ransomware evolution, and it's what enables these attacks to adapt to the environment they target. Breaking the link to the command-and-control infrastructure stops the progression of an attack to its next stage. For more information about C2 detection and remediation, see [Tech Community blog: Detecting and remediating command and control attacks at the network layer](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/detecting-and-remediating-command-and-control-attacks-at-the/ba-p/3650607).
 
@@ -155,8 +157,10 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 > The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
 
 #### Use CSP to enable `Convert warn verdict to block`
+By default, SmartScreen verdicts for malicious sites result in a warning that can be overridden by the user. A policy can be set to convert the warning to blocks, preventing such overrides.
 
-[Defender CSP: Configuration/EnableConvertWarnToBlock](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock)
+For non-Edge browsers, see [Defender CSP: Configuration/EnableConvertWarnToBlock](/windows/client-management/mdm/defender-csp#configurationenableconvertwarntoblock).
+For Edge browsers, see [Edge Policy: Prevent SmartScreen Prompt Override](/deployedge/microsoft-edge-policies#preventsmartscreenpromptoverride).
 
 #### Use Group Policy to enable Convert warn verdict to block
 
@@ -202,7 +206,7 @@ Network protection is enabled per device, which is typically done using your man
 > [!NOTE]
 > Microsoft Defender Antivirus must be in active mode to enable network protection.
 
-You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in audit mode, and gather data on what would be blocked. Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. In order for indicators of compromise (IoC) or Web content filtering (WCF) to work, network protection must be in `block` mode.
+You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in [audit mode](overview-attack-surface-reduction.md). Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. To enforce blocking of custom indicators or Web content filtering categories, network protection must be in `block` mode.
 
 For information about network protection for Linux and macOS see the following articles: 
 
@@ -229,7 +233,7 @@ DeviceEvents
 :::image type="content" source="media/network-protection-advanced-hunting.png" alt-text="Advanced hunting for auditing and identifying events." lightbox="media/network-protection-advanced-hunting.png":::
 
 > [!TIP]
-> These entries have data in the **AdditionalFields** column which gives you great info around the action, if you expand **AdditionalFields** you can also get the fields: **IsAudit**, **ResponseCategory**, and **DisplayName**.
+> These entries have data in the **AdditionalFields** column which supplies more info around the action, including the fields: **IsAudit**, **ResponseCategory**, and **DisplayName**.
 
 Here's another example:
 
@@ -266,21 +270,19 @@ DeviceEvents
 
 ```
 
-You can use the resulting list of URLs and IPs to determine what would be blocked if network protection is set to block mode on the device. You can also see which features would block URLs and IPs. Review the list to identify any URLS or IPs that are necessary for your environment. You can then create an allow indicator for those URLs or IP addresses. Allow indicators take precedence over any blocks.
+You can use the resulting list of URLs and IPs to determine what would be blocked if network protection is set to block mode on the device. You can also see which features would block URLs and IPs. Review the list to identify any URLS or IPs that are necessary for your environment. You can then create an allow indicator for those URLs or IP addresses. Allow indicators take precedence over any blocks. See [Order of precedence for Network protection blocks](web-protection-overview.md#order-of-precedence).
 
-Once you've created an indicator, you can look at resolving the underlying issue as follows:
+After creating an indicator to unblock a site, you may attempt to resolve the original block as follows:
 
-- **SmartScreen**: request review
+- **SmartScreen**: report false positive, if appropriate
 - **Indicator**: modify existing indicator
 - **MCA**: review unsanctioned app
 - **WCF**: request recategorization
 
-Using this data you can make an informed decision on enabling network protection in Block mode. See [Order of precedence for Network protection blocks](web-protection-overview.md#order-of-precedence).
-
 > [!NOTE]
-> As this is a per-device setting, if there are devices that cannot move to Block mode you can simply leave them on audit until you can rectify the challenge and you will still receive the auditing events.
+> As this is a per-device setting, if there are devices that cannot move to Block mode you can simply leave them on audit to receive the auditing events.
 
-For information about how to report false positives see [Report false positives](web-protection-overview.md#report-false-positives).
+For information about how to report false positives in SmartScreen data, see [Report false positives](web-protection-overview.md#report-false-positives).
 
 For details on how to create your own Power BI reports, see [Create custom reports using Power BI](api/api-power-bi.md).
 
@@ -301,9 +303,7 @@ In non-Microsoft Edge processes, Network Protection determines the fully qualifi
 
 Network protection works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into exploit protection events and blocks as part of [alert investigation scenarios](investigate-alerts.md).
 
-When network protection blocks a connection, a notification is displayed from the Action Center. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information.
-
-You can also use [audit mode](overview-attack-surface-reduction.md) to evaluate how network protection would impact your organization if it were enabled.
+When network protection blocks a connection, a notification is displayed on the client. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information.
 
 <a name='review-network-protection-events-in-the-microsoft-365-defender-portal'></a>
 
@@ -315,7 +315,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Copy the XML directly](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
+1. [Create an XML query](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
 
 2. Select **OK**.
 
@@ -344,14 +344,13 @@ Here's an example of how that works:
 Due to the multi-user nature of Windows 10 Enterprise, keep the following points in mind:
 
 - Network protection is a device-wide feature and can't be targeted to specific user sessions.
-- Web content filtering policies are also device-wide.
 - If you need to differentiate between user groups, consider creating separate Windows Virtual Desktop host pools and assignments.
 - Test network protection in audit mode to assess its behavior before rolling out.
 - Consider resizing your deployment if you have a large number of users or a large number of multi-user sessions.
 
 ### Alternative option for network protection
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, network protection for Microsoft Edge can be enabled using the following method:
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
@@ -391,7 +390,7 @@ For more information, see [Turn on network protection](enable-network-protection
 
 #### Network protection suggested registry keys
 
-For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
+For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later (used in Windows Virtual Desktop on Azure), enable other registry keys, as follows:
 
 1. Go to **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Microsoft** > **Windows Defender** > **Windows Defender Exploit Guard** > **Network Protection**.
 
@@ -408,7 +407,7 @@ For more information, see: [Turn on network protection](enable-network-protectio
 
 #### Windows Servers and Windows Multi-session configuration requires PowerShell
 
-For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
+For Windows Servers and Windows Multi-session, there are other items that you must enable by using PowerShell cmdlets. For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), Windows Server version 1803 or later, and Windows 10 Enterprise Multi-Session 1909 and later, used in Windows Virtual Desktop on Azure, run the following PowerShell commands:
 
 ```powershell
 

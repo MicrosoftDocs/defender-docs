@@ -3,8 +3,8 @@ title: Deploy Microsoft Defender for Endpoint on Linux with Ansible
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Ansible.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -115,7 +115,7 @@ Pull the [installer bash script](https://github.com/microsoft/mdatp-xplat/tree/m
 
 ### Create Ansible YAML files
 
-Create installation YAML file. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
+Create installation YAML file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/ansible.install_mdatp_simplified.yaml).
 
 ```bash
 - name: Install and Onboard MDE
@@ -483,7 +483,6 @@ When upgrading your operating system to a new major version, you must first unin
    - [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
    - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
    - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-   - [Defender for Endpoint on Linux for ARM64-based devices (preview)](mde-linux-arm.md)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
