@@ -22,7 +22,7 @@ If automatic registration is disabled, you must manually register each SQL serve
 Existing customers must follow the instructions on this page to update the configuration to enable Auto registration through the SQL extension.
 
 > [!IMPORTANT]
-> The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. for more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
+> The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Update the plan on multiple subscriptions
 
