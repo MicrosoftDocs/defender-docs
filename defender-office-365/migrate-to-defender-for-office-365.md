@@ -51,6 +51,13 @@ The high-level migration steps are illustrated in the following diagram. The act
 
 :::image type="content" source="media/mdo-migration-overview.png" alt-text="The process of migration from a third-party protection solution or device to Defender for Office 365" lightbox="media/mdo-migration-overview.png":::
 
+> [!TIP]
+> For information about configuring protection for Microsoft Teams, see the following articles:
+>
+> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
+
 ## Why use the steps in this guide?
 
 In the IT industry, surprises are bad. Simply flipping your MX records to point to Microsoft 365 without prior and thoughtful testing will result in many surprises. For example:

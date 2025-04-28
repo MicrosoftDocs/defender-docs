@@ -51,6 +51,12 @@ For example, assume that a session policy is configured to prevent downloading f
 
 Session policies don't protect external business-to-business (B2B) collaboration users in Microsoft Teams applications.
 
+## Session Controls with Non-Interactive Tokens
+Some applications utilize non-interactive access tokens to facilitate seamless redirection between apps within the same suite or realm. When one application is onboarded to Conditional Access App Control and the other is not, session controls may not be enforced as expected. For example, if the Teams client retrieves a non-interactive token for SharePoint Online (SPO), it can initiate an active session in SPO without prompting the user for reauthentication. As a result, the session control mechanism cannot intercept or enforce policies on these sessions. To ensure consistent enforcement, it's recommended to onboard all relevant applications, such as Teams, alongside SPO. 
+
+## IPv6 limitations
+Access and session policies support IPv4 only. If a request is made over IPv6, IP-based policy rules are not applied. This limitation applies when using both reverse proxy and Edge in-browser protection.
+
 ## Limitations for sessions that the reverse proxy serves
 
 The following limitations apply only on sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
@@ -94,6 +100,7 @@ The following table lists example results when you define the **Block upload of 
 ## Limitations for sessions that are served with Edge in-browser protection
 
 The following limitations apply only on sessions that are served with Edge in-browser protection.
+
 
 ### Deep link is lost when user switches to Edge by clicking 'Continue in Edge'  
 
