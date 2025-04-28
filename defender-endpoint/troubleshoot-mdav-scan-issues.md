@@ -34,6 +34,32 @@ Understanding why a scan is launched can help identify what settings are applied
 | Catch up scan | Launched when a scheduled scan was missed twice |
 | Manually launched | A scan is launched manually by using any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
 
+## CPU Performance and Scan Throttling in Windows Defender
+
+Windows Defender includes several configurable settings to manage CPU usage during scans. These settings help balance system performance and security by controlling how aggressively Defender uses system resources. The key settings to be aware of are:
+
+1. **ScanOnlyIfIdle**
+- **Description**: When enabled, Windows Defender will only perform scans when the system is idle.
+- **Purpose**: This minimizes performance impact during active use by deferring scans until the system is not in use.
+- **Typical Use Case**: Ideal for environments where user experience is a priority and scans can be delayed without compromising security.
+
+2. **DisableCpuThrottleOnIdleScans**
+- **Description**: When set to `true`, this disables CPU throttling during idle-time scans.
+- **Purpose**: Allows Defender to use more CPU resources when the system is idle, potentially completing scans faster.
+- **Interaction with Other Settings**: Works in conjunction with `ScanOnlyIfIdle`. If both are enabled, scans will run only when idle and will not be throttled.
+
+3. **AvgCPULoadFactor**
+- **Description**: Specifies the average CPU load (as a percentage) that Defender should not exceed during scans.
+- **Purpose**: Helps maintain overall system responsiveness by limiting Defender’s CPU usage.
+- **Example**: A value of `50` means Defender will attempt to keep its CPU usage below 50% during scans.
+- **Interaction with Other Settings**: This setting is influenced by `DisableCpuThrottleOnIdleScans` and `ThrottleForScheduledScanOnly`, which can override or limit when throttling is applied.
+
+4. **ThrottleForScheduledScanOnly**
+- **Description**: When enabled, CPU throttling is applied only to scheduled scans, not to manual scans.
+- **Purpose**: Ensures that scheduled scans are less intrusive, while allowing manual scans to run at full speed if needed.
+- **Interaction with Other Settings**: When used with `AvgCPULoadFactor`, throttling limits will only apply to scheduled scans. Manual scans will ignore the CPU load factor and may use more resources.
+
+
 ## Policies that impact scanning
 
 Understanding the policies applied to the scan enables you to understand the behavior of the scan and what can be tuned to remediate scan challenges.
