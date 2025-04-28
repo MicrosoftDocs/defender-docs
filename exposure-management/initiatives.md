@@ -21,11 +21,21 @@ ms.date: 11/04/2024
 
 ## View initiatives page
 
+[!NOTE]
+
+All information shown on the Initiative pages that is related to Endpoints data is based on the user's scope. This includes, initiative scores, metrics progress, and history reasoning.
+
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
 1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
     :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
+
+1. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
+
+1. Choose the device groups relevant for you, and the iniatives data will be recalculated (only when related to Endpoints data).
+
+:::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
 
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
@@ -36,11 +46,6 @@ ms.date: 11/04/2024
     - **Initiative name**
     - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
     - **Current score** of the initiative
-    
-    [!NOTE]
-
-    Initiative scores are calculated based on user's scope.
-
     - **Programs** or workloads contributing to or required by this initiative
 
 1. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
@@ -72,7 +77,7 @@ The changes in your score provide you with useful feedback about how well you're
 
 ## Check history
 
-1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time. The history reasoning is calculated based on the user's scope.
+1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time. 
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
@@ -86,8 +91,6 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. To review metrics associated with your initiative, select **Exposure insights -> Initiatives-> Security metrics**.
 1. Sort by heading, as needed.
-
-   The metric's progress for security metrics related to Endpoints is calcuated based on the user's scope.
 
 1. Select **Exposure insights -> Initiatives-> Security recommendations** to view recommendations related to your initiative.
 
