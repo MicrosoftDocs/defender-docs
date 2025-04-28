@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/25/2025
+ms.date: 04/28/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS prerequisites
@@ -40,7 +40,7 @@ This article lists the prerequisites for installing and configuring Microsoft De
 - Beginner-level experience in macOS and BASH scripting
 - For [manual deployments](#manual-deployment-requirements), administrative privileges on the device
 - For [enterprise deployments](#enterprise-deployment-requirements), a Mobile Device Management (MDM) solution such as Microsoft Intune
-- [Network connectivity](#network-connectivity) to the Microsoft Defenender for Endpoint service.
+- [Network connectivity](#network-connectivity) to the Microsoft Defender for Endpoint service.
 
 ### System requirements
 
@@ -64,9 +64,9 @@ These three most recent major releases of macOS are supported.
 
 There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across 
 
-- [Microsoft Intune-based deployment](mac-install-with-intune.md)
+- [Microsoft Intune-based deployment](mac-install-with-intune.md)#
+- [Security Settings Management](mde-security-settings-management.md)
 - Non-Microsoft management tools:
-    - [Security Settings Management](mde-security-settings-management.md)
     - [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
  
 ### Manual deployment requirements
@@ -114,10 +114,11 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 
 Onboarding Microsoft Defender for Endpoint for macOS requires the following steps:
 
-- Install the .pkg containing the software
-- Test the [network connectivity](#test-network-connectivity)
-- Install the required system extensions 
-- On-board the device to Microsoft Defender for Endpoint
+- First, ensure that the device meets the [system requirements](#system-requirements) and [network connectivity](#network-connectivity) requirements.
+- Next, install the .pkg containing the software
+- Once the .pkg has been installed, test the [network connectivity](#test-network-connectivity)
+- Next, install the required system extensions
+- Finally, on-board the device to Microsoft Defender for Endpoint
 
 See  [Onboard client devices running macOS to Microsoft Defender for Endpoint](onboard-client.md) for details.
 
@@ -137,13 +138,11 @@ The output from this command should be similar to the following:
 
  `OK https://cdn.x.cp.wd.microsoft.com/ping`
 
-
 Once Microsoft Defender for Endpoint is installed, connectivity can be validated by running the following command in Terminal:
 
 ```bash
 mdatp connectivity test
 ```
-
 
 ## Resources
 
