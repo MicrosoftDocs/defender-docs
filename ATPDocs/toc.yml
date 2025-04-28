@@ -257,7 +257,7 @@ items:
            href: security-assessment-unsecure-account-attributes.md
          - name: Weak cipher usage assessment
            href: security-assessment-weak-cipher.md
-     - name: Identity security initiative
+     - name: Identity security initiative (Preview)
        href: identity-security-initiative.md
 - name: Reference
   items:
