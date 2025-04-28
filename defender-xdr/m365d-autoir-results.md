@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 08/11/2022
+ms.date: 04/28/2025
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -21,6 +21,7 @@ ms.custom:
 ms.reviewer: evaldm, isco
 appliesto:
 - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand the results and key findings of automated investigation in Microsoft Defender XDR
 ---
 
 # Details and results of an automated investigation
@@ -29,9 +30,9 @@ appliesto:
 
 With Microsoft Defender XDR, when an [automated investigation](m365d-autoir.md) runs, details about that investigation are available both during and after the automated investigation process. If you have the [necessary permissions](m365d-action-center.md#required-permissions-for-action-center-tasks), you can view those details in an investigation details view that provides you with up-to-date status and the ability to approve any pending actions. 
 
-## (NEW) Unified investigation page
+## Unified investigation page
 
-The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). To access the unified investigation page, select the link in the yellow banner you'll see on:
+The investigation page includes information across your devices, email, and collaboration content. The unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). To access the unified investigation page, select the link in the yellow banner you'll see on:
 
 - Any investigation page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview portal</a>
 - Any investigation page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
@@ -46,7 +47,7 @@ You can open the investigation details view by using one of the following method
 
 ### Select an item in the Action center
 
-The improved [Action center](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) brings together [remediation actions](m365d-remediation-actions.md) across your devices, email & collaboration content, and identities. Listed actions include remediation actions that were taken automatically or manually. In the Action center, you can view actions that are awaiting approval and actions that were already approved or completed. You can also navigate to more details, such as an investigation page.
+The [Action center](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) brings together [remediation actions](m365d-remediation-actions.md) across your devices, email & collaboration content, and identities. Listed actions include remediation actions that were taken automatically or manually. In the Action center, you can view actions that are awaiting approval and actions that were already approved or completed. You can also navigate to more details, such as an investigation page.
 
 > [!TIP]
 > You must have [certain permissions](m365d-action-center.md#required-permissions-for-action-center-tasks) to approve, reject, or undo actions.
@@ -63,9 +64,9 @@ The improved [Action center](m365d-action-center.md) ([https://security.microsof
    - Select **Reject** to prevent a pending action from being taken.
    - Select **Go hunt** to go into [Advanced hunting](advanced-hunting-overview.md).
 
-### Open an investigation from an incident details page
+### Open an investigation from an incident page
 
-Use an incident details page to view detailed information about an incident, including alerts that were triggered information about any affected devices, user accounts, or mailboxes.
+Use the incident page to view detailed information about an incident, including alerts that were triggered information about any affected devices, user accounts, or mailboxes.
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in. 
 
@@ -77,17 +78,13 @@ Use an incident details page to view detailed information about an incident, inc
 
 5. Select **Open investigation page**. 
 
-Here's an example.
-
-:::image type="content" source="/defender/media/mtp-incidentdetails-tabs.png" alt-text="The investigation page in the Microsoft Defender portal" lightbox="/defender/media/mtp-incidentdetails-tabs.png":::
-
 ## Investigation details
 
 Use the investigation details view to see past, current, and pending activity pertaining to an investigation. Here's an example.
 
 :::image type="content" source="/defender/media/mtp-air-investdetails.png" alt-text="The investigation details page in the Microsoft Defender portal" lightbox="/defender/media/mtp-air-investdetails.png":::
 
-In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
+In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Mailboxes**, **Devices**, **Users**, **Evidence**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
 
 > [!NOTE]
 > The specific tabs you see in an investigation details page depends on what your subscription includes. For example, if your subscription does not include Microsoft Defender for Office 365 Plan 2, you won't see a **Mailboxes** tab.
@@ -103,7 +100,6 @@ In the Investigation details view, you can see information on the **Investigatio
 | **Entities** | Provides details about each analyzed entity, including a verdict for each entity type (*Malicious*, *Suspicious*, or *No threats found*).|
 |**Log** | Provides a chronological, detailed view of all the investigation actions taken after an alert was triggered.|
 | **Pending actions history** | Lists items that require approval to proceed. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) to approve pending actions. |
-
 
 ## Investigation states
 
