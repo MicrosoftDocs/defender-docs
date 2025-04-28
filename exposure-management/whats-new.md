@@ -24,13 +24,16 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
-## April 2025
+## May 2025
 
-### Enhanced support for device group scoping
+### Enhanced support for device groups scoping
 
-The device groups scoping within Exposure Management has been expanded. This update introduces the ability to filter the list of affected devices based on your assigned scope. With this enhancement, initiative scores, metric progress, security events, and historical insights will now be calculated and displayed according to your specific user scope. As a result, the data presented, including on the Overview page, will be tailored to align with your designated scope.
+The device groups scoping within Exposure Management has been expanded. This update enhances the existing capability to filter the list of affected devices based on your assigned scope by extending it to security metrics and exposed entities in recommendations. With this enhancement, initiative scores, metric progress, security events, and historical insights will now be calculated and displayed according to your specific user scope. As a result, the data presented, including on the Overview page, will be tailored to align with your designated scope.
 
-We will also support the device groups scope filter from Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly. Note that this capability applies only to data associated with Endpoint devices.
+We will also support the device groups filter, which is already available in Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly.
+
+> [!NOTE]
+> The device groups scoping capability applies only to data associated with Endpoint devices.
 
 For more information, see [Review security initiatives](initiatives.md)
 
