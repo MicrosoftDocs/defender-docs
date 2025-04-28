@@ -16,16 +16,42 @@ Identity security is the practice of protecting the digital identities of indivi
 - Your organization must have a Microsoft Defender for Identity license.
 - [Review prerequisites and permissions needed](/security-exposure-management/prerequisites) for working with Security Exposure Management.
 
+## View Identity Security Initiatives
+1. Navigate to [Microsoft Defender portal](https://security.microsoft.com/) 
+1. From the Exposure management section on the navigation bar, select Exposure insights **>** Initiatives to open the Identity Security page.
+
+## Review security metrics
+
+Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
+Metrics can be associated with one or more initiatives.
+
+On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
+We recommend that you prioritize metrics with the highest impact on Initiative Score level. This composite measure considers both the weight value of each recommendation and the percentage of non-compliant recommendations.
+
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
+
+
+|Metric property |Description  |
+|---------|---------|
+|**Metric name**    | The name of the metric.        |
+|**Progress**   |Shows the improvement of the exposure level for the metric from 0 (high exposure) to 100 (no exposure).         |
+|**State**   | Shows if the metric needs attention or if the target was met.       |
+|**Total assets**  | Total number of assets under the metric scope.        |
+|**Recommendations**   | Security recommendations associated with the metric.        |
+|**Weight**    | The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. Shown as High, Medium, and Low. It can also be defined as Risk accepted.        |
+|**14-day trend** | Shows the metric value changes over the last 14 days.        |
+|**Last updated** | Shows a timestamp of when the metric was last updated.
+
+> [!NOTE]
+> The Affected assets experience is not fully supported during the Preview phase.
+
 ## View Identity security recommendations 
 
  The Security recommendations tab displays a list of prioritized remediation actions related to your identity security posture. Each recommendation is evaluated for compliance and mapped to its corresponding risk impact, workload, and domain. This view helps you triage and take action based on urgency and business relevance.
 
 :::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page":::
 
-1. Navigate to [Microsoft Defender portal](https://security.microsoft.com/) 
-1. From the Exposure management section on the navigation bar, select Exposure insights **>** Initiatives to open the Identity Security page.
-1. Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:
-
+Sort the recommendations by any of the headings or filter them based on your task needs. 
 
 | **Column**             | **Description**                                                                 |
 |------------------------|---------------------------------------------------------------------------------|
@@ -43,29 +69,6 @@ Security Exposure Management categorizes recommendations by compliance status, a
 
 - **Compliant**: Indicates that the recommendation was implemented successfully.
 - **Not complaint**: Indicates that the recommendation wasn't fixed.
-
-## Review security metrics
-
-Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
-Metrics can be associated with one or more initiatives.
-
-On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
-
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
-
-
-|Metric property |Description  |
-|---------|---------|
-|**Metric name**    | The name of the metric.        |
-|**Progress**   |Shows the improvement of the exposure level for the metric from 0 (high exposure) to 100 (no exposure).         |
-|**State**   | Shows if the metric needs attention or if the target was met.       |
-|**Affected assets**   | The number of affected assets within the metric.       |
-|**Total assets**  | Total number of assets under the metric scope.        |
-|**Recommendations**   | Security recommendations associated with the metric.        |
-|**Weight**    | The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. Shown as High, Medium, and Low. It can also be defined as Risk accepted.        |
-|**14-day trend** | Shows the metric value changes over the last 14 days.        |
-|**Last updated** | Shows a timestamp of when the metric was last updated.
-
 
 ## Set target scores
 
