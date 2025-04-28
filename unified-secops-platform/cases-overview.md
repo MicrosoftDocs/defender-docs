@@ -81,7 +81,7 @@ Manage the following case details to describe, prioritize, assign, and track wor
 | Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
 | Status | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`</br>Default value is `New`|
 | Assigned to | A single user in the tenant | none |
-| Description | Plain text | none |
+| Description | Rich text | none |
 | Case details | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
 | | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
 | | Due on</br>Linked incidents | none |
