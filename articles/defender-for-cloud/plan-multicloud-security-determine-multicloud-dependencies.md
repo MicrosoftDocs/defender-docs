@@ -109,7 +109,7 @@ Make sure to check that your clusters meet network requirements so that the Defe
 
 ### Defender for SQL
 
-Defender for SQL provides threat detection for the GCP Compute Engine and AWS. The Defender for SQL Server on Machines plan must be enabled on the subscription where the connector is located.
+Defender for SQL provides threat detection for the GCP Compute Engine and AWS. The Defender for SQL Servers on Machines plan must be enabled on the subscription where the connector is located.
 
 #### Review components - Defender for SQL
 
