@@ -61,17 +61,17 @@ To create a new file policy, follow this procedure:
 
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
 
-   > [!NOTE]
-> The file policy,'Contains' filter searches only for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
-> * Spaces or hyphens between words function like OR. For example, if you search for 'malware virus' it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
-> * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware."\
-> * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
+    > [!NOTE]
+    > The file policy,'Contains' filter searches only for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
+    > * Spaces or hyphens between words function like OR. For example, if you search for 'malware virus' it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
+    > * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware."\
+    > * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
-1. Under the first **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You are then prompted to sign in to the cloud app and add the relevant folders.
+1. Under the **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You are then prompted to sign in to the cloud app and add the relevant folders.
 
     :::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
 
-1. Under the second **Apply to** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
+1. Under the  **Select user groups** filter, select either **all file owners**, **file owners from selected user groups** or **all file owners excluding selected groups**. Then select the relevant user groups to determine which users and groups should be included in the policy.
 
 1. Select the **Content inspection method**.  We recommend using the [**Data Classification Services**](content-inspection.md).
 
@@ -175,7 +175,7 @@ Below is a list of the file filters that can be applied:
 
 * **Collaborators** – Include/exclude specific collaborators or groups. 
 
-**Any from domain** – If any user from this domain has direct access to the file.
+* **Any from domain** – If any user from this domain has direct access to the file.
 > [!NOTE]
 > - This filter doesn't support files that were shared with a group, only with specific users.
 > - For SharePoint and OneDrive, the filter doesn't support files shared with a specific user through a shared link.
@@ -184,8 +184,9 @@ Below is a list of the file filters that can be applied:
 
   - **Groups** – If a specific group has access to the file. Groups can be imported from Active Directory, cloud apps or manually created in the service.
 
-      >[!NOTE]
-      > - This filter is used to search for a collaborator group as a whole. It doesn't match for individual group members.
+>[!NOTE]
+> - This filter is used to search for a collaborator group as a whole. It doesn't match for individual group members.
+
   - **Users** – Certain set of users that might have access to the file.
 
 - **Created** – File creation time. The filter supports before/after dates and a date range.
