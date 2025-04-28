@@ -64,10 +64,10 @@ To create a new file policy, follow this procedure:
     > [!NOTE]
     > The file policy,'Contains' filter searches only for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
     > * Spaces or hyphens between words function like OR. For example, if you search for 'malware virus' it finds all files with either malware or virus in the name, so it finds both malware-virus.exe and virus.exe.
-    > * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it will not find malwarevirusfile.exe and it will not find malware.exe. However, it searches for the exact string. If you search for "malware virus," it will not find "virus" or "virus-malware."\
+    > * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it won't find malwarevirusfile.exe and it won't find malware.exe. However, it searches for the exact string. If you search for "malware virus," it won't find "virus" or "virus-malware."\
     > * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
-1. Under the **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You are then prompted to sign in to the cloud app and add the relevant folders.
+1. Under the **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You're then prompted to sign in to the cloud app and add the relevant folders.
 
     :::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
 
@@ -100,7 +100,7 @@ To create a new file policy, follow this procedure:
 
 ## File policy best practices
 
-1. Avoid resetting the file policy using the **Reset results and apply actions again** checkbox in production environments unless it's absolutely necessary. Doing so initiates a full scan of all files covered by the policy, which can negatively impact performance.
+1. Avoid resetting the file policy using the **Reset results and apply actions again** checkbox in production environments unless it's necessary. Doing so initiates a full scan of all files covered by the policy, which can negatively affect performance.
 
 1. When applying labels to files in a specific parent folder **and** its subfolders, use the **Apply to** -> **Selected folders** option. Then add each of the parent folders.
 
@@ -124,7 +124,7 @@ Each policy is composed of the following parts:
 
 * **Content inspection** – Enable you to narrow down the policy, based on DLP engine results. You can include a custom expression or a preset expression. Exclusions can be set and you can choose the number of matches. You can also use anonymization to mask the username.
 
-* **Actions** – The policy provides a set of governance actions that can be automatically applied when violations are found.  These actions are divided into collaboration actions, security actions, and investigation actions.
+* **Actions** – The policy provides a set of governance actions that can be automatically applied when violations are found. These actions are divided into collaboration actions, security actions, and investigation actions.
 
 * **Extensions** - Content inspection can be performed via 3rd-party engines for improved DLP or anti-malware capabilities.
 
@@ -148,7 +148,7 @@ You can go to the Policy center to review file policy violations.
 
 ## File filters 
 
-File filters allow you to apply specific criteria to your file policies, focusing on files that meet conditions such as file type, access level, and sharing status. This includes file types such as PDF, Office files, RTF, HTML, and code files.
+File filters allow you to apply specific criteria to your file policies and focus on files that meet conditions such as file type, access level, and share status. This includes file types such as PDF, Office files, RTF, HTML, and code files.
 
 Below is a list of the file filters that can be applied:
 
@@ -167,7 +167,7 @@ Below is a list of the file filters that can be applied:
 > [!NOTE]
 > Files shared into your connected storage apps by external users are handled as follows by Defender for Cloud Apps:
 > - **OneDrive:** OneDrive assigns an internal user as the owner of any file placed into your OneDrive by an external user. Because these files are then considered owned by your organization, Defender for Cloud Apps scans these files and applies policies as it does to any other file in your OneDrive.
-> - **Google Drive:** Google Drive considers these as being owned by the external user, and because of legal restrictions on files and data that your organization doesn't own, Defender for Cloud Apps doesn't have access to these files.
+> - **Google Drive:** Google Drive considers these files owned by the external user. Due to legal restrictions on files and data that your organization doesn't own, Defender for Cloud Apps doesn't have access to these files.
 > - **Box:** Because Box considers externally owned files to be private information, Box Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
 > - **Dropbox:** Because Dropbox considers externally owned files to be private information, Dropbox Global Admins can't see the content of the files. For this reason, Defender for Cloud Apps doesn't have access to these files.
 
@@ -178,7 +178,7 @@ Below is a list of the file filters that can be applied:
 * **Any from domain** – If any user from this domain has direct access to the file.
 > [!NOTE]
 > - This filter doesn't support files that were shared with a group, only with specific users.
-> - For SharePoint and OneDrive, the filter doesn't support files shared with a specific user through a shared link.
+> - This filter doesn't support files shared with a specific user through a shared link for SharePoint and OneDrive.
 
   - **Entire organization** – If the entire organization has access to the file.
 
@@ -191,9 +191,7 @@ Below is a list of the file filters that can be applied:
 
 - **Created** – File creation time. The filter supports before/after dates and a date range.
 
-- **Extension** – Focus on specific file extensions. For example, all files that are executables (*.exe). This filter is case sensitive.
-> - Use the OR clause to apply the filter on more than a single capitalization variation.
-
+- **Extension** – Focus on specific file extensions. For example, all files that are executables (*.exe). This filter is case sensitive. Use the OR clause to apply the filter on more than a single capitalization variation.
 
 - **File ID** – Search for specific file IDs. File ID is an advanced feature that allows you to track certain high-value files without a dependency on owner, location, or name.
 
@@ -229,7 +227,7 @@ Labels include:
 
 - **Matched policy** - Files that are matched by an active Defender for Cloud Apps policy.
 
-- **MIME type** – File MIME type check. It accepts free text.
+- **MIME type** – File Multipurpose Internet Mail Extensions (MIME) type check. It accepts free text.
 
 - **Owner** -Include/exclude specific file owners. For example, track all files shared by *rogue_employee_#100*.
 
@@ -238,12 +236,12 @@ Labels include:
 - **Parent folder** – Include or exclude a specific folder (doesn't apply to subfolders). For example, all publicly shared files except for files in this folder.
 
   > [!NOTE]
-  > Defender for Cloud Apps only detects new SharePoint and OneDrive folders after some file activity has been performed in them.
+  > Defender for Cloud Apps only detects new SharePoint and OneDrive folders after some file activity occurs in them.
 - **Quarantined** – If the file quarantined by the service. For example, show me all files that are quarantined.
 
 ## Authorizing files
 
-After Defender for Cloud Apps has identified files as posing a malware or DLP risk, we recommend you investigate the files. If you determine the files are safe, you can authorize them. Authorizing a file removes it from the malware detection report and suppresses future matches on this file.
+After Defender for Cloud Apps identifies files as posing a malware or DLP risk, we recommend you investigate the files. If you determine the files are safe, you can authorize them. Authorizing a file removes it from the malware detection report and suppresses future matches on this file.
 
 ### To authorize files
 
@@ -252,9 +250,11 @@ After Defender for Cloud Apps has identified files as posing a malware or DLP ri
 
     > [!TIP]
     > You can filter the list of policies by type. The following table lists, per risk type, which filter type to use:
-    > |Risk type  |Filter type  |
-    >|DLP |File policy|
-    >|Malware      | Malware detection policy |
+    >
+    > | Risk type | Filter type |
+    > | --- | --- |
+    > | DLP | File policy |
+    > | Malware | Malware detection policy |
    
 1. In the list of matched files, on the row in which the file under investigation appears, select the ✓ to **Authorize**.
 
