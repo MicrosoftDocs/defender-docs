@@ -43,7 +43,7 @@ The investigation page includes information across your devices, email, and coll
 You can open the investigation details view by using one of the following methods:
 
 - [Select an item in the Action center](#select-an-item-in-the-action-center)
-- [Select an investigation from an incident details page](#open-an-investigation-from-an-incident-details-page)
+- [Select an investigation from an incident details page](#open-an-investigation-from-an-incident-page)
 
 ### Select an item in the Action center
 
