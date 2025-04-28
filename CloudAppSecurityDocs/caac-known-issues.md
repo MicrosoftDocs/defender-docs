@@ -56,7 +56,7 @@ Some applications utilize non-interactive access tokens to facilitate seamless r
 
 ## IPv6 limitations for sessions served by reverse proxy and Edge in-browser protection
 
-Access and session policies support IPv4 only. If a request is made over IPv6, IP-based policy rules are not supported. This limitation applies to both reverse proxy and Edge in-browser protection.
+Access and session policies support IPv4 only. If a request is made over IPv6, IP-based policy rules are not applied. This limitation applies when using both reverse proxy and Edge in-browser protection.
 
 ## Limitations for sessions that the reverse proxy serves
 
