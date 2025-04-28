@@ -18,7 +18,7 @@ Identity security is the practice of protecting the digital identities of indivi
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/) 
 1. From the Exposure management section on the navigation bar, select **Exposure insights** **>** **Initiatives** to open the Identity Security page.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page" lightbox="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png":::
 
 ## Review security metrics
 
@@ -28,7 +28,7 @@ Metrics can be associated with one or more initiatives.
 On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
 We recommend that you prioritize metrics with the highest impact on Initiative Score level. This composite measure considers both the weight value of each recommendation and the percentage of noncompliant recommendations.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page" lightbox="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png":::
 
 
 |Metric property |Description  |
@@ -49,7 +49,7 @@ We recommend that you prioritize metrics with the highest impact on Initiative S
 
  The Security recommendations tab displays a list of prioritized remediation actions related to your identity security posture. Each recommendation is evaluated for compliance and mapped to its corresponding risk impact, workload, and domain. This view helps you triage and take action based on urgency and business relevance.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page":::
+:::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page" lightbox="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png":::
 
 Sort the recommendations by any of the headings or filter them based on your task needs. 
 
@@ -70,9 +70,11 @@ Security Exposure Management categorizes recommendations by compliance status, a
 - **Compliant**: Indicates that the recommendation was implemented successfully.
 - **Not complaint**: Indicates that the recommendation wasn't fixed.
 
-## Set target scores
+## Set target score
 
 Set a customized target score for this initiative, taking your organization’s unique set of circumstances, priorities, and risk appetite into account.
+
+:::image type="content" source="media/identity-security-initiative/set-target-score.png" alt-text="Screenshot showing the set target score button" lightbox="media/identity-security-initiative/set-target-score.png":::
 
 ## Related content
 
