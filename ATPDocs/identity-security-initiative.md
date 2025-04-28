@@ -9,8 +9,6 @@ ms.date: 04/05/2025
 
 Identity security is the practice of protecting the digital identities of individuals and organizations. This includes protecting passwords, usernames, and other credentials that can be used to access sensitive data or systems. Identity security is essential for protecting against a wide range of cyber threats, including phishing, malware, and data breaches.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
-
 ## Prerequisites
 
 - Your organization must have a Microsoft Defender for Identity license.
@@ -19,6 +17,9 @@ Identity security is the practice of protecting the digital identities of indivi
 ## View Identity Security Initiatives
 1. Navigate to [Microsoft Defender portal](https://security.microsoft.com/) 
 1. From the Exposure management section on the navigation bar, select Exposure insights **>** Initiatives to open the Identity Security page.
+
+
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
 
 ## Review security metrics
 
