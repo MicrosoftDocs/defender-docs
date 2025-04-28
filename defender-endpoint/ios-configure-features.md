@@ -318,10 +318,10 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 
 > [!NOTE]
 > Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS. 
+> > IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
+> > For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 > 
-> IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
-> 
-> For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
+> MDE portal Timeline doesn't display the URL for Custom URL Indicator Blocks for unsupervised devices, Instead it marks hidden for privacy.
 
 ## Configure vulnerability assessment of apps
 
