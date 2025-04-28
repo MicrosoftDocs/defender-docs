@@ -45,7 +45,7 @@ GitHub connectors in Defender for Cloud will be updated to include write permiss
 
 1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
 
-1. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
+2. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
 
 Note: Existing connectors will continue to work without the new functionality if the above action is not taken.
 
