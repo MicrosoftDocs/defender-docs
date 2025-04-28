@@ -4,7 +4,7 @@ description: Learn how to connect Mend.io with Microsoft Defender for Cloud to e
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 04/24/2025
+ms.date: 04/28/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided by Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
 ---
