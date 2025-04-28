@@ -31,10 +31,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|April 30| Change| [Updated GitHub Application Permissions](#github-application-permissions-update)|
 | April 28 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
 | April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
+
+### GitHub Application Permissions Update
+
+April 30, 2025
+
+GitHub connectors in Defender for Cloud will be updated to include write permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities. Permissions can be granted in two different ways: 
+
+1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
+
+2. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
+
+Note: Existing connectors will continue to work without the new functionality if the above action is not taken.
 
 ### Update to Defender for SQL servers on Machines plan
 
