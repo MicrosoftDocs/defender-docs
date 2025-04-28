@@ -4,7 +4,7 @@ description: Learn how to update your SQL Servers on machine configuration acros
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/27/2025
+ms.date: 04/28/2025
 #customer intent: As a security administrator, I want to update the Defender for SQL servers on Machines plan so that I can ensure my SQL servers in various environments have the latest configuration.
 ---
 
@@ -22,7 +22,7 @@ If automatic registration is disabled, you must manually register each SQL serve
 Existing customers must follow the instructions on this page to update the configuration to enable Auto registration through the SQL extension.
 
 > [!IMPORTANT]
-> The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. for more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
+> The Defender for SQL servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL servers on Machines plan transition](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Update the plan on multiple subscriptions
 
@@ -30,7 +30,7 @@ Existing customers must follow the instructions on this page to update the confi
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. On the Overview page, select **[Update the configuration in Defender for SQL Servers on Machines plan for multiple subscriptions](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_AzureDefenderForData/vNextUpgradeContextBlade)**.
+1. On the Overview page, select **[Update the configuration in Defender for SQL Servers on Machines plan for multiple subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Security_AzureDefenderForData/vNextUpgradeContextBlade)**.
 
 1. Select all the relevant subscriptions.
 

@@ -4,7 +4,7 @@ description: Learn about determining multicloud dependencies when planning multi
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.date: 12/13/2023
+ms.date: 04/28/2025
 ---
 
 # Determine multicloud dependencies
@@ -70,7 +70,7 @@ Defender for Servers offers two different plans:
     - Providing [antivirus](/microsoft-365/security/defender-endpoint/next-generation-protection) capabilities.
     - Threat management, including [threat hunting](/microsoft-365/security/defender-endpoint/advanced-hunting-overview), [detection](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [analytics](/microsoft-365/security/defender-endpoint/threat-analytics), and [automated investigation and response](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response).
   - **Provisioning:** Automatic provisioning of the Defender for Endpoint sensor on every supported machine that's connected to Defender for Cloud.
-  - **Licensing:** Charges Defender for Endpoint licenses per hour instead of per seat, lowering costs by protecting virtual machines only when they are in use.
+  - **Licensing:** Charges Defender for Endpoint licenses per hour instead of per device, lowering costs by protecting virtual machines only when they are in use.
 - **Plan 2:** Includes all the components of Plan 1 along with additional capabilities such as File Integrity Monitoring (FIM), Just-in-time (JIT) VM access, and more.
 
     Review the [features of each plan](./defender-for-servers-introduction.md) before onboarding to Defender for Servers.
