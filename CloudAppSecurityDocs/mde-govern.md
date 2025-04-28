@@ -121,6 +121,7 @@ To block an app, do the following steps:
 > - To remove a selected scoping profile from an unsanctioned app, remove the unsanctioned tag and then tag the app again with the required scoped profile.
 > - It can take up to two hours for app domains to propagate and be updated in the endpoint devices once they're marked with the relevant tag or/and scoping.
 > - When an app is tagged as *Monitored*, the option to apply a scoped profile shows only if the built-in *Win10 Endpoint Users* data source has consistently recieved data during the past 30 days.
+> - Device groups in Microsoft Defender for Business(MDB) are managed differently. Due to this- No device groups will appear in MDA device groups for customers with MDB license.
 
 ## Educate users when accessing risky apps
 
