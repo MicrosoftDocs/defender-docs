@@ -30,15 +30,15 @@ This article explains the benefits and procedures to connect Mend.io to Defender
 
 - Have an account with [Mend.io](https://www.mend.io/).
 
-- Obtain an API key from Mend.io with read-only permissions and an expiration date set to 180 days.
+- [Obtain an Activation key](https://api-docs.mend.io/1.4/issue-tracker-api#getintegrationactivationtoken) from Mend.io. 
 
 - You must have the appropriate role to:
 
     | Task | Role |
     |--|--|
-    | Create DevOps connectors | Security Admin or Contributor assigned at the subscription level through Azure role-based-access control |
-    | Create the Mend.io connector | Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra. Permissions can be granted through Privileged Identity Management |
-    | View reachability analysis findings | Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control on the subscription that hosts the DevOps connector |
+    | Create DevOps connectors | Security Admin or Contributor assigned at the subscription level through Azure role-based-access control. |
+    | Create the Mend.io connector | Security Administrator or Global Administrator assigned at the tenant level through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure). |
+    | View reachability analysis findings | Security Admin or Security Reader assigned at the subscription level through Azure role-based-access control on the subscription that hosts the DevOps connector. |
 
 - Connect only one Mend.io connector per tenant.
 
@@ -63,7 +63,9 @@ To connect your Mend.io account to Defender for Cloud:
     > [!NOTE] 
     > The option to add the Mend.io integration isn't available if you don't have the appropriate permissions, or if you already have an existing connector to Mend.io.
 
-1. Enter a Mend.io namespace, API key ID, and API secret.
+1. Enter a Mend.io activation key.
+
+    :::image type="content" source="media/connect-mend-io/activation-key.png" alt-text="Screenshot that shows where to add the activation key." lightbox="media/connect-mend-io/activation-key.png":::
 
 1. Select **Create**.
 
