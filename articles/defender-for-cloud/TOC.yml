@@ -316,8 +316,6 @@
       - name: Internet exposure analysis
         displayName: internet, exposure, analysis
         href: internet-exposure-analysis.md
-      - name: Supported resource types for multicloud in Foundational CSPM
-        href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
         items:
         - name: Overview
@@ -935,10 +933,12 @@
         items:
           - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
-          - name: Vulnerability assessments for Docker Hub
-            href: agentless-vulnerability-assessment-docker-hub.md
-          - name: Vulnerability assessments for JFrog Artifactory
-            href: agentless-vulnerability-assessment-jfrog-artifactory.md
+          - name: Vulnerability assessments for external registries
+            items:
+            - name: Vulnerability assessments for Docker Hub
+              href: agentless-vulnerability-assessment-docker-hub.md
+            - name: Vulnerability assessments for JFrog Artifactory
+              href: agentless-vulnerability-assessment-jfrog-artifactory.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)
@@ -965,6 +965,18 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
+      - name: Container software supply chain (CSSC) security
+        items:
+          - name: Overview
+            href: containers-software-supply-chain-security-introduction.md
+          - name: Securing a container image
+            href: secure-container-image.md
+          - name: Gated deployment
+            items:
+              - name: Overview
+                href: gated-deployment-introduction.md
+              - name: Enable gated deployment
+                href: enable-gated-deployment.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
         href: cluster-security-dashboard.md
@@ -1006,7 +1018,7 @@
         - name: Advanced Threat Protection for Azure SQL Database
           displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
           href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-      - name: Defender for SQL Server on Machines
+      - name: Defender for SQL Servers on Machines
         items:
         - name: Overview
           displayName: SQL, SQL servers, defender, machines
@@ -1014,18 +1026,35 @@
         - name: Enable Defender for SQL Servers on Machines
           displayName: hybrid, arc, Azure Defender
           href: defender-for-sql-usage.md
+        - name: Update Defender for SQL Servers on Machines plan configuration
+          displayName: SQL, SQL servers, defender, machines
+          href: update-sql-machine-configuration.md
         - name: Verify SQL machine protection
           displayName: SQL, SQL servers, defender, machines
           href: verify-machine-protection.md
-        - name: Troubleshoot SQL machine protection
+        - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
-        - name: Enable Defender for SQL servers on machines at scale
-          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-          href: enable-defender-sql-at-scale.md
         - name: Migrate to AMA
           displayName: vulnerability, assessment, findings, migrate
-          href: defender-for-sql-autoprovisioning.md  
+          href: defender-for-sql-autoprovisioning.md
+        - name: Disable Defender for SQL Servers on Machines
+          displayName: SQL, SQL servers, defender, machines, disable
+          href: disable-sql-on-machines.md
+        - name: Government clouds
+          items:
+          - name: Enable Defender for SQL Servers on Machines government
+            displayName: hybrid, arc, Azure Defender
+            href: defender-for-sql-usage-gov.md
+          - name: Verify SQL machine protection government
+            displayName: SQL, SQL servers, defender, machines
+            href: verify-machine-protection-gov.md
+          - name: Troubleshoot SQL machine protection configuration government
+            displayName: Troubleshoot guide, SQL, servers, machines
+            href: troubleshoot-sql-machines-guide-gov.md
+          - name: Enable Defender for SQL servers on machines at scale
+            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+            href: enable-defender-sql-at-scale.md
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview
@@ -1289,6 +1318,8 @@
       href: defender-for-cloud-glossary.md
     - name: Defender for Cloud cost calculator
       href: cost-calculator.md
+    - name: Chargeback process using Azure Cost Analysis
+      href: chargeback.md
     - name: Optimize costs with prepurchase plan
       href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field

@@ -16,7 +16,7 @@ Defender for Containers assists you with four core domains of container security
 
 - [**Security posture management**](#security-posture-management) runs continuous monitoring of cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover cloud resources, provide comprehensive inventory capabilities, detect misconfigurations with mitigation guidelines, provide contextual risk assessment, and empowers users to perform enhanced risk hunting capabilities through the Defender for Cloud security explorer.
 
-- [**Vulnerability assessment**](#vulnerability-assessment) -  performs agentless vulnerability assessment of [container registry images, running containers, and supported K8s nodes](support-matrix-defender-for-containers.md) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights.
+- [**Vulnerability assessment**](#vulnerability-assessment) -  performs agentless vulnerability assessment of [container registry images, running containers, and supported K8s nodes](support-matrix-defender-for-containers.md) with remediation guidelines, zero configuration, daily re-scans, coverage for OS and language packages, and exploitability insights. The vulnerability findings artifact is signed with a Microsoft certificate for integrity and authenticity and is associated with the container image in the registry for validation needs.
 
 - [**Run-time threat protection**](#run-time-protection-for-kubernetes-nodes-and-clusters) - a rich threat detection suite for Kubernetes clusters, nodes, and workloads, powered by Microsoft leading threat intelligence, provides mapping to MITRE ATT&CK framework for easy understanding of risk and relevant context, and automated response. Security operators can also investigate and respond to threats to Kubernetes services through the [Microsoft Defender XDR portal](/defender-xdr/investigate-respond-container-threats).
 
@@ -42,7 +42,7 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 - **Agentless vulnerability assessment** - provides vulnerability assessment for [cluster nodes](kubernetes-nodes-va.md) and for [all container images](agentless-vulnerability-assessment-azure.md), including recommendations for registry and runtime, quick scans of new images, daily refresh of results, exploitability insights, and more. Vulnerability information is added to the security graph for contextual risk assessment and calculation of attack paths, and hunting capabilities.
 
-- **Comprehensive inventory capabilities**  - enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query-with-the-cloud-security-explorer) to easily monitor and manage your assets.
+- **Comprehensive inventory capabilities**  - enables you to explore resources, pods, services, repositories, images, and configurations through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets.
 
 - **[Enhanced risk-hunting](how-to-manage-cloud-security-explorer.md)** - enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md)
 

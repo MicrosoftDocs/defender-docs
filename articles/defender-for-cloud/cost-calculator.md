@@ -2,7 +2,7 @@
 title: Estimate costs with the Defender for Cloud cost calculator
 description: Discover how to use the Microsoft Defender for Cloud Cost Calculator to estimate your cloud security expenses. 
 ms.topic: how-to
-ms.date: 01/08/2025
+ms.date: 03/19/2025
 #customer intent: Customers will use this document to learn how to effectively estimate and manage their Microsoft Defender for Cloud costs. They will understand how to access and use the cost calculator, configure different plans and environments, add assets, and can adjust their cost estimates to optimize their cloud security expenses.
 ---
 
@@ -12,7 +12,7 @@ The Microsoft Defender for Cloud cost calculator is a helpful tool for estimatin
   
 ## Access the cost calculator
   
-To begin using the Defender for Cloud Cost Calculator, navigate to the **Environment Settings** section of Microsoft Defender for Cloud. Select the **Cost Calculator** button located in the upper section of the interface.  
+  To use the Defender for Cloud Cost Calculator, go to the **Environment Settings** section of Microsoft Defender for Cloud. Select the **Cost Calculator** button located in the upper section of the interface.
 
 :::image type="content" source="media/cost-calculator/select-cost-calculator.png" alt-text="Screenshot of cost calculator button in Environment Settings." lightbox="media/cost-calculator/select-cost-calculator.png":::
   
@@ -78,7 +78,7 @@ In most cases, the **Reader** role *at the subscription scope* is sufficient. Th
 
 **Summary**:
 
-Granting your user or service principal the **Reader** role (or any higher-privileged role) on each subscription you wish to query ensures the script can:
+Granting your user or service principal the **Reader** role (or any higher-privileged role) on each subscription you want to query ensures the script can:
 
 - Retrieve the list of subscriptions.
 - Enumerate and read all relevant resource information (via REST or Az PowerShell).
@@ -206,7 +206,7 @@ This read-level access allows enumerating resource counts and gathering metadata
 
 1. Choose a name for the custom environment.
 1. Specify the plans and the number of billable assets for each plan.
-1. Select the types of assets you wish to include in the cost calculation.  
+1. Select the types of assets you want to include in the cost calculation.  
 1. The calculator estimates costs based on your inputs and any existing discounts.
 
 > [!NOTE]
@@ -218,7 +218,7 @@ This read-level access allows enumerating resource counts and gathering metadata
   
 After generating the report, you can adjust the plans and the number of billable assets:  
   
-1. Choose the environment you wish to modify by selecting the edit (pencil) icon.
+1. Choose the environment you want to modify by selecting the edit (pencil) icon.
 1. A configuration page appears, enabling you to adjust plans, the number of billable assets, and the average monthly hours.  
 1. Select the **Recalculate** button to update the cost estimate.  
   
@@ -226,8 +226,8 @@ After generating the report, you can adjust the plans and the number of billable
   
 Once you're satisfied with the report, you can export it as a CSV file:  
   
-1. Select the **Export to CSV** button located at the bottom of the **Summary** panel on the right.  
-1. The cost information is downloaded as a CSV file.  
+1. Select the **Export to CSV** button located at the bottom of the **Summary** panel on the right.
+1. The cost information is downloaded as a CSV file.
 
 ## Frequently asked questions
   
@@ -237,7 +237,7 @@ The cost calculator is a tool designed to simplify the process of estimating cos
   
 ### How does the cost calculator work?  
   
-The calculator allows you to select the environments and plans you wish to enable. It then performs a discovery process to automatically populate the number of billable units for each plan per environment. You also can manually adjust the unit quantities and discount levels.  
+The calculator allows you to select the environments and plans you want to enable. It then performs a discovery process to automatically populate the number of billable units for each plan per environment. You also can manually adjust the unit quantities and discount levels.  
   
 ### What is the discovery process?  
   

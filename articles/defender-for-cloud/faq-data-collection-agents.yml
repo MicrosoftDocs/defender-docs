@@ -238,7 +238,7 @@ sections:
       - question: |
           Where are the Disk snapshots copied?
         answer: |
-          AgentlessThe analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
+          The analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
           
           The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example - a snapshot of an EC2 instance in US West are analyzed at the same region, without being copied to another region or cloud).
           

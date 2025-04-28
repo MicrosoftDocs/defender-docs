@@ -57,4 +57,4 @@ To integrate Defender for Cloud's findings into ServiceNow's Configuration Compl
 
 - [Connect ServiceNow's ITSM module to Defender for Cloud](connect-servicenow.md)
 - [Create a ticket in Defender for Cloud](create-ticket-servicenow.md)
-- [Assign an owner to an recommendation or severity level](integration-servicenow.md)
+

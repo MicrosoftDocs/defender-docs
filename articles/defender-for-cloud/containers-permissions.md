@@ -130,7 +130,11 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
   - resourcemanager.organizations.get
   - resourcemanager.organizations.getIamPolicy
   - storage.buckets.getIamPolicy
-
+    
+- MDCGkeContainerInventoryCollectionRole
+  - container.nodes.proxy
+  - container.secrets.list
+  
 ## Permissions granted in cloud environments
 
 Onboarding AWS and GCP cloud environments to Defender for Cloud through the Azure portal creates a connector to your desired cloud environment, and generates a script for you to run in the cloud environment to create the required roles and permissions. The script is created based on the settings you choose when going through the onboarding process.

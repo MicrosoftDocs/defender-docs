@@ -2,7 +2,7 @@
 title: Enable threat protection for AI workloads (preview)
 description: Learn how to enable threat protection for AI workloads on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 03/11/2025
+ms.date: 03/18/2025
 ---
 
 # Enable threat protection for AI workloads (preview)
@@ -54,6 +54,8 @@ User prompt evidence consists of prompts and model responses. Both are considere
 1. Select the relevant Azure subscription.
 
 1. Locate AI workloads and select **Settings**.
+
+    :::image type="content" source="media/ai-onboarding/select-settings.png" alt-text="Screenshot that shows where the settings button is located on the Plans screen." lightbox="media/ai-onboarding/select-settings.png":::
 
 1. Toggle Enable user prompt evidence to **On**.
 

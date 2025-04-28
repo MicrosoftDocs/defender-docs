@@ -2,7 +2,7 @@
 title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 03/13/2025
+ms.date: 04/28/2025
 author: dcurwin
 ms.author: dacurwin
 
@@ -75,8 +75,10 @@ direct onboarding combined with Log Analytics workspace-based onboarding), Defen
   |Operating System|Minimum agent version|
   | -------- | -------- |
   |Windows 2019 and later | 10.8555|
-  |Windows Server 2016 or Windows 2012 R2 <br/>([modern, unified solution](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution))|10.8560|
+  |Windows Server 2016 or Windows 2012 R2 <br/>([modern, unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))|10.8560|
   |Linux Server|30.101.23052.009|
+  |Linux (AMD64)|30.101.23052.009|
+  |Linux (ARM64)|30.101.25022.004|
 
 ## Next steps
 
