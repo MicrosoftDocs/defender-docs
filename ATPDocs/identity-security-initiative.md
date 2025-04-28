@@ -15,9 +15,8 @@ Identity security is the practice of protecting the digital identities of indivi
 - [Review prerequisites and permissions needed](/security-exposure-management/prerequisites) for working with Security Exposure Management.
 
 ## View Identity Security Initiatives
-1. Navigate to [Microsoft Defender portal](https://security.microsoft.com/) 
-1. From the Exposure management section on the navigation bar, select Exposure insights **>** Initiatives to open the Identity Security page.
-
+1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/) 
+1. From the Exposure management section on the navigation bar, select **Exposure insights** **>** **Initiatives** to open the Identity Security page.
 
 :::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page":::
 
@@ -27,7 +26,7 @@ Metrics in security initiatives help you to measure exposure risk for different 
 Metrics can be associated with one or more initiatives.
 
 On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
-We recommend that you prioritize metrics with the highest impact on Initiative Score level. This composite measure considers both the weight value of each recommendation and the percentage of non-compliant recommendations.
+We recommend that you prioritize metrics with the highest impact on Initiative Score level. This composite measure considers both the weight value of each recommendation and the percentage of noncompliant recommendations.
 
 :::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page":::
 
@@ -44,7 +43,7 @@ We recommend that you prioritize metrics with the highest impact on Initiative S
 |**Last updated** | Shows a timestamp of when the metric was last updated.
 
 > [!NOTE]
-> The Affected assets experience is not fully supported during the Preview phase.
+> The Affected assets experience isn't fully supported during the Preview phase.
 
 ## View Identity security recommendations 
 
