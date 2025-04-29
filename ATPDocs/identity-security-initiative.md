@@ -72,7 +72,9 @@ Security Exposure Management categorizes recommendations by compliance status, a
 
 ## Set target score
 
-Set a customized target score for this initiative, taking your organization’s unique set of circumstances, priorities, and risk appetite into account.
+You can set a customized target score for the initiative, taking your organization’s unique set of circumstances, priorities, and risk appetite into account.
+
+To set a target store, select the initiative, and then select **Set target score** from the top of the initiative pane.
 
 :::image type="content" source="media/identity-security-initiative/set-target-score.png" alt-text="Screenshot showing the set target score button" lightbox="media/identity-security-initiative/set-target-score.png":::
 
