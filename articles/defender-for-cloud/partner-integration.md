@@ -2,7 +2,7 @@
 title: Security solutions integrations (legacy)
 description: Learn about how Microsoft Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 10/01/2024
+ms.date: 04/28/2025
 #customer intent: As a reader, I want to learn how security solutions integrate into Defender for Cloud.
 ---
 

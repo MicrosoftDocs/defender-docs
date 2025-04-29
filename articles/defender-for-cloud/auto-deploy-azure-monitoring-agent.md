@@ -12,15 +12,15 @@ ms.custom: template-how-to
 
 Microsoft Defender for Cloud uses the Azure Monitor Agent (AMA) to:
 
-- Protect databases in the Defender for SQL Server on Machines plan.
+- Protect databases in the Defender for SQL Servers on Machines plan.
 - Take advantage of the [free data ingestion](data-ingestion-benefit.md) benefit provided in Defender for Servers Plan 2.
 
-## AMA in Defender for SQL Server on Machines
+## AMA in Defender for SQL Servers on Machines
 
 Defender for SQL Server on Machine uses the AMA to collect machine information for posture assessment, in order to detect misconfigurations and proactively prevent attacks.
 
 - The AMA replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) that was previously used by the plan.
-- The MMA is deprecated. If you're using the MMA, [follow the migration steps](defender-for-sql-autoprovisioning.md) to automatically provision the AMA for Defender for SQL Server on Machines.
+- The MMA is deprecated. If you're using the MMA, [follow the migration steps](defender-for-sql-autoprovisioning.md) to automatically provision the AMA for Defender for SQL Servers on Machines.
 
 Autoprovisioning for the AMA is turned on by default when you enable the database plan. You can turn automatic provisioning off and on as needed.
 
@@ -28,7 +28,7 @@ The AMA is implemented as a virtual machine extension, but you can deploy it usi
 
 ## Log Analytics workspace
 
-The AMA requires a Log Analytics workspace solution. These solutions are automatically installed when you turn on the Defender for SQL Server on Machines plan with automatic AMA provisioning.  [Learn more](defender-for-sql-usage.md)
+The AMA requires a Log Analytics workspace solution. These solutions are automatically installed when you turn on the Defender for SQL Servers on Machines plan with automatic AMA provisioning.  [Learn more](defender-for-sql-usage.md)
 
 The [Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/insights/solutions) for the data that you're collecting are:
 
