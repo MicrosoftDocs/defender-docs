@@ -32,9 +32,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 | -------- | -------- | -------- |
 |--|--|--|
-| -------- | -------- | -------- |
+| May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
 | May 1 | GA | [Microsoft Security Copilot is now Generally Available in Defender for Cloud](#microsoft-security-copilot-is-now-generally-available-in-defender-for-cloud) |
 | May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
+
+### General Availability for Defender for AI Services
+
+May 1, 2025
+
+Defender for Cloud now supports runtime protection for Azure AI services (previously called threat protection for AI workloads).
+
+Protection for Azure AI services covers threats specific to AI services and applications, such as jailbreak, wallet abuse, data exposure, suspicious access patterns, and more. The detections use signals from Microsoft Threat Intelligence and Azure AI Prompt Shields, and apply machine learning and AI to secure your AI services.
+
+Learn more about [Defender for AI Services](ai-threat-protection.md).
 
 ### Microsoft Security Copilot is now Generally Available in Defender for Cloud
 
