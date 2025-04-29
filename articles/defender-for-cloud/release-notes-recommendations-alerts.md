@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 04/02/2025
+ms.date: 04/29/2025
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 

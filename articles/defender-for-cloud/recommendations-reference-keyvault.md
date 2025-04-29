@@ -3,7 +3,7 @@ title: Reference table for all Keyvault security recommendations in Microsoft De
 description: This article lists all Microsoft Defender for Cloud Keyvault security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 04/02/2025
+ms.date: 04/29/2025
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -21,6 +21,8 @@ To learn about actions that you can take in response to these recommendations, s
 >
 > For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
 > Limiting policies to only foundational recommendations simplifies policy management.
+
+Read this blog to learn how to [protect Your Azure Key Vault and why Azure role based access control is critical for security](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/protecting-your-azure-key-vault-why-azure-rbac-is-critical-for-security/4407848).
 
 ## Azure Keyvault recommendations
 
