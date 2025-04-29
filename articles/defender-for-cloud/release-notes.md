@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/27/2025
+ms.date: 04/29/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,12 +31,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| April 28 | Preview | [AI Posture Management in GCP Vertex AI (Preview)](#ai-posture-management-in-gcp-vertex-ai-preview) |
+| April 29 | Preview | [AI Posture Management in GCP Vertex AI (Preview)](#ai-posture-management-in-gcp-vertex-ai-preview) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
 
 ### AI Posture Management in GCP Vertex AI (Preview)
 
-April 28, 2025
+April 29, 2025
 
 Defender for Cloud's AI security posture management features now support AI workloads in Google Cloud Platform (GCP) Vertex AI (Preview).
 
