@@ -1010,5 +1010,10 @@
       "redirect_url": "/defender-cloud-apps/troubleshooting-api-connectors-errors",
       "redirect_document_id": true
     }
+    {
+      "source_path": "CloudAppSecurityDocs/connector-platform.md",
+      "redirect_url": "defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps",
+      "redirect_document_id": true
+    },
   ]
 }
