@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 04/23/2025
+ms.date: 04/29/2025
 ms.reviewer: pauhijbr, ksarens
 manager: deniseb
 ms.subservice: ngp
@@ -45,7 +45,6 @@ Set-MpPreference -ScanScheduleQuickScanTime
 > The time value is represented as the number of minutes past midnights (00:00 or 12:00 a.m.), For example, 120 is equivalent to 2:00 AM.  The schedule is based on local time on the device where the scan is executing. 
 
 For example, to set a daily quick scan run on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (For example, laptops and/or tablets).
-
 
 ```powershell
 Set-MpPreference -ScanScheduleQuickScanTime 720
@@ -96,10 +95,9 @@ The default value is 8, never. If you specify a value of 8 or don't specify a va
 
 -ScanScheduleOffset
 
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
+This setting allows you to configure the number of minutes after midnight to perform a scheduled scan. The local time on the endpoint is used to determine when the scan occurs. If you enable this setting, the scheduled scan runs at the specified time. If you disable or don't enable this setting, the scheduled scan will default to running two hours (120 minutes) after midnight.
 
 For example, setting the weekly scheduled scan for a quick scan, that runs every Wednesday at 12:00 PM (lunch time)
-
 
 ```powershell
 Set-MpPreference -ScanParameters 1
@@ -126,8 +124,6 @@ Set-MpPreference -ScanScheduleOffset 720
 |Enable full scan on battery power|Disabled/Not Configured (Default)|Set-MpPreference -EnableFullScanOnBatteryPower `Boolean` <br>For example: Set-MpPreference -EnableFullScanOnBatteryPower $False|
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fschedule-antivirus-scans-powershell.md/main/bcb7536e-34b9-8af7-5381-96c46d108a91/use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
-
-
 
 ## PowerShell cmdlets for scheduling scans to complete remediation
 
