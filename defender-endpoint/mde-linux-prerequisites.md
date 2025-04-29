@@ -68,10 +68,14 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
 
-- Red Hat Enterprise Linux 7.2 or higher 
+- Red Hat Enterprise Linux 7.2 and higher 
+
 - Red Hat Enterprise Linux 8.x 
 - Red Hat Enterprise Linux 9.x 
-- CentOS 7.2 or higher, excluding CentOS Stream 
+- CentOS 7.2 and higher, excluding CentOS Stream 
+
+- CentOS 8.x
+
 - Ubuntu 16.04 LTS 
 - Ubuntu 18.04 LTS 
 - Ubuntu 20.04 LTS 
@@ -80,7 +84,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Debian 9 - 12 
 - SUSE Linux Enterprise Server 12.x 
 - SUSE Linux Enterprise Server 15.x 
-- Oracle Linux 7.2 or higher 
+- Oracle Linux 7.2 and higher 
+
 - Oracle Linux 8.x 
 - Oracle Linux 9.x 
 - Amazon Linux 2 
@@ -173,13 +178,6 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 - The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, and `mde-netfilter`.
 - For RHEL6 the mdatp RPM package requires `policycoreutils`, `libselinux`, and `mde-netfilter`.
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, and `mde-netfilter`.
-
-> [!NOTE]
-> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
-> - The mdatp RPM package requires `audit`, `semanage`.
-> - For DEBIAN, the mdatp package requires `auditd`.
-> - For Mariner, the mdatp package requires `audit`.
 
 The `mde-netfilter` package also has the following package dependencies:
 
