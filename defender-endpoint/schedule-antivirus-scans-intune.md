@@ -31,7 +31,7 @@ ms.subservice: ngp
 
 This article describes how to configure scheduled scans using Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
-Configure antivirus scans using Intune
+## Configure antivirus scans using Intune
 
 In the Intune portal ([https://intune.microsoft.com](https://intune.microsoft.com/)) 
 
@@ -70,11 +70,11 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 |  Description|Setting|
 | -------- | -------- |
 |Scan Parameter |Quick scan (Default) |
-|Schedule Scan Day|Windows Clients: Wednesday <br> hello|
-|Schedule Scan Time|Windows Clients: 1020 <br> hello|
+|Schedule Scan Day|Windows Clients: Wednesday<br>|
+|Schedule Scan Time|Windows Clients: 1020 <br>|
 
 > [!NOTE]
-> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020). And for Windows Servers, on Saturday's at 1:00 AM. (60)
+> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020).
 
 > [!TIP]
 > Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](/defender-endpoint/cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
@@ -90,6 +90,9 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 |Enable Low CPU Priority|Disabled (Default)|
 |Disable Catchup Full Scan|Enabled (Default)|
 |Disable Catchup Quick Scan|Disabled (Default)|
+
+> [!NOTE]
+> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and takes full advantage of the resources available to complete the scan as fast as possible.
 
 ### See also
 
