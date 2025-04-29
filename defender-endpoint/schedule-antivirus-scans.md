@@ -57,6 +57,12 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 
 ## Important points to keep in mind
 
+- You can configure two types of scheduled scans:
+
+    1. **Daily Scan**: Runs once per day and can only be a **quick scan**.
+
+    2. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
+
 - By default, Microsoft Defender Antivirus checks for an update 15 minutes before the time of any scheduled scans. You can [manage the schedule for when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) to override this default.
 
 - If a device is unplugged and running on battery during a scheduled full scan, the scheduled scan stops with event 1002, which states that the scan stopped before completion. Microsoft Defender Antivirus runs a full scan at the next scheduled time.
