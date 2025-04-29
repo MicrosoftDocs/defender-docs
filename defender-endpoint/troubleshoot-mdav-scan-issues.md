@@ -46,7 +46,7 @@ The key settings to be aware of are:
    - **Purpose**: This minimizes performance impact during active use by deferring scans until the system is not in use.
    - **Typical Use Case**: Ideal for environments where user experience is a priority and scans can be delayed without compromising security.
    - **Policy Name**:
-      - **Group Policy**: Not available.
+      - **Group Policy**: Not available.   
       - **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/ScanOnlyIfIdleEnabled`
    - **Default**: True (Enabled)
 
