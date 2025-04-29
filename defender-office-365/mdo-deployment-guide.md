@@ -123,7 +123,7 @@ The previous information and the protection policies that are involved are summa
 |&nbsp;&nbsp;[Outbound spam](outbound-spam-policies-configure.md)|✔||✔|
 |&nbsp;&nbsp;[Connection filtering](connection-filter-policies-configure.md)|✔¹|||
 |**Defender for Office 365 policies**:||||
-|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Advanced phishing thresholds](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
+|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
 |&nbsp;&nbsp;[Safe Links](safe-links-policies-configure.md)|³|✔|✔|
 |&nbsp;&nbsp;[Safe Attachments](safe-attachments-policies-configure.md)|³|✔|✔|
 |**General behavior**||||
