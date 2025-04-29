@@ -85,7 +85,7 @@ Even when the correlation logic indicates that two incidents should be merged, D
 
 - One of the incidents has a status of "Closed". Incidents that are resolved don't get reopened.
 - The source and target incidents are assigned to two different people.
-- The source and target incidents have two different classifications (for example, true positive and false positive).
+- The source and target incidents have two different classifications (for example, true positive and false positive) or two different determinations (the subcategories of classifications).
 - Merging the two incidents would raise the number of entities in the target incident above the allowed maximum.
 - The two incidents contain devices in different [device groups](/defender-endpoint/machine-groups) as defined by the organization. <br>(This condition is not in effect by default; it must be enabled.)
 
@@ -94,12 +94,6 @@ Even when the correlation logic indicates that two incidents should be merged, D
 If two incidents should be merged, but aren't merged for any of the reasons listed in the [previous section](#when-incidents-arent-merged), you can now merge the incidents manually after you fix the underlying reasons.
 
 For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
-
-<!-- This paragraph (what I originally wrote) better describes the Cases feature, doesn't it? 
-
-Over the course of investigating an incident, you might discover that other incidents are related to the same attack story or security event, and that these incidents should be investigated together as a unit. In such a case, you can now merge these incidents together into a single incident. This scenario includes cases where the incidents ought to be merged, but weren't because of the circumstances described previously in [When incidents aren't merged](#when-incidents-arent-merged).
-
--->
 
 Merging incidents together is preferable to unlinking alerts from one incident and linking them to another, because all the incident information (for example, the activity log) is preserved.
 
