@@ -321,7 +321,7 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 > > IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
 > > For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 > 
-> MDE portal Timeline doesn't display the URL for Custom URL Indicator Blocks for unsupervised devices, Instead it marks hidden for privacy.
+> MDE portal Timeline doesn't display the URL for Custom URL Indicator Blocks for unsupervised devices, instead it marks hidden for privacy.
 
 ## Configure vulnerability assessment of apps
 
@@ -374,7 +374,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
    - The privacy approval screen appears only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
-   :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
+   :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen.":::
 
 Once the client versions are deployed to target iOS devices, processing starts. Vulnerabilities found on those devices start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. This time frame is especially true for the entire list of apps to show up in the software inventory.
 
