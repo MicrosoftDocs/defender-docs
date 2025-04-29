@@ -15,20 +15,20 @@ Identity security is the practice of protecting the digital identities of indivi
 - [Review prerequisites and permissions needed](/security-exposure-management/prerequisites) for working with Security Exposure Management.
 
 ## View Identity Security Initiatives
-1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/) 
+1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 1. From the Exposure management section on the navigation bar, select **Exposure insights** **>** **Initiatives** to open the Identity Security page.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page" lightbox="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png":::
+   :::image type="content" source="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png" alt-text="Screenshot showing the Identity security initiative page." lightbox="media/identity-security-initiative/screenshot-of-the-identity-security-initiative-page.png":::
 
 ## Review security metrics
 
 Metrics in security initiatives help you to measure exposure risk for different areas within the initiative. Each metric gathers together one or more recommendations for similar assets.
 Metrics can be associated with one or more initiatives.
 
-On the Metrics tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
+On the **Metrics** tab of an initiative, or in the Metrics section of Exposure Insights, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric.
 We recommend that you prioritize metrics with the highest impact on Initiative Score level. This composite measure considers both the weight value of each recommendation and the percentage of noncompliant recommendations.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page" lightbox="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png":::
+:::image type="content" source="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png" alt-text="Screenshot showing the security metrics page." lightbox="media/identity-security-initiative/screenshot-of-the-security-metrics-page.png":::
 
 
 |Metric property |Description  |
@@ -49,7 +49,7 @@ We recommend that you prioritize metrics with the highest impact on Initiative S
 
  The Security recommendations tab displays a list of prioritized remediation actions related to your identity security posture. Each recommendation is evaluated for compliance and mapped to its corresponding risk impact, workload, and domain. This view helps you triage and take action based on urgency and business relevance.
 
-:::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page" lightbox="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png":::
+:::image type="content" source="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png" alt-text="Showing showing the security recommendations page." lightbox="media/identity-security-initiative/screenshot-showing-the-security-recommendations-page.png":::
 
 Sort the recommendations by any of the headings or filter them based on your task needs. 
 
@@ -76,7 +76,7 @@ You can set a customized target score for the initiative, taking your organizati
 
 To set a target store, select the initiative, and then select **Set target score** from the top of the initiative pane.
 
-:::image type="content" source="media/identity-security-initiative/set-target-score.png" alt-text="Screenshot showing the set target score button" lightbox="media/identity-security-initiative/set-target-score.png":::
+:::image type="content" source="media/identity-security-initiative/set-target-score.png" alt-text="Screenshot showing the set target score button." lightbox="media/identity-security-initiative/set-target-score.png":::
 
 ## Related content
 
