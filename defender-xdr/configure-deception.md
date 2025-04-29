@@ -16,7 +16,7 @@ ms.topic: how-to
 search.appverid: 
 - MOE150
 - MET150
-ms.date: 01/12/2024
+ms.date: 04/25/2025
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn how to configure the deception capability so that I can protect my organization from high-impact attacks that use human-operated lateral movement.

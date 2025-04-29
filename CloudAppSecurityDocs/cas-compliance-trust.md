@@ -21,6 +21,9 @@ Microsoft Defender for Cloud Apps collects information from your configured clou
 - System settings and policies
 - User and group configurations
 
+> [!NOTE]
+> The data collected from the various applications is dependent on the customer-provided data from the various applications and may include personal information.
+
 ## Data storage location
 
 Defender for Cloud Apps operates in the Microsoft Azure data centers in the following geographical regions: 

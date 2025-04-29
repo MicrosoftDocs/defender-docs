@@ -18,7 +18,7 @@ ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/20/2025
+ms.date: 04/25/2025
 appliesto:
   - Microsoft Defender XDR
 ---
