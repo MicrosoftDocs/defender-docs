@@ -34,7 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
 | May 1 | GA | [Microsoft Security Copilot is now Generally Available in Defender for Cloud](#microsoft-security-copilot-is-now-generally-available-in-defender-for-cloud) |
-| May 1 | GA | [Data and AI security dashboard](#data-and-ai-security-dashboard) |
+| May 1 | GA | [General Availability Data and AI security dashboard](#general-availability-data-and-ai-security-dashboard) |
 | May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
 
 ### General Availability for Defender for AI Services
@@ -59,7 +59,9 @@ Security administrators can quickly summarize recommendations, generate remediat
 
 Learn more about [Microsoft Security Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md).
 
-### Data and AI security dashboard
+### General Availability Data and AI security dashboard
+
+MAy 1, 2025
 
 Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in GA. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
 
