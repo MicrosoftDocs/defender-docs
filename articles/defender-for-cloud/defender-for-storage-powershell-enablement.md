@@ -35,7 +35,7 @@ Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "
         "name": "OnUploadMalwareScanning",
             "isEnabled": "True",
         "additionalExtensionProperties": {
-            "CapGBPerMonthPerStorageAccount": "6000"
+            "CapGBPerMonthPerStorageAccount": "10000"
         }
     },
     {
@@ -44,9 +44,9 @@ Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "
     }]'
 ```
 
-If no extension properties are provided for the cmdlet, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 5,000 GB.
+If no extension properties are provided for the cmdlet, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 10,000 GB.
 
-To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to `False` on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties respectively. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
 
@@ -66,7 +66,7 @@ Update-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>
 > [!NOTE]
 > With Defender for Storage enabled at the subscription level, the `-OverrideSubscriptionLevelSetting` parameter is necessary to override the settings at the subscription level. If the override parameter is not used, the extensions will be set according to the subscription level settings, regardless of the parameter values supplied in the cmdlet.
 
-To modify the monthly threshold for malware scanning the storage account, adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data to be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning the storage account, adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data to be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 The malware scan results can be sent to the Event Grid by supplying the Event Grid topic resource ID in the parameter  `-MalwareScanningScanResultsEventGridTopicResourceId "<resourceId>"`.
 
