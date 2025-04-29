@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 03/18/2025
+ms.date: 04/29/2025
 ms.reviewer: pauhijbr, ksarens
 manager: deniseb
 ms.subservice: ngp
@@ -45,7 +45,7 @@ This article describes how to configure scheduled scans using Group Policy. To l
 
 > [!NOTE]
 > When configuring scheduled scans, the setting **Start the scheduled scan only when computer is on but not in use** (which is enabled by default) can affect the expected scheduled time by requiring the machine to be idle first.
-> > For weekly scans, the default behavior on Windows Server and Windows 10 and later, is to scan outside of the automatic maintenance when the machine is idle. To change this behavior, modify the settings by disabling "Start the scheduled scan only when computer is on but not in use" (**ScanOnlyIfIdle**), and then define a schedule.
+> For weekly scans, the default behavior on Windows Server and Windows 10 and later, is to scan outside of the automatic maintenance when the machine is idle. To change this behavior, modify the settings by disabling "Start the scheduled scan only when computer is on but not in use" (**ScanOnlyIfIdle**), and then define a schedule.
 
 For more information, see the [Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) and [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) articles.
 
@@ -53,8 +53,8 @@ For more information, see the [Manage when protection updates should be download
 
 | Location | Setting | Description | Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
-| Scan |Specify the interval to run quick scans per day |Specify how many hours should elapse before the next quick scan. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
-| Scan |Specify the time for a daily quick scan |Specify the number of minutes after midnight (for example, enter **60** for 1 AM.)  Note that if this setting is set to 0, daily quick scans don't run.| 120 (2 AM) |
+| Scan |Specify the daily interval for running quick scans. |Specify the number of hours that should pass before the next quick scan is performed. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
+| Scan |Specify the time for a daily quick scan |Specify the number of minutes after midnight (for example, enter **60** for 1 AM.)  If this setting is set to 0, daily quick scans don't run.| 120 (2 AM) |
 
 > [!TIP]
 > When scheduling a scan, depending on your environment, if your client devices are shutdown after-hours, you might want to consider setting the daily quick scans during lunch time (720). 
@@ -71,7 +71,7 @@ For more information, see the [Manage when protection updates should be download
 > Our recommendation for scheduled scans is to configure **quick** scan together with always-on [real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) and [cloud protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware.
 
 > [!WARNING]
->  In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
+> Generally, there's no need to schedule a full scan, and most users won't need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
 
 ## Group Policy settings for general scheduling scans
 
@@ -81,7 +81,7 @@ For more information, see the [Manage when protection updates should be download
 | Root | Configure scheduled task times randomization window |- This setting lets you set the start time for scheduled task scans and security updates. <br> - When enabled, you can choose a randomization window between **1 and 23 hours**. <br> - The Randomize Scheduled Task Times uses the specified window. <br> - If disabled or not configured, it randomizes times between **0 and 4 hours**. | Not configured (Disabled)|
 
 > [!TIP]
-> Use the randomization for Virtual Machines (VMs), Virtual Desktop Infrastructure (VDI), and Azure Virtual Desktop (AVD) devices so that the scheduled scans all do not run at the same exact time, and thus causing a cpu and/or disk i/o bottleneck on the parent partition (aka Host).
+> Enable randomization for Virtual Machines (VMs), Virtual Desktop Infrastructure (VDI), and Azure Virtual Desktop (AVD) devices to ensure that scheduled scans don't run simultaneously. This helps prevent CPU and disk I/O bottlenecks on the parent partition (also known as the Host).
 
 ## Group Policy settings for scheduling scans for specifying the maximum percentage of CPU utilization during a scan
 
@@ -90,7 +90,7 @@ For more information, see the [Manage when protection updates should be download
 | Scan |Specify the maximum percentage of CPU utilization during a scan|Configure the maximum percentage CPU utilization permitted during a scan.  Valid values for this setting are a percentage represented by integers 5 to 100.  A value of 0 indicates that there should be no throttling of CPU utilization.|Enabled - 50|
 
 > [!NOTE]
-> Lowering the maximum percentage of CPU utilization during a scan to 5 thru 30, it will cause the scheduled scan to run longer.  For environments that have a maintenance window, please keep that in mind.
+> Reducing the maximum CPU utilization during a scan to between 5% and 30% will extend the duration of the scheduled scan. For environments with a maintenance window, please take this into consideration.
 
 ## Group Policy settings for scheduling scans for lowering the CPU priority
 
