@@ -36,7 +36,7 @@ This article lists the prerequisites for installing and configuring Microsoft De
 
 ### Prerequisites
 
-- A Defender for Endpoint subscription and access to the Microsoft Defender portal
+- A [Defender for Endpoint subscription](microsoft-defender-endpoint-mac-prerequisites.md#licensing-requirements) and access to the Microsoft Defender portal
 - Beginner-level experience in macOS and BASH scripting
 - For [manual deployments](#manual-deployment-requirements), administrative privileges on the device
 - For [enterprise deployments](#enterprise-deployment-requirements), a Mobile Device Management (MDM) solution such as Microsoft Intune
@@ -53,7 +53,6 @@ These three most recent major releases of macOS are supported.
 > Beta versions of macOS aren't supported, but new releases of macOS are supported from day 1.
 
 - Supported processors: x64 and ARM64
-
 - Disk space: 1 GB
 
 > [!CAUTION]
@@ -62,9 +61,9 @@ These three most recent major releases of macOS are supported.
 
 ### Enterprise deployment requirements
 
-There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across 
+There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across your devices:
 
-- [Microsoft Intune-based deployment](mac-install-with-intune.md)#
+- [Microsoft Intune-based deployment](mac-install-with-intune.md)
 - [Security Settings Management](mde-security-settings-management.md)
 - Non-Microsoft management tools:
     - [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
@@ -144,7 +143,7 @@ Once Microsoft Defender for Endpoint is installed, connectivity can be validated
 mdatp connectivity test
 ```
 
-## Resources
+## Related content
 
 - For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
