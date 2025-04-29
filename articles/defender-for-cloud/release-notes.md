@@ -34,6 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |--|--|--|
 | May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
 | May 1 | GA | [Microsoft Security Copilot is now Generally Available in Defender for Cloud](#microsoft-security-copilot-is-now-generally-available-in-defender-for-cloud) |
+| May 1 | GA | [Data and AI security dashboard](#data-and-ai-security-dashboard) |
 | May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
 
 ### General Availability for Defender for AI Services
@@ -57,6 +58,21 @@ Security Copilot speeds up risk remediation for security teams, making it faster
 Security administrators can quickly summarize recommendations, generate remediation scripts, and delegate tasks via email to resource owners. These capabilities reduce investigation time, help security teams understand risks in context, and identify resources for quick remediation.
 
 Learn more about [Microsoft Security Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md).
+
+### Data and AI security dashboard
+
+Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in GA. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+
+Key benefits of the Data and AI security dashboard include:
+
+- **Unified view**: Gain a comprehensive view of all organizational data and AI resources.
+- **Data insights**: Understand where your data is stored and the types of resources holding it.
+- **Protection coverage**: Assess the protection coverage of your data and AI resources.
+- **Critical issues**: Highlight resources that require immediate attention based on high-severity recommendations, alerts, and attack paths.
+- **Sensitive data discovery**: Locate and summarize sensitive data resources in your cloud and AI assets.
+- **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
+
+Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
 
 ### Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources
 
