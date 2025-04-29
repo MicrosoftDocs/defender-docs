@@ -33,6 +33,8 @@ All information shown on the Initiative pages that is related to Endpoints data 
 
 1. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
 
+:::image type="content" source="media/initiatives/filter-by-dg.png" alt-text="Screenshot of device group filter":::
+
 1. Choose the device groups relevant for you, and the iniatives data will be recalculated (only when related to Endpoints data).
 
 :::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
