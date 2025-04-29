@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date | Category | Update|
 | -------- | -------- | -------- |
 | April 29 | Preview | [Defender for Cloud integration with Mend.io (Preview)](#defender-for-cloud-integration-with-mendio-preview) |
+| April 29 | Change | [Updated GitHub Application Permissions](#github-application-permissions-update)|
 | April 28 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
 | April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
@@ -44,6 +45,17 @@ April 29, 2025
 Defender for Cloud is now integrated with Mend.io in preview. This integration enhances software application security by identifying and mitigating vulnerabilities in partner dependencies. This integration streamlines discovery and remediation processes, improving overall security.
 
 Learn more about the [Mend.io integration](integration-mend-io.md).
+### GitHub Application Permissions Update
+
+April 29, 2025
+
+GitHub connectors in Defender for Cloud will be updated to include write permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities. Permissions can be granted in two different ways: 
+
+1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
+
+1. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
+
+Note: Existing connectors will continue to work without the new functionality if the above action is not taken.
 
 ### Update to Defender for SQL servers on Machines plan
 
@@ -497,7 +509,7 @@ Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md
 
 November 26, 2024
 
-You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview portal.
 
 With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
 
@@ -512,7 +524,7 @@ Until recently, Defender for Cloud imported all sensitivity labels from the Micr
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.

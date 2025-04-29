@@ -1043,9 +1043,6 @@
         - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
-        - name: Enable Defender for SQL servers on machines at scale
-          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-          href: enable-defender-sql-at-scale.md
         - name: Migrate to AMA
           displayName: vulnerability, assessment, findings, migrate
           href: defender-for-sql-autoprovisioning.md
@@ -1063,6 +1060,9 @@
           - name: Troubleshoot SQL machine protection configuration government
             displayName: Troubleshoot guide, SQL, servers, machines
             href: troubleshoot-sql-machines-guide-gov.md
+          - name: Enable Defender for SQL servers on machines at scale
+            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+            href: enable-defender-sql-at-scale.md
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview
