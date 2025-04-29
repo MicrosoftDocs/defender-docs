@@ -60,7 +60,7 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 | Description|Setting|
 | -------- | -------- |
 |Schedule Quick Scan Time|720|
-|<Delete me>|<Delete me>|
+
 
 > [!NOTE]
 > In this example, a quick scan runs daily on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (e.g laptops).
@@ -70,8 +70,8 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 |  Description|Setting|
 | -------- | -------- |
 |Scan Parameter |Quick scan (Default) |
-|Schedule Scan Day|Windows Clients: Wednesday|
-|Schedule Scan Time|Windows Clients: 1020|
+|Schedule Scan Day|Windows Clients: Wednesday <br> hello|
+|Schedule Scan Time|Windows Clients: 1020 <br> hello|
 
 > [!NOTE]
 > In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020). And for Windows Servers, on Saturday's at 1:00 AM. (60)
