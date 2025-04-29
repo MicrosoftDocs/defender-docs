@@ -15,3 +15,93 @@ ms.date:     04/25/2025
 
 # Schedule antivirus scans using Microsoft Intune
 
+**Applies to:**
+
+- [Microsoft Defender XDR](/defender-xdr)
+
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+
+- Microsoft Defender for Business
+- Microsoft Defender Antivirus
+
+**Platforms**
+
+- Windows
+- Windows Server
+
+This article describes how to configure scheduled scans using Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+
+Configure antivirus scans using Intune
+
+In the Intune portal ([https://intune.microsoft.com](https://intune.microsoft.com/)) 
+
+1. Go to Endpoint security > Antivirus > Create Policy > Platform: Windows > Profile: Microsoft Defender Antivirus > Create
+
+1. On the Basics page, enter a name and description for the profile, then choose Next.
+
+1. On the Configuration settings page, expand each group of settings, and configure the settings you want to manage with this profile. Follow the different settings as documented below.
+
+1. When your done configuring settings, select Next.
+
+1. In the Scope tags page, choose Select scope tags to open the Select tags pane to assign scope tags to the profile.
+
+1. Select Next to continue.
+
+1. In Assignments, select the users or groups that will receive your profile. For more information on assigning profiles, see Assign user and device profiles.
+
+1. Select Next.
+
+1. In Review + create, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+For more information: [Antivirus policy for endpoint security in Intune ](/intune/intune-service/protect/endpoint-security-antivirus-policy)
+
+## Use Intune for scheduling daily quick scans
+
+| Description|Setting|
+| -------- | -------- |
+|Schedule Quick Scan Time|720|
+|<Delete me>|<Delete me>|
+
+> [!NOTE]
+> In this example, a quick scan runs daily on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (e.g laptops).
+> 
+## Use Intune for scheduling Weekly Scan (Quick or Full)
+
+|  Description|Setting|
+| -------- | -------- |
+|Scan Parameter |Quick scan (Default) |
+|Schedule Scan Day|Windows Clients: Wednesday|
+|Schedule Scan Time|Windows Clients: 1020|
+
+> [!NOTE]
+> In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020). And for Windows Servers, on Saturday's at 1:00 AM. (60)
+
+> [!TIP]
+> Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](/defender-endpoint/cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
+
+## General settings for Scheduled scan to consider:
+
+|Description| Setting|
+| -------- | -------- |
+|Check For Signatures Before Running Scan |Disabled (Default)|
+|Randomize Schedule Task Times|Not configured|
+|Scheduler Randomization Time|Scheduled tasks won't be randomized|
+|Avg CPU Load Factor|Not Configured (Default, 50)|
+|Enable Low CPU Priority|Disabled (Default)|
+|Disable Catchup Full Scan|Enabled (Default)|
+|Disable Catchup Quick Scan|Disabled (Default)|
+
+### See also
+
+- [Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
+
+- [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+
+- [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
+
+- [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
+
+- [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+
+- [Microsoft Defender Antivirus full scan considerations and best practices](/defender-endpoint/mdav-scan-best-practices)
+
