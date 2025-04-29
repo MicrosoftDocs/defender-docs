@@ -1,12 +1,13 @@
 ---
-title: Review security initiatives in Microsoft Security Exposure Management
-description: Learn how to work with security Initiatives in Microsoft Security Exposure Management.
+title: Review security initiatives in Security Exposure Management
+description: Learn how to effectively manage and track security initiatives using Microsoft Security Exposure Management to improve your organization's security posture.
+#customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
+manager: ornat-spodek
+ms.topic: how-to
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 05/04/2025
 ---
 
 # Review security initiatives
@@ -21,36 +22,37 @@ ms.date: 11/04/2024
 
 ## View initiatives page
 
-[!NOTE]
+The initiatives page provides detailed insights into your security initiatives and their progress.
 
-All information shown on the Initiative pages that is related to Endpoints data is based on the user's scope. This includes, initiative scores, metrics progress, and history reasoning.
+> [!NOTE]
+> All information shown on the Initiative pages that is related to Endpoints data is based on the user's scope. This includes, initiative scores, metrics progress, and history reasoning.
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
-1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
+2. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
     :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
 
-1. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
+3. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
 
 :::image type="content" source="media/initiatives/filter-by-dg.png" alt-text="Screenshot of device group filter":::
 
-1. Choose the device groups relevant for you, and the iniatives data will be recalculated (only when related to Endpoints data).
+4. Choose the device groups relevant for you, and the iniatives data will be recalculated (only when related to Endpoints data).
 
 :::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
 
-1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
+5. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
-1. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **Mark as favorite** in the individual initiative.
+6. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **Mark as favorite** in the individual initiative.
 
-1. You can review the following information for all initiatives:
+7. You can review the following information for all initiatives:
     - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
     - **Initiative name**
     - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
     - **Current score** of the initiative
     - **Programs** or workloads contributing to or required by this initiative
 
-1. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
+8. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
     - Your target score for the initiative
     - A means to set a custom target score appropriate to your organization's needs
     - Description
