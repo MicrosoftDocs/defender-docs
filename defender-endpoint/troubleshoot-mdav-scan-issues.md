@@ -55,7 +55,7 @@ The key settings to be aware of are:
 
    - **Description**: When set to `true`, this disables CPU throttling during idle-time scans.
    - **Purpose**: Allows Defender to use more CPU resources when the system is idle, potentially completing scans faster.
-   - **Interaction with Other Settings**: Works in conjunction with `ScanOnlyIfIdle`. If both are enabled, scans will run only when idle and will not be throttled.
+   - **Interaction with Other Settings**: Works with `ScanOnlyIfIdle`. If both are enabled, scans run only when idle and aren't throttled.
    - **Policy Name**:
       - **Group Policy**: Not available.
       - **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/DisableCpuThrottleOnIdleScans`
@@ -76,7 +76,7 @@ The key settings to be aware of are:
 
    - **Description**: When enabled, CPU throttling is applied only to scheduled scans, not to manual scans.
    - **Purpose**: Ensures that scheduled scans are less intrusive, while allowing manual scans to run at full speed if needed.
-   - **Interaction with Other Settings**: When used with `AvgCPULoadFactor`, throttling limits will only apply to scheduled scans. Manual scans will ignore the CPU load factor and may use more resources.
+   - **Interaction with Other Settings**: When used with `AvgCPULoadFactor`, throttling limits only apply to scheduled scans. Manual scans ignore the CPU load factor and might use more resources.
    - **Policy Name**:
       - **Group Policy**: `Cpu throttling type`
       - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/ThrottleForScheduledScanOnly`
