@@ -63,9 +63,9 @@ The key settings to be aware of are:
 
 3. **AvgCPULoadFactor**
 
-   - **Description**: Specifies the average CPU load (as a percentage) that Defender should not exceed during scans. This setting does not apply to realtime protection scans.
+   - **Description**: Specifies the average CPU load (as a percentage) that Microsoft Defender Antivirus shouldn't exceed during scans. This setting doesn't apply to real time protection scans.
    - **Purpose**: Helps maintain overall system responsiveness by limiting Defender's CPU usage.
-   - **Example**: A value of `50` means Defender will attempt to keep its CPU usage below 50% during scans.
+   - **Example**: A value of `50` means Microsoft Defender Antivirus attempts to keep its CPU usage below 50% during scans.
    - **Interaction with Other Settings**: This setting is influenced by `DisableCpuThrottleOnIdleScans` and `ThrottleForScheduledScanOnly`, which can override or limit when throttling is applied.
    - **Policy Name**:
       - **Group Policy**: `Specify the maximum percentage of CPU utilization during a scan`
@@ -85,8 +85,8 @@ The key settings to be aware of are:
 5. **EnableLowCpuPriority**
 
    - **Description**: This policy setting allows you to enable or disable low CPU priority for scheduled scans.
-   - **Purpose**: Helps reduce the impact of scans on system performance by allowing other processes to take precedence over Defender's scanning tasks.
-   - **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Defender's CPU usage. It is especially useful in environments where maintaining responsiveness during scans is critical.
+   - **Purpose**: Helps reduce the impact of scans on system performance by allowing other processes to take precedence over Microsoft Defender Antivirus's scanning tasks.
+   - **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Microsoft Defender Antivirus's CPU usage. It is especially useful in environments where maintaining responsiveness during scans is critical.
    - **Policy Name**:
       - **Group Policy**: `Configure low CPU priority for scheduled scans`
       - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/EnableLowCPUPriority`
