@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 04/28/2025
+ms.date: 05/01/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -26,6 +26,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## May 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|--|--|--|
+| May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
+
+### Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources
+
+May 1, 2025
+
+**Estimated date for change:** June 2025
+
+Beginning June 1, 2025, Microsoft Defender CSPM will start billing for **Azure Database for MySQL Flexible Server** and **Azure Database for PostgreSQL Flexible Server** resources in your subscription where Defender CSPM is enabled. These resources are already protected by Defender CSPM and no user action is required. After billing starts, your bill might increase.
+
+For more information, see [CSPM plan pricing](concept-cloud-security-posture-management.md#plan-pricing)
 
 ## April 2025
 
