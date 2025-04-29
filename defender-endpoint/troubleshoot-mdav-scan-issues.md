@@ -38,59 +38,15 @@ Understanding why a scan is launched can help identify what settings are applied
 
 Microsoft Defender Antivirus includes several configurable settings to manage CPU usage during scans. These settings help balance system performance and security by controlling how aggressively Defender uses system resources. If you use Group Policy, these settings are found under `Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus > Scan`. To check current value of these settings on a machine use the `Get-MpPreference` PowerShell command.
 
-The key settings to be aware of are:
+The key settings to be aware of are listed in the following table:
 
-1. **ScanOnlyIfIdle**
-
-   - **Description**: When enabled, Microsoft Defender Antivirus only performs scans when the system is idle.
-   - **Purpose**: This minimizes performance impact during active use by deferring scans until the system is not in use.
-   - **Typical Use Case**: Ideal for environments where user experience is a priority and scans can be delayed without compromising security.
-   - **Policy Name**:
-      - **Group Policy**: Not available.   
-      - **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/ScanOnlyIfIdleEnabled`   
-   - **Default**: True (Enabled)
-
-
-2. **DisableCpuThrottleOnIdleScans**
-
-   - **Description**: When set to `true`, this disables CPU throttling during idle-time scans.
-   - **Purpose**: Allows Defender to use more CPU resources when the system is idle, potentially completing scans faster.
-   - **Interaction with Other Settings**: Works with `ScanOnlyIfIdle`. If both are enabled, scans run only when idle and aren't throttled.
-   - **Policy Name**:
-      - **Group Policy**: Not available.   
-      - **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/DisableCpuThrottleOnIdleScans`   
-   - **Default**: True (Enabled)
-
-3. **AvgCPULoadFactor**
-
-   - **Description**: Specifies the average CPU load (as a percentage) that Microsoft Defender Antivirus shouldn't exceed during scans. This setting doesn't apply to real time protection scans.
-   - **Purpose**: Helps maintain overall system responsiveness by limiting Defender's CPU usage.
-   - **Example**: A value of `50` means Microsoft Defender Antivirus attempts to keep its CPU usage below 50% during scans.
-   - **Interaction with Other Settings**: This setting is influenced by `DisableCpuThrottleOnIdleScans` and `ThrottleForScheduledScanOnly`, which can override or limit when throttling is applied.
-   - **Policy Name**:
-      - **Group Policy**: `Specify the maximum percentage of CPU utilization during a scan`   
-      - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/AvgCPULoadFactor`   
-
-
-4. **ThrottleForScheduledScanOnly**
-
-   - **Description**: When enabled, CPU throttling is applied only to scheduled scans, not to manual scans.
-   - **Purpose**: Ensures that scheduled scans are less intrusive, while allowing manual scans to run at full speed if needed.
-   - **Interaction with Other Settings**: When used with `AvgCPULoadFactor`, throttling limits only apply to scheduled scans. Manual scans ignore the CPU load factor and might use more resources.
-   - **Policy Name**:
-      - **Group Policy**: `Cpu throttling type`   
-      - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/ThrottleForScheduledScanOnly`   
-   - **Default**: True (Enabled)
-
-5. **EnableLowCpuPriority**
-
-   - **Description**: This policy setting allows you to enable or disable low CPU priority for scheduled scans.
-   - **Purpose**: Helps reduce the impact of scans on system performance by allowing other processes to take precedence over Microsoft Defender Antivirus's scanning tasks.
-   - **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Microsoft Defender Antivirus's CPU usage. It's especially useful in environments where maintaining responsiveness during scans is critical.
-   - **Policy Name**:   
-      - **Group Policy**: `Configure low CPU priority for scheduled scans`   
-      - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/EnableLowCPUPriority`   
-   - **Default**: False (Disabled)
+| Setting | Details |
+|--|--|
+| `ScanOnlyIfIdle` | - **Description**: When enabled, Microsoft Defender Antivirus only performs scans when the system is idle.<br/><br/>- **Purpose**: This minimizes performance impact during active use by deferring scans until the system is not in use.<br/><br/>- **Typical Use Case**: Ideal for environments where user experience is a priority and scans can be delayed without compromising security.<br/><br/>- **Policy Name**:<br/>- **Group Policy**: Not available. <br/>- **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/ScanOnlyIfIdleEnabled` <br/><br/>- **Default**: True (Enabled) |
+| `DisableCpuThrottleOnIdleScans` | - **Description**: When set to `true`, this disables CPU throttling during idle-time scans.<br/><br/>- **Purpose**: Allows Defender to use more CPU resources when the system is idle, potentially completing scans faster.<br/><br/>- **Interaction with Other Settings**: Works with `ScanOnlyIfIdle`. If both are enabled, scans run only when idle and aren't throttled.<br/><br/>- **Policy Name**:<br/>- **Group Policy**: Not available.<br/>- **Intune**: `./Device/Vendor/MSFT/Defender/Configuration/DisableCpuThrottleOnIdleScans`<br/><br/>- **Default**: True (Enabled) |
+| `AvgCPULoadFactor` | **Description**: Specifies the average CPU load (as a percentage) that Microsoft Defender Antivirus shouldn't exceed during scans. This setting doesn't apply to real time protection scans.<br/><br/>- **Purpose**: Helps maintain overall system responsiveness by limiting Defender's CPU usage.<br/><br/>- **Example**: A value of `50` means Microsoft Defender Antivirus attempts to keep its CPU usage below 50% during scans.<br/><br/>- **Interaction with Other Settings**: This setting is influenced by `DisableCpuThrottleOnIdleScans` and `ThrottleForScheduledScanOnly`, which can override or limit when throttling is applied.<br/><br/>- **Policy Name**: <br/>- **Group Policy**: `Specify the maximum percentage of CPU utilization during a scan`<br/>- **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/AvgCPULoadFactor` |
+| `ThrottleForScheduledScanOnly` | - **Description**: When enabled, CPU throttling is applied only to scheduled scans, not to manual scans.<br/><br/>- **Purpose**: Ensures that scheduled scans are less intrusive, while allowing manual scans to run at full speed if needed.<br/><br/>- **Interaction with Other Settings**: When used with `AvgCPULoadFactor`, throttling limits only apply to scheduled scans. Manual scans ignore the CPU load factor and might use more resources.<br/><br/>- **Policy Name**:<br/>- **Group Policy**: `Cpu throttling type` <br/>- **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/ThrottleForScheduledScanOnly`<br/><br/>- **Default**: True (Enabled) |
+| `EnableLowCpuPriority` | - **Description**: This policy setting allows you to enable or disable low CPU priority for scheduled scans.<br/><br/>- **Purpose**: Helps reduce the impact of scans on system performance by allowing other processes to take precedence over Microsoft Defender Antivirus's scanning tasks.<br/><br/>- **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Microsoft Defender Antivirus's CPU usage. It's especially useful in environments where maintaining responsiveness during scans is critical.<br/><br/>- **Policy Name**: <br/>- **Group Policy**: `Configure low CPU priority for scheduled scans`<br/>- **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/EnableLowCPUPriority`<br/><br/>- **Default**: False (Disabled) |
 
 ## Policies that impact scanning
 
