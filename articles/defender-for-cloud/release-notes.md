@@ -27,22 +27,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-## May 2025
-
-|Date | Category | Update|
-| -------- | -------- | -------- |
-| May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
-
-### General Availability for Defender for AI Services
-
-May 1, 2025
-
-Defender for Cloud now supports runtime protection for Azure AI services (previously called threat protection for AI workloads).
-
-Protection for Azure AI services covers threats specific to AI services and applications, such as jailbreak, wallet abuse, data exposure, suspicious access patterns, and more. The detections use signals from Microsoft Threat Intelligence and Azure AI Prompt Shields, and apply machine learning and AI to secure your AI services.
-
-Learn more about [Defender for AI Services](ai-threat-protection.md).
-
 ## April 2025
 
 |Date | Category | Update|
