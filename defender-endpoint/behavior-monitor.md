@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 03/25/2025
+ms.date: 04/29/2025
 search.appverid: met150
 ---
 
