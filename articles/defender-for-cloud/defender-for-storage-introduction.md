@@ -83,9 +83,7 @@ Defender for Storage also processes internal transactions, including Azure Blob 
 
 Malware scanning is charged on a per-gigabyte basis for scanned data. To ensure cost predictability, a monthly cap can be established for each storage account's scanned data volume. This cap can be set subscription-wide, affecting all storage accounts within the subscription, or applied to individual storage accounts. Under protected subscriptions, you can set specific storage accounts with different limits.
 
-By default, the limit is set to 5,000 GB per month per storage account. Once this threshold is exceeded, scanning ceases for the remaining blobs, with a 20-GB confidence interval. For configuration details, see [configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
-
-By default, the limit is set to 5,000 GB per month per storage account. Once this threshold is exceeded, scanning ceases for the remaining blobs, with a 20-GB confidence interval. For configuration details, see [configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
+By default, the limit is set to 10,000 GB per month per storage account. Once this threshold is exceeded, scanning ceases for the remaining blobs, with a 20-GB confidence interval. For configuration details, see [configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
 
 > [!IMPORTANT]
 > Malware scanning in Defender for Storage isn't included for free in the first 30-day trial and is charged from the first day in accordance with the pricing scheme available on the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Malware scanning incurs additional charges for other Azure services: Azure Storage read operations, Azure Storage blob indexing, and Azure Event Grid notifications.
@@ -96,7 +94,7 @@ Microsoft Defender for Storage secures your data at scale with granular controls
 
 ### Monitor your malware scanning cap
 
-To ensure uninterrupted protection while effectively managing costs, there are two security alerts related to malware scanning cap usage. The first alert, `Malware scanning will stop soon: 75% of monthly gigabytes scan cap reached (Preview)`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware scanning stopped: monthly gigabytes scan cap reached (Preview)`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts include details on affected storage accounts to prompt and inform action, ensuring you maintain your desired level of security without unexpected expenses.
+To ensure uninterrupted protection while effectively managing costs, there are two security alerts related to malware scanning cap usage. The first alert, `Malware scanning will stop soon: 75% of monthly gigabytes scan cap reached`, is triggered as your usage approaches 75% of the set monthly cap, offering a heads-up to adjust your cap if needed. The second alert, `Malware scanning stopped: monthly gigabytes scan cap reached`, notifies you when the cap is reached and scanning is paused for the month, potentially leaving new uploads unscanned. Both alerts include details on affected storage accounts to prompt and inform action, ensuring you maintain your desired level of security without unexpected expenses.
 
 ## Understand the differences between malware scanning and hash reputation analysis
 
