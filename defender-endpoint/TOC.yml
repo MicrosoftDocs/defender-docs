@@ -178,6 +178,8 @@
           items:
           - name: Deploy Defender for Endpoint on macOS
             items:
+            - name: Microsoft Defender for Endpoint Prerequisites on macOS
+              href: microsoft-defender-endpoint-mac-prerequisites.md
             - name: Deployment with Microsoft Intune
               href: mac-install-with-intune.md
             - name: JAMF Pro-based deployment
