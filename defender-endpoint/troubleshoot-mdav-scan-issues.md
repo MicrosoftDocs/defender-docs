@@ -86,7 +86,7 @@ The key settings to be aware of are:
 
    - **Description**: This policy setting allows you to enable or disable low CPU priority for scheduled scans.
    - **Purpose**: Helps reduce the impact of scans on system performance by allowing other processes to take precedence over Microsoft Defender Antivirus's scanning tasks.
-   - **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Microsoft Defender Antivirus's CPU usage. It is especially useful in environments where maintaining responsiveness during scans is critical.
+   - **Interaction with Other Settings**: Complements `AvgCPULoadFactor` and `ThrottleForScheduledScanOnly` by further deprioritizing Microsoft Defender Antivirus's CPU usage. It's especially useful in environments where maintaining responsiveness during scans is critical.
    - **Policy Name**:
       - **Group Policy**: `Configure low CPU priority for scheduled scans`
       - **Intune**: `./Device/Vendor/MSFT/Policy/Config/Defender/EnableLowCPUPriority`
@@ -131,7 +131,7 @@ In an Intune policy and in [Defender for Endpoint Security Settings Management](
 
    Settings: `Scan Parameter`; `Schedule Scan Day`; and `Schedule Scan Time`
 
-If you are using Group Policy to manage your devices, see [Configure Microsoft Defender Antivirus with Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus#group-policy-settings-and-resources)
+If you're using Group Policy to manage your devices, see [Configure Microsoft Defender Antivirus with Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus#group-policy-settings-and-resources)
 
 For information about troubleshooting antivirus settings, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
 
