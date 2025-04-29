@@ -34,12 +34,12 @@ This article provides a detailed explanation of the benefits and procedures need
 
 - You must have the appropriate role to:
   - **Create DevOps connectors**: Security Admin or Contributor assigned at the **subscription level** through Azure role-based-access control (RBAC).
-  - **Create the Endor Labs connector**: Security Administrator or Global Administrator assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
+  - **Create the Endor Labs connector**: Security Administrator (or higher) assigned at the **tenant level** through Microsoft Entra. Permissions can be granted through [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure).
   - **View reachability analysis findings**: Security Admin or Security Reader assigned at the **subscription level** through Azure role-based-access control (RBAC) on the subscription that hosts the DevOps connector.
 
 - You can only have one connector to Endor Labs per tenant.
 
-- Findings from Endor Labs will only be shown if the corresponding repository is also connected to Defender for Cloud.
+- Findings from Endor Labs are only shown if the corresponding repository is also connected to Defender for Cloud.
 
 ## Connect Endor Labs
 
@@ -58,7 +58,7 @@ To connect your Endor Labs account to Defender for Cloud:
    :::image type="content" border="true" source="./media/connect-endor-labs/add-endor-labs.png" alt-text="Screenshot that shows where the Add Integration button is and the ServiceNow option." lightbox="media/connect-endor-labs/add-endor-labs.png":::
 
     > [!NOTE]
-    > The option to add the Endor labs integration is not available if you don't have the appropriate permissions, or if you already have already an existing connector to Endor Labs.
+    > The option to add the Endor labs integration isn't available if you don't have the appropriate permissions, or if you already have an existing connector to Endor Labs.
 
 1. Enter an Endor Labs namespace, API key ID, API secret.
 

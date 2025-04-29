@@ -10,7 +10,7 @@ ms.date: 11/05/2024
 
 ---
 
-# Improve your API security posture (Preview)
+# Improve your API security posture
 
 APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks and misconfigurations. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API posture and risk assessments for your Azure API Management APIs. This provides insights into risks, recommendations, and attack path analysis.  
 
@@ -26,7 +26,7 @@ API security posture management in Defender for Cloud offers the following capab
   - Identify and fix unauthenticated API risks.  
   - Detect inactive or dormant APIs.  
 - Identify APIs exposed to the internet.  
-- Identify sensitive data exposure in API endpoints, including requests and responses, URL paths, and query parameters (integrated with Microsoft Purview).  
+- Identify sensitive data exposure in API endpoints, including requests and responses, URL paths, and query parameters (integrated with Microsoft Purview), powered by analyzing sampled API traffic logs.  
 - Understand cloud application exposure risks by linking APIs to backend environments like virtual machines, containers, storage, and databases.  
 - Address API-driven attack paths and prioritize mitigation with cloud [security explorer and API-led attack path analysis](concept-attack-path.md).  
 
@@ -36,7 +36,7 @@ Defender for Cloud continuously discovers APIs published within your Azure API M
 
 ## Prioritize and implement API security best practices
 
-Assess and secure your APIs against high-risk issues like broken or weak authentication. Get insights on inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. [Security recommendations](risk-prioritization.md#recommendations) are prioritized based on these factors, allowing you to fix critical vulnerabilities first.  
+Assess and secure your APIs against high-risk issues such as lack of encryption and anonymous access with broken or weak authentication. Gain insights into inactive APIs and those exposed directly to the internet. Defender for Cloud scans for API risks, considering potential exploitability and business impact. Security recommendations are prioritized based on these factors, allowing you to address critical vulnerabilities first. [Security recommendations](risk-prioritization.md#recommendations) are prioritized based on these factors, allowing you to fix critical vulnerabilities first. 
 
 ## Classify APIs exposing sensitive data  
 

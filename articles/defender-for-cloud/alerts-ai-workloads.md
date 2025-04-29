@@ -53,16 +53,6 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: Medium
 
-### Sensitive Data Exposure Detected in Azure AI Model Deployment
-
-(AI.Azure_DataLeakInModelResponse.Sensitive)
-
-**Description**: The sensitive data leakage alert is designed to notify the SOC that a GenAI model responded to a user prompt with sensitive information, potentially due to a malicious user attempting to bypass the generative AI’s safeguards to access unauthorized sensitive data.
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
-
-**Severity**: Low
-
 ### Corrupted AI application\model\data directed a phishing attempt at a user
 
 (AI.Azure_MaliciousUrl.ModelResponse)
@@ -170,6 +160,16 @@ This article lists the security alerts you might get for AI workloads from Micro
 **Description**: This alert detects a suspicious invocation of a high-risk operation in your subscription, which might indicate an attempt to access restricted resources. The identified AI-resource related operations are designed to allow administrators to efficiently access their environments. While this activity might be legitimate, a threat actor might utilize such operations to gain initial access to restricted AI resources in your environment. This can indicate that the service principal is compromised and is being used with malicious intent.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial access
+
+**Severity**: Medium
+
+### Suspicious anomaly detected in sensitive data exposed by an AI resource
+
+(AI.Azure_SensitiveDataAnomaly)
+
+**Description**: This alert studies the sensitive data usage patterns of AI resources and aims to detect when an AI application is discussing sensitive data out of pattern. The alert is looking for sensitive info types that have not been previously passed in the model responses, to detect suspicious behavior or intent deviation of the application or data exfiltration. Since this alert is designed to detect anomalies it will not trigger for new resources or newly onboarded subscriptions for a certain period of time.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
 
 **Severity**: Medium
 

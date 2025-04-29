@@ -57,7 +57,7 @@ These plans protect all supported databases in your subscription.
 To enable and modify each plan individually, see:
 
 - [Enable Defender for Azure SQL Databases](enable-sql-database-plan.md)
-- [Enable Defender for SQL Server on Machines](defender-for-sql-usage.md)
+- [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)
 - [Enable Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md)
 - [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md)
 
