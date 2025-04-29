@@ -544,7 +544,7 @@ This rule prevents malware from abusing WMI to attain persistence on a device.
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 
 > [!NOTE]
-> If `CcmExec.exe` (SCCM Agent) is detected on the device, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
+> If you are using Configuration Manager (CM, formerly MEMCM or SCCM) `CcmExec.exe` (SCCM Agent), we encourage you to run in audit mode for 60 days at a minimum and when ready to run in block mode, deploy appropriate ASR rules per rule exclusions as appropriate.
 
 Intune name: `Persistence through WMI event subscription`
 
