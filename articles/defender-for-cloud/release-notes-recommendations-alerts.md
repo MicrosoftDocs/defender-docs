@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 04/29/2025
+ms.date: 04/30/2025
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -50,7 +50,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 | ------------ | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | April 20 | Alert | Preview | [(Preview) AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#preview-suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource), this replaces the previous sensitive data exposure alert |
 | April 29 | Recommendation | GA | [Role-Based Access Control should be used on Keyvault Services](recommendations-reference-keyvault.md#role-based-access-control-should-be-used-on-keyvault-services) |
-| April 20 | Alert                          | Preview                                                      | [AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource) , this replaces the previous sensitive data exposure alert |
+| April 20 | Alert                          | Preview                                                      | AI - Suspicious anomaly detected in sensitive data exposed by AI resource , this replaces the previous sensitive data exposure alert |
 |February 5|Recommendation|Upcoming Deprecation|The following recommendations will be deprecated:<br/>* Configure Microsoft Defender for Storage (Classic) to be enabled<br/>* Configure basic Microsoft Defender for Storage to be enabled (Activity Monitoring only)|
 |January 29 | Recommendation                | GA | We have further hardened the [Running containers as root user should be avoided](recommendations-reference-container.md#running-containers-as-root-user-should-be-avoided) recommendation.<br/><br/>**What's Changing?**<br/><br/>We now require at least one range to be specified for the "Run as group rule". This change was needed to ensure containers will not get access to files owned by root, and groups with permissions to the root group. |
 | January 13 | Alert                          | Preview                                                      | [AI - Access from a suspicious IP](alerts-ai-workloads.md#access-from-suspicious-ip) |
