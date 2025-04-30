@@ -66,7 +66,7 @@ Learn more about the [Mend.io integration](integration-mend-io.md).
 
 April 29, 2025
 
-GitHub connectors in Defender for Cloud will be updated to include write permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities. Permissions can be granted in two different ways: 
+GitHub connectors in Defender for Cloud will be updated to include administrator permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities and is scoped to managing the custom properties schema. Permissions can be granted in two different ways: 
 
 1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
 
