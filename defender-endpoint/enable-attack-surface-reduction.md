@@ -98,23 +98,27 @@ When adding exclusions, keep these points in mind:
 
 * Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
-## Policy Conflict
+## Policy conflicts
 
-1. If a conflicting policy is applied via MDM and GP, the setting applied from GP takes precedence.
+If a conflicting policy is applied via MDM and GP, the setting applied from Group Policy takes precedence.
 
-1. Attack surface reduction rules for managed devices now support behavior for merger of settings from different policies, to create a superset of policy for each device. Only the settings that aren't in conflict are merged, while those that are in conflict aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed. Attack surface reduction rule merge behavior is as follows:
+Attack surface reduction rules for managed devices now support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conficts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
 
-   - Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
+Attack surface reduction rule merge behavior works as follows:
 
-     - **Devices** > **Configuration profiles** > **Endpoint protection profile** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**. (See [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
-     - **Endpoint security** > **Attack surface reduction policy** > **Attack surface reduction rules**. (See [Attack surface reduction rules](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
-      - **Endpoint security** > **Security baselines** > **Microsoft Defender ATP Baseline** > **Attack Surface Reduction Rules**. (See [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).)
+- Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
 
-   - Settings that don't have conflicts are added to a superset of policy for the device.
+   - **Devices** > **Configuration profiles** > **Endpoint protection profile** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**. (See [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
 
-   - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
+   - **Endpoint security** > **Attack surface reduction policy** > **Attack surface reduction rules**. (See [Attack surface reduction rules](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
 
-   - Only the configurations for conflicting settings are held back.
+   - **Endpoint security** > **Security baselines** > **Microsoft Defender ATP Baseline** > **Attack Surface Reduction Rules**. (See [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).)
+
+- Settings that don't have conflicts are added to a superset of policy for the device.
+
+- When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
+
+- Only the configurations for conflicting settings are held back.
 
 ## Configuration methods
 
@@ -132,10 +136,10 @@ The following procedures for enabling attack surface reduction rules include ins
 ### Intune
 
 > [!IMPORTANT]
-> If using Intune on Windows Server 2012 R2 and Windows Server 2016 unified version, you need to set these to `Not Configured`, because they're not supported on these OS versions. Otherwise, the following policies fail to apply:
-> - Block persistence through Windows Management Instrumentation (WMI) event subscription
-> - Block JavaScript or VBScript from launching downloaded executable content
-> - Use advanced protection against ransomware
+> If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, these policies fail to apply:
+> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
+> - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+> - [Use advanced protection against ransomware](/defender-endpoint/attack-surface-reduction-rules-reference#use-advanced-protection-against-ransomware)
 
 #### Endpoint security policy (Preferred)
 
