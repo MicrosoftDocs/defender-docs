@@ -288,7 +288,7 @@ Example:
 > There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
 
 > [!NOTE]
-> If you're using Disable admin merge with Microsoft Defender for Endpoint Security Settings Management (Disable Local Admin Merge) or Microsoft Intune (Disable Local Admin Merge) or CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**) or Group Policy (Configure local administrator merge behavior for lists)  to `true` on devices, adding ASR rules per rule exclusions and ASR rules exclusions locally, they will not apply.  To modify the behavior, you will need to change it to false.
+> If you're using Disable admin merge with Microsoft Defender for Endpoint Security Settings Management (Disable Local Admin Merge) or Microsoft Intune (Disable Local Admin Merge) or CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**) or Group Policy (Configure local administrator merge behavior for lists) to `true` on devices, adding ASR rules per rule exclusions and ASR rules exclusions locally, they will not apply.  To modify the behavior, you will need to change it to false.
 
 ### Group policy
 
