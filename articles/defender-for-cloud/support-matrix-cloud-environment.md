@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 02/02/2025
+ms.date: 05/01/2025
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -26,7 +26,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA|
 |[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA|
 |[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA|
-|[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | Preview | NA | NA |
+|[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | GA | NA | NA |
 |**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
 |[Asset inventory](asset-inventory.md) | GA | GA | GA|
 |[Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA|
@@ -34,11 +34,12 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Secure score](secure-score-security-controls.md) | GA | GA | GA|
 |[DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA|
 | **DEFENDER CSPM FEATURES** | | | |
-| [Data security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
+| [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
 | [AI security posture management](ai-security-posture.md) | GA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender CSPM](concept-cloud-security-posture-management.md)| GA | NA | NA|
+| [Defender for AI Services](ai-threat-protection.md) | GA | NA | NA |
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | GA|
