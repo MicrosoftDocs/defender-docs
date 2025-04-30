@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
-ms.date: 03/05/2025
+ms.date: 04/30/2025
 ---
 
 # Enable attack surface reduction rules
