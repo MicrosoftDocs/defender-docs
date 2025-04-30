@@ -362,7 +362,7 @@ In PowerShell, you use the [New-TeamsProtectionPolicy](/powershell/module/exchan
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
-|**Zero-hour auto purge (ZAP)** (_ZapEnabled_)|**Off** (`$false`)|**On** (`$true`)|**On** (`$true`)||
+|**Zero-hour auto purge (ZAP)** (_ZapEnabled_)|**On** (`$true`)|**On** (`$true`)|**On** (`$true`)||
 |**Quarantine policies**|||||
 |&nbsp;&nbsp;**Malware** (_MalwareQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
 |&nbsp;&nbsp;**High confidence phishing** (_HighConfidencePhishQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
