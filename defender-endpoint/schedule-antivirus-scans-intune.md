@@ -1,16 +1,20 @@
 ---
-# Required metadata
-# For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
-# For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
-
 title: Schedule antivirus scans using Microsoft Intune
 description: Schedule antivirus scans using Intune
-author:      YongRhee-MSFT # GitHub alias
-ms.author:   yongrhee # Microsoft alias
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.date:     04/25/2025
+ms.custom: nextgen
+ms.collection: 
+- m365-security
+- tier2
+- mde-ngp
+search.appverid: met150
+ms.date: 04/30/2025
 ms.subservice: ngp
+ms.localizationpriority: medium
 ---
 
 # Schedule antivirus scans using Microsoft Intune
