@@ -139,7 +139,6 @@ The following procedures for enabling attack surface reduction rules include ins
 > If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, these policies fail to apply:
 > - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 > - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
-> - [Use advanced protection against ransomware](/defender-endpoint/attack-surface-reduction-rules-reference#use-advanced-protection-against-ransomware)
 
 #### Endpoint security policy (Preferred)
 
