@@ -1,7 +1,7 @@
 ---
 title: Microsoft Security Copilot in Defender for Cloud
 description: Learn about the benefits of copilot in Microsoft Defender for Cloud and how it applies to analyzing your security posture.
-ms.date: 04/23/2025
+ms.date: 04/30/2025
 author: ElazarK
 ms.author: elkrieger
 ms.topic: concept-article

@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 04/23/2025
+ms.date: 04/30/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
@@ -38,15 +38,11 @@ Copilot in Defender for Cloud can assist with the remediation process for recomm
 
 1. Review the summary.
 
-1. Select **Help me remediate this recommendation**.
+1. Select **Fix with Copilot**.
 
-    :::image type="content" source="media/remediate-with-copilot/help-remediate.png" alt-text="Screenshot that shows where the help remediate the recommendation button is located." lightbox="media/remediate-with-copilot/help-remediate.png":::
-
-1. To remediate the recommendation, review the suggested remediation information and follow the instructions.
+1. Follow the prompts to have Copilot fix the recommendation.
 
 1. (Optional) If a script is presented, select **Run** to apply the remediation.
-
-    :::image type="content" source="media/remediate-with-copilot/run-script.png" alt-text="Screenshot that shows where the run button is located in order to run the script.":::
 
 If you're unable or unsure how to remediate a recommendation, you can ask Copilot for additional information to assist you with more prompts. You can also delegate the recommendation to an appropriate person if needed.
 
