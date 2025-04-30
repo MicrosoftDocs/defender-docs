@@ -292,12 +292,17 @@ Example:
 > There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
 
 > [!NOTE]
-> If you're using Disable admin merge with Microsoft Defender for Endpoint Security Settings Management (Disable Local Admin Merge) or Microsoft Intune (Disable Local Admin Merge) or CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**) or Group Policy (Configure local administrator merge behavior for lists) to `true` on devices, adding ASR rules per rule exclusions and ASR rules exclusions locally, they will not apply.  To modify the behavior, you will need to change it to false.
+> If you're using "Disable admin merge" set to `true` on devices, and you're using any of the following tools/methods, adding ASR rules per-rule exclusions or local ASR rule exclusions don't apply.
+> - Defender for Endpoint Security Settings Management (Disable Local Admin Merge)
+> - Intune (Disable Local Admin Merge)
+> - The Defender CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**)
+> - Group Policy (Configure local administrator merge behavior for lists)
+> To modify this behavior, you need to change "Disable admin merge" to `false`.
 
 ### Group policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software will overwrite any conflicting group policy settings on startup.
+> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software overwrites any conflicting group policy settings on startup.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx), right-click the Group Policy Object you want to configure and select **Edit**.
 
