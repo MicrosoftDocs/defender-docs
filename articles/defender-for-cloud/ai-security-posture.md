@@ -1,7 +1,7 @@
 ---
 title: Overview - AI security posture management
 description: Learn about AI security posture management in Microsoft Defender for Cloud and how it protects resources from AI threats.
-ms.date: 02/05/2025
+ms.date: 04/28/2025
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
@@ -10,7 +10,8 @@ author: Elazark
 
 # Overview - AI security posture management
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multi, or hybrid cloud (currently Azure and AWS) generative AI applications throughout their entire lifecycle. Defender for Cloud reduces risks to cross-cloud AI workloads by:
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud secures enterprise-built, multicloud, or hybrid cloud environments. These environments include Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) Vertex AI (Preview). The CSPM plan secures generative AI applications throughout their entire lifecycle.
+ Defender for Cloud reduces risks to cross-cloud AI workloads by:
 
 - Discover the generative AI Bill of Materials (AI BOM), which includes application components, data, and AI artifacts from code to cloud.
 - Strengthening generative AI application security posture with built-in recommendations and by exploring and remediating security risks.
@@ -39,8 +40,10 @@ Defender for Cloud discovers AI workloads and identifies details of your organiz
 Defender for Cloud automatically and continuously discovers deployed AI workloads across the following services:
 
 - Azure OpenAI Service
+- Azure AI foundry
 - Azure Machine Learning
 - Amazon Bedrock
+- Google Vertex AI (Preview)
 
 Defender for Cloud can also discover vulnerabilities within generative AI library dependencies such as TensorFlow, PyTorch, and Langchain by scanning source code for Infrastructure as Code (IaC) misconfigurations and container images for vulnerabilities. Regularly updating or patching the libraries can prevent exploits, protecting generative AI applications and maintaining their integrity.
 

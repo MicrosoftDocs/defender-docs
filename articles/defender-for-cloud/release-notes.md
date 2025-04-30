@@ -89,12 +89,29 @@ For more information, see [CSPM plan pricing](concept-cloud-security-posture-man
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| April 29 | Preview | [AI Posture Management in GCP Vertex AI (Preview)](#ai-posture-management-in-gcp-vertex-ai-preview) |
 | April 29 | Preview | [Defender for Cloud integration with Mend.io (Preview)](#defender-for-cloud-integration-with-mendio-preview) |
 | April 29 | Change | [Updated GitHub Application Permissions](#github-application-permissions-update)|
 | April 28 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
 | April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
 | April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
 | April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
+
+### AI Posture Management in GCP Vertex AI (Preview)
+
+April 29, 2025
+
+Defender for Cloud's AI security posture management features now support AI workloads in Google Cloud Platform (GCP) Vertex AI (Preview).
+
+Key features for this release include:
+
+- Modern AI application Discovery: Automatically discover and catalog AI application components, data, and AI artifacts deployed in GCP Vertex AI.
+- Security Posture Strengthening: Detect misconfigurations and receive built-in recommendations and remediation actions to enhance the security posture of your AI applications.
+- Attack Path Analysis: Identify and remediate risks using advanced attack path analysis to protect your AI workloads from potential threats.
+
+These features are designed to provide comprehensive visibility, misconfiguration detection, and hardening for AI resources, ensuring a reduction of risks for AI workloads developed on the GCP Vertex AI platform.
+
+Learn more about [AI security posture management](ai-security-posture.md).
 
 ### Defender for Cloud integration with Mend.io (Preview)
 
@@ -107,7 +124,7 @@ Learn more about the [Mend.io integration](integration-mend-io.md).
 
 April 29, 2025
 
-GitHub connectors in Defender for Cloud will be updated to include write permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities. Permissions can be granted in two different ways: 
+GitHub connectors in Defender for Cloud will be updated to include administrator permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities and is scoped to managing the custom properties schema. Permissions can be granted in two different ways: 
 
 1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
 
