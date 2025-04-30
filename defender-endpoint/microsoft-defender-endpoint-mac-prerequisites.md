@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/28/2025
+ms.date: 04/29/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS prerequisites
@@ -105,7 +105,7 @@ If a proxy or firewall is blocking anonymous traffic, make sure that anonymous t
 
 > [!WARNING]
 > Authenticated proxies aren't supported. Ensure that only PAC, WPAD, or a static proxy is being used.
-> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store won't allow for interception.
+> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store doesn't allow for interception.
 
 ## Next steps
 
