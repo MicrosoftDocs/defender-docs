@@ -291,7 +291,7 @@ Example:
 > [!WARNING]
 > There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you're using "Disable admin merge" set to `true` on devices, and you're using any of the following tools/methods, adding ASR rules per-rule exclusions or local ASR rule exclusions don't apply.
 > - Defender for Endpoint Security Settings Management (Disable Local Admin Merge)
 > - Intune (Disable Local Admin Merge)
@@ -361,7 +361,7 @@ Example:
    > [!IMPORTANT]
    > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
-## Related articles
+## Related content
 
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)
