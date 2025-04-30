@@ -94,11 +94,11 @@ chmod +x ./mde_linux_edr_diy.sh
    > [!TIP]
    > If you double-click **MDATP MacOS DIY**, you will get the following message:
    >
-   > > **"MDATP MacOS DIY" cannot be opened because the developer cannot be verifier.**<br/>
+   > > **"MDATP MacOS DIY" cannot be opened because the developer cannot be verified.**<br/>
    > > macOS cannot verify that this app is free from malware.<br/>
-   > > **[Move to Trash]** **[Cancel]**
+   > > **[Move to Trash]** **[Done]**
 
-7. Click **Cancel**.
+7. Click **Done**.
 
 8. Right-click **MDATP MacOS DIY**, and then click **Open**.
 
