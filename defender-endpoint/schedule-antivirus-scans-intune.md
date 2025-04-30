@@ -33,27 +33,25 @@ ms.localizationpriority: medium
 - Windows
 - Windows Server
 
-This article describes how to configure scheduled scans using Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+This article describes how to configure scheduled scans using Microsoft Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
 ## Configure antivirus scans using Intune
 
 1. In the [Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Antivirus** > **Create Policy**. For **Platform**, select **Windows**, and for **Profile**, select **Microsoft Defender Antivirus**. Then select **Create**.
 
-1. On the Basics page, enter a name and description for the profile, then choose Next.
+2. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.
 
-1. On the Configuration settings page, expand each group of settings, and configure the settings you want to manage with this profile. Follow the different settings as documented below.
+3. On the **Configuration settings** page, expand each group of settings, and configure the settings you want to manage with this profile. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
 
-1. When your done configuring settings, select Next.
+4. When your done configuring settings, select **Next**.
 
-1. In the Scope tags page, choose Select scope tags to open the Select tags pane to assign scope tags to the profile.
+5. In the Scope tags page, choose Select scope tags to open the Select tags pane to assign scope tags to the profile.
 
-1. Select Next to continue.
+6. Select Next to continue.
 
-1. In Assignments, select the users or groups that will receive your profile. For more information on assigning profiles, see Assign user and device profiles.
+7. In Assignments, select the users or groups that will receive your profile. For more information on assigning profiles, see Assign user and device profiles. Then select Next.
 
-1. Select Next.
-
-1. In Review + create, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+8. In Review + create, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 For more information: [Antivirus policy for endpoint security in Intune ](/intune/intune-service/protect/endpoint-security-antivirus-policy)
 
