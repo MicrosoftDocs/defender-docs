@@ -17,7 +17,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Authenticated Received Chain (ARC) is an email authentication method that tries to preserve authentication results across devices and any message modification that occurs between the sender and recipient.
 ms.service: defender-office-365
-ms.date: 1/29/2024
+ms.date: 04/30/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -145,9 +145,9 @@ smtp.mailfrom=contoso.com; dkim=fail (body hash did not verify)
 header.d=contoso.com;dmarc=fail action=none
 header.from=contoso.com;compauth=pass reason=130
 ```
-> **Note:**  
-> When the ARC result is **pass** and originates from a **trusted ARC sealer**, it can be used to preserve authentication context and potentially override failures in SPF, DKIM, or DMARC caused by message modifications during transit.  
-> However, the final spoofing determination is based on the **Composite Authentication (CompAuth)** outcome. A message may still be delivered even if ARC fails, provided SPF, DKIM, and DMARC evaluations, along with CompAuth, result in a pass.
+
+> [!NOTE]  
+> The ARC result **pass** from a **trusted ARC sealer** can potentially override failures in SPF, DKIM, or DMARC caused by message modification during transit. However, the final spoofing determination is based on the [composite authentication](email-authentication-about.md#composite-authentication) (CompAuth) outcome. Messages that fail ARC might still be delivered if they pass SPF, DKIM, DMARC, and composite authentication evaluations.
 
 
 ## Trusted ARC sealer mail flow diagrams
