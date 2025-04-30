@@ -205,13 +205,13 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
       ```
 
-   - For Debian 12 and later, run the following command.
+   - For Debian 12/Ubuntu 24.04 and later, run the following command.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
