@@ -76,7 +76,7 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
  
 ### macOS
 
-1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
+1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
 
       The following prompt appears:
 
@@ -122,9 +122,7 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
 
     :::image type="content" source="media/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="Screenshot that shows a macOS EDR test alert that shows severity, category, detection source, and a collapsed menu of actions":::
 
-    The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions.
-
-    Look at the alert details and the device timeline, and perform the regular investigation steps.
+    The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions. Look at the alert details and the device timeline, and perform the regular investigation steps.
 
 
 ## Next steps
