@@ -10,7 +10,7 @@ ms.service: microsoft-defender-iot
 >
 > This article discusses Microsoft Defender for IoT in the Defender portal (Preview).
 >
-> If you're interested in the features not yet available in the Defender portal, or a customer working on the **classic Defender for IoT portal** (Azure portal), see the [Defender for IoT on Azure documentation](/azure/defender-for-iot/organizations/overview).
+> Some features are not yet available in the Defender portal. If you're interested in these features, or you're an existing customer working on the Azure portal, see the [Defender for IoT on Azure documentation](/azure/defender-for-iot/organizations/overview).
 >
 > Learn more about the [Defender for IoT management portals](/defender-for-iot/microsoft-defender-iot#what-are-the-different-management-portals-for-microsoft-defender-for-iot).
 >
