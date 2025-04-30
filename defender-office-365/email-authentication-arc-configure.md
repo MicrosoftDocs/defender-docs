@@ -145,6 +145,10 @@ smtp.mailfrom=contoso.com; dkim=fail (body hash did not verify)
 header.d=contoso.com;dmarc=fail action=none
 header.from=contoso.com;compauth=pass reason=130
 ```
+> **Note:**  
+> When the ARC result is **pass** and originates from a **trusted ARC sealer**, it can be used to preserve authentication context and potentially override failures in SPF, DKIM, or DMARC caused by message modifications during transit.  
+> However, the final spoofing determination is based on the **Composite Authentication (CompAuth)** outcome. A message may still be delivered even if ARC fails, provided SPF, DKIM, and DMARC evaluations, along with CompAuth, result in a pass.
+
 
 ## Trusted ARC sealer mail flow diagrams
 
