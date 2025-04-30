@@ -37,9 +37,7 @@ This article describes how to configure scheduled scans using Intune. To learn m
 
 ## Configure antivirus scans using Intune
 
-In the Intune portal ([https://intune.microsoft.com](https://intune.microsoft.com/)) 
-
-1. Go to Endpoint security > Antivirus > Create Policy > Platform: Windows > Profile: Microsoft Defender Antivirus > Create
+1. In the [Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Antivirus** > **Create Policy**. For **Platform**, select **Windows**, and for **Profile**, select **Microsoft Defender Antivirus**. Then select **Create**.
 
 1. On the Basics page, enter a name and description for the profile, then choose Next.
 
