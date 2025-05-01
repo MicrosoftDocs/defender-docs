@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 05/01/2025
 ---
 
 # UEFI scanning in Defender for Endpoint
