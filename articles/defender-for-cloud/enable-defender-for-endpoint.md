@@ -192,5 +192,5 @@ To remove the Defender for Endpoint solution from your machines:
 1. In the Defender plans page, select **Settings & Monitoring**.
 1. In the status of the Endpoint protection component, select **Off** to disable the integration with Microsoft Defender for Endpoint for the subscription.
 1. Select **Continue** and **Save** to save your settings.
-1. Remove the MDE.Windows/MDE.Linux extension from the machine.
-1. [Offboard the device from the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/offboard-machines).
+1. Remove the `MDE.Windows` or `MDE.Linux` extension from the machine.
+1. [Offboard the device from the Microsoft Defender for Endpoint service](/defender-endpoint/offboard-machines).
