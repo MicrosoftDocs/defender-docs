@@ -111,7 +111,7 @@ To complete this process, you must have admin privileges on the device.
 
 9. Select **Install Software**.
 
-1. At the end of the installation process, for macOS Ventura (13.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
+10. At the end of the installation process, for macOS Ventura (13.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
 
     :::image type="content" source="media/monterey-install-2.png" alt-text="Screenshot that shows the system extension approval":::
 
