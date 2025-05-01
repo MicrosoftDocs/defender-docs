@@ -64,23 +64,23 @@ Download the installation and onboarding packages from Microsoft Defender portal
 
 6. Copy the *wdav.pkg* and *MicrosoftDefenderATPOnboardingMacOs.sh* to the device where you want to deploy the Microsoft Defender for Endpoint on macOS.
 
-## Application installation (macOS 11 and newer versions)
+## Application installation (macOS 13 and newer versions)
 
 To complete this process, you must have admin privileges on the device.
 
 1. Do one of the following steps:
 
-   - Navigate to the downloaded *wdav.pkg* in **Finder** and open it.
+- Navigate to the downloaded *wdav.pkg* in **Finder** and open it.
 
    Or
 
    - You can download the *wdav.pkg*- from **Terminal**
-
+   
      ```console
-     sudo installer -store -pkg /Users/admin/Downloads/wdav.pkg -target /
+     sudo installer -pkg /Users/admin/Downloads/wdav.pkg -target /
      ```
-
-   :::image type="content" source="media/monterey-install-1.png" alt-text="Screenshot that shows the installation process for the application":::
+     
+      :::image type="content" source="media/monterey-install-1.png" alt-text="Screenshot that shows the installation process for the application":::
 
 2. Select **Continue**.
 
@@ -111,9 +111,9 @@ To complete this process, you must have admin privileges on the device.
 
 9. Select **Install Software**.
 
-10. At the end of the installation process, for macOS Big Sur (11.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
+1. At the end of the installation process, for macOS Ventura (13.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
 
-    :::image type="content" source="media/monterey-install-2.png" alt-text="Screenshot that shows the system extension approval":::
+       :::image type="content" source="media/monterey-install-2.png" alt-text="Screenshot that shows the system extension approval":::
 
 11. To enable system extension, select **Details**.
 
