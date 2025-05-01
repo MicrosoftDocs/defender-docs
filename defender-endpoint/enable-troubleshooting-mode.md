@@ -52,7 +52,7 @@ Defender for Endpoint collects logs and investigation data throughout the troubl
 - A snapshot of `MpPreference` is taken before troubleshooting mode begins.
 - A second snapshot is taken just before troubleshooting mode expires.
 - Operational logs from during troubleshooting mode are also collected.
-- Logs and snapshots are collected and are available for an admin to collect using the [Collect investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) feature on the device page. Microsoft doesn't remove this data from the device until an admin has collected it.
+- Logs and snapshots are collected and are available for an administrator to collect using the [Collect investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) feature on the device page. Microsoft doesn't remove this data from the device until an administrator has collected it.
 
 Administrators can also review the changes in settings that take place during troubleshooting mode in **Event Viewer** on the device itself. 
 
