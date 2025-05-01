@@ -82,11 +82,14 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
     Defender for Cloud onboards existing and new machines to Defender for Endpoint.
 
-    Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
+    In case you are configuring Defender for Endpoint on the first subscription in your tenant, onboarding might take up to 12 hours. For new machines and subscriptions created after the integration has been enabled for the first time, onboarding takes up to an hour.
+
+> [!NOTE]
+> Enabling Defender for Endpoint integration on Windows Server 2012 R2 and Windows Server 2016 machines is a one-time action. If you disable the plan and re-enable it, integration remains enabled.
 
 ## Enable on Linux machines (plan/integration enabled)
 
-If Defender for Servers is already enabled and Defender for Endpoint integration is on in the subscription, you can manually enable the integration for Linux machines in a subscription.
+If Defender for Servers is already enabled and Defender for Endpoint integration is on in a subscription that existed before summer 2021, you might need to manually enable the integration for Linux machines.
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
 
@@ -106,7 +109,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     - Defender for Cloud onboards Linux machines to Defender for Endpoint.
     - Defender for Cloud detects any previous Defender for Endpoint installations on Linux machines and reconfigures them to integrate with Defender for Cloud.
-    - Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
+    - In case you are configuring Defender for Endpoint on the first subscription in your tenant, onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
 1. To verify Defender for Endpoint sensor installation on a Linux machine, run the following shell command on each machine.
 
@@ -123,7 +126,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 > [!NOTE]
 > Enabling Defender for Endpoint integration on Linux machines is a one-time action. If you disable the plan and re-enable it, integration remains enabled.
 
-## Enable integration on Linux in multiple subscriptions
+## Enable integration with PowerShell in multiple subscriptions
 
 1. In Defender for Cloud, open the **Workload protections** dashboard.
 1. In the dashboard, review the insights panel to see which subscriptions and resources don't have Defender for Endpoint enabled for Linux machines.
