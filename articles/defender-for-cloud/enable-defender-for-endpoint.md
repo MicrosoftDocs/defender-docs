@@ -179,48 +179,10 @@ You can use the [Defender for Endpoint deployment status workbook](https://githu
 
 1. Open the [Microsoft Defender portal](https://security.microsoft.com/). Learn about [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-## Send a test alert from Defender for Endpoint
+## Run a detection test
 
-To generate a benign test alert from Defender for Endpoint, select the tab for the relevant operating system of your endpoint:
+See [EDR detection test for verifying device's onboarding and reporting services](/defender-endpoint/edr-detection).
 
-### Test on Windows
-
-For endpoints running Windows:
-
-1. Create a folder 'C:\test-MDATP-test'.
-1. Use Remote Desktop to access your machine.
-1. Open a command-line window.
-1. At the prompt, copy and run the following command. The command prompt window closes automatically.
-
-    ```powershell
-    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden (New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe'); Start-Process 'C:\\test-MDATP-test\\invoice.exe'
-    ```
-
-    :::image type="content" source="./media/integration-defender-for-endpoint/generate-edr-alert.png" alt-text="A command prompt window with the command to generate a test alert.":::
-
-    If the command is successful, you see a new alert on the workload protection dashboard and the Microsoft Defender for Endpoint portal. This alert might take a few minutes to appear.
-1. To review the alert in Defender for Cloud, go to **Security alerts** > **Suspicious PowerShell CommandLine**.
-1. From the investigation window, select the link to go to the Microsoft Defender for Endpoint portal.
-
-    > [!TIP]
-    > The alert is triggered with **Informational** severity.
-
-### Test on Linux
-
-For endpoints running Linux:
-
-1. Download the test alert tool from: <https://aka.ms/LinuxDIY>
-1. Extract the contents of the zip file and execute this shell script:
-
-    `./mde_linux_edr_diy`
-
-    If the command is successful, you see a new alert on the workload protection dashboard and the Microsoft Defender for Endpoint portal. This alert might take a few minutes to appear.
-
-1. To review the alert in Defender for Cloud, go to **Security alerts** > **Enumeration of files with sensitive data**.
-1. From the investigation window, select the link to go to the Microsoft Defender for Endpoint portal.
-
-    > [!TIP]
-    > The alert is triggered with **Low** severity.
 
 ## Remove Defender for Endpoint from a machine
 
