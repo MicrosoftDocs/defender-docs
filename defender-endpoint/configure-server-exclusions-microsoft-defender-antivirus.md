@@ -391,9 +391,5 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Configure Defender for Endpoint on Android features](android-configure.md)
-- [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
