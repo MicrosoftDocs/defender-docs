@@ -128,19 +128,10 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 ## Enable integration with PowerShell in multiple subscriptions
 
-1. In Defender for Cloud, open the **Workload protections** dashboard.
-1. In the dashboard, review the insights panel to see which subscriptions and resources don't have Defender for Endpoint enabled for Linux machines.
+To enable Defender for Servers integration for Linux machines or Windows Server 2012 R2 and 2016 with MDE Unified solution on multiple subscriptions, you can use one of the [PowerShell scripts in the Defender for Cloud GitHub repository](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration).
 
-    - The insights panel displays information about subscriptions that have integration enabled for Windows machines but not for Linux machines.
-    - Subscriptions without Linux machines show no affected resources.
-
-1. In the insights panel, select the subscriptions on which to enable Defender for Endpoint integration for Linux machines.
-1. Select **Enable** to turn on endpoint protection for Linux machines. Defender for Cloud:
-
-    - Automatically onboards Linux machines to Defender for Endpoint in the selected subscriptions.
-    - Detects any previous installations of Defender for Endpoint and reconfigures them to integrate with Defender for Cloud.
-
-Use the [Defender for Servers deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status). Among other things in this workbook, you can verify installation and deployment status of Defender for Endpoint on a Linux machine.
+- Ue [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Unified%20solution) to enable integration with the Defender for Endpoint modern unified solution on Windows Server 2012 R2 or Windows Server 2016
+- Use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Integration%20for%20Linux) to enable Defender for Endpoint integration on Linux machines
 
 ### Manage automatic updates for Linux
 
