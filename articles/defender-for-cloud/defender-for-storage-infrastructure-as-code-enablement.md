@@ -28,7 +28,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
   extension {
     name = "OnUploadMalwareScanning"
     additional_extension_properties = {
-      CapGBPerMonthPerStorageAccount = "5000"
+      CapGBPerMonthPerStorageAccount = "10000"
     }
   }
  
@@ -40,7 +40,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
+To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 
@@ -67,7 +67,7 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
         name: 'OnUploadMalwareScanning'
         isEnabled: 'True'
         additionalExtensionProperties: {
-          CapGBPerMonthPerStorageAccount: '5000'
+          CapGBPerMonthPerStorageAccount: '10000'
         }
       }
       {
@@ -81,7 +81,7 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 
@@ -110,7 +110,7 @@ To enable and configure Microsoft Defender for Storage at the subscription level
                 "name": "OnUploadMalwareScanning",
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
-                    "CapGBPerMonthPerStorageAccount": "5000"
+                    "CapGBPerMonthPerStorageAccount": "10000"
                 }
             },
             {
@@ -124,7 +124,7 @@ To enable and configure Microsoft Defender for Storage at the subscription level
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 
@@ -156,7 +156,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
       malwareScanning = {
         onUpload = {
           isEnabled     = true
-          capGBPerMonth = 5000
+          capGBPerMonth = 10000
         }
       }
       sensitiveDataDiscovery = {
@@ -173,7 +173,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 
@@ -218,7 +218,7 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
     malwareScanning: {
       onUpload: {
         isEnabled: true
-        capGBPerMonth: 5000
+        capGBPerMonth: 10000
       }
     }
     sensitiveDataDiscovery: {
@@ -231,7 +231,7 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth parameter` to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth parameter` to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 
@@ -262,7 +262,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
         "malwareScanning": {
             "onUpload": {
                 "isEnabled": true,
-                "capGBPerMonth": 5000
+                "capGBPerMonth": 10000
             }
         },
         "sensitiveDataDiscovery": {
@@ -276,7 +276,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 **Modifying the monthly cap for malware scanning**:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
 
 **Disabling features**:
 

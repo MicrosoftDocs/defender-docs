@@ -29,7 +29,7 @@ This article lists the security alerts you might get for Azure Key Vault from Mi
 
 (KV_SuspiciousIPAccess)
 
-**Description**: A key vault has been successfully accessed by an IP that has been identified by Microsoft Threat Intelligence as a suspicious IP address. This might indicate that your infrastructure has been compromised. We recommend further investigation. Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/insidetrack/blog/microsoft-uses-threat-intelligence-to-protect-detect-and-respond-to-threats/).
+**Description**: A key vault has been successfully accessed by an IP that has been identified by Microsoft Threat Intelligence as a suspicious IP address. This might indicate that your infrastructure has been compromised. We recommend further investigation. Learn more about [Microsoft's threat intelligence capabilities](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-threat-intelligence/).
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Credential Access
 
