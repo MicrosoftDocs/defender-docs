@@ -105,8 +105,8 @@ You can query all troubleshooting mode events in advanced hunting.
 
    :::image type="content" source="/defender/media/ts-mode-menu.png" alt-text="Turn on troubleshooting mode" lightbox="/defender/media/ts-mode-menu.png":::
 
-> [!NOTE]
-> The **Turn on troubleshooting mode** option is available on all devices, even if the device doesn't meet the prerequisites for troubleshooting mode.  
+   > [!NOTE]
+   > The **Turn on troubleshooting mode** option is available on all devices, even if the device doesn't meet the prerequisites for troubleshooting mode.  
 
 3. Confirm you want to turn on troubleshooting mode for the device.
 
@@ -177,6 +177,7 @@ DeviceEvents
 
 ## Related articles
 
+- [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 - [Troubleshooting mode scenarios](troubleshooting-mode-scenarios.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
