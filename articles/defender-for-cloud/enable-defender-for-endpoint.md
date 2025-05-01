@@ -181,8 +181,7 @@ You can use the [Defender for Endpoint deployment status workbook](https://githu
 
 ## Run a detection test
 
-See [EDR detection test for verifying device's onboarding and reporting services](/defender-endpoint/edr-detection).
-
+Follow the instructions in [EDR detection test for verifying device's onboarding and reporting services](/defender-endpoint/edr-detection).
 
 ## Remove Defender for Endpoint from a machine
 
