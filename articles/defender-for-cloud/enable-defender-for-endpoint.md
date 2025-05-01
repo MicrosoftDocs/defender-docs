@@ -145,10 +145,6 @@ In Windows, Defender for Endpoint version updates are provided via continuous kn
 
 This configuration is supported for Azure VMs and Azure Arc machines, where the `MDE.Linux` extension initiates autoupdate.
 
-## Enable integration with PowerShell on multiple subscriptions
-
-To enable endpoint protection on Linux machines and Windows machines running Windows Server 2016/2012 R2 in multiple subscriptions, use our [PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Integration%20for%20Linux) from the Defender for Cloud GitHub repository.
-
 ## Enable integration at scale
 
 You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud-composite/settings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
@@ -172,16 +168,16 @@ URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Micr
 
 You can use the [Defender for Endpoint deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status) to track the Defender for Endpoint deployment status on your Azure VMs and Azure Arc-enabled VMs. The interactive workbook provides an overview of machines in your environment showing their Microsoft Defender for Endpoint extension deployment status.
 
-## Access the Defender portal
+## Access the Microsoft Defender portal
 
 1. Make sure you have the [right permissions for portal access](/microsoft-365/security/defender-endpoint/assign-portal-access).
 
 1. Check whether you have a proxy or firewall that is blocking anonymous traffic.
 
     - The Defender for Endpoint sensor connects from the system context, so anonymous traffic must be permitted.
-    - To ensure unhindered access to the Defender for Endpoint portal, [enable access to service URLs in the proxy server](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
+    - To ensure unhindered access to the Microsoft Defender portal, [enable access to service URLs in the proxy server](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
-1. Open the [Microsoft Defender Portal](https://security.microsoft.com/). Learn about [Microsoft Defender for Endpoint in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mde).
+1. Open the [Microsoft Defender portal](https://security.microsoft.com/). Learn about [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
 ## Send a test alert from Defender for Endpoint
 
