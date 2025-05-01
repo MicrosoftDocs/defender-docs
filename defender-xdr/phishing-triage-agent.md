@@ -266,15 +266,58 @@ To train the agent, follow these steps:
 
    [SCREENSHOT]
    > [!NOTE]
-   > You can only change the alert’s classification to **true positive – phishing** or **false positive – not malicious**.
+   > You can only change the alert's classification to **true positive – phishing** or **false positive – not malicious**.
 
-4. Select **Use this feedback to teach the agent** and then **Evaluate**. Using these options adds the feedback to the agent’s memory and improves the agent's subsequent responses to be  better aligned with your organization’s context.
+4. Select **Use this feedback to teach the agent** and then **Evaluate**. Using these options adds the feedback to the agent's memory and improves the agent's subsequent responses to be  better aligned with your organization’s context.
 
    [SCREENSHOT]
    > [!NOTE]
    > Not selecting the **Use this feedback to teach the agent** just logs the feedback in the management page for auditing purposes.
 
-The agent then translates the given feedback into a lesson and output back what it learned from the feedback given to it.
+5. Select **Save** to save the feedback and add the lesson to the agent's memory.
+
+The agent then translates the given feedback into a lesson and use it for triage and classification of future incidents.
+
+> [!TIP]
+> Always check the validity of AI responses as sometimes the responses are inapplicable to the scenario.
+
+When you get an error after you provided feedback, follow these steps:
+
+1. Check the validity of your feedback. If the feedback conflicts, please refer to the feedback management page under settings, and reject first the conflicting feedback.
+
+   [SCREENSHOT]
+
+2. After resolving the conflict, rewrite the feedback and select **Evaluate**.
+
+3. The new feedback is available for later reviewing under the feedback management page.
+
+Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
+
+## Frequently asked questions
+
+Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, navigate to the [overview](#overview) and [prerequisites](#prerequisites) sections of this article.
+
+### Why is the Phishing Triage Agent important?
+
+Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports. Consequently, managing these incidents becomes a tedious and repetitive task for Security Operations Center (SOC) analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, who have a limited amount of time to dedicate to completing critical demands. By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
+
+### When is the agent triggered?
+
+The agent automatically runs when a user  reports a potential phishing attempt and an alert is created.
+
+### How do I grant the agent access to plugins and services?
+
+You can create an agent identity using a service principal and assign it to an appropriate Tier 1 equivalent URBAC role in your environment to manage access. Alternatively, you can connect it to an existing user account by signing in to manage access. Note that service principals are only supported for public preview.
+
+### Can the Phishing Triage Agent be trusted?
+
+Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, the agent is assigned an identity and configured with the minimum required permissions for its operation, ensuring that it doesn't have unnecessary permissions. Furthermore, all agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
+
+### Can I remove the Phishing Triage Agent?
+
+Yes. You can [pause or remove the agent](#pause-or-remove-the-agent) at any time in the Agents Overview page. 
+
+Removing the agent does not revert any changes made to the incidents it has triaged. The agent is no longer able to triage new incidents after its removal, but it retains the history of all incidents it triaged.
 
 
 ## Related content
