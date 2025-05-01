@@ -43,9 +43,9 @@ Defender for Endpoint stores collected data in the tenant's geo-location as iden
 
 ## Move between subscriptions
 
-You can move Defender for Endpoint between subscriptions in the same tenant or between different tenants.
+You can move Defender for Endpoint for servers between subscriptions in the same tenant or between different tenants.
 
-- **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux` or `MDE.Windows` extension from the virtual machine. Defender for Cloud will automatically redeploy it.
+- **Move to a different subscription in the same tenant**: To move your Defender for Endpoint for servers extension to a different subscription in the same tenant, delete either the `MDE.Linux` or `MDE.Windows` extension from the virtual machine. Defender for Cloud will automatically redeploy it.
 
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
@@ -68,7 +68,7 @@ Defender for Servers provides visibility into two main types of health issues:
 
 - **Heartbeat Issues**: Problems where the agent is installed but not reporting correctly.
 
-Sometimes, Defender for Endpoint doesn't apply to certain servers. This status is also shown as described in the last query.
+In some situations, Defender for Endpoint doesn't apply to certain machines, such as in cases where a client operating system is installed. These devices need to be covered by a Defender for Endpoint user licenses, such as Microsoft 365 E5. This status is also shown as described in the last query.
 
 Defender for Servers shows specific error messages for each issue type. These messages explain the problem. When available, you'll also find instructions to fix the issue.
 
@@ -76,7 +76,7 @@ Health status updates every four hours. This ensures the issue reflects the stat
 
 To see Defender for Endpoint health issues, use the security explorer as follows:
 
-- To find all the unhealthy virtual machines (VMs) with the issues mentioned, run the following query:
+- To find all the unhealthy virtual machines (VMs) with the issues mentioned, run the query shown in the following screenshot:
 
   :::image type="content" source="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png" alt-text="Screenshot of query of unhealthy virtual machines." lightbox="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png":::
 
@@ -93,5 +93,5 @@ To see Defender for Endpoint health issues, use the security explorer as follows
   :::image type="content" source="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png" alt-text="Screenshot of query of virtual machines where Defender for Endpoint isn't applicable." lightbox="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png":::
 
 ## Next steps
-
+ 
 [Learn more](endpoint-detection-response.md) about EDR recommendations in Defender for Servers.
