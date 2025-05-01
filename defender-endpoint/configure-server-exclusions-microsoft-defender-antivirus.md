@@ -6,7 +6,7 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 05/01/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.topic: conceptual
@@ -240,10 +240,9 @@ This section lists the folder exclusions that are delivered automatically when y
 
 ## Built-in exclusions
 
-> [!NOTE]
-> - Please see [Important Notes](#important-notes-about-automatic-exclusions-on-windows-server)
-> - Default locations could be different than the locations that are described in this article.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
+Make sure to review [Important notes about automatic exclusions](#important-notes-about-automatic-exclusions-on-windows-server) (in this article). Keep in mind that default locations could be different than the locations that are described in this article.
+
+The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
 
 Because Microsoft Defender Antivirus is built into Windows, it doesn't require exclusions for operating system files on any version of Windows. 
 
