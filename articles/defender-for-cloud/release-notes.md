@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/25/2025
+ms.date: 05/01/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,12 +27,225 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## May 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
+| May 1 | GA | [Microsoft Security Copilot is now Generally Available in Defender for Cloud](#microsoft-security-copilot-is-now-generally-available-in-defender-for-cloud) |
+| May 1 | GA | [General Availability Data and AI security dashboard](#general-availability-data-and-ai-security-dashboard) |
+| May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
+
+### General Availability for Defender for AI Services
+
+May 1, 2025
+
+Defender for Cloud now supports runtime protection for Azure AI services (previously called threat protection for AI workloads).
+
+Protection for Azure AI services covers threats specific to AI services and applications, such as jailbreak, wallet abuse, data exposure, suspicious access patterns, and more. The detections use signals from Microsoft Threat Intelligence and Azure AI Prompt Shields, and apply machine learning and AI to secure your AI services.
+
+Learn more about [Defender for AI Services](ai-threat-protection.md).
+
+### Microsoft Security Copilot is now Generally Available in Defender for Cloud
+
+May 1, 2025
+
+Microsoft Security Copilot is now generally available in Defender for Cloud. 
+
+Security Copilot speeds up risk remediation for security teams, making it faster and easier for administrators to address cloud risks. It provides AI-generated summaries, remediation actions, and delegation emails, guiding users through each step of the risk reduction process.
+
+Security administrators can quickly summarize recommendations, generate remediation scripts, and delegate tasks via email to resource owners. These capabilities reduce investigation time, help security teams understand risks in context, and identify resources for quick remediation.
+
+Learn more about [Microsoft Security Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md).
+
+### General Availability Data and AI security dashboard
+
+MAy 1, 2025
+
+Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in GA. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
+
+Key benefits of the Data and AI security dashboard include:
+
+- **Unified view**: Gain a comprehensive view of all organizational data and AI resources.
+- **Data insights**: Understand where your data is stored and the types of resources holding it.
+- **Protection coverage**: Assess the protection coverage of your data and AI resources.
+- **Critical issues**: Highlight resources that require immediate attention based on high-severity recommendations, alerts, and attack paths.
+- **Sensitive data discovery**: Locate and summarize sensitive data resources in your cloud and AI assets.
+- **AI workloads**: Discover AI application footprints, including services, containers, data sets, and models.
+
+Learn more about the [Data and AI security dashboard](data-aware-security-dashboard-overview.md).
+
+### Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources
+
+May 1, 2025
+
+**Estimated date for change:** June 2025
+
+Beginning June 1, 2025, Microsoft Defender CSPM will start billing for **Azure Database for MySQL Flexible Server** and **Azure Database for PostgreSQL Flexible Server** resources in your subscription where Defender CSPM is enabled. These resources are already protected by Defender CSPM and no user action is required. After billing starts, your bill might increase.
+
+For more information, see [CSPM plan pricing](concept-cloud-security-posture-management.md#plan-pricing)
+
+## April 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| April 29 | Preview | [AI Posture Management in GCP Vertex AI (Preview)](#ai-posture-management-in-gcp-vertex-ai-preview) |
+| April 29 | Preview | [Defender for Cloud integration with Mend.io (Preview)](#defender-for-cloud-integration-with-mendio-preview) |
+| April 29 | Change | [Updated GitHub Application Permissions](#github-application-permissions-update)|
+| April 28 | Change | [Update to Defender for SQL servers on Machines plan](#update-to-defender-for-sql-servers-on-machines-plan) |
+| April 27 | GA | [New default cap for on-upload malware scanning in Microsoft Defender for Storage](#new-default-cap-for-on-upload-malware-scanning-in-microsoft-defender-for-storage) |
+| April 24 | GA| [General Availability of API Security Posture Management native integration within Defender CSPM Plan](#general-availability-of-api-security-posture-management-native-integration-within-defender-cspm-plan) |
+| April 7 | Upcoming Change| [Enhancements for Defender for app service alerts](#enhancements-for-defender-for-app-service-alerts) |
+
+### AI Posture Management in GCP Vertex AI (Preview)
+
+April 29, 2025
+
+Defender for Cloud's AI security posture management features now support AI workloads in Google Cloud Platform (GCP) Vertex AI (Preview).
+
+Key features for this release include:
+
+- Modern AI application Discovery: Automatically discover and catalog AI application components, data, and AI artifacts deployed in GCP Vertex AI.
+- Security Posture Strengthening: Detect misconfigurations and receive built-in recommendations and remediation actions to enhance the security posture of your AI applications.
+- Attack Path Analysis: Identify and remediate risks using advanced attack path analysis to protect your AI workloads from potential threats.
+
+These features are designed to provide comprehensive visibility, misconfiguration detection, and hardening for AI resources, ensuring a reduction of risks for AI workloads developed on the GCP Vertex AI platform.
+
+Learn more about [AI security posture management](ai-security-posture.md).
+
+### Defender for Cloud integration with Mend.io (Preview)
+
+April 29, 2025
+
+Defender for Cloud is now integrated with Mend.io in preview. This integration enhances software application security by identifying and mitigating vulnerabilities in partner dependencies. This integration streamlines discovery and remediation processes, improving overall security.
+
+Learn more about the [Mend.io integration](integration-mend-io.md).
+### GitHub Application Permissions Update
+
+April 29, 2025
+
+GitHub connectors in Defender for Cloud will be updated to include administrator permissions for [[Custom Properties]](https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#about-custom-properties). This permission is used to provide new contextualization capabilities and is scoped to managing the custom properties schema. Permissions can be granted in two different ways: 
+
+1. In your GitHub organization, navigate to the Microsoft Security DevOps applications within **Settings > GitHub Apps** and accept the permissions request.
+
+1. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
+
+Note: Existing connectors will continue to work without the new functionality if the above action is not taken.
+
+### Update to Defender for SQL servers on Machines plan
+
+April 28, 2025
+
+The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
+
+Starting today, we're gradually releasing an enhanced agent solution for the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to make the onboarding processes easier and improve protection coverage.
+
+**Required customer actions**
+
+1. [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): Customers who enabled Defender for SQL Server on machines plan before today are required to follow these instructions to update their configuration, following the enhanced agent release.
+
+1. [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2025, customers must verify the protection status of their SQL Server instances across their environments. Learn how to [troubleshoot any deployment issues Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
+
+> [!NOTE]
+> After the agent upgrade occurs, you might experience a billing increase if additional SQL Server instances are protected with your enabled Defender for SQL Servers on Machines plan. For billing information, review the 
+[Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+### New default cap for on-upload malware scanning in Microsoft Defender for Storage
+
+April 27, 2025
+
+The default cap value for on-upload malware scanning has been updated from 5,000GB to 10,000GB. This new cap applies to the following scenarios:
+
+- **New Subscriptions:** Subscriptions where Defender for Storage is enabled for the first time.
+
+- **Re-enabled Subscriptions:** Subscriptions where Defender for Storage was previously disabled and is now re-enabled.
+
+When Defender for Storage Malware Scanning is enabled for these subscriptions, the default cap for on-upload malware scanning will be set to 10,000GB. This cap is adjustable to meet your specific needs.
+
+For more detailed information, please refer to the section on [Malware scanning - billing per GB, monthly capping, and configuration](/azure/defender-for-cloud/defender-for-storage-introduction)
+
+### General Availability of API Security Posture Management native integration within Defender CSPM Plan
+
+April 24, 2025
+
+API Security Posture Management is now generally available as part of the Defender CSPM plan. This release introduces a unified inventory of your APIs along with posture insights, helping you identify and prioritize API risks more effectively directly from your Defender CSPM plan. You can enable this capability through the Environment Settings page by turning on the API Security Posture extension.
+
+With this update, new risk factors have been added, including risk factors for unauthenticated APIs (AllowsAnonymousAccess) and APIs lacking encryption (UnencryptedAccess). Additionally, APIs published through Azure API Management now allow mapping back to any connected Kubernetes Ingresses and VMs, providing end-to-end visibility into API exposure and support risk remediation through Attack path analysis.
+
+### Enhancements for Defender for app service alerts
+
+April 7, 2025
+
+On April 30, 2025, Defender for App Service alerting capabilities will be enhanced. We'll add alerts for suspicious code executions and access to internal or remote endpoints. Additionally, we have improved coverage and reduced noise from relevant alerts by expanding our logic and removing alerts that were causing unnecessary noise. As part of this process, the alert "Suspicious WordPress theme invocation detected" will be deprecated.
+
 ## March 2025
 
 |Date | Category | Update|
 |--|--|--|
+| March 30 | GA | [Enhanced container protection with vulnerability assessment and malware detection for AKS nodes is now GA](#enhanced-container-protection-with-vulnerability-assessment-and-malware-detection-for-aks-nodes-is-now-ga) |
+| March 27 | Preview | [Kubernetes gated deployment (Preview)](#kubernetes-gated-deployment-preview) |
+| March 27 | Preview | [Customizable on-upload malware scanning filters in Defender for Storage (Preview)](#customizable-on-upload-malware-scanning-filters-in-defender-for-storage-preview) |
+| March 26 | GA | [General Availability for agentless VM scanning support for CMK in Azure](#general-availability-for-agentless-vm-scanning-support-for-cmk-in-azure) |
 | March 11 | Upcoming Change | [Upcoming change to the recommendation severity levels](#upcoming-change-to-the-recommendation-severity-levels) |
 | March 03 | GA | [General Availability of File Integrity Monitoring (FIM) based on Microsoft Defender for Endpoint in Azure Government](#general-availability-of-file-integrity-monitoring-fim-based-on-microsoft-defender-for-endpoint-in-azure-government) |
+
+### Enhanced container protection with vulnerability assessment and malware detection for AKS nodes is now GA
+ 
+March 30, 2025
+ 
+Defender for Cloud now provides vulnerability assessment and malware detection for the nodes in Azure Kubernetes Service (AKS) as GA.
+Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service, as well as understand their part in the shared security responsibility they have with the managed cloud provider.
+To receive the new capabilities, you have to enable the **Agentless scanning for machines**"** as part of Defender CSPM, Defender for Containers, or Defender for Servers P2 plan on your subscription.
+
+#### Vulnerability Assessment
+
+A new recommendation is now available in Azure portal: **AKS nodes should have vulnerability findings resolved.** Using this recommendation, you can now review and remediate vulnerabilities and CVEs found on Azure Kubernetes Service (AKS) nodes.
+
+#### Malware detection
+
+New security alerts are triggered when the agentless malware detection capability detects malware in AKS nodes.
+Agentless malware detection uses the Microsoft Defender Antivirus anti-malware engine to scan and detect malicious files. When threats are detected, security alerts are directed into Defender for Cloud and Defender XDR, where they can be investigated and remediated.
+ 
+**Note:** Malware detection for AKS nodes is available only for Defender for Containers or Defender for Servers P2 enabled environments.
+
+### Kubernetes gated deployment (Preview)
+
+March 27, 2025
+
+We're introducing the Kubernetes gated deployment (Preview) feature to the Defender for Containers plan. Kubernetes gated deployment is a mechanism for enhancing Kubernetes security by controlling the deployment of container images that violate organizational security policies. 
+
+This capability is based on two new functionalities: 
+
+- **Vulnerability findings artifact**: Generation of findings for each container image scanned for vulnerability assessment.
+- **Security rules**: Addition of security rules to alert or prevent the deployment of vulnerable container images into Kubernetes clusters. 
+
+**Customized security rules**: Customers can customize security rules for various environments, for Kubernetes clusters within their organization, or for namespaces, to enable security controls tailored to specific needs and compliance requirements.
+
+**Configurable actions for a security rule**:
+
+- **Audit**: Attempting to deploy a vulnerable container image triggers an "Audit" action, generating a recommendation with violation details on the container image. 
+
+- **Deny**: Attempting to deploy a vulnerable container image triggers a "Deny" action to prevent deployment of the container image, ensuring that only secure and compliant images are deployed. 
+
+**End-to-End Security**: Defining protection from deployment of vulnerable container images as the first security rule, we introduce the end-to-end Kubernetes secure gating mechanism, ensuring that vulnerable containers don't enter the customer's Kubernetes environment. 
+
+For more information about this feature, see [Gated Deployment solution overview](gated-deployment-introduction.md).
+
+### Customizable on-upload malware scanning filters in Defender for Storage (Preview)
+
+March 27, 2025
+
+On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes as well as by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
+
+Learn how to [configure customizable on-upload malware scanning filters](on-upload-malware-scanning.md#customizable-on-upload-malware-scanning-filters).
+
+### General Availability for agentless VM scanning support for CMK in Azure
+
+March 26, 2025
+
+Agentless scanning for Azure VMs with CMK encrypted disks is now Generally Available. Both the Defender CSPM plan, and the Defender for Servers P2 provide support for agentless scanning for VMs, now with CMK support across all clouds
+
+Learn how to [enable agentless scanning for Azure VMs with CMK encrypted disks](enable-agentless-scanning-vms.md#enable-for-azure-vms-with-cmk-encrypted-disks).
 
 ### Upcoming change to the recommendation severity levels
 
@@ -371,7 +584,7 @@ Learn more about [sensitivity scanning](concept-data-security-posture-prepare.md
 
 November 26, 2024
 
-You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview compliance portal.
+You no longer need to select the dedicated consent button under the "Information Protection" section within the "Labels" page, to benefit from custom information types and sensitivity labels configured in the Microsoft 365 Defender portal or Microsoft Purview portal.
 
 With this change, all custom information types and sensitivity labels are automatically imported into the Microsoft Defender for Cloud portal.
 
@@ -386,7 +599,7 @@ Until recently, Defender for Cloud imported all sensitivity labels from the Micr
 - Sensitivity labels that have their scope set to "Items -> Files", or "Items -> Emails", under the "Define the scope of your label" section in the Information Protection section.
 - The sensitivity label has an automatic labeling rule configured.
 
-As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview compliance portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
+As of November 26, 2024 the names of the sensitivity label scopes in the user interface (UI) have been updated in both the Microsoft 365 Defender portal and the Microsoft Purview portal. Defender for Cloud now will only import sensitivity labels with the "Files and other data assets" scope applied to them. Defender for Cloud no longer imports labels with the "Emails" scope applied to them.
 
 > [!NOTE]
 > Labels that were configured with "Items -> Files" before this change took place are automatically migrated to the new "Files and other data assets" scope.

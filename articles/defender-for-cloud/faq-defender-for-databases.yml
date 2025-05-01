@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 06/20/2023
+  ms.date: 04/27/2025
 title: Common questions about Microsoft Defender for Databases
 summary: Get answers to common questions about Microsoft Defender for Databases.
 
@@ -14,16 +14,6 @@ summary: Get answers to common questions about Microsoft Defender for Databases.
 sections:
   - name: Ignored
     questions:
-      - question: |
-          If I enable this Microsoft Defender plan on my subscription, are all SQL servers on the subscription protected?
-        answer: |
-          No. To defend a SQL server running on an Azure virtual machine or an Azure Arc-enabled machine, Defender for Cloud requires:
-
-          - A Log Analytics agent on the machine.
-          - The relevant Log Analytics workspace to have Microsoft Defender for SQL Servers on Machines enabled.
-
-          The subscription status, shown on the SQL server's page in the Azure portal, reflects the default workspace status and applies to all connected machines. Defender for Cloud helps protect only the SQL servers on hosts that have a Log Analytics agent reporting to that workspace.
-
       - question: |
           Is there a performance effect from deploying Microsoft Defender for SQL Servers on Machines?
         answer: |
@@ -35,11 +25,6 @@ sections:
           Lab tests of our solution showed CPU usage averaging 3% for peak slices, compared against benchmark loads. An analysis of our current user data shows a negligible effect on CPU and memory usage.
 
           Performance always varies between environments, machines, and loads. These statements serve as a general guideline, not a guarantee for any individual deployment.
-
-      - question: |
-          I changed the Log Analytics workspace for Defender for SQL Servers on Machines and lost all my scan results and baselines settings. What happened?
-        answer: |
-          The scan results and baselines are not stored in the Log Analytics workspace but are linked to it. Changing the workspace resets the scan results and baseline settings. However, if you revert to the original workspace within 90 days, the scan results and baseline settings are restored. [Read more](defender-for-sql-on-machines-vulnerability-assessment.md#data-residency).
 
       - question: |
           What happens to the old scan results and baselines after I switch to express configuration?
@@ -110,48 +95,9 @@ sections:
           It takes approximately 30 minutes to update the protection status via the SQL IaaS Agent Extension, assuming that all the prerequisites are fulfilled.
 
       - question: |
-          How do I verify that my deployment of Defender for SQL Servers on Machines ended successfully and that my database is now protected?
-        answer: |
-          1. In the Azure portal, locate the database on the upper search bar.
-          2. Under **Security**, select **Microsoft Defender for Cloud**.
-          3. Check **Protection Status**. If the status is **Protected**, the deployment was successful.
-
-          :::image type="content" source="media/defender-for-sql-usage/protection-status-protected.png" alt-text="Screenshot that shows protection status as protected." lightbox="media/defender-for-sql-usage/protection-status-protected.png":::
-
-      - question: |
-          What is the purpose of the managed identity created during the installation process on Azure SQL virtual machines?
-        answer: |
-          The managed identity is part of the Azure policy, which pushes out the Azure Monitor Agent. The Azure Monitor Agent uses the managed identity to access the database so that it can collect the data and send it via the Log Analytics workspace to Defender for Cloud. For more information about the use of the managed identity, see [Resource Manager template samples for agents in Azure Monitor](/azure/azure-monitor/agents/resource-manager-agent).
-
-      - question: |
-          Can I use my own DCR or managed identity instead of the one that Defender for Cloud creates?
-        answer: |
-          Yes. We allow you to bring your own identity or data collection rule (DCR) by using only the script described in [Enable Microsoft Defender for SQL Servers on Machines at scale](enable-defender-sql-at-scale.md).
-
-      - question: |
-          How many resource groups and Log Analytics workspaces does the autoprovisioning process create?
-        answer: |
-          By default, we create the resource group, workspace, and DCR per region that has the SQL machine. If you choose the custom workspace option, only one resource group or DCR is created in the same location as the workspace.
-
-      - question: |
-          How can I enable SQL servers on machines with the Azure Monitor Agent at scale?
-        answer: |
-          For the process of how to enable autoprovisioning across multiple subscriptions simultaneously, see [Enable Microsoft Defender for SQL Servers on Machines at scale](enable-defender-sql-at-scale.md). It's applicable to SQL servers hosted on Azure virtual machines, SQL servers hosted in on-premises environments, and Azure Arc-enabled SQL servers.
-
-      - question: |
-          Which tables are used in a Log Analytics workspace with the Azure Monitor Agent?
-        answer: |
-          Defender for SQL Servers on Machines (for both SQL virtual machines and Azure Arc-enabled SQL servers) uses the Log Analytics workspace to transfer data from the database to the Defender for Cloud portal. No data is saved locally at the Log Analytics workspace. The tables in the Log Analytics workspace named `SQLAtpStatus` and `SqlVulnerabilityAssessmentScanStatus` will be retired [when the Microsoft Monitor Agent is deprecated](/azure/azure-monitor/agents/azure-monitor-agent-migration). You can view the status of threat protection and vulnerability assessments in the Defender for Cloud portal.
-
-      - question: |
           How does Defender for SQL Servers on Machines collect logs from the SQL server?
         answer: |
           Defender for SQL Servers on Machines uses Extended Events, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL Servers on Machines collects the logs by using the SQL Server audit logs.
-
-      - question: |
-          Does the presence of a parameter named enableCollectionOfSqlQueriesForSecurityResearch in the policy initiative mean that my data is collected for analysis?
-        answer: |
-          The `enableCollectionOfSqlQueriesForSecurityResearch` parameter isn't in use today. Its default value is `false`. Unless you proactively change the value, it remains `false`. This parameter has no effect.
 
 additionalContent: |
 
