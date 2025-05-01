@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 02/06/2025
+ms.date: 03/27/2025
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
@@ -318,10 +318,10 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 
 > [!NOTE]
 > Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS. 
+> > IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
+> > For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 > 
-> IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
-> 
-> For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
+> MDE portal Timeline doesn't display the URL for Custom URL Indicator Blocks for unsupervised devices, instead it marks hidden for privacy.
 
 ## Configure vulnerability assessment of apps
 
@@ -374,7 +374,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
    - The privacy approval screen appears only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
-   :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
+      :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen.":::
 
 Once the client versions are deployed to target iOS devices, processing starts. Vulnerabilities found on those devices start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. This time frame is especially true for the entire list of apps to show up in the software inventory.
 
@@ -426,6 +426,9 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
+
+> [!NOTE]
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
 
 ### Configure device tags using MDM
 

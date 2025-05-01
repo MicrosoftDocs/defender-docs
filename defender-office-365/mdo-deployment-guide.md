@@ -30,6 +30,13 @@ In new Microsoft 365 organizations with Microsoft Defender for Office 365 (inclu
 
 Although your Microsoft 365 organization includes a default level of protection from the moment you create it (or add Defender for Office 365 to it), the steps in this article give you an actionable plan to unleash the full protection capabilities of EOP and Defender for Office 365. After you complete the steps, you can also use this article to show management that you're maximizing your investment in Microsoft 365.
 
+> [!TIP]
+> For information about configuring protection for Microsoft Teams, see the following articles:
+>
+> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
+
 The steps to configure EOP and Defender for Office 365 are described in the following diagram:
 
 :::image type="content" source="media/mdo-deployment-guide.png" alt-text="A conceptual diagram showing the steps to configure Defender for Office 365." lightbox="media/mdo-deployment-guide.png":::
@@ -116,7 +123,7 @@ The previous information and the protection policies that are involved are summa
 |&nbsp;&nbsp;[Outbound spam](outbound-spam-policies-configure.md)|✔||✔|
 |&nbsp;&nbsp;[Connection filtering](connection-filter-policies-configure.md)|✔¹|||
 |**Defender for Office 365 policies**:||||
-|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Advanced phishing thresholds](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
+|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
 |&nbsp;&nbsp;[Safe Links](safe-links-policies-configure.md)|³|✔|✔|
 |&nbsp;&nbsp;[Safe Attachments](safe-attachments-policies-configure.md)|³|✔|✔|
 |**General behavior**||||

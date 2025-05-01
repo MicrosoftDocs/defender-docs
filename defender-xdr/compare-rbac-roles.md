@@ -138,10 +138,10 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 |Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
 |---|-----|
-|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Security operations \ Security data \ Response (manage)</br>Security operations \ Posture management \ Secure Score (read)</br>Security operations \ Posture management \ Secure Score (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
+|Local Global administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (all permissions) </br>Authorization and settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (all permissions)|
 |Local Security operator|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security setting (all permissions) </br>Authorization and settings \ System setting (read)|
-|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
-|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</brAuthorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
+|Local Security reader|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (read) </br>Authorization and settings \ System settings (read)|
+|Local Compliance administrator|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (read) </br>Authorization and settings \ Security settings \ Security settings (all permissions) </br>Authorization and settings \ System settings (read)|
 
 <a name='azure-active-directory-global-roles-access'></a>
 

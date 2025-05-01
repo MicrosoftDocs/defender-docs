@@ -88,12 +88,16 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
    The Activation page lists servers discovered in Device Inventory and identified as eligible domain controllers. 
 
-2. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+
+    :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
 
     > [!NOTE]
     > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
-3. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
+1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
+
+    :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
 
 ## Onboarding Confirmation 
 
@@ -104,7 +108,7 @@ To confirm the sensor has been onboarded:
 2. Check that the onboarded domain controller is listed. 
 
 > [!NOTE]
->  The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
+> The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 ## Test activated capabilities
 
@@ -113,8 +117,8 @@ The first time you activate Defender for Identity capabilities on your domain co
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
 
 - Investigation features on the [ITDR dashboard](#check-the-itdr-dashboard), [identity inventory](#confirm-entity-page-details), and [identity advanced hunting data](#test-advanced-hunting-tables)
-- [Specified security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
-- [Specified alert detections](#test-alert-functionality)
+- [Security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
+- [Alert detections](#test-alert-functionality)
 - [Remediation actions](#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
@@ -125,7 +129,6 @@ Use the following procedures to test your environment for Defender for Identity 
 In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment.
 
 For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
-
 
 ### Confirm entity page details
 
@@ -139,7 +142,7 @@ In the Defender portal, check for the following details:
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
-    If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
+   If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
@@ -205,9 +208,9 @@ Test remediation actions on a test user. For example:
 
 1. In the Defender portal, go to the user details page for a test user.
 
-1. From the **Options** menu, select any of the available remediation actions.
+2. From the **Options** menu, select any of the available remediation actions.
 
-1. Check Active Directory for the expected activity.
+3. Check Active Directory for the expected activity.
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
@@ -215,8 +218,10 @@ For more information, see [Remediation actions in Microsoft Defender for Identit
 
 If you want to deactivate Defender for Identity capabilities on your domain controller, delete it from the **Sensors** page:
 
-1. In the Defender portal, select **Settings > Identities > Sensors**.
-1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+1. In the Defender portal, select **Settings** > **Identities** > **Sensors**.
+2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+
+    :::image type="content" source="media/activate-capabilities/3.jpg" lightbox="media/activate-capabilities/3.jpg" alt-text="Screenshot that shows how to deactivate a server.":::
 
 Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 

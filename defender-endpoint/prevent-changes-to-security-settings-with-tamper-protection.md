@@ -71,7 +71,7 @@ Tamper protection doesn't prevent you from viewing your security settings. And, 
 Tamper protection is available for devices that are running one of the following versions of Windows:
 
 - Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
+- Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
 - Windows Server 2016 and Windows Server 2012 R2 (using the modern, unified solution)
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
@@ -134,6 +134,5 @@ To learn more about Microsoft Defender Vulnerability Management, see [Dashboard 
 - [Built-in protection helps guard against ransomware](built-in-protection.md)
 - [Frequently asked questions on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
-- [Defender for Endpoint on non-Windows devices](configure-endpoints-non-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

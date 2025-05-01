@@ -7,7 +7,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 09/18/2024
+ms.date: 03/04/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -29,11 +29,11 @@ Microsoft Defender for Endpoint for US Government customers, built in the Azure 
 This offering is available to GCC, GCC High, and DoD customers and is based on the same prevention, detection, investigation, and remediation as the commercial version. However, there are some differences in the availability of capabilities for this offering.
 
 > [!NOTE]
-> If you are a GCC customer using Defender for Endpoint in Commercial, please refer to the public documentation pages.
+> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](/defender-endpoint/).
 
 ## Licensing requirements
 
-Microsoft Defender for Endpoint for US Government customers requires one of the following Microsoft volume licensing offers:
+Microsoft Defender for Endpoint for US Government customers requires one of the Microsoft volume licensing offers listed in this article for desktop and server licensing.
 
 ### Desktop licensing
 
@@ -65,7 +65,7 @@ The following are the Microsoft Defender for Endpoint portal URLs for US Governm
 |DoD|<https://security.apps.mil>|
 
 > [!NOTE]
-> If you are a GCC customer and in the process of moving from Microsoft Defender for Endpoint commercial to GCC, use https://transition.security.microsoft.com to access your Microsoft Defender for Endpoint commercial data.
+> If you're a GCC customer and in the process of moving from Microsoft Defender for Endpoint commercial to GCC, use https://transition.security.microsoft.com to access your Microsoft Defender for Endpoint commercial data.
 
 ## Endpoint versions
 
@@ -73,43 +73,38 @@ The following are the Microsoft Defender for Endpoint portal URLs for US Governm
 
 The following OS versions are supported:
 
-
 |OS version|GCC|GCC High|DoD|
 |:---|:---:|:---:|:---:|
 |Windows 11|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 10, version 21H1 and above|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 10, version 20H2 (with [KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 10, version 2004 (with [KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing), please upgrade|
-|Windows 10, version 1909 (with [KB4586819](https://support.microsoft.com/help/4586819) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing), please upgrade|
-|Windows 10, version 1903 (with [KB4586819](https://support.microsoft.com/help/4586819) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing), please upgrade|
-|Windows 10, version 1809 (with [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|
-|Windows 10, version 1803 (with [KB4598245](https://support.microsoft.com/help/4598245) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|![Yes](media/svg/check-yes.svg) <br /> Note: [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing), please upgrade|
-|Windows 10, version 1709|![No.](media/svg/check-no.svg) <br /> Note: Won't be supported|![Yes](media/svg/check-yes.svg) With [KB4499147](https://support.microsoft.com/help/4499147) <sup>1</sup> <br /> Note: [Deprecated](/lifecycle/announcements/revised-end-of-service-windows-10-1709), please upgrade|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|
-|Windows 10, version 1703 and earlier|![No.](media/svg/check-no.svg) <br /> Note: Won't be supported|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|![No](media/svg/check-no.svg) <br /> Note: Won't be supported|
-|Windows Server 2022|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2019 (with [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup>)|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2016 (Modern) <sup>2</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2012 R2 (Modern) <sup>2</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2016 (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2012 R2 (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows Server 2008 R2 SP1 (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 8.1 Enterprise (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 8 Pro (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 7 SP1 Enterprise (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Windows 7 SP1 Pro (Legacy) <sup>3</sup>|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 10, version 21H1 and later|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 10, version 20H2 (with [KB4586853](https://support.microsoft.com/help/4586853)) <br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 10, version 2004 (with [KB4586853](https://support.microsoft.com/help/4586853))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-version-2004-end-of-servicing); upgrade now|
+|Windows 10, version 1909 (with [KB4586819](https://support.microsoft.com/help/4586819))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1909-end-of-servicing); upgrade now|
+|Windows 10, version 1903 (with [KB4586819](https://support.microsoft.com/help/4586819))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|
+|Windows 10, version 1809 (with [KB4586839](https://support.microsoft.com/help/4586839))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|
+|Windows 10, version 1803 (with [KB4598245](https://support.microsoft.com/help/4598245))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|
+|Windows 10, version 1709|![No.](media/svg/check-no.svg) <br/> Not supported|![Yes](media/svg/check-yes.svg) With [KB4499147](https://support.microsoft.com/help/4499147)<br/>See note 1 following this table<br/>[Deprecated](/lifecycle/announcements/revised-end-of-service-windows-10-1709); upgrade now|![No](media/svg/check-no.svg) <br/> Not supported|
+|Windows 10, version 1703 and earlier|![No.](media/svg/check-no.svg) <br/> Not supported|![No](media/svg/check-no.svg) <br/> Not supported|![No](media/svg/check-no.svg) <br/> Not supported|
+|Windows Server 2022 and later|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2019 (with [KB4586839](https://support.microsoft.com/help/4586839))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2016 (Modern)<br/>See note 2 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2012 R2 (Modern)<br/>See note 2 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2016 (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2012 R2 (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2008 R2 SP1 (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 8.1 Enterprise (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 8 Pro (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 7 SP1 Enterprise (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows 7 SP1 Pro (Legacy) <br/>See note 3 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Linux|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |macOS|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Android|![Yes.](media/svg/check-yes.svg) <br /> |![Yes](media/svg/check-yes.svg) <br /> |![Yes](media/svg/check-yes.svg) <br />|
-|iOS|![Yes.](media/svg/check-yes.svg) <br /> |![Yes](media/svg/check-yes.svg) <br /> |![Yes](media/svg/check-yes.svg) <br />|
+|Android|![Yes.](media/svg/check-yes.svg) <br/> |![Yes](media/svg/check-yes.svg) <br/> |![Yes](media/svg/check-yes.svg) <br/>|
+|iOS|![Yes.](media/svg/check-yes.svg) <br/> |![Yes](media/svg/check-yes.svg) <br/> |![Yes](media/svg/check-yes.svg) <br/>|
 
-**Footnotes**
-
-   <sup>1</sup> The patch must be deployed prior to device onboarding in order to configure Defender for Endpoint to the correct environment.
-
-   <sup>2</sup> Learn about the [unified modern solution for Windows 2016 and 2012 R2](configure-server-endpoints.md#functionality-in-the-modern-unified-solution). If you have previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
-
-   <sup>3</sup> When using [Microsoft Monitoring Agent](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) you'll need to choose "Azure US Government" under "Azure Cloud" if using the [setup wizard](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard), or if using a [command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) or a [script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation) - set the "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parameter to 1. </br>
-    The minimum MMA supported version is 10.20.18029 (March 2020).
+>[!NOTE]
+> 1. The patch must be deployed before device onboarding in order to configure Defender for Endpoint to the correct environment.
+> 2. Learn about the [unified modern solution for Windows 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). If you previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
+> 3. When using the [Microsoft Monitoring Agent](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) make sure to choose `Azure US Government` under **Azure Cloud** if using the [setup wizard](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard). If you're using a [command line](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) or a [script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation), set the `OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE` parameter to `1`. The minimum MMA supported version is `10.20.18029` (March 2020).
 
 ### OS versions when using Microsoft Defender for servers
 
@@ -118,7 +113,7 @@ The following OS versions are supported when using [Microsoft Defender for serve
 
 |OS version|GCC|GCC High|DoD|
 |:---|:---:|:---:|:---:|
-|Windows Server 2022|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Windows Server 2022 and later|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2019|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2016|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2012 R2|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
@@ -144,12 +139,12 @@ For more information, see [Configure device proxy and Internet connectivity sett
 
 ## API
 
-Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you'll need to use the following URIs:
+Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you need to use the following URIs:
 
 
 |Endpoint type|GCC|GCC High & DoD|
 |---|---|---|
-|Login|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
+|Sign in|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
 |Defender for Endpoint API|`https://api-gcc.securitycenter.microsoft.us`|`https://api-gov.securitycenter.microsoft.us`|
 
 ## Feature parity with commercial
@@ -160,12 +155,12 @@ These are the known gaps:
 
 |Feature name|GCC|GCC High|DoD|
 |---|:---:|:---:|:---:|
-|Microsoft Secure Score|![Yes](media/svg/check-yes.svg)<sup>1</sup>|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Microsoft Secure Score|![Yes](media/svg/check-yes.svg)<br/>See note following this table|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Microsoft Threat Experts|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
 |Microsoft Defender for Endpoint Security Configuration Management|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
 
 > [!NOTE]
-> <sup>1</sup> While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
+> While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
 
 These are the features and known gaps for [Mobile Threat Defense (Microsoft Defender for Endpoint on Android & iOS)](mtd.md):
 
@@ -179,12 +174,11 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 |Conditional Access/Conditional Launch|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Support for MAM|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Privacy Controls|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Microsoft Defender Vulnerability Management core capabilities <br/> (included in Defender for Endpoint Plan 2) <sup>1</sup>|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Microsoft Defender Vulnerability Management premium capabilities <sup>1</sup>|![Yes](media/svg/check-yes.svg) |![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Microsoft Defender Vulnerability Management core capabilities <br/> (included in Defender for Endpoint Plan 2) <br/>See note following this table|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Microsoft Defender Vulnerability Management premium capabilities <br/>See note following this table|![Yes](media/svg/check-yes.svg) |![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 
 > [!NOTE]
->
-> <sup>1</sup> The following Defender Vulnerability Management functionality is not available for GCC, GCC High and DoD customers:
+> The following Defender Vulnerability Management functionality isn't available for GCC, GCC High, and DoD customers:
 > - Report inaccuracy
 > - Request CVE support
 

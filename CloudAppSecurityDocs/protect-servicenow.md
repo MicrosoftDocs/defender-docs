@@ -1,7 +1,7 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your ServiceNow app to Defender for Cloud Apps using the API connector.
-ms.date: 12/12/2024
+ms.date: 04/28/2025
 ms.topic: how-to
 ---
 
@@ -152,14 +152,15 @@ For more information, see the [ServiceNow product documentation](https://docs.se
    
    1. Select **Update**.
    
-1. Establish an internal procedure to ensure that the connection remains alive. A couple of days before the expected expiration of the refresh token lifespan.
-Revoke to the old refresh token. We don't recommend keeping old keys for security reasons.
-
-    1. On the ServiceNow pane, search for **System OAuth**, and then select **Manage Tokens**.
-
+1. Establish an internal procedure to ensure that the connection remains active.
+    1. Before the expected expiration of the refresh token, revoke the old refresh token.
+    1. In the ServiceNow portal, search for **System OAuth**, and then select **Manage Tokens**.
     1. Select the old token from the list according to the OAuth name and expiration date.
-
     1. Select **Revoke Access > Revoke**.
+    1. In the Microsoft Defender Portal edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
+
+    > [!NOTE]
+    > This is a recurring process every 90 days. Without this, the ServiceNow connection will stop working.
       
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 

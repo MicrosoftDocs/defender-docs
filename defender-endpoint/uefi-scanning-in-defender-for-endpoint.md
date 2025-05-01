@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 05/22/2024
+ms.date: 03/26/2025
 ---
 
 # UEFI scanning in Defender for Endpoint
@@ -26,7 +26,7 @@ Recently, Microsoft Defender for Endpoint extended its protection capabilities t
 
 Hardware and firmware-level attacks have continued to rise in recent years, as modern security solutions made persistence and detection evasion on the operating system more difficult. Attackers compromise the boot flow to achieve low-level malware behavior that's hard to detect, posing a significant risk to an organization's security posture.
 
-[Windows Defender System Guard](/windows/security/hardware-security/how-hardware-based-root-of-trust-helps-protect-windows) helps defend against firmware attacks by providing guarantees for secure boot through hardware-backed security features like [hypervisor-level attestation](https://www.microsoft.com/security/blog/2018/04/19/introducing-windows-defender-system-guard-runtime-attestation/) and [Secure Launch](/windows/security/threat-protection/windows-defender-system-guard/system-guard-how-hardware-based-root-of-trust-helps-protect-windows), also known as Dynamic Root of Trust (DRTM), which are enabled by default in [Secured-core PCs](https://www.microsoft.com/windowsforbusiness/windows10-secured-core-computers). The new UEFI scan engine in Defender for Endpoint expands on these protections by making firmware scanning broadly available.
+[Windows Defender System Guard](/windows/security/hardware-security/how-hardware-based-root-of-trust-helps-protect-windows) helps defend against firmware attacks by providing guarantees for secure boot through hardware-backed security features like [hypervisor-level attestation](https://www.microsoft.com/security/blog/2018/04/19/introducing-windows-defender-system-guard-runtime-attestation/) and [Secure Launch](/windows/security/threat-protection/windows-defender-system-guard/system-guard-how-hardware-based-root-of-trust-helps-protect-windows), also known as Dynamic Root of Trust (DRTM), which are enabled by default in [Secured-core PCs](https://www.microsoft.com/windows/business/windows-11-secured-core-computers). The new UEFI scan engine in Defender for Endpoint expands on these protections by making firmware scanning broadly available.
 
 The UEFI scanner is a new component of the [built-in antivirus](microsoft-defender-antivirus-windows.md) solution on Windows 10 and newer versions, and gives Defender for Endpoint the unique ability to scan inside of the firmware filesystem and perform security assessment. It integrates insights from our partner chipset manufacturers and further expands the comprehensive endpoint protection provided by Defender for Endpoint.
 
@@ -39,7 +39,7 @@ The UEFI scanner is a new component of the [built-in antivirus](microsoft-defend
 - Devices are running one of the following versions of Windows:
   - Windows 10, Windows 11 or newer on client devices
   - Windows Server 2019, Windows Server 2022, or newer versions
-  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) installed
+  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) installed
 
 ## What is the UEFI scanner?
 
@@ -108,7 +108,7 @@ AlertStats
 
 The new UEFI scanner adds to a rich set of Microsoft technologies that integrate to deliver chip-to-cloud security, from a strong hardware root of trust to cloud-powered security solutions at the OS level.
 
-Hardware backed security features like Secure Launch and device attestation help stop firmware attacks. These features, which are enabled by default in [Secured-core PCs](https://www.microsoft.com/en-us/windowsforbusiness/windows10-secured-core-computers), seamlessly integrate with Defender for Endpoint to provide comprehensive endpoint protection.
+Hardware backed security features like Secure Launch and device attestation help stop firmware attacks. These features, which are enabled by default in [Secured-core PCs](https://www.microsoft.com/windows/business/windows-11-secured-core-computers), seamlessly integrate with Defender for Endpoint to provide comprehensive endpoint protection.
 
 With its UEFI scanner, [Defender for Endpoint](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp) gets even richer visibility into threats at the firmware level, where attackers have been increasingly focusing their efforts on. Security operations teams can use this new level of visibility, along with the rich set of detection and response capabilities in Defender for Endpoint, to investigate and contain such advanced attacks.
 

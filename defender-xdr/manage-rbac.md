@@ -60,7 +60,7 @@ Centralized permissions management is supported for the following solutions:
 |Microsoft Defender for Cloud Apps|Full support for all cloud apps data and actions. </br></br> **Note:** Once Unified RBAC is activated, some built-in scoped roles will no longer be supported. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions).|
 
 > [!NOTE]
-> Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview compliance portal.
+> Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview portal.
 
 ## Before you start
 

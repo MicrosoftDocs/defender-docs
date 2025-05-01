@@ -233,7 +233,8 @@ Before you create indicators for files, make sure the following requirements are
 
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
 - Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
+- Client devices must be running Windows 11 or Windows 10, version 1703 or later
+- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016 / Windows Server 2012 R2 with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
 - The [Block or allow feature is turned on](advanced-features.md)
 
 #### Indicators for IP addresses, URLs, or domains
@@ -256,7 +257,7 @@ Before you create indicators for application certificates, make sure the followi
 
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware client version is 4.18.1901.x or later
-- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution in Defender for Endpoint](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution), or Windows Server 2019, or Windows Server 2022
+- Devices are running Windows 10, version 1703 or later, or Windows 11; Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), or Windows Server 2019, Windows Server 2022, or Windows Server 2025
 - Virus and threat protection definitions are up to date
 
 > [!TIP]
