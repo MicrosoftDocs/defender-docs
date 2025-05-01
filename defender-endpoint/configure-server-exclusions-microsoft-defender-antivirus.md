@@ -391,5 +391,7 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
