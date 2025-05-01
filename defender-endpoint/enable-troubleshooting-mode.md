@@ -68,7 +68,7 @@ Notifications are sent to the user when troubleshooting mode begins and when tro
 You can query all troubleshooting mode events in advanced hunting.
 
 > [!NOTE]
-> Policy management changes are applied to the device when it is actively in troubleshooting mode. However, the changes do not take effect until troubleshooting mode expires. Additionally, Microsoft Defender Antivirus Platform updates are not applied during Troubleshooting mode. Platform updates are applied when troubleshooting mode ends with a Windows update.
+> Policy management changes are applied to the device when it's actively in troubleshooting mode. However, the changes don't take effect until troubleshooting mode expires. Additionally, Microsoft Defender Antivirus Platform updates aren't applied during Troubleshooting mode. Platform updates are applied when troubleshooting mode ends with a Windows update.
 
 ## Prerequisites
 
@@ -106,7 +106,7 @@ You can query all troubleshooting mode events in advanced hunting.
    :::image type="content" source="/defender/media/ts-mode-menu.png" alt-text="Turn on troubleshooting mode" lightbox="/defender/media/ts-mode-menu.png":::
 
 > [!NOTE]
-> The **Turn on troubleshooting mode** option is available on all devices, even if the device does not meet the prerequisites for troubleshooting mode.  
+> The **Turn on troubleshooting mode** option is available on all devices, even if the device doesn't meet the prerequisites for troubleshooting mode.  
 
 3. Confirm you want to turn on troubleshooting mode for the device.
 
