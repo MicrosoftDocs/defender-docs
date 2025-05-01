@@ -30,21 +30,17 @@ search.appverid: met150
 
 - Windows Server
 
+## Important notes about automatic exclusions on Windows Server
 
-> [!IMPORTANT]
-> ## Important notes about automatic exclusions on Windows Server
->
-> - [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
-> - Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
-> - Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
-> - Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
-> - Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
-> - Appropriate exclusions must be set for software that isn't included with the operating system.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in and automatic exclusions. 
+- [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
+- Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
+- Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
+- Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+- Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
+- Appropriate exclusions must be set for software that isn't included with the operating system.
+- The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. 
 
-## Overview
-
-This article describes types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
+This article describes the two main types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
 
 - [Automatic exclusions](#automatic-server-role-exclusions) for roles on Windows Server 2016 and later. 
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
