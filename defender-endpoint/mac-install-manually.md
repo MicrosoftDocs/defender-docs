@@ -33,7 +33,7 @@ ms.date: 04/16/2025
 This article describes how to deploy Microsoft Defender for Endpoint on macOS manually. A successful deployment requires the completion of all of the following steps:
 
 - [Download installation and onboarding packages](#download-installation-and-onboarding-packages)
-- [Application installation (macOS 11 and newer versions)](#application-installation-macos-11-and-newer-versions)
+- [Application installation (macOS 13 and newer versions)](#application-installation-macos-13-and-newer-versions)
 - [Onboarding Package](#onboarding-package)
 - [Grant Full Disk Access](#allow-full-disk-access)
 - [Ensure Background Execution](#background-execution)
