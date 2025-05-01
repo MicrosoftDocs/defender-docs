@@ -4,7 +4,7 @@ description: Learn how to enable Microsoft Defender for Endpoint integration in 
 author: elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 05/01/2025
 #customer intent: As a user, I want to learn how to manually enable the Defender for Endpoint integration in Defender for Cloud so that I can protect multicloud and on-premises machines.
 ---
 
@@ -26,7 +26,7 @@ This article explains how to manually enable Defender for Endpoint integration w
 **Azure VMs** |  Check that VMs can connect to the Defender for Endpoint service.<br/><br/> If machines don't have direct access, proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender-endpoint/configure-proxy-internet) and [Linux](/defender-endpoint/linux-static-proxy-configuration) machines.
 **On-premises VMs** | We recommend that you [onboard on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).<br/><br/> If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender Server Plan 1 features are available, but most Defender for Servers Plan 2 functionality doesn't work.
 **Azure tenant** | If you moved your subscription between Azure tenants, some manual preparatory steps are also required. [Contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) for details.
-**Windows Server 2016, 2012 R2** | Unlike later versions of Windows Server, which come with the Defender for Endpoint sensor preinstalled, Defender for Cloud installs the sensor on machines running Windows Server 2016/2012 R2 using the unified Defender for Endpoint solution. After you enable a Defender for Servers plan with the integration, you can't roll it back. Even if you disable the plan and then re-enable it, the integration will be re-enabled.
+**Windows Server 2016, 2012 R2** | Unlike later versions of Windows Server, which come with the Defender for Endpoint sensor preinstalled, Defender for Cloud installs the sensor on machines running Windows Server 2016/2012 R2 using the unified Defender for Endpoint solution. 
 
 ## Enable on a subscription
 
@@ -42,8 +42,7 @@ Defender for Endpoint integration is enabled by default when you enable a Defend
 
 1. The Defender for Endpoint sensor is deployed to all Windows and Linux machines in the selected subscription.
 
-    Onboarding might take up to an hour.
-    On Linux machines, Defender for Cloud detects any previous Defender for Endpoint installations and reconfigures them to integrate with Defender for Cloud.
+    Onboarding might take up to an hour. Defender for Cloud detects any previous Defender for Endpoint installations and reconfigures them to integrate with Defender for Cloud.
 
 ### Verify installation on Linux machines
 
@@ -57,9 +56,13 @@ Verify Defender for Endpoint sensor installation on a Linux machine by following
 
 1. Additionally, in the Azure portal, you can check that Linux machines have a new Azure extension called `MDE.Linux`.
 
+> [!NOTE]
+> On new subscriptions, Defender for Endpoint integration is automatically enabled and covers machines running a supported Windows Server or Linux operating system. The following sections cover a one-time opt-in that might be required in some scenarios only.
+
+
 ## Enable Defender for Endpoint unified solution on Windows Server 2016/2012 R2
 
-If Defender for Servers is enabled and Defender for Endpoint integration is on in a subscription, manually enable integration of the unified solution for machines running Windows Server 2016 or Windows Server 2012 R2 in the subscription.
+If Defender for Servers is enabled and Defender for Endpoint integration is on in a subscription that existed before spring 2022, you might need to manually enable integration of the unified solution for machines running Windows Server 2016 or Windows Server 2012 R2 in the subscription.
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
 
