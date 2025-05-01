@@ -80,18 +80,24 @@ To see Defender for Endpoint health issues, use the security explorer as follows
 
   :::image type="content" source="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png" alt-text="Screenshot of query of unhealthy virtual machines." lightbox="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png":::
 
-- Another way to access this data:
+- Another way to access this data is shown in the following screenshot:
 
   :::image type="content" source="media/integration-defender-for-endpoint/unhealthy-virtual-machines-alternate-query.png" alt-text="Screenshot of alternate query of unhealthy virtual machines." lightbox="media/integration-defender-for-endpoint/unhealthy-virtual-machines-query.png":::
 
-- To find all the healthy VMs where Defender for Endpoint works correctly, run the following query:
+- To find all the healthy VMs where Defender for Endpoint works correctly, run the query shown in the following screenshot:
 
   :::image type="content" source="media/integration-defender-for-endpoint/healthy-virtual-machines-query.png" alt-text="Screenshot of query of healthy virtual machines." lightbox="media/integration-defender-for-endpoint/healthy-virtual-machines-query.png":::
 
-- To get the list of VMs where Defender for Endpoint isn't applicable, run the following query:
+- To get the list of VMs where Defender for Endpoint isn't applicable, run the query shown in the following screenshot:
 
   :::image type="content" source="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png" alt-text="Screenshot of query of virtual machines where Defender for Endpoint isn't applicable." lightbox="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png":::
 
 ## Next steps
  
 [Learn more](endpoint-detection-response.md) about EDR recommendations in Defender for Servers.
+
+## Related content
+
+- [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server)
+- [Antivirus solution compatibility with Defender for Endpoint](/defender-endpoint/defender-compatibility)
+- [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](/defender-endpoint/server-migration)
