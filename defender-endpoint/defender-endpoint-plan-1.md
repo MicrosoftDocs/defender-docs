@@ -10,7 +10,7 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 02/13/2025
+ms.date: 05/02/2025
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -191,17 +191,17 @@ With the Defender for Endpoint APIs, you can automate workflows and integrate wi
 
 To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
 
-- **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
-- **Microsoft Defender for Endpoint Server** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-- **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](/defender-business/mdb-overview)*). To learn more, see [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers).
-
-See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
-
 ## Next steps
 
 - [Set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)
+
+## Related content
+
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 - [Manage Defender for Endpoint Plan 1](preferences-setup.md)
 - [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
