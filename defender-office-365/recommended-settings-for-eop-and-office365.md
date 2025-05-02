@@ -19,7 +19,7 @@ ms.collection:
   - tier1
 description: What are best practices for Exchange Online Protection (EOP) and Defender for Office 365 security settings? What's the current recommendations for standard protection? What should be used if you want to be more strict? And what extras do you get if you also use Defender for Office 365?
 ms.service: defender-office-365
-ms.date: 04/14/2025
+ms.date: 04/28/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -181,13 +181,13 @@ The spoof settings are inter-related, but the **Show first contact safety tip** 
 
 Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
-Although the **Apply quarantine policy** value appears unselected when you create an anti-phishing policy in the Defender portal, the quarantine policy named DefaultFullAccessPolicy¹ is used if you don't select a quarantine policy. This policy enforces the historical capabilities for messages that were quarantined as spoof as described in the table [here](quarantine-end-user.md). When you later view or edit the quarantine policy settings, the quarantine policy name is shown.
+Although the **Apply quarantine policy** value appears unselected when you create an anti-phishing policy in the Defender portal, the quarantine policy named DefaultFullAccessPolicy¹ is used if you don't select a quarantine policy. This policy enforces the historical capabilities for messages that were quarantined as spoof as described in the table [here](quarantine-end-user.md). When you later view or edit the anti-phishing policy settings, the quarantine policy name is shown.
 
 Admins can create or use quarantine policies with more restrictive or less restrictive capabilities. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
-|**Phishing threshold & protection**|||||
+|**Spoof**|||||
 |**Enable spoof intelligence** (_EnableSpoofIntelligence_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Actions**|||||
 |**Honor DMARC record policy when the message is detected as spoof** (_HonorDmarcPolicy_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|When this setting is turned on, you control what happens to messages where the sender fails explicit [DMARC](email-authentication-dmarc-configure.md) checks when the policy action in the DMARC TXT record is set to `p=quarantine` or `p=reject`. For more information, see [Spoof protection and sender DMARC policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).|
@@ -207,12 +207,12 @@ Extra security benefits come with a Microsoft Defender for Office 365 subscripti
 
 > [!IMPORTANT]
 >
-> - The default anti-phishing policy in Microsoft Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](#advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured or enabled in the default policy. To enable all protection features, use one of the following methods:
+> - The default anti-phishing policy in Microsoft Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) and [phishing email thresholds](#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) settings aren't configured in the default policy. To enable all protection features, use one of the following methods:
 >   - Turn on and use the Standard and/or Strict [preset security policies](preset-security-policies.md) and configure impersonation protection there.
 >   - Modify the default anti-phishing policy.
 >   - Create more anti-phishing policies.
 >
-> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 >
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) protection and [Safe Documents](safe-documents-in-e5-plus-security-about.md) protection have no dependencies on Safe Links policies.
 >
@@ -224,9 +224,11 @@ If your subscription includes Microsoft Defender for Office 365 or if you've pur
 
 EOP customers get basic anti-phishing as previously described, but Defender for Office 365 includes more features and control to help prevent, detect, and remediate against attacks. To create and configure these policies, see [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
-#### Advanced settings in anti-phishing policies in Microsoft Defender for Office 365
+<a name='advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365'></a>
 
-For more information about this setting, see [Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365). To configure this setting, see [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md).
+#### Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365
+
+For more information about this setting, see [Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365). To configure this setting, see [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
@@ -238,15 +240,15 @@ For more information about these settings, see [Impersonation settings in anti-p
 
 Wherever you select **Quarantine the message** as the action for an impersonation verdict, an **Apply quarantine policy** box is available. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
-Although the **Apply quarantine policy** value appears unselected when you create an anti-phishing policy in the Defender portal, the quarantine policy named DefaultFullAccessPolicy is used if you don't select a quarantine policy. This policy enforces the historical capabilities for messages that were quarantined as impersonation as described in the table [here](quarantine-end-user.md). When you later view or edit the quarantine policy settings, the quarantine policy name is shown.
+Although the **Apply quarantine policy** value appears unselected when you create an anti-phishing policy in the Defender portal, the quarantine policy named DefaultFullAccessPolicy is used if you don't select a quarantine policy. This policy enforces the historical capabilities for messages that were quarantined as impersonation as described in the table [here](quarantine-end-user.md). When you later view or edit the anti-phishing policy settings, the quarantine policy name is shown.
 
 Admins can create or use quarantine policies with more restrictive or less restrictive capabilities. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
-|**Phishing threshold & protection**|||||
-|User impersonation protection: **Enable users to protect** (_EnableTargetedUserProtection_ and _TargetedUsersToProtect_)|Not selected (`$false` and none)|Selected (`$true` and \<list of users\>)|Selected (`$true` and \<list of users\>)|We recommend adding users (message senders) in key roles. Internally, protected senders might be your CEO, CFO, and other senior leaders. Externally, protected senders could include council members or your board of directors.|
-|Domain impersonation protection: **Enable domains to protect**|Not selected|Selected|Selected||
+|**Impersonation**|||||
+|<u>User impersonation protection</u>: **Enable users to protect** (_EnableTargetedUserProtection_ and _TargetedUsersToProtect_)|Not selected (`$false` and none)|Selected (`$true` and \<list of users\>)|Selected (`$true` and \<list of users\>)|We recommend adding users (message senders) in key roles. Internally, protected senders might be your CEO, CFO, and other senior leaders. Externally, protected senders could include council members or your board of directors.|
+|<u>Domain impersonation protection</u>: **Enable domains to protect**|Not selected|Selected|Selected||
 |**Include domains I own** (_EnableOrganizationDomainsProtection_)|Off (`$false`)|Selected (`$true`)|Selected (`$true`)||
 |**Include custom domains** (_EnableTargetedDomainsProtection_ and _TargetedDomainsToProtect_)|Off (`$false` and none)|Selected (`$true` and \<list of domains\>)|Selected (`$true` and \<list of domains\>)|We recommend adding domains (sender domains) that you don't own, but you frequently interact with.|
 |**Add trusted senders and domains** (_ExcludedSenders_ and _ExcludedDomains_)|None|None|None|Depending on your organization, we recommend adding senders or domains that are incorrectly identified as impersonation attempts.|
@@ -360,7 +362,7 @@ In PowerShell, you use the [New-TeamsProtectionPolicy](/powershell/module/exchan
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
-|**Zero-hour auto purge (ZAP)** (_ZapEnabled_)|**Off** (`$false`)|**On** (`$true`)|**On** (`$true`)||
+|**Zero-hour auto purge (ZAP)** (_ZapEnabled_)|**On** (`$true`)|**On** (`$true`)|**On** (`$true`)||
 |**Quarantine policies**|||||
 |&nbsp;&nbsp;**Malware** (_MalwareQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
 |&nbsp;&nbsp;**High confidence phishing** (_HighConfidencePhishQuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||

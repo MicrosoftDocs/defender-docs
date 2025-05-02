@@ -26,7 +26,7 @@ ms.date: 03/31/2025
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
 > [!TIP]
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers in preview. For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm).
+> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers in preview. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -71,7 +71,6 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Deployment guidance for Defender for Endpoint on Linux on Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 - [Deployment guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]

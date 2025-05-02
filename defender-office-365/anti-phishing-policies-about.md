@@ -44,7 +44,7 @@ Anti-phishing policies in EOP and Defender for Office 365 are both available on 
 - **Impersonation protection**:
   - Protection against user, domain, and sender impersonation.
   - Ability to define trusted senders and domains to reduce false positives.
-- **Advanced phishing detection**:
+- **Phishing email thresholds**:
   - Customizable phishing thresholds to fine-tune detection.
 - **AI and machine learning-based detection**:
   - Improved detection of sophisticated phishing attacks through advanced algorithms.
@@ -61,7 +61,7 @@ The high-level differences between anti-phishing policies in EOP and anti-phishi
 |Spoof settings|✔|✔|
 |First contact safety tip|✔|✔|
 |Impersonation settings||✔|
-|Advanced phishing thresholds||✔|
+|Phishing email thresholds||✔|
 
 <sup>\*</sup> In the default policy, the policy name and description are read-only (the description is blank), and you can't specify who the policy applies to (the default policy applies to all recipients).
 
@@ -229,7 +229,7 @@ Depending on the number of recipients in the message, the first contact safety t
 This section describes the policy settings that are only available in anti-phishing policies in Defender for Office 365.
 
 > [!NOTE]
-> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured or enabled in the default policy. To enable all protection features, modify the default anti-phishing policy or create other anti-phishing policies.
+> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured in the default policy. To enable all protection features, modify the default anti-phishing policy or create other anti-phishing policies.
 
 ### Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365
 
@@ -377,16 +377,18 @@ Trusted senders and domain are exceptions to the impersonation protection settin
 > - `noreply@emeaemail.teams.microsoft.com`
 > - `no-reply@sharepointonline.com`
 
-### Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365
+<a name='advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365'></a>
 
-The following advanced phishing thresholds are only available in anti-phishing policies in Defender for Office 365. These thresholds control the sensitivity for applying machine learning models to messages to determine a phishing verdict:
+### Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365
+
+The following phishing email thresholds are available only in anti-phishing policies in Defender for Office 365. These thresholds control the sensitivity for applying machine learning models to messages for phishing verdicts:
 
 - **1 - Standard**: This is the default value. The severity of the action that's taken on the message depends on the degree of confidence that the message is phishing (low, medium, high, or very high confidence). For example, messages that are identified as phishing with a very high degree of confidence have the most severe actions applied, while messages that are identified as phishing with a low degree of confidence have less severe actions applied.
 - **2 - Aggressive**: Messages that are identified as phishing with a high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - **3 - More aggressive**: Messages that are identified as phishing with a medium or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - **4 - Most aggressive**: Messages that are identified as phishing with a low, medium, or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 
-The chance of false positives (good messages marked as bad) increases as you increase this setting. For information about the recommended settings, see [anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+The chance of false positives (good messages marked as bad) increases as you increase this setting. For information about the recommended settings, see [Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 ### Spoofing vs. impersonation
 
