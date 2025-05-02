@@ -43,6 +43,8 @@ Refer to the following table to understand existing quotas and usage parameters.
 
 In the unified Microsoft Defender portal, you are able to run queries over Microsoft Sentinel tables by onboarding a workspace. [Log analytics workspace limits](/azure/azure-monitor/service-limits#log-analytics-workspaces) therefore also apply. 
 
+For advanced hunting in multitenant organizations, see [Quotas in advanced hunting in multitenant management](/unified-secops-platform/mto-advanced-hunting.md#quotas).
+
 > [!NOTE]
 > A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md) 
 

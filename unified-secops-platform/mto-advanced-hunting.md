@@ -23,8 +23,14 @@ appliesto:
 # Advanced hunting in Microsoft Defender multitenant management
 
 Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
+ 
 
 Multiple workspaces per tenant are supported in multitenant Advanced hunting as preview.
+
+
+## Quotas
+
+Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters).
 
 ## Run cross-tenant queries
 
@@ -59,7 +65,14 @@ You can run any query that you already have access to in the multitenant managem
    | take 10
    ```
 
+
+> [!NOTE]
+> If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
+
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+
+
+
 
 ## Run cross-workspace queries (Preview)
 
@@ -81,6 +94,10 @@ union workspace("WorkspaceB2").Usage, Usage
 Results show from both *WorkspaceA1* and *WorkspaceB2*.
 
 For more information, see [Query multiple workspaces](/azure/sentinel/extend-sentinel-across-workspaces-tenants#query-multiple-workspaces) and [Manage workspaces across tenants using Azure Lighthouse](/azure/sentinel/extend-sentinel-across-workspaces-tenants#manage-workspaces-across-tenants-using-azure-lighthouse).
+
+> [!NOTE]
+> If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
+
 
 ## Custom detection rules
 
@@ -111,6 +128,11 @@ To manage detection rules:
    :::image type="content" source="media/mto-advanced-hunting/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="media/mto-advanced-hunting/custom-detection-rule-details.png":::
 
 1. Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
+
+
+
+
+
 
 ## Related content
 

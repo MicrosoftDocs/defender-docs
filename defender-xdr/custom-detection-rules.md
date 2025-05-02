@@ -99,6 +99,8 @@ To create a custom detection rule, the query must return the following columns:
 > [!NOTE]
 > Support for more entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
 
+The `Timestamp` that is returned from the query should not have been manipulated in the query and should be returned exactly as it appears in the raw event.
+
 Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
 
 There are various ways to ensure more complex queries return these columns. For example, if you prefer to aggregate and count by entity under a column such as `DeviceId`, you can still return `Timestamp` and `ReportId` by getting it from the most recent event involving each unique `DeviceId`.
