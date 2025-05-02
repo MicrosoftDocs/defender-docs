@@ -74,7 +74,7 @@ To complete this process, you must have admin privileges on the device.
 
    Or
 
-- You can download the *wdav.pkg*- from **Terminal**.
+   - You can download the *wdav.pkg*- from **Terminal**.
    
      ```console
      sudo installer -pkg /Users/admin/Downloads/wdav.pkg -target /
