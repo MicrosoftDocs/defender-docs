@@ -29,9 +29,12 @@ ms.date: 05/02/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article describes how to collect diagnostic information, log installation issues, configure Microsoft Defender for Endpoint on Linux using the command line, and how to uninstall Defender for Endpoint on Linux.
+This article provides resources for resolving issues or configuring Microsoft Defender for Endpoint on Linux. This article describes how to collect diagnostic information, log installation issues, and configure Defender for Endpoint on Linux using the command line. This article also describes how to uninstall Defender for Endpoint on Linux.
 
 ## Collect diagnostic information
+
+> [!TIP]
+> Run the [Defender for Endpoint client analyzer](run-analyzer-linux.md) with live response or locally on the device to collect diagnostic information from Defender for Endpoint on Linux. 
 
 If you can reproduce a problem, first increase the logging level, run the system for some time, and then restore the logging level to the default.
 
@@ -91,11 +94,11 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Group|Scenario|Command|
 |---|---|---|
 |Configuration|Turn on/off real-time protection|`mdatp config real-time-protection --value [enabled\|disabled]`|
-|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled\|disabled]`
+|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled\|disabled]` |
 |Configuration|Turn on/off cloud protection|`mdatp config cloud --value [enabled\|disabled]`|
 |Configuration|Turn on/off product diagnostics|`mdatp config cloud-diagnostic --value [enabled\|disabled]`|
 |Configuration|Turn on/off automatic sample submission|`mdatp config cloud-automatic-sample-submission --value [enabled\|disabled]`|
-|Configuration|Turn on/off AV passive mode|`mdatp config passive-mode --value [enabled\|disabled]`|
+|Configuration|Turn on/off antivirus passive mode|`mdatp config passive-mode --value [enabled\|disabled]`|
 |Configuration|Add/remove an antivirus exclusion for a file extension|`mdatp exclusion extension [add\|remove] --name [extension]`|
 |Configuration|Add/remove an antivirus exclusion for a file|`mdatp exclusion file [add\|remove] --path [path-to-file]`|
 |Configuration|Add/remove an antivirus exclusion for a directory|`mdatp exclusion folder [add\|remove] --path [path-to-directory]`|
@@ -130,9 +133,9 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Quarantine management|Remove all files from the quarantine|`mdatp threat quarantine remove-all`|
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
-|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version lower than 101.23092.0012.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat quarantine restore threat-id --id [threat-id] --destination-path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat quarantine restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version earlier than `101.23092.0012`.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version `101.23092.0012` or later.|`mdatp threat quarantine restore threat-id --id [threat-id] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version `101.23092.0012` or later.|`mdatp threat quarantine restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Endpoint Detection and Response|Set early preview |`mdatp edr early-preview [enabled\|disabled]`|
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
