@@ -30,7 +30,7 @@ Multiple workspaces per tenant are supported in multitenant Advanced hunting as 
 
 ## Quotas
 
-Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters).
+Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
 
 ## Run cross-tenant queries
 
