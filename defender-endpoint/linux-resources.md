@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 10/11/2024
+ms.date: 05/02/2025
 ---
 
 # Resources
@@ -28,6 +28,8 @@ ms.date: 10/11/2024
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+This article describes how to collect diagnostic information, log installation issues, configure Microsoft Defender for Endpoint on Linux using the command line, and how to uninstall Defender for Endpoint on Linux.
 
 ## Collect diagnostic information
 
@@ -74,17 +76,6 @@ If an error occurs during installation, the installer will only report a general
 The detailed log will be saved to `/var/log/microsoft/mdatp/install.log`.
 If you experience issues during installation, send us this file so we can help diagnose the cause.
 
-## Uninstall Defender for Endpoint on Linux
-
-There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
-
-### Manual uninstallation
-
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
-- `sudo zypper remove mdatp` for SLES and variants.
-- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
-- `sudo dnf remove mdatp` for Mariner
-
 ## Configure from the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done from the command line.
@@ -96,10 +87,6 @@ By default, the command-line tool outputs the result in human-readable format. I
 ### Supported commands
 
 The following table lists commands for some of the most common scenarios. Run `mdatp help` from the Terminal to view the full list of supported commands.
-
-<br>
-
-****
 
 |Group|Scenario|Command|
 |---|---|---|
@@ -150,5 +137,22 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
 |Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
-|
+
+## Uninstall Defender for Endpoint on Linux
+
+There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
+
+### Manual uninstallation
+
+- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
+- `sudo zypper remove mdatp` for SLES and variants.
+- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
+- `sudo dnf remove mdatp` for Mariner
+
+## Related content
+
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
