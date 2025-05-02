@@ -83,7 +83,6 @@ To learn more, see the following articles:
 
 Your organization's attack surfaces are all the places where you're vulnerable to cyberattacks. With Defender for Endpoint Plan 1, you can reduce your attack surfaces by protecting the devices and applications that your organization uses. The attack surface reduction capabilities that are included in Defender for Endpoint Plan 1 are described in the following sections.
 
-- [Attack surface reduction](#attack-surface-reduction)
 - [Attack surface reduction rules](#attack-surface-reduction-rules)
 - [Ransomware mitigation](#ransomware-mitigation)
 - [Device control](#device-control)
@@ -193,6 +192,6 @@ To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 - [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
-- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
+- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
