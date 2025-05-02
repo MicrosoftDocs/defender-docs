@@ -145,24 +145,21 @@ The following table lists commands for some of the most common scenarios. Run `m
 
 There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
 
-### Add device tags to Linux devices you want to offboard
+### Offboard Linux devices
 
-To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard Linux from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
+To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
 
 1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
 
 2. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
    
-3. Remove policies for [Tamper Protection](/defender-endpoint/tamperprotection-macos). See [Set preferences on Mac: Tamper protection](/defender-endpoint/mac-preferences#tamper-protection) or use manual configuration.
+3. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
 
-4. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process. 
+   :::image type="content" source="media/offboard-linux.png" alt-text="Screenshot showing Offboarding page in the Microsoft Defender portal.":::
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
 
-5. Uninstall the Defender for Endpoint app on Mac devices.
-
-6. Remove Mac devices from the group for system extension policies if an MDM was used to set them.
-
+4. Uninstall Defender for Endpoint on the devices.
 
 ### Manual uninstallation
 
