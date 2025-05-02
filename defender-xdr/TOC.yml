@@ -322,8 +322,10 @@
           items:
           - name: Custom detections overview
             href: custom-detections-overview.md
-          - name: Create & manage detection rules
+          - name: Create detection rules
             href: custom-detection-rules.md
+          - name: Manage detection rules
+            href: custom-detection-manage.md            
         - name: Take action on query results
           href: advanced-hunting-take-action.md
         - name: Link query results to an incident
