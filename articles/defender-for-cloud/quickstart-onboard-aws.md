@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 04/21/2025
+ms.date: 05/04/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -160,7 +160,7 @@ Learn more about how to [enable Defender CSPM](tutorial-enable-cspm-plan.md).
 ## Connect your AWS account
 
 > [!IMPORTANT]
-> If your AWS account is already connected to Microsoft Sentinel, Defender for Cloud cannot connect to it. Follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](troubleshoot-aws-connector.md), to connect your AWS account and ensure that it works.
+> If your AWS account is already connected to Microsoft Sentinel, you cannot connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 To connect your AWS to Defender for Cloud by using a native connector:
 
@@ -187,10 +187,12 @@ To connect your AWS to Defender for Cloud by using a native connector:
     | EC2Instance <br> ECRImage  <br> ECRRepository  <br> RDSDBInstance <br> S3Bucket  <br> S3BucketTags <br> S3Region <br> EKSCluster <br> EKSClusterName <br> EKSNodegroup <br> EKSNodegroupName <br> AutoScalingAutoScalingGroup  | 1 hour  |
     | EcsClusterArn <br> EcsService <br> EcsServiceArn <br> EcsTaskDefinition <br> EcsTaskDefinitionArn <br> EcsTaskDefinitionTags <br> AwsPolicyVersion <br> LocalPolicyVersion <br> AwsEntitiesForPolicy <br> LocalEntitiesForPolicy <br> BucketEncryption <br> BucketPolicy <br> S3PublicAccessBlockConfiguration <br> BucketVersioning <br> S3LifecycleConfiguration <br> BucketPolicyStatus <br> S3ReplicationConfiguration <br> S3AccessControlList <br> S3BucketLoggingConfig <br> PublicAccessBlockConfiguration | 12 hours |
 
-> [!NOTE]
-> (Optional) Select **Management account** to create a connector to a management account. Connectors are then created for each member account discovered under the provided management account. Autoprovisioning is also enabled for all of the newly onboarded accounts.
->
-> (Optional) Use the AWS regions dropdown menu to select specific AWS regions to be scanned. All regions are selected by default.
+    > [!NOTE]
+    > (Optional) Select **Management account** to create a connector to a management account. Connectors are then created for each member account discovered under the provided management account. Autoprovisioning is also enabled for all of the newly onboarded accounts.
+    >
+    > (Optional) Use the AWS regions dropdown menu to select specific AWS regions to be scanned. All regions are selected by default.
+
+Next, review and select the Defender for Cloud plans to enable for this AWS account
 
 ## Select Defender plans
 
@@ -205,7 +207,7 @@ In this section of the wizard, you select the Defender for Cloud plans that you 
     > [!IMPORTANT]
     > To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events.
     >
-    > As explained in [the AWS documentation](https://aws.amazon.com/cloudtrail/pricing/), there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. (This is the default role name. Confirm the role name configured on your account.)
+    > [AWS's documentation](https://aws.amazon.com/cloudtrail/pricing/) explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. (This is the default role name. Confirm the role name configured on your account.)
 
 1. By default, the **Servers** plan is set to **On**. This setting is necessary to extend the coverage of Defender for Servers to AWS EC2. Ensure that you fulfilled the [network requirements for Azure Arc](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).
 
