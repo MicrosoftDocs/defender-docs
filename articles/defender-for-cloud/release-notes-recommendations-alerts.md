@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date**     | **Type**                       | **State**                                                    | **Name**                                                     |
 | ------------ | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| May 1 | Alert | GA | [AI alerts](alerts-ai-workloads.md) have been released to GA with the plan's official GA release |
 | April 20 | Alert | Preview | [(Preview) AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#preview-suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource), this replaces the previous sensitive data exposure alert |
 | April 29 | Recommendation | GA | [Role-Based Access Control should be used on Keyvault Services](recommendations-reference-keyvault.md#role-based-access-control-should-be-used-on-keyvault-services) |
 | April 20 | Alert                          | Preview                                                      | AI - Suspicious anomaly detected in sensitive data exposed by AI resource , this replaces the previous sensitive data exposure alert |
