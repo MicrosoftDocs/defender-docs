@@ -2,7 +2,7 @@
 title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 04/28/2025
+ms.date: 05/01/2025
 author: dcurwin
 ms.author: dacurwin
 
@@ -29,13 +29,20 @@ This tenant-level setting allows you to automatically and natively onboard any n
 
 ## How it works
 
-Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn't require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. To enable server management capabilities, you have several options:
+Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn't require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. 
 
-- For servers (Windows Server and Linux), you can use:
-   - Defender for Endpoint security settings management
-   - Microsoft Intune
-   - Non-Microsoft tools, such as electronic software distribution tools
-- For Windows Server devices, you can also use [Microsoft Configuration Manager](/mem/configmgr/)
+You must use additional tools to manage server security settings, such as antivirus policies, attack surface reduction rules, and security intelligence updates. You have several options to manage these settings for Windows servers and Linux servers:
+
+- Windows Server:
+   - [Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management)
+   - [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+   - [Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
+   - [PowerShell](/powershell/module/defender/)
+   - [Windows Management Instrumentation](/defender-endpoint/use-wmi-microsoft-defender-antivirus) (WMI)
+
+- Linux server:
+   - [Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management)
+   - Non-Microsoft solutions (see [Configure security settings in Defender for Endpoint on Linux](/defender-endpoint/linux-preferences))
 
 ## Enable direct onboarding
 
@@ -63,7 +70,7 @@ You now successfully enabled direct onboarding on your tenant. After you enable 
 
 ### Deploy Defender for Endpoint on your servers
 
-Deploying the Defender for Endpoint agent on your on-premises Windows and Linux servers is the same whether you use direct onboarding or not. Refer to the [Defender for Endpoint onboarding guide](/microsoft-365/security/defender-endpoint/onboarding) for further instructions.
+Deploying the Defender for Endpoint agent on your on-premises Windows and Linux servers is the same whether you use direct onboarding or not. See [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server) for more information.
 
 ## Current limitations
 
@@ -74,9 +81,9 @@ direct onboarding combined with Log Analytics workspace-based onboarding), Defen
 
   |Operating System|Minimum agent version|
   | -------- | -------- |
-  |Windows 2019 and later | 10.8555|
+  |Windows Server 2019 and later | 10.8555|
   |Windows Server 2016 or Windows 2012 R2 <br/>([modern, unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))|10.8560|
-  |Linux Server|30.101.23052.009|
+  |Linux server|30.101.23052.009|
   |Linux (AMD64)|30.101.23052.009|
   |Linux (ARM64)|30.101.25022.004|
 
