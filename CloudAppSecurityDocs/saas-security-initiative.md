@@ -11,6 +11,10 @@ The SaaS Security Initiative provides a centralized place for software as a serv
 
 The SaaS Security Initiative serves as the main hub for SaaS security posture management (SSPM). It consolidates best-practice recommendations into 12 measurable metrics. These metrics facilitate the management and prioritization of a large number of security recommendations.
 
+## How use the SaaS Security Initiative
+
+[SaaS security initiative](https://www.youtube.com/watch?v=AVXSf3hYg44)
+
 ## Prerequisites
 
 - Your organization must have Microsoft Defender for Cloud Apps licenses.
