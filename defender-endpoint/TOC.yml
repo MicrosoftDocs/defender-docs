@@ -252,14 +252,14 @@
                 href: manage-sys-extensions-using-jamf.md
               - name: Manual deployment
                 href: manage-sys-extensions-manual-deployment.md
-            
+           
         - name: Defender for Endpoint on Linux
           items:
           - name: Deploy Defender for Endpoint on Linux
             items:
-            - name: 1 - Prerequisites
+            - name: Prerequisites
               href: mde-linux-prerequisites.md
-            - name: 2 - Choose a deployment method
+            - name: Choose a deployment method
               items:
               - name: Installer script based deployment
                 href: linux-installer-script.md
@@ -277,28 +277,28 @@
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
               - name: Deployment guidance for Defender for Endpoint on Linux for SAP
                 href: mde-linux-deployment-on-sap.md
-            - name: 3 - Configuration
+          - name: Configure Defender for Endpoint on Linux
+            items:
+            - name: Configure security policies and settings
+              href: linux-preferences.md
+            - name: Static proxy configuration
+              href: linux-static-proxy-configuration.md
+            - name: Configure antivirus scans
               items:
-              - name: Configure security policies and settings
-                href: linux-preferences.md
-              - name: Static proxy configuration
-                href: linux-static-proxy-configuration.md
-              - name: Configure antivirus scans
-                items:
-                - name: Schedule antivirus scans using Anacron
-                  href: schedule-antivirus-scan-anacron.md
-                - name: Schedule antivirus scans using Crontab
-                  href: schedule-antivirus-scan-crontab.md
-              - name: Network protection for Linux
-                href: network-protection-linux.md
-              - name: Configure and validate exclusions on Linux
-                href: linux-exclusions.md
-              - name: Configure eBPF-based sensor
-                href: linux-support-ebpf.md 
-              - name: Detect and block Potentially Unwanted Applications
-                href: linux-pua.md
-              - name: Configure Offline Security Intelligence Update
-                href: linux-support-offline-security-intelligence-update.md
+              - name: Schedule antivirus scans using Anacron
+                href: schedule-antivirus-scan-anacron.md
+              - name: Schedule antivirus scans using Crontab
+                href: schedule-antivirus-scan-crontab.md
+            - name: Network protection for Linux
+              href: network-protection-linux.md
+            - name: Configure and validate exclusions on Linux
+              href: linux-exclusions.md
+            - name: Configure eBPF-based sensor
+              href: linux-support-ebpf.md 
+            - name: Detect and block Potentially Unwanted Applications
+              href: linux-pua.md
+            - name: Configure Offline Security Intelligence Update
+              href: linux-support-offline-security-intelligence-update.md
           - name: Update Defender for Endpoint on Linux
             items: 
             - name: Update Defender for Endpoint on Linux
@@ -307,7 +307,7 @@
               href: linux-update-mde-linux.md
           - name: Privacy for Defender for Endpoint on Linux
             href: linux-privacy.md
-          - name: Resources for Microsoft Defender for Endpoint on Linux
+          - name: Additional resources for Defender for Endpoint on Linux
             href: linux-resources.md
         - name: Mobile Threat Defense
           items:
@@ -781,6 +781,8 @@
       - name: Configure Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
+        - name: Schedule scans using Intune
+          href: schedule-antivirus-scans-intune.md
         - name: Schedule scans using Group Policy
           href: schedule-antivirus-scans-group-policy.md
         - name: Schedule scans using PowerShell
