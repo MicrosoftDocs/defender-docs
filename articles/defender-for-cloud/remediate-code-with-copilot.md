@@ -4,13 +4,13 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate code with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 06/10/2024
+ms.date: 04/23/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate code in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Remediate code with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot allows you to remediate Infrastructure as Code (IaC) misconfigurations that are discovered in your code repositories. Remediating an IaC finding with Copilot allows you to address security misconfigurations and vulnerabilities early in the development cycle by automatically generating Pull Requests (PRs) that correct the identified weaknesses. Remediating these misconfigurations and vulnerabilities ensure that security issues in code are addressed accurately and promptly.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you remediate Infrastructure as Code (IaC) misconfigurations in your code repositories. Remediating IaC findings with Copilot lets you address security misconfigurations and vulnerabilities early in the development cycle by automatically generating Pull Requests (PRs) that correct the identified weaknesses. This remediation ensures that security issues in code are addressed accurately and promptly.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Microsoft Defender for Cloud's integration with Microsoft Security Copilot allow
 
 ## Remediate an Infrastructure as Code scanning finding
 
-With Microsoft Security Copilot in Defender for Cloud you can remediate recommendations.
+With Microsoft Security Copilot, in Defender for Cloud you can remediate recommendations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -33,11 +33,11 @@ With Microsoft Security Copilot in Defender for Cloud you can remediate recommen
 
 1. Search for and select the **Azure DevOps repositories should have infrastructure as code scanning findings resolved** recommendation.
 
-    :::image type="content" source="media/remediate-code-with-copilot/search-recommendation.png" alt-text="Screenshot that shows the searched for recommendation." lightbox="media/remediate-code-with-copilot/search-recommendation.png":::
+    :::image type="content" source="media/remediate-code-with-copilot/search-recommendation.png" alt-text="Screenshot that shows the recommendation that you searched for." lightbox="media/remediate-code-with-copilot/search-recommendation.png":::
 
 1. Select **Reduce risk with Copilot**.
 
-    :::image type="content" source="media/remediate-code-with-copilot/copilot-summarize.png" alt-text="Screenshot that shows where the summarize with copilot button is located." lightbox="media/remediate-code-with-copilot/copilot-summarize.png":::
+    :::image type="content" source="media/remediate-code-with-copilot/copilot-summarize.png" alt-text="Screenshot that shows where the Summarize with copilot button is located." lightbox="media/remediate-code-with-copilot/copilot-summarize.png":::
 
 1. Select **Help me remediate this recommendation**.
 
@@ -55,9 +55,9 @@ With Microsoft Security Copilot in Defender for Cloud you can remediate recommen
 
 1. Select the provided link.
 
-1. Review the PR.
+1. Review the pull request.
 
-Once the PR is generated in your code repository, you should have a developer review and approve the PR to have it merged into the code base.
+Once the pull request is generated in your code repository, a developer should review and approve the pull request for merging into the code base.
 
 ## Next step
 
