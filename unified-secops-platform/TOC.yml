@@ -16,10 +16,12 @@
           href: defender-xdr-portal.md
         - name: Microsoft Sentinel
           items:
-          - name: Integration overview
-            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in the Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - name: Move your Microsoft Sentinel experience to the Defender portal
+            href: /azure/sentinel/move-to-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - name: Integration with Defender XDR
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
         - name: Microsoft Copilot
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Microsoft Security Exposure Management
