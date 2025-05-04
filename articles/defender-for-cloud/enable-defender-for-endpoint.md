@@ -130,7 +130,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 To enable Defender for Servers integration for Linux machines or Windows Server 2012 R2 and 2016 with MDE Unified solution on multiple subscriptions, you can use one of the [PowerShell scripts in the Defender for Cloud GitHub repository](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration).
 
-- Ue [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Unified%20solution) to enable integration with the Defender for Endpoint modern unified solution on Windows Server 2012 R2 or Windows Server 2016
+- Use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Unified%20solution) to enable integration with the Defender for Endpoint modern unified solution on Windows Server 2012 R2 or Windows Server 2016
 - Use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/MDE%20Integration/Enable%20MDE%20Integration%20for%20Linux) to enable Defender for Endpoint integration on Linux machines
 
 ### Manage automatic updates for Linux
