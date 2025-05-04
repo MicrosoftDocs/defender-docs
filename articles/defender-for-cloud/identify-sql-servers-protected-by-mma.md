@@ -3,10 +3,12 @@ title: Identify SQL Servers protected by MMA
 description: Learn how to identify SQL servers protected by the Microsoft Monitoring Agent (MMA) in your environment without having Azure Arc installed
 ms.topic: how-to
 ms.date: 05/04/2025
-ms.author: Elazark
-author: elkrieger
+ms.author: Elkrieger
+author: ElazarK
 # customer intent: As a user, I want to learn how to identify SQL servers protected by Microsoft Monitoring Agent (MMA) in my environment so that I can assess their security posture.
 ---
+
+# Identify SQL Servers protected by MMA
 
 Microsoft Defender for Cloud's Defender for SQL Server on Machines plan provides database security to protect SQL Server instances hosted on Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises machines.
 
@@ -44,4 +46,4 @@ You can identify SQL servers onboarded to the Defender for SQL Server on Machine
 
 ## Related content
 
-- [Defender for SQL on machines](defender-for-sql-on-machines.md)
+- [Defender for SQL on machines](defender-for-sql-servers-introduction.md)
