@@ -20,11 +20,9 @@ Defender for Cloud provides a CloudFormation template (Terraform script) that in
 
 1. Follow the steps in the [Connect AWS accounts to Microsoft Defender for Cloud](connect-aws-accounts.md) until step 5b in the Connect Defender Plans section.
 
-1. Copy the AWS CloudFormation template to a text editing tool.
+1. On the Configure access page, search for the **ASCDefendersOIDCIdentityProvider": {** section in the template, and make a separate copy of the entire **ClientIdList** section in a text editing tool.
 
-1. Search for the **ASCDefendersOIDCIdentityProvider": {** section in the template, and make a separate copy of the entire **ClientIdList** section.
-
-1. Locate the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
+1. On the Configure access page, locate the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
 
 1. Sign in to your AWS account.
 
