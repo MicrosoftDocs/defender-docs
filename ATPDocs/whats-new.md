@@ -22,6 +22,10 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## May 2025
+
+### Disabled sam-r
+
 ## April 2025
 
 ### Privileged Identity Tag Now Visible in Defender for Identity Inventory
