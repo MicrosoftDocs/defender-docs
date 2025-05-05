@@ -3,7 +3,7 @@ title: Alerts for AI services
 description: This article lists the security alerts for AI services visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 05/01/2025
+ms.date: 05/05/2025
 ai-usage: ai-assisted
 ---
 
