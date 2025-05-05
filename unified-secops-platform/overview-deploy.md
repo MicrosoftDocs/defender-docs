@@ -79,6 +79,7 @@ For more information, see:
 - [Onboarding prerequisites](microsoft-sentinel-onboard.md#prerequisites)
 - [Assign Microsoft Entra ID roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
 - [Grant a user access to Azure roles](/azure/role-based-access-control/quickstart-assign-role-user-portal)
+- [Managing unified RBAC in Microsoft Defender](https://aka.ms/defender_RBAC) (video demo)
 
 ## Onboard to unified SecOps
 

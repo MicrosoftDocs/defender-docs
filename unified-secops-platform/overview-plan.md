@@ -1,6 +1,6 @@
 ---
-title: Plan your deployment | Microsoft Defender
-description: Plan to deploy Microsoft's unified security operations platform with the Microsoft Defender portal, Microsoft Sentinel, and other Microsoft Defender services.
+title: Planning Guidance for Unified Security Operations in the Microsoft Defender Portal
+description: Plan to deploy unified security operations in the Microsoft Defender portal, including Microsoft Sentinel and other Microsoft Defender services.
 author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
@@ -12,11 +12,11 @@ ms.collection:
 - msftsolution-secops
 
 
-#customer intent: As a security administrator, I want to plan my unified security operations platform deployment so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
+#customer intent: As a security administrator, I want to plan my unified security operations deployment so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
 
 ---
 
-# Microsoft's unified security operations platform planning overview
+# Planning guidance for unified security operations in the Microsoft Defender portal
 
 This article outlines activities to plan a deployment of Microsoft's security products to Microsoft's unified security operations platform for end-to-end security operations (SecOps). Unify your SecOps on Microsoft's platform to help you reduce risk, prevent attacks, detect and disrupt cyberthreats in real time, and respond faster with AI-enhanced security capabilities, all from the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -214,6 +214,8 @@ For more information, see:
 - [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
 - [Microsoft Sentinel roles](/azure/role-based-access-control/built-in-roles#security)
 - [Onboarding prerequisites](microsoft-sentinel-onboard.md#prerequisites)
+- [Managing unified RBAC in Microsoft Defender](https://aka.ms/defender_RBAC) (video demo)
+
 
 ## Plan Zero Trust activities
 
