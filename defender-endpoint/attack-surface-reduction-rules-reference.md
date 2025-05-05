@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/04/2025
+ms.date: 04/30/2025
 search.appverid: met150
 ---
 
@@ -253,8 +253,8 @@ For rules with the "Rule State" specified:
 
 > [!NOTE]
 > To protect your environment from vulnerable drivers, you should first implement these:
-> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
-> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
+> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
+> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
 > For Windows 11 or later, and Windows Server core 1809 or later, or Windows Server 2019 or later, you should also enable [Microsoft Windows vulnerable driver blocklist](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), 
 > Then as another layer of defense, you should enable this attack surface reduction rule.
 
@@ -544,7 +544,9 @@ This rule prevents malware from abusing WMI to attain persistence on a device.
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 
 > [!NOTE]
-> If `CcmExec.exe` (SCCM Agent) is detected on the device, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
+> If you're utilizing Configuration Manager (CM, previously known as MEMCM or SCCM) with CcmExec.exe` (SCCM Agent), we recommend running it in audit mode for at least 60 days. 
+> Once you're prepared to switch to block mode, ensure you deploy the appropriate ASR rules, considering any necessary rule exclusions.
+
 
 Intune name: `Persistence through WMI event subscription`
 

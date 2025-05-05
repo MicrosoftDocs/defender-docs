@@ -1,7 +1,7 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your ServiceNow app to Defender for Cloud Apps using the API connector.
-ms.date: 04/28/2025
+ms.date: 05/05/2025
 ms.topic: how-to
 ---
 
@@ -97,6 +97,7 @@ Defender for Cloud Apps supports the following ServiceNow versions:
         - Kingston
         - London  
         - Utah
+        - Yokohama
     :::column-end:::
     :::column:::
         - Madrid

@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 04/29/2025
+ms.date: 04/30/2025
 ms.reviewer: pauhijbr, ksarens
 manager: deniseb
 ms.subservice: ngp
@@ -44,10 +44,14 @@ Set-MpPreference -ScanScheduleQuickScanTime
 > [!NOTE]
 > The time value is represented as the number of minutes past midnights (00:00 or 12:00 a.m.), For example, 120 is equivalent to 2:00 AM.  The schedule is based on local time on the device where the scan is executing. 
 
-For example, to set a daily quick scan run on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (For example, laptops and/or tablets).
+To set a daily quick scan run on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (For example, laptops and/or tablets).
 
 ```powershell
 Set-MpPreference -ScanScheduleQuickScanTime 720
+```
+To disable the daily quick scan, set this value to 0
+```powershell
+Set-MpPreference -ScanScheduleQuickScanTime 0
 ```
 
 ## Use PowerShell cmdlets to scheduling weekly quick or full scans
@@ -121,6 +125,7 @@ Set-MpPreference -ScanScheduleOffset 720
 |Disable CPU throttle on idle scans|Enabled/Not Configured (Default)|Set-MpPreference -DisableCpuThrottleOnIdleScans `Boolean` <br>For example: Set-MpPreference -DisableCpuThrottleOnIdleScans $True Idle here means 90% of CPU utilization or below|
 |Enable Low CPU Priority|Disabled/Not Configured (Default)|Set-MpPreference -EnableLowCpuPriority `Boolean` <br>For example: Set-MpPreference -EnableLowCpuPriority $False|
 |Disable Catchup Full Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupFullScan `Boolean` <br>For example: Set-MpPreference -DisableCatchupFullScan $True|
+|Disable Catchup Quick Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupQuickScan `Boolean` <br>For example: Set-MpPreference -DisableCatchupQuickScan $True|
 |Enable full scan on battery power|Disabled/Not Configured (Default)|Set-MpPreference -EnableFullScanOnBatteryPower `Boolean` <br>For example: Set-MpPreference -EnableFullScanOnBatteryPower $False|
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fschedule-antivirus-scans-powershell.md/main/bcb7536e-34b9-8af7-5381-96c46d108a91/use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
