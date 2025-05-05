@@ -21,7 +21,8 @@ Defender for Servers Plan 2 automatically assesses updates and patches on machin
 
 These recommendations rely on [Azure Update Manager](/azure/update-manager/overview), which uses a [VM extension](/azure/update-manager/workflow-update-manager?tabs=azure-vms%2Cupdate-win).
 
-! [!NOTE] The older method for update assessment used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data. Use of the MMA is now deprecated.
+> [!NOTE]
+> The older method for update assessment used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data. Use of the MMA is now deprecated.
 
 ## Prerequisites
 
