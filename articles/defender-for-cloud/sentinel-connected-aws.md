@@ -10,13 +10,27 @@ ms.author: elkrieger
 
 # Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
 
-Microsoft Defender for Cloud and Microsoft Sentinel use the same authentication mechanism to connect to Amazon Web Services (AWS) accounts. If your AWS account is already connected to Microsoft Sentinel, Defender for Cloud can't connect to it.
+Microsoft Defender for Cloud generates a CloudFormation template (Terraform script) that includes all of the resources necessary to onboard your Amazon Web Services (AWS) account to Defender for Cloud. However, Defender for Cloud and Microsoft Sentinel use the same authentication mechanism to connect to AWS accounts. When an AWS account is first connected to Microsoft Sentinel, Defender for Cloud can't connect to it as well.
 
 This article guides you through the steps to connect your AWS account to Defender for Cloud and ensure it operates correctly.
 
+## Prerequisites
+
+To complete the procedures in this article, you need:
+
+- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/).
+
+- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
+
+- Access to an AWS account.
+
+- Contributor level permission for the relevant Azure subscription.
+  
+- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md#before-you-start) for your tenant.
+
 ## Connect your AWS account to Defender for Cloud
 
-Defender for Cloud provides a CloudFormation template (Terraform script) that includes all the resources required for the onboarding process at the same template. You need to use the same CloudFormation template and follow the steps provided in this article to resolve the conflict between the Defender for Cloud and Microsoft Sentinel.
+ You need access to the CloudFormation template provided by Defender for Cloud and to follow the steps provided in this article to resolve the conflict between the Defender for Cloud and Microsoft Sentinel.
 
 1. Follow the steps in the [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md) until step 5b in the [Connect Defender Plans](quickstart-onboard-aws.md#select-defender-plans) section.
 
