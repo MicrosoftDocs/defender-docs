@@ -27,37 +27,32 @@ ms.date: 05/05/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-Use the **Time zone** menu to configure the time zone and view license information.
+This article describes time zone settings and options. You can use **Time zone** menu to configure the time zone and view license information.
+
 :::image type="content" source="media/atp-time-zone.png" alt-text="The Time zone settings-1" lightbox="media/atp-time-zone.png":::
 
 > [!NOTE]
-> Changing the time zone setting in the Microsoft Defender portal only affects how times are displayed. It does not affect the actual scheduling of operations such as antivirus scans, which continue to follow the local system time or UTC, depending on how they're configured.
+> Changing the time zone setting in the [Microsoft Defender portal](https://security.microsoft.com) only affects how times are displayed. It doesn't affect the actual scheduling of operations, such as antivirus scans, which continue to follow the local system time or UTC settings, depending on how they're configured.
 
 ## Time zone settings
 
-The aspect of time is important in the assessment and analysis of perceived and actual cyberattacks.
+The aspect of time is important in the assessment and analysis of perceived and actual cyberattacks. Cyberforensic investigations often rely on time stamps to piece together the sequence of events. It's important that your system reflects the correct time zone settings. Defender for Endpoint can display either Coordinated Universal Time (UTC) or local time.
 
-Cyberforensic investigations often rely on time stamps to piece together the sequence of events. It's important that your system reflects the correct time zone settings.
-
-Microsoft Defender for Endpoint can display either Coordinated Universal Time (UTC) or local time.
-
-Your current time zone setting is shown in the Microsoft Defender for Endpoint menu. You can change the displayed time zone in the **Time zone** menu.
+Your current time zone setting is shown in the **Timezone** menu in the Microsoft Defender portal.
 
 :::image type="content" source="media/atp-time-zone-menu.png" alt-text="The Time zone settings-2" lightbox="media/atp-time-zone-menu.png":::
 
 ### UTC time zone
 
-Microsoft Defender for Endpoint uses UTC time by default.
-
-Setting the Microsoft Defender for Endpoint time zone to UTC will display all system timestamps (alerts, events, and others) in UTC for all users. This can help security analysts working in different locations across the globe to use the same time stamps while investigating events.
+Defender for Endpoint uses UTC time by default. Keeping this time zone displays all system timestamps (alerts, events, and others) in UTC for all users. This configuration can help security analysts working in different locations across the globe to use the same time stamps while investigating events.
 
 ### Local time zone
 
-You can choose to have Microsoft Defender for Endpoint use local time zone settings. All alerts and events will be displayed using your local time zone.
+You can choose to have Defender for Endpoint use local time zone settings instead of UTC. In this case, all alerts and events are displayed using your local time zone. Choosing this setting means that the timestamps displayed in the Microsoft Defender portal are aligned to local time for all Defender for Endpoint users. Analysts located in different global locations see alarts with time stamps according to their regional settings.
 
-The local time zone is taken from your device's regional settings. If you change your regional settings, the Microsoft Defender for Endpoint time zone will also change. Choosing this setting means that the timestamps displayed in Microsoft Defender for Endpoint will be aligned to local time for all Microsoft Defender for Endpoint users. Analysts located in different global locations will now see the Microsoft Defender for Endpoint alerts according to their regional settings.
+Choosing to use local time can be useful if the analysts are located in a single location. In this case, it might be easier to correlate events to local time, for example, when a local user clicked on a suspicious email link.
 
-Choosing to use local time can be useful if the analysts are located in a single location. In this case it might be easier to correlate events to local time, for example, when a local user clicked on a suspicious email link.
+The local time zone is based on your device's regional settings. If you change your regional settings, the time zone used for Defender for Endpoint also change. 
 
 ### Set the time zone
 
@@ -102,4 +97,5 @@ The following date and time formats are currently not supported:
 ##### Decimal symbol used in numbers
 
 Decimal symbol used is always a dot, even if a comma is selected in  the **Numbers** format settings in **Region** settings. For example, 15,5K is displayed as 15.5K.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
