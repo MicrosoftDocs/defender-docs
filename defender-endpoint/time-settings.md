@@ -48,7 +48,7 @@ Defender for Endpoint uses UTC time by default. Keeping this time zone displays 
 
 ### Local time zone
 
-You can choose to have Defender for Endpoint use local time zone settings instead of UTC. In this case, all alerts and events are displayed using your local time zone. Choosing this setting means that the timestamps displayed in the Microsoft Defender portal are aligned to local time for all Defender for Endpoint users. Analysts located in different global locations see alarts with time stamps according to their regional settings.
+You can choose to have Defender for Endpoint use local time zone settings instead of UTC. In this case, all alerts and events are displayed using your local time zone. Choosing this setting means that the timestamps displayed in the Microsoft Defender portal are aligned to local time for all Defender for Endpoint users. Analysts located in different global locations see alerts with time stamps according to their regional settings.
 
 Choosing to use local time can be useful if the analysts are located in a single location. In this case, it might be easier to correlate events to local time, for example, when a local user clicked on a suspicious email link.
 
@@ -80,7 +80,7 @@ Microsoft Edge uses the **Region** settings configured in the **Clocks, Language
 
 ##### Date and time formats
 
-There are some known issues with the time and date formats. If you configure your regional settings to anything other than the supported formats, the portal may not correctly reflect your settings.
+There are some known issues with the time and date formats. If you configure your regional settings to anything other than the supported formats, the Microsoft Defender portal might not correctly reflect your settings.
 
 The following date and time formats are supported:
 
@@ -94,7 +94,7 @@ The following date and time formats are currently not supported:
 - Date format `dd-MMM-yy`
 - Date format `dd/MM/yy`
 - Date format `MM/dd/yy`
-- Date format with `yy`. Will only show `yyyy`.
+- Date format with `yy` only shows `yyyy`.
 - Time format `HH:mm:ss` (24 hour format)
 
 ##### Decimal symbol used in numbers
