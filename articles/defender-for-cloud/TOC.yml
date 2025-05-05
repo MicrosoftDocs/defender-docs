@@ -472,7 +472,7 @@
               href: alerts-azure-ddos-protection.md
             - name: Alerts for Defender for APIs
               href: alerts-defender-for-apis.md
-            - name: Alerts for AI workloads (Preview)
+            - name: Alerts for AI services
               href: alerts-ai-workloads.md
             - name: Deprecated security alerts
               href: deprecated-alerts.md
