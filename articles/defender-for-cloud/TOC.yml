@@ -877,9 +877,6 @@
             href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md
-          - name: Enable file integrity monitoring (legacy MMA)
-            displayName: fim, change, log analytics, mma
-            href: file-integrity-monitoring-enable-log-analytics.md
       - name: Just-in-time machine access
         items:
           - name: Overview
