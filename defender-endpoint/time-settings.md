@@ -30,6 +30,8 @@ ms.date: 09/21/2024
 Use the **Time zone** menu to configure the time zone and view license information.
 :::image type="content" source="media/atp-time-zone.png" alt-text="The Time zone settings-1" lightbox="media/atp-time-zone.png":::
 
+**Note:** Changing the time zone setting in the Defender portal only affects how times are displayed. It does not affect the actual scheduling of operations such as antivirus scans, which continue to follow the local system time or UTC, depending on how they're configured.
+
 ## Time zone settings
 
 The aspect of time is important in the assessment and analysis of perceived and actual cyberattacks.
