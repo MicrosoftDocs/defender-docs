@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date**     | **Type**                       | **State**                                                    | **Name**                                                     |
 | ------------ | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|May 15|Alert|Upcoming Deprecation|The following [alerts ](/azure/ddos-protection/ddos-view-alerts-defender-for-cloud)will be deprecated and will not be available through XDR Integration: <br/>* DDoS Attack detected for Public IP <br/>* DDoS Attack mitigated for Public IP <br/> **Note**: The alerts will be available on Defender for Cloud portal. |
 | May 1 | Alert | GA | [AI alerts](alerts-ai-workloads.md) have been released to GA with the plan's official GA release |
 | April 20 | Alert | Preview | [(Preview) AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#preview-suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource), this replaces the previous sensitive data exposure alert |
 | April 29 | Recommendation | GA | [Role-Based Access Control should be used on Keyvault Services](recommendations-reference-keyvault.md#role-based-access-control-should-be-used-on-keyvault-services) |
