@@ -38,9 +38,13 @@ You can view the list of existing custom detection rules, check their previous r
 
 To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
 
-:::image type="content" source="/defender/media/unified-custom-det-list.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list-tb.png":::
+:::image type="content" source="/defender/media/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list.png":::
 
+You can filter for any column by going to **Add filter**, selecting the columns you want to filter for, and selecting **Add**. For each of the chosen columns, select the corresponding pill beside **Filters:**, select the columns, then **Apply**.
 
+To search for specific rules, go to the search box in the upper right of the page and enter the name or rule ID of the rule you are looking for.
+
+To help 
 
 The page lists all the rules with the following run information:
 
