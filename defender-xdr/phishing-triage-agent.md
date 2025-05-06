@@ -133,28 +133,7 @@ The Phishing Triage Agent is now set up and running in the background, ready to 
 
 [SCREENSHOT]
 
-#### Troubleshooting agent issues
-
-Following are responses to common issues about the Phishing Triage Agent, including issues on setup and expected output.
-
-##### The agent is not running after setup
-
-If the agent is not running after setup, check the following:
-
-1. Check the agent’s [identity and role](#create-the-agents-identity-and-assign-permissions). Ensure that it has the minimum required permissions.
-2. Ensure that the tenant meets all the [prerequisites](#prerequisites) to run the agent.
-
-##### I don’t see the Phishing Triage Agent running
-
-The agent runs automatically when a user submits a potential phishing email. The agent doesn’t run if there are no submissions. To test the agent, you can submit a phishing incident to trigger it.
-
-##### What incidents should I look for?
-
-Phishing incidents that contain the alert *Email reported by user as malware or phish* are addressed by the Phishing Triage Agent. Ensure that you have the alert policy **Email reported by user as malware or phish** turned on in your organization. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
-
-##### The agent is fully set up but there’s no change in an alert's classification
-
-It's possible that another party, either manually by a user or through automation, changed the alert's classification. The agent doesn’t change a previously classified alert.
+If you encounter any issues during the setup process, refer to the [troubleshooting section](#troubleshooting-agent-issues) for assistance.
 
 ## Manage the Phishing Triage Agent
 
@@ -314,6 +293,29 @@ To resolve some of the feedback errors, follow these steps:
 4. Navigate to the feedback management page to view the new feedback provided.
 
 Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
+
+## Troubleshooting agent issues
+
+Following are responses to common issues about the Phishing Triage Agent, including issues on setup and expected output.
+
+### The agent is not running after setup
+
+If the agent is not running after setup, check the following:
+
+1. Check the agent’s [identity and role](#create-the-agents-identity-and-assign-permissions). Ensure that it has the minimum required permissions.
+2. Ensure that the tenant meets all the [prerequisites](#prerequisites) to run the agent.
+
+### I don’t see the Phishing Triage Agent running
+
+The agent runs automatically when a user submits a potential phishing email. The agent doesn’t run if there are no submissions. To test the agent, you can submit a phishing incident to trigger it.
+
+### What incidents should I look for?
+
+Phishing incidents that contain the alert *Email reported by user as malware or phish* are addressed by the Phishing Triage Agent. Ensure that you have the alert policy **Email reported by user as malware or phish** turned on in your organization. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
+
+### The agent is fully set up but there’s no change in an alert's classification
+
+It's possible that another party, either manually by a user or through automation, changed the alert's classification. The agent doesn’t change a previously classified alert.
 
 ## Frequently asked questions
 
