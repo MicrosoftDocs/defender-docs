@@ -76,9 +76,8 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
     :::image type="content" source="media/apply-to-continous-reports.png" alt-text="Screenshot showing how to apply file polcies to specific continous reports" lightbox="media/apply-to-continous-reports.png":::
 
     > [!IMPORTANT]
-    > When configuring an app discovery policy, selecting Apply to > All continuous reports generates individual alerts for each discovery stream. This includes the global stream, which aggregates data from all discovery sources, resulting in multiple alerts. One from the global stream and additional alerts from each individual source.
-    > To prevent multiple alerts, select Apply to > Specific continuous reports, and choose only the streams relevant to your policy.
-    > To learn more see: [Defender for Cloud apps continuous risk assessment reports](set-up-cloud-discovery.md#snapshot-and-continuous-risk-assessment-reports)
+    > When configuring an app discovery policy, selecting **Apply to > All continuous reports** generates individual alerts for each discovery stream, including the global stream. This results in multiple alerts, one from the global stream and additional alerts from each individual source. To customize your alerts, select **Apply to > Specific continuous reports** and choose only the relevant streams for your policy.\
+    > Learn more: [Defender for Cloud apps continuous risk assessment reports](set-up-cloud-discovery.md#snapshot-and-continuous-risk-assessment-reports)
 1. Select the dates during which the anomalous activity occurred to trigger the alert under **Raise alerts only for suspicious activities occurring after date.**
 
 1. Set a **Daily alert limit** under **Alerts**. Select if the alert is sent as an email. Then provide email addresses as needed.
