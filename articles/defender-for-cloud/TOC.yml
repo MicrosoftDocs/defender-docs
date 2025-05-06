@@ -477,7 +477,7 @@
               href: alerts-azure-ddos-protection.md
             - name: Alerts for Defender for APIs
               href: alerts-defender-for-apis.md
-            - name: Alerts for AI workloads (Preview)
+            - name: Alerts for AI services
               href: alerts-ai-workloads.md
             - name: Deprecated security alerts
               href: deprecated-alerts.md
@@ -696,7 +696,7 @@
 
 - name: Protect data
   items:
-  - name: Overview data and AI security dashboard (Preview)
+  - name: Overview data and AI security dashboard
     href: data-aware-security-dashboard-overview.md
   - name: Data security posture
     items:
@@ -882,9 +882,6 @@
             href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md
-          - name: Enable file integrity monitoring (legacy MMA)
-            displayName: fim, change, log analytics, mma
-            href: file-integrity-monitoring-enable-log-analytics.md
       - name: Just-in-time machine access
         items:
           - name: Overview
@@ -898,8 +895,6 @@
       - name: Remediate EDR solutions (agentless)
         displayName: defender for endpoint, endpoint, edr
         href: endpoint-detection-response-solution-recommendations.md   
-      - name: Remediate EDR solutions (MMA)
-        href: endpoint-protection-recommendations-technical.md 
       - name: Remediate Defender for Endpoint misconfigurations
         href: endpoint-detection-misconfiguration.md
       - name: Remediate machine vulnerabilities
@@ -1048,9 +1043,9 @@
         - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
-        - name: Migrate to AMA
-          displayName: vulnerability, assessment, findings, migrate
-          href: defender-for-sql-autoprovisioning.md
+        - name: Enable Defender for SQL servers on machines at scale
+          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+          href: enable-defender-sql-at-scale.md
         - name: Disable Defender for SQL Servers on Machines
           displayName: SQL, SQL servers, defender, machines, disable
           href: disable-sql-on-machines.md
@@ -1065,9 +1060,9 @@
           - name: Troubleshoot SQL machine protection configuration government
             displayName: Troubleshoot guide, SQL, servers, machines
             href: troubleshoot-sql-machines-guide-gov.md
-          - name: Enable Defender for SQL servers on machines at scale
-            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-            href: enable-defender-sql-at-scale.md
+          - name: Migrate to AMA
+            displayName: vulnerability, assessment, findings, migrate
+            href: defender-for-sql-autoprovisioning.md
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview

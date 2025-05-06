@@ -4,10 +4,13 @@ description: Learn how to enable SQL server-targeted Azure Monitoring Agent's au
 ms.topic: install-set-up-deploy
 ms.author: dacurwin
 author: dcurwin
-ms.date: 02/18/2025
+ms.date: 05/05/2025
 ---
 
 # Migrate to Defender for SQL on machines using AMA
+
+> [!IMPORTANT]
+> This article applies to government clouds only.
 
 Microsoft Monitoring Agent (MMA) is being deprecated in August 2024. As a result, a new SQL server-targeted Azure Monitoring Agent (AMA) autoprovisioning process was released. You can learn more about the [Defender for SQL Server on machines Log Analytics Agent's deprecation plan](upcoming-changes.md#defender-for-sql-server-on-machines).
 
