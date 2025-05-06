@@ -44,8 +44,8 @@ Discovery policies enable you to set alerts that notify you when new apps are de
 
 > [!NOTE]
 >
-> - Newly created discovery policies (or policies with updated continuous reports) trigger an alert once in 90 days per app per continuous report, regardless of whether there are existing alerts for the same app. So, for example, if you create a policy for discovering new popular apps, it may trigger additional alerts for apps that have already been discovered and alerted on.
-> - Data from **snapshot reports** do not trigger alerts in app discovery policies.
+> - Newly created discovery policies (or policies with updated continuous reports) trigger an alert once in 90 days per app per continuous report, regardless of whether there are existing alerts for the same app. So, for example, if you create a policy for discovering new popular apps, it might trigger additional alerts for apps that have already been discovered and alerted on.
+> - Data from **snapshot reports** don't trigger alerts in app discovery policies.
 
 For example, if you're interested in discovering risky hosting apps found in your cloud environment, set your policy as follows:
 
@@ -69,14 +69,14 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 
 1. To set which discovered apps trigger this policy, select **Add filters**.
 
-    The filters are chosen from drop-down lists. To add filters, select **Add a filter**. To remove a filter, select the 'X'.
+    The filters are chosen from drop-down lists. To add filters, select **Add a filter**. To remove a filter, select the 'X.'
 
 1. Under **Apply to** choose whether this policy applies **All continuous reports** or **Specific continuous reports**. Select whether the policy applies to **Users**, **IP addresses**, or both.
 
     :::image type="content" source="media/apply-to-continous-reports.png" alt-text="Screenshot showing how to apply file polcies to specific continous reports" lightbox="media/apply-to-continous-reports.png":::
 
     > [!IMPORTANT]
-    > When configuring an app discovery policy, selecting **Apply to > All continuous reports** generates individual alerts for each discovery stream, including the global stream. This results in multiple alerts, one from the global stream and additional alerts from each individual source. To customize your alerts, select **Apply to > Specific continuous reports** and choose only the relevant streams for your policy.\
+    > When you configure an app discovery policy and select **Apply to > All continuous reports**, multiple alerts are generated for each discovery stream, including the global stream which aggregates data from all sources. To control alert volume, select **Apply to > Specific continuous reports** and choose only the relevant streams for your policy.\
     > Learn more: [Defender for Cloud apps continuous risk assessment reports](set-up-cloud-discovery.md#snapshot-and-continuous-risk-assessment-reports)
 1. Select the dates during which the anomalous activity occurred to trigger the alert under **Raise alerts only for suspicious activities occurring after date.**
 
