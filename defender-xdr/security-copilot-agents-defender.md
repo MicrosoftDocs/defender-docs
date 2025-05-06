@@ -18,7 +18,7 @@ ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 04/28/2025
+ms.date: 05/12/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -28,8 +28,6 @@ appliesto:
 # Microsoft Security Copilot Agents in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-[!INCLUDE [agents-overview](~/../security-copilot/securityopilot.md]
 
 Microsoft Security Copilot agents are available in Microsoft Defender to help you perform your security tasks efficiently. Security Copilot agents are AI-powered assistants that can help you with various tasks by working seamlessly with Microsoft security products.
 
@@ -74,4 +72,4 @@ The following plugins must be enabled in Security Copilot:
 
 #### Roles with access
 
-The **Security Administrator** role is required to set up and manage the agent. Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdicts.
+The **Security Administrator** role is required to set up and manage the agent. Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict.
