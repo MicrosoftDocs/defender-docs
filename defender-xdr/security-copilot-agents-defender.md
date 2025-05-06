@@ -29,6 +29,8 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+[!INCLUDE [agents-overview](~/../security-copilot/securityopilot.md]
+
 Microsoft Security Copilot agents are available in Microsoft Defender to help you perform your security tasks efficiently. Security Copilot agents are AI-powered assistants that can help you with various tasks by working seamlessly with Microsoft security products.
 
 ## Agents in Microsoft Defender
@@ -40,6 +42,20 @@ The [Phishing Triage Agent](phishing-triage-agent.md) helps security operations 
 #### Trigger
 
 The agent is triggered when a user in your organization submits a phishing incident. The agent autonomously analyzes the submitted email to classify them as either phishing or not phishing based on its training and the context of the organization.
+
+#### Permissions
+
+The agent requires the following permissions to operate:
+
+- Security data basics (read)
+- Email & collaboration content (read)
+- Email & collaboration metadata (read)
+- Security Copilot (read)
+- Alerts (manage)
+
+#### Identity
+
+The agent operates in the context of the identity you associate with it. Creating the agent's identity and assigning the appropriate permissions to the agent is the required before starting the setup.
 
 #### Products
 
@@ -55,3 +71,7 @@ The following plugins must be enabled in Security Copilot:
 - Microsoft Defender XDR
 - Microsoft Threat Intelligence
 - Phishing Triage Agent
+
+#### Roles with access
+
+The **Security Administrator** role is required to set up and manage the agent. Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdicts.

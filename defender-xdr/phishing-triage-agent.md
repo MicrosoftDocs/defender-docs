@@ -246,11 +246,15 @@ To review the agent’s findings, follow these steps:
 
    [SCREENSHOT]
 
-The Activity tab opens to a full graphical representation of the agent’s thought process while doing the triage. Each step highlights the action performed, how the actions were done, and the corresponding results to provide full transparency into the evidence collected and the reasoning behind the agent’s decision. 
+The Activity tab opens to a full graphical representation of the agent’s thought process while doing the triage. Each step highlights the action performed, how the actions were done, and the corresponding results to provide full transparency into the evidence collected and the reasoning behind the agent’s decision.
 
-### Train the agent about your organization's context
+## Provide feedback to the Phishing Triage Agent
+
+You can train the Phishing Triage Agent to improve its performance and adapt it to your organization’s context by providing feedback. The agent learns from your feedback and uses it to improve its decision-making process. This feedback loop is essential for the agent to refine its behavior and align with your organization's specific needs.
 
 The agent interacts with the user to learn and adapt itself to your organization’s context, impacting how it classifies future incidents. Agents can be given feedback in natural language. All feedback given to the agent are turned into the agent’s lessons and stored in the agent’s memory for future triaging and classification.
+
+### Train the agent about your organization's context
 
 On its first run, the Phishing Triage Agent might make decisions based on limited context or without insight into your organization’s specific environment. Providing feedback to the agent helps it learn from your input and incorporate those organizational nuances into future decisions, improving decision-making over time.
 
@@ -266,13 +270,13 @@ To train the agent, follow these steps:
 
    [SCREENSHOT]
    > [!NOTE]
-   > You can only change the alert's classification to **true positive – phishing** or **false positive – not malicious**.
+   > Changing the alert's classification is limited to **true positive – phishing** or **false positive – not malicious**.
 
 4. Select **Use this feedback to teach the agent** and then **Evaluate**. Using these options adds the feedback to the agent's memory and improves the agent's subsequent responses to be  better aligned with your organization’s context.
 
    [SCREENSHOT]
    > [!NOTE]
-   > Not selecting the **Use this feedback to teach the agent** just logs the feedback in the management page for auditing purposes.
+   > Not selecting the **Use this feedback to teach the agent** only saves the feedback in the management page for auditing purposes.
 
 5. Select **Save** to save the feedback and add the lesson to the agent's memory.
 
@@ -281,15 +285,23 @@ The agent then translates the given feedback into a lesson and use it for triage
 > [!TIP]
 > Always check the validity of AI responses as sometimes the responses are inapplicable to the scenario.
 
-When you get an error after you provided feedback, follow these steps:
+### Resolve feedback errors
 
-1. Check the validity of your feedback. If the feedback conflicts, please refer to the feedback management page under settings, and reject first the conflicting feedback.
+If you get an error after you provided feedback, it might be due to conflicting feedback, the feedback being previously rejected, or the feedback refers to an unsupported feature or capability, or irrelevant content. 
+
+To resolve some of the feedback errors, follow these steps:
+
+1. Navigate to the [feedback management](#view-and-manage-feedback-to-the-agent) page. 
+
+2. Select the feedback from the list to review the error. If the error indicates a conflict, the conflicting feedback must be rejected first before providing new feedback. Once the error is resolved, rewrite the feedback then select **Evaluate**.
 
    [SCREENSHOT]
 
-2. After resolving the conflict, rewrite the feedback and select **Evaluate**.
+3. If the error indicates that the feedback is previously rejected, rewrite the feedback then select **Evaluate**.
 
-3. The new feedback is available for later reviewing under the feedback management page.
+   [SCREENSHOT]
+
+4. Navigate to the feedback management page to view the new feedback provided.
 
 Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
 
@@ -315,10 +327,9 @@ Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough
 
 ### Can I remove the Phishing Triage Agent?
 
-Yes. You can [pause or remove the agent](#pause-or-remove-the-agent) at any time in the Agents Overview page. 
+Yes. You can [pause or remove the agent](#pause-or-remove-the-agent) at any time in the Agents Overview page.
 
 Removing the agent does not revert any changes made to the incidents it has triaged. The agent is no longer able to triage new incidents after its removal, but it retains the history of all incidents it triaged.
-
 
 ## Related content
 
