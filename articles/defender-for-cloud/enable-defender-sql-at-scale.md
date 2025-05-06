@@ -4,7 +4,7 @@ description: Learn how to protect your Microsoft SQL servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 12/17/2024
+ms.date: 05/05/2025
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---
 

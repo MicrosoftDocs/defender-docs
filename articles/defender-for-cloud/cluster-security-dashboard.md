@@ -1,7 +1,6 @@
 ---
 title: Azure Kubernetes Service (AKS) Security Dashboard
 description: Explain the views and actions in the AKS security Dashboard to enable and protect an individual cluster with Defender for Containers.
-author: ehorwitz-ms
 ms.author: dacurwin
 ms.topic: conceptual
 ms.date: 12/19/2024
@@ -16,6 +15,7 @@ The AKS security dashboard provides comprehensive visibility and automated remed
 Consolidating security and operational data in one place directly within the AKS portal allows engineers to benefit from a unified view of their Kubernetes environment. The view enables more efficient detection and remediation of security issues, with minimal disruption to their workflows to reduce the risk of overlooking security issues and improving remediation cycles.
 
 The AKS Security Dashboard allows the user to:
+
 - View the security posture of the cluster.
 - Enable Defender for Containers plan and configure settings for the specific cluster resource.
 - Review vulnerability assessment recommendations.
@@ -25,10 +25,11 @@ The AKS Security Dashboard allows the user to:
 ## Prerequisites
 
 The AKS Security Dashboard shows security vulnerabilities and misconfigurations for a cluster if at least one of the following plans is enabled:
+
 - [Defender for Containers on the subscription](tutorial-enable-containers-azure.md) or [the individual cluster](#setting-the-defender-for-containers-plan)
 - [DCSPM](tutorial-enable-cspm-plan.md) on the subscription
 
-## Using the AKS Security Dashboard 
+## Using the AKS Security Dashboard
 
 The AKS Security Dashboard is accessed from a cluster resource pane by selecting **Microsoft Defender for Cloud** in the menu list. The dashboard shows:
 

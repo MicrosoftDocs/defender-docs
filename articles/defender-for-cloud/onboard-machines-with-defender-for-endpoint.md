@@ -1,14 +1,14 @@
 ---
-title: Onboard non-Azure machines with Defender for Endpoint
+title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 09/17/2024
+ms.date: 05/01/2025
 author: dcurwin
 ms.author: dacurwin
 
 ---
 
-# Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint
+# Connect your non-Azure servers to Microsoft Defender for Cloud with Defender for Endpoint
 
 Defender for Cloud allows you to directly onboard your non-Azure servers by deploying the Defender for Endpoint agent. This provides protection for both your cloud and non-cloud assets under a single, unified offering.
 
@@ -29,11 +29,24 @@ This tenant-level setting allows you to automatically and natively onboard any n
 
 ## How it works
 
-Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn’t require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. To enable server management capabilities, refer to the deployment of Azure Arc.
+Direct onboarding is a seamless integration between Defender for Endpoint and Defender for Cloud that doesn't require extra software deployment on your servers. Once enabled, it also shows your non-Azure server devices onboarded to Defender for Endpoint in Defender for Cloud, under a designated Azure Subscription you configure (in addition to their regular representation in  the Microsoft Defender Portal). The Azure Subscription is used for licensing, billing, alerts, and security insights but doesn't provide server management capabilities such as Azure Policy, Extensions, or Guest configuration. 
+
+You must use additional tools to manage server security settings, such as antivirus policies, attack surface reduction rules, and security intelligence updates. You have several options to manage these settings for Windows servers and Linux servers:
+
+- Windows Server:
+   - [Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management)
+   - [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+   - [Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
+   - [PowerShell](/powershell/module/defender/)
+   - [Windows Management Instrumentation](/defender-endpoint/use-wmi-microsoft-defender-antivirus) (WMI)
+
+- Linux server:
+   - [Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management)
+   - Non-Microsoft solutions (see [Configure security settings in Defender for Endpoint on Linux](/defender-endpoint/linux-preferences))
 
 ## Enable direct onboarding
 
-Enabling direct onboarding is an opt-in setting at the tenant level. It affects both existing and new servers onboarded to Defender for Endpoint in the same Microsoft Entra tenant. Shortly after you enable this setting, your server devices will show under the designated subscription. Alerts, software inventory, and vulnerability data are integrated with Defender for Cloud, in a similar way to how it works with Azure VMs.
+Enabling direct onboarding is an opt-in setting at the tenant level. It affects both existing and new servers onboarded to Defender for Endpoint in the same Microsoft Entra tenant. Shortly after you enable this setting, your server devices show up under the designated subscription. Alerts, software inventory, and vulnerability data are integrated with Defender for Cloud in a similar way to how it works with Azure VMs.
 
 Before you begin:
 
@@ -44,8 +57,11 @@ Before you begin:
 ### Enable in the Defender for Cloud portal
 
 1. Go to **Defender for Cloud** > **Environment Settings** > **Direct onboarding**.
+
 1. Switch the **Direct onboarding** toggle to **On**.
+
 1. Select the subscription you would like to use for servers onboarded directly with Defender for Endpoint.
+
 1. Select **Save**.
 
 :::image type="content" source="media/onboard-machines-with-defender-for-endpoint/direct-onboarding-subscription.png" alt-text="Screenshot of Onboard non-Azure servers with Defender for Endpoint.":::
@@ -54,23 +70,25 @@ You now successfully enabled direct onboarding on your tenant. After you enable 
 
 ### Deploy Defender for Endpoint on your servers
 
-Deploying the Defender for Endpoint agent on your on-premises Windows and Linux servers is the same whether you use direct onboarding or not. Refer to the [Defender for Endpoint onboarding guide](/microsoft-365/security/defender-endpoint/onboarding) for further instructions.
+Deploying the Defender for Endpoint agent on your on-premises Windows and Linux servers is the same whether you use direct onboarding or not. See [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server) for more information.
 
 ## Current limitations
 
-- **Plan support**: Direct onboarding provides access to all Defender for Servers Plan 1 features. However, certain features in Plan 2 still require the deployment of the Azure Monitor Agent, which is only available with Azure Arc on non-Azure machines. If you enable Plan 2 on your designated subscription, machines onboarded directly with Defender for Endpoint have access to all Defender for Servers Plan 1 features and the Defender Vulnerability Management Addon features included in Plan 2.
+- **Plan support**: Direct onboarding provides access to all Defender for Servers Plan 1 features. However, certain features in Defender for Servers Plan 2 still require the deployment of the Azure Monitor Agent, which is only available with Azure Arc on non-Azure machines. If you enable Defender for Servers Plan 2 on your designated subscription, servers onboarded directly with Defender for Endpoint have access to all Defender for Servers Plan 1 features and the [Defender Vulnerability Management add-on](/defender-vulnerability-management/defender-vulnerability-management-capabilities) features included in Plan 2.
 - **Multi-cloud support**: You can directly onboard VMs in AWS and GCP using the Defender for Endpoint agent. However, if you plan to simultaneously connect your AWS or GCP account to Defender for Servers using multicloud connectors, it's currently still recommended to deploy Azure Arc.
-- **Simultaneous onboarding limited support**: For servers simultaneously onboarded using multiple methods (for example, direct onboarding combined with Log Analytics workspace-based onboarding), Defender for Cloud makes every effort to correlate them into a single device representation. However, devices using older versions of Defender for Endpoint might face certain limitations. In some instances, this could result in overcharges. We generally advise using the latest agent version. Specifically, for this limitation, ensure your Defender for Endpoint agent versions meet or exceed these minimum versions:
+- **Simultaneous onboarding limited support**: For servers simultaneously onboarded using multiple methods (for example, 
+direct onboarding combined with Log Analytics workspace-based onboarding), Defender for Cloud makes every effort to correlate them into a single device representation. However, devices using older versions of Defender for Endpoint might face certain limitations. In some instances, this could result in overcharges. We generally advise using the latest agent version. Specifically, for this limitation, ensure your Defender for Endpoint agent versions meet or exceed these minimum versions:
 
   |Operating System|Minimum agent version|
   | -------- | -------- |
-  |Windows 2019| 10.8555|
-  |Windows 2012 R2, 2016 (modern, unified agent)|10.8560|
+  |Windows Server 2019 and later | 10.8555|
+  |Windows Server 2016 or Windows 2012 R2 <br/>([modern, unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))|10.8560|
+  |Linux server|30.101.23052.009|
   |Linux (AMD64)|30.101.23052.009|
   |Linux (ARM64)|30.101.25022.004|
 
 ## Next steps
 
-This page showed you how to add your non-Azure machines to Microsoft Defender for Cloud. To monitor their status, use the inventory tools as explained in the following page:
+This article describes how to add your non-Azure servers to Microsoft Defender for Cloud. To monitor their status, use the inventory tools as explained in the following article:
 
 - [Explore and manage your resources with asset inventory](asset-inventory.md)

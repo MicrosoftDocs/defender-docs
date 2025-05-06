@@ -177,6 +177,14 @@
             - name: Connect ServiceNow to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
+          - name: Mend.io
+            items:
+            - name: Overview Mend.io integration
+              displayName: CSPM, cloud security, posture, management, Mend.io
+              href: integration-mend-io.md
+            - name: Connect Mend.io to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, Mend.io
+              href: connect-mend-io.md
           - name: API security testing partners
             items:
                 - name: Overview of API security testing integrations
@@ -409,6 +417,9 @@
         - name: IoT recommendations
           displayName: IoT, recommendations
           href: recommendations-reference-iot.md
+        - name: Keyvault recommendations
+          displayName: keyvault, recommendations
+          href: recommendations-reference-keyvault.md
         - name: Networking recommendations
           displayName: networking, recommendations
           href: recommendations-reference-networking.md
@@ -461,7 +472,7 @@
               href: alerts-azure-ddos-protection.md
             - name: Alerts for Defender for APIs
               href: alerts-defender-for-apis.md
-            - name: Alerts for AI workloads (Preview)
+            - name: Alerts for AI services
               href: alerts-ai-workloads.md
             - name: Deprecated security alerts
               href: deprecated-alerts.md
@@ -533,9 +544,6 @@
         href: remediate-cloud-deployment-secrets.md
     - name: Improve security posture with Microsoft Security Copilot
       items:
-        - name: Analyze recommendations with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, analyze
-          href: analyze-with-copilot.md
         - name: Summarize recommendations with Microsoft Security Copilot
           displayName: copilot, security, recommendations, summarize
           href: summarize-with-copilot.md
@@ -700,7 +708,7 @@
     - name: Review data security alerts
       href: review-data-security-alerts.md
 
-- name: Protect AI workloads
+- name: Protect AI services
   items:
   - name: Overview data and AI security dashboard (Preview)
     href: data-aware-security-dashboard-overview.md
@@ -716,7 +724,7 @@
     items:
     - name: Overview
       href: ai-threat-protection.md
-    - name: Enable threat protection for AI workloads (preview)
+    - name: Enable threat protection for AI services
       href: ai-onboarding.md
     - name: Gain application and end-user context
       href: gain-end-user-context-ai.md
@@ -869,9 +877,6 @@
             href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md
-          - name: Enable file integrity monitoring (legacy MMA)
-            displayName: fim, change, log analytics, mma
-            href: file-integrity-monitoring-enable-log-analytics.md
       - name: Just-in-time machine access
         items:
           - name: Overview
@@ -885,8 +890,6 @@
       - name: Remediate EDR solutions (agentless)
         displayName: defender for endpoint, endpoint, edr
         href: endpoint-detection-response-solution-recommendations.md   
-      - name: Remediate EDR solutions (MMA)
-        href: endpoint-protection-recommendations-technical.md 
       - name: Remediate Defender for Endpoint misconfigurations
         href: endpoint-detection-misconfiguration.md
       - name: Remediate machine vulnerabilities
@@ -1018,7 +1021,7 @@
         - name: Advanced Threat Protection for Azure SQL Database
           displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
           href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-      - name: Defender for SQL Server on Machines
+      - name: Defender for SQL Servers on Machines
         items:
         - name: Overview
           displayName: SQL, SQL servers, defender, machines
@@ -1026,18 +1029,35 @@
         - name: Enable Defender for SQL Servers on Machines
           displayName: hybrid, arc, Azure Defender
           href: defender-for-sql-usage.md
+        - name: Update Defender for SQL Servers on Machines plan configuration
+          displayName: SQL, SQL servers, defender, machines
+          href: update-sql-machine-configuration.md
         - name: Verify SQL machine protection
           displayName: SQL, SQL servers, defender, machines
           href: verify-machine-protection.md
-        - name: Troubleshoot SQL machine protection
+        - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
-        - name: Enable Defender for SQL servers on machines at scale
-          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-          href: enable-defender-sql-at-scale.md
         - name: Migrate to AMA
           displayName: vulnerability, assessment, findings, migrate
-          href: defender-for-sql-autoprovisioning.md  
+          href: defender-for-sql-autoprovisioning.md
+        - name: Disable Defender for SQL Servers on Machines
+          displayName: SQL, SQL servers, defender, machines, disable
+          href: disable-sql-on-machines.md
+        - name: Government clouds
+          items:
+          - name: Enable Defender for SQL Servers on Machines government
+            displayName: hybrid, arc, Azure Defender
+            href: defender-for-sql-usage-gov.md
+          - name: Verify SQL machine protection government
+            displayName: SQL, SQL servers, defender, machines
+            href: verify-machine-protection-gov.md
+          - name: Troubleshoot SQL machine protection configuration government
+            displayName: Troubleshoot guide, SQL, servers, machines
+            href: troubleshoot-sql-machines-guide-gov.md
+          - name: Enable Defender for SQL servers on machines at scale
+            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+            href: enable-defender-sql-at-scale.md
       - name: Defender for Open-Source Relational Databases
         items:
         - name: Overview
@@ -1262,12 +1282,12 @@
             href: review-pull-request-annotations.md
       - name: Common questions about DevOps security
         href: faq-defender-for-devops.yml
-  - name: Threat protection for AI workloads (preview)
+  - name: Defender for AI services
     items:
       - name: Overview
         displayName: AI, Defender for AI
         href: ai-threat-protection.md
-      - name: Enable threat protection for AI workloads (preview)
+      - name: Enable threat protection for AI services
         displayName: AI, Defender for AI
         href: ai-onboarding.md
       - name: Gain end-user context for AI alerts
@@ -1301,6 +1321,8 @@
       href: defender-for-cloud-glossary.md
     - name: Defender for Cloud cost calculator
       href: cost-calculator.md
+    - name: Chargeback process using Azure Cost Analysis
+      href: chargeback.md
     - name: Optimize costs with prepurchase plan
       href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field

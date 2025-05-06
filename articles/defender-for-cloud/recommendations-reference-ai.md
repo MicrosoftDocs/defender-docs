@@ -159,12 +159,6 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 ## AWS AI recommendations
 
-### AWS Bedrock should have model invocation logging enabled
-
-**Description:** With invocation logging, you can collect the full request data, response data, and metadata associated with all calls performed in your account. This enables you to recreate activity trails for investigation purposes when a security incident occurs.
-
-**Severity:** Low
-
 ### AWS Bedrock should use AWS PrivateLink
 
 **Description** Amazon Bedrock VPC endpoint powered by AWS PrivateLink, allows you to establish a private connection between the VPC in your account and the Amazon Bedrock service account. AWS PrivateLink enables VPC instances to communicate with Bedrock service resources, without the need for public IP addresses, ensuring your data is not exposed to the public internet and thereby helping with your compliance requirements.
@@ -176,6 +170,50 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 **Description** Guardrails for Amazon Bedrock enhance the safety of generative AI applications by evaluating both user inputs and model-generated responses. These guardrails include content filters, which help detect and filter harmful content. Specifically, the "Prompt Attacks" category that includes safeguards on user prompts to prevent jailbreaks and prompt injections.
 
 **Severity** Medium
+
+### AWS Bedrock should have model invocation logging enabled
+
+**Description:** With invocation logging, you can collect the full request data, response data, and metadata associated with all calls performed in your account. This enables you to recreate activity trails for investigation purposes when a security incident occurs.
+
+**Severity:** Low
+
+## GCP AI recommendations
+
+### A Private Service endpoint should be used for Vertex AI Online endpoints (Preview)
+
+**Description:** Defender for Cloud has identified that a Private Service endpoint is not configured on Vertex AI Online endpoints. Private endpoint connections enforce secure communication by enabling private connectivity to the Online prediction's endpoint. Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses.
+
+**Severity** Medium
+
+### Root access should be disabled on Workbench instances (Preview)
+
+**Description:** Defender for Cloud has identified that root access is not disabled on the GCP Workbench instance. To reduce the risk of accidental or malicious system damage, it is essential to disable root access on your Google Cloud Vertex AI notebook instances. This measure limits administrative privileges within the instances, ensuring a more secure environment.
+
+**Severity** Medium
+
+### Public IP addresses should be disabled on Workbench instances (Preview)
+
+**Description:** Defender for Cloud has identified that external IP addresses have been configured on the GCP Workbench instance. To reduce your attack surface, Workbench instances shouldn't have public IP addresses. Instead, instances should be configured behind load balancers to minimize the instance's exposure to the internet
+
+**Severity** Medium
+
+### (Enable if required) Customer-managed keys should be used to encrypt data at rest in Vertex AI DataSets (Preview)
+
+**Description:** Defender for Cloud has identified that customer-managed keys are not being used on Vertex AI DataSets. Using customer-managed keys to encrypt data at rest provides more control over the key lifecycle, including rotation and management. This is particularly relevant for organizations with related compliance requirements. By using customer-managed keys, you can ensure that your data is encrypted with keys that you control, giving you the ability to manage and rotate these keys as needed. This added control can help meet compliance requirements and enhance the security of your data.
+
+**Severity** Low
+
+### Cloud Monitoring should be used on GCP Workbench instance (Preview)
+
+**Description** Defender for Cloud has identified that Cloud Monitoring is not enabled on the GCP Workbench instance. Enabling Cloud Monitoring for Google Cloud Vertex AI notebook instances is essential for tracking performance metrics, detecting issues early, and ensuring optimal operation through proactive monitoring and alerts.
+
+**Severity** Low
+
+### Idle shutdown should be enabled on Workbench instances (Preview)
+
+**Description** Defender for Cloud has identified that idle shutdown is not configured on the GCP Workbench instance. To optimize costs and enhance security, ensure that the Idle Shutdown feature is enabled for your Google Cloud Vertex AI notebook instances.
+
+**Severity** Low
 
 ## Related content
 
