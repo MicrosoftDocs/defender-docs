@@ -22,16 +22,12 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/02/2025
+ms.date: 05/07/2025
 ---
 
 ## Manage existing custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
-
 
 You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand and modify it.
 
