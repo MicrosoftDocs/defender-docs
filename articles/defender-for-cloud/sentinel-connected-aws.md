@@ -42,6 +42,8 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
 1. Search for the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
 
+1. Save the file locally.
+
 1. In a separate browser window, sign in to your AWS account.
 
 1. Navigate to **Identity and Access Management (IAM)** > **Identity Providers**.
