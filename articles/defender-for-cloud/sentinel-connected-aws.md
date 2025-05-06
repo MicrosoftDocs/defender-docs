@@ -10,7 +10,7 @@ ms.author: elkrieger
 
 # Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
 
-Microsoft Defender for Cloud generates a CloudFormation template (Terraform script) that includes all of the resources necessary to onboard your Amazon Web Services (AWS) account to Defender for Cloud. However, Defender for Cloud and Microsoft Sentinel use the same authentication mechanism to connect to AWS accounts. When an AWS account is first connected to Microsoft Sentinel, Defender for Cloud can't connect to it as well.
+Microsoft Defender for Cloud generates a CloudFormation template that includes all of the resources necessary to onboard your Amazon Web Services (AWS) account to Defender for Cloud. However, Defender for Cloud and Microsoft Sentinel use the same authentication mechanism to connect to AWS accounts. When an AWS account is first connected to Microsoft Sentinel, Defender for Cloud can't connect to it as well.
 
 This article guides you through the steps to connect your AWS account to Defender for Cloud and ensure it operates correctly.
 
@@ -36,7 +36,7 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
     :::image type="content" source="media/sentinel-connected-aws/copy-template.png" alt-text="Screenshot that shows where the copy button is located." lightbox="media/sentinel-connected-aws/copy-template.png":::
 
-1. Paste the template into a text editing tool.
+1. Paste the template into a local text editing tool.
 
 1. Search for the **ASCDefendersOIDCIdentityProvider": {** section of the template, and make a separate copy of the entire **ClientIdList**.
 
