@@ -41,10 +41,10 @@
       items:
       - name: Overview
         href: overview-deploy.md
-      - name: Transition your Microsoft Sentinel environment to the Defender portal
-        href: /azure/sentinel/move-to-defender?branch=pr-en-us-299308&toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
+    - name: Transition
+      href: /azure/sentinel/move-to-defender?branch=pr-en-us-299308&toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json    
     - name: Reduce security risk
       items:
       - name: Improve security posture and reduce risk
