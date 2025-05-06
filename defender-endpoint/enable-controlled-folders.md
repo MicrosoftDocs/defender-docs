@@ -45,6 +45,10 @@ You can enable controlled folder access by using any of these methods:
   - [PowerShell](#powershell)
   - [See also](#see-also)
 
+1. Navigate to **Microsoft Intune admin center**.
+
+2. Go to **Endpoint security > Attack surface reduction**, and select **+ Create Policy**.
+
 3. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
 
 4. Name the policy and add a description. Select **Next**.
