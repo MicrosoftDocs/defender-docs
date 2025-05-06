@@ -38,7 +38,7 @@ You can view the list of existing custom detection rules, check their previous r
 
 To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
 
-:::image type="content" source="/defender/media/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list.png":::
+:::image type="content" source="/defender/media/unified-custom-det-list.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list-tb.png":::
 
 
 
