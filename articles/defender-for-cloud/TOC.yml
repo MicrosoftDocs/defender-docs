@@ -579,7 +579,7 @@
           href: review-exemptions.md
         - name: Assign a recommendation to an active user
           displayName: assign, recommendation, user, owner
-          href: assign-user.md
+          href: active-user.md
         - name: Remediate recommendations
           displayName: remediation, steps, recommendations, fix, actions, activity log
           href: implement-security-recommendations.md
