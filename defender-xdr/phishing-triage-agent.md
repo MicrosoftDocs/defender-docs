@@ -285,6 +285,16 @@ The agent then translates the given feedback into a lesson and use it for triage
 > [!TIP]
 > Always check the validity of AI responses as sometimes the responses are inapplicable to the scenario.
 
+### Sample feedback
+
+Following are recommendations when providing feedback to the Phishing Triage Agent:
+
+1. Use the context of the email subject, message body, sender, and recipients when providing details in the feedback.
+2. Be specific. Your comments must be descriptive and applicable to the current alert you are looking at.
+3. Check that your feedback aligns with previous comments provided to the agent to avoid feedback conflict and other errors.
+
+Here are examples of how you can write your feedback to the agent.
+
 ### Resolve feedback errors
 
 If you get an error after you provided feedback, it might be due to conflicting feedback, the feedback being previously rejected, or the feedback refers to an unsupported feature or capability, or irrelevant content. 
