@@ -56,7 +56,7 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 
 If you connected your AWS account to Microsoft Sentinel first, the Defender for Cloud connector won't work. To fix this issue, you need to edit the CloudFormation template and apply remediation steps within your AWS account.
 
-Learn how to [Connect a Microsoft Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md)
+Learn how to [Connect a Microsoft Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 #### Cost impact of API calls to AWS
 

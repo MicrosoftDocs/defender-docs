@@ -22,11 +22,11 @@ Defender for Cloud and AWS use federated authentication. All resources related t
 - An identity provider (OpenID Connect)
 - Identity and Access Management (IAM) roles with a federated principal (connected to the identity providers)
 
-The architecture of the authentication process across clouds includes
+The architecture of the authentication process across clouds includes:
 
 :::image type="content" source="media/quickstart-onboard-aws/architecture-authentication-across-clouds.png" alt-text="Diagram showing architecture of authentication process across clouds.":::
 
-Defender for Cloud CSPM service acquires a Entra token with a validity lifetime of 1 hour, signed by Entra ID using the RS256 algorithm.
+Defender for Cloud CSPM service acquires an Entra token with a validity lifetime of 1 hour, signed by Entra ID using the RS256 algorithm.
 
 The Entra token is exchanged for AWS short-living credentials, and Defender for Cloud's CSPM service assumes the CSPM IAM role (assumed with web identity).
 
@@ -192,7 +192,7 @@ To connect your AWS to Defender for Cloud by using a native connector:
     >
     > (Optional) Use the AWS regions dropdown menu to select specific AWS regions to be scanned. All regions are selected by default.
 
-Next, review and select the Defender for Cloud plans to enable for this AWS account
+Next, review and select the Defender for Cloud plans to enable for this AWS account.
 
 ## Select Defender plans
 
