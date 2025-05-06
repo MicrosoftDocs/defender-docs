@@ -44,7 +44,7 @@ You can filter for any column by going to **Add filter**, selecting the columns 
 
 To search for specific rules, go to the search box in the upper right of the page and enter the name or rule ID of the rule you are looking for.
 
-To help 
+For multiworkspace organizations that onboarded multiple workspaces to Microsoft Defender, you can filter for workspaces using the columns **Workspace ID** or **Workspace name**. 
 
 The page lists all the rules with the following run information:
 
@@ -55,7 +55,7 @@ The page lists all the rules with the following run information:
 
 ### View rule details, modify rule, and run rule
 
-To view comprehensive information about a custom detection rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
+To view comprehensive information about a custom detection rule or an analytics rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
 
 :::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="/defender/media/custom-detect-rules-view.png":::
 
