@@ -135,7 +135,6 @@ With the query in the query editor, select **Create detection rule** and specify
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 
-#### Dynamic
 
 #### Rule frequency
 

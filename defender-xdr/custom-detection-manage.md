@@ -61,11 +61,12 @@ To view comprehensive information about a custom detection rule or an analytics 
 
 You can also take the following actions on the rule from this page:
 
-- **Run** - Run the rule immediately. This also resets the interval for the next run.
-- **Edit** - Modify the rule without changing the query.
-- **Modify query** - Edit the query in advanced hunting.
-- **Turn on** / **Turn off** - Enable the rule or stop it from running.
-- **Delete** - Turn off the rule and remove it.
+- **Open detection rule page** - opens the detection rule page to view triggered alerts and actions (for custom detection rules only)
+- **Run** - runs the rule immediately; this also resets the interval for the next run (for custom detection rules only)
+- **Edit** - allows you to modify the rule without changing the query
+- **Modify query** - allows you to edit the query in advanced hunting
+- **Turn on** / **Turn off** - allows you to enable the rule or stop it from running
+- **Delete** - allows you to turn off the rule and remove it
 
 ### View and manage triggered alerts
 
@@ -82,8 +83,6 @@ In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name
 > [!TIP]
 > To quickly view information and take action on an item in a table, use the selection column [&#10003;] at the left of the table.
 
-> [!NOTE]
-> Some columns in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## See also
 

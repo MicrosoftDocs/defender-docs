@@ -32,6 +32,15 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## May 2025
+- (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
+    - You can now migrate any analytics rule that can run in Continuous (near real-time) frequency by selecting the **Migrate now** button in the banner that appears when you open the detection rules list page.
+    - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
+    - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
+    - You can now view the details pane even for analytics rules.
+    - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
+
+
 ## April 2025
 
 - (Preview) You can now create data security investigations in the Microsoft Defender portal with the integration of Microsoft Purview Data Security Investigations (preview) and Microsoft Defender XDR. This integration allows security operations center (SOC) teams to enhance their investigation and response to potential data security incidents like data breaches or data leaks. For more information, see [Create data security investigations in the Microsoft Defender portal](create-dsi-in-defender.md).
