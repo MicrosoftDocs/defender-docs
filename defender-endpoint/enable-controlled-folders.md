@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 05/06/2025
 ---
 
 # Enable controlled folder access
@@ -44,10 +44,6 @@ You can enable controlled folder access by using any of these methods:
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
   - [See also](#see-also)
-
-1. Navigate to **Microsoft Intune admin center**.
-
-2. Go to **Endpoint security > Attack surface reduction**, and select **+ Create Policy**.
 
 3. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
 
@@ -89,7 +85,7 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 1. After the policy is created, **Close**.
 
-For more information about Microsoft Configuration Manager and Controlled Folder Access, please visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 ## Group Policy
 
