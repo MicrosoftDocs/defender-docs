@@ -86,4 +86,4 @@ To import roles, follow these steps:
 
 Imported roles are available in the Permissions and roles list.
 
-Learn more about unified RBAC in [Microsoft Defender XDR unified role-based access control](/defender-xdr/manage-rbac.md).
+Learn more about unified RBAC in [Microsoft Defender XDR unified role-based access control](/defender-xdr/manage-rbac).
