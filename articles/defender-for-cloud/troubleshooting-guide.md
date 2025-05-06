@@ -4,7 +4,7 @@ description: This guide is for IT professionals, security analysts, and cloud ad
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 01/24/2024
+ms.date: 05/06/2025
 ---
 
 # Microsoft Defender for Cloud troubleshooting guide
@@ -51,6 +51,12 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 - Wait at least 12 hours after creation of the AWS root account.
 - Make sure that EKS clusters are successfully connected to Azure Arc-enabled Kubernetes.
 - If you don't see AWS data in Defender for Cloud, make sure that the required AWS resources for sending data to Defender for Cloud exist in the AWS account.
+
+### Connected to Sentinel first
+
+If you connected your AWS account to Microsoft Sentinel first, the Defender for Cloud connector won't work. To fix this issue, you need to edit the CloudFormation template and apply remediation steps within your AWS account.
+
+Learn how to [Connect a Microsoft Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md)
 
 #### Cost impact of API calls to AWS
 
