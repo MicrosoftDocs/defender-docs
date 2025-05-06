@@ -36,7 +36,13 @@ You can view the list of existing custom detection rules, check their previous r
 
 ### View existing rules
 
-To view all existing custom detection rules, navigate to **Hunting** > **Custom detection rules**. The page lists all the rules with the following run information:
+To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
+
+:::image type="content" source="/defender/media/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="/defender/media/unified-custom-det-list.png":::
+
+
+
+The page lists all the rules with the following run information:
 
 - **Last run** - When a rule was last run to check for query matches and generate alerts
 - **Last run status** - Whether a rule ran successfully
