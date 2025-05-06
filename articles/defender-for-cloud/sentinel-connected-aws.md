@@ -1,7 +1,7 @@
 ---
 title: Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
 description: Troubleshoot deployment issues for your AWS connector withing Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/05/2025
+ms.date: 05/06/2025
 ms.topic: how-to
 #customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and i soperating the way it should be.
 author: Elazark
@@ -38,9 +38,9 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
 1. Paste the template into a text editing tool.
 
-1. On the Configure access page, search for the **ASCDefendersOIDCIdentityProvider": {** section in the template, and make a separate copy of the entire **ClientIdList**.
+1. Search for the **ASCDefendersOIDCIdentityProvider": {** section of the template, and make a separate copy of the entire **ClientIdList**.
 
-1. On the Configure access page, locate the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
+1. Search for the **ASCDefendersOIDCIdentityProvider** section in the template and delete it.
 
 1. In a separate browser window, sign in to your AWS account.
 
@@ -52,7 +52,11 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
 1. Paste the **ClientIdList** section you copied in step 3.
 
-1. Navigate to the CloudFormation template on the Configure access page in Defender for Cloud.
+1. Navigate to the Configure access page in Defender for Cloud.
+
+1. Follow the Create a Stack in AWS instructions, and use the template you changed in the editing tool.
+
+    :::image type="content" source="media/sentinel-connected-aws/create-stack.png" alt-text="Screenshot that shows where the create stack instructions are located." lightbox="media/sentinel-connected-aws/create-stack.png":::
 
 1. Select **Next**.
 
