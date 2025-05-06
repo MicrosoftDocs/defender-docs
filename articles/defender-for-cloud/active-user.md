@@ -47,7 +47,7 @@ Defender for Cloud's active user feature suggests up to three potential active u
 
 1. Review the activity and confidence assigned to the top three suggested users.
 
-    :::image type="content" source="media/active-user/select-active-user.png" alt-text="Screenshot that shows the activity and confidence assigned to the top three suggested users." lightbox="media/active-user/select-active-user.png":::
+    :::image type="content" source="media/active-user/select-active-user.png" alt-text="Screenshot that shows the activity and confidence assigned to the top three suggested users." lightbox="media/active-user/select-active-user-zoom.png":::
 
 1. Select **More info** to view more information about the user, including, name, email address, the user's manager, department, role, and last activities.
 
