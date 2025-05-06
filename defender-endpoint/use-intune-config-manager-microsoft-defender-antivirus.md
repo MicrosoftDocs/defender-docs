@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 07/25/2024
+ms.date: 05/06/2025
 ms.reviewer: phuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -155,7 +155,7 @@ Information about the detected items on your computer will be automatically coll
   
   - **Not configured** - The setting is restored to the system default (script scanning is allowed).
   - **Not allowed** - The setting is disabled, scripts will not be scanned.
-  - **Allowed** - The setting is enabled, scripts will be scanned(it will enable the [Anti-malware Scan Interface](amsi-on-mdav)). This is the recommended configuration.
+  - **Allowed** - The setting is enabled, scripts will be scanned(it will enable the [Anti-malware Scan Interface](amsi-on-mdav.md)). This is the recommended configuration.
 
   Changes to this setting are not applied if tamper protection is enabled.
 
