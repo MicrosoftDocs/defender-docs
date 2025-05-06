@@ -56,7 +56,7 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
 1. Navigate to the Configure access page in Defender for Cloud.
 
-1. Follow the Create a Stack in AWS instructions, and use the template you changed in the editing tool.
+1. Follow the Create a Stack in AWS instructions, and use the template you saved locally.
 
     :::image type="content" source="media/sentinel-connected-aws/create-stack.png" alt-text="Screenshot that shows where the create stack instructions are located." lightbox="media/sentinel-connected-aws/create-stack.png":::
 
