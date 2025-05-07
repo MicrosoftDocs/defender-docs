@@ -13,28 +13,28 @@ items:
     href: architecture.md
   - name: Defender for Identity in the Microsoft Defender portal
     href: microsoft-365-security-center-mdi.md
+  - name: Pilot Microsoft Defender XDR
+    href: defender-xdr\pilot-defender-xdr-overview.md
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-- name: Deploy
-  expanded: true
-  items:
-  - name: Quick installation guide
-    href: deploy/quick-installation-guide.md
-  - name: Pilot and deploy Microsoft Defender XDR
-    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-  - name: Defender for Identity deployment overview
-    href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
       href: deploy/prerequisites.md
     - name: Plan your Defender for Identity capacity
       href: deploy/capacity-planning.md
-  - name: Deploy Defender for Identity
+    - name: Roles and permissions
+      href: role-groups.md
+- name: Deploy Defender for Identity
+  items:
+  - name: Defender for Identity deployment overview
+    href: deploy/deploy-defender-identity.md
+  - name: Deploy Defender for Identity classic sensors
     items:
+    - name: Quick installation guide
+      href: deploy/quick-installation-guide.md
     - name: Configure connectivity settings
       href: deploy/configure-proxy.md
-      displayName: proxy
     - name: Test connectivity settings
       href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
@@ -43,6 +43,10 @@ items:
       href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
+  - name: Deploy sensors
+    items:
+    - name: Activate Defender for Identity capabilities on your domain controller
+      href: deploy/activate-capabilities.md
   - name: Post-deployment configuration
     items:
     - name: Configure event collection
@@ -51,8 +55,6 @@ items:
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
         href: deploy/configure-windows-event-collection.md
-    - name: Roles and permissions
-      href: role-groups.md
     - name: Configure a Directory Service account
       items:
       - name: Overview
@@ -85,7 +87,7 @@ items:
         displayName: standalone
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
-  - name: Integrate with PAM services
+  - name: Integrate with identity services
     items:
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
