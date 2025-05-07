@@ -102,7 +102,8 @@ Following the burrowing attack case creation example, the SOC admins configured 
 Add tasks to manage granular components of your cases. Each task comes with its own name, status, priority, owner, and due date. With this information, you always know who is accountable to complete which task and by what time. The task description summarizes the work to do and some space for describing the progress. Closing notes provide more context about the outcome of completed tasks.
 
 :::image type="content" source="media/cases-overview/add-task-small.png" alt-text="Screenshot showing the task pane with tasks populated for the case and statuses available." lightbox="media/cases-overview/add-task.png":::
-</br>*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
+
+*Image shows the following task statuses available: New, In progress, Failed, Partially completed, Skipped, Completed*
 
 ### Link incidents
 
@@ -123,6 +124,14 @@ Need to write down notes, or that key detection logic to pass along? Create rich
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
 Audit events are automatically added to the activity log of the case and the latest events are shown at the top. Change the filter if you need to focus on comments or audit history.
+
+### Attachments
+
+Share reports, emails, screenshots, log files, and more, all centralized in the **Attachments** tab of a case. Ensure you have all the necessary information to make quick and accurate decisions in your security investigations.
+
+:::image type="content" source="media/cases-overview/case-attachments.png" alt-text="Screenshot of the details of the Attachments tab of a case.":::
+
+To add attachments to your case, go to the **Case details** page, click the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. The file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If you need to upload malware samples, you can wrap them in password-protected ZIP files.
 
 ## Related content
 
