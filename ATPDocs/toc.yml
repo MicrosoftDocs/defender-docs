@@ -14,7 +14,7 @@ items:
   - name: Defender for Identity in the Microsoft Defender portal
     href: microsoft-365-security-center-mdi.md
   - name: Pilot Microsoft Defender XDR
-    href: defender-xdr/pilot-deploy-overview?toc=%2Fdefender-for-identity%2Ftoc.json&bc=%2Fdefender-for-identity%2Fbreadcrumb%2Ftoc.json
+    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
   - name: Plan and prepare
