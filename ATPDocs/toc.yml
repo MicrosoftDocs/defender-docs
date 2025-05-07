@@ -25,7 +25,7 @@ items:
       href: deploy/capacity-planning.md
     - name: Roles and permissions
       href: role-groups.md
-- name: Deploy Defender for Identity
+- name: Deploy
   items:
   - name: Defender for Identity deployment overview
     href: deploy/deploy-defender-identity.md
