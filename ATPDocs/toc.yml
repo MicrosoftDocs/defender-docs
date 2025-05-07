@@ -17,20 +17,20 @@ items:
     href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-  - name: Plan and prepare
-    items:
-    - name: Defender for Identity prerequisites
-      href: deploy/prerequisites.md
-    - name: Plan your Defender for Identity capacity
-      href: deploy/capacity-planning.md
-    - name: Roles and permissions
-      href: role-groups.md
+- name: Plan and prepare
+  items:
+  - name: Prerequisites
+    href: deploy/prerequisites.md
+  - name: Roles and permissions
+    href: role-groups.md
+  - name: Capacity planning
+    href: deploy/capacity-planning.md
 - name: Deploy
   items:
-  - name: Defender for Identity deployment overview
-    href: deploy/deploy-defender-identity.md
-  - name: Deploy Defender for Identity classic sensors
+  - name: Onboard and configure classic sensors
     items:
+    - name: Overview
+      href: deploy/deploy-defender-identity.md
     - name: Quick installation guide
       href: deploy/quick-installation-guide.md
     - name: Configure connectivity settings
@@ -43,7 +43,7 @@ items:
       href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
-  - name: Deploy sensors
+  - name: Install sensor
     items:
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
@@ -85,8 +85,6 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
-    - name: Activate Defender for Identity capabilities on your domain controller
-      href: deploy/activate-capabilities.md
 - name: Integrate with identity services
   items:
   - name: Integrate Defender for Identity with PAM services
@@ -144,7 +142,7 @@ items:
     items:
     - name: Alerts overview
       href: alerts-overview.md
-    - name: Understanding security alerts
+    - name: Understand security alerts
       href: understanding-security-alerts.md
     - name: Investigate security alerts
       href: manage-security-alerts.md
