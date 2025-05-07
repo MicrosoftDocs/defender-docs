@@ -27,7 +27,8 @@ Microsoft Defender for Resource Manager automatically monitors the resource mana
 Microsoft Defender for Resource Manager protects against issues including:
 
 - **Suspicious resource management operations**, such as operations from malicious IP addresses, disabling antimalware, and suspicious scripts running in VM extensions
-- **Use of exploitation toolkits** like Microburst or PowerZure
+- **Use of exploitation toolkits** like Microburst or PowerZure (supported in certain versions)
+
 - **Lateral movement** from the Azure management layer to the Azure resources data plane
 
 :::image type="content" source="media/defender-for-resource-manager-introduction/consistent-management-layer-with-defender.png" alt-text="Azure Resource Manager overview diagram.":::
