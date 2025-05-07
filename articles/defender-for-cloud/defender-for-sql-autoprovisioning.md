@@ -4,7 +4,7 @@ description: Learn how to enable SQL server-targeted Azure Monitoring Agent's au
 ms.topic: install-set-up-deploy
 ms.author: dacurwin
 author: dcurwin
-ms.date: 05/04/2025
+ms.date: 05/05/2025
 ---
 
 # Migrate to Defender for SQL on machines using AMA
