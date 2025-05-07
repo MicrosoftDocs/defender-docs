@@ -14,7 +14,7 @@ ms.collection:
 - usx-security
 ms.topic: conceptual
 
-# customer intent: As a security operations center business decision maker, I want to learn about the case management tools available in the unified SecOps experience in the Microsoft Defender portal so I can unify security tickets, increase visibility, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
+# customer intent: As a security operations center business decision maker, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets, increase visibility, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
 
 # Manage cases natively in the Microsoft Defender portal
