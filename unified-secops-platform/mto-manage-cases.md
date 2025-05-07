@@ -1,12 +1,12 @@
 ---
-title: Manage security operations cases natively in the Microsoft Defender portal
-description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
+title: Manage cases across multiple tenants in the Microsoft Defender portal
+description: Learn about case management features for unified security operations across multiple tenants in the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: yelevin
 author: yelevin
 ms.localizationpriority: medium
-ms.date: 05/04/2025
+ms.date: 05/07/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -14,12 +14,12 @@ ms.collection:
 - usx-security
 ms.topic: conceptual
 
-# customer intent: As a business decision maker for a security operations center, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across hybrid, multitenant, and multicloud environments, and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
+# customer intent: As a business decision maker for a security operations center, I want to learn about the multi-tenant case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across multi-tenant environments, both hybrid and multicloud; and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
 ---
 
-# Manage security operations cases natively in the Microsoft Defender portal
+# Manage multi-tenant security operations cases in the Microsoft Defender portal
 
-Case management is the first installment of new unified security operations (SecOps) capabilities for managing security work in the Microsoft Defender portal.
+Case management is the first installment of new capabilities for managing security work when you onboard to Microsoft's unified security operations (SecOps) platform.
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
@@ -27,7 +27,7 @@ This initial step toward delivering a unified, security-focused case management 
 
 ## What is case management?
 
-Case management enables you to manage SecOps cases natively in the Defender portal. Here's the initial set of scenarios and features supported.
+Case management enables you to manage SecOps cases natively in the Defender portal. Here's the currently supported set of scenarios and features.
 
 - Define your own case workflow with custom status values
 - Assign tasks to collaborators and configure due dates
@@ -51,8 +51,8 @@ For more information, see [Connect Microsoft Sentinel to the Defender portal](mi
 
 Use Defender XDR unified RBAC or Microsoft Sentinel roles to grant access to case management features.
 
-| Cases feature | Microsoft Defender Unified RBAC | Microsoft Sentinel role |
-| ------------- | ------------------------------- | ----------------------- |
+| Cases feature | Microsoft Defender XDR Unified RBAC | Microsoft Sentinel role |
+|---|---|---|
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)| Microsoft Sentinel Reader |
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage) | Microsoft Sentinel Responder |
 | Customize case status options | Authorization and setting > Core Security settings (manage)| Microsoft Sentinel Contributor |
@@ -63,7 +63,7 @@ For more information, see [Microsoft Defender XDR Unified role-based access cont
 
 To start using case management, select **Cases** in the Defender portal to access the case queue. Filter, sort, or search your cases to find what you need to focus on.
 
-:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of the cases queue in the Defender portal.":::
+:::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of case queue.":::
 
 The maximum allowed per tenant is 100,000 cases.
 
@@ -73,17 +73,17 @@ Each case has a page which allows analysts to manage the case and displays impor
 
 In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
 
-:::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of the case details page in the Defender portal." lightbox="media/cases-overview/case-details-large.png":::
+:::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of case details." lightbox="media/cases-overview/case-details-large.png":::
 
 Manage the following case details to describe, prioritize, assign, and track work:
 
 | Displayed case feature | Manage case options | Default value |
 |:---|:---|:---|
-| **Priority** | `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
-| **Status** | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`</br>Default value is `New`|
-| **Assigned to** | A single user in the tenant | none |
-| **Description** | Plain text | none |
-| **Case details** | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
+| Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
+| Status | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`</br>Default value is `New`|
+| Assigned to | A single user in the tenant | none |
+| Description | Plain text | none |
+| Case details | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
 | | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
 | | Due on</br>Linked incidents | none |
 
@@ -118,7 +118,7 @@ Each case has a threshold of 100 linked incidents.
 
 ### Activity log
 
-Need to write down notes, or that key detection logic to pass along? Create rich text comments and review the audit events in the activity log. Comments are a great place to quickly add information&mdash;including such things as queries, tables, links, and structured content&mdash;to a case.
+Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
@@ -129,4 +129,3 @@ Audit events are automatically added to the activity log of the case and the lat
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 - [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 - [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
-- [Microsoft Defender multitenant management](mto-overview.md)
