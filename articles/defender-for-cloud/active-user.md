@@ -1,14 +1,14 @@
 ---
-title: Assign a recommendation to an Active User
+title: Assign a recommendation to an active user
 author: Elazark
 ms.author: elkrieger
-description: Learn how to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
+description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
 ms.date: 05/06/2025
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
 ---
 
-# Assign a recommendation to an Active User
+# Assign a recommendation to an active user
 
 Defender for Cloud’s Active User feature helps security administrators identify the most active users responsible for remediation recommendations. Security administrators must monitor and address potential threats such as attack paths and their associated recommendations to secure cloud resources. 
 
