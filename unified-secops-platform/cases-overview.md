@@ -1,6 +1,6 @@
 ---
 title: Manage cases natively in the Microsoft Defender portal
-description: Learn about case management features across the unified security operations (SecOps) experience in the Microsoft Defender portal.
+description: Learn about case management features for unified security operations in the Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: austinmc
