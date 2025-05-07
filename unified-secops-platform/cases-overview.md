@@ -19,7 +19,7 @@ ms.topic: conceptual
 
 # Manage cases natively in the Microsoft Defender portal
 
-Case management is the first installment of new capabilities for managing security work across the unified security operations (SecOps) experience in the Microsoft Defender portal.
+Case management is the first installment of new unified security operations (SecOps) capabilities for managing security work in the Microsoft Defender portal.
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
