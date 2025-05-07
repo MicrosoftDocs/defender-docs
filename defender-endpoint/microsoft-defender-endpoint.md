@@ -14,7 +14,7 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/23/2025
+ms.date: 05/07/2025
 ---
 
 # Microsoft Defender for Endpoint
