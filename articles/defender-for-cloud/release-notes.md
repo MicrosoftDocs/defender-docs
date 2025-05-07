@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 05/01/2025
+ms.date: 05/07/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,10 +31,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| May 7 | Preview | [Assign recommendations to active users (Preview)](#assign-recommendations-to-active-users-preview) |
 | May 1 | GA | [General Availability for Defender for AI Services](#general-availability-for-defender-for-ai-services) |
 | May 1 | GA | [Microsoft Security Copilot is now Generally Available in Defender for Cloud](#microsoft-security-copilot-is-now-generally-available-in-defender-for-cloud) |
 | May 1 | GA | [General Availability Data and AI security dashboard](#general-availability-data-and-ai-security-dashboard) |
 | May 1 | Upcoming change | [Defender CSPM starts billing for Azure Database for MySQL Flexible Server and Azure Database for PostgreSQL Flexible Server resources](#defender-cspm-starts-billing-for-azure-database-for-mysql-flexible-server-and-azure-database-for-postgresql-flexible-server-resources) |
+
+### Assign recommendations to active users (Preview)
+
+May 7, 2025
+
+The Active User feature helps security administrators identify and assign recommendations to the most relevant users based on recent control plane activity. Each recommendation might have up to three active users recommended at the resource, resource group, or subscription level. Administrators can select a user from the list, assign the recommendation, and set a due date, which triggers a notification to the assigned user. This approach streamlines remediation workflows, reduces investigation time, and strengthens overall security posture.
+
+Learn more about the [Active User feature](active-user.md).
 
 ### General Availability for Defender for AI Services
 
@@ -60,7 +69,7 @@ Learn more about [Microsoft Security Copilot in Defender for Cloud](copilot-secu
 
 ### General Availability Data and AI security dashboard
 
-MAy 1, 2025
+May 1, 2025
 
 Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in GA. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
 
