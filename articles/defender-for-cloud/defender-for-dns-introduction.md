@@ -11,9 +11,9 @@ author: dcurwin
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
 
-Microsoft Defender for DNS provides another layer of protection for resources that use Azure DNS's [Azure-provided name resolution](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#azure-provided-name-resolution) capability.
+Microsoft Defender for DNS provides an additional layer of protection for all Azure resources that use Azure DNS's Azure-provided name resolution capability.
 
-From within Azure DNS, Defender for DNS monitors the queries from these resources and detects suspicious activities without the need for any extra agents on your resources.
+From within Azure DNS, Defender for DNS monitors the queries from these resources and detects suspicious activities without the need for any extra agents.
 
 ## Availability
 
