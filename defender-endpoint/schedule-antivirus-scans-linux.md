@@ -26,7 +26,7 @@ Microsoft Defender for Endpoint (MDE) on Linux offers robust antivirus scanning 
 
 With Microsoft Defender for Endpoint on Linux, you can perform three types of on-demand scans on individual devices: Quick scan, full scan, and custom scan.
 
-These scans start right away, letting you specify parameters like the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusions), ensuring that excluded files and folders aren't scanned.
+These scans start right away, letting you specify parameters like the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusion.md), ensuring that excluded files and folders aren't scanned.
 
 The following table describes each type of scan:
 
@@ -63,8 +63,8 @@ The following commands can be used to run quick, full, or custom scans:
 
 The following articles describe how to schedule antivirus scans using crontab or anacron:
 
-- [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab)
-- [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron)
+- [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab.md)
+- [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron.md)
 
 ### Microsoft Defender portal
 
@@ -86,7 +86,7 @@ Various antivirus settings and configurations can influence both performance and
 |**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives during on-demand antivirus scans. |
 |**Maximum on-demand scan threads**|This setting controls how many threads are used for on-demand scans, impacting both CPU usage and the scan's duration.|
 
-For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences#antivirus-engine-preferences)
+For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences#antivirus-engine-preferences.md).
 
 ## Recommended Best Practices and Considerations
 
