@@ -19,6 +19,10 @@ ms.date: 05/08/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
+**Applies to:**
+
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft Defender for Endpoint (MDE) on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind.
 
@@ -26,7 +30,7 @@ Microsoft Defender for Endpoint (MDE) on Linux offers robust antivirus scanning 
 
 With Microsoft Defender for Endpoint on Linux, you can perform three types of on-demand scans on individual devices: Quick scan, full scan, and custom scan.
 
-These scans start right away, letting you specify parameters like the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusion.md), ensuring that excluded files and folders aren't scanned.
+These scans start right away, letting you specify parameters like the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusions.md), ensuring that excluded files and folders aren't scanned.
 
 The following table describes each type of scan:
 
@@ -86,9 +90,9 @@ Various antivirus settings and configurations can influence both performance and
 |**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives during on-demand antivirus scans. |
 |**Maximum on-demand scan threads**|This setting controls how many threads are used for on-demand scans, impacting both CPU usage and the scan's duration.|
 
-For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences#antivirus-engine-preferences.md).
+For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
 
-## Recommended Best Practices and Considerations
+## Best practices for antivirus scans
 
 Starting from version 101.23062.0001, Microsoft Defender for Endpoint on Linux operates in `passive` mode by default, meaning real-time protection is turned off. To maintain security, it's recommended to use scheduled scans as needed.
 
