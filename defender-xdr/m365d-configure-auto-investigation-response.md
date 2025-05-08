@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 07/08/2024
+ms.date: 04/28/2025
 ms.collection:
 - m365-security
 - tier2
@@ -18,6 +18,7 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 f1.keywords: CSH
+#customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
 # Configure automated investigation and response capabilities in Microsoft Defender XDR
@@ -55,16 +56,16 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 1. Go to the Microsoft Defender portal at <https://security.microsoft.com> and sign in.
 
-2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
+2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
 3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
 
-   - [How threats are remediated](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations#how-threats-are-remediated)
-   - [Create and manage device groups](/windows/security/threat-protection/microsoft-defender-atp/machine-groups)
+   - [How threats are remediated](/defender-endpoint/automated-investigations#how-threats-are-remediated)
+   - [Create and manage device groups](/defender-endpoint/machine-groups)
 
 ## Review your security and alert policies in Office 365
 
-Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365](/defender-office-365/mdo-about) features are configured correctly.
+Microsoft provides built-in [alert policies](alert-policies.md) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365](/defender-office-365/mdo-about) features are configured correctly.
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 

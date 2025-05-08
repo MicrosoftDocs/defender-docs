@@ -28,7 +28,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]
-> **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
+> The **Microsoft Graph security API** is a unified schema and interface that integrates with various Microsoft security solutions and Microsoft security partners. To get started, see [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
