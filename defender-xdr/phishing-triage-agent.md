@@ -267,31 +267,31 @@ The agent then translates the given feedback into a lesson and uses it for triag
 
 Microsoft recommends the following guidelines when providing feedback to the Phishing Triage Agent:
 
-1. Be specific. Your feedback must be descriptive and applicable to the current alert you are looking at.
-2. Use the context of the email subject, text in the message body, sender, and recipients when providing details in your feedback.
-3. Check that your feedback aligns with previous comments provided to the agent to avoid feedback conflict and other errors.
+1. **Be specific**. Your feedback must be descriptive and applicable to the current alert you are looking at.
+2. **Ensure correct context**. Use the context of the email subject, text in the message body, sender, and recipients when providing details in your feedback.
+3. **Avoid duplicates or conflicts**. Check that your feedback aligns with previous comments provided to the agent to avoid feedback conflict and other errors.
 
 Here are examples of how you can write your feedback to the agent.
 
 1. Feedback about a recipient:
 
-   > New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients.
-   > The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+   > - New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients.</br>
+   > - The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
 
 2. Feedback about a sender:
 
-   > Emails with the subject "Benefits" must be from the domain "benefits.company.com". If the domain does not match, classify the email as *true positive - phishing*.
-   > Emails offering file sharing or document access should only be sent from our authorized provider Microsoft and not from external domains. If the sender is not from our authorized provider, the email should be classified as *true positive - phishing*.
+   > - Emails with the subject "Benefits" must be from the domain "benefits.company.com". If the domain does not match, classify the email as *true positive - phishing*.</br>
+   > - Emails offering file sharing or document access should only be sent from our authorized provider Microsoft and not from external domains. If the sender is not from our authorized provider, the email should be classified as *true positive - phishing*.
 
 3. Feedback about the email body:
 
-   > Emails requesting credential verification must contain a link to our internal portal. If the email contains a link to an external site, classify the email as *true positive - phishing*.
-   > This email contains a generic "verify your account" message. Emails requesting verification must contain specific details about the account being verified. The email should be classified as *true positive - phishing*.
+   > - Emails requesting credential verification must contain a link to our internal portal. If the email contains a link to an external site, classify the email as *true positive - phishing*.</br>
+   > - This email contains a generic "verify your account" message. Emails requesting verification must contain specific details about the account being verified. The email should be classified as *true positive - phishing*.
 
 4. Feedback about a recipient and email body:
 
-   > This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment. The email should be classified as *true positive - phishing*.
-   > The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+   > - This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment. The email should be classified as *true positive - phishing*.</br>
+   > - The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
 
 ### Resolve feedback errors
 
