@@ -290,8 +290,7 @@ Here are examples of how you can write your feedback to the agent.
 
 4. Feedback about a recipient and email body:
 
-   > - This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment. The email should be classified as *true positive - phishing*.</br>
-   > - The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+   > - This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment.
 
 ### Resolve feedback errors
 
