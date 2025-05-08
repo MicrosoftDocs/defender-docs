@@ -89,6 +89,8 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 ## Enable the plan at the SQL Server resource level
 
+Although we recommend enabling the plan for an entire Azure subscription, you might need to enable Defender for SQL on machines on specific machines only. To do this, [disable the plan on the subscription](disable-sql-on-machines.md) and follow instructions below on the resource level. 
+
 1. In the Azure portal, search for and select:
     - **Azure Arc** > **Data services** > **SQL Server instances**.
     <br> 
