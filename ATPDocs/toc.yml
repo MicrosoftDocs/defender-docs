@@ -43,7 +43,7 @@ items:
       href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
-  - name: Install sensor
+  - name: Install sensor (Preview)
     items:
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
