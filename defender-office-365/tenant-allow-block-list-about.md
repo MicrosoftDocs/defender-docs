@@ -34,7 +34,7 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override the Defender for Office 365 or EOP filtering verdicts. The list is used during mail flow or time of click for incoming messages from external senders.
 
-Entries for **Domains and email addresses** and **Spoofed senders** apply to internal messages sent within the organization. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
+Entries for **Domains and email addresses** and **Spoofed senders** apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 
 The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 

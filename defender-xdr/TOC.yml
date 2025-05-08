@@ -109,7 +109,9 @@
         - name: Investigate and respond to container threats
           href: investigate-respond-container-threats.md
         - name: Investigate insider risk threats
-          href: irm-investigate-alerts-defender.md                         
+          href: irm-investigate-alerts-defender.md
+        - name: Create data security investigations
+          href: create-dsi-in-defender.md                                    
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -414,6 +416,12 @@
           href: advanced-hunting-security-copilot.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
+        - name: Security Copilot agents in Microsoft Defender
+          items:
+          - name: Overview
+            href: security-copilot-agents-defender.md          
+          - name: Phishing Triage Agent
+            href: phishing-triage-agent.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -489,7 +497,9 @@
         - name: Troubleshoot service issues
           href: troubleshoot.md
         - name: Create Custom Defender XDR reports
-          href: defender-xdr-custom-reports.md                        
+          href: defender-xdr-custom-reports.md
+        - name: Visualize impact with the unified security summary
+          href: security-summary-report.md                                   
         - name: Microsoft Defender XDR APIs
           items:
             - name: Overview
