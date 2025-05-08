@@ -102,7 +102,7 @@ When adding exclusions, keep these points in mind:
 
 If a conflicting policy is applied via MDM and GP, the setting applied from Group Policy takes precedence.
 
-Attack surface reduction rules for managed devices now support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conficts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
+Attack surface reduction rules for managed devices now support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conflicts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
 
 Attack surface reduction rule merge behavior works as follows:
 
