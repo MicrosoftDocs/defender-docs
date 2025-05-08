@@ -4,7 +4,7 @@ description: Learn how to troubleshoot security intelligence updates from your M
 author: emmwalshh
 ms.author: ewalsh
 manager: deniseb 
-ms.date: 04/10/2024
+ms.date: 05/08/2025
 ms.topic: troubleshooting
 ms.service: defender-endpoint
 ms.subservice: ngp
