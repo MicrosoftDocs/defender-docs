@@ -177,11 +177,11 @@ You can train the Phishing Triage Agent to improve its performance and adapt it 
 
 The agent interacts with the user to learn and adapt itself to your organization’s context, impacting how it classifies future incidents. Agents can be given feedback in natural language. All feedback given to the agent are turned into the agent’s lessons and stored in the agent’s memory for future triaging and classification.
 
-### Train the agent about your organization's context
+### Teach the agent about your organization's context
 
 On its first run, the Phishing Triage Agent might make decisions based on limited context or without insight into your organization’s specific environment. Providing feedback to the agent helps it learn from your input and incorporate those organizational nuances into future decisions, improving decision-making over time.
 
-To train the agent, follow these steps:
+To teach the agent, follow these steps:
 
 1. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under Guided Response triage section.
 
@@ -209,32 +209,34 @@ The agent then translates the given feedback into a lesson and uses it for triag
 
 ### Sample feedback
 
+When you disagree with the Phishing Triage Agent’s classification, it’s important to provide feedback to teach the agent. The agent translates the given feedback into a lesson and uses it for triage and classification of future incidents.
+
 Microsoft recommends the following guidelines when providing feedback to the Phishing Triage Agent:
 
-1. **Be specific**. Your feedback must be descriptive and applicable to the current alert you are looking at.
-2. **Ensure correct context**. Use the context of the email subject, text in the message body, sender, and recipients when providing details in your feedback.
-3. **Avoid duplicates or conflicts**. Check that your feedback aligns with previous comments provided to the agent to avoid feedback conflict and other errors.
+1. **Be specific**. Provide relevant and descriptive feedback for the current alert. Avoid vague or generic comments.
+2. **Ensure the context and relevancy of your feedback**. Use details like  the email subject, the text in the message body, the sender, or the recipients of the email to provide context in your feedback.
+3. **Prevent conflicts**. Ensure your feedback aligns with prior comments provided to the agent to avoid contradictions and errors. You can review all feedback to the agent in the [Feedback](#view-and-manage-feedback-to-the-agent) page.
 
 Here are examples of how you can write your feedback to the agent.
 
 1. Feedback about a recipient:
 
-   > - New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients.</br>
-   > - The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+   > - New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients. The email should be classified as True positive - phishing.</br>
+   > - The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as True positive - phishing.
 
 2. Feedback about a sender:
 
-   > - Emails with the subject "Benefits" must be from the domain "benefits.company.com". If the domain does not match, classify the email as *true positive - phishing*.</br>
-   > - Emails offering file sharing or document access should only be sent from our authorized provider Microsoft and not from external domains. If the sender is not from our authorized provider, the email should be classified as *true positive - phishing*.
+   > - Emails with the subject "Benefits" must be from the domain "benefits.company.com". If the domain does not match, classify the email as True positive-phishing.</br>
+   > - Emails offering file sharing or document access should only be sent from our authorized provider Microsoft and not from external domains. If the sender is not from our authorized provider, the email should be classified as True positive - phishing.
 
 3. Feedback about the email body:
 
-   > - Emails requesting credential verification must contain a link to our internal portal. If the email contains a link to an external site, classify the email as *true positive - phishing*.</br>
-   > - This email contains a generic "verify your account" message. Emails requesting verification must contain specific details about the account being verified. The email should be classified as *true positive - phishing*.
+   > - Emails requesting credential verification must contain a link to the company's internal portal "internal.domain.com". If the email contains a link different from the internal portal, classify the email as True positive-phishing.</br>
+   > - This email contains a generic "verify your account" message. Emails requesting verification must contain specific details about the account being verified. The email should be classified as True positive - phishing.
 
 4. Feedback about a recipient and email body:
 
-   > - This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment.
+   > - This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment. The email should be classified as True positive - phishing.
 
 ### Resolve feedback errors
 
@@ -254,7 +256,7 @@ To resolve some of the feedback errors, follow these steps:
 
 4. Navigate to the feedback management page to view the new feedback provided.
 
-Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
+Once the agent is taught and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
 
 ## Manage the Phishing Triage Agent
 
