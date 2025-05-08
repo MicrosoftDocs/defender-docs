@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 09/02/2024
+ms.date: 05/08/2025
 ms.topic: troubleshooting
 ---
 
