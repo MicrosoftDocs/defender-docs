@@ -63,7 +63,7 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 ## Set up the Phishing Triage Agent
 
 > [!IMPORTANT]
-> Setup and management of the Phishing Triage Agent is only available to users with the **Security Administrator** role.
+> Setup and management of the Phishing Triage Agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
 
 ### Create the agent's identity and assign permissions
 
@@ -75,7 +75,7 @@ The Phishing Triage Agent uses as identity to access the data it needs to perfor
 
 - **Microsoft Entra user**: Create a user account in the Microsoft Entra admin center and assign the user the Security Reader role.
 
-- **Service principal**: coming soon!
+- **Service principal**: (in development) Create a service principal in the Microsoft Entra admin center and assign it the Security Reader role. The service principal is a non-interactive identity that can be used to authenticate the agent. This option is only available for public preview.
 
 > [!TIP]
 > Microsoft recommends creating and using a dedicated user account for the agent with the minimum required permissions.
@@ -119,11 +119,11 @@ Follow the steps in the setup wizard to complete the setup. The setup process in
 1. Select the agent's [identity](#identity).
 
 2. Follow the prompts to sign in to the user account you created for the agent.
- 
+
    [SCREENSHOT]
- 
+
    > [!NOTE]
-   > You can change the agent's identity and role at any time. To do this, navigate to Settings > Microsoft Defender XDR. Under Agents, select Identity and role.
+   > You can change the agent's identity and role at any time. To do this, navigate to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
 
 3. Select **Deploy agent** to activate the agent.
 
@@ -133,7 +133,7 @@ The Phishing Triage Agent is now set up and running in the background, ready to 
 
 [SCREENSHOT]
 
-If you encounter any issues during the setup process, refer to the [troubleshooting section](#troubleshooting-agent-issues) for assistance.
+If you encounter any issues during the setup process, refer to the [Troubleshoot agent issues](#troubleshoot-agent-issues) section for more information.
 
 ## Manage the Phishing Triage Agent
 
@@ -142,7 +142,7 @@ You can manage the Phishing Triage Agent's settings and review and manage feedba
 ### Pause or remove the agent
 
 > [!IMPORTANT]
-> Pausing or removing the Phishing Triage Agent is only available to users with the **Security Administrator** role.
+> Pausing or removing the Phishing Triage Agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
 
 Pausing the agent stops the agent from triaging incidents without removing it entirely. The agent stops triaging incidents, including incidents that are in progress of triaging. Resuming the agent resumes all the agent’s activities.
 
@@ -179,7 +179,7 @@ You can view and manage feedback provided by users to the Phishing Triage Agent 
 Review each feedback by selecting an item from the feedback list. In the **Review feedback** pane, check the details and decide to keep feedback in the agent’s memory or reject the feedback. The agent continues to use all feedback that you decide to keep for triaging user-submitted phishing incidents in the future.
 
 > [!NOTE]
-> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
+> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
 
 When you reject feedback, the agent takes note of the rejected feedback to discontinue use of the feedback for future triaging. In the Review feedback pane, select Reject feedback to reject a specific feedback. Here’s an example of rejected feedback.
 
@@ -216,8 +216,8 @@ Once the agent is done triaging an alert in an incident, it provides clear reaso
 To review the agent’s findings, follow these steps:
 
 1. Select the incident in the incident queue.
- 
-2. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under Guided Response triage section. The task is marked as a completed task by the agent.
+
+2. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section. The task is marked as a completed task by the agent.
 
    [SCREENSHOT]
 
@@ -248,39 +248,58 @@ To train the agent, follow these steps:
 3. In the **Manage alert** pane, provide the correct classification and add your comment. You can use natural language to explain the reason for the change in classification. Select **Save**.
 
    [SCREENSHOT]
-   > [!NOTE]
-   > Changing the alert's classification is limited to **true positive – phishing** or **false positive – not malicious**.
 
-4. Select **Use this feedback to teach the agent** and then **Evaluate**. Using these options adds the feedback to the agent's memory and improves the agent's subsequent responses to be  better aligned with your organization’s context.
+4. Select **Use this feedback to teach the agent** and then **Evaluate**. Using these options adds the feedback to the agent's memory as a lesson and improves the agent's subsequent responses to be  better aligned with your organization’s context.
 
    [SCREENSHOT]
    > [!NOTE]
-   > Not selecting the **Use this feedback to teach the agent** only saves the feedback in the management page for auditing purposes.
+   > The option **Use this feedback to teach the agent** appears when you change an alert's classification to *true positive – phishing* or *false positive – not malicious*.
+   > Not selecting the option only saves the feedback you provided in the Feedback management page for auditing purposes.
 
 5. Select **Save** to save the feedback and add the lesson to the agent's memory.
 
-The agent then translates the given feedback into a lesson and use it for triage and classification of future incidents.
+The agent then translates the given feedback into a lesson and uses it for triage and classification of future incidents.
 
 > [!TIP]
-> Always check the validity of AI responses as sometimes the responses are inapplicable to the scenario.
+> Always check the validity of AI responses as sometimes these responses are inapplicable to the scenario.
 
 ### Sample feedback
 
-Following are recommendations when providing feedback to the Phishing Triage Agent:
+Microsoft recommends the following guidelines when providing feedback to the Phishing Triage Agent:
 
-1. Use the context of the email subject, message body, sender, and recipients when providing details in the feedback.
-2. Be specific. Your comments must be descriptive and applicable to the current alert you are looking at.
+1. Be specific. Your feedback must be descriptive and applicable to the current alert you are looking at.
+2. Use the context of the email subject, text in the message body, sender, and recipients when providing details in your feedback.
 3. Check that your feedback aligns with previous comments provided to the agent to avoid feedback conflict and other errors.
 
 Here are examples of how you can write your feedback to the agent.
 
+1. Feedback about a recipient:
+
+   > New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients.
+   > The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+
+2. Feedback about a sender:
+
+   > Emails with the subject "Benefits" must be from the domain "benefits.company.com". If the domain does not match, classify the email as *true positive - phishing*.
+   > Emails offering file sharing or document access should only be sent from our authorized provider Microsoft and not from external domains. If the sender is not from our authorized provider, the email should be classified as *true positive - phishing*.
+
+3. Feedback about the email body:
+
+   > Emails requesting credential verification must contain a link to our internal portal. If the email contains a link to an external site, classify the email as *true positive - phishing*.
+   > This email contains a generic "verify your account" message. Emails requesting verification must contain specific details about the account being verified. The email should be classified as *true positive - phishing*.
+
+4. Feedback about a recipient and email body:
+
+   > This email was sent to multiple employees. The message body contains an instruction to download "an important attachment" and lacks a description of the attachment. Legitimate emails always include a description of the attachment. The email should be classified as *true positive - phishing*.
+   > The email was sent to a large number of recipients, including external domains. This is a common tactic used by attackers to spread phishing emails quickly. The email should be classified as *true positive - phishing*.
+
 ### Resolve feedback errors
 
-If you get an error after you provided feedback, it might be due to conflicting feedback, the feedback being previously rejected, or the feedback refers to an unsupported feature or capability, or irrelevant content. 
+If you get an error after you provided feedback, it might be due to conflicting feedback, the feedback being previously rejected, or the feedback refers to an unsupported feature or capability, or irrelevant content.
 
 To resolve some of the feedback errors, follow these steps:
 
-1. Navigate to the [feedback management](#view-and-manage-feedback-to-the-agent) page. 
+1. Navigate to the [feedback management](#view-and-manage-feedback-to-the-agent) page.
 
 2. Select the feedback from the list to review the error. If the error indicates a conflict, the conflicting feedback must be rejected first before providing new feedback. Once the error is resolved, rewrite the feedback then select **Evaluate**.
 
@@ -294,7 +313,7 @@ To resolve some of the feedback errors, follow these steps:
 
 Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
 
-## Troubleshooting agent issues
+## Troubleshoot agent issues
 
 Following are responses to common issues about the Phishing Triage Agent, including issues on setup and expected output.
 
