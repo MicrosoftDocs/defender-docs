@@ -134,6 +134,8 @@ You can set attack surface reduction rules for devices that are running any of t
 
 - Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
 - Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 11 Pro, version 21H2 or later
+- Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
 - Windows Server 2025
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
