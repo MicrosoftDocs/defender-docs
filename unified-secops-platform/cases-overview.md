@@ -33,7 +33,7 @@ Case management enables you to manage SecOps cases natively in the Defender port
 - Assign tasks to collaborators and configure due dates
 - Handle escalations and complex cases by linking multiple incidents to a case
 - Manage access to your cases using RBAC
-- Manage cases spanning multiple tenants using multitenant management (Preview)
+- [Manage cases from multiple tenants using the multitenant portal (Preview)](mto-manage-cases.md)
 
 As we build on this foundation of case management, we're prioritizing these additional robust capabilities as we evolve this solution:
 
