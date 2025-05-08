@@ -340,17 +340,19 @@ It's possible that another party, either manually by a user or through automatio
 
 Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, navigate to the [overview](#overview) and [prerequisites](#prerequisites) sections of this article.
 
-### Why is the Phishing Triage Agent important?
-
-Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports. Consequently, managing these incidents becomes a tedious and repetitive task for Security Operations Center (SOC) analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, who have a limited amount of time to dedicate to completing critical demands. By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
-
 ### When is the agent triggered?
 
 The agent automatically runs when a user  reports a potential phishing attempt and an alert is created.
 
 ### How do I grant the agent access to plugins and services?
 
-You can create an agent identity using a service principal and assign it to an appropriate Tier 1 equivalent URBAC role in your environment to manage access. Alternatively, you can connect it to an existing user account by signing in to manage access. Note that service principals are only supported for public preview.
+You can create an agent identity using a service principal and assign it to an appropriate Tier 1 equivalent URBAC role in your environment to manage access. Note that service principals are only supported for public preview. Alternatively, you can connect it to an existing user account by signing in to manage access.
+
+To learn more about the agent's identity and permissions, see [Create the agent's identity and assign permissions](#create-the-agents-identity-and-assign-permissions).
+
+### Why is the Phishing Triage Agent important?
+
+Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports. Consequently, managing these incidents becomes a tedious and repetitive task for Security Operations Center (SOC) analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, who have a limited amount of time to dedicate to completing critical demands. By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
 
 ### Can the Phishing Triage Agent be trusted?
 
