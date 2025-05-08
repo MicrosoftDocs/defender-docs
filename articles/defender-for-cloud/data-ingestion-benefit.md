@@ -42,7 +42,7 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 ### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
 
-Security Events are free—up to **500 MB per server per day** only when they reach the **SecurityEvent** table.  A DCR must therefore use the **Microsoft-SecurityEvent** stream to ensure compliance with the data ingestion benefit.
+Security Events are free, up to **500 MB per server per day**, but only when they reach the **SecurityEvent** table.  A DCR must therefore use the **Microsoft-SecurityEvent** stream to ensure compliance with the data ingestion benefit.
 
 #### Quick steps to create a DCR
 
