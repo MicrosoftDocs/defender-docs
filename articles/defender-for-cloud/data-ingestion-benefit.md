@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: elkrieger
 author: elazark
 ms.date: 04/08/2025
+ai-usage: ai-assisted
 ---
 
 # Use the data ingestion benefit
@@ -41,13 +42,11 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 ### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
 
-> **Why this matters**  
-> Security Events are free—up to **500 MB per server per day**—*only* when they reach the **SecurityEvent** table.  
-> A DCR must therefore use the **`Microsoft-SecurityEvent`** stream.
+Security Events are free—up to **500 MB per server per day** only when they reach the **SecurityEvent** table.  A DCR must therefore use the **Microsoft-SecurityEvent** stream to ensure compliance with the data ingestion benefit.
 
-#### Quick steps
+#### Quick steps to create a DCR
 
-1. Go to the **Azure portal** ▸ *Monitor* ▸ **Data Collection Rules** ▸ **+ Create**.
+1. Go to the [Azure portal](https://portal.azure.com) ▸ *Monitor* ▸ **Data Collection Rules** ▸ **+ Create**.
 2. **Add data source**  
    - *Type*: **Windows event logs**  
    - *Log name*: `Security`  
@@ -63,7 +62,7 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 #### Sample JSON fragment
 
-```jsonc
+```json
 {
   "dataSources": {
     "windowsEventLogs": [
@@ -96,8 +95,8 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 #### Deploy at scale
 
-Automate creation and assignment of a compliant DCR across subscriptions with the Azure Policy initiative **Deploy AMA DCR for Security Events collection**:  
-<https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection>
+Automate creation and assignment of a compliant DCR across subscriptions with the Azure Policy initiative [Deploy AMA DCR for Security Events collection](
+https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection).
 
 ## Configure a workspace
 
