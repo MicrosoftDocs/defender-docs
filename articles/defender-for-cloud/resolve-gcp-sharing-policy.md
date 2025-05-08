@@ -24,10 +24,14 @@ This page guides you through the steps to resolve the Domain Restricted Sharing 
 
 - Contributor level permission for the relevant Azure subscription.
 
+- Ensure to modify the policy at the organization level.
+
 ## Enable service accounts for Defender for Cloud
 
 Defender for cloud requires the following service accounts to be enabled in your GCP project.
 
 1. Sign in to your GCP account.
 
-1. 
+1. Navigate to **IAM & Admin** > **Organization Policies**
+
+1. Select **Domain Restricted Sharing**.
