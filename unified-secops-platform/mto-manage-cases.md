@@ -41,6 +41,17 @@ The cases experience in the multitenant portal is just like [that in the regular
 
 For more information, see [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md).
 
+## Manage a case in the multitenant portal
+
+Manage cases from multiple tenants at a glance in the multitenant case queue.
+
+- To see a preview flyout panel of a case's details, select the row of the desired case.
+- To open a case's full details page, select the case's name. 
+
+Navigate effortlessly between cases in different tenants without leaving the multitenant queue or losing context.
+
+For more information on managing cases, see [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md)
+
 ## Create a case in the multitenant portal
 
 1. In the multitenant portal, select **Cases**.
