@@ -1,7 +1,7 @@
 ---
 title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Learn how to take advantage of the data ingestion benefit in Microsoft Defender for Cloud.
-ms.topic: quickstart
+ms.topic: how-to
 ms.author: elkrieger
 author: elazark
 ms.date: 04/08/2025
@@ -38,6 +38,66 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
 - [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
+
+### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
+
+> **Why this matters**  
+> Security Events are free—up to **500 MB per server per day**—*only* when they reach the **SecurityEvent** table.  
+> A DCR must therefore use the **`Microsoft-SecurityEvent`** stream.
+
+#### Quick steps
+
+1. Go to the **Azure portal** ▸ *Monitor* ▸ **Data Collection Rules** ▸ **+ Create**.
+2. **Add data source**  
+   - *Type*: **Windows event logs**  
+   - *Log name*: `Security`  
+   - *Stream*: **`Microsoft-SecurityEvent`**  
+   - *(Optional)* filter with XPath, for example:
+
+     ```xpath
+     *[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
+     ```
+
+3. **Destination** ▸ Select the Log Analytics workspace that has **Defender for Servers Plan 2** enabled.
+4. **Review + create** ▸ **Assign** the rule to Windows machines running the Azure Monitor Agent (AMA).
+
+#### Sample JSON fragment
+
+```jsonc
+{
+  "dataSources": {
+    "windowsEventLogs": [
+      {
+        "name": "SecurityEvents",
+        "streams": ["Microsoft-SecurityEvent"],
+        "scheduledTransferPeriod": "PT5M",
+        "xPathQueries": [
+          "*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]"
+        ]
+      }
+    ]
+  },
+  "destinations": {
+    "logAnalytics": [
+      { "workspaceId": "<workspace-id>" }
+    ]
+  }
+}
+```
+
+#### Compliance checklist
+
+| Requirement | Why it matters |
+|-------------|----------------|
+| **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the **SecurityEvent** table covered by the allowance. |
+| **Security solution** enabled on workspace | Activates the SecurityEvent table. |
+| **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
+| **Azure Monitor Agent (AMA)** installed | Required to apply custom DCRs. |
+
+#### Deploy at scale
+
+Automate creation and assignment of a compliant DCR across subscriptions with the Azure Policy initiative **Deploy AMA DCR for Security Events collection**:  
+<https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection>
 
 ## Configure a workspace
 
