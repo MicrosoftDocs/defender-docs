@@ -145,7 +145,7 @@ The **Email & collaboration** node contains features that are specific to Defend
       - [Advanced delivery](/defender-office-365/advanced-delivery-policy-configure)
       - [Enhanced filtering](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)
       - [Quarantine policies](/defender-office-365/quarantine-policies)
-  - [Alert policies](/purview/alert-policies)
+  - [Alert policies](alert-policies.md)
   - [Activity alerts](/purview/create-activity-alerts)
 
 :::image type="content" source="media/mdo-m365d-nav.png" alt-text="A screenshot that shows the left navigation pane of the Defender portal focused on Email & collaboration." lightbox="media/mdo-m365d-nav.png":::
