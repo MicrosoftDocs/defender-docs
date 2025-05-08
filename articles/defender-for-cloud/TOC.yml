@@ -1046,6 +1046,9 @@
         - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
+        - name: Identify SQL Servers protected by MMA
+          displayName: SQL, SQL servers, defender, machines, MMA
+          href: identify-sql-servers-protected-by-mma.md
         - name: Enable Defender for SQL servers on machines at scale
           displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
           href: enable-defender-sql-at-scale.md
