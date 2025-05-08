@@ -115,7 +115,6 @@ Onboarding Microsoft Defender for Endpoint for macOS requires the following step
 
 - First, ensure that the device meets the [system requirements](#system-requirements) and [network connectivity](#network-connectivity) requirements.
 - Next, install the .pkg containing the software
-- Once the .pkg has been installed, test the [network connectivity](#test-network-connectivity)
 - Next, install the required system extensions
 - Finally, on-board the device to Microsoft Defender for Endpoint
 
