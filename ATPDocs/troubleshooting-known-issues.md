@@ -117,29 +117,14 @@ The issue can be caused when the trusted root certification authorities certific
 
 Run the following PowerShell cmdlet to verify that the required certificates are installed.
 
-In the following example, use the "DigiCert Baltimore Root" certificate for all customers. In addition, use the "DigiCert Global Root G2" certificate for commercial customers or use the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
+In the following example the "DigiCert Global Root G2" certificate is for commercial customers and the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
 
 ```powershell
-# Certificate for all customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
-
 # Certificate for commercial customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
 
 # Certificate for US Government GCC High customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
-```
-
-Output for certificate for all customers:
-
-```Output
-Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
-Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
-Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
-FriendlyName : DigiCert Baltimore Root
-NotBefore    : 5/12/2000 11:46:00 AM
-NotAfter     : 5/12/2025 4:59:00 PM
-Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
 Output for certificate for commercial customers certificate:
@@ -168,9 +153,7 @@ Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.O
 
 If you don't see the expected output, use the following steps:
 
-1. Download the following certificates to the Server Core machine. For all customers, download the [Baltimore CyberTrust root](https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt) certificate.
-
-    In addition:
+1. Download the following certificates to the machine:
 
     - For commercial customers, download the [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) certificate
     - For US Government GCC High customers, download the [DigiCert Global Root CA](https://cacerts.digicert.com/DigiCertGlobalRootCA.crt) certificate
@@ -178,9 +161,6 @@ If you don't see the expected output, use the following steps:
 1. Run the following PowerShell cmdlet to install the certificate.
 
     ```powershell
-    # For all customers, install certificate
-    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
-
     # For commercial customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
 
