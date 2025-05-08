@@ -19,10 +19,17 @@ ms.date: 05/08/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 **Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Servers Plan 1](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
+- [Microsoft Defender for Servers Plan 2](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
+- [Microsoft Defennder for Endpoint Servers](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
+
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Microsoft Defender for Endpoint (MDE) on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind.
 
