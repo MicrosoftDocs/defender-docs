@@ -135,62 +135,6 @@ The Phishing Triage Agent is now set up and running in the background, ready to 
 
 If you encounter any issues during the setup process, refer to the [Troubleshoot agent issues](#troubleshoot-agent-issues) section for more information.
 
-## Manage the Phishing Triage Agent
-
-You can manage the Phishing Triage Agent's settings and review and manage feedback provided to it. To do these, select **Manage agent** in the agent card above the incident queue. Alternatively, you can navigate to **Settings > Microsoft Defender XDR > Agents**.
-
-### Pause or remove the agent
-
-> [!IMPORTANT]
-> Pausing or removing the Phishing Triage Agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
-
-Pausing the agent stops the agent from triaging incidents without removing it entirely. The agent stops triaging incidents, including incidents that are in progress of triaging. Resuming the agent resumes all the agent’s activities.
-
-Removing the agent permanently removes the agent. When the agent is removed, the agent stops triaging new incidents and all feedback are deleted. However, it retains the history of all incidents it triaged.
-
-To pause, resume, or remove the agent:
-
-1. Navigate to the **Overview** page under **Agents**.
-
-2. Select **Pause** to temporarily stop the agent. Once paused, the same option becomes **Resume**, which you can select when you’re ready to resume the agent's activities.
-
-   [SCREENSHOT]
-
-3. To remove the agent, select **Remove agent**.
-
-### Change the agent's identity and role
-
-> [!IMPORTANT]
-> Changing the Phishing Triage Agent’s identity is only available to users with the **Security Administrator** role.
-
-You can manage the agent's identity and role at any time by navigating to the **Identity and role** page under **Agents**. You can view the agent's current identity, last update information, and the option to select a different identity for the agent.
-
-[SCREENSHOT]
-
-### View and manage feedback to the agent
-
-You can view and manage feedback provided by users to the Phishing Triage Agent by navigating to the Agent feedback page. The feedback page includes a list of all feedback provided to the agent. The feedback information includes what is stored in the agent memory, the agent's lessons, users who provided feedback, feedback submission date, and the incident ID. The Phishing Triage Agent uses all feedback provided to it to triage user-submitted phishing incidents. It stores all feedback in its memory as lessons.
-
-[SCREENSHOT]
-
-> [!TIP]
-> You can only manage feedback one at a time. Managing multiple feedback is not supported.
-
-Review each feedback by selecting an item from the feedback list. In the **Review feedback** pane, check the details and decide to keep feedback in the agent’s memory or reject the feedback. The agent continues to use all feedback that you decide to keep for triaging user-submitted phishing incidents in the future.
-
-> [!NOTE]
-> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
-
-When you reject feedback, the agent takes note of the rejected feedback to discontinue use of the feedback for future triaging. In the Review feedback pane, select Reject feedback to reject a specific feedback. Here’s an example of rejected feedback.
-
-[SCREENSHOT]
-
-### Track the agent's performance
-
-You can review the overall performance of the Phishing Triage Agent by navigating to the agent card in the incident queue. The agent card contains the total number of incidents triaged by the agent. The total number of incidents are tracked either from the agent’s first deployment date or based on the last 30 days of data of the agent’s work. Here's an example.
-
-[SCREENSHOT]
-
 ## Maximize efficiency with the Phishing Triage Agent
 
 Once the Phishing Triage Agent is fully set up and running, it is triggered automatically when a user in your organization submits a suspicious phishing email, and an alert is created. The agent autonomously analyzes these submissions leveraging sophisticated AI tools and your organizational knowledge. When the agent arrives at a conclusion, it classifies and resolves the related alerts and incidents as either malicious or false alarms. The agent provides a detailed explanation for its verdict for each submission it triages.
@@ -311,6 +255,62 @@ To resolve some of the feedback errors, follow these steps:
 4. Navigate to the feedback management page to view the new feedback provided.
 
 Once the agent is trained and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive learning process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By continuously integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
+
+## Manage the Phishing Triage Agent
+
+You can manage the Phishing Triage Agent's settings and review and manage feedback provided to it. To do these, select **Manage agent** in the agent card above the incident queue. Alternatively, you can navigate to **Settings > Microsoft Defender XDR > Agents**.
+
+### View and manage feedback to the agent
+
+You can view and manage feedback provided by users to the Phishing Triage Agent by navigating to the **Feedback** page. The feedback page contains a list of all feedback provided to the agent. The feedback information includes the lessons stored in the agent memory, users who provided feedback, feedback submission date, and the incident ID. The Phishing Triage Agent uses all feedback provided to it to triage user-submitted phishing incidents. It stores all feedback in its memory as lessons.
+
+[SCREENSHOT]
+
+> [!TIP]
+> You can only manage feedback one at a time. Managing multiple feedback is not supported.
+
+Review each feedback by selecting an item from the feedback list. In the **Review feedback** pane, check the details and decide to keep feedback in the agent’s memory or reject the feedback. The agent continues to use all feedback that you decide to keep for triaging user-submitted phishing incidents in the future.
+
+> [!NOTE]
+> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
+
+When you reject feedback, the agent takes note of the rejected feedback to discontinue use of the feedback for future triaging. In the Review feedback pane, select Reject feedback to reject specific feedback. Here's an example of rejected feedback.
+
+[SCREENSHOT]
+
+### Track the agent's performance
+
+You can review the overall performance of the Phishing Triage Agent by navigating to the agent card in the incident queue. The agent card contains the total number of incidents triaged by the agent. The total number of incidents are tracked either from the agent’s first deployment date or based on the last 30 days of data of the agent’s work. Here's an example.
+
+[SCREENSHOT]
+
+### Pause or remove the agent
+
+> [!IMPORTANT]
+> Pausing or removing the Phishing Triage Agent is only available to users with the **Security Administrator** role with the *Security Copilot (read)* permission.
+
+Pausing the agent stops the agent from triaging incidents without removing it entirely. The agent stops triaging incidents, including incidents that are in progress of triaging. Resuming the agent resumes all the agent’s activities.
+
+Removing the agent permanently removes the agent. When the agent is removed, the agent stops triaging new incidents and all feedback are deleted. However, it retains the history of all incidents it triaged.
+
+To pause, resume, or remove the agent:
+
+1. Navigate to the **Overview** page under **Agents**.
+
+2. Select **Pause** to temporarily stop the agent. Once paused, the same option becomes **Resume**, which you can select when you’re ready to resume the agent's activities.
+
+   [SCREENSHOT]
+
+3. To remove the agent, select **Remove agent**.
+
+### Change the agent's identity and role
+
+> [!IMPORTANT]
+> Changing the Phishing Triage Agent’s identity is only available to users with the **Security Administrator** role.
+
+You can manage the agent's identity and role at any time by navigating to the **Identity and role** page under **Agents**. You can view the agent's current identity, last update information, and the option to select a different identity for the agent.
+
+[SCREENSHOT]
 
 ## Troubleshoot agent issues
 
