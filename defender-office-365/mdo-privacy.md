@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/03/2024
+ms.date: 05/08/2025
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-office-365
@@ -13,6 +13,7 @@ ms.localizationpriority: medium
 ms.collection:
 - m365-security
 - tier2
+- essentials-privacy
 ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
 search.appverid: met150

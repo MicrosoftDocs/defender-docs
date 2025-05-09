@@ -117,4 +117,4 @@ The following list describes what happens in the Tenant Allow/Block List when yo
 
 After you add an allow entry on the **Submissions** page or a block entry in the Tenant Allow/Block List, the entry should start working immediately (within 5 minutes).
 
-If Microsoft learned from the allow entry, the built-in [alert policy](/purview/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.
+If Microsoft learned from the allow entry, the built-in [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.
