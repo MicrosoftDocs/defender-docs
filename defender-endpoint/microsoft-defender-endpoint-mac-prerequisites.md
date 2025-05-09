@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/29/2025
+ms.date: 05/09/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS prerequisites
@@ -146,6 +146,5 @@ mdatp connectivity test
 
 - For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
-- [Turn on Network protection for macOS](network-protection-macos.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
