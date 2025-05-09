@@ -73,7 +73,7 @@ Security settings in Exchange Online Protection (EOP) and Defender for Office 36
 
 If you're using custom policies, use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare your policy settings to the Standard and Strict preset security policy settings. For a detailed listing of all policy settings, see the tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365).
 
-You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](/purview/alert-policies#threat-management-alert-policies).
+You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](alert-policies.md#threat-management-alert-policies).
 
 ## Need to make changes to automated investigation settings?
 
