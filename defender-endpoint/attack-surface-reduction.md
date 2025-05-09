@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 05/09/2025
 ---
 
 # Attack surface reduction rules overview
