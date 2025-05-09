@@ -25,7 +25,7 @@ ms.date: 04/16/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
@@ -34,7 +34,7 @@ ms.date: 04/16/2025
 
 ## No license found
 
-When [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md) is being deployed, an error message with an **x** on top of the Microsoft Defender for Endpoint on macOS shield appears.
+When [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md) is being deployed, an error message with an **x** on top of the Microsoft Defender for Endpoint on macOS shield appears.
 
 Select the **x** symbol.
 
@@ -162,7 +162,7 @@ You can also suppress switching to experience for Individuals on MDM-enrolled ma
 
 - [Manual deployment for Microsoft Defender for Endpoint on macOS](mac-install-manually.md): Install Microsoft Defender for Endpoint on macOS manually from the command line.
 - [Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro](mac-jamfpro-policies.md): Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md): Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md): Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 - [Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md): Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

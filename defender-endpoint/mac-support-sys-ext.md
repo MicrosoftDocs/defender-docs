@@ -25,7 +25,7 @@ ms.date: 04/16/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
@@ -122,7 +122,7 @@ The following files might be missing if you're managing it via Intune, JamF, or 
 |"/Library/Managed Preferences/servicemanagement.plist"     |   n/a      | Background services        |
 |"/Library/Managed Preferences/com.apple.TCC.configuration-profile-policy.plist"     |    full_disk_access_enabled (for DLP)     |   Accessibility      |
 
-To troubleshoot the issue of missing files to make Microsoft Defender for Endpoint on macOS work properly [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md#microsoft-defender-for-endpoint-on-macos).
+To troubleshoot the issue of missing files to make Microsoft Defender for Endpoint on macOS work properly [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md#microsoft-defender-for-endpoint-on-macos).
 
 ## Solution
 

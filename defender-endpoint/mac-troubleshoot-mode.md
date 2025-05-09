@@ -27,7 +27,7 @@ ms.date: 02/24/2025
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 
 This article describes how to enable the troubleshooting mode in Microsoft Defender for Endpoint on macOS so admins can troubleshoot various Microsoft Defender Antivirus features temporarily, even if organizational policies manage the devices.
 

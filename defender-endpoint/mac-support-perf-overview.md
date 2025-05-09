@@ -19,7 +19,7 @@ ms.custom: partner-contribution
 
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 This article provides general guidelines to identify performance issues related to Microsoft Defender for Endpoint on macOS. See [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md) for more specific guidance. 

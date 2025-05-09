@@ -22,7 +22,7 @@ ms.date: 04/16/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
@@ -31,7 +31,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on macOS th
 
 ## Prerequisites and system requirements
 
-Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac-overview.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for a description of prerequisites and system requirements for the current software version.
 
 ## Overview
 
