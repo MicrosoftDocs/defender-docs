@@ -162,7 +162,7 @@ DeviceEvents
 
 ## Recommended content
 
-- [Microsoft Defender XDR for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender XDR for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender XDR for Endpoint integration with Microsoft Defender XDR for Cloud Apps](/defender-cloud-apps/mde-integration)
 - [Get to know the innovative features in Microsoft Edge](https://www.microsoft.com/edge/features?form=MW00UY)
 - [Protect your network](network-protection.md)

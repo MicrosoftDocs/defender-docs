@@ -112,7 +112,7 @@ To add anti-malware protection to these older operating systems, you can use [Sy
 
 ### Other supported operating systems
 
-- [Mac](microsoft-defender-endpoint-mac-overview.md) (client devices)
+- [Mac](microsoft-defender-endpoint-mac.md) (client devices)
 - [Linux](microsoft-defender-endpoint-linux.md)
 - [Windows Subsystem for Linux](mde-plugin-wsl.md)
 - [Android](microsoft-defender-endpoint-android.md)
