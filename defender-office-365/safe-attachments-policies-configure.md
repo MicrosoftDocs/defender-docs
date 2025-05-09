@@ -95,6 +95,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
 
      > [!TIP]
      > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
+     > Also leaving user, group and domain field blank will create a policy that applies to all users.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.
 
