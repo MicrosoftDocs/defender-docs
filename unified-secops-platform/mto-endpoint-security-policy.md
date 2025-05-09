@@ -11,8 +11,8 @@ ms.collection:
   - m365-security
   - highpri
   - tier1
-ms.topic: conceptual
-ms.date: 05/29/2024
+ms.topic: concept-article
+ms.date: 05/12/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
   - ✅ <a href="https://learn.microsoft.com/defender-endpoint/microsoft-defender-endpoint" target="_blank">Microsoft Defender for Endpoint</a>
@@ -20,22 +20,24 @@ appliesto:
 
 # Endpoint security policies in multitenant management
 
-An aggregated view of all security policies from all tenants is now available through the **Endpoint security policies** page in multitenant management. The page gives you access to manage security settings on your tenants' devices, allowing you to create, edit, or delete security policies. Navigate to the page through **Endpoint > Configuration management > Endpoint security policies**.
-
-:::image type="content" source="media/mto-endpoint-security-policy/navigation-mto-endpoint-policies-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/navigation-mto-endpoint-policies.png":::
+An aggregated view of all security policies from all tenants is available through the **Endpoint security policies** page in multitenant management. The page gives you access to manage security settings on your tenants' devices, allowing you to create, edit, or delete security policies. Navigate to the page through **Endpoint > Configuration management > Endpoint security policies**.
 
 > [!IMPORTANT]
-> The Endpoint security policies page is available only for [users with the security administrator role in Microsoft Defender XDR](/defender-endpoint/assign-portal-access). Any other user role like Security Reader cannot access the security policies page. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
-
-> [!NOTE]
-> The endpoints security policies page is not yet available for tenants with Microsoft Defender for Business licenses.
+> The Endpoint security policies page is available only for [users with the security administrator role in Microsoft Defender XDR](/defender-endpoint/assign-portal-access). Any other user role like Security Reader cannot access the endpoint security policies page. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
 
 To know more about endpoint security policy types, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies).
+
+Distributed policies now appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For more information, see [Content distribution in multitenant management](mto-tenantgroups.md).
+
+:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+
+The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
 
 > [!TIP]
 > Security administrators must have permissions in each tenant to access the endpoint security policies page in multitenant management.
 
 From the page, you can search for a specific policy by using the **Search** function. You can also **Filter** the policies according to tenant name, policy category, policy type, and targets. You can view, create, edit, or delete a security policy on a single tenant only through the page.
+
 
 ## Create a new security policy
 
