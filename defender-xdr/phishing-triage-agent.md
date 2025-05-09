@@ -189,7 +189,7 @@ To teach the agent, follow these steps:
 
    [SCREENSHOT]
 
-3. In the **Manage alert** pane, provide the correct classification and add your comment. You can use natural language to explain the reason for the change in classification. Select **Save**.
+3. In the **Manage alert** pane, provide the correct classification and add your feedback. You can use natural language to explain the reason for the change in classification. Refer to the [Feedback guide](#feedback-guide-and-examples) to see samples of how to provide feedback to the agent.
 
    [SCREENSHOT]
 
@@ -207,7 +207,7 @@ The agent then translates the given feedback into a lesson and uses it for triag
 > [!TIP]
 > Always check the validity of AI responses as sometimes these responses are inapplicable to the scenario.
 
-### Sample feedback
+### Feedback guide and examples
 
 When you disagree with the Phishing Triage Agent’s classification, it’s important to provide feedback to teach the agent. The agent translates the given feedback into a lesson and uses it for triage and classification of future incidents.
 
