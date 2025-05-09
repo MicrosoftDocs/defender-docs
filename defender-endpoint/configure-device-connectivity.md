@@ -73,7 +73,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 **Defender Antivirus versions (macOS/Linux)**
 
-- [macOS supported versions](microsoft-defender-endpoint-mac-overview.md) with MDE product version 101.24022.*+
+- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
 
 **Supported Operating Systems**

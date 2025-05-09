@@ -106,7 +106,7 @@ You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/d
 
 ## See also
 
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)

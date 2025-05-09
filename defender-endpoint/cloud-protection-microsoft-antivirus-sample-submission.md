@@ -136,7 +136,7 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 
 - [Next-generation protection overview](next-generation-protection.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
 - [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 

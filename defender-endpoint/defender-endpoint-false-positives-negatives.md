@@ -400,7 +400,7 @@ If you've worked through all the steps in this article and still need help, cont
 - [Manage Defender for Endpoint](preferences-setup.md)
 - [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Overview of Microsoft Defender portal](/legal/microsoft-365/api-terms-of-use)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
 - [Configure Defender for Endpoint on Android features](android-configure.md)

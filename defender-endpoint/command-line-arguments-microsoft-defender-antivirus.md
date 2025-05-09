@@ -106,7 +106,7 @@ The following table lists common errors that can occur while using the MpCmdRun 
 - [Configure Microsoft Defender Antivirus features](configure-microsoft-defender-antivirus-features.md)
 - [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
 - [Reference articles for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)

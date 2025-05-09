@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 05/09/2025
 ---
 
 # Attack surface reduction rules overview
@@ -98,7 +98,7 @@ Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](https://support.microsoft.com/help/4052623/update-for-microsoft-defender-antimalware-platform).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-updates).
 
 ### Cases where warn mode isn't supported
 
@@ -205,7 +205,7 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 > If you're looking for Antivirus related information for other platforms, see:
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac-overview.md)
+> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
