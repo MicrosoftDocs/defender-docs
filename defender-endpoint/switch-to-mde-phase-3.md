@@ -83,7 +83,7 @@ To verify that your onboarded devices are properly connected to Defender for End
 |Operating system|Guidance|
 |---|---|
 |Windows 10 or later<br/><br/>Window Server 2025<br/><br/>Windows Server 2022<br/><br/>Windows Server 2019<br/><br/>Windows Server, version 1803, or later<br/><br/>Windows Server 2016<br/><br/>Windows Server 2012 R2|See [Run a detection test](run-detection-test.md).|
-|macOS (see [System requirements](microsoft-defender-endpoint-mac-overview.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
+|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
 |Linux (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
 
 ## Step 3: Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints
