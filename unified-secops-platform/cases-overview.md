@@ -83,7 +83,7 @@ The maximum allowed per tenant is 100,000 cases.
 
 Each case has a page which allows analysts to manage the case and displays important details.
 
-In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK&trade; techniques and indicators of compromise (IoCs).
+In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK&reg; techniques and indicators of compromise (IoCs).
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of the case details page in the Defender portal." lightbox="media/cases-overview/case-details-large.png":::
 
