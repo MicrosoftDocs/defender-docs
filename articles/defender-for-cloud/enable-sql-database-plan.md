@@ -16,7 +16,7 @@ Defender for Azure SQL Databases in Microsoft Defender for Cloud lets you protec
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- You must connect a [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service (AWS) account](quickstart-onboard-aws.md), or [Google Cloud Project (GCP) projects](quickstart-onboard-gcp.md).
+- You must connect a [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service (AWS) account](quickstart-onboard-aws.md), or [Google Cloud Platform (GCP)](quickstart-onboard-gcp.md).
 
 - You must [enable the Defender for Databases plan](tutorial-enable-databases-plan.md) on your Defender for Cloud subscription.
 
