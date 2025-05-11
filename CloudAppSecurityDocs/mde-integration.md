@@ -18,7 +18,7 @@ This article describes the out-of-the-box integration available between Microsof
 
 - Microsoft Defender for Cloud Apps license
 
-- Devices must be onboarded to [Microsoft Defender for Endpoint](https://learn.microsoft.com/defender-endpoint/onboard-client)
+- Devices must be onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-client)
 
 - One of the following:
 
