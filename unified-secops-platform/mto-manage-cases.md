@@ -46,7 +46,7 @@ For more information, see [Manage security operations cases natively in the Micr
 Manage cases from multiple tenants at a glance in the multitenant case queue.
 
 - To see a preview flyout panel of a case's details, select the row of the desired case.
-- To open a case's full details page, select the case's name. 
+- To open a case's full details page, select the case's name.
 
 Navigate effortlessly between cases in different tenants without leaving the multitenant queue or losing context.
 
@@ -54,9 +54,7 @@ For more information on managing cases, see [Manage security operations cases na
 
 ## Create a case in the multitenant portal
 
-1. In the multitenant portal, select **Cases**.
-
-1. Select **+ Create** on the **Cases** queue page.
+1. On the **Cases** page in the multitenant portal, select **+ Create**.
 
 1. In the **Create case** pane, select the desired tenant from the drop-down at the top, then proceed as in the single-tenant experience.
 
@@ -67,6 +65,7 @@ The maximum allowed per tenant is 100,000 cases.
 
 ## Related content
 
+- [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md)
+- [Microsoft Defender multitenant management](mto-overview.md)
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
-- [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 - [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)

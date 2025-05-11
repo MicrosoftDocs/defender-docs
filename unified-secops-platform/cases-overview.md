@@ -19,25 +19,37 @@ ms.topic: conceptual
 
 # Manage security operations cases natively in the Microsoft Defender portal
 
-Case management is the first installment of new unified security operations (SecOps) capabilities for managing security work in the Microsoft Defender portal.
+Microsoft Defender case management is a collection of features and capabilities delivering a unified, security-focused case management experience. This experience is designed for managing unified security operations (SecOps) work natively in the Microsoft Defender portal, without the need for third-party tools. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
-This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
+The current, introductory phase of the case management rollout centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads.
 
 <a name="what-is-case-management-preview"></a>
 
 ## What is case management?
 
-Case management enables you to manage SecOps cases natively in the Defender portal. Here's the initial set of scenarios and features supported.
+Case management enables you to manage SecOps cases natively in the Defender portal. Even in its initial stages, SecOps teams are demonstrating the following use cases for case management:
 
-- Define your own case workflow with custom status values
-- Assign tasks to collaborators and configure due dates
-- Handle escalations and complex cases by linking multiple incidents to a case
-- Manage access to your cases using RBAC
-- [Manage cases from multiple tenants using the multitenant portal (Preview)](mto-manage-cases.md)
+- Responding to security events that span multiple incidents.
+
+- Managing threat hunting.
+
+- Tracking IoCs and threat actors.
+
+- Tracking detection logic that needs tuning.
+
+The following specific capabilities and features support these use cases and scenarios:
+
+- Create and track your SecOps related cases in one place with the new **Cases** page.
+- [Define your own case workflow by configuring custom status values](#customize-status).
+- [Improve collaboration, quality, and accountability by assigning tasks and due dates](#tasks).
+- [Handle escalations and complex cases by linking multiple incidents to a case](#link-incidents).
+- [Manage access to your cases using RBAC](#requirements).
+- [Add rich-text comments to provide links, tables, and formatting to the activity log (in Preview)](#activity-log).
+- [Upload attachments to store files like documents, CSVs, and encrypted zip files containing malware samples (in Preview)](#attachments).
+- [Manage cases in multiple tenants via the multitenant management portal (in Preview)](mto-manage-cases.md).
 
 As we build on this foundation of case management, we're prioritizing these additional robust capabilities as we evolve this solution:
 
-- Multi-tenant support *(now added, in Preview)*
 - Automation
 - More evidence to add
 - Workflow customization
@@ -71,7 +83,7 @@ The maximum allowed per tenant is 100,000 cases.
 
 Each case has a page which allows analysts to manage the case and displays important details.
 
-In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK techniques and IoCs.
+In the following example, a threat hunter is investigating a hypothetical "Burrowing" attack that consists of multiple MITRE ATT&CK&trade; techniques and indicators of compromise (IoCs).
 
 :::image type="content" source="media/cases-overview/case-details.png" alt-text="Screenshot of the case details page in the Defender portal." lightbox="media/cases-overview/case-details-large.png":::
 
@@ -131,11 +143,11 @@ Share reports, emails, screenshots, log files, and more, all centralized in the 
 
 :::image type="content" source="media/cases-overview/case-attachments.png" alt-text="Screenshot of the details of the Attachments tab of a case.":::
 
-To add attachments to your case, go to the **Case details** page, click the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. The file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If you need to upload malware samples, you can wrap them in password-protected ZIP files.
+To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
 
 ## Related content
 
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
-- [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting)
 - [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md)
 - [Microsoft Defender multitenant management](mto-overview.md)

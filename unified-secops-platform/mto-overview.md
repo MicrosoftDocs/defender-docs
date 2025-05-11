@@ -72,7 +72,7 @@ The following key capabilities are available for each tenant you have access to 
 | ---------- | ----------- |
 | **Incidents & alerts** > **[Incidents](mto-incidents-alerts.md)** | Manage incidents originating from multiple tenants. |
 | **Incidents & alerts** > **[Alerts](mto-incidents-alerts.md)** | Manage alerts originating from multiple tenants. |
-| **[Cases](cases-overview.md)** | Manage cases originating from multiple tenants, or a single case with links to items from multiple tenants. |
+| **[Cases](cases-overview.md)** | Manage cases originating from multiple tenants. |
 | **Hunting** > **[Advanced hunting](mto-advanced-hunting.md)** | Proactively hunt for intrusion attempts and breach activity across multiple tenants at the same time. |
 | **Hunting** > **[Custom detection rules](/defender-xdr/custom-detections-overview)** | View and manage custom detection rules across multiple tenants. |
 | **Assets** > **Devices** > **[Tenants](mto-tenant-devices.md)** | For all tenants and at a tenant-specific level, explore the device counts across different values such as device type, device value, onboarding status, and risk status. |
