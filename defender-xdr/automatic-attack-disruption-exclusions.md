@@ -116,6 +116,12 @@ To remove an exclusion:
 
 - Device group exclusions can be configured in the **Device groups** tab. Select the device group you want to configure from the list and choose the appropriate exclusion from the flyout pane. Select **Save** to save the exclusion.
 
+## Opting out of Automated Attack Disruption
+
+If you must  opt out of the Attack Disruption feature, you can do so by opening a support case with Microsoft  via the Defender portal with the subject: "Attack disruption opt-out". In your request, please specify that you wish to opt out of Attack Disruption and include a brief explanation for your decision. This feedback helps us improve the feature and better understand customer needs. By opting out, you will still receive alerts related to Attack Disruption, but no automated actions will be taken.
+
+Opting out of attack disruption can greatly increase security risk. Consider excluding specific entities instead. 
+
 ## See also
 
 - [View details and results of automated attack disruption actions](autoad-results.md)
