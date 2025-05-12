@@ -29,6 +29,14 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+https://learn.microsoft.com/en-us/defender-endpoint/ios-whatsnew?view=o365-worldwide
+
+#### Alerts for activities related to certificates are now detected as events
+
+**May 2025**
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the download/installation/removal of self-signed certificates as events instead of alerts. These events can be viewed in the Timeline tab of a device page.
+
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
 **March 2025**
