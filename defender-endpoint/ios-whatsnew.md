@@ -29,8 +29,6 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-https://learn.microsoft.com/en-us/defender-endpoint/ios-whatsnew?view=o365-worldwide
-
 #### Alerts for activities related to certificates are now detected as events
 
 **May 2025**
