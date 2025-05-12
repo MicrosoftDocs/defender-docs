@@ -23,7 +23,7 @@ This article describes the out-of-the-box integration available between Microsof
 - One of the following:
 
     - Microsoft Defender for Endpoint with Plan 2
-    - Microsoft Defender for Business with a premium or standalone license
+    - Microsoft Defender for Business (standalone or as part of Microsoft 365 Business Premiumw)
     
     For more information, see [Compare Microsoft endpoint security plans](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2).
 
