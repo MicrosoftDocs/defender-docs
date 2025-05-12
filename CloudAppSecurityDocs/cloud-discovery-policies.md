@@ -69,7 +69,7 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 
 1. To set which discovered apps trigger this policy, select **Add filters**.
 
-    The filters are chosen from drop-down lists. To add filters, select **Add a filter**. To remove a filter, select the 'X.'
+    The filters are chosen from drop-down lists. To add filters, select **Add a filter**. To remove a filter, select the 'X'.
 
 1. Under **Apply to** choose whether this policy applies **All continuous reports** or **Specific continuous reports**. Select whether the policy applies to **Users**, **IP addresses**, or both.
 
