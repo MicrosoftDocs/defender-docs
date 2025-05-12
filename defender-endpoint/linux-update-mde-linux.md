@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/24/2025
+ms.date: 05/12/2025
 ---
 
 # Schedule an update for Microsoft Defender for Endpoint on Linux
