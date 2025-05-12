@@ -5,10 +5,10 @@ ms.date: 01/25/2024
 ms.topic: how-to
 ---
 > [!NOTE]
-> This feature is about to be disabled... go to 
+> Remote collection of local administrators' group members on endpoints (using SAM-R queries) feature in Microsoft Defender for Identity will be disabled by mid-May 2025.
 > 
 
-# Configure remote WMI to enable lateral movement path detection in Microsoft Defender for Identity
+# Configure remote SAM-R to enable lateral movement path detection in Microsoft Defender for Identity
 
 Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
 
