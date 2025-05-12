@@ -326,6 +326,7 @@
               - name: User experiences in Defender for Endpoint on Android
                 href: android-new-ux.md
               - name: User experiences in Defender for Endpoint on iOS
+                href: ios-new-ux.md
               - name: Mobile device resources for Defender for Endpoint 
                 href: mobile-resources-defender-endpoint.md
               - name: Configure Defender for Endpoint on Android features
