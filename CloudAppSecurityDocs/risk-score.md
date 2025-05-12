@@ -12,7 +12,8 @@ The Microsoft Defender for Cloud Apps **Cloud app catalog** page provides a full
 
 For example:
 
-:::image type="content" source="media/cloud-app-catalog.png" alt-text="Screenshot showing the cloud app catalog." lightbox="media/cloud-app-catalog.png":::
+:::image type="content" source="media/cloud-app-catalog.png" alt-text="Screenshot showing the cloud app catalog" lightbox="media/cloud-app-catalog.png":::
+
 
 Apps in the cloud app catalog are scored based on more than 90 risk factors. This article describes how to identify apps covered by the catalog, and how to use and customize the cloud app risk scores.
 
@@ -57,7 +58,7 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
 1. Select the **Advanced filters** toggle to configure the following advanced filter:
 
-- **Compliance risk factor** > **SOC 2** > **equals** > **Yes**
+    - **Compliance risk factor** > **SOC 2** > **equals** > **Yes**
     - **Compliance risk factor** > **ISO 27001** > **equals** > **Yes**
     - **Security risk factor** > **Data-at-rest-encryption method** > **does not equal** > **Not supported, NA**
     - **Security risk factor** > **Admin audit trail** > **equals** > **Yes**
@@ -65,8 +66,10 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
     For example:
 
-    ![Screenshot showing cloud app catalog filters.](media/cloud-app-catalog-filters.png)
-   
+    :::image type="content" source="media/compliance-risk-factor.png" alt-text="Screenshot showing the compliance risk factors":::
+
+    :::image type="content" source="media/security-risk-factor.png" alt-text="Screenshot showing the security risk factor filters":::
+
 1. Review the filtered apps shown in the grid and check to see that the apps you use have appropriate risk scores for your organization. Select an app to expand it for more details.
 
     We recommend that you review the weights given to risk factors and risk categories when scoring a specific app. In the expanded app details, scroll down and hover an **i** button next to each risk factor name to learn more. For example:
@@ -107,9 +110,9 @@ You might want to request a review by the Defender for Cloud Apps security analy
 
 1. Sign into Microsoft Defender XDR and select **Cloud apps** > **Cloud app catalog**, and locate the app you want to update.
 
-1. In the **Cloud App Catalog** page, in the app row you want to update, select the three dots at the end of the row and choose **Request score update**. For example:
+1. In the **Cloud App Catalog** page, click on the app row you want to update, and choose **Request score update**. For example:
 
-    :::image type="content" source="media/request-score-update.png" alt-text="Screenshot of how to request a risk score update." lightbox="media/request-score-update.png":::
+    :::image type="content" source="media/request-score-update.png" alt-text="Screenshot of how to request a risk score update.":::
 
 1. In the **Suggest an improvement** dialog, select whether you want to request a score update, suggest a new risk factor, or update app data.
 
@@ -127,7 +130,7 @@ If you find a new app in your environment that hasn't been scored by Defender fo
 
 1. In the **Suggest new cloud app** pop-up, fill in details about the new app. Include the name and domain of the app.
 
-    ![Screenshot showing the ](media/suggest-new-app-pop-up.png)
+    :::image type="content" source="media/suggest-new-app-pop-up.png" alt-text="Suggest a new app":::
    
 3. We recommend selecting the checkbox to enable Defender for Cloud Apps analysts to contact you in case additional information about the app is needed.
 
