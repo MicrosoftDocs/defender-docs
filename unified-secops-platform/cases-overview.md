@@ -1,12 +1,12 @@
 ---
-title: Manage cases natively in Microsoft's unified SecOps platform
-description: Learn about case management features across Microsoft's unified security operations (SecOps) platform.
+title: Manage cases natively in the Microsoft Defender portal
+description: Learn about case management features for unified security operations in the Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: austinmc
-author: austinmccollum
+ms.author: yelevin
+author: yelevin
 ms.localizationpriority: medium
-ms.date: 01/16/2025
+ms.date: 05/04/2025
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -14,12 +14,12 @@ ms.collection:
 - usx-security
 ms.topic: conceptual
 
-# customer intent: As a security operations center business decision maker, I want to learn about the case management tool available in Microsoft's unified SecOps platform so I can unify security tickets and case management tools so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
+# customer intent: As a security operations center business decision maker, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets, increase visibility, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
 
-# Manage cases natively in Microsoft's unified security operations platform
+# Manage cases natively in the Microsoft Defender portal
 
-Case management is the first installment of new capabilities for managing security work when you onboard to Microsoft's unified security operations (SecOps) platform.
+Case management is the first installment of new unified security operations (SecOps) capabilities for managing security work in the Microsoft Defender portal.
 
 This initial step toward delivering a unified, security-focused case management experience centralizes rich collaboration, customization, evidence collection, and reporting across SecOps workloads. SecOps teams maintain security context, work more efficiently, and respond faster to attacks when they manage case work without leaving the Defender portal.
 
@@ -81,7 +81,7 @@ Manage the following case details to describe, prioritize, assign, and track wor
 | Priority| `Very low`, `Low`, `Medium`, `High`, `Critical` | none |
 | Status | Set by analysts, customizable by admins | Default statuses are `New`, `Open`, and `Closed`</br>Default value is `New`|
 | Assigned to | A single user in the tenant | none |
-| Description | Plain text | none |
+| Description | Rich text | none |
 | Case details | Case ID | Case IDs start at 1000 and aren't purged. Use custom statuses and filters to archive cases. Case numbers are automatically set.|
 | | Created by</br>Created on</br>Last updated by</br>Last updated on | automatically set |
 | | Due on</br>Linked incidents | none |
@@ -117,7 +117,7 @@ Each case has a threshold of 100 linked incidents.
 
 ### Activity log
 
-Need to write down notes, or that key detection logic to pass along? Create plain text comments and review the audit events in the activity log. Comments are a great place to quickly add information to a case.
+Need to write down notes, or that key detection logic to pass along? Create rich text comments and review the audit events in the activity log. Comments are a great place to quickly add information&mdash;including such things as queries, tables, links, and structured content&mdash;to a case.
 
 :::image type="content" source="media/cases-overview/informal-comments.png" alt-text="Screenshot showing informal comments between analysts.":::
 
