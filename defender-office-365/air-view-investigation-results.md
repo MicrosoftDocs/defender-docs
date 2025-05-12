@@ -643,7 +643,7 @@ Clicking anywhere in a row other than the check box next to the first column or 
 
 ## View details about an alert related to an investigation
 
-Certain kinds of alerts trigger automated investigation in Microsoft 365. To learn more, see [Threat management alert policies](/purview/alert-policies#threat-management-alert-policies).
+Certain kinds of alerts trigger automated investigation in Microsoft 365. To learn more, see [Threat management alert policies](/defender-xdr/alert-policies#threat-management-alert-policies).
 
 1. In the Microsoft 365 Defender portal a <https://security.microsoft.com>, go to **Actions & submissions** \> **Action center**. Or, to go directly to the **Action center** page, use <https://security.microsoft.com/action-center/>.
 1. On the **Action center** page, use the **Pending** or **History** tabs to find the action.
