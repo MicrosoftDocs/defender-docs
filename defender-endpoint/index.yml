@@ -32,6 +32,14 @@ landingContent:
           url:  microsoft-defender-endpoint.md
         - text: What is Defender for Endpoint plan 1?
           url: defender-endpoint-plan-1.md
+        - text: Defender for Endpoint on Linux
+          url: microsoft-defender-endpoint-linux.md
+        - text: Defender for Endpoint on Mac overview
+          url: microsoft-defender-endpoint-mac.md
+        - text: Defender for Endpoint on Android
+          url: microsoft-defender-endpoint-android.md
+        - text: Defender for Endpoint on iOS
+          url: microsoft-defender-endpoint-ios.md
       - linkListType: whats-new
         links:
           - text: What's new in Microsoft Defender for Endpoint
@@ -87,21 +95,6 @@ landingContent:
           url: endpoint-attack-notifications.md
         - text: Threat analytics
           url: threat-analytics.md
-
-  # Card
-  - title: Use Microsoft Defender for Endpoint on other platforms
-    linkLists:
-      - linkListType: overview
-        links:
-        - text: Microsoft Defender for Endpoint on Mac
-          url: microsoft-defender-endpoint-mac.md
-        - text: Microsoft Defender for Endpoint on iOS
-          url: microsoft-defender-endpoint-ios.md
-        - text: Microsoft Defender for Endpoint on Linux
-          url: microsoft-defender-endpoint-linux.md
-        - text: Microsoft Defender for Endpoint on Android
-          url: microsoft-defender-endpoint-android.md
-
 
 # Card
   - title: Reference

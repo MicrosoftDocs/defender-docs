@@ -15,17 +15,17 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/21/2025
+ms.date: 03/28/2025
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -52,7 +52,7 @@ Antivirus exclusions can be used to exclude trusted files and processes from rea
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
-| Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes content from antivirus scans and on-demand scans.| 
+| Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes events from on-demand scans, real-time protection (RTP), and behavior monitoring (BM).| 
 | Global Exclusion  | Antivirus and endpoint detections and response engine <br/>*(scope: global)*  | Excludes events from real time protection and EDR visibility. Doesn't apply to on-demand scans by default. |
 
 > [!IMPORTANT]

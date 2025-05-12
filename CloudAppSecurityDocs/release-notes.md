@@ -7,6 +7,7 @@ ms.topic: overview
 
 # What's new in Microsoft Defender for Cloud Apps
 
+>
 *Applies to: Microsoft Defender for Cloud Apps*
 
 This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
@@ -19,68 +20,116 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+>[!IMPORTANT]
+> **Take Immediate Action by April, 29 2025**, to ensure optimal service quality and prevent the interruption of some services. This change will only affect your organization if you're using a firewall allowlist that restricts outbound traffic based on IP addresses or Azure service tags. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively use as an additional Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’, that will be adjusted to reflect the above range by April 28, 2025.\
+> This update should be completed and the IP addresses or new Azure service tag added to your firewall's allowlist by April 29, 2025.
+> This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.\
+> Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
+
+
+## April 2025
+
+
+### OAuth app information is now available in attack paths (Preview)
+
+The Security Exposure Management platform now includes OAuth applications as part of the attack path and attack surface map experiences. This enhancement enables you to visualize how attackers could exploit OAuth apps to move laterally within your environment and access critical assets. By identifying these attack paths and investigating associated permissions, you can reduce exposure and improve the security posture of your Microsoft 365 services.
+
+For more information, see [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+
+### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
+
+The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
+
+This table provides details on Microsoft 365-connected OAuth applications that are registered with Microsoft Entra ID and accessible through the Defender for Cloud Apps app governance capability.
+
+### New Applications page in Defender XDR (Preview)
+
+The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
+
+The page surfaces key insights such as risk scores, usage patterns, publisher verification status, and privilege levels. These insights help you quickly identify and address high-risk or untagged applications.
+
+For more information, see [Application inventory overview](applications-inventory.md)
+
+
+## March 2025
+
+### Enhanced Identity Inventory (Preview)
+
+The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment. The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
+
+- Cloud application accounts: Provides insights into accounts from connected applications via Defender for Cloud Apps, allowing investigation of account permissions, group memberships, aliases, and the applications in use.
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory), [Cloud application accounts](/defender-cloud-apps/accounts).
+
+### Role-Based Access Control scoping for "Behaviors" (Preview)
+
+Defender for Cloud Apps customers can now configure Role-Based Access Control (RBAC) scoping for 'Behaviors.' This new capability allows administrators to define and manage access permissions more precisely. Administrators can ensure that users have the appropriate level of access to specific application data based on their roles and responsibilities. By using RBAC scoping, organizations can enhance their security posture, streamline operations, and reduce the risk of unauthorized access.
+
+For more information, see:
+
+- [Configure admin access](/defender-cloud-apps/manage-admins)
+- [Investigate behaviors with advanced hunting (Preview)](/defender-cloud-apps/behaviors)
+
 ## February 2025
-
-### Enhanced Visibility into OAuth Apps Connected to Microsoft 365 - General Availability
-
-Defender for Cloud Apps users who use app governance will be able to gain visibility into the origin of OAuth apps connected to Microsoft 365. You can filter and monitor apps that have external origins, to proactively review such apps and improve the security posture of the organization. 
-
-The new *Permissions filter and export capabilities allow you to quickly identify apps with specific permissions to access Microsoft 365.
-
-You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
-
-We're also expanding the coverage of privilege level feature for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification enables you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365. 
-
-For more information, see [detailed insights into OAuth apps](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
-
-### Enhanced alert source accuracy
-
-Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, will be reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.   
-The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
-
-To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
-
-To learn more about the Graph API alert resource: [alert resource type - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/resources/security-alert?view=graph-rest-1.0&preserve-view=true)
-
-### Network requirement updates
-
-Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our portals and services you must apply these changes by March 27, 2025.
-
-New CDN domains have been added and must be included in firewall rules to allow outbound traffic on port 443:
-- cdn.cloudappsecurity.com
-- cdn-discovery.cloudappsecurity.com
-
-To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
-
-|Data center|IP addresses|DNS name|
-|----|----|----|
-|US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
-|US2|13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
-|US3|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
-|EU1|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
-|EU2|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
-|Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
-|GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
-
-
-For **US Government GCC High** customers:
-
-||IP addresses|DNS name|
-|----|----|----|
-|**Session controls**|US Gov Arizona: 52.244.144.65, 52.244.43.90, 52.244.43.225, 52.244.215.117, 52.235.134.195, 52.126.54.167, 52.126.55.65 <br /><br />US Gov Virginia: 13.72.27.223, 13.72.27.219, 13.72.27.220, 13.72.27.222, 20.141.230.137, 52.235.179.167, 52.235.184.112|\*.mcas-gov.us<br/>\*.admin-mcas-gov.us|
-|**Access controls**|US Gov Arizona: 52.244.215.83, 52.244.212.197, 52.127.2.97, 52.126.54.254, 52.126.55.65 <br /><br />US Gov Virginia: 13.72.27.216, 13.72.27.215, 52.127.50.130, 52.235.179.123, 52.245.252.18, 52.245.252.131, 52.245.252.191, 52.245.253.12, 52.245.253.58, 52.245.253.229, 52.245.254.39, 52.245.254.51, 52.245.254.212, 52.245.254.245, 52.235.184.112, 52.235.184.112|\*.access.mcas-gov.us<br/>\*.access.cloudappsecurity.us|
-|**SAML proxy**|US Gov Arizona: 20.140.49.129, 52.126.55.65<br /><br />US Gov Virginia: 52.227.216.80, 52.235.184.112|\*.saml.cloudappsecurity.us|
-
-For **US Government GCC** customers:
-
-||IP addresses|DNS name|
-|----|----|----|
-|**Session controls**|US Gov Arizona: 52.235.147.86, 52.126.49.55, 52.126.48.233 <br /><br /> US Gov Virginia: 52.245.225.0, 52.245.224.229, 52.245.224.234, 52.245.224.228, 20.141.230.215, 52.227.10.254, 52.126.48.233, 52.227.3.207 | \*.mcas-gov.ms<br/>\*.admin-mcas-gov.ms|
-|**Access controls** |US Gov Arizona: 52.127.2.97, 52.235.143.220, 52.126.48.233 <br /><br />US Gov Virginia: 52.245.224.235, 52.245.224.227, 52.127.50.130, 52.245.222.168, 52.245.222.172, 52.245.222.180, 52.245.222.209, 52.245.223.38, 52.245.223.72, 52.245.223.177, 52.245.223.181, 52.245.223.182, 52.245.223.190, 23.97.12.140, 52.227.3.207  | \*.access.mcas-gov.ms|
-|**SAML proxy** |US Gov Arizona: 52.126.48.233 <br /> US Gov Virginia: 52.227.216.80, 52.126.48.233, 52.227.3.207 | \*.saml.cloudappsecuritygov.com|
-
-To stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Cloud Apps services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](/azure/virtual-network/service-tags-overview).
-
+ 
+ ### Enhanced Visibility into OAuth Apps Connected to Microsoft 365 - General Availability
+ 
+ Defender for Cloud Apps users who use app governance are able to gain visibility into the origin of OAuth apps connected to Microsoft 365. You can filter and monitor apps that have external origins, to proactively review such apps and improve the security posture of the organization.
+ 
+ The new *Permissions filter and export capabilities allow you to quickly identify apps with specific permissions to access Microsoft 365.
+ 
+ You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
+ 
+ We're also expanding the coverage of privilege level feature for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification enables you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365.
+ 
+ For more information, see [detailed insights into OAuth apps](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
+ 
+ ### Enhanced alert source accuracy
+ 
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ Microsoft Defender for Cloud Apps is enhancing its alert sources to deliver more precise information. This update, applicable to new alerts only, are reflected across various experiences and APIs, including the Defender XDR portal, Advanced hunting, and Graph API.
+ The goal is to improve the accuracy of alert origins, facilitating better identification, management, and response to alerts.
+ 
+ To learn more about the different alert sources in Defender XDR see the _Alert sources_ section of [Investigate alerts in Microsoft Defender XDR - Microsoft Defender XDR | Microsoft Learn](/defender-xdr/investigate-alerts?tabs=settings)
+ 
+ 
+ ### Network requirement updates
+ 
+ Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 16, 2025.
+ Microsoft Defender for Cloud Apps has improved its security and performance. Network information in firewalls and additional third-party services must be updated to comply with the new standards. To ensure uninterrupted access to our services you must apply these changes by March 27, 2025.
+ 
+ To connect to third-party apps and enable Defender for Cloud Apps, use the following IP addresses:
+ 
+ |Data center|IP addresses|DNS name|
+ |----|----|----|
+ |US1|13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
+ |US2|13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
+ |US3|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
+ |EU1|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
+ |EU2|13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
+ |Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
+ |GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
+ 
+ 
+ For **US Government GCC High** customers:
+ 
+ ||IP addresses|DNS name|
+ |----|----|----|
+ |**Session controls**|US Gov Arizona: 52.244.144.65, 52.244.43.90, 52.244.43.225, 52.244.215.117, 52.235.134.195, 52.126.54.167, 52.126.55.65 <br /><br />US Gov Virginia: 13.72.27.223, 13.72.27.219, 13.72.27.220, 13.72.27.222, 20.141.230.137, 52.235.179.167, 52.235.184.112|\*.mcas-gov.us<br/>\*.admin-mcas-gov.us|
+ |**Access controls**|US Gov Arizona: 52.244.215.83, 52.244.212.197, 52.127.2.97, 52.126.54.254, 52.126.55.65 <br /><br />US Gov Virginia: 13.72.27.216, 13.72.27.215, 52.127.50.130, 52.235.179.123, 52.245.252.18, 52.245.252.131, 52.245.252.191, 52.245.253.12, 52.245.253.58, 52.245.253.229, 52.245.254.39, 52.245.254.51, 52.245.254.212, 52.245.254.245, 52.235.184.112, 52.235.184.112|\*.access.mcas-gov.us<br/>\*.access.cloudappsecurity.us|
+ |**SAML proxy**|US Gov Arizona: 20.140.49.129, 52.126.55.65<br /><br />US Gov Virginia: 52.227.216.80, 52.235.184.112|\*.saml.cloudappsecurity.us|
+ 
+ For **US Government GCC** customers:
+ 
+ ||IP addresses|DNS name|
+ |----|----|----|
+ |**Session controls**|US Gov Arizona: 52.235.147.86, 52.126.49.55, 52.126.48.233 <br /><br /> US Gov Virginia: 52.245.225.0, 52.245.224.229, 52.245.224.234, 52.245.224.228, 20.141.230.215, 52.227.10.254, 52.126.48.233, 52.227.3.207 | \*.mcas-gov.ms<br/>\*.admin-mcas-gov.ms|
+ |**Access controls** |US Gov Arizona: 52.127.2.97, 52.235.143.220, 52.126.48.233 <br /><br />US Gov Virginia: 52.245.224.235, 52.245.224.227, 52.127.50.130, 52.245.222.168, 52.245.222.172, 52.245.222.180, 52.245.222.209, 52.245.223.38, 52.245.223.72, 52.245.223.177, 52.245.223.181, 52.245.223.182, 52.245.223.190, 23.97.12.140, 52.227.3.207  | \*.access.mcas-gov.ms|
+ |**SAML proxy** |US Gov Arizona: 52.126.48.233 <br /> US Gov Virginia: 52.227.216.80, 52.126.48.233, 52.227.3.207 | \*.saml.cloudappsecuritygov.com|
+ 
+ To stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Cloud Apps services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](/azure/virtual-network/service-tags-overview).
 
 ## November 2024
 

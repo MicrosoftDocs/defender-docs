@@ -17,7 +17,7 @@ ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 02/11/2024
+ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR
 #customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for password spray attacks so that I can take the necessary actions to remediate the attack and protect my network.

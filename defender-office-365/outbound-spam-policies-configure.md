@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view, create, modify, and delete outbound spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 02/05/2025
+ms.date: 03/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -57,7 +57,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
 - For our recommended settings for outbound spam policies, see [EOP outbound spam policy settings](recommended-settings-for-eop-and-office365.md#eop-outbound-spam-policy-settings).
 
-- The default [alert policies](/purview/alert-policies#threat-management-alert-policies) named **Email sending limit exceeded**, **Suspicious email sending patterns detected**, and **User restricted from sending email** already send email notifications to members of the **TenantAdmins** group (**Global Administrator** members) group about unusual outbound email activity and blocked users due to outbound spam. For more information, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). We recommend that you use these alert policies instead of the notification options in outbound spam policies.
+- The default [alert policies](/defender-xdr/alert-policies#threat-management-alert-policies) named **Email sending limit exceeded**, **Suspicious email sending patterns detected**, and **User restricted from sending email** already send email notifications to members of the **TenantAdmins** group (**Global Administrator** members) group about unusual outbound email activity and blocked users due to outbound spam. For more information, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). We recommend that you use these alert policies instead of the notification options in outbound spam policies.
 
 ## Use the Microsoft Defender portal to create outbound spam policies
 
@@ -71,7 +71,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    When you're finished on the **Name your policy page**, select **Next**.
 
-4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (recipient conditions):
+4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (sender conditions):
    - **Users**: The specified mailboxes, mail users, or mail contacts.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
@@ -94,7 +94,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
-   - **Exclude these users, groups, and domains**: To add exceptions for the internal senders that the policy applies to, select this option and configure the exceptions.
+   - **Exclude these users, groups, and domains**: To add exceptions for the internal senders that the policy applies to, select this option and configure the exceptions (sender exceptions).
 
      You can use an exception only once, but the exception can contain multiple values:
 
@@ -157,7 +157,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
      >
      > - This setting is in the process of being deprecated from outbound spam policies.
      >
-     > - The default [alert policy](/purview/alert-policies#threat-management-alert-policies) named **User restricted from sending email** already sends email notifications to members of the **TenantAdmins** group (**Global Administrator** members) when users are blocked due to exceeding the limits in the **Recipient Limits** section. **We strongly recommend that you use the alert policy rather than this setting in the outbound spam policy to notify admins and other users**. For instructions, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users).
+     > - The default [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **User restricted from sending email** already sends email notifications to members of the **TenantAdmins** group (**Global Administrator** members) when users are blocked due to exceeding the limits in the **Recipient Limits** section. **We strongly recommend that you use the alert policy rather than this setting in the outbound spam policy to notify admins and other users**. For instructions, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users).
 
    When you're finished on the **Protection settings** page, select **Next**.
 

@@ -1,8 +1,8 @@
 ---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: denisebmsft
-ms.author: deniseb 
+author: emmwalshh
+ms.author: ewalsh 
 manager: deniseb 
 ms.topic: how-to
 ms.service: defender-endpoint
@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 02/04/2025
+ms.date: 04/16/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -80,7 +80,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 - Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
 - Windows 11
-- Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
@@ -166,15 +166,15 @@ Configure devices to communicate through your connectivity infrastructure. Ensur
 
 For more information, see [Verify client connectivity](verify-connectivity.md).
 
-The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](download-client-analyzer.md).
+The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 
-- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
+- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within the MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: https://aka.ms/MDEClientAnalyzerPreview
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip]{https://aka.ms/MDEClientAnalyzerPreview}.
  
 
 > [!NOTE]
@@ -193,10 +193,10 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
 
-- [Onboard Windows Client](onboard-windows-client.md)
-- [Onboard Windows Server](configure-server-endpoints.md)
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)
-- [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
+   - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
+   - [Onboard client devices running Windows or macOS](onboard-client.md)
+   - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+   - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 
 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.

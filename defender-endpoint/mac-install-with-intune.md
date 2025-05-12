@@ -1,6 +1,6 @@
 ---
-title: Intune-based deployment for Microsoft Defender for Endpoint on Mac
-description: Install Microsoft Defender for Endpoint on Mac, using Microsoft Intune.
+title: Intune-based deployment for Microsoft Defender for Endpoint on macOS
+description: Install Microsoft Defender for Endpoint on macOS, using Microsoft Intune.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 12/02/2024
+ms.date: 04/16/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -27,7 +27,7 @@ ms.date: 12/02/2024
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 
-This article describes how to deploy Microsoft Defender for Endpoint on macOS through Microsoft Intune. 
+This article describes how to deploy Microsoft Defender for Endpoint on macOS through Microsoft Intune.
 
 ## Prerequisites and system requirements
 
@@ -35,14 +35,14 @@ Before you get started, see [the main Microsoft Defender for Endpoint on macOS p
 
 ## Overview
 
-The following table summarizes the steps to deploy and manage Microsoft Defender for Endpoint on Macs via Microsoft Intune. See the following table for more detailed steps:
+The following table summarizes the steps to deploy and manage Microsoft Defender for Endpoint on macOS via Microsoft Intune. See the following table for more detailed steps:
 
 |Step |Sample file name  |Bundle identifier  |
 |---------|---------|---------|
 |Approve system extension|`sysext.mobileconfig`|N/A|
 |Network extension policy|`netfilter.mobileconfig`|N/A|
 |Full Disk Access|`fulldisk.mobileconfig`|`com.microsoft.wdav.epsext`|
-|Microsoft Defender for Endpoint configuration settings <br/><br/>If you're planning to run non-Microsoft antivirus on Mac, set `passiveMode` to `true`.|`MDE_MDAV_and_exclusion_settings_Preferences.xml`|`com.microsoft.wdav`|
+|Microsoft Defender for Endpoint configuration settings <br/><br/>If you're planning to run non-Microsoft antivirus on macOS, set `passiveMode` to `true`.|`MDE_MDAV_and_exclusion_settings_Preferences.xml`|`com.microsoft.wdav`|
 |Background services|`background_services.mobileconfig`|N/A|
 |Configure Microsoft Defender for Endpoint notifications|`notif.mobileconfig`|`com.microsoft.wdav.tray`|
 |Accessibility settings|`accessibility.mobileconfig`|`com.microsoft.dlp.daemon`|
@@ -104,7 +104,7 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 > [!IMPORTANT]
-> Only one `.mobileconfig` (plist) for Network Filter is supported. Adding multiple Network Filters leads to network connectivity issues on Mac. This issue isn't specific to Defender for Endpoint on macOS.
+> Only one `.mobileconfig` (plist) for Network Filter is supported. Adding multiple Network Filters leads to network connectivity issues on macOS. This issue isn't specific to Defender for Endpoint on macOS.
 
 To configure your network filter:
 
@@ -375,7 +375,7 @@ To set Device Control for Microsoft Defender for Endpoint on macOS, follow the s
 
 To set Purview's Data Loss Prevention (DLP) for endpoint on macOS, follow the steps in [Onboard and offboard macOS devices into Compliance solutions using Microsoft Intune](/purview/device-onboarding-offboarding-macos-intune-mde).
 
-### Step 13: Check status of PList (.mobileconfig)
+### Step 13: Check status of PList (.Mobileconfig)
 
 After completing the profile configuration, you'll be able to review the status of the policies.
 
@@ -387,7 +387,7 @@ Once the Intune changes are propagated to the enrolled devices, you can see them
 
 #### Client device setup
 
-A standard [Company Portal installation](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) is sufficient for a mac device.
+A standard [Company Portal installation](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) is sufficient for a Mac device.
 
 1. Confirm device management.
 

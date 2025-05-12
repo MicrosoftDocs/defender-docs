@@ -32,12 +32,27 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
     :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Screenshot of a health issue details pane." lightbox="media/health-issues/close-suppress.png":::
 
+## Health issue status
+
+Health issues in Microsoft Defender for Identity can have different statuses depending on their state and how they're handled. 
+
+- **Open:**: The health issue is marked as open. 
+- **Closed:** A health issue is automatically marked as **Closed** when Microsoft Defender for Identity detects that the underlying issue is resolved. If you have [Azure ATP (workspace name) Administrator](/defender-for-identity/role-groups#defender-for-identity-security-groups)  you can also manually close a health issue.
+- **Suppressed:** If you have Azure ATP (workspace name) Administrators permissions, you can suppress the health alert for seven days. Suppress a health alert if you're aware of an expected temporary known issue, for example, taking down a machine for maintenance.
+
+For example, if a domain controller is taken offline for maintenance, a "Sensor stopped communicating" alert might be triggered. You can use the API to change the alert status from Open to Suppressed. Once the domain controller is back online, revert the status to Open and let Microsoft Defender for Identity close the alert automatically when the issue is resolved.
 
 ## Health issues
 
 This section describes all the health issues for each component, listing the cause and the steps needed to resolve the problem.
 
 Sensor-specific health issues are displayed in the **Sensor health issues** tab and domain related or aggregated health issues are displayed in the **Global health issues** tab as detailed in the following tables:
+
+### Network configuration mismatch for sensors running on VMware
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|The virtual machines that the listed Defender for Identity sensors is installed on has a network configuration mismatch. This issue might affect the performance and reliability of the sensors.|Review the network interface settings, including disabling the Large Send Offload (LSO), and follow the instructions in [here](https://aka.ms/mdi/vmware-sensor-issue).|High|Sensors health issues tab|
 
 ### A domain controller is unreachable by a sensor
 

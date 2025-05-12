@@ -15,11 +15,11 @@ ms.collection:
 - essentials-security
 - essentials-privacy
 - essentials-compliance
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 11/03/2024
+ms.date: 04/25/2025
 appliesto: 
 - Microsoft Defender XDR 
 ---

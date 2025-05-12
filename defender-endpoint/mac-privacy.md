@@ -1,6 +1,6 @@
 ---
-title: Privacy for Microsoft Defender for Endpoint on Mac
-description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data collected in Microsoft Defender for Endpoint on Mac.
+title: Privacy for Microsoft Defender for Endpoint on macOS
+description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data collected in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Privacy for Microsoft Defender for Endpoint on macOS
@@ -27,11 +27,11 @@ ms.date: 04/30/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft is committed to providing you with the information and controls you need to make choices about how your data is collected and used when you're using Microsoft Defender for Endpoint on macOS.
 
-This topic describes the privacy controls available within the product, how to manage these controls with policy settings and more details on the data events that are collected.
+This article describes the privacy controls available within the product, how to manage these controls with policy settings and more details on the data events that are collected.
 
 ## Overview of privacy controls in Microsoft Defender for Endpoint on macOS
 
@@ -41,7 +41,7 @@ This section describes the privacy controls for the different types of data coll
 
 Diagnostic data is used to keep Microsoft Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements.
 
-Some diagnostic data is required, while some diagnostic data is optional. We give you the ability to choose whether to send us required or optional diagnostic data through the use of privacy controls, such as policy settings for organizations.
+Some diagnostic data is required, while some diagnostic data is optional. We give you the ability to choose whether to send us required or optional diagnostic data by using privacy controls, such as policy settings for organizations.
 
 There are two levels of diagnostic data for Microsoft Defender for Endpoint client software that you can choose from:
 
@@ -98,7 +98,7 @@ The following fields are considered common for all events:
 
 **Required diagnostic data** is the minimum data necessary to help keep Microsoft Defender for Endpoint secure, up to date, and perform as expected on the device it's installed on.
 
-Required diagnostic data helps to identify problems with Microsoft Defender for Endpoint that may be related to a device or software configuration. For example, it can help determine if a Microsoft Defender for Endpoint feature crashes more frequently on a particular operating system version, with newly introduced features, or when certain Microsoft Defender for Endpoint features are disabled. Required diagnostic data helps Microsoft detect, diagnose, and fix these problems more quickly so the impact to users or organizations is reduced.
+Required diagnostic data helps to identify problems with Microsoft Defender for Endpoint that may be related to a device or software configuration. For example, it can help determine if a Microsoft Defender for Endpoint feature crashes more frequently on a particular operating system version, with newly introduced features, or when certain Microsoft Defender for Endpoint features is disabled. Required diagnostic data helps Microsoft detect, diagnose, and fix these problems more quickly so the impact to users or organizations is reduced.
 
 #### Software setup and inventory data events
 
