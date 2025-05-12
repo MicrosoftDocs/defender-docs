@@ -24,6 +24,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## May 2025
 
+### Local administrators collection (using SAM-R queries) feature will be disabled
+Remote collection of local administrators' group members on endpoints (using SAM-R queries) feature in Microsoft Defender for Identity will be disabled by mid-May 2025. The details collected are used to build the potential lateral movement paths map. Alternative methods are currently being explored.
+
 ### New Health Issue
 
 New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
