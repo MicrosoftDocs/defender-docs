@@ -74,7 +74,8 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
     We recommend that you review the weights given to risk factors and risk categories when scoring a specific app. In the expanded app details, scroll down and hover an **i** button next to each risk factor name to learn more. For example:
 
-    :::image type="content" source="media/cac-weight.png" alt-text="Screenshot showing a risk calculation." lightbox="media/cac-weight.png":::
+    :::image type="content" source="media/disaster-recovery-plan-information.png" alt-text="Screenshot showing more information about the disaster recovery plan with a risk calculation score" lightbox="media/disaster-recovery-plan-information.png":::
+
 
 ## Customize the risk score
 
