@@ -46,10 +46,10 @@ In Microsoft 365 organizations with mailboxes in Exchange Online, alert policies
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- For information about other alert policy categories, see [Permissions required to view alerts](/purview/alert-policies#rbac-permissions-required-to-view-alerts).
+- For information about other alert policy categories, see [Permissions required to view alerts](/defender-xdr/alert-policies#rbac-permissions-required-to-view-alerts).
 
 ## Open alert policies
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.
 
-On the **Alert policy** page, you can view and create alert policies. For more information, see [Alert policies in Microsoft 365](/purview/alert-policies)
+On the **Alert policy** page, you can view and create alert policies. For more information, see [Alert policies in Microsoft 365](/defender-xdr/alert-policies)
