@@ -28,6 +28,17 @@ ms.date: 04/18/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+#### Alerts for activities related to open wireless connection and certificates are now detected as events
+
+May 2025
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the following as events instead of alerts:
+
+- Connecting or disconnecting to open wireless networks
+- Download/installation/removal of self-signed certificates
+
+These events can be viewed in the Timeline tab of a device page.
+
 #### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
 April 2025
