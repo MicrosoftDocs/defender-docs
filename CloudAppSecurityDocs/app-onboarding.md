@@ -26,8 +26,8 @@ All SaaS applications that exist in the Microsoft Entra ID catalog will be avail
 
 Fully performing and testing the procedures in this article requires that you have a session or access policy configured. For more information, see:
 
-- [Create Microsoft Defender for Cloud Apps access policies](https://example.com)
-- [Create Microsoft Defender for Cloud Apps session policies](https://example.com)
+- [Create Microsoft Defender for Cloud Apps access policies](https://learn.microsoft.com/en-us/defender-cloud-apps/access-policy-aad)
+- [Create Microsoft Defender for Cloud Apps session policies](https://learn.microsoft.com/en-us/defender-cloud-apps/session-policy-aad)
 
 ## Supported Apps
 
