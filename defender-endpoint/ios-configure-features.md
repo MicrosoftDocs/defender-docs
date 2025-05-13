@@ -167,9 +167,11 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
 6. Review and create the configuration policy.
 
-> [!NOTE]
-> **Open Wi-Fi Network Alert:**
-> An alert is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert is generated. However, connecting to a different open Wi-Fi network results in an immediate alert.
+> [!IMPORTANT]
+> Starting May 19, 2025, alerts for connecting or disconnecting to an open wireless network are now generated as events. Previously, an alert is generated when end-users connect to an open Wi-Fi network. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br>
+> With this change, security operations center (SOC) analysts can now view the connecting/disconnection to open wireless networks as events in the Timeline tab of a device page. In particular, events are generated following these activities:</br>
+> - Mobile devices connecting/disconnecting to open wireless networks, whether trusted or not. When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each is generated.</br>
+> For these changes to take effect, end-users must update to latest version of Defender for Endpoint on Android. Otherwise, the previous experience of generating alerts will still be in place.</br>
 
 ## Coexistence of multiple VPN profiles
 
