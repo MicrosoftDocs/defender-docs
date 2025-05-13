@@ -184,8 +184,7 @@ You can export all activities from the past six months by clicking the Export bu
 >   - Cloud App Security Administrator
 >   - Global Reader
 
-:When exporting data:
-
+When exporting data:
 - You can choose a date range of up to six months.
 - You can choose to exclude private activities.  
 - The exported file is limited to 100,000 records and is delivered in CSV format.
