@@ -392,7 +392,7 @@ For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/po
 This example modifies the existing malware filter policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions to the quarantined messages.
 
 ```powershell
-New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
+Set-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
 For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
@@ -441,7 +441,7 @@ This example creates a safe attachment policy named Research Department that blo
 New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block -QuarantineTag NoAccess
 ```
 
-For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
+For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy).
 
 This example modifies the existing safe attachment policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions.
 
@@ -449,7 +449,7 @@ This example modifies the existing safe attachment policy named Human Resources 
 Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
+For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safeattachmentpolicy).
 
 ## Configure global quarantine notification settings in the Microsoft Defender portal
 
@@ -505,8 +505,6 @@ To create customized quarantine notifications for up to three languages, do the 
 4. When you're finished on the **Quarantine notifications** flyout, select **Save**.
 
    :::image type="content" source="media/mdo-quarantine-policy-quarantine-notification-settings.png" alt-text="Quarantine notification settings flyout in the Microsoft Defender portal." lightbox="media/mdo-quarantine-policy-quarantine-notification-settings.png":::
-
-For information about the **Specify sender address**
 
 ### Customize all quarantine notifications
 
@@ -585,7 +583,7 @@ If you'd rather use PowerShell to view quarantine policies, do any of the follow
   Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
   ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Get-QuarantinePolicy](/powershell/module/exchange/get-quarantinepolicy).
 
 ## Modify quarantine policies in the Microsoft Defender portal
 
@@ -649,6 +647,9 @@ By default, the default alert policy named **User requested to release a quarant
 Admins can customize the email notification recipients or create a custom alert policy for more options.
 
 For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
+
+> [!NOTE]
+> Audit logging must be enabled in order to receive notifications for quarantine release requests. For instructions on how to turn auditing on or off, see [Turn auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable). 
 
 ## Appendix
 
