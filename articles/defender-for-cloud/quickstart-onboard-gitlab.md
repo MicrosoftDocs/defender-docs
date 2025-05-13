@@ -1,7 +1,7 @@
 ---
 title: Connect your GitLab groups
 description: Learn how to connect your GitLab Environment to Defender for Cloud.
-ms.date: 05/30/2024
+ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
 ---
@@ -28,7 +28,7 @@ To complete this quickstart, you need:
 | Aspect | Details |
 |--|--|
 | Release state: | Preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include legal terms that apply to Azure features that are in beta, in preview, or otherwise not yet released into general availability. |
-| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing).|
+| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).|
 | Required permissions: | **Account Administrator** with permissions to sign in to the Azure portal. <br> **Contributor** to create a connector on the Azure subscription. <br> **Group Owner** on the GitLab Group.|
 | Regions and availability: | Refer to the [support and prerequisites](devops-support.md) section for region support and feature availability.|
 | Clouds: | :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/x-no.png" border="false"::: National (Azure Government, Microsoft Azure operated by 21Vianet) |

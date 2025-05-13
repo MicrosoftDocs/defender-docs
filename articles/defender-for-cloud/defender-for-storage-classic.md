@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Storage (classic)
 description: Learn about the benefits and features of Microsoft Defender for Storage (classic).
-ms.date: 06/15/2023
+ms.date: 05/13/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
@@ -36,7 +36,7 @@ For more clarification about Defender for Storage (classic), see the [commonly a
 |Aspect|Details|
 |----|:----|
 |Release state:|General availability (GA)|
-|Pricing:|**Microsoft Defender for Storage (classic)** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/)|
+|Pricing:|**Microsoft Defender for Storage (classic)** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).|
 |Protected storage types:|[Blob Storage](https://azure.microsoft.com/services/storage/blobs/)  (Standard/Premium StorageV2, Block Blobs) <br>[Azure Files](/azure/storage/files/storage-files-introduction) (over REST API and SMB)<br>[Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) (Standard/Premium accounts with hierarchical namespaces enabled)|
 |Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Microsoft Azure operated by 21Vianet<br>:::image type="icon" source="./media/icons/no-icon.png"::: Connected AWS accounts|
 

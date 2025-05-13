@@ -4,7 +4,7 @@ description: Learn how to create rich, interactive reports for your Microsoft De
 ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
-ms.date: 12/06/2023
+ms.date: 05/13/2025
 ---
 
 # Create interactive reports with Azure Monitor workbooks
@@ -17,7 +17,7 @@ In Microsoft Defender for Cloud, you can access built-in workbooks to track your
 
 :::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="Screenshot that shows the Secure Score Over Time workbook.":::
 
-For pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+For pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 

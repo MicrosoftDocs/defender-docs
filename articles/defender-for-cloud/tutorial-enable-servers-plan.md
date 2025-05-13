@@ -4,7 +4,7 @@ description: Learn how to enable the Defender for Servers plan in Microsoft Defe
 ms.topic: install-set-up-deploy
 ms.author: elkrieger
 author: elazark
-ms.date: 03/05/2025
+ms.date: 05/13/2025
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
 
 ---
@@ -24,7 +24,7 @@ This article helps you deploy a Defender for Servers plan.
 --- | ---
 **Plan your deployment** | Review the [Defender for Servers planning guide](plan-defender-for-servers.md).<br/><br/>[Check permissions needed](plan-defender-for-servers-roles.md) to deploy and work with the plan, [choose a plan and deployment scope](plan-defender-for-servers-select-plan.md), and [understand how data is collected and stored](plan-defender-for-servers-data-workspace.md).
 **Compare plan features** | [Understand and compare](defender-for-servers-overview.md) Defender for Servers plan features.
-**Review pricing** | Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+**Review pricing** | Review Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 **Get an Azure subscription** | You need a Microsoft Azure subscription. [Sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if you need to.
 **Turn on Defender for Cloud** | Make sure Defender for Cloud is [available in the subscription](connect-azure-subscription.md).
 **Onboard AWS/GCP machines** | To protect AWS and GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.<br/><br/>By default the connection process onboards machines as Azure Arc-enabled VMs.

@@ -1,7 +1,7 @@
 ---
 title: Connect your GitHub organizations
 description: Learn how to connect your GitHub Environment to Defender for Cloud and enhance the security of your GitHub resources.
-ms.date: 05/30/2024
+ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
 #customer intent: As a user, I want to learn how to connect my GitHub Environment to Defender for Cloud so that I can enhance the security of my GitHub resources.
@@ -26,7 +26,7 @@ To complete this quick start, you need:
 | Aspect | Details |
 |--|--|
 | Release state: | General Availability. |
-| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing) |
+| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing) You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
 | Required permissions: | **Account Administrator** with permissions to sign in to the Azure portal. <br> **Contributor** to create the connector on the Azure subscription.  <br> **Organization Owner** in GitHub. |
 | GitHub supported versions: | GitHub Free, Pro, Team, and Enterprise Cloud |
 | Regions and availability: | Refer to the [support and prerequisites](devops-support.md) section for region support and feature availability.|

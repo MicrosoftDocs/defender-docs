@@ -2,7 +2,7 @@
 title: Protect your resources with the Resource Manager plan
 description: Learn how to enable the Defender for Resource Manager plan on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 06/29/2023
+ms.date: 05/13/2025
 ---
 
 # Protect your resources with Defender for Resource Manager
@@ -13,7 +13,7 @@ Microsoft Defender for Resource Manager automatically monitors the resource mana
 
 Learn more about [Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md).
 
-You can learn more about Defender for Resource Manager's pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+You can learn more about Defender for Resource Manager's pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 

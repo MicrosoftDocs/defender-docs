@@ -2,7 +2,7 @@
 title: Protect your Amazon Web Service (AWS) accounts containers with Defender for Containers
 description: Learn how to enable the Defender for Containers plan on your Amazon Web Service (AWS) accounts for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/24/2025
+ms.date: 05/13/2025
 ---
 
 # Protect your Amazon Web Service (AWS) containers with Defender for Containers
@@ -11,7 +11,7 @@ Defender for Containers in Microsoft Defender for Cloud is the cloud-native solu
 
 Learn more about [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
-You can learn more about Defender for Container's pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+You can learn more about Defender for Container's pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 
