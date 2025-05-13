@@ -31,39 +31,39 @@ items:
      href: deploy/deploy-defender-identity.md
    - name: Install classic sensors
      items:
-     - name: Quick installation guide
-       href: deploy/quick-installation-guide.md
-     - name: Configure connectivity settings
-       href: deploy/configure-proxy.md
-     - name: Test connectivity settings
-       href: deploy/test-connectivity.md
-     - name: Download the Defender for Identity sensor
-       href: deploy/download-sensor.md
-     - name: Install the Defender for Identity sensor
-       href: deploy/install-sensor.md
-     - name: Configure the Defender for Identity sensor
-       href: deploy/configure-sensor-settings.md
-     - name: Extra deployment scenarios
-       items:
-       - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
-         href: deploy/active-directory-federation-services.md
-       - name: Configure action accounts
-         href: deploy/manage-action-accounts.md
-       - name: Deploy for multiple Active Directory forests
-         href: deploy/multi-forest.md
-       - name: Configure a standalone sensor
-         items:
-       - name: Prerequisites for a standalone sensor
-        href: deploy/prerequisites-standalone.md
-      - name: Configure port mirroring
-        href: deploy/configure-port-mirroring.md
-        displayName: standalone
-      - name: Configure Windows Event Forwarding
-        href: deploy/configure-event-forwarding.md
-        displayName: standalone
-      - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
-        displayName: standalone
+      - name: Quick installation guide
+        href: deploy/quick-installation-guide.md
+      - name: Configure connectivity settings
+        href: deploy/configure-proxy.md
+      - name: Test connectivity settings
+        href: deploy/test-connectivity.md
+      - name: Download the Defender for Identity sensor
+        href: deploy/download-sensor.md
+      - name: Install the Defender for Identity sensor
+        href: deploy/install-sensor.md
+      - name: Configure the Defender for Identity sensor
+        href: deploy/configure-sensor-settings.md
+      - name: Extra deployment scenarios
+        items:
+          - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
+            href: deploy/active-directory-federation-services.md
+          - name: Configure action accounts
+            href: deploy/manage-action-accounts.md
+          - name: Deploy for multiple Active Directory forests
+            href: deploy/multi-forest.md
+          - name: Configure a standalone sensor
+            items:
+              - name: Prerequisites for a standalone sensor
+                href: deploy/prerequisites-standalone.md
+              - name: Configure port mirroring
+                href: deploy/configure-port-mirroring.md
+                displayName: standalone
+              - name: Configure Windows Event Forwarding
+                href: deploy/configure-event-forwarding.md
+                displayName: standalone
+              - name: Listen for SIEM events
+                href: deploy/configure-event-collection.md
+                displayName: standalone
   - name: Activate Defender for Identity Sensor (Preview)
     items:
     - name: Activate Defender for Identity capabilities on your domain controller
