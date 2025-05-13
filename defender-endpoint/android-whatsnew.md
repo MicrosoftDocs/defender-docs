@@ -37,9 +37,7 @@ Starting May 19, 2025, security operations center (SOC) analysts can now view th
 - Connecting or disconnecting to open wireless networks
 - Download/installation/removal of self-signed certificates
 
-These events can be viewed in the Timeline tab of a device page.
-
-Commercial customers are advised to update to the latest version of Defender for Endpoint on Android for these changes to take effect. GCC tenants, however, will continue to receive alerts for these events. 
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
 
 #### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
