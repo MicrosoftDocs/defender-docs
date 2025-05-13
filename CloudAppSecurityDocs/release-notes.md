@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 02/20/2025
+ms.date: 05/13/2025
 ms.topic: overview
 ---
 
@@ -26,6 +26,14 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 > This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.\
 > Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
 
+
+## May 2025 
+
+### New and improved Cloud App Catalog page
+
+The Cloud app catalog page has been revamped to meet security standards. The new design includes improved navigation, making it easier for you to discover and manage your cloud applications.
+
+For more information, see [Cloud app catalog](risk-score.md).
 
 ## April 2025
 

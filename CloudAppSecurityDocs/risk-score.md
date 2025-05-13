@@ -1,7 +1,7 @@
 ---
 title: Cloud app catalog and risk scores | Microsoft Defender for Cloud Apps
 description: Learn about the Microsoft Defender for Cloud Apps' cloud app catalog, and how to use and customize your cloud app risk score.
-ms.date: 09/07/2023
+ms.date: 05/12/2025
 ms.topic: how-to
 #CustomerIntent: As a Defender for Cloud Apps user, I want to understand how to use the Cloud app catalog and my cloud app risk scores.
 ---
