@@ -180,7 +180,7 @@ Use the following procedure to enable network protection on domain-joined comput
 
 ### PowerShell
 
-1. On your Windows device, click Start, type `powershell`, right-click **Windows PowerShell**, and then select **Run as administrator**.
+1. On your Windows device, click **Start**, type `powershell`, right-click **Windows PowerShell**, and then select **Run as administrator**.
 
 2. Run the following cmdlet:
 
@@ -195,7 +195,7 @@ Use the following procedure to enable network protection on domain-joined comput
    |Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
    |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
 
-   [!IMPORTANT]
+   > [!IMPORTANT]
    > For Domain Controllers and Microsoft Exchange servers, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
    
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
