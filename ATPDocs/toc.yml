@@ -27,7 +27,7 @@ items:
     href: deploy/capacity-planning.md
 - name: Deploy
   items:
-  - name: Onboard and configure classic sensors
+  - name: Install classic sensors
     items:
     - name: Overview
       href: deploy/deploy-defender-identity.md
@@ -43,27 +43,6 @@ items:
       href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
-  - name: Install sensor (Preview)
-    items:
-    - name: Activate Defender for Identity capabilities on your domain controller
-      href: deploy/activate-capabilities.md
-  - name: Post-deployment configuration
-    items:
-    - name: Configure event collection
-      items:
-      - name: Event collection overview 
-        href: deploy/event-collection-overview.md
-      - name: Configure audit policies for Windows event logs
-        href: deploy/configure-windows-event-collection.md
-    - name: Configure a Directory Service account
-      items:
-      - name: Overview
-        href: deploy/directory-service-accounts.md
-        displayName: Directory Service Account, DSA
-      - name: Configure a DSA with a gMSA
-        href: deploy/create-directory-service-account-gmsa.md
-    - name: Configure remote calls to SAM
-      href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
     items:
     - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
@@ -85,6 +64,27 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
+  - name: Activate Defender for Identity Sensor (Preview)
+    items:
+    - name: Activate Defender for Identity capabilities on your domain controller
+      href: deploy/activate-capabilities.md
+- name: Post-deployment configuration
+  items:
+  - name: Configure event collection
+    items:
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Configure audit policies for Windows event logs
+        href: deploy/configure-windows-event-collection.md
+      - name: Configure a Directory Service account
+        items:
+      - name: Overview
+        href: deploy/directory-service-accounts.md
+        displayName: Directory Service Account, DSA
+      - name: Configure a DSA with a gMSA
+        href: deploy/create-directory-service-account-gmsa.md
+      - name: Configure remote calls to SAM
+        href: deploy/remote-calls-sam.md
 - name: Integrate with identity services
   items:
   - name: Integrate Defender for Identity with PAM services
