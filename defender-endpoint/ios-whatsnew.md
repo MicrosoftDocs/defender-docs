@@ -29,13 +29,13 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-#### Alerts for activities related to certificates are now detected as events
+#### Alerts for activities related to open wireless connections are now detected as events
 
 **May 2025**
 
-Starting May 19, 2025, security operations center (SOC) analysts can now view the download/installation/removal of self-signed certificates as events instead of alerts. These events can be viewed in the Timeline tab of a device page.
+Starting May 19, 2025, alerts for connecting or disconnecting to an open wireless network are now generated as events. Previously, an alert is generated when end-users connect to an open Wi-Fi network. These events can be viewed in the Timeline tab of a device page.
 
-Commercial customers are advised to update to the latest version of Defender for Endpoint on Android for these changes to take effect. GCC tenants, however, will continue to receive alerts for these events. 
+For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
