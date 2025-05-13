@@ -43,6 +43,22 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### May-2025 Build: 101.25032.0008 | Release version: 30.125032.0008.0
+
+|Build:             |**101.25032.0008**    |
+|-------------------|----------------------|
+|Released:          |**May 12, 2025**      |
+|Published:         |**May 13, 2025**      |
+|Release version:   |**30.125032.0008.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+
+- Removes external dependency of MDE Netfilter and libpcre from MDE package
+
+- Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
+
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 
 |Build:             |**101.25022.0002**    |
