@@ -1,7 +1,7 @@
 ---
 title: Deploy Microsoft Defender for Identity
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 08/27/2023
+ms.date: 05/13/2025
 ms.topic: how-to
 ---
 
@@ -9,13 +9,15 @@ ms.topic: how-to
 
 This article provides an overview of the full deployment process for Microsoft Defender for Identity, including steps for preparation, deployment, and extra steps for specific scenarios.
 
-Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your Identity Threat Detection and Response (ITDR) or extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Identity uses signals from your Identity Infrastructure servers like domain controllers, AD FS / AD CS and Microsoft Entra Connect servers to detect threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
+Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your Identity Threat Detection and Response (ITDR) or extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Identity uses signals from your Identity Infrastructure servers like domain controllers, Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) and Microsoft Entra Connect servers to detect threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
 
-For a quick set of deployment highlights, see [Quick installation guide](quick-installation-guide.md).
+
+> [!IMPORTANT]
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
 
 ## Prerequisites
 
-Before you start, make sure that you have access to Microsoft Defender XDR at least as a Security administrator, and you have one of the following licenses:
+Before you start, make sure that you have access to Microsoft Defender XDR at least as a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles), and you have one of the following licenses:
 
 [!INCLUDE [licenses](../includes/licenses.md)]
 
@@ -56,6 +58,34 @@ Use the following steps to prepare for deploying Defender for Identity:
 > [!IMPORTANT]
 > The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
 
+## Quick steps: Install classic sensors
+
+Watch the following video for a step-by-step demo and to learn about:
+
+- The importance of installing Defender for Identity sensors to protect your organization against identity-based attacks
+- Downloading and installing the sensor
+- Finding potential sensor and configuration health issues
+- Viewing identity-related posture assessments in Microsoft Secure Score
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de930a92-f552-4c09-92dc-1ab03c2e1131]
+
+> [!NOTE]
+> Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS / Microsoft Entra Connect farm or cluster, we recommend installing the sensor on each AD FS / AD CS / Microsoft Entra Connect server.
+
+This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
+
+**To download and install the classic sensor**:
+
+1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com).
+1. Browse to **System** > **Settings** > **Identities** > **Sensors** > **Add sensor**
+1. Select **Download installer** and save the file in a location you can access from your domain controller.
+1. Copy the **Access key** value, which you need for the installation.
+
+    > [!TIP]
+    > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
+
+1. From the domain controller, run the installer you'd downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
+
 ## Deploy Defender for Identity classic sensor
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
@@ -87,6 +117,6 @@ The following procedures help you complete the deployment process:
 
 ## Next step
 
-> [!div class="step-by-step"]
-> [Defender for Identity prerequisites »](prerequisites.md)
+ For deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.
+
 

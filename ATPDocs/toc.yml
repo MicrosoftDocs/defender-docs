@@ -27,12 +27,10 @@ items:
     href: deploy/capacity-planning.md
 - name: Deploy
   items:
-   - name: Overview
-     href: deploy/deploy-defender-identity.md
    - name: Install classic sensors
      items:
-      - name: Quick installation guide
-        href: deploy/quick-installation-guide.md
+      - name: Deploy Defender for Identity classic sensor
+        href: deploy/deploy-defender-identity.md
       - name: Configure connectivity settings
         href: deploy/configure-proxy.md
       - name: Test connectivity settings

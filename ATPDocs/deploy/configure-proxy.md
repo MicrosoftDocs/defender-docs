@@ -21,6 +21,7 @@ To ensure maximal security and data privacy, Defender for Identity uses certific
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
+- To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
 - If your proxy or firewall uses explicit allowlists, we also recommend ensuring that the following URLs are allowed:
 
     - `crl.microsoft.com`
