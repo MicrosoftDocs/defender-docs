@@ -64,42 +64,15 @@ You can use Registry Editor to check the status of network protection.
 
 To enable network protection, you can use one of the following methods:
 
-- [PowerShell](#powershell)
-- [Mobile Device Management (MDM)](#mobile-device-management-mdm)
+
+
 - [Microsoft Intune](#microsoft-intune)
+- [Mobile Device Management (MDM)](#mobile-device-management-mdm)
 - [Group Policy](#group-policy)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
+- [PowerShell](#powershell)
 
-### PowerShell
 
-1. On your Windows device, select Start, type `powershell`, right-click **Windows PowerShell**, and then select **Run as administrator**.
-
-2. Run the following cmdlet:
-
-   ```PowerShell
-   Set-MpPreference -EnableNetworkProtection Enabled
-   ```
-
-3. For Windows Server, use the additional commands that listed in the following table:
-
-   | Windows Server version | Commands |
-   |---|---|
-   | Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
-   | Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
-
-4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
-
-   ```PowerShell
-   Set-MpPreference -EnableNetworkProtection AuditMode
-   ```
-
-   To turn off network protection, use the `Disabled` parameter instead of `AuditMode` or `Enabled`.
-
-### Mobile device management (MDM)
-
-1. Use the [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection) configuration service provider (CSP) to enable or disable network protection or enable audit mode.
-
-2. [Update Microsoft Defender antimalware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you enable or disable network protection or enable audit mode.
 
 ### Microsoft Intune
 
@@ -155,6 +128,14 @@ To enable network protection, you can use one of the following methods:
 
 8. Review all the information, and then select **Create**.
 
+
+### Mobile device management (MDM)
+
+1. Use the [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection) configuration service provider (CSP) to enable or disable network protection or enable audit mode.
+
+2. [Update Microsoft Defender antimalware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you enable or disable network protection or enable audit mode.
+
+
 ### Group Policy
 
 Use the following procedure to enable network protection on domain-joined computers or on a standalone computer.
@@ -182,6 +163,7 @@ Use the following procedure to enable network protection on domain-joined comput
 
 5. (This step is optional.) Follow the steps in [Check if network protection is enabled](#check-if-network-protection-is-enabled) to verify that your Group Policy settings are correct.
 
+
 ### Microsoft Configuration Manager
 
 1. Open the Configuration Manager console.
@@ -202,6 +184,32 @@ Use the following procedure to enable network protection on domain-joined comput
 6. Complete the rest of the steps, and save the policy.
 
 7. From the ribbon, select **Deploy** to deploy the policy to a collection.
+
+
+### PowerShell
+
+1. On your Windows device, select Start, type `powershell`, right-click **Windows PowerShell**, and then select **Run as administrator**.
+
+2. Run the following cmdlet:
+
+   ```PowerShell
+   Set-MpPreference -EnableNetworkProtection Enabled
+   ```
+
+3. For Windows Server, use the additional commands that listed in the following table:
+
+   | Windows Server version | Commands |
+   |---|---|
+   | Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
+   | Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
+
+4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
+
+   ```PowerShell
+   Set-MpPreference -EnableNetworkProtection AuditMode
+   ```
+
+   To turn off network protection, use the `Disabled` parameter instead of `AuditMode` or `Enabled`.
 
 #### Important information about removing Exploit Guard settings from a device
 
