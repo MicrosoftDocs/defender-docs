@@ -74,6 +74,14 @@ Watch the following video for a step-by-step demo and to learn about:
 
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
 
+### Minimum system requirements
+
+This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
+
+When running as a virtual machine, all memory is required to be allocated to the virtual machine always. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
+
+[!INCLUDE [server-requirements](../includes/server-requirements.md)]
+
 **To download and install the classic sensor**:
 
 1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com).
@@ -81,10 +89,16 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 1. Select **Download installer** and save the file in a location you can access from your domain controller.
 1. Copy the **Access key** value, which you need for the installation.
 
-    > [!TIP]
-    > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
+> [!TIP]
+> You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
 1. From the domain controller, run the installer you'd downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
+
+### Schedule a maintenance window (optional)
+
+During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 will be installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending.
+
+When installing your sensors, consider scheduling a maintenance window for your domain controllers.
 
 ## Deploy Defender for Identity classic sensor
 
