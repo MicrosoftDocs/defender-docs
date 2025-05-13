@@ -196,13 +196,13 @@ Use the following procedure to enable network protection on domain-joined comput
    Set-MpPreference -EnableNetworkProtection Enabled
    ```
 
-3. For Windows Server, use the additional commands that listed in the following table:
+1. For Windows Server, use the additional commands that listed in the following table:
 
    | Windows Server version | Commands |
    |---|---|
-   | Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
-   | Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
-
+   |Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` |
+   |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
+   
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
    ```PowerShell
