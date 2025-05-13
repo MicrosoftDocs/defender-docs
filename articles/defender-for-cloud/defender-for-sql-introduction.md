@@ -1,7 +1,7 @@
 ---
 title: Benefits and Features of Defender for Azure SQL Databases
 description: Learn how Microsoft Defender for Azure SQL Databases helps you discover, track, and mitigate vulnerabilities, and alerts you to potential threats.
-ms.date: 03/12/2024
+ms.date: 05/13/2025
 ms.topic: overview
 ms.custom: references_regions
 ms.author: dacurwin
@@ -13,7 +13,7 @@ author: dcurwin
 
 In Microsoft Defender for Cloud, the *Defender for Azure SQL Databases* plan within Defender for Databases helps you discover and mitigate potential [database vulnerabilities](sql-azure-vulnerability-assessment-overview.md). It alerts you to anomalous activities that might indicate a threat to your databases.
 
-When you enable Defender for Azure SQL Databases, all supported resources within the subscription are protected. Future resources that you create on the same subscription will also be protected. For information about billing, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+When you enable Defender for Azure SQL Databases, all supported resources within the subscription are protected. Future resources that you create on the same subscription will also be protected. For information about billing, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 Defender for Azure SQL Databases helps protect read/write replicas of:
 
