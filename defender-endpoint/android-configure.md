@@ -109,7 +109,13 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > [!NOTE]
 > - The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
 > - To ensure comprehensive protection against Wi-Fi threats, users should enable location permission and select the "Allow All the Time" option. This permission is optional but highly recommended, even when the app is not actively in use. If location permission is denied, Defender for Endpoint will only offer limited protection against network threats and will only safeguard users from rogue certificates.
-**An open wi-fi network alert** is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert will be generated. However, connecting to a different open Wi-Fi network will result in an immediate alert.
+
+> [!IMPORTANT]
+> Starting May 19, 2025, alerts for connecting or disconnecting to an open wireless network are now generated as events. Previously, an alert is generated when end-users connect to an open Wi-Fi network. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br>
+> With this change, security operations center (SOC) analysts can now view the connecting/disconnection to open wireless networks and download/installation/removal of self-signed certificates as events in the Timeline tab of a device page. In particular, events are generated following these activities:</br>
+> - Mobile devices connecting/disconnecting to open wireless networks, whether trusted or not. When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each is generated.</br>
+> - End-users download/install/delete allow-listed certificates.</br>
+> For these changes to take effect, end-users must update to latest version of Defender for Endpoint on Android. Otherwise, the previous experience of generating alerts will still be in place.</br>
 
 ## Privacy Controls
 
