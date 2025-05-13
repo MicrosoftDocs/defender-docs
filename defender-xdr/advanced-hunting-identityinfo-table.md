@@ -19,7 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 04/22/2024
+ms.date: 05/13/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -86,6 +86,7 @@ Defender portal users who have not onboarded a Sentinel workspace that has the U
 | `UserAccountControl` | `string` | Security attributes of the user account in the Active Directory domain |
 | `IdentityEnvironment` | `string` | Environment where the identity is used; possible values: CloudOnly, Hybrid, On-premises |
 | `SourceProviders` | `dynamic` | Source providers of the accounts for the identity; possible values: ActiveDirectory, EntraID, Okta |
+| `GroupMembership`	| `dynamic` |	Microsoft Entra ID groups where the user account is a member |
 
 
 <a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps or Microsoft Defender for Endpoint P2 licensing.<br>
