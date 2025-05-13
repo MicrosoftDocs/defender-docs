@@ -1,12 +1,8 @@
 ---
 title: Microsoft Defender for Cloud Regional Availability
 description: Discover the regional availability of Microsoft Defender for Cloud plans across Azure, AWS, and GCP. Find supported services by region and platform.
-author: dcurwin
-contributors:
 ms.topic: concept-article
 ms.date: 05/13/2025
-ms.author: dcurwin
-ms.reviewer: dacurwin
 ms.custom: references_regions 
 ai-usage: ai-assisted
 
@@ -411,4 +407,4 @@ asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
 
 ## Related content
 
-- [Azure products availability by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region//)
+- [Azure products availability by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/)
