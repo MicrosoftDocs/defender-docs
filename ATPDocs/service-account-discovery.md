@@ -17,7 +17,7 @@ Service accounts are classified into several types:
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria such as having a [Service Principal Name ](/windows/win32/ad/service-principal-names)(SPN) or password never expires assigned to them and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 Service account types are displayed in the Identity Info table within Advanced Hunting.
 
@@ -96,8 +96,10 @@ When you investigate a specific Service account, you'll see the following detail
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
 
-
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
+## Related content
+- [Service principal names](/windows/win32/ad/service-principal-names)
+- [How to configure SPN](/windows-server/identity/ad-ds/manage/how-to-configure-spn?tabs=add%2Caduc)
 
 If you run into any problems, we're here to help. To get assistance or support for your product issue, see how to open a support ticket at [Microsoft Defender for Identity support](support.md).
