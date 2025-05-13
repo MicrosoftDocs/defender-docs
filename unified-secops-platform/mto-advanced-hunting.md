@@ -32,6 +32,8 @@ Multiple workspaces per tenant are supported in multitenant Advanced hunting as 
 
 Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
 
+
+
 ## Run cross-tenant queries
 
 You can run any query that you already have access to in the multitenant management **Advanced hunting** page.
@@ -72,8 +74,6 @@ You can run any query that you already have access to in the multitenant managem
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 
-
-
 ## Run cross-workspace queries (Preview)
 
 To run queries across multiple workspaces in the same tenant, use the [workspace( ) expression](/azure/azure-monitor/logs/cross-workspace-query#query-across-log-analytics-workspaces-using-workspace), with the workspace identifier as the argument in your query to refer to a table in a different workspace.
@@ -98,8 +98,17 @@ For more information, see [Query multiple workspaces](/azure/sentinel/extend-sen
 > [!NOTE]
 > If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
 
+## View schema tables
 
-## Custom detection rules
+You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables) in the left pane inside the advanced hunting page under the **Schema** tab. 
+
+The schema list is a unified view of all tables from all your tenants regardless of the tenant selected in the upper right tenant selector.
+
+This could mean that some tables that appear here might only be available for query in some tenants, like custom Microsoft Sentinel tables.
+
+
+## View and manage custom detection rules
+
 
 You can also manage custom detection rules from multiple tenants in the custom detection rules page.
 
