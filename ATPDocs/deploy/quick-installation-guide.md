@@ -27,7 +27,7 @@ This section lists the prerequisites required before installing the Defender for
 - System requirements
 - Recommendations for best practices
 
-Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Levels (FFL) of Windows 2003 and above.
 
 ### Licensing requirements
 
@@ -48,7 +48,7 @@ For more information, see [Microsoft Defender for Identity role groups](../role-
 
 ### Minimum system requirements
 
-This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
+This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of two cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
 
 When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
@@ -76,7 +76,7 @@ When installing your sensors, consider scheduling a maintenance window for your 
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
 
 > [!NOTE]
-> Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS / Entra Connect farm or cluster, we recommend installing the sensor on each AD FS / AD CS / Entra Connect server.
+> Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS / Microsoft Entra Connect farm or cluster, we recommend installing the sensor on each AD FS / AD CS / Microsoft Entra Connect server.
 >
 
 **To download and install the classic sensor**:
@@ -84,7 +84,7 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com).
 1. Browse to **System** > **Settings** > **Identities** > **Sensors** > **Add sensor**
 1. Select **Download installer** and save the file in a location you can access from your domain controller.
-1. Copy the **Access key** value, which you'll need for the installation.
+1. Copy the **Access key** value, which you need for the installation.
 
     > [!TIP]
     > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
@@ -94,4 +94,4 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 ## Next step
 
-For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.
+For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md). For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.

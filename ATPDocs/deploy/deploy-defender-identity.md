@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article provides an overview of the full deployment process for Microsoft Defender for Identity, including steps for preparation, deployment, and extra steps for specific scenarios.
 
-Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your Identity Threat Detection and Response (ITDR) or extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Identity uses signals from your Identity Infrastructure servers like domain controllers, AD FS / AD CS and Entra Connect servers to detect threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
+Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your Identity Threat Detection and Response (ITDR) or extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Identity uses signals from your Identity Infrastructure servers like domain controllers, AD FS / AD CS and Microsoft Entra Connect servers to detect threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
 
 For a quick set of deployment highlights, see [Quick installation guide](quick-installation-guide.md).
 
@@ -82,7 +82,7 @@ The following procedures help you complete the deployment process:
 >
 
 > [!IMPORTANT]
-> Installing a Defender for Identity sensor on an AD FS / AD CS and Entra Connect servers requires extra steps. For more information, see [Configuring sensors for AD FS, AD CS and Entra Connect](active-directory-federation-services.md).
+> Installing a Defender for Identity sensor on an AD FS / AD CS and Microsoft Entra Connect servers requires extra steps. For more information, see [Configuring sensors for AD FS, AD CS, and Microsoft Entra Connect](active-directory-federation-services.md).
 > 
 
 ## Next step

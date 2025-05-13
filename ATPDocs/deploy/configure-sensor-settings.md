@@ -58,7 +58,7 @@ After the Defender for Identity sensor is installed, do the following to view an
     |Name  |Description  |
     |---------|---------|
     |**Description**     |  Optional. Enter a description for the Defender for Identity sensor.       |
-    |**Domain Controllers (FQDN)**     |  Required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.   <br><br>Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**. <br><br>For any servers you define in the **Domain Controllers** list: <br><br> - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected. <br><br> - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest. |
+    |**Domain Controllers (FQDN)**     |  Required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and can't be modified for the Defender for Identity sensor.   <br><br>Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**. <br><br>For any servers you define in the **Domain Controllers** list: <br><br> - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected. <br><br> - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest. |
     |**Capture Network adapters**     | Required.      <br><br>  - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.<br><br>      - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.      |
 
 1. On the **Sensors** page, select **Export** to export a list of your sensors to a **.csv** file. For example:
@@ -70,7 +70,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 Use the following procedures to validate your Defender for Identity sensor installation.
 
 > [!NOTE]
-> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment).
+> If you're installing on an AD FS or AD CS server, you use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment).
 >
 
 
