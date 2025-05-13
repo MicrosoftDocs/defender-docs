@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 03/27/2025
+ms.date: 05/15/2025
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
