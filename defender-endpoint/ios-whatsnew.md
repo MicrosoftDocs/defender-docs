@@ -35,6 +35,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 Starting May 19, 2025, security operations center (SOC) analysts can now view the download/installation/removal of self-signed certificates as events instead of alerts. These events can be viewed in the Timeline tab of a device page.
 
+Commercial customers are advised to update to the latest version of Defender for Endpoint on Android for these changes to take effect. GCC tenants, however, will continue to receive alerts for these events. 
+
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
 **March 2025**
