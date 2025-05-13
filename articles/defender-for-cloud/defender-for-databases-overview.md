@@ -1,7 +1,7 @@
 ---
 title: Overview of Defender for Databases
 description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL, MySQL, and MariaDB.
-ms.date: 12/23/2024
+ms.date: 05/13/2025
 ms.topic: overview
 ms.author: dacurwin
 author: dcurwin
@@ -22,7 +22,7 @@ Defender for Databases includes four offerings that relate to database types:
 
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md): Offers security for Azure Cosmos DB by providing threat protection and real-time alerts to help safeguard your data.
 
-Each of these database protection plans is priced separately. For more information, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+Each of these database protection plans is priced separately. For more information, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Key features
 
