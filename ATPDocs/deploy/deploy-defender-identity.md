@@ -17,7 +17,10 @@ Defender for Identity is a primary component of a [Zero Trust](/security/zero-tr
 
 ## Prerequisites
 
-Before you start, make sure that you have access to Microsoft Defender XDR at least as a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles), and you have one of the following licenses:
+Before you start, make sure that you meet the basic setup requirements: 
+
+- You have access to Microsoft Defender XDR with at least as a [Security administrator role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+- You have one of the following licenses:
 
 [!INCLUDE [licenses](../includes/licenses.md)]
 
@@ -30,7 +33,7 @@ This section describes how to start onboarding to Defender for Identity.
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com). 
 1. From the navigation menu, select any item, such as **Incidents & alerts**, **Hunting**, **Action center**, or **Threat analytics** to initiate the onboarding process.
 
-You'll then be given the option to deploy supported services, including Microsoft Defender for Identity. Cloud components required for Defender for Identity are automatically added when you open the Defender for Identity settings page.
+You see the option to deploy supported services, including Microsoft Defender for Identity. When you open the Defender for Identity settings page, the required cloud components are added automatically.
 
 For more information, see:
 
@@ -72,13 +75,15 @@ Watch the following video for a step-by-step demo and to learn about:
 > [!NOTE]
 > Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS / Microsoft Entra Connect farm or cluster, we recommend installing the sensor on each AD FS / AD CS / Microsoft Entra Connect server.
 
-This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
+This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. 
 
 ### Minimum system requirements
 
-This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
+Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
 
 When running as a virtual machine, all memory is required to be allocated to the virtual machine always. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
+
+Defender for Identity sensors is supported on the following operating systems:
 
 [!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
@@ -92,17 +97,17 @@ When running as a virtual machine, all memory is required to be allocated to the
 > [!TIP]
 > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
-1. From the domain controller, run the installer you'd downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
+1. From the domain controller, run the installer you downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
 
 ### Schedule a maintenance window (optional)
 
-During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 will be installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending.
+During installation, the setup adds .NET Framework 4.7, if it's not already installed. The process might trigger a server reboot, especially if a restart is already pending. 
 
 When installing your sensors, consider scheduling a maintenance window for your domain controllers.
 
 ## Deploy Defender for Identity classic sensor
 
-After you've prepared your system, use the following steps to deploy Defender for Identity:
+After you prepare your system, follow these steps:
 
 1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
 1. [Download the Defender for Identity classic sensor](download-sensor.md).
@@ -131,6 +136,6 @@ The following procedures help you complete the deployment process:
 
 ## Next step
 
- For deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.
+ - For deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.
 
 
