@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
-ms.date: 03/03/2024
+ms.date: 05/13/2025
 ---
 
 # Protect your APIs with Defender for APIs
@@ -43,7 +43,7 @@ When selecting a plan, consider these points:
 - The API traffic counted towards the billing is reset to 0 at the start of each month (every billing cycle).
 - The overages are computed on API traffic exceeding the entitlement limit per plan selection during the month for your entire subscription.
 
-To select the best plan for your subscription from the Microsoft Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/), follow these steps and choose the plan that matches your subscriptions’ API traffic requirements:  
+To select the best plan for your subscription from the Microsoft Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Follow these steps to choose the plan that matches your subscriptions’ API traffic requirements:  
 
 1. Sign into the [portal](https://portal.azure.com/), and in Defender for Cloud, select **Environment settings**.
 

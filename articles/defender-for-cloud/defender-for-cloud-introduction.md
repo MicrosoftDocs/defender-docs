@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. Learn how to enhance your cloud security posture. 
 ms.topic: overview
-ms.date: 02/23/2025
+ms.date: 05/13/2025
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---
 
@@ -17,7 +17,7 @@ Microsoft Defender for Cloud is a cloud-native application protection platform (
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
 > [!NOTE]
-> For Defender for Cloud pricing information, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+> For Defender for Cloud pricing information, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 The Microsoft 365 Defender portal helps security teams investigate attacks on cloud resources, devices, and identities. Microsoft 365 Defender provides an overview of attacks, including suspicious and malicious events in cloud environments. Microsoft 365 Defender achieves this by correlating all alerts and incidents, including cloud alerts and incidents.
 

@@ -4,7 +4,7 @@ description: Learn about how the Log Analytics agent collects data from your wor
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 07/31/2023
+ms.date: 05/13/2025
 ---
 
 # Collect data from your workloads with the Log Analytics agent
@@ -70,7 +70,7 @@ When you select a data collection tier in Microsoft Defender for Cloud, the secu
 
 The enhanced security protections of Defender for Cloud are required for storing Windows security event data. Learn more about [the enhanced protection plans](defender-for-cloud-introduction.md).
 
-You might be charged for storing data in Log Analytics. For more information, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+You might be charged for storing data in Log Analytics. For more information, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ### Information for Microsoft Sentinel users
 

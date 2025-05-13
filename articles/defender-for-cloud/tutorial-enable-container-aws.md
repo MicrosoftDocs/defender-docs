@@ -11,7 +11,7 @@ Defender for Containers in Microsoft Defender for Cloud is the cloud-native solu
 
 Learn more about [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
-You can learn more about Defender for Container's pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+You can learn more about Defender for Container's pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 
