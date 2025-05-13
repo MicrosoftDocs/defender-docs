@@ -2,7 +2,7 @@
 title: Connect your Azure subscriptions
 description: Learn how to connect your Azure subscriptions to Microsoft Defender for Cloud and protect your cloud-based applications.
 ms.topic: install-set-up-deploy
-ms.date: 03/05/2025
+ms.date: 05/13/2025
 ms.custom: mode-other
 ---
 
@@ -16,7 +16,7 @@ Microsoft Defender for Cloud is a cloud-native application protection platform (
 - A cloud security posture management (CSPM) solution that surfaces actions you can take to prevent breaches.
 - A cloud workload protection platform (CWPP) with specific protections for servers, containers, storage, databases, and other workloads.
 
-Defender for Cloud includes Foundational CSPM capabilities and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) for free. You can add other paid plans to secure all aspects of your cloud resources. You can try Defender for Cloud for free for the first 30 days. After 30 days, charges begin in accordance with the plans enabled in your environment. To learn more about these plans and their costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+Defender for Cloud includes Foundational CSPM capabilities and access to [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) for free. You can add other paid plans to secure all aspects of your cloud resources. You can try Defender for Cloud for free for the first 30 days. After 30 days, charges begin in accordance with the plans enabled in your environment. To learn more about these plans and their costs, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [Estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 > [!IMPORTANT]
 > Malware scanning in Defender for Storage isn't included for free in the first 30-day trial and will be charged from the first day in accordance with the pricing scheme available on the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
