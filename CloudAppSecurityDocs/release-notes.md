@@ -33,7 +33,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 The Cloud app catalog page has been revamped to meet security standards. The new design includes improved navigation, making it easier for you to discover and manage your cloud applications.
 
-For more information, see [Cloud app catalog](risk-score.md).
+For more information, see: [Find your cloud app and calculate risk scores](risk-score.md).
 
 ## April 2025
 
