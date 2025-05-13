@@ -57,6 +57,8 @@ What's new
 
 - Removes external dependency of MDE Netfilter and libpcre from MDE package
 
+- Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
+
 - Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
 
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
