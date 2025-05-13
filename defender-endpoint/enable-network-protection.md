@@ -213,9 +213,11 @@ Use the following procedure to enable network protection on domain-joined comput
 
 #### Important information about removing Exploit Guard settings from a device
 
-Once an Exploit Guard policy is deployed using Configuration Manager, Exploit Guard settings aren't removed from the clients if you remove the deployment. Furthermore, if you remove the client's Exploit Guard deployment, `Delete not supported` is recorded in the client's `ExploitGuardHandler.log` in Configuration Manager.  <!--CMADO8538577-->
+Once an Exploit Guard policy is deployed using Configuration Manager, Exploit Guard settings aren't removed from the clients if you remove the deployment. Furthermore, if you remove the client's Exploit Guard deployment, `Delete not supported` is recorded in the client's `ExploitGuardHandler.log` in Configuration Manager.
+<!--CMADO8538577-->
 
-Use the following PowerShell script in the SYSTEM context to remove Exploit Guard settings correctly:<!--CMADO9907132-->
+Use the following PowerShell script in the SYSTEM context to remove Exploit Guard settings correctly: 
+<!--CMADO9907132-->
 
 ```powershell
 $defenderObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_Defender02" -Filter "InstanceID='Defender' and ParentID='./Vendor/MSFT/Policy/Config'"
