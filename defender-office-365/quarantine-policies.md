@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 05/21/2024
+ms.date: 05/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -649,7 +649,7 @@ Admins can customize the email notification recipients or create a custom alert 
 For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
 
 > [!NOTE]
-> Audit logging must be enabled in order to receive notifications for quarantine release requests. For instructions on how to turn auditing on or off, see [Turn auditing on or off](https://learn.microsoft.com/en-us/purview/audit-log-enable-disable). 
+> Audit logging must be enabled in order to receive notifications for quarantine release requests (it's on by default). For instructions on how to turn auditing on or off, see [Turn auditing on or off](/purview/audit-log-enable-disable). 
 
 ## Appendix
 
