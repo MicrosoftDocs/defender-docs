@@ -37,7 +37,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns below is available for Defender portal users who have onboarded Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
-Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-specific columns](advanced-hunting-identityinfo-table.md#ueba-specific-columns]).
+Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns]).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
