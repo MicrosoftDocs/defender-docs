@@ -20,6 +20,16 @@ ms.topic: concept-article
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
 
+## May 2025
+
+- [Case management now available for the Defender multitenant portal (Preview)](#case-management-now-available-for-the-defender-multitenant-portal-preview)
+
+### Case management now available for the Defender multitenant portal (Preview)
+
+SecOps teams for large organizations and managed security service providers (MSSPs) must manage cases across multiple tenants. This can now be done without leaving the Defender multitenant portal.
+
+For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
+
 ## April 2025
 
 - [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
