@@ -2,8 +2,8 @@
 title: Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot missing events or alerts issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: deniseb
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -23,10 +23,10 @@ ms.date: 10/11/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article provides some general steps to mitigate missing events or alerts in the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -86,7 +86,7 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
 
 ## Missing file events
 
-File events are collected with `fanotify` framework. In case some or all file events are missing, make sure `fanotify` is enabled on the device and that the file system is [supported](microsoft-defender-endpoint-linux.md#system-requirements).
+File events are collected with `fanotify` framework. In case some or all file events are missing, make sure `fanotify` is enabled on the device and that the file system is [supported](/defender-endpoint/mde-linux-prerequisites).
 
 List the filesystems on the machine with:
 

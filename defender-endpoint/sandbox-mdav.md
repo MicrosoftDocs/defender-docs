@@ -8,7 +8,7 @@ author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
-ms.date: 02/26/2024
+ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:
 - m365-security
@@ -24,16 +24,16 @@ audience: ITPro
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 **Platforms:**
 
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 This article describes how to run Microsoft Defender Antivirus in a sandbox environment for enhanced protection against tampering. 
 

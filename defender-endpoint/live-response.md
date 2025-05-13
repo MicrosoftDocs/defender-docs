@@ -73,7 +73,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
   - **Windows Server 2022**
 
-  - **Windows Server 2025** (beginning in February 2025 and rolling out over the next several weeks)
+  - **Windows Server 2025**
 
 - **Enable live response from the advanced settings page**.
 

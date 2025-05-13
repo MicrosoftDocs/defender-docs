@@ -5,8 +5,8 @@ ms.topic: conceptual
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.custom: asr
 ms.subservice: asr
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/26/2021
+ms.date: 03/10/2025
 ---
 
 # Migrating from a non-Microsoft HIPS to attack surface reduction rules

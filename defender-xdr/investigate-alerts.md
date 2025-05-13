@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - met150
-ms.date: 1/27/2025
+ms.date: 3/25/2025
 appliesto:
 - Microsoft Defender XDR
 ---
@@ -28,7 +28,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]
-> This article describes security alerts in Microsoft Defender XDR. However, you can use activity alerts to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Create activity alerts - Microsoft Purview | Microsoft Docs](/Microsoft-365/compliance/create-activity-alerts).
+> This article describes security alerts in Microsoft Defender XDR. However, you can use alert policies to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
 Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Alerts are typically part of a broader attack and provide clues about an incident.
 
@@ -58,6 +58,7 @@ You can filter alerts according to these criteria:
 - Product name
 - Entities (the impacted assets)
 - Automated investigation state
+- Workspace
 - Data stream (workload or location)
 
 > [!NOTE]

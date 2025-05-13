@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/18/2024
+ms.date: 03/26/2025
 ---
 
 # Configure Microsoft Defender Antivirus features
@@ -23,9 +23,7 @@ ms.date: 02/18/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -41,6 +39,7 @@ You can configure Microsoft Defender Antivirus with a number of tools, such as:
 - [Group Policy](use-group-policy-microsoft-defender-antivirus.md)
 - [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md)
+
 The following broad categories of features can be configured:
 
 - Cloud-delivered protection. See [Cloud-delivered protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
@@ -76,8 +75,6 @@ The following broad categories of features can be configured:
 >   - top scans per file
 >   - top scans per file per process
 >
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
-> See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
->
+> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

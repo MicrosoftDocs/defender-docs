@@ -3,8 +3,8 @@ title: Microsoft Defender portal overview
 description: Learn about the Microsoft services and features available in the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 11/14/2024
 audience: ITPro
@@ -221,8 +221,6 @@ For more information, see [Microsoft Defender Vulnerability Management](/defende
 ## Email and collaboration
 
 In the **Email & collaboration** section, monitor, investigate, and manage security threats and responses to email and collaboration apps with Microsoft Defender for Office 365.
-
-<!--can we get a better screenshot here?-->
 
 :::image type="content" source="./media/overview-defender-portal/email-investigations.png" alt-text="Screenshot of the Email Investigations page in the Microsoft Defender portal" lightbox="./media/overview-defender-portal/email-investigations.png":::
 

@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-ms.date: 05/08/2024
+ms.date: 05/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -23,17 +23,26 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+- Microsoft Defender Antivirus
 
-If you wish to use Microsoft Defender Antivirus on your Windows Server, and it had been previously disabled or uninstalled, you may need to take further steps to re-enable it and ensure it's fully updated.
+This article describes how to enable and update Microsoft Defender Antivirus on Windows Server. You'd use the procedures in this article if Microsoft Defender Antivirus was previously disabled or uninstalled.
 
-To enable and update Microsoft Defender Antivirus on Windows Server, perform the following steps:
+## Enable and update Microsoft Defender Antivirus on Windows Server
 
-1. Install the latest Servicing Stack Update (SSU).
-2. Install the latest cumulative update (LCU).
-3. Reinstall Microsoft Defender Antivirus or re-enable it. For more information on how to reinstall or re-enable Microsoft Defender Antivirus on Windows Server, see [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled) and [Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled](#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled).
+
+1. Install the latest [servicing stack updates](/windows/deployment/update/servicing-stack-updates).
+
+2. Install the latest [cumulative update](/windows/deployment/update/catalog-checkpoint-cumulative-updates).
+
+3. Reinstall Microsoft Defender Antivirus or re-enable it. See the following sections (in this article):
+
+   - [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled)
+   - [Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled](#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-uninstalled)
+
 4. Reboot the system.
+
 5. Install the latest version of the platform update.
 
    > [!NOTE]
@@ -52,8 +61,11 @@ On Windows Server 2016, in some cases, you may need to use the [Malware Protecti
 As a local administrator on the server, perform the following steps:
 
 1. Open Command Prompt.
-2. Run the following command:
-   `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`.
+
+2. Run the following command: 
+
+   `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`
+
 3. Restart the device.
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
@@ -91,4 +103,5 @@ As a local administrator on the server, perform the following steps:
 ## Related articles
 
 [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

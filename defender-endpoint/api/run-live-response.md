@@ -30,7 +30,7 @@ ms.date: 04/18/2023
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -93,8 +93,8 @@ Before you can initiate a session on a device, make sure you fulfill the followi
       - 12 (Monterey)
       - 11 (Big Sur)
 
-  - **Linux Server**
-      - [Supported Linux server distributions and kernel versions](../microsoft-defender-endpoint-linux.md)
+  - **Linux servers**
+      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## Permissions
 

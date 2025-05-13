@@ -5,19 +5,19 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.reviewer: sugamar
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: sugamar, yongrhee
 manager: deniseb
 ms.custom: asr
 ms.topic: conceptual
 ms.collection: 
- - m365-security
- - m365solution-asr-rules
- - highpri
- - tier1
- - mde-asr
-ms.date: 12/18/2022
+- m365-security
+- m365solution-asr-rules
+- highpri
+- tier1
+- mde-asr
+ms.date: 03/27/2025
 search.appverid: met150
 ---
 

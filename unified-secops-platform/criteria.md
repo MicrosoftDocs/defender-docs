@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 10/30/2024
+ms.date: 03/13/2025
 search.appverid: met150
 ---
 
@@ -219,4 +219,4 @@ Vulnerable software is an application or code that has security flaws or weaknes
 
 ### Vulnerable drivers
 
-Despite strict requirements and reviews imposed on code running in kernel, device drivers remain susceptible to various types of vulnerabilities and bugs. Examples include memory corruption and arbitrary read and write bugs, which can be exploited by attackers to execute more significant malicious and destructive actions -– actions typically restricted in user mode. Terminating critical processes on a device is an example of such malicious action.  
+Despite strict requirements and reviews imposed on code running in kernel, device drivers remain susceptible to various types of vulnerabilities and bugs , including intentional design oversights that undermine the security promise of the operating system . Examples include memory corruption and arbitrary read and write bugs, which can be exploited by attackers to execute more significant malicious and destructive actions -– actions typically restricted in user mode. Terminating critical processes on a device is an example of such malicious action.  
