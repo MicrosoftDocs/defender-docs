@@ -48,7 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## May 2025
 
-- (GA) New setting for **"****Allow Network Protection On Win Server"** to be able to manage Network Protection for Windows Server 2019 and later in Microsoft Defender for Endpoint Security Settings Management and Microsoft Intune. See [Turn on network protection](/defender-endpoint/enable-network-protection).
+- (GA) New setting for **"Allow Network Protection On Win Server"** to be able to manage Network Protection for Windows Server 2019 and later in Microsoft Defender for Endpoint Security Settings Management and Microsoft Intune. See [Turn on network protection](/defender-endpoint/enable-network-protection).
 
 ## April 2025
 
