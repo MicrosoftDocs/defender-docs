@@ -17,9 +17,9 @@ Once Azure Arc is deployed and following the [release on the updated agent](rele
 > [!NOTE]
 >  This change might affect your pricing. For information regarding the plan pricing review, [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-## Identify SQL servers protected by MMA
+## Determine which SQL servers are protected by the legacy MMA
 
-You can identify SQL servers onboarded to the Defender for SQL Server on Machines plan with the legacy Microsoft Monitoring agent (MMA) in your environment without Azure Arc installed.
+You can identify SQL servers onboarded to the Defender for SQL Server on Machines plan with the legacy MMA in your environment without Azure Arc installed.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
