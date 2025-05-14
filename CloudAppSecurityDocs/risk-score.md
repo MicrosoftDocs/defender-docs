@@ -131,7 +131,7 @@ If you find a new app in your environment that hasn't been scored by Defender fo
 
 1. In the **Suggest new cloud app** pop-up, fill in details about the new app. Include the name and domain of the app.
 
-    :::image type="content" source="media/suggest-new-app-pop-up.png" alt-text="Suggest a new app":::
+    :::image type="content" source="media/suggest-a-new-app-pop-up.png" alt-text="Screenshot showing the suggest a new app pop up ":::
    
 3. We recommend selecting the checkbox to enable Defender for Cloud Apps analysts to contact you in case additional information about the app is needed.
 
