@@ -23,10 +23,7 @@ Brazil Southeast, Central US (EU Access Program), China East, China East 2, Chin
 
 ### Defender for Servers P1
 
-**Supported regions:**  
-Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Belgium Central, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, East US, East US 2, East US 2 (EU Access Program), EU SSLV, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Indonesia Central, Israel Central, Israel North West, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, North Central US, North Europe, Norway East, Norway West, Poland Central, Qatarc, South Africa North, South Africa West, South Central US, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK South, UK West, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest, West Central US, West Europe, West US, West US 2, West US 3
-
-**Unsupported regions:**  
+**Available in all regions.**
 
 ### Defender for Storage
 
@@ -126,10 +123,7 @@ Australia East, Belgium Central, Central US (EU Access Program), Chile Central, 
 
 ### Defender CSPM
 
-**Supported regions:**  
-Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Belgium Central, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, East US, East US 2, East US 2 (EU Access Program), EU SSLV, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Indonesia Central, Israel Central, Israel North West, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, North Central US, North Europe, Norway East, Norway West, Poland Central, Qatarc, South Africa North, South Africa West, South Central US, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK South, UK West, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest, West Central US, West Europe, West US, West US 2, West US 3
-
-**Unsupported regions:**  
+**Available in all regions.**
 
 ### DevOps security (security connector for ADO/GH/GL)
 
@@ -149,48 +143,6 @@ US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 
 ## AWS
 
-The following table shows the status for the AWS regions:
-
-| Region         | Region status     |
-| -------------- | ----------------- |
-| us-east-1      | Live              |
-| us-east-2      | Live              |
-| us-west-1      | Live              |
-| us-west-2      | Live              |
-| af-south-1     | Live              |
-| ap-east-1      | Live              |
-| ap-south-1     | Live              |
-| ap-south-2     | Live              |
-| ap-southeast-1 | Live              |
-| ap-southeast-2 | Live              |
-| ap-southeast-3 | Live              |
-| ap-southeast-4 | Live              |
-| ap-northeast-1 | Live              |
-| ap-northeast-2 | Live              |
-| ap-northeast-3 | Live              |
-| ca-central-1   | Live              |
-| ca-west-1      | Live              |
-| eu-central-1   | Live              |
-| eu-central-2   | Live              |
-| eu-west-1      | Live              |
-| eu-west-2      | Live              |
-| eu-west-3      | Live              |
-| eu-south-1     | Live              |
-| eu-south-2     | Live              |
-| eu-north-1     | Live              |
-| me-central-1   | Live              |
-| me-south-1     | Live              |
-| sa-east-1      | Live              |
-| il-central-1   | Live              |
-| us-gov-west-1  | GovCloud          |
-| us-gov-east-1  | GovCloud          |
-| cn-north-1     | China             |
-| cn-northwest-1 | China             |
-| ap-southeast-5 | Not yet available |
-| ap-northeast-4 | Not yet available |
-| me-central-2   | Not yet available |
-| eu-sov-1       | Not yet available |
-
 ### Defender for Servers (Agentless scanning)
 
 **Supported regions:**  
@@ -201,31 +153,19 @@ ap-southeast-3, eu-south-1, eu-south-2, me-south-1, il-central-1, us-gov-west-1,
 
 ### Defender for Storage
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-us-east-1, us-east-2, us-west-1, us-west-2, af-south-1, ap-east-1, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-northeast-1, ap-northeast-2, ap-northeast-3, ca-central-1, ca-west-1, eu-central-1, eu-central-2, eu-west-1, eu-west-2, eu-west-3, eu-south-1, eu-south-2, eu-north-1, me-central-1, me-south-1, sa-east-1, il-central-1, us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-northeast-4, me-central-2, eu-sov-1
+Not available.
 
 ### Defender for Storage (Malware Scanning)
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-us-east-1, us-east-2, us-west-1, us-west-2, af-south-1, ap-east-1, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-northeast-1, ap-northeast-2, ap-northeast-3, ca-central-1, ca-west-1, eu-central-1, eu-central-2, eu-west-1, eu-west-2, eu-west-3, eu-south-1, eu-south-2, eu-north-1, me-central-1, me-south-1, sa-east-1, il-central-1, us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-northeast-4, me-central-2, eu-sov-1
+Not available.
 
 ### Defender for APIs
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-us-east-1, us-east-2, us-west-1, us-west-2, af-south-1, ap-east-1, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-northeast-1, ap-northeast-2, ap-northeast-3, ca-central-1, ca-west-1, eu-central-1, eu-central-2, eu-west-1, eu-west-2, eu-west-3, eu-south-1, eu-south-2, eu-north-1, me-central-1, me-south-1, sa-east-1, il-central-1, us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-northeast-4, me-central-2, eu-sov-1
+Not available.
 
 ### Defender for Key Vault
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-us-east-1, us-east-2, us-west-1, us-west-2, af-south-1, ap-east-1, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-northeast-1, ap-northeast-2, ap-northeast-3, ca-central-1, ca-west-1, eu-central-1, eu-central-2, eu-west-1, eu-west-2, eu-west-3, eu-south-1, eu-south-2, eu-north-1, me-central-1, me-south-1, sa-east-1, il-central-1, us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-northeast-4, me-central-2, eu-sov-1
+Not available.
 
 ### Defender for Open-source Relational Databases
 
@@ -237,10 +177,7 @@ ap-southeast-3, eu-south-1, eu-south-2, me-south-1, il-central-1, us-gov-west-1,
 
 ### Defender for Cosmos DB
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-us-east-1, us-east-2, us-west-1, us-west-2, af-south-1, ap-east-1, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-northeast-1, ap-northeast-2, ap-northeast-3, ca-central-1, ca-west-1, eu-central-1, eu-central-2, eu-west-1, eu-west-2, eu-west-3, eu-south-1, eu-south-2, eu-north-1, me-central-1, me-south-1, sa-east-1, il-central-1, us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-northeast-4, me-central-2, eu-sov-1
+Not available.
 
 ### Defender for SQL servers on machines
 
@@ -276,54 +213,6 @@ us-gov-west-1, us-gov-east-1, cn-north-1, cn-northwest-1, ap-southeast-5, ap-nor
 
 ## GCP
 
-The following table shows the status for the GCP regions:
-
-| Region                  | Region status     |
-| ----------------------- | ----------------- |
-| asia-east1              | Live              |
-| asia-east2              | Live              |
-| asia-northeast1         | Live              |
-| asia-northeast2         | Live              |
-| asia-northeast3         | Live              |
-| asia-south1             | Live              |
-| asia-south2             | Live              |
-| asia-southeast1         | Live              |
-| asia-southeast2         | Live              |
-| australia-southeast1    | Live              |
-| australia-southeast2    | Live              |
-| europe-central2         | Live              |
-| europe-north1           | Live              |
-| europe-west1            | Live              |
-| europe-west2            | Live              |
-| europe-west3            | Live              |
-| europe-west4            | Live              |
-| europe-west6            | Live              |
-| europe-west8            | Live              |
-| europe-west9            | Live              |
-| europe-west10           | Live              |
-| northamerica-northeast1 | Live              |
-| northamerica-northeast2 | Live              |
-| southamerica-east1      | Live              |
-| southamerica-west1      | Live              |
-| us-central1             | Live              |
-| us-east1                | Live              |
-| us-east4                | Live              |
-| us-east5                | Live              |
-| us-south1               | Live              |
-| us-west1                | Live              |
-| us-west2                | Live              |
-| us-west3                | Live              |
-| us-west4                | Live              |
-| me-west1                | Live              |
-| me-central2             | Live              |
-| africa-south1           | Live              |
-| northamerica-south1     | Live              |
-| asia-southeast3         | Not yet available |
-| asia-southeast4         | Not yet available |
-| europe-south1           | Not yet available |
-| europe-north2           | Not yet available |
-| europe-central3         | Not yet available |
-
 ### Defender for Servers (Agentless scanning)
 
 **Supported regions:**  
@@ -334,38 +223,23 @@ asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
 
 ### Defender for Storage
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for Storage (Malware Scanning)
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for APIs
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for Key Vault
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for Open-source Relational Databases
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for Cosmos DB
 
@@ -392,10 +266,7 @@ asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-
 
 ### Sensitivity scan (Defender for Storage plan)
 
-**Supported regions:**  
-
-**Unsupported regions:**  
-asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, europe-west10, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1, us-central1, us-east1, us-east4, us-east5, us-south1, us-west1, us-west2, us-west3, us-west4, me-west1, me-central2, africa-south1, northamerica-south1, asia-southeast3, asia-southeast4, europe-south1, europe-north2, europe-central3
+Not available.
 
 ### Defender for Containers
 
