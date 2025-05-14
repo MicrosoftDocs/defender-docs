@@ -170,6 +170,16 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
+### (Preview) **Anomalous tool invocation**
+
+(AI.Azure_AnomalousToolInvocation)
+
+**Description:** This alert analyzes anomalous activity from an AI application connected to an Azure OpenAI model deployment. The application attempted to invoke a tool in a manner that deviates from expected behavior. This behavior may indicate potential misuse or an attempted attack through one of the tools available to the application.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
+
+**Severity**: Medium
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
