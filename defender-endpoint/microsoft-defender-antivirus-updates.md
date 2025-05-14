@@ -109,10 +109,10 @@ Updates contain:
 #### What's new
 
 - Fixed TVM Block where we failed to block a trusted file
-- Fixed Defender platform update timestamp to reflect the actual update time.
-- The 1002 event (An antimalware scan was stopped before it finished) now includes details of the stop reason.
-- Added additional details to the 1000 event (Scan started), like scan trigger and scan on idle.
-- Improved ASR file processing to correctly handle allow Indicator Of Compromise (IoC).
+- Fixed Microsoft Defender platform update timestamp to reflect the actual update time.
+- The [1002 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1002) (An antimalware scan was stopped before it finished) now includes details of the stop reason.
+- Added additional details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
+- Improved ASR file processing to correctly handle allow Indicators of Compromise (IoCs).
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for Smart App Controll (SAC) trusted file handling.
 - Improved Device Control logic for offline printers.
