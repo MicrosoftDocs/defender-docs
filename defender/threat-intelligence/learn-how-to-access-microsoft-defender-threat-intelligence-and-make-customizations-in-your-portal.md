@@ -61,7 +61,7 @@ The **Featured threat intelligence articles** widget in the Defender portal home
 ### Article digest 
 
 > [!IMPORTANT]
-> On May 27, 2025 the Microsoft Defender portal will no longer support this feature. To stay updated with the most recent Microsoft Threat Intelligence reports, you can set up email notifications for updates. [Learn more](/defender-xdr/m365d-threat-analytics-notifications)
+> On May 27, 2025 the Microsoft Defender portal will no longer support this feature. To stay updated with the most recent Microsoft Threat Intelligence reports, you can set up email notifications. [Learn more](/defender-xdr/m365d-threat-analytics-notifications)
 
 In the **Intel explorer** page, a banner message notifies you of the number of new Defender TI articles that were published since you last accessed the Defender portal. Select **Show me** to open a flyout panel that lists the articles you might have missed, then select any of the listed articles to open it:
 
