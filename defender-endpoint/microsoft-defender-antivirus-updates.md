@@ -114,8 +114,8 @@ Updates contain:
 - Added additional details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
 - Improved ASR file processing to correctly handle allow [Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
 - Improvement in health reporting for machines that are rebooted or hibernated.
-- Improved performance for Smart App Controll (SAC) trusted file handling.
-- Improved Device Control logic for offline printers.
+- Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
+- Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
 
 ### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
 
