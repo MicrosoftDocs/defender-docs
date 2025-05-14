@@ -114,7 +114,7 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > Starting May 19, 2025, alerts are no longer generated in the Microsoft Defender portal for mobile devices connecting or disconnecting to an open wireless network and for downloading/installing/deleting self-signed certificates. Instead, these activities are now generated as events and are viewable in the device timeline.</br></br>
 > Here are a key changes about this new experience:</br>
 > - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
-> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated.</br>
+> - WWhen an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
 > - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to trusted networks, are sent to the device timeline as events.
 > - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.</br>
 > - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
