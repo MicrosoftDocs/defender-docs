@@ -7,10 +7,14 @@ ms.topic: how-to
 
 # Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity
 
+> [!IMPORTANT]
+> Remote collection of local administrators' group members on endpoints (using SAM-R queries) feature in Microsoft Defender for Identity will be disabled by mid-May 2025. This change will happen automatically by the specified dates. No admin action is required. 
+> 
+
 Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
 
 > [!NOTE]
-> This feature can potentially be exploited by an adversary to obtain the Net-NTLM hash of the DSA account due to a Windows limitation in the SAM-R calls that allows downgrading from Kerberos to NTLM.
+> This feature can potentially be exploited by an adversary to obtain the NTLM hash of the DSA account due to a Windows limitation in the SAM-R calls that allows downgrading from Kerberos to NTLM.
 > The new Defender for Identity sensor (version 3.x) is not affected by this issue as it uses different detection methods.
 > 
 > It is recommended to use a [low privileged DSA account](directory-service-accounts.md#grant-required-dsa-permissions). You can also [contact support](../support.md) to open a case and request to completely disable the [Lateral Movement Paths](../security-assessment-riskiest-lmp.md) data collection capability.

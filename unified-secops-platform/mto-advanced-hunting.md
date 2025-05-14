@@ -1,6 +1,6 @@
 ---
-title: Advanced hunting in Microsoft Defender multi-tenant management
-description: Learn about advanced hunting in Microsoft Defender multi-tenant management
+title: Advanced hunting in Microsoft Defender multitenant management
+description: Learn about advanced hunting in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: deniseb
@@ -14,21 +14,29 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: conceptual
-ms.date: 03/25/2025
+ms.date: 05/02/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Advanced hunting in Microsoft Defender multi-tenant management
+# Advanced hunting in Microsoft Defender multitenant management
 
-Advanced hunting in Microsoft Defender multi-tenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
+Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
+ 
 
-Multiple workspaces per tenant are supported in multi-tenant Advanced hunting as preview.
+Multiple workspaces per tenant are supported in multitenant Advanced hunting as preview.
+
+
+## Quotas
+
+Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
+
+
 
 ## Run cross-tenant queries
 
-You can run any query that you already have access to in the multi-tenant management **Advanced hunting** page.
+You can run any query that you already have access to in the multitenant management **Advanced hunting** page.
 
 1. Queries listed on the **Queries** tab are filtered by tenant. Select a tenant to view the queries available for each one.
 
@@ -59,7 +67,12 @@ You can run any query that you already have access to in the multi-tenant manage
    | take 10
    ```
 
+
+> [!NOTE]
+> If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
+
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+
 
 ## Run cross-workspace queries (Preview)
 
@@ -82,7 +95,20 @@ Results show from both *WorkspaceA1* and *WorkspaceB2*.
 
 For more information, see [Query multiple workspaces](/azure/sentinel/extend-sentinel-across-workspaces-tenants#query-multiple-workspaces) and [Manage workspaces across tenants using Azure Lighthouse](/azure/sentinel/extend-sentinel-across-workspaces-tenants#manage-workspaces-across-tenants-using-azure-lighthouse).
 
-## Custom detection rules
+> [!NOTE]
+> If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
+
+## View schema tables
+
+You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables) in the left pane inside the advanced hunting page under the **Schema** tab. 
+
+The schema list is a unified view of all tables from all your tenants regardless of the tenant selected in the upper right tenant selector.
+
+This could mean that some tables that appear here might only be available for query in some tenants, like custom Microsoft Sentinel tables.
+
+
+## View and manage custom detection rules
+
 
 You can also manage custom detection rules from multiple tenants in the custom detection rules page.
 
@@ -91,7 +117,7 @@ You can also manage custom detection rules from multiple tenants in the custom d
 1. To view custom detection rules, go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management.
 2. View the **Tenant name** column to see which tenant the detection rule comes from:
 
-   :::image type="content" source="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant custom detection page" lightbox="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png":::
+   :::image type="content" source="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multitenant custom detection page." lightbox="media/mto-advanced-hunting/mto-custom-detection-tenant-name.png":::
 
 To view only a specific tenant's custom detection rules, select **Filter**, choose the tenant or tenants and select **Apply**.
 
@@ -111,6 +137,11 @@ To manage detection rules:
    :::image type="content" source="media/mto-advanced-hunting/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="media/mto-advanced-hunting/custom-detection-rule-details.png":::
 
 1. Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
+
+
+
+
+
 
 ## Related content
 
