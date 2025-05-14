@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/03/2025
+ms.date: 04/09/2025
 ---
 
 # Microsoft Defender Antivirus in the Windows Security app
@@ -60,6 +60,9 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 3. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/microsoft-defender-antivirus-updates/).
 
 4. Select **Check for updates** to download new protection updates (if there are any).
+
+> [!TIP]
+> If you have your Microsoft Defender Antivirus updates (Security intelligence, Engine, and Platform), pointing to a [WSUS](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) or [Software Update Point](/intune/configmgr/sum/get-started/prepare-for-software-updates-management), and if you have the Windows Update policy set to [3 - Auto download and notify for install](/windows/deployment/update/waas-wu-settings), when you select **Check for updates**, all available Microsoft Defender Antivirus updates are installed.
 
 ## Ensure Microsoft Defender Antivirus is enabled in the Windows Security app
 

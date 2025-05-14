@@ -3,8 +3,8 @@ title: Troubleshoot installation issues for Microsoft Defender for Endpoint on L
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: deniseb
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -171,7 +171,7 @@ service mdatp status
     findmnt -T <path_of_EICAR_file>
     ```
 
-    Currently supported file systems for on-access activity are listed [here](microsoft-defender-endpoint-linux.md#system-requirements). Any files outside these file systems aren't scanned.
+    Currently supported file systems for on-access activity are listed [here](/defender-endpoint/mde-linux-prerequisites). Any files outside these file systems aren't scanned.
 
 ## Command-line tool mdatp isn't working
 

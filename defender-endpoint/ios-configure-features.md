@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 02/06/2025
+ms.date: 05/15/2025
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
@@ -167,9 +167,13 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
 6. Review and create the configuration policy.
 
-> [!NOTE]
-> **Open Wi-Fi Network Alert:**
-> An alert is generated whenever a user connects to an open Wi-Fi network. If the user reconnects to the same network within a seven-day period, no new alert is generated. However, connecting to a different open Wi-Fi network results in an immediate alert.
+> [!IMPORTANT]
+> Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
+> Here are key points about this change:</br>
+> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
+> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
+> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to user trusted networks, are sent to the device timeline as events.</br>
+> - This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
 
 ## Coexistence of multiple VPN profiles
 
@@ -318,10 +322,10 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 
 > [!NOTE]
 > Defender for Endpoint on iOS supports creating custom indicators only for URLs and domains. IP based custom indicators aren't supported on iOS. 
+> > IP `245.245.0.1` is an internal Defender IP and shouldn't be included in custom indicators by customers to avoid any functionality issues.
+> > For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
 > 
-> IP `245.245.0.1` is an internal Defender IP and should not be included in custom indicators by customers to avoid any functionality issues.
-> 
-> For iOS, no alerts are generated in the Microsoft Defender portal when the URL or domain set in the indicator is accessed.
+> MDE portal Timeline doesn't display the URL for Custom URL Indicator Blocks for unsupervised devices, instead it marks hidden for privacy.
 
 ## Configure vulnerability assessment of apps
 
@@ -374,7 +378,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
    - The privacy approval screen appears only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
-   :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
+      :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen.":::
 
 Once the client versions are deployed to target iOS devices, processing starts. Vulnerabilities found on those devices start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. This time frame is especially true for the entire list of apps to show up in the software inventory.
 
@@ -426,6 +430,9 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
 This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
+
+> [!NOTE]
+> Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the XDR portal.
 
 ### Configure device tags using MDM
 

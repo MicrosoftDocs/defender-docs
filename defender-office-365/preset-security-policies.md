@@ -16,7 +16,7 @@ ms.custom:
 description: Admins can learn how to apply Standard and Strict policy settings across the protection features of Exchange Online Protection (EOP) and Microsoft Defender for Office 365
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 01/29/2025
+ms.date: 03/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -33,9 +33,9 @@ Depending on your organization, preset security policies provide many of the pro
 
 The following preset security policies are available:
 
-- **Standard** preset security policy
-- **Strict** preset security policy
-- **Built-in protection** preset security policy (default policies for Safe Attachments and Safe Links protection in Defender for Office 365)
+- **Standard** preset security policy.
+- **Strict** preset security policy.
+- **Built-in protection** preset security policy (default policies for Safe Attachments and Safe Links protection in Defender for Office 365; applied to all users who aren't specifically excluded, or who aren't included in the **Standard** or **Strict** preset security policies, or in custom Safe Attachments or Safe Links policies).
 
 For details about these preset security policies, see the [Appendix](#appendix) section at the end of this article.
 
@@ -106,13 +106,19 @@ The rest of this article how to configure preset security policies.
    > [!NOTE]
    > In organizations without Defender for Office 365, selecting **Next** takes you to the **Review** page (Step 9).
 
-4. On the **Apply Defender for Office 365 protection** page, identify the internal recipients that the [Defender for Office 365 protections](#policies-in-preset-security-policies) apply to (recipient conditions).
+4. On the **Apply Defender for Office 365 protection** page, identify the internal recipients that the [Defender for Office 365 protections](#policies-in-preset-security-policies) apply to (recipient conditions) or don't apply to (recipient exceptions)
 
    The settings and behavior are exactly like the **Apply Exchange Online Protection** page in the previous step.
 
    You can also select **Previously selected recipients** to use the same recipients that you selected for EOP protection on the previous page.
 
    When you're finished on the **Apply Defender for Office 365 protection** page, select **Next**.
+
+   > [!TIP]
+   > If not all users in your organization have Defender for Office 365 licenses, you can use the following methods to apply Defender for Office 365 protections to eligible users only:
+   >
+   > - Use **Specified recipients** to identify the users or groups who **are eligible** for Defender for Office 365 protections.
+   > - Use **Exclude these recipients** \> **Specified recipients** to identify the users or groups who **aren't eligible** for Defender for Office 365 protections.
 
 5. On the **Impersonation protection** page, select **Next**.
 
@@ -182,9 +188,9 @@ To disable the **Standard protection** or **Strict protection** preset security 
 ## Use the Microsoft Defender portal to add exclusions to the Built-in protection preset security policy
 
 > [!TIP]
-> The **Built-in protection** preset security policy is applied to all users in organizations with any amount of licenses for Defender for Microsoft 365. This application is in the spirit of securing the broadest set of users until admins specifically configure Defender for Office 365 protections. Because **Built-in protection** is enabled by default, customers don't need to worry about violating product licensing terms. However, we recommend purchasing enough Defender for Office 365 licenses to ensure **Built-in protection** continues for all users.
+> The **Built-in protection** preset security policy is applied to all users in organizations with any amount of licenses for Defender for Office 365. Application of this protection is in the spirit of securing the broadest set of users until admins specifically configure Defender for Office 365 protections. Because **Built-in protection** is enabled by default, customers don't need to worry about violating product licensing terms. However, we recommend purchasing enough Defender for Office 365 licenses to ensure **Built-in protection** continues for all users.
 >
-> The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy.
+> <u>The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies</u>. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
@@ -295,6 +301,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
     ```powershell
     Write-Output -InputObject ("`r`n"*3),"Strict anti-malware policy",("-"*79);Get-MalwareFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict anti-spam policy",("-"*79);Get-HostedContentFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict anti-phishing policy",("-"*79);Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict Safe Attachments policy",("-"*79);Get-SafeAttachmentPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict Safe Links policy",("-"*79);Get-SafeLinksPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"
     ```
+
 ### Use PowerShell to view rules for preset security policies
 
 Remember, if you never turned on the Standard preset security policy or the Strict preset security policy in the Microsoft Defender portal, the associated rules for those policies don't exist.
@@ -525,7 +532,7 @@ Preset security policies use special versions of the individual protection polic
   - Anti-phishing policies in Defender for Office 365 named **Standard Preset Security Policy** and **Strict Preset Security Policy**, which include:
     - The same [spoof settings](anti-phishing-policies-about.md#spoof-settings) that are available in the EOP anti-phishing policies.
     - [Impersonation settings](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
-    - [Advanced phishing thresholds](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+    - [Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Safe Links policies](safe-links-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
   - [Safe Attachments policies](safe-attachments-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
 

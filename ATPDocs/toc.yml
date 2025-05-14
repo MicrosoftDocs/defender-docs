@@ -85,6 +85,10 @@ items:
         displayName: standalone
     - name: Activate Defender for Identity capabilities on your domain controller
       href: deploy/activate-capabilities.md
+  - name: Integrate with PAM services
+    items:
+    - name: Integrate Defender for Identity with PAM services
+      href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
@@ -128,6 +132,8 @@ items:
       href: identity-inventory.md
     - name: Investigate assets
       href: investigate-assets.md
+    - name: Service accounts
+      href: service-account-discovery.md
   - name: Lateral movement paths
     items:
     - name: Understand and investigate lateral movement paths
@@ -172,6 +178,9 @@ items:
          displayName: Microsoft Entra Connect
        - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
          href: remove-replication-permissions-microsoft-entra-connect.md
+       - name: Remove unsafe permissions on sensitive Entra Connect accounts
+         href: remove-unsafe-permissions-sensitive-entra-connect.md
+         displayName: MDI
        - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
          href: replace-entra-connect-default-admin.md
      - name: Identity infrastructure
@@ -248,6 +257,8 @@ items:
            href: security-assessment-unsecure-account-attributes.md
          - name: Weak cipher usage assessment
            href: security-assessment-weak-cipher.md
+     - name: Identity security initiative (Preview)
+       href: identity-security-initiative.md
 - name: Reference
   items:
   - name: Operations guide

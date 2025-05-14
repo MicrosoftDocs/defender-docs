@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 ---
 
 # Run the client analyzer on Windows
@@ -25,6 +25,14 @@ ms.date: 03/12/2025
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
+
+You have two options for running the Defender for Endpoint client analyzer on Windows:
+
+- Use live response
+- Run the client analyzer locally on the device
 
 ## Option 1: Live response
 
@@ -40,7 +48,7 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
    1. Go to **Start** and type **cmd**.
    
-   1. Right-click **Command prompt** and select **Run as administrator**.
+   2. Right-click **Command prompt** and select **Run as administrator**.
 
 4. Type the following command and then press **Enter**:
 
@@ -57,9 +65,12 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 In addition to the previous procedure, you can also [collect the analyzer support logs using live response.](troubleshoot-collect-support-log.md).
 
 > [!NOTE]
-> On Windows 10 and 11, Windows Server 2019 and 2022, or Windows Server 2012R2 and 2016 with the [modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) installed, the client analyzer script calls into an executable file called `MDEClientAnalyzer.exe` to run the connectivity tests to cloud service URLs.
+> On Windows 10 and 11, Windows Server 2019 and 2022, or Windows Server 2012R2 and 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) installed, the client analyzer script calls into an executable file called `MDEClientAnalyzer.exe` to run the connectivity tests to cloud service URLs.
 >
 > On Windows 8.1, Windows Server 2016 or any previous OS edition where Microsoft Monitoring Agent (MMA) is used for onboarding, the client analyzer script calls into an executable file called `MDEClientAnalyzerPreviousVersion.exe` to run connectivity tests for Command and Control (CnC) URLs while also calling into Microsoft Monitoring Agent connectivity tool `TestCloudConnection.exe` for Cyber Data channel URLs.
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
 ## Important points to keep in mind
 
@@ -78,18 +89,18 @@ Example contents after MDEClientAnalyzer.ps1 is modified:
 ## Result package contents on Windows
 
 > [!NOTE]
-> The exact files captured may change depending on factors such as:
+> The exact files captured might change depending on factors such as:
 >
 > - The version of windows on which the analyzer is run.
 > - Event log channel availability on the machine.
-> - The start state of the EDR sensor (Sense is stopped if machine is not yet onboarded).
+> - The start state of the EDR sensor (Sense is stopped if machine isn't yet onboarded).
 > - If an advanced troubleshooting parameter was used with the analyzer command.
 
 By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items listed in the following table:
 
 | Folder | Item | Description |
 |--|--|--|
-| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which will contain the findings and guidance that the analyzer script run on the machine can produce. |
+| | `MDEClientAnalyzer.htm` | This is the main HTML output file, which contains the findings and guidance that the analyzer script run on the machine can produce. |
 | `SystemInfoLogs` | `AddRemovePrograms.csv` | List of x64 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `AddRemoveProgramsWOW64.csv` | List of x86 installed software on x64 OS collected from registry |
 | `SystemInfoLogs` | `CertValidate.log` | Detailed result from certificate revocation executed by calling into [CertUtil](/windows-server/administration/windows-commands/certutil) |
@@ -114,7 +125,6 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 

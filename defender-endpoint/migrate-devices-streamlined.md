@@ -68,7 +68,7 @@ The following table lists migration instructions for the available onboarding to
 > [!IMPORTANT]
 > Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. To migrate existing devices, you need to fully offboard and onboard using the streamlined onboarding package.
 
-For general information on onboarding Windows client devices, see [Onboarding Windows Client](onboard-windows-client.md).
+For general information on onboarding Windows client devices, see [Onboarding Windows Client](onboard-client.md).
 
 Confirm prerequisites are met: [Prerequisites for using streamlined method](configure-device-connectivity.md#prerequisites).
 
@@ -96,13 +96,13 @@ Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI)
 
 ### Windows Server
 
-For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
 ### Microsoft Defender for Cloud
 
-Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
 ### Microsoft Configuration Manager
 
@@ -351,7 +351,7 @@ DeviceInfo
 
 ### Use Defender for Endpoint Client Analyzer (cross-platform) to validate connectivity for newly migrated endpoints
 
-Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](download-client-analyzer.md).
+Download and run the client analyzer for macOS or Linux. For more information, see [Download and run the client analyzer](overview-client-analyzer.md).
 
 1. Run `mdeclientanalyzer.cmd -o <path to cmd file>` from within the MDEClientAnalyzer folder. The command uses parameters from the onboarding package to test connectivity.
 

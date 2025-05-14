@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
-ms.date: 03/13/2025
+ms.date: 04/08/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -27,7 +27,7 @@ ms.reviewer: mkaminska, yongrhee
 
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 
@@ -36,9 +36,9 @@ The Device Health report provides information about the devices in your organiza
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
 > - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (non MMA), MacOS, Linux 
-> - Sense (MsSense.exe): **10.8210.** \*+. See [Prerequisites](#prerequisites) section for related details.
+> - Sense (MsSense.exe): **10.8210.** \*+.
 >
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 ## View device health cards
 
@@ -48,7 +48,6 @@ In the Microsoft Defender portal, in the navigation pane, select **Reports**, an
   - [View device health cards](#view-device-health-cards)
   - [Report access permissions](#report-access-permissions)
   - [Microsoft Defender Antivirus health tab](#microsoft-defender-antivirus-health-tab)
-    - [Prerequisites](#prerequisites)
     - [Card functionality](#card-functionality)
       - [New Microsoft Defender Antivirus filter definitions](#new-microsoft-defender-antivirus-filter-definitions)
       - [Export report](#export-report)
@@ -119,20 +118,6 @@ For the three `updates` cards (also known as up-to-date reporting cards), "**No 
 - Cloud protection isn't enabled.
 - Device doesn't meet pre-requisites for Antivirus engine or platform version.
 
-### Prerequisites
-
-Up-to-date reporting generates information for devices that meet the following criteria:
-
-* **Windows:**
-  * OS - Windows 10 1809 or later  
-  * Engine version: 1.1.19300.2+  
-  * Platform version: 4.8.2202.1+  
-  * Sense (MsSense.exe): 10.8210.*+  
-
-* **Linux and Mac:**
-  * Platform version: 101.23112.*+  
-
-* **Cloud Protection enabled**
   
 :::image type="content" source="media/device-health-defender-antivirus-health-tab.png" alt-text="Shows the Microsoft Defender Antivirus Health tab." lightbox="media/device-health-defender-antivirus-health-tab.png":::
 
@@ -174,7 +159,7 @@ There are two different export csv functionalities through the portal:
 
 - **Top level export**. You can use the top-level **Export** button to gather an all-up Microsoft Defender Antivirus health report (500-K limit).
 
-:::image type="content" source="media/device-health-defender-antivirus-health-tab-export.png" alt-text="Screenshot that shows the top-level export report button." lightbox="media/device-health-defender-antivirus-health-tab-export.png":::
+  :::image type="content" source="media/device-health-defender-antivirus-health-tab-export.png" alt-text="Screenshot that shows the top-level export report button." lightbox="media/device-health-defender-antivirus-health-tab-export.png":::
 
 - **Flyout level export**. You can use the **Export** button within the flyouts to export a report to an Excel spreadsheet (100-K limit).
 
@@ -288,14 +273,15 @@ For more information about the aforementioned terms, refer back to the section: 
 
 > [!NOTE]
 >
-> Up to date reporting generates information for devices that meet the following criteria:
->
-> - Engine version: `1.1.19300.2` or later
-> - Platform version: `4.18.2202.1` or later
-> - Cloud protection enabled
-> - Windows OS
->
-> Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under `no data available`.>
+> Up-to-date reporting generates information for devices that meet the following criteria:
+> * **Windows:**
+>    * OS - Windows 10 1809 or later
+>    * Engine version: 1.1.19300.2+  
+>    * Platform version: 4.8.2202.1+  
+>    * Sense (MsSense.exe): 10.8210.*+  
+> * **Linux and Mac:**
+>    * Platform version: 101.23112.*+  
+> * **Cloud Protection enabled**
 
 ##### Up-to-date definitions
 

@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 03/12/2025
+ms.date: 04/01/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -31,6 +31,8 @@ f1.keywords: NOCSH
 
 If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. This article explains how to use the tool on your device or with live response. You can use either a Python-based solution or a binary version that doesn't need Python.
 
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
 
 ## Running the binary version of the client analyzer
 
@@ -43,7 +45,7 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 2. Verify the download.
 
     ```bash
-    echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '7886E960546A8490C7CBD962330104B2454647131B89D26771610FDB5BB6BE3D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -125,6 +127,9 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
     ```bash
     sudo ./mde_support_tool.sh -d
     ```
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
 
 ## Command line options
 Below are the command line options provided by client analyzer
@@ -370,15 +375,15 @@ A single report `installation_report.json` is generated. The keys in the file ar
 
 | Key  | Remarks |
 | ------------- | ------------- |
-| agent_version  | Version of Defender for Endpoint installed  |
+| agent_version  | Version of Defender for Endpoint installed.  |
 | onboarding_status | The onboarding and ring info |
-| support_status | MDE is supported with the current system configurations |
-| distro | The distro on which the agent is installed in supported or not |
-| connectivitytest | The connectivity test stratus|
-| min_requirement | The minimum requirements for CPU and Memory are met|
-| external_depedency | The external dependencies are satisfied or not |
+| support_status | MDE is supported with the current system configurations. |
+| distro | The distro on which the agent is installed in supported or not. |
+| connectivitytest | The connectivity tests status.|
+| min_requirement | The minimum requirements for CPU and Memory are met.|
+| external_depedency | The external dependencies are satisfied or not. |
 | mde_health | Health status of MDE Agent|
-| folder_perm | The required folder permissions are met or not |
+| folder_perm | The required folder permissions are met or not. |
 
 #### Exclude mode
 
@@ -525,7 +530,8 @@ The following script performs the first six steps of the [Running the Python ver
    ./mde_support_tool.sh
 
    ```
-
+> [!TIP]
+> Watch this video to learn more about endpoint settings: [Defender for Endpoint client analyzer endpoint settings](https://www.youtube.com/watch?v=Frw2xFjzphE)
 #### Run the client analyzer install scripts
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate.
@@ -606,12 +612,6 @@ The Python version of the client analyzer accepts command line parameters to per
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-
-- [Download and run the client analyzer](download-client-analyzer.md)
-
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 

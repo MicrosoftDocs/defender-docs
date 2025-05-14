@@ -44,7 +44,11 @@
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
     - name: Reduce security risk
-      href: reduce-risk-overview.md
+      items:
+      - name: Improve security posture and reduce risk"
+        href: reduce-risk-overview.md
+      - name: Protect your environment with Exposure Management
+        href: overview-msem-strategy.md  
     - name: Detect threats
       href: detect-threats-overview.md
     - name: Uncover adversaries with threat intel
@@ -90,6 +94,8 @@
               href: mto-requirements.md
             - name: View and manage incidents and alerts
               href: mto-incidents-alerts.md
+            - name: View and manage cases
+              href: mto-manage-cases.md
             - name: Advanced hunting
               href: mto-advanced-hunting.md
             - name: Multitenant devices
@@ -102,6 +108,10 @@
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution with tenant groups
               href: mto-tenantgroups.md
+            - name: Manage tenants in other Microsoft clouds
+              href: mto-cross-cloud.md              
+            - name: Troubleshoot issues
+              href: mto-troubleshoot.md              
         - name: Configure notifications
           items:
           - name: Get incident notifications

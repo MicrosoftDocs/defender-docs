@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for an individual device.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/24/2023
+ms.date: 03/26/2025
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
@@ -54,7 +54,6 @@ Here's what you see in the Windows Security app:
 ## See also
 
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
-- [Defender for Endpoint on non-Windows devices](configure-endpoints-non-windows.md)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

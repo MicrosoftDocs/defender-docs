@@ -1004,6 +1004,16 @@
       "source_path": "CloudAppSecurityDocs/file-filters.md",
       "redirect_url": "/defender-cloud-apps/data-protection-policies",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/troubleshooting-api-connectors-using-error-messages.md",
+      "redirect_url": "/defender-cloud-apps/troubleshooting-api-connectors-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "CloudAppSecurityDocs/connector-platform.md",
+      "redirect_url": "/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps",
+      "redirect_document_id": true
+    },
   ]
 }

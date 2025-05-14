@@ -20,14 +20,11 @@ ms.collection:
   - tier1
 ms.topic: concept-article
 #customerIntent: As a security admin, I want to pilot and deploy Microsoft Defender for Cloud Apps to evaluate it's ability to enhance my organization's security posture and protect against cloud application-based threats.
-
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Pilot and deploy Microsoft Defender for Cloud Apps
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 This article provides a workflow for piloting and deploying Microsoft Defender for Cloud Apps in your organization. Use these recommendations to onboard Microsoft Defender for Cloud Apps as part of an end-to-end solution with Microsoft Defender XDR.
 

@@ -7,7 +7,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
-ms.date: 01/31/2025
+ms.date: 04/01/2025
 audience: ITPro
 ms.topic: troubleshooting
 ms.subservice: ngp
@@ -30,7 +30,7 @@ ms.collection:
 - Windows
 - Windows Server
 
-If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Antimalware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
+If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Anti-malware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
 
 As an admin, you can also troubleshoot these issues on your own.
 
@@ -44,7 +44,7 @@ First, you might want to check if other software is causing the issue. Read [Che
 |2. **Using HTA's, CHM's and different files as databases**. <br/>Anytime that Microsoft Defender Antivirus must extract and/or scan complex file formats, higher CPU utilization can occur. | Consider switching to using actual databases if you need to save info and query it. <br/><br/>As a workaround, add [Antivirus exclusions (process+path)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus). |
 |3. **Using obfuscations on scripts**. <br/>If you obfuscate scripts, Microsoft Defender Antivirus in order to check if the script contains malicious payloads, it can use more CPU utilization while scanning. | Use script obfuscation only when necessary.<br/><br/>As a workaround, add [Antivirus exclusions (process+path)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus). |
 |4. **Not letting the Microsoft Defender Antivirus cache finish before sealing the image**.| If you're creating a VDI image such as for a non-persistent image, make sure that cache maintenance completes before the image is sealed. <br/> For more information, see [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus). |
-|5. **Having the wrong path exclusion(s) due to misspelling**. <br/>If you add misspelled exclusion paths, it can lead to performance issues.| Use `MpCmdRun.exe -CheckExclusion -Path` to validate path-based exclusions. |
+|5. **Misspelled exclusions**. <br/>| Use `MpCmdRun.exe -CheckExclusion -Path` to validate path-based exclusions. |
 |6. **When a path exclusion is added, it works for scanning flows**. <br/>Behavior Monitoring (BM) and Network Real-time Inspection (NRI) can still cause performance issues. |As a workaround, take these steps: <br/>1. (Preferred) For .exe's and dll's use [Indicators – File hash - allow](/defender-endpoint/indicator-file) or [Indicators – Certificate - allow](/defender-endpoint/indicator-certificates) <br/>2. (Alternative) [Add Antivirus exclusions (process+path)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus). |
 |7. **File hash computation**. <br/>If you enable file hash computation, which is used for [file indicators](indicator-file.md), there's more performance overhead. For example, copying large files from a network share onto your local device, especially over a VPN connection, might have an effect on device performance. | This is where you, and your leadership team will have to make a decision, of having more security or less CPU utilization. <br/><br/>One possible solution is to disable the File hash computation feature. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **MpEngine**, and then enable file hash computation features. <br/>**Note**: To enable Indicators - File hash functionality, this feature must be activated.|
 

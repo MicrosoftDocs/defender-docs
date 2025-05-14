@@ -18,16 +18,14 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 04/01/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Microsoft Defender XDR Advanced hunting API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!WARNING]
 > This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**

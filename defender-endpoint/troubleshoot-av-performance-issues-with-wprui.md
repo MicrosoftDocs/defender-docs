@@ -43,7 +43,7 @@ There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 
 ## Using the MDE Client Analyzer
 
-1. Download the [MDE Client Analyzer](/defender-endpoint/download-client-analyzer).
+1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
 
 1. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
 
