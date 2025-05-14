@@ -1,11 +1,11 @@
 ---
-title: Deploy Microsoft Defender for Identity
+title: Microsoft Defender for Identity Deployment Overview
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
 ms.date: 05/13/2025
 ms.topic: how-to
 ---
 
-# Deploy Microsoft Defender for Identity with Microsoft Defender XDR
+# Deploy Microsoft Defender for Identity
 
 This article provides an overview of the full deployment process for Microsoft Defender for Identity, including steps for preparation, deployment, and extra steps for specific scenarios.
 
