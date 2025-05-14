@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/09/2025
+ms.date: 05/14/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -97,6 +97,25 @@ Updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
+
+### April-2025 (Platform: 4.18.2504X.xxxx | Engine: 1.1.2504X.xxxx)
+
+- Security intelligence update version: **x.x.x.x**
+- Release date:  **May 14, 2025 (Engine) / May 14, 2025 (Platform)**
+- Platform: **4.18.25040.xxxx**
+- Engine: **1.1.25040.xxxx**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Fixed TVM Block where we failed to block a trusted file
+- Fixed Defender platform update timestamp to reflect the actual update time.
+- The 1002 event (An antimalware scan was stopped before it finished) now includes details of the stop reason.
+- Added additional details to the 1000 event (Scan started), like scan trigger and scan on idle.
+- Improved ASR file processing to correctly handle allow Indicator Of Compromise (IoC).
+- Improvement in health reporting for machines that are rebooted or hibernated.
+- Improved performance for Smart App Controll (SAC) trusted file handling.
+- Improved Device Control logic for offline printers.
 
 ### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
 
