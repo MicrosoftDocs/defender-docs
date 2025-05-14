@@ -37,13 +37,13 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
+   wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
    ```
 
 2. Verify the download.
 
    ```bash
-   echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '7886E960546A8490C7CBD962330104B2454647131B89D26771610FDB5BB6BE3D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
    
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
