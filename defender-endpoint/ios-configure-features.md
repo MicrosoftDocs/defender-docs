@@ -168,11 +168,12 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 6. Review and create the configuration policy.
 
 > [!IMPORTANT]
-> Starting May 19, 2025, alerts for connecting or disconnecting to an open wireless network are now generated as events. Previously, an alert is generated when end-users connect to an open Wi-Fi network. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
-> With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events in the Timeline tab of a device page. In particular, events are generated following these activities:</br>
-> - Mobile devices connecting/disconnecting to open wireless networks, whether trusted or not. When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period.</br></br>
->For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS. Otherwise, the previous experience of generating alerts will still be in place. End-users who turned on auto-update automatically gets these changes.</br></br>
-> The previous experience of generating alerts for these activities still apply to GCC tenants.
+> Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
+> Here are a key changes about this change:</br>
+> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
+> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period.</br>
+> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to trusted networks, are sent to the device timeline as events.</br>
+> This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
 
 ## Coexistence of multiple VPN profiles
 
