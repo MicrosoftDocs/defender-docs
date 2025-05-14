@@ -33,7 +33,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **May 2025**
 
-Starting May 19, 2025, alerts for connecting or disconnecting to an open wireless network are now generated as events. Previously, an alert is generated when end-users connect to an open Wi-Fi network. These events can be viewed in the Timeline tab of a device page.
+Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline.
 
 For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
