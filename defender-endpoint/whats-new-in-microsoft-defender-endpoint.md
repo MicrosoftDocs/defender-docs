@@ -46,6 +46,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
 
+## May 2025
+
+- (GA) New setting for **"Allow Network Protection On Win Server"** to be able to manage Network Protection for Windows Server 2019 and later in Microsoft Defender for Endpoint Security Settings Management and Microsoft Intune. See [Turn on network protection](/defender-endpoint/enable-network-protection).
+
 ## April 2025
 
 - (Preview) **Contain IP addresses of undiscovered devices**: Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. See [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) for more information.
