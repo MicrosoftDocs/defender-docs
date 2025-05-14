@@ -12,14 +12,15 @@ ms.topic: how-to
 >
 > As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
 >
-> We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
-> While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function until that time, **no new SIEM agents can be configured starting June 19, 2025**. Azure Sentinel agents, however, remain supported and can still be added.
 >
+> While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function until that time, **no new SIEM agents can be configured starting June 19, 2025**. [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), however, remains supported and can still be added.
+>
+> We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
 > The same alert and activity data currently available through Microsoft Defender for Cloud Apps SIEM agent is accessible through the unified API and SIEM solutions detailed below. These APIs provide access to alerts and activity data across Microsoft security products to allow cross workload visibility. This helps streamline your security operations, and supports more comprehensive security monitoring and management, in solutions that utilize data from multiple Microsoft Defender workloads in one place.
 >
 > To ensure continuity and access to the same data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
-> - **For activities**, [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+> - **For alerts and activities**, [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
 > - **For Microsoft Entra ID Protection logon events**, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
 > - **For Microsoft Graph Security Alerts API**, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 >
