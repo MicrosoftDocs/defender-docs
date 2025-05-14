@@ -20,8 +20,8 @@ ms.date: 04/08/2025
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
 
-> [!TIP] 
-> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in preview! For more information, see [Microsoft Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
+> [!TIP]
+> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in GA.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -68,10 +68,14 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
 
-- Red Hat Enterprise Linux 7.2 or higher 
+- Red Hat Enterprise Linux 7.2 and higher 
+
 - Red Hat Enterprise Linux 8.x 
 - Red Hat Enterprise Linux 9.x 
-- CentOS 7.2 or higher, excluding CentOS Stream 
+- CentOS 7.2 and higher, excluding CentOS Stream 
+
+- CentOS 8.x
+
 - Ubuntu 16.04 LTS 
 - Ubuntu 18.04 LTS 
 - Ubuntu 20.04 LTS 
@@ -80,7 +84,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Debian 9 - 12 
 - SUSE Linux Enterprise Server 12.x 
 - SUSE Linux Enterprise Server 15.x 
-- Oracle Linux 7.2 or higher 
+- Oracle Linux 7.2 and higher 
+
 - Oracle Linux 8.x 
 - Oracle Linux 9.x 
 - Amazon Linux 2 
@@ -92,20 +97,19 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Alma 9.2 and higher 
 - Mariner 2 
 
-**The following Linux server distributions on Arm64 are now supported in preview:**
+**The following Linux server distributions on ARM64 are now GA:**
 
-- Ubuntu 20.04 Arm64 
-- Ubuntu 22.04 Arm64 
+- Ubuntu 20.04 ARM64 
+- Ubuntu 22.04 ARM64 
 - Ubuntu 24.04 ARM64
-- Amazon Linux 2 Arm64 
-- Amazon Linux 2023 Arm64 
+- Debian 11, 12 ARM64
+- Amazon Linux 2 ARM64 
+- Amazon Linux 2023 ARM64 
 - RHEL 8.x ARM64
 - RHEL 9.x ARM64
 - Oracle Linux 8.x ARM64
 - Oracle Linux 9.x ARM64
 - SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
-
-Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/defender-endpoint/mde-linux-arm) is now in preview. 
 
 > [!NOTE]
 > The workstation and desktop versions of these distributions are unsupported
@@ -146,11 +150,14 @@ Support for [Microsoft Defender for Endpoint on Linux for Arm64-based devices](/
 
 ## Verify that devices can connect to Defender for Endpoint cloud services
 
-- Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment)
-- Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
-   1. Transparent proxy
-   2. [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
-- Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
+
+2. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+
+   - Transparent proxy
+   - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration) 
+
+3. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE] 
 > Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
@@ -186,7 +193,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 ## Installation instructions 
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux:
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
 
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
@@ -195,7 +202,6 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Guidance for Defender for Endpoint on Linux for Arm64-based devices (preview)](/defender-endpoint/mde-linux-arm)
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
 
 > [!IMPORTANT]
