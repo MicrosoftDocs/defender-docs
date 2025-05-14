@@ -13,7 +13,7 @@ The SaaS Security Initiative serves as the main hub for SaaS security posture ma
 
 ## How use the SaaS Security Initiative
 
-> [!VIDEO 352cf722-69b2-45c1-932e-0ca32ef40fa0]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=352cf722-69b2-45c1-932e-0ca32ef40fa0]
 
 ## Prerequisites
 
