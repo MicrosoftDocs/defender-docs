@@ -93,6 +93,10 @@ If you're working with [multiple forests](multi-forest.md), make sure that the f
 |**LDAPS to Global Catalog**|TCP|3269|Domain controllers|Outbound|
 
 
+> [!TIP]
+> By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269, open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
+>
+
 ### Dynamic memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:

@@ -27,24 +27,26 @@ items:
     href: deploy/capacity-planning.md
 - name: Deploy
   items:
-  - name: Deployment Overview
+  - name: Deployment overview
     href: deploy/deploy-defender-identity.md
-  - name: Install a classic sensor
+  - name: Deploy a sensor on a domain controller
     items:
-    - name: Connect to the Defender for Identity service
-      href: deploy/configure-proxy.md
-    - name: Test connectivity settings
-      href: deploy/test-connectivity.md
-    - name: Download the Defender for Identity sensor
-      href: deploy/download-sensor.md
-    - name: Install the Defender for Identity sensor
-      href: deploy/install-sensor.md
-    - name: Configure the Defender for Identity sensor
-      href: deploy/configure-sensor-settings.md
-  - name: Activate an integrated sensor (Preview)
-    items:
-      - name: Activate Defender for Identity capabilities on your domain controller
-        href: deploy/activate-capabilities.md
+     - name: Deploy a Microsoft Defender for Identity sensor
+       items:
+        - name: Connect to the Defender for Identity service
+          href: deploy/configure-proxy.md
+        - name: Test connectivity settings
+          href: deploy/test-connectivity.md
+        - name: Download the Defender for Identity sensor
+          href: deploy/download-sensor.md
+        - name: Install the Defender for Identity sensor
+          href: deploy/install-sensor.md
+        - name: Configure the Defender for Identity sensor
+          href: deploy/configure-sensor-settings.md
+     - name: Activate an XDR sensor (Preview)
+       items:
+        - name: Activate Defender for Identity capabilities on your domain controller
+          href: deploy/activate-capabilities.md
   - name: Install a sensor on Microsoft AD FS / AD CS / Entra Connect servers
     href: deploy/active-directory-federation-services.md
   - name: Deploy for multiple Active Directory forests
@@ -62,8 +64,6 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
-- name: Post-deployment configuration
-  items:
   - name: Configure event collection
     items:
       - name: Event collection overview 
@@ -72,13 +72,13 @@ items:
         href: deploy/configure-windows-event-collection.md
       - name: Configure a Directory Service account
         items:
-      - name: Overview
-        href: deploy/directory-service-accounts.md
-        displayName: Directory Service Account, DSA
-      - name: Configure a DSA with a gMSA
-        href: deploy/create-directory-service-account-gmsa.md
-      - name: Configure remote calls to SAM
-        href: deploy/remote-calls-sam.md
+        - name: Overview
+          href: deploy/directory-service-accounts.md
+          displayName: Directory Service Account, DSA
+        - name: Configure a DSA with a gMSA
+          href: deploy/create-directory-service-account-gmsa.md
+        - name: Configure remote calls to SAM
+          href: deploy/remote-calls-sam.md
   - name: Configure action accounts
     href: deploy/manage-action-accounts.md
 - name: Integrate with identity services
