@@ -16,7 +16,7 @@ ms.topic: how-to
 > While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function until that time, **no new SIEM agents can be configured starting June 19, 2025**. [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), however, remains supported and can still be added.
 >
 > We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
-> The same alert and activity data currently available through Microsoft Defender for Cloud Apps SIEM agent is accessible through the unified API and SIEM solutions detailed below. These APIs provide access to alerts and activity data across Microsoft security products to allow cross workload visibility. This helps streamline your security operations, and supports more comprehensive security monitoring and management, in solutions that utilize data from multiple Microsoft Defender workloads in one place.
+> These APIs provide access to alerts and activity data across Microsoft security products to allow cross workload visibility. This helps streamline your security operations, and supports more comprehensive security monitoring and management, in solutions that utilize data from multiple Microsoft Defender workloads in one place.
 >
 > To ensure continuity and access to the same data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
