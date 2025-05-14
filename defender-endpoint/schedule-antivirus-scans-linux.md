@@ -87,9 +87,9 @@ The following articles describe how to schedule antivirus scans using crontab or
 
 The following screenshots show how to trigger an antivirus scan on a device from the Microsoft Defender portal:
 
-![Screenshot 2025-04-25 070817](https://github.com/user-attachments/assets/e1952535-e55e-4333-8380-f2b527a8afb7)
+![scan-1](https://github.com/user-attachments/assets/f4b74beb-a469-42b0-bc85-d4ae213c5397)
 
-![Screenshot 2025-04-25 070855](https://github.com/user-attachments/assets/6a454f88-6be6-42ef-b0a1-372248e6f511)
+![scan-2](https://github.com/user-attachments/assets/f5d12421-0b72-455d-9db3-c97a1643e0c7)
 
 ## Performance optimizations for antivirus scans
 
