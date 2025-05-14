@@ -43,12 +43,18 @@ The following table describes each type of scan:
 
 |Scan type|Description|
 |--|--|
-|**Quick scan (recommended)**| A quick scan provides strong protection against malware by scanning directories such as `/home`, `/tmp`, `/var`, `/srv`, `/opt`, `/etc`, `/run`, `/lib`, `/usr`, `/boot`. |
+|**Quick scan (recommended)**| A quick scan examines locations where malware is likely to be registered and executed, such as startup scripts, cron jobs, and system service directories (e.g., `/etc/rc.local`, `/etc/init.d/`, and `systemd` service files). It also checks common directories where malware could reside, such as `/tmp`, `/var`, etc. This is subject to change based on various factors like threat landscape or evolving malware techniques.|
 |**Full scan**| A full scan scans all files and folders within `/`. <br><br> A full scan with Microsoft Defender for Endpoint on Linux can take several hours or even days to complete. The duration depends on the volume and type of data being scanned, and the availability of CPU resources. |
 |**Custom scan**| A custom scan runs on files and folders specified with the `--path` parameter. <br><br> By default, custom scans in Microsoft Defender for Endpoint on Linux ignore files and folders specified in the antivirus exclusions. However, you can override this behavior by using the `--ignore-exclusions` flag, to ensure the excluded files and folders are scanned during a custom scan. |
 
 [!Note]
 > For optimal performance, we recommend using quick scans to secure your devices.
+
+[!Note]
+> Based on the enforcement level configured, MDE will take remediation actions accordingly when a scan detects a malicious file. Refer to [this document](./linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus) for more details.
+
+[!Note]
+> If multiple scans are initiated, they get queued one after the other. 
 
 ## How to Run Antivirus Scans using Microsoft Defender for Endpoint on Linux
 
