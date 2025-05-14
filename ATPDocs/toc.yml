@@ -29,7 +29,7 @@ items:
   items:
    - name: Install classic sensors
      items:
-      - name: Deploy Defender for Identity classic sensor
+      - name: Overview
         href: deploy/deploy-defender-identity.md
       - name: Configure connectivity settings
         href: deploy/configure-proxy.md
