@@ -45,7 +45,7 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 2. Verify the download.
 
     ```bash
-    echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '7886E960546A8490C7CBD962330104B2454647131B89D26771610FDB5BB6BE3D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
