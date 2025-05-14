@@ -13,18 +13,17 @@ ms.topic: how-to
 > As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
 >
 >
-> While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function until that time, **no new SIEM agents can be configured starting June 19, 2025**. [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), however, remains supported and can still be added.
+> While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time, **no new SIEM agents can be configured starting June 19, 2025**. [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), however, remains supported and can still be added.
 >
 > We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
-> These APIs provide access to alerts and activity data across Microsoft security products to allow cross workload visibility. This helps streamline your security operations, and supports more comprehensive security monitoring and management, in solutions that utilize data from multiple Microsoft Defender workloads in one place.
+> These APIs enhance security monitoring and management and offer additional supported capabilities that utilize data from multiple Microsoft Defender workloads.
 >
-> To ensure continuity and access to the same data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+> To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
-> - **For alerts and activities**, [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
-> - **For Microsoft Entra ID Protection logon events**, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
-> - **For Microsoft Graph Security Alerts API**, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
->
-> To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+> - For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+> - For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
+> - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+> - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 
 You can integrate Microsoft Defender for Cloud Apps with your generic SIEM server to enable centralized monitoring of alerts and activities from connected apps. As new activities and events are supported by connected apps, visibility into them is then rolled out into Microsoft Defender for Cloud Apps. Integrating with a SIEM service allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures, and correlating between cloud-based and on-premises events. The Microsoft Defender for Cloud Apps SIEM agent runs on your server and pulls alerts and activities from Microsoft Defender for Cloud Apps and streams them into the SIEM server.
