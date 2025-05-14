@@ -15,7 +15,7 @@ Microsoft Defender for Cloud's Defender for SQL Server on Machines plan provides
 Once Azure Arc is deployed and following the [release on the updated agent](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan), your SQL Server instances will migrate automatically and seamlessly to the updated agent. To ensure your SQL servers are correctly protected, we recommend the [installation of Azure Arc](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-azure-arc).
 
 > [!NOTE]
->  This change might affect your pricing. For information regarding the plan pricing review, [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+>  This change might affect your pricing. For information regarding the plan pricing, review [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ## Determine which SQL servers are protected by the legacy MMA
 
