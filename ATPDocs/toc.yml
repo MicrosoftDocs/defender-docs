@@ -45,12 +45,12 @@ items:
     items:
       - name: Activate Defender for Identity capabilities on your domain controller
         href: deploy/activate-capabilities.md
-   - name: Install a sensor on Microsoft AD FS / AD CS / Entra Connect servers
-     href: deploy/active-directory-federation-services.md
-   - name: Deploy for multiple Active Directory forests
-     href: deploy/multi-forest.md
-   - name: Configure a standalone sensor
-     items:
+  - name: Install a sensor on Microsoft AD FS / AD CS / Entra Connect servers
+    href: deploy/active-directory-federation-services.md
+  - name: Deploy for multiple Active Directory forests
+    href: deploy/multi-forest.md
+  - name: Configure a standalone sensor
+    items:
       - name: Prerequisites for a standalone sensor
         href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
