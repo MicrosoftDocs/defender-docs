@@ -98,10 +98,10 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### April-2025 (Platform: 4.18.2504X.xxxx | Engine: 1.1.2504X.xxxx)
+### April-2025 (Engine: 1.1.2504X.xxxx)
 
-- Security intelligence update version: **x.x.x.x**
-- Release date:  **May 14, 2025 (Engine) / May 14, 2025 (Platform)**
+- Security intelligence update version: **1.429.1.0**
+- Release date:  **May 14, 2025 (Engine) / TBD (Platform)**
 - Platform: **4.18.25040.xxxx**
 - Engine: **1.1.25040.xxxx**
 - Support phase: **Security and Critical Updates**
@@ -205,7 +205,6 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - Windows Update
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
-
 - [File server](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - Command line, as follows:   
