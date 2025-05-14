@@ -173,7 +173,7 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 > - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
 > - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period.</br>
 > - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to trusted networks, are sent to the device timeline as events.</br>
-> This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
+> - This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
 
 ## Coexistence of multiple VPN profiles
 
