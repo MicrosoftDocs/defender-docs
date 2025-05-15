@@ -14,21 +14,18 @@ ms.collection:
   - m365solution-getstarted
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/16/2024
+ms.date: 04/25/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Deploy supported services
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
