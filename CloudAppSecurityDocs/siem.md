@@ -109,7 +109,7 @@ Integrating with your SIEM is accomplished in three steps:
 >
 > * The file name might differ depending on the version of the SIEM agent.
 > * Parameters in brackets [  ] are optional, and should be used only if relevant.
-> * It is recommended to run the JAR during server startup.
+> * It's recommended to run the JAR during server startup.
 >   * Windows: Run as a scheduled task and make sure that you configure the task to **Run whether the user is logged on or not** and that you uncheck the **Stop the task if it runs longer than** checkbox.
 >   * Linux: Add the run command with an **&** to the rc.local file. For example: `java -jar mcas-siemagent-0.87.20-signed.jar [--logsDirectory DIRNAME] [--proxy ADDRESS[:PORT]] --token TOKEN &`
 
