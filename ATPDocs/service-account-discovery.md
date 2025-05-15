@@ -17,7 +17,7 @@ Service accounts are classified into several types:
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria and classifies them as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria.These criteria include having a [Service Principal Name ](/windows/win32/ad/service-principal-names)(SPN) or a "password never expires" attribute assigned. The feature then classifies these accounts as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 Service account types are displayed in the Identity Info table within Advanced Hunting.
 
@@ -68,7 +68,7 @@ You can use the sort and filter functionality on each service account tab to get
 |**Tags**    | Sensitive or Honey Token        |
 |**Auth protocols**   | Lists the available methods for verifying user identities, for example, Kerberos and NTLM (New Technology LAN Manager).         |
 |**Sources**     |  The number of potential source logins.        |
-|**Destinations**    | When a service account is trying to access a destination server, the request is directed to the target system, which can include a number of resources on that server. These resources might be a database, a file server, or other services hosted on the server.        |
+|**Destinations**    | When a service account is trying to access a destination server, the request is directed to the target system, which can include many resources on that server. These resources might be a database, a file server, or other services hosted on the server.        |
 |**Connections**   | The number of unique connections made between sources and destinations.         |
 |**Created**    |The timestamp when the service account was first created.         |
 |**Last updated**    | The timestamp of the most recent update to the service account.        |
@@ -79,7 +79,7 @@ You can use the sort and filter functionality on each service account tab to get
 
 For a deeper dive into what's happening in your service account click on the domain name to see the following information:
 
-When you investigate a specific Service account, you'll see the following details under the connections tab:
+When you investigate a specific Service account, you see the following details under the connections tab:
 
 :::image type="content" source="media/screenshot-of-the-connections-page.png" alt-text="Screenshot of the connections page." lightbox="media/Screenshot-of-the-connections-page.png":::
 
@@ -96,8 +96,10 @@ When you investigate a specific Service account, you'll see the following detail
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
 
-
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
+## Related content
+- [Service principal names](/windows/win32/ad/service-principal-names)
+- [How to configure SPN](/windows-server/identity/ad-ds/manage/how-to-configure-spn?tabs=add%2Caduc)
 
 If you run into any problems, we're here to help. To get assistance or support for your product issue, see how to open a support ticket at [Microsoft Defender for Identity support](support.md).
