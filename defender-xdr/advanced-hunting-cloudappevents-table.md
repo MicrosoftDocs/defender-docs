@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 06/09/2024
+ms.date: 05/15/2025
 ---
 
 # CloudAppEvents
@@ -32,15 +32,13 @@ The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.m
 
 ## Prerequisites
 
-Before events can populate, ensure:
+Before populating events, make sure to:
 
 1. Verify that the checkbox "Pull activities" is selected within the Microsoft 365 connector settings.
 
 :::image type="content" source="media/microsoft365-activities.png" alt-text="Screenshot showing the Microsoft 365 components":::
 
 1. Connect any relevant connector via the App Connector page to pull the activities data for that application. For more details, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
-
-
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
