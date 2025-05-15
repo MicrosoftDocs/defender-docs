@@ -36,7 +36,7 @@ Before populating events, make sure to:
 
 1. Verify that the checkbox "Pull activities" is selected within the Microsoft 365 connector settings.
 
-:::image type="content" source="media/microsoft365-activities.png" alt-text="Screenshot showing the Microsoft 365 components":::
+    :::image type="content" source="media/microsoft365-activities.png" alt-text="Screenshot showing the Microsoft 365 components":::
 
 1. Connect any relevant connector via the App Connector page to pull the activities data for that application. For more details, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
