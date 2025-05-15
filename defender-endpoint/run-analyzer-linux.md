@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 05/14/2025
+ms.date: 05/15/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
