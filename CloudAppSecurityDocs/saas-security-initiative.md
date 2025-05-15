@@ -11,7 +11,7 @@ The SaaS Security Initiative provides a centralized place for software as a serv
 
 The SaaS Security Initiative serves as the main hub for SaaS security posture management (SSPM). It consolidates best-practice recommendations into 12 measurable metrics. These metrics facilitate the management and prioritization of a large number of security recommendations.
 
-## How use the SaaS Security Initiative
+## How to use the SaaS Security Initiative
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=352cf722-69b2-45c1-932e-0ca32ef40fa0]
 
