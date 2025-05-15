@@ -178,7 +178,7 @@ The following text is an alerts logfile example:
 
 ### Step 3: Validate that the SIEM agent is working
 
-1. Make sure the status of the SIEM agent in the portal isn't **Connection error** or **Disconnected** and there are no agent notifications. It shows up as **Connection error** if the connection is down for more than two hours. The status shows as **Disconnected** if the connection is down for over 12 hours.
+1. Make sure the status of the SIEM agent in the portal isn't **Connection error** or **Disconnected** and there are no agent notifications. If the connection is down for more than two hours, the status is changed to **Connection error**.  If the connection is down for over 12 hours, the status is changed to **Disconnected**.
 
     ![SIEM disconnected.](media/siem-not-connected.png)
 
