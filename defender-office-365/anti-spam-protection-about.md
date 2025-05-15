@@ -145,7 +145,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
 
   ² For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
 
-  ³ You can use this value as a condition in [Mail flow rules in Exchange Server](/exchange/policy-and-compliance/mail-flow-rules/mail-flow-rules) to filter or route messages for mailboxes in on-premises Exchange environments.
+  ³ You can use this value as a condition in [Mail flow rules in Exchange Server](/exchange/policy-and-compliance/mail-flow-rules/mail-flow-rules) to filter or route messages for mailboxes in on-premises Exchange environments only (not in Exchange Online).
 
   ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
