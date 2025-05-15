@@ -13,7 +13,7 @@ ms.topic: how-to
 > As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
 >
 >
-> While existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time, **no new SIEM agents can be configured starting June 19, 2025**. [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), however, remains supported and can still be added.
+> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
 >
 > We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
 > These APIs enhance security monitoring and management and offer additional supported capabilities that utilize data from multiple Microsoft Defender workloads.
