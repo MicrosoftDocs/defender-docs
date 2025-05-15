@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 02/16/2025
+ms.date: 05/15/2025
 ms.collection:
 - m365-security
 - tier2
