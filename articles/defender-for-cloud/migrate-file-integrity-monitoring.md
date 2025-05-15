@@ -4,7 +4,7 @@ description: Learn how to migrate File Integrity Monitor (FIM) from previous ver
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/10/2025
+ms.date: 05/15/2025
 #customer intent: As a security administrator, I want to migrate FIM so that I can use the latest features and improvements.
 ---
 
