@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: sugamar
 manager: deniseb
 ms.custom: admindeeplinkDEFENDER
@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 05/09/2025
 ---
 
 # Attack surface reduction rules overview
@@ -98,7 +98,7 @@ Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](https://support.microsoft.com/help/4052623/update-for-microsoft-defender-antimalware-platform).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](/defender-endpoint/microsoft-defender-antivirus-updates).
 
 ### Cases where warn mode isn't supported
 
@@ -134,6 +134,8 @@ You can set attack surface reduction rules for devices that are running any of t
 
 - Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
 - Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 11 Pro, version 21H2 or later
+- Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
 - Windows Server 2025
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 

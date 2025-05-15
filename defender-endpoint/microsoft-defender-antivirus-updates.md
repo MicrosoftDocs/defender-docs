@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/09/2025
+ms.date: 05/14/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,6 +98,25 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### April-2025 (Platform: TBD | Engine: 1.1.25040.1)
+
+- Security intelligence update version: **1.429.3.0**
+- Release date:  **May 14, 2025 (Engine)** / (Platform pending)
+- Platform: (*coming soon*)
+- Engine: **1.1.25040.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Fixed TVM Block where we failed to block a trusted file
+- Fixed Microsoft Defender platform update timestamp to reflect the actual update time.
+- The [1002 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1002) (An anti-malware scan was stopped before it finished) now includes details of the stop reason.
+- Added more details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
+- Improved ASR file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
+- Improvement in health reporting for machines that are rebooted or hibernated.
+- Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
+- Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
+
 ### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
 
 - Security intelligence update version: **1.427.3.0**
@@ -186,7 +205,6 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - Windows Update
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
-
 - [File server](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus)
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](/defender-endpoint/microsoft-defender-security-center-antivirus)
 - Command line, as follows:   

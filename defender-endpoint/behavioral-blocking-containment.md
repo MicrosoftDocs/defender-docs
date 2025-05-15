@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/29/2025
+ms.date: 04/25/2025
 ---
 
 # Behavioral blocking and containment
