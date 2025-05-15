@@ -43,7 +43,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 2. Verify the download.
 
    ```bash
-   echo '7886E960546A8490C7CBD962330104B2454647131B89D26771610FDB5BB6BE3D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '4D3073F252667AC87F1229163677CB6843E0454AC4F33A526D7F55DDAA5E09E3  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
    
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
