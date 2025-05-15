@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 04/11/2025
+ms.date: 05/14/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -37,13 +37,13 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
+   wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
    ```
 
 2. Verify the download.
 
    ```bash
-   echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '4D3073F252667AC87F1229163677CB6843E0454AC4F33A526D7F55DDAA5E09E3  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
    
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
