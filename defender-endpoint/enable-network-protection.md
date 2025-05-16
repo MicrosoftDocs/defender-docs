@@ -40,26 +40,6 @@ search.appverid: met150
 
 [Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
-## Check if network protection is enabled
-
-You can use Registry Editor to check the status of network protection.
-
-1. Select the **Start** button in the task bar and type `regedit`. In the list of results, select Registry editor to open it.
-
-2. Choose **HKEY_LOCAL_MACHINE** from the side menu.
-
-3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Policy Manager**.
-
-   If the key is missing, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
-
-4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
-
-   - **0**, or **Off**
-   - **1**, or **On**
-   - **2**, or **Audit** mode
-
-   :::image type="content" source="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Network Protection registry key" lightbox="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
-
 ## Enable network protection
 
 To enable network protection, you can use one of the following methods:
@@ -205,6 +185,27 @@ Use the following procedure to enable network protection on domain-joined comput
    ```
 
    To turn off network protection, use the `Disabled` parameter instead of `AuditMode` or `Enabled`.
+
+
+## Check if network protection is enabled
+
+You can use Registry Editor to check the status of network protection.
+
+1. Select the **Start** button in the task bar and type `regedit`. In the list of results, select Registry editor to open it.
+
+2. Choose **HKEY_LOCAL_MACHINE** from the side menu.
+
+3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Policy Manager**.
+
+   If the key is missing, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+
+4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
+
+   - **0**, or **Off**
+   - **1**, or **On**
+   - **2**, or **Audit** mode
+
+   :::image type="content" source="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Network Protection registry key" lightbox="/defender/media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
 
 #### Important information about removing Exploit Guard settings from a device
 
