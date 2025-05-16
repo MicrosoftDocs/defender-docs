@@ -57,16 +57,8 @@ Understand the following prerequisites before you create indicators for files:
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
 - The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
-
 - This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
-- File hash computation is enabled, by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**
-
-Alternatively, use one of these two ways to enable File hash computation:
-Run the following command: `Set-MpPreference -EnableFileHashComputation $true`
-
-```cmd
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine" /v "EnableFileHashComputation" /t REG_DWORD /d 1 /f
-```
+- File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
 
 > [!NOTE]
 > File indicators support portable executable (PE) files, including `.exe` and `.dll` files only.
@@ -98,9 +90,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine" /v "EnableF
    - Indicator: Specify the entity details and define the expiration of the indicator.
    - Action: Specify the action to be taken and provide a description.
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
-
-   > [!NOTE]
-   > Device Group creation is supported in both Defender for Endpoint Plan 1 and Plan 2
 
 5. Review the details in the Summary tab, then select **Save**.
 
