@@ -116,18 +116,7 @@ The following sections describe each of these methods in detail.
                    <dict>
                    <key>behaviorMonitoring</key>
                    <string>enabled</string>
-                   <key>behaviorMonitoringConfigurations</key>
-                   <dict>
-                   <key>blockExecution</key>
-                   <string>enabled</string>
-                   <key>notifyForks</key>
-                   <string>enabled</string>
-                   <key>forwardRtpToBm</key>
-                   <string>enabled</string>
-                   <key>avoidOpenCache</key>
-                   <string>enabled</string>
-                                    </dict>
-                       </dict>
+                   </dict>
                </dict>
            </array>
        </dict>
@@ -162,22 +151,11 @@ The following sections describe each of these methods in detail.
                    <key>behaviorMonitoring</key>
                    <string>enabled</string>
                </dict>
-                   <key>features</key>
-                        <dict>
-                            <key>behaviorMonitoring</key>
-                            <string>enabled</string>
-                            <key>behaviorMonitoringConfigurations</key>
-                                <dict>
-                                    <key>blockExecution</key>
-                                    <string>enabled</string>
-                                    <key>notifyForks</key>
-                                    <string>enabled</string>
-                                    <key>forwardRtpToBm</key>
-                                    <string>enabled</string>
-                                    <key>avoidOpenCache</key>
-                                    <string>enabled</string>
-                                </dict>
-                        </dict>
+           <key>features</key>
+               <dict>
+                   <key>behaviorMonitoring</key>
+                   <string>enabled</string>
+               </dict>
        </dict>
    </plist>
    ```
@@ -219,14 +197,42 @@ sudo mdatp threat list
 
 ```
 
-### Frequently Asked Questions (FAQ)
+### Frequently asked questions (FAQ)
 
-#### What if I see an increase in cpu utilization or memory utilization?
+#### What if I see an increase in CPU utilization or memory utilization?
 
-Disable behavior monitoring and see if the issue goes away.
+Disable behavior monitoring and see if the issue goes away. If the issue doesn't go away, it isn't related to behavior monitoring.
 
-- If the issue doesn't go away, it isn't related to behavior monitoring.
-- If the issue goes away, download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer), and then contact Microsoft support.
+If the issue goes away, re-enable behavior monitoring and use behavior monitoring statistics to identify and exclude processes generating excessive events:
+
+```bash
+sudo mdatp config behavior-monitoring-statistics --value enabled
+```
+
+Repro the issue and then execute:
+
+```bash
+sudo mdatp diagnostic behavior-monitoring-statistics --sort
+```
+
+This command lists processes running on the machine which are reporting behavior monitoring events to the engine process. The more events, the more CPU/memory impact that process has.
+
+Exclude identified processes using:
+
+```bash
+sudo mdatp exclusion process add --path <path to process with lots of events>
+```
+
+> [!IMPORTANT]
+> Please verify the reliability of the processes being excluded. Excluding these processes will prevent all events from being sent to behavior monitoring and from undergoing content scanning. However, EDR will continue to receive events from these processes. It is important to note that this mitigation is unlikely to reduce CPU usage of the `wdavdaemon` or `wdavdaemon_enterprise processes`, but may affect `wdavdaemon_unprivileged`. If the other two processes are also experiencing high CPU usage, behavior monitoring may not be the sole cause, and contacting Microsoft support is recommended.
+
+Once done, disable behavior monitoring statistics:
+
+```bash
+sudo mdatp config behavior-monitoring-statistics --value disabled
+```
+
+If the issue persists, download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer), and then contact Microsoft support.
 
 ## Network real-time inspection for macOS
 
