@@ -27,7 +27,7 @@ ms.date: 04/16/2025
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 
-This article describes how to deploy Microsoft Defender for Endpoint on macOS through Microsoft Intune. 
+This article describes how to deploy Microsoft Defender for Endpoint on macOS through Microsoft Intune.
 
 ## Prerequisites and system requirements
 
