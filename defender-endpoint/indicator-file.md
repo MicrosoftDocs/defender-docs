@@ -121,7 +121,7 @@ The current supported actions for file IOC are allow, audit and block, and remed
    :::image type="content" source="media/indicators-generate-alert.png" alt-text="The Alert settings for file indicators" lightbox="media/indicators-generate-alert.png":::
 
    > [!IMPORTANT]
-   > - Typically, file blocks are enforced and removed within15 minutes, average 30 minutes but can take upwards of 2 hours.
+   > - Typically, file blocks are enforced and removed within 15 minutes, average 30 minutes but can take upwards of 2 hours.
    > - If there are conflicting file IoC policies with the same enforcement type and target, the policy of the more secure hash will be applied. An SHA-256 file hash IoC policy will win over an SHA-1 file hash 
    IoC policy, which will win over an MD5 file hash IoC policy if the hash types define the same file. This is always true regardless of the device group.
    > - In all other cases, if conflicting file IoC policies with the same enforcement target are applied to all devices and to the device's group, then for a device, the policy in the device group will win.
@@ -144,7 +144,7 @@ Timestamp > ago(30d)
 
 For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Here are other thread names that can be used in the sample query:
+Here are other threat names that can be used in the sample query:
 
 Files:
 
