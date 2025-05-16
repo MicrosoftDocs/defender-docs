@@ -81,7 +81,7 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 
       Any other separation characters are invalid.
 
-4. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
+1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
    | Configuration Key| Description|
    |---|---|
@@ -89,21 +89,21 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
    |Enable Network protection in Microsoft Defender|1 - Enable (default), 0- Disable. This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
    |Enable Network Protection Privacy|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable privacy in network protection.|
    |Enable Users to Trust Networks and Certificates|1 - Enable, 0 - Disable (default). Security admins manage this setting to enable or disable the end user's in-app experience to trust and untrust unsecure and suspicious networks and malicious certificates.|
-   |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender.|
-   |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, alerts are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
-   |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, notification alerts are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and alerts are also sent to the SOC Admin. |
+   |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender. This setting is only applicable to alerts and not to device timeline events. So, this setting won't applied to open wi-fi and self-signed certificates.|
+   |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, events are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
+   |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, events are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and events are also sent to the SOC Admin. |
    
-5. Add the required groups to which the policy has to be applied. Review and create the policy.
+1. Add the required groups to which the policy has to be applied. Review and create the policy.
 
    | Configuration Key| Description|
    |---|---|
    |Enable Network protection in Microsoft Defender|1: Enable (default)<br/> 0: Disable<br/><br/> This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
    |Enable Network Protection Privacy|1: Enable (default) <br/> 0: Disable <br/><br/> Security admins manage this setting to enable or disable privacy in network protection.|
    |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks and malicious certificates.|
-   |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender.|
+   |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender. This setting is only applicable to alerts and not to the device timeline events. So, this setting won't be applied to open Wi-Fi and self-signed certificate detection.|
    |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/>  Security admins manage this setting to enable or disable open network detection.|
-   |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, notification alerts are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and alerts are sent to SOC admins when Defender detects a bad certificate.|
-
+   |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, events are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and events are sent to SOC admins when Defender detects a bad certificate.|
+   
 6. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
@@ -111,13 +111,14 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > - To ensure comprehensive protection against Wi-Fi threats, users should enable location permission and select the "Allow All the Time" option. This permission is optional but highly recommended, even when the app is not actively in use. If location permission is denied, Defender for Endpoint will only offer limited protection against network threats and will only safeguard users from rogue certificates.
 
 > [!IMPORTANT]
-> Starting May 19, 2025, alerts are no longer generated in the Microsoft Defender portal for mobile devices connecting or disconnecting to an open wireless network and for downloading/installing/deleting self-signed certificates. Instead, these activities are now generated as events and are viewable in the device timeline.</br></br>
-> Here are a key changes about this new experience:</br>
-> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
-> - WWhen an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
-> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to trusted networks, are sent to the device timeline as events.
-> - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.</br>
-> - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+> Starting May 19, 2025, alerts are no longer generated in the Microsoft Defender portal for mobile devices connecting or disconnecting to an open wireless network and for downloading/installing/deleting self-signed certificates. Instead, these activities are now generated as events and are viewable in the device timeline.
+> Here are key changes about this new experience:
+> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on mid-May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.
+> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
+> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
+> - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
+- The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+
 
 ## Privacy Controls
 
