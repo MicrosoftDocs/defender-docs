@@ -45,7 +45,7 @@ For a video about this information, see <https://youtu.be/eQanpq9N1Ps>.
 
 The **Incidents** page in the Microsoft Defender portal at <https://security.microsoft.com/incidents> (also known as the _Incidents_ queue) allows you to manage and monitor events from the following sources in Defender for Office 365:
 
-- [Alerts](/purview/alert-policies#default-alert-policies).
+- [Alert policies](/defender-xdr/alert-policies#default-alert-policies).
 - [Automated investigation and response (AIR)](air-about.md).
 
 For more information about the Incidents queue, see [Prioritize incidents in Microsoft Defender XDR](/defender-xdr/incident-queue).
@@ -273,7 +273,7 @@ The submission pipeline in the service follows a tightly integrated process when
 - Automated triage.
 - Grading by security analysts and human-partnered machine learning-based solutions.
 
-For more information, see [Reporting an email in Defender for Office 365 - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/reporting-an-email-in-microsoft-defender-for-office-365/ba-p/2870231).
+For more information, see [Microsoft Defender for Office 365 Blog - Reporting an email in Defender for Office 365](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/reporting-an-email-in-microsoft-defender-for-office-365/2870231).
 
 Security team members can do submissions from multiple locations in the Microsoft Defender portal at <https://security.microsoft.com>:
 

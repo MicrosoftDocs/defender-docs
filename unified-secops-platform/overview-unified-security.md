@@ -3,8 +3,8 @@ title: "What is Microsoft's unified security operations platform?"
 description: Provides an overview of features and functionality in the Microsoft's unified security operations platform
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 11/15/2024
 audience: ITPro

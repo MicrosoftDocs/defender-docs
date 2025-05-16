@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 01/28/2025
+  ms.date: 03/02/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -29,7 +29,7 @@ summary: |
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
-  This article provides frequently asked questions and answers about quarantined email messages for Microsoft 365 organizations with mailboxes in Exchange Online, or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes.
+  This article provides frequently asked questions (FAQ) and answers about quarantined email messages for Microsoft 365 organizations with mailboxes in Exchange Online, or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes.
 
   > [!NOTE]
   > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
@@ -226,7 +226,7 @@ sections:
         answer: |
           First, use [message trace](message-trace-defender-portal.md) to confirm that the recipient didn't receive a quarantine notification:
 
-          - **Sender**: `Quarantine@messaging.micosoft.com` or a [custom sender address](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
+          - **Sender**: `Quarantine@messaging.microsoft.com` or a [custom sender address](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
           - **Recipient**: The recipient's email address.
 
           After you confirm that quarantine notifications weren't sent, proceed with the following guidance.
@@ -237,7 +237,7 @@ sections:
 
           Also, the protection policies in [preset security policies](preset-security-policies.md) are always applied _before_ custom protection policies. A user who's defined in the Standard or Strict preset security policy will never get a customized protection policy where the quarantine policy is customized to turn on quarantine notifications. For more information, see [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies)
 
-          Quarantine notifications aren't enabled for messages quarantined by Exchange mail flow rules (transport rules) or data loss prevention (DLP). These messages have the AdminOnly quarantine policy. Quarantine notifications are also no generated for messages with DefaultFullAccess quarantine policy.
+          Quarantine notifications aren't enabled for messages quarantined by Exchange mail flow rules (transport rules) or data loss prevention (DLP). These messages have the AdminOnly quarantine policy. Quarantine notifications are also not generated for messages with DefaultFullAccess quarantine policy.
 
       - question: |
           How do I customize quarantine notifications to add a custom logo?
@@ -275,6 +275,13 @@ sections:
 
           **Approve release** has been retired and is now included in :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 
+      - question: |
+          The **Block sender** button in quarantine notifications or on the **Quarantine** page doesn't seem to be working. What's going on?
+        answer: |
+          The **Block sender** action isn't possible for public folders.
+
+          Public folders in Exchange don't have junk email configuration settings like individual mailboxes. The `Set-MailboxJunkEmailConfiguration` cmdlet configures junk email settings for mailboxes, not public folders.
+          
       - question: |
           **Filter** and **Search** aren't working. What's going on?
         answer: |

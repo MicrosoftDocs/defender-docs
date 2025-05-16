@@ -1,6 +1,6 @@
 ---
-title: Deploy updates for Microsoft Defender for Endpoint on Mac
-description: Control updates for Microsoft Defender for Endpoint on Mac in enterprise environments.
+title: Deploy updates for Microsoft Defender for Endpoint on macOS
+description: Control updates for Microsoft Defender for Endpoint on macOS in enterprise environments.
 ms.service: defender-endpoint
 author: emmwalshh
 ms.author: ewalsh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 04/16/2025
 ---
 
 # Deploy updates for Microsoft Defender for Endpoint on macOS
@@ -30,12 +30,12 @@ ms.date: 05/02/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 
 > [!WARNING]
-> Each version of Defender for Endpoint on macOS is set to expire automatically after 6 months. While expired versions continue to receive security intelligence updates, we recommend that you install the latest version to get all available improvements and enhancements. <br>
+> Each version of Defender for Endpoint on macOS is set to expire automatically after six months. While expired versions continue to receive security intelligence updates, we recommend that you install the latest version to get all available improvements and enhancements. <br>
 > To check the expiration date, run the following command:
 > ```bash
 > mdatp health --field product_expiration
@@ -43,7 +43,7 @@ Microsoft regularly publishes software updates to improve performance, security,
 
 To update Microsoft Defender for Endpoint on macOS, Microsoft AutoUpdate (MAU) is used. MAU checks updates periodically, and automatically downloads and installs them.
 
-You can deploy preferences to configure how and when MAU checks for updates for the Macs in your organization.
+You can deploy preferences to configure how and when MAU checks for updates for the macOS devices in your organization.
 
 ## Use msupdate
 
@@ -76,7 +76,7 @@ The `Current` channel contains the most stable version of the product.
 > - `Current Channel` was named `Production`
 
 > [!TIP]
-> In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to `Beta` or `Preview`.
+> In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to `Beta` or `Preview`.
 
 <br>
 
@@ -105,7 +105,7 @@ The `Current` channel contains the most stable version of the product.
 
 For the latest information on this setting, see [EnableCheckForUpdatesButton](/deployoffice/mac/mau-preferences#enablecheckforupdatesbutton).
 
-Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface. 
+Change whether local users are able to select the "Check for Updates" option in the Microsoft AutoUpdate user interface. 
 <br>
 
 
@@ -153,7 +153,7 @@ The following configuration profile is used to:
 - Allow users on the device to enroll into the Insider channels
 
 > [!WARNING]
-> The below configuration is an example configuration and should not be used in production without proper review of settings and tailor of configurations.
+> The following configuration is an example configuration and shouldn't be used in production without proper review of settings and tailor of configurations.
 
 ### Jamf Pro
 

@@ -9,8 +9,8 @@ metadata:
   ms.service: unified-secops-platform #Required; use either service or product per approved list. 
   ms.topic: landing-page # Required
   ms.collection: usx-security # Optional; Remove if no collection is used.
-  author: cwatson-cat #Required; your GitHub user alias, with correct capitalization.
-  ms.author: cwatson #Required; microsoft alias of author; optional team alias.
+  ms.author: bagol
+  author: batamig
   ms.date: 12/03/2024 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -82,7 +82,7 @@ landingContent:
           - text: "Optimize your SOC"
             url: /azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal&branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json   
           - text: "Manage multiple tenants"
-            url: /defender-xdr/mto-overview?branch=main?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+            url: mto-overview.md
 
 
 

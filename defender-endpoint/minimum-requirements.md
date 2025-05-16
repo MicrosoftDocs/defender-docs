@@ -2,11 +2,11 @@
 title: Minimum requirements for Microsoft Defender for Endpoint
 description: Understand licensing and other requirements for onboarding devices to Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 01/13/2025
+ms.date: 03/14/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -25,7 +25,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 There are some minimum requirements for onboarding devices to Defender for Endpoint. This article describes licensing, hardware and software requirements, and other configuration settings needed to onboard devices.
 
@@ -93,11 +93,11 @@ Supported versions of Windows include:
   - Windows Server 2019 core edition
   - Windows Server 2022
   - Windows Server 2022 core edition
-  - Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)
+  - Windows Server 2025
 - Azure Virtual Desktop
 - Windows 365 running one of the previously listed operating systems/versions
 
-The following operating systems require the use of the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA) to work with Defender for Endpoint:
+The following operating systems work with Defender for Endpoint, provided you're using the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA):
 
 - Windows 8.1 Enterprise
 - Windows 8.1 Pro
@@ -113,7 +113,7 @@ To add anti-malware protection to these older operating systems, you can use [Sy
 ### Other supported operating systems
 
 - [Mac](microsoft-defender-endpoint-mac.md) (client devices)
-- [Linux Server](microsoft-defender-endpoint-linux.md)
+- [Linux](microsoft-defender-endpoint-linux.md)
 - [Windows Subsystem for Linux](mde-plugin-wsl.md)
 - [Android](microsoft-defender-endpoint-android.md)
 - [iOS](microsoft-defender-endpoint-ios.md)

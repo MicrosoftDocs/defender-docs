@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-mdti
 ms.topic: conceptual
-ms.date: 01/15/2025
+ms.date: 04/17/2025
 ---
 
 # Using Microsoft Security Copilot for threat intelligence
@@ -24,7 +24,7 @@ ms.date: 01/15/2025
 **Applies to:**
 - [Microsoft Defender XDR](/defender-xdr)
 
-Microsoft Copilot in Defender applies the capabilities of [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) to deliver Microsoft Defender Threat Intelligence (Defender TI) information about threat actors and tools, as well as contextual threat intelligence, directly into the Microsoft Defender portal. Based on threat analytics reports, intel profiles, and other available Defender TI content, you can use Copilot in Defender to summarize the latest threats affecting your organization, know which threats to prioritize based on your exposure level, or gain more knowledge about your organization's or the global threat landscape.
+Microsoft Copilot in Microsoft Defender applies the capabilities of [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) to deliver Microsoft Defender Threat Intelligence (Defender TI) information about threat actors and tools, as well as contextual threat intelligence, directly into the Microsoft Defender portal. Based on threat analytics reports, intel profiles, and other available Defender TI content, you can use Copilot in Defender to summarize the latest threats affecting your organization, know which threats to prioritize based on your exposure level, or gain more knowledge about your organization's or the global threat landscape.
 
 > [!NOTE]
 > Defender TI capabilities are also available in Security Copilot standalone experience through the Microsoft Threat Intelligence plugin. [Learn more about Defender TI integration with Security Copilot](security-copilot-and-defender-threat-intelligence.md)

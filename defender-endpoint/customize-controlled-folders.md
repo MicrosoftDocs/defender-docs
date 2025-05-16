@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 10/17/2024
+ms.date: 03/04/2025
 ---
 
 # Customize controlled folder access
@@ -33,7 +33,13 @@ ms.date: 10/17/2024
 > [!TIP]
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11 clients.
+Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
+
+- Windows 11
+- Windows 10
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.

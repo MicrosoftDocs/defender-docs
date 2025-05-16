@@ -32,7 +32,7 @@ To learn more about the services that are part of the Microsoft Defender portal,
 - **[Microsoft Defender for Office 365 in the Microsoft Defender portal](microsoft-365-security-center-mdo.md)**
 - **[Microsoft Defender for Identity in the Microsoft Defender portal](/defender-for-identity/microsoft-365-security-center-mdi)**
 - **[Microsoft Defender for Cloud Apps in the Microsoft Defender portal](/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps)**
-- **[Microsoft Defender for Cloud alerts and incidents in the Microsoft Defender portal](microsoft-365-security-center-defender-cloud.md)**
+- **[Microsoft Defender for Cloud integration with Microsoft Defender XDR](/azure/defender-for-cloud/concept-integration-365)**
 - **[Microsoft Purview Data Loss Prevention alerts in the Microsoft Defender portal](dlp-investigate-alerts-defender.md)**
 - **[Microsoft Defender Vulnerability Management in the Microsoft Defender portal](/defender-vulnerability-management/defender-vulnerability-management)**
 - **[Microsoft Security Copilot embedded experience in the Microsoft Defender portal](security-copilot-in-microsoft-365-defender.md)**
@@ -92,7 +92,7 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
-You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](submission-guide.md).
+You can submit files, email and email attachments, URLs, or Teams messages in the **Submissions** page to Microsoft for further analysis. For more information, see the [Submission guide](/unified-secops-platform/submission-guide).
 
 ## Threat analytics
 

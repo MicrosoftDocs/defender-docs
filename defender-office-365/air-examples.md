@@ -14,7 +14,7 @@ search.appverid:
 ms.collection:
 - m365-security
 - tier2
-ms.date: 01/10/2025
+ms.date: 02/24/2025
 description: See examples for how to start automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
 ms.custom:
 - air
@@ -39,7 +39,7 @@ This article describes how AIR works through several examples:
 
 ## Example: A user-reported phishing message launches an investigation playbook
 
-A user receives an email that looks like a phishing attempt. The user reports the message using the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md), which results in an alert that's triggered by the **Email reported by user as malware or phish** [alert policy](/purview/alert-policies#threat-management-alert-policies), which automatically launches the investigation playbook.
+A user receives an email that looks like a phishing attempt. The user reports the message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), which results in an alert that's triggered by the **Email reported by user as malware or phish** [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies), which automatically launches the investigation playbook.
 
 Various aspects of the reported email message are assessed. For example:
 
@@ -88,7 +88,7 @@ AIR capabilities in Defender for Office 365 Plan 2 include [reports and details]
 
 Use the [Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference) for integration with these solutions.
 
-For an example of a custom solution that integrates alerts from user-reported phishing messages that were already processed by AIR into a SIEM server and case management system, see [Tech Community blog: Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the Office 365 Management API](https://techcommunity.microsoft.com/t5/microsoft-security-and/improve-the-effectiveness-of-your-soc-with-office-365-atp-and/ba-p/1525185).
+For an example of a custom solution that integrates alerts from user-reported phishing messages that were already processed by AIR into a SIEM server and case management system, see [Microsoft Security Blog - Improve the Effectiveness of your SOC with Microsoft Defender for Office 365 and the Office 365 Management API](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/improve-the-effectiveness-of-your-soc-with-office-365-atp-and-the-o365-managemen/1525185).
 
 The integrated solution greatly reduces the number of false positives, which allows the SecOps team to focus their time and effort on real threats.
 

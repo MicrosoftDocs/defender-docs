@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-spam settings and filters that help prevent spam in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 12/08/2024
+ms.date: 05/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -145,7 +145,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
 
   ² For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
 
-  ³ You can this use value as a condition in mail flow rules to filter or route the message.
+  ³ You can use this value as a condition in [Mail flow rules in Exchange Server](/exchange/policy-and-compliance/mail-flow-rules/mail-flow-rules) to filter or route messages for mailboxes in on-premises Exchange environments only (not in Exchange Online).
 
   ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 

@@ -116,7 +116,7 @@ In this scenario, a legitimate app is blocked from writing to folders that are p
 
 In this scenario, a third-party app that isn't a threat is detected and identified as malicious by Microsoft Defender Antivirus.
 
-**How to address**: Submit the app to Microsoft for analysis. See [How to submit a file to Microsoft for analysis](/defender-xdr/submission-guide#how-do-i-submit-a-file-to-microsoft-for-analysis).
+**How to address**: Submit the app to Microsoft for analysis. See [How to submit a file to Microsoft for analysis](/unified-secops-platform/submission-guide#how-do-i-submit-a-file-to-microsoft-for-analysis).
 
 ### An app is incorrectly detected and identified as malicious by Defender for Endpoint
 

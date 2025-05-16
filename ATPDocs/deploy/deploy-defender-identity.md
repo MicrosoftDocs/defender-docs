@@ -53,14 +53,17 @@ Use the following steps to prepare for deploying Defender for Identity:
 > We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if the servers in your environment have the necessary prerequisites.
 > You can use the [DefenderForIdentity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/) to add the required auditing and configure the necessary settings.
 
-## Deploy Defender for Identity
+> [!IMPORTANT]
+> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
+
+## Deploy Defender for Identity classic sensor
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
 
 1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
-1. [Download the Defender for Identity sensor](download-sensor.md).
-1. [Install the Defender for Identity sensor](install-sensor.md). 
-1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
+1. [Download the Defender for Identity classic sensor](download-sensor.md).
+1. [Install the Defender for Identity classic sensor](install-sensor.md). 
+1. [Configure the Defender for Identity classic sensor](configure-sensor-settings.md) to start receiving data.
 
 ## Post-deployment configuration
 

@@ -7,26 +7,25 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
 - MOE150
 - MET150
-ms.date: 08/14/2024
+ms.date: 04/25/2025
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint
+#customer intent: As a security analyst, I want to understand how to manage the deception capability in Microsoft Defender XDR to detect human-operated attacks with lateral movement.
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased products/services that might be substantially modified before commercially release. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -63,9 +62,9 @@ Attackers interacting with the fake network assets set up by the deception capab
 
 The built-in deception capability in the Microsoft Defender portal uses rules to make decoys and lures that match your environment. The feature applies machine learning to suggest decoys and lures that are tailored to your network. You can also use the deception feature to manually create the decoys and lures. These decoys and lures are then automatically deployed to your network and planted to devices you specify using PowerShell.
 
-:::image type="content" source="/defender/media/deception/fig1-deception.png" alt-text="Screenshot of an attack with lateral movement and where deception intercepts the attack" lightbox="/defender/media/deception/fig1-deception.png":::
+Deception technology, through high confidence detections of human-operated lateral movement, alerts security teams when an attacker interacts with fake hosts or lures. Here's the process of how the deception capability works:
 
-*Figure 1. Deception technology, through high confidence detections of human-operated lateral movement, alerts security teams when an attacker interacts with fake hosts or lures*
+:::image type="content" source="/defender/media/deception/fig1-deception.png" alt-text="Screenshot of an attack with lateral movement and where deception intercepts the attack" lightbox="/defender/media/deception/fig1-deception.png":::
 
 **Decoys** are fake devices and accounts that appear to belong to your network. **Lures** are fake content planted on specific devices or accounts and are used to attract an attacker. The content can be a document, a configuration file, cached credentials, or any content that an attacker can likely read, steal, or interact with. Lures imitate important company information, settings, or credentials.
 
@@ -94,9 +93,9 @@ The alert details contain:
 - The decoy device or user account where the alert originated
 - The type of attack like sign in attempts or lateral movement attempts
 
-:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
+Here's an example of a deception-related alert:
 
-*Figure 2. Details of a deception-related alert*
+:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
 
 ## Next step
 
