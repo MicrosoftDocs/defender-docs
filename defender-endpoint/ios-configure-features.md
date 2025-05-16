@@ -123,14 +123,14 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
    :::image type="content" source="media/np-mdmconfig-key.png" alt-text="Screenshot that shows the mdm configuration policy." lightbox="media/np-mdmconfig-key.png":::
 
-6. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
+1. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
-   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, alerts are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
+   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, events are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
    | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
-   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
-   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
+   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    
 7. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
@@ -152,13 +152,13 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
    :::image type="content" source="media/addiosconfigvalue.png" alt-text="Add configuration value." lightbox="media/addiosconfigvalue.png":::
 
-4. For other configurations related to network protection, add the following keys and appropriate corresponding value.
+1. For other configurations related to network protection, add the following keys and appropriate corresponding value.
 
    |Key| Default (true - enable, false - disable)|Description|
    |---|---|---|
-   |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
+   |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, events are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
    |`DefenderEndUserTrustFlowEnable`| false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
-   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
+   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WI-FI access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
    |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    
 5. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
@@ -174,7 +174,6 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 > - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
 > - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to user trusted networks, are sent to the device timeline as events.</br>
 > - This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
-
 ## Coexistence of multiple VPN profiles
 
 Apple iOS doesn't support multiple device-wide VPNs to be active simultaneously. While multiple VPN profiles can exist on the device, only one VPN can be active at a time.
