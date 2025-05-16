@@ -224,7 +224,7 @@ sudo mdatp exclusion process add --path <path to process with lots of events>
 ```
 
 > [!IMPORTANT]
-> Please verify the reliability of the processes being excluded. Excluding these processes will prevent all events from being sent to behavior monitoring and from undergoing content scanning. However, EDR will continue to receive events from these processes. It is important to note that this mitigation is unlikely to reduce CPU usage of the `wdavdaemon` or `wdavdaemon_enterprise processes`, but may affect `wdavdaemon_unprivileged`. If the other two processes are also experiencing high CPU usage, behavior monitoring may not be the sole cause, and contacting Microsoft support is recommended.
+> Please verify the reliability of the processes being excluded. Excluding these processes will prevent all events from being sent to behavior monitoring and from undergoing content scanning. However, EDR will continue to receive events from these processes. It is important to note that this mitigation is unlikely to reduce CPU usage of the `wdavdaemon` or `wdavdaemon_enterprise` processes, but may affect `wdavdaemon_unprivileged`. If the other two processes are also experiencing high CPU usage, behavior monitoring may not be the sole cause, and contacting Microsoft support is recommended.
 
 Once done, disable behavior monitoring statistics:
 
