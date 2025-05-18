@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 09/30/2024
+ms.date: 05/18/2025
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
@@ -51,6 +51,9 @@ You can use Attack path analysis  to locate the biggest risks to your environmen
 1. Select a node.
 
     :::image type="content" source="media/how-to-manage-attack-path/node-select.png" alt-text="Screenshot of the attack path screen that shows you where the nodes are located for selection." lightbox="media/how-to-manage-attack-path/node-select.png":::
+   > [!NOTE]
+   > If you have limited permissions—especially across subscriptions—you might not see full attack path details. This is expected behavior designed to protect sensitive data.
+   > To view all details, make sure you have the necessary permissions. 
 
 1. Select **Insight** to view the associated insights for that node.
 
