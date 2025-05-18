@@ -29,7 +29,6 @@ ms.date: 04/16/2025
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business)
 
-
 This article provides answers to frequently asked questions about Device Control capabilities in Microsoft Defender for Endpoint.
 
 ## Questions | Answers
