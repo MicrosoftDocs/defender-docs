@@ -7,6 +7,10 @@ ms.topic: conceptual
 
 # Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity
 
+> [!IMPORTANT]
+>  The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. The change will occur automatically by the specified date, and no administrative action is required.
+>
+
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored sign-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
 
 A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs help you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
