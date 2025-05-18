@@ -38,7 +38,7 @@ To populate data in the `CloudAppEvents` table, make sure to to do the following
 
     :::image type="content" source="media/microsoft365-activities.png" alt-text="Screenshot showing the Microsoft 365 components":::
 
-1. Connect each relevant cloud app using the App connectors page in Microsoft Defender for Cloud Apps to pull activity data for that application. For more information, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+1. Connect each relevant cloud app to pull activity data for that application. For more information, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
