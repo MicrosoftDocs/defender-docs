@@ -65,7 +65,7 @@ Learn more about [Microsoft Security Copilot in Defender for Cloud](copilot-secu
 
 ### General Availability Data and AI security dashboard
 
-MAy 1, 2025
+May 1, 2025
 
 Defender for Cloud is enhancing the Data security dashboard to include AI Security with the new Data and AI security dashboard in GA. The dashboard provides a centralized platform to monitor and manage data and AI resources, along with their associated risks and protection status.
 
