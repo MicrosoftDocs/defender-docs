@@ -32,7 +32,7 @@ The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.m
 
 ## Prerequisites
 
-To populate data in the CloudAppEvents table, make sure to to do the following:
+To populate data in the `CloudAppEvents` table, make sure to to do the following:
 
 1. Select the checkbox "Pull activities" when configuring the Microsoft 365 connector.
 
