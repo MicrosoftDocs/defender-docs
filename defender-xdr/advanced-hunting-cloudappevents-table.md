@@ -32,13 +32,13 @@ The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.m
 
 ## Prerequisites
 
-Before populating events, make sure to:
+To populate data in the CloudAppEvents table, make sure to to do the following:
 
-1. Verify that the checkbox "Pull activities" is selected within the Microsoft 365 connector settings.
+1. Select the checkbox "Pull activities" when configuring the Microsoft 365 connector.
 
     :::image type="content" source="media/microsoft365-activities.png" alt-text="Screenshot showing the Microsoft 365 components":::
 
-1. Connect any relevant connector via the App Connector page to pull the activities data for that application. For more details, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+1. Connect each relevant cloud app using the App connectors page in Microsoft Defender for Cloud Apps to pull activity data for that application. For more information, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
