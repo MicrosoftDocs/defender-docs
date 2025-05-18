@@ -30,10 +30,9 @@ ms.date: 05/15/2025
 
 The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving accounts and objects in Office 365 and other [cloud apps and services](#apps-and-services-covered). Use this reference to construct queries that return information from this table.
 
-
 ## Prerequisites
 
-To populate data in the `CloudAppEvents` table, make sure to to do the following:
+To populate data in the `CloudAppEvents` table, make sure to:
 
 1. Select the checkbox "Pull activities" when configuring the Microsoft 365 connector.
 
@@ -101,7 +100,7 @@ The __CloudAppEvents__ table contains enriched logs from all SaaS applications c
 
 Connect supported cloud apps for instant, out-of-the-box protection, deep visibility into the app's user and device activities, and more. For more information, see [Protect connected apps using cloud service provider APIs](/defender-cloud-apps/protect-connected-apps).
 
-## Related topics
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
