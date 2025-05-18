@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud security recomm
 author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 09/27/2023
+ms.date: 05/18/2025
 ms.author: dacurwin
 ms.custom: generated
 ai-usage: ai-assisted

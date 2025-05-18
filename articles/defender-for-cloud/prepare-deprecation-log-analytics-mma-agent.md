@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 10/14/2024
+ms.date: 05/18/2025
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
