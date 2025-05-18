@@ -4,7 +4,7 @@ description: Learn how you can optimize Microsoft Defender for Cloud costs with 
 ms.topic: how-to
 ms.reviewer: liuyizhu
 ms.service: defender-for-cloud
-ms.date: 05/15/2024
+ms.date: 05/18/2025
 ---
 
 # Optimize Microsoft Defender for Cloud costs with a pre-purchase plan

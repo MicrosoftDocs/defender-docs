@@ -886,7 +886,7 @@
           - name: Overview
             displayName: fim, change
             href: file-integrity-monitoring-overview.md
-          - name: Migrate from Microsoft Monitoring Agent or the Azure Monitor Agent 
+          - name: Migrate from the Microsoft Monitoring Agent or the Azure Monitor Agent 
             href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md
