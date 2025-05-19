@@ -42,21 +42,9 @@ Security Exposure Management provides initiatives that currently include:
 
 - **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
 
-- **External Attack Surface Management Initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers high-level insights into identified exposures. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. By using the initiative, you can get high-level insights and metrics related to identified exposures on the selected vendor. 
+- **External Attack Surface Management Initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers insights into identified exposures on the selected vendor. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. 
 
-> [!NOTE]
->
-> This initiative provides high-level insights without a full connection to the MDEASM subscription and supports pre-built footprints only, hence does not require an active MDEASM subscription. Detailed exposure analysis including asset information can be done through Microsoft Defender External Attack Surface Management.
-
-To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
-
-1. Go to **External Attack Surface Protection** in the Security Initiatives list, click on it, then choose **Open Initiative Page**.
-
-1. Go to the **Connect source** to open the settings tab
-
-> [!NOTE]
->
-> If you have previously configured the initiative, you can click on "Switch pre-built footprint" to re-configure it with a new data.
+For more information about the external attack surface management initiative, see [External attack surface management initiative](external-attack-surface-management-initiative.md).
 
  > [!IMPORTANT]
 > Initiatives that are in preview are marked accordingly. Preview initiatives are still in development, and are subject to change.

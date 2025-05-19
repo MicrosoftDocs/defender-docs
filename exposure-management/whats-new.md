@@ -24,6 +24,14 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## May 2025
+
+### Enhanced External Attack Surface Management integration with Exposure Management
+
+This new integration allows you to incorporate detailed external attack surface data from Microsoft Defender External Attack Surface Management (MDEASM) into Exposure Management. This provides a comprehensive risk overview directly within the External Attack Surface initiative page, helping to identify and reduce external exposures more effectively. Additionally, it supports graph exploration, enabling users to analyze relationships between assets and vulnerabilities seamlessly.
+
+For more information, see [External attack surface management initiative](external-attack-surface-management-initiative.md).
+
 ## March 2025
 
 ### New predefined classifications
