@@ -4,7 +4,7 @@ description: Remediate security recommendations in Microsoft Defender for Cloud 
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
-ms.date: 03/07/2024
+ms.date: 05/19/2025
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand how to remediate security recommendations in Microsoft Defender for Cloud so that I can improve my security posture.
 ---
