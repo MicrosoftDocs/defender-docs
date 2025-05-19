@@ -3,11 +3,11 @@ title: "What's new in the Microsoft's unified SecOps platform"
 description: Lists the new features and functionality in the Microsoft unified security operations platform
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 12/10/2024
-manager: dansimp
+ms.date: 03/31/2025
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -19,6 +19,45 @@ ms.topic: concept-article
 # What's new in Microsoft's unified security operations platform
 
 This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+
+## May 2025
+
+- [Case management now available for the Defender multitenant portal (Preview)](#case-management-now-available-for-the-defender-multitenant-portal-preview)
+
+### Case management now available for the Defender multitenant portal (Preview)
+
+SecOps teams for large organizations and managed security service providers (MSSPs) must manage cases across multiple tenants. This can now be done without leaving the Defender multitenant portal.
+
+For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
+
+## April 2025
+
+- [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
+- [Case management now generally available](#case-management-now-generally-available)
+
+### Multi workspace and multi tenant support for Microsoft Sentinel (preview)
+
+Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
+
+A primary workspace's alerts are correlated with Defender XDR data, which results in incidents that include alerts from Microsoft Sentinel's primary workspace and Defender XDR. All other onboarded workspaces are considered secondary workspaces. Incidents are created based on the workspace’s data and won't include Defender XDR data.
+
+If you're working with multiple tenants and multiple workspaces per tenant, you can also use Microsoft Defender multitenant management to view incidents and alerts, and to hunt for data in Advanced hunting, across both multiple workspaces and tenants.
+
+For more information, see:
+
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
+- [Microsoft Defender multitenant management](mto-overview.md)
+- [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
+- [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
+
+### Cross-cloud multitenant management (Preview)
+
+Multitenant management in Microsoft Defender now supports managing tenants in other Microsoft cloud environments. Security operations teams operating in government cloud environments can now manage their entire security operations, including tenants in other Microsoft cloud environments, in a single pane of glass. For more information, see [Manage tenants in other Microsoft cloud environments](mto-cross-cloud.md).
+
+### Case management now generally available
+
+The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
 
 ## January 2025
 
@@ -101,7 +140,7 @@ Microsoft Sentinel workbooks are now available for viewing directly in the Micro
 
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
-For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](/defender-xdr/microsoft-sentinel-onboard).
+For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).
 
 ## November 2024
 
@@ -113,7 +152,7 @@ For more information, see [Visualize and monitor your data by using workbooks in
 We previously announced Microsoft Sentinel is generally available within Microsoft's unified security operations platform in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
 
  - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
- - [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard)
+ - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 
 ### Feature availability for Government clouds
 

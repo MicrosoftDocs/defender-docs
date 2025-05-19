@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 11/9/2023
+ms.date: 02/24/2025
 audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
@@ -47,7 +47,6 @@ Watch this video that shows more information about the unified submissions exper
 |Method|Submission type|Comments|
 |---|---|---|
 |[The built-in Report button in supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)|User||
-|[The Microsoft Report Message and Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook)|User|These free add-ins work in Outlook on all available platforms. For installation instructions, see [Enable the Report Message or the Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).|
 |[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negative) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with Exchange Online mailboxes as part of a Microsoft 365 subscription (not available in standalone EOP).|
 |Report messages from quarantine|Admin and User|Admins can [submit quarantined messages to Microsoft for analysis](quarantine-admin-manage-messages-files.md#submit-email-to-microsoft-for-review-from-quarantine) (false positives and false negatives). <br><br> If users are allowed to [release their own messages from quarantine](quarantine-end-user.md#release-quarantined-email), and [user reported settings](submissions-user-reported-messages-custom-mailbox.md) is configured to allow users to report quarantined messages, users can select **Report message as having no threats** (false positive) when they release a quarantined message.|
 
@@ -63,7 +62,7 @@ User reported messages are also available to admins in the following locations i
 
 In Defender for Office 365, admins can also submit messages from the [Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page) and from [Alerts](/defender-xdr/investigate-alerts) in the Defender portal.
 
-Admins can use the sample submission portal at <https://www.microsoft.com/wdsi/filesubmission> to submit other suspected files to Microsoft for analysis. For more information, see [Submit files for analysis](/defender-xdr/submission-guide).
+Admins can use the sample submission portal at <https://www.microsoft.com/wdsi/filesubmission> to submit other suspected files to Microsoft for analysis. For more information, see [Submit files for analysis](/unified-secops-platform/submission-guide).
 
 > [!TIP]
 > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit messages to Microsoft for analysis. The messages are analyzed for email authentication and policy checks only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary). If you report a message, URL, or email attachment to Microsoft from one of these organizations, you get the following message in the result details:

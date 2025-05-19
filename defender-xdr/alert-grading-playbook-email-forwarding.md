@@ -13,19 +13,19 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 04/03/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to review and classify alerts about suspicious email forwarding activity so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for suspicious email forwarding activity
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat actors can use compromised user accounts for several malicious purposes, including reading emails in a user's inbox, forwarding emails to external recipients, and sending phishing mails, among others. The targeted user might be unaware that their emails are being forwarded. This is a common tactic that attackers use when user accounts are compromised.
 

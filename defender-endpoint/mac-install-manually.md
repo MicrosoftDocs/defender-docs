@@ -16,7 +16,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/01/2025
 ---
 
 # Manual deployment for Microsoft Defender for Endpoint on macOS
@@ -28,12 +28,12 @@ ms.date: 04/30/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink).
+> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 This article describes how to deploy Microsoft Defender for Endpoint on macOS manually. A successful deployment requires the completion of all of the following steps:
 
 - [Download installation and onboarding packages](#download-installation-and-onboarding-packages)
-- [Application installation (macOS 11 and newer versions)](#application-installation-macos-11-and-newer-versions)
+- [Application installation (macOS 13 and newer versions)](#application-installation-macos-13-and-newer-versions)
 - [Onboarding Package](#onboarding-package)
 - [Grant Full Disk Access](#allow-full-disk-access)
 - [Ensure Background Execution](#background-execution)
@@ -48,9 +48,12 @@ Download the installation and onboarding packages from Microsoft Defender portal
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, go to **Settings > Endpoints > Device management > Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings > Endpoints > Device management > Onboarding**.
+
 2. In Section 1 of the page, set operating system to **macOS** and Deployment method to **Local script**.
+
 3. In Section 2 of the page, select **Download installation package**. Save it as wdav.pkg to a local directory.
+
 4. In Section 2 of the page, select **Download onboarding package**. Save it as WindowsDefenderATPOnboardingPackage.zip to the same directory.
    :::image type="content" source="media/onboarding-package-step4.png" alt-text="Screenshot that shows the options to download the installation and onboarding packages.":::
 
@@ -58,25 +61,26 @@ Download the installation and onboarding packages from Microsoft Defender portal
     - Type *cd Downloads* and press **Enter**.
     - Type *ls* and press **Enter**.
      :::image type="content" source="media/Terminal-image-step5.png" alt-text="Screenshot that displays the two download files.":::
+
 6. Copy the *wdav.pkg* and *MicrosoftDefenderATPOnboardingMacOs.sh* to the device where you want to deploy the Microsoft Defender for Endpoint on macOS.
 
-## Application installation (macOS 11 and newer versions)
+## Application installation (macOS 13 and newer versions)
 
 To complete this process, you must have admin privileges on the device.
 
 1. Do one of the following steps:
 
-   - Navigate to the downloaded *wdav.pkg* in **Finder** and open it.
+- Navigate to the downloaded *wdav.pkg* in **Finder** and open it.
 
    Or
 
-   - You can download the *wdav.pkg*- from **Terminal**
-
+   - You can download the *wdav.pkg*- from **Terminal**.
+   
      ```console
-     sudo installer -store -pkg /Users/admin/Downloads/wdav.pkg -target /
+     sudo installer -pkg /Users/admin/Downloads/wdav.pkg -target /
      ```
-
-   :::image type="content" source="media/monterey-install-1.png" alt-text="Screenshot that shows the installation process for the application":::
+     
+      :::image type="content" source="media/monterey-install-1.png" alt-text="Screenshot that shows the installation process for the application.":::
 
 2. Select **Continue**.
 
@@ -107,7 +111,7 @@ To complete this process, you must have admin privileges on the device.
 
 9. Select **Install Software**.
 
-10. At the end of the installation process, for macOS Big Sur (11.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
+10. At the end of the installation process, for macOS Ventura (13.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
 
     :::image type="content" source="media/monterey-install-2.png" alt-text="Screenshot that shows the system extension approval":::
 
@@ -119,9 +123,9 @@ To complete this process, you must have admin privileges on the device.
 
     :::image type="content" source="media/security-privacy-window-updated.png" alt-text="Screenshot that shows the security and privacy window.":::
 
-13. Repeat steps 11 and 12 for all system extensions distributed with Microsoft Defender for Endpoint on Mac.
+13. Repeat steps 11 and 12 for all system extensions distributed with Microsoft Defender for Endpoint on macOS.
 
-14. As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on Mac inspects socket traffic and reports this information to the Microsoft Defender portal. When prompted to grant Microsoft Defender for Endpoint permissions to filter network traffic, select **Allow**.
+14. As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal. When prompted to grant Microsoft Defender for Endpoint permissions to filter network traffic, select **Allow**.
 
     :::image type="content" source="media/monterey-install-4.png" alt-text="Screenshot that shows the system extension security preferences2":::
 
@@ -175,7 +179,7 @@ You can view applications permitted to run in background in System Settings => s
 
 :::image type="content" source="media/background-items.png" alt-text="Screenshot that shows background items":::
 
-Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they are disabled, then macOS won't start Microsoft Defender after a machine restart.
+Make sure all Microsoft Defender and Microsoft Corporation items are enabled. If they're disabled, then macOS won't start Microsoft Defender after a machine restart.
 
 ## Bluetooth permissions
 
@@ -257,15 +261,15 @@ See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove M
 > [!TIP]
 >
 > - Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
-> - If you have any feedback that you'll like to share, submit it by opening Microsoft Defender Endpoint on Mac on your device and navigate to **Help** \> **Send feedback**.
+> - If you have any feedback that you like to share, submit it by opening Microsoft Defender Endpoint on macOS on your device and navigate to **Help** \> **Send feedback**.
 
 ## Recommended content
 
-- [Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md).
+- [Learn how to install, configure, update, and use Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md).
 - [Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf](mac-jamfpro-policies.md).
 - [Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md).
 - [Learn how to troubleshoot license issues in Microsoft Defender for Endpoint on Mac](mac-support-license.md).
-- [Learn how to use resources for Microsoft Defender for Endpoint on Mac, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product](mac-resources.md).
-- [Learn how to configure Microsoft Defender for Endpoint on Mac in enterprise organizations](mac-preferences.md).
-- [Learn how to install Microsoft Defender for Endpoint on Mac on other management solutions](mac-install-with-other-mdm.md).
+- [Learn how to use resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product](mac-resources.md).
+- [Learn how to configure Microsoft Defender for Endpoint on macOS in enterprise organizations](mac-preferences.md).
+- [Learn how to install Microsoft Defender for Endpoint on macOS on other management solutions](mac-install-with-other-mdm.md).
 - [Learn how to detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on macOS](mac-pua.md).

@@ -19,14 +19,13 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 ms.date: 07/14/2023
+appliesto:
+- Microsoft Defender XDR
 ---
 
 # Address false positives or false negatives in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 False positives or negatives can occasionally occur with any threat protection solution. If [automated investigation and response capabilities](m365d-autoir.md) in Microsoft Defender XDR missed or wrongly detected something, there are steps your security operations team can take:
 

@@ -1,6 +1,6 @@
 ---
 title: Get scan history by definition
-description: Learn how to use the get scan history by definition api
+description: Learn how to use the get scan history by definition API
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/15/2022
+ms.date: 03/21/2025
 ---
 
 # Get scan history by definition
@@ -28,8 +28,9 @@ ms.date: 12/15/2022
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > Want to experience Microsoft Defender Vulnerability Management? Find out how to [sign up for a free trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
@@ -52,7 +53,7 @@ For an example of OData operation usage, see [example $top request](#example-top
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -63,10 +64,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|Machine.Read.All| Read all scan information.|
 |Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
-> [!NOTE]
-> When obtaining a token using user credentials:
-> - To view data the user needs to have at least the following role permission: 'ViewData' or 'TvmViewData' (See [Create and manage roles](../user-roles.md) for more information)
-> 
+When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md)).
 
 ## HTTP request
 

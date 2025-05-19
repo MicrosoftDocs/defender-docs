@@ -13,11 +13,12 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier2
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/16/2021
+ms.date: 04/28/2025
+#customer intent: As an IT admin, I want to track my Microsoft Secure Score history and set goals so that I can improve my organization's security posture.
 ---
 
 # Track your Microsoft Secure Score history and meet goals
@@ -45,10 +46,10 @@ To view all history for that specific recommended action, select the history lin
 In the **Metrics & trends** tab, there are several graphs and charts to give you more visibility into trends and set goals. You can set the date range for the whole page of visualizations. The visualizations include:
 
 * **Your Secure Score zone** - Customized based on your organization's goals and definitions of good, okay, and bad score ranges.
-* **Regression trend** - A timeline of points that have regressed because of configuration, user, or device changes.  
 * **Comparison trend** - How your organization's Secure Score compares to others' over time. This view can include lines representing the score average of organizations with similar seat count and a custom comparison view that you can set.
-* **Risk acceptance trend** - Timeline of recommended actions marked as "risk accepted."
 * **Score changes** - The number of points achieved, points regressed, and changes to your score in the specified date range.
+* **Regression trend** - A timeline of points that have regressed because of configuration, user, or device changes.  
+* **Risk acceptance trend** - Timeline of recommended actions marked as "risk accepted."
 
 ### Compare your score to organizations like yours
 
@@ -72,7 +73,7 @@ In the **Metrics & trends** tab, view how your organization's Secure Score compa
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community. We're monitoring the community and will provide help.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection). We're monitoring the community and will provide help.
 
 ## Related resources
 

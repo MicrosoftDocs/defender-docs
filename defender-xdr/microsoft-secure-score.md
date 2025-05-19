@@ -17,7 +17,7 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 09/29/2024
+ms.date: 04/28/2025
 ---
 
 # Microsoft Secure Score
@@ -97,7 +97,7 @@ Recommendations for other security products are coming soon. The recommendations
 
 ### Security defaults
 
-Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults to make it easier to help protect your organization with preconfigured security settings for common attacks.
+Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/entra/fundamentals/security-defaults) to make it easier to help protect your organization with preconfigured security settings for common attacks.
 
 If you turn on security defaults, you are awarded full points for the following recommended actions:
 
@@ -159,7 +159,7 @@ Microsoft Secure Score is a numerical summary of your security posture based on 
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection).
 
 ## Related resources
 

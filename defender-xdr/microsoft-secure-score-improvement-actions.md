@@ -12,14 +12,14 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.date: 02/16/2021
+ms.date: 04/28/2025
 ---
 
 # Assess your security posture with Microsoft Secure Score
@@ -115,7 +115,7 @@ Prerequisites include any licenses that are needed or actions to be completed be
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community. We're monitoring the community and will provide help.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection). We're monitoring the community and will provide help.
 
 ## Related resources
 

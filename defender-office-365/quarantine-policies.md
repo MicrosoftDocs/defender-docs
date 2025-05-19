@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 05/21/2024
+ms.date: 05/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -392,7 +392,7 @@ For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/po
 This example modifies the existing malware filter policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions to the quarantined messages.
 
 ```powershell
-New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
+Set-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
 For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
@@ -441,7 +441,7 @@ This example creates a safe attachment policy named Research Department that blo
 New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block -QuarantineTag NoAccess
 ```
 
-For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
+For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy).
 
 This example modifies the existing safe attachment policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions.
 
@@ -449,7 +449,7 @@ This example modifies the existing safe attachment policy named Human Resources 
 Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
+For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safeattachmentpolicy).
 
 ## Configure global quarantine notification settings in the Microsoft Defender portal
 
@@ -506,8 +506,6 @@ To create customized quarantine notifications for up to three languages, do the 
 
    :::image type="content" source="media/mdo-quarantine-policy-quarantine-notification-settings.png" alt-text="Quarantine notification settings flyout in the Microsoft Defender portal." lightbox="media/mdo-quarantine-policy-quarantine-notification-settings.png":::
 
-For information about the **Specify sender address**
-
 ### Customize all quarantine notifications
 
 Even if you don't customize quarantine notifications for different languages, settings are available in the **Quarantine notifications flyout** to customize all quarantine notifications. Or, you can configure the settings before, during, or after you customize quarantine notifications for different languages (these settings apply to all languages):
@@ -515,6 +513,9 @@ Even if you don't customize quarantine notifications for different languages, se
 - **Specify sender address**: Select an existing user for the sender email address of quarantine notifications. The default sender is `quarantine@messaging.microsoft.com`.
 
 - **Use my company logo**: Select this option to replace the default Microsoft logo that's used at the top of quarantine notifications. Before you do this step, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/Microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+
+  > [!TIP]
+  > PNG or JPEG logos are the most compatible in quarantine notifications in all versions of Outlook. For the best compatibility with SVG logos in quarantine notifications, use a URL link to the SVG logo instead of directly uploading the SVG file when you customize the Microsoft 365 theme.
 
   A custom logo in a quarantine notification is shown in the following screenshot:
 
@@ -582,7 +583,7 @@ If you'd rather use PowerShell to view quarantine policies, do any of the follow
   Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
   ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Get-QuarantinePolicy](/powershell/module/exchange/get-quarantinepolicy).
 
 ## Modify quarantine policies in the Microsoft Defender portal
 
@@ -646,6 +647,9 @@ By default, the default alert policy named **User requested to release a quarant
 Admins can customize the email notification recipients or create a custom alert policy for more options.
 
 For more information about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
+
+> [!NOTE]
+> Audit logging must be enabled in order to receive notifications for quarantine release requests (it's on by default). For instructions on how to turn auditing on or off, see [Turn auditing on or off](/purview/audit-log-enable-disable). 
 
 ## Appendix
 

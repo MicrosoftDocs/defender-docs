@@ -1,6 +1,6 @@
 ---
-title: Alert classification for malicious exchange connectors
-description: Alert grading recipients from malicious exchange connectors activity and protect their network from malicious attack.
+title: Alert classification for malicious Exchange connectors
+description: Learn how to classify alerts on malicious Exchange connectors activity and protect your network from attacks.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -13,22 +13,21 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
-ms.date: 03/11/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for malicious Exchange connectors so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
-# Alert classification for malicious exchange connectors
+# Alert classification for malicious Exchange connectors
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-
-Threat actors use compromised exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
+Threat actors use compromised Microsoft Exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
 
 This playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, they take necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
 
@@ -37,15 +36,15 @@ Following are the results of using a playbook:
 - Determination of the alert as malicious (TP) or benign (FP).
 - If malicious, remediate/remove the malicious connector from the environment.
 
-## Exchange connectors
+## What are Exchange connectors?
 
 Exchange connectors are a collection of instructions that customize the way your email flows to and from your Microsoft 365 or Office 365 organization. Usually, most Microsoft 365 and Office 365 organizations don't need connectors for regular mail flow.
 
 Connectors are used to route mail traffic between remote email systems and Office 365 (O365) or O365, and on-premises email systems.
 
-## Malicious Exchange connectors
+### Malicious Exchange connectors
 
-Attackers may compromise an existing exchange connector or compromise an admin, and set up a new connector by sending phish or spam/bulk emails.
+Attackers may compromise an existing Exchange connector or compromise an admin, and set up a new connector by sending phish or spam/bulk emails.
 
 The typical indicators of a malicious connector can be found when looking at email traffic and its headers. For example, when email traffic is observed from a connector node with a mismatch in P1 (header sender) and P2 (envelope sender) sender addresses along with no information on Sender's AccountObjectId.
 
@@ -53,7 +52,7 @@ This alert tries to identify such instances of mail flow, wherein the mail sendi
 
 ## Playbook workflow
 
-You must follow the sequence to identify malicious exchange connectors:
+You must follow the sequence to identify malicious Exchange connectors:
 
 - Identify which accounts are sending emails:
   - Do accounts appear to be compromised?
@@ -65,12 +64,12 @@ You must follow the sequence to identify malicious exchange connectors:
   - Are emails going to external addresses belonging to customers or vendors (supply chain type attack)?
 - Check if the FROM header and Envelope Sender domains are the same or different.
 
-## Investigating malicious connectors
+## Investigate malicious connectors
 
 This section describes the steps to investigate an alert and remediate the security risk due to this incident.
 
 - Determine whether the connector demonstrates bad (malicious) behavior.
-  - Look for events indicating unusual mail traffic and identify, whether any new exchange connector was added recently.
+  - Look for events indicating unusual mail traffic and identify, whether any new and recently added Exchange connector.
     - For mail traffic observed, determine if the email accounts are compromised by inspecting whether the accounts are responsible for unusual mail traffic.
   - Look for mail content containing malicious artifacts (bad links/attachments).
   - Look for domains that are not part of your environment.
@@ -95,9 +94,7 @@ Ensure you have access to the following tables:
 |CloudAppEvents|Contains audit log of user activities.|
 |IdentityLogonEvents|Contains login information for all users.|
 
-## References
-
-AHQs samples for reference:
+### Sample queries
 
 - Run this KQL to check new connector creation.
 
@@ -178,9 +175,9 @@ AHQs samples for reference:
     - Check the mail content for bad behavior
     - Look at URLs in the email or email having attachments.
 
-## AHQ considerations
+### Query considerations
 
-Following are the AHQ considerations for protecting the recipients from malicious attack.
+Following are the query considerations for protecting the recipients from malicious attack.
 
 - Check for admin logins for those who frequently manage connectors from unusual locations (generate stats and exclude locations from where most successful logins are observed).
 

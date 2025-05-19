@@ -342,6 +342,6 @@ Response actions run along the top of a specific device page and include:
 - [User entity page in Microsoft Defender](investigate-users.md)
 - [IP address entity page in Microsoft Defender](entity-page-ip.md)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-integration-with-azure-sentinel.md)
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](/unified-secops-platform/microsoft-sentinel-onboard)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

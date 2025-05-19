@@ -99,8 +99,9 @@ This query will return all vulnerabilities (CVEs) reported by Rapid7 on ingested
 
 ```kusto
 ExposureGraphEdges
-| where EdgeLabel == "affecting"
-| where tostring(EdgeProperties.rawData.reportInfo.reportedBy) == "rapid7"
+| where EdgeLabel == "affecting" 
+| where SourceNodeLabel == "Cve" 
+| where isnotempty(EdgeProperties.rawData.rapid7ReportInfo)
 | project AssetName = TargetNodeName, CVE = SourceNodeName
 ```
 
@@ -108,8 +109,9 @@ This query will return all vulnerabilities (CVEs) reported by Tenable on ingeste
 
 ```kusto
 ExposureGraphEdges
-| where EdgeLabel == "affecting"
-| where tostring(EdgeProperties.rawData.reportInfo.reportedBy) == "tenable"
+| where EdgeLabel == "affecting" 
+| where SourceNodeLabel == "Cve" 
+| where isnotempty(EdgeProperties.rawData.tenableReportInfo)
 | project AssetName = TargetNodeName, CVE = SourceNodeName
 ```
 
