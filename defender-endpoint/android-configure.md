@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 02/11/2025
+ms.date: 05/19/2025
 ---
 
 # Configure Defender for Endpoint on Android features
