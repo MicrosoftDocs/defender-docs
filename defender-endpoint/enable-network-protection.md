@@ -60,42 +60,39 @@ To enable network protection, you can use any of the methods described in this a
 
 6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
-### Network Protection on Windows clients:
+   - Network Protection on Windows clients:
 
-| Description| Setting|
-| -------- | -------- |
-| Enable Network Protection|Options:<br>- Enabled (block mode) Block mode is needed to block IP address/URL indicators and Web Content Filtering.<br>- Enabled (audit mode) <br>- Disabled (Default) <br>- Not Configured|
+      | Description| Setting|
+      | -------- | -------- |
+      | Enable Network Protection|Options:<br>- Enabled (block mode) Block mode is needed to block IP address/URL indicators and Web Content Filtering.<br>- Enabled (audit mode) <br>- Disabled (Default) <br>- Not Configured|
 
-#### Network Protection on Windows Server 2012 R2 and Windows Server 2016:
+   - Network Protection on Windows Server 2012 R2 and Windows Server 2016
 
-| Description|Setting|
-| -------- | -------- |
-|Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
+      | Description|Setting|
+      | -------- | -------- |
+      |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
 
-#### Optional Network Protection settings for Windows and Windows Server:
+   - Optional Network Protection settings for Windows and Windows Server:
 
-> [!WARNING]
-> For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the **Allow Datagram Processing On WinServer** to **Datagram processing on Windows Server is disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+      > [!WARNING]
+      > For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the **Allow Datagram Processing On WinServer** to **Datagram processing on Windows Server is disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
 
-|Description| Setting|
-| -------- | -------- |
-|Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default). <br>- Not configured|
-|Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
-|Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
-|Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
-|Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
-|[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
+      |Description| Setting|
+      | -------- | -------- |
+      |Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default). <br>- Not configured|
+      |Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
+      |Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
+      |Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
+      |Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
+      |[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
 
-- When you're done configuring settings, select Next.
+7. When you're done configuring settings, select **Next**.
 
-- On the Assignments page, select the groups that will receive this profile.
+8. On the **Assignments** page, select the groups that will receive this profile. Then select **Next**.
 
-- Select Next.
+9. On the **Review + create** page, review the information, and then select **Save**. 
 
-- On the Review + create page, when you're done, select Save. 
-
-- The new profile is displayed in the list when you select the policy type for the profile you created.
-
+   The new profile is displayed in the list when you select the policy type for the profile you created.
 
 ### Microsoft Intune
 
