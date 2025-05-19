@@ -424,9 +424,9 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: Applications inventory
+- name: View and manage applications
   items:
-    - name: Applications
+    - name: Assets
       items:
       - name: Applications inventory
         href: applications-inventory.md
