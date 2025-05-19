@@ -299,6 +299,8 @@ The **Take action** wizard is described in the following list:
    Select **Back** to go back and change your selections.
 
    When you're finished on the **Review and submit** page, select **Submit**.
+> [!NOTE]
+  > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also the action logs are only available in https://security.microsoft.com/threatincidents not in the Unified action center (https://security.microsoft.com/action-center)
 
 > [!TIP]
 > The actions might take time for to appear on the related pages, but the speed of the remediation isn't affected.
