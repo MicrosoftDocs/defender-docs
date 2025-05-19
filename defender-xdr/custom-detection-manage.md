@@ -25,7 +25,7 @@ ms.topic: how-to
 ms.date: 05/07/2025
 ---
 
-## Manage existing custom detection rules
+# Manage existing custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
