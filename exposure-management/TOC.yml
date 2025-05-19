@@ -70,6 +70,9 @@
           href: initiatives.md
         - name: Security initiatives catalog
           href: initiatives-list.md
+          items:
+           - name: External attack surface management initiative
+             href: external-attack-surface-management.md
         - name: Investigate security initiative metrics
           href: security-metrics.md
         - name: Review security recommendations
