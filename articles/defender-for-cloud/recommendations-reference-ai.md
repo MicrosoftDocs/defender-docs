@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud AI security rec
 author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 07/30/2024
+ms.date: 05/18/2025
 ms.author: dacurwin
 ms.custom: generated
 ai-usage: ai-assisted

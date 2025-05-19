@@ -1,7 +1,7 @@
 ---
 title: Configure the Microsoft Security DevOps GitHub action
 description: Learn how to configure the Microsoft Security DevOps GitHub action to enhance your project's security and DevOps processes.
-ms.date: 06/18/2023
+ms.date: 05/18/2025
 ms.topic: how-to
 ---
 
