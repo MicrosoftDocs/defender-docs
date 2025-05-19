@@ -7,8 +7,9 @@ ms.topic: article
 
 # Migrate from Defender for Cloud Apps SIEM Agent to Supported APIs
 
-## Mapping Legacy SIEM Fields to New API Schemas
-The legacy Defender for Cloud Apps SIEM agent output logs in Common Event Format (CEF) with specific fields for alerts and activities. The new APIs do not have an exact one-to-one field mapping for every CEF attribute; however, they provide equivalent or enhanced data through their schemas. While exact schema equivalence isn't available due to structural differences, the recommended APIs provide equivalent data enriched by context from multiple Microsoft Defender workloads. Transitioning to these APIs will enhance security operations by offering comprehensive and integrated insights.
+Transitioning from the legacy [Defender for Cloud Apps SIEM agent ](siem.md) to supported APIs enables continued access to enriched activities and alerts data. While the APIs may not have exact one-to-one mappings to the legacy Common Event Format (CEF) schema, they provide comprehensive and enhanced data enriched by integration across multiple Microsoft Defender workloads.
+
+# Recommended APIs for Migration
 
 > To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
@@ -17,7 +18,9 @@ The legacy Defender for Cloud Apps SIEM agent output logs in Common Event Format
 > - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 > - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-The table below compares the legacy SIEM agent’s CEF fields to the nearest equivalent fields in the Defender XDR Streaming API (advanced hunting event schema) and the Microsoft Graph Security Alerts API. This will help you identify where to find the same information when migrating:
+## Field Mapping from Legacy SIEM to Supported APIs
+
+The table below compares the legacy SIEM agent’s CEF fields to the nearest equivalent fields in the Defender XDR Streaming API (advanced hunting event schema) and the Microsoft Graph Security Alerts API.
 
 
 | CEF Field (MDA SIEM)                  | Description                                                 | Defender XDR Streaming API (CloudAppEvents/AlertEvidence/AlertInfo)                             | Graph Security Alerts API (v2)                                 |
