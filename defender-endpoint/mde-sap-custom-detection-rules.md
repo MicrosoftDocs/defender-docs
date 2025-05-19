@@ -102,8 +102,4 @@ The SAP BASIS Team and the security team should codevelop the solution. The SAP 
 
 - To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
-   
-
-
-
-
+- To learn more about custom rules, see [Create custom detection rules](/defender-xdr/custom-detection-rules#2-create-new-rule-and-provide-alert-details).
