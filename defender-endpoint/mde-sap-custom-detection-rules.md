@@ -45,6 +45,40 @@ The SAP BASIS Team and the Security team should co-develop the solution. The SAP
    - [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](https://aka.ms/mde4sap-linux)
    - [Microsoft Defender for Endpoint on Windows Server with SAP](https://aka.ms/mde4sap-windows)
 
+3. The Security team identifies all the SAP servers and runs a query for "InitiatingProcessName" == "sapxpg", noting which servers are starting SAPXPG. 
+
+   - It is recommended to limit the number of servers running SAPXPG to a minimum and to disallow SAPXPG on most SAP servers. 
+   - The SAP BASIS team and Security team should limit access to the authorization objects and transaction codes for SAPXPG. 
+
+4. The SAP BASIS team briefs the Security team on any "allowed" utilities, such as BRTOOLS (for Oracle customers), AzCopy (if used) or other specific utilities for printing or archiving.
+
+5. The Security teams works with the SAP BASIS team to query SAPXPG commands and parameters. An example query to detect or block "wget" (which can be used to download malicious payloads) is as follows:
+
+   ```kusto
+
+   DeviceProcessEvents
+    | where Timestamp >= ago (1d)
+    | where (InitiatingProcessFileName == "sapxpg" or  InitiatingProcessFileName =="sapxpg.exe")  and FileName == "wget"
+
+   // Query will show SAPXPG commands that execute "wget"
+
+   ```
+
+   This query is designed to work on Linux (sapxpg) and Windows (sapxpg.exe).
+
+   Another query/rule design logic is to block SAPXPG from executing any command other than specified allowed commands. In the following query, any command that is not in the set ("cp", "ls", "mkdir") can be alerted or blocked. 
+
+   ```kusto
+   
+   DeviceProcessEvents
+    | where Timestamp >= ago (1d)
+    | where (InitiatingProcessFileName == "sapxpg" or  InitiatingProcessFileName =="sapxpg.exe")  and FileName !in ("cp", "ls", "mkdir")
+
+   //Query will show SAPXPG commands that execute any command other than "cp" or "mv" or mkdir
+
+   ```
+
+6. 
 
 
 
