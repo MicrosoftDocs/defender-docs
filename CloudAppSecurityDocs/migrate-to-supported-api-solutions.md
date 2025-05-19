@@ -1,4 +1,4 @@
----
+----
 title: Migrate to Supported API Solutions
 description: Learn how to transition to APIs that support the management of activities and alerts data from multiple workloads in Microsoft Defender for Cloud Apps.
 ms.date: 05/19/2025
