@@ -93,6 +93,14 @@ The SAP BASIS Team and the Security team should co-develop the solution. The SAP
    - `whoami`
    - `chmod +x`
 
+7. The security team deploys the rule to non-production environments. The security team monitors detections, and the SAP BASIS team monitors jobs/interfaces for errors.
+
+8. The security team deploys the rule to production environments. The SAP BASIS team should monitor jobs and interfaces, and the security team should monitor any alerts that are generated.
+
+## Additional information
+
+To trace SAPXPG using `sapxpg_trace`, see [SAP documentation: Analyzing Problems with External Commands and Programs](https://help.sap.com/doc/saphelp_snc700_ehp01/7.0.1/en-US/4b/272d0ed1341780e10000000a42189c/content.htm?no_cache=true).
+
 
 
    
