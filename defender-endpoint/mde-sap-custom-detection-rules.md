@@ -34,7 +34,7 @@ Make sure to read the following articles before you begin:
 - [Create custom detection rules](/defender-xdr/custom-detection-rules)
 - [SAP Documentation: Starting External Commands and ProgramsLocate this document in the navigation structure](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/4b/2b2bed365474fee10000000a421937/frameset.htm)
 
-The SAP BASIS Team and the Security team should co-develop the solution. The SAP BASIS team doesn't have access to the Microsoft Defender portal, and the Security team won't know the specifics of the SAP Batch Jobs and External Commands.
+The SAP BASIS Team and the Security team should codevelop the solution. The SAP BASIS team doesn't have access to the Microsoft Defender portal, and the Security team doesn't know the specifics of the SAP Batch Jobs and External Commands.
 
 ## Recommended implementation sequence
 
@@ -45,7 +45,7 @@ The SAP BASIS Team and the Security team should co-develop the solution. The SAP
    - [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](https://aka.ms/mde4sap-linux)
    - [Microsoft Defender for Endpoint on Windows Server with SAP](https://aka.ms/mde4sap-windows)
 
-3. The Security team identifies all the SAP servers and runs a query for "InitiatingProcessName" == "sapxpg", noting which servers are starting SAPXPG. 
+3. The Security team identifies all the SAP servers and runs a query for `"InitiatingProcessName" == "sapxpg"`, noting which servers are starting SAPXPG. 
 
    - It is recommended to limit the number of servers running SAPXPG to a minimum and to disallow SAPXPG on most SAP servers. 
    - The SAP BASIS team and Security team should limit access to the authorization objects and transaction codes for SAPXPG. 
