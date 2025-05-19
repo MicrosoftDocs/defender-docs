@@ -45,6 +45,7 @@ The following are prerequisites for configuring automatic attack disruption in M
 The Minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell command: 
 
 > Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\' -Name "InstallLocation"
+> or
 > Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status' -Name "MsSenseDllVersion"
 
 #### Automation setting for your organizations devices
