@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 04/01/2025
+ms.date: 05/15/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -45,7 +45,7 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 2. Verify the download.
 
     ```bash
-    echo 'B5EBD9AB36F2DB92C341ABEBB20A50551D08D769CB061EAFCC1A931EFACE305D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '24F0A3BFC9B2CF41893A1C867AE6D1B6B79250F24D15DBA0B080B7083F78CA81 XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
