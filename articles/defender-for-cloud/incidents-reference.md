@@ -2,7 +2,7 @@
 title: Reference table for all incidents
 description: This article lists the incidents visible in Microsoft Defender for Cloud and provides information on managing security incidents.
 ms.topic: reference
-ms.date: 06/26/2024
+ms.date: 05/19/2025
 ---
 
 # Incidents - a reference guide
