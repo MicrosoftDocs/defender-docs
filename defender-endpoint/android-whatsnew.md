@@ -2,8 +2,8 @@
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 ms.reviewer: denishdonga
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 02/04/2025
+ms.date: 05/15/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -26,7 +26,45 @@ ms.date: 02/04/2025
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+#### Alerts for activities related to open wireless connection and certificates are now detected as events
+
+May 2025
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the following as events instead of alerts:
+
+- Connecting or disconnecting to open wireless networks
+- Download/installation/removal of self-signed certificates
+
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
+
+#### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
+
+April 2025
+
+**Setup a secure environment to test prerelease builds of Defender for Endpoint on Android**. Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
+
+- Android Enterprise scenarios
+- Mobile Application Mangement (MAM) enrollment scenarios
+
+For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
+
+#### Defender for Endpoint on Android now supports Android 10 as the minimum version
+
+February 2025
+
+**Defender for Endpoint is ending support for Android 8, 8.1, and 9 on April 30, 2025**. Moving forward, only devices running Android 10 and later are supported.
+
+**How does this change affect your organization's users?**
+
+**New Users**: The application will no longer be available for new installations on devices running below Android 10. When users with Android versions below 10 attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible.
+
+**Existing users**: The Microsoft Defender app continues to function for existing users on Android 8, 8.1, and 9 versions, but they don't receive updates from the Google Play store as they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to users running an Android version prior to version 10.
+
+After discontinuing support for deprecated versions, Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running Android version prior to version 10 won't be investigated.
+
+This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
 
 #### Microsoft Defender for Mobile: Open Wi-Fi Detection Update
 
@@ -42,7 +80,7 @@ As part of our Microsoft Defender for Mobile application, we offer Open Wi-Fi de
 
 Based on our research insights and inputs from Microsoft and other SOC teams, we're implementing a caching behavior to ensure the value of the alerts remains and also doesn't cause fatigue to SOC teams due to sheer volume.
 
-**New behavior:** 
+**New behavior:**
 
 - Every time the end user connects to an open Wi-Fi network, an alert is raised.
 

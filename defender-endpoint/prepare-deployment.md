@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/09/2024
+ms.date: 01/28/2025
 ---
 
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
@@ -29,7 +29,7 @@ ms.date: 09/09/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The next step when deploying Defender for Endpoint is to assign roles and permissions for the Defender for Endpoint deployment.
 
@@ -38,19 +38,23 @@ The next step when deploying Defender for Endpoint is to assign roles and permis
 
 ## Role-based access control
 
-Microsoft recommends using the concept of least privileges. Defender for Endpoint leverages built-in roles within Microsoft Entra ID. [Review the different roles available](/azure/active-directory/roles/permissions-reference) and choose the right one to solve your needs for each persona for this application. Some roles may need to be applied temporarily and removed after the deployment has been completed.
+Microsoft recommends using the concept of least privileges. Defender for Endpoint applies built-in roles within Microsoft Entra ID. [Review the different roles available](/azure/active-directory/roles/permissions-reference) and choose the right one to solve your needs for each persona for this application. Some roles may need to be applied temporarily and removed after the deployment has been completed.
 
-Microsoft recommends using [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide additional auditing, control, and access review for users with directory permissions.
+Microsoft recommends using [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide more auditing, control, and access review for users with directory permissions.
 
 Defender for Endpoint supports two ways to manage permissions:
 
-- **Basic permissions management**: Set permissions to either full access or read-only. Users with a role, such as Security Administrator in Microsoft Entra ID have full access. The Security reader role has read-only access and does not grant access to view machines/device inventory.
+- **Basic permissions management**: Set permissions to either full access or read-only. Users with a role, such as Security Administrator in Microsoft Entra ID have full access. The Security reader role has read-only access and doesn't grant access to view machines/device inventory.
 
 - **Role-based access control (RBAC)**: Set granular permissions by defining roles, assigning Microsoft Entra user groups to the roles, and granting the user groups access to device groups. For more information. see [Manage portal access using role-based access control](rbac.md).
 
-Microsoft recommends leveraging RBAC to ensure that only users that have a business justification can access Defender for Endpoint.
+Microsoft recommends applying RBAC to ensure that only users that have a business justification can access Defender for Endpoint.
 
 You can find details on permission guidelines here: [Create roles and assign the role to a Microsoft Entra group](user-roles.md#create-roles-and-assign-the-role-to-an-azure-active-directory-group).
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 The following example table serves to identify the Cyber Defense Operations Center structure in your environment that will help you determine the RBAC structure required for your environment.
 

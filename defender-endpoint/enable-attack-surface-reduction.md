@@ -4,8 +4,8 @@ description: Enable attack surface reduction rules to protect your devices from 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.subservice: asr
 ms.topic: how-to
@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
-ms.date: 02/12/2024
+ms.date: 05/08/2025
 ---
 
 # Enable attack surface reduction rules
@@ -31,7 +31,7 @@ ms.date: 02/12/2024
 - Windows
 
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [Attack surface reduction rules](attack-surface-reduction.md) help prevent actions that malware often abuses to compromise devices and networks.
 
@@ -50,10 +50,11 @@ You can set attack surface reduction rules for devices that are running any of t
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
+- Windows Server 2025
 
 To use the entire feature-set of attack surface reduction rules, you need:
 
-- Microsoft Defender Antivirus as primary AV (real-time protection on)
+- Microsoft Defender Antivirus as primary antivirus (real-time protection on)
 - [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) on (some rules require that)
 - Windows 10 Enterprise E5 or E3 License
 
@@ -86,36 +87,45 @@ Enterprise-level management such as Intune or Microsoft Configuration Manager is
 You can exclude files and folders from being evaluated by most attack surface reduction rules. This means that even if an attack surface reduction rule determines the file or folder contains malicious behavior, it doesn't block the file from running.
 
 > [!IMPORTANT]
-> Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Excluded files will be allowed to run, and no report or event will be recorded. If attack surface reduction rules are detecting files that you believe shouldn't be detected, you should [use audit mode first to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
+> Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Excluded files are allowed to run, and no report or event are recorded. If attack surface reduction rules are detecting files that you believe shouldn't be detected, you should [use audit mode first to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
 An exclusion is applied only when the excluded application or service starts. For example, if you add an exclusion for an update service that is already running, the update service continues to trigger events until the service is stopped and restarted.
 
 When adding exclusions, keep these points in mind:
 
 * Exclusions are typically based on individual files or folders (using folder paths or the full path of the file to be excluded).
 * Exclusion paths can use environment variables and wildcards. See [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
-* When deployed through group policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it is possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+* When deployed through group policy or PowerShell, exclusions apply to all attack surface reduction rules. Using Intune, it's possible to configure an exclusion for a specific attack surface reduction rule. See [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 
 * Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
-## Policy Conflict
+## Policy conflicts
 
-1. If a conflicting policy is applied via MDM and GP, the setting applied from GP takes precedence.
+If a conflicting policy is applied via MDM and GP, the setting applied from Group Policy takes precedence.
 
-1. Attack surface reduction rules for managed devices now support behavior for merger of settings from different policies, to create a superset of policy for each device. Only the settings that aren't in conflict are merged, while those that are in conflict aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed. Attack surface reduction rule merge behavior is as follows:
-   - Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
-     - Devices > Configuration profiles > Endpoint protection profile > **Microsoft Defender Exploit Guard** > [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).
-     - Endpoint security > **Attack surface reduction policy** > [Attack surface reduction rules](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
-      - Endpoint security > Security baselines > **Microsoft Defender ATP Baseline** > [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).
-   - Settings that don't have conflicts are added to a superset of policy for the device.
-   - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
-   - Only the configurations for conflicting settings are held back.
+Attack surface reduction rules for managed devices now support behavior for merging settings from different policies to create a policy superset for each device. Only the settings that aren't in conflict are merged, whereas policy conflicts aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile were deployed. 
+
+Attack surface reduction rule merge behavior works as follows:
+
+- Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
+
+   - **Devices** > **Configuration profiles** > **Endpoint protection profile** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**. (See [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
+
+   - **Endpoint security** > **Attack surface reduction policy** > **Attack surface reduction rules**. (See [Attack surface reduction rules](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
+
+   - **Endpoint security** > **Security baselines** > **Microsoft Defender ATP Baseline** > **Attack Surface Reduction Rules**. (See [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).)
+
+- Settings that don't have conflicts are added to a superset of policy for the device.
+
+- When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
+
+- Only the configurations for conflicting settings are held back.
 
 ## Configuration methods
 
 This section provides configuration details for the following configuration methods:
 
 - [Intune](#intune)
-- [Custom profile in Intune](#custom-profile-in-intune)
+- [Custom profile in Intune](#custom-profile-in-intune-alternative-2)
 - [MDM](#mdm)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
 - [Group policy](#group-policy)
@@ -125,31 +135,39 @@ The following procedures for enabling attack surface reduction rules include ins
 
 ### Intune
 
-#### Device Configuration Profiles
+> [!IMPORTANT]
+> If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, these policies fail to apply:
+> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
+> - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+> - [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
 
-1. Select **Device configuration** > **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
-
-1. In the **Endpoint protection** pane, select **Windows Defender Exploit Guard**, then select **Attack Surface Reduction**. Select the desired setting for each attack surface reduction rule.
-
-1. Under **Attack Surface Reduction exceptions**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
-
-   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
-   
-4. Select **OK** on the three configuration panes. Then select **Create** if you're creating a new endpoint protection file or **Save** if you're editing an existing one.
-
-#### Endpoint security policy
+#### Endpoint security policy (Preferred)
 
 1. Select **Endpoint Security** > **Attack surface reduction**. Choose an existing attack surface reduction rule or create a new one. To create a new one, select **Create Policy** and enter information for this profile. For **Profile type**, select **Attack surface reduction rules**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
 
-2. In the **Configuration settings** pane, select **Attack Surface Reduction** and then select the desired setting for each attack surface reduction rule.
+1. In the **Configuration settings** pane, select **Attack Surface Reduction** and then select the desired setting for each attack surface reduction rule.
 
-3. Under **List of additional folders that need to be protected**, **List of apps that have access to protected folders**, and **Exclude files and paths from attack surface reduction rules**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
+1. Under **List of additional folders that need to be protected**, **List of apps that have access to protected folders**, and **Exclude files and paths from attack surface reduction rules**, enter individual files and folders. 
+
+   You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
 
    `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
    
-4. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
+1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
 
-### Custom profile in Intune
+#### Device Configuration Profiles (Alternative 1)
+
+1. Select **Device configuration** > **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
+
+2. In the **Endpoint protection** pane, select **Windows Defender Exploit Guard**, then select **Attack Surface Reduction**. Select the desired setting for each attack surface reduction rule.
+
+3. Under **Attack Surface Reduction exceptions**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
+
+   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
+
+4. Select **OK** on the three configuration panes. Then select **Create** if you're creating a new endpoint protection file or **Save** if you're editing an existing one.
+
+#### Custom profile in Intune (Alternative 2)
 
 You can use Microsoft Intune OMA-URI to configure custom attack surface reduction rules. The following procedure uses the rule [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) for the example.
 
@@ -163,39 +181,43 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
    - In **Profile type**, select **Templates**
    - If attack surface reduction rules are already set through Endpoint security, in **Profile type**, select **Settings Catalog**.
 
-   Select **Custom**, and then select **Create**.
+3. Select **Custom**, and then select **Create**.
 
    :::image type="content" source="media/mem02-profile-attributes.png" alt-text="The rule profile attributes in the Microsoft Intune admin center portal." lightbox="media/mem02-profile-attributes.png":::
 
-3. The Custom template tool opens to step **1 Basics**. In **1 Basics**, in **Name**, type a name for your template, and in **Description** you can type a description (optional).
+4. The Custom template tool opens to step **1 Basics**. In **1 Basics**, in **Name**, type a name for your template, and in **Description** you can type a description (optional).
 
    :::image type="content" source="media/mem03-1-basics.png" alt-text="The basic attributes in the Microsoft Intune admin center portal" lightbox="media/mem03-1-basics.png":::
 
-4. Click **Next**. Step **2 Configuration settings** opens. For OMA-URI Settings, click **Add**. Two options now appear: **Add** and **Export**.
+5. Click **Next**. Step **2 Configuration settings** opens. For OMA-URI Settings, click **Add**. Two options now appear: **Add** and **Export**.
 
-    :::image type="content" source="media/mem04-2-configuration-settings.png" alt-text="The configuration settings in the Microsoft Intune admin center portal." lightbox="media/mem04-2-configuration-settings.png":::
+   :::image type="content" source="media/mem04-2-configuration-settings.png" alt-text="Screenshot showing the configuration settings in the Microsoft Intune admin center portal." lightbox="media/mem04-2-configuration-settings.png":::
 
-1. Click **Add** again. The **Add Row OMA-URI Settings** opens. In **Add Row**, do the following:
+6. Click **Add** again. The **Add Row OMA-URI Settings** opens. In **Add Row**, fill in the following information:
 
-   - In **Name**, type a name for the rule.
-   - In **Description**, type a brief description.
-   - In **OMA-URI**, type or paste the specific OMA-URI link for the rule that you're adding. Refer to the MDM section in this article for the OMA-URI to use for this example rule. For attack surface reduction rule GUIDS, see [Per rule descriptions](attack-surface-reduction-rules-reference.md#per-rule-descriptions) in the article: Attack surface reduction rules.
-   - In **Data type**, select **String**.
-   - In **Value**, type or paste the GUID value, the \= sign and the State value with no spaces (_GUID=StateValue_). Where:
+   1. In **Name**, type a name for the rule.
 
-     - 0: Disable (Disable the attack surface reduction rule)
-     - 1: Block (Enable the attack surface reduction rule)
-     - 2: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
-     - 6: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
+   2. In **Description**, type a brief description.
+
+   3. In **OMA-URI**, type or paste the specific OMA-URI link for the rule that you're adding. Refer to the MDM section in this article for the OMA-URI to use for this example rule. For attack surface reduction rule GUIDS, see [Per rule descriptions](attack-surface-reduction-rules-reference.md#per-rule-descriptions).
+
+   4. In **Data type**, select **String**.
+
+   5. In **Value**, type or paste the GUID value, the `\=` sign and the State value with no spaces (`GUID=StateValue`):
+
+      - `0`: Disable (Disable the attack surface reduction rule)
+      - `1`: Block (Enable the attack surface reduction rule)
+      - `2`: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
+      - `6`: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
 
    :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal" lightbox="media/mem05-add-row-oma-uri.png":::
 
-1. Select **Save**. **Add Row** closes. In **Custom**, select **Next**. In step **3 Scope tags**, scope tags are optional. Do one of the following:
+7. Select **Save**. **Add Row** closes. In **Custom**, select **Next**. In step **3 Scope tags**, scope tags are optional. Do one of the following:
 
    - Select **Select Scope tags**, select the scope tag (optional) and then select **Next**.
    - Or select **Next**
       
-1. In step **4 Assignments**, in **Included Groups**, for the groups that you want this rule to apply, select from the following options:
+8. In step **4 Assignments**, in **Included Groups**, for the groups that you want this rule to apply, select from the following options:
 
    - **Add groups**
    - **Add all users**
@@ -203,27 +225,27 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
    :::image type="content" source="media/mem06-4-assignments.png" alt-text="The assignments in the Microsoft Intune admin center portal" lightbox="media/mem06-4-assignments.png":::
 
-1. In **Excluded groups**, select any groups that you want to exclude from this rule, and then select **Next**.
+9. In **Excluded groups**, select any groups that you want to exclude from this rule, and then select **Next**.
 
-1. In step **5 Applicability Rules** for the following settings, do the following:
+10. In step **5 Applicability Rules** for the following settings, do the following:
 
-   - In **Rule**, select either **Assign profile if**, or **Don't assign profile if**
+      1. In **Rule**, select either **Assign profile if**, or **Don't assign profile if**.
 
-   - In **Property**, select the property to which you want this rule to apply
-   - In **Value**, enter the applicable value or value range
+      2. In **Property**, select the property to which you want this rule to apply.
 
-   :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
+      3. In **Value**, enter the applicable value or value range.
 
-10. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
+      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
 
-    :::image type="content" source="media/mem08-6-review-create.png" alt-text="The Review and create option in the Microsoft Intune admin center portal" lightbox="media/mem08-6-review-create.png":::
+11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
-    Rules are active and live within minutes.
+      :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+
+   Rules are active and live within minutes.
 
 > [!NOTE]
-> Conflict handling:
->
-> If you assign a device two different attack surface reduction policies, potential policy conflicts can occur, depending on whether rules are assigned different states, whether conflict management is in place, and whether the result is an error. Nonconflicting rules do not result in an error, and such rules are applied correctly. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
+> Regarding conflict handling, if you assign a device two different attack surface reduction policies, potential policy conflicts can occur, depending on whether rules are assigned different states, whether conflict management is in place, and whether the result is an error. 
+> Nonconflicting rules do not result in an error, and such rules are applied correctly. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
 
 ### MDM
 
@@ -270,10 +292,18 @@ Example:
 > [!WARNING]
 > There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
 
+> [!IMPORTANT]
+> If you're using "Disable admin merge" set to `true` on devices, and you're using any of the following tools/methods, adding ASR rules per-rule exclusions or local ASR rule exclusions don't apply.
+> - Defender for Endpoint Security Settings Management (Disable Local Admin Merge)
+> - Intune (Disable Local Admin Merge)
+> - The Defender CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**)
+> - Group Policy (Configure local administrator merge behavior for lists)
+> To modify this behavior, you need to change "Disable admin merge" to `false`.
+
 ### Group policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software will overwrite any conflicting group policy settings on startup.
+> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software overwrites any conflicting group policy settings on startup.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx), right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -332,7 +362,7 @@ Example:
    > [!IMPORTANT]
    > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
-## Related articles
+## Related content
 
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)

@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: deniseb
-ms.date: 8/22/2023
+ms.date: 02/24/2025
 ms.reviewer: gigarrub
 audience: ITPro
 ms.topic: conceptual
@@ -124,7 +124,7 @@ The last stage takes place after mail or file delivery, acting on mail that is i
 
 5. **Campaign Views** let administrators see the big picture of an attack, faster and more completely, than any team could without automation. Microsoft leverages the vast amounts of anti-phishing, anti-spam, and anti-malware data across the entire service to help identify campaigns, and then allows admins to investigate them from start to end, including targets, impacts, and flows, that are also available in a downloadable campaign write-up.
 
-6. **The Report Message add-ins** enable people to easily report false positives (good email, mistakenly marked as *bad*) or false negatives (bad email marked as *good*) to Microsoft for further analysis.
+6. **The built-in Report button** in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) enables people to easily report false positives (good email, mistakenly marked as *bad*) or false negatives (bad email marked as *good*) to Microsoft for further analysis.
 
 7. **Safe Links for Office clients** offers the same Safe Links time-of-click protection, natively, inside supported Office apps like Word, PowerPoint, and Excel.
 

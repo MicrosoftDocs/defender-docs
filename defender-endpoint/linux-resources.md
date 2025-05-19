@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -22,12 +22,12 @@ ms.date: 10/11/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
+**Applies to:**
 
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Collect diagnostic information
 

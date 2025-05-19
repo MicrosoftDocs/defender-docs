@@ -49,7 +49,7 @@ Advanced hunting supports queries that check a broader data set coming from:
 - Microsoft Defender for Identity
 - Microsoft Sentinel
 
-To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md). 
+To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md). Or to use advanced hunting with Microsoft Sentinel, [connect Microsoft Sentinel to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard). 
 
 
 For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://learn-video.azurefd.net/vod/player?id=ffdedc73-6edf-45a9-8c90-566296e8d4ec). 
@@ -65,8 +65,13 @@ Also, your access to endpoint data is determined by role-based access control (R
 ## Data freshness and update frequency
 Advanced hunting data can be categorized into two distinct types, each consolidated differently.
 
-- **Event or activity data**—populates tables about alerts, security events, system events, and routine assessments. Advanced hunting receives this data almost immediately after the sensors that collect them successfully transmit them to the corresponding cloud services. For example, you can query event data from healthy sensors on workstations or domain controllers almost immediately after they are available on Microsoft Defender for Endpoint and Microsoft Defender for Identity.
-- **Entity data**—populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated with any new information every 15 minutes, adding rows that might not be fully populated. Every 24 hours, data is consolidated to insert a record that contains the latest, most comprehensive data set about each entity.
+### **Event or activity data**
+Event or activity data populates tables about alerts, security events, system events, and routine assessments. Advanced hunting receives this data almost immediately after the sensors that collect them successfully transmit them to the corresponding cloud services. For example, you can query event data from healthy sensors on workstations or domain controllers almost immediately after they are available on Microsoft Defender for Endpoint and Microsoft Defender for Identity. 
+
+To collect even more event properties, you have the option of turning on [aggregated reporting](/defender-endpoint/aggregated-reporting).
+
+### **Entity data**
+Entity data populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated with any new information every 15 minutes, adding rows that might not be fully populated. Every 24 hours, data is consolidated to insert a record that contains the latest, most comprehensive data set about each entity.
 
 
 ## Time zone

@@ -32,7 +32,7 @@ The Defender portal combines security capabilities from existing Microsoft 365 s
 
 For more information about the benefits of the unified Microsoft Defender XDR, see [Overview of Defender XDR](microsoft-365-defender.md).
 
-If you're looking for compliance-related items, see [Microsoft Purview compliance portal](/purview/purview-compliance-portal).
+If you're looking for compliance-related items, see [Microsoft Purview portal](/purview/purview-compliance-portal).
 
 ## Capabilities
 
@@ -145,8 +145,7 @@ The **Email & collaboration** node contains features that are specific to Defend
       - [Advanced delivery](/defender-office-365/advanced-delivery-policy-configure)
       - [Enhanced filtering](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)
       - [Quarantine policies](/defender-office-365/quarantine-policies)
-  - [Alert policies](/purview/alert-policies)
-  - [Activity alerts](/purview/create-activity-alerts)
+  - [Alert policies](alert-policies.md)
 
 :::image type="content" source="media/mdo-m365d-nav.png" alt-text="A screenshot that shows the left navigation pane of the Defender portal focused on Email & collaboration." lightbox="media/mdo-m365d-nav.png":::
 

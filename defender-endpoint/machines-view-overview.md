@@ -27,7 +27,7 @@ ms.date: 01/23/2025
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Device inventory** shows a list of the devices in your network where alerts were generated. By default, the queue displays devices seen in the last 30 days. At a glance, you see information such as domain, risk level, OS platform, and other details for easy identification of devices most at risk.
 
@@ -152,7 +152,7 @@ The available device properties to use as filters vary based on the device inven
 |**Mitigation status**|**All devices**, **Computers & mobile**|The available values are **Contained** and **Isolated**.|
 |**Model**|**All devices**|The model of the device. Enter a value or select from the available values.|
 |**Onboarding status**|**All devices**, **Computers & mobile**|Whether the device is currently onboarded in Defender for Endpoint. Device discovery must be enabled for this filter to appear. The available values are: <br/> - **Onboarded**: The device is onboarded to Defender for Endpoint. <br/> - **Can be onboarded**: The supported device was discovered, but it isn't currently onboarded. We highly recommend onboarding these devices. <br/> - **Unsupported**: The unsupported device was discovered. <br/> - **Insufficient info**: The system couldn't determine the supportability of the device.|
-|**OS distribution**|**All devices**, **Computers & mobile**|The distribution of the operating system. The available values are: <br/> - **Windows 11** <br/>- **Windows 10** <br/> - **Windows 8.1** <br/> - **Windows 8**<br/> - **Windows 7** <br/> - **Windows Server 2022** <br/> - **Windows Server 2019** <br/> - **Windows Server 2016** <br/> - **Windows Server 2012 R2** <br/> - **Windows Server 2008 R2** <br/> - **Linux** <br/> - **macOS** <br/> - **iOS** <br/> - **Android** <br/> - **Windows 10 WVD** <br/> - **Other**|
+|**OS distribution**|**All devices**, **Computers & mobile**|The distribution of the operating system. The available values are: <br/> - **Windows 11** <br/>- **Windows 10** <br/> - **Windows 8.1** <br/> - **Windows 8**<br/> - **Windows 7** <br/> - **Windows Server 2025** <br/> - **Windows Server 2022** <br/> - **Windows Server 2019** <br/> - **Windows Server 2016** <br/> - **Windows Server 2012 R2** <br/> - **Windows Server 2008 R2** <br/> - **Linux** <br/> - **macOS** <br/> - **iOS** <br/> - **Android** <br/> - **Windows 10 WVD** <br/> - **Other**|
 |**OS Platform**|**All devices**, **Computers & mobile**|The operating system on the device. The available
 |**Risk level**|All|The overall risk assessment of the device based on a combination of factors, including the type and severity of active alerts on the device. The available values are: - **High** - **Medium** - **Low** - **Informational** - **No known risk** Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.|
 |**Sensor health state**|**All devices**, **Computers & mobile** |The available values for onboarded devices are: <br/> - **Active**: Devices that are actively reporting sensor data to the service. <br/> - **Inactive**: Devices that stopped sending signals for more than seven days. <br/> - **Misconfigured**: Devices with impaired communications or devices that can't send sensor data. For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).|
@@ -160,8 +160,7 @@ The available device properties to use as filters vary based on the device inven
 |**Tags**|All|The grouping and tagging that you added to individual devices. For more information, see [Create and manage device tags](machine-tags.md).|
 |**Transient device**|All|The available values are **No** and **Yes**. By default, transient devices are filtered to reduce inventory noise. For more information, see [Identifying transient devices](transient-device-tagging.md).|
 |**Vendor**|**All devices**|The vendor of the device. Enter a value or select from the available values.|
-|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release.
-- The build has no version name.<br/>- The build version name isn't yet supported<br/><br/>The full OS version is visible on the device details page.|
+|**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release <br/>- The build has no version name.<br/>- The build version name isn't yet supported<br/><br/>The full OS version is visible on the device details page.|
 
 ## Use columns to customize the device inventory views
 

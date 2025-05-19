@@ -1,6 +1,6 @@
 ---
 title: View and manage actions in the Action center
-description: Use the Action center to view and manage remediation actions
+description: Use the Action center in the Microsoft Defender portal to view and manage remediation actions for affected assets.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -8,8 +8,8 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 11/25/2024
-manager: dansimp
+ms.date: 04/28/2025
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,12 +19,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+appliesto:
+- Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to understand how to view and manage remediation actions in the Action center
 ---
 
 # View and manage actions in the Action center
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 

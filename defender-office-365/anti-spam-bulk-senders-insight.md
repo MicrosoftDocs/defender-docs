@@ -16,7 +16,7 @@ ms.collection:
   - tier2
 description: Admins can learn about the Bulk senders insight page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages.
 ms.service: defender-office-365
-ms.date: 07/24/2024
+ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -24,9 +24,6 @@ appliesto:
 ---
 
 # Bulk senders insight in Exchange Online Protection
-
-> [!NOTE]
-> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
 
 In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk sender threshold and the quality of the bulk sender.
 

@@ -69,9 +69,13 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 
 To make sure your Defender for Endpoint subscription is properly provisioned, you can check your license state in either the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) or Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products)).
 
-[Check your license state](production-deployment.md#check-license-state).
+[Check your license state](production-deployment.md#check-your-license-state).
 
 ## Step 2: Set up role-based access control and grant permissions to your security team
+
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
 Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
 

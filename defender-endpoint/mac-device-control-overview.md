@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 04/16/2025
 ---
 
 # Device Control for macOS
@@ -29,11 +29,11 @@ ms.date: 01/31/2025
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Requirements
 
-Device control for Mac has the following prerequisites:
+Device control for macOS has the following prerequisites:
 
 - Defender for Endpoint or Defender for Business licenses (can be a trial subscription)
 - Minimum OS version: macOS 11 or higher
@@ -112,8 +112,8 @@ Device control for macOS has similar capabilities to Device control for Windows,
 
 - macOS doesn't have a centralized Device Manager or view of devices. Access is granted/denied to applications that interact with devices. This is why on macOS there are a richer set of [access types](#access-types). For example, a `portableDevice` policy can deny or allow `download_photos_from_device`.
 
-- To stay consistent with Windows, there are `generic_read`,`generic_write` , and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
-- Creating a `deny` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.     
+- To stay consistent with Windows, there are `generic_read`, `generic_write`, and `generic_execute` access types. Policies with generic access types don't need to be changed if/when more specific access types are added in the future. The best practice is to use generic access types unless there's a specific need to deny/allow a more specific operation.
+- Creating a `deny` policy using generic access types is the best way to attempt to completely block all operations for that type of device (for example, Android phones), but there might still be gaps if the operation is performed using an application that isn't supported by macOS device control.
 
 
 ### Settings
@@ -201,7 +201,7 @@ The following table lists the properties you can use in entry:
 | Property name | Description | Options |
 |:---|:---|:---|
 | `$type` | The type of enforcement | See table below for supported enforcements |
-| `options` | $type specific value to use | An array of options for the entry. May be omitted if not options are desired. |
+| `options` | $type specific value to use | An array of options for the entry. Might be omitted if not options are desired. |
 
 #### Enforcement type
 
@@ -258,7 +258,7 @@ v2_full_disk_access                         : "approved"
 - `active` - feature version, you should see ["v2"]. (Device Control is enabled, but not configured.)
     - [] - Device Control isn't configured on this machine.
     - ["v1"] - You are on a preview version of Device Control. Migrate to version 2 using this guide. v1 is considered obsolete and not described in this documentation.
-    - ["v1", "v2"] - You have both v1 and v2 enabled. Offboard from v1.
+    - ["v1," "v2"] - You have both v1 and v2 enabled. Offboard from v1.
 - `v1_configured` - v1 configuration is applied
 - `v1_enforcement_level` - when v1 is enabled
 - `v2_configured` - v2 configuration is applied

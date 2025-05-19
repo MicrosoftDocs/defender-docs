@@ -3,8 +3,8 @@ title: Grant access to managed security service provider (MSSP)
 description: Take the necessary steps to configure MSSP integration with the Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Grant managed security service provider (MSSP) access (preview)
@@ -24,7 +24,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mssp-support-abovefoldlink)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
