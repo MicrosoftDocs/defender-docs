@@ -10,9 +10,9 @@ ms.date: 05/19/2025
 ---
 
 
-# Integrating Microsoft Defender External Attack Surface Management with Microsoft Security Exposure Management
+# External Attack Surface Management initative in Exposure Management
 
-Learn how to integrate Microsoft Defender External Attack Surface Management (MDEASM) with Microsoft Security Exposure Management (MSEM) to enhance visibility and control over your organization's external exposures. By connecting MDEASM insights to MSEM using the External Attack Surface Management initiative, you can assess the risk associated with your organization's or vendor's external attack surface and manage your security posture more effectively within the Exposure Management portal.
+Explore how to integrate Microsoft Defender External Attack Surface Management (MDEASM) with Microsoft Security Exposure Management (MSEM) to enhance visibility and control over your organization's external exposures. By connecting MDEASM insights to MSEM using the External Attack Surface Management initiative, you can assess the risk associated with your organization's or vendor's external attack surface and manage your security posture more effectively within the Exposure Management portal.
 
 There are two ways to use this initiative:
 - **Pre-built footprint**: Provides high-level insights using a predefined set of external assets, without requiring a full MDEASM subscription.
@@ -27,8 +27,8 @@ To configure your External Attack Surface initiative, you need to have **Global 
 1. Go to the **Initiatives** page, select the **External Attack Surface Protection**, then choose **Open initiative page**.
 1. Go to the **Connect data source** to open the settings tab.
 
-> [!NOTE]
-> If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
+    > [!NOTE]
+    > If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
 
 3. Choose **Search for your organization's pre-built footprint**.
 4. Select the footprint you want to use from the list of available pre-built footprints and choose **Connect**.
@@ -73,8 +73,8 @@ If you haven’t already deployed an MDEASM resource, follow these steps:
 1. Go to the **Initiatives** page, select the **External Attack Surface Protection**, then choose **Open initiative page**.
 1. Go to the **Connect data source** to open the settings tab.
 
-> [!NOTE]
-> If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
+    > [!NOTE]
+    > If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
 
 1. Choose **Connect to your MDEASM workspace**.
 1. Provide the following details from your Azure MDEASM resource:
@@ -83,11 +83,13 @@ If you haven’t already deployed an MDEASM resource, follow these steps:
    - **Resource Group Name**
    - **Region**
 
-:::image type="content" source="media/EASM/EASM-full_integration.png" alt-text="Screenshot of side panel for EASM initiative"::: 
+    :::image type="content" source="media/EASM/EASM-full_integration.png" alt-text="Screenshot of side panel for EASM initiative"::: 
 
 1. Select **Connect**. After validation, data will begin flowing into the graph, and metrics will calculate within 48 hours.
 
-You can review your security initiative data through security metrics that reflect various exposure types as assessed by the External Attack Surface assessment engine. You can select a metric to view additional information such as the exposed assets and their types. You can also explore the data integrated from EASM using the Attack Surface Map to uncover insights related to your attack surface. You can search for various assets such as IP addresses, domains, hosts, and more, and review the findings on these assets.
+You can review your security initiative data through security metrics that reflect various exposure types as assessed by the External Attack Surface assessment engine. Select a metric to view additional information such as the exposed assets and their types. 
+
+Also explore the data integrated from EASM using the attack surface map to uncover insights related to your attack surface. You can search for various assets such as IP addresses, domains, hosts, and more, and review the findings on these assets.
 
 ## Next steps
 
