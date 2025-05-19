@@ -174,7 +174,7 @@
             href: mde-sap-windows-server.md
           - name: Deployment guidance for Defender for Endpoint on Linux for SAP
             href: mde-linux-deployment-on-sap.md
-          - name: Create custom detection rules for servers running SAP
+          - name: Use custom detection rules to protect SAPXPG
             href: mde-sap-custom-detection-rules.md
         - name: Defender for Endpoint on macOS
           items:
