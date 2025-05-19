@@ -101,17 +101,17 @@ What's new
 
 Known Issues
 
-- There's a known issue where MDE is deleting the configuration file located at /etc/system/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
+- There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
   To set the file to be unmodifiable, execute the following command:
-    
+  
 ```bash
 
   sudo chattr +i /etc/systemd/system/mdatp.service.d/[file name]
   ```
   
- This command makes the file unchangeable. T If you need to restore modification permissions, use the following command:
-  
+ This command makes the file unchangeable. If you need to restore modification permissions, use the following command:
+
   ```bash
   
   sudo chattr -i /etc/systemd/system/mdatp.service.d/[file name]
