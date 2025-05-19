@@ -63,6 +63,11 @@ User prompt evidence consists of prompts and model responses. Both are considere
 
 
 
+> [!NOTE]
+> This feature requires a Microsoft Purview license. It is not included in the Microsoft Defender for Cloud's Defender for AI Services plan. 
+> 
+> To get started with Microsoft Purview DSPM for AI, see [Set up Microsoft Purview DSPM for AI](/purview/ai-microsoft-purview). 
+
 Enable Microsoft Purview to access, process, and store prompt and response data—including associated metadata—from Azure AI Services. This integration supports key data security and compliance scenarios such as: 
 
 - Sensitive information type (SIT) classification 
