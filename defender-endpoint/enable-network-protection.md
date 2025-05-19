@@ -73,13 +73,13 @@ Network Protection on Windows clients:
 
 | Description| Setting|
 | -------- | -------- |
-| Enable Network Protection| Options: Enabled (block mode) Enabled (audit mode) Disabled (Default) Not Configured|
+| Enable Network Protection| Options: Enabled (block mode) <br> Enabled (audit mode) <br> Disabled (Default) <br>Not Configured|
 
 #### Network Protection on Windows Server 2012 R2 and Windows Server 2016:
 
 | Description|Setting|
 | -------- | -------- |
-|Allow Network Protection Down Level|Options: Network protection will be enabled downlevel. Network Protection will be disabled downlevel. (Default) Not Configured|
+|Allow Network Protection Down Level|Options: Network protection will be enabled downlevel. <br> Network Protection will be disabled downlevel. (Default) <br> Not Configured|
 
 #### Optional Network Protection settings for Windows and Windows Server:
 
@@ -88,12 +88,12 @@ Network Protection on Windows clients:
 
 |Description| Setting|
 | -------- | -------- |
-|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled. Datagram processing on Windows Server is disabled. Not configured|
-|Disable DNS over TCP parsing|DNS over TCP parsing is enabled (Default). DNS over TCP parsing is enabled. Not configured|
-|Disable HTTP parsing|HTTP parsing is enabled (Default). HTTP parsing is disabled. Not configured|
-|Disable SSH parsing|SSH parsing is enabled.|
-|Disable TLS parsing	|TLS parsing is enabled.|
-|Enable DNS Sinkhole|DNS Sinkhole is enabled.|
+|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled. <br> Datagram processing on Windows Server is disabled (Default). <br> Not configured|
+|Disable DNS over TCP parsing|DNS over TCP parsing is disabled. <br> DNS over TCP parsing is enabled (Default). <br> Not configured|
+|Disable HTTP parsing| HTTP parsing is disabled. <br> HTTP parsing is enabled (Default). <br> Not configured|
+|Disable SSH parsing| SSH parsing is disabled. <br> SSH parsing is enabled (Default). <br> Not configured|
+|Disable TLS parsing | TLS parsing is disabled. <br> TLS parsing is enabled (Default). <br> Not configured|
+|[Deprecated]Enable DNS Sinkhole| DNS Sinkhole is disabled. <br> DNS Sinkhole is enabled. (Default) <br> Not configured|
 
 - When you're done configuring settings, select Next.
 
