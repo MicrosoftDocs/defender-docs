@@ -9,7 +9,7 @@ ms.topic: article
 
 Transitioning from the legacy [Defender for Cloud Apps SIEM agent ](siem.md) to supported APIs enables continued access to enriched activities and alerts data. While the APIs may not have exact one-to-one mappings to the legacy Common Event Format (CEF) schema, they provide comprehensive and enhanced data enriched by integration across multiple Microsoft Defender workloads.
 
-# Recommended APIs for Migration
+## Recommended APIs for Migration
 
 > To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
