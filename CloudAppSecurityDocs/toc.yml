@@ -323,6 +323,10 @@ items:
         href: siem.md
       - name: Troubleshooting SIEM solutions
         href: troubleshooting-siem.md
+    - name: Migratation Guides
+      items:
+       - name: Migrate to supported API solutions
+         href: migrate-to-supported-api-solutions.md
     - name: Customize alert automation with Power Automate
       items:
       - name: Customize alert automation with Power Automate
