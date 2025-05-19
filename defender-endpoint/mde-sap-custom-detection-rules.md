@@ -78,7 +78,25 @@ The SAP BASIS Team and the Security team should co-develop the solution. The SAP
 
    ```
 
-6. 
+6. The security team creates a rule to detect suspicious commands, specifying the action "Restrict app execution." Suspicious commands could include: 
+
+   - `ncat`
+   - `netcat`
+   - `socat`
+   - `azcopy`
+   - `wget`
+   - `curl`
+   - `echo`
+   - `base64`
+   - `/dev/tcp`
+   - `pwd`
+   - `whoami`
+   - `chmod +x`
+
+
+
+   
+
 
 
 
