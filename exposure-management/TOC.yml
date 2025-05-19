@@ -72,7 +72,7 @@
           href: initiatives-list.md
           items:
            - name: External attack surface management initiative
-             href: external-attack-surface-management.md
+             href: external-attack-surface-management-initiative.md
         - name: Investigate security initiative metrics
           href: security-metrics.md
         - name: Review security recommendations
