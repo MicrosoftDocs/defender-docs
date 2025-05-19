@@ -38,6 +38,23 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+## May 2025
+
+Customers in government cloud environments are now able to take purge email messages or propose email remediation, Submit messages to Microsoft, Trigger investigations and block entries in the Tenant Allow/Block List together in few clicks.
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+  - SecOps personnel can now create tenant-level block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
+  - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
+    - Purge email messages or propose email remediation.
+    - Submit messages to Microsoft.
+    - Trigger investigations.
+    - Block entries in the Tenant Allow/Block List.
+  - Actions are contextually based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
+  - For 101 or more messages selected, only email purge and propose remediation options are available.
+
+  > [!TIP]
+  > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
+
+  For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation) and  [Remediate Malicios Email: Email remediation](remediate-malicious-email-delivered-office-365.md#email-remediation).
 
 ## March 2025
 
