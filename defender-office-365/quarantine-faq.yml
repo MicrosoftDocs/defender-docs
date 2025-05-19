@@ -116,7 +116,7 @@ sections:
 
           By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
 
-          If the previous suggestion don't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue. 
+          If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue. 
 
           > [!TIP]
           > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
@@ -135,7 +135,7 @@ sections:
 
             If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off. Forced release might cause messages to be released multiple times.
 
-            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine has not occurred.
+            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine hasn't occurred.
 
           - Inbox rules ([created by users in Outlook](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) or by admins using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
 
