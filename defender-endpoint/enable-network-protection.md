@@ -44,11 +44,69 @@ search.appverid: met150
 
 To enable network protection, you can use one of the following methods:
 
+- [Microsoft Defender for Endpoint Security Settings Management](#Microsoft-Defender-for-Endpoint-Security-Settings-Management)
 - [Microsoft Intune](#microsoft-intune)
 - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
 - [Group Policy](#group-policy)
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
 - [PowerShell](#powershell)
+
+### Microsoft Defender for Endpoint Security Settings Management
+
+#### Create an endpoint security policy
+
+- 
+Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) using at least a Security Administrator role assigned.
+
+Select Endpoints > Configuration management > Endpoint security policies and then select Create new Policy.
+
+- Under Select Platform, select "Windows 10, Windows 11, and Windows Server".
+
+- Under Select Template, select Microsoft Defender Antivirus, then select Create policy.
+
+On the Basics page, enter a name and description for the profile, then choose Next.
+
+- On the Settings page, expand each group of settings, and configure the settings you want to manage with this profile.
+
+#### 
+Network Protection on Windows clients:
+
+| Description| Setting|
+| -------- | -------- |
+| Enable Network Protection| Options: Enabled (block mode) Enabled (audit mode) Disabled (Default) Not Configured|
+|<Delete me>  | <Delete me>  |
+
+#### Network Protection on Windows Server 2012 R2 and Windows Server 2016:
+
+| Description|Setting|
+| -------- | -------- |
+|Allow Network Protection Down Level|Options: Network protection will be enabled downlevel. Network Protection will be disabled downlevel. (Default) Not Configured|
+|<Delete me>  |<Delete me>  |
+
+#### Optional Network Protection settings for Windows and Windows Server:
+
+> [!WARNING]
+> For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the "Allow Datagram Processing On WinServer" to  . These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+
+|Description| Setting|
+| -------- | -------- |
+|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled. Datagram processing on Windows Server is disabled. Not configured|
+|Disable DNS over TCP parsing|DNS over TCP parsing is enabled (Default). DNS over TCP parsing is enabled. Not configured|
+|Disable HTTP parsing|HTTP parsing is enabled (Default). HTTP parsing is disabled. Not configured|
+|Disable SSH parsing|SSH parsing is enabled.|
+|Disable TLS parsing	|TLS parsing is enabled.|
+|Enable DNS Sinkhole|DNS Sinkhole is enabled.|
+
+- When you're done configuring settings, select Next.
+
+- On the Assignments page, select the groups that will receive this profile.
+
+- Select Next.
+
+- On the Review + create page, when you're done, select Save. 
+
+- The new profile is displayed in the list when you select the policy type for the profile you created.
+
 
 ### Microsoft Intune
 
@@ -168,15 +226,16 @@ Use the following procedure to enable network protection on domain-joined comput
    Set-MpPreference -EnableNetworkProtection Enabled
    ```
 
-3. For Windows Server, use the additional commands listed in the following table:
+1. For Windows Server, use the additional commands listed in the following table:
 
-   | Windows Server version | Commands |
-   |---|---|
-   |Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
-   |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
+| Windows Server version | Commands |
+|---|---|
+|Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
+|Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
 
    > [!IMPORTANT]
-   > For Domain Controllers and Microsoft Exchange servers, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+   > For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+   
    
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
