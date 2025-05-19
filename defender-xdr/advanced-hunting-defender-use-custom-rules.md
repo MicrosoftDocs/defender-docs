@@ -138,7 +138,7 @@ If your Defender XDR data is ingested into Microsoft Sentinel, you have the opti
 
 You can view all your user-defined rules—both custom detection rules and analytics rules—in the **Detection rules** page. Read [Manage custom detections](custom-detection-manage.md) for more details.
 
-You can migrate any analytics rule that can run in [Continuous (near real-time) frequency](custom-detection-rules.md#continuous-nrt-frequency) by selecting the **Migrate now** button in the banner that appears when you open the detection rules list page.
+
 
 For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
    

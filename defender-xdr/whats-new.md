@@ -35,7 +35,6 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2025
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
-    - You can now migrate any analytics rule that can run in Continuous (near real-time) frequency by selecting the **Migrate now** button in the banner that appears when you open the detection rules list page.
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
     - You can now view the details pane even for analytics rules.
