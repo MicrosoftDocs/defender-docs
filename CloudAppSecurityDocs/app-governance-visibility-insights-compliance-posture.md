@@ -52,8 +52,8 @@ For sensitivity labeling data, cards show the number apps that have accessed con
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![number apps that have accessed content with sensitivity labels.](sensitive-data-accessed-chart1.png)
+The number of apps that have accessed content with sensitivity labels.
+> :::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
 
 ## Next steps
 
