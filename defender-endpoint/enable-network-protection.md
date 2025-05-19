@@ -74,14 +74,12 @@ Network Protection on Windows clients:
 | Description| Setting|
 | -------- | -------- |
 | Enable Network Protection| Options: Enabled (block mode) Enabled (audit mode) Disabled (Default) Not Configured|
-|<Delete me>  | <Delete me>  |
 
 #### Network Protection on Windows Server 2012 R2 and Windows Server 2016:
 
 | Description|Setting|
 | -------- | -------- |
 |Allow Network Protection Down Level|Options: Network protection will be enabled downlevel. Network Protection will be disabled downlevel. (Default) Not Configured|
-|<Delete me>  |<Delete me>  |
 
 #### Optional Network Protection settings for Windows and Windows Server:
 
