@@ -7,7 +7,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/14/2025
+ms.date: 05/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -45,10 +45,6 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
-
-## May 2025
-
-- (GA) New setting for **"Allow Network Protection On Win Server"** to be able to manage Network Protection for Windows Server 2019 and later in Microsoft Defender for Endpoint Security Settings Management and Microsoft Intune. See [Turn on network protection](/defender-endpoint/enable-network-protection).
 
 ## April 2025
 
