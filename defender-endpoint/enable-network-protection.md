@@ -42,56 +42,49 @@ search.appverid: met150
 
 ## Enable network protection
 
-To enable network protection, you can use one of the following methods:
-
-- [Microsoft Defender for Endpoint Security Settings Management](#Microsoft-Defender-for-Endpoint-Security-Settings-Management)
-- [Microsoft Intune](#microsoft-intune)
-- [Mobile Device Management (MDM)](#mobile-device-management-mdm)
-- [Group Policy](#group-policy)
-- [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [PowerShell](#powershell)
+To enable network protection, you can use any of the methods described in this article.
 
 ### Microsoft Defender for Endpoint Security Settings Management
 
 #### Create an endpoint security policy
 
-- Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) using at least a Security Administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) using at least a Security Administrator role assigned.
 
-- Select Endpoints > Configuration management > Endpoint security policies and then select Create new Policy.
+2. Go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new policy**.
 
-- Under Select Platform, select "Windows 10, Windows 11, and Windows Server".
+3. Under **Select Platform**, select **Windows 10, Windows 11, and Windows Server**.
 
-- Under Select Template, select Microsoft Defender Antivirus, then select Create policy.
+4. Under **Select Template**, select **Microsoft Defender Antivirus**, then select **Create policy**.
 
-- On the Basics page, enter a name and description for the profile, then choose Next.
+5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-- On the Settings page, expand each group of settings, and configure the settings you want to manage with this profile.
+6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
 ### Network Protection on Windows clients:
 
 | Description| Setting|
 | -------- | -------- |
-| Enable Network Protection|Options:<br>Enabled (block mode) Note: Block mode is needed to block IP address/URL indicators and Web Content Filtering.<br>Enabled (audit mode) <br>Disabled (Default) <br>Not Configured|
+| Enable Network Protection|Options:<br>- Enabled (block mode) Block mode is needed to block IP address/URL indicators and Web Content Filtering.<br>- Enabled (audit mode) <br>- Disabled (Default) <br>- Not Configured|
 
 #### Network Protection on Windows Server 2012 R2 and Windows Server 2016:
 
 | Description|Setting|
 | -------- | -------- |
-|Allow Network Protection Down Level|Options:<br>Network protection will be enabled downlevel. <br>Network Protection will be disabled downlevel. (Default) <br>Not Configured|
+|Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
 
 #### Optional Network Protection settings for Windows and Windows Server:
 
 > [!WARNING]
-> For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the "Allow Datagram Processing On WinServer" to **"Datagram processing on Windows Server is disabled"**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+> For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the **Allow Datagram Processing On WinServer** to **Datagram processing on Windows Server is disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
 
 |Description| Setting|
 | -------- | -------- |
-|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled. <br>Datagram processing on Windows Server is disabled (Default). <br>Not configured|
-|Disable DNS over TCP parsing|DNS over TCP parsing is disabled. <br>DNS over TCP parsing is enabled (Default). <br>Not configured|
-|Disable HTTP parsing|HTTP parsing is disabled. <br>HTTP parsing is enabled (Default). <br>Not configured|
-|Disable SSH parsing|SSH parsing is disabled. <br>SSH parsing is enabled (Default). <br>Not configured|
-|Disable TLS parsing |TLS parsing is disabled. <br>TLS parsing is enabled (Default). <br>Not configured|
-|[Deprecated]Enable DNS Sinkhole|DNS Sinkhole is disabled. <br>DNS Sinkhole is enabled. (Default) <br>Not configured|
+|Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default). <br>- Not configured|
+|Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
+|Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
+|Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
+|Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
+|[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
 
 - When you're done configuring settings, select Next.
 
