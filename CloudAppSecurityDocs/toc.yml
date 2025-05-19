@@ -426,7 +426,7 @@ items:
     href: app-governance-faq.yml
 - name: Applications inventory
   items:
-    - name: Assets
+    - name: Applications
       items:
       - name: Applications inventory
         href: applications-inventory.md
