@@ -47,10 +47,10 @@ The SAP BASIS Team and the Security team should codevelop the solution. The SAP 
 
 3. The Security team identifies all the SAP servers and runs a query for `"InitiatingProcessName" == "sapxpg"`, noting which servers are starting SAPXPG. 
 
-   - It is recommended to limit the number of servers running SAPXPG to a minimum and to disallow SAPXPG on most SAP servers. 
+   - It's recommended to limit the number of servers running SAPXPG to a minimum and to disallow SAPXPG on most SAP servers. 
    - The SAP BASIS team and Security team should limit access to the authorization objects and transaction codes for SAPXPG. 
 
-4. The SAP BASIS team briefs the Security team on any "allowed" utilities, such as BRTOOLS (for Oracle customers), AzCopy (if used) or other specific utilities for printing or archiving.
+4. The SAP BASIS team briefs the Security team on any "allowed" utilities, such as `BRTOOLS` (for Oracle customers), `AzCopy` (if used) or other specific utilities for printing or archiving.
 
 5. The Security teams works with the SAP BASIS team to query SAPXPG commands and parameters. An example query to detect or block "wget" (which can be used to download malicious payloads) is as follows:
 
@@ -99,9 +99,9 @@ The SAP BASIS Team and the Security team should codevelop the solution. The SAP 
 
 ## Additional information
 
-To trace SAPXPG using `sapxpg_trace`, see [SAP documentation: Analyzing Problems with External Commands and Programs](https://help.sap.com/doc/saphelp_snc700_ehp01/7.0.1/en-US/4b/272d0ed1341780e10000000a42189c/content.htm?no_cache=true).
+- To trace SAPXPG using `sapxpg_trace`, see [SAP documentation: Analyzing Problems with External Commands and Programs](https://help.sap.com/doc/saphelp_snc700_ehp01/7.0.1/en-US/4b/272d0ed1341780e10000000a42189c/content.htm?no_cache=true).
 
-
+- To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
    
 
