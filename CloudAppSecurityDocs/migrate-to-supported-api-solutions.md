@@ -1,17 +1,14 @@
-----
+---
 title: Migrate to Supported API Solutions
-description: Learn how to transition to APIs that support the management of activities and alerts data from multiple workloads in Microsoft Defender for Cloud Apps.
+description: This article describes how to transition from the legacy Defender for Cloud Apps SIEM agent to supported APIs.
 ms.date: 05/19/2025
 ms.topic: article
-ms.service: defender-for-cloud-apps
-ms.custom: migration, API, security, monitoring
-----
+---
 
 # Migrate from Defender for Cloud Apps SIEM Agent to Supported APIs
 
-
 ## Mapping Legacy SIEM Fields to New API Schemas
-The legacy Defender for Cloud Apps SIEM agent output logs in Common Event Format (CEF) with specific fields for alerts and activities. The new APIs do not have an exact one-to-one field mapping for every CEF attribute; however, they provide equivalent or enhanced data through their schemas. While exact schema equivalence isn't available due to structural differences, the recommended APIs provide equivalent data enriched by context from multiple Microsoft Defender workloads. Transitioning to these APIs will enhance security operations by offering comprehensive and integrated insights. 
+The legacy Defender for Cloud Apps SIEM agent output logs in Common Event Format (CEF) with specific fields for alerts and activities. The new APIs do not have an exact one-to-one field mapping for every CEF attribute; however, they provide equivalent or enhanced data through their schemas. While exact schema equivalence isn't available due to structural differences, the recommended APIs provide equivalent data enriched by context from multiple Microsoft Defender workloads. Transitioning to these APIs will enhance security operations by offering comprehensive and integrated insights.
 
 > To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 >
