@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/11/2025
+ms.date: 05/20/2025
 ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
