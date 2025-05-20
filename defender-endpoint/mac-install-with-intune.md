@@ -371,7 +371,7 @@ Set policies using the Microsoft Defender portal by following these steps:
 
 Set policies using Microsoft Defender Portal by implementing the following instructions:
 
-To create this profile, copy the code as per [https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences#intune-recommended-profile](/defender-endpoint/mac-preferences) (recommended) OR [https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences#intune-full-profile](/defender-endpoint/mac-preferences) (for advanced scenarios), and save the file with the name *com.microsoft.wdav.xml*
+To create this profile, copy the code for the [Intune recommended profile](/defender-endpoint/mac-preferences) (recommended) or the [Intune full profile](/defender-endpoint/mac-preferences#intune-full-profile) (for advanced scenarios), and save the file as `com.microsoft.wdav.xml`.
 
 1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
