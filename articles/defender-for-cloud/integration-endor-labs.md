@@ -4,7 +4,7 @@ description: Learn how to enhance vulnerability analysis and provide comprehensi
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 11/19/2024
+ms.date: 05/20/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between Endor Labs and Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided when Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
 ---
