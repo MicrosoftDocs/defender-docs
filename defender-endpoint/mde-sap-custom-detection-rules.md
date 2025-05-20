@@ -34,7 +34,7 @@ Make sure to read the following articles before you begin:
 - [Create custom detection rules](/defender-xdr/custom-detection-rules)
 - [SAP Documentation: Starting External Commands and Programs](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/4b/2b2bed365474fee10000000a421937/frameset.htm)
 
-The SAP BASIS Team and the security team should codevelop the solution. The SAP BASIS team doesn't have access to the Microsoft Defender portal, and the security team doesn't know the specifics of the SAP Batch Jobs and External Commands. Both teams should work together.
+The SAP BASIS Team and the security team should codevelop the solution. The SAP BASIS team doesn't have access to the [Microsoft Defender portal](/defender-xdr/microsoft-365-security-center-mde), and the security team doesn't know the specifics of the SAP Batch Jobs and External Commands. Both teams should work together.
 
 ## Recommended implementation sequence
 
