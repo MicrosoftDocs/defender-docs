@@ -94,12 +94,12 @@ Whether Microsoft Defender Antivirus runs in active mode, passive mode, or is di
 
 The following table summarizes the state of Microsoft Defender Antivirus in several scenarios. 
 
-| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Microsoft Defender Antivirus state | Smart App Control State | 
+| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Microsoft Defender Antivirus state | Smart App Control State |
 |---|---|---|---|
 | Microsoft Defender Antivirus | Yes | Active mode | N/A  |
-| Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off | 
-| A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | N/A | 
-| A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | Evaluation or On | 
+| Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
+| A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
+| A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
 
 > [!NOTE]
 > Smart App Control is a consumer-only product that's used on new Windows 11 installs. It can run alongside your antivirus software and block apps that are considered to be malicious or untrusted. [Learn more about Smart App Control](https://support.microsoft.com/topic/what-is-smart-app-control-285ea03d-fa88-4d56-882e-6698afdb7003).
