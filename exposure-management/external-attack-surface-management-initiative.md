@@ -35,7 +35,10 @@ To configure your External Attack Surface initiative, you need to have **Global 
 
 :::image type="content" source="media/EASM/EASM-Pre-built-footprint.png" alt-text="Screenshot of side panel for EASM pre-built footprint selection" lightbox="media/EASM/EASM-Pre-built-footprint.png":::
 
-5. After 48 hours, the initiative will be populated with data from the selected footprint.
+5. In up to 1 hour, the initiative will be populated with high-level metrics and scores from the selected footprint.
+
+    > [!NOTE]
+    > This approach does not provide asset level information and detailed exposure information.
 
 ## Using the EASM initiative with full MSEADM integration
 
@@ -76,8 +79,9 @@ If you haven’t already deployed an MDEASM resource, follow these steps:
     > [!NOTE]
     > If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
 
-1. Choose **Connect to your MDEASM workspace**.
-1. Provide the following details from your Azure MDEASM resource:
+1. Choose **Connect your MDEASM workspace**.
+1. To enable the intitiative to pull data from your Defender EASM resource, enter the values from your resource's **Essentials** section on the **Overview** pane found in Azure.
+
    - **Resource Name**
    - **Subscription ID**
    - **Resource Group Name**
@@ -85,7 +89,7 @@ If you haven’t already deployed an MDEASM resource, follow these steps:
 
     :::image type="content" source="media/EASM/EASM-full_integration.png" alt-text="Screenshot of side panel for EASM initiative"::: 
 
-1. Select **Connect**. After validation, data will begin flowing into the graph, and metrics will calculate within 48 hours.
+1. Select **Connect**. After validation, data will begin flowing into the graph, and metrics will calculate within 32 hours.
 
 You can review your security initiative data through security metrics that reflect various exposure types as assessed by the External Attack Surface assessment engine. Select a metric to view additional information such as the exposed assets and their types. 
 
