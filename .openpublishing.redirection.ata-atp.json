@@ -17,7 +17,7 @@
     },
     {
       "source_path": "ATPDocs/deploy/quick-installation-guide.md",
-      "redirect_url": "ATPDocs/deploy/deploy-defender-identity",
+      "redirect_url": "deploy/deploy-defender-identity",
       "redirect_document_id": false
     },
     {
