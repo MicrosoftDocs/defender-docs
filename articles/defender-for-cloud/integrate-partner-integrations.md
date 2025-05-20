@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 10/13/2024
+ms.date: 05/20/2025
 ---
 
 # Integrate partner integrations
