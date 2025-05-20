@@ -4,7 +4,7 @@ description: Learn how to use advanced hunting with Defender for Endpoint to saf
 author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
-ms.date: 05/19/2025
+ms.date: 05/20/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -32,7 +32,7 @@ SAP Systems can execute OS level commands by using `SAPXPG – Transaction Code 
 Make sure to read the following articles before you begin:
 
 - [Create custom detection rules](/defender-xdr/custom-detection-rules)
-- [SAP Documentation: Starting External Commands and ProgramsLocate this document in the navigation structure](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/4b/2b2bed365474fee10000000a421937/frameset.htm)
+- [SAP Documentation: Starting External Commands and Programs](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/4b/2b2bed365474fee10000000a421937/frameset.htm)
 
 The SAP BASIS Team and the security team should codevelop the solution. The SAP BASIS team doesn't have access to the Microsoft Defender portal, and the security team doesn't know the specifics of the SAP Batch Jobs and External Commands. Both teams should work together.
 
