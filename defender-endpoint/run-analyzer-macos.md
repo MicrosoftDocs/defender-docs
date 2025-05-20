@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 01/08/2025
+ms.date: 05/15/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -27,6 +27,9 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 1. Using a binary version (no external Python dependency)
 2. Using a Python-based solution
 
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
+
 ## Use the binary version of the client analyzer
 
 1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS machine you need to investigate. 
@@ -34,16 +37,16 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
+   wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
    ```
 
 2. Verify the download.
 
    ```bash
-   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '24F0A3BFC9B2CF41893A1C867AE6D1B6B79250F24D15DBA0B080B7083F78CA81  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
-
-2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
+   
+3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
 
    If you're using a terminal, extract the files by running the following command:
 
@@ -51,24 +54,24 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
    ```
 
-3. Change to the tool's directory by running the following command:
+4. Change to the tool's directory by running the following command:
 
    ```bash
    cd XMDEClientAnalyzerBinary
    ```
 
-4. Notice that the following two zipped files are produced:
+5. Notice that the following two zipped files are produced:
 
    - `SupportToolLinuxBinary.zip`: For all Linux devices
    - `SupportToolMacOSBinary.zip`: For Mac devices
 
-5. Unzip the SupportToolMacOSBinary.zip. 
+6. Unzip the SupportToolMacOSBinary.zip. 
 
    ```bash
     unzip -q SupportToolMacOSBinary.zip
    ```
    
-6. Run the tool as root to generate your diagnostic package:
+7. Run the tool as root to generate your diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -81,7 +84,7 @@ The client analyzer depends on few extra PIP packages (`decorator`, `sh`, `distr
 The tool currently requires Python version 3 or later to be installed on your device. If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
-> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it is recommended that you install the packages into a user PIP environment.
+> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it's recommended that you install the packages into a user PIP environment.
 
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool to the Mac machine you're investigating.
 
@@ -95,8 +98,8 @@ The tool currently requires Python version 3 or later to be installed on your de
 
    | OS | Command |
    |--|--|
-   | Linux | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11 XMDEClientAnalyzer.zip'| sha256sum -c` |
-   | macOS | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11  XMDEClientAnalyzer.zip'| shasum -a 256 -c` |
+   | Linux | `echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| sha256sum -c` |
+   | macOS | `echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| shasum -a 256 -c` |
    
 3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine. 
 
@@ -124,24 +127,27 @@ The tool currently requires Python version 3 or later to be installed on your de
    ./mde_support_tool.sh
    ```
    
-7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you will want to remove this extended attribute:
+7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you'll want to remove this extended attribute:
 
    ```bash
    xattr -c MDESupportTools
    ```
-
+   
    Otherwise you might get the following warning:
-
+   
       "You might get a "MDESupportTool" Not Opened
-
-      Apple could not verify "MDESupportTool" is free of malware that may harm your Mac or compromise your privacy"
-
+   
+      Apple couldn't verify "MDESupportTool" is free of malware that might harm your Mac or compromise your privacy"
+   
 8. To collect actual diagnostic package and generate the result archive file, run again as root:
 
    ```bash
    sudo ./mde_support_tool.sh -d
    ```
-      
+   
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
+
 ## Command line options
 
 ### Primary command lines

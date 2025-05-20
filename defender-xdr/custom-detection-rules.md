@@ -1,6 +1,6 @@
 ---
-title: Create and manage custom detection rules in Microsoft Defender XDR
-description: Learn how to create and manage custom detections rules based on advanced hunting queries.
+title: Create custom detection rules in Microsoft Defender XDR
+description: Learn how to create custom detections rules based on advanced hunting queries.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -22,10 +22,10 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 02/10/2025
+ms.date: 05/07/2025
 ---
 
-# Create and manage custom detections rules
+# Create custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -75,13 +75,14 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 
 To create a custom detection rule, the query must return the following columns:
-1. `Timestamp` - Used to set the timestamp for generated alerts
-2. A column or combination of columns that uniquely identify the event in Defender XDR tables:
+1. `Timestamp` - This column is used to set the timestamp for generated alerts. The `Timestamp` that is returned from the query should not have been manipulated in the query and should be returned exactly as it appears in the raw event.
+   
+3. A column or combination of columns that uniquely identify the event in Defender XDR tables:
       - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
       - For Alert* tables, `Timestamp` must appear in the event
       - For Observation* tables, `Timestamp`and `ObservationId` must appear in the same event
       - For all others, `Timestamp` and `ReportId` must appear in the same event
-3. One of the following columns that contain a strong identifier for an impacted asset:
+4. One of the following columns that contain a strong identifier for an impacted asset:
       - `DeviceId`
       - `DeviceName`
       - `RemoteDeviceName`
@@ -98,6 +99,8 @@ To create a custom detection rule, the query must return the following columns:
 
 > [!NOTE]
 > Support for more entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
+
+
 
 Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
 
@@ -131,6 +134,7 @@ With the query in the query editor, select **Create detection rule** and specify
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
+
 
 #### Rule frequency
 
@@ -167,7 +171,7 @@ Once you click **Save**, the selected rules' frequency gets updated to Continuou
 You can run a query continuously as long as:
 
 - The query references one table only.
-- The query uses an operator from the list of supported KQL operators. **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**
+- The query uses an operator from the list of **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**. (For `matches regex`, regular expressions must be encoded as string literals and follow the string quoting rules. For example, the regular expression `\A` is represented in KQL as `"\\A"`. The extra backslash indicates that the other backslash is part of the regular expression `\A`.)
 - The query doesn't use joins, unions, or the `externaldata` operator.
 - The query doesn't include any comments line/information.
 
@@ -267,61 +271,16 @@ Only data from devices in the scope will be queried. Also, actions are taken onl
 After reviewing the rule, select **Create** to save it. The custom detection rule immediately runs. It runs again based on configured frequency to check for matches, generate alerts, and take response actions.
 
 > [!IMPORTANT]
-> Custom detections should be regularly reviewed for efficiency and effectiveness. For guidance on how to optimize your queries, follow the **[Advanced hunting query best practices](advanced-hunting-best-practices.md)**. To make sure you're creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in **[Manage existing custom detection rules](#manage-existing-custom-detection-rules)**.
+> Custom detections should be regularly reviewed for efficiency and effectiveness. For guidance on how to optimize your queries, follow the **[Advanced hunting query best practices](advanced-hunting-best-practices.md)**. To make sure you're creating detections that trigger true alerts, take time to review your existing custom detections by following the steps in **[Manage existing custom detection rules](custom-detection-manage.md)**.
 >
 > You maintain control over the broadness or specificity of your custom detections so any false alerts generated by custom detections might indicate a need to modify certain parameters of the rules.
 
-## Manage existing custom detection rules
 
-You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand and modify it.
-
-> [!TIP]
-> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
-
-### View existing rules
-
-To view all existing custom detection rules, navigate to **Hunting** > **Custom detection rules**. The page lists all the rules with the following run information:
-
-- **Last run** - When a rule was last run to check for query matches and generate alerts
-- **Last run status** - Whether a rule ran successfully
-- **Next run** - The next scheduled run
-- **Status** - Whether a rule has been turned on or off
-
-### View rule details, modify rule, and run rule
-
-To view comprehensive information about a custom detection rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
-
-:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="/defender/media/custom-detect-rules-view.png":::
-
-You can also take the following actions on the rule from this page:
-
-- **Run** - Run the rule immediately. This also resets the interval for the next run.
-- **Edit** - Modify the rule without changing the query.
-- **Modify query** - Edit the query in advanced hunting.
-- **Turn on** / **Turn off** - Enable the rule or stop it from running.
-- **Delete** - Turn off the rule and remove it.
-
-### View and manage triggered alerts
-
-In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name]**), go to  **Triggered alerts**, which lists the alerts generated by matches to the rule. Select an alert to view detailed information about it and take the following actions:
-
-- Manage the alert by setting its status and classification (true or false alert)
-- Link the alert to an incident
-- Run the query that triggered the alert on advanced hunting
-
-### Review actions
-
-In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name]**), go to **Triggered actions**, which lists the actions taken based on matches to the rule.
-
-> [!TIP]
-> To quickly view information and take action on an item in a table, use the selection column [&#10003;] at the left of the table.
-
-> [!NOTE]
-> Some columns in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## See also
 
 - [Custom detections overview](custom-detections-overview.md)
+- [Manage custom detections](custom-detection-manage.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the advanced hunting query language](advanced-hunting-query-language.md)
 - [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md)

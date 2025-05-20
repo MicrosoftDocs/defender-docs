@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 05/02/2025
 ---
 
 # Use the advanced hunting query resource report
@@ -44,6 +44,8 @@ Refer to the following table to understand existing quotas and usage parameters.
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
 
 In the unified Microsoft Defender portal, you are able to run queries over Microsoft Sentinel tables by onboarding a workspace. [Log analytics workspace limits](/azure/azure-monitor/service-limits#log-analytics-workspaces) therefore also apply. 
+
+For advanced hunting in multitenant organizations, see [Quotas in advanced hunting in multitenant management](/unified-secops-platform/mto-advanced-hunting#quotas).
 
 > [!NOTE]
 > A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md) 

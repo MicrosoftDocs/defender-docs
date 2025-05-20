@@ -1,7 +1,7 @@
 ---
 title: Integrate Microsoft Defender for Endpoint
 description: This article describes how to integrate Microsoft Defender for Endpoint with Defender for Cloud Apps for enhanced visibility into Shadow IT and risk management.
-ms.date: 06/03/2024
+ms.date: 05/12/2025
 ms.topic: how-to
 ---
 
@@ -18,10 +18,12 @@ This article describes the out-of-the-box integration available between Microsof
 
 - Microsoft Defender for Cloud Apps license
 
+- Devices must be onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-client)
+
 - One of the following:
 
     - Microsoft Defender for Endpoint with Plan 2
-    - Microsoft Defender for Business with a premium or standalone license
+    - Microsoft Defender for Business (standalone or as part of Microsoft 365 Business Premium)
     
     For more information, see [Compare Microsoft endpoint security plans](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2).
 

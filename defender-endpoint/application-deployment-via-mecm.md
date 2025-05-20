@@ -4,8 +4,8 @@ description: Learn how to migrate down-level servers from Microsoft Monitoring A
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.topic: conceptual
-ms.date: 03/14/2025
+ms.date: 03/27/2025
 ---
 
 # Migrating servers from Microsoft Monitoring Agent to the unified solution
@@ -126,7 +126,7 @@ Copy the unified solution package, onboarding script, and migration script to th
 - [Microsoft Monitoring Agent Setup](/services-hub/health/mma-setup)
 - [Deploy applications - Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)
 - [Microsoft Defender for Endpoint - Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection)
-- [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint: Defending Windows Server 2012 R2 and 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
