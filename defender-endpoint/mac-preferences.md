@@ -426,6 +426,29 @@ Determines the number of days after which the last installed security intelligen
 |**Data type**|Integer|
 |**Possible values**|7 (default). Allowed values are integers between 1 and 30|
 
+#### Security intelligence update interval (in seconds)
+
+Specifies the time interval (in seconds) after which security intelligence updates will be checked.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdatesInterval|
+|**Data type**|Integer|
+|**Possible values**|28800 (default). Allowed values are integers between 60 and 86400|
+
+#### Proxy for MDE communication 
+
+Configure proxy for all MDE cloud communication. If not set, the system-wide proxy is used.
+
+|Section|Value|
+|---|---|
+|**Key**|proxy|
+|**Data type**|String|
+|**Comments**|Format: "http://proxy.server:port".|
+> [!IMPORTANT]
+>
+> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy.
+
 ### User interface preferences
 
 Manage the preferences for the user interface of Microsoft Defender for Endpoint on macOS.
