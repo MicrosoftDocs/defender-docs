@@ -85,9 +85,9 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 |`com.microsoft.wdav.epsext`|`UBF8T346G9`|
 |`com.microsoft.wdav.netext`|`UBF8T346G9`|
 
-      :::image type="content" alt-text="Screenshot showing allowed system extensions" source="media/mac-install-with-intune/image003.png" lightbox="media/mac-install-with-intune/image003.png":::
-
-1. On the **Scopes** tab, (optional) select scope tags, then select **Next.**
+```
+  :::image type="content" alt-text="Screenshot showing allowed system extensions" source="media/mac-install-with-intune/image003.png" lightbox="media/mac-install-with-intune/image003.png":::
+```1. On the **Scopes** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices or users are located, then select **Next**.
 
@@ -420,14 +420,10 @@ For more information about managing security settings, see:
 > The Device Control setting is included in the MacOS Full disk access template created in step 3.
 > For more information about Device Control for Microsoft Defender for Endpoint on macOS see [Device Control for MacOS](/defender-endpoint/mac-device-control-overview)
 
-### Step 12: Microsoft Purview Data Loss Prevention (DLP) for Endpoint on MacOS (optional)
+### Step 12: Publish the Microsoft Defender application
 
-> [!NOTE]
-> To deploy Microsoft Purview's Data Loss Prevention (DLP) for endpoint on macOS, follow the steps in [Onboard and offboard macOS devices into Purview solutions using Intune for Microsoft Defender for Endpoint customers](/purview/device-onboarding-offboarding-macos-intune-mde)
-
-To set Purview's Data Loss Prevention (DLP) for endpoint on macOS, follow the steps in [Onboard and offboard macOS devices into Compliance solutions using Microsoft Intune](/purview/device-onboarding-offboarding-macos-intune-mde).
-
-### Step 13: Publish application
+> [!IMPORTANT]
+> The Microsoft Defender app for macOS splits features for both Microsoft Defender for Endpoint and Microsoft Purview Endpoint Data Loss Prevention, if you are also planning to onboard MacOS devices to Purview (Step 18), ensure Device Monitoring is turned on **at this stage**. To enable Purview Device Monitoring on the [Microsoft Purview Portal](https://purview.microsoft.com) go to **Settings > Devices.**
 
 This step enables deploying Microsoft Defender for Endpoint to enrolled machines.
 
@@ -456,14 +452,71 @@ This step enables deploying Microsoft Defender for Endpoint to enrolled machines
    For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
    
 > [!IMPORTANT]
-> You should create and deploy the configuration profiles in the order specified (steps 1-13) for a successful system configuration.
+> You should create and deploy the configuration profiles in the order specified (steps 1-12) for a successful system configuration.
 
-### Step 14: Check Device and Configuration status
+### Step 13: Download the Microsoft Defender for Endpoint onboarding package
 
-> [!NOTE]
-> After completing the profile configuration, once the Intune changes are propagated to the enrolled devices, you'll be able to review the status of the policies.
+To download the onboarding package from the Microsoft Defender portal:
 
-#### Step 14a. View Status
+1. In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage), select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+
+1. On the **Select operating system to start the onboarding process** drop-down, select **macOS.**
+
+1. On the **Deployment method** drop-down, select **Mobile Device Management / Microsoft Intune**.
+
+      :::image type="content" source="../defender-endpoint/media/macos-install-with-intune.png" alt-text="Screenshot that shows the Onboarding settings page." lightbox="../defender-endpoint/media/macos-install-with-intune.png":::
+
+3. Select **Download onboarding package**. Save it as _WindowsDefenderATPOnboardingPackage.zip_ to the same directory.
+
+1. Extract the contents of the .zip file:
+
+      ```bash
+   unzip WindowsDefenderATPOnboardingPackage.zip
+   ```
+
+      ```console
+   Archive:  WindowsDefenderATPOnboardingPackage.zip
+   warning:  WindowsDefenderATPOnboardingPackage.zip appears to use backslashes as path separators
+    inflating: intune/kext.xml
+    inflating: intune/WindowsDefenderATPOnboarding.xml
+    inflating: jamf/WindowsDefenderATPOnboarding.plist
+   ```
+
+      :::image type="content" source="../defender-endpoint/media/deploy-onboarding-package.png" alt-text="Screenshot that shows the sample description."  lightbox="../defender-endpoint/media/deploy-onboarding-package.png":::
+
+### Step 14: Deploy the Microsoft Defender for Endpoint onboarding package for MacOS
+
+This profile contains license information for Microsoft Defender for Endpoint. 
+
+1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
+
+1. On the **Policies** tab, select **Create** > **New Policy**. 
+
+1. Under **Platform**, select **macOS**.
+
+1. Under **Profile type**, select **Templates**.
+
+1. Under **Template name**, select **Custom**.
+
+1. Select **Create**.
+
+1. On the **Basics** tab, **Name** the profile, (for example: MDE onboarding for macOS), and enter a **Description**, then select **Next**.
+
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** **name.**
+
+1. Choose a **Deployment channel** and select **Next**.
+
+1. Select the *WindowsDefenderATPOnboarding.xml* Configuration profile file created earlier, then select **Next.**
+
+1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
+
+1. Review the configuration profile, then select **Create**.
+
+### Step 15: Check Device and Configuration status
+
+
+
+#### Step 15a. View Status
 
 There are multiple ways to look at this information in the [Microsoft Intune admin center](https://intune.microsoft.com/#home), including monitoring and reports per device, user, configuration policies and more. Here's an example:
 
@@ -471,7 +524,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 
 1. On the **Policies** tab select a policy, then on the **Device and user check-in status** select **View Report**.
 
-#### Step 13b. Client device setup
+#### Step 15b. Client device setup
 
 
 
@@ -489,147 +542,57 @@ Select **Open System Preferences**, locate **Management Profile** on the list, a
 
 You might now enroll more devices. You can also enroll them later, after finishing the provisioning system configuration and application packages.
 
-3. In Intune, open **Manage** \> **Devices** \> **All devices**. Here you can see your device among the listed:
+1. In Intune, select **Devices** > **All devices**. Here you can see your device among the listed:
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-5-alldevices.png" alt-text="Screenshot that shows the All Devices page." lightbox="../defender-endpoint/media/mdatp-5-alldevices.png":::
+![Screenshot that shows the All Devices page.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/pr/defender-endpoint/media/mdatp-5-alldevices.png)
 
-#### Step 13c. Verify client device state
+#### Step 15c. Verify client device state
 
-1. After the configuration profiles are deployed to your devices, open System Settings > General __**General** > Device Management __on your Mac device.
+1. After the configuration profiles are deployed to your devices, open **System Settings > General > Device Management** on your MacOS device.
 
-1. Verify that the following configuration profiles are present and installed. The **Management Profile** should be the Intune system profile and all the configuration profiles that were created above.
+1. Verify that all the configuration profiles are present and installed:
 
-1. You should also see the Microsoft Defender for Endpoint icon in the top-right corner.
+   1. accessibility.mobileconfig
+      
+   1. background_services.mobileconfig
+      
+   1. bluetooth.mobileconfig
+      
+   1. com.microsoft.autoupdate2.mobileconfig
+      
+   1. fulldisk.mobileconfig
+      
+   1. Management Profile (this is the Intune system profile)
+      
+   1. WindowsDefenderATPOnboarding.xml (this is the MDE onboarding package for macOS)
+      
+   1. netfilter.mobileconfig
+      
+   1. notif.mobileconfig
+      
+1. You should also see the **Microsoft Defender** icon in the top-right corner.
 
 ![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-icon-bar.png)
 
-Step 13: Check Device and Configuration status
-
- Note
-
-After completing the profile configuration, once the Intune changes are propagated to the enrolled devices, you'll be able to review the status of the policies.
-
-Step 13a. View Status
-
-There are multiple ways to look at this information in the [Microsoft Intune admin center](https://intune.microsoft.com/#home), including monitoring and reports per device, user, configuration policies and more. Here's an example:
-
-   1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
-      
-   1. On the **Policies** tab select a policy, then on the **Device and user check-in status** select **View Report**.
-      
-Step 13b. Client device setup
-
- Note
-
-While there are multiple ways to enroll MacOS devices to **Microsoft Intune**, a standard [Company Portal installation](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) is sufficient for a Mac device. To install the Company Portal app [Download the Company Portal App](https://go.microsoft.com/fwlink/?linkid=853070). For more information see [Enrollment guide: Enroll macOS devices in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment-macos)
-
-   1. Follow the steps outlined in [Enroll your macOS device using the Company Portal app](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
-      
-   1. Confirm device management.
-      
-      ![Screenshot that shows the Confirmed device management page.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-3-confirmdevicemgmt.png)
-      
-      Select **Open System Preferences**, locate **Management Profile** on the list, and select **Approve...**. Your Management Profile would be displayed as **Verified**:
-      
-      ![Screenshot that shows the Management profile page.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-4-managementprofile.png)
-      
-   1. Select **Continue** and complete the enrollment.
-      
-      You might now enroll more devices. You can also enroll them later, after finishing the provisioning system configuration and application packages.
-      
-   1. In Intune, open **Manage** > **Devices** > **All devices**. Here you can see your device among the listed:
-      
-      ![Screenshot that shows the All Devices page.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-5-alldevices.png)
-      
-Step 13c. Verify client device state
-
-   1. After the configuration profiles are deployed to your devices, open **System Settings** > **General > Device Management** on your Mac device.
-      
-   1. Verify that the following configuration profiles are present and installed. The **Management Profile** should be the Intune system profile and all the configuration profiles that were created above.
-      
-   1. You should also see the Microsoft Defender for Endpoint icon in the top-right corner.
-      
-      ![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-icon-bar.png)
-      
-### Step 15: Download the onboarding package
-
-To download the onboarding packages from Microsoft 365 Defender portal:
-
-1. In the Microsoft 365 Defender portal, go to **System** > **Settings** > **Endpoints** > **Device management** > **Onboarding**.
-
-2. Set the operating system to **macOS** and the deployment method to **Mobile Device Management / Microsoft Intune**.
-
-   :::image type="content" source="../defender-endpoint/media/macos-install-with-intune.png" alt-text="Screenshot that shows the Onboarding settings page." lightbox="../defender-endpoint/media/macos-install-with-intune.png":::
-
-3. Select **Download onboarding package**. Save it as _WindowsDefenderATPOnboardingPackage.zip_ to the same directory.
-
-4. Extract the contents of the .zip file:
-
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
-
-   ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   warning:  WindowsDefenderATPOnboardingPackage.zip appears to use backslashes as path separators
-    inflating: intune/kext.xml
-    inflating: intune/WindowsDefenderATPOnboarding.xml
-    inflating: jamf/WindowsDefenderATPOnboarding.plist
-   ```
-
-   :::image type="content" source="../defender-endpoint/media/deploy-onboarding-package.png" alt-text="Screenshot that shows the sample description."  lightbox="../defender-endpoint/media/deploy-onboarding-package.png":::
-
-### Step 16: Deploy the onboarding package
-
-This profile contains license information for Microsoft Defender for Endpoint. 
-
-To deploy the onboarding package:
-
-1. Under **Configuration profiles**, select **Create Profile**.
-
-1. Under **Platform**, select **macOS**.
-
-1. Under **Profile type**, select **Templates**.
-
-1. Under **Template name**, select **Custom**.
-
-1. Select **Create**.
-
-   :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-1.png" alt-text="Screenshot that shows the deployed onboarding package." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-1.png":::
-
-1. On the **Basics** tab, **Name** the profile. For example, `Onboarding-prod-macOS-Default-MDE`. Select **Next**.
-
-   :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-2.png" alt-text="Screenshot that shows the Custom page." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-2.png":::
-
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `WindowsDefenderATPOnboarding`.
-
-1. Choose a **Deployment channel** and select **Next**.
-
-1. Select a **Configuration profile file**.
-
-   :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles.png" alt-text="Screenshot that shows the configuration settings." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles.png":::
-
-1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
-
-   :::image type="content" source="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-3.png" alt-text="Screenshot that shows the Assignments tab." lightbox="../defender-endpoint/media/mdatp-6-systemconfigurationprofiles-3.png":::
-
-1. Review the configuration profile. Select **Create**.
-
-1. Open **Devices** > **Configuration profiles** to see the created profile.
-
-### Step 17: Verify anti-malware detection
+### Step 16: Verify anti-malware detection
 
 See the following article to test for an anti-malware detection review: [Antivirus detection test for verifying device's onboarding and reporting services](validate-antimalware.md)
 
-### Step 18: Verifying EDR detection
+### Step 17: Verifying EDR detection
 
 See the following article to test for an EDR detection review: [EDR detection test for verifying device onboarding and reporting services](edr-detection.md)
+
+### Step 18: Microsoft Purview Data Loss Prevention (DLP) for Endpoint on MacOS (strongly recommended)
+
+
 
 ## Troubleshooting
 
 Issue: No license found.
 
-Solution: Follow the steps in this article to create a device profile using WindowsDefenderATPOnboarding.xml.
+Cause: Onboarding has not completed. 
+
+Resolution: Ensure you have completed steps 13 and 14 above.
 
 ## Logging installation issues
 
