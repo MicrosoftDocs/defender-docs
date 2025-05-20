@@ -25,15 +25,14 @@ ms.date: 12/29/2023
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
-
 
 
 The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about cloud audit events for various cloud platforms protected by the organization's [Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-integration-365#advanced-hunting-in-xdr). Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+This advanced hunting table is populated by records from Microsoft Defender for Cloud. If your organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t going to work or return any results. For more information about prerequisities in integrating Defender for Cloud with Defender XDR, read [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
