@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 07/22/2024
+ms.date: 04/25/2025
 ---
 
 # Client behavioral blocking
