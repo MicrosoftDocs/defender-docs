@@ -1,5 +1,5 @@
 ---
-title: "Custom detection rules with advanced hunting: Protecting SAP External OS Commands (SAPXPG)"
+title: "Custom detection rules with advanced hunting: Protecting SAP external OS commands (SAPXPG)"
 description: Learn how to use advanced hunting with Defender for Endpoint to safeguard the SAPXPG mechanism with SAP systems.
 author: emmwalshh
 ms.author: ewalsh
@@ -18,7 +18,7 @@ f1.keywords: NOCSH
 audience: ITPro
 ---
 
-# Custom detection rules with advanced hunting: Protecting SAP External OS Commands (SAPXPG)
+# Custom detection rules with advanced hunting: Protecting SAP external OS commands (SAPXPG)
 
 **Applies to:**
 
