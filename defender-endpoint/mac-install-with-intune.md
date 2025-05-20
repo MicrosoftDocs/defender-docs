@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/19/2025
+ms.date: 05/20/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -74,20 +74,20 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 1. On the **Configuration settings** tab**,** select **+ Add settings.**
 
-1. In the **Settings picker**, expand the **System Configuration** category, and then select **System Extensions** and check **Allowed System Extensions:**
+1. In the **Settings picker**, expand the **System Configuration** category, and then select **System Extensions** and check **Allowed System Extensions**.
    
 1. Close the Settings picker, and then select **+ Edit instance**. 
 
 1. Configure the following entries in the **Allowed system extensions** section, then select **Save,** then select **Next.**
 
-|Allowed System Extensions|Team Identifier|
-|---|---|
-|`com.microsoft.wdav.epsext`|`UBF8T346G9`|
-|`com.microsoft.wdav.netext`|`UBF8T346G9`|
+   |Allowed System Extensions|Team Identifier|
+   |---|---|
+   |`com.microsoft.wdav.epsext`|`UBF8T346G9`|
+   |`com.microsoft.wdav.netext`|`UBF8T346G9`|
 
-```
-  :::image type="content" alt-text="Screenshot showing allowed system extensions" source="media/mac-install-with-intune/image003.png" lightbox="media/mac-install-with-intune/image003.png":::
-```1. On the **Scopes** tab, (optional) select scope tags, then select **Next.**
+   :::image type="content" alt-text="Screenshot showing allowed system extensions" source="media/mac-install-with-intune/image003.png" lightbox="media/mac-install-with-intune/image003.png":::
+
+1. On the **Scopes** tab, (optional) select scope tags, then select **Next.**
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices or users are located, then select **Next**.
 
@@ -345,9 +345,9 @@ In this step, you will configure anti-malware and EDR policies, using either the
 > [!NOTE]
 > Complete **only one** of the following steps (9a. OR 9b.)
 
-#### 9a. Set policies using Microsoft Defender portal
+#### 9a. Set policies using the Microsoft Defender portal
 
-Set policies using Microsoft Defender Portal by implementing the following instructions:
+Set policies using the Microsoft Defender portal by following these steps:
 
 1. Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender for Endpoint Security Settings Management.
 
