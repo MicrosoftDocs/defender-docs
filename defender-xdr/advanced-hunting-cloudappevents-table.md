@@ -36,7 +36,7 @@ To make sure the `CloudAppEvents` data is populated:
 
 1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
 
-1.  In the **Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
+1.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
 
  For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
 
