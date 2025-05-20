@@ -142,6 +142,8 @@ SOC optimizations are actionable recommendations that surface ways that you can 
 
 Use SOC optimization recommendations to help you close coverage gaps against specific threats and tighten your ingestion rates against data that doesn't provide security value. SOC optimizations help you optimize your Microsoft Sentinel workspace, without having your SOC teams spend time on manual analysis and research.
 
+:::image type="content" source="media/respond-threats-overview/soc-optimizations.png" alt-text="Screenshot of Microsoft Sentinel SOC optimization recommendations.":::
+
 For more information, see [Microsoft Sentinel SOC optimizations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal).
 
 ## Microsoft Security Exposure Management for potential threat response
