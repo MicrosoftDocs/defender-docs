@@ -69,7 +69,6 @@ Security Events are free, up to **500 MB per server per day**, but only when the
       {
         "name": "SecurityEvents",
         "streams": ["Microsoft-SecurityEvent"],
-        "scheduledTransferPeriod": "PT5M",
         "xPathQueries": [
           "*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]"
         ]
@@ -89,7 +88,7 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 | Requirement | Why it matters |
 |-------------|----------------|
 | **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the **SecurityEvent** table covered by the allowance. |
-| **Security solution** enabled on workspace | Activates the SecurityEvent table. |
+| **Security solution enabled on workspace** | Ensures the ingestion benefit is applied (same as Defender for Servers Plan 2). |
 | **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
 | **Azure Monitor Agent (AMA)** installed | Required to apply custom DCRs. |
 
@@ -116,4 +115,3 @@ Azure Monitor describes how to [create a Log Analytics workspace](/azure/azure-m
 
 > [!NOTE]
 > If you want to disable Defender for Servers Plan 2, you explicitly disable the plan on any Log Analytics workspace with it enabled.
-
