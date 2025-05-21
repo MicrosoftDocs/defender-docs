@@ -66,7 +66,7 @@ For example, the following command defines all settings for the domain, creates 
 Set-MDIConfiguration -Mode Domain -Configuration All
 ```
 
-# Onboarding steps
+## Onboarding steps
 
 ## Customers with domain controllers already onboarded to Defender for Endpoint 
 
@@ -167,7 +167,6 @@ IdentityQueryEvents
 
 For more information, see [Advanced hunting in the Microsoft Defender portal](/microsoft-365/security/defender/advanced-hunting-microsoft-defender).
 
-
 ## Test Identity Security Posture Management (ISPM) recommendations
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
@@ -218,7 +217,7 @@ Test remediation actions on a test user. For example:
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
-# Offboarding steps
+## Offboarding steps
 
 ## Customers with domain controllers already onboarded to Defender for Endpoint 
 
@@ -242,7 +241,6 @@ Download the Defender for Identity offboarding package from the [Microsoft Defen
 2. Select Download offboarding package and save the file in a location you can access from your domain controller.
 3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
 4. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server and click Delete. 
-
 
 ## Next steps
 
