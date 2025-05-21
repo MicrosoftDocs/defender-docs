@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 05/14/2025
+ms.date: 05/15/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -43,7 +43,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 2. Verify the download.
 
    ```bash
-   echo '7886E960546A8490C7CBD962330104B2454647131B89D26771610FDB5BB6BE3D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '24F0A3BFC9B2CF41893A1C867AE6D1B6B79250F24D15DBA0B080B7083F78CA81  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
    
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
