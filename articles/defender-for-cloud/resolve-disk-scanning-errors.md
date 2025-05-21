@@ -10,7 +10,7 @@ ms.author: elkrieger
 
 # Resolve disk scanning errors
 
-Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud will scan disks in your GCP project for vulnerabilities and present recommendations and insights to remediate and detected vulnerability. However, disk scanning can fail due to organizational policies. 
+Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud scans disks in your GCP project for vulnerabilities and present recommendations and insights to remediate detected vulnerabilities. However, disk scanning might fail due to organizational policies.
 
 GCP organization policies are a common way for organization administrators to configure constraints across your organization's resources. These policies might block Defender for Cloud's access to your tenant, preventing it from scanning disks.
 
@@ -30,7 +30,7 @@ To resolve disk scanning errors, you need to check the organization policies in 
 
 1. Sign in to your GCP project.
 
-1. Navigate to your organization > relevant project.
+1. Navigate to your organization > relevant GCP project.
 
 1. Navigate to **IAM & Admin** > **Organization Policies**
 
