@@ -1,6 +1,6 @@
 ---
-title: Resolve disk scanning errors
-description: Troubleshoot disk scanning errors in Microsoft Defender for Cloud to ensure your resources are connected and protected.
+title: Resolve disk scanning error
+description: Troubleshoot disk scanning error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 05/21/2025
 ms.topic: how-to
 author: Elazark
@@ -8,7 +8,7 @@ ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the disk scanning errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
 
-# Resolve disk scanning errors
+# Resolve disk scanning error
 
 Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud scans disks in your GCP project for vulnerabilities and present recommendations and insights to remediate detected vulnerabilities. However, disk scanning might fail due to organizational policies.
 

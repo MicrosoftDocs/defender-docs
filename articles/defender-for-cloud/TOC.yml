@@ -98,6 +98,9 @@
           - name: Resolve Domain Restricted Sharing policy
             displayName: connector, GCP, domain, restricted, sharing, policy
             href: resolve-gcp-sharing-policy.md
+          - name: Resolve disc scanning error
+            displayName: connector, GCP, disc, scanning, error
+            href: resolve-disk-scanning-error.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
