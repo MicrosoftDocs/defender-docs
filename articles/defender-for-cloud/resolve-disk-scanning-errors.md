@@ -38,11 +38,13 @@ To resolve disk scanning errors, you need to check the organization policies in 
 
 1. Select **Edit**.
 
+1. Change the policy type to **Allow**.
+
 1. Add `organizations/517615557103` to the allowed list.
 
-1. 
+1. Select **Save**.
 
+## Next step
 
-
-
-
+> [!div class="nextstepaction"]
+> [Common GCP questions](faq-general.yml)
