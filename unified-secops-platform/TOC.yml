@@ -44,7 +44,7 @@
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
     - name: Transition
-      href: /azure/sentinel/move-to-defender?branch=pr-en-us-299308&toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json    
+      href: /azure/sentinel/move-to-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json    
     - name: Reduce security risk
       items:
       - name: Improve security posture and reduce risk
