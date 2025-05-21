@@ -19,7 +19,7 @@ The Applications page includes the following tabs:
 
 In the Defender portal at <https://security.microsoft.com>, go to **Assets** > **Applications**. Or, go directly to the **Applications** page, by clicking on the banner links on the existing Cloud discovery and App governance pages.
 
-:::image type="content" source="media/banner-on-cloud-discovery-pages.png" alt-text="Screenshot of the Cloud Discovery page with a banner about the new unified application inventory experience" lightbox="media/banner-on-cloud-discovery-pages.png":::
+:::image type="content" source="media/banner-on-cloud-discovery-pages.png" alt-text="Screenshot of the Cloud Discovery page with a banner about the new unified application inventory experience." lightbox="media/banner-on-cloud-discovery-pages.png":::
 
 :::image type="content" source="media/banner-message-on-app-governance-pages.png" alt-text="Screenshot of the App Governance page with a banner about the new unified application inventory experience for managing OAuth and SaaS apps" lightbox="media/banner-message-on-app-governance-pages.png":::
 
@@ -31,7 +31,7 @@ There are several options you can choose from to customize the SaaS apps and OAu
 * Apply filters
 
 > [!NOTE]
->When exporting the applications list to a CSV file, a maximum of 1000 SaaS or OAuth apps are displayed.
+> When exporting the applications list to a CSV file, a maximum of 1000 SaaS or OAuth apps are displayed.
 
 The following image depicts the SaaS apps list:
 :::image type="content" source="media/applications-tab-in-the-defender-portal.png" alt-text="Screenshot of the applications tab in the Defender portal" lightbox="media/applications-tab-in-the-defender-portal.png"
@@ -71,7 +71,7 @@ The OAuth apps tab provides visibility into Microsoft 365, Google workspace and 
 
 * **Apps from external unverified publishers** – Shows apps that originated from an external unverified publisher tenant. (Available for Microsoft 365)
 
-For more information on how to create app policies, see:[Create app policies in app governance](app-governance-app-policies-create.md)
+For more information on how to create app policies, see [Create app policies in app governance](app-governance-app-policies-create.md).
 
 The following image depicts the OAuth apps list:
 
@@ -97,8 +97,7 @@ You can apply the following filters to get a more focused view:
 | **Privilege level**  | The app's privilege level. |
 | **Certification**| Indicates if an app meets stringent security and compliance standards set by Microsoft 365 or if its publisher has publicly attested to its safety.  |
 | **Sensitivity label accessed**| Sensitivity labels on content accessed by the app  |
-| **Service accessed**| Microsoft 365 services accessed by the app  
-|
+| **Service accessed**| Microsoft 365 services accessed by the app  |
 
 
 > [!TIP]
