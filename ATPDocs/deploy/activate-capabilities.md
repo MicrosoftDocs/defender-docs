@@ -87,9 +87,8 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
     The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server you can find its activation state.
-   
 
-1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+2. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
 
     :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
 
