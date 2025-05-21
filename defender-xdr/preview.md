@@ -16,20 +16,18 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 05/01/2024
+ms.date: 05/08/2024
+appliesto: 
+  - Microsoft Defender XDR
+  - Microsoft Defender for Business
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Microsoft Defender for Cloud Apps
 ---
 
 # Microsoft Defender XDR preview features
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender for Business
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
 
 The Microsoft Defender XDR service is constantly being updated to include new feature enhancements and capabilities.
 
@@ -52,17 +50,17 @@ When working with features in public preview, these features:
 
 Accounts assigned the following Microsoft Entra roles can turn on Microsoft Defender XDR Preview features:
 
-- Global administrator
-- Security administrator
+- Global Administrator
+- Security Administrator
 - Security Operator
 
 ## Turn on preview features
 
 Turn on preview features to be among the first to try new features. Your feedback is valuable and helps to improve the overall experience before features are generally available.
 
-In Microsoft Defender XDR, select **Settings > Microsoft Defender XDR > General > Preview features**, and select to turn on preview features.
+In the Microsoft Defender portal, navigate to **Settings > Microsoft Defender XDR > General > Preview features**, and select to turn on preview features.
 
-If you already have preview features turned on, and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
+If you already have preview features turned on and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
 
 :::image type="content" source="media/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
 
