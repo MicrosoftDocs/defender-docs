@@ -24,6 +24,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## May 2025
 
+###  Expanded New Sensor Deployment Support for Domain Controllers
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](activate-capabilities.md)
+
+
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify non-eligible servers and take action to update and onboard them for enhanced identity protection.
 
