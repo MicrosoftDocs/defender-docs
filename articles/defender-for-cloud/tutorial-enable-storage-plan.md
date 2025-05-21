@@ -2,7 +2,7 @@
 title: Deploy Microsoft Defender for Storage
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 10/10/2024
+ms.date: 05/13/2025
 ---
 
 # Deploy Microsoft Defender for Storage
@@ -14,7 +14,7 @@ With Microsoft Defender for Storage, organizations can customize their protectio
    > [!TIP]
    > If you're currently using Microsoft Defender for Storage classic, consider [migrating to the new plan](defender-for-storage-classic-migrate.md), which offers several benefits over the classic plan.
 
-Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about pricing and regional availability.
+Check out the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about pricing and regional availability. You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 

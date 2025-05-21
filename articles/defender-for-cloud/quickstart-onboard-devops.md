@@ -1,7 +1,7 @@
 ---
 title: Connect your Azure DevOps organizations
 description: Learn how to connect your Azure DevOps environment to Defender for Cloud.
-ms.date: 03/12/2024
+ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
 ---
@@ -25,7 +25,7 @@ To complete this quickstart, you need:
 | Aspect | Details |
 |--|--|
 | Release state: | General Availability. |
-| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing). |
+| Pricing: | For pricing, see the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?v=17.23h#pricing). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
 | Required permissions: | **Account Administrator** with permissions to sign in to the Azure portal. <br> **Contributor** to create a connector on the Azure subscription. <br> **Project Collection Administrator** on the Azure DevOps Organization. <br> **Basic or Basic + Test Plans Access Level** on the Azure DevOps Organization. <br> _Make sure you have BOTH Project Collection Administrator permissions and Basic Access Level for all Azure DevOps organizations you wish to onboard. Stakeholder Access Level is not sufficient._ <br> **Third-party application access via OAuth**, which must be set to `On` on the Azure DevOps Organization. [Learn more about OAuth and how to enable it in your organizations](/azure/devops/organizations/accounts/change-application-access-policies).|
 | Regions and availability: | Refer to the [support and prerequisites](devops-support.md) section for region support and feature availability.  |
 | Clouds: | :::image type="icon" source="media/quickstart-onboard-github/check-yes.png" border="false"::: Commercial <br> :::image type="icon" source="media/quickstart-onboard-github/x-no.png" border="false"::: National (Azure Government, Microsoft Azure operated by 21Vianet) |

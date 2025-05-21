@@ -16,7 +16,7 @@ Defender for Azure Cosmos DB continually analyzes the personal data stream from 
 
 You can [enable Microsoft Defender for Azure Cosmos DB](quickstart-enable-database-protections.md) for all your databases (recommended), or you can enable it at either the subscription level or the resource level. Importantly, Defender for Azure Cosmos DB doesn't access the Azure Cosmos DB account data and doesn't affect the service's performance.
 
-For billing information about Defender for Azure Cosmos DB, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+For billing information about Defender for Azure Cosmos DB, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 The following table lists supported and unsupported Azure Cosmos DB APIs in Defender for Azure Cosmos DB:
 

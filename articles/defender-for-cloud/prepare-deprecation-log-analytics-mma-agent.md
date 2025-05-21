@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 10/14/2024
+ms.date: 05/18/2025
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
@@ -245,7 +245,7 @@ Machine information is collected for assessment using the Log Analytics agent (a
 
 - OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
 
-Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
+Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information. You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 > [!IMPORTANT]
 > Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).

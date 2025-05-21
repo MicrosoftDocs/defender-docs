@@ -68,6 +68,6 @@ The CloudFormation template provided by Defender for Cloud is needed to grant pe
 
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
-- Set up your [on-premises machines](quickstart-onboard-machines.md) and [Google Cloud Projects (GCP)](quickstart-onboard-gcp.md).
+- Set up your [on-premises machines](quickstart-onboard-machines.md) and [Google Cloud Platforms (GCP)](quickstart-onboard-gcp.md).
 - Get answers to [common questions](faq-general.yml) about onboarding your AWS account.
 - [Troubleshoot your multicloud connectors](troubleshooting-guide.md#troubleshoot-connectors).

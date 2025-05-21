@@ -26,7 +26,7 @@ As a cloud-native solution, Defender for App Service can identify attack methodo
 
 The log data and the infrastructure together can tell the story: from a new attack circulating in, the wild to compromises in customer machines. Therefore, even if Microsoft Defender for App Service is deployed after a web app has been exploited, it might be able to detect ongoing attacks.
 
-You can learn more about Defender for Clouds pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+You can learn more about Defender for Clouds pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Prerequisites
 

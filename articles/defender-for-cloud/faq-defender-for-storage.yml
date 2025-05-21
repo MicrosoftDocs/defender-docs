@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 02/05/2025
+  ms.date: 05/13/2025
 title: Common questions about Defender for Storage
 summary: Get answers to common questions about Microsoft Defender for Storage.
 
@@ -51,7 +51,7 @@ sections:
       - question: |
           How can I calculate the cost Defender for Storage?
         answer: |
-          To estimate the cost of Defender for Storage and add-ons like malware scanning, we provide a [pricing estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Microsoft%20Defender%20for%20Storage%20Price%20Estimation) that you can deploy in your environment. This workbook also provides visibility into your Defender for Storage and add-ons - malware scanning and sensitivity data discovery - enablement status across subscriptions. For more information about how this workbook works, visit this [Blog Post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-storage-price-estimation-dashboard/ba-p/2429724). You can also check out the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) for more information.
+          To estimate the cost of Defender for Storage and add-ons like malware scanning, we provide a [pricing estimation workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Microsoft%20Defender%20for%20Storage%20Price%20Estimation) that you can deploy in your environment. This workbook also provides visibility into your Defender for Storage and add-ons - malware scanning and sensitivity data discovery - enablement status across subscriptions. For more information about how this workbook works, visit this [Blog Post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-storage-price-estimation-dashboard/ba-p/2429724). You can also check out the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) for more information. You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 
 additionalContent: |

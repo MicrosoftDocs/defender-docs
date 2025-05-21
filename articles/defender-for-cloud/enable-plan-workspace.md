@@ -2,7 +2,7 @@
 title: Protect resources that report to a Log Analytics workspace
 description: Learn how to enable the Defender for Cloud plans that are available on workspaces to protect the resources that report to that workspace.
 ms.topic: install-set-up-deploy
-ms.date: 10/14/2024
+ms.date: 05/13/2025
 ---
 
 # Protect resources that report to a Log Analytics workspace
@@ -26,7 +26,7 @@ The available plans that you can enable on a Log Analytics workspace level are:
 
 - Connect your [non-Azure machines](quickstart-onboard-machines.md), [AWS account](quickstart-onboard-aws.md) or [GCP projects](quickstart-onboard-gcp.md).
 
-- Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Enable plans on a Log Analytics workspace
 

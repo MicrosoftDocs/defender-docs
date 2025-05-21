@@ -1,7 +1,7 @@
 ---
 title: Migrate from Defender for Storage (classic)
 description: Learn about how to migrate from Defender for Storage (classic) to the new Defender for Storage plan to take advantage of its enhanced capabilities and pricing.
-ms.date: 08/27/2024
+ms.date: 05/13/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -18,7 +18,7 @@ On March 28, 2023, we introduced the new Defender for Storage plan. This plan of
 - **Predictable, per-storage account pricing**: A more foreseeable and flexible pricing structure for better control over coverage.
 - **Granular controls at the resource level**: Enable at the subscription or resource level and exclude specific storage accounts from protected subscriptions, providing more granular control over your security coverage.
 
-The new pricing plan charges based on the number of storage accounts you protect, simplifying calculations and allowing for easy scaling as your needs change. For detailed pricing information, see [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+The new pricing plan charges based on the number of storage accounts you protect, simplifying calculations and allowing for easy scaling as your needs change. For detailed pricing information, see [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 To take advantage of these features, we recommend moving to the new Defender for Storage plan by February 5, 2025.
 

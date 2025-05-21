@@ -15,20 +15,17 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 ## Sensor versions available per release
 
-### [Version Placeholder]
+### Defender for Containers Sensor v0.9
 
-- **Released:** [Release Date Placeholder]
+- **Released:** June 4, 2025
 - **What's included:**
-  - [Feature/Update Placeholder]
+  - **Helm-based deployment support**
+    Introduces a new deployment method for the Defender for Containers sensor using Helm. This option lets you deploy and manage the sensor more easily, and access the latest capabilities in Public Preview or GA.
+    For setup instructions and more details, see []
 
-### [Version Placeholder]
+  - **DNS threat detections**
+    This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.
 
-- **Released:** [Release Date Placeholder]
-- **What's included:**
-  - [Feature/Update Placeholder]
+  - Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
-### [Version Placeholder]
-
-- **Released:** [Release Date Placeholder]
-- **What's included:**
-  - [Feature/Update Placeholder]
+  - Bug fixes and security enhancements.

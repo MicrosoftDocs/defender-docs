@@ -4,7 +4,7 @@ description: Learn about integrating Power BI with Microsoft Defender for Cloud 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 09/12/2024
+ms.date: 05/20/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between Power BI and Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.
 ---

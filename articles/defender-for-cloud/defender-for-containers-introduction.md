@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 author: dcurwin
 ms.author: dacurwin
-ms.date: 03/10/2025
+ms.date: 05/13/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
@@ -30,7 +30,7 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 |--|--|
 | Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md)|
 | Feature availability | Refer to the [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) for additional information on feature release state and availability|
-| Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) |
+| Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
 | Required roles and permissions: | * To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br> * **Security admin** can dismiss alerts<br> * **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-configure-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
 | Clouds: | View the [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) to see cloud availability.|
 

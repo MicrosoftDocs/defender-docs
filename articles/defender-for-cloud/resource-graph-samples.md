@@ -1,7 +1,7 @@
 ---
 title: Azure Resource Graph sample queries
 description: Sample Azure Resource Graph queries for Microsoft Defender for Cloud showing use of resource types and tables to access Microsoft Defender for Cloud related resources and properties.
-ms.date: 02/14/2023
+ms.date: 05/18/2025
 ms.topic: sample
 ms.custom: subject-resourcegraph-sample, devx-track-azurepowershell, devx-track-azurecli
 ---
