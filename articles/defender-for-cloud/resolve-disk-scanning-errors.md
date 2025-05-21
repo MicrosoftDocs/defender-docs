@@ -30,7 +30,17 @@ To resolve disk scanning errors, you need to check the organization policies in 
 
 1. Sign in to your GCP project.
 
-1. Navigate to your organization.
+1. Navigate to your organization > relevant project.
+
+1. Navigate to **IAM & Admin** > **Organization Policies**
+
+1. Search for the `Compute Storage resource use restrictions` policy.
+
+1. Select **Edit**.
+
+1. Add `organizations/517615557103` to the allowed list.
+
+1. 
 
 
 
