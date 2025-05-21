@@ -315,8 +315,8 @@ items:
     - name: Governing connected apps
       href: governance-actions.md
       displayName: governance actions
-  - name: Integrate with SIEM and API solutions
-    items:
+- name: Integrate with SIEM and API solutions
+  items:
     - name: Manage events with SIEM solutions
       items:
       - name: Integrate with Microsoft Sentinel

@@ -29,6 +29,18 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## May 2025 
 
+### Changes to Microsoft Defender for Cloud Apps SIEM agent availability
+
+As part of our ongoing convergence process across Microsoft Defender workloads, [Microsoft Defender for Cloud Apps SIEM agents](defender-cloud-apps/siem) will be deprecated starting November 2025.
+
+To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+- For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+- For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
+- For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+- To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+
+For detailed guidance see: [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md)
+
 ### New and improved Cloud App Catalog page
 
 The Cloud app catalog page has been revamped to meet security standards. The new design includes improved navigation, making it easier for you to discover and manage your cloud applications.
