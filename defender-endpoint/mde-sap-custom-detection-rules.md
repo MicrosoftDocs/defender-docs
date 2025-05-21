@@ -77,7 +77,7 @@ The SAP BASIS Team and the security team should codevelop the solution. The SAP 
 
    ```
 
-6. The security team [creates a custom detection rule](/defender-xdr/custom-detection-rules#2-create-new-rule-and-provide-alert-details) to detect suspicious commands, specifying the action, `Restrict app execution`. Suspicious commands could include: 
+6. The security team [creates a custom detection rule](/defender-xdr/custom-detection-rules#2-create-new-rule-and-provide-alert-details) to detect suspicious commands. Suspicious commands could include: 
 
    - `ncat`
    - `netcat`
