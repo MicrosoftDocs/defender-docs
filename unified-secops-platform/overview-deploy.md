@@ -72,11 +72,14 @@ For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstar
 
 Provision your users based on the access plan you'd [prepared earlier](overview-plan.md#plan-roles-and-permissions). To comply with Zero Trust principles, we recommend that you use role-based access control (RBAC) to provide user access only to the resources that are allowed and relevant for each user, instead of providing access to the entire environment.
 
+[!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
+
 For more information, see:
 
-- [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
+- [Onboarding prerequisites](microsoft-sentinel-onboard.md#prerequisites)
 - [Assign Microsoft Entra ID roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
 - [Grant a user access to Azure roles](/azure/role-based-access-control/quickstart-assign-role-user-portal)
+- [Managing unified RBAC in Microsoft Defender](https://aka.ms/defender_RBAC) (video demo)
 
 ## Onboard to unified SecOps
 
