@@ -25,7 +25,7 @@ audience: ITPro
 - Microsoft Defender for Endpoint for servers
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
-SAP Systems can execute OS level commands by using `SAPXPG – Transaction Code SM49/SM69`. This article describes how to use advanced hunting with Microsoft Defender for Endpoint to help safeguard the SAPXPG mechanism to protect it from being exploited. The example illustrated in this article features SAP running on Linux; however, the procedure for SAP running on Windows 11 is similar.
+SAP Systems can execute OS level commands by using `SAPXPG – Transaction Code SM49/SM69`. This article describes how to use advanced hunting with Microsoft Defender for Endpoint to help safeguard the SAPXPG mechanism to protect it from being exploited. The example illustrated in this article features SAP running on Linux; however, the procedure for SAP running on Windows Server is similar.
 
 ## Before you begin
 
