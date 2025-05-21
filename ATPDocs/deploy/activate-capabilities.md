@@ -68,7 +68,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Onboarding steps
 
-## Customers with domain controllers already onboarded to Defender for Endpoint 
+### Customers with domain controllers already onboarded to Defender for Endpoint 
 
 ### Activate Defender for Identity capabilities
 
@@ -89,7 +89,7 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
     :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
 
-## Customers without domain controllers onboarded to Defender for Endpoint 
+### Customers without domain controllers onboarded to Defender for Endpoint 
 
 ### Connectivity requirements
 
@@ -219,7 +219,7 @@ For more information, see [Remediation actions in Microsoft Defender for Identit
 
 ## Offboarding steps
 
-## Customers with domain controllers already onboarded to Defender for Endpoint 
+### Customers with domain controllers already onboarded to Defender for Endpoint 
 
 ### Deactivate Defender for Identity capabilities on your domain controller 
 
@@ -232,7 +232,7 @@ If you want to deactivate Defender for Identity capabilities on your domain cont
 
 Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 
-## Customers without domain controllers onboarded to Defender for Endpoint 
+### Customers without domain controllers onboarded to Defender for Endpoint 
 
 ### Offboard Defender for Identity capabilities on your domain controller 
 Download the Defender for Identity offboarding package from the [Microsoft Defender portal] (https://security.microsoft.com).
