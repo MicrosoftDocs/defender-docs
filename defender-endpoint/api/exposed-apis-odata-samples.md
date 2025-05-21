@@ -1,12 +1,12 @@
 ---
 title: OData queries with Microsoft Defender for Endpoint
-ms.reviewer: 
+ms.reviewer: yongrhee
 description: Use these examples of Open Data Protocol (OData) queries to help with data access protocols in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 03/21/2025
+ms.date: 05/20/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
