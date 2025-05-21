@@ -434,7 +434,8 @@ Specifies the time interval (in seconds) after which security intelligence updat
 |---|---|
 |**Key**|definitionUpdatesInterval|
 |**Data type**|Integer|
-|**Possible values**|28800 (default). Allowed values are integers between 60 and 86400|
+|**Possible values**|28800 (default, 8 hours). Allowed values are integers between 60 (1 minute) and 86400 (24 hours)|
+|**Comments**|Setting the value too low may lead to repeated or unnecessary security intelligence update checks.|
 
 #### Proxy for MDE communication 
 
@@ -444,10 +445,10 @@ Configure proxy for all MDE cloud communication. If not set, the system-wide pro
 |---|---|
 |**Key**|proxy|
 |**Data type**|String|
-|**Comments**|Format: "http://proxy.server:port".|
+|**Comments**|Format: "http://proxy.server:port" or "https://proxy.server:port".|
 > [!IMPORTANT]
->
-> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy.
+> - Incorrect proxy configuration can disrupt MDE functionality.
+> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy settings.
 
 ### User interface preferences
 
