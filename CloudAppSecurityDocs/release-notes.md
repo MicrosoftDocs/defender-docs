@@ -31,7 +31,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Changes to Microsoft Defender for Cloud Apps SIEM agent availability
 
-As part of our ongoing convergence process across Microsoft Defender workloads, [Microsoft Defender for Cloud Apps SIEM agents](defender-cloud-apps/siem) will be deprecated starting November 2025.
+As part of our ongoing convergence process across Microsoft Defender workloads, [Microsoft Defender for Cloud Apps SIEM agents](siem.md) will be deprecated starting November 2025.
 
 To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
 - For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
