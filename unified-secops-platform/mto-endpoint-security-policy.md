@@ -12,10 +12,11 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: concept-article
-ms.date: 05/12/2025
+ms.date: 05/26/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-  - ✅ <a href="https://learn.microsoft.com/defender-endpoint/microsoft-defender-endpoint" target="_blank">Microsoft Defender for Endpoint</a>
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
+  - Microsoft Defender for Endpoint
 ---
 
 # Endpoint security policies in multitenant management
