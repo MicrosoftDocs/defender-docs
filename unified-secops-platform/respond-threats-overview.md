@@ -134,6 +134,18 @@ The following image shows the Microsoft Sentinel **Content hub**, filtered for o
 
 To create and manage these playbooks, specific roles and permissions are required, and extra charges may apply for the usage of Azure Logic Apps. For more information, see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automation/automate-responses-with-playbooks).
 
+### SOC optimizations
+
+Security operations center (SOC) teams look for ways to improve processes and outcomes and ensure you have the data needed to address risks without extra ingestion costs. SOC teams want to make sure that you have all the necessary data to act against risks, without paying for more data than needed. At the same time, SOC teams must also adjust security controls as threats and business priorities change, doing so quickly and efficiently to maximize your return on investment.
+
+SOC optimizations are actionable recommendations that surface ways that you can optimize your security controls, gaining more value from Microsoft security services as time goes on. Recommendations help you reduce costs without affecting SOC needs or coverage, and can help you add security controls and data where needed. These optimizations are tailored to your environment and based on your current coverage and threat landscape.
+
+Use SOC optimization recommendations to help you close coverage gaps against specific threats and tighten your ingestion rates against data that doesn't provide security value. SOC optimizations help you optimize your Microsoft Sentinel workspace, without having your SOC teams spend time on manual analysis and research.
+
+:::image type="content" source="media/respond-threats-overview/soc-optimizations.png" alt-text="Screenshot of Microsoft Sentinel SOC optimization recommendations.":::
+
+For more information, see [Microsoft Sentinel SOC optimizations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal).
+
 ## Microsoft Security Exposure Management for potential threat response
 
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) enables organizations to identify and mitigate potential attack paths before they can be exploited. Microsoft Security Exposure Management treats attack paths like incidents, providing a proactive approach to managing vulnerabilities and misconfigurations, and aiding in responses to in-progress attacks.
