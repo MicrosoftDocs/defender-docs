@@ -102,6 +102,9 @@ The best way to get an overview of Shadow IT use across your organization is by 
 1. From the **Cloud discovery** page, select **Actions** > **Generate Cloud Discovery executive report**.
 
 1. Optionally, change the report name, and then select **Generate**.
+   
+> [!NOTE]
+> The executive summary report is revamped to a 6-pager report with a goal to provide a clear, concise & actionable overview while preserving the depth and integrity of the original analysis.
 
 ## Exclude entities
 
