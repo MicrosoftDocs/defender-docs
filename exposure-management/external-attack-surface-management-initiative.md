@@ -10,7 +10,7 @@ ms.date: 05/19/2025
 ---
 
 
-# External Attack Surface Management initative in Exposure Management
+# External Attack Surface Management initiative in Exposure Management
 
 Explore how to integrate Microsoft Defender External Attack Surface Management (MDEASM) with Microsoft Security Exposure Management (MSEM) to enhance visibility and control over your organization's external exposures. By connecting MDEASM insights to MSEM using the External Attack Surface Management initiative, you can assess the risk associated with your organization's or vendor's external attack surface and manage your security posture more effectively within the Exposure Management portal.
 
@@ -20,9 +20,9 @@ There are two ways to use this initiative:
 
 ## Using the EASM initiative with pre-built footprint
 
-This approach with the initiative provides high-level insights without a full connection to the MDEASM subscription and supports pre-built footprints only, hence doesn't require an active MDEASM subscription.
+This approach with the initiative provides high-level insights without a full connection to the MDEASM subscription and supports pre-built footprints only and doesn't require an active MDEASM subscription.
 
-To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
+**Prerequisites**: To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
 1. Go to the **Initiatives** page, select the **External Attack Surface Protection**, then choose **Open initiative page**.
 1. Go to the **Connect data source** to open the settings tab.
@@ -35,40 +35,42 @@ To configure your External Attack Surface initiative, you need to have **Global 
 
 :::image type="content" source="media/EASM/EASM-Pre-built-footprint.png" alt-text="Screenshot of side panel for EASM pre-built footprint selection" lightbox="media/EASM/EASM-Pre-built-footprint.png":::
 
-5. In up to 1 hour, the initiative will be populated with high-level metrics and scores from the selected footprint.
+5. In up to 1 hour, the initiative is populated with high-level metrics and scores from the selected footprint.
 
     > [!NOTE]
-    > This approach does not provide asset level information and detailed exposure information.
+    > This approach doesn't provide asset level information and detailed exposure information.
 
 ## Using the EASM initiative with full MSEADM integration
 
+**Prerequisites**:
 This approach requires a full MDEASM subscription and provides comprehensive exposure analysis and asset-level details.
 To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
 ### Environment setup:
 
-If you haven’t already deployed an MDEASM resource, follow these steps:
+To deploy an MDEASM resource, follow these steps:
 
-1. Deploy an EASM resource:
-   1. Log into https://portal.azure.com.
-   2. Create a Resource Group with the appropriate subscription and region.
-   3. Deploy an MDEASM Resource within that group, see, [Create a Defender EASM Azure resource](/azure/external-attack-surface-management/deploying-the-defender-easm-azure-resource).
+1. Log into [https://portal.azure.com](https://portal.azure.com).
+2. Create a Resource Group with the appropriate subscription and region.
+3. Deploy an MDEASM Resource within that group, see, [Create a Defender EASM Azure resource](/azure/external-attack-surface-management/deploying-the-defender-easm-azure-resource).
 
-1. Discover the attack surface
-    You can discover your attack surface in two ways:
-    1. Use the **Get Started** option to search for your organization and build a preconfigured attack surface.
-    1. Or, create a custom discovery group by providing:
-    - Domains
-    - IP Blocks or Addresses (use example IPs such as 203.0.113.0 if needed)
-    - Hosts
-    - ASNs
-    - Emails
-    - WHOIS organization data
+**Discover the attack surface**
 
-    For more information, see [Discovering your attack surface](/azure/external-attack-surface-management/discovering-your-attack-surface)
+You can discover your attack surface in two ways:
+
+1. Use the **Get Started** option to search for your organization and build a preconfigured attack surface.
+1. Or, create a custom discovery group by providing:
+
+- Domains
+- IP Blocks or Addresses (use example IPs such as 203.0.113.0 if needed)
+- Hosts
+- ASNs
+- Emails
+- WHOIS organization data
+
+For more information, see [Discovering your attack surface](/azure/external-attack-surface-management/discovering-your-attack-surface)
 
 > [!TIP]
->
 > The easiest path is to provide a host, domain, and any known external IP addresses.
 
 ### Configure the initiative
@@ -80,7 +82,7 @@ If you haven’t already deployed an MDEASM resource, follow these steps:
     > If you previously configured the initiative, you can select **Switch data source** to reconfigure it with new data.
 
 1. Choose **Connect your MDEASM workspace**.
-1. To enable the intitiative to pull data from your Defender EASM resource, enter the values from your resource's **Essentials** section on the **Overview** pane found in Azure.
+1. To enable the initiative to pull data from your Defender EASM resource, enter the values from your resource's **Essentials** section on the **Overview** pane found in Azure.
 
    - **Resource Name**
    - **Subscription ID**
