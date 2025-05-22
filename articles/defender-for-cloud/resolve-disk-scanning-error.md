@@ -36,11 +36,11 @@ By configuring your organization policies, you can control the resources that De
 
 1. Search for the `Compute Storage resource use restrictions (Compute Engine disks, images, and snapshots)` policy.
 
-1. Select **Edit**.
+1. Select **Manage policy**.
 
 1. Change the policy type to **Allow**.
 
-1. Add `organizations/517615557103` to the allowed list.
+1. In the allow list, add `under:organizations/517615557103`.
 
 1. Select **Save**.
 
