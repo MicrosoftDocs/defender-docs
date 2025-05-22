@@ -34,7 +34,7 @@ By configuring your organization policies, you can control the resources that De
 
 1. Navigate to **IAM & Admin** > **Organization Policies**
 
-1. Search for the `Compute Storage resource use restrictions` policy.
+1. Search for the `Compute Storage resource use restrictions (Compute Engine disks, images, and snapshots)` policy.
 
 1. Select **Edit**.
 
