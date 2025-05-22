@@ -12,7 +12,7 @@ ms.author: elkrieger
 
 Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud uses [agentless machine scanning](concept-agentless-data-collection.md) to detect vulnerabilities and present recommendations and alerts to remediate detected vulnerabilities. 
 
-If Defender for Cloud is not generating any agentless results for your Virtual Machines (VMs), this can be due to GCP organization policies that block Defender for Cloud's access to your tenant, and preventing it from scanning disks.
+If Defender for Cloud is not generating any agentless results for your Virtual Machines (VMs) up to 24 hours after the GCP project has been connected, this can be due to GCP organization policies that block Defender for Cloud's access to your tenant. If your policies are blocking Defender for Cloud, Defender for Cloud is prevented from performing scans.
 
 This article describes how to resolve the disk scanning error.
 
@@ -43,6 +43,8 @@ By configuring your organization policies, you can control the resources that De
 1. Add `organizations/517615557103` to the allowed list.
 
 1. Select **Save**.
+
+Disk scanning is triggered by Defender for Cloud's API calls. You will know that everything is working after the next API call when results for agentless scanning are generated. 
 
 ## Next step
 
