@@ -5,11 +5,15 @@ ms.date: 08/13/2024
 ms.topic: how-to
 ---
 
-# Activate Microsoft Defender for Identity capabilities directly on a domain controller
+# Activate Microsoft Defender for Identity capabilities directly on a domain controller (Preview)
 
-Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using [Microsoft Defender for Identity classic sensor](deploy-defender-identity.md).
+This article describes how to activate and test Microsoft Defender for Identity new sensor capabilities on your domain controller.
 
-This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
+> [!NOTE]
+> The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
+> 
+> Preview features are still in development, have limited or restricted functionality and may be available only in selected geographic areas.
+> For more information, see the [Microsoft Defender XDR preview features](../../defender-xdr/preview.md)
 
 > [!IMPORTANT]
 > The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
@@ -70,6 +74,8 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ### Customers with domain controllers already onboarded to Defender for Endpoint 
 
+Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using [Microsoft Defender for Identity classic sensor](deploy-defender-identity.md).
+
 ### Activate Defender for Identity capabilities
 
 Activate the Defender for Identity from the [Microsoft Defender portal](https://security.microsoft.com).
@@ -78,17 +84,17 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
     The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server you can find its activation state.
 
-2. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
+1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
 
     :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
-
-    > [!NOTE]
+   
+       > [!NOTE]
     > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
-3. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
+1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 
-    :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to seethe onboarded servers.":::
-
+    :::image type="content" source="media/activate-capabilities/2.jpg" lightbox="media/activate-capabilities/2.jpg" alt-text="Screenshot that shows how to see the onboarded servers.":::
+   
 ### Customers without domain controllers onboarded to Defender for Endpoint 
 
 ### Connectivity requirements
@@ -101,22 +107,28 @@ For more information, see [Configure your network environment to ensure connecti
 Download the Defender for Identity onboarding package from the [Microsoft Defender portal] (https://security.microsoft.com) 
 
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**
-2. Select Download onboarding package and save the file in a location you can access from your domain controller.
-3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator. 
-   
+
+1. Select Download onboarding package and save the file in a location you can access from your domain controller.
+![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png)
+
+1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.   
+![Screenshot that shows the script.](media/activate-capabilities/screenshot-that-shows-the-script..png)
+
 ## Onboarding Confirmation 
 
 To confirm the sensor has been onboarded: 
 
 1. Navigate to **System** > **Settings** > **Identities** > **Sensors**.
 
-2. Check that the onboarded domain controller is listed. 
+1. Check that the onboarded domain controller is listed. 
 
 > [!NOTE]
 > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
-> To check the onboarding on the local server you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event: 
 
-## Test activated capabilities
+To check the onboarding on the local server you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event:   
+![Screenshot that shows the eventlog.](media/activate-capabilities/screenshot-that-shows-the-eventlog..png)
+
+**Test activated capabilities**
 
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
 
@@ -226,9 +238,9 @@ For more information, see [Remediation actions in Microsoft Defender for Identit
 If you want to deactivate Defender for Identity capabilities on your domain controller, delete it from the **Sensors** page:
 
 1. Navigate to **Settings** > **Identities** > **Sensors**
-2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.  
+![Screenshot that shows how to delete a sensor.](media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor..png)
 
-    :::image type="content" source="media/activate-capabilities/3.jpg" lightbox="media/activate-capabilities/3.jpg" alt-text="Screenshot that shows how to deactivate a server.":::
 
 Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 
@@ -238,9 +250,12 @@ Deactivating Defender for Identity capabilities from your domain controller does
 Download the Defender for Identity offboarding package from the [Microsoft Defender portal] (https://security.microsoft.com).
 
 1. Navigate to **Settings** > **Identities** > **Activation**
-2. Select Download offboarding package and save the file in a location you can access from your domain controller.
-3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
-4. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server and click Delete. 
+
+1. Select Download offboarding package and save the file in a location you can access from your domain controller.  
+![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor..png)
+1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
+1. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server and click Delete.   
+![Screenshot that shows how to delete a sensor.](media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor..png)
 
 ## Next steps
 
