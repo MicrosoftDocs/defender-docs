@@ -1,20 +1,20 @@
 ---
-title: Resolve agentless scanning error
-description: Troubleshoot disk scanning error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
+title: Resolve agentless scan error
+description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 05/22/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-#customer intent: As a security professional, I want to resolve the disk scanning errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
+#customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
 
-# Resolve agentless scanning error
+# Resolve agentless scan error
 
-Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud uses [agentless machine scanning](concept-agentless-data-collection.md) to detect vulnerabilities and present recommendations and alerts to remediate detected vulnerabilities. 
+After you connect your Google Cloud Platform (GCP) project to Defender for Cloud, Defender for Cloud utilizes [agentless machine scanning](concept-agentless-data-collection.md) to present recommendations and alerts that offer remediation steps for any detected vulnerabilities.
 
-If Defender for Cloud is not generating any agentless results for your Virtual Machines (VMs) up to 24 hours after the GCP project has been connected, this can be due to GCP organization policies that block Defender for Cloud's access to your tenant. If your policies are blocking Defender for Cloud, Defender for Cloud is prevented from performing scans.
+If Defender for Cloud doesn't generate any agentless results for your Virtual Machines (VMs) up to 24 hours after you connect the GCP project, GCP organization policies might block Defender for Cloud's access to your tenant. If your policies block Defender for Cloud, Defender for Cloud can't perform scans.
 
-This article describes how to resolve the disk scanning error.
+This article explains how to resolve the disk scan error.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ By configuring your organization policies, you can control the resources that De
 
 1. Select **Save**.
 
-Disk scanning is triggered by Defender for Cloud's API calls. You will know that everything is working after the next API call when results for agentless scanning are generated. 
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know that everything works after the next API call, which takes up to 24 hours to occur, when results for agentless scanning are generated.
 
 ## Next step
 
