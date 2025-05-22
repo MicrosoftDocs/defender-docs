@@ -13,7 +13,7 @@ This article describes how to activate and test Microsoft Defender for Identity 
 > The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
 > 
 > Preview features are still in development, have limited or restricted functionality and may be available only in selected geographic areas.
-> For more information, see the [Microsoft Defender XDR preview features](../../defender-xdr/preview.md)
+> For more information, see the [Microsoft Defender XDR preview features](/defender-xdr/preview.md)
 
 > [!IMPORTANT]
 > The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
@@ -82,14 +82,14 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
-    The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server you can find its activation state.
+The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server you can find its activation state.
 
 1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
 
     :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
    
-       > [!NOTE]
-    > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+> [!NOTE]
+> You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 
