@@ -1,6 +1,6 @@
 ---
-title: "What's new in the Microsoft's unified SecOps platform"
-description: Lists the new features and functionality in the Microsoft unified security operations platform
+title: "What's new for Microsoft's unified security operations?"
+description: Lists the new features and functionality available for Microsoft unified security operations.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: bagol
@@ -16,9 +16,9 @@ ms.collection:
 ms.topic: concept-article
 ---
 
-# What's new in Microsoft's unified security operations platform
+# What's new for Microsoft unified security operations
 
-This article lists recent features added into Microsoft's unified SecOps platform within the Microsoft Defender portal, and new features in related services that provide an enhanced user experience in the platform.
+This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
 ## May 2025
 

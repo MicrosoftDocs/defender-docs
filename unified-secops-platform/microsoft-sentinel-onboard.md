@@ -54,10 +54,13 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
 
 - An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the Defender portal to onboard where you don't have the required permissions. The following table highlights some of the key roles needed.
 
+
+
+
   |Task |Microsoft Entra or Azure built-in role required |Scope  |
   |---------|---------|---------|
-  |**Onboard Microsoft Sentinel to the Defender portal**|[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID|Tenant|
-  |**Connect or disconnect a workspace with Microsoft Sentinel enabled**|[Owner](/azure/role-based-access-control/built-in-roles#owner) or </br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor |
+  |**Onboard Microsoft Sentinel to the Defender portal**|One of the following in Microsoft Entra ID:<br><br> - [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) <br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) <br>- [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) <br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor)|Tenant|
+  |**Connect or disconnect a workspace with Microsoft Sentinel enabled**|[Owner](/azure/role-based-access-control/built-in-roles#owner) or </br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |- Subscription Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor |
   |**Change the primary workspace**|[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID|Tenant|
   |**View Microsoft Sentinel in the Defender portal**|[Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) |Subscription, resource group, or workspace resource  |
   |**Query Microsoft Sentinel data tables or view incidents**  |[Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) or a role with the following actions:</br>- Microsoft.OperationalInsights/workspaces/read</br>- Microsoft.OperationalInsights/workspaces/query/read</br>- Microsoft.SecurityInsights/Incidents/read</br>- Microsoft.SecurityInsights/incidents/comments/read</br>- Microsoft.SecurityInsights/incidents/relations/read</br>- Microsoft.SecurityInsights/incidents/tasks/read|Subscription, resource group, or workspace resource       |
@@ -67,6 +70,9 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
   After you connect Microsoft Sentinel to the Defender portal, your existing Azure role-based access control (RBAC) permissions allow you to work with the Microsoft Sentinel features that you have access to. Continue to manage roles and permissions for your Microsoft Sentinel users from the Azure portal, as any Azure RBAC changes are reflected in the Defender portal. 
 
   For more information, see [Roles and permissions in Microsoft Sentinel](/azure/sentinel/roles) and [Manage access to Microsoft Sentinel data by resource](/azure/sentinel/resource-context-rbac).
+
+  > [!IMPORTANT]
+  > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ### Microsoft's unified SecOps platform prerequisites
 
