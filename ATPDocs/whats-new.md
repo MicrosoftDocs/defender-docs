@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md)
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
 
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
