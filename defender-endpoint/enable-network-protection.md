@@ -58,7 +58,7 @@ To enable network protection, you can use any of the methods described in this a
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+1. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
    - Network Protection on Windows clients:
 
@@ -73,19 +73,19 @@ To enable network protection, you can use any of the methods described in this a
       |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
 
    - Optional Network Protection settings for Windows and Windows Server:
-
-      > [!WARNING]
-      > For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the **Allow Datagram Processing On WinServer** to **Datagram processing on Windows Server is disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
-
-      |Description| Setting|
-      | -------- | -------- |
-      |Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default). <br>- Not configured|
-      |Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
-      |Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
-      |Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
-      |Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
-      |[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
-
+   
+     > [!WARNING]
+     > For Domain Controllers, Windows DNS servers Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others set the **Allow Datagram Processing On WinServer** to **disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+     
+     |Description| Setting|
+     | -------- | -------- |
+     |Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default, recommended). <br>- Not configured|
+     |Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
+     |Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
+     |Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
+     |Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
+     |[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
+     
 7. When you're done configuring settings, select **Next**.
 
 8. On the **Assignments** page, select the groups that will receive this profile. Then select **Next**.
@@ -216,13 +216,14 @@ Use the following procedure to enable network protection on domain-joined comput
 
 | Windows Server version | Commands |
 |---|---|
-|Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
-|Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/> `set-MpPreference -AllowDatagramProcessingOnWinServer $true`|
+|Windows Server 2019 and later | `set-mpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
+|Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
 
-   > [!IMPORTANT]
-   > For Domain Controllers, Windows DNS servers and Microsoft Exchange servers, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
-   
-   
+> [!IMPORTANT]
+> or Domain Controllers, Windows DNS servers Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+
+
+
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
    ```PowerShell
@@ -279,10 +280,15 @@ $exploitGuardObject.Put()
 ## See also
 
 - [Network protection](network-protection.md)
+
 - [Network protection for Linux](network-protection-linux.md)
+
 - [Network protection for macOS](network-protection-macos.md)
+
 - [Network protection and the TCP three-way handshake](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
+
 - [Evaluate network protection](evaluate-network-protection.md)
+
 - [Troubleshoot network protection](troubleshoot-np.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
