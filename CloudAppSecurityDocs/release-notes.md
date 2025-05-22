@@ -29,6 +29,12 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## May 2025 
 
+### New Applications inventory page now available in Defender XDR
+
+The new Applications page in Microsoft Defender XDR provides a unified inventory of all SaaS and connected OAuth applications across your environment. This view helps streamline application discovery, monitoring, and risk assessment.
+
+For more details, see [Application inventory overview](applications-inventory.md).
+
 ### New and improved Cloud App Catalog page
 
 The Cloud app catalog page has been revamped to meet security standards. The new design includes improved navigation, making it easier for you to discover and manage your cloud applications.
