@@ -97,7 +97,6 @@ This procedure describes how to create a new session policy in Defender for Clou
 
     1. <a name="inspection"></a>In the **Apply to** area (Preview):
 
-        - Select whether to apply the policy to all files, or files in specified folders only
         - Select an inspection method to use, such as data classification services, or malware. For more information, see [Microsoft Data Classification Services integration](dcs-inspection.md).
         - Configure more detailed options for your policy, such as scenarios based on elements like fingerprints or trainable classifiers.
 

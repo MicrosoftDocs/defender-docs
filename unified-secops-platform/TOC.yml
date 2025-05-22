@@ -16,10 +16,10 @@
           href: defender-xdr-portal.md
         - name: Microsoft Sentinel
           items:
-          - name: Integration overview
-            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in the Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
+          - name: Integration with Defender XDR
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
         - name: Microsoft Copilot
           href: /defender-xdr/security-copilot-in-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Microsoft Security Exposure Management
@@ -43,9 +43,11 @@
         href: overview-deploy.md
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
+    - name: Transition
+      href: /azure/sentinel/move-to-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json    
     - name: Reduce security risk
       items:
-      - name: Improve security posture and reduce risk"
+      - name: Improve security posture and reduce risk
         href: reduce-risk-overview.md
       - name: Protect your environment with Exposure Management
         href: overview-msem-strategy.md  
@@ -94,6 +96,8 @@
               href: mto-requirements.md
             - name: View and manage incidents and alerts
               href: mto-incidents-alerts.md
+            - name: View and manage cases
+              href: mto-manage-cases.md
             - name: Advanced hunting
               href: mto-advanced-hunting.md
             - name: Multitenant devices

@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ROBOTS: noindex,nofollow
 ms.subservice: macos
-ms.date: 04/30/2024
+ms.date: 05/08/2025
 ---
 
 # New configuration profiles for macOS Big Sur and newer versions of macOS 
