@@ -161,7 +161,7 @@ Microsoft security portals include:
 
 | Portal name | Description | Link |
 |---|---|---|
-| **Microsoft Defender portal** | Monitor and respond to threat activity and strengthen security posture across your identities, email, data, endpoints, and apps with [Microsoft Defender XDR](../defender-xdr/microsoft-365-defender.md) | [security.microsoft.com](https://security.microsoft.com/)  <br/><br/>The Microsoft Defender portal is where you view and manage alerts, incidents, settings, and more. |
+| **Microsoft Defender portal** | Monitor and respond to threat activity and strengthen security posture across your identities, email, data, endpoints, and apps with [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender) | [security.microsoft.com](https://security.microsoft.com/)  <br/><br/>The Microsoft Defender portal is where you view and manage alerts, incidents, settings, and more. |
 | **Defender for Cloud portal** | Use [Microsoft Defender for Cloud](/azure/security-center/security-center-intro) to strengthen the security posture of your data centers and your hybrid workloads in the cloud | [portal.azure.com/#blade/Microsoft_Azure_Security](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0) |
 | **Microsoft Security Intelligence portal** | Get security intelligence updates for Microsoft Defender for Endpoint, submit samples, and explore the threat encyclopedia | [microsoft.com/wdsi](https://microsoft.com/wdsi) |
 
