@@ -22,6 +22,15 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## May 2025
+
+### Local administrators collection (using SAM-R queries) feature will be disabled
+The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change will occur automatically by the specified date, and no administrative action is required.
+
+### New Health Issue
+
+New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+
 ## April 2025
 
 ### Privileged Identity Tag Now Visible in Defender for Identity Inventory
@@ -47,7 +56,6 @@ For more information, see: [Integrations Defender for Identity and PAM services.
 
 ### New Service Account Discovery page
 
-
 Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
 
 This update provides:
@@ -59,11 +67,6 @@ This update provides:
 - A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
 
 For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
-
-
-### New Health Issue
-
-New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
 
 ### Enhanced Identity Inventory
 

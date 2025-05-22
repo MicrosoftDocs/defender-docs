@@ -23,6 +23,7 @@ This article lists recent features added into Microsoft's unified SecOps platfor
 ## May 2025
 
 - [Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform](#microsoft-sentinel-use-cases-generally-available-in-microsofts-unified-secops-platform)
+- [Case management now available for the Defender multitenant portal (Preview)](#case-management-now-available-for-the-defender-multitenant-portal-preview)
 
 ### Microsoft Sentinel use cases generally available in Microsoft's unified SecOps platform
 
@@ -30,9 +31,14 @@ All Microsoft Sentinel use cases that are in general availability, including [mu
 
 We recommend that you [onboard your workspaces to the Defender portal](microsoft-sentinel-onboard.md) to take advantage of a single location for all your security operations. For more information, see:
 
-<!--link to blog-->
-- [Moving to Microsoft's unified SecOps platform, by persona](https://aka.ms/move-to-defender)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json)
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+
+### Case management now available for the Defender multitenant portal (Preview)
+
+SecOps teams for large organizations and managed security service providers (MSSPs) must manage cases across multiple tenants. This can now be done without leaving the Defender multitenant portal.
+
+For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
 
 ## April 2025
 

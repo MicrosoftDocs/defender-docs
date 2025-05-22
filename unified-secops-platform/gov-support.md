@@ -1,5 +1,5 @@
 ---
-title: Support for US Government customers
+title: Microsoft Unified Security Operations Support for US Government Customers
 description: Learn about support for Microsoft's unified SecOps platform for US Government clouds.
 author: batamig
 ms.author: bagol
@@ -14,15 +14,15 @@ ms.collection:
 
 ---
 
-# Microsoft's unified security operations platform for US Government customers
+# Microsoft's unified security operations support for US Government customers
 
-This article provides information about Microsoft's unified security operations (SecOps) platform for US Government customers.
+This article provides information about Microsoft's unified security operations (SecOps) support for US Government customers.
 
 ## Feature availability
 
 - All features in Microsoft's SecOps platform that are in general availability are available in commercial and GCC High and DoD clouds. 
 
-  GCC is supported in preview, with the following limitation: The [Advanced hunting](/defender-xdr/advanced-hunting-overview) [JOIN operator](/defender-xdr/advanced-hunting-query-language#learn-common-query-operators) isn't supported between Defender tables and Microsoft Sentinel tables unless you configure per-table retention on your Defender tables in Log Analytics. For more information, see [Advanced hunting event collection](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=defender-portal#advanced-hunting-event-collection).
+  GCC is supported with the following limitation: The [Advanced hunting](/defender-xdr/advanced-hunting-overview) [JOIN operator](/defender-xdr/advanced-hunting-query-language#learn-common-query-operators) isn't supported between Defender tables and Microsoft Sentinel tables unless you configure per-table retention on your Defender tables in Log Analytics. For more information, see [Advanced hunting event collection](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=defender-portal#advanced-hunting-event-collection).
   
 - Features still in preview are available only in the commercial cloud.
 
