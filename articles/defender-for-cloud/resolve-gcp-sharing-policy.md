@@ -1,7 +1,7 @@
 ---
 title: Resolve Domain Restricted Sharing policy
 description: Troubleshoot deployment issues for your GCP connector within Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/11/2025
+ms.date: 05/21/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
@@ -30,9 +30,9 @@ This page guides you through the steps to resolve the Domain Restricted Sharing 
 
 Defender for Cloud requires the following service accounts to be enabled in your GCP project.
 
-1. Sign in to your GCP account.
+1. Sign in to your GCP project.
 
-1. Navigate to **IAM & Admin** > **Organization Policies**
+1. Navigate to **IAM & Admin** > **Organization Policies**.
 
 1. Select **Domain Restricted Sharing**.
 
