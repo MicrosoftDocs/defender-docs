@@ -1,24 +1,24 @@
 ---
-title: Resolve disk scanning error
+title: Resolve agentless scanning error
 description: Troubleshoot disk scanning error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/21/2025
+ms.date: 05/22/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the disk scanning errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
 
-# Resolve disk scanning error
+# Resolve agentless scanning error
 
-Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud scans disks in your GCP project for vulnerabilities and present recommendations and insights to remediate detected vulnerabilities. However, disk scanning might fail due to organizational policies.
+Once your Google Cloud Platform (GCP) project is connected to Defender for Cloud, Defender for Cloud uses [agentless machine scanning](concept-agentless-data-collection.md) to detect vulnerabilities and present recommendations and alerts to remediate detected vulnerabilities. 
 
-GCP organization policies are a common way for organization administrators to configure constraints across your organization's resources. These policies might block Defender for Cloud's access to your tenant, preventing it from scanning disks.
+If Defender for Cloud is not generating any agentless results for your Virtual Machines (VMs), this can be due to GCP organization policies that block Defender for Cloud's access to your tenant, and preventing it from scanning disks.
+
+This article describes how to resolve the disk scanning error.
 
 ## Prerequisites
 
-- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
-
-- [Onboard your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+- You must have a [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
 - Access to a GCP project.
 
@@ -26,7 +26,7 @@ GCP organization policies are a common way for organization administrators to co
 
 ## Manage your organizations policies
 
-To resolve disk scanning errors, you need to check the organization policies in your GCP project.
+By configuring your organization policies, you can control the resources that Defender for Cloud can access in your GCP project.
 
 1. Sign in to your GCP project.
 
