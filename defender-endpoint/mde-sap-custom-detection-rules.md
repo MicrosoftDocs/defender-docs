@@ -51,7 +51,7 @@ The SAP BASIS Team and the security team should codevelop the solution. The SAP 
 
 4. The SAP BASIS team briefs the security team on any "allowed" utilities, such as `BRTOOLS` (for Oracle customers), `AzCopy` (if used) or other specific utilities for printing or archiving.
 
-5. The security team works with the SAP BASIS team to query SAPXPG commands and parameters. An example query to detect or block `wget` (which can be used to download malicious payloads) is as follows:
+5. The security team works with the SAP BASIS team to query SAPXPG commands and parameters. An example query to detect `wget` (which can be used to download malicious payloads) is as follows:
 
    ```kusto
 
