@@ -30,6 +30,9 @@ appliesto:
 > [!NOTE]
 > This article describes security alerts in Microsoft Defender XDR. However, you can use alert policies to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
+> .[!NOTE]
+> This article refers to Defender XDR continually, but you may have ended up here without an XDR license. You do not need an XDR subscription to access these - several different resources will give you access. For example, if you have Defender for 365 only, you will get Alerts in the locations mentioned here. If you have P2 of the same service, you will have access to some XDR settings in Defender's settings catalogue. The Defender for 365 license includes some aspects of the XDR suite. You may find it easier to look through that service's documentation first.
+
 Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Alerts are typically part of a broader attack and provide clues about an incident.
 
 In Microsoft Defender XDR, related alerts are aggregated together to form [incidents](incidents-overview.md). Incidents will always provide the broader context of an attack, however, analyzing alerts can be valuable when deeper analysis is required.
