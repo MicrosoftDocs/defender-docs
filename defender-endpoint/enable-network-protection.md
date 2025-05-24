@@ -75,7 +75,7 @@ To enable network protection, you can use any of the methods described in this a
    - Optional Network Protection settings for Windows and Windows Server:
    
      > [!WARNING]
-     > For Domain Controllers, Windows DNS servers Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others set the **Allow Datagram Processing On WinServer** to **disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+     > For Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others, set the **Allow Datagram Processing On WinServer** to **disabled**. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
      
      |Description| Setting|
      | -------- | -------- |
