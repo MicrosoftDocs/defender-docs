@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 05/24/2025
 ---
 
 # Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
@@ -56,7 +56,7 @@ You encounter this message in a different way: If you're using the terminal to e
 
 ### Cause
 
-- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script [Download the onboarding package](mac-install-with-intune.md#step-15-download-the-onboarding-package) that contains the license settings. For information on troubleshooting in this scenario, see [If you didn't run the configuration script](#if-you-didnt-run-the-configuration-script).
+- You can encounter an error if you've deployed and/or installed the Microsoft Defender for Endpoint on macOS package [Download installation packages](mac-install-manually.md#download-installation-and-onboarding-packages), but you might not have run the configuration script that contains the license settings. See [Step 15: Check Device and Configuration status](mac-install-with-intune.md#step-15-check-device-and-configuration-status). For information on troubleshooting in this scenario, see [If you didn't run the configuration script](#if-you-didnt-run-the-configuration-script).
 
 - You can encounter an error message when the Microsoft Defender for Endpoint on macOS agent isn't up to date. For information on troubleshooting in this scenario, see [If Microsoft Defender for Endpoint on macOS isn't up to date](#if-microsoft-defender-for-endpoint-on-macos-isnt-up-to-date).
 
