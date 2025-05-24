@@ -207,7 +207,7 @@ Download **[notif.mobileconfig](https://raw.githubusercontent.com/microsoft/mdat
 
 To turn off notifications for the end users, you can change **Show NotificationCenter** from `true` to `false` in [notif.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/notif.mobileconfig).
 
-:::image type="content" source="../defender-endpoint/media/image.png" alt-text="Screenshot showing notif.mobileconfig with ShowNotificationCenter set to True.":::
+:::image type="content" source="media/image.png" alt-text="Screenshot showing notif.mobileconfig with ShowNotificationCenter set to True.":::
 
 To configure notifications:
 
@@ -309,7 +309,7 @@ This profile is used to update the Microsoft Defender for Endpoint on macOS via 
 
 For more information, see [Deploy updates for Microsoft Defender for Endpoint on macOS](mac-updates.md).
 
-Download **[com.microsoft.autoupdate2.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig)** from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+Download **[com.microsoft.autoupdate2.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig)** from the [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 > [!NOTE]
 > The sample `com.microsoft.autoupdate2.mobileconfig` from the GitHub repository is set to Current Channel (Production).
@@ -326,7 +326,7 @@ Download **[com.microsoft.autoupdate2.mobileconfig](https://raw.githubuserconten
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile, (for example: MacOS Microsoft Auto-Update), and enter a **Description**, then select **Next**.
+1. On the **Basics** tab, **Name** the profile, (for example, `macOS Microsoft Auto-Update`), and enter a **Description**, then select **Next**.
 
 1. On the **Configuration settings** tab, enter a **Custom configuration profile** name.
 
@@ -385,7 +385,7 @@ To create this profile, copy the code for the [Intune recommended profile](/defe
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile, (for example: MacOS wdav preferences), and enter a **Description**, then select **Next**.
+1. On the **Basics** tab, **Name** the profile, (for example, `macOS wdav preferences`), and enter a **Description**, then select **Next**.
 
 1. On the **Configuration settings** tab, enter the **Custom configuration profile** **name** `com.microsoft.wdav`
 
@@ -428,25 +428,25 @@ This step enables deploying Microsoft Defender for Endpoint to enrolled machines
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), open **Apps**.
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-8-app-before.png" alt-text="Screenshot that shows the application's overview page." lightbox="../defender-endpoint/media/mdatp-8-app-before.png":::
+   :::image type="content" source="media/mdatp-8-app-before.png" alt-text="Screenshot that shows the application's overview page." lightbox="media/mdatp-8-app-before.png":::
    
 1. Expand **Platforms**, select **macOS,** then select **+Create** 
 
 1. Under **App type**, select **Microsoft Defender for Endpoint >** **macOS**, then select **Select**.
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-9-app-type.png" alt-text="Screenshot that shows the specific application type." lightbox="../defender-endpoint/media/mdatp-9-app-type.png":::
+   :::image type="content" source="media/mdatp-9-app-type.png" alt-text="Screenshot that shows the specific application type." lightbox="media/mdatp-9-app-type.png":::
    
 1. On the **App information**, keep the default values and select **Next**.
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-10-properties.png" alt-text="Screenshot that shows the application properties page." lightbox="../defender-endpoint/media/mdatp-10-properties.png":::
+   :::image type="content" source="media/mdatp-10-properties.png" alt-text="Screenshot that shows the application properties page." lightbox="media/mdatp-10-properties.png":::
    
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, then select **Next**.
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-11-assignments.png" alt-text="Screenshot that shows the Intune assignments information page." lightbox="../defender-endpoint/media/mdatp-11-assignments.png":::
+   :::image type="content" source="media/mdatp-11-assignments.png" alt-text="Screenshot that shows the Intune assignments information page." lightbox="media/mdatp-11-assignments.png":::
    
 1. On the Review+Create tab, select **Create**. 
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-12-applications.png" alt-text="Screenshot that shows the application lists page." lightbox="../defender-endpoint/media/mdatp-12-applications.png":::
+   :::image type="content" source="media/mdatp-12-applications.png" alt-text="Screenshot that shows the application lists page." lightbox="media/mdatp-12-applications.png":::
    
    For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
    
