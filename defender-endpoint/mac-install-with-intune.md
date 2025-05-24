@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/20/2025
+ms.date: 05/24/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -559,7 +559,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
       
 1. You should also see the **Microsoft Defender** icon in the top-right corner.
 
-![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/main/defender-endpoint/media/mdatp-icon-bar.png)
+![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](media/mdatp-icon-bar.png)
 
 ### Step 16: Verify anti-malware detection
 
