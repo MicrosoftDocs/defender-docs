@@ -1,5 +1,5 @@
 ---
-title: Support for US Government customers
+title: Microsoft Unified Security Operations Support for US Government Customers
 description: Learn about support for Microsoft's unified SecOps platform for US Government clouds.
 author: batamig
 ms.author: bagol
@@ -14,9 +14,9 @@ ms.collection:
 
 ---
 
-# Microsoft's unified security operations platform for US Government customers
+# Microsoft's unified security operations support for US Government customers
 
-This article provides information about Microsoft's unified security operations (SecOps) platform for US Government customers.
+This article provides information about Microsoft's unified security operations (SecOps) support for US Government customers.
 
 ## Feature availability
 

@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 03/03/2025
+ms.date: 05/19/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,9 +39,26 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## May 2025
+
+- In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+  - SecOps personnel can now create tenant-level block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
+  - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
+    - Purge email messages or propose email remediation.
+    - Submit messages to Microsoft.
+    - Trigger investigations.
+    - Crate block entries in the Tenant Allow/Block List.
+  - Actions are contextually based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
+  - For 101 or more messages selected, only email purge and propose remediation options are available.
+
+  > [!TIP]
+  > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
+
+  For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation) and  [Remediate Malicious Email: Manual and automated remediation](remediate-malicious-email-delivered-office-365.md#manual-and-automated-remediation).
+
 ## March 2025
 
-- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzea these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzes these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
 - **Create allow entries directly in the Tenant Allow/Block List**: You can now create allow entries for domains & addresses and URLs directly in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). This capability is available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet.
 
