@@ -463,7 +463,7 @@ To download the onboarding package from the Microsoft Defender portal:
 
 1. On the **Deployment method** drop-down, select **Mobile Device Management / Microsoft Intune**.
 
-   :::image type="content" source="../defender-endpoint/media/macos-install-with-intune.png" alt-text="Screenshot that shows the Onboarding settings page." lightbox="../defender-endpoint/media/macos-install-with-intune.png":::
+   :::image type="content" source="media/macos-install-with-intune.png" alt-text="Screenshot that shows the Onboarding settings page." lightbox="media/macos-install-with-intune.png":::
 
 3. Select **Download onboarding package**. Save it as _WindowsDefenderATPOnboardingPackage.zip_ to the same directory.
 
@@ -481,7 +481,7 @@ To download the onboarding package from the Microsoft Defender portal:
     inflating: jamf/WindowsDefenderATPOnboarding.plist
    ```
 
-   :::image type="content" source="../defender-endpoint/media/deploy-onboarding-package.png" alt-text="Screenshot that shows the sample description."  lightbox="../defender-endpoint/media/deploy-onboarding-package.png":::
+   :::image type="content" source="media/deploy-onboarding-package.png" alt-text="Screenshot that shows the sample description."  lightbox="media/deploy-onboarding-package.png":::
 
 ### Step 14: Deploy the Microsoft Defender for Endpoint onboarding package for MacOS
 
@@ -527,11 +527,11 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 
 1. Confirm device management.
 
-   ![Screenshot that shows the Confirmed device management page](/media/mdatp-3-confirmdevicemgmt.png)
+   ![Screenshot that shows the Confirmed device management page](media/mdatp-3-confirmdevicemgmt.png)
 
 2. Select **Open System Preferences**, locate **Management Profile** on the list, and select **Approve...**. Your Management Profile would be displayed as **Verified**:
 
-   ![Screenshot that shows the Management profile page.](/media/mdatp-4-managementprofile.png)
+   ![Screenshot that shows the Management profile page.](media/mdatp-4-managementprofile.png)
 
 1. Select **Continue** and complete the enrollment.
 
@@ -539,7 +539,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 
 1. In Intune, select **Devices** > **All devices**. Here you can see your device among the listed:
 
-![Screenshot that shows the All Devices page.](https://review.learn.microsoft.com/en-us/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fmac-install-with-intune.md/pr/defender-endpoint/media/mdatp-5-alldevices.png)
+   ![Screenshot that shows the All Devices page.](media/mdatp-5-alldevices.png)
 
 #### Step 15c. Verify client device state
 
@@ -559,7 +559,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
       
 1. You should also see the **Microsoft Defender** icon in the top-right corner.
 
-![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](media/mdatp-icon-bar.png)
+   ![Screenshot that shows the icon for Microsoft Defender for Endpoint in the status bar.](media/mdatp-icon-bar.png)
 
 ### Step 16: Verify anti-malware detection
 
