@@ -4,7 +4,7 @@ description: Learn about automating connector deployment when planning multiclou
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.date: 10/03/2022
+ms.date: 05/25/2025
 ---
 
 # Automate connector deployment
