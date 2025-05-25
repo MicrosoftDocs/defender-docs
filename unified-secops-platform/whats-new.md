@@ -55,8 +55,6 @@ For example, if the incidents weren't merged because they were assigned to two d
 
 To understand more about merging incidents, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
 
-For instructions on merging incidents manually, see [Merge incidents manually in the Microsoft Defender portal](/defender-xdr/merge-incidents-manually).
-
 ### Multi workspace and multi tenant support for Microsoft Sentinel (Preview)
 
 Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
