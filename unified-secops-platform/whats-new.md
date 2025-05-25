@@ -31,6 +31,7 @@ All Microsoft Sentinel use cases that are in general availability, including [mu
 
 We recommend that you [onboard your workspaces to the Defender portal](microsoft-sentinel-onboard.md) to take advantage of a single location for all your security operations. For more information, see:
 
+- [The Best of Microsoft Sentinel - now in Microsoft Defender](https://techcommunity.microsoft.com/blog/MicrosoftThreatProtectionBlog/the-best-of-microsoft-sentinel-%E2%80%94-now-in-microsoft-defender/4415822) (blog)
 - [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json)
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 
