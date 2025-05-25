@@ -1,7 +1,7 @@
 ---
 title: Uncover adversaries with threat intelligence across the Defender portal
 ms.reviewer: 
-description: Learn about threat intelligence features across Microsoft's unified security operations (SecOps) platform.
+description: Learn about threat intelligence features across the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: pauloliveria
@@ -22,7 +22,7 @@ ms.date: 01/24/2025
 
 # Uncover adversaries with threat intelligence across the Defender portal
 
-Uncover and neutralize modern adversaries with threat intelligence in Microsoft’s unified security operations (SecOps) platform. Whether you use Microsoft's threat intelligence or other sources important to your SecOps organization, **Threat intelligence** in the Microsoft Defender portal unifies the tools needed to identify cyberattackers and their infrastructure.
+Uncover and neutralize modern adversaries with threat intelligence in the Microsoft Defender portal. Whether you use Microsoft's threat intelligence or other sources important to your security operations team, **Threat intelligence** in the Microsoft Defender portal unifies the tools needed to identify cyberattackers and their infrastructure.
 
 :::image type="content" source="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png" alt-text="Screenshot of Threat intelligence section of the Microsoft Defender portal." lightbox="/unified-secops-platform/media/threat-intel-overview/usx-threat-intel.png":::
 

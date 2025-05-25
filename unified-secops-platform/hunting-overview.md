@@ -19,7 +19,7 @@ ms.topic: conceptual
 
 # Hunting in the Microsoft Defender portal
 
-Hunting for security threats is a highly customizable activity that is most effective when accomplished across all stages of threat hunting: proactive, reactive, and post incident. Microsoft's unified security operations (SecOps) platform provides effective hunting tools for every stage of threat hunting. These tools are well fit for analysts who are just starting out in their career, or experienced threat hunters using advanced hunting methods. Threat hunters of all levels benefit from hunting tool features that allow them to share their techniques, queries, and findings with their team along the way.
+Hunting for security threats is a highly customizable activity that is most effective when accomplished across all stages of threat hunting: proactive, reactive, and post incident. The Defender portal provides effective hunting tools for every stage of threat hunting with unified security operations services. These tools are well fit for analysts who are just starting out in their career, or experienced threat hunters using advanced hunting methods. Threat hunters of all levels benefit from hunting tool features that allow them to share their techniques, queries, and findings with their team along the way.
 
 ## Hunting tools
 

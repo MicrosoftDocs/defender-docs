@@ -23,9 +23,9 @@ Microsoft Security Exposure Management and Microsoft Threat Intelligence are ava
 
 ## Prerequisites
 
-- Before you deploy Microsoft's unified security operations platform, make sure that you have a plan in place, including a workspace design and an understanding of Microsoft Sentinel costs and billing.
+- Before you deploy Microsoft Defender services for unified security operations, make sure that you have a plan in place, including a workspace design and an understanding of Microsoft Sentinel costs and billing.
 
-  For more information, see [Unified security operations platform planning overview](overview-plan.md).
+  For more information, see [Planning guidance for unified security operations in the Microsoft Defender portal](overview-plan.md).
 
 ## Deploy Microsoft Defender XDR services
 
@@ -61,7 +61,7 @@ For more information, see [Get started with Security Copilot](/copilot/security/
 
 ## Architect your workspace and onboard to Microsoft Sentinel
 
-The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. Microsoft's unified security operations platform supports a primary workspace and multiple secondary workspaces.
+The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. The Defender portal supports a primary workspace and multiple secondary workspaces.
 
 1. Create a Security resource group for governance purposes, which allows you to isolate Microsoft Sentinel resources and role-based access to the collection.
 1. Create a Log Analytics workspace in the Security resource group and onboard Microsoft Sentinel into it.

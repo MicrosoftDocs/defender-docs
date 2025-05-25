@@ -79,7 +79,7 @@ Multitenant management in Microsoft Defender now supports managing tenants in ot
 
 ### Case management now generally available
 
-The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md).
+The Microsoft Defender portal's case management feature is now generally available. For more information, see [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md).
 
 ## January 2025
 
@@ -120,7 +120,7 @@ This is just the start. Stay tuned for additional capabilities as we evolve this
 
 For more information, see the following articles:
 
-- [Manage cases natively in Microsoft's unified security operations (SecOps) platform](cases-overview.md)
+- [Manage security operations cases natively in the Microsoft Defender portal](cases-overview.md)
 - [Microsoft Sentinel blog - Improve SecOps collaboration with case management](https://techcommunity.microsoft.com/blog/MicrosoftSentinelBlog/improve-secops-collaboration-with-case-management/4369044)
 
 ### Unified device timeline in Microsoft Defender portal (Preview)
@@ -158,7 +158,7 @@ For more information, see [SOC optimization reference of recommendations](/azure
 
 ### Microsoft Sentinel workbooks now available to view directly in the Microsoft Defender portal
 
-Microsoft Sentinel workbooks are now available for viewing directly in the Microsoft Defender portal with Microsoft's unified security operations (SecOps) platform. Now, in the Defender portal, when you select **Microsoft Sentinel > Threat management > Workbooks**, you remain in the Defender portal instead of a new tab being opened for workbooks in the Azure portal. Continue tabbing out to the Azure portal only when you need to edit your workbooks.
+Microsoft Sentinel workbooks are now available for viewing directly in the Microsoft Defender portal. Now, in the Defender portal, when you select **Microsoft Sentinel > Threat management > Workbooks**, you remain in the Defender portal instead of a new tab being opened for workbooks in the Azure portal. Continue tabbing out to the Azure portal only when you need to edit your workbooks.
 
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
@@ -171,7 +171,7 @@ For more information, see [Visualize and monitor your data by using workbooks in
 
 ### Microsoft Sentinel availability in Microsoft Defender portal
 
-We previously announced Microsoft Sentinel is generally available within Microsoft's unified security operations platform in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
+We previously announced Microsoft Sentinel is generally available in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
 
  - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
  - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)

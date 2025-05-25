@@ -1,6 +1,6 @@
 ---
 title: "Improve Security Posture and Reduce Risk"
-description: Provides an overview of solutions that help reduce security risk in Microsoft's unified security operations platform.
+description: Provides an overview of solutions that help reduce security risk in the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: bagol

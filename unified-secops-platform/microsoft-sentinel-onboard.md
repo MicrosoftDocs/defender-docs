@@ -31,7 +31,7 @@ ms.date: 03/17/2025
 
 Microsoft Sentinel is generally available within Microsoft's unified security operations (SecOps) platform in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. When you onboard Microsoft Sentinel to the Defender portal together Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
 
-- [What is Microsoft's unified security operations platform?](overview-unified-security.md)
+- [What are unified security operations?](overview-unified-security.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
 
@@ -42,7 +42,7 @@ Before you begin, review the feature documentation to understand the product cha
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 - [Advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-microsoft-defender)
 - [Alerts, incidents, and correlation in Microsoft Defender XDR](/defender-xdr/alerts-incidents-correlation)
-- [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
+- [Microsoft Sentinel automation in the Defender portal](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
 The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to a primary workspace and multiple secondary workspaces. If you have only one workspace when you onboard Microsoft Sentinel, that workspace is designated as the primary workspace. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579). In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 

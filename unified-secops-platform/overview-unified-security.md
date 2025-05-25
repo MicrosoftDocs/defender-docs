@@ -1,6 +1,6 @@
 ---
-title: "What is Microsoft's unified security operations platform?"
-description: Provides an overview of features and functionality in the Microsoft's unified security operations platform
+title: "What Are Unified Security Operations in the Microsoft Defender Portal?"
+description: Provides an overview of features and functionality in the Microsoft Defender portal for unified security operations.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: bagol
@@ -14,12 +14,18 @@ ms.collection:
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security operations center leader, I want to learn about the services and features available with Microsoft's unified security operations platform to help me determine whether it meets my organization's requirements.
+# customer intent: As a security operations center leader, I want to learn about the services and features available in the Microsoft Defender portal for unified security operations to help me determine whether it meets my organization's requirements.
 ---
 
-# What is Microsoft's unified security operations platform?
+# What are unified security operations in the Microsoft Defender portal?
 
-Microsoft's unified security operations platform provides a single platform for end-to-end security operations (SecOps). It integrates security information and event management (SIEM), security orchestration, automation, and response (SOAR), extended detection and response (XDR), posture and exposure management, cloud security, threat intelligence, and generative AI solutions.
+The Microsoft Defender portal provides unified security operations that integrate solutions for:
+
+- Security information and event management (SIEM)
+- Security orchestration, automation, and response (SOAR)
+- Extended detection and response (XDR)
+- Posture and exposure management
+- Cloud security, threat intelligence, and generative AI
 
 To cover all those capabilities, the Defender portal combines services like [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), [Microsoft Sentinel](/azure/sentinel/overview), [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) in the Microsoft Defender portal. Integrate more Microsoft Defender services to add security and provide integrated protection against sophisticated attacks. The Defender portal provides a single location to monitor, detect, investigate, remediate, and respond against pre- and post-breach cybersecurity risks and threats.
 
@@ -108,4 +114,4 @@ For more information, see [Microsoft Copilot in Microsoft Defender](/defender-xd
 
 - Blog post: [AI-powered, unified security operations](https://www.microsoft.com/security/business/solutions/ai-powered-unified-secops-platform)
 - [Planning guidance for unified security operations in the Microsoft Defender portal](overview-plan.md)
-- [Deploy Microsoft's unified security operations platform](overview-deploy.md)
+- [Deploy for unified security operations](overview-deploy.md)

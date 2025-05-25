@@ -18,7 +18,7 @@ ms.collection:
 
 # Planning guidance for unified security operations in the Microsoft Defender portal
 
-This article outlines activities to plan a deployment of Microsoft's security products to Microsoft's unified security operations platform for end-to-end security operations (SecOps). Unify your SecOps on Microsoft's platform to help you reduce risk, prevent attacks, detect and disrupt cyberthreats in real time, and respond faster with AI-enhanced security capabilities, all from the [Microsoft Defender portal](https://security.microsoft.com).
+This article describes how to plan your deployment for unified security operations in the Microsoft Defender portal. Unify security operations to help you reduce risk, prevent attacks, detect and disrupt cyberthreats in real time, and respond faster with AI-enhanced security capabilities, all from the [Microsoft Defender portal](https://security.microsoft.com).
 
 ## Plan your deployment
 
@@ -54,7 +54,7 @@ Other services supported in the Microsoft Defender portal, but not licensed with
 
 ## Review service prerequisites
 
-Before you deploy Microsoft's unified security operations platform, review the prerequisites for each service you plan to use. The following table lists the services and links for more information:
+Before you deploy Microsoft Defender services for unified security operations, review the prerequisites for each service you plan to use. The following table lists the services and links for more information:
 
 | Security service         | Prerequisites                  |
 | ------------------------ | ------------------------------ |
@@ -78,7 +78,7 @@ Before you deploy Microsoft's unified security operations platform, review the p
 
 ## Review data security and privacy practices
 
-Before you deploy Microsoft's unified security operations platform, make sure that you understand the data security and privacy practices for each service you plan to use. The following table lists the services and links for more information. Note that several services use the data security and retention practices for Microsoft Defender XDR instead of have separate practices of their own.
+Before you deploy Microsoft Defender services for unified security operations, make sure that you understand the data security and privacy practices for each service you plan to use. The following table lists the services and links for more information. Note that several services use the data security and retention practices for Microsoft Defender XDR instead of have separate practices of their own.
 
 | Security service         | Data security and privacy |
 | ------------------------ |--------------------------------------- |
@@ -178,7 +178,7 @@ The following table describes portals for other workloads that can impact your s
 
 ## Plan roles and permissions
 
-Microsoft's unified security operations (SecOps) platform unifies the following role-based access control (RBAC) models:
+The Microsoft Defender portal unifies the following role-based access control (RBAC) models for unified security operations:
 
 - [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview), used for delegating access to Defender access, like device groups
 - [Azure RBAC](/azure/role-based-access-control/), used by Microsoft Sentinel to delegate permissions
@@ -249,4 +249,4 @@ For more information, see the [Zero Trust Guidance Center](/security/zero-trust/
 
 ## Next step
 
-[Deploy Microsoft's unified security operations platform](overview-deploy.md)
+[Deploy for unified security operations](overview-deploy.md)

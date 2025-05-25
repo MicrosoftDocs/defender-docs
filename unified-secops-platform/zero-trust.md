@@ -1,6 +1,6 @@
 ---
 title: Zero Trust with unified security operations | Microsoft Defender
-description: Learn how implementing Microsoft's unified security operations platform can help you deploy a Zero Trust architecture.
+description: Learn how implementing unified security operations in the Defender portal can help you deploy a Zero Trust architecture.
 author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
@@ -11,7 +11,7 @@ ms.collection:
 #customerIntent: As a security operations professional, I want to implement a Zero Trust architecture using the unified security operations in the Microsoft Defender portal to enhance our organization's security posture by ensuring explicit verification, least privilege access, and preparation for potential breaches.
 ---
 
-# Zero Trust with Microsoft's unified security operations platform
+# Zero Trust with unified security operations in the Microsoft Defender portal
 
 Zero Trust is a security strategy for designing and implementing the following sets of security principles:
 
@@ -21,7 +21,7 @@ Zero Trust is a security strategy for designing and implementing the following s
 |**Use least privilege access** |Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.      |
 |**Assume breach** |Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses. |
 
-This article describes how Microsoft's unified security operations (SecOps) platform provides centralized access to the tools and capabilities necessary to implement a comprehensive Zero Trust solution.
+This article describes how the Microsoft Defender portal provides centralized access to the tools and capabilities necessary to implement a comprehensive Zero Trust solution with unified security operations.
 
 ## Verify explicitly with the Defender portal
 
@@ -88,4 +88,4 @@ For more information, see:
 
 ## Next step
 
-[Microsoft's unified security operations platform planning overview](overview-plan.md)
+[Planning guidance for unified security operations in the Microsoft Defender portal](overview-plan.md)

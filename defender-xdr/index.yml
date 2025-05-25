@@ -65,7 +65,7 @@ landingContent:
           url: deploy-configure-m365-defender.md
 
   # Card
-  - title: Microsoft's unified security operations platform
+  - title: Unified security operations in the Defender portal
     linkLists:
       - linkListType: overview
         links:
