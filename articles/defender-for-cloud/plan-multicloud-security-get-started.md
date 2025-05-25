@@ -4,7 +4,7 @@ description: Learn about designing a solution for securing and protecting your m
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.date: 05/30/2024
+ms.date: 05/25/2025
 ---
 
 # Start planning multicloud protection
