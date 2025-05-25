@@ -1,7 +1,7 @@
 ---
 title: Resolve agentless scan error
 description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/22/2025
+ms.date: 05/25/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
@@ -10,11 +10,11 @@ ms.author: elkrieger
 
 # Resolve agentless scan error
 
-After you connect your Google Cloud Platform (GCP) project to Defender for Cloud, Defender for Cloud utilizes [agentless machine scanning](concept-agentless-data-collection.md) to present recommendations and alerts that offer remediation steps for any detected vulnerabilities.
+After you connect your Google Cloud Platform (GCP) project to Microsoft Defender for Cloud, the service uses agentless machine scanning to identify vulnerabilities in your virtual machines (VMs). It then provides security recommendations and alerts, along with guidance for remediation.
 
-If Defender for Cloud doesn't generate any agentless results for your Virtual Machines (VMs) up to 24 hours after you connect the GCP project, GCP organization policies might block Defender for Cloud's access to your tenant. If your policies block Defender for Cloud, Defender for Cloud can't perform scans.
+If no agentless scan results appear within 24 hours after you connect your GCP project, it’s possible that a GCP organizational policy—specifically, the `Compute Storage resource use restrictions (Compute Engine disks, images, and snapshots)` policy is preventing Defender for Cloud from accessing the necessary resources.
 
-This article explains how to resolve the disk scan error.
+This article explains how to identify and resolve this issue so Defender for Cloud can successfully scan your VMs.
 
 ## Prerequisites
 
