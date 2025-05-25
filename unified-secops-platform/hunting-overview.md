@@ -1,6 +1,6 @@
 ---
-title: Threat hunting features across Microsoft's unified security operations platform
-description: Learn about threat hunting features across Microsoft's unified security operations (SecOps) platform.
+title: Threat hunting features across the Microsoft Defender portal
+description: Learn about threat hunting features across the Microsoft Defender portal
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: austinmc
@@ -14,10 +14,10 @@ ms.collection:
 - usx-security
 ms.topic: conceptual
 
-# customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in Microsoft's unified SecOps platform so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
+# customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in the Microsoft Defender portal so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
 
-# Hunting in Microsoft's unified SecOps platform
+# Hunting in the Microsoft Defender portal
 
 Hunting for security threats is a highly customizable activity that is most effective when accomplished across all stages of threat hunting: proactive, reactive, and post incident. Microsoft's unified security operations (SecOps) platform provides effective hunting tools for every stage of threat hunting. These tools are well fit for analysts who are just starting out in their career, or experienced threat hunters using advanced hunting methods. Threat hunters of all levels benefit from hunting tool features that allow them to share their techniques, queries, and findings with their team along the way.
 
@@ -35,7 +35,7 @@ Maximize the full extent of your team's hunting prowess with the following hunti
 
 | Hunting tool | Description |
 |---|---|
-|[**Advanced hunting**](/defender-xdr/advanced-hunting-microsoft-defender) | View and query data sources available within Microsoft's unified SecOps platform and share queries with your team. Use all your existing Microsoft Sentinel workspace content, including queries and functions. |
+|[**Advanced hunting**](/defender-xdr/advanced-hunting-microsoft-defender) | View and query data sources available from Defender portal services and share queries with your team. Use all your existing Microsoft Sentinel workspace content, including queries and functions. |
 |[**Microsoft Sentinel hunting**](/azure/sentinel/hunting) | Hunt for security threats across data sources. Use specialized search and query tools like **hunts**, **bookmarks** and **livestream**. |
 |[**Go hunt**](/defender-xdr/advanced-hunting-go-hunt) | Quickly pivot an investigation to entities found within an incident. |
 |[**Hunts**](/azure/sentinel/hunts) | An end-to-end, proactive threat hunting process with collaboration features. |
@@ -61,6 +61,6 @@ The following table describes how you can make the most of the Defender portal's
 
 ## Related content
 
-- [Threat detection in Microsoft's unified SecOps platform](/unified-secops-platform/detect-threats-overview)
+- [Threat detection in the Microsoft Defender portal](/unified-secops-platform/detect-threats-overview)
 - [Security posture management and risk reduction](/unified-secops-platform/reduce-risk-overview)
 - [Service integration](/unified-secops-platform/overview-defender-portal)

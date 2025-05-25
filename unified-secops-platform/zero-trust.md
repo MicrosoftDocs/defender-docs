@@ -8,7 +8,7 @@ ms.topic: concept-article #Don't change.
 ms.date: 01/16/2025
 ms.collection:
 - usx-security
-#customerIntent: As a security operations professional, I want to implement a Zero Trust architecture using Microsoft's unified SecOps platform to enhance our organization's security posture by ensuring explicit verification, least privilege access, and preparation for potential breaches.
+#customerIntent: As a security operations professional, I want to implement a Zero Trust architecture using the unified security operations in the Microsoft Defender portal to enhance our organization's security posture by ensuring explicit verification, least privilege access, and preparation for potential breaches.
 ---
 
 # Zero Trust with Microsoft's unified security operations platform
@@ -23,9 +23,9 @@ Zero Trust is a security strategy for designing and implementing the following s
 
 This article describes how Microsoft's unified security operations (SecOps) platform provides centralized access to the tools and capabilities necessary to implement a comprehensive Zero Trust solution.
 
-## Verify explicitly with unified SecOps
+## Verify explicitly with the Defender portal
 
-To effectively verify explicitly, Microsoft's unified SecOps platform provides a variety of tools and services to ensure that every access request is authenticated and authorized based on comprehensive data analysis. For example:
+To effectively verify explicitly, the Defender portal provides a variety of tools and services to ensure that every access request is authenticated and authorized based on comprehensive data analysis. For example:
 
 - **Microsoft Defender XDR** provides extended detection and response across users, identities, devices, apps, and emails. Add **Microsoft Defender for Cloud** to stretch that threat protection across multi-cloud and hybrid environments, and **Microsoft Entra ID Protection** to help you evaluate risk data from sign-in attempts. 
 
@@ -45,9 +45,9 @@ For more information, see:
 - [What is Microsoft Security Exposure Management?](/security-exposure-management/get-started-exposure-management)
 - [What is Microsoft Sentinel?](/azure/sentinel/overview?tabs=defender-portal)
 
-## Use least privileged access across unified SecOps
+## Use least privileged access across the Defender portal
 
-Microsoft's unified SecOps platform also provides a comprehensive set of tools to help you implement least privilege access across your environment. For example:
+The Defender portal also provides a comprehensive set of tools to help you implement least privilege access across your environment. For example:
 
 - Implement **Microsoft Defender XDR** unified role-based access control (RBAC) to assign permissions based on roles, ensuring users have only the access they need to perform their tasks.
 
@@ -67,9 +67,9 @@ For more information, see:
 - [Start planning multicloud protection with Defender for Cloud](/azure/defender-for-cloud/plan-multicloud-security-get-started)
 - [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication)
 
-## Assume breach across unified SecOps
+## Assume breach across the Defender portal
 
-Assuming breach helps organizations prepare for and respond to security incidents more effectively. For example, with the unified SecOps platform:
+Assuming breach helps organizations prepare for and respond to security incidents more effectively. For example:
 
 - Configure **Microsoft Defender XDR** automatic attack disruption to contain attacks in progress, limiting lateral movement and reducing impact with high-fidelity signals and continuous investigation insights.
 

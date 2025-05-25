@@ -1,6 +1,6 @@
 ---
-title: Deploy Microsoft's unified SecOps platform | Microsoft Defender
-description: Deploy Microsoft's unified security operations platform with the Microsoft Defender portal, Microsoft Sentinel, and other Microsoft Defender services.
+title: Deploy for Unified Security Operations | Microsoft Defender
+description: Deploy Microsoft Defender portal services for unified security operations, including Microsoft Defender XDR, Microsoft Sentinel, and other Microsoft Defender services.
 author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
@@ -11,13 +11,13 @@ ms.collection:
 - zerotrust-solution
 - msftsolution-secops
 
-#customer intent: As a security administrator, I want to deploy Microosft's unified security operations platform so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
+#customer intent: As a security administrator, I want to deploy Microsoft Defender portal services for unified security operations.
 
 ---
 
-# Deploy Microsoft's unified SecOps platform
+# Deploy for unified security operations
 
-Microsoft's unified security operations platform combines the capabilities of Microsoft Defender portal, Microsoft Sentinel, and other Microsoft Defender services. This platform provides a comprehensive view of your organization's security posture and helps you to detect, investigate, and respond to threats across your organization.
+The Microsoft Defender portal provides unified security operations with Microsoft Defender XDR, Microsoft Sentinel, and other services. Together, Defender portal services provide a comprehensive view of your organization's security posture and helps you to detect, investigate, and respond to threats across your organization.
 
 Microsoft Security Exposure Management and Microsoft Threat Intelligence are available in any environment that meets the prerequisites, to users configured with required permissions.
 
@@ -81,9 +81,9 @@ For more information, see:
 - [Grant a user access to Azure roles](/azure/role-based-access-control/quickstart-assign-role-user-portal)
 - [Managing unified RBAC in Microsoft Defender](https://aka.ms/defender_RBAC) (video demo)
 
-## Onboard to unified SecOps
+## Onboard to the Defender portal
 
-When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting, creating a unified SecOps platform. To onboard to Microsoft's unified SecOps platform, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
+When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting for unified security operations. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
 
 ## Fine-tune system configurations
 

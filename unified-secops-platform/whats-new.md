@@ -43,10 +43,21 @@ For more information, see [View and manage cases across multiple tenants in the 
 
 ## April 2025
 
-- [Multi workspace and multi tenant support for Microsoft Sentinel (preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
+- [Merge incidents manually (Preview)](#merge-incidents-manually-preview)
+- [Multi workspace and multi tenant support for Microsoft Sentinel (Preview)](#multi-workspace-and-multi-tenant-support-for-microsoft-sentinel-preview)
 - [Case management now generally available](#case-management-now-generally-available)
 
-### Multi workspace and multi tenant support for Microsoft Sentinel (preview)
+### Merge incidents manually (Preview)
+
+If two incidents should be merged because they describe the same attack story, but aren't merged for any of the reasons listed in ["When incidents aren't merged"](/defender-xdr/alerts-incidents-correlation#when-incidents-arent-merged), you can now merge the incidents manually after you fix the underlying reasons.
+
+For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
+
+To understand more about merging incidents, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
+
+For instructions on merging incidents manually, see [Merge incidents manually in the Microsoft Defender portal](/defender-xdr/merge-incidents-manually).
+
+### Multi workspace and multi tenant support for Microsoft Sentinel (Preview)
 
 Microsoft Sentinel now supports multiple workspaces in the Defender portal, using one primary workspace per tenant and multiple secondary workspaces.
 
@@ -56,7 +67,7 @@ If you're working with multiple tenants and multiple workspaces per tenant, you 
 
 For more information, see:
 
-- [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
 - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
 - [Microsoft Defender multitenant management](mto-overview.md)
 - [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
@@ -92,7 +103,7 @@ Along with the new location, the management interface streamlines the creation a
 
 For more information, see the following articles:
 
-- [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
+- [Uncover adversaries with threat intelligence across the Defender portal](threat-intelligence-overview.md)
 - [New STIX objects in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/announcing-public-preview-new-stix-objects-in-microsoft-sentinel/4369164)
 - [Understand threat intelligence](/azure/sentinel/understand-threat-intelligence#create-and-manage-threat-intelligence)
 
@@ -167,7 +178,7 @@ We previously announced Microsoft Sentinel is generally available within Microso
 
 ### Feature availability for Government clouds
 
-In the Defender portal, all Microsoft Sentinel features for unified SecOps that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
+In the Defender portal, all Microsoft Sentinel features that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
 
 For more information, see [Microsoft Sentinel feature support for Azure commercial/other clouds](/azure/sentinel/feature-availability#experience-in-the-defender-portal) and [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov).
 

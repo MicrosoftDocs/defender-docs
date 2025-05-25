@@ -71,9 +71,9 @@ To onboard and use Microsoft Sentinel in the Defender portal, you must have the 
   > [!IMPORTANT]
   > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-### Microsoft's unified SecOps platform prerequisites
+### Unified security operations prerequisites
 
-To unify capabilities with Defender XDR in Microsoft's unified SecOps platform, you must have the following resources and access:
+To unify Microsoft Defender XDR and Microsoft Sentinel security operations in the Defender portal, you must have the following resources and access:
 
 - Licensing for Defender XDR, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites)
 - Account for Defender XDR is a member of the same Microsoft Entra tenant with which Microsoft Sentinel is associated
