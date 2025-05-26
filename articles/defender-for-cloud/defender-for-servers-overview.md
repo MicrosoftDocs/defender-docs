@@ -52,7 +52,7 @@ Plan features are summarized in the table.
 | **Defender for Endpoint automatic onboarding** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::|  |
 | [Defender for Endpoint EDR](integration-defender-for-endpoint.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | Threat detection (OS-level) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| [Integrated alerts and incidents](concept-integration-365.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.Azure, AWS and GCPpng"::: | Azure, AWS and GCP |
+| [Integrated alerts and incidents](concept-integration-365.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | Software inventory discovery | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | Vulnerability scanning (agent-based) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
