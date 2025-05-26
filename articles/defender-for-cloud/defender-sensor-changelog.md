@@ -15,9 +15,9 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 ## Sensor versions available per release
 
-### Defender for Containers Sensor v0.917
+### Defender for Containers Sensor v0.9.17
 
-- **Released:** June 4, 2025
+- **Released:** June 11, 2025
 - **What's included:**
   - **Helm-based deployment support**
     Introduces a new deployment method for the Defender for Containers sensor using Helm. This option lets you deploy and manage the sensor more easily, and access the latest capabilities in Public Preview or GA.
