@@ -4,7 +4,7 @@
   items:
     - name: Overview
       items:
-      - name: What are unified security operations??
+      - name: What are unified security operations?
         href: overview-unified-security.md
       - name: What's new
         href: whats-new.md
