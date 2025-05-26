@@ -8,7 +8,7 @@ manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 04/02/2025
+ms.date: 05/24/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -289,7 +289,7 @@ For more information, see [Microsoft Defender Core service overview](/defender-e
 |---|---|
 |Enable Network Protection|Enabled (block mode)|
 |Allow Network Protection Down Level|Network protection is enabled downlevel.|
-|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled.|
+|Allow Datagram Processing On Win Server|Datagram processing on Windows Server is disabled (Default, Recommended).|
 |Disable DNS over TCP parsing|DNS over TCP parsing is enabled.|
 |Disable HTTP parsing|HTTP parsing is enabled.|
 |Disable SSH parsing|SSH parsing is enabled.|
