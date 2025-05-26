@@ -68,9 +68,9 @@ To enable network protection, you can use any of the methods described in this a
 
    - Network Protection on Windows Server 2012 R2 and Windows Server 2016, use the additional policy listed in the following table:
    
-    | Description|Setting|
-    | -------- | -------- |
-    |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
+      | Description|Setting|
+      | -------- | -------- |
+      |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
 
    - Optional Network Protection settings for Windows and Windows Server:
    
