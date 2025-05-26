@@ -43,7 +43,7 @@ This approach with the initiative provides high-level insights without a full co
 ## Using the EASM initiative with full MSEADM integration
 
 **Prerequisites**:
-This approach requires a full MDEASM subscription and provides comprehensive exposure analysis and asset-level details.
+This approach requires a full MDEASM subscription (trial or paid) and provides comprehensive exposure analysis and asset-level details.
 To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
 ### Environment setup:
