@@ -16,7 +16,7 @@ ms.collection:
 
 # Microsoft Defender portal service support for US Government customers
 
-This article provides information about Microsoft's unified security operations (SecOps) support for US Government customers.
+This article provides information about support for US Government customers by unified security operations services in the Microsoft Defender portal.
 
 ## Feature availability
 
