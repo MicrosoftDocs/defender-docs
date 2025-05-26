@@ -49,11 +49,11 @@ Plan features are summarized in the table.
 | Feature | Plan 1 (P1) | Plan 2 (P2) | Cloud availability |
 |--|--|--|--|
 | **Multicloud and hybrid support** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Defender for Servers protects VMs on Azure, AWS and GCP VMs, and on-premises machines connected to Microsoft Defender for Cloud. <br/><br/> Review Defender for Servers [support and requirements](support-matrix-defender-for-servers.md). |
-| **Defender for Endpoint automatic onboarding** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Azure, AWS and GCP |
+| **Defender for Endpoint automatic onboarding** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::|  |
 | [Defender for Endpoint EDR](integration-defender-for-endpoint.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| Threat detection (OS-level) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
-| Integrated alerts and incidents | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
-| Threat detection (Azure network layer) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Threat detection (OS-level) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
+| [Integrated alerts and incidents](concept-integration-365.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.Azure, AWS and GCPpng"::: | Azure, AWS and GCP |
+| [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | Software inventory discovery | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | Vulnerability scanning (agent-based) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | Vulnerability scanning (agentless) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
