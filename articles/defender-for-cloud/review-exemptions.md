@@ -4,7 +4,7 @@ description: Learn how to exempt recommendations so they're not taken into accou
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 02/29/2024
+ms.date: 05/25/2025
 #customer intent: As a user, I want to learn how to exempt recommendations in Microsoft Defender for Cloud so that I can customize the security recommendations for my environment.
 ---
 

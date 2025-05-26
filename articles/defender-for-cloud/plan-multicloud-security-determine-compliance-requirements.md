@@ -4,7 +4,7 @@ description: Learn about determining compliance requirements in multicloud envir
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.date: 10/03/2022
+ms.date: 05/25/2025
 ---
 
 # Determine compliance requirements
