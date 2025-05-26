@@ -132,7 +132,7 @@ The following alert classification mapping is used to sync the alert classificat
 |Microsoft Defender alert classification|Microsoft Purview Insider Risk Management alert classification|
 |:---|:---|
 |True positive </br> Includes multi-staged attack, phishing, etc.|Confirmed|
-|Information, expected activity (benign positive) </br> Includes Ssecurity testing, confirmed activity, etc.|Dismissed|
+|Information, expected activity (benign positive) </br> Includes security testing, confirmed activity, etc.|Dismissed|
 |False positive </br> Includes not malicious, not enough data to validate, etc.|Dismissed|
 
 For more information about alert statuses and classifications in Microsoft Defender XDR, see [Manage alerts in Microsoft Defender](investigate-alerts.md#manage-alerts).
