@@ -30,8 +30,9 @@ Multiple workspaces per tenant are supported in multitenant Advanced hunting as 
 
 ## Quotas
 
-Advanced hunting in multitenant organizations returns up to 50,000 records in total. For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
+In multitenant environments, advanced hunting queries can return a maximum of 50,000 records in total. The result set from each individual tenant is capped at 50,000 divided by the number of tenants queried. 
 
+For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
 
 
 ## Run cross-tenant queries
@@ -73,8 +74,7 @@ You can run any query that you already have access to in the multitenant managem
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
-
-## Run cross-workspace queries (Preview)
+## Run cross-workspace queries
 
 To run queries across multiple workspaces in the same tenant, use the [workspace( ) expression](/azure/azure-monitor/logs/cross-workspace-query#query-across-log-analytics-workspaces-using-workspace), with the workspace identifier as the argument in your query to refer to a table in a different workspace.
 

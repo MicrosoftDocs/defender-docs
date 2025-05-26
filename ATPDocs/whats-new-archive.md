@@ -904,7 +904,7 @@ We are expanding our sensitivity definition for on-premises accounts to include 
 
 Released June 14, 2020
 
-- **Feature enhancement: Additional activity details available in the unified SecOps experience**  
+- **Feature enhancement: Additional activity details available**  
 We've extended the device information we send to Defender for Cloud Apps including device names, IP addresses, account UPNs and used port. For more information about our integration with Defender for Cloud Apps, see [Using Azure ATP with Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.

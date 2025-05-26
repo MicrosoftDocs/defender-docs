@@ -1,6 +1,6 @@
 ---
 title: Manage app governance alerts
-ms.date: 02/28/2023
+ms.date: 05/23/2025
 ms.topic: conceptual
 description: Remediate app threats.
 ---

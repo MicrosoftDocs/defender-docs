@@ -26,8 +26,6 @@ Multi-tenant management for Microsoft Defender XDR and Microsoft Sentinel in the
 
 Manage incidents & alerts originating from multiple tenants and workspaces under **Incidents & alerts**.
 
-Multiple workspaces per tenant are supported in multitenant management as preview.
-
 ## View and investigate incidents
 
 To view or investigate an incident:
