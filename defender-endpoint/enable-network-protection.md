@@ -66,26 +66,27 @@ To enable network protection, you can use any of the methods described in this a
       | -------- | -------- |
       | Enable Network Protection|Options:<br>- Enabled (block mode) Block mode is needed to block IP address/URL indicators and Web Content Filtering.<br>- Enabled (audit mode) <br>- Disabled (Default) <br>- Not Configured|
 
-   - Network Protection on Windows Server 2012 R2 and Windows Server 2016
-
-      | Description|Setting|
-      | -------- | -------- |
-      |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
+   - Network Protection on Windows Server 2012 R2 and Windows Server 2016, use the additional policy listed in the following table:
+   
+    | Description|Setting|
+ | -------- | -------- |
+ |Allow Network Protection Down Level|Options:<br>- Network protection will be enabled downlevel. <br>- Network Protection will be disabled downlevel. (Default) <br>- Not Configured|
 
    - Optional Network Protection settings for Windows and Windows Server:
    
      > [!WARNING]
-     > For Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others, set the `Allow Datagram Processing On WinServer` to `disabled`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+     > Disable the `Allow Datagram Processing On WinServer` setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
+     
      
      |Description| Setting|
-     | -------- | -------- |
-     |Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default, recommended). <br>- Not configured|
-     |Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
-     |Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
-     |Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
-     |Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
-     |[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
-     
+| -------- | -------- |
+|Allow Datagram Processing On Win Server|- Datagram processing on Windows Server is enabled. <br>- Datagram processing on Windows Server is disabled (Default, recommended). <br>- Not configured|
+|Disable DNS over TCP parsing|- DNS over TCP parsing is disabled. <br>- DNS over TCP parsing is enabled (Default). <br>- Not configured|
+|Disable HTTP parsing|- HTTP parsing is disabled. <br>- HTTP parsing is enabled (Default). <br>- Not configured|
+|Disable SSH parsing|- SSH parsing is disabled. <br>- SSH parsing is enabled (Default). <br>- Not configured|
+|Disable TLS parsing |- TLS parsing is disabled. <br>- TLS parsing is enabled (Default). <br>- Not configured|
+|[Deprecated]Enable DNS Sinkhole|- DNS Sinkhole is disabled. <br>- DNS Sinkhole is enabled. (Default) <br>- Not configured|
+
 7. When you're done configuring settings, select **Next**.
 
 8. On the **Assignments** page, select the groups that will receive this profile. Then select **Next**.
@@ -220,7 +221,7 @@ Use the following procedure to enable network protection on domain-joined comput
 |Windows Server 2016 <br/>Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection) | `set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/>|
 
 > [!IMPORTANT]
-> For Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others, set the `AllowDatagramProcessingOnWinServer` parameter to `$false`. These roles often generate high volumes of UDP traffic, which can affect network performance and reliability when datagram processing is enabled. Disabling this setting helps maintain network stability and optimize resource usage in demanding environments.
+> Disable the "AllowDatagramProcessingOnWinServer" setting. This is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
 
 4. (This step is optional.) To set network protection to audit mode, use the following cmdlet:
 
