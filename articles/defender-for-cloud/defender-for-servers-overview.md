@@ -53,20 +53,20 @@ Plan features are summarized in the table.
 | [Defender for Endpoint EDR](integration-defender-for-endpoint.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | Threat detection (OS-level) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [Integrated alerts and incidents](concept-integration-365.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
+| [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Software inventory discovery](asset-inventory.md) <sup>[1](#footnote1)</sup> | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [Vulnerability scanning (agent-based)](auto-deploy-vulnerability-assessment.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| OS baseline misconfigurations <sup>[2](#footnote2)</sup> | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
+| [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
+| OS baseline misconfigurations <sup>[2](#footnote2)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
 | [Regulatory compliance assessment](concept-regulatory-compliance-standards.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Different standards are available for different environments. Learn more about [compliance cloud availability](concept-regulatory-compliance-standards.md#available-compliance-standards). |
-| [OS system updates](enable-periodic-system-updates.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises<sup>[3](#footnote3)</sup> |
-| [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities)<sup>[4](#footnote4)</sup> | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
-| [Malware scanning (agentless)](agentless-malware-scanning.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
-| Machine secrets scanning (agentless) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| [File integrity monitoring](file-integrity-monitoring-overview.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
-| [Just-in-time virtual machine access](just-in-time-access-overview.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure and AWS |
-| [Network map](protect-network-resources.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
-| [Free data ingestion (500 MB)](data-ingestion-benefit.md) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises<sup>[3](#footnote3)</sup> |
+| [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities)<sup>[4](#footnote4)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Machine secrets scanning (agentless) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
+| [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| [Just-in-time virtual machine access](just-in-time-access-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure and AWS |
+| [Network map](protect-network-resources.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
+| [Free data ingestion (500 MB)](data-ingestion-benefit.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 
 <sup><a name="footnote1"></a>1</sup> Software inventory discovery (provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory)) is integrated into Defender for Cloud.
 <sup><a name="footnote2"></a>2</sup> There are OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline). Other [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations in Defender for Cloud are included in the [free foundational posture management](concept-cloud-security-posture-management.md).
