@@ -46,6 +46,9 @@ This approach with the initiative provides high-level insights without a full co
 This approach requires a full MDEASM subscription (trial or paid) and provides comprehensive exposure analysis and asset-level details.
 To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
+> [!NOTE]
+> External attack surface assets do not support scoping, so all users with access can see all collected data.
+
 ### Environment setup:
 
 To deploy an MDEASM resource, follow these steps:
