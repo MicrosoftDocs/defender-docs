@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 11/12/2024
+ms.date: 05/26/2025
 ---
 
 # Security Initiatives
