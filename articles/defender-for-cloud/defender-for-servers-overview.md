@@ -46,10 +46,32 @@ Defender for Servers offers two plans:
 
 Plan features are summarized in the table.
 
+| Feature | Plan 1 (P1) | Plan 2 (P2) | Cloud availability |
+|--|--|--|--|
+| **Multicloud and hybrid support** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Defender for Servers protects VMs on Azure, AWS and GCP VMs, and on-premises machines connected to Microsoft Defender for Cloud. <br/><br/> Review Defender for Servers [support and requirements](support-matrix-defender-for-servers.md). |
+| **Defender for Endpoint automatic onboarding** | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png":::| Azure, AWS and GCP |
+| [Defender for Endpoint EDR](integration-defender-for-endpoint.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
+| Threat detection (OS-level) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Integrated alerts and incidents | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Threat detection (Azure network layer) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Software inventory discovery | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| Vulnerability scanning (agent-based) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| Vulnerability scanning (agentless) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| OS baseline misconfigurations | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Regulatory compliance assessment | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| OS system updates | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Defender for Vulnerability Management premium features | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| Malware scanning (agentless) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Machine secrets scanning (agentless) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| File integrity monitoring | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Just-in-time virtual machine access | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| Network map | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| Free data ingestion (500 MB) | :::image type="icon" source="./media/icons/no-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+
+
+
 **Feature** | **Plan support** | **Details**
 --- | --- | ---
-**Multicloud and hybrid support** | Supported in Plan 1 and 2 | Defender for Servers can protect Azure VMs, AWS/GCP VMs, and on-premises machines connected to Microsoft Defender for Cloud. <br/><br/> Review Defender for Servers [support and requirements](support-matrix-defender-for-servers.md).
-**Defender for Endpoint automatic onboarding** | Supported in Plan 1 and 2 | Microsoft Defender for Cloud [automatically onboards machines to Defender for Endpoint](enable-defender-for-endpoint.md) by installing the Defender for Endpoint extension on connected machines.
 **Defender for Endpoint EDR** | Supported in Plan 1 and 2 | Supported endpoints receive near real-time threat detection using Defender for Endpoint's [EDR](/defender-endpoint/overview-endpoint-detection-response) capabilities.
 **Threat detection (OS-level)** | Supported in Plan 1 and 2 | Defender for Endpoint integration provides OS-level threat detection.
 **Integrated alerts and incidents** | Supported in Plan 1 and 2 | Defender for Endpoint alerts and incidents for connected machines are displayed in Microsoft Defender for Cloud, with drill-down in the Defender portal. [Learn more](concept-integration-365.md).
