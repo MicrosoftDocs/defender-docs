@@ -140,6 +140,7 @@ The following procedures for enabling attack surface reduction rules include ins
 > - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 > - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 > - [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
+> - [Block Webshell creation for Servers, not supported on Windows Server 2012 R2]
 
 #### Endpoint security policy (Preferred)
 
