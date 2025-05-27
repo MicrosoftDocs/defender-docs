@@ -88,6 +88,12 @@ Defender for Identity uses Microsoft Entra security groups as a basis for role g
 
 Manage your role groups from [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) on the Azure portal. Only Microsoft Entra users can be added or removed from security groups.
 
+## Assign custom roles
+
+User Role-Based Access Control (URBAC) enables organizations to define custom roles that restrict visibility to specific Active Directory domains. Individuals assigned to these scoped roles will only see data, such as alerts, identities, and activities, related to the Active Directory domains included in their Defender XDR role assignment.
+
+For more information, see: [Scoped access for Microsoft Defender for Identity](configure-scoped-access.md)
+
 ## Next step
 
 > [!div class="step-by-step"]

@@ -127,6 +127,12 @@ To access and manage roles and permissions, without being a Global Administrator
 > [!NOTE]
 > For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you'll need to activate the new Microsoft Defender XDR Unified RBAC model. For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
 
+> [!NOTE]
+> **Configure scoped roles for Microsoft Defender for Identity (Preview)**
+> You can configure scoped access for Microsoft Defender for Identity (MDI) using Microsoft Defender XDR’s Unified RBAC (URBAC). This allows you to restrict access and visibility to specific Active Directory domains, helping align with team responsibilities and reduce unnecessary data exposure.
+>
+> For more information see: [Configure scoped access in Microsoft Defender for Identity](configure-scoped-access.md).
+
 ## Next steps
 
 - [Import existing RBAC roles](import-rbac-roles.md)

@@ -44,8 +44,9 @@ To enable identity scoping, follow these steps:​
 1. Select Next to see the **Authorization and settings** option.
 1. Choose **Select custom permissions** and under **Security settings** select either:
     - Select all permissions - users are able to create and manage roles and permissions.
-    - Read-only - uses can access and view roles and permissions in a read-only mode.
-:::image type="content" source="media/custom-roles/authorization-and-settings-custom-roles.png" alt-text="Screenshot showing the authroization and settings page":::
+    - Read-only - users can access and view roles and permissions in a read-only mode.
+
+    :::image type="content" source="media/custom-roles/authorization-and-settings-custom-roles.png" alt-text="Screenshot showing the authorization and settings page":::
 1. Select Add assignments and enter the Assignment name.
     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
 1. Under Employees, enter individual usernames or Microsoft Entra ID groups to assign to the role.

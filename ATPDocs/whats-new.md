@@ -24,6 +24,21 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## May 2025
 
+### Scoped access by Active Directory domain now supported 
+
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). This capability enables organizations to define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+Scoping by Active Directory domains helps:
+
+- Optimize performance: Focus monitoring on critical assets and reduce noise from non-essential data.
+
+- Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
+
+- Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](config-scoped-access.md).
+
+
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
 Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
 
