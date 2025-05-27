@@ -45,3 +45,7 @@ Large organizations use a wide variety of security solutions, and running multip
 Delegating security functionality, creating exclusions, and configuring settings can help reduce the likelihood of interoperability issues, but these might not be eliminated completely. Acceptable risk is different for every organization; optimizing for usability might increase risk, and optimizing for security will likely impact usability. Organizations should weigh the benefits of interoperability over potential risks.
 
 Commercially reasonable support is provided through Microsoft Customer Service and Support and Microsoft managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution. Managing security often means finding an acceptable balance between productivity and risk; if a particular security configuration is causing significant performance problems, some organizations choose to disable the additional protection in favor of increased usability for select device groups. This should also be considered for other device-impacting settings.
+
+## More information
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
