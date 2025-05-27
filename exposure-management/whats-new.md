@@ -100,9 +100,9 @@ The following predefined classification rules were added to the critical assets 
 
 For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
-### New documentation library for Microsoft's unified security operations platform
+### New documentation library for unified security operations in the Microsoft Defender portal
 
-Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+Find centralized documentation about [unified security operations in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). The Defender portal brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI. Learn about the features and functionality available for unified security operations, and then start to plan your deployment.
 
 ## November 2024
 

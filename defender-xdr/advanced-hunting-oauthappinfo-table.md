@@ -37,9 +37,9 @@ The `OAuthAppInfo` table might not include all the app or service principal-rela
 
 ## Prerequisites
 
-This advanced hunting table is populated by app governance records from Microsoft Defender for Cloud Apps. To turn on app governance, follow the steps in [Turn on app governance](/defender-cloud-apps/app-governance-get-started).
+This advanced hunting table is populated by app governance records from Microsoft Defender for Cloud Apps. 
 
-If your organization hasn’t deployed Microsoft Defender for Cloud Apps in Microsoft Defender XDR nor turned on app governance, you can't view the `OAuthAppInfo` table in advanced hunting.
+You need to turn on app governance to view the `OAuthAppInfo` table in advanced hunting. To turn on app governance, follow the steps in [Turn on app governance](/defender-cloud-apps/app-governance-get-started).
 
 
 ## Schema
