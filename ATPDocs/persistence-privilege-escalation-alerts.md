@@ -31,7 +31,7 @@ After the attacker uses techniques to keep access to different on-premises resou
 
 Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different protocol fields that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Defender for Identity learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.
 
-In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Defender for Identity.
+In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This isn't based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Defender for Identity.
 
 **Learning period**:
 
@@ -43,7 +43,7 @@ This alert has a learning period of 5 days from the start of domain controller m
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004), [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)        |
 |MITRE attack technique  |  [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)       |
-|MITRE attack sub-technique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)       |
+|MITRE attack subtechnique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)       |
 
 **Suggested steps for prevention**:
 
@@ -69,7 +69,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004), [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)        |
 |MITRE attack technique  |  [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/), [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/), [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)       |
-|MITRE attack sub-technique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
+|MITRE attack subtechnique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
 
 ## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
 
@@ -77,7 +77,7 @@ None
 
 **Description**:
 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is designed to identify.
 
 **Learning period**:
 
@@ -89,7 +89,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004), [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)        |
 |MITRE attack technique  |  [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)       |
-|MITRE attack sub-technique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
+|MITRE attack subtechnique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
 
 ## Suspected Golden Ticket usage (ticket anomaly using RBCD) (external ID 2040)
 
@@ -109,7 +109,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    |  [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)        |
 |MITRE attack technique  |  [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)       |
-|MITRE attack sub-technique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
+|MITRE attack subtechnique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
 
 ## Suspected Golden Ticket usage (time anomaly) (external ID 2022)
 
@@ -131,7 +131,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004), [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)        |
 |MITRE attack technique  |  [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)       |
-|MITRE attack sub-technique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
+|MITRE attack subtechnique |  [Golden Ticket(T1558.001)](https://attack.mitre.org/techniques/T1558/001/)  
 
 ## Suspected skeleton key attack (encryption downgrade) (external ID 2010)
 
@@ -155,7 +155,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    |  [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)       |
 |MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/),[Modify Authentication Process (T1556)](https://attack.mitre.org/techniques/T1556/)      |
-|MITRE attack sub-technique |  [Domain Controller Authentication (T1556.001)](https://attack.mitre.org/techniques/T1556/001/)       |
+|MITRE attack subtechnique |  [Domain Controller Authentication (T1556.001)](https://attack.mitre.org/techniques/T1556/001/)       |
 
 ## Suspicious additions to sensitive groups (external ID 2024)
 
@@ -179,7 +179,7 @@ Four weeks per domain controller, starting from the first event.
 |---------|---------|
 |Secondary MITRE tactic    | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)        |
 |MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/),[Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)      |
-|MITRE attack sub-technique | N/A        |
+|MITRE attack subtechnique | N/A        |
 
 **Suggested steps for prevention**:
 
@@ -204,7 +204,7 @@ None
 |Primary MITRE tactic  | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
 |---------|---------|
 |MITRE attack technique | N/A        |
-|MITRE attack sub-technique | N/A        |
+|MITRE attack subtechnique | N/A        |
 
 **Suggested steps for prevention**:
 
@@ -215,7 +215,7 @@ None
 **Severity**: High
 
 **Description**:
-Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try and manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](entity-tags.md).
+Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address, and more. Sometimes attackers will try to manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a preconfigured [honeytoken user](entity-tags.md).
 
 **Learning period**:
 
@@ -226,14 +226,14 @@ None
 |Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)  |
 |---------|---------|
 |MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
-|MITRE attack sub-technique | N/A        |
+|MITRE attack subtechnique | N/A        |
 
 ## Honeytoken group membership changed (external ID 2428)
 
 **Severity**: High
 
 **Description**:
-In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there is a change made to a preconfigured [honeytoken user account](entity-tags.md).
+In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there's a change made to a preconfigured [honeytoken user account](entity-tags.md).
 
 **Learning period**:
 
@@ -244,7 +244,7 @@ None
 |Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)  |
 |---------|---------|
 |MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
-|MITRE attack sub-technique | N/A        |
+|MITRE attack subtechnique | N/A        |
 
 ## Suspected SID-History injection (external ID 1106)
 
@@ -253,7 +253,7 @@ None
 **Description**:
 SIDHistory is an attribute in Active Directory that allows users to retain their permissions and access to resources when their account is migrated from one domain to another. When a user account is migrated to a new domain, the user's SID is added to the SIDHistory attribute of their account in the new domain. This attribute contains a list of SIDs from the user's previous domain.
 
-Adversaries may use the SIH history injection to escalate privileges and bypass access controls. This detection will trigger when newly added SID was added to the SIDHistory attribute.
+Adversaries may use the SIH history injection to escalate privileges and bypass access controls. This detection triggers when newly added SID was added to the SIDHistory attribute.
 
 **Learning period**:
 
@@ -264,7 +264,7 @@ None
 |Primary MITRE tactic  |[Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
 |---------|---------|
 |MITRE attack technique  |[Account Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)     |
-|MITRE attack sub-technique |[SID-History Injection(T1134.005)](https://attack.mitre.org/techniques/T1134/005/)       |
+|MITRE attack subtechnique |[SID-History Injection(T1134.005)](https://attack.mitre.org/techniques/T1134/005/)       |
 
 ## Suspicious modification of a dNSHostName attribute (CVE-2022-26923)  (external ID 2421)
 
@@ -284,7 +284,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    |  [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)       |
 |MITRE attack technique  |   [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/),[Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)      |
-|MITRE attack sub-technique |  [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)       |
+|MITRE attack subtechnique |  [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)       |
 
 ## Suspicious modification of domain AdminSdHolder  (external ID 2430)
 
@@ -304,7 +304,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)        |
 |MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 ## Suspicious Kerberos delegation attempt by a newly created computer  (external ID 2422)
 
@@ -324,7 +324,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)        |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 ## Suspicious Domain Controller certificate request (ESC8)  (external ID 2432)
 
@@ -344,7 +344,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003),[Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/),[Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/)     |
 |MITRE attack technique  |   [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)  |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 > [!NOTE]
 > Suspicious Domain Controller certificate request (ESC8) alerts are only supported by Defender for Identity sensors on AD CS.
@@ -367,7 +367,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 > [!NOTE]
 > Suspicious modifications to the AD CS security permissions/settings alerts are only supported by Defender for Identity sensors on AD CS.
@@ -390,10 +390,10 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
-|MITRE attack sub-technique | [Domain Trust Modification (T1484.002)](https://attack.mitre.org/techniques/T1562/002/)     |
+|MITRE attack subtechnique | [Domain Trust Modification (T1484.002)](https://attack.mitre.org/techniques/T1562/002/)     |
 
 > [!NOTE]
-> Suspicious modification of the trust relationship of AD FS server alerts are only supported by Defender for Identity sensors on AD FS.
+> Suspicious modifications of the trust relationship of AD FS server alerts are only supported by Defender for Identity sensors on AD FS.
 
 ## Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account  (external ID 2423)
 
@@ -413,7 +413,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
-|MITRE attack sub-technique |  N/A   |
+|MITRE attack subtechnique |  N/A   |
 
 
 ## Next steps

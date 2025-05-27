@@ -42,7 +42,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
 |---------|---------|
 |MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
-|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+|MITRE attack subtechnique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **Suggested steps for prevention**:
 
@@ -68,7 +68,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
+|MITRE attack subtechnique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
 
 **Suggested steps for prevention**:
 
@@ -94,7 +94,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Credentials from Password Stores (T1555)](https://attack.mitre.org/techniques/T1555/)        |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 ## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 
@@ -108,7 +108,7 @@ In a brute-force attack, the attacker attempts to authenticate with multiple pas
 
 In this detection, an alert is triggered when many authentication failures occur using Kerberos, NTLM, or use of a password spray is detected. Using Kerberos or NTLM, this type of attack is typically committed either *horizontal*, using a small set of passwords across many users, *vertical* with a large set of passwords on a few users, or any combination of the two.
 
-In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. The minimum period before an alert can be triggered is one week.
+In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks prove to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. The minimum period before an alert can be triggered is one week.
 
 **Learning period**:
 
@@ -119,7 +119,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
 |---------|---------|
 |MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
-|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+|MITRE attack subtechnique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **Suggested steps for prevention**:
 
@@ -131,7 +131,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 **Description**:
 
-Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, and identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 To allow Defender for Identity to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Defender for Identity deployment. Once the Defender for Identity initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
