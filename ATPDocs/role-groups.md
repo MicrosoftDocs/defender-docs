@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity role groups
 
-Microsoft Defender for Identity offers role-based security to safeguard data according to your organization's specific security and compliance needs. We recommend that you use role groups to manage access to Defender for Identity, segregating responsibilities across your security team and granting only the amount of access that users need to do their jobs.
+Microsoft Defender for Identity offers role-based security to safeguard data according to your organization's specific security and compliance needs. We recommend that you use role groups to manage access to Defender for Identity, segregate responsibilities across your security team, and grant only the amount of access that users need to do their jobs.
 
 ## Unified role-based access control (RBAC)
 
@@ -29,9 +29,9 @@ When creating your custom roles, make sure that you apply the permissions listed
 For more information, see [Custom roles in role-based access control for Microsoft Defender XDR](/microsoft-365/security/defender/custom-roles) and [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
 
 > [!NOTE]
-> Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data. This content adheres to existing Defender for Cloud Apps permissions.
+> Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) might still contain Defender for Identity data. This content adheres to existing Defender for Cloud Apps permissions.
 > 
-> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in Microsoft Defender for Cloud Apps, these permissions do not carry over and you will have to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
+> Exception: If you configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in Microsoft Defender for Cloud Apps, these permissions do not carry over and you will have to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
 
 ## Required permissions Defender for Identity in Microsoft Defender XDR
 
@@ -87,6 +87,12 @@ The following table lists the activities available for each security group:
 Defender for Identity uses Microsoft Entra security groups as a basis for role groups.
 
 Manage your role groups from [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) on the Azure portal. Only Microsoft Entra users can be added or removed from security groups.
+
+## Assign custom roles
+
+User Role-Based Access Control (URBAC) enables organizations to define custom roles that restrict visibility to specific Active Directory domains. Individuals assigned to these scoped roles will only see data, such as alerts, identities, and activities, related to the Active Directory domains included in their Defender XDR role assignment.
+
+For more information, see: [Scoped access for Microsoft Defender for Identity](configure-scoped-access.md)
 
 ## Next step
 

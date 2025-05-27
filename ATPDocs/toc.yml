@@ -53,6 +53,8 @@ items:
         href: deploy/configure-windows-event-collection.md
     - name: Roles and permissions
       href: role-groups.md
+    - name: Configure scoped access
+      href: configure-scoped-access.md
     - name: Configure a Directory Service account
       items:
       - name: Overview
