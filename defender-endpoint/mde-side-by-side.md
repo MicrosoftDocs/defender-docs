@@ -27,9 +27,9 @@ search.appverid: met150
 
 Large organizations use a wide variety of security solutions, and running multiple security solutions concurrently can lead to performance issues and conflicts. To help minimize interoperability issues, trusted security solutions can often be configured to mitigate conflicts with each other. Organizations should understand the potential benefits, risks, and mitigation recommendations to make informed choices.  
 
-1. **Disable duplication**. Running multiple security solutions that perform the same function can lead to performance issues and conflicts. It is generally recommended to avoid redundant capabilities, as this increases the likelihood of problematic product interactions. 
+1. **Disable duplication**. Running multiple security solutions that perform the same function can lead to performance issues and conflicts. It's recommended to avoid redundant capabilities, as this increases the likelihood of problematic product interactions. 
 
-   Microsoft Defender for Endpoint can be configured to disable EDR Block Mode, Automated Investigation & Remediation, PUA Protection, Network Discovery & Response, and other capabilities, reducing overlap with functions provided by a third-party EDR solution such as CrowdStrike Falcon. Responsibility for these functions falls to the security solution actively providing those functions. 
+   Microsoft Defender for Endpoint can be configured to disable endpoint detection and response (EDR) in Block Mode, Automated Investigation & Remediation, PUA Protection, Network Discovery & Response, and other capabilities. Reducing overlap with functions provided by a third-party EDR solution such as CrowdStrike Falcon. Responsibility for these functions falls to the security solution actively providing those functions. 
 
    Similarly, setting Microsoft Defender Antivirus in "Passive Mode" ensures that when another antimalware solution is present, Defender Antivirus does not perform active protection, remediation, or malware blocking. Responsibility for malware protection shifts to the active antimalware solution. 
 
