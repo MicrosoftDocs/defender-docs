@@ -92,7 +92,11 @@ sections:
       - question: Do I have the flexibility to select where to store my data?
         answer: |
           No. When your Defender for Identity workspace is created, it's stored automatically in the Azure region that's closest to your Microsoft Entra tenant's geographical location. Once your Defender for Identity workspace is created, Defender for Identity data can't be moved to a different region.
-
+      
+      - question: When using Microsoft Defender for Identity (MDI), is end-user consent required for overseas data transfer under Japan’s Act on the Protection of Personal Information (APPI)?
+        answer: |
+           No, end-user consent is not required. Providing personal data to MDI constitutes “outsourcing” rather than a “provision to a third party in a foreign country” under the APPI. Therefore, explicit end-user consent for cross-border data transfer is not necessary.
+           
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |
           Microsoft developers and administrators have, by design, been given sufficient privileges to carry out their assigned duties to operate and evolve the service. Microsoft deploys combinations of preventive, detective, and reactive controls including the following mechanisms to help protect against unauthorized developer and/or administrative activity:
