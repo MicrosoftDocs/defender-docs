@@ -182,9 +182,9 @@ For more information, see:
 
 ## SIEM integration
 
-You can integrate Defender for Identity with Microsoft Sentinel as part of Microsoft's [unified security operations platform](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Identity with Microsoft Sentinel for unified security operations in the [Defender portal](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
-Microsoft Sentinel supports a Microsoft Defender for XDR data connector to bring all signals from Defender XDR, including Defender for Identity, to Microsoft Sentinel. Use the Defender portal as a unified security operations (SecOps) platform.
+The Defender portal supports unified security operations with Microsoft Sentinel, bringing signals from Defender XDR, including Defender for Identity, to Microsoft Sentinel.
 
 For more information, see:
 
