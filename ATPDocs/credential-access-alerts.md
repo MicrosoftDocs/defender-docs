@@ -15,7 +15,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [Security alert name mapping and unique external IDs](understanding-security-alerts.md#classify-security-alerts).
 
 The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by Defender for Identity in your network.
 

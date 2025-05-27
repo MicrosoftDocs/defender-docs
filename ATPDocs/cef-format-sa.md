@@ -39,7 +39,7 @@ The cs2 field identifies if the alert is new or updated.
 The cs3 field identifies the fully qualified domain name of the source computer name.
 
 > [!NOTE]
-> If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+> If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics).
 
 ## Sample logs
 
@@ -196,7 +196,7 @@ Priorities:
 
 ## See Also
 
-- [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+- [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics).
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum](https://aka.ms/MDIcommunity)
