@@ -36,7 +36,7 @@ Scoping by Active Directory domains helps:
 
 - Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
 
-For more information see: [Configure scoped access for Microsoft Defender for Identity](config-scoped-access.md).
+For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
