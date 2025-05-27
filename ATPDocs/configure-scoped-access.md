@@ -8,21 +8,14 @@ ms. reviewer: 'LiorShapiraa'
 
 # Configure scoped access for Microsoft Defender for Identity
 
-As organizations grow and manage complex identity environments, the ability to control who can access what-and where-is critical. Microsoft Defender for Identity scoping lets you control which entities and resources are included in monitoring. You can focus monitoring on specific groups, starting with Active Directory domains. This improves efficiency by limiting the scope to critical assets and reducing nonessential data volume. You can also restrict visibility to specific entities, ensuring access is aligned with assigned responsibilities.
-
-This new capability allows [Global Administrators](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrators](/entra/identity/role-based-access-control/permissions-reference) to scope investigation and administration experiences by Active Directory domains, providing:
-
-- Optimize performance – improve efficiency by scoping monitoring to critical assets without overloading analysis with nonessential data 
-
-- Enhance visibility control – focus Microsoft Defender for Identity monitoring on specific user groups, starting with Active Directory domains 
-
-- Support operational boundaries – align access and responsibility across SOC analysts, identity admins, and regional teams 
+As organizations grow and their identity environments become more complex, it’s important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities. 
 
 ## Prerequisites
 
 - Check that Microsoft Defender for Identity sensor installed. 
 
 - Confirm the [Identity workload for URBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is activated. 
+- Ensure you have the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
 
 - Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
 
