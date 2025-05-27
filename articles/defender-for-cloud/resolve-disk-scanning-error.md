@@ -30,7 +30,7 @@ By configuring your organization policies, you can control the resources that De
 
 1. Sign in to your GCP project.
 
-1. Navigate to your organization > relevant GCP project.
+1. Navigate to **your organization** > **relevant GCP project**.
 
 1. Navigate to **IAM & Admin** > **Organization Policies**
 
