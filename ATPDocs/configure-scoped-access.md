@@ -12,14 +12,15 @@ As organizations grow and their identity environments become more complex, it’
 
 ## Prerequisites
 
-- Check that Microsoft Defender for Identity sensor installed. 
+Before you begin, make sure you meet the following requirements:
 
+- Check that Microsoft Defender for Identity sensor installed. 
 - Confirm the [Identity workload for URBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is activated. 
 - Ensure you have the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
 
 - Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
 
-## Configure scoping rules
+### Configure scoping rules
 To enable identity scoping, follow these steps:​
 
 1. Sign in to the Microsoft Defender portal as Global Administrator or Security Administrator.
@@ -50,13 +51,13 @@ To enable identity scoping, follow these steps:​
 
     :::image type="content" source="media/custom-roles/edit-custom-role.png" alt-text="Screenshot showing how to edit a custom role":::
 
-## Known limitations
+
+### Known limitations
 
 > [!NOTE]
 > Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
 >
 > Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
-
 
 |Defender for Identity experience |Status |
 |---------|---------|
@@ -76,7 +77,8 @@ IdentityLogonEvents, IdentityQueryEvents     |   Available      |
 |Device and group global search and entity page     |   Unavailable      |
 |Alert tuning and critical asset management   |   Unavailable      |
 
-## Related articles
+### Next steps
+
 - [Microsoft Defender for Identity role groups](role-groups.md)
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles)

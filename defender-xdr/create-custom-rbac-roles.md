@@ -131,7 +131,7 @@ To access and manage roles and permissions, without being a Global Administrator
 > **Configure scoped roles for Microsoft Defender for Identity (Preview)**
 > You can configure scoped access for Microsoft Defender for Identity (MDI) using Microsoft Defender XDR’s Unified RBAC (URBAC). This allows you to restrict access and visibility to specific Active Directory domains, helping align with team responsibilities and reduce unnecessary data exposure.
 >
-> For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md)
+> For more information see: [Configure scoped access for Microsoft Defender for Identity](../ATPDocs/configure-scoped-access.md)
 
 ## Next steps
 
