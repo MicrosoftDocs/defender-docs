@@ -1,40 +1,133 @@
 ---
-title: Understanding security alerts | Microsoft Defender for Identity
-description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-ms.date: 01/29/2023
+title: Learn to view and manage security alerts | Microsoft Defender for Identity
+description: This article explains how to view and manage Microsoft Defender for Identity security alerts.
+ms.date: 05/08/2025
 ms.topic: how-to
 ---
 
-# Understanding security alerts
+# View and Manage security alerts
 
-Microsoft Defender for Identity security alerts explain in clear language and graphics, which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color-coded to make them easy to visually filter, and organized by threat phase. Each alert is designed to help you quickly understand exactly what is happening on your network. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+The alerts queue shows a list of alerts that were flagged from identities in your network. By default, the queue displays alerts seen in the last 7 days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
 
-In this article, you'll learn the structure of Defender for Identity security alerts, and how to use them.
+## View the alerts queue 
 
-> [!div class="checklist"]
->
-> - Security alert structure
-> - Security alert classifications
-> - Security alert categories
-> - Advanced Security Alert investigation
-> - Related entities
-> - Defender for Identity and NNR (Network Name Resolution)
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Incidents & alerts** and then to **Alerts**.
 
-## Security alert structure
+Alerts from the last 7 days are displayed with the following information:
 
-Each Defender for Identity security alert includes an **Alert story**. This is the chain of events related to this alert in chronological order, and other important information related to the alert.
+  - Alert name
+  - Tags
+  - Severity
+  - Investigation state
+  - Status
+  - Category
+  - Detection source
+  - Impacted assets
+  - First activity
+  - Last activity
 
-On the alert page you can:
+:::image type="content" source="media/filtered-alerts.png" alt-text="The Defender for Identity events" lightbox="media/filtered-alerts.png":::
 
-- **Manage alert** - change the alert's status, assignment, and classification. You can also add a comment here.
-- **Export** - download a detailed Excel report for analysis
-- **Link alert to another incident** - link an alert to a new existing incident
+## Customize the view of the alerts queue
 
-  [![Defender for Identity security alert structure](media/security-alert-structure.png)](media/security-alert-structure.png#lightbox)
+You can customize the view of the alerts queue in a few ways. Using the tools at the top of the page, you can:
 
-For more information about alerts, see [Investigate alerts in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts).
+- Customize the view to add or remove columns.
+- Apply filters.
+- Customize the duration. Display the alerts for a particular duration, such as 1 Day, 3 Days, 1 Week, 30 Days, and 6 Months.
+- Export a detailed Excel report for analysis.
 
-## Security alert classifications
+### Filter the alerts view
+
+You can apply the following filters to get a more focused view of the alerts.
+
+
+|Alert |Description  |
+|---------|---------|
+|**Severity**    |   Alert severity is determined based on multiple factors, including the level of access an attacker might already have, the potential outcome if the attack succeeds, and the confidence level that the detection is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics)     |
+|**Status**    | You can choose to filter the list of alerts based on their Status. For example, you can filter to show only alerts that are **New**, **In Progress**, or **Resolved**.        |
+|**Detection sources**    |  You can filter the alerts based on the following Detection sources:   **Microsoft Defender for Identity** or **Microsoft Defender XDR**     |
+|**Tags**    | You can filter the alerts based on Tags assigned to alerts. |
+
+### View an alert
+
+You can access individual alerts from multiple locations, by selecting the alert name from any of the following:
+- The **Alerts** page
+- The **Incidents** page
+- The pages of individual **Devices**
+- The **Advanced hunting** page
+
+## The alerts page
+
+The alerts page provides context into the alert, by combining attack signals and alerts related to the selected alert to construct a detailed alert story. The alerts page helps you quickly triage, investigate, and take effective action on alerts.
+
+> [!NOTE]
+> Due to, the ongoing transition from classic Defender for Identity alerts to the unified Microsoft Defender XDR alerts, you might notice differences in how alerts are displayed.
+
+1. To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
+
+    :::image type="content" source="media/filter-alerts-menu.png" alt-text="Screenshot showing the alerts filter menu per service":::
+
+### Microsoft Defender for Identity alerts
+
+At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of them to get more details about the entities involved.
+- The **Alert story** section gives information to provide a complete story with the details of the alert. The alert story is divided into two sections: 
+    - **What happened** includes the alert's timeline and the entities involved in the alert.
+    - **Alert graph** provides a visual representation of the alert, including the entities involved in the alert and their relationships. The graph helps you understand how the entities are connected and how they relate to the alert.
+- **Important information** provides technical context that supports alert investigation. You can use this information to validate whether the activity was expected or suspicious and decide what actions to take to contain or escalate the incident.
+- **Activity details** provides detailed information, including the timestamp, the base object, the search scope, and other details about the alert. 
+- The **details pane** on the right side of the page provides additional information about the alert, including the **Alert details**, **Comments & history**. The details pane also provides additional options, such as:
+    - Manage alert
+    - Export alert
+    - Move alert to another incident
+    - Classify an alert 
+
+:::image type="content" source="media/legacy-mdi-alert-structure.png" alt-text="Screenshot showing the Defender for Identity alert structure":::
+
+### Microsoft Defender XDR alerts
+
+At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see buttons for details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of them to get more details about the entities involved.
+
+- The **Alert story** section gives information to provide a complete story with the details of the alert. The alert story is divided into two sections: 
+    - **What happened** includes the alert's timeline and the entities involved in the alert.
+- The **details pane** on the right side of the page provides additional information about the alert, including the **Alert details**, **Comments & history**. The details pane also provides additional options, such as:
+    - Manage alert
+    - Move alert to another incident
+    - Classify an alert 
+
+:::image type="content" source="media/defender-xdr-alert-structure.png" alt-text="Screenshot showing the Defender for XDR alert structure":::
+
+## Manage security alerts 
+
+Selecting an alert opens the Alert management pane, where you can perform the following actions:
+
+### Change the status of an alert
+You can categorize alerts as New, In Progress, or Resolved by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to alerts. For example, a team leader can review all New alerts, and decide to assign them to the In Progress queue for further analysis. Alternatively, the team leader might assign the alert to the Resolved queue if they know the alert is benign, or coming from a device that is irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
+
+### Move an alert to another incident
+You can create a new incident from the alert or link to an existing incident.
+
+:::image type="content" source="media/move-alert-to-other-incident.png" alt-text="Screenshot showing the option to move an alert to another incident":::
+
+### Assign alerts
+If an alert isn't yet assigned, you can select Assign to me to assign the alert to yourself.
+
+:::image type="content" source="media/alert-state.png" alt-text="The Alert state pane" lightbox="media/alert-state.png":::
+
+### Add comments to an alert
+You can add comments to an alert to provide additional context or information. This is useful for sharing insights with your team or documenting your investigation process.
+Whenever a change or comment is made to an alert, it's recorded in the Comments and history section.
+
+:::image type="content" source="media/comments-history.png" alt-text="The Comments & history page" lightbox="media/comments-history.png":::
+
+### Classify security alerts
+
+For each alert, ask the following questions to determine the alert classification and help decide what to do next:
+
+1. Is the security alert a TP, B-TP, or FP?
+1. How common is this specific security alert in your environment?
+1. Was the alert triggered by the same types of computers or users?
+   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you might decide to exclude it to avoid additional future FP alerts.
 
 Following proper investigation, all Defender for Identity security alerts can be classified as one of the following activity types:
 
@@ -44,115 +137,17 @@ Following proper investigation, all Defender for Identity security alerts can be
 
 - **False positive (FP)**: A false alarm, meaning the activity didn't happen.
 
-### Is the security alert a TP, B-TP, or FP
-
-For each alert, ask the following questions to determine the alert classification and help decide what to do next:
-
-1. How common is this specific security alert in your environment?
-1. Was the alert triggered by the same types of computers or users?
-   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you may decide to exclude it to avoid additional future FP alerts.
+:::image type="content" source="media/classify-alert.png" alt-text="The page on which you can classify an alert" lightbox="media/classify-alert.png":::
 
 > [!NOTE]
 > An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.
->
 
-## Security alert categories
 
-Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyberattack kill chain. Learn more about each phase and the alerts designed to detect each attack, using the following links:
+### Tuning alerts
 
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft Defender XDR, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
 
-## Advanced security alert investigation
-
-To get more details on a security alert, select **Export** on an alert details page to download the detailed Excel alert report.
-
-The downloaded file includes summary details about the alert on the first tab, including:
-
-- Title
-- Description
-- Start Time (UTC)
-- End Time (UTC)
-- Severity – Low/Medium/High
-- Status – Open/Closed
-- Status Update Time (UTC)
-- View in browser
-
-All involved entities, including accounts, computers, and resources are listed, separated by their role. Details are provided for the source, destination, or attacked entity, depending on the alert.
-
-Most of the tabs include the following data per entity:
-
-- Name
-- Details
-- Type
-- SamName
-- Source Computer
-- Source User (if available)
-- Domain Controllers
-- Accessed Resource: Time, Computer, Name, Details, Type, Service.
-- Related entities: ID, Type, Name, Unique Entity Json, Unique Entity Profile Json
-- All raw activities captured by Defender for Identity Sensors related to the alert (network or event activities) including:
-
-  - Network Activities
-  - Event Activities
-
-Some alerts have extra tabs, such as details about:
-
-- Attacked accounts when the suspected attack used Brute Force.
-- Domain Name System (DNS) servers when the suspected attacked involved network mapping reconnaissance (DNS).
-
-For example:
-
-![Involved entities.](media/involved-entities.png)
-
-### Related entities
-
-In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the "role" they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
-
-#### Unique Entity Json file
-
-Includes the data Defender for Identity learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime*, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController*, and *DnsName*.
-
-#### Unique Entity Profile Json file
-
-Includes all data Defender for Identity profiled on the entity. Defender for Identity uses the network and event activities captured to learn about the environment's users and computers. Defender for Identity profiles relevant information per entity. This information contributes Defender for Identity's threat identification capabilities.
-
-![Related entities.](media/related-entities.png)
-
-### How can I use Defender for Identity information in an investigation?
-
-Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by Defender for Identity.
-
-- Check if all related users belong to the same group or department.
-- Do related users share resources, applications, or computers?
-- Is an account active even though its PasswordExpiryTime already passed?
-
-## Defender for Identity and NNR (Network Name Resolution)
-
-Defender for Identity detection capabilities rely on active Network Name Resolution (NNR) to resolve IPs to computers in your organization. Using NNR, Defender for Identity is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Defender for Identity profiles entities, including computers, and generates alerts.
-
-NNR data is crucial for detecting the following alerts:
-
-- Suspected identity theft (pass-the-ticket)
-- Suspected DCSync attack (replication of directory services)
-- Network mapping reconnaissance (DNS)
-
-Use the NNR information provided in the **Network Activities** tab of the alert download report, to determine if an alert is an **FP**. In cases of an **FP** alert, it's common to have the NNR certainty result given with low confidence.
-
-Download report data appears in two columns:
-
-- **Source/Destination computer**
-
-  - *Certainty* – low-resolution certainty may indicate incorrect name resolution.
-- **Source/Destination computer**
-  - *Resolution method* – provides the NNR methods used to resolve the IP to computer in the organization.
-
-![Network activities.](media/network-activities.png)
-
-For more information about how to work with Defender for Identity security alerts, see [Working with security alerts](/defender-for-identity/manage-security-alerts).
+For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
 ## Related content
 

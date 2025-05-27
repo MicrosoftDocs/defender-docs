@@ -1039,6 +1039,11 @@
       "source_path": "ATPDocs/security-assessment-legacy-protocols.md",
       "redirect_url": "/defender-for-identity/security-assessment",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "manage-security-alerts.md",
+      "redirect_url": "/defender-for-identity/understanding-security-alerts",
+      "redirect_document_id": false
+    } 
   ]
 }
