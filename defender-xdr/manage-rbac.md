@@ -114,6 +114,9 @@ Use the following steps as a guide to start using the Microsoft Defender XDR Uni
    - [Microsoft Defender XDR Unified RBAC permissions](custom-permissions-details.md)
    - [Map existing RBAC roles to Microsoft Defender XDR Unified RBAC roles](compare-rbac-roles.md)
 
+4. **Learn more about Microsoft Defender for Identity scoped access**
+   - [Configure scoped access in Microsoft Defender for Identity](configure-scoped-access.md)
+
 Watch the following video to see the preceding steps in action:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=0b4bc29d-0b8b-41f1-ad8b-105b0d0386f8]
