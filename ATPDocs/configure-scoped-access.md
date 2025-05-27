@@ -26,14 +26,13 @@ This new capability allows [Global Administrators](/entra/identity/role-based-ac
 
 - Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
 
-
-## Configure scoping rules (Preview)
-
+## Configure scoping rules
 To enable identity scoping, follow these steps:​
 
 1. Sign in to the Microsoft Defender portal as Global Administrator or Security Administrator.
 1. Navigate to Permissions > Microsoft Defender XDR >  Roles​
-:::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
+
+    :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
 
 1. Select **Create custom role**.
 
@@ -61,7 +60,8 @@ To enable identity scoping, follow these steps:​
 
 > [!NOTE]
 > Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
-> Microsoft Entra ID IP alerts aren't supported. These alerts aren't included within the scoped MDI detections.
+>
+> Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
 
 |Defender for Identity experience |Status |
