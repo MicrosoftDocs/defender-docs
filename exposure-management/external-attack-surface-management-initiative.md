@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: how-to
 ms.service: exposure-management
-ms.date: 05/26/2025
+ms.date: 05/27/2025
 ---
 
 
@@ -40,7 +40,7 @@ This approach with the initiative provides high-level insights without a full co
     > [!NOTE]
     > This approach doesn't provide asset level information and detailed exposure information.
 
-## Using the EASM initiative with full MSEADM integration
+## Using the EASM initiative with full MDEASM integration
 
 **Prerequisites**:
 This approach requires a full MDEASM subscription (trial or paid) and provides comprehensive exposure analysis and asset-level details.
@@ -55,7 +55,7 @@ To deploy an MDEASM resource, follow these steps:
 
 1. Log into [https://portal.azure.com](https://portal.azure.com).
 2. Create a Resource Group with the appropriate subscription and region.
-3. Deploy an MDEASM Resource within that group, see, [Create a Defender EASM Azure resource](/azure/external-attack-surface-management/deploying-the-defender-easm-azure-resource).
+3. Deploy an MDEASM Resource within that group, see, [Create a Defender EASM Azure resource](/azure/external-attack-surface-management/deploying-the-defender-easm-azure-resource). Each new resource will automatically get a free 30 day trial.
 
 **Discover the attack surface**
 
