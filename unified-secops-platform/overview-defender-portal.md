@@ -14,7 +14,7 @@ ms.collection:
 - usx-security
 ms.topic: concept-article
 
-# customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether Microsoft's unified SecOps platform meets my organization's requirements.
+# customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether they meet my organization's requirements.
 ---
 
 # Microsoft Defender portal
@@ -52,7 +52,7 @@ Methods | Details
 
 ### Microsoft Sentinel permissions
 
-When you're onboarded to Microsoft's unified SecOps platform, existing Azure RBAC permissions are used to work with Microsoft Sentinel features in the Defender portal.
+When you're onboarded to the Microsoft Defender portal, existing Azure RBAC permissions are used to work with Microsoft Sentinel features in the Defender portal.
 
 - Manage roles and permissions for Microsoft Sentinel users in the Azure portal.
 - Any Azure RBAC changes are reflected in the Defender portal.
