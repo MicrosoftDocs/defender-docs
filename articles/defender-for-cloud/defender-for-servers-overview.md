@@ -4,7 +4,7 @@ description: Get an overview of the Defender for Servers plan in Microsoft Defen
 ms.topic: concept-article
 ms.author: elkrieger
 author: elazark
-ms.date: 03/10/2025
+ms.date: 05/27/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
@@ -68,9 +68,9 @@ Plan features are summarized in the table.
 | [Network map](protect-network-resources.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Free data ingestion (500 MB)](data-ingestion-benefit.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 
-<sup><a name="footnote1"></a>1</sup> Software inventory discovery (provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory)) is integrated into Defender for Cloud.
-<sup><a name="footnote2"></a>2</sup> There are OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline). Other [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations in Defender for Cloud are included in the [free foundational posture management](concept-cloud-security-posture-management.md).
-<sup><a name="footnote3"></a>3</sup> To take advantage of Azure Update integration in Defender for Servers Plan 2, on-premises, AWS, and GCP machines should be onboarded with Azure Arc. [Learn more](enable-periodic-system-updates.md).
+<sup><a name="footnote1"></a>1</sup> Software inventory discovery (provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory)) is integrated into Defender for Cloud. <br>
+<sup><a name="footnote2"></a>2</sup> There are OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline). Other [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations in Defender for Cloud are included in the [free foundational posture management](concept-cloud-security-posture-management.md). <br>
+<sup><a name="footnote3"></a>3</sup> To take advantage of Azure Update integration in Defender for Servers Plan 2, on-premises, AWS, and GCP machines should be onboarded with Azure Arc. [Learn more](enable-periodic-system-updates.md). <br>
 <sup><a name="footnote4"></a>4</sup> Is only available in the [Defender portal](https://security.microsoft.com/homepage).
 
 **Feature** | **Plan support** | **Details**
