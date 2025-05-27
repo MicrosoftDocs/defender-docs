@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/19/2025
+ms.date: 05/27/2025
 ---
 
 # Overview - Exposure insights
@@ -42,7 +42,7 @@ Security Exposure Management provides initiatives that currently include:
 
 - **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
 
-- **External Attack Surface Management Initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers insights into identified exposures on the selected vendor. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. 
+- **External attack surface management initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers insights into identified exposures on the selected vendor. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. 
 
     For more information about the external attack surface management initiative, see [External attack surface management initiative](external-attack-surface-management-initiative.md).
 
