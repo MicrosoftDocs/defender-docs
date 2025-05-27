@@ -1,13 +1,15 @@
 ---
 title: Review pull request annotations in GitHub and Azure DevOps
 description: Review pull request annotations in GitHub or in Azure DevOps.
-ms.topic: overview
-ms.date: 06/06/2023
+ms.topic: how-to
+ms.date: 05/25/2025
 ---
 
 # Review pull request annotations in GitHub and Azure DevOps
 
-### Resolve security issues in GitHub
+Reviewing pull request annotations in GitHub and Azure DevOps is crucial for maintaining code quality and security. This process helps identify and resolve potential issues early in the development cycle, ensuring that the codebase remains robust and secure.
+
+## Resolve security issues in GitHub
 
 **To resolve security issues in GitHub**:
 
@@ -21,9 +23,9 @@ ms.date: 06/06/2023
     - **False positive** - The alert isn't valid.
     - **Used in tests** - The alert isn't in the production code.
   
-### Resolve security issues in Azure DevOps
+## Resolve security issues in Azure DevOps
 
-Once you've configured the scanner, you're able to view all issues that were detected.
+After configuring the scanner, you can view all detected issues.
 
 **To resolve security issues in Azure DevOps**:
 
@@ -43,7 +45,7 @@ Once you've configured the scanner, you're able to view all issues that were det
 
     - **Active** - The default status for new annotations.
     - **Pending** - The finding is being worked on.
-    - **Resolved** - The finding has been addressed.
+    - **Resolved** - The finding is addressed.
     - **Won't fix** - The finding is noted but won't be fixed.
     - **Closed** - The discussion in this annotation is closed.
 
@@ -58,4 +60,4 @@ Learn how to [Discover misconfigurations in Infrastructure as Code](iac-vulnerab
 ## Next steps
 
 > [!div class="nextstepaction"]
-> Now learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+> [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).

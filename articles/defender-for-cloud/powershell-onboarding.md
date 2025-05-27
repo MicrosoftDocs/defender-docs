@@ -2,7 +2,7 @@
 title: Onboard with PowerShell
 description: This document walks you through the process of enabling Microsoft Defender for Cloud with PowerShell cmdlets.
 ms.topic: quickstart
-ms.date: 08/11/2024
+ms.date: 05/25/2025
 ms.custom: mode-api, devx-track-azurepowershell
 ---
 
