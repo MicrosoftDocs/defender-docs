@@ -20,6 +20,14 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
+## June 2025
+
+### Multitenant portal tenant groups now renamed to distribution profiles
+
+In the Microsoft Defender multitenant portal, tenant groups are now renamed to **distribution profiles**. For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profile.md).
+
+<!-- screenshot-->
+
 ## May 2025
 
 - [All Microsoft Sentinel use cases generally available in the Defender portal](#all-microsoft-sentinel-use-cases-generally-available-in-the-defender-portal)

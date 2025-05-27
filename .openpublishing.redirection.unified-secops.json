@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "unified-secops-platform/mto-tenant-groups.md",
+      "redirect_url": "mto-distribution-profiles",
+      "redirect_document_id": false
+    }
+  ]
+}
