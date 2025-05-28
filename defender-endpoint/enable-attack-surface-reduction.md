@@ -56,18 +56,18 @@ To use the entire feature-set of attack surface reduction rules, you need:
 
 - Microsoft Defender Antivirus as primary antivirus Note: Microsoft Defender Antivirus cannot be running in "Passive Mode" or "Disabled"
 
-- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) needs to be on
+- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) to be on
 
-- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) on (some rules require Cloud Protection)
+- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to be on (some rules require Cloud Protection)
 
-- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is required
+- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
 
-- Windows 10 Enterprise E5 or E3 License
+- Microsoft 365 E5 or E3 License
 
 > [!IMPORTANT]
-> The pre-requisites above are necessary in order for Attack Surface Reduction rules to work appropriately.
+> The pre-requisites above are necessary in order for Attack Surface Reduction rules to work properly.
 
-Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), with a Windows E5 license, you get advanced management capabilities including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. These advanced capabilities aren't available with an E3 license, but you can still use Event Viewer to review attack surface reduction rule events.
+Although attack surface reduction rules don't require a [Microsoft 365 E5 license](/microsoft-365/commerce/licenses/e3-extra-features-licenses), with Microsoft 365 E5 license, you get advanced management capabilities including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. These advanced capabilities aren't available with an E3 license, but you can still use Event Viewer to review attack surface reduction rule events.
 
 Each attack surface reduction rule contains one of four settings:
 
@@ -76,7 +76,7 @@ Each attack surface reduction rule contains one of four settings:
 - **Audit**: Evaluate how the attack surface reduction rule would impact your organization if enabled
 - **Warn**: Enable the attack surface reduction rule but allow the end user to bypass the block
 
-We recommend using attack surface reduction rules with a Windows E5 license (or similar licensing SKU) to take advantage of the advanced monitoring and reporting capabilities available in [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). However, if you have another license, such as Windows Professional or Windows E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
+We recommend using attack surface reduction rules with a Microsoft 365 E5 license (or similar licensing SKU) to take advantage of the advanced monitoring and reporting capabilities available in [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). However, if you have another license, such as Windows Professional or Microsoft 365 E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
 
 > [!TIP]
 > To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
