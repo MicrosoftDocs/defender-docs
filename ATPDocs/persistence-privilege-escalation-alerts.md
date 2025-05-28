@@ -32,7 +32,7 @@ After the attacker uses techniques to keep access to different on-premises resou
 
 Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different protocol fields that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Defender for Identity learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.
 
-In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Defender for Identity.
+In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This isnt based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Defender for Identity.
 
 **Learning period**:
 
@@ -216,7 +216,7 @@ None
 **Severity**: High
 
 **Description**:
-Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try and manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](entity-tags.md).
+Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try to manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](entity-tags.md).
 
 **Learning period**:
 
@@ -234,7 +234,7 @@ None
 **Severity**: High
 
 **Description**:
-In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there is a change made to a preconfigured [honeytoken user account](entity-tags.md).
+In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there's a change made to a preconfigured [honeytoken user account](entity-tags.md).
 
 **Learning period**:
 
