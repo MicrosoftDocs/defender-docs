@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn about the anti-phishing policies that are available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 05/28/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -158,13 +158,13 @@ In anti-phishing policies, you can control whether `p=quarantine` or `p=reject` 
 
 The relationship between spoof intelligence and whether sender DMARC policies are honored is described in the following table:
 
+> [!TIP]
+> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method mitigates the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from legitimate message senders who fail to conform to standard email authentication practices.
+
 |&nbsp;|Honor DMARC policy On|Honor DMARC policy Off|
 |---|---|---|
 |**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: No action is applied by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
 |**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Messages are quarantined.</li><li>DMARC policy `p=reject`: Messages are quarantined.</li><li>DMARC policy `p=none`: No action is applied by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.|
-
-> [!TIP]
-> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system using a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
 
 > [!NOTE]
 > If the MX record for the Microsoft 365 domain points to a third-party service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
