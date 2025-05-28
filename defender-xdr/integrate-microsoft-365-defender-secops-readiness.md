@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
