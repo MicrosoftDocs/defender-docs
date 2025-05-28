@@ -6,7 +6,7 @@ ms.author: deniseb
 manager: deniseb
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium

@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: low
 search.appverid:
   - MET150

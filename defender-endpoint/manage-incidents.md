@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: edr
 ms.date: 06/05/2024
 ---
