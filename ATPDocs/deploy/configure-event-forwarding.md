@@ -11,7 +11,7 @@ ms.reviewer: rlitinsky
 This article describes an example of how to configure Windows event forwarding to your Microsoft Defender for Identity standalone sensor. Event forwarding is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network. For more information, see [Windows event collection overview](event-collection-overview.md).
 
 > [!IMPORTANT]
->Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+>Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
 
 ## Prerequisites
@@ -29,7 +29,7 @@ This procedure describes how to add the network service account to the **Event L
 
 1. Select **Members**.
 
-1. If **Network Service** is not listed, select **Add**, and then enter **Network Service** in the **Enter the object names to select** field.
+1. If **Network Service** isn't listed, select **Add**, and then enter **Network Service** in the **Enter the object names to select** field.
 
 1. Select **Check Names** and select **OK** twice.
 
