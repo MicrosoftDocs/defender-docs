@@ -14,7 +14,7 @@ ms.collection:
   - highpri
   - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 04/15/2025
