@@ -2,7 +2,7 @@
 title: Role groups | Microsoft Defender for Identity
 description: Learn about working with Microsoft Defender for Identity role groups.
 ms.date: 01/15/2024
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: LiorShapiraa
 ---
 

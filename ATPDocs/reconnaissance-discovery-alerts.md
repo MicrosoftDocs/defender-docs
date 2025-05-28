@@ -2,7 +2,7 @@
 title: Reconnaissance and discovery security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when reconnaissance and discovery attacks are detected against your organization.
 ms.date: 04/16/2023
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: morRubin
 ---
 

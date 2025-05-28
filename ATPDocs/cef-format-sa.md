@@ -2,7 +2,7 @@
 title: SIEM log reference
 description: Provides samples of logs sent from Microsoft Defender for Identity to your SIEM.
 ms.date: 09/22/2024
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: rlitinsky
 ---
 
