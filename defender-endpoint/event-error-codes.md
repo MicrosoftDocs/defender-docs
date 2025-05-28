@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/25/2025
 ms.subservice: ngp
 search.appverid: met150

@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier2
 - demo
-ms.topic: article
+ms.topic: how-to
 ms.subservice: asr
 ms.date: 03/04/2025
 ---
