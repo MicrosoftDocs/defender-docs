@@ -30,8 +30,6 @@ Microsoft Defender for Identity now supports integration with Okta, enabling det
 
 For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
 
-## 
-
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
