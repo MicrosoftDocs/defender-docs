@@ -419,8 +419,7 @@ None
 ## Next steps
 
 - [Investigate assets](investigate-assets.md)
-- [Understanding security alerts](understanding-security-alerts.md)
-- [Manage security alerts](/defender-for-identity/manage-security-alerts)
+- [View and manage alerts](understanding-security-alerts.md)
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
