@@ -46,7 +46,7 @@ The cs3 field identifies the fully qualified domain name of the source computer 
 The log examples comply with RFC 5424, but Defender for Identity also supports RFC 3164.
 
 >[!NOTE]
->The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+>The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics).
 
 Priorities:
 
