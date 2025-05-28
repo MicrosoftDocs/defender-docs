@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/26/2025
 ---
 

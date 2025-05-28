@@ -10,7 +10,7 @@ audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
 manager: deniseb
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2

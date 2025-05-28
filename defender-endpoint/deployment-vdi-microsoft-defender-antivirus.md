@@ -3,7 +3,7 @@ title: Configure Microsoft Defender Antivirus on a remote desktop or virtual des
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
 ms.date: 12/30/2024
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen

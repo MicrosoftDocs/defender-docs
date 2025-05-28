@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 ms.date: 09/21/2024
 ---

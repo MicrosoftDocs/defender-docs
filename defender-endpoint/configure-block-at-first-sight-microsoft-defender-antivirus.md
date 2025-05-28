@@ -10,7 +10,7 @@ manager: deniseb
 ms.custom: nextgen
 ms.date: 07/25/2024
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2

@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 manager: deniseb
 ms.author: ewalsh
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/08/2024
 ms.reviewer: yongrhee; pahuijbr
