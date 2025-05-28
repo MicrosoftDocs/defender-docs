@@ -29,9 +29,9 @@ Regularly updating the built-in Administrator account's password is essential du
 
 1. Take appropriate action on those accounts by resetting their password.  
 
-For example:
+   For example:
 
-![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-of-report.png)
+   ![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-of-report.png)
 
 ## Next steps
 
