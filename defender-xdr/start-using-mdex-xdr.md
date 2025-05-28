@@ -12,7 +12,7 @@ ms.collection:
   - m365-security
   - tier1
   - essentials-manage
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 01/29/2024
 ---
