@@ -6,7 +6,7 @@ author: chrisda
 ms.author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/10/2025
 ms.localizationpriority: medium
 search.appverid:
