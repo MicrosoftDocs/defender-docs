@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 05/28/2025
+ms.date: 08/05/2024
 ---
 
 # Manage endpoint security policies in Microsoft Defender for Endpoint
@@ -50,6 +50,7 @@ The following list provides a brief description of each endpoint security policy
 
 - **Attack surface reduction** - When Microsoft Defender Antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for attack surface reduction to manage those settings for your devices.
 
+
 ## Create an endpoint security policy
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using at least a Security Administrator role.
@@ -59,6 +60,7 @@ The following list provides a brief description of each endpoint security policy
 3. Select a platform from the dropdown list.
 
 4. Select a template, then select **Create policy**.
+
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
@@ -82,7 +84,6 @@ The following list provides a brief description of each endpoint security policy
 2. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
 
 3. To modify the policy, select **Edit** for each category where you want to make a change:
-
    - Basics
    - Settings
    - Assignments
@@ -99,7 +100,7 @@ To verify that you have successfully created a policy, select a policy name from
 
 The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it has been applied to, and assigned groups.
 
-During an investigation, you can also view the **Security policies** tab in the device page to view the list of policies that are being applied to a particular device. For more information, see [Investigating devices](investigate-machines.md).
+During an investigation, you can also view the **Security policies** tab in the device page to view the list of policies that are being applied to a particular device. For more information, see [Investigating devices](investigate-machines.md#security-policies).
 
 :::image type="content" source="./media/security-policies-list.png" alt-text="Security policies tab with list of policies":::
 

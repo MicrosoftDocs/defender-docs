@@ -3,6 +3,7 @@ title: Identity Security Initiative
 description: Learn how to enhance your organization's identity security using the Identity Security Initiative in Microsoft Defender XDR.
 ms.topic: overview
 ms.date: 04/05/2025
+ms.reviewer: AbbyMSFT
 ---
 
 # Identity Security Initiative (Preview)
