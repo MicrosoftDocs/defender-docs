@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150

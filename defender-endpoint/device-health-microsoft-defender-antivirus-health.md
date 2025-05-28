@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
 ---

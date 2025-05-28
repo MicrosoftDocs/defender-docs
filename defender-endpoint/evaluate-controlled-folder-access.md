@@ -4,7 +4,7 @@ description: See how controlled folder access can help protect files from malici
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: sugamar, moeghasemi

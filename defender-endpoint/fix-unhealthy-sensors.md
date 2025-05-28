@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - ngp
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/25/2025
 ms.subservice: onboard
 search.appverid: met150

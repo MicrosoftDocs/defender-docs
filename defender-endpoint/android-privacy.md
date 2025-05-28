@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-android
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/21/2025
