@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 6/20/2023
 ms.localizationpriority: medium
 ms.collection: 
