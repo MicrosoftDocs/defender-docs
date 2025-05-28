@@ -287,7 +287,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.
 
-      :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
+        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) by using one of the following methods:
 
