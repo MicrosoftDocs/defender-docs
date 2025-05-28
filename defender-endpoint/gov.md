@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: get-started
 ---
 
 # Microsoft Defender for Endpoint for US Government customers
