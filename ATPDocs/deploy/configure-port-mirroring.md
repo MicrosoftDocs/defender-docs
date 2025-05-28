@@ -3,6 +3,7 @@ title: Configure port mirroring  | Microsoft Defender for Identity
 description: Learn about Defender for Identity port mirroring options.
 ms.date: 08/10/2023
 ms.topic: how-to
+ms.reviewer: martin77s
 ---
 
 # Configure port mirroring
