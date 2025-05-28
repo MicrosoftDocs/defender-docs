@@ -87,7 +87,7 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
 Your new attack surface reduction policy for attack surface reduction rules is listed in **Endpoint security | Attack surface reduction**.
 
 > [!div class="mx-imgBorder"]
-   > :::image type="content" source="media/asr-mem-my-asr-rules.png" alt-text=" The Attack surface reduction page" lightbox="media/asr-mem-my-asr-rules.png":::
+> :::image type="content" source="media/asr-mem-my-asr-rules.png" alt-text=" The Attack surface reduction page" lightbox="media/asr-mem-my-asr-rules.png":::
 
 <a name='step-2-understand-the-asr-rules-reporting-page-in-the-microsoft-365-defender-portal'></a>
 
@@ -192,6 +192,9 @@ Attack surface reduction rules now provide the capability to configure rule-spec
 
 To configure specific rule exclusions, you have the choices of using the MDE Security Settings Management, Intune, and Group Policy.
 
+> [!NOTE]
+> When configuring Attack Surface Reduction per-rule exclusions, please note that specifying only the file or application name (e.g., test1.exe) is not sufficient. You must provide the full file or application path (e.g., C:\test1.exe) to ensure the exclusion is applied correctly.
+
 #### Via Intune:
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and navigate to **Home** > **Endpoint security** > **Attack surface reduction**.
@@ -208,10 +211,8 @@ To configure specific rule exclusions, you have the choices of using the MDE Sec
 
 > [!TIP]
 > Use the checkboxes next to your list of exclusion entries to select items to **Delete**, **Sort**, **Import**, or **Export**.
-
-### Via Group Policy
-
-
+> 
+**Via Group Policy**
 
 Use Group Policy to set the per-user ASR rule exclusions
 
@@ -238,7 +239,7 @@ Use Group Policy to set the per-user ASR rule exclusions
 1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
 
 > [!NOTE]
-> "If policies aren't applying, review [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+> If policies aren't applying, review [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
