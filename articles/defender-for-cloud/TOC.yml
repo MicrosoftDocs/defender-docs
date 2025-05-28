@@ -293,6 +293,8 @@
         - name: Defender for Cloud cloud support matrices
           displayName: matrices, gov, government, 21via, net, support
           href: support-matrix-cloud-environment.md
+        - name: Regional availability for Defender for Cloud plans
+          href: regional-availability.md
         - name: Defender for Servers support matrices
           displayName: coverage, machines, windows, linux, multicloud, supported features,
             endpoint protections
