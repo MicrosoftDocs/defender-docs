@@ -79,15 +79,17 @@
     - name: Investigate and respond to threats
       items:
       - name: Overview
-        href: incidents-overview.md
+        href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Investigate incidents
+      - name: Investigate and respond to incidents
         items:
+        - name: Plan incident response
+          href: plan-incident-response.md
         - name: Incidents
           href: investigate-incidents.md
         - name: Move alerts to another incident
