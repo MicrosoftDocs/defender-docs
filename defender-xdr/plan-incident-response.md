@@ -24,11 +24,13 @@ appliesto:
 
 # Plan an incident response workflow in the Microsoft Defender portal
 
-In the Microsoft Defender portal, you can respond to security incidents that are automatically created from alerts. These incidents are collections of related alerts that tell the full story of an attack. The alerts in a single incident might come from all Microsoft security and compliance solutions, as well as from vast numbers of external solutions collected through Microsoft Sentinel and Microsoft Defender for Cloud.
+In the Microsoft Defender portal, you can respond to security incidents that are collections of related alerts and tell the full story of an attack. 
+
+This article provides a set of steps that you can follow to investigate, analyze, and resolve security incidents in the Microsoft Defender portal, and also maps these steps to your security team's experience level and role.
 
 ## Incident response workflow example in the Microsoft Defender portal
 
-Here's a workflow example for responding to incidents in Microsoft 365 with the Microsoft Defender portal.
+Here's a workflow example for responding to incidents in the Microsoft Defender portal.
 
 :::image type="content" source="/defender/media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-example-workflow.png":::
 
