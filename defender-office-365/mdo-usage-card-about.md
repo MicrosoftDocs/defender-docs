@@ -7,7 +7,7 @@ author: dansimp
 ms.author: dansimp
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid:
 - MET150
