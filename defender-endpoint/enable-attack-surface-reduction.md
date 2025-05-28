@@ -54,8 +54,14 @@ You can set attack surface reduction rules for devices that are running any of t
 
 To use the entire feature-set of attack surface reduction rules, you need:
 
-- Microsoft Defender Antivirus as primary antivirus (real-time protection on)
-- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) on (some rules require that)
+- Microsoft Defender Antivirus as primary antivirus Note: Microsoft Defender Antivirus cannot be running in "Passive Mode" or "Disabled"
+
+- Real-time protection needs to be on
+
+- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) on (some rules require Cloud Protection)
+
+- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is required
+
 - Windows 10 Enterprise E5 or E3 License
 
 Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), with a Windows E5 license, you get advanced management capabilities including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. These advanced capabilities aren't available with an E3 license, but you can still use Event Viewer to review attack surface reduction rule events.
