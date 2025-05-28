@@ -41,9 +41,9 @@ This section describes how to tag an entity manually, such as for a honeytoken a
 
 1. Use the search box to find your entity if you need to. Select the entities you want to tag, and then select **Add selection**. 
 
-For example:
+    For example:
 
-:::image type="content" source="media/entity-tags/tag-entities.png" alt-text="Screenshot of tagging user accounts as sensitive." lightbox="media/entity-tags/tag-entities.png":::
+    :::image type="content" source="media/entity-tags/tag-entities.png" alt-text="Screenshot of tagging user accounts as sensitive." lightbox="media/entity-tags/tag-entities.png":::
 
 ## Default sensitive entities
 
