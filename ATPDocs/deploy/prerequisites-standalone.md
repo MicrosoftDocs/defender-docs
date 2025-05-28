@@ -4,6 +4,7 @@ description: This article describes the prerequisites required for a successful 
 ms.date: 11/26/2023
 ms.topic: conceptual
 #CustomerIntent: As a Defender for Identity admin, I want to understand extra prerequisites for deploying a Defender for Identity standalone sensor so that I can be prepared for a successful deployment.
+ms.reviewer: rlitinsky
 ---
 
 # Microsoft Defender for Identity standalone sensor prerequisites

@@ -3,6 +3,7 @@ title: Microsoft Defender for Identity security alerts in Microsoft Defender XDR
 description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft Defender XDR
 ms.date: 04/16/2023
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Investigate Defender for Identity security alerts in Microsoft Defender XDR

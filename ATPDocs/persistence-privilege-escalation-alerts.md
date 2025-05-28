@@ -3,6 +3,7 @@ title: Persistence and privilege escalation security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when persistence attacks are detected against your organization.
 ms.date: 04/17/2023
 ms.topic: conceptual
+ms.reviewer: morRubin
 ---
 
 # Persistence and privilege escalation alerts

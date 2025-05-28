@@ -3,6 +3,7 @@ title: Configure Windows event forwarding  | Microsoft Defender for Identity
 description: Learn about Microsoft Defender for Identity's support for configuring Windows event forwarding.
 ms.date: 08/10/2023
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure Windows event forwarding to your Defender for Identity standalone sensor

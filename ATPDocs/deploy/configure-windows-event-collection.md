@@ -3,6 +3,7 @@ title: Configure audit policies for Windows event logs | Microsoft Defender for 
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
 ms.date: 01/16/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure audit policies for Windows event logs

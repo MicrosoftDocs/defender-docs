@@ -4,6 +4,7 @@ description: Learn about when to use entity tags with Microsoft Defender for Ide
 ms.date: 09/03/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity customer, I want to learn how to apply entity tags so that I can identify sensitive accounts in Microsoft Defender XDR.
+ms.reviewer: LiorShapiraa
 ---
 
 # Defender for Identity entity tags in Microsoft Defender XDR

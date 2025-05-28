@@ -3,6 +3,7 @@ title: Listen for SIEM events | Microsoft Defender for Identity
 description: Learn how to configure your Microsoft Defender for Identity sensor to listen for SIEM events and enhance your detection abilities with extra Windows events.
 ms.date: 08/10/2023
 ms.topic: how-to
+ms.reviewer: martin77s
 ---
 
 # Listen for SIEM events on your Defender for Identity standalone sensor
