@@ -34,6 +34,9 @@ LAPS simplifies password management while helping customers implement more recom
     ![Remediate devices unprotected by LAPS.](media/laps-unprotected-devices.png)
 
 > [!NOTE]
+> If you migrated from legacy to Windows LAPS, you have to clear the previously stored passwords in on-premises Active Directory
+
+> [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it will be marked as **Completed**.
 
 ## See also
