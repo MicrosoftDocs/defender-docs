@@ -10,7 +10,7 @@ author: batamig
 manager: raynew
 ms.date: 07/31/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 search.appverid: 
 - MOE150
 - MET150
