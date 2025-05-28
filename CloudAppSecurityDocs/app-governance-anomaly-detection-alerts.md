@@ -1,7 +1,7 @@
 ---
 title: Investigate app governance threat detection alerts | Microsoft Defender for Cloud Apps
 ms.date: 05/23/2025
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 description: Learn how to investigate threat detection alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ---

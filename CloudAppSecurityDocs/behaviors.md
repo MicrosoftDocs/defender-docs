@@ -2,7 +2,7 @@
 title: Investigate behaviors with advanced hunting | Microsoft Defender for Cloud Apps
 description: Learn how to investigate Microsoft Defender for Cloud App behaviors with Microsoft Defender XDR advanced hunting.
 ms.date: 09/07/2023
-ms.topic: conceptual
+ms.topic: how-to
 #CustomerIntent: As a Defender for Cloud Apps customer, I want to understand how behaviors work so that I can investigate more effectively.
 ---
 

@@ -4,7 +4,7 @@
 title: Working with entity profiles in the Advanced Threat Analytics console
 description: Describes how to investigate entities from the user profiles screen in the ATA console
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 
