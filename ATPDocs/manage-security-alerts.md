@@ -3,6 +3,7 @@ title: Microsoft Defender for Identity security alerts in Microsoft Defender XDR
 description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft Defender XDR
 ms.date: 04/16/2023
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Investigate Defender for Identity security alerts in Microsoft Defender XDR
@@ -87,7 +88,7 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
     You can also export the alert to an Excel file. To do this, select **Export.**
 
     > [!NOTE]
-    > Alert export option is limited to Microsoft Defender for Identity Alerts with the "aa" prefix, for more information refer to [XDR Alert Sources](https://learn.microsoft.com/defender-xdr/investigate-alerts?tabs=settings#alert-sources).
+    > Alert export option is limited to Microsoft Defender for Identity Alerts with the "aa" prefix, for more information, see [XDR Alert Sources](https://learn.microsoft.com/defender-xdr/investigate-alerts?tabs=settings#alert-sources).
 
 ## Tuning alerts
 
