@@ -3,6 +3,7 @@ title: Edit overly permissive certificate template with privileged EKU (Any purp
 description: This article provides an overview of Microsoft Defender for Identity's overly permissive certificate template with privileged EKU security posture assessment report.
 ms.date: 11/20/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)
