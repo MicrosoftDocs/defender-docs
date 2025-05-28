@@ -87,7 +87,9 @@ You can choose which ticketing system to integrate. For preview, only ServiceNow
     |---|---|---|
     | Compute | Microsoft.Compute/virtualMachines<br/>Microsoft.Compute/virtualMachineScaleSets/virtualMachines<br/>Microsoft.ClassicCompute/virtualMachines | - Deallocated VMs<br/>- Databricks VMs |
     | Storage | Microsoft.Storage/storageAccounts | Storage accounts without blob containers or file shares |
-    | DBs | Microsoft.Sql/servers<br/>Microsoft.DBforPostgreSQL/servers<br/>Microsoft.DBforMySQL/servers<br/>Microsoft.Sql/managedInstances<br/>Microsoft.DBforMariaDB/servers<br/>Microsoft.Synapse/workspaces | --- |
+  | DBs | Microsoft.Sql/servers<br/>Microsoft.DBforPostgreSQL/flexibleServers*<br/>Microsoft.DBforMySQL/flexibleServers*<br/>Microsoft.DBforPostgreSQL/servers<br/>Microsoft.DBforMySQL/servers<br/>Microsoft.Sql/managedInstances<br/>Microsoft.DBforMariaDB/servers<br/>Microsoft.Synapse/workspaces | --- |
+    *Starting June 1st, 2025<br/>
+
 
     | AWS Service | Resource types | Exclusions |
     |---|---|---|
