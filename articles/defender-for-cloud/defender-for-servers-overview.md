@@ -57,7 +57,8 @@ Plan features are summarized in the table.
 | [Regulatory compliance assessment](concept-regulatory-compliance-standards.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Different standards are available for different environments. Learn more about [compliance cloud availability](concept-regulatory-compliance-standards.md#available-compliance-standards). |
 | [Vulnerability scanning (agent-based)](auto-deploy-vulnerability-assessment.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
-| OS baseline misconfigurations <sup>[2](#footnote2)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
+| OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) compute security baselines | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
+| OS baseline misconfigurations based on [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations <sup>[2](#footnote2)</sup> | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises<sup>[3](#footnote3)</sup> |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities)<sup>[4](#footnote4)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
@@ -69,7 +70,7 @@ Plan features are summarized in the table.
 | [Free data ingestion (500 MB)](data-ingestion-benefit.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 
 <sup><a name="footnote1"></a>1</sup> Software inventory discovery (provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory)) is integrated into Defender for Cloud. <br>
-<sup><a name="footnote2"></a>2</sup> There are OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline). Other [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations in Defender for Cloud are included in the [free foundational posture management](concept-cloud-security-posture-management.md). <br>
+<sup><a name="footnote2"></a>2</sup> OS baseline misconfigurations for MCSB are included in the [free foundational posture management](concept-cloud-security-posture-management.md). <br>
 <sup><a name="footnote3"></a>3</sup> To take advantage of Azure Update integration in Defender for Servers Plan 2, on-premises, AWS, and GCP machines should be onboarded with Azure Arc. [Learn more](enable-periodic-system-updates.md). <br>
 <sup><a name="footnote4"></a>4</sup> Is only available in the [Defender portal](https://security.microsoft.com/homepage).
 
