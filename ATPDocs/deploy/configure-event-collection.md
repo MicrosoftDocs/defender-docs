@@ -13,7 +13,7 @@ This article describes the required message syntax when configuring a Defender f
 For more information, see [Windows event collection overview](event-collection-overview.md).
 
 > [!IMPORTANT]
-> Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+> Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
 ## RSA Security Analytics
 
@@ -90,7 +90,7 @@ In this syntax:
 
 - The syslog header is optional.
 
-- There's a `\r\n` character separator between all required fields. These are `CRLF` control characters, (`0D0A` in hex), and not literal characters.
+- There's a `\r\n` character separator between all required fields. These are `CRLF` control characters, `0D0A` in hex, and not literal characters.
 
 - The fields are in `key=value` format.
 
@@ -148,7 +148,7 @@ In this syntax, you must include the following fields:
 Make sure that the message includes the original event text from the Windows event, and that you have `\t` between the key=value pairs.
 
 >[!NOTE]
-> Using WinCollect for Windows event collection is not supported.
+> Using WinCollect for Windows event collection isn't supported.
 
 ## Related content
 
