@@ -65,7 +65,7 @@ To configure your Advanced Audit Policy settings:
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
-1. Expand **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
+1. Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
 
     ![Screenshot of the pane for editing the default policy for domain controllers.](../media/advanced-audit-policy-check-step-1.png)
 
@@ -102,11 +102,11 @@ To configure your Advanced Audit Policy settings:
 
 1. After you apply the policy via GPO, conform that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
 
-To test your audit policies from the command line, run the following command:
+    To test your audit policies from the command line, run the following command:
 
-```cmd
-auditpol.exe /get /category:*
-```
+    ```cmd
+    auditpol.exe /get /category:*
+    ```
 
 For more information, see the [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
 
