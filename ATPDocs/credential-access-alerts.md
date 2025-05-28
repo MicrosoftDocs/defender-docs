@@ -112,7 +112,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 **Learning period**:
 
-1 week
+One week
 
 **MITRE**:
 
@@ -145,7 +145,7 @@ To allow Defender for Identity to accurately profile and learn legitimate users,
 |---------|---------|
 |Secondary MITRE tactic    |[Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)         |
 |MITRE attack technique  |  [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)     |
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack subtechnique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 **Kerberoasting specific suggested steps for prevention**:
 
@@ -172,7 +172,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [Kerberoasting (T1558.003)](https://attack.mitre.org/techniques/T1558/003/)    |
+|MITRE attack subtechnique |   [Kerberoasting (T1558.003)](https://attack.mitre.org/techniques/T1558/003/)    |
 
 ## Suspected AS-REP Roasting attack (external ID 2412)
 
@@ -191,7 +191,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [AS-REP Roasting (T1558.004)](https://attack.mitre.org/techniques/T1558/004/)    |
+|MITRE attack subtechnique |   [AS-REP Roasting (T1558.004)](https://attack.mitre.org/techniques/T1558/004/)    |
 
 **Suggested steps for prevention**:
 
@@ -219,8 +219,8 @@ None
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
-|MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
-|MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
+|MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal, or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
+|MITRE attack subtechnique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
 
 <a name="honeytoken-activity-external-id-2014"></a>
 
@@ -245,7 +245,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Discovery](https://attack.mitre.org/tactics/TA0007)        |
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack subtechnique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 ## Suspected DCSync attack (replication of directory services) (external ID 2006)
 
@@ -260,7 +260,7 @@ Active Directory replication is the process by which changes that are made on on
 In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
-> If you have domain controllers on which Defender for Identity sensors are not installed, those domain controllers are not covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by Defender for Identity as a domain controller. It is highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
+> If you have domain controllers on which Defender for Identity sensors aren't installed, those domain controllers aren't covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it might not immediately be identified by Defender for Identity as a domain controller. It's highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
 
 **Learning period**:
 
@@ -272,7 +272,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)      |
 |MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
-|MITRE attack sub-technique | [DCSync (T1003.006)](https://attack.mitre.org/techniques/T1003/006/)        |
+|MITRE attack subtechnique | [DCSync (T1003.006)](https://attack.mitre.org/techniques/T1003/006/)        |
 
 **Suggested steps for prevention:**:
 
@@ -337,7 +337,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 ## Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate (external ID 2424)
 
@@ -345,7 +345,7 @@ None
 
 **Description**:
 
-Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) may indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
+Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) might indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
 
 **Learning period**:
 
@@ -356,7 +356,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Forge Web Credentials (T1606)](https://attack.mitre.org/techniques/T1606/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 > [!NOTE]
 > Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate alerts are only supported by Defender for Identity sensors on AD FS.
@@ -378,7 +378,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 ## Suspected suspicious Kerberos ticket request (external ID 2418)
 
@@ -386,7 +386,7 @@ None
 
 **Description**:
 
-This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers may attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure. 
+This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers might attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure.
 
 **Learning period**:
 
@@ -398,7 +398,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009)      |
 |MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
-|MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
+|MITRE attack subtechnique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
 
 ## Password spray against OneLogin 
 
@@ -406,7 +406,7 @@ None
 
 **Description**:
 
-In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try and find if any of the users is using known\weak password. 
+In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try to find if any of the users is using known\weak password. 
 We recommend investigating the source IP performing the failed logins to determine whether they're legitimate or not. 
 
 **Learning period**:
@@ -418,7 +418,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)        |
-|MITRE attack sub-technique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
+|MITRE attack subtechnique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
 
 ## Suspicious OneLogin MFA fatigue 
 
@@ -426,7 +426,7 @@ None
 
 **Description**:
 
-In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system. 
+In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system.
 
 We recommend investigating the source IP performing the failed MFA attempts to determine whether they're legitimate or not and if the user is performing logins. 
 
@@ -439,7 +439,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Multifactor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
-|MITRE attack sub-technique | N/A  |
+|MITRE attack subtechnique | N/A  |
 
 ## See also
 
