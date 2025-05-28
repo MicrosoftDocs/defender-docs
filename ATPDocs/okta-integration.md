@@ -20,7 +20,8 @@ Your Okta environment must have one of the following licenses:
 
 - Enterprise
 
-- An Okta user with the Super Admin role must complete the onboarding steps.
+> [!NOTE]
+> The Super Admin role is required only to create the API token. Once the token is created, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 
 ### Connect Okta to Microsoft Defender for Identity
 
@@ -34,8 +35,6 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 ### Create an API token
 
-> [!NOTE]
-> To generate the API token, a Super Administrator role is required. After the API token creation, the Super Administrator role is no longer required.
 
 1. In the Okta console, select **Admin**.
 
@@ -60,6 +59,8 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token is used to connect Okta to Defender for Identity.
 
     :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message":::
+
+1. After the token is created, you can remove the Super Admin role from the account. To support ongoing access, assign the Read-Only Administrator role and the custom Defender for Identity role.
 
 ### Create a custom Okta role
 
@@ -87,7 +88,6 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
     :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Enter the all users and all identitity and access management resources":::
 1. Select **Save selection**
-1. Assign the Read-Only Administrator role to the Microsoft Defender for Identity custom role in the resource set.
 
 ### Connect Okta to Defender for Identity
 
