@@ -11,7 +11,7 @@ ms.collection:
   - m365-security
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.date: 05/29/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>

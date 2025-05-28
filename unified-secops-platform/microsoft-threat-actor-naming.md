@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.custom:
 - cx-ti
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
 ms.date: 4/23/2025
 ---
