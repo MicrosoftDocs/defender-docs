@@ -60,8 +60,8 @@ Plan features are summarized in the table.
 | OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) compute security baselines | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
 | OS baseline misconfigurations based on [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations <sup>[2](#footnote2)</sup> | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
-| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises<sup>[3](#footnote3)</sup> |
-| [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities)<sup>[4](#footnote4)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
+| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <sup>[3](#footnote3)</sup> |
+| [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[4](#footnote4)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 | Machine secrets scanning (agentless) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
