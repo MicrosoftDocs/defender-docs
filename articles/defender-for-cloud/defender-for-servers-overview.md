@@ -42,6 +42,10 @@ Defender for Servers offers two plans:
 - **Defender for Servers Plan 1** is entry-level and focuses on the EDR capabilities provided by the Defender for Endpoint integration.
 - **Defender for Servers Plan 2** provides the same features as Plan 1 and other capabilities.
 
+## Plan pricing
+
+For Defender for Servers pricing, review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
 ## Plan protection features
 
 Plan features are summarized in the table.
