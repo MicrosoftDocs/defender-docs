@@ -1,11 +1,11 @@
 ---
-title: Incidents and alerts in the Microsoft Defender portal
-description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
+title: Plan an incident response workflow in the Microsoft Defender portal
+description: Plan an incident response workflow in the Microsoft Defender portal, including triage, investigation, and resolution.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: yelevin
-author: yelevin
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: raynew
 audience: ITPro
@@ -15,11 +15,8 @@ ms.collection:
   - usx-security
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-search.appverid:
-  - MOE150
-  - MET150
-ms.date: 11/14/2024
+ms.topic: how-to
+ms.date: 05/28/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
