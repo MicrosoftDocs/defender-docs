@@ -156,7 +156,7 @@ To further inspect the event and related events, you can quickly run an [advance
 
 The **Security policies** tab shows the endpoint security policies that are applied on the device. You see a list of policies, type, status, and last check-in time. Selecting the name of a policy takes you to the policy details page where you can see the policy settings status, applied devices, and assigned groups.
 
-:::image type="content" source="media/mde-security-policies.png" alt-text="Image showing the Security policies tab" lightbox="media/mde-security-policies.png":::
+:::image type="content" source="media/mde-security-policies.png" alt-text="Screenshot showing the Security policies tab." lightbox="media/mde-security-policies.png":::
 
 ### Configuration management - Effective settings
 
@@ -166,11 +166,12 @@ Configuration sources can include tools like Microsoft Defender for Endpoint, Gr
  
 Select a setting to open a side panel with more details. You see the current value, any other configuration attempts that didn’t take effect, and—for complex settings like ASR rules or AV exclusions—a breakdown of all configured rules, their sources, and any exclusions.
  
-[!NOTE] The presented settings are AV security settings, Attack Surface Reduction rules, and exclusions, for Windows platforms.
+> [!NOTE]
+> The presented settings are AV security settings, Attack Surface Reduction rules, and exclusions, for Windows platforms.
 
-:::image type="content" source="media/mde-effective-settings.png" alt-text="Image showing the Effective settings tab" lightbox="media/mde-effective-settings.png":::
+:::image type="content" source="media/mde-effective-settings.png" alt-text="Screenshot showing the Effective settings tab." lightbox="media/mde-effective-settings.png":::
 
-:::image type="content" source="media/mde-effective-settings-open.png" alt-text="Image showing the Effective settings value opened tab" lightbox="media/mde-effective-settings-open.png":::
+:::image type="content" source="media/mde-effective-settings-open.png" alt-text="Screenshot showing the opened Effective settings value tab." lightbox="media/mde-effective-settings-open.png":::
 
 ### Software inventory
 
