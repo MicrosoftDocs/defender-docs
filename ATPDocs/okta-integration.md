@@ -35,7 +35,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 ### Create an API token
 
 > [!NOTE]
-> To generate the API token, a ‘Super Administrator’ role is required. After the API token creation, the ‘Super Administrator’ role is no longer required.
+> To generate the API token, a Super Administrator role is required. After the API token creation, the Super Administrator role is no longer required.
 
 1. In the Okta console, select **Admin**.
 
@@ -46,8 +46,6 @@ This section provides instructions for connecting Microsoft Defender for Identit
    :::image type="content" source="media/okta-integration/okta-side-menu-security-api.png" alt-text="Screenshot showing the Okta sidemenu":::
 
 1. Select **Tokens**
-
-
 1. Select **Create Token**.
 
      :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot showing where to create a token":::
@@ -55,42 +53,40 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. In the Create token pop-up:
     1. Enter a name for your Defender for Identity token
     2. Select Any IP
-    3. Click Create token.
+    3. Select Create token.
 
     :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot showing where to enter the Okta token name":::
 
-1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token will be used to connect Okta to Defender for Identity.
+1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token is used to connect Okta to Defender for Identity.
 
     :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message":::
-
-1. Remove the ‘Super Administrator’ role from the Okta account
 
 ### Create a custom Okta role
 
 1. Navigate to **Security > Administrator**
 1. Select the **Roles** tab
-1. Click **Create new role**
+1. Select **Create new role**
 1. Set the role name to **Microsoft Defender for Identity**
 1. Select the permissions you want to assign to this role. Include the following permissions:
     - **Suspend users**
     - **Unsuspend users**
     - **Clear users’ session**
     - **View roles, resources, and admin assignments**
-:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Assign Okta permissions":::
+1. Select **Save role**
 
-1. Click **Save role**
+:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Assign Okta permissions":::
 
 ### Create a resource set
 
 1. Select the **Resources** tab
-1. Click **Create new resource set**
+1. Select **Create new resource set**
 1. Name the resource set **Microsoft Defender for Identity**
 1. Add the following resources:
     - **All users**
     - **All Identity and Access Management resources**
 
     :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Enter the all users and all identitity and access management resources":::
-1. Click **Save selection**
+1. Select **Save selection**
 1. Assign the Read-Only Administrator role to the Microsoft Defender for Identity custom role in the resource set.
 
 ### Connect Okta to Defender for Identity
@@ -126,11 +122,11 @@ This section provides instructions for connecting Microsoft Defender for Identit
     |DistinguishedName    | DistinguishedName    |
     |         |         |
 
-1. Click Save.
-1. Verify that the 3 custom attrbutes you added are displayed correctly.
+1. Select Save.
+1. Verify that the three custom attributes you added are displayed correctly.
 
      :::image type="content" source="media/okta-integration/okta-custom-attributes.png" alt-text="Verify that all three custom attributes are displayed correctly":::
 
-## Related topics
+## Related articles
 
 - [Defender for Identity VPN integration in Microsoft Defender XDR](vpn-integration.md)

@@ -22,6 +22,16 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2025
+
+### Okta integration is now available in Microsoft Defender for Identity
+
+Microsoft Defender for Identity now supports integration with Okta, enabling detection of identity-based threats across cloud and on-premises environments. This integration helps identify suspicious sign-ins, risky role assignments, and potential privilege misuse within your Okta environment.
+
+For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
+
+## 
+
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
