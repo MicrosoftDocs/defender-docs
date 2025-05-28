@@ -1,7 +1,7 @@
 ---
 title: Contact Microsoft Defender for Cloud Apps support | Microsoft Defender for Cloud Apps
 description: Learn how to contact Microsoft Defender for Cloud Apps  support
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/30/2023
 ---
 
