@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-android
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: android
 ms.date: 08/26/2024
 ---

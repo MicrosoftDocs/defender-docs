@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - must-keep
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
