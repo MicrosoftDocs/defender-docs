@@ -4,7 +4,6 @@ description: Learn how Microsoft Defender for Identity collects data in a manner
 ms.date: 06/06/2024
 ms.topic: conceptual
 #customerIntent: To learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
-ms.reviewer: rlitinsky
 ---
 
 # Privacy with Microsoft Defender for Identity

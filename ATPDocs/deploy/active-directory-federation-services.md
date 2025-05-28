@@ -3,7 +3,6 @@ title: Configure sensors for AD FS, AD CS, and Microsoft Entra Connect | Microso
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers.
 ms.date: 11/02/2024
 ms.topic: how-to
-ms.reviewer: rlitinsky
 ---
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect

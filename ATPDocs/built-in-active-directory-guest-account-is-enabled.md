@@ -10,7 +10,6 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     10/05/2024
-ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Built-in Active Directory Guest account is enabled
@@ -28,11 +27,11 @@ The on-premises Guest account is a built-in, non-nominative account that allows 
 
 1. Take appropriate action on those accounts by **disabling** the account.
 
-   For example:
+For example:
 
-   ![Screenshot showing guest account in AD.](media/built-in-active-directory-guest-account-is-enabled/guest-account.png)
+![Screenshot showing guest account in AD.](media/built-in-active-directory-guest-account-is-enabled/guest-account.png)
 
-   ![Screenshot showing security report.](media/built-in-active-directory-guest-account-is-enabled/security-report.png)
+![Screenshot showing security report.](media/built-in-active-directory-guest-account-is-enabled/security-report.png)
 
 ## Next steps
 

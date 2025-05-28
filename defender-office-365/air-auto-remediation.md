@@ -26,11 +26,17 @@ appliesto:
 
 # Automated remediation in Automated investigation and response (AIR)
 
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+> [!TIP]
+> The features described in this article are currently in Private Preview, aren't available in all organization, and are subject to change.
+
 By default, remediation actions identified by automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 require approval by security operations (SecOps) teams. For more information about AIR, see [Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-about.md)
 
 Now, admins can also designate certain actions to automatically remediate. Automatically remediating messages identified as malicious in AIR investigations has the following benefits:
 
 - Increases customer protection by expediting remediation of more threats.
+
 - Saves time for SecOps teams by reducing the need for approval.
 
 The rest of this article describes how to configure automated remediation in AIR and how to identify messages that were automatically remediated.

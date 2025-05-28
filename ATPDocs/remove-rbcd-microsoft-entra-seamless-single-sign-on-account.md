@@ -7,7 +7,6 @@ ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/22/2024
 ms.subservice: ''
-ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Remove Resource Based Constrained Delegation for Microsoft Entra seamless SSO account

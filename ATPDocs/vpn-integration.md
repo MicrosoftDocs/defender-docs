@@ -4,7 +4,6 @@ description: Learn how to collect accounting information by integrating a VPN fo
 ms.date: 08/31/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to collect accounting information from VPN solutions. 
-ms.reviewer: martin77s
 ---
 
 # Defender for Identity VPN integration in Microsoft Defender XDR

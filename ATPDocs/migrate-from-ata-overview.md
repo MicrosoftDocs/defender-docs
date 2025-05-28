@@ -3,7 +3,6 @@ title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
 ms.date: 02/21/2024
 ms.topic: how-to
-ms.reviewer: martin77s
 ---
 
 # Advanced Threat Analytics (ATA) to Microsoft Defender for Identity

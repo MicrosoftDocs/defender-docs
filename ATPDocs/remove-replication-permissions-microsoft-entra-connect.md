@@ -6,7 +6,6 @@ ms.author:   liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/12/2024
-ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector account

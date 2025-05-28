@@ -4,7 +4,6 @@ description: Learn how to download and schedule Microsoft Defender for Identity 
 ms.date: 12/20/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to understand how to generate and schedule reports for activity detected in my environment.
-ms.reviewer: LiorShapiraa
 ---
 
 # Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)

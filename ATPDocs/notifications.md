@@ -4,7 +4,6 @@ description: Learn how to use and configure Microsoft Defender for Identity noti
 ms.date: 09/03/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to work with Defender for Identity notifications to make sure I'm up to date about events detected by Defender for Identity.
-ms.reviewer: LiorShapiraa
 ---
 
 # Defender for Identity notifications in Microsoft Defender XDR

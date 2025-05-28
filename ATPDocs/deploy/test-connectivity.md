@@ -4,7 +4,6 @@ description: Learn how to test whether the server where you're installing your M
 ms.date: 01/16/2024
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to verify that the server I'm using for my sensor can connect successfully to the Defender for Identity cloud service so that I can continue on with deploying confidently.
-ms.reviewer: rlitinsky
 ---
 
 # Test Microsoft Defender for Identity connectivity
@@ -29,19 +28,19 @@ For more information, see [Required ports](../prerequisites.md#ports).
     > [!IMPORTANT]
     > You must specify `HTTPS`, not `HTTP`, to properly test connectivity.
 
-    **Result**: You should get an *Ok* message displayed (HTTP status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. 
+**Result**: You should get an *Ok* message displayed (HTTP status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. 
 
-    For some older workspaces, the message returned could be *Error 503 The service is unavailable*. This is a temporary state that still indicates success. For example:
+For some older workspaces, the message returned could be *Error 503 The service is unavailable*. This is a temporary state that still indicates success. For example:
 
-    :::image type="content" source="../media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
+:::image type="content" source="../media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
 
-    Other results might include the following scenarios:
+Other results might include the following scenarios:
 
-    - If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
+- If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
-    - If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this: 
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this: 
 
-      :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
+    :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 
 ### Test service connectivity using PowerShell
 

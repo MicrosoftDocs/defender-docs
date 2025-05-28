@@ -3,7 +3,6 @@ title: Detection exclusions in Microsoft Defender XDR
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft Defender XDR.
 ms.date: 03/23/2023
 ms.topic: how-to
-ms.reviewer: LiorShapiraa
 ---
 
 # Configure Defender for Identity detection exclusions in Microsoft Defender XDR

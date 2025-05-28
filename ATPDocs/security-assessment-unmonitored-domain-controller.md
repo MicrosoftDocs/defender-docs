@@ -3,7 +3,6 @@ title: Unmonitored domain controllers assessment
 description: This article provides an overview of Microsoft Defender for Identity's unmonitored domain controllers identity security posture assessment report.
 ms.date: 01/29/2023
 ms.topic: how-to
-ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Unmonitored domain controllers

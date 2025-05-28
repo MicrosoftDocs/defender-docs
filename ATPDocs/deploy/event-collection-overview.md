@@ -3,7 +3,6 @@ title: Event collection overview | Microsoft Defender for Identity
 description: Learn about required event collection for Microsoft Defender for Identity sensors on AD FS servers, AD CS servers, Microsoft Entra Connect servers, and domain controllers.
 ms.date: 08/10/2023
 ms.topic: conceptual
-ms.reviewer: rlitinsky
 ---
 
 # Event collection with Microsoft Defender for Identity

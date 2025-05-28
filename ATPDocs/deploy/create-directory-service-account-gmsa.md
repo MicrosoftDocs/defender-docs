@@ -3,7 +3,6 @@ title: Configure a DSA for Defender for Identity with a gMSA
 description: Learn how to configure a Directory Service Account for Defender for Identity with a group managed service account (gMSA).
 ms.date: 12/11/2023
 ms.topic: how-to
-ms.reviewer: rlitinsky
 ---
 
 # Configure a Directory Service Account for Defender for Identity with a gMSA

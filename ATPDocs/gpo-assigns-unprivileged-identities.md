@@ -10,7 +10,6 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     10/05/2024
-ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: GPO assigns unprivileged identities to local groups with elevated privileges

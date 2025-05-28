@@ -10,7 +10,6 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     03/16/2025
-ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Remove unsafe permissions on sensitive Entra Connect accounts

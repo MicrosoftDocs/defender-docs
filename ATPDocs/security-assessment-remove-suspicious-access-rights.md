@@ -3,7 +3,6 @@ title: Remove access rights on suspicious accounts with the Admin SDHolder permi
 description: Learn about Microsoft Defender for Identity's `Remove access rights on suspicious accounts with the Admin SDHolder permission` security assessment in Microsoft Secure Score.
 ms.date: 01/04/2024
 ms.topic: how-to
-ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Remove access rights on suspicious accounts with the Admin SDHolder permission

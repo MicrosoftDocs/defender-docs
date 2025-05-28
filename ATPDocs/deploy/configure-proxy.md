@@ -3,7 +3,6 @@ title: Verify connectivity to the Defender for Identity service | Microsoft Defe
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
 ms.date: 02/12/2024
 ms.topic: how-to
-ms.reviewer: rlitinsky
 ---
 
 # Configure endpoint proxy and internet connectivity settings

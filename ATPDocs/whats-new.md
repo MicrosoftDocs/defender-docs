@@ -4,7 +4,6 @@ description: This article is updated frequently to let you know what's new in th
 ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
-ms.reviewer: AbbyMSFT
 ---
 
 # What's new in Microsoft Defender for Identity

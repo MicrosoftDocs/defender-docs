@@ -10,7 +10,6 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     12/04/2024
-ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)

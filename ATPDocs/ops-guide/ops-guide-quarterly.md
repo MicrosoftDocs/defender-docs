@@ -4,7 +4,6 @@ description: Learn about the Microsoft Defender for Identity activities that we 
 ms.date: 01/29/2024
 ms.topic: how-to
 #customerIntent: As a Microsoft Defender for Identity customer, I want to know the recommended activities for my team on a quarterly or ad-hoc basis.
-ms.reviewer: martin77s
 ---
 
 # Quarterly / ad hoc operational guide - Microsoft Defender for Identity

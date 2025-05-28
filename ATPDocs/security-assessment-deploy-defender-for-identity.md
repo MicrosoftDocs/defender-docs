@@ -3,7 +3,6 @@ title: Start your Defender for Identity deployment security assessment
 description: This article provides an overview of Microsoft Defender for Identity's Start your Defender for Identity deployment security posture assessment report.
 ms.date: 06/11/2023
 ms.topic: how-to
-ms.reviewer: rlitinsky
 ---
 
 # Security assessment: Start your Defender for Identity deployment

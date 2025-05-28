@@ -4,7 +4,6 @@ description: Explains how Microsoft Defender for Identity fits into an overall Z
 ms.date: 05/12/2024
 ms.topic: conceptual
 ms.collection: zerotrust-services
-ms.reviewer: rlitinsky
 ---
 
 

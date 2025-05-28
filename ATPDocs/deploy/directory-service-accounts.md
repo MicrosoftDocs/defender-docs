@@ -3,7 +3,6 @@ title: Directory Service Accounts for Microsoft Defender for Identity
 description: Learn about how Microsoft Defender for Identity uses Directory Service accounts (DSAs).
 ms.date: 01/16/2024
 ms.topic: conceptual
-ms.reviewer: rlitinsky
 ---
 
 # Directory Service Accounts for Microsoft Defender for Identity

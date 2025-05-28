@@ -10,7 +10,6 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     10/06/2024
-ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Change password for krbtgt account

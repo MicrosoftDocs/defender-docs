@@ -3,7 +3,6 @@ title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
 ms.date: 01/16/2025
 ms.topic: how-to
-ms.reviewer: rlitinsky
 ---
 
 # Microsoft Defender for Identity health issues
