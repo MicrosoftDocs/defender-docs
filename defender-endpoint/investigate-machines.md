@@ -50,7 +50,7 @@ When you investigate a specific device, you see:
 :::image type="content" source="media/specific-device.png" alt-text="The device view" lightbox="media/specific-device.png":::
 
 > [!NOTE]
-> Due to product constrains, the device profile doesn't consider all cyber evidence when determining the 'Last Seen' timeframe (as seen on the device page as well).
+> Due to product constraints, the device profile doesn't consider all cyber evidence when determining the 'Last Seen' timeframe (as seen on the device page as well).
 > For example, the 'Last seen' value in the Device page may show an older time frame even though more recent alerts or data is available in the machine's timeline.
 
 ## Device details
