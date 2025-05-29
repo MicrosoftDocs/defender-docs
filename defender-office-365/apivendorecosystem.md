@@ -37,12 +37,12 @@ This article outlines the goals, benefits, and deployment considerations for org
 
 Integration features are available to customers with Microsoft Defender for Office 365 Plan 2 (P2) or Microsoft 365 E5 licenses.
 
-Must be licensed with one of the following third-party solutions:
+- Must be licensed with one of the following third-party solutions:
 
-   KnowBe4 Defend
-   
-      Darktrace
-      
+  - Darktrace/EMAIL
+  
+  - KnowBe4 Defend Platform
+  
 ## Getting Started
 
 **Check License Eligibility**
@@ -63,7 +63,7 @@ Must be licensed with one of the following third-party solutions:
             
 ## Understanding the Integration
 
-The integration works by allowing the third-party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 will then acknowledge the verdict provided and determine what the highest verdict on a message was. MDO will update the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll then be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
+The integration works by allowing the third-party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 acknowledges the verdict provided and determine what the highest verdict on a message was. MDO updates the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
 
 ## Configuring your Policies
 
@@ -119,7 +119,7 @@ EmailEvents
 
 The Microsoft 365 Defender portal provides a centralized reporting experience that consolidates telemetry from both Microsoft Defender for Office 365 (MDO) and integrated third-party vendors. This unified view enables security teams to assess the effectiveness of their entire email security stack in one place.
 
-The following dashboards will display this information:
+The following dashboards display this information:
 
 **Detection totals**
 
@@ -135,17 +135,17 @@ The following dashboards will display this information:
 
 **Post-delivery catch by non-Microsoft solutions**
 
-- Shows the verdict types that the third-party provided on messages. This is a breakdown of the Non-Microsoft Post-delivery blocks field in the Detection Totals report.
+- Shows the verdict types that the third-party provided on messages. This report is a breakdown of the Non-Microsoft Post-delivery blocks field in the Detection Totals report.
 
 ## Frequently Asked Questions
 
 **I have multiple ICES/CAPES solutions. How does that work?**
 
-You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each third-party will be able to provide verdicts on the messages in your mailboxes. You'll see the third-party catch and be able to identify which third-party the catch is attributed to, within the security portal experiences. If multiple third parties send verdicts on the same message, both third-party verdicts and explainability will be logged. The highest verdict between the third-party verdicts will determine what action is taken on the message.
+You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each third-party is able to provide verdicts on the messages in your mailboxes. You'll see the third-party catch and be able to identify which third-party the catch is attributed to, within the security portal experiences. If multiple third parties send verdicts on the same message, both third-party verdicts and explainability will be logged. The highest verdict between the third-party verdicts determines what action is taken on the message.
 
 **Which verdict takes precedence?**
 
-The "highest" verdict will take precedence. The precedence should be as follows (highest to lowest precedence):
+The "highest" verdict takes precedence. The precedence should be as follows (highest to lowest precedence):
 
 Malware
 
@@ -165,7 +165,7 @@ Clean or Not Spam
 
 **What if I utilize a different third-party application?**
 
-Currently, this integration only works for authorized partners which are Darktrace and KnowBe4. If you utilize a different ICES/CAPES vendor, you will not be able to take advantage of this integration.
+Currently, this integration only works for authorized partners which are Darktrace and KnowBe4. If you utilize a different ICES/CAPES vendor, you won't be able to take advantage of this integration.
 
 **Will I be charged for the third-party verdict data and actioning by MDO policies?**
 
@@ -173,7 +173,7 @@ No, there is no charge for the integration. The integration and Graph API suppor
 
 **Why do I not see the Detection Totals and Post-delivery catch by non-Microsoft solutions reports?**
 
-The reports will only show if you have had activity from one of the authorized third-party partners in the past 90 days.
+The reports only show if you have activity from one of the authorized third-party partners in the past 90 days.
 
 ## Feedback and Support
 
