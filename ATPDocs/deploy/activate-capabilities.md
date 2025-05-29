@@ -6,14 +6,13 @@ ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Activate Microsoft Defender for Identity capabilities directly on a domain controller
+# Activate Microsoft Defender for Identity capabilities directly on a domain controller (Preview)
 
-Microsoft Defender for Endpoint customers, who have already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities directly on a domain controller instead of using [Microsoft Defender for Identity classic sensor](deploy-defender-identity.md).
-
-This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
+Microsoft Defender for Endpoint customers who have already onboarded their domain controllers can now activate Defender for Identity capabilities directly on a domain controller using the new Microsoft XDR sensor, instead of the [Defender for Identity sensor](deploy-defender-identity.md).
+This article describes how to activate and tests Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!IMPORTANT]
-> The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
+> The Defender for XDR sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor [here](quick-installation-guide.md).
 
 ## Prerequisites
 
@@ -21,7 +20,7 @@ Before activating the Defender for Identity capabilities on your domain controll
 
 ### Defender for Identity sensor conflicts
 
-The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the Defender for Identity classic sensor.
+The configuration described in this article doesn't support side-by-side installation with an existing Defender for Identity sensor, and isn't recommended as a replacement for the original Defender for Identity sensor.
 
 Make sure that the domain controller where you're planning to activate Defender for Identity capabilities doesn't have a [Defender for Identity sensor](deploy-defender-identity.md) deployed.
 
@@ -34,6 +33,13 @@ Direct Defender for Identity capabilities are supported on domain controllers on
 - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later
 
 > [!IMPORTANT]
+> After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. This [out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
+
+### Defender for Endpoint onboarding
+
+Your domain controller must be onboarded to Microsoft Defender for Endpoint.
+
+For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
 >After installing the March 2024 Cumulative Update, LSASS might experience a memory leak on domain controllers when on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests.
 >
 > This issue is addressed in the out-of-band update [KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3).
@@ -71,7 +77,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ### Customers with domain controllers already onboarded to Defender for Endpoint 
 
-### Activate Defender for Identity capabilities
+After you complete the configuration, activate the Microsoft Defender for Identity capabilities on your domain controller.
 
 Activate the Defender for Identity from the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -114,10 +120,10 @@ To confirm the sensor has been onboarded:
 2. Check that the onboarded domain controller is listed. 
 
 > [!NOTE]
-> The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
-> To check the onboarding on the local server you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event: 
+> The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 ## Test activated capabilities
+The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
 
@@ -172,7 +178,7 @@ For more information, see [Advanced hunting in the Microsoft Defender portal](/m
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
 
-1. Trigger a new **Resolve unsecure domain configurations** recommendation by setting your Active Directory configuration to a non-compliant state, and then returning it to a compliant state. For example, run the following commands:
+1. Trigger a new **Resolve unsecure domain configurations** recommendation by setting your Active Directory configuration to a noncompliant state, and then returning it to a compliant state. For example, run the following commands:
 
     **To set a non-compliant state**
 

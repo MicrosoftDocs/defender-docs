@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Download the Microsoft Defender for Identity classic sensor
 
-This article describes how to download the Microsoft Defender for Identity classic sensor for your domain controllers or AD CS / AD FS and Entra Connect servers. 
+This article describes how to download the Microsoft Defender for Identity classic sensor for your domain controllers or AD CS / AD FS and Microsoft Entra Connect servers. 
 
 > [!IMPORTANT]
 > The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
@@ -32,7 +32,7 @@ This article describes how to download the Microsoft Defender for Identity class
 1. In the **Add a new sensor** pane, copy the **Access key** value and save it to a secured location. This access key is a one-time password for use when deploying the sensor, after which communication is performed using certificates for authentication and TLS encryption.
 
     > [!TIP]
-    > It is recommended to regenerate the access key using the **Regenerate key** button on a regular basis. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
+    > It's recommended to regenerate the access key using the **Regenerate key** button regularly. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
 
 1. Copy the downloaded installation package to the dedicated server or domain controller where you're installing the Defender for Identity sensor.
 

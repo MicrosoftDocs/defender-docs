@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "ATPDocs/deploy/quick-installation-guide.md",
+      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/configure-event-collection.md",
       "redirect_url": "deploy/configure-event-collection",
       "redirect_document_id": false

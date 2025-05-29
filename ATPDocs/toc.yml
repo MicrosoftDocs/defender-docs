@@ -13,65 +13,46 @@ items:
     href: architecture.md
   - name: Defender for Identity in the Microsoft Defender portal
     href: microsoft-365-security-center-mdi.md
+  - name: Pilot Microsoft Defender XDR
+    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-- name: Deploy
-  expanded: true
+- name: Plan and prepare
   items:
-  - name: Quick installation guide
-    href: deploy/quick-installation-guide.md
-  - name: Pilot and deploy Microsoft Defender XDR
-    href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-  - name: Defender for Identity deployment overview
+  - name: Prerequisites
+    href: deploy/prerequisites.md
+  - name: Roles and permissions
+    href: role-groups.md
+  - name: Capacity planning
+    href: deploy/capacity-planning.md
+- name: Deploy
+  items:
+  - name: Deployment overview
     href: deploy/deploy-defender-identity.md
-  - name: Plan and prepare
+  - name: Deploy a sensor on a domain controller
     items:
-    - name: Defender for Identity prerequisites
-      href: deploy/prerequisites.md
-    - name: Plan your Defender for Identity capacity
-      href: deploy/capacity-planning.md
-  - name: Deploy Defender for Identity
+     - name: Deploy a Microsoft Defender for Identity sensor
+       items:
+        - name: Connect to the Defender for Identity service
+          href: deploy/configure-proxy.md
+        - name: Test connectivity settings
+          href: deploy/test-connectivity.md
+        - name: Download the Defender for Identity sensor
+          href: deploy/download-sensor.md
+        - name: Install the Defender for Identity sensor
+          href: deploy/install-sensor.md
+        - name: Configure the Defender for Identity sensor
+          href: deploy/configure-sensor-settings.md
+     - name: Activate a Defender for XDR sensor (Preview)
+       items:
+        - name: Activate Defender for Identity capabilities on your domain controller
+          href: deploy/activate-capabilities.md
+  - name: Install a sensor on Microsoft AD FS / AD CS / Entra Connect servers
+    href: deploy/active-directory-federation-services.md
+  - name: Deploy for multiple Active Directory forests
+    href: deploy/multi-forest.md
+  - name: Configure a standalone sensor
     items:
-    - name: Configure connectivity settings
-      href: deploy/configure-proxy.md
-      displayName: proxy
-    - name: Test connectivity settings
-      href: deploy/test-connectivity.md
-    - name: Download the Defender for Identity sensor
-      href: deploy/download-sensor.md
-    - name: Install the Defender for Identity sensor
-      href: deploy/install-sensor.md
-    - name: Configure the Defender for Identity sensor
-      href: deploy/configure-sensor-settings.md
-  - name: Post-deployment configuration
-    items:
-    - name: Configure event collection
-      items:
-      - name: Event collection overview 
-        href: deploy/event-collection-overview.md
-      - name: Configure audit policies for Windows event logs
-        href: deploy/configure-windows-event-collection.md
-    - name: Roles and permissions
-      href: role-groups.md
-    - name: Configure a Directory Service account
-      items:
-      - name: Overview
-        href: deploy/directory-service-accounts.md
-        displayName: Directory Service Account, DSA
-      - name: Configure a DSA with a gMSA
-        href: deploy/create-directory-service-account-gmsa.md
-    - name: Configure remote calls to SAM
-      href: deploy/remote-calls-sam.md
-  - name: Extra deployment scenarios
-    items:
-    - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
-      href: deploy/active-directory-federation-services.md
-    - name: Configure action accounts
-      href: deploy/manage-action-accounts.md
-    - name: Deploy for multiple Active Directory forests
-      href: deploy/multi-forest.md
-    - name: Configure a standalone sensor
-      items:
       - name: Prerequisites for a standalone sensor
         href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
@@ -83,12 +64,27 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
-    - name: Activate Defender for Identity capabilities on your domain controller
-      href: deploy/activate-capabilities.md
-  - name: Integrate with PAM services
+  - name: Configure event collection
     items:
-    - name: Integrate Defender for Identity with PAM services
-      href: integrate-microsoft-and-pam-services.md
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Configure audit policies for Windows event logs
+        href: deploy/configure-windows-event-collection.md
+      - name: Configure a Directory Service account
+        items:
+        - name: Overview
+          href: deploy/directory-service-accounts.md
+          displayName: Directory Service Account, DSA
+        - name: Configure a DSA with a gMSA
+          href: deploy/create-directory-service-account-gmsa.md
+        - name: Configure remote calls to SAM
+          href: deploy/remote-calls-sam.md
+  - name: Configure action accounts
+    href: deploy/manage-action-accounts.md
+- name: Integrate with identity services
+  items:
+  - name: Integrate Defender for Identity with PAM services
+    href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
@@ -142,7 +138,7 @@ items:
     items:
     - name: Alerts overview
       href: alerts-overview.md
-    - name: Understanding security alerts
+    - name: Understand security alerts
       href: understanding-security-alerts.md
     - name: Investigate security alerts
       href: manage-security-alerts.md
