@@ -29,7 +29,7 @@ Large organizations use a wide variety of security solutions, and running multip
 
 1. **Disable duplication**. Running multiple security solutions that perform the same function can lead to performance issues and conflicts. It's recommended to avoid redundant capabilities, as this increases the likelihood of problematic product interactions. 
 
-   Microsoft Defender for Endpoint can be configured to disable endpoint detection and response (EDR) in Block Mode, Automated Investigation & Remediation, PUA Protection, Network Discovery & Response, and other capabilities. Reducing overlap with functions provided by a non-Microsoft EDR solution such as CrowdStrike Falcon. Responsibility for these functions falls to the security solution actively providing those functions. 
+   Microsoft Defender for Endpoint can be configured to disable endpoint detection and response (EDR) in Block Mode, Automated Investigation & Remediation, PUA Protection, Network Discovery & Response, and other capabilities. This can reduce overlap with detection and response functions provided by non-Microsoft endpoint security solutions. Responsibility for these functions falls to the solution actively providing those functions. 
 
    Similarly, setting Microsoft Defender Antivirus in "Passive Mode" ensures that when another anti-malware solution is present, Defender Antivirus doesn't perform active protection, remediation, or malware blocking. Responsibility for malware protection shifts to the active anti-malware solution. 
 
@@ -46,6 +46,6 @@ Delegating security functionality, creating exclusions, and configuring settings
 
 Commercially reasonable support is provided through Microsoft Customer Service and Support and Microsoft managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution. Managing security often means finding an acceptable balance between productivity and risk; if a particular security configuration is causing significant performance problems, some organizations choose to disable the additional protection in favor of increased usability for select device groups. This should also be considered for other device-impacting settings.
 
-## More information
+## Example of the "include" that can be added to pages that are relevant to a side by side scenario, this will not be shown on this page (for review only)
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
