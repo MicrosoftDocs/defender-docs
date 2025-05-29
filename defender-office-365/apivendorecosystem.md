@@ -45,22 +45,22 @@ Integration features are available to customers with Microsoft Defender for Offi
   
 ## Getting Started
 
-**Check License Eligibility**
+1. **Check License Eligibility**
 
    1. Ensure your tenant has MDO P2 or Microsoft 365 E5 licenses.
    
-   **Select a Partner**
+1. **Select a Partner**
+
+   1. Choose from approved API vendors listed above.
    
-      1. Choose from approved API vendors listed above.
-      
-      **Enable Integration**
-      
-         1. Upon onboarding to the strategic integration partner, their solution is seamlessly and automatically incorporated into your security architecture.
-         
-         **Monitor and Manage**
-         
-            1. Use the unified dashboards and quarantine to monitor threat activity and take action.
-            
+1. **Enable Integration**
+
+   1. Upon onboarding to the strategic integration partner, their solution is seamlessly and automatically incorporated into your security architecture.
+   
+1. **Monitor and Manage**
+
+   1. Use the unified dashboards and quarantine to monitor threat activity and take action.
+   
 ## Understanding the Integration
 
 The integration works by allowing the third-party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 acknowledges the verdict provided and determine what the highest verdict on a message was. MDO updates the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
