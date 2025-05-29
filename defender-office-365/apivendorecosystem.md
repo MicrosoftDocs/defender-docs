@@ -21,7 +21,7 @@ The API Vendor Ecosystem enables Microsoft Defender for Office 365 (MDO) to inte
 This article outlines the goals, benefits, and deployment considerations for organizations participating in the API Vendor Ecosystem.
 
 > [!NOTE]
-> This guide outlines the integration experience and ecosystem principles. Specific API details are not publicly available.
+> This guide outlines the integration experience and ecosystem principles. Specific API details aren't publicly available.
 
 ## Benefits of the API Vendor Ecosystem
 
@@ -63,7 +63,7 @@ Must be licensed with one of the following third-party solutions:
             
 ## Understanding the Integration
 
-The integration works by allowing the third party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 will then acknowledge the verdict provided and determine what the highest verdict on a message was. MDO will update the message and/or logs with the verdict information, moving the message to the user policy-specified location. You will then be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
+The integration works by allowing the third party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 will then acknowledge the verdict provided and determine what the highest verdict on a message was. MDO will update the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll then be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
 
 ## Configuring your Policies
 
@@ -141,11 +141,11 @@ The following dashboards will display this information:
 
 **I have multiple ICES/CAPES solutions. How does that work?**
 
-You can use this integration with multiple ICES/CAPES vendors as long as they are part of the API Vendor Ecosystem partnership. The integration will work the same, where each 3<sup>rd</sup> party will be able to provide verdicts on the messages in your mailboxes.  You will see the 3<sup>rd</sup> party catch and be able to identify which 3<sup>rd</sup> party the catch is attributed to, within the security portal experiences. If multiple 3<sup>rd</sup> parties send verdicts on the same message, both 3<sup>rd</sup> party verdicts and explainability will be logged. The highest verdict between the 3<sup>rd</sup> party verdicts will determine what action is taken on the message.
+You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each 3<sup>rd</sup> party will be able to provide verdicts on the messages in your mailboxes.  You'll see the 3<sup>rd</sup> party catch and be able to identify which 3<sup>rd</sup> party the catch is attributed to, within the security portal experiences. If multiple 3<sup>rd</sup> parties send verdicts on the same message, both 3<sup>rd</sup> party verdicts and explainability will be logged. The highest verdict between the 3<sup>rd</sup> party verdicts will determine what action is taken on the message.
 
 **Which verdict takes precedence?**
 
-The “highest” verdict will take precedence. The precedence should be as follows (highest to lowest precedence):
+The "highest" verdict will take precedence. The precedence should be as follows (highest to lowest precedence):
 
 Malware
 
