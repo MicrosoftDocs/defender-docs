@@ -63,7 +63,7 @@ Must be licensed with one of the following third-party solutions:
             
 ## Understanding the Integration
 
-The integration works by allowing the third party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 will then acknowledge the verdict provided and determine what the highest verdict on a message was. MDO will update the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll then be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
+The integration works by allowing the third-party to pass in details on a specific message regarding the verdict, confidence level, and any threat details they would like to share via a private Microsoft Graph API. Microsoft Defender for Office 365 will then acknowledge the verdict provided and determine what the highest verdict on a message was. MDO will update the message and/or logs with the verdict information, moving the message to the user policy-specified location. You'll then be able to see the results of this integration in multiple unified experiences, including Reporting, Advanced Hunting, Email Entity, Quarantine, and Threat Explorer.
 
 ## Configuring your Policies
 
@@ -104,15 +104,15 @@ The [Email Entity](/defender-office-365/mdo-email-entity-page) page consolidates
 
 Security teams can use Microsoft 365 Defender’s [Advanced Hunting](/defender-xdr/advanced-hunting-overview) capabilities to query and correlate data across native and third-party detections. Vendor-submitted messages are represented in the [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table) and [EmailPostDeliveryEvents](/defender-xdr/advanced-hunting-emailpostdeliveryevents-table) tables, with extended schema support for partner-specific attributes, including vendor-specific threat details.
 
-Use this example query to see 3rd party catch in Advanced Hunting.
+Use this example query to see third-party catch in Advanced Hunting.
 
 
 ```kusto
-EmailEvents 
-| where Timestamp > ago(7d) 
-//List emails caught by a 3rd party solution
-| where DetectionMethods contains "Thirdparty"
-| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation 
+EmailEvents  
+| where Timestamp > ago(7d)  
+//List emails caught by a Third-party solution 
+| where DetectionMethods contains "Thirdparty" 
+| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation  
 ```
 
 ## Reporting
@@ -123,25 +123,25 @@ The following dashboards will display this information:
 
 **Detection totals**
 
-*Defender for Office Mailflow blocks*: Messages that MDO caught during mailflow. These are unique messages that the 3<sup>rd</sup> party did not catch.
+- *Defender for Office Mailflow blocks*: Messages that MDO caught during mailflow. These are unique messages that the third-party did not catch.
 
-*Defender for Office Post-delivery blocks*: Messages that MDO caught after delivery, through ZAP. These are unique messages that the 3<sup>rd</sup> party did not catch.
+- *Defender for Office Post-delivery blocks*: Messages that MDO caught after delivery, through ZAP. These are unique messages that the third-party did not catch.
 
-*Non-Microsoft Post-delivery blocks*: Messages that the third party caught.
+- *Non-Microsoft Post-delivery blocks*: Messages that the third-party caught.
 
-*Duplicate blocks*: Messages that MDO caught during mailflow that the 3<sup>rd</sup> party also contributed a verdict on.
+- *Duplicate blocks*: Messages that MDO caught during mailflow that the third-party also contributed a verdict on.
 
-*Duplicate blocks (Defender for Office Post-delivery)*: Messages that MDO caught after delivery, through ZAP, that the 3<sup>rd</sup> party also contributed a verdict on.
+- *Duplicate blocks (Defender for Office Post-delivery)*: Messages that MDO caught after delivery, through ZAP, that the third-party also contributed a verdict on.
 
 **Post-delivery catch by non-Microsoft solutions**
 
-- Shows the verdict types that the 3rd party provided on messages. This is a breakdown of the Non-Microsoft Post-delivery blocks field in the Detection Totals report.
+- Shows the verdict types that the third-party provided on messages. This is a breakdown of the Non-Microsoft Post-delivery blocks field in the Detection Totals report.
 
 ## Frequently Asked Questions
 
 **I have multiple ICES/CAPES solutions. How does that work?**
 
-You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each 3<sup>rd</sup> party will be able to provide verdicts on the messages in your mailboxes.  You'll see the 3<sup>rd</sup> party catch and be able to identify which 3<sup>rd</sup> party the catch is attributed to, within the security portal experiences. If multiple 3<sup>rd</sup> parties send verdicts on the same message, both 3<sup>rd</sup> party verdicts and explainability will be logged. The highest verdict between the 3<sup>rd</sup> party verdicts will determine what action is taken on the message.
+You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each third-party will be able to provide verdicts on the messages in your mailboxes. You'll see the third-party catch and be able to identify which third-party the catch is attributed to, within the security portal experiences. If multiple third parties send verdicts on the same message, both third-party verdicts and explainability will be logged. The highest verdict between the third-party verdicts will determine what action is taken on the message.
 
 **Which verdict takes precedence?**
 
@@ -163,17 +163,17 @@ Junk
 
 Clean or Not Spam
 
-**What if I utilize a different 3<sup>rd</sup> Party application?**
+**What if I utilize a different third-party application?**
 
 Currently, this integration only works for authorized partners which are Darktrace and KnowBe4. If you utilize a different ICES/CAPES vendor, you will not be able to take advantage of this integration.
 
-**Will I be charged for the 3P verdict data and actioning by MDO policies?**
+**Will I be charged for the third-party verdict data and actioning by MDO policies?**
 
 No, there is no charge for the integration. The integration and Graph API support are included as part of your Microsoft Defender for Office 365 Plan 2 licenses.
 
 **Why do I not see the Detection Totals and Post-delivery catch by non-Microsoft solutions reports?**
 
-The reports will only show if you have had activity from one of the authorized 3rd Party partners in the past 90 days.
+The reports will only show if you have had activity from one of the authorized third-party partners in the past 90 days.
 
 ## Feedback and Support
 
