@@ -4,7 +4,7 @@
 title: Troubleshooting Advanced Threat Analytics using the database
 description: Describes how you can use the ATA database to help troubleshoot issues 
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.service: advanced-threat-analytics
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 

@@ -2,7 +2,7 @@
 title: Troubleshooting content inspection errors 
 description: This article provides a list of content inspection statuses and their meanings.
 ms.date: 01/29/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ---
 # Troubleshooting content inspection errors
 

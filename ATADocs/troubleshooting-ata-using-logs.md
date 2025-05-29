@@ -4,7 +4,7 @@
 title: Troubleshooting Advanced Threat Analytics using the logs
 description: Describes how you can use the ATA logs to troubleshoot issues
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.service: advanced-threat-analytics
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 
