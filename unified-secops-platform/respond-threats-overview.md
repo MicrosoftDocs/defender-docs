@@ -1,6 +1,6 @@
 ---
-title: Threat response in Microsoft's unified SecOps platform
-description: Learn about the features that help respond to threats in the Microsoft unified SecOps platform, ensuring comprehensive protection.
+title: Threat Response in the Defender Portal
+description: Learn about the features that help respond to threats in the Microsoft Defender portal, ensuring comprehensive protection.
 search.appverid: met150
 ms.service: unified-secops-platform
 ms.author: bagol
@@ -19,9 +19,9 @@ appliesto:
 # Customer intent: As a security operations center business decision maker, I want to learn about the tools available to respond to threats automatically in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
 
-# Threat response in Microsoft's unified SecOps platform
+# Threat response in the Microsoft Defender portal
 
-As cyber threats evolve and data stores and tooling grow in complexity, security solutions must adapt and respond faster in real time. This article explains how the advanced response features provided across the Microsoft's unified SecOps platform help contain threats as they're detected and neutralize them before causing damage.
+As cyber threats evolve and data stores and tooling grow in complexity, security solutions must adapt and respond faster in real time. This article explains how the advanced response features provided across the Microsoft Defender portal help contain threats as they're detected and neutralize them before causing damage.
 
 ## Threat response across the Defender portal
 
@@ -47,7 +47,7 @@ The following image shows an example of the incidents related to a **Human-opera
 
 :::image type="content" source="media/respond-threats-overview/threat-analytics.png" alt-text="Screenshot of a list of related incidents to a specific threat." lightbox="media/respond-threats-overview/threat-analytics.png":::
 
-For more information, see [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md).
+For more information, see [Uncover adversaries with threat intelligence across the Defender portal](threat-intelligence-overview.md).
 
 ## Microsoft Defender XDR threat response features
 
@@ -118,7 +118,7 @@ The following image shows an example of the sorts of configurations available fo
 
 :::image type="content" source="media/respond-threats-overview/automation-rule.png" alt-text="Screenshot of a sample automation rule in Microsoft Sentinel." lightbox="media/respond-threats-overview/automation-rule.png":::
 
-In Microsoft's unified SecOps platform, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
+In the Defender portal, automation rules with incident triggers apply universally across both Microsoft Sentinel and Microsoft Defender XDR incidents, ensuring cohesive and comprehensive incident management.
 
 For more information, see [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded).
 
@@ -163,5 +163,5 @@ For more information, see [Start using Microsoft Security Exposure Management](/
 For more information, see:
 
 - [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal)
-- [Threat detection in Microsoft's unified SecOps platform](detect-threats-overview.md)
-- [Uncover adversaries with threat intelligence in Microsoft's unified SecOps platform](threat-intelligence-overview.md)
+- [Threat detection in the Microsoft Defender portal](detect-threats-overview.md)
+- [Uncover adversaries with threat intelligence across the Defender portal](threat-intelligence-overview.md)
