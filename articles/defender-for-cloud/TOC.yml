@@ -101,6 +101,9 @@
           - name: Resolve agentless scanning error
             displayName: connector, GCP, disc, scanning, error
             href: resolve-disk-scanning-error.md
+          - name: Resolve VPC Service Controls restriction issues
+            displayName: connector, GCP, VPC, service, controls, restriction, issues
+            href: resolve-vpc-service-controls-issues.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
