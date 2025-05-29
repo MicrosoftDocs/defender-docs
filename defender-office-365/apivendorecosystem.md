@@ -108,11 +108,11 @@ Use this example query to see third-party catch in Advanced Hunting.
 
 
 ```kusto
-EmailEvents  
-| where Timestamp > ago(7d)  
-//List emails caught by a Third-party solution 
-| where DetectionMethods contains "Thirdparty" 
-| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation  
+EmailEvents
+| where Timestamp > ago(7d)
+//List emails caught by a Third-party solution
+| where DetectionMethods contains "Thirdparty"
+| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation 
 ```
 
 ## Reporting
@@ -147,21 +147,21 @@ You can use this integration with multiple ICES/CAPES vendors as long as they're
 
 The "highest" verdict takes precedence. The precedence should be as follows (highest to lowest precedence):
 
-Malware
+1. Malware
 
-High Confidence Phish
+1. High Confidence Phish
 
-Phish
+1. Phish
 
-High Confidence Spam
+1. High Confidence Spam
 
-Spam
+1. Spam
 
-Deleted
+1. Deleted
 
-Junk
+1. Junk
 
-Clean or Not Spam
+1. Clean or Not Spam
 
 **What if I utilize a different third-party application?**
 
