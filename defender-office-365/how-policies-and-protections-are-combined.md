@@ -7,7 +7,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: reference
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
