@@ -82,7 +82,7 @@ Additionally, administrators are encouraged to use the [Configuration Analyzer]
 
 To maintain consistent message handling and threat response across the ecosystem, it is critical to align policy configurations between MDO and the integrated third-party solution. This alignment ensures that messages flagged by either system exhibit predictable behavior and are surfaced appropriately in unified dashboards and quarantine views.
 
-Once policy alignment is established, the remainder of the integration lifecycle - including monitoring, reporting, and response - can be managed directly within the Microsoft 365 Defender portal.
+Once policy alignment is established, the remainder of the integration lifecycle - including monitoring, reporting, and response - can be managed directly within the Microsoft 365 Securityportal.
 
 ## Portal Experiences
 
