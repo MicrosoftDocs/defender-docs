@@ -79,7 +79,7 @@ In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `Sour
 
 ## February 2021
 
-1. In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict`and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
+1. In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict` and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
 
     | Table name | Original column name | New column name | Reason for change
     |--|--|--|--|
