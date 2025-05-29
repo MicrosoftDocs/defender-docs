@@ -3,6 +3,7 @@ title: Prevent users to request a certificate valid for arbitrary users based on
 description: This article provides an overview of Microsoft Defender for Identity's 'Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)' identity security posture assessment report.
 ms.date: 11/13/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
