@@ -745,6 +745,14 @@ The effect of **No access** permissions (admin only access) on user capabilities
 - **Quarantine notifications turned on**:
   - **On the Quarantine page**: Quarantined messages are visible to users, but the only available action is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
   - **In quarantine notifications**: Users receive quarantine notifications, but the only available action is **Review message**.
+> **Note:**  
+> 💡 The **default `AdminOnlyAccessPolicy`** is **immutable** and **always has notifications disabled**.  
+> To enable notifications while maintaining restricted access:  
+> - **Create a custom quarantine policy**  
+> - Set **Access: No access**  
+> - Configure **notifications** as needed  
+
+<!-- You may need to use a plugin or CSS styling in your Markdown tool to display this in pink -->
 
 ##### Limited access
 
