@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 04/01/2025

@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
 ms.date: 03/28/2025

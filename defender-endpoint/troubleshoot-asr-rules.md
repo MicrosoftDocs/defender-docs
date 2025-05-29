@@ -11,7 +11,7 @@ manager: deniseb
 ms.custom: 
 - mde-asr
 - admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: asr
 ms.collection: 
 - m365-security
