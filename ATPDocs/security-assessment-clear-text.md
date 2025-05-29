@@ -3,6 +3,7 @@ title: Clear text exposure assessment
 description: This article provides an overview of Microsoft Defender for Identity's clear text exposure identity security posture assessment report.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Entities exposing credentials in clear text

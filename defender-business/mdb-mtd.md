@@ -5,7 +5,7 @@ author: chrisda
 ms.author: chrisda
 manager: deniseb
 ms.date: 07/23/2024
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.collection:
