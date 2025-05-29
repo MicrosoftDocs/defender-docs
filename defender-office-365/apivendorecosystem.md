@@ -51,12 +51,12 @@ Integration features are available to customers with Microsoft Defender for Offi
    
 1. **Select a Partner**
 
-   1. Choose from approved API vendors listed above.
-   
+   1. Choose from approved API vendors.
+      
 1. **Enable Integration**
 
-   1. Upon onboarding to the strategic integration partner, their solution is seamlessly and automatically incorporated into your security architecture.
-   
+   1. Once you onboard to the strategic integration partner, their solution is seamlessly and automatically incorporated into your security architecture.
+      
 1. **Monitor and Manage**
 
    1. Use the unified dashboards and quarantine to monitor threat activity and take action.
@@ -82,7 +82,7 @@ Additionally, administrators are encouraged to use the [Configuration Analyzer]
 
 To maintain consistent message handling and threat response across the ecosystem, it is critical to align policy configurations between MDO and the integrated third-party solution. This alignment ensures that messages flagged by either system exhibit predictable behavior and are surfaced appropriately in unified dashboards and quarantine views.
 
-Once policy alignment is established, the remainder of the integration lifecycle - including monitoring, reporting, and response - can be managed directly within the Microsoft 365 Securityportal.
+Once policy alignment is established, the remainder of the integration lifecycle - including monitoring, reporting, and response - can be managed directly within the Microsoft 365 Security portal.
 
 ## Portal Experiences
 
@@ -165,7 +165,7 @@ The "highest" verdict takes precedence. The precedence should be as follows (hig
 
 **What if I utilize a different third-party application?**
 
-Currently, this integration only works for authorized partners which are Darktrace and KnowBe4. If you utilize a different ICES/CAPES vendor, you won't be able to take advantage of this integration.
+Currently, this integration only works for authorized partners which are Darktrace and KnowBe4. If you utilize a different ICES/CAPES vendor, you cannot take advantage of this integration.
 
 **Will I be charged for the third-party verdict data and actioning by MDO policies?**
 
