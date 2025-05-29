@@ -3,6 +3,7 @@ title: Activate Microsoft Defender for Identity capabilities directly on a domai
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
 ms.date: 08/13/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Activate Microsoft Defender for Identity capabilities directly on a domain controller

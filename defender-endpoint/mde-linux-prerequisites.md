@@ -175,14 +175,21 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, and `mde-netfilter`.
-- For RHEL6 the mdatp RPM package requires `policycoreutils`, `libselinux`, and `mde-netfilter`.
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, and `mde-netfilter`.
+- The mdatp RPM package requires `glibc >= 2.17`.
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`.
 
-The `mde-netfilter` package also has the following package dependencies:
-
-- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> [!NOTE]
+> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
+> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
+> - The mdatp RPM package requires `audit`, `semanage`.
+> - For DEBIAN, the mdatp package requires `auditd`.
+> - For Mariner, the mdatp package requires `audit`.
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 ## Installation instructions 
 
