@@ -9,7 +9,7 @@ author:      aylamck # GitHub alias
 ms.author:   aylamckorkle # Microsoft alias
 ms.service: defender-office-365
 ms.topic: article
-ms.date: 06/29/2025
+ms.date: 06/08/2025
 ---
 
 # MDO API Vendor Ecosystem Integration Guide
