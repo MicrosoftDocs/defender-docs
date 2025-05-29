@@ -141,7 +141,7 @@ The following dashboards display this information:
 
 **I have multiple ICES/CAPES solutions. How does that work?**
 
-You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration will work the same, where each third-party is able to provide verdicts on the messages in your mailboxes. You can see the third-party catch and be able to identify which third-party the catch is attributed to, within the security portal experiences. If multiple third parties send verdicts on the same message, both third-party verdicts and explainability will be logged. The highest verdict between the third-party verdicts determines what action is taken on the message.
+You can use this integration with multiple ICES/CAPES vendors as long as they're part of the API Vendor Ecosystem partnership. The integration works the same, where each third-party is able to provide verdicts on the messages in your mailboxes. You can see the third-party catch and be able to identify which third-party the catch is attributed to, within the security portal experiences. If multiple third parties send verdicts on the same message, both third-party verdicts and explainability are logged. The highest verdict between the third-party verdicts determines what action is taken on the message.
 
 **Which verdict takes precedence?**
 
