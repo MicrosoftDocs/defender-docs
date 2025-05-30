@@ -3,6 +3,7 @@ title: Unsecure account attributes assessment
 description: This article provides an overview of Microsoft Defender for Identity's entities with unsecure attributes identity security posture assessment report.
 ms.date: 07/02/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Unsecure account attributes
