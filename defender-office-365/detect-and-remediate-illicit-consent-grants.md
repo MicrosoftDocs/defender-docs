@@ -6,7 +6,7 @@ author: chrisda
 ms.author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
 - tier2
 - m365-security

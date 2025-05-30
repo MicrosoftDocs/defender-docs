@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: deniseb
 ms.date: 2/20/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: high
 search.appverid:
   - MET150

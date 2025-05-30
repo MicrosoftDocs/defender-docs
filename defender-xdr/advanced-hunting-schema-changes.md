@@ -17,8 +17,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/16/2024
+ms.date: 05/28/2025
 ---
 
 # Advanced hunting schema - Naming changes
@@ -36,6 +39,12 @@ The [advanced hunting schema](advanced-hunting-schema-tables.md) is updated regu
 Naming changes are automatically applied to queries that are saved in Microsoft Defender XDR, including queries used by custom detection rules. You don't need to update these queries manually. However, you will need to update the following queries:
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
+
+
+
+## May 2025
+In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `SourceProvider` column was replaced by the `IdentityEnvironment` column. This change was made to streamline the unified `IdentityInfo` table with a similar table in Microsoft Sentinel log analytics. Note that a new column, `SourceProviders` (with an *s*) was added in the unified table. This column refers to the source providers of the accounts for the identity.
+
 
 ## December 2020
 
@@ -70,7 +79,7 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 
 ## February 2021
 
-1. In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict`and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
+1. In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict` and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
 
     | Table name | Original column name | New column name | Reason for change
     |--|--|--|--|
