@@ -4,7 +4,7 @@
 title: Advanced Threat Analytics update to 1.5 migration guide
 description: Procedures to update ATA to version 1.5
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.service: advanced-threat-analytics
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 
