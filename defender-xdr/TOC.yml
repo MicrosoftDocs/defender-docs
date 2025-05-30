@@ -79,22 +79,24 @@
     - name: Investigate and respond to threats
       items:
       - name: Overview
-        href: incidents-overview.md
+        href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Investigate incidents
+      - name: Investigate and respond to incidents
         items:
-        - name: Incidents
+        - name: Plan incident response
+          href: /unified-secops-platform/plan-incident-response
+        - name: Investigate incidents  
           href: investigate-incidents.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
-        - name: Alerts
+        - name: Investigate alerts
           href: investigate-alerts.md
-        - name: Entity pages
+        - name: Investigate entity pages
           items:
           - name: User
             href: investigate-users.md
