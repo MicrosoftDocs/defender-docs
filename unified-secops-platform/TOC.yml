@@ -63,6 +63,8 @@
         href: /defender-xdr/advanced-hunting-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json 
     - name: Investigate incidents
       items:
+        - name: Plan incident response
+          href: plan-incident-response.md
         - name: Overview
           href: /defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
         - name: Correlation and merging

@@ -87,9 +87,7 @@
       - name: Manage incidents
         href: manage-incidents.md
       - name: Investigate and respond to incidents
-        items:
-        - name: Plan incident response
-          href: plan-incident-response.md
+        items:        
         - name: Incidents
           href: investigate-incidents.md
         - name: Move alerts to another incident
