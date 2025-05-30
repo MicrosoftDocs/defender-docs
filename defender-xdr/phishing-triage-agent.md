@@ -253,7 +253,7 @@ Here are examples of failures you might encounter when writing feedback to the a
 |:---|:---|
 |[SCREENSHOT] Part of the feedback provided can't be addressed as the agent currently doesn't support teaching this type of feedback.|Rewrite your feedback and ensure that the feedback addresses descriptions of the email that it can support. Then select Evaluate before saving the feedback.|
 |[SCREENSHOT] The feedback includes content that’s irrelevant to the email being reviewed.|Rewrite your feedback and ensure that your feedback contains details that are not related to the email being reviewed or vague statements that are hard to apply to similar emails in the future. Select Evaluate before saving the feedback.|
-|[SCREENSHOT] The given feedback conflicts with previous feedback given to a similar email.|Review your given feedback against the feedback it conflicts with in the [feedback management page](#view-and-manage-feedback-to-the-agent). Based on your review, you can:< /br> - Rewrite your given feedback then select Evaluate for the agent to reevaluate your new feedback. < /br>
+|[SCREENSHOT] The given feedback conflicts with previous feedback given to a similar email.|Review your given feedback against the feedback it conflicts with in the [feedback management page](#view-and-manage-feedback-to-the-agent). Based on your review, you can:</br> - Rewrite your given feedback then select Evaluate for the agent to reevaluate your new feedback. </br>
 -	Reject the previous feedback in the feedback management page. Select Evaluate to try again.|
 
 > [!NOTE]
