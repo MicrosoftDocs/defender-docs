@@ -3,6 +3,7 @@ title: Weekly operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a weekly basis.
 ms.date: 01/29/2024
 ms.topic: how-to
+ms.reviewer: martin77s
 ---
 
 # Weekly operational guide - Microsoft Defender for Identity

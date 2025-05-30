@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 05/13/2025
+ms.date: 05/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -587,7 +587,8 @@ For detailed syntax and parameter information, see [Get-QuarantinePolicy](/power
 
 ## Modify quarantine policies in the Microsoft Defender portal
 
-You can't modify the default quarantine policies named AdminOnlyAccessPolicy, DefaultFullAccessPolicy, or DefaultFullAccessWithNotificationPolicy.
+> [!NOTE]
+> Permissions and notification settings in default quarantine policies are read only (aren't modifiable).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Quarantine policies** in the **Rules** section. Or, to go directly to the **Quarantine policies** page, use <https://security.microsoft.com/quarantinePolicies>.
 
@@ -675,6 +676,9 @@ Quarantine policies also control whether users receive _quarantine notifications
 - Inform the user that the message is in quarantine.
 - Allow users to view and take action on the quarantined message from the quarantine notification. Permissions control what the user can do in the quarantine notification as described in the [Quarantine policy permission details](#quarantine-policy-permission-details) section.
 
+> [!NOTE]
+> Permissions and notification settings in default quarantine policies are read only (aren't modifiable).
+
 The relationship between permissions, permissions groups, and the default quarantine policies are described in the following tables:
 
 |Permission|No access|Limited access|Full access|
@@ -745,6 +749,12 @@ The effect of **No access** permissions (admin only access) on user capabilities
 - **Quarantine notifications turned on**:
   - **On the Quarantine page**: Quarantined messages are visible to users, but the only available action is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
   - **In quarantine notifications**: Users receive quarantine notifications, but the only available action is **Review message**.
+
+> [!TIP]
+> To enable quarantine notifications while maintaining restricted access, [create a custom quarantine policy](#step-1-create-quarantine-policies-in-the-microsoft-defender-portal) with the following settings:
+>
+> - **Recipient message access** page: Select **Set specific access (Advanced)**, but leave **Select release action preference** and **Select additional actions recipients can take on quarantined messages** blank/unselected (equivalent to the value 0 for the _EndUserQuarantinePermissionsValue_ parameter on the **New-QuarantinePolicy** cmdlet [in Powershell](#create-quarantine-policies-in-powershell)).
+> - **Quarantine notification** page: Select **Enable** and then select **Don't include quarantined messages from blocked sender addresses** (default) or **Include quarantined messages from blocked sender addresses**.
 
 ##### Limited access
 

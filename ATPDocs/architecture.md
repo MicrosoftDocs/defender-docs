@@ -4,6 +4,7 @@ description: Learn about the Microsoft Defender for Identity system architecture
 ms.date: 09/14/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity user, I want to understand the relevant components and how they interact with the rest of my environment so that I can best use Defender for Identity features.
+ms.reviewer: morRubin
 ---
 
 # Microsoft Defender for Identity architecture
