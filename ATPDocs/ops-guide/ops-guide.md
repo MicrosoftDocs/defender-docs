@@ -4,6 +4,7 @@ description: Learn about the Microsoft Defender for Identity activities that we 
 ms.date: 01/29/2024
 ms.topic: conceptual
 #customerIntent: To learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily, weekly, monthly, quarterly, and ad-hoc basis.
+ms.reviewer: martin77s
 ---
 
 # Microsoft Defender for Identity operational guide

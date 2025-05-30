@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 05/28/2025
 ---
 
 # Investigate devices in the Microsoft Defender for Endpoint Devices list
@@ -50,7 +50,7 @@ When you investigate a specific device, you see:
 :::image type="content" source="media/specific-device.png" alt-text="The device view" lightbox="media/specific-device.png":::
 
 > [!NOTE]
-> Due to product constrains, the device profile does not consider all cyber evidence when determining the 'Last Seen' timeframe (as seen on the device page as well).
+> Due to product constraints, the device profile doesn't consider all cyber evidence when determining the 'Last Seen' timeframe (as seen on the device page as well).
 > For example, the 'Last seen' value in the Device page may show an older time frame even though more recent alerts or data is available in the machine's timeline.
 
 ## Device details
@@ -152,16 +152,26 @@ To further inspect the event and related events, you can quickly run an [advance
 
 **Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](api/ti-indicator.md) for details.
 
-
-
-
-### Security policies
+### Configuration management - Security policies
 
 The **Security policies** tab shows the endpoint security policies that are applied on the device. You see a list of policies, type, status, and last check-in time. Selecting the name of a policy takes you to the policy details page where you can see the policy settings status, applied devices, and assigned groups.
 
+:::image type="content" source="media/mde-security-policies.png" alt-text="Screenshot showing the Security policies tab." lightbox="media/mde-security-policies.png":::
 
-:::image type="content" source="media/security-policies-tab.png" alt-text="The Security policies tab" lightbox="media/security-policies-tab.png":::
+### Configuration management - Effective settings
 
+The **Effective settings** tab provides visibility into the actual value of each security setting and identifies the source that configured it. It lists setting names, policy types, effective values, the source of each effective value, and the last report time.
+
+Configuration sources can include tools like Microsoft Defender for Endpoint, Group Policy, Intune, or default settings. They can also be specific registry paths, such as the MDM or Group Policy hives. If the source is a registry location, the Configured By field shows as **Unknown** along with the registry path.
+ 
+Select a setting to open a side panel with more details. You see the current value, any other configuration attempts that didn’t take effect, and—for complex settings like ASR rules or AV exclusions—a breakdown of all configured rules, their sources, and any exclusions.
+ 
+> [!NOTE]
+> The presented settings are AV security settings, Attack Surface Reduction rules, and exclusions, for Windows platforms.
+
+:::image type="content" source="media/mde-effective-settings.png" alt-text="Screenshot showing the Effective settings tab." lightbox="media/mde-effective-settings.png":::
+
+:::image type="content" source="media/mde-effective-settings-open.png" alt-text="Screenshot showing the opened Effective settings value tab." lightbox="media/mde-effective-settings-open.png":::
 
 ### Software inventory
 
