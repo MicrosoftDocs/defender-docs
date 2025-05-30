@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: deniseb
 ms.date: 9/7/2023
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
   - tier2
   - m365-security

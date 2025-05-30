@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: get-started
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 02/24/2025
+ms.date: 05/20/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -315,7 +315,17 @@ In general, it's easier to create blocks than allows, because unnecessary allow 
 
 - **Allow**:
 
-  - You can't create allow entries for **domains and email addresses**, **files**, and **URLs** directly on the corresponding tabs in the Tenant Allow/Block List. Instead, you use the **Submissions** page to report the item to Microsoft. As you report the item to Microsoft, you can select to allow the item, which creates a corresponding temporary allow entry in the Tenant Allow/Block list.
+  - You can create allow entries for **domains and email addresses** and **URLs** on the corresponding tabs in the Tenant Allow/Block List to override the following verdicts:
+    - Bulk
+    - Spam
+    - High confidence spam
+    - Phishing (not high confidence phishing)
+
+  - You can't create allow entries directly in the Tenant Allow/Block List for the following items:
+    - Malware or high confidence phishing verdicts for **domains and email addresses** or **URLs**.
+    - Any verdicts for **files**.
+
+    Instead, you use the **Submissions** page to report the items to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message**, **Allow this URL**, or **Allow this file** to create a corresponding temporary allow entry in the Tenant Allow/Block list.
 
   - Messages allowed by [spoof intelligence](anti-spoofing-spoof-intelligence.md) are shown on the **Spoof intelligence** page. If you change a block entry to an allow entry, the sender becomes a manual allow entry on the **Spoofed senders** tab in the Tenant Allow/Block List. You can also proactively create allow entries for not yet encountered spoofed senders on the **Spoofed senders** tab.
 

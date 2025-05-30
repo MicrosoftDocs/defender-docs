@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 04/23/2025
+ms.date: 05/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -35,13 +35,31 @@ This article is updated frequently to let you know what's new in the latest rele
 > 
 > 1. Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 >
-> 2. If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. In the event of a fallback, all process operations continue to flow seamlessly. 
+> 2. If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.
 >
 > Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
 ## Releases for Defender for Endpoint on Linux
+
+### May-2025 Build: 101.25032.0008 | Release version: 30.125032.0008.0
+
+|Build:             |**101.25032.0008**    |
+|-------------------|----------------------|
+|Released:          |**May 12, 2025**      |
+|Published:         |**May 13, 2025**      |
+|Release version:   |**30.125032.0008.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+
+- Removed external dependency of MDE Netfilter and libpcre from MDE package
+
+- Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
+
+- Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
 
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 
@@ -83,25 +101,25 @@ What's new
 
 Known Issues
 
-- There's a known issue where MDE is deleting the configuration file located at /etc/system/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
+- There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
   To set the file to be unmodifiable, execute the following command:
-    
+  
 ```bash
 
   sudo chattr +i /etc/systemd/system/mdatp.service.d/[file name]
   ```
   
- This command makes the file unchangeable. T If you need to restore modification permissions, use the following command:
-  
+ This command makes the file unchangeable. If you need to restore modification permissions, use the following command:
+
   ```bash
   
   sudo chattr -i /etc/systemd/system/mdatp.service.d/[file name]
   ```
   
-  Please note that the chattr command can only be used on supported file systems, such as ext4.
+  Note that the chattr command can only be used on supported file systems, such as ext4.
   
- If you need further assistance, you can reach out to our support team with your organization ID, and we can implement a temporary mitigation to prevent deletion. A permanent fix for this issue will be available in MDE version 101.25032.0000.
+ If you need further assistance, you can reach out to our support team with your organization ID, and we can implement a temporary mitigation to prevent deletion. A permanent fix for this issue is available in MDE version 101.25032.0000.
   
 ### Feb-2025 Build: 101.24122.0008 | Release version: 30.124112.0008.0
 
@@ -154,7 +172,7 @@ What's new
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor
-    - When eBPF isn't present and we fallback to Net link as supplementary event provider
+    - When eBPF isn't present and we fall back to Net link as supplementary event provider
     - There's no supplementary sensor present.
 
 - Beginning with 2411, the MDATP package release to Production on `packages.microsoft.com` follows a gradual rollout mechanism which spans over a week. The other release rings, insiderFast, and insiderSlow, are unaffected by this change.
@@ -207,7 +225,7 @@ What's new
 
 #### What's new
 
-- Starting this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Net link as a fallback supplementary event provider. Net link provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
+- Starting with this version, Defender for Endpoint on Linux no longer supports `AuditD` as a supplementary event provider. For improved stability and performance, we have transitioned to eBPF. If you disable eBPF, or in the event eBPF isn't supported on any specific kernel, Defender for Endpoint on Linux automatically switches back to Net link as a fallback supplementary event provider. Net link provides reduced functionality and tracks only process-related events. In this case, all process operations continue to flow seamlessly, but you could miss specific file and socket-related events that eBPF would otherwise capture. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). If you have any concerns or need assistance during this transition, contact support.
 
 - Stability and performance improvements
 
@@ -713,7 +731,7 @@ There are multiple fixes and new changes in this release
    - Files
    - Executables
     
-- Network Protection: Connections that is blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
+- Network Protection: Connections that are blocked by Network Protection and have the block overridden by users is now correctly reported to Microsoft Defender XDR
 
 - Improved logging in Network Protection block and audit events for debugging
 |
@@ -1186,7 +1204,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) isn't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
+- Fixes a kernel hang observed on select customer workloads running mdatp version `101.75.43`. After RCA, this was attributed to a race condition while releasing the ownership of a sensor file descriptor. The race condition was exposed due to a recent product change in the shutdown path. Customers on newer Kernel versions (5.1+) aren't impacted by this issue. For more information, see [System hang due to blocked tasks in fanotify code](https://access.redhat.com/solutions/2838901).
 
 #### Known issues
 
