@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - mde-edr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 09/21/2024
