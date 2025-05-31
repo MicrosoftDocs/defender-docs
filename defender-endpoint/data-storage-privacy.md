@@ -14,7 +14,7 @@ ms.collection:
 - essentials-privacy
 - essentials-security
 - essentials-compliance
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: met150
 ms.date: 05/12/2025
 ---

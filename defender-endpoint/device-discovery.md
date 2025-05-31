@@ -16,7 +16,7 @@ ms.collection:
 - m365-initiative-defender-endpoint
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: met150
 ms.date: 05/08/2025
 ---

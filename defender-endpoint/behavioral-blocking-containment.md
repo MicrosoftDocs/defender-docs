@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: emmwalshh
 ms.reviewer: shwetaj
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
