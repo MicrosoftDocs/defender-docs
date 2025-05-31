@@ -4,7 +4,7 @@ description: You can deploy and manage Microsoft Defender Antivirus with Intune,
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen

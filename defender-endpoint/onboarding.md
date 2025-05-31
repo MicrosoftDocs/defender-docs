@@ -14,7 +14,7 @@ ms.collection:
   - m365-initiative-defender-endpoint
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 05/08/2025

@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.date: 03/27/2025
 ---
 

@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 - mde-android
 ms.custom: partner-contribution
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/24/2025
