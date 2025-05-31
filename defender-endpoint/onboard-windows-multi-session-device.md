@@ -4,7 +4,7 @@ description: Learn about onboarding Windows devices to Defender for Endpoint in 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen

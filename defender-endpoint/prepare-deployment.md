@@ -13,7 +13,7 @@ ms.collection:
   - m365solution-scenario
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 01/28/2025

@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.date: 12/13/2024
 ms.subservice: onboard
 search.appverid: met150
