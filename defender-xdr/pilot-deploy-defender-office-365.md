@@ -17,7 +17,7 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: concept-article
+ms.topic: install-set-up-deploy
 ms.date: 04/22/2025
 appliesto:
   - Microsoft Defender XDR

@@ -18,7 +18,7 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: concept-article
+ms.topic: install-set-up-deploy
 appliesto:
   - Microsoft Defender XDR
 #customer intent: To learn how to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
