@@ -14,7 +14,7 @@ ms.collection:
   - usx-security
   - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150

@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - security-copilot
   - magic-ai-copilot
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150
