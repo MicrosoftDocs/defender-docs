@@ -12,7 +12,7 @@ ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 
 # customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in the Microsoft Defender portal so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
