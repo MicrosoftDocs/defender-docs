@@ -15,7 +15,7 @@ ms.collection:
   - usx-security
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150
