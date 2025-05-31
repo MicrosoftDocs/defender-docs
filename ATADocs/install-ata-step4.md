@@ -4,7 +4,7 @@
 title: Install Advanced Threat Analytics - Step 4
 description: Step 4 of installing ATA helps you to install the ATA Gateway.
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: advanced-threat-analytics
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 
