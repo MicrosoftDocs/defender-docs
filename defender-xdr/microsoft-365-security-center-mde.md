@@ -10,7 +10,7 @@ author: diannegali
 manager: deniseb
 ms.date: 10/16/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 search.appverid: 
 - MOE150
 - MET150
