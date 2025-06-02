@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: asr
 search.appverid: met150
 ms.date: 03/27/2025
