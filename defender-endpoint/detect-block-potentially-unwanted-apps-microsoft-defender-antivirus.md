@@ -108,9 +108,11 @@ At first, try using PUA protection in audit mode. It detects potentially unwante
 
 | Operating systems |Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- |
-|Windows 11, Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
-|Windows 11, Windows 10 + Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Block mode (1)|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client + Microsoft Defender for Servers Plan 1 or Microsoft Defender for Servers Plan 2 or Microsoft Defender for Endpoint for servers|Block mode (1)   |
+|Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
+|Windows 11 with Smart App Control enabled |Disabled (0)|
+|Windows 10 onboarded to Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Block mode (1)|
+|Windows 11 with Smart App Control enabled and onboarded with Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Audit mode (2)|
+|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client and onboarded to Microsoft Defender for Servers Plan 1 or Microsoft Defender for Servers Plan 2 or Microsoft Defender for Endpoint for servers|Block mode (1)   |
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
