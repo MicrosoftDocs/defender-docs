@@ -2,7 +2,7 @@
 title: Other security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when other attacks are detected against your organization.
 ms.date: 01/18/2023
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: morRubin
 ---
 
