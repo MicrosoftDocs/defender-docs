@@ -7,7 +7,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
