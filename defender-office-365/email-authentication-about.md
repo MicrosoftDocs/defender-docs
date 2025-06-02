@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MET150
 ms.assetid:
