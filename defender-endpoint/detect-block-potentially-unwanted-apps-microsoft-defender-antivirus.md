@@ -111,7 +111,7 @@ At first, try using PUA protection in audit mode. It detects potentially unwante
 |Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016 not onboarded to Microsoft Defender for Endpoint |Audit mode (2)|
 |Windows 11 version 22H2 or later with Smart App Control enabled not onboarded to Microsoft Defender for Endpoint |Disabled (0)|
 |Windows 10, version 2004 or later onboarded to Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business | Block mode (1)|
-|Windows 11 version 22H2 or late with Smart App Control enabled and onboarded with Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Audit mode (2)|
+|Windows 11 version 22H2 or later with Smart App Control enabled and onboarded with Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Audit mode (2)|
 |Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client and onboarded to Microsoft Defender for Servers Plan 1 or Microsoft Defender for Servers Plan 2 or Microsoft Defender for Endpoint for servers|Block mode (1)   |
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
