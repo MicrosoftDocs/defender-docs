@@ -56,9 +56,11 @@ This article is updated frequently to let you know what's new in the latest rele
 What's new
 
 - Removed external dependency of MDE Netfilter and libpcre from MDE package
-
+  
 - Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
-
+  
+- Added detection mechanism for CVE-2025-31324 affecting the "Visual Composer" component of the SAP NetWeaver application server,
+  
 - Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
 
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
