@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 05/21/2025
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
@@ -426,6 +426,30 @@ Determines the number of days after which the last installed security intelligen
 |**Data type**|Integer|
 |**Possible values**|7 (default). Allowed values are integers between 1 and 30|
 
+#### Security intelligence update interval (in seconds)
+
+Specifies the time interval (in seconds) after which security intelligence updates will be checked.
+
+|Section|Value|
+|---|---|
+|**Key**|definitionUpdatesInterval|
+|**Data type**|Integer|
+|**Possible values**|28800 (default, 8 hours). Allowed values are integers between 60 (1 minute) and 86400 (24 hours)|
+|**Comments**|Setting the value too low may lead to repeated or unnecessary security intelligence update checks.|
+
+#### Proxy for Defender for Endpoint communication 
+
+Configure proxy for all Defender for Endpoint cloud communication. If not set, the system-wide proxy is used.
+
+|Section|Value|
+|---|---|
+|**Key**|proxy|
+|**Data type**|String|
+|**Comments**|Format: "http://proxy.server:port" or "https://proxy.server:port".|
+> [!IMPORTANT]
+> - Incorrect proxy configuration can disrupt MDE functionality.
+> - You can run "mdatp connectivity test" on endpoint to test mde connectivity after applying proxy settings.
+
 ### User interface preferences
 
 Manage the preferences for the user interface of Microsoft Defender for Endpoint on macOS.
@@ -534,9 +558,9 @@ EDR Group identifiers
 |**Data type**|String|
 |**Comments**|Group identifier|
 
-### Tamper Protection
+### Tamper protection
 
-Manage the preferences of the Tamper Protection component of Microsoft Defender for Endpoint on macOS.
+Manage the preferences of the tamper protection component of Microsoft Defender for Endpoint on macOS.
 
 |Section|Value|
 |---|---|

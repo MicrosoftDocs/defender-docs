@@ -1,7 +1,7 @@
 ---
 title: Cloud app catalog and risk scores | Microsoft Defender for Cloud Apps
 description: Learn about the Microsoft Defender for Cloud Apps' cloud app catalog, and how to use and customize your cloud app risk score.
-ms.date: 09/07/2023
+ms.date: 05/12/2025
 ms.topic: how-to
 #CustomerIntent: As a Defender for Cloud Apps user, I want to understand how to use the Cloud app catalog and my cloud app risk scores.
 ---
@@ -12,12 +12,13 @@ The Microsoft Defender for Cloud Apps **Cloud app catalog** page provides a full
 
 For example:
 
-:::image type="content" source="media/cloud-app-catalog.png" alt-text="Screenshot showing the cloud app catalog." lightbox="media/cloud-app-catalog.png":::
+:::image type="content" source="media/cloud-app-catalog.png" alt-text="Screenshot showing the cloud app catalog" lightbox="media/cloud-app-catalog.png":::
+
 
 Apps in the cloud app catalog are scored based on more than 90 risk factors. This article describes how to identify apps covered by the catalog, and how to use and customize the cloud app risk scores.
 
 >[!TIP]
-> By default, Defender for Cloud Apps cannot discover apps that aren't in the catalog. To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check our roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity), [suggest a new app](#suggest-a-change-to-the-cloud-app-catalog), or [create a custom app](cloud-discovery-custom-apps.md).
+> By default, Defender for Cloud Apps can't discover apps that aren't in the catalog. To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check our roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity), [suggest a new app](#suggest-a-change-to-the-cloud-app-catalog), or [create a custom app](cloud-discovery-custom-apps.md).
 
 ## Risk scoring process
 
@@ -57,7 +58,7 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
 1. Select the **Advanced filters** toggle to configure the following advanced filter:
 
-- **Compliance risk factor** > **SOC 2** > **equals** > **Yes**
+    - **Compliance risk factor** > **SOC 2** > **equals** > **Yes**
     - **Compliance risk factor** > **ISO 27001** > **equals** > **Yes**
     - **Security risk factor** > **Data-at-rest-encryption method** > **does not equal** > **Not supported, NA**
     - **Security risk factor** > **Admin audit trail** > **equals** > **Yes**
@@ -65,13 +66,16 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
     For example:
 
-    ![Screenshot showing cloud app catalog filters.](media/cloud-app-catalog-filters.png)
-   
+    :::image type="content" source="media/compliance-risk-factor.png" alt-text="Screenshot showing the compliance risk factors":::
+
+    :::image type="content" source="media/security-risk-factor.png" alt-text="Screenshot showing the security risk factor filters":::
+
 1. Review the filtered apps shown in the grid and check to see that the apps you use have appropriate risk scores for your organization. Select an app to expand it for more details.
 
     We recommend that you review the weights given to risk factors and risk categories when scoring a specific app. In the expanded app details, scroll down and hover an **i** button next to each risk factor name to learn more. For example:
 
-    :::image type="content" source="media/cac-weight.png" alt-text="Screenshot showing a risk calculation." lightbox="media/cac-weight.png":::
+    :::image type="content" source="media/disaster-recovery-plan-information.png" alt-text="Screenshot showing more information about the disaster recovery plan with a risk calculation score" lightbox="media/disaster-recovery-plan-information.png":::
+
 
 ## Customize the risk score
 
@@ -107,9 +111,9 @@ You might want to request a review by the Defender for Cloud Apps security analy
 
 1. Sign into Microsoft Defender XDR and select **Cloud apps** > **Cloud app catalog**, and locate the app you want to update.
 
-1. In the **Cloud App Catalog** page, in the app row you want to update, select the three dots at the end of the row and choose **Request score update**. For example:
+1. In the **Cloud App Catalog** page, click on the app row you want to update, and choose **Request score update**. For example:
 
-    :::image type="content" source="media/request-score-update.png" alt-text="Screenshot of how to request a risk score update." lightbox="media/request-score-update.png":::
+    :::image type="content" source="media/request-score-update.png" alt-text="Screenshot of how to request a risk score update.":::
 
 1. In the **Suggest an improvement** dialog, select whether you want to request a score update, suggest a new risk factor, or update app data.
 
@@ -127,12 +131,12 @@ If you find a new app in your environment that hasn't been scored by Defender fo
 
 1. In the **Suggest new cloud app** pop-up, fill in details about the new app. Include the name and domain of the app.
 
-    ![Screenshot showing the ](media/suggest-new-app-pop-up.png)
+    :::image type="content" source="media/suggest-a-new-app-pop-up.png" alt-text="Screenshot showing the suggest a new app pop up ":::
    
 3. We recommend selecting the checkbox to enable Defender for Cloud Apps analysts to contact you in case additional information about the app is needed.
 
 > [!NOTE]
-> If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators will be created in Defender for Endpoint for all unsanctioned cloud applications. While Microsoft does its best to keep the list of urls or indicators for an app up to date, however it is beyond control that the app vendors could add, change, use different urls for different types of their app such as web, desktop or mobile and so on resulting in inconsistent unsanctioned behavior for an app or app type due to missing url or an indicator in the catalog. In such case we suggest to propose a change to the cloud app catalog for such urls to be added.
+> If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. While Microsoft does its best to keep the list of urls or indicators for an app up to date, however it is beyond control that the app vendors could add, change, use different urls for different types of their app such as web, desktop, or mobile, and so on, resulting in inconsistent unsanctioned behavior for an app or app type due to missing url or an indicator in the catalog. In such case we suggest proposing a change to the cloud app catalog for such urls to be added.
 
 ## Supported filters and categories
 
@@ -158,21 +162,21 @@ The following table lists the cloud app catalog's supported categories:
 
 | Category                    | Description          |
 | -------------------------- | --------------------- |
-| **Accounting and finance**     | Cloud apps that provide financial services, such as insurance services, banking, stocks and more. |
+| **Accounting and finance**     | Cloud apps that provide financial services, such as insurance services, banking, stocks, and more. |
 | **Advertising**                | Cloud apps that provide advertising tools and advertising platforms. |
 | **Business intelligence**      | Cloud apps that help organizations to make data-driven business decisions and create data-based reports and dashboards.     |
 | **Business management**        | Cloud apps that provide business management solutions based on enterprise resource planning (ERP).           |
 | **CRM**                        | Cloud apps that provide customer relationship management tools, helping organizations to build stronger relationships with their customers, boost conversations and improve revenues.             |
 | **Cloud computing platform**   | Cloud apps that provide cloud computing platforms used for cloud storage, virtual computing, networking, analytics, etc.  |
-| **Cloud storage**              | Cloud apps that provide data storage including uploading, downloading and sharing.    |
-| **Code hosting**               | Cloud apps that allow developers to create, run, store, edit and share code projects. |
+| **Cloud storage**              | Cloud apps that provide data storage including uploading, downloading, and sharing.    |
+| **Code hosting**               | Cloud apps that allow developers to create, run, store, edit, and share code projects. |
 | **Collaboration**              | Cloud apps in which multiple users or organizations can engage in a shared activity with a shared data. |
 | **Communications**             | Cloud apps that provide communication services, including telecommunication services. |
 | **Content management**         | Cloud apps that provide tools to help organizations organize, search, and analyze content. |
 | **Content sharing**            | Cloud apps that allow users to upload, download and publicly share content with others. |
-| **Customer support**           | Cloud apps that provide tools for customer issue tracking, helpdesk and product user live chat. |
+| **Customer support**           | Cloud apps that provide tools for customer issue tracking, helpdesk, and product user live chat. |
 | **Data analytics**             | Cloud apps that provide tools for manipulating and transforming data, as well as running complex algorithms and logic on top of it. |
-| **Development tools**          | Cloud apps that provide tools helping individuals to create new apps, websites and online services. |
+| **Development tools**          | Cloud apps that provide tools helping individuals to create new apps, websites, and online services. |
 | **E-commerce**                 | Cloud apps that provide e-commerce platforms and tools, for either purchasing or selling products. |
 | **Education**                  | Cloud apps that provide education tools and platforms, such as training, test, knowledge base, knowledge checks, and management of the studying process for individuals and organizations.  |
 | **Forums**                     | Cloud apps that provide forums and blogs, helping sharing knowledge and maintaining communities. |
@@ -188,18 +192,18 @@ The following table lists the cloud app catalog's supported categories:
 | **Operations management**      | Cloud apps that are used to manage business practices of organization’s internal flows and procedures. |
 | **Personal instant messaging** | Cloud apps that provide nonbusiness real-time text correspondence using an online chat. |
 | **Product design**             | Cloud apps that provide product sketching and prototyping tools. |
-| **Productivity**               | Cloud apps that are used for creating, producing and modifying information and media. |
-| **Project management**         | Cloud apps that are used for project planning, project scheduling and project resource management. |
+| **Productivity**               | Cloud apps that are used for creating, producing, and modifying information and media. |
+| **Project management**         | Cloud apps that are used for project planning, project scheduling, and project resource management. |
 | **Property management**        | Cloud apps that are used to manage business physical  resources and inventory. |
-| **Sales**                      | Cloud apps that are used to track, optimize and streamline the lifecycle of selling business products.  |
-| **Security**                   | Cloud apps that are used to identify, prevent, stop and repair the damage caused by others on network or endpoint devices. |
-| **Social network**             | Cloud apps that enable people with similar interests to come together and communicate with each other by posting and sharing information, comments, messages and media. |
+| **Sales**                      | Cloud apps that are used to track, optimize, and streamline the lifecycle of selling business products.  |
+| **Security**                   | Cloud apps that are used to identify, prevent, stop, and repair the damage caused by others on network or endpoint devices. |
+| **Social network**             | Cloud apps that enable people with similar interests to come together and communicate with each other by posting and sharing information, comments, messages, and media. |
 | **Supply chain and logistics** | Cloud apps that are used to execute supply chain operations and manage supplier relationships. |
-| **Transportation and travel**  | Cloud apps that are used to create, track and manage personal or business travel and transportation inquiries and orders. |
+| **Transportation and travel**  | Cloud apps that are used to create, track, and manage personal or business travel and transportation inquiries and orders. |
 | **Vendor management system**   | Cloud apps that allow business to manage and procure staffing and placement services, as well as outside contracting or contingent labor. |
 | **Web analytics**              | Cloud apps that are used to analyze the use patterns and behavior of visitors to a website. Such apps allow you to optimize and gain insight to attract more visitors and improve website experience. |
 | **Webmail**                    | Cloud apps that are used to access email via a web browser.         |
-| **Website monitoring**         | Cloud apps that are used to track website visitors, performance and operations, as well as that the website performs as expected and any issue is being handled and resolved  |
+| **Website monitoring**         | Cloud apps that are used to track website visitors, performance, and operations, as well as that the website performs as expected and any issue is being handled and resolved  |
 
 
 

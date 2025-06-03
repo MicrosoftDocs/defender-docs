@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/17/2025
+ms.date: 05/01/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -25,7 +25,6 @@ ms.date: 04/17/2025
 **Applies to:**
 
 - Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
 
@@ -205,13 +204,13 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
       ```
 
-   - For Debian 12 and later, run the following command.
+   - For Debian 12/Ubuntu 24.04 and later, run the following command.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
@@ -486,9 +485,9 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 
 The following external package dependencies exist for the `mdatp` package:
 
-- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, `mde-netfilter`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `mde-netfilter`
-- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`, `mde-netfilter`
+- The mdatp RPM package requires `glibc >= 2.17`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`
+- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
@@ -496,12 +495,12 @@ The following external package dependencies exist for the `mdatp` package:
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-
-The `mde-netfilter` package also has the following package dependencies:
-
-- For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1`, `libglib2.0-0`
-- For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
-- For Mariner, the `mde-netfilter` package requires `libnfnetlink`, `libnetfilter_queue`
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
@@ -558,12 +557,14 @@ For manual uninstallation, execute the following command for your Linux distribu
 ## See also
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
-- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
-- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
-- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
-- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
-- [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+
+- Other deployment methods:
+   - [Installer script based deployment](linux-installer-script.md) 
+   - [Ansible based deployment](linux-install-with-ansible.md)
+   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet based deployment](linux-install-with-puppet.md)
+   - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

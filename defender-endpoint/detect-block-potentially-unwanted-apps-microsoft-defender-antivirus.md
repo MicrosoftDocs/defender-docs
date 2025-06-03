@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 04/01/2025
+ms.date: 05/01/2025
 ---
 
 # Detect and block potentially unwanted applications
@@ -193,7 +193,7 @@ get-mpPreference | ft PUAProtection
 | -------- | -------- |
 | `0` | PUA Protection off (Default).  Microsoft Defender Antivirus won't protect against potentially unwanted applications.  |
 | `1` | PUA Protection on. Detected items are blocked. They'll show in history along with other threats.|
-| `2` | Audit mode. Microsoft Defender Antivirus detects potentially unwanted applications but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer.|
+| `2` | Audit mode. Microsoft Defender Antivirus detects potentially unwanted applications but takes no action. You can review information about the applications Microsoft Defender Antivirus would've taken action against by searching for events created by Microsoft Defender Antivirus in the Event Viewer, but not in the [Microsoft Defender portal](https://security.microsoft.com).|
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
 

@@ -1,7 +1,7 @@
 ---
 title: Protect your GitHub Enterprise environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your GitHub Enterprise app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 04/27/2025
 ms.topic: how-to
 ---
 # How Defender for Cloud Apps helps protect your GitHub Enterprise environment
@@ -85,10 +85,6 @@ These steps can be completed independently of the [Configure GitHub Enterprise C
 
 1. **Create an OAuth App for Defender for Cloud Apps to connect your GitHub organization.** Repeat this step for each additional connected organization.
 
-    > [!NOTE]
-    > If you have [preview features](/microsoft-365/security/defender/preview) and [app governance turned on](app-governance-get-started.md), use the **App governance** page instead of the **OAuth apps** page to perform this procedure.
-    >
-
 1. Browse to **Settings** > **Developer settings**, select  **OAuth Apps**, and then select **Register an application**. Alternatively, if you have existing OAuth apps, select **New OAuth App**.
 
     ![Screenshot showing creating an oauth app.](media/connect-github-create-oauth-app.png)
@@ -129,8 +125,8 @@ These steps can be completed independently of the [Configure GitHub Enterprise C
    
    1. Select the **GitHub Profile picture** -> **your enterprises**.
    1. Select **your enterprise account** and choose the account you want to connect to Microsoft Defender for Cloud Apps.
-   1. Confirm that the URL is the enterprise slug. For instance, in this example `https://github.com/enterprises/testEnterprise` *testEnterprise* is the enterprise slug. Enter only the enterprise slug, not the entire URL.
-
+   1. Confirm that the URL contains the enterprise slug. For instance, `https://github.com/enterprises/testEnterprise` 
+   2. Enter only the enterprise slug, not the entire URL. In this example, *testEnterprise* is the enterprise slug.
 1. Select **Next**.
 
 1. Select **Connect GitHub**.

@@ -6,7 +6,7 @@ description: Windows Server includes automatic exclusions, based on server role.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 05/01/2025
 author: emmwalshh
 ms.author: ewalsh
 ms.topic: conceptual
@@ -30,21 +30,17 @@ search.appverid: met150
 
 - Windows Server
 
+## Important notes about automatic exclusions on Windows Server
 
-> [!IMPORTANT]
-> ## Important notes about automatic exclusions on Windows Server
->
-> - [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
-> - Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
-> - Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
-> - Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
-> - Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
-> - Appropriate exclusions must be set for software that isn't included with the operating system.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in and automatic exclusions. 
+- [Custom exclusions](configure-exclusions-microsoft-defender-antivirus.md) take precedence over automatic exclusions. When a custom exclusion is set for a path that also has a duplicate automatic or built-in exclusion, the custom exclusion will always apply.
+- Automatic exclusions only apply to [real-time protection (RTP)](configure-protection-features-microsoft-defender-antivirus.md) scanning. Other scan activity, for example [Network Inspection](network-protection.md) and [Behavior Monitoring](behavior-monitor.md), will not be excluded. To exclude other scan types, please use custom exclusions.
+- Automatic exclusions aren't honored during a [quick scan, full scan, and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan). To exclude other scan types, please use custom exclusions.
+- Built-in exclusions and automatic server role exclusions don't appear in the standard exclusion lists that are shown in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+- Microsoft Defender Antivirus uses the Deployment Image Servicing and Management (DISM) tools to determine which roles are installed on your computer.
+- Appropriate exclusions must be set for software that isn't included with the operating system.
+- The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. 
 
-## Overview
-
-This article describes types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
+This article describes the two main types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
 
 - [Automatic exclusions](#automatic-server-role-exclusions) for roles on Windows Server 2016 and later. 
 - [Built-in exclusions](#built-in-exclusions) for operating system files on all versions of Windows. 
@@ -240,10 +236,9 @@ This section lists the folder exclusions that are delivered automatically when y
 
 ## Built-in exclusions
 
-> [!NOTE]
-> - Please see [Important Notes](#important-notes-about-automatic-exclusions-on-windows-server)
-> - Default locations could be different than the locations that are described in this article.
-> - The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
+Make sure to review [Important notes about automatic exclusions](#important-notes-about-automatic-exclusions-on-windows-server) (in this article). Keep in mind that default locations could be different than the locations that are described in this article.
+
+The list of built-in exclusions applied by Microsoft Defender Antivirus is kept up to date as the threat landscape changes. This article lists some, but not all, of the built-in exclusions. 
 
 Because Microsoft Defender Antivirus is built into Windows, it doesn't require exclusions for operating system files on any version of Windows. 
 
@@ -396,9 +391,7 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
-- [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Configure Defender for Endpoint on Android features](android-configure.md)
-- [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

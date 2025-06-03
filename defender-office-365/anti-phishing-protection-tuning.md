@@ -34,7 +34,7 @@ If your subscription includes Microsoft Defender for Office 365, you can use [Of
 
 - [Safe Links in Microsoft Defender for Office 365](safe-links-policies-configure.md)
 - [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)
-- [Anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md). You can temporarily increase the **Advanced phishing thresholds** in the policy from **Standard** to **Aggressive**, **More aggressive**, or **Most aggressive**.
+- [Anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md). You can temporarily increase the **Phishing email threshold** in the policy from **Standard** to **Aggressive**, **More aggressive**, or **Most aggressive**.
 
 Verify these policies are working. Safe Links and Safe Attachments protection is turned on by default, thanks to Built-in protection in [preset security policies](preset-security-policies.md). Anti-phishing has a default policy that applies to all recipients where anti-spoofing protection is turned on by default. Impersonation protection isn't turned on in the policy, and therefore needs to be configured. For instructions, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 

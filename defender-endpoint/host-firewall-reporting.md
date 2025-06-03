@@ -3,11 +3,11 @@ title: Host firewall reporting in Microsoft Defender for Endpoint
 description: Host and view firewall reporting in Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/11/2024
+ms.date: 05/08/2025
 audience: ITPro
 ms.topic: conceptual
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 manager: deniseb
 ms.subservice: asr
 ms.collection: 

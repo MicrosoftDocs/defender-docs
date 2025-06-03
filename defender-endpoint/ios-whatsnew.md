@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 05/15/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -28,6 +28,14 @@ search.appverid: met150
 - [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+#### Alerts for activities related to open wireless connections are now detected as events
+
+**May 2025**
+
+Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline.
+
+For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 

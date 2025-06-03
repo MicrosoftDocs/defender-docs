@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/24/2025
+ms.date: 05/12/2025
 ---
 
 # Schedule an update for Microsoft Defender for Endpoint on Linux
@@ -92,19 +92,19 @@ CRON_TZ=America/Los_Angeles
 > #!RHEL and variants (CentOS and Oracle Linux)
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo yum update mdatp -y >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo yum update mdatp -y >> ~/mdatp_cron_job.log
 > ```
 
 > #!SLES and variants
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo zypper update mdatp >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo zypper update mdatp >> ~/mdatp_cron_job.log
 > ```
 
 > #!Ubuntu and Debian systems
 >
 > ```bash
-> 0 6 * * sun [ $(date +%d) -le 15 ] && sudo apt-get install --only-upgrade mdatp >> ~/mdatp_cron_job.log
+> 0 6 * * sun [ $(date +\%d) -le 15 ] && sudo apt-get install --only-upgrade mdatp >> ~/mdatp_cron_job.log
 > ```
 
 > [!NOTE]

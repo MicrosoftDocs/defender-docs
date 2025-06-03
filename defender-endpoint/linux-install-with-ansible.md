@@ -115,7 +115,7 @@ Pull the [installer bash script](https://github.com/microsoft/mdatp-xplat/tree/m
 
 ### Create Ansible YAML files
 
-Create installation YAML file. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
+Create installation YAML file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/ansible.install_mdatp_simplified.yaml).
 
 ```bash
 - name: Install and Onboard MDE

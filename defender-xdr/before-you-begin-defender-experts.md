@@ -1,7 +1,7 @@
 ---
-title: Key infrastructure requirements before enrolling in the Microsoft Defender Experts for Hunting service
+title: Before you begin using the Microsoft Defender Experts for Hunting service
 ms.reviewer:
-description: This section outlines the key infrastructure requirements you must meet and important information on data access and compliance.
+description: To enable us to get started with the defender experts managed service, we require the following prerequisites
 ms.service: defender-experts-for-hunting
 ms.author: vpattnaik
 author: vpattnai
@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 04/07/2025
+ms.date: 04/24/2025
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -75,13 +75,13 @@ Any detection that's not from Microsoft Defender products (for example, detectio
 
 [Ask Defender Experts](experts-on-demand.md) is intended to provide a better understanding of complex threats affecting your organization. It focuses on products included in Microsoft Defender XDR (Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, and Defender for Identity). [See sample questions you can ask Defender Experts](experts-on-demand.md#sample-questions-you-can-ask-from-defender-experts).
 
-Defender Experts for Hunting customers are assigned 10 Ask Defender Experts credits, which you can use to submit questions, at the start of each calendar quarter. Unused credits from the current quarter roll up to the next one. You can use up to 20 credits only per quarter. All unused credits expire by the end of the calendar year or at the end of your subscription term, whichever comes first. 
+Defender Experts for Hunting customers are assigned 10 Ask Defender Experts credits, which you can use to submit questions, at the start of each calendar quarter. Unused credits from the current quarter roll up to the next one. You can use up to 20 credits only per quarter. All unused credits expire by the end of the calendar year or at the end of your subscription term, whichever comes first.
 
 [Learn more about Microsoft's commercial licensing terms](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA)
 
 ## Access requirements
 
-Anyone from your organization can [apply for the Defender Experts for Hunting service](#apply-for-microsoft-defender-experts-for-hunting-service). However, you need to work with your Commercial Executive to transact the SKU. 
+Anyone from your organization can [apply for the Defender Experts for Hunting service](#apply-for-microsoft-defender-experts-for-hunting-service). However, you need to work with your Commercial Executive to transact the SKU.
 
 You might need certain roles and permissions to fully access the service capabilities. Refer to [Custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md) for details.
 
@@ -89,7 +89,7 @@ You might need certain roles and permissions to fully access the service capabil
 
 Defender Experts for Hunting is a managed threat hunting service that proactively hunts for threats across endpoints, email, identity, and cloud apps. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
 
-The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > [**Microsoft Defender Experts**](https://aka.ms/trustcenter-defenderexperts).
+The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 
 ### Data collection, usage, and retention
 

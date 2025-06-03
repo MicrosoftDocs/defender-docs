@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 04/18/2025
+ms.date: 05/15/2025
 ---
 
 # What's new in Microsoft Defender for Endpoint on Android
@@ -27,6 +27,17 @@ ms.date: 04/18/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+#### Alerts for activities related to open wireless connection and certificates are now detected as events
+
+May 2025
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the following as events instead of alerts:
+
+- Connecting or disconnecting to open wireless networks
+- Download/installation/removal of self-signed certificates
+
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
 
 #### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
