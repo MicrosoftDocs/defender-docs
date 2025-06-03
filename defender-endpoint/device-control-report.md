@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 06/25/2024
 ms.author: deniseb
 author: denisebmsft
-ms.topic: conceptual
+ms.topic: article
 manager: deniseb
 ms.reviewer: joshbregman
 audience: ITPro
