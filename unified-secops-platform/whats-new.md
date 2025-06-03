@@ -24,7 +24,7 @@ This article lists recent features added for unified security operations in the 
 
 ### Multitenant portal tenant groups now renamed to distribution profiles
 
-In the Microsoft Defender multitenant portal, tenant groups are now renamed to **distribution profiles**. For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profile.md).
+In the Microsoft Defender multitenant portal, tenant groups are now renamed to **distribution profiles**. For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profiles.md).
 
 <!-- screenshot-->
 
