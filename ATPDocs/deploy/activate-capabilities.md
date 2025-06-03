@@ -14,7 +14,7 @@ This article describes how to activate and test Microsoft Defender for Identity 
 > The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
 > 
 > Preview features are still in development, have limited or restricted functionality and may be available only in selected geographic areas.
-> For more information, see the [Microsoft Defender XDR preview features](defender-xdr/preview.md)
+> For more information, see the [Microsoft Defender XDR preview features](defender-xdr/preview)
 
 > [!IMPORTANT]
 > The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
