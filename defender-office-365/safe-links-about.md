@@ -79,6 +79,7 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 |Chris's Microsoft 365 E5 organization has no Safe Links policies configured. Chris receives an email from an external sender that contains a URL to a malicious website that he ultimately clicks.|Chris is protected by Safe Links. <br><br> The **Built-in protection** preset security policy provides Safe Links protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).|
 |In Pat's organization, admins have created a Safe Links policy that applies Pat, but Safe Links protection for Office apps is turned off. Pat opens a Word document and clicks a URL in the file.|Pat isn't protected by Safe Links. <br><br> Although Pat is included in an active Safe Links policy, Safe Links protection for Office apps is turned off in that policy, so the protection can't be applied.|
 |Jamie and Julia both work for contoso.com. A long time ago, admins configured Safe Links policies that apply to both of Jamie and Julia. Jamie sends an email to Julia, not knowing that the email contains a malicious URL.|Julia is protected by Safe Links **if** the Safe Links policy that applies to her is configured to apply to messages between internal recipients. For more information, see the [Safe Links settings for email messages](#safe-links-settings-for-email-messages) section later in this article.|
+|Jim's IT department has set SafeLinks to not rewrite URLs, and check via API only. He receives an email about an urgent crypto opportunity within BroMail - an 'aternative' email client that doesn't use 'woke' APIs, and clicks the link. The link was legitimate on delivery, but since has been weaponized. |Jim is phished. His mail client does not support the API call SafeLinks is configured to use. Because the link was not malicious on delivery, SafeLinks did not catch it.|
 
 ## Recipient filters in Safe Links policies
 
@@ -106,18 +107,18 @@ You can use a condition or exception only once, but the condition or exception c
 
 ## Safe Links settings for email messages
 
-Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://<DataCenterLocation>.safelinks.protection.outlook.com` (for example, `https://nam01.safelinks.protection.outlook.com`). After the link is rewritten, it's analyzed for potentially malicious content.
+Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://<DataCenterLocation>.safelinks.protection.outlook.com` (for example, `https://nam01.safelinks.protection.outlook.com`). If a rewritten link is clicked, it is scanned for malicious content before directing the user to the page.
 
-Safe Links rewrites URLs without altering their appearance in the standard email view. However, these rewritten URLs can be seen by viewing the email's source code. This process ensures secure links, protecting against potential threats while maintaining readability and integrity in the normal email view. When a user hovers over a URL, a pop-up message will display the original URL, indicating that it has been scanned by Safe Links. In plain text format emails, the Safe Links URLs will be directly visible within the content. 
+~~Safe Links rewrites URLs without altering their appearance in the standard email view. However, these rewritten~~ Safe links URLs can be seen by viewing the email's source code. This process ensures secure links, protecting against potential threats while maintaining readability and integrity in the normal email view. When a user hovers over a URL, a pop-up message will display the original URL, indicating that it has been scanned by Safe Links. ~~In plain text format emails, the Safe Links URLs will be directly visible within the content.~~
 
-After Safe Links rewrites a URL, the URL is rewritten even if the message is _manually_ forwarded or replied to. Wrapping is done per message recipient (both internal and external recipients). Additional links that are added to the forwarded or replied-to message are also rewritten.
+If URL rewriting is enabled  the URL is rewritten even if the message is _manually_ forwarded or replied to. Wrapping is done per message recipient (both internal and external recipients). Additional links that are added to the forwarded or replied-to message are also rewritten.
 
 For _automatic_ forwarding by Inbox rules or SMTP forwarding, the URL isn't rewritten in the message that's intended for the final recipient _unless_ one of the following statements is true:
 
 - The recipient is also protected by Safe Links.
 - The URL was already rewritten in a previous communication.
 
-As long as Safe Links protection is turned on, URLs are scanned prior to message delivery, regardless of whether the URLs are rewritten or not. In supported versions of Outlook (Windows, Mac, and Outlook on the web), unwrapped URLs are checked by a client-side API call to Safe Links at the time of click.
+As long as Safe Links protection is turned on, URLs are scanned prior to message delivery, regardless of whether the URLs are rewritten or not. If rewriting is enabled, links are scanned on click. If rewriting is disabled,  unwrapped URLs are checked by a client-side API call to Safe Links at the time of click in supported versions of Outlook (Windows, Mac, and Outlook on the web),
 
 The settings in Safe Links policies that apply to email messages are described in the following list:
 
@@ -137,7 +138,7 @@ The settings in Safe Links policies that apply to email messages are described i
       - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This is the recommended value.
       - Not selected (off): If URL scanning can't complete, deliver the message anyway.
 
-  - **Do not rewrite URLs, do checks via SafeLinks API only**: If this setting is selected (on), no URL wrapping takes place but the URLs are scanned prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called exclusively via APIs at the time of URL click.
+  - **Do not rewrite URLs, do checks via SafeLinks API only**: If this setting is selected (on), no URL wrapping takes place but the URLs are scanned prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called via APIs at the time of URL click for an additional scan.
 
   For more information about the recommended values for Standard and Strict policy settings for Safe Links policies, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
@@ -242,7 +243,7 @@ These settings apply to Safe Links in email, Teams, and Office apps:
 
   If you select this setting, the following settings are available:
 
-  - **Let users click through to the original URL**: Controls whether users can click through the [warning page](#warning-pages-from-safe-links) to the original URL. The recommend value is not selected (off).
+  - **Let users click through to the original URL**: Controls whether users can click through the [warning page](#warning-pages-from-safe-links) to the original URL when a URL is detected to be malicious. The recommend value is not selected (off).
 
     In Safe Links for Office apps, this setting applies to the original URL in the desktop versions Word, Excel, PowerPoint, and Visio.
 
