@@ -31,7 +31,7 @@ items:
     href: deploy/deploy-defender-identity.md
   - name: Deploy a sensor on a domain controller
     items:
-     - name: Deploy a Microsoft Defender for Identity sensor
+     - name: Deploy the classic sensor
        items:
         - name: Connect to the Defender for Identity service
           href: deploy/configure-proxy.md
