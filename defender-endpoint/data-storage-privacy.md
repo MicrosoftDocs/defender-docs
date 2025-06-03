@@ -70,7 +70,7 @@ In the advanced hunting investigation experience, it's accessible via a query fo
 
 ## Data sharing for Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer.
+Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
