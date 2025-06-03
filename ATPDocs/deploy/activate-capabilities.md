@@ -256,7 +256,8 @@ Download the Defender for Identity offboarding package from the [Microsoft Defen
 ![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor..png)
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
 1. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server and click Delete.   
-![Screenshot that shows how to delete a sensor.](media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor..png)
+:::image type="content" source="media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor..png" alt-text="Screenshot that shows how to delete a sensor" lightbox="media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor..png":::
+
 
 ## Next steps
 
