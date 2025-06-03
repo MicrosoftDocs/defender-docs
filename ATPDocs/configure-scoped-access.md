@@ -34,8 +34,7 @@ To enable identity scoping, follow these steps:​
 :::image type="content" source="media/custom-roles/add-role-name-and-description.png" alt-text="Add role name and description":::
 1. Select Next to choose the permissions you want to assign. Permissions are organized in three different categories.
    :::image type="content" source="media/custom-roles/choose-permissions.png" alt-text="Screenshot showing the three permission types":::
-1. Select Next to see the **Authorization and settings** option.
-1. Choose **Select custom permissions** and under **Security settings** select either:
+1. Choose [**Select custom permissions**](/defender-xdr/create-custom-rbac-roles)
     - Select all permissions - users are able to create and manage roles and permissions.
     - Read-only - users can access and view roles and permissions in a read-only mode.
 
