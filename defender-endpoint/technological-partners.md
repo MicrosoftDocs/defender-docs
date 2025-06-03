@@ -165,7 +165,7 @@ The following are the solution's categories:
 
 |Product name|Vendor|Description|
 |---|---|---|
-|[Zscaler Internet Access](https://go.microsoft.com/fwlink/?linkid=2201779)|Zscaler|Zscaler Internet Access is a cloud native security service edge (SSE) solution that builds on a decade of secure web gateway leadership. Offered as a scalable SaaS platform from the world's largest security cloud, it replaces legacy network security solutions to stop advanced attacks and prevent data loss with a comprehensive zero trust approach.|
+|[Zscaler Internet Access](https://go.microsoft.com/fwlink/?linkid=2201779)|Zscaler|Zscaler Internet Access is a cloud native security service edge (SSE) solution that builds on a decade of secure web gateway leadership. Offered as a scalable SaaS platform from the world's largest security cloud, it replaces legacy network security solutions to stop advanced attacks and prevent data loss with a comprehensive Zero Trust approach.|
 
 ### Additional integrations
 
