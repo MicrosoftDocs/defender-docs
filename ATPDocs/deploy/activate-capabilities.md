@@ -127,7 +127,7 @@ To confirm the sensor has been onboarded:
 > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 To check the onboarding on the local server you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event:   
-![Screenshot that shows the eventlog.](media/activate-capabilities/screenshot-that-shows-the-eventlog..png)
+::: image type="content" source="media/activate-capabilities/screenshot-that-shows-the-eventlog..png" alt-text="Screenshot that shows the eventlog" lightbox="media/activate-capabilities/screenshot-that-shows-the-eventlog..png" :::
 
 **Test activated capabilities**
 
