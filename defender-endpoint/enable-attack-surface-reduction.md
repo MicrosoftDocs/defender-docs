@@ -136,13 +136,13 @@ The following procedures for enabling attack surface reduction rules include ins
 ### Intune
 
 > [!IMPORTANT]
-> If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, these policies fail to apply:
-> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
-> - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
-> - [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
+> If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, policies containing any of these rules targeted at Windows Server 2012 R2 or Windows Server 2016 will fail to apply:
+- [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
+- [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+- [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
+- [Block Webshell creation for Servers](/defender-endpoint/attack-surface-reduction-rules-reference), this isn't supported on Windows Server 2012 R2, but it is supported on Windows Server 2016. It only applies to the Exchange server role.
 
 #### Endpoint security policy (Preferred)
-
 1. Select **Endpoint Security** > **Attack surface reduction**. Choose an existing attack surface reduction rule or create a new one. To create a new one, select **Create Policy** and enter information for this profile. For **Profile type**, select **Attack surface reduction rules**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
 
 1. In the **Configuration settings** pane, select **Attack Surface Reduction** and then select the desired setting for each attack surface reduction rule.
@@ -159,7 +159,7 @@ The following procedures for enabling attack surface reduction rules include ins
 
 1. Select **Device configuration** > **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
 
-2. In the **Endpoint protection** pane, select **Windows Defender Exploit Guard**, then select **Attack Surface Reduction**. Select the desired setting for each attack surface reduction rule.
+2. In the **Endpoint protection** pane, select **Windows Defender Exploit Guard**, and then select **Attack Surface Reduction**. Select the desired setting for each attack surface reduction rule.
 
 3. Under **Attack Surface Reduction exceptions**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
 
@@ -177,8 +177,8 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 2. In **Create a profile**, in the following two drop-down lists, select the following:
 
-   - In **Platform**, select **Windows 10 and later**
-   - In **Profile type**, select **Templates**
+   - In **Platform**, select **Windows 10 and later**.
+   - In **Profile type**, select **Templates**.
    - If attack surface reduction rules are already set through Endpoint security, in **Profile type**, select **Settings Catalog**.
 
 3. Select **Custom**, and then select **Create**.
@@ -235,7 +235,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
       3. In **Value**, enter the applicable value or value range.
 
-      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal" lightbox="media/mem07-5-applicability-rules.png":::
+      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
 
 11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
@@ -245,7 +245,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 > [!NOTE]
 > Regarding conflict handling, if you assign a device two different attack surface reduction policies, potential policy conflicts can occur, depending on whether rules are assigned different states, whether conflict management is in place, and whether the result is an error. 
-> Nonconflicting rules do not result in an error, and such rules are applied correctly. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
+> Nonconflicting rules don't result in an error, and such rules are applied correctly. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
 
 ### MDM
 
@@ -290,7 +290,7 @@ Example:
 6. After the policy is created, select **Close**.
 
 > [!WARNING]
-> There is a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there is no defined release date for when this will be fixed.
+> There's a known issue with the applicability of attack surface reduction on Server OS versions which is marked as compliant without any actual enforcement. Currently, there's no defined release date for when this will be fixed.
 
 > [!IMPORTANT]
 > If you're using "Disable admin merge" set to `true` on devices, and you're using any of the following tools/methods, adding ASR rules per-rule exclusions or local ASR rule exclusions don't apply.
@@ -316,15 +316,15 @@ Example:
    - 0: Disable (Disable the attack surface reduction rule)
    - 1: Block (Enable the attack surface reduction rule)
    - 2: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
-   - 6: Warn  (Enable the attack surface reduction rule but allow the end-user to bypass the block)
+   - 6: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
 
       :::image type="content" source="media/asr-rules-gp.png" alt-text="attack surface reduction rules in Group Policy" lightbox="media/asr-rules-gp.png":::
 
 5. To exclude files and folders from attack surface reduction rules, select the **Exclude files and paths from Attack surface reduction rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
 
    > [!WARNING]
-   > Do not use quotes as they are not supported for either the **Value name** column or the **Value** column.
-   > The rule ID should not have any leading or trailing spaces.
+   > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
+   > The rule ID shouldn't have any leading or trailing spaces.
 
 ### PowerShell
 
@@ -333,7 +333,7 @@ Example:
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-2. Type one of the following cmdlets. (For more information, such as rule ID, refer to [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).)
+2. Type one of the following cmdlets. For more information, such as rule ID, refer to [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
 
    | Task | PowerShell cmdlet|
    |---|---|

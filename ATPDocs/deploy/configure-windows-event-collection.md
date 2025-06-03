@@ -3,6 +3,7 @@ title: Configure audit policies for Windows event logs | Microsoft Defender for 
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
 ms.date: 01/16/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure audit policies for Windows event logs
@@ -64,7 +65,7 @@ To configure your Advanced Audit Policy settings:
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
-1. Expand **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
+1. Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
 
     ![Screenshot of the pane for editing the default policy for domain controllers.](../media/advanced-audit-policy-check-step-1.png)
 
@@ -101,11 +102,11 @@ To configure your Advanced Audit Policy settings:
 
 1. After you apply the policy via GPO, conform that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
 
-To test your audit policies from the command line, run the following command:
+    To test your audit policies from the command line, run the following command:
 
-```cmd
-auditpol.exe /get /category:*
-```
+    ```cmd
+    auditpol.exe /get /category:*
+    ```
 
 For more information, see the [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
 
@@ -286,7 +287,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.
 
-      :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
+        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) by using one of the following methods:
 
