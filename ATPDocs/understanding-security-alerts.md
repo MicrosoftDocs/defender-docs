@@ -3,6 +3,7 @@ title: Learn to view and manage security alerts | Microsoft Defender for Identit
 description: This article explains how to view and manage Microsoft Defender for Identity security alerts.
 ms.date: 05/08/2025
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # View and Manage security alerts
