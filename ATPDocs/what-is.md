@@ -4,6 +4,7 @@ description: This article describes the Microsoft Defender for Identity service 
 ms.date: 08/27/2024
 ms.topic: overview
 #customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft Defender XDR deployment.
+ms.reviewer: AbbyMSFT
 ---
 
 # What is Microsoft Defender for Identity?
