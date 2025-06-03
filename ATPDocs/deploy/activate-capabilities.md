@@ -113,7 +113,7 @@ Download the Defender for Identity onboarding package from the [Microsoft Defend
 ::: image type="content" source="media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png" alt-text="Screenshot that shows how to onboard the new sensor" lightbox="media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png" :::
 
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.   
-![Screenshot that shows the script.](media/activate-capabilities/screenshot-that-shows-the-script..png)
+::: image type="content" source="media/activate-capabilities/screenshot-that-shows-the-script..png" alt-text="Screenshot that shows the script." lightbox="media/activate-capabilities/screenshot-that-shows-the-script..png":::
 
 ## Onboarding Confirmation 
 
