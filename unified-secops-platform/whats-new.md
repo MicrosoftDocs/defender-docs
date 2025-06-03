@@ -26,7 +26,7 @@ This article lists recent features added for unified security operations in the 
 
 In the Microsoft Defender multitenant portal, tenant groups are now renamed to **deployment profiles**. Deployment profiles, previously known as tenant groups, enable you to distribute content at scale across all of your tenants, based on categories like business groups or location. For example:
 
-:::image type="content" source="media/whats-new/deployment-profiles.png" alt-text="Screenshot of the renamed Deployment profiles area.":::
+:::image type="content" source="media/whats-new/deployment-profiles.png" alt-text="Screenshot of the renamed Deployment profiles area." lightbox="media/whats-new/deployment-profiles.png":::
 
 For more information, see [Content distribution using deployment profiles in multitenant management](mto-deployment-profiles.md).
 
