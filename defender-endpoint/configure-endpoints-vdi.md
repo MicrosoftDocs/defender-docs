@@ -43,7 +43,7 @@ Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets e
 Like any other system in an IT environment, VDI devices should have an endpoint detection and response (EDR) and antivirus solution to protect against advanced threats and attacks.
 
 > [!NOTE]
-> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-windows-client.md).
+> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
 
 ## Onboarding non-persistent virtual desktop infrastructure (VDI) devices
 
@@ -70,7 +70,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 ### Onboarding steps
 
 > [!NOTE]
-> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first. See [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-windows-server-2012r2-2016.md).
+> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first. See [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md).
 
 1. Open the VDI configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
@@ -146,7 +146,7 @@ The following registry is relevant only when the aim is to achieve a single entr
 
    ```
 
-2. Follow the [server onboarding process](onboard-windows-server-2012r2-2016.md). 
+2. Follow the [server onboarding process](onboard-server.md). 
 
 ## Updating virtual desktop infrastructure (VDI) images (persistent or non-persistent)
 

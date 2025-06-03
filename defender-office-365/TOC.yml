@@ -101,6 +101,9 @@
        items:
        - name: Defender for Office 365 SecOps guide
          href: mdo-sec-ops-guide.md
+     - name: Quickly configure Microsoft Teams protection
+       href: mdo-support-teams-quick-configure.md
+
    - name: Migrate
      items:
        - name: Migrate to Defender for Office 365
@@ -116,6 +119,8 @@
      items:
        - name: Defender for Office 365 SecOps Guide
          href: mdo-sec-ops-guide.md
+       - name: SecOps guide for Teams protection in Defender for Office 365
+         href: mdo-support-teams-sec-ops-guide.md
        - name: Threat classification
          href: mdo-threat-classification.md
        - name: Security recommendations for priority accounts
@@ -363,6 +368,8 @@
        href: office-365-ti.md
      - name: Defender for Office 365 SecOps Guide
        href: mdo-sec-ops-guide.md
+     - name: SecOps guide for Teams protection in Defender for Office 365
+       href: mdo-support-teams-sec-ops-guide.md
      - name: Analyze and classify
        items:
        - name: Campaign Views
@@ -519,6 +526,8 @@
         items:
         - name: Getting started with defense in-depth configuration for email security
           href: step-by-step-guides/defense-in-depth-guide.md
+        - name: Tune Microsoft Defender for Office 365
+          href: step-by-step-guides/tune-microsoft-defender-for-office-365.md
         - name: How to configure quarantine permissions and policies
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
         - name: Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365

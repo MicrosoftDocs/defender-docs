@@ -7,7 +7,7 @@ ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/29/2024
+ms.date: 04/16/2025
 ms.subservice: macos
 manager: deniseb
 ms.custom: partner-contribution
@@ -30,7 +30,7 @@ Depending on the applications that you're running and your device characteristic
 > As a general best practice, it's recommended to [update the Microsoft Defender for Endpoint agent to latest available version](/defender-endpoint/mac-whatsnew) and confirming that the issue still persists before investigating further.
 
 > [!CAUTION]
-> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on Mac EDR functionality.
+> Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on macOS EDR functionality.
 
 > [!WARNING]
 > Before starting, make sure that other security products aren't currently running on the device. Multiple security products might conflict and affect system performance.
@@ -42,7 +42,7 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 |Daemon name|Component|Troubleshooting guide|
 | -------- | -------- |-------- |
 |wdavdaemon| Core (privileged)|Open a [Microsoft support case](contact-support.md).|
-|wdavdaemon_unprivileged| Antimalware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
+|wdavdaemon_unprivileged| Anti-malware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
 |wdavdaemon_enterprise| Endpoint Detection and Response (EDR)|Open a [Microsoft support case](contact-support.md).|
 
 Additionally, gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs. This is used by the support team to investigate the issue. 

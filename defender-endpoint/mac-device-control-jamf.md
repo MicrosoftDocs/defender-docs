@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 04/16/2025
 ---
 
 # Deploy and manage Device Control using JAMF
@@ -46,7 +46,7 @@ Before you begin, confirm your subscription. To access and use device control, y
 
 ### Step 1: Creating a JSON policy
 
-Device Control on Mac is defined through a JSON policy. This policy should have the appropriate groups, rules, and settings defined to tailor specific customer conditions. For example, some enterprise organizations might need to block all removable media devices entirely, while others might have specific exceptions for a vendor or serial number. Microsoft has a [local GitHub repository](https://github.com/microsoft/mdatp-devicecontrol/tree/main/macOS/policy/samples"https://github.com/microsoft/mdatp-devicecontrol/tree/main/macos/policy/samples") that you can use to build your policies.
+Device Control on macOS is defined through a JSON policy. This policy should have the appropriate groups, rules, and settings defined to tailor specific customer conditions. For example, some enterprise organizations might need to block all removable media devices entirely, while others might have specific exceptions for a vendor or serial number. Microsoft has a [local GitHub repository](https://github.com/microsoft/mdatp-devicecontrol/tree/main/macOS/policy/samples"https://github.com/microsoft/mdatp-devicecontrol/tree/main/macos/policy/samples") that you can use to build your policies.
 
 For more information about settings, rules, and groups, see [Device Control for macOS](mac-device-control-overview.md).
 

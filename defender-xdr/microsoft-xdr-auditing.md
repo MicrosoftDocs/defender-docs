@@ -45,7 +45,7 @@ To access the audit log, you need to have the **View-Only Audit Logs** or **Audi
 > [!NOTE]
 > Global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online.
 
-Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview compliance portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
+Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
 > [!IMPORTANT]
 > Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using accounts with lower permissions helps improve security for your organization.
@@ -54,7 +54,7 @@ Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/a
 
 Follow these steps to search the audit log:
 
-1. Navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
+1. Navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://purview.microsoft.com) and select **Audit**.
 
    :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
 

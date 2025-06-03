@@ -1,5 +1,5 @@
 ---
-title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Mac
+title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on macOS
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on macOS
@@ -33,7 +33,7 @@ ms.date: 04/30/2024
 
 The potentially unwanted application (PUA) protection feature in Microsoft Defender for Endpoint on macOS can detect and block PUA files on endpoints in your network.
 
-These applications are not considered viruses, malware, or other types of threats, but might perform actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have poor reputation.
+These applications aren't considered viruses, malware, or other types of threats, but might perform actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have poor reputation.
 
 These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.
 
@@ -41,7 +41,7 @@ These applications can increase the risk of your network being infected with mal
 
 Microsoft Defender for Endpoint on macOS can detect and report PUA files. When configured in blocking mode, PUA files are moved to the quarantine.
 
-When a PUA is detected on an endpoint, Microsoft Defender for Endpoint on macOS presents a notification to the user, unless notifications have been disabled. The threat name will contain the word "Application".
+When a PUA is detected on an endpoint, Microsoft Defender for Endpoint on macOS presents a notification to the user, unless notifications are disabled. The threat name contains the word "Application".
 
 ## Configure PUA protection
 
@@ -56,7 +56,7 @@ PUA protection in Microsoft Defender for Endpoint on macOS can be configured in 
 
 You can configure how PUA files are handled from the command line or from the management console.
 
-### Use the command-line tool to configure PUA protection:
+### Use the command-line tool to configure PUA protection
 
 In Terminal, execute the following command to configure PUA protection:
 
@@ -66,13 +66,13 @@ mdatp threat policy set --type potentially_unwanted_application --action [off|au
 
 ### Use the management console to configure PUA protection:
 
-In your enterprise, you can configure PUA protection from a management console, such as JAMF or Intune, similarly to how other product settings are configured. For more information, see the [Threat type settings](mac-preferences.md#threat-type-settings) section of the [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md) topic.
+In your enterprise, you can configure PUA protection from a management console, such as JAMF or Intune, similarly to how other product settings are configured. For more information, see the [Threat type settings](mac-preferences.md#threat-type-settings) section of the [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md) article.
 
-### Test PUA protection:
+### Test PUA protection
 
-You are able to test PUA protection by going to [Potentially unwanted applications (PUA) demonstration](defender-endpoint-demonstration-potentially-unwanted-applications.md).
+You're able to test PUA protection by going to [Potentially unwanted applications (PUA) demonstration](defender-endpoint-demonstration-potentially-unwanted-applications.md).
 
-## Related topics
+## Related articles
 
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 

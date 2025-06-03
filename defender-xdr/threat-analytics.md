@@ -20,7 +20,7 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 04/17/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
@@ -91,20 +91,21 @@ Select a threat from the dashboard to view the report for that threat. You can a
 
 You can filter the threat report list and view the most relevant reports according to a specific threat type or by type of report.
 
-- **Threat tags**—assist you in viewing the most relevant reports according to a specific threat category. For example, the **Ransomware** tag includes all reports related to ransomware.
 - **Report types**—assist you in viewing the most relevant reports according to a specific report type. For example, the **Tools & techniques** tag includes all reports that cover tools and techniques.
+- **Threat tags**—assist you in viewing the most relevant reports according to a specific threat category. For example, the **Ransomware** tag includes all reports related to ransomware.
+
 
 The different tags have equivalent filters that assist you in efficiently reviewing the threat report list and filtering the view based on a specific threat tag or report type. For example, to view all threat reports related to ransomware category, or threat reports that involve vulnerabilities.
+
+Report types are presented at the top of the threat analytics page. There are counters for the number of available reports under each type.
+
+:::image type="content" source="/defender/media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report types." lightbox="/defender/media/threat-analytics/ta-dashboard-tags.png":::
 
 The Microsoft Threat Intelligence team adds threat tags to each threat report. The following threat tags are currently available:
   - Ransomware
   - Phishing
   - Activity group
   - Vulnerability
-
-Threat tags are presented at the top of the threat analytics page. There are counters for the number of available reports under each tag.
-
-:::image type="content" source="/defender/media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report tags." lightbox="/defender/media/threat-analytics/ta-dashboard-tags.png":::
 
 To set the types of reports you want in the list, select **Filters**, choose from the list, and select **Apply**. 
 

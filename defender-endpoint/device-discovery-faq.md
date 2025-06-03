@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: faq
 search.appverid: met150
 ms.date: 03/04/2025
 ---
@@ -78,7 +78,7 @@ By default, all onboarded devices running on Windows 10 version 1809 or later, W
 - `DHCPv6`
 - `IP` (headers)
 - `LLDP`
-- LL`MNR
+- `LLMNR`
 - `mDNS`
 - `MNDP`
 - `MSSQL`

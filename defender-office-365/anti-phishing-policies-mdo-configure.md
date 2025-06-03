@@ -117,7 +117,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
      - **3 - More aggressive**
      - **4 - Most aggressive**
 
-     For more information about this setting, see [Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+     For more information about this setting, see [Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
    - **Impersonation**: These settings are conditions for the policy that identify specific senders to look for (individually or by domain) in the From address of inbound messages. For more information, see [Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
@@ -321,7 +321,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
      - **Show user impersonation safety tip**: This setting is available only if you selected **Enable users to protect** on the previous page.
      - **Show domain impersonation safety tip**: This setting is available only if you selected **Enable domains to protect** on the previous page.
      - **Show user impersonation unusual characters safety tip** This setting is available only if you selected **Enable users to protect** or **Enable domains to protect** on the previous page.
-     - **Show (?) for unauthenticated senders for spoof**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds a question mark (?) to the sender's photo in the From box in Outlook if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication). This setting is selected by default.
+     - **Show (?) for unauthenticated senders for spoof**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds a question mark (?) to the sender's photo in the From box in Outlook if the message doesn't pass [Sender Policy Framework (SPF)](email-authentication-spf-configure.md) or [DomainKeys Identified Mail (DKIM)](email-authentication-dkim-configure.md) checks **and** the message doesn't pass [Domain-based Message Authentication, Reporting and Conformance (DMARC)](email-authentication-dmarc-configure.md) or [composite authentication](email-authentication-about.md#composite-authentication). This setting is selected by default.
      - **Show "via" tag**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds tag named via (`chris@contoso.com via fabrikam.com`) to the From address if it's different from the domain in the DKIM signature or the **MAIL FROM** address. This setting is selected by default.
 
      To turn on a setting, select the check box. To turn it off, clear the check box.

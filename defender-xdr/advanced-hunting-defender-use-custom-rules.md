@@ -123,7 +123,7 @@ The **Analytics rule wizard** appears. Fill up the required details as described
 
 
 ##### Custom detection rules
-You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
+You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
 
 
 In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise the rule creation won't proceed.
@@ -133,3 +133,12 @@ If your Defender XDR data is ingested into Microsoft Sentinel, you have the opti
 
 > [!NOTE]
 > If a Defender XDR table is not set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is actually available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
+
+## Manage custom analytics and detection rules
+
+You can view all your user-defined rules—both custom detection rules and analytics rules—in the **Detection rules** page. Read [Manage custom detections](custom-detection-manage.md) for more details.
+
+
+
+For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
+   

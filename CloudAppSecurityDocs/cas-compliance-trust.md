@@ -21,6 +21,9 @@ Microsoft Defender for Cloud Apps collects information from your configured clou
 - System settings and policies
 - User and group configurations
 
+> [!NOTE]
+> The data collected from the various applications is dependent on the customer-provided data from the various applications and may include personal information.
+
 ## Data storage location
 
 Defender for Cloud Apps operates in the Microsoft Azure data centers in the following geographical regions: 
@@ -59,7 +62,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 ## Data sharing for Microsoft Defender for Cloud Apps
 
-Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer:
+Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud

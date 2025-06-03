@@ -177,7 +177,7 @@ After you apply system tags or custom tags to users, you can use those tags as f
   - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
   - [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report)
 - [Campaigns](campaigns.md)
-- [Custom alert policies](/purview/alert-policies#view-alerts)
+- [Custom alert policies](/defender-xdr/alert-policies#view-alerts)
 - [Attack simulation training](attack-simulation-training-get-started.md)
   - [Simulations](attack-simulation-training-simulations.md)
   - [Simulation automations](attack-simulation-training-simulation-automations.md)

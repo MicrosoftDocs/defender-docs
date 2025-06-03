@@ -1,6 +1,6 @@
 ---
 title: Determine your app compliance posture with app governance | Microsoft Defender for Cloud Apps
-ms.date: 05/28/2023
+ms.date: 05/23/2025
 ms.topic: conceptual
 description: Determine your app compliance posture with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ---
@@ -52,8 +52,8 @@ For sensitivity labeling data, cards show the number apps that have accessed con
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![number apps that have accessed content with sensitivity labels.](sensitive-data-accessed-chart1.png)
+The number of apps that have accessed content with sensitivity labels.
+> :::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
 
 ## Next steps
 

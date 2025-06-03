@@ -4,6 +4,7 @@ description: This article is updated frequently to let you know what's new in th
 ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
+ms.reviewer: AbbyMSFT
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -22,7 +23,31 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## May 2025
+
+###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
+
+
+### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
+The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify non-eligible servers and take action to update and onboard them for enhanced identity protection.
+
+
+### Local administrators collection (using SAM-R queries) feature will be disabled
+The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change will occur automatically by the specified date, and no administrative action is required.
+
+### New Health Issue
+
+New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+
 ## April 2025
+
+### Privileged Identity Tag Now Visible in Defender for Identity Inventory
+
+Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
+Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
+
+Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
@@ -34,12 +59,11 @@ Microsoft Defender for Identity now supports integration with industry-leading P
 - Delinea
 - BeyondTrust
 
-For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+For more information, see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
 
 ## March 2025
 
 ### New Service Account Discovery page
-
 
 Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
 
@@ -52,11 +76,6 @@ This update provides:
 - A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
 
 For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
-
-
-### New Health Issue
-
-New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
 
 ### Enhanced Identity Inventory
 
@@ -77,7 +96,7 @@ New LDAP query events were added to the `IdentityQueryEvents` table in Advanced 
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
 
 New Features and Improvements:
-- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDIConfiguration.
+- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDI Configuration.
 - Support for getting, testing, and setting the proxy configuration on new MDI sensor.
 - The Active Directory Certificate Services registry value for audit filtering now properly sets the type.
 - New-MDIConfigurationReport now shows the name of the tested GPO and supports Server and Identity arguments.
@@ -121,7 +140,7 @@ Additionally, the **built-in schema reference** for Advanced Hunting in Microsof
 
 ### New Identity guide tour
 
-Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
+Explore key MDI features with the new **Identities Tour** in the Microsoft 365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 
@@ -177,11 +196,11 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 **New Microsoft Entra Connect Identity posture recommendations:**
 
 * **Rotate password for Microsoft Entra Connect connector account**
-   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information click [here](rotate-password-microsoft-entra-connect.md).
+   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, click [here](rotate-password-microsoft-entra-connect.md).
 * **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
-   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't actually required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information click [here](remove-replication-permissions-microsoft-entra-connect.md)
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, click [here](remove-replication-permissions-microsoft-entra-connect.md)
 * **Change password for Microsoft Entra seamless SSO account configuration**
-   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
 
 **New Microsoft Entra Connect detections:**
 
