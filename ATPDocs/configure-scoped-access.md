@@ -23,7 +23,6 @@ Before you begin, make sure you meet the following requirements:
 ### Configure scoping rules
 To enable identity scoping, follow these steps:​
 
-1. Sign in to the Microsoft Defender portal as Global Administrator or Security Administrator.
 1. Navigate to Permissions > Microsoft Defender XDR >  Roles​
 
     :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
