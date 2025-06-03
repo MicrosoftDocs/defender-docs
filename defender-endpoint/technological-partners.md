@@ -129,7 +129,7 @@ The following are the solution's categories:
 |[Azure](https://go.microsoft.com/fwlink/?linkid=2202040)|Microsoft|Microsoft Azure provides tools and services to help you reach and scale to a global audience with cloud gaming services.|
 |[AWS](https://go.microsoft.com/fwlink/?linkid=2202041)|Amazon|Amazon Web Services provides information technology infrastructure services to businesses in the form of web services.|
 |[Box](https://go.microsoft.com/fwlink/?linkid=2202042)|Box|Box is an online file sharing and cloud content management service offering unlimited storage, custom branding, and administrative controls.|
-|[DocuSign](https://go.microsoft.com/fwlink/?linkid=2201767)|DocuSign|DocuSign is an Electronic Signature and Agreement Cloud enabling employees to securely send, sign and manage agreements.|
+|[DocuSign](https://go.microsoft.com/fwlink/?linkid=2201767)|DocuSign|DocuSign is an Electronic Signature and Agreement Cloud enabling employees to securely send, sign, and manage agreements.|
 |[Dropbox](https://go.microsoft.com/fwlink/?linkid=2202139)|Dropbox|Dropbox is a smart workspace company that provides secure file sharing, collaboration, and storage solutions.|
 |[Egnyte](https://go.microsoft.com/fwlink/?linkid=2201956)|Egnyte|Egnyte delivers secure content collaboration, compliant data protection and simple infrastructure modernization.|
 |[GITHUB](https://go.microsoft.com/fwlink/?linkid=2201957)|Microsoft|GitHub is a code hosting platform for collaboration and version control. It allows developers to work together on their projects right from planning and coding to shipping the software.|
@@ -159,7 +159,7 @@ The following are the solution's categories:
 |[Vulcan Cyber risk management platform](https://go.microsoft.com/fwlink/?linkid=2201770)|Vulcan Cyber|Vulcan Cyber gives you the tools to effectively manage the vulnerability and risk lifecycle for all your cyber assets, including application, cloud, and infrastructure.|
 |[Extended Security Posture Management (XSPM)](https://go.microsoft.com/fwlink/?linkid=2201771)|Cymulate|Cymulate's Extended Security Posture Management enables companies to challenge, assess, and optimize their cybersecurity posture.|
 |[Illusive Platform](https://go.microsoft.com/fwlink/?linkid=2201778)|Illusive Networks|Illusive continuously discovers and automatically remediates identity vulnerabilities, and it detects attacks using deceptive controls.|
-|[ServiceNow vulnerability response](https://go.microsoft.com/fwlink/?linkid=2243580)| ServiceNow |  Use the Microsoft Threat and vulnerability management integration to import third-party scanner data about your assets and vulnerabilities. You can then view reports about vulnerabilities and vulnerable items on the Vulnerability Response dashboards.
+|[ServiceNow vulnerability response](https://go.microsoft.com/fwlink/?linkid=2243580)| ServiceNow |  Use the Microsoft Threat and vulnerability management integration to import non-Microsoft scanner data about your assets and vulnerabilities. You can then view reports about vulnerabilities and vulnerable items on the Vulnerability Response dashboards.
 
 ### Secure service edge
 
