@@ -53,9 +53,9 @@ To enable identity scoping, follow these steps:​
 ### Known limitations
 
 > [!NOTE]
-> Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
+> - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
 >
-> Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
+> - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
 |Defender for Identity experience |Status |
 |---------|---------|
