@@ -92,9 +92,9 @@ The agent’s identity must be assigned the necessary permissions by creating or
 
 The Phishing Triage Agent requires a role that includes all the following permissions and data sources:
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage":::
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage":::
 
 > [!TIP]
 > Microsoft recommends creating or assigning a role to the identity of the agent with only the minimum required permissions. 
@@ -109,21 +109,22 @@ You can access the Phishing Triage Agent setup in two ways:
 
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent** to start setting up the agent.
 
-  [SCREENSHOT]
+  :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted":::
+
 
 - Alternatively, you can navigate to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview**, then select **Set up** to start the process.
 
-  [SCREENSHOT]
+  :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up":::
 
 Follow the steps in the setup wizard, which includes:
 
 1. Select the [identity](#identity) type to assign to the agent.
   
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage":::
 
 2. Follow the prompts to sign in to the account you created for the agent.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.png" alt-text="Screenshot of the account assignment for Phishing Triage":::
 
    > [!NOTE]
    > You can change the agent's identity and role at any time. To do this, navigate to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
@@ -131,6 +132,7 @@ Follow the steps in the setup wizard, which includes:
 3. Select **Deploy agent** to activate the agent.
 
 4. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
+
    > [!TIP]
    > If you encounter any issues during the setup process, refer to the [Troubleshoot agent issues](#troubleshoot-agent-issues) section for more information.
 
@@ -143,7 +145,7 @@ The card currently contains the following metrics:
 
 All metrics are calculated from the time the agent addressed its first incident, or in the last 30 days.
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-queue-with-agent.png" alt-text="Screenshot of the incident queue with the Phishing Triage Agent active":::
 
 ## Enhance incident response with the Phishing Triage Agent
 
@@ -169,7 +171,7 @@ The Phishing Triage Agent flags your attention to incidents and alerts that requ
 
 When an alert is determined as a true phishing threat, the Phishing Triage Agent marks it as a true positive. This allows analysts to prioritize these phishing threats effectively and take swift action. Analysts can now easily filter the queue, focusing on verified phishing alerts and dedicating their attention where it’s most needed, rather than managing numerous alerts.
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Phishing Triage Agent tag":::
 
 ### Transparency and explainability in Phishing Triage
 
@@ -181,15 +183,15 @@ To review the agent’s findings, follow these steps:
 
 2. On the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section. The task is marked as completed and assigned to the agent. The card contains the agent’s verdict reasoning on the basis of its classification, highlighting specific incriminating evidence.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-main.png" alt-text="Screenshot of the incident page with the Phishing Triage Agent card highlighted":::
 
 3. You can select the **More actions** ellipsis to view more the details about the alert, copy the agent’s classification details to clipboard, or to manage the specific feedback.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/more-actions-card.png" alt-text="Screenshot highlighting the more actions options within the Phishing Triage Agent card":::
 
 4. To view the steps the agent took prior to reaching its classification, select View agent activity in the Phishing Triage Agent card. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-activity-pane.png" alt-text="Screenshot highlighting the View Activity option in the Phishing Triage Agent card":::
 
 ## Teach the agent your organization’s context through feedback
 
@@ -201,13 +203,13 @@ To teach the agent through feedback, follow these steps:
 
 2. Review the agent’s classification and reason in the title and content of the card. If its decision doesn’t align with your classification criteria, select **Change classification**. Alternatively, you can change the alert’s classification by selecting the specific alert from the Alerts tab, then select **Manage alert**.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card":::
 
 3. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. After selecting the classification, add your reason for changing it and explain your feedback in the **Why did you change this classification** field. These actions only store your feedback in the feedback management page for auditing and won't be incorporated into the active teaching of the agent until you select **Use this feedback to teach the agent**.
 
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane":::
 
-4. To have the agent apply your feedback in classifying future incidents, select **Use this feedback to teach the agent** and then choose **Evaluate**. Use the guide to writing feedback to help you compose your feedback. These options give you a preview of how the agent processes feedback into a lesson and evaluates if it meets your expectations. If it does, you can then decide to insert the lesson into the agent’s memory.
+4. To have the agent apply your feedback in classifying future incidents, select **Use this feedback to teach the agent** and then choose **Evaluate feedback**. Use the guide to writing feedback to help you compose your feedback. These options give you a preview of how the agent processes feedback into a lesson and evaluates if it meets your expectations. If it does, you can then decide to insert the lesson into the agent’s memory.
 
    > [!NOTE]
    > Providing feedback to the agent can only be done once. You can teach the agent only on how to classify phishing alerts, which means selecting between classifications of True positive – phish or False positive – not malicious.
@@ -251,9 +253,9 @@ Here are examples of failures you might encounter when writing feedback to the a
 
 |Failure message|Recommended action|
 |:---|:---|
-|[SCREENSHOT] Part of the feedback provided can't be addressed as the agent currently doesn't support teaching this type of feedback.|Rewrite your feedback and ensure that the feedback addresses descriptions of the email that it can support. Then select Evaluate before saving the feedback.|
-|[SCREENSHOT] The feedback includes content that’s irrelevant to the email being reviewed.|Rewrite your feedback and ensure that your feedback contains details that are not related to the email being reviewed or vague statements that are hard to apply to similar emails in the future. Select Evaluate before saving the feedback.|
-|[SCREENSHOT] The given feedback conflicts with previous feedback given to a similar email.|Review your given feedback against the feedback it conflicts with in the [feedback management page](#view-and-manage-feedback-to-the-agent). Based on your review, you can:</br> - Rewrite your given feedback then select Evaluate for the agent to reevaluate your new feedback. </br>
+|:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided"::: </br> Part of the feedback provided can't be addressed as the agent currently doesn't support teaching this type of feedback.|Rewrite your feedback and ensure that the feedback addresses descriptions of the email that it can support. Then select Evaluate before saving the feedback.|
+|:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided"::: </br> The feedback includes content that’s irrelevant to the email being reviewed.|Rewrite your feedback and ensure that your feedback contains details that are not related to the email being reviewed or vague statements that are hard to apply to similar emails in the future. Select Evaluate before saving the feedback.|
+|:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided"::: </br> The given feedback conflicts with previous feedback given to a similar email.|Review your given feedback against the feedback it conflicts with in the [feedback management page](#view-and-manage-feedback-to-the-agent). Based on your review, you can:</br> - Rewrite your given feedback then select Evaluate for the agent to reevaluate your new feedback. </br>
 -	Reject the previous feedback in the feedback management page. Select Evaluate to try again.|
 
 > [!NOTE]
@@ -284,7 +286,7 @@ This page provides a comprehensive list of all feedback submitted to the agent. 
 - The user who provided the feedback 
 - Feedback submission date, feedback ID, alert ID and the incident ID
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-feedback-management.png" alt-text="Screenshot of the Feedback management page":::
 
 Feedback status can be one of the following:
 
@@ -299,7 +301,7 @@ Feedback status can be one of the following:
 
 To review the details of a specific feedback, select an entry from the feedback list. In the **Review feedback** pane, check the details of the feedback provided, the agent’s lesson, the classification changes, and other important details about the feedback. You can use these details to decide whether to retain the feedback in the agent’s memory or reject it.
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/review-feedback-pane.png" alt-text="Screenshot of the Review feedback pane":::
 
 > [!NOTE]
 > Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
@@ -315,7 +317,7 @@ To reject specific feedback, open the Review feedback pane and select Reject fee
 
 You can manage the agent's identity and role at any time by navigating to the **Identity and role** page under **Agents**. This page is similar to when you initially set up the agent’s identity and role. Here, you can view the agent's current identity, see details about the last update, and select a new identity  type if needed.
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page":::
 
 ### Pause or resume the agent
 
@@ -330,8 +332,7 @@ To pause or resume the agent:
 
 2. Select **Pause** to temporarily stop the agent. Once paused, the same option becomes **Resume**, which you can select when you’re ready to reactivate the agent's activities.
 
-   [SCREENSHOT]
-   [SCREENSHOT]
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option":::
 
 ### Remove the agent
 
@@ -409,7 +410,7 @@ The agent doesn’t need to be reprogrammed for every new situation. Within defi
 
 ### What level of visibility and control do I have over the agent?
 
-Microsoft provides tools for organizations to maintain visibility into and control over the Phishing Triage Agent from deployment through ongoing operations. The agent adheres to Microsoft’s Responsible AI (RAI) standards for fairness, reliability, safety, privacy, security, inclusiveness, transparency, and accountability.
+Microsoft provides tools for organizations to maintain visibility into and control over the Phishing Triage Agent from deployment through ongoing operations. [The agent adheres to Microsoft’s Responsible AI (RAI) standards](/copilot/security/rai-faqs-security-copilot-agents) for fairness, reliability, safety, privacy, security, inclusiveness, transparency, and accountability.
 
 Administrators configure the agent’s identity and access levels during installation, following least-privilege principles. Security and IT teams can authorize specific actions, monitor performance, and review outputs directly in Microsoft Defender. Capacity consumption and data access limits are also configurable by administrators.
 
@@ -418,4 +419,4 @@ The Phishing Triage Agent operates within a zero-trust environment. The system e
 ## Related content
 
 - [Microsoft Security Copilot agents](/copilot/security/agents-overview)
-- [Responsible AI FAQs for Security Copilot](/copilot/security/rai-faqs-security-copilot)
+- [Responsible AI FAQs for Security Copilot Agent](/copilot/security/rai-faqs-security-copilot-agents)
