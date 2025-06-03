@@ -59,7 +59,7 @@ What's new
   
 - Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
   
-- Added detection mechanism for CVE-2025-31324 affecting the "Visual Composer" component of the SAP NetWeaver application server,
+- Added detection mechanism for CVE-2025-31324 affecting the "Visual Composer" component of the SAP NetWeaver application server.
   
 - Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
 
