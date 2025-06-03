@@ -22,11 +22,14 @@ This article lists recent features added for unified security operations in the 
 
 ## June 2025
 
-### Multitenant portal tenant groups now renamed to distribution profiles
+### Multitenant portal tenant groups now renamed to deployment profiles
 
-In the Microsoft Defender multitenant portal, tenant groups are now renamed to **distribution profiles**. For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profiles.md).
+In the Microsoft Defender multitenant portal, tenant groups are now renamed to **deployment profiles**. Deployment profiles, previously known as tenant groups, enable you to distribute content at scale across all of your tenants, based on categories like business groups or location. For example:
 
-<!-- screenshot-->
+:::image type="content" source="media/whats-new/deployment-profiles.png" alt-text="Screenshot of the renamed Deployment profiles area.":::
+
+For more information, see [Content distribution using deployment profiles in multitenant management](mto-deployment-profiles.md).
+
 
 ## May 2025
 

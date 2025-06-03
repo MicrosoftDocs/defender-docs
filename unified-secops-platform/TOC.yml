@@ -111,7 +111,7 @@
             - name: Create and manage endpoint security policies
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution with profiles
-              href: mto-distribution-profiles.md
+              href: mto-deployment-profiles.md
             - name: Manage tenants in other Microsoft clouds
               href: mto-cross-cloud.md
             - name: Manage unified role-based access control (URBAC) for multitenant management
