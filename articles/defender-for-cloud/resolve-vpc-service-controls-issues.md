@@ -10,7 +10,9 @@ ms.author: elkrieger
 
 # Resolve VPC service controls issues
 
-Organizations that use Virtual Private Cloud (VPC) Service Controls to restrict Google Services, must add ingress and egress policies per service account, that allow Defender for Cloud to scan Google Cloud Platform (GCP) projects. Without these permissions in place, Defender for Cloud can't perform disk scanning.
+Google Cloud Platform (GCP), Virtual Private Cloud (VPC) Service Controls provide an additional layer of security by defining perimeters that isolate and protect sensitive resources. Each perimeter can encompass one or more projects, restricting access to Google-managed services from outside the defined boundary.
+
+In order for Microsoft Defender for Cloud to gain the ability to scan resources within these protected environments, it’s essential to configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
 
 ## Prerequisites
 
@@ -24,3 +26,10 @@ Organizations that use Virtual Private Cloud (VPC) Service Controls to restrict 
 
 ## Add ingress and egress policies
 
+Each VPC Service Controls perimeter in GCP protects one or more projects, and any perimeter that restricts Google Services must be configured to allow Defender for Cloud to scan the relevant projects.
+
+1. Sign in to your GCP project.
+
+1. Navigate to **Security** > **VPC Service Controls**.
+
+1. 
