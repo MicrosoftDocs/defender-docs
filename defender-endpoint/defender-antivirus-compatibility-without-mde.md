@@ -5,7 +5,7 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/09/2025
 ms.subservice: ngp
 search.appverid: met150
