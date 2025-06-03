@@ -96,6 +96,23 @@ When you investigate a specific Service account, you see the following details u
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
 
+### Create custom service account classification rules
+
+Create custom service account classification rules to help you identify and classify service accounts based on specific criteria that are relevant to your organization. This allows you to tailor the service account discovery process to better suit your needs.
+
+You can create custom service account classification rules by selecting the following supported filters:
+
+- Account Display Name
+- Account Domain
+- Account Name
+- Organizational Unit
+
+Service accounts discovered via the custom classifications are displayed on the Service Accounts page, alongside the automatically discovered service accounts that MDI identifies such as users with SPN + password set to never expire, gMSA, and sMSA.
+
+> [!NOTE]
+> Service accounts labeled with the prefix srv are not detected.
+
+
 For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
 ## Related content
