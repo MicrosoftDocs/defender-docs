@@ -3,6 +3,7 @@ title: Security alerts
 description: This article provides a list of the security alerts issued by Microsoft Defender for Identity.
 ms.date: 03/23/2023
 ms.topic: conceptual
+ms.reviewer: morRubin
 ---
 
 # Security alerts in Microsoft Defender for Identity

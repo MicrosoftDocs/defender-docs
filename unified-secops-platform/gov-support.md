@@ -1,6 +1,6 @@
 ---
-title: Microsoft Unified Security Operations Support for US Government Customers
-description: Learn about support for Microsoft's unified SecOps platform for US Government clouds.
+title: Microsoft Defender Portal Service Support for US Government Customers
+description: Learn about support in the Microsoft Defender portal for US Government clouds.
 author: batamig
 ms.author: bagol
 ms.service: unified-secops-platform
@@ -10,13 +10,13 @@ ms.collection:
 - usx-security
 
 
-#customer intent: As a US government cloud customer, I want to understand the support available for me in Microsoft's unified security operations platform.
+#customer intent: As a US government cloud customer, I want to understand the support available for me in the Microsoft Defender portal.
 
 ---
 
-# Microsoft's unified security operations support for US Government customers
+# Microsoft Defender portal service support for US Government customers
 
-This article provides information about Microsoft's unified security operations (SecOps) support for US Government customers.
+This article provides information about support for US Government customers by unified security operations services in the Microsoft Defender portal.
 
 ## Feature availability
 
@@ -26,7 +26,7 @@ This article provides information about Microsoft's unified security operations 
   
 - Features still in preview are available only in the commercial cloud.
 
-While [automatic attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Defender XDR is generally available, [SAP support for attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft's unified SecOps platform is available only in the commercial cloud.
+While [automatic attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Defender XDR is generally available, [SAP support for attack disruption](/defender-xdr/automatic-attack-disruption) with Microsoft Sentinel and Microsoft Defender XDR is available only in the commercial cloud.
 
 For more information, see:
 

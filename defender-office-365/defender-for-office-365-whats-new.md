@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.service: defender-office-365
@@ -58,7 +58,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## March 2025
 
-- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzea these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+- **User reported messages by third-party add-ins can be sent to Microsoft for analysis**: In [user reported settings](submissions-user-reported-messages-custom-mailbox.md), admins can select **Monitor reported messages in Outlook** \> **Use a non-Microsoft add-in button**. In the **Reported message destination** section, select **Microsoft and my reporting mailbox**, and then provide the email address of the internal Exchange Online mailbox where user-reported messages by the third-party add-in are routed to. Microsoft analyzes these reported messages and provides result on the **User reported** tab of **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
 - **Create allow entries directly in the Tenant Allow/Block List**: You can now create allow entries for domains & addresses and URLs directly in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). This capability is available in Microsoft 365 Worldwide, GCC, GCC High, DoD, and Office 365 operated by 21Vianet.
 
