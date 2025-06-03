@@ -14,6 +14,8 @@ Google Cloud Platform (GCP) Virtual Private Cloud (VPC) Service Controls provide
 
 For Microsoft Defender for Cloud to scan resources within these protected environments, configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
 
+If you are unsure whether you Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshooting-guide.md#defender-api-calls-to-gcp) to find out.
+
 ## Prerequisites
 
 - A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/).
@@ -32,4 +34,25 @@ Each VPC Service Controls perimeter in GCP protects one or more projects. Config
 
 1. Navigate to **Security** > **VPC Service Controls**.
 
-1. 
+1. Select **Edit**.
+
+1. Under the Ingress policy add the following service accounts:
+
+   - `serviceAccount:mdc-agentless-scanning@guardians-prod-diskscanning.iam.gserviceaccount.com`
+   - `serviceAccount:microsoft-defender-cspm@eu-secure-vm-project.iam.gserviceaccount.com`
+
+    > [!NOTE]
+    > If the microsoft-defender-cspm service account name was changed when the GCP project was connected to MDC, make sure to edit the service account with the correct name. The name can be found by navigating to **IAM & Admin permissions** in your GCP project.
+
+1. Under the Egress policy, add the following service accounts:
+
+   - `serviceAccount:mdc-agentless-scanning@guardians-prod-diskscanning.iam.gserviceaccount.com`
+
+1. Select **Save**.
+
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know that everything works after the next API call, which takes up to 24 hours to occur, when results for agentless scanning are generated.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Microsoft Defender for Cloud troubleshooting guide](troubleshooting-guide.md)
