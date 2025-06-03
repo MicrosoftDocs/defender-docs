@@ -57,10 +57,13 @@ To enable identity scoping, follow these steps:​
 >
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
+> [! NOTE]
+> **Limited experience support in Public preview** 
+> Defender for Identity scoping is currently in Public preview. Experiences that are not yet supported will become available by General Availability. 
+
 |Defender for Identity experience |Status |
 |---------|---------|
-|MDI alerts and incidents (includes a user entity)     |   Available      |
-|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents,  
+|MDI alerts and incidents (includes a user entity) Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents,  
 IdentityLogonEvents, IdentityQueryEvents     |   Available      |
 |User page and user global search  |   Available      |
 |MDI alerts based on XDR detection platform  
@@ -75,7 +78,7 @@ IdentityLogonEvents, IdentityQueryEvents     |   Available      |
 |Device and group global search and entity page     |   Unavailable      |
 |Alert tuning and critical asset management   |   Unavailable      |
 
-### Next steps
+### Related articles
 
 - [Microsoft Defender for Identity role groups](role-groups.md)
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
