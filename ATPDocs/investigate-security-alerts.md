@@ -11,7 +11,7 @@ Investigate alerts that are affecting your environment, understand what they mea
 
 ## Investigate using the alert story
 
-Each Defender for Identity security alert includes an **Alert story**. This is the chain of events related to this alert in chronological order, and other important information related to the alert.
+Defender for Identity classic security alerts include an **Alert story**. This is the chain of events related to this alert in chronological order, and other important information related to the alert.
 
 The alert story details why the alert was triggered and related events that happened before and after. 
 
