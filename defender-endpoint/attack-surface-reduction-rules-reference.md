@@ -651,6 +651,9 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 
 Dependencies: Microsoft Defender Antivirus
 
+> [!NOTE]
+> When managing ASR rules using **Microsoft Defender for Endpoint security settings management**, the setting for **"Block Webshell creation for Servers"** must be configured as **"Not Configured"** in Group Policy or other local settings. If this rule is set to any other value (e.g., Enabled or Disabled), it may cause conflicts and prevent the policy from applying correctly through security settings management.
+
 ### Block Win32 API calls from Office macros
 
 This rule prevents VBA macros from calling Win32 APIs. Office VBA enables Win32 API calls. Malware can abuse this capability, such as [calling Win32 APIs to launch malicious shellcode](https://www.microsoft.com/security/blog/2018/09/12/office-vba-amsi-parting-the-veil-on-malicious-macros/) without writing anything directly to disk. Most organizations don't rely on the ability to call Win32 APIs in their day-to-day functioning, even if they use macros in other ways.
