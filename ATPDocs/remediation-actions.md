@@ -55,7 +55,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 |Suspend User in Entra ID               | - Global Administrator |
 |Require User to Sign In Again          | - Global Administrator <br> - Security Administrator <br> - Security Operator|
 | Disable/Enable User in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
-| Force Password Reset in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
+| Force Password Reset in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
 
 
 ## Related videos
