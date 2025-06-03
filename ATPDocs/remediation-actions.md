@@ -39,7 +39,23 @@ The following Defender for Identity actions can be performed directly on your on
 
 - **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
+- **Mark User Compromised** - The user’s risk level is set to High
+
+- **Suspend User in Entra ID** - Block new sign-ins and access to cloud resources
+
+- **Require User to Sign In Again** - Revoke a user’s active sessions
+
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
+
+## Roles and Permissions
+
+| Action | XDR RBAC permissions      |
+| ------------------------------------- | ------------------------------------------------------------ |
+|Mark User Compromised                  | - Global Administrator <br> - Security Administrator|
+|Suspend User in Entra ID               | - Global Administrator |
+|Require User to Sign In Again          | - Global Administrator <br> - Security Administrator <br> - Security Operator|
+| Disable/Enable User in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
+| Force Password Reset in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
 
 
 ## Related videos
