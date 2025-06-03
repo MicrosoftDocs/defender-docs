@@ -20,13 +20,6 @@ Once you've selected an alert of interest, the details pane changes to display i
 
 Once you're done investigating, go back to the alert you started with, mark the alert's status as Resolved and classify it as either False alert or True alert. Classifying alerts helps tune this capability to provide more true alerts and less false alerts.
 
-### How can I use Defender for Identity information in an investigation?
-
-Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by Defender for Identity.
-
-- Check if all related users belong to the same group or department.
-- Do related users share resources, applications, or computers?
-- Is an account active even though its PasswordExpiryTime already passed?
 
 ## Advanced security alert investigation
 
@@ -72,6 +65,10 @@ Some alerts have extra tabs, such as details about:
 For example:
 
 ![Involved entities.](media/involved-entities.png)
+
+## How can I use Defender for Identity information in an investigation?
+
+Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by Defender for Identity.
 
 ### Related entities
 
