@@ -48,7 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date**     | **Type**                       | **State**                                                    | **Name**                                                     |
 | ------------ | -------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|June 1||Alert|Upcoming deprecation|The following [alert ](alerts-resource-manager.md#usage-of-powerzure-function-to-maintain-persistence-in-your-azure-environment) will be deprecated since the method is no longer supported in PowerZure<br/>* Usage of PowerZure function to maintain persistence in your Azure environment|
+|June 1||Alert|Upcoming deprecation|The following alert will be deprecated since the method is no longer supported in PowerZure:<br/>* Usage of PowerZure function to maintain persistence in your Azure environment|
 |May 15||Alert|Upcoming Deprecation|The following [alerts ](/azure/ddos-protection/ddos-view-alerts-defender-for-cloud)will be deprecated and will not be available through XDR Integration: <br/>* DDoS Attack detected for Public IP <br/>* DDoS Attack mitigated for Public IP <br/> **Note**: The alerts will be available on Defender for Cloud portal. |
 | May 1 || Alert | GA | [AI alerts](alerts-ai-workloads.md) have been released to GA with the plan's official GA release |
 | April 20 || Alert | Preview | [(Preview) AI - Suspicious anomaly detected in sensitive data exposed by AI resource](alerts-ai-workloads.md#preview-suspicious-anomaly-detected-in-sensitive-data-exposed-by-an-ai-resource), this replaces the previous sensitive data exposure alert |
