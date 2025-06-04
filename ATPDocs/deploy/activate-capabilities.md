@@ -1,4 +1,4 @@
----
+![Screenshot 2025-06-04 145534](https://github.com/user-attachments/assets/603fd52b-1e8b-4b85-adf7-558ead062459)---
 title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
 ms.date: 08/13/2024
@@ -116,7 +116,7 @@ Download the Defender for Identity onboarding package from the [Microsoft Defend
 
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
 
-    :::image type="content" source="media/activate-capabilities/screenshot-that-shows-the-script.png" alt-text="Screenshot that shows the script." lightbox="media/activate-capabilities/screenshot-that-shows-the-script.png":::
+<img width="474" alt="Screenshot that shows the script." src="https://github.com/user-attachments/assets/ff2d73d4-7285-403e-979a-520e05cbf1d1" />
 
 ## Onboarding Confirmation 
 
@@ -128,10 +128,6 @@ To confirm the sensor has been onboarded:
 
     > [!NOTE]
     > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
-
-    To check the onboarding on the local server, you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event:
-
-    :::image type="content" source="media/activate-capabilities/screenshot-that-shows-the-eventlog.png" alt-text="Screenshot that shows the eventlog" lightbox="media/activate-capabilities/screenshot-that-shows-the-eventlog.png":::
 
 **Test activated capabilities**
 
