@@ -25,6 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2025
 
+
 ### Scoped access by Active Directory domain now supported (Preview)
 
 MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). This capability enables organizations to define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
@@ -38,6 +39,22 @@ Scoping by Active Directory domains helps:
 - Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
 
 For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+
+### Defender For Identity PowerShell module updates (version 1.0.0.4)
+
+New Features and Improvements:
+- Added remote domain functionality
+- Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
+- Added ability to Get/Set/Test the Deleted Objects container permissions.
+- Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
+
+Bug Fixes:
+- Fixed audit verification checks for non-English operating systems.
+- Fixed DomainObjectAuditing identity redundant parameter bug.
+- Fixed Domain Controller detection logic to confirm AD Web Services is running on the server.
+- Fixed issue with Test-MDIDSA not parsing Deleted Object permissions.
+- Other reliability fixes.
 
 
 ## May 2025
