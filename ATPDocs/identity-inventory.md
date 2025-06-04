@@ -10,6 +10,7 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     03/13/2025
+ms.reviewer: rlitinsky
 ---
 
 # Identity inventory
