@@ -28,7 +28,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Scoped access by Active Directory domain now supported (Preview)
 
-MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). This capability enables organizations to define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
 
 Scoping by Active Directory domains helps:
 
