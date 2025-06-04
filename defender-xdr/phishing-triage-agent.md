@@ -14,11 +14,11 @@ ms.collection:
 - tier1
 - security-copilot
 - magic-ai-copilot 
-ms.topic: concept-article
+ms.topic: how-to
 search.appverid:
 - MOE150
 - MET150
-ms.date: 06/03/2025
+ms.date: 06/06/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
@@ -188,7 +188,7 @@ To review the agent’s findings, follow these steps:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-activity-pane.png" alt-text="Screenshot highlighting the View Activity option in the Phishing Triage Agent card" lightbox="/defender/media/agents-in-defender/phishing-triage/incident-activity-pane.png":::
 
-## Teach the agent your organization’s context through feedback
+## Teach the agent your organization's context through feedback
 
 The Phishing Triage Agent refines its decision-making through feedback tailored to your organization’s needs. Analysts can provide feedback in simple, natural language without the need for complex input or configurations, making it easy to guide the agent’s behavior. This feedback is incorporated into the agent’s memory, enabling it to adapt to how your organization interprets and classifies phishing threats, improving the agent’s effectiveness in handling future alerts.
 
