@@ -18,27 +18,33 @@ For example, an incident involving Attack Disruption, where response actions are
 
 ## How to add automated response exclusions
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+1. In the [Microsoft Defender XDR](https://security.microsoft.com/) portal, go to **Settings** and then **Microsoft Defender XDR**.
 
-1. You'll then see **Automated response exclusions** in the left-hand menu.
 
-    ![Automated response exclusions.](media/automated-response-exclusions.png)
+ :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-settings1.png" alt-text="Go to Settings, then Microsoft Defender XDR.":::
+ 
 
-1. To exclude specific users, select **Exclude Users**.
+1. You'll see **Automated response > Identities** in the left-side menu.
 
-    :::image type="content" source="media/exclude-users.png" alt-text="Exclude specific users.":::
+ :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-automated-response.png" alt-text="Go to Automated response then Identities.":::
 
+ 
+1. To exclude specific users, select **Add User Exclusion**.
+
+:::image type="content" source="media/automated-response-exclusions/screenshot-xdr-add-exclusion.png" alt-text="Exclude specific users.":::
+   
+   
 1. Search for the users to exclude and select the **Exclude Users** button.
 
-    :::image type="content" source="media/exclude-specific-users.png" alt-text="Choose which users to exclude.":::
-
+   :::image type="content" source="media/exclude-specific-users.png" alt-text="Choose which users to exclude.":::
+   
 1. To remove excluded users, select the relevant users from the list and select the **Remove** button.
 
-    :::image type="content" source="media/remove-excluded-users.png" alt-text="Remove excluded users.":::
-
+   :::image type="content" source="media/remove-excluded-users.png" alt-text="Remove excluded users.":::
+   
 ## See also
 
 - [Configure event collection](deploy/configure-event-collection.md)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
+
