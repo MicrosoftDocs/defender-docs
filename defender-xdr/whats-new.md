@@ -35,7 +35,7 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2025
 
-- (Preview) The **Sensitivity label** filter is now available in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. This filter allows you to filter incidents and alerts based on the sensitivity label assigned to the affected resources. For more information, see [Filters in the incident queue](incident-queue.md#filters) and [Investigate alerts](investigate-alerts.md).
+- (Preview) The **Sensitivity label** filter is now available in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. This filter allows you to filter incidents and alerts based on the sensitivity label assigned to the affected resources. For more information, see [Filters in the incident queue](incident-queue.md#filters-) and [Investigate alerts](investigate-alerts.md).
 
 ## May 2025
 
