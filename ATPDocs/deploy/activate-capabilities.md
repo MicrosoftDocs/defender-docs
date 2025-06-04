@@ -83,7 +83,7 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
-   The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server you can find its activation state.
+   The Activation Page now displays all servers from your device inventory, including those not currently eligible for the activation of the new Defender for Identity sensor. For each server, you can find its activation state.
 
 1. Select the domain controller where you want to activate the Defender for Identity capabilities and then select **Activate**. Confirm your selection when prompted. 
 
@@ -129,7 +129,7 @@ To confirm the sensor has been onboarded:
     > [!NOTE]
     > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
-    To check the onboarding on the local server you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event:
+    To check the onboarding on the local server, you can also review the event log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Sense** > **Operational**. You should receive an onboarding event:
 
     :::image type="content" source="media/activate-capabilities/screenshot-that-shows-the-eventlog.png" alt-text="Screenshot that shows the eventlog" lightbox="media/activate-capabilities/screenshot-that-shows-the-eventlog.png":::
 
@@ -259,7 +259,7 @@ Download the Defender for Identity offboarding package from the [Microsoft Defen
 1. Select Download offboarding package and save the file in a location you can access from your domain controller.  
 ![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor.png)
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
-1. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server and click **Delete**.
+1. To fully remove the sensor, navigate to **Settings** > **Identities** > **Sensors**, select the server, and click **Delete**.
 
 :::image type="content" source="media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor" lightbox="media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor.png":::
 
