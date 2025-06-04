@@ -45,7 +45,7 @@ By default, the alerts queue in the Microsoft Defender portal displays the new a
 
 From the default alerts queue, you can select **Filter** to see all available filters from which you can specify a subset of the alerts. Here's an example.
 
-:::image type="content" source="/defender/media/investigate-alerts/alerts-filters-small.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alerts-filters.png":::
+:::image type="content" source="/defender/media/investigate-alerts/alert-filters-small.png" alt-text="All the filters available in the Alerts queue in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alert-filters.png":::
 
 You can filter alerts according to these criteria:
 
