@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 06/03/2025
+ms.date: 06/04/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -35,6 +35,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Agentless FIM is now available in preview
 
+Agentless File Integrity Monitoring (FIM) is now available in preview. This capability complements the generally available (GA) FIM solution based on the Microsoft Defender for Endpoint agent, and introduces support for custom file and registry monitoring.
+
+Agentless FIM enables organizations to monitor file and registry changes across their environment without deploying other agents. It provides a lightweight, scalable alternative while maintaining compatibility with the existing agent-based solution.
+
+Key capabilities include:
+- **Custom monitoring**: Meet specific compliance and security requirements by defining and monitoring custom file paths and registry keys.
+- **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
+- **Agentless architecture**: No agent installation required. Data is collected via agentless scanning and streamed to your selected workspace on a 24-hour cadence. 
+
 ## May 2025
 
 |Date | Category | Update|
@@ -51,7 +60,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 May 28, 2025
 
-On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes as well as by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
+On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes and by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
 
 Learn how to [configure customizable on-upload malware scanning filters](/azure/defender-for-cloud/on-upload-malware-scanning).
 
@@ -154,7 +163,7 @@ GitHub connectors in Defender for Cloud will be updated to include administrator
 
 1. In an automated email from GitHub Support, select **Review permission request** to accept or reject this change.
 
-Note: Existing connectors will continue to work without the new functionality if the above action is not taken.
+Note: Existing connectors continue to work without the new functionality if the above action isn't taken.
 
 ### Update to Defender for SQL servers on Machines plan
 
@@ -171,14 +180,14 @@ Starting today, we're gradually releasing an enhanced agent solution for the pla
 1. [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2025, customers must verify the protection status of their SQL Server instances across their environments. Learn how to [troubleshoot any deployment issues Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
 
 > [!NOTE]
-> After the agent upgrade occurs, you might experience a billing increase if additional SQL Server instances are protected with your enabled Defender for SQL Servers on Machines plan. For billing information, review the 
+> After the agent upgrade occurs, you might experience a billing increase if other SQL Server instances are protected with your enabled Defender for SQL Servers on Machines plan. For billing information, review the 
 [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ### New default cap for on-upload malware scanning in Microsoft Defender for Storage
 
 April 27, 2025
 
-The default cap value for on-upload malware scanning has been updated from 5,000GB to 10,000GB. This new cap applies to the following scenarios:
+The default cap value for on-upload malware scanning has been updated from 5,000 GB to 10,000 GB. This new cap applies to the following scenarios:
 
 - **New Subscriptions:** Subscriptions where Defender for Storage is enabled for the first time.
 
@@ -218,7 +227,7 @@ On April 30, 2025, Defender for App Service alerting capabilities will be enhanc
 March 30, 2025
  
 Defender for Cloud now provides vulnerability assessment and malware detection for the nodes in Azure Kubernetes Service (AKS) as GA.
-Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service, as well as understand their part in the shared security responsibility they have with the managed cloud provider.
+Providing security protection for these Kubernetes nodes allow customers to maintain security and compliance across the managed Kubernetes service, and understand their part in the shared security responsibility they have with the managed cloud provider.
 To receive the new capabilities, you have to enable the **Agentless scanning for machines**"** as part of Defender CSPM, Defender for Containers, or Defender for Servers P2 plan on your subscription.
 
 #### Vulnerability Assessment
@@ -259,7 +268,7 @@ For more information about this feature, see [Gated Deployment solution overvi
 
 March 27, 2025
 
-On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes as well as by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
+On-upload malware scanning now supports customizable filters. Users can set exclusion rules for on-upload malware scans based on blob path prefixes, suffixes and by blob size. By excluding specific blob paths and types, such as logs or temporary files, you can avoid unnecessary scans and reduce costs.
 
 Learn how to [configure customizable on-upload malware scanning filters](on-upload-malware-scanning.md#customizable-on-upload-malware-scanning-filters).
 
@@ -296,7 +305,7 @@ With this release, an in-product experience will be released to allow you to mig
 For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint). For information on how to disable previous versions and use the migration tool, see [Migrate File Integrity Monitoring from previous versions](/azure/defender-for-cloud/migrate-file-integrity-monitoring).
 
 > [!IMPORTANT]
-> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds is not currently planned to be supported.
+> The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
 > 
 
 ## February 2025
