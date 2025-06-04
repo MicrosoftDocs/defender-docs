@@ -1,4 +1,4 @@
-![Screenshot 2025-06-04 145534](https://github.com/user-attachments/assets/603fd52b-1e8b-4b85-adf7-558ead062459)---
+---
 title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
 ms.date: 08/13/2024
