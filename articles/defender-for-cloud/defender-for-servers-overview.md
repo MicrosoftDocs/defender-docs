@@ -80,7 +80,7 @@ Plan features are summarized in the table.
 
 ## Deployment scope
 
-Enable Defender for Servers at the subscription level, but you can enable and disable Defender for Servers at the resource level if you need deployment granularity, as follows:
+You should [enable Defender for Servers](tutorial-enable-servers-plan.md) at the subscription level, but you can enable and disable Defender for Servers at the resource level if you need deployment granularity, as follows:
 
 **Scope** | **Plan 1** | **Plan 2**
 --- | --- | ---
