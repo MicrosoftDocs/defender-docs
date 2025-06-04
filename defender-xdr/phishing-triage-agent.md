@@ -138,12 +138,7 @@ Follow the steps in the setup wizard, which includes:
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. Your incident queue now contains the Phishing Triage Agent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
 
-The card currently contains the following metrics:
-
-- Incidents addressed: incidents containing user-reported phishing alerts that were classified by the agent as true phishing threats or false alarms
-- Incidents resolved: incidents that no longer require further handling, like false alarms
-
-All metrics are calculated from the time the agent addressed its first incident, or in the last 30 days.
+The card currently contains the number of incidents addressed, which are incidents containing user-reported phishing alerts that were classified by the agent as true phishing threats or false alarms. All metrics are calculated from the time the agent addressed its first incident, or in the last 30 days.
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-queue-with-agent.png" alt-text="Screenshot of the incident queue with the Phishing Triage Agent active" lightbox="/defender/media/agents-in-defender/phishing-triage/incident-queue-with-agent.png":::
 
