@@ -183,6 +183,18 @@ sudo mdatp config behavior-monitoring --value disabled
 
 For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
 
+### Verifying behavior monitoring is enabled
+
+To verify behavior monitoring is enabled, open terminal window and copy and execute the following command:
+
+```bash
+
+mdatp health --details features
+
+```
+
+When behavior monitoring is enabled, the result displays the value of behavior_monitoirng as enabled.
+
 ### To test behavior monitoring (prevention/block) detection
 
 See [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
