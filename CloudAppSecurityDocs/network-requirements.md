@@ -13,7 +13,7 @@ ms.topic: reference
 > This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.
 
 >[!IMPORTANT]
-> As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by <TBD> 
+> As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by [TBD:] 
 > Ensure the following endpoints are allowed:
 >
 > - discoveryresources-cdn-prod.cloudappsecurity.com
