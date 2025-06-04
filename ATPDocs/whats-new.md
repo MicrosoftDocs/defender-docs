@@ -27,7 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Service account classification rules now available
 
-You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts. For example, by defining rules based on naming patterns or organizational units.
+You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
 For more information, see [Service account discovery](service-account-discovery.md)
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
