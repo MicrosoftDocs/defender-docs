@@ -19,7 +19,7 @@ The Identity alerts page gives you cross-domain signal enrichment and  automated
 
 Alerts originating from Defender for Identity trigger [Microsoft Defender XDR automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
 
-Due to, the ongoing transition from the classic Defender for Identity alerts to the unified Microsoft Defender XDR alerts, you might notice differences in how alerts are displayed. You can see different information, depending on the origin of the alerts:
+Due to the ongoing transition from the classic alerts to the unified Microsoft Defender XDR alerts, you might notice differences in how alerts are displayed. You can see different information, depending on the origin of the alerts:
 
 - **Classic Defender for Identity** – These alerts use the original layout, schema, and terminology specific to Defender for Identity.
 - **Defender XDR** – These alerts follow a unified structure consistent across Microsoft Defender products, including Defender for Endpoint and Defender for Office 365.
