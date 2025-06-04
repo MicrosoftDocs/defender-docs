@@ -27,7 +27,7 @@ To enable identity scoping, follow these steps:​
 
     :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
 
-1. Follow the steps in [Create custom roles with Microsoft Defender XDR Unified RBAC](defender-xdr/create-custom-rbac-roles#create-a-custom-role)
+1. Follow the steps in [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
 1. After creating the custom role, return to this article to configure scoped access. 
 1. Under **Assign users and groups**, enter individual usernames or Microsoft Entra ID groups to assign to the role.
 1. Choose Microsoft Defender for Identity as the data source.
