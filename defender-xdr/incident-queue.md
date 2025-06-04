@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/27/2025
+ms.date: 06/04/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -107,7 +107,7 @@ The **Filters** list above the list of incidents shows the currently applied fil
 
 From the default incident queue, you can select **Add filter** to see the **Add filter** drop-down, from which you specify filters to apply to the incidents queue to limit the set of incidents shown. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-all-filters.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal.":::
+:::image type="content" source="/defender/media/incidents-queue/incident-filters-small.png" alt-text="The Filters pane for the incident queue in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incident-filters.png":::
 
 Select the filters you want to use, then select **Add** at the bottom of the list to make them available.
 
@@ -128,7 +128,7 @@ This table lists the filter names that are available.
 | **Multiple category**  | Specify whether the filter is for more than one category. |
 | **Categories** | Choose categories to focus on specific tactics, techniques, or attack components seen. |
 | **Entities** | Specify the name of an asset such as a user, device, mailbox, or application name. |
-| **Data sensitivity** | Some attacks focus on targeting to exfiltrate sensitive or valuable data. By applying a filter for specific sensitivity labels, you can quickly determine if sensitive information has potentially been compromised and prioritize addressing those incidents. <br><br> This filter displays information only when you've applied [sensitivity labels from Microsoft Purview Information Protection](/Microsoft-365/compliance/sensitivity-labels). |
+| **Sensitivity label** | Filter incidents based on the sensitivity label applied on the data. Some attacks focus on exfiltrating sensitive or valuable data. By applying a filter for specific sensitivity labels, you can quickly determine if sensitive information is potentially compromised and prioritize addressing those incidents. |
 | **Device groups** | Specify a [device group](/windows/security/threat-protection/microsoft-defender-atp/machine-groups) name. |
 | **OS platform** | Specify device operating systems. |
 | **Classification** | Specify the set of classifications of the related alerts. |
