@@ -78,6 +78,8 @@ mdatp health --details edr
 
 mdatp health --details definitions
 
+mdatp health --details features
+
 mdatp health --details help
 
 ```
