@@ -4,7 +4,7 @@ description: Get an overview of the Defender for Servers plan in Microsoft Defen
 ms.topic: concept-article
 ms.author: elkrieger
 author: elazark
-ms.date: 05/28/2025
+ms.date: 06/04/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
@@ -66,7 +66,7 @@ Plan features are summarized in the table.
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <sup>[3](#footnote3)</sup> |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[4](#footnote4)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
-| [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
+| [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | Machine secrets scanning (agentless) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS and GCP |
 | [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 | [Just-in-time virtual machine access](just-in-time-access-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure and AWS |
