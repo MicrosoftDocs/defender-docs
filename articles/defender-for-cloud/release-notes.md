@@ -44,6 +44,8 @@ Key capabilities include:
 - **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
 - **Agentless architecture**: No agent installation required. Data is collected via agentless scanning and streamed to your selected workspace on a 24-hour cadence. 
 
+Learn more about [File integrity monitoring](file-integrity-monitoring-overview.md) and how to [Enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
+
 ## May 2025
 
 |Date | Category | Update|
