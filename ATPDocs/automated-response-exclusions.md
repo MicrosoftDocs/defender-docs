@@ -23,23 +23,20 @@ For example, an incident involving Attack Disruption, where response actions are
 
    :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-settings1.png" alt-text="Go to Settings, then Microsoft Defender XDR.":::
 
-2. You'll see **Automated response > Identities** in the left-side menu.
-
-   :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-settings1.png" alt-text="Go to Settings, then Microsoft Defender XDR.":::
  
-3. You'll see **Automated response > Identities** in the left-side menu.
+2. You'll see **Automated response > Identities** in the left-side menu.
 
     :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-automated-response.png" alt-text="Go to Automated response then Identities.":::
  
-4. To exclude specific users, select **Add User Exclusion**.
+3. To exclude specific users, select **Add User Exclusion**.
 
    :::image type="content" source="media/automated-response-exclusions/screenshot-xdr-add-exclusion.png" alt-text="Exclude specific users.":::
       
-5. Search for the users to exclude and select the **Exclude Users** button.
+4. Search for the users to exclude and select the **Exclude Users** button.
 
     :::image type="content" source="media/exclude-specific-users.png" alt-text="Choose which users to exclude.":::
    
-6. To remove excluded users, select the relevant users from the list and select the **Remove** button.
+5. To remove excluded users, select the relevant users from the list and select the **Remove** button.
 
      :::image type="content" source="media/remove-excluded-users.png" alt-text="Remove excluded users.":::
    
