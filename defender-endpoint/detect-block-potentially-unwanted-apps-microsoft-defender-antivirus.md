@@ -106,16 +106,15 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
-Microsoft Defender Antivirus (standalone)
+#### Microsoft Defender Antivirus (standalone)
 
 |Scenarios|Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- |
-|Windows 11 version 22H2 or later with Smart App Control enabled|Disabled (0)|
-|Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016 not onboarded to Microsoft Defender for Endpoint |Audit mode (2)|
+|Windows 11 version 22H2 or later with Smart App Control enabled|Disabled (0) Note: Since Smart App Control has PUA functionality.|
+|Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
 
 
-Microsoft Defender Antivirus with Microsoft Defender for Endpoint Plan 1 or Plan 2 or Microsoft Defender for Business
-
+#### Microsoft Defender Antivirus with Microsoft Defender for Endpoint Plan 1 or Plan 2 or Microsoft Defender for Business
 
 | Scenarios | Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- |
