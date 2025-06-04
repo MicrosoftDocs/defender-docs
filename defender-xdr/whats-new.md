@@ -33,7 +33,12 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 
+## June 2025
+
+- (Preview) The **Sensitivity label** filter is now available in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. This filter allows you to filter incidents and alerts based on the sensitivity label assigned to the affected resources. For more information, see [Filters in the incident queue](incident-queue.md#filters) and [Investigate alerts](investigate-alerts.md).
+
 ## May 2025
+
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
