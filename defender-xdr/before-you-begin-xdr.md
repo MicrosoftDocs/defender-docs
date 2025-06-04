@@ -1,7 +1,7 @@
 ---
-title: Before you begin using Defender Experts for XDR
+title: Before you begin using the Microsoft Defender Experts for XDR service
 ms.reviewer:
-description: To enable us to get started with this managed service, we require the following licensing prerequisites
+description: To enable us to get started with the defender experts managed service, we require the following licensing prerequisites
 ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
@@ -17,10 +17,10 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 02/05/2025
+ms.date: 04/24/2025
 ---
 
-# Before you begin
+# Before you begin using Defender Experts for XDR
 
 **Applies to:**
 
@@ -71,13 +71,13 @@ Defender Experts for XDR requests for certain roles and permissions for you to f
 
 Defender Experts for XDR is a managed extended detection and response service that proactively hunts for threats across endpoints, email, identity, and cloud apps. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Purchasing this service means you're granting permission to Microsoft experts to access the said data.
 
-The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/en-us/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **[Microsoft Defender Experts](https://aka.ms/trustcenter-defenderexperts)**.
+The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/en-us/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 
 ### Data collection, usage, and retention
 
 All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender XDR service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations).
 
-Defender Experts for XDR operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the US region for the length of the service, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
+Defender Experts for XDR operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the European Union region for customers whose Defender XDR data is in scope of EU data boundary and in the US region for other customers, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
 
 Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 

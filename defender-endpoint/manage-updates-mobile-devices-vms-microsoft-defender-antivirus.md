@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/08/2021
+ms.date: 03/26/2025
 ---
 
 # Manage updates for mobile devices and virtual machines (VMs)

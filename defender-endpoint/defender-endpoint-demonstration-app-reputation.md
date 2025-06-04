@@ -30,10 +30,16 @@ Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing
 
 ## Scenario requirements and setup
 
-- Windows 11 or Windows 10
-- Windows Server 2022 or Windows Server 2019 or Windows Server 2016 or Windows Server 2012 R2 or Windows Server 2008 R2 
-- Microsoft Edge or Internet Explorer browser required
-- To turn ON/OFF, go to **Settings** > **Update & Security** > **Windows Security** > **Open Windows Security** > **App & browser control** > **Check apps and files**
+- The following versions of Windows are supported:
+   - Windows 11
+   - Windows 10
+   - Windows Server 2025
+   - Windows Server 2022
+   - Windows Server 2019
+   - Windows Server 2016
+   - Windows Server 2012 R2
+   - Windows Server 2008 R2 
+- Microsoft Edge or Internet Explorer browser required. 
 
 ## Scenario Demos
 

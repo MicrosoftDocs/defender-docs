@@ -3,10 +3,6 @@
 
 title: Install Advanced Threat Analytics - Step 6
 description: In this step of installing ATA, you configure data sources.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -36,12 +32,12 @@ ms.suite: ems
 
 ### Configure Event Collection
 
-To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These Windows events are either read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, they can be forwarded to the ATA Gateway in one of two ways, either by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These Windows events are either read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway isn't deployed, they can be forwarded to the ATA Gateway in one of two ways, either by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
 
 > [!NOTE]
 > For ATA versions 1.8 and higher, Windows event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway now read events locally, without the need to configure event forwarding.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that isn't available via the domain controller network traffic.
 
 #### SIEM/Syslog
 
@@ -56,17 +52,17 @@ For ATA to be able to consume data from a Syslog server, you need to perform the
 
 > [!IMPORTANT]
 >
-> - Do not forward all the Syslog data to the ATA Gateway.
+> - Don't forward all the Syslog data to the ATA Gateway.
 > - ATA supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server.
 
 > [!NOTE]
-> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATA. Windows Event ID 4776 provides data regarding NTLM authentications.
+> If you don't use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATA. Windows Event ID 4776 provides data regarding NTLM authentications.
 
 #### Configuring the ATA Gateway to listen for SIEM events
 
-1. In ATA Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
+1. In ATA Configuration, under **Data sources** select **SIEM** and turn on **Syslog** and select **Save**.
 
     ![Enable syslog listener UDP image.](media/ATA-enable-siem-forward-events.png)
 
@@ -109,7 +105,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
-- The order is not important for the _Extension_ part
+- The order isn't important for the _Extension_ part
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
@@ -122,7 +118,7 @@ The computer attempted to validate the credentials for an account.
 
 Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Logon Account: Administrator
+Sign in Account: Administrator
 
 Source Workstation: SIEM
 
@@ -130,7 +126,7 @@ Error Code: 0x0
 
 - Syslog header is optional.
 
-- There's a "\r\n" character separator between all required fields. Note that these are the control characters CRLF (0D0A in hex) and not literal characters.
+- There's a "\r\n" character separator between all required fields. These are the control characters CRLF (0D0A in hex) and not literal characters.
 - The fields are in key=value format.
 - The following keys must exist and have a value:
   - EventCode = the Windows event ID
@@ -140,11 +136,11 @@ Error Code: 0x0
   - ComputerName = the source host name
   - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
-- The order is not important for the key=value pairs.
+- The order isn't important for the key=value pairs.
 
 #### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [QRadar: Agentless Windows Events Collection using the MSRPC Protocol](https://www.ibm.com/support/pages/qradar-agentless-windows-events-collection-using-msrpc-protocol-msrpc-faq).
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it's necessary to set QRadar to use agentless Windows event collection. For more information, see [QRadar: Agentless Windows Events Collection using the MSRPC Protocol](https://www.ibm.com/support/pages/qradar-agentless-windows-events-collection-using-msrpc-protocol-msrpc-faq).
 
 ```log
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -166,7 +162,7 @@ Message is the original event text from the Windows event
 Make sure to have \t between the key=value pairs.
 
 >[!NOTE]
-> Using WinCollect for Windows event collection is not supported.
+> Using WinCollect for Windows event collection isn't supported.
 
 > [!div class="step-by-step"]
 > [« Step 5](install-ata-step5.md)

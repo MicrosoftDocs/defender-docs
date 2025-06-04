@@ -64,14 +64,14 @@ Use this detection to control file uploads and downloads in real time with sessi
 
 By enabling file sandboxing, files that according to their metadata and based on proprietary heuristics to be potentially risky, will also be sandbox scanned in a safe environment. The Sandbox scan may detect files that were not detected based on threat intelligence sources.
 
-Defender for Cloud Apps supports malware detection for the following apps:
+Defender for Cloud Apps supports "File Sandboxing" malware detection for the following apps:
 
 * Box
 * Dropbox
 * Google Workspace
 
 > [!NOTE]
->* Proactively sandboxing will be done in third party applications (*Box*, *Dropbox* etc.). In *OneDrive* and *SharePoint* files are being scanned and sandboxed as part of the service itself.
+>* Proactively sandboxing will be done in third party applications (*Box*, *Dropbox* etc.). **In *OneDrive* and *SharePoint* files are being scanned and sandboxed as part of the service itself**.
 > * In *Box*, *Dropbox*, and *Google Workspace*, Defender for Cloud Apps doesn't automatically block the file, but blocking may be performed according to the app's capabilities and the app's configuration set by the customer.
 > * If you're unsure about whether a detected file is truly malware or a false positive, go to the Microsoft Security Intelligence page at [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission) and submit the file for further analysis.
 

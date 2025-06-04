@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/19/2024
+ms.date: 04/07/2025
 ---
 
 
@@ -45,7 +45,7 @@ This article describes how to configure exclusion lists.
 |Any file on the machine that is opened by any process under a specific folder|Specifying `c:\test\sample\*` would exclude files opened by: <p> `c:\test\sample\test.exe` <p> `c:\test\sample\test2.exe` <p> `c:\test\sample\utility.exe`|
 |Any file on the machine that is opened by a specific process in a specific folder|Specifying `c:\test\process.exe` would exclude files only opened by `c:\test\process.exe`|
 
-When you add a process to the process exclusion list, Microsoft Defender Antivirus won't scan files opened by that process, no matter where the files are located. The process itself, however, will be scanned unless it has also been added to the [file exclusion list](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+When you add a process to the process exclusion list, Microsoft Defender Antivirus won't scan files opened by that process, no matter where the files are located. The process itself, however, is scanned unless it's added to the [file exclusion list](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
 The exclusions only apply to [always-on real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). They don't apply to scheduled or on-demand scans.
 
@@ -60,15 +60,15 @@ By default, local changes made to the lists (by users with administrator privile
 You can [configure how locally and globally defined exclusions lists are merged](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) to allow local changes to override managed deployment settings.
     
 > [!NOTE]
-> **Network Protection** and **Attack surface reduction rules** are directly impacted by process exclusions on all platforms, meaning that a process exclusion on any OS (Windows, MacOS, Linux) will result in Network Protection or ASR being unable to inspect traffic or enforce rules for that specific process.
+> **Network Protection** and **Attack surface reduction rules** are directly impacted by process exclusions on all platforms, meaning that a process exclusion on any OS (Windows, macOS, Linux) results in Network Protection or ASR being unable to inspect traffic or enforce rules for that specific process.
 
 ### Image name vs full path for process exclusions
 
-Two different types of process exclusions may be set. A process may be excluded by image name, or by full path. The image name is simply the file name of the process, without the path.
+Two different types of process exclusions might be set. A process might be excluded by image name, or by full path. The image name is simply the file name of the process, without the path.
 
 For example, given the process `MyProcess.exe` running from `C:\MyFolder\` the full path to this process would be `C:\MyFolder\MyProcess.exe` and the image name is `MyProcess.exe`. 
 
-Image name exclusions are much more broad - an exclusion on `MyProcess.exe` excludes any processes with this image name, regardless of the path they're run from. So for example, if the process `MyProcess.exe` is excluded by image name, it will also be excluded if it is run from `C:\MyOtherFolder`, from removable media, et cetera. As such it's recommended that whenever possible, the full path is used. 
+Image name exclusions are much more broad - an exclusion on `MyProcess.exe` excludes any processes with this image name, regardless of the path they're run from. So for example, if the process `MyProcess.exe` is excluded by image name, it will also be excluded if it's run from `C:\MyOtherFolder`, from removable media, et cetera. As such it's recommended that whenever possible, the full path is used. 
 
 ### Use wildcards in the process exclusion list
 
@@ -88,7 +88,7 @@ The following table describes how the wildcards can be used in the process exclu
 
 ### Contextual Process Exclusions
 
-A process exclusion may also be defined via a [Contextual exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) allowing, for example, a specific file to be excluded only if it's opened by a specific process. 
+A process exclusion might also be defined via a [Contextual exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) allowing, for example, a specific file to be excluded only if it's opened by a specific process. 
 
 ## Configure the list of exclusions for files opened by specified processes
 
@@ -98,26 +98,26 @@ For more information, see [Configure device restriction settings in Microsoft In
 
 ### Use Microsoft Configuration Manager to exclude files that have been opened by specified processes from scans
 
-See [How to create and deploy antimalware policies: Exclusion settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
+See [How to create and deploy anti-malware policies: Exclusion settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
 
 ### Use Group Policy to exclude files that have been opened by specified processes from scans
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and click **Administrative templates**.
+2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
 3. Expand the tree to **Windows components \> Microsoft Defender Antivirus \> Exclusions**.
 
 4. Double-click **Process Exclusions** and add the exclusions:
     1. Set the option to **Enabled**.
-    2. Under the **Options** section, click **Show...**.
+    2. Under the **Options** section, select **Show...**.
     3. Enter each process on its own line under the **Value name** column. See the example table for the different types of process exclusions. Enter **0** in the **Value** column for all processes.
 
-5. Click **OK**.
+5. Select **OK**.
 
 ### Use PowerShell cmdlets to exclude files that have been opened by specified processes from scans
 
-Using PowerShell to add or remove exclusions for files that have been opened by processes requires using a combination of three cmdlets with the `-ExclusionProcess` parameter. The cmdlets are all in the [Defender module](/powershell/module/defender/).
+Using PowerShell to add or remove exclusions for files that are opened by processes requires using a combination of three cmdlets with the `-ExclusionProcess` parameter. The cmdlets are all in the [Defender module](/powershell/module/defender/).
 
 The format for the cmdlets is:
 
@@ -134,7 +134,7 @@ The following are allowed as the \<cmdlet\>:
 |Remove items from the list|`Remove-MpPreference`|
 
 > [!IMPORTANT]
-> If you have created a list, either with `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference` cmdlet again overwrites the existing list.
+> If you create a list, with either `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference`, cmdlet overwrites the existing list.
 
 For example, the following code snippet would cause Microsoft Defender Antivirus scans to exclude any file that is opened by the specified process:
 

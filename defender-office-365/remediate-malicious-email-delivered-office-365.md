@@ -3,7 +3,7 @@ title: Remediate malicious email that was delivered in Office 365
 author: chrisda
 ms.author: chrisda
 manager: deniseb
-ms.topic: conceptual
+ms.topic: concept-article
 ms.collection:
 - m365-security
 - tier1
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
-ms.date: 01/13/2025
+ms.date: 05/19/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -31,7 +31,7 @@ Remediation means to take a prescribed action against a threat. Malicious email 
   - **Organization limits**: The maximum number of active, concurrent email remediations is 50. Once the limit is reached, no new remediations are triggered until some actions are completed.
   - **Email message limits**: If an active remediation involves more than one million email messages, no new email remediations are allowed.
   - **Recipient requirements in remediations**:
-    - The total percentage of selected recipients must be at least 40% of the total email message count in the remediation. For instance, if an email is sent to five recipients, Explorer (Threat Explorer) counts it as five email messages. If the remediation requires the deletion of 5,000 email messages, the remediation must target at least 2,000 recipients.
+    - The total percentage of selected recipients must be at least 40% of the total email message count in the remediation. If the remediation requires the deletion of 5,000 email messages, the remediation must target at least 2,000 recipients. Explorer (Threat Explorer) counts each recipient as a unique email message. For example, Threat Exporer counts a message sent to 5 addresses as 5 messages.
     - If the recipient count is less than 40% of the total email message count, the remediation can't be used to delete more than 1,000 messages that were sent to a single recipient.
 
 - You need to be assigned permissions before you can do the procedures in this article. Admins can take the required action on email messages, but the **Search and Purge** role is required to get those actions approved. To assign the **Search and Purge** role, you have the following options:
@@ -59,7 +59,7 @@ Once emails are selected through Explorer, you can start remediation by taking d
 - Direct approval: When actions like *move to inbox*, *move to junk*, *move to deleted items*, *soft delete*, or *hard delete* are selected by security personnel who have appropriate permissions, and the next steps in remediation are followed, the remediation process begins to execute the selected action.
 
   > [!NOTE]
-  > As the remediation gets kicked-off, it generates an alert and an investigation in parallel. Alert shows up in the alerts queue with the name "Administrative action submitted by an Administrator" suggesting that security personnel took the action of remediating an entity. It presents details like name of the person who performed the action, supporting investigation link, time, etc. It works really well to know every time a harsh action like remediation is performed on entities. All these actions can be tracked under the **Actions & Submissions** \> **Action center** \> **History tab** (public preview).
+  > As the remediation gets kicked-off, it generates an alert and an investigation in parallel. Alert shows up in the alerts queue with the name "Administrative action submitted by an Administrator" suggesting that security personnel took the action of remediating an entity. It presents details like name of the person who performed the action, supporting investigation link, time, etc. It works really well to know every time a harsh action like remediation is performed on entities. All these actions can be tracked under the **Actions & Submissions** \> **Action center** \> **History tab**.
 
 - Two-step approval: An "add to remediation" action can be taken by admins who don't have appropriate permissions or who need to wait to execute the action. In this case, the targeted emails are added to a remediation container. Approval is needed before the remediation is executed.
 
@@ -109,7 +109,7 @@ Open any remediation item to view details about it, including its remediation na
     - **Hard delete**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
 
   > [!NOTE]
-  > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available.
+  > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
   
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, the total of remediable and nonremediable messages equals the total number of messages submitted. But the totals might not match because of system delays, time-outs, or expired messages. Messages expire based on the Explorer retention period for your organization.
 
@@ -122,7 +122,7 @@ Open any remediation item to view details about it, including its remediation na
   > [!TIP]
   > For best results, remediation should be done in batches of 50,000 or fewer.
 
-  Only remediable email messages are acted on during remediation. Nonremediable emails can't be remediated by Microsoft 365, becayse they aren't stored in cloud mailboxes.
+  Only remediable email messages are acted on during remediation. Nonremediable emails can't be remediated by Microsoft 365, because they aren't stored in cloud mailboxes.
 
   Admins can take actions on emails in quarantine if necessary, but those emails expire out of quarantine if they're not manually purged. By default, emails quarantined because of malicious content aren't accessible by users, so security personnel don't have to take any action to get rid of threats in quarantine. If the emails are on-premises or external, the user can be contacted to address the suspicious email. Or the admins can use separate email server/security tools for removal. These emails can be identified by applying the *delivery location = on-premises* external filter in Explorer. For failed or dropped email, or email not accessible by users, there isn't any email to mitigate, since these mails don't reach the mailbox.
 

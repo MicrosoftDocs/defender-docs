@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 1/29/2024
+ms.date: 04/15/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -68,7 +68,7 @@ The rest of this article describes the SPF TXT records that you need to create f
 
 SPF TXT records are exhaustively described in [RFC 7208](https://datatracker.ietf.org/doc/html/rfc7208).
 
-The basic syntax of the SPF TX record for a custom domain in Microsoft 365 is:
+The basic syntax of the SPF TXT record for a custom domain in Microsoft 365 is:
 
 ```txt
 v=spf1 <valid mail sources> <enforcement rule>
@@ -180,6 +180,8 @@ Important points to remember:
 ## Troubleshooting SPF TXT records
 
 - **One SPF record per domain or subdomain**: Multiple SPF TXT records for the same domain or subdomain cause a DNS lookup loop that makes SPF fail, so use only one SPF record per domain or subdomain.
+
+- **Time to live (TTL)**: We recommended a minimum TTL value of 3600 seconds (one hour) on SPF TXT records to avoid DNS lookup timeouts.
 
 - **Less than 10 DNS lookups**: When destination email systems query the SPF TXT record for valid sources for the MAIL FROM address domain, the query scans through the IP addresses and `include:` statements in the record until the message source (ultimately, an IP address) matches one of the specified sources. If the number of DNS lookups (which can be different than the number of DNS _queries_) is greater than 10, the message fails SPF with a permanent error (also known as a `permerror`). The destination email system rejects the message in a non-delivery report (also known as an NDR or _bounce message_) with one of the following errors:
   - The message exceeded the hop count.

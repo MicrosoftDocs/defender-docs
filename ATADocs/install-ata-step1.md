@@ -3,10 +3,6 @@
 
 title: Install Advanced Threat Analytics - Step 1
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -31,7 +27,7 @@ ms.suite: ems
 > [!NOTE]
 > **Support lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 > [!div class="step-by-step"]
 > [Step 2 »](install-ata-step2.md)
@@ -46,25 +42,25 @@ This installation procedure provides instructions for performing a fresh install
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
 
 > [!NOTE]
-> If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
+> If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you don't have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
 
 Perform the following steps on the ATA Center server.
 
 1. Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from [MSDN](/power-apps/developer/data-platform/org-service/subscribe-sdk-assembly-updates-using-nuget).
 
-1. Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
+1. Sign in to the computer on to which you're installing the ATA Center as a user who is a member of the local administrators' group.
 
 1. Run **Microsoft ATA Center Setup.EXE** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 
     > [!NOTE]
     > Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.
 
-1. If Microsoft .NET Framework is not installed, you are prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
-1. On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
+1. If Microsoft .NET Framework isn't installed, you're prompted to install it when you start installation. You might be prompted to reboot after .NET Framework installation.
+1. On the **Welcome** page, select the language to be used for the ATA installation screens and select **Next**.
 
-1. Read the Microsoft Software License Terms, after accepting the terms, click the acceptance check box, then click **Next**.
+1. Read the Microsoft Software License Terms, after accepting the terms, select the acceptance check box, then select **Next**.
 
-1. We recommend setting ATA to update automatically. If Windows isn't set to update automatically on your computer, you'll see the **Use Microsoft Update to help keep your computer secure and up to date** screen.
+1. We recommend setting ATA to update automatically. If Windows isn't set to update automatically on your computer, you see the **Use Microsoft Update to help keep your computer secure and up to date** screen.
     ![Keep ATA up to date image.](media/ata_ms_update.png)
 
 1. Select **Use Microsoft Update when I check for updates (recommended)**. This adjusts the Windows settings to enable updates for other Microsoft products (including ATA).
@@ -77,14 +73,14 @@ Perform the following steps on the ATA Center server.
     |---------|---------------|------------|
     |Installation Path|This is the location where the ATA Center is installed. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
     |Database Data Path|This is the location where the MongoDB database files are located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments, you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
-    |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select an installed certificate or use the checkbox to create a self-signed certificate.|
+    |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Select the key icon to select an installed certificate or use the checkbox to create a self-signed certificate.|
 
     ![ATA center configuration image.](media/ATA-Center-Configuration.png)
 
     > [!NOTE]
-    > Make sure to pay attention to health alerts regarding the Center Service SSL Certificate status and expiration warnings. If the certificate expires, you'll need to completely re-deploy ATA.
+    > Make sure to pay attention to health alerts regarding the Center Service SSL Certificate status and expiration warnings. If the certificate expires, you need to completely redeploy ATA.
 
-1. Click **Install** to install the ATA Center and its components.  
+1. Select **Install** to install the ATA Center and its components.  
 The following components are installed and configured during the installation of ATA Center:
 
     - ATA Center service
@@ -95,14 +91,14 @@ The following components are installed and configured during the installation of
 
     - Self-signed certificates (if selected during the installation)
 
-1. When the installation is complete, click **Launch**  to open the ATA Console and complete setup from the **Configuration** page.
-    The **General** settings page will open automatically to continue the configuration and the deployment of the ATA Gateways.
-    Because you are logging into the site using an IP address, you receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
+1. When the installation is complete, select **Launch**  to open the ATA Console and complete setup from the **Configuration** page.
+    The **General** settings page opens automatically to continue the configuration and the deployment of the ATA Gateways.
+    Because you're logging into the site using an IP address, you receive a warning related to the certificate, this is normal and you should select **Continue to this website**.
 
 ### Validate installation
 
 1. Check if the service **Microsoft Advanced Threat Analytics Center**, is running.
-1. On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the user credentials you used to install the ATA Center.
+1. On the desktop, select the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Sign in with the user credentials you used to install the ATA Center.
 
 ### Set anti-virus exclusions
 

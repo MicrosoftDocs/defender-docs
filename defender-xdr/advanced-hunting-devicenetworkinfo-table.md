@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 04/03/2025
 ---
 
 # DeviceNetworkInfo
@@ -57,6 +57,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IPAddresses` | `string` | JSON array containing all the IP addresses assigned to the adapter, along with their respective subnet prefix and IP address space, such as public, private, or link-local |
 | `ReportId` | `long` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
 | `NetworkAdapterVendor` | `string` | Name of the manufacturer or vendor of the network adapter |
+| `OnboardingStatus` | `string` | Indicates whether the device is currently onboarded to Microsoft Defender for Endpoint or if the device is not supported |
+| `NetworkAdapterDnsSuffix` | `string` | Domain suffix assigned to the device’s network adapter, indicating the network environment the network adapter is connected to |
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

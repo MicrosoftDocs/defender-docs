@@ -159,6 +159,14 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     ![Google Workspace authorize new client ID.](media/connect-google-workspace/google-workspace-authorize-new-client-id.png)
 
+   >[!IMPORTANT]
+   > In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
+   > - Navigate to admin.google.com
+   > - Select apps -> Google Workspace -> Drive and Docs
+   > - Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
+
+   
+
 ### Configure Defender for Cloud Apps
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.

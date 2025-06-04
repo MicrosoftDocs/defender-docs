@@ -14,7 +14,7 @@ ms.topic: conceptual
 ms.custom: api
 ms.subservice: reference
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # MachineAction resource type
@@ -25,8 +25,9 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business) (for supported capabilities only)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
@@ -35,6 +36,7 @@ ms.date: 12/18/2020
 
 
 - For more information, see [Response Actions](../respond-machine-alerts.md).
+- If you're using Defender for Business, see [Review remediation actions](/defender-business/mdb-review-remediation-actions) for available actions.
 
 |Method|Return Type|Description|
 |---|---|---|

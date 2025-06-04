@@ -3,10 +3,6 @@
 
 title: Advanced Threat Analytics update to 1.6 migration guide
 description: Procedures to update ATA to version 1.6
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -43,12 +39,12 @@ The update to ATA 1.6 provides improvements in the following areas:
 ## Updating ATA to version 1.6
 
 > [!NOTE]
-> If ATA is not installed in your environment, download the full version of ATA, which includes version 1.6 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
+> If ATA isn't installed in your environment, download the full version of ATA, which includes version 1.6 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
 
 If you already have ATA version 1.5 deployed, this procedure walks you through the steps necessary to update your deployment.
 
 > [!NOTE]
-> You cannot install ATA version 1.6 directly on top of ATA version 1.4. You must install ATA version 1.5 first. If you accidentally attempted to install ATA 1.6 without installing ATA 1.5, you get an error telling you that **A newer version is already installed on your machine.** You must uninstall the remnants of ATA 1.6 that remain on your computer - even though the installation failed - before you install ATA version 1.5.
+> You can't install ATA version 1.6 directly on top of ATA version 1.4. You must install ATA version 1.5 first. If you accidentally attempted to install ATA 1.6 without installing ATA 1.5, you get an error telling you that **A newer version is already installed on your machine.** You must uninstall the remnants of ATA 1.6 that remain on your computer - even though the installation failed - before you install ATA version 1.5.
 
 Follow these steps to update to ATA version 1.6:
 
@@ -76,16 +72,16 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
 1. Run the installation file, Microsoft ATA Center Setup.exe, and follow the instructions on the screen to install the update.
 
-    1. ATA 1.6 requires .Net Framework 4.6.1 to be installed. If not already installed, ATA installation installs .Net Framework 4.6.1 as part of the installation.
+    1. ATA 1.6 requires .NET Framework 4.6.1 to be installed. If not already installed, ATA installation installs .NET Framework 4.6.1 as part of the installation.
 
         > [!NOTE]
-        > The installation of .Net Framework 4.6.1 may require restarting the server. ATA installation will proceed only after the server was restarted.
+        > The installation of .NET Framework 4.6.1 might require restarting the server. ATA installation will proceed only after the server was restarted.
 
     2. On the **Welcome** page, select your language and select **Next**.
 
     3. Read the End-User License Agreement and if you accept the terms, select **Next**.
 
-    4. It is now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
+    4. It's now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
     ![Keep ATA up-to-date image.](media/ata_ms_update.png)
      This adjusts the Windows settings to enable updates for other Microsoft products (including ATA), as seen here.
     ![Windows auto-update image.](media/ata_installupdatesautomatically.png)
@@ -95,7 +91,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     6. Select **Update**. After you select **Update**, ATA is offline until the update procedure is complete.
 
-1. After updating the ATA Center, the ATA Gateways will report that they are now outdated.
+1. After updating the ATA Center, the ATA Gateways will report that they're now outdated.
 
     ![Outdated gateways image.](media/ATA-center-outdated.png)
 
@@ -131,14 +127,14 @@ The zip file includes the following files:
     > [!NOTE]
     > You can also use this ATA Gateway package to install new ATA Gateways.
 
-1. Your previous settings are preserved, but it may take a few minutes for the service to restart.
+1. Your previous settings are preserved, but it might take a few minutes for the service to restart.
 
 1. Repeat this step for all other ATA Gateways deployed.
 
 > [!NOTE]
 > After successfully updating an ATA Gateway, the outdated notification for the specific ATA Gateway will be resolved.
 
-You know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
+You know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they're successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
 ![Updated gateways image.](media/ATA-gw-updated.png)
 

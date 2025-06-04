@@ -1,6 +1,6 @@
 ---
-title: Alert classification for malicious exchange connectors
-description: Alert grading recipients from malicious exchange connectors activity and protect their network from malicious attack.
+title: Alert classification for malicious Exchange connectors
+description: Learn how to classify alerts on malicious Exchange connectors activity and protect your network from attacks.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -17,7 +17,7 @@ ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
-ms.date: 03/11/2024
+ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR
 #customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for malicious Exchange connectors so that I can take the necessary actions to remediate the attack and protect my network.
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Threat actors use compromised exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
+Threat actors use compromised Microsoft Exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
 
 This playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, they take necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
 
@@ -44,7 +44,7 @@ Connectors are used to route mail traffic between remote email systems and Offic
 
 ### Malicious Exchange connectors
 
-Attackers may compromise an existing exchange connector or compromise an admin, and set up a new connector by sending phish or spam/bulk emails.
+Attackers may compromise an existing Exchange connector or compromise an admin, and set up a new connector by sending phish or spam/bulk emails.
 
 The typical indicators of a malicious connector can be found when looking at email traffic and its headers. For example, when email traffic is observed from a connector node with a mismatch in P1 (header sender) and P2 (envelope sender) sender addresses along with no information on Sender's AccountObjectId.
 
@@ -52,7 +52,7 @@ This alert tries to identify such instances of mail flow, wherein the mail sendi
 
 ## Playbook workflow
 
-You must follow the sequence to identify malicious exchange connectors:
+You must follow the sequence to identify malicious Exchange connectors:
 
 - Identify which accounts are sending emails:
   - Do accounts appear to be compromised?
@@ -69,7 +69,7 @@ You must follow the sequence to identify malicious exchange connectors:
 This section describes the steps to investigate an alert and remediate the security risk due to this incident.
 
 - Determine whether the connector demonstrates bad (malicious) behavior.
-  - Look for events indicating unusual mail traffic and identify, whether any new exchange connector was added recently.
+  - Look for events indicating unusual mail traffic and identify, whether any new and recently added Exchange connector.
     - For mail traffic observed, determine if the email accounts are compromised by inspecting whether the accounts are responsible for unusual mail traffic.
   - Look for mail content containing malicious artifacts (bad links/attachments).
   - Look for domains that are not part of your environment.

@@ -3,10 +3,6 @@
 
 title: What's new in Advanced Threat Analytics version 1.5
 description: Lists what was new in ATA version 1.5 along with known issues
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -43,7 +39,7 @@ The update to ATA 1.5 provides improvements in the following areas:
 
 - Improved auto-resolution of health alerts
 
-- Additional performance counters for enhanced monitoring and troubleshooting
+- Extra performance counters for enhanced monitoring and troubleshooting
 
 ## Known issues
 The following known issues exist in this version.
@@ -57,19 +53,19 @@ Microsoft Advanced Threat Analytics Gateway is not installed
 <b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
 ### Deployment
 The folder specified for the "Database data path" and "Database journal path" has to be empty (no files or subfolders).
-If it is not empty, the deployment does not progress.
+If it isn't empty, the deployment doesn't progress.
 
 ### Installation from Zip file
-When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation fails.
+When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Don't install the ATA Gateway directly from within the zip file or the installation fails.
 
 ### Configuration
-After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which may take up to 10 minutes the first time the service starts.
+After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which might take up to 10 minutes the first time the service starts.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Don't install Microsoft Message Analyzer or any other network capturing software. Installing other software causes the ATA Gateway to stop functioning properly.
 
 ### KB on virtualization host
-Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
+Don't install KB 3047154 on a virtualization host. This might cause port mirroring to stop working properly.
 
 ## See Also
 

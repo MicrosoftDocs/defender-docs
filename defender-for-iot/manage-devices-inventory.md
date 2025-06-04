@@ -42,6 +42,10 @@ To customize the device inventory views:
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
 
+### OT network tag
+
+When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that these devices are part of the site. This tag helps users focus on devices that belong to their OT network.
+
 ## Manage OT devices
 
 - [Explore the device inventory](/defender-endpoint/machines-view-overview#explore-the-device-inventory) including search, export to CSV, and more.

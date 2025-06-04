@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: get-started
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 06/17/2024
+ms.date: 05/20/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -29,6 +29,13 @@ appliesto:
 In new Microsoft 365 organizations with Microsoft Defender for Office 365 (included or as an add-on subscription), this article describes the configuration steps that you need to do in [Exchange Online Protection (EOP)](eop-about.md) and [Defender for Office 365](mdo-about.md) in the earliest days of your organization.
 
 Although your Microsoft 365 organization includes a default level of protection from the moment you create it (or add Defender for Office 365 to it), the steps in this article give you an actionable plan to unleash the full protection capabilities of EOP and Defender for Office 365. After you complete the steps, you can also use this article to show management that you're maximizing your investment in Microsoft 365.
+
+> [!TIP]
+> For information about configuring protection for Microsoft Teams, see the following articles:
+>
+> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 The steps to configure EOP and Defender for Office 365 are described in the following diagram:
 
@@ -116,7 +123,7 @@ The previous information and the protection policies that are involved are summa
 |&nbsp;&nbsp;[Outbound spam](outbound-spam-policies-configure.md)|✔||✔|
 |&nbsp;&nbsp;[Connection filtering](connection-filter-policies-configure.md)|✔¹|||
 |**Defender for Office 365 policies**:||||
-|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Advanced phishing thresholds](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
+|&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) plus: <ul><li>[Impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li></ul>|✔²|✔²|✔|
 |&nbsp;&nbsp;[Safe Links](safe-links-policies-configure.md)|³|✔|✔|
 |&nbsp;&nbsp;[Safe Attachments](safe-attachments-policies-configure.md)|³|✔|✔|
 |**General behavior**||||
@@ -255,7 +262,7 @@ In Defender for Office 365 Plan 2, you also have access to create and apply cust
 
 ## Step 5: Review and configure user reported message settings
 
-**Summary**: Deploy the [Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) or a [supported third party tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
+**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported third party tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
 
 **Details**:
 
@@ -266,7 +273,6 @@ The important parts of user message reporting are:
 - **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
 
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
-- The Microsoft [Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) for Outlook and Outlook on the web.
 - Third-party reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-third-party-reporting-tools).
 
 - **Where do user reported messages go?**: You have the following options:
@@ -309,7 +315,17 @@ In general, it's easier to create blocks than allows, because unnecessary allow 
 
 - **Allow**:
 
-  - You can't create allow entries for **domains and email addresses**, **files**, and **URLs** directly on the corresponding tabs in the Tenant Allow/Block List. Instead, you use the **Submissions** page to report the item to Microsoft. As you report the item to Microsoft, you can select to allow the item, which creates a corresponding temporary allow entry in the Tenant Allow/Block list.
+  - You can create allow entries for **domains and email addresses** and **URLs** on the corresponding tabs in the Tenant Allow/Block List to override the following verdicts:
+    - Bulk
+    - Spam
+    - High confidence spam
+    - Phishing (not high confidence phishing)
+
+  - You can't create allow entries directly in the Tenant Allow/Block List for the following items:
+    - Malware or high confidence phishing verdicts for **domains and email addresses** or **URLs**.
+    - Any verdicts for **files**.
+
+    Instead, you use the **Submissions** page to report the items to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message**, **Allow this URL**, or **Allow this file** to create a corresponding temporary allow entry in the Tenant Allow/Block list.
 
   - Messages allowed by [spoof intelligence](anti-spoofing-spoof-intelligence.md) are shown on the **Spoof intelligence** page. If you change a block entry to an allow entry, the sender becomes a manual allow entry on the **Spoofed senders** tab in the Tenant Allow/Block List. You can also proactively create allow entries for not yet encountered spoofed senders on the **Spoofed senders** tab.
 

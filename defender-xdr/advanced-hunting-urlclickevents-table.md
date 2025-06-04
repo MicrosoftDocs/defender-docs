@@ -49,6 +49,8 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `UrlChain` | `string` | For scenarios involving redirections, it includes URLs present in the redirection chain|
 | `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event.|
 
+> [!NOTE]
+> For clicks originating from email in Drafts and Sent items folders, email metadata is either not available or `NetworkMessageId` is assigned by default. In this case, `UrlClickEvents` can't be joined with `Email*` tables like `EmailEvents`, `EmailPostDeliveryEvents`, and others, using `NetworkMessageId`. 
 
 You can try this example query that uses the `UrlClickEvents` table to return a list of links where a user was allowed to proceed: 
 

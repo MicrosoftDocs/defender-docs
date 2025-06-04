@@ -2,8 +2,8 @@
 title: View and organize the Microsoft Defender for Endpoint Alerts queue
 description: Learn about how the Microsoft Defender for Endpoint alerts queues work, and how to sort and filter lists of alerts.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - mde-edr
 ms.topic: conceptual
-ms.date: 02/15/2024
+ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150
 ---

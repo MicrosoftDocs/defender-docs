@@ -14,17 +14,14 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/08/2024
+ms.date: 04/15/2025
+appliesto:
+ - Microsoft Defender XDR
 ---
 
 # Get incident information API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
 
@@ -89,7 +86,8 @@ Here's an example of the request.
 ```http
 GET https://api.security.microsoft.com/api/incidents/{id}
 ```
-## Related articles
+
+## Related content
 
 [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 

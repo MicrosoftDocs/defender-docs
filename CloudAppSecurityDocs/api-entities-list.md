@@ -27,7 +27,7 @@ POST /api/v1/entities/
 
 | Parameter | Description |
 | --- | --- |
-| filters | Filter objects with all the search filters for the request, see [entity filters](api-entities.md#filters) for more details |
+| filters | Filter objects with all the search filters for the request, for more details see [entity filters](api-entities.md#filters)  |
 | sortDirection | The sorting direction. Possible values are: `asc` and `desc` |
 | sortField | Fields used to sort entities. Possible values are:<br />- **date**: The date when then the entity was created<br />- **severity**: The severity of the entity |
 | skip | Skips the specified number of records |
@@ -37,7 +37,7 @@ POST /api/v1/entities/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/entities/" -d '{
@@ -56,7 +56,7 @@ Returns a list of activities in JSON format.
 
 ```json
 {
-  "total": 5 // total number of records
+  "total": 5 // approximate number of records
   "hasNext": true // whether there is more data to show or not.
   "data": [
     // returned records

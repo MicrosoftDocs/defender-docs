@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 02/05/2025
+ms.date: 03/18/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -396,3 +396,23 @@ When the payload is used in a simulation, the service replaces the QR code with 
 ### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design?
 
 A: Currently, the following HTML tags aren't supported in the payload editor: `applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title`.
+
+### Q: What happens if you modify the content used in an existing simulation?
+
+A: You can modify key elements that are used in a simulation independently of the simulation itself. For example:
+
+- Payload
+- Module
+- Login page
+- Landing page
+
+The simulation content is evaluated at the time of launch, so what's used in the simulation depends on the status of the simulation when you modified the content:
+
+- **Active** or **In progress**: This simulation was already launched, so any content changes aren't used.
+- **Scheduled**: The simulation hasn't been launched yet, so any content changes are used in the situation when it launches.
+
+### Q: What happens if you cancel a simulation after there have already been clicks on the payload? Are those users still considered repeat offenders, even though the simulation was cancelled?
+
+A _repeat offender_ is a user who was compromised by consecutive simulations (gave up their credentials). The default value of consecutive simulations is two, but you can [configure the threshold](attack-simulation-training-settings.md#configure-the-repeat-offender-threshold).
+
+If you cancel an in-progress simulation, users who entered their credentials before the cancellation are counted as repeat offenders or compromised in reports.

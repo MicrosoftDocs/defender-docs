@@ -3,12 +3,13 @@ title: Microsoft Defender for Identity security alerts in Microsoft Defender XDR
 description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft Defender XDR
 ms.date: 04/16/2023
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Investigate Defender for Identity security alerts in Microsoft Defender XDR
 
 > [!NOTE]
-> Defender for Identity is not designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
+> Defender for Identity isn't designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
 
 This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
@@ -87,7 +88,7 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
     You can also export the alert to an Excel file. To do this, select **Export.**
 
     > [!NOTE]
-    > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft Defender XDR**. Each link will bring you to the relevant portal, and provide information about the alert there.
+    > Alert export option is limited to Microsoft Defender for Identity Alerts with the "aa" prefix, for more information, see [XDR Alert Sources](https://learn.microsoft.com/defender-xdr/investigate-alerts?tabs=settings#alert-sources).
 
 ## Tuning alerts
 

@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 08/13/2024
+ms.date: 03/10/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -147,7 +147,12 @@ You can also create custom payloads that use QR codes as phishing links as descr
 ## Create payloads
 
 > [!NOTE]
-> Certain trademarks, logos, symbols, insignias and other source identifiers receive heightened protection under local, state and federal statutes and laws. Unauthorized use of such indicators can subject the users to penalties, including criminal fines. Though not an extensive list, this includes the Presidential, Vice Presidential, and Congressional seals, the CIA, the FBI, Social Security, Medicare and Medicaid, the United States Internal Revenue Service, and the Olympics. Beyond these categories of trademarks, use and modification of any third-party trademark carries an inherent amount of risk. Using your own trademarks and logos in a payload would be less risky, particularly where your organization permits the use. If you have any further questions about what is or is not appropriate to use when creating or configuring a payload, you should consult with your legal advisors.
+>
+> - Certain trademarks, logos, symbols, insignias and other source identifiers receive heightened protection under local, state and federal statutes and laws. Unauthorized use of such indicators can subject the users to penalties, including criminal fines. Though not an extensive list, this includes the Presidential, Vice Presidential, and Congressional seals, the CIA, the FBI, Social Security, Medicare and Medicaid, the United States Internal Revenue Service, and the Olympics. Beyond these categories of trademarks, use and modification of any third-party trademark carries an inherent amount of risk. Using your own trademarks and logos in a payload would be less risky, particularly where your organization permits the use. If you have legal questions around logo and brand usage, consult with your legal advisors.
+>
+> - Microsoft permits customers to use our logos and branding in their custom payloads within Attack simulation training, as long as the logo and branding are used only as part of simulation content. The user landing page should contain a highly visible, unavoidable disclaimer that clearly states Microsoft isn't associated with and doesn't endorse the simulation exercise, nor was it an actual email from or associated with Microsoft. You can use the text from Microsoft's global landing page as a reference:
+>
+>   _The message you just clicked on is a phishing message simulation. It is not a real message from the owner of the trademark or logo featured in the simulation. The trademarks and logos featured in the simulation may be the property of their respective owners and are in no way associated or affiliated with the simulation, nor have the owners of such trademarks and logos authorized, sponsored, or endorsed the use of such trademarks and logos in the simulation._
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> **Payloads** \> **Tenant payloads** tab. To go directly to the **Content library** tab where you can select **Payloads** and the **Tenant payloads** tab, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 

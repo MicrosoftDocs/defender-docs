@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 06/19/2024
+ms.date: 04/25/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -31,9 +31,9 @@ When an automatic attack disruption triggers in Microsoft Defender XDR, the deta
 
 ## Review the incident graph
 
-Microsoft Defender XDR automatic attack disruption is built in in the incident view. Review the incident graph to get the entire attack story and assess the attack disruption impact and status.
+Microsoft Defender XDR automatic attack disruption is built-in in the incident view. Review the incident graph to get the entire attack story and assess the attack disruption impact and status.
 
-Here are some examples of what it looks like:
+The incident page includes the following information:
 
 - Disrupted incidents include a tag for 'Attack Disruption' and the specific threat type identified (i.e., ransomware). If you subscribe to incident email notifications, these tags also appear in the emails.
 - A highlighted notification below the incident title indicating that the incident was disrupted.
@@ -96,6 +96,7 @@ IdentityDirectoryEvents
 
 The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-AttackDisruption.md#microsoft-365-defender).
 
-## Next step
+## Related content
 
+- [Exclude assets from automated response actions](automatic-attack-disruption-exclusions.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)

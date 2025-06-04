@@ -99,7 +99,7 @@ Use a custom app policy when you need to do something not already done by one of
    > [!NOTE]
    > Some policy conditions are only applicable to apps that access Graph API permissions. When evaluating apps that access only non-Graph APIs, app governance skips these policy conditions and proceed to check only other policy conditions.
 
-5. Here are the available conditions for a custom app policy:
+1. Here are the available conditions for a custom app policy:
 
    |Condition|Condition values accepted|Description|More information|
    |---|---|---|---|
@@ -123,9 +123,9 @@ Use a custom app policy when you need to do something not already done by one of
    |**Sensitivity labels accessed**|Select one or more sensitivity labels from the list|Apps that accessed data with specific sensitivity labels in the last 30 days.||
    |**Services accessed** (Graph only)|Exchange and/or OneDrive and/or SharePoint and/or Teams|Apps that have accessed OneDrive, SharePoint, or Exchange Online using Microsoft Graph and EWS APIs|Multiple selections allowed.|
    |**Error rate** (Graph only)|Error rate is greater than X% in the last seven days|Apps whose Graph API error rates in the last seven days are greater than a specified percentage||
-   |**App origin** (Preview)|External or Internal|Apps that originated within the tenant or registered in an external tenant||
-
-   All of the specified conditions must be met for this app policy to generate an alert.
+   |**App origin**|External or Internal|Apps that originated within the tenant or registered in an external tenant||
+   
+      All of the specified conditions must be met for this app policy to generate an alert.
 
 6. When you're done specifying the conditions, select **Save**, and then select **Next**.
 
@@ -166,7 +166,7 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 1. Go to **Microsoft Defender XDR > App governance > Policies > Other apps**. For example:
 
     ![Other apps-policy creation](media/app-governance-app-policies-create/other-apps-policy-creation.jpg)
-
+   
 2. Filter the apps according to your needs. For example, you might want to view all apps that request **Permission** to **Modify calendars in your mailbox**.
 
    > [!TIP]

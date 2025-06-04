@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 - must-keep
 ms.topic: reference
-ms.date: 01/25/2023
+ms.date: 03/21/2025
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
@@ -32,13 +32,13 @@ search.appverid: met150
 > [!IMPORTANT]
 > Advanced hunting capabilities aren't included in Defender for Business.
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Full scenario using multiple APIs from Microsoft Defender for Endpoint.
 
@@ -55,19 +55,19 @@ In this section, we share PowerShell samples to
 
 2. If your policy doesn't allow you to run the PowerShell commands, you can run the following command:
 
-  ```
-  Set-ExecutionPolicy -ExecutionPolicy Bypass
-  ```
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy Bypass
+   ```
 
-For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy)
+For more information, see [PowerShell documentation](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ## Get token
 
 Run the following command, using your information as follows:
 
-- `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
-- `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint)
-- `$appSecret`: Secret of your Microsoft Entra app
+- `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant).
+- `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint).
+- `$appSecret`: Secret of your Microsoft Entra app.
 - `$suspiciousUrl`: The URL
 
 

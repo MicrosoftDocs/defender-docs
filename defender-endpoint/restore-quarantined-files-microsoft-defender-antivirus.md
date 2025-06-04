@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 08/28/2023
-ms.reviewer: pahuijbr
+ms.date: 03/26/2025
+ms.reviewer: yongrhee, pahuijbr
 manager: deniseb
 ms.subservice: ngp
 ms.topic: conceptual
@@ -33,6 +33,8 @@ search.appverid: met150
 
 Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
 
+### Using the Windows Security app
+
 1. On your Windows device, open **Windows Security**.
 
 2. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
@@ -41,24 +43,33 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 
 4. Select an item you want to keep, and choose an action, such as **Restore**.
 
-> [!TIP]
-> You can also restore a file from quarantine by using Command Prompt. See [Restore file from quarantine](respond-file-alerts.md#restore-file-from-quarantine). 
+### Using the MpCmdRun command line
 
+1. Open Command Prompt as an administrator.
+
+2. Type the following command, and then press **Enter**:
+
+   ```dos
+   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name <filename>
+   ```
+
+### Download or collect the file
+
+Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download files that are in quarantine.
+
+The **Download file** button can have the following states:
+
+   - **Active** - You're able to collect the file. 
+   - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
+
+For more information, see [Download or collect file](/defender-endpoint/respond-file-alerts#download-or-collect-file).
 
 ## See also
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

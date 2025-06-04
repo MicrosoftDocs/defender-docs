@@ -23,9 +23,8 @@ search.appverid: MET150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Windows 11
-- Windows 10, version 2004 and later (build 19044 and later)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## Overview
 

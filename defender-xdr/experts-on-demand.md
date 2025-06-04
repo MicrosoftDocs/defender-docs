@@ -11,7 +11,7 @@ ms.author: vpattnaik
 author: vpattnai
 ms.custom: 
 - cx-ti
-- cx-dex
+- cx-ean
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

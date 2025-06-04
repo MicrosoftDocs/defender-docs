@@ -16,7 +16,7 @@ ms.collection:
 - tier1
 ms.topic: solution-overview
 ms.custom: migrationguides
-ms.date: 10/24/2023
+ms.date: 09/21/2024
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 ms.subservice: onboard
 search.appverid: met150

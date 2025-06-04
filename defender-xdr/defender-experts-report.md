@@ -13,7 +13,7 @@ manager: dansimp
 audience: ITPro
 ms.custom: 
 - cx-ti
-- cx-dex
+- cx-ean
 ms.collection: 
 - m365-security 
 - tier1

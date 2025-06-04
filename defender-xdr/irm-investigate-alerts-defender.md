@@ -19,7 +19,7 @@ search.appverid:
 ms.date: 02/17/2025
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-- <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft's unified security operations platform</a>
+- <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft Sentinel in the Defender portal</a>
 ---
 # Investigate insider risk threats in the Microsoft Defender portal
 
@@ -132,7 +132,7 @@ The following alert classification mapping is used to sync the alert classificat
 |Microsoft Defender alert classification|Microsoft Purview Insider Risk Management alert classification|
 |:---|:---|
 |True positive </br> Includes multi-staged attack, phishing, etc.|Confirmed|
-|Information, expected activity (benign positive) </br> Includes Ssecurity testing, confirmed activity, etc.|Dismissed|
+|Information, expected activity (benign positive) </br> Includes security testing, confirmed activity, etc.|Dismissed|
 |False positive </br> Includes not malicious, not enough data to validate, etc.|Dismissed|
 
 For more information about alert statuses and classifications in Microsoft Defender XDR, see [Manage alerts in Microsoft Defender](investigate-alerts.md#manage-alerts).

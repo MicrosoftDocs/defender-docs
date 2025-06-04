@@ -3,10 +3,6 @@
 
 title: Advanced Threat Analytics personal data policy
 description: Provides links to information about how to delete private information and personal data from ATA.
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
@@ -34,7 +30,7 @@ ms.suite: ems
 
 All data in ATA that relates to entities is derived from Active Directory (AD) and replicated to ATA from there. When searching for personal data, the first place you should consider searching is AD.
 
-From the ATA Center, use the search bar to view the identifiable personal data that is stored in the database. Users can search for a specific user or device. Selecting the entity will open the user or device profile page. The profile provides you with the comprehensive details about the entity, it's history, and related network activity derived from AD.
+From the ATA Center, use the search bar to view the identifiable personal data that is stored in the database. Users can search for a specific user or device. Selecting the entity opens the user or device profile page. The profile provides you with the comprehensive details about the entity, its history, and related network activity derived from AD.
 
 ## Updating personal data
 
@@ -62,7 +58,7 @@ Running this completely removes the entity with the UPN admin1@contoso.com from 
 
 ### Delete entity activity data
 
-This action permanently deletes an entity's activities data from the ATA database. All entities will are unchanged but the activities and security alerts related to them for the specified timeframe are deleted.
+This action permanently deletes an entity's activities data from the ATA database. All entities are unchanged but the activities and security alerts related to them for the specified timeframe are deleted.
 
 To run this command, provide the command name `deleteOldData`, and the number of days of data you want to keep in the database.
 

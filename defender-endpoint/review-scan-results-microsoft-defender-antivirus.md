@@ -8,7 +8,7 @@ ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
-ms.date: 04/30/2024
+ms.date: 05/08/2025
 ms.subservice: ngp
 ms.topic: conceptual
 ms.collection: 
@@ -24,8 +24,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](defender-endpoint-plan-1.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
