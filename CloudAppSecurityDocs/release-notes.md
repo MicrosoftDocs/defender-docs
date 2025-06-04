@@ -27,6 +27,17 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 > Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
 
 
+## June 2025
+
+### Firewall configuration update required
+
+As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by <TBD> 
+Ensure the following endpoints are allowed:
+- discoveryresources-cdn-prod.cloudappsecurity.com
+- discoveryresources-cdn-gov.cloudappsecurity.us
+
+For the full list of required outbound IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
+
 ## May 2025 
 
 
