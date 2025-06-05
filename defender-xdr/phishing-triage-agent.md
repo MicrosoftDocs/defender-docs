@@ -301,9 +301,9 @@ To review the details of a specific feedback, select an entry from the feedback 
 > [!NOTE]
 > Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
 
-To reject specific feedback, open the Review feedback pane and select Reject feedback. When you reject feedback, the agent records it as rejected and stops using it in future triage decisions. Here’s an example.
+To reject specific feedback, open the Review feedback pane and select **Reject feedback**. When you reject feedback, the agent records it as rejected and stops using it in future triage decisions. Here’s an example.
 
-[SCREENSHOT]
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-rejected.png" alt-text="Screenshot of rejected feedback" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-rejected.png":::
 
 ### Change the agent's identity and role
 
