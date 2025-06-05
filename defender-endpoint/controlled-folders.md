@@ -142,15 +142,15 @@ You can review the Windows event log to see events that are created when control
 
 5. Select **OK**.
 
-The following table shows events related to controlled folder access:
+   The following table shows events related to controlled folder access:
 
-|Event ID|Description|
-|---|---|
-|`5007`|Event when settings are changed|
-|`1124`|Audited controlled folder access event|
-|`1123`|Blocked controlled folder access event|
-|`1127`|Blocked controlled folder access sector write block event|
-|`1128`|Audited controlled folder access sector write block event|
+   |Event ID|Description|
+   |---|---|
+   |`5007`|Event when settings are changed|
+   |`1124`|Audited controlled folder access event|
+   |`1123`|Blocked controlled folder access event|
+   |`1127`|Blocked controlled folder access sector write block event|
+   |`1128`|Audited controlled folder access sector write block event|
 
 ## Controlled folder access experience
 
@@ -164,7 +164,7 @@ Controlled folder access blocked C:\...
 \ApplicationName... from making changes to memory.
 ```
 
-and in the Protection history, you will see:
+And in the Protection history, you will see:
 
 
 ```
