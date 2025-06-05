@@ -94,6 +94,14 @@ After assigning both roles, you can remove the the Super Admin role. This ensure
     :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Enter the all users and all identitity and access management resources":::
 1. Select **Save selection**
 
+
+### Apply least-privilege roles to the Defender for Identity Okta account
+
+1. Assign the following roles to your dedicated Defender for Idenitity Okta account: 
+    1.  Read-Only Administrator role.
+    2.  The custom role and resource set. 
+1. Remove the Super Admin role from the Okta account.
+
 ### Connect Okta to Defender for Identity
 
 1.  Navigate to the Microsoft Defender Portal
