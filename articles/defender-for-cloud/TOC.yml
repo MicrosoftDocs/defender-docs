@@ -130,21 +130,61 @@
           href: tutorial-enable-storage-plan.md
         - name: Protect containers with Defender for Containers
           items:
-            - name: Protect Azure containers
-              href: tutorial-enable-containers-azure.md
-            - name: Protect on-premises and IaaS Kubernetes clusters
-              href: tutorial-enable-containers-arc.md
-            - name: Protect Amazon Web Service (AWS) accounts containers
-              href: tutorial-enable-container-aws.md
-            - name: Protect Google Cloud Platform (GCP) project containers
-              href: tutorial-enable-container-gcp.md
-            - name: Configure Defender for Containers components
-              displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
-                azure arc, multicloud
-              href: defender-for-containers-enable.md
-            - name: Defender for Containers resources and offboarding
-              displayName: defender, containers, offboard, resources
-              href: defender-for-containers-offboard.md
+    - name: Protect containers with Defender for Containers
+      items:
+        - name: Defender for Containers deployment overview
+          href: defender-for-containers-deployment-overview.md
+        - name: Azure (AKS)
+          items:
+            - name: Overview
+              href: defender-for-containers-azure-overview.md
+            - name: Deploy
+              href: defender-for-containers-azure-deploy.md
+            - name: Verify deployment
+              href: defender-for-containers-azure-verify.md
+            - name: Configure
+              href: defender-for-containers-azure-configure.md
+            - name: Remove
+              href: defender-for-containers-azure-remove.md
+        - name: Arc-enabled Kubernetes
+          items:
+            - name: Overview
+              href: defender-for-containers-arc-overview.md
+            - name: Deploy
+              href: defender-for-containers-arc-deploy.md
+            - name: Verify deployment
+              href: defender-for-containers-arc-verify.md
+            - name: Configure
+              href: defender-for-containers-arc-configure.md
+            - name: Remove
+              href: defender-for-containers-arc-remove.md
+        - name: AWS (EKS)
+          items:
+            - name: Overview
+              href: defender-for-containers-eks-overview.md
+            - name: Deploy
+              href: defender-for-containers-eks-deploy.md
+            - name: Verify deployment
+              href: defender-for-containers-eks-verify.md
+            - name: Configure
+              href: defender-for-containers-eks-configure.md
+            - name: Remove
+              href: defender-for-containers-eks-remove.md
+        - name: GCP (GKE)
+          items:
+            - name: Overview
+              href: defender-for-containers-gke-overview.md
+            - name: Deploy
+              href: defender-for-containers-gke-deploy.md
+            - name: Verify deployment
+              href: defender-for-containers-gke-verify.md
+            - name: Configure
+              href: defender-for-containers-gke-configure.md
+            - name: Remove
+              href: defender-for-containers-gke-remove.md
+        - name: Defender for Containers resources and offboarding
+          displayName: defender, containers, offboard, resources
+          href: defender-for-containers-offboard.md
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md
