@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/21/2025
+ms.date: 05/30/2025
 ms.reviewer: nehabha
 f1.keywords: NOCSH
 ms.collection:
@@ -79,6 +79,27 @@ Microsoft Defender Antivirus has one of the following states on devices:
 
   1. Uninstall the non-Microsoft antivirus/antimalware solution.
   2. Onboard the device to Defender for Business.
+
+### What to expect when threats are detected by Microsoft Defender Antivirus
+
+When Microsoft Defender Antivirus detects threat, the following things happen:
+
+- Users receive [notifications in Windows](https://support.microsoft.com/windows/8942c744-6198-fe56-4639-34320cf9444e).
+- Detections are listed in the [Windows Security app](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) on the **Protection history** page.
+- If you [secured your Windows devices](/microsoft-365/business-premium/m365bp-protect-managed-devices), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
+
+  > [!TIP]
+  > In Microsoft 365 Business Premium, if you have more than 800 devices [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll), you're prompted to view threat detections and insights from Microsoft Intune instead of from the **Threats and antivirus** page.
+
+In most cases, users don't need to take any further action. As soon as a malicious file or program is detected on a device, Microsoft Defender Antivirus blocks it and prevents it from running. Plus, newly detected threats are added to the antivirus and antimalware engine so that other devices and users are also protected.
+
+If a user needs to take action (for example, approve the removal of a malicious file), the action is shown in the notification they receive. To learn more about actions that Microsoft Defender Antivirus takes on a user's behalf, or actions users might need to take, see [Protection History](https://support.microsoft.com/office/f1e5fd95-09b4-46d1-b8c7-1059a1e09708).
+
+To learn more about different threats, visit the [Microsoft Security Intelligence Threats](https://www.microsoft.com/wdsi/threats) site where you can take the following actions:
+
+- View current information about top threats.
+- View the latest threats for a specific region.
+- Search the threat encyclopedia for details about a specific threat.
 
 ## Onboard a device
 

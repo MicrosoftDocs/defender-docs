@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.service: defender-office-365
