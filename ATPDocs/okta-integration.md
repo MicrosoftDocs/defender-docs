@@ -14,6 +14,8 @@ Okta manages how users and customers sign in and get access to key systems. Sinc
 
 Before connecting your Okta account to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
+- An existing Okta account with a Super Admin role. 
+
 Your Okta environment must have one of the following licenses:
 
 - Developer
@@ -30,11 +32,12 @@ This section provides instructions for connecting Microsoft Defender for Identit
 **To connect Okta to Defender for Identity** 
 
 1. Create a dedicated Okta account that is used only for Microsoft Defender for Identity.
-1. Verify your Okta account
+1. Assign your Okta account as a Super Admin role.
+1. Verify your Okta account.
 1. Store the account credentials for later use.
+1. Sign in to your dedicated Okta account created in step 1 in order to create an API token. 
 
 ### Create an API token
-
 
 1. In the Okta console, select **Admin**.
 
@@ -60,9 +63,11 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
     :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message":::
 
-1. After the token is created, you can remove the Super Admin role from the account. To support ongoing access, assign the Read-Only Administrator role and the custom Defender for Identity role.
-
 ### Create a custom Okta role
+
+To support ongoing API access, Read-Only Administrator role and the custom Defender for Identity role are required. 
+
+After assigning both roles, you can remove the the Super Admin role. This ensures that only relevant permissions are assigned to your Okta account at all times. 
 
 1. Navigate to **Security > Administrator**
 1. Select the **Roles** tab
