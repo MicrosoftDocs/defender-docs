@@ -23,8 +23,6 @@ This article explains how to enable Microsoft Defender for Containers on your Az
 
 1. On the Defender plans page, toggle the **Containers** plan to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/toggle-defender-for-containers.png" alt-text="Screenshot that shows the Defender for Cloud pricing page with the Containers plan toggle highlighted." lightbox="media/tutorial-enable-containers-azure/toggle-defender-for-containers.png":::
-
 1. Select **Settings** to configure the plan components.
 
 ## Configure plan components
@@ -36,8 +34,6 @@ After enabling the plan, configure which components to enable:
    - **Agentless container vulnerability assessment**
    - **Defender DaemonSet**
    - **Azure Policy for Kubernetes**
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/containers-settings.png" alt-text="Screenshot showing the Defender for Containers components settings page." lightbox="media/tutorial-enable-containers-azure/containers-settings.png":::
 
 1. Select **Continue**.
 
@@ -128,4 +124,4 @@ For detailed verification steps, see [Verify Defender for Containers deployment 
 
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Enable all Defender for Containers components via portal](defender-for-containers-aks-enable-all-portal.md)
-- [Troubleshoot Defender for Containers deployment](defender-for-containers-troubleshooting.md)
+- [Review security recommendations for AKS](recommendations-reference-container.md)

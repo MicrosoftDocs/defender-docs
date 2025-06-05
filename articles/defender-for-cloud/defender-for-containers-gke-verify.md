@@ -149,82 +149,48 @@ Check for the alert in Defender for Cloud within 5-10 minutes.
 kubectl exec -n kube-system -it $(kubectl get pods -n kube-system -l app=microsoft-defender -o jsonpath='{.items[0].metadata.name}') -- defender-sensor status
 ```
 
-## Verify GCP-specific integrations
+### Verify runtime threat detection
 
-### Check Workload Identity
-
-```bash
-# Verify Workload Identity binding
-gcloud iam service-accounts get-iam-policy \
-    defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
-
-# Check Kubernetes service account annotation
-kubectl describe serviceaccount defender-sa -n kube-system
-```
-
-### Check GCP API access
+Test the runtime protection with a simulated threat:
 
 ```bash
-# Test API access
-gcloud projects get-iam-policy PROJECT_ID \
-    --flatten="bindings[].members" \
-    --filter="bindings.members:serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com"
+# Connect to your GKE cluster
+gcloud container clusters get-credentials CLUSTER_NAME --zone ZONE
+
+# Run a test that triggers an alert
+kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "cat /etc/shadow"
+
+# Check for alerts in Defender for Cloud
+# The alert should appear within 5-10 minutes
 ```
 
-## Common verification issues
-
-### Sensor pods not running
-
-If sensor pods are not running:
+### Check vulnerability scanning
 
 ```bash
-# Check pod events
-kubectl describe pods -n kube-system -l app=microsoft-defender
+# List images in GCR
+gcloud container images list
 
-# Check node resources
-kubectl top nodes
+# Check vulnerability scanning status in Artifact Registry
+gcloud artifacts docker images list --repository=REPOSITORY --location=LOCATION
 
-# Verify GKE node pool configuration
-gcloud container node-pools describe NODE_POOL_NAME \
-    --cluster=CLUSTER_NAME \
-    --zone=ZONE
+# View scan results in the Azure portal
+# Navigate to Recommendations > "Container images should have vulnerability findings resolved"
 ```
 
-### No security alerts
+## Configure monitoring
 
-If you're not seeing security alerts:
-- Ensure Cloud Logging is enabled for the GKE cluster
-- Verify network connectivity to Azure
-- Check that runtime protection is enabled in Defender settings
+### Set up alerts
 
-### Missing image scan results
+1. In Azure portal, navigate to **Microsoft Defender for Cloud** > **Alerts**.
+2. Configure alert rules for your GKE clusters based on your security requirements.
 
-If image vulnerabilities aren't showing:
-- Verify GCR/Artifact Registry permissions
-- Ensure vulnerability scanning is enabled in GCP
-- Wait up to 24 hours for initial scan results
+### Enable email notifications
 
-## Performance monitoring
-
-### Check resource usage
-
-```bash
-# Monitor Defender sensor resource usage
-kubectl top pods -n kube-system -l app=microsoft-defender
-
-# Check DaemonSet resource limits
-kubectl describe daemonset microsoft-defender-sensor -n kube-system | grep -A 5 "Limits:"
-```
-
-### Monitor API quota usage
-
-```bash
-# Check GCP API quota usage
-gcloud compute project-info describe --project=PROJECT_ID
-```
+1. In Azure portal, go to **Microsoft Defender for Cloud** > **Settings** > **Email notifications**.
+2. Configure email notifications for security alerts and recommendations.
 
 ## Next steps
 
 - [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
 - [Remove Defender for Containers](defender-for-containers-gke-remove.md)
-- [Troubleshoot common issues](defender-for-containers-troubleshooting.md)
+- [Review container security best practices](container-security.md)

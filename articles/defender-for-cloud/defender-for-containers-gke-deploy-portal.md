@@ -29,7 +29,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/add-gcp-environment.png" alt-text="Screenshot showing Add GCP environment option." lightbox="media/tutorial-enable-container-gcp/add-gcp-environment.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/add-gcp-project.png" alt-text="Screenshot showing Add GCP environment option." lightbox="media/tutorial-enable-container-gcp/add-gcp-project.png":::
 
 ## Configure the GCP connector
 
@@ -41,7 +41,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
    - **GCP project ID**: Your GCP project ID
    - **GCP project number**: Your GCP project number
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gcp-connector-basics.png" alt-text="Screenshot showing GCP connector basic configuration." lightbox="media/tutorial-enable-container-gcp/gcp-connector-basics.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/create-gcp-connector.png" alt-text="Screenshot showing GCP connector basic configuration." lightbox="media/tutorial-enable-container-gcp/create-gcp-connector.png":::
 
 1. Select **Next: Select plans**.
 
@@ -49,7 +49,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. In the Select plans page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/enable-containers-plan-gcp.png" alt-text="Screenshot showing Containers plan enabled for GCP." lightbox="media/tutorial-enable-container-gcp/enable-containers-plan-gcp.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/gcp-select-plans.png" alt-text="Screenshot showing Containers plan enabled for GCP." lightbox="media/tutorial-enable-container-gcp/gcp-select-plans.png":::
 
 1. Select **Configure** to set up plan components.
 
@@ -66,7 +66,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Select **Copy** to copy the setup script.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gcp-setup-script.png" alt-text="Screenshot showing GCP setup script." lightbox="media/tutorial-enable-container-gcp/gcp-setup-script.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/configure-access.png" alt-text="Screenshot showing GCP setup script." lightbox="media/tutorial-enable-container-gcp/configure-access.png":::
 
 1. Open Google Cloud Shell or your local terminal with gcloud CLI.
 
@@ -93,7 +93,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Wait for the connector creation to complete (5-10 minutes).
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/connector-created.png" alt-text="Screenshot showing successful GCP connector creation." lightbox="media/tutorial-enable-container-gcp/connector-created.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/connector-created-successfully.png" alt-text="Screenshot showing successful GCP connector creation." lightbox="media/tutorial-enable-container-gcp/connector-created-successfully.png":::
 
 ## Deploy the Defender sensor to GKE clusters
 
@@ -115,7 +115,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. View the list of discovered GKE clusters.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gke-clusters-list.png" alt-text="Screenshot showing discovered GKE clusters." lightbox="media/tutorial-enable-container-gcp/gke-clusters-list.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/discovered-gke-clusters.png" alt-text="Screenshot showing discovered GKE clusters." lightbox="media/tutorial-enable-container-gcp/discovered-gke-clusters.png":::
 
 1. For each cluster, select **Deploy Defender sensor**.
 
@@ -180,7 +180,7 @@ After deployment completes:
 
 1. Verify your GKE clusters appear with security data.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gke-inventory.png" alt-text="Screenshot showing GKE clusters in inventory." lightbox="media/tutorial-enable-container-gcp/gke-inventory.png":::
+    :::image type="content" source="media/tutorial-enable-container-gcp/view-protected-gke-clusters.png" alt-text="Screenshot showing GKE clusters in inventory." lightbox="media/tutorial-enable-container-gcp/view-protected-gke-clusters.png":::
 
 For detailed verification, see [Verify Defender for Containers deployment on GCP (GKE)](defender-for-containers-gke-verify.md).
 

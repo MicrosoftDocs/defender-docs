@@ -193,130 +193,53 @@ kubectl label namespace default \
     pod-security.kubernetes.io/warn=restricted
 ```
 
-## Configure alerts and notifications
-
-### Set up SNS integration
-
-Configure alerts to AWS SNS:
-
-```bash
-# Create SNS topic
-aws sns create-topic --name defender-alerts
-
-# Subscribe email
-aws sns subscribe \
-    --topic-arn arn:aws:sns:<region>:<account>:defender-alerts \
-    --protocol email \
-    --notification-endpoint <email>
-```
-
-### Configure alert filtering
-
-Filter alerts by severity and type:
+### Configure admission control policies
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
+# admission-policy.yaml
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicy
 metadata:
-  name: microsoft-defender-alerts-config
-  namespace: kube-system
-data:
-  alertFilters: |
-    - severity: ["High", "Critical"]
-      forward: true
-      destination: "sns"
-    - type: ["Privilege Escalation", "Defense Evasion"]
-      forward: true
-      destination: "cloudwatch"
-```
-
-## Configure Fargate support
-
-### Enable Fargate monitoring
-
-For EKS on Fargate:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-fargate-config
-  namespace: kube-system
-data:
-  fargateConfig: |
-    enabled: true
-    logConfiguration:
-      logDriver: awslogs
-      options:
-        awslogs-group: /aws/eks/fargate
-        awslogs-region: <region>
-        awslogs-stream-prefix: defender
-```
-
-### Deploy sidecar for Fargate
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app-with-defender
+  name: security-baseline
 spec:
-  template:
-    spec:
-      containers:
-      - name: app
-        image: myapp:latest
-      - name: defender-sidecar
-        image: mcr.microsoft.com/defender/sensor:latest
-        env:
-        - name: FARGATE_MODE
-          value: "true"
+  failurePolicy: Fail
+  matchConstraints:
+    resourceRules:
+    - apiGroups: ["apps"]
+      apiVersions: ["v1"]
+      resources: ["deployments"]
+  validations:
+  - expression: |
+      object.spec.template.spec.containers.all(container,
+        !has(container.securityContext) ||
+        !has(container.securityContext.privileged) ||
+        container.securityContext.privileged == false
+      )
+    message: "Containers must not run as privileged"
 ```
 
-## Performance optimization
-
-### Adjust resource limits
+### Apply security policies
 
 ```bash
-# Update daemonset for resource limits
-kubectl patch daemonset microsoft-defender-sensor -n kube-system \
-    -p '{"spec":{"template":{"spec":{"containers":[{"name":"defender","resources":{"limits":{"cpu":"200m","memory":"512Mi"},"requests":{"cpu":"100m","memory":"256Mi"}}}]}}}}'
-```
+# Apply admission policy
+kubectl apply -f admission-policy.yaml
 
-### Enable CPU and memory requests and limits
-
-For EKS nodes:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
+# Create policy binding
+cat <<EOF | kubectl apply -f -
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicyBinding
 metadata:
-  name: kubelet-config
-  namespace: kube-system
-data:
-  kubelet: |
-    --cpu-cfs-quota=true
-    --cpu-cfs-period=100000
-    --enforce-node-allocatable=pods,kubelet
-    --system-reserved-cpu=200m
-    --system-reserved-memory=512Mi
+  name: security-baseline-binding
+spec:
+  policyName: security-baseline
+  validationActions: [Deny]
+  matchResources:
+    namespaceSelector:
+      matchLabels:
+        environment: production
+EOF
 ```
 
-## Troubleshooting
+## Configure container runtime security
 
-### View Defender for Containers logs
-
-Access logs for troubleshooting:
-
-```bash
-kubectl logs -n kube-system daemonset/microsoft-defender-sensor
-```
-
-### Common issues and solutions
-
-- **Issue**: Sensor not starting
-  - **Solution**: Check if the IAM role is correctly attached to the nodes.
-
-- **Issue**: Alerts not firing
-  - **Solution**: Verify SNS topic and subscription configuration.
-```
+# ...rest of file continues...

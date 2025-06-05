@@ -298,6 +298,21 @@ ConfigurationChange
 | order by TimeGenerated desc
 ```
 
+## Troubleshooting
+
+If you encounter issues:
+
+1. Check the [support matrix](support-matrix-defender-for-containers.md) for compatibility.
+
+1. Review extension logs:
+   ```bash
+   kubectl logs -n azure-arc deployment/azure-arc-controllers
+   ```
+
+1. Verify cluster connectivity to Azure endpoints.
+
+1. Consult the [general troubleshooting guide](/azure/defender-for-cloud/troubleshooting-guide).
+
 ## Next steps
 
 - [Verify your configuration](defender-for-containers-arc-verify.md)

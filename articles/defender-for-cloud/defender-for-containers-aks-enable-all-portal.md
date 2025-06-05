@@ -36,11 +36,7 @@ The first step is to enable the Defender for Containers plan on your subscriptio
 
 1. Select the subscription where your AKS clusters are located.
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/environment-settings.png" alt-text="Screenshot showing the environment settings page in Microsoft Defender for Cloud." lightbox="media/tutorial-enable-containers-azure/environment-settings.png":::
-
 1. On the Defender plans page, locate the **Containers** row and toggle the Status to **On**.
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/toggle-defender-for-containers.png" alt-text="Screenshot that shows the Defender for Cloud pricing page with the Containers plan toggle highlighted." lightbox="media/tutorial-enable-containers-azure/toggle-defender-for-containers.png":::
 
 ## Configure plan components
 
@@ -48,9 +44,7 @@ After enabling the plan, configure which components to enable:
 
 1. Select **Settings** in the Containers plan row.
 
-1. In the Settings page, you'll see all available components:
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/containers-settings-all.png" alt-text="Screenshot showing all Defender for Containers components in the settings page." lightbox="media/tutorial-enable-containers-azure/containers-settings-all.png":::
+1. In the Settings page, you'll see all available components.
 
 1. Ensure all components are toggled **On**:
    - **Agentless discovery for Kubernetes** - Provides visibility into your Kubernetes clusters
@@ -62,9 +56,7 @@ After enabling the plan, configure which components to enable:
 
 ## Review and save settings
 
-1. The monitoring coverage page shows what will be protected:
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/monitoring-coverage.png" alt-text="Screenshot showing the monitoring coverage summary for Defender for Containers." lightbox="media/tutorial-enable-containers-azure/monitoring-coverage.png":::
+1. The monitoring coverage page shows what will be protected.
 
 1. Review the components that will be enabled:
    - Container vulnerability assessments
@@ -88,8 +80,6 @@ After saving, Defender for Cloud automatically begins deploying the necessary co
    - "Azure Kubernetes Service clusters should have Defender profile enabled"
    - "Azure Policy for Kubernetes should be installed and enabled on your clusters"
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/container-recommendations.png" alt-text="Screenshot showing container-related recommendations in Defender for Cloud." lightbox="media/tutorial-enable-containers-azure/container-recommendations.png":::
-
 1. Select each recommendation to see the affected resources and remediation progress.
 
 ## Verify component deployment
@@ -102,15 +92,11 @@ After saving, Defender for Cloud automatically begins deploying the necessary co
 
 1. Verify that **microsoft-defender** extension is installed and shows as **Succeeded**.
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/defender-extension-installed.png" alt-text="Screenshot showing the Defender extension installed on an AKS cluster." lightbox="media/tutorial-enable-containers-azure/defender-extension-installed.png":::
-
 ### Check Azure Policy deployment
 
 1. In your AKS cluster, under **Settings**, select **Policies**.
 
 1. Verify that Azure Policy is enabled for the cluster.
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/azure-policy-enabled.png" alt-text="Screenshot showing Azure Policy enabled on an AKS cluster." lightbox="media/tutorial-enable-containers-azure/azure-policy-enabled.png":::
 
 ### Verify vulnerability scanning
 
@@ -120,8 +106,6 @@ After saving, Defender for Cloud automatically begins deploying the necessary co
 
 1. Select a container registry to view vulnerability findings.
 
-    :::image type="content" source="media/tutorial-enable-containers-azure/registry-vulnerabilities.png" alt-text="Screenshot showing vulnerability findings for a container registry." lightbox="media/tutorial-enable-containers-azure/registry-vulnerabilities.png":::
-
 ## View security insights
 
 After deployment completes (typically within 30 minutes), you can start viewing security insights:
@@ -129,8 +113,6 @@ After deployment completes (typically within 30 minutes), you can start viewing 
 1. Navigate to **Microsoft Defender for Cloud** > **Workload protections**.
 
 1. Select **Containers** to view the security dashboard.
-
-    :::image type="content" source="media/tutorial-enable-containers-azure/containers-dashboard.png" alt-text="Screenshot showing the Containers security dashboard in Defender for Cloud." lightbox="media/tutorial-enable-containers-azure/containers-dashboard.png":::
 
 1. From here you can:
    - View vulnerable container images

@@ -42,8 +42,6 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 
 1. Select **Add**.
 
-    :::image type="content" source="media/tutorial-enable-containers-arc/add-arc-cluster.png" alt-text="Screenshot showing the Add button in Azure Arc Kubernetes clusters." lightbox="media/tutorial-enable-containers-arc/add-arc-cluster.png":::
-
 1. Select **Add a Kubernetes cluster with Azure Arc**.
 
 1. Follow the connection instructions:
@@ -71,11 +69,7 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 
 1. Select the subscription containing your Arc-enabled cluster.
 
-    :::image type="content" source="media/tutorial-enable-containers-arc/environment-settings.png" alt-text="Screenshot showing environment settings in Defender for Cloud." lightbox="media/tutorial-enable-containers-arc/environment-settings.png":::
-
 1. Toggle the **Containers** plan to **On**.
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/enable-containers-plan.png" alt-text="Screenshot showing the Containers plan toggle." lightbox="media/tutorial-enable-containers-arc/enable-containers-plan.png":::
 
 ## Configure all plan components
 
@@ -87,8 +81,6 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
    - **Defender DaemonSet** - Runtime threat detection
    - **Azure Policy for Kubernetes** - Security recommendations
 
-    :::image type="content" source="media/tutorial-enable-containers-arc/all-components-enabled.png" alt-text="Screenshot showing all Defender for Containers components enabled." lightbox="media/tutorial-enable-containers-arc/all-components-enabled.png":::
-
 1. Select **Continue** and then **Save**.
 
 ## Deploy extensions to Arc-enabled clusters
@@ -98,8 +90,6 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/arc-recommendation.png" alt-text="Screenshot showing the Arc Defender extension recommendation." lightbox="media/tutorial-enable-containers-arc/arc-recommendation.png":::
 
 1. Select the recommendation.
 
@@ -114,8 +104,6 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 1. Under **Settings**, select **Extensions**.
 
 1. Select **+ Add**.
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/add-extension.png" alt-text="Screenshot showing the Add extension button." lightbox="media/tutorial-enable-containers-arc/add-extension.png":::
 
 1. Install the **Microsoft Defender for Containers** extension:
    - Search for "Microsoft Defender"
@@ -135,8 +123,6 @@ During extension deployment:
 
 1. Or select a custom workspace in a [supported region](support-matrix-defender-for-containers.md).
 
-    :::image type="content" source="media/tutorial-enable-containers-arc/configure-workspace.png" alt-text="Screenshot showing Log Analytics workspace configuration." lightbox="media/tutorial-enable-containers-arc/configure-workspace.png":::
-
 ## Verify extension deployment
 
 1. In your Arc-enabled cluster, navigate to **Extensions**.
@@ -144,8 +130,6 @@ During extension deployment:
 1. Verify both extensions show as **Succeeded**:
    - Microsoft Defender for Containers
    - Azure Policy for Kubernetes
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/extensions-installed.png" alt-text="Screenshot showing installed extensions on Arc cluster." lightbox="media/tutorial-enable-containers-arc/extensions-installed.png":::
 
 1. Select each extension to view configuration details.
 
@@ -168,8 +152,6 @@ For Arc-enabled clusters, configure registry scanning:
 1. Select **Containers**.
 
 1. Your Arc-enabled clusters should appear within 15-30 minutes.
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/containers-dashboard-arc.png" alt-text="Screenshot showing Arc clusters in the Containers dashboard." lightbox="media/tutorial-enable-containers-arc/containers-dashboard-arc.png":::
 
 ## View security insights
 

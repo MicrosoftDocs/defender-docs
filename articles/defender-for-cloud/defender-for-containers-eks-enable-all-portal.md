@@ -42,7 +42,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Select **Add environment** > **Amazon Web Services**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/add-aws-environment.png" alt-text="Screenshot showing Add AWS environment button." lightbox="media/tutorial-enable-container-aws/add-aws-environment.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/add-aws-account.png" alt-text="Screenshot showing Add AWS environment button." lightbox="media/tutorial-enable-container-aws/add-aws-account.png":::
 
 ## Configure connector settings
 
@@ -53,7 +53,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
    - **Resource group**: Create or select a resource group
    - **Location**: Choose your preferred Azure region
 
-    :::image type="content" source="media/tutorial-enable-container-aws/connector-details.png" alt-text="Screenshot showing AWS connector configuration details." lightbox="media/tutorial-enable-container-aws/connector-details.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/create-aws-connector.png" alt-text="Screenshot showing AWS connector configuration details." lightbox="media/tutorial-enable-container-aws/create-aws-connector.png":::
 
 1. Select **Next: Select plans**.
 
@@ -63,7 +63,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Toggle the plan to **On**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/select-plans-containers.png" alt-text="Screenshot showing Containers plan selection for AWS." lightbox="media/tutorial-enable-container-aws/select-plans-containers.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/aws-select-plans.png" alt-text="Screenshot showing Containers plan selection for AWS." lightbox="media/tutorial-enable-container-aws/aws-select-plans.png":::
 
 1. Select **Configure** to open the components settings.
 
@@ -73,7 +73,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
    - **Agentless container vulnerability assessment** - ECR scanning
    - **Policy monitoring** - Compliance and hardening
 
-    :::image type="content" source="media/tutorial-enable-container-aws/all-components-eks.png" alt-text="Screenshot showing all Defender for Containers components enabled." lightbox="media/tutorial-enable-container-aws/all-components-eks.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/container-extension-details.png" alt-text="Screenshot showing all Defender for Containers components enabled." lightbox="media/tutorial-enable-container-aws/container-extension-details.png":::
 
 1. Select **Continue**.
 
@@ -85,7 +85,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
    - **DefenderForCloud-Containers** template for container protection
    - **DefenderForCloud-ECR** template for registry scanning
 
-    :::image type="content" source="media/tutorial-enable-container-aws/cloudformation-templates.png" alt-text="Screenshot showing CloudFormation template downloads." lightbox="media/tutorial-enable-container-aws/cloudformation-templates.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/download-cloudformation-template.png" alt-text="Screenshot showing CloudFormation template downloads." lightbox="media/tutorial-enable-container-aws/download-cloudformation-template.png":::
 
 1. Open a new browser tab and sign in to your **AWS Console**.
 
@@ -111,7 +111,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Repeat for the ECR template if you have container registries.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/cloudformation-complete.png" alt-text="Screenshot showing completed CloudFormation stack." lightbox="media/tutorial-enable-container-aws/cloudformation-complete.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/deploy-cloudformation.png" alt-text="Screenshot showing completed CloudFormation stack." lightbox="media/tutorial-enable-container-aws/deploy-cloudformation.png":::
 
 ## Complete connector creation
 
@@ -126,7 +126,7 @@ Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Select **Create**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/create-connector.png" alt-text="Screenshot showing final connector creation." lightbox="media/tutorial-enable-container-aws/create-connector.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/review-create-connector.png" alt-text="Screenshot showing final connector creation." lightbox="media/tutorial-enable-container-aws/review-create-connector.png":::
 
 1. Wait for the connector to be created (5-10 minutes).
 
@@ -138,7 +138,7 @@ Once the connector is active:
 
 1. Look for "EKS clusters should have Defender profile enabled".
 
-    :::image type="content" source="media/tutorial-enable-container-aws/eks-recommendation.png" alt-text="Screenshot showing EKS Defender recommendation." lightbox="media/tutorial-enable-container-aws/eks-recommendation.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/deploy-defender-sensor.png" alt-text="Screenshot showing EKS Defender recommendation." lightbox="media/tutorial-enable-container-aws/deploy-defender-sensor.png":::
 
 1. Select the recommendation.
 
@@ -154,7 +154,7 @@ Once the connector is active:
 
 1. Verify ECR integration is enabled.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/ecr-scanning-enabled.png" alt-text="Screenshot showing ECR scanning configuration." lightbox="media/tutorial-enable-container-aws/ecr-scanning-enabled.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/enable-ecr-scanning.png" alt-text="Screenshot showing ECR scanning configuration." lightbox="media/tutorial-enable-container-aws/enable-ecr-scanning.png":::
 
 1. Container images in ECR will be automatically scanned for vulnerabilities.
 
@@ -185,7 +185,7 @@ For comprehensive monitoring:
 
 1. Verify status shows as **Connected**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/connector-healthy.png" alt-text="Screenshot showing healthy AWS connector." lightbox="media/tutorial-enable-container-aws/connector-healthy.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/verify-connector-health.png" alt-text="Screenshot showing healthy AWS connector." lightbox="media/tutorial-enable-container-aws/verify-connector-health.png":::
 
 ### View discovered resources
 
@@ -198,7 +198,7 @@ For comprehensive monitoring:
    - ECR repositories
    - Container images
 
-    :::image type="content" source="media/tutorial-enable-container-aws/aws-inventory.png" alt-text="Screenshot showing AWS resources in inventory." lightbox="media/tutorial-enable-container-aws/aws-inventory.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/view-discovered-resources.png" alt-text="Screenshot showing AWS resources in inventory." lightbox="media/tutorial-enable-container-aws/view-discovered-resources.png":::
 
 ### Check security insights
 
@@ -210,7 +210,7 @@ For comprehensive monitoring:
    - Runtime protection coverage
    - Compliance scores
 
-    :::image type="content" source="media/tutorial-enable-container-aws/containers-dashboard-eks.png" alt-text="Screenshot showing Containers dashboard with EKS data." lightbox="media/tutorial-enable-container-aws/containers-dashboard-eks.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/review-security-dashboard.png" alt-text="Screenshot showing Containers dashboard with EKS data." lightbox="media/tutorial-enable-container-aws/review-security-dashboard.png":::
 
 ## Test the deployment
 
@@ -270,5 +270,5 @@ To disable Defender for Containers on AWS:
 ## Next steps
 
 - [Configure advanced settings for EKS](defender-for-containers-eks-configure.md)
-- [Investigate container security alerts](alerts-reference-containers.md)
-- [Implement container security best practices](container-security.md)
+- [Review container security best practices](container-security.md)
+- [Implement security policies for containers](kubernetes-workload-protections.md)

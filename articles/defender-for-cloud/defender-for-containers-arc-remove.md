@@ -238,6 +238,6 @@ kubectl get all,cm,secret,sa,role,rolebinding,crd --all-namespaces | grep defend
 
 ## Next steps
 
-- [Learn about Arc-enabled Kubernetes](https://docs.microsoft.com/azure/azure-arc/kubernetes/overview)
+- [Learn more about Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)
 - [Explore alternative security solutions](https://azure.microsoft.com/products/category/security/)
 - [Re-deploy Defender for Containers](defender-for-containers-arc-deploy.md)

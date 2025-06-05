@@ -54,8 +54,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/add-gcp-button.png" alt-text="Screenshot showing Add GCP environment button." lightbox="media/tutorial-enable-container-gcp/add-gcp-button.png":::
-
 ## Configure connector details
 
 1. In the **Basics** tab, provide:
@@ -66,15 +64,11 @@ gcloud services enable cloudresourcemanager.googleapis.com
    - **GCP project ID**: Your GCP project identifier
    - **GCP project number**: The numeric project ID
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/connector-basics.png" alt-text="Screenshot showing GCP connector basic settings." lightbox="media/tutorial-enable-container-gcp/connector-basics.png":::
-
 1. Select **Next: Select plans**.
 
 ## Enable all Defender for Containers features
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
-
-    :::image type="content" source="media/tutorial-enable-container-gcp/enable-containers-toggle.png" alt-text="Screenshot showing Containers plan enabled." lightbox="media/tutorial-enable-container-gcp/enable-containers-toggle.png":::
 
 1. Select **Configure** next to the Containers plan.
 
@@ -84,8 +78,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
    - **Agentless container vulnerability assessment** - Registry scanning
    - **Compliance monitoring** - CIS benchmarks and best practices
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/all-features-enabled.png" alt-text="Screenshot showing all container protection features enabled." lightbox="media/tutorial-enable-container-gcp/all-features-enabled.png":::
-
 1. Select **Continue** and **Next: Configure access**.
 
 ## Set up GCP permissions
@@ -93,8 +85,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
 1. The portal generates a setup script for GCP permissions.
 
 1. Select **Copy script** to copy the entire script.
-
-    :::image type="content" source="media/tutorial-enable-container-gcp/copy-setup-script.png" alt-text="Screenshot showing GCP setup script to copy." lightbox="media/tutorial-enable-container-gcp/copy-setup-script.png":::
 
 1. Open **Google Cloud Shell** in a new tab.
 
@@ -121,8 +111,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Browse and select the downloaded JSON key.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/upload-key-file.png" alt-text="Screenshot showing key file upload." lightbox="media/tutorial-enable-container-gcp/upload-key-file.png":::
-
 1. Select **Next: Review and create**.
 
 ## Create the connector
@@ -134,8 +122,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Select **Create**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/create-connector-final.png" alt-text="Screenshot showing final connector creation." lightbox="media/tutorial-enable-container-gcp/create-connector-final.png":::
-
 1. Wait for deployment to complete (5-10 minutes).
 
 ## Deploy Defender sensor to all GKE clusters
@@ -143,8 +129,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
 1. After connector creation, navigate to **Recommendations**.
 
 1. Search for "GKE clusters should have Defender profile enabled".
-
-    :::image type="content" source="media/tutorial-enable-container-gcp/gke-defender-recommendation.png" alt-text="Screenshot showing GKE Defender recommendation." lightbox="media/tutorial-enable-container-gcp/gke-defender-recommendation.png":::
 
 1. Select the recommendation.
 
@@ -188,8 +172,6 @@ gcloud services enable cloudresourcemanager.googleapis.com
    - Cloud Operations for GKE
    - System and workload logging
    - Audit logging
-
-    :::image type="content" source="media/tutorial-enable-container-gcp/gke-logging-settings.png" alt-text="Screenshot showing GKE logging configuration." lightbox="media/tutorial-enable-container-gcp/gke-logging-settings.png":::
 
 1. Save changes for each cluster.
 
@@ -331,5 +313,4 @@ To disable Defender for Containers:
 
 - [Configure advanced settings for GKE](defender-for-containers-gke-configure.md)
 - [Implement container security best practices](container-security.md)
-- [Investigate container security alerts](alerts-reference-containers.md)
-- [Use Kubernetes admission control](defender-for-containers-admission-control.md)
+- [Investigate runtime protection for Kubernetes](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)

@@ -43,8 +43,6 @@ For detailed instructions, see [Connect an existing Kubernetes cluster to Azure 
 
 1. On the Defender plans page, toggle the **Containers** plan to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-arc/toggle-defender-for-containers.png" alt-text="Screenshot showing the Defender for Cloud pricing page with Containers plan enabled." lightbox="media/tutorial-enable-containers-arc/toggle-defender-for-containers.png":::
-
 1. Select **Settings** to configure the plan components.
 
 ## Configure plan components
@@ -54,8 +52,6 @@ For detailed instructions, see [Connect an existing Kubernetes cluster to Azure 
    - **Agentless container vulnerability assessment** 
    - **Defender DaemonSet**
    - **Azure Policy for Kubernetes**
-
-    :::image type="content" source="media/tutorial-enable-containers-arc/containers-settings-arc.png" alt-text="Screenshot showing Defender for Containers components settings for Arc." lightbox="media/tutorial-enable-containers-arc/containers-settings-arc.png":::
 
 1. Select **Continue**.
 
@@ -102,7 +98,7 @@ The Defender extension requires a Log Analytics workspace:
 
 1. Choose the DefaultWorkspace-[subscription-id]-[region] or a custom workspace.
 
-1. Ensure the workspace is in a [supported region](support-matrix-defender-for-containers.md#azure-arc-enabled-kubernetes-clusters).
+1. Ensure the workspace is in a [supported region](support-matrix-defender-for-containers.md).
 
 ## Enable Azure Policy for Kubernetes
 

@@ -40,7 +40,7 @@ First, you need to connect your AWS account to Microsoft Defender for Cloud:
    - **Resource group**: Select or create a resource group
    - **Region**: Choose the Azure region for the connector
 
-    :::image type="content" source="media/tutorial-enable-container-aws/aws-connector-basics.png" alt-text="Screenshot showing AWS connector basic configuration." lightbox="media/tutorial-enable-container-aws/aws-connector-basics.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/create-aws-connector.png" alt-text="Screenshot showing AWS connector basic configuration." lightbox="media/tutorial-enable-container-aws/create-aws-connector.png":::
 
 1. Select **Next: Select plans**.
 
@@ -48,7 +48,7 @@ First, you need to connect your AWS account to Microsoft Defender for Cloud:
 
 1. In the Select plans page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/enable-containers-plan-aws.png" alt-text="Screenshot showing Containers plan enabled for AWS." lightbox="media/tutorial-enable-container-aws/enable-containers-plan-aws.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/aws-select-plans.png" alt-text="Screenshot showing Containers plan enabled for AWS." lightbox="media/tutorial-enable-container-aws/aws-select-plans.png":::
 
 1. Select **Configure** to set up plan components.
 
@@ -65,7 +65,7 @@ First, you need to connect your AWS account to Microsoft Defender for Cloud:
 
 1. Select **Download** to get the CloudFormation template.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/download-cloudformation.png" alt-text="Screenshot showing CloudFormation template download." lightbox="media/tutorial-enable-container-aws/download-cloudformation.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/download-cloudformation-template.png" alt-text="Screenshot showing CloudFormation template download." lightbox="media/tutorial-enable-container-aws/download-cloudformation-template.png":::
 
 1. In your AWS console:
    - Navigate to **CloudFormation**
@@ -105,7 +105,7 @@ After the connector is created, deploy the Defender sensor:
 
 1. You'll see a list of discovered EKS clusters.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/eks-clusters-list.png" alt-text="Screenshot showing discovered EKS clusters." lightbox="media/tutorial-enable-container-aws/eks-clusters-list.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/discovered-eks-clusters.png" alt-text="Screenshot showing discovered EKS clusters." lightbox="media/tutorial-enable-container-aws/discovered-eks-clusters.png":::
 
 1. For each cluster, select **Deploy Defender sensor**.
 
@@ -154,7 +154,7 @@ After deployment:
 
 1. Verify your EKS clusters appear with security data.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/eks-inventory.png" alt-text="Screenshot showing EKS clusters in inventory." lightbox="media/tutorial-enable-container-aws/eks-inventory.png":::
+    :::image type="content" source="media/tutorial-enable-container-aws/add-aws-connectors.png" alt-text="Screenshot showing EKS clusters in inventory." lightbox="media/tutorial-enable-container-aws/add-aws-connectors.png":::
 
 1. Check for recommendations specific to your EKS clusters.
 

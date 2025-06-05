@@ -208,3 +208,56 @@ kubectl describe pod <pod-name> -n kube-system
 # Verify Inspector is enabled
 aws inspector2 list-coverage \
     --filter-criteria '{"resourceType":[{"comparison":"EQUALS","value":"ECR"}]}'
+```
+
+### Test Binary Authorization
+
+```bash
+# Create a test policy
+cat <<EOF > /tmp/binary-auth-policy.yaml
+apiVersion: binaryauthorization.grafeas.io/v1beta1
+kind: Policy
+metadata:
+  name: binary-authorization-policy
+spec:
+  globalPolicyEvaluationMode: ENABLE
+  defaultAdmissionRule:
+    evaluationMode: REQUIRE_ATTESTATION
+    enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
+    requireAttestationsBy:
+    - projects/PROJECT_ID/attestors/prod-attestor
+EOF
+
+# Apply the policy
+kubectl apply -f /tmp/binary-auth-policy.yaml
+
+# Test with unsigned image (should fail)
+kubectl run test-unsigned --image=nginx:latest
+
+# Check audit logs
+kubectl logs -n kube-system -l component=admission-controller
+```
+
+## Monitor performance impact
+
+Defender for Containers is designed to have minimal performance impact. However, monitor your clusters for any unusual behavior or performance issues after deployment.
+
+### Check resource usage
+
+```bash
+# Monitor node resource usage
+kubectl top nodes
+
+# Monitor pod resource usage
+kubectl top pods --all-namespaces
+```
+
+### Review Defender metrics
+
+In **Microsoft Defender for Cloud** > **Security policy** > **Kubernetes**, review the metrics and recommendations for your clusters.
+
+## Next steps
+
+- Explore **Microsoft Defender for Cloud** features for Kubernetes.
+- Set up alerts and automation for security events.
+- Regularly review and optimize your security posture.
