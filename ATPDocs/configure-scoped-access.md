@@ -29,14 +29,16 @@ To enable identity scoping, follow these steps:​
     :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
 
 1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
-1. In the **Authorization and settings** step, select **Select custom permissions**.
+
     :::image type="content" source="media/custom-roles/create-custom-role.png" alt-text="Screenshot showing the create custom roles button":::
+
+1. In the **Authorization and settings** step, select **Select custom permissions**.
+
 1.  During the role creation process:
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
     1. Under **Scope**, select the user groups (AD domains) or Microsoft Entra ID groups that will be scoped to the assignment.
-
-     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
+     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
 1. Select Add.
 1. You can edit the role at any time. Select the role from the list of custom roles and choose **Edit**.
 
