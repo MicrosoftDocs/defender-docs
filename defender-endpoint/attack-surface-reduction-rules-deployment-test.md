@@ -234,11 +234,11 @@ Use Group Policy to set the per-user ASR rule exclusions.
 
 1. Double-click **Apply a list of exclusions to specific attack surface reduction (ASR) rules**, and set the option to **Enabled**. 
 
-1. Then click on **Show...**.
+1. Then select **Show...**.
 
 1. Under **Value Name**, enter GUID for the ASR Rule.
 
-1. Under **Value**, enter the <drive_letter:\Path\ProcessName>.  In order to add multiple processes, it's separated by a greater than sign (>). For example, `C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe`.
+1. Under **Value**, enter the <drive_letter:\Path\ProcessName>. In order to add multiple processes, it's separated by a greater than sign (>). For example, `C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe`.
    
 1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
 
@@ -247,7 +247,7 @@ Use Group Policy to set the per-user ASR rule exclusions.
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
-Use PowerShell, as an alternative to Intune, to enable attack surface reduction rules in audit mode. This allows you to view a record of apps that would have been blocked if the feature was fully enabled. You can also see how often the rules fire during normal use.
+Use PowerShell, as an alternative to Intune, to enable attack surface reduction rules in audit mode. This configuration allows you to view a record of apps that would have been blocked if the feature was fully enabled. You can also see how often the rules fire during normal use.
 
 To enable an attack surface reduction rule in audit mode, use the following PowerShell cmdlet:
 
@@ -264,7 +264,7 @@ To enable all the added attack surface reduction rules in audit mode, use the fo
 ```
 
 > [!TIP]
-> If you want to fully audit how attack surface reduction rules work in your organization, you'll need to use a management tool to deploy this setting to devices in your network.
+> If you want to fully audit how attack surface reduction rules work in your organization, you need to use a management tool to deploy this setting to devices in your network.
 
 You can also use Group Policy, Intune, or mobile device management (MDM) configuration service providers (CSPs) to configure and deploy the setting. Learn more in the main [Attack surface reduction rules](attack-surface-reduction.md) article.
 
@@ -272,7 +272,7 @@ You can also use Group Policy, Intune, or mobile device management (MDM) configu
 
 ## Use Windows Event Viewer Review as an alternative to the attack surface reduction rules reporting page in the Microsoft Defender portal
 
-To review apps that would have been blocked, open Event Viewer and filter for Event ID 1121 in the Microsoft-Windows-Windows Defender/Operational log. The following table lists all network protection events.
+To review apps that would be blocked, open Event Viewer and filter for Event ID 1121 in the Microsoft-Windows-Windows Defender/Operational log. The following table lists all network protection events.
 
 Event ID | Description
 -|-
