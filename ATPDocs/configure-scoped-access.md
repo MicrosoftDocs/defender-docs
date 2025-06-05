@@ -52,12 +52,12 @@ Defender for Identity scoping is currently in Public preview. The following tabl
 
 |Defender for Identity experience |Status |
 |---------|---------|
-|MDI alerts and incidents (includes a user entity) Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents,  
+|MDI alerts and incidents (includes a user entity) | Available
+|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents,  
 IdentityLogonEvents, IdentityQueryEvents     |   Available      |
 |User page and user global search  |   Available      |
-|MDI alerts based on XDR detection platform  
-(detection source is XDR and service source is MDI)     |   Available      |
-|MDI alerts with no user à scoping based on Active Directory device     |  Available       |
+|MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     |   Available      |
+|MDI alerts with no user > scoping based on Active Directory device     |  Available       |
 |Health issues       |   Available      |
 |Identities settings: sensors page, manual tagging, health issues notifications  |   Available      |
 |Defender XDR Incident email notifications     | Unavailable      |
