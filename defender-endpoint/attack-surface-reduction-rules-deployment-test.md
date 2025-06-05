@@ -201,7 +201,7 @@ To configure specific rule exclusions, you have the choices of using the MDE Sec
 > [!NOTE]
 > When configuring Attack Surface Reduction per-rule exclusions, please note that specifying only the file or application name (e.g., test1.exe) is not sufficient. You must provide the full file or application path (e.g., C:\test1.exe) to ensure the exclusion is applied correctly.
 
-#### Via Intune:
+#### Via Intune
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and navigate to **Home** > **Endpoint security** > **Attack surface reduction**.
 
@@ -218,7 +218,7 @@ To configure specific rule exclusions, you have the choices of using the MDE Sec
 > [!TIP]
 > Use the checkboxes next to your list of exclusion entries to select items to **Delete**, **Sort**, **Import**, or **Export**.
 > 
-**Via Group Policy**
+#### Via Group Policy
 
 Use Group Policy to set the per-user ASR rule exclusions
 
