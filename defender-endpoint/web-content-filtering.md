@@ -105,6 +105,7 @@ Policies can be deployed to block any of the following parent or child categorie
 
 > [!NOTE]
 > Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories.
+> **_Remote proxy sites_** are categorized as **_Illegal Software_**. This classification is based on their inherent ability to route traffic to any destination, which can include access to unwanted, malicious, or illegal content. As with any other blocked site, an organization may choose to use an **ALLOW indicator** to allow access to a site that would otherwise be blocked based on its Web Content Filtering category.
 
 ### Create a policy
 
