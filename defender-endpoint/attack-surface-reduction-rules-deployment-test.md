@@ -30,16 +30,16 @@ search.appverid: met150
 
 Testing Microsoft Defender for Endpoint attack surface reduction rules helps you determine if rules impede line-of-business operations before you enable rules. By starting with a small, controlled group, you can limit potential work disruptions as you expand your deployment across your organization.
 
-In this section of the attack surface reduction rules deployment guide, you'll learn how to:
+In this section of the attack surface reduction rules deployment guide, you learn how to:
 
-- configure rules using Microsoft Intune
-- use Microsoft Defender for Endpoint attack surface reduction rules reports
-- configure attack surface reduction rules exclusions
-- enable attack surface reduction rules using PowerShell
-- use Event Viewer for attack surface reduction rules events
+- Configure rules using Microsoft Intune
+- Use Microsoft Defender for Endpoint attack surface reduction rules reports
+- Configure attack surface reduction rules exclusions
+- Enable attack surface reduction rules using PowerShell
+- Use Event Viewer for attack surface reduction rules events
 
 > [!NOTE]
-> Before you begin testing attack surface reduction rules, it's recommended that you first disable all rules that you have previously set to either **audit** or **enable** (if applicable). See [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md) for information about using the attack surface reduction rules report disabling attack surface reduction rules.
+> Before you begin testing attack surface reduction rules, it's recommended that you first disable all rules that were previously set to either **audit** or **enable** (if applicable). See [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md) for information about using the attack surface reduction rules report disabling attack surface reduction rules.
 
 Begin your attack surface reduction rules deployment with ring 1.
 
