@@ -151,7 +151,7 @@ The **GroupBy** returns results set to the following groups:
 
 ### Configuration tab
 
-Lists—on a per-computer basis—the aggregate state of attack surface reduction rules: Off, Audit, Block.
+Lists, on a per-computer basis, the aggregate state of attack surface reduction rules: Off, Audit, Block.
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Screenshot that shows the attack surface reduction rules report main configuration tab." lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
 
@@ -188,7 +188,7 @@ This tab provides a method to select detected entities (for example, false posit
 > :::image type="content" source="media/asr-defender365-06d.png" alt-text="The pane for exclusion of the detected file" lightbox="media/asr-defender365-06d.png":::
 
 > [!NOTE]
-> If you have a Microsoft Defender 365 E5 (or Windows E5?) License, this link will open the Microsoft Defender 365  Reports > Attack surface reductions > [Exclusions](https://security.microsoft.com/asr?viewid=exclusions) tab.
+> If you have an appropriate license and permissions, this link opens the Microsoft Defender portal with [Exclusions visible](https://security.microsoft.com/asr?viewid=exclusions).
 
 For more information about using the attack surface reduction rules report, see [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md).
 
@@ -196,7 +196,7 @@ For more information about using the attack surface reduction rules report, see 
 
 Attack surface reduction rules now provide the capability to configure rule-specific exclusions, known as "Per Rule Exclusions."
 
-To configure specific rule exclusions, you have the choices of using the MDE Security Settings Management, Intune, and Group Policy.
+To configure specific rule exclusions, you have the choices of using the Defender for Endpoint Security Settings Management, Intune, and Group Policy.
 
 > [!NOTE]
 > When configuring Attack Surface Reduction per-rule exclusions, please note that specifying only the file or application name (e.g., test1.exe) is not sufficient. You must provide the full file or application path (e.g., C:\test1.exe) to ensure the exclusion is applied correctly.
