@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 05/21/2025
+ms.date: 06/05/2025
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -70,16 +70,16 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 
 3. If your organization uses root CAs that are private, you must establish explicit trust between Intune (MDM solution) and user devices. Establishing trust helps prevent Defender from flagging root CAs as rogue certificates.
 
-    To establish trust for the root CAs, use **'Trusted CA certificate list for Network Protection'** as the key. In the value, add the **'comma separated list of certificate thumbprints (SHA 1)'**.
+   To establish trust for the root CAs, use **'Trusted CA certificate list for Network Protection'** as the key. In the value, add the **'comma separated list of certificate thumbprints (SHA 1)'**.
 
-    **Example of Thumbprint format to add**: `50 30 06 09 1d 97 d4 f5 ae 39 f7 cb e7 92 7d 7d 65 2d 34 31, 503006091d97d4f5ae39f7cbe7927d7d652d3431`
+   **Example of Thumbprint format to add**: `50 30 06 09 1d 97 d4 f5 ae 39 f7 cb e7 92 7d 7d 65 2d 34 31, 503006091d97d4f5ae39f7cbe7927d7d652d3431`
 
-      > [!IMPORTANT]
-      > Certificate SHA-1 Thumbprint characters should be with either white space separated, or non separated.
-      >
-      > This format is invalid: `50:30:06:09:1d:97:d4:f5:ae:39:f7:cb:e7:92:7d:7d:65:2d:34:31`
+   > [!IMPORTANT]
+   > Certificate SHA-1 Thumbprint characters should be with either white space separated, or non separated.
+   >
+   > This format is invalid: `50:30:06:09:1d:97:d4:f5:ae:39:f7:cb:e7:92:7d:7d:65:2d:34:31`
 
-      Any other separation characters are invalid.
+   Any other separation characters are invalid.
 
 1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
