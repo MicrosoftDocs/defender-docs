@@ -49,17 +49,20 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
 1. Open Command Prompt as an administrator by following these steps:
 
     a. Open the **Start** menu.
-
+   
     b. Type **cmd**. Right-click on **Command Prompt** and then select **Run as administrator**.
-
+   
     c. Specify administrator credentials or approve the prompt.
-
+   
 1. Navigate to the directory for Microsoft Defender Antivirus: 
 
    `cd C:\ProgramData\Microsoft\Windows Defender\Platform\<version>`
-
+   
    Where `<version>` is the actual version that starts with `4.18.2xxxx.x`
    
+> [!NOTE]
+> C:\ProgramData is a hidden folder.  If you don't have a folder that starts with 4.18.2xxxx.x in C:\ProgramData\Microsoft\Windows Defender\Platform\, then you will need to go to C:\Program Files\Windows Defender\
+
 1. Type the following command, and then press **Enter**
 
     ```Dos
