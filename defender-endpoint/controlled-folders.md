@@ -3,7 +3,7 @@ title: Protect important folders from ransomware from encrypting your files with
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/15/2025
+ms.date: 06/05/2025
 author: denisebmsft
 ms.author: deniseb
 audience: ITPro
@@ -41,7 +41,7 @@ Platforms
 
 ## What is controlled folder access?
 
-Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using the Microsoft Defender for Endpoint Security Settings Management, or Microsoft Intune, or Microsoft Endpoint Configuration Manager, or Windows Security App. 
+Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using Microsoft Defender for Endpoint Security Settings Management, Microsoft Intune, Microsoft Endpoint Configuration Manager, or the Windows Security App. 
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
