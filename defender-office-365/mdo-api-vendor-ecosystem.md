@@ -142,14 +142,16 @@ The Microsoft 365 Defender portal provides a centralized reporting experience th
 
 The following dashboards display this information:
 
-- **Detection totals**:
-  - *Defender for Office 365 Mailflow blocks*: Messages Defender for Office 365 detected during mail flow. These unique messages were undetected by the third-party vendor.
-  - *Defender for Office 365 Post-delivery blocks*: Messages Defender for Office 365 detected after delivery via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md). These unique messages were undetected by the third-party vendor.
-  - *Non-Microsoft Post-delivery blocks*: Messages the third-party vendor detected.
-  - *Duplicate blocks*: Messages Defender for Office 365 detected during mail flow where the third-party vendor also delivered a verdict.
-  - *Duplicate blocks (Defender for Office 365 Post-delivery)*: Messages Defender for Office 365 detected after delivery via ZAP where the third-party vendor also delivered a verdict.
+- **Email Detections**:
+  - *Defender mailflow detections*: Messages Defender for Office 365 detected during mail flow. These unique messages were undetected by the third-party vendor.
+  - *Defender post-delivery detections*: Messages Defender for Office 365 detected after delivery via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md). These unique messages were undetected by the third-party vendor.
+  - *Non-Microsoft post-delivery detection*: Messages the third-party vendor detected.
+  - *Duplicate detections*: Messages Defender for Office 365 detected during mail flow where the third-party vendor also delivered a verdict.
+  - *Duplicate post-delivery detections*: Messages Defender for Office 365 detected after delivery via ZAP where the third-party vendor also delivered a verdict.
 
-- **Post-delivery catch by non-Microsoft solutions**: Shows the verdict types on messages provided by the third-party vendor. This report is a breakdown of the *Non-Microsoft Post-delivery blocks* field in the **Detection totals** report.
+- **Non-Microsoft detections**:
+  - *Post-delivery detections*: Shows the verdict types on messages provided by the third-party vendor. This report is a breakdown of the *Non-Microsoft post-delivery detections* field in the **Email detections** report.
+  - *Efficacy*: Calculates the unique Non-Microsoft post-delivery detections over the total Defender for Office detections. This shows the added value from your third-party solution.
 
 ## Frequently asked questions
 
