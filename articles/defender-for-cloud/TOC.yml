@@ -130,58 +130,72 @@
           href: tutorial-enable-storage-plan.md
         - name: Protect containers with Defender for Containers
           items:
-    - name: Protect containers with Defender for Containers
-      items:
-        - name: Defender for Containers deployment overview
-          href: defender-for-containers-deployment-overview.md
-        - name: Azure (AKS)
-          items:
-            - name: Overview
-              href: defender-for-containers-azure-overview.md
-            - name: Deploy
-              href: defender-for-containers-azure-deploy.md
-            - name: Verify deployment
-              href: defender-for-containers-azure-verify.md
-            - name: Configure
-              href: defender-for-containers-azure-configure.md
-            - name: Remove
-              href: defender-for-containers-azure-remove.md
-        - name: Arc-enabled Kubernetes
-          items:
-            - name: Overview
-              href: defender-for-containers-arc-overview.md
-            - name: Deploy
-              href: defender-for-containers-arc-deploy.md
-            - name: Verify deployment
-              href: defender-for-containers-arc-verify.md
-            - name: Configure
-              href: defender-for-containers-arc-configure.md
-            - name: Remove
-              href: defender-for-containers-arc-remove.md
-        - name: AWS (EKS)
-          items:
-            - name: Overview
-              href: defender-for-containers-eks-overview.md
-            - name: Deploy
-              href: defender-for-containers-eks-deploy.md
-            - name: Verify deployment
-              href: defender-for-containers-eks-verify.md
-            - name: Configure
-              href: defender-for-containers-eks-configure.md
-            - name: Remove
-              href: defender-for-containers-eks-remove.md
-        - name: GCP (GKE)
-          items:
-            - name: Overview
-              href: defender-for-containers-gke-overview.md
-            - name: Deploy
-              href: defender-for-containers-gke-deploy.md
-            - name: Verify deployment
-              href: defender-for-containers-gke-verify.md
-            - name: Configure
-              href: defender-for-containers-gke-configure.md
-            - name: Remove
-              href: defender-for-containers-gke-remove.md
+            - name: Defender for Containers deployment overview
+              href: defender-for-containers-deployment-overview.md
+            - name: Azure (AKS)
+              items:
+                - name: Overview
+                  href: defender-for-containers-azure-overview.md
+                - name: Deploy
+                  href: defender-for-containers-azure-deploy.md
+                - name: Deploy via portal
+                  href: defender-for-containers-azure-deploy-portal.md
+                - name: Enable all components via portal
+                  href: defender-for-containers-aks-enable-all-portal.md
+                - name: Verify deployment
+                  href: defender-for-containers-azure-verify.md
+                - name: Configure
+                  href: defender-for-containers-azure-configure.md
+                - name: Remove
+                  href: defender-for-containers-azure-remove.md
+            - name: Arc-enabled Kubernetes
+              items:
+                - name: Overview
+                  href: defender-for-containers-arc-overview.md
+                - name: Deploy
+                  href: defender-for-containers-arc-deploy.md
+                - name: Deploy via portal
+                  href: defender-for-containers-arc-deploy-portal.md
+                - name: Enable all components via portal
+                  href: defender-for-containers-arc-enable-all-portal.md
+                - name: Verify deployment
+                  href: defender-for-containers-arc-verify.md
+                - name: Configure
+                  href: defender-for-containers-arc-configure.md
+                - name: Remove
+                  href: defender-for-containers-arc-remove.md
+            - name: AWS (EKS)
+              items:
+                - name: Overview
+                  href: defender-for-containers-eks-overview.md
+                - name: Deploy
+                  href: defender-for-containers-eks-deploy.md
+                - name: Deploy via portal
+                  href: defender-for-containers-eks-deploy-portal.md
+                - name: Enable all components via portal
+                  href: defender-for-containers-eks-enable-all-portal.md
+                - name: Verify deployment
+                  href: defender-for-containers-eks-verify.md
+                - name: Configure
+                  href: defender-for-containers-eks-configure.md
+                - name: Remove
+                  href: defender-for-containers-eks-remove.md
+            - name: GCP (GKE)
+              items:
+                - name: Overview
+                  href: defender-for-containers-gke-overview.md
+                - name: Deploy
+                  href: defender-for-containers-gke-deploy.md
+                - name: Deploy via portal
+                  href: defender-for-containers-gke-deploy-portal.md
+                - name: Enable all components via portal
+                  href: defender-for-containers-gke-enable-all-portal.md
+                - name: Verify deployment
+                  href: defender-for-containers-gke-verify.md
+                - name: Configure
+                  href: defender-for-containers-gke-configure.md
+                - name: Remove
+                  href: defender-for-containers-gke-remove.md
         - name: Defender for Containers resources and offboarding
           displayName: defender, containers, offboard, resources
           href: defender-for-containers-offboard.md
@@ -1131,406 +1145,4 @@
             href: enable-defender-for-databases-azure.md
           - name: Enable on AWS (Preview)
             displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-            href: enable-defender-for-databases-aws.md
-      - name: Defender for Azure Cosmos DB
-        items:
-        - name: Defender for Azure Cosmos DB
-          displayName: Cosmos, DB, Cosmos DB
-          href: concept-defender-for-cosmos.md
-        - name: Deploy Defender for Azure Cosmos DB
-          displayName: Cosmos, DB, Cosmos DB
-          href: defender-for-databases-enable-cosmos-protections.md
-      - name: Common questions
-        href: faq-defender-for-databases.yml     
-      - name: Manage vulnerability assessment
-        items:
-        - name: Configure vulnerability findings in your Azure SQL databases
-          items:
-          - name: Express configuration
-            displayName: vulnerability, assessment, findings, express
-            href: configure-vulnerability-findings-express.md
-          - name: Classic configuration
-            displayName: vulnerability, assessment, findings, classic
-            href: configure-vulnerability-findings-classic.md
-          - name: Troubleshoot express or classic configuration
-            href: troubleshoot-vulnerability-findings.md
-          - name: Scan your SQL servers for vulnerabilities
-            href: defender-for-sql-on-machines-vulnerability-assessment.md
-          - name: Manage vulnerability assessments
-            items:
-            - name: PowerShell examples
-              items:
-              - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
-                href: powershell-sample-vulnerability-assessment-azure-sql.md
-              - name: Set up baselines for vulnerability assessments on Azure SQL databases
-                href: powershell-sample-vulnerability-assessment-baselines.md
-              - name: Express configuration PowerShell wrapper module
-                href: express-configuration-sql-commands.md
-              - name: Example - express configuration
-                href: express-configuration-powershell-commands.md
-              - name: Azure CLI examples
-                href: express-configuration-azure-commands.md
-              - name: Find and remediate vulnerabilities
-                href: sql-azure-vulnerability-assessment-find.md
-            - name: Vulnerability assessment rules
-              href: sql-azure-vulnerability-assessment-rules.md
-            - name: Vulnerability assessment rules changelog
-              href: sql-azure-vulnerability-assessment-rules-changelog.md
-            - name: Store vulnerability scans in storage
-              href: /azure/azure-sql/database/sql-database-vulnerability-assessment-storage?toc=/azure/defender-for-cloud/toc.json
-            - name: Consume and export scan results
-              href: defender-for-sql-scan-results.md
-      - name: Investigate and remediate
-        items:
-        - name: Investigate Defender for SQL security Alerts, reporting, and queries
-          displayName: SQL, SQL servers, defender, machines
-          href: defender-for-sql-alerts.md
-        - name: Find and remediate vulnerabilities
-          href: sql-azure-vulnerability-assessment-find.md
-        - name: Vulnerability assessment rules
-          href: sql-azure-vulnerability-assessment-rules.md
-        - name: SQL vulnerability assessment rules changelog
-          href: sql-azure-vulnerability-assessment-rules-changelog.md
-        - name: Consume and export scan results
-          href: defender-for-sql-scan-results.md
-        - name: Investigate Defender for SQL security alerts
-          href: defender-for-sql-alerts.md
-
-  - name: Defender for App Service
-    items:
-      - name: Overview
-        displayName: Azure Defender for App Service, defender for app
-        href: defender-for-app-service-introduction.md
-      - name: Protect applications with Defender for App Service
-        displayName: App service
-        href: tutorial-enable-app-service-plan.md
-  - name: Defender for Storage
-    items:
-      - name: Overview
-        displayName: blob, adls, files, Microsoft Defender for Storage, Defender for
-          Storage, storage, Azure-native security, automated response, alerts,
-          security, hash reputation analysis
-        href: defender-for-storage-introduction.md
-      - name: Enable and configure Defender for Storage
-        items:
-          - name: Deployment overview
-            href: tutorial-enable-storage-plan.md
-          - name: Prerequisites
-            href: support-matrix-defender-for-storage.md
-          - name: Enable options
-            items:
-              - name: Enable with the Azure policy (recommended)
-                href: defender-for-storage-policy-enablement.md
-              - name: Enable with Infrastructure as Code
-                href: defender-for-storage-infrastructure-as-code-enablement.md
-              - name: Enable with REST API
-                href: defender-for-storage-rest-api-enablement.md
-              - name: Enable with PowerShell
-                href: defender-for-storage-powershell-enablement.md
-              - name: Enable with the Azure portal
-                href: defender-for-storage-azure-portal-enablement.md
-      - name: Malware scanning
-        items:
-              - name: Introduction to malware scanning
-                href: introduction-malware-scanning.md
-              - name: On-upload malware scanning
-                href: on-upload-malware-scanning.md
-              - name: On-demand malware scanning
-                href: on-demand-malware-scanning.md
-              - name: Advanced configurations for malware scanning
-                href: advanced-configurations-for-malware-scanning.md
-              - name: Set up responses to malware scanning
-                href: defender-for-storage-configure-malware-scan.md
-      - name: Sensitive data threat detection
-        items:
-              - name: Overview
-                href: defender-for-storage-data-sensitivity.md
-              - name: Enable sensitive data threat detection
-                href: enable-defender-for-storage-data-sensitivity.md
-      - name: Investigate and respond
-        items:
-              - name: Understand security threats and alerts 
-                href: defender-for-storage-threats-alerts.md
-              - name: Understanding malware scanning results
-                href: understand-malware-scan-results.md
-              - name: Test the data security features
-                href: defender-for-storage-test.md
-      - name: Common questions about Defender for Storage
-        displayName: storage, common questions, defender for storage, storage, faq,
-          frequently asked questions
-        href: faq-defender-for-storage.yml
-      - name: Defender for Storage (classic)
-        items:
-          - name: Overview (classic)
-            href: defender-for-storage-classic.md
-          - name: Enable and configure Defender for Storage (classic)
-            href: defender-for-storage-classic-enable.md
-          - name: Migrating to the new plan
-            href: defender-for-storage-classic-migrate.md
-          - name: Common questions about Defender for Storage (classic)
-            displayName: storage, common questions, defender for storage, storage, faq,
-              frequently asked questions
-            href: faq-defender-for-storage-classic.yml
-  - name: Defender for Key Vault
-    items:
-      - name: Overview
-        displayName: KV, akv
-        href: defender-for-key-vault-introduction.md
-      - name: Protect key vault with Defender for Key Vault
-        displayName: Key vault
-        href: tutorial-enable-key-vault-plan.md
-      - name: Handle Defender for Key Vault alerts
-        displayName: akv, kv
-        href: defender-for-key-vault-introduction.md#respond-to-microsoft-defender-for-key-vault-alerts
-  - name: Defender for Resource Manager
-    items:
-      - name: Overview
-        displayName: ARM
-        href: defender-for-resource-manager-introduction.md
-      - name: Protect resources with Defender for Resource Manager
-        href: tutorial-enable-resource-manager-plan.md
-      - name: Handle Defender for Resource Manager alerts
-        displayName: arm
-        href: defender-for-resource-manager-usage.md
-  - name: Defender for DNS
-    items:
-      - name: Overview
-        displayName: domain, Defender for DNS
-        href: defender-for-dns-introduction.md
-      - name: Respond to Microsoft Defender for DNS alerts
-        displayName: DNS
-        href: defender-for-dns-alerts.md
-  - name: DevOps security
-    items:
-      - name: DevOps security overview
-        href: defender-for-devops-introduction.md
-      - name: Support and prerequisites
-        href: devops-support.md
-      - name: DevOps environment security posture
-        href: concept-devops-environment-posture-management-overview.md
-      - name: Reliability in Cloud for DevOps security
-        href: /azure/reliability/reliability-defender-devops?toc=/azure/defender-for-cloud/toc.json&bc=/azure/defender-for-cloud/breadcrumb/toc.json
-      - name: Onboard
-        items:
-          - name: Connect Azure DevOps environments
-            href: quickstart-onboard-devops.md
-          - name: Configure agentless code scanning for Azure DevOps
-            href: agentless-code-scanning.md
-          - name: Connect GitHub environments
-            href: quickstart-onboard-github.md
-          - name: Connect GitLab environments
-            href: quickstart-onboard-gitlab.md
-          - name: Configure the Microsoft Security DevOps Azure DevOps extension
-            href: azure-devops-extension.yml
-          - name: Configure the Microsoft Security DevOps GitHub action
-            href: github-action.md
-          - name: Integrate Defender for Cloud CLI with CI/CD pipelines
-            href: cli-cicd-integration.md
-            displayName: CLI Jenkins Pipeline
-          - name: Configure pull request annotations
-            href: enable-pull-request-annotations.md
-          - name: Map IaC templates from code to cloud
-            href: iac-template-mapping.md
-          - name: Map container images from code to cloud
-            href: container-image-mapping.md
-          - name: Edit DevOps connectors
-            href: edit-devops-connector.md
-      - name: Investigate and remediate
-        items:
-          - name: Discover IaC misconfigurations
-            href: iac-vulnerabilities.md
-          - name: Review pull request annotations
-            href: review-pull-request-annotations.md
-      - name: Common questions about DevOps security
-        href: faq-defender-for-devops.yml
-  - name: Defender for AI services
-    items:
-      - name: Overview
-        displayName: AI, Defender for AI
-        href: ai-threat-protection.md
-      - name: Enable threat protection for AI services
-        displayName: AI, Defender for AI
-        href: ai-onboarding.md
-      - name: Gain end-user context for AI alerts
-        displayName: AI, Defender for AI, threat protection
-        href: gain-end-user-context-ai.md
-- name: Reference
-  items:
-    - name: Archived release notes (older than six months)
-      displayName: changelog, news
-      href: release-notes-archive.md
-    - name: How Microsoft secures customer data
-      href: data-security.md
-    - name: REST APIs documentation
-      href: /rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/security-center-security-baseline?toc=/azure/defender-for-cloud/TOC.json
-    - name: Azure Policy built-ins
-      displayName: samples, policy
-      href: policy-reference.md
-    - name: Azure updates blog
-      href: https://azure.microsoft.com/updates/?product=security-center
-    - name: Azure CLI
-      href: /cli/azure/security
-    - name: Azure PowerShell
-      href: /powershell/module/az.security/
-- name: Resources
-  items:
-    - name: Build skills with Microsoft Learn training
-      href: /training/browse/?term=defender%20for%20cloud&terms=defender%20for%20cloud&expanded=microsoft-defender&products=defender-for-cloud
-    - name: Defender for Cloud glossary of terms
-      href: defender-for-cloud-glossary.md
-    - name: Defender for Cloud cost calculator
-      href: cost-calculator.md
-    - name: Chargeback process using Azure Cost Analysis
-      href: chargeback.md
-    - name: Optimize costs with prepurchase plan
-      href: prepurchase-plan.md
-    - name: Microsoft Defender for Cloud in the field
-      items:
-        - name: New AWS connector
-          href: episode-one.md
-        - name: Integrate with Azure Purview
-          href: episode-two.md
-        - name: Microsoft Defender for Containers
-          href: episode-three.md
-        - name: Security posture management improvements
-          href: episode-four.md
-        - name: Microsoft Defender for Servers
-          href: episode-five.md
-        - name: Lessons learned from the field
-          href: episode-six.md
-        - name: New GCP connector
-          href: episode-seven.md
-        - name: Microsoft Defender for IoT
-          href: episode-eight.md
-        - name: Microsoft Defender for Containers in a multicloud environment
-          href: episode-nine.md
-        - name: Protecting containers in GCP with Defender for Containers
-          href: episode-ten.md
-        - name: Threat landscape for containers
-          href: episode-eleven.md
-        - name: Enhanced workload protection features in Defender for Servers
-          href: episode-twelve.md
-        - name: Defender for Storage
-          href: episode-thirteen.md
-        - name: Defender for Servers deployment in AWS and GCP
-          href: episode-fourteen.md
-        - name: Remediate security recommendations with governance
-          href: episode-fifteen.md
-        - name: Defender for Servers integration with Microsoft Defender for Endpoint
-          href: episode-sixteen.md
-        - name: Defender for Servers integration with Microsoft Entra
-          href: episode-seventeen.md
-        - name: Defender for Azure Cosmos DB
-          href: episode-eighteen.md
-        - name: DevOps security in Defender for Cloud
-          href: episode-nineteen.md
-        - name: Cloud security explorer and attack path analysis
-          href: episode-twenty.md
-        - name: Latest updates in the regulatory compliance dashboard
-          href: episode-twenty-one.md
-        - name: Defender EASM
-          href: episode-twenty-two.md
-        - name: Defender Threat Intelligence (Defender TI)
-          href: episode-twenty-three.md
-        - name: Enhancements in Defender for SQL Vulnerability Assessment
-          href: episode-twenty-four.md
-        - name: AWS ECR coverage in Defender for Containers
-          href: episode-twenty-five.md
-        - name: Governance capability improvements in Defender for Cloud
-          href: episode-twenty-six.md
-        - name: Demystifying Defender for Servers
-          href: episode-twenty-seven.md
-        - name: Zero Trust and Defender for Cloud
-          href: episode-twenty-eight.md
-        - name: Security policy enhancements in Defender for Cloud
-          href: episode-twenty-nine.md
-        - name: New Custom Recommendations for AWS and GCP in Defender for Cloud
-          href: episode-thirty.md
-        - name: Understanding data security posture management capability
-          href: episode-thirty-one.md
-        - name: API Security with Defender for APIs
-          href: episode-thirty-two.md
-        - name: Agentless Container Posture Management
-          href: episode-thirty-three.md
-        - name: Understanding the DevOps Threat Matrix
-          href: episode-thirty-four.md
-        - name: Security alert correlation
-          href: episode-thirty-five.md
-        - name: Defender CSPM support for GCP and more updates
-          href: episode-thirty-six.md
-        - name: Capabilities to counter identity-based supply chain attacks
-          href: episode-thirty-seven.md
-        - name: Data security dashboard
-          href: episode-thirty-eight.md
-        - name: Defender for APIs reaches GA
-          href: episode-thirty-nine.md
-        - name: Live from Microsoft Ignite 2023
-          href: episode-forty.md
-        - name: Native integration with ServiceNow
-          href: episode-forty-one.md 
-        - name: Agentless secrets scanning for virtual machines
-          href: episode-forty-two.md
-        - name: Unified insights from Microsoft Entra permissions management
-          href: episode-forty-three.md
-        - name: Agentless malware detection
-          href: episode-forty-four.md
-        - name: Risk prioritization
-          href: episode-forty-five.md
-        - name: DevOps Security Capabilities in Defender CSPM
-          href: episode-forty-six.md
-        - name: Vulnerability management in Defender CSPM
-          href: episode-forty-seven.md
-        - name: Microsoft CNAPP solution 
-          displayName: CNAPP
-          href: episode-forty-eight.md
-        - name: Microsoft Security Copilot integration
-          displayName: Copilot, security
-          href: episode-forty-nine.md
-        - name: Secure AI applications from code to runtime
-          displayName: AI, applications, code, runtime
-          href: episode-fifty.md
-        - name: Defender for Open-Source Relational Databases multicloud
-          displayName: Defender for Open-Source Relational Databases, multicloud, RDS, threat detection
-          href: episode-fifty-one.md
-        - name: Binary drift detection in Defender for Containers
-          displayName: Defender for Containers, binary drift detection
-          href: episode-fifty-two.md
-        - name: Updated File Integrity Monitoring in Defender for Servers
-          displayName: Defender for Servers, FIM
-          href: episode-fifty-three.md
-        - name: Updates from Microsoft Ignite 2024
-          DisplayName: updates, Ignite, 2024
-          href: episode-fifty-four.md
-        - name: Cloud Detection Response experience
-          DisplayName: Cloud Detection Response, CDR
-          href: episode-fifty-five.md
-        - name: Improvements in Container's Posture Management
-          DisplayName: Container's Posture Management
-          href: episode-fifty-six.md
-        - name: Onboarding Docker Hub and JFrog Artifactory
-          DisplayName: Docker Hub, JFrog Artifactory
-          href: episode-fifty-seven.md
-        - name: AKS security dashboard
-          DisplayName: AKS security dashboard
-          href: episode-fifty-eight.md
-        - name: Integrate CLI with CI/CD pipelines
-          DisplayName: Defender for Cloud CLI, CI/CD pipelines
-          href: episode-fifty-nine.md
-    - name: Manage user data
-      href: privacy.md
-    - name: Microsoft Defender for IoT documentation
-      href: /azure/defender-for-iot/
-    - name: Azure security documentation
-      href: /azure/security/
-    - name: Microsoft Defender for Cloud tech community blogs
-      href: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bg-p/MicrosoftDefenderCloudBlog
-    - name: Microsoft Defender for Cloud on Stack Overflow
-      href: https://stackoverflow.com/search?q=microsoft+defender+for+cloud
-    - name: Pricing
-      href: https://azure.microsoft.com/pricing/details/azure-defender/
-    - name: Regional availability
-      href: https://azure.microsoft.com/regions/services/
-    - name: Troubleshooting guide
-      href: troubleshooting-guide.md
+            href: enable-defender-for-database
