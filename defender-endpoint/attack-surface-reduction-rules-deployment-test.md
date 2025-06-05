@@ -78,7 +78,7 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
    > [!NOTE]
    > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
 
-8. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
+8. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
 
 9. In the **Assignments** pane, you can deploy or "assign" the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
 
@@ -147,7 +147,7 @@ The **GroupBy** returns results set to the following groups:
 > :::image type="content" source="media/asr-defender365-filter.png" alt-text="The Attack surface reduction rules detections filter on rules" lightbox="media/asr-defender365-filter.png":::
 
 > [!NOTE]
-> If you have a Microsoft 365 Security E5 or A5, Windows E5 or A5 license, the following link opens the Microsoft Defender 365  Reports > [Attack surface reductions](https://security.microsoft.com/asr?viewid=detections) > Detections tab.
+> If you have a license for Microsoft 365 Security E5 or A5, or Windows E5 or A5, the following link opens the Microsoft Defender portal with detections visible: [Attack surface reduction detections](https://security.microsoft.com/asr?viewid=detections).
 
 ### Configuration tab
 
