@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 ms.date: 01/16/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection:
