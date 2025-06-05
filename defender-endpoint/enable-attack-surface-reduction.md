@@ -15,7 +15,7 @@ ms.collection:
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
 search.appverid: met150
-ms.date: 05/08/2025
+ms.date: 06/05/2025
 ---
 
 # Enable attack surface reduction rules
@@ -54,7 +54,7 @@ You can set attack surface reduction rules for devices that are running any of t
 
 To use the entire feature-set of attack surface reduction rules, you need:
 
-- Microsoft Defender Antivirus as primary antivirus Note: Microsoft Defender Antivirus cannot be running in "Passive Mode" or "Disabled"
+- Microsoft Defender Antivirus as primary antivirus. Microsoft Defender Antivirus can't be running in passive mode or be disabled.
 
 - [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) to be on
 
@@ -65,13 +65,13 @@ To use the entire feature-set of attack surface reduction rules, you need:
 - Microsoft 365 E5 or E3 License
 
 > [!IMPORTANT]
-> The pre-requisites above are necessary in order for Attack Surface Reduction rules to work properly.
+> The prerequisites listed in this article are necessary in order for Attack Surface Reduction rules to work properly.
 
 Although attack surface reduction rules don't require a [Microsoft 365 E5 license](/microsoft-365/commerce/licenses/e3-extra-features-licenses), with Microsoft 365 E5 license, you get advanced management capabilities including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. These advanced capabilities aren't available with an E3 license, but you can still use Event Viewer to review attack surface reduction rule events.
 
 Each attack surface reduction rule contains one of four settings:
 
-- **Not configured** | **Disabled**: Disable the attack surface reduction rule
+- **Not configured** or **Disabled**: Disable the attack surface reduction rule
 - **Block**: Enable the attack surface reduction rule
 - **Audit**: Evaluate how the attack surface reduction rule would impact your organization if enabled
 - **Warn**: Enable the attack surface reduction rule but allow the end user to bypass the block
