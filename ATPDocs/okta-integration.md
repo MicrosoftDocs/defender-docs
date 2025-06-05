@@ -25,7 +25,7 @@ Your Okta environment must have one of the following licenses:
 
 ### Connect Okta to Microsoft Defender for Identity
 
-This section provides instructions for connecting Microsoft Defender for Identity to your existing Okta account using the connector APIs. This connection gives you visibility into and control over Okta use.
+This section provides instructions for connecting Microsoft Defender for Identity to your dedicated Okta account using the connector APIs. This connection gives you visibility into and control over Okta use.
 
 **To connect Okta to Defender for Identity** 
 
