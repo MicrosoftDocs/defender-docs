@@ -1,7 +1,7 @@
 ---
 title: Resolve VPC service controls issues
 description: Troubleshoot VPC service controls issues in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 06/04/2025
+ms.date: 06/05/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
@@ -10,9 +10,9 @@ ms.author: elkrieger
 
 # Resolve VPC service controls issues
 
-Google Cloud Platform (GCP) Virtual Private Cloud (VPC) Service Controls provide an extra layer of security by defining perimeters that isolate and protect sensitive resources. Each perimeter can encompass one or more projects, restricting access to Google-managed services from outside the defined boundary.
+Google Cloud Platform (GCP) Virtual Private Cloud (VPC) Service Controls provide an extra layer of security by defining perimeters that isolate and protect sensitive resources. Each perimeter can encompass one or more projects, restricting access to Google services from outside the defined boundary.
 
-For Microsoft Defender for Cloud to scan resources within these protected environments, configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This configuration ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
+To allow Microsoft Defender for Cloud to scan resources within these protected environments, you need to configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This configuration ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
 
 If you're unsure whether your Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshooting-guide.md#defender-api-calls-to-gcp) to find out.
 
