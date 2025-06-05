@@ -199,7 +199,7 @@ Attack surface reduction rules now provide the capability to configure rule-spec
 To configure specific rule exclusions, you have the choices of using the Defender for Endpoint Security Settings Management, Intune, and Group Policy.
 
 > [!NOTE]
-> When configuring Attack Surface Reduction per-rule exclusions, keep in mind that specifying only the file or application name (e.g., `test1.exe`) is not sufficient. You must provide the full file or application path (e.g., `C:\test1.exe`) to ensure the exclusion is applied correctly.
+> When configuring Attack Surface Reduction per-rule exclusions, keep in mind that specifying only the file or application name (for example, `test1.exe`) isn't sufficient. You must provide the full file or application path (for example, `C:\test1.exe`) to ensure the exclusion is applied correctly.
 
 #### Via Intune
 
@@ -207,11 +207,11 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 2. If it isn't already configured, set the rule for which you want to configure exclusions to **Audit** or **Block**.
 
-3. In **ASR Only Per Rule Exclusion**, click the toggle to change from **Not configured** to **Configured.**
+3. In **ASR Only Per Rule Exclusion**, select the toggle to change from **Not configured** to **Configured.**
 
 4. Enter the names of the files or application that you want to exclude.
 
-5. At the bottom of the **Create profile** wizard, select **Next** and follow the wizard instructions.
+5. At the bottom of the **Create profile** wizard, select **Next**, and then follow the wizard instructions.
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-per-rule-exclusion.png" alt-text="Screenshot that shows the configuration settings for adding ASR per-rule exclusions." lightbox="media/attack-surface-reduction-rules-report-per-rule-exclusion.png":::
 
