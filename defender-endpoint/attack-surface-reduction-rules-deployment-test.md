@@ -80,7 +80,7 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
 
 8. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
 
-9. In the **Assignments** pane, you can deploy or "assign" the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
+9. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
 
    > [!NOTE]
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
@@ -199,7 +199,7 @@ Attack surface reduction rules now provide the capability to configure rule-spec
 To configure specific rule exclusions, you have the choices of using the Defender for Endpoint Security Settings Management, Intune, and Group Policy.
 
 > [!NOTE]
-> When configuring Attack Surface Reduction per-rule exclusions, please note that specifying only the file or application name (e.g., test1.exe) is not sufficient. You must provide the full file or application path (e.g., C:\test1.exe) to ensure the exclusion is applied correctly.
+> When configuring Attack Surface Reduction per-rule exclusions, keep in mind that specifying only the file or application name (e.g., `test1.exe`) is not sufficient. You must provide the full file or application path (e.g., `C:\test1.exe`) to ensure the exclusion is applied correctly.
 
 #### Via Intune
 
@@ -217,10 +217,10 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 > [!TIP]
 > Use the checkboxes next to your list of exclusion entries to select items to **Delete**, **Sort**, **Import**, or **Export**.
-> 
+
 #### Via Group Policy
 
-Use Group Policy to set the per-user ASR rule exclusions
+Use Group Policy to set the per-user ASR rule exclusions.
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
@@ -234,13 +234,11 @@ Use Group Policy to set the per-user ASR rule exclusions
 
 1. Double-click **Apply a list of exclusions to specific attack surface reduction (ASR) rules**, and set the option to **Enabled**. 
 
-1. Then click on **Show...**
+1. Then click on **Show...**.
 
-1. Under "**Value Name**", enter "GUID for the ASR Rule" without the double quotes
+1. Under **Value Name**, enter GUID for the ASR Rule.
 
-1. Under "**Value**", enter the <drive_letter:\Path\ProcessName>.  In order to add multiple processes, it's separated by a greater than sign (>)
-
-   e.g.,  "C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe" without the double quotes
+1. Under **Value**, enter the <drive_letter:\Path\ProcessName>.  In order to add multiple processes, it's separated by a greater than sign (>). For example, `C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe`.
    
 1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
 
