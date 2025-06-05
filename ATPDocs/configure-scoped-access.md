@@ -9,6 +9,7 @@ ms. reviewer: 'LiorShapiraa'
 # Configure scoped access for Microsoft Defender for Identity
 
 As organizations grow and their identity environments become more complex, it’s important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities. 
+Scoped access is implemented by creating a custom role using Microsoft Defender XDR Unified RBAC. During the role configuration process, you define which users or groups have access to specific Active Directory domains or Microsoft Entra ID groups.
 
 ## Prerequisites
 
@@ -23,30 +24,31 @@ Before you begin, make sure you meet the following requirements:
 ### Configure scoping rules
 To enable identity scoping, follow these steps:​
 
-1. Navigate to Permissions > Microsoft Defender XDR >  Roles​
+1. Navigate to **Permissions > Microsoft Defender XDR >  Roles​**
 
     :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal":::
 
-1. Follow the steps in [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
-1. After creating the custom role, return to this article to configure scoped access. 
-1. Under **Assign users and groups**, enter individual usernames or Microsoft Entra ID groups to assign to the role.
-1. Choose Microsoft Defender for Identity as the data source.
-1. Select User groups (AD domains) to scope the assigned users or Microsoft Entra ID groups.
+1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
+1.  During the role creation process:
+    1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
+    1. Select Microsoft Defender for Identity as the data source.
+    1. Under **Scope**, select the user groups (AD domains) or Microsoft Entra ID groups that will be scoped to the assignment.
+
      :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
-1. Select Add and submit.
-1. You can edit the role at any time by selecting it from the list of custom roles and choosing **Edit**.
+1. Select Add.
+1. You can edit the role at any time. Select the role from the list of custom roles and choose **Edit**.
 
     :::image type="content" source="media/custom-roles/edit-custom-role.png" alt-text="Screenshot showing how to edit a custom role":::
 
 
 ### Known limitations 
 
+Defender for Identity scoping is currently in Public preview. The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity. Features that are currently unavailable will become available when Identity scoping reaches general availability.
+
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
 >
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
-
-Defender for Identity scoping is currently in Public preview. The following table summarizes current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
 
 |Defender for Identity experience |Status |
 |---------|---------|
