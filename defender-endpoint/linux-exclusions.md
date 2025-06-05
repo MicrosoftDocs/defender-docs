@@ -141,8 +141,8 @@ In enterprise environments, exclusions can also be managed through a configurati
 ### Using Defender for Endpoint security settings management
 
 > [!NOTE]
-> This method is currently in private Preview. To enable this feature, please reach out to xplatpreviewsupport@microsoft.com.
 > Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/mem/intune/protect/mde-security-integration#prerequisites)
+
 You can use the Microsoft Intune admin center or the Microsoft Defender portal to manage exclusions as endpoint security policies and assign those policies to Microsoft Entra ID groups. If you're using this method for the first time, make sure to complete the following steps:
 
 #### 1. Configure your tenant to support security settings management
