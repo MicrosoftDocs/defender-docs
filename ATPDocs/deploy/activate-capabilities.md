@@ -149,8 +149,8 @@ To confirm the sensor has been onboarded:
 ## Test activated capabilities
 The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
-    > [!NOTE]
-    > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
+> [!NOTE]
+> The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
 
 
 Defender for Identity capabilities on domain controllers currently support the following Defender for Identity functionality:
