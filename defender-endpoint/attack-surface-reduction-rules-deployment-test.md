@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 03/26/2025
+ms.date: 06/05/2025
 search.appverid: met150
 ---
 
@@ -56,33 +56,39 @@ Begin the testing phase by turning on the attack surface reduction rules with th
 You can use Microsoft Intune Endpoint Security to configure custom attack surface reduction rules.
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Go to **Endpoint Security** > **Attack surface reduction**.
+
 3. Select **Create Policy**.
+
 4. In **Platform**, select **Windows 10, Windows 11, and Windows Server**, and in **Profile**, select **Attack surface reduction rules**.
 
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/asr-mem-create-profile.png" alt-text="The profile creation page for ASR rules" lightbox="media/asr-mem-create-profile.png":::
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/asr-mem-create-profile.png" alt-text="The profile creation page for ASR rules" lightbox="media/asr-mem-create-profile.png":::
 
 5. Select **Create**.
+
 6. In the **Basics** tab of the **Create profile** pane, in **Name** add a name for your policy. In **Description** add a description for your attack surface reduction rules policy.
+
 7. In the **Configuration settings** tab, under **Attack Surface Reduction Rules**, set all rules to **Audit mode**.
 
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/asr-mem-configuration-settings.png" alt-text="The configuration of attack surface reduction rules to Audit mode" lightbox="media/asr-mem-configuration-settings.png":::
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/asr-mem-configuration-settings.png" alt-text="The configuration of attack surface reduction rules to Audit mode" lightbox="media/asr-mem-configuration-settings.png":::
 
-    > [!NOTE]
-    > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
+   > [!NOTE]
+   > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
 
 8. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
-9. In the **Assignments** pane, you can deploy or "assign" the profile to your user or device groups. Learn more: [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
 
-    > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+9. In the **Assignments** pane, you can deploy or "assign" the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
+
+   > [!NOTE]
+   > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 10. Review your settings in the **Review + create** pane. Select **Create** to apply the rules.
 
-    > [!div class="mx-imgBorder"]
-    > :::image type="content" source="media/asr-mem-review-create.png" alt-text="The Create profile page" lightbox="media/asr-mem-review-create.png":::
+   > [!div class="mx-imgBorder"]
+   > :::image type="content" source="media/asr-mem-review-create.png" alt-text="The Create profile page" lightbox="media/asr-mem-review-create.png":::
 
 Your new attack surface reduction policy for attack surface reduction rules is listed in **Endpoint security | Attack surface reduction**.
 
