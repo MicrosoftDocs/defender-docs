@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/14/2025
+ms.date: 05/22/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,11 +98,11 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### April-2025 (Platform: TBD | Engine: 1.1.25040.1)
+### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
 - Security intelligence update version: **1.429.3.0**
-- Release date:  **May 14, 2025 (Engine)** / (Platform pending)
-- Platform: (*coming soon*)
+- Release date:  **May 14, 2025 (Engine)** / **May 22, 2025 (Platform)**
+- Platform: **4.18.25040.2**
 - Engine: **1.1.25040.1**
 - Support phase: **Security and Critical Updates**
 
@@ -154,32 +154,6 @@ Updates contain:
 - Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
 - Increased [device control policy](device-control-policies.md) limits.
 - Improved security resilience for Defender update process.
-
-### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
-
-- Security intelligence update version: **1.423.21.0**
-- Release date: **February 20, 2025** (Engine) / **March 5, 2025** (Platform)
-- Platform: **4.18.25010.11**
-- Engine: **1.1.25010.7**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved handling of [attack surface reduction rule](attack-surface-reduction-rules-reference.md) exclusions.
-- Improved AMSI scan performance with changes to exclusion handling.
-- Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
-- Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
-- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
-- Fixed attack surface reduction warn mode processing when exclusions are applied.
-- Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
-- Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
-- Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
-- Resolved an issue with [tamper protection for exclusions](/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions) where an exclusion policy was handled by System Center Configuration Manager.
-- Fixed issue with device control auditing of removable media.
-- Fixed issue with MDM policy management on Azure Virtual Desktop.
-- Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
-- Improved device control policy enforcement in offline environments.
-- Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
 
 ### Previous version updates: Technical upgrade support only
 

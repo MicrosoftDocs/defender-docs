@@ -107,7 +107,7 @@ If the incident or related alerts were the result of an analytics rule you've se
 
 > [!NOTE]
 > To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
-> To view attack path details with Microsoft Sentinel in the unified security operations platform, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
+> To view attack path details with Microsoft Sentinel in the Defender portal, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
 
 The incident graph also contains information about **attack paths**. These paths allow security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **View attack paths**. The top attack paths are shown within the incident graph. Here's an example.
 

@@ -4,6 +4,7 @@ description: This article is updated frequently to let you know what's new in th
 ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
+ms.reviewer: AbbyMSFT
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -22,7 +23,32 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2025
+
+### DefenderForIdentity PowerShell module updates (version 1.0.0.4)
+
+New Features and Improvements:
+- Added remote domain functionality
+- Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
+- Added ability to Get/Set/Test the Deleted Objects container permissions.
+- Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
+
+Bug Fixes:
+- Fixed audit verification checks for non-English operating systems.
+- Fixed DomainObjectAuditing identity redundant parameter bug.
+- Fixed Domain Controller detection logic to confirm AD Web Services is running on the server.
+- Fixed issue with Test-MDIDSA not parsing Deleted Object permissions.
+- Other reliability fixes.
+
 ## May 2025
+
+###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
+
+
+### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
+The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify non-eligible servers and take action to update and onboard them for enhanced identity protection.
+
 
 ### Local administrators collection (using SAM-R queries) feature will be disabled
 The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change will occur automatically by the specified date, and no administrative action is required.

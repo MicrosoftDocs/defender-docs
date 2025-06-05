@@ -3,6 +3,7 @@ title: Monitored activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
 ms.date: 02/12/2024
 ms.topic: conceptual
+ms.reviewer: rlitinsky
 ---
 
 # Microsoft Defender for Identity monitored activities
