@@ -117,7 +117,7 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
 > - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
 > - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
-- The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+> - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
 
 ## Privacy Controls
 
