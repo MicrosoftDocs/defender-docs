@@ -5,7 +5,7 @@ author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.collection: 
