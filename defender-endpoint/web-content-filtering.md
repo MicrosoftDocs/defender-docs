@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 02/18/2025
+ms.date: 06/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -29,7 +29,6 @@ search.appverid: met150
 
 > [!TIP]
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
 
 ## What is web content filtering?
 
@@ -104,7 +103,7 @@ Policies can be deployed to block any of the following parent or child categorie
 | **Uncategorized** | - **Newly registered domains**: Sites that are newly registered in the past 30 days and haven't yet been moved to another category.<br/><br/>- **Parked domains**: Sites that have no content or are parked for later use. |
 
 > [!NOTE]
-> Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories.
+> Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories. *Remote proxy sites* are categorized as *Illegal Software*. This classification is based on their inherent ability to route traffic to any destination, which can include access to unwanted, malicious, or illegal content. As with any other blocked site, an organization can choose to use an "allow" indicator to allow access to a site that would otherwise be blocked based on its Web Content Filtering category.
 
 ### Create a policy
 
@@ -151,7 +150,7 @@ To define a custom indicator, follow these steps:
 
 ### Dispute categories
 
-If you encounter a domain that has been incorrectly categorized, you can dispute the category directly from the Microsoft Defender portal.
+If you encounter a domain that has been incorrectly categorized, you can dispute the category directly in the Microsoft Defender portal.
 
 To dispute the category of a domain, navigate to **Reports** \> **Web protection** \> **Web content filtering categories details** \> **Domains**. On the domains tab of the Web Content Filtering reports, find the ellipsis beside each of the domains. Hover over the ellipsis and then select **Dispute Category**.
 
@@ -169,7 +168,7 @@ In the first 30 days of using this feature, your organization might not have eno
 
 :::image type="content" source="media/web-activity-by-category600.png" alt-text="The web activity by category card" lightbox="media/web-activity-by-category600.png":::
 
-### Web content filtering  summary card
+### Web content filtering summary card
 
 This card displays the distribution of blocked access attempts across the different parent web content categories. Select one of the colored bars to view more information about a specific parent web category.
 
@@ -188,9 +187,7 @@ You can access the **Report details** for each card by selecting a table row or 
 :::image type="content" source="media/web-protection-report-details.png" alt-text="The web protection report details" lightbox="media/web-protection-report-details.png":::
 
 - **Web categories**: Lists the web content categories that have had access attempts in your organization. Select a specific category to open a summary flyout.
-
 - **Domains**: Lists the web domains that have been accessed or blocked in your organization.
-
 - **Device groups**: Lists all the device groups that have generated web activity in your organization
 
 Use the time range filter at the top left of the page to select a time period. You can also filter the information or customize the columns. Select a row to open a flyout pane with even more information about the selected item.
