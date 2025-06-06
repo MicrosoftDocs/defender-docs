@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.topic: troubleshooting-general
-ms.date: 04/16/2025
+ms.date: 06/06/2025
 ms.collection: 
 - m365-security
 - tier3
