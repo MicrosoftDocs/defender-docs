@@ -194,7 +194,7 @@ To verify behavior monitoring is enabled, open Terminal, copy and run the follow
 mdatp health --details features
 ```
 
-When behavior monitoring is enabled, the result displays the value of behavior_monitoirng as enabled.
+When behavior monitoring is enabled, the result displays the value of `behavior_monitoring` as enabled.
 
 ### To test behavior monitoring (prevention/block) detection
 
