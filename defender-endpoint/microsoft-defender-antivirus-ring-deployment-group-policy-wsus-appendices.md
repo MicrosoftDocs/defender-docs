@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 07/25/2024
