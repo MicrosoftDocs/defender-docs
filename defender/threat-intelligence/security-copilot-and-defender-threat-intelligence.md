@@ -15,7 +15,7 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-mdti
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/22/2025
 ---
 

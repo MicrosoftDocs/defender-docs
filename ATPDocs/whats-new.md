@@ -23,6 +23,23 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2025
+
+### DefenderForIdentity PowerShell module updates (version 1.0.0.4)
+
+New Features and Improvements:
+- Added remote domain functionality
+- Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
+- Added ability to Get/Set/Test the Deleted Objects container permissions.
+- Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
+
+Bug Fixes:
+- Fixed audit verification checks for non-English operating systems.
+- Fixed DomainObjectAuditing identity redundant parameter bug.
+- Fixed Domain Controller detection logic to confirm AD Web Services is running on the server.
+- Fixed issue with Test-MDIDSA not parsing Deleted Object permissions.
+- Other reliability fixes.
+
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)

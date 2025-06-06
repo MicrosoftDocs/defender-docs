@@ -22,8 +22,15 @@ This article lists recent features added for unified security operations in the 
 
 ## May 2025
 
+- [Unified role-based access control in multitenant portal (Preview)](#unified-role-based-access-control-in-multitenant-management-preview)
 - [All Microsoft Sentinel use cases generally available in the Defender portal](#all-microsoft-sentinel-use-cases-generally-available-in-the-defender-portal)
 - [Case management now available for the Defender multitenant portal (Preview)](#case-management-now-available-for-the-defender-multitenant-portal-preview)
+
+### Unified role-based access control in multitenant management (Preview)
+
+Unified role-based access control (URBAC) is now available in the Microsoft Defender multitenant management portal. You can create, delete, import, and edit roles in the multitenant management portal. This capability provides a comprehensive view of permissions and access for your tenants, and a centralized administration to manage these permissions.
+
+For more information, see [Manage unified role-based access control in multitenant management](mto-urbac.md).
 
 ### All Microsoft Sentinel use cases generally available in the Defender portal
 
