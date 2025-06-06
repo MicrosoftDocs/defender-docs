@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's new in Microsoft Defender for Endpoint - Before 2023
