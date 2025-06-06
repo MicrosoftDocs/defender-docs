@@ -62,16 +62,13 @@ Access to Defender for Endpoint is done through a browser. The following browser
 
 ## Hardware and software requirements
 
-Devices on your network must be running one of the supported operating systems. New features or capabilities are typically provided only on supported operating systems. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends installing the latest available security patches for any operating system.
+Devices on your network must be running one of the operating systems below. New features or capabilities are typically provided only on vendor-supported operating systems. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends installing the latest available security patches for any operating system.
 
-### Supported Windows versions
+### Windows versions supported by Defender for Endpoint
 
 > [!IMPORTANT]
-> Windows 11 Home devices that are upgraded to a supported edition might require you to run the following command before onboarding: `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`
+> You may continue to use Microsoft Windows after OS support ends; however, it will no longer receive quality updates, new or updated features, or security updates for the operating system itself. However, devices protected by Microsoft Defender for Endpoint will continue to receive regular product updates through existing channels, keeping detection and protection capabilities current. 
 >
-> For more information about edition upgrades and features, see ([Windows features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
-
-Supported versions of Windows include:
 
 - Windows 11 Enterprise
 - Windows 11 IoT Enterprise
@@ -110,7 +107,7 @@ The following operating systems work with Defender for Endpoint, provided you're
 
 To add anti-malware protection to these older operating systems, you can use [System Center Endpoint Protection](onboard-downlevel.md#configure-and-update-system-center-endpoint-protection-clients). 
 
-### Other supported operating systems
+### Other operating systems supported by Defender for Endpoint
 
 - [Mac](microsoft-defender-endpoint-mac.md) (client devices)
 - [Linux](microsoft-defender-endpoint-linux.md)
@@ -125,7 +122,9 @@ To add anti-malware protection to these older operating systems, you can use [Sy
 > - Virtual Machines running Windows 10 Enterprise 2016 LTSB can encounter performance issues when used on non-Microsoft virtualization platforms.
 > - For virtual environments, we recommend using Windows 10 Enterprise LTSC 2019 or later.
 > - [Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md) don't include server licenses. To onboard servers to those plans, you need another license, such as Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering). To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-> - If your organization is a small or medium-sized business, see [Microsoft Defender for Business requirements](/defender-business/mdb-requirements). 
+> - If your organization is a small or medium-sized business, see [Microsoft Defender for Business requirements](/defender-business/mdb-requirements).
+> - Windows 11 24H2 Home devices that are upgraded to a supported edition might require you to run the following command before onboarding: `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`
+> For more information about edition upgrades and features, see ([Windows features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
 
 ### Hardware requirements
 
