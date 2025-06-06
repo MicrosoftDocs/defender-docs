@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: article
 f1_keywords: 
   - 'ms.o365.cc.AdminRoleGroups'
 ms.collection: 
