@@ -154,7 +154,7 @@ If you encounter a domain that has been incorrectly categorized, you can dispute
 
 To dispute the category of a domain, navigate to **Reports** \> **Web protection** \> **Web content filtering categories details** \> **Domains**. On the domains tab of the Web Content Filtering reports, find the ellipsis beside each of the domains. Hover over the ellipsis and then select **Dispute Category**.
 
-A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For manual unblocking, create a [custom allow indicator](indicator-ip-domain.md) .
+A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For manual unblocking, create a [custom allow indicator](indicator-ip-domain.md).
 
 ## Web content filtering cards and details
 
