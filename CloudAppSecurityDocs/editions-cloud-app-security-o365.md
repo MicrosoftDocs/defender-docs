@@ -26,7 +26,8 @@ Office 365 Cloud App Security includes threat detection based on user activity l
 
 |Capability|Feature|Microsoft Defender for Cloud Apps|Office 365 Cloud App Security|
 |----|----|----|----|
-|Cloud discovery|Discovered apps |31,000 + cloud apps  |750+ cloud apps with similar functionality to Office 365|
+|App Governance|App Governance|Yes||
+|Cloud discovery|Discovered apps |34,000 + cloud apps  |750+ cloud apps with similar functionality to Office 365|
 ||Deployment for discovery analysis|<li> Manual upload <br> <li> Automated upload - Log collector and API <br> <li> Native Defender for Endpoint integration |Manual log upload|
 ||Log anonymization for user privacy|Yes||
 ||Access to full cloud app catalog|Yes||
@@ -52,3 +53,4 @@ Office 365 Cloud App Security includes threat detection based on user activity l
 Read about the basics in [Getting started with Defender for Cloud Apps](./get-started.md).
 
 [!INCLUDE [Open support ticket](includes/support.md)]
+"
