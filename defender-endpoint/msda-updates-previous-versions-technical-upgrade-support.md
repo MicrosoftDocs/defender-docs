@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 - mde-ngp
-ms.topic: conceptual
+ms.topic: reference
 ms.subservice: ngp
 search.appverid: met150
 ---
