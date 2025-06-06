@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 04/04/2025
+ms.date: 06/06/2025
 ms.reviewer: pahuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
@@ -26,13 +26,9 @@ search.appverid: met150
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
 - Microsoft Defender Antivirus
-
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 This article describes how to collect diagnostic data that's used by Microsoft support and engineering teams when they help troubleshoot issues with Microsoft Defender Antivirus.
@@ -48,11 +44,11 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
 
 1. Open Command Prompt as an administrator by following these steps:
 
-    a. Open the **Start** menu.
+   a. Open the **Start** menu.
    
-    b. Type **cmd**. Right-click on **Command Prompt** and then select **Run as administrator**.
+   b. Type **cmd**. Right-click on **Command Prompt** and then select **Run as administrator**.
    
-    c. Specify administrator credentials or approve the prompt.
+   c. Specify administrator credentials or approve the prompt.
    
 1. Navigate to the directory for Microsoft Defender Antivirus: 
 
@@ -65,9 +61,9 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
 
 1. Type the following command, and then press **Enter**
 
-    ```Dos
-    mpcmdrun.exe -GetFiles
-    ```
+   ```Dos
+   mpcmdrun.exe -GetFiles
+   ```
 
 4. A `.cab` file is generated that contains various diagnostic logs. The location of the file is specified in the output in the command prompt. By default, the location is `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
@@ -90,7 +86,7 @@ mpcmdrun.exe -GetFiles -SupportLogLocation <path>
 
 Copies the diagnostic data to the specified path. If the path isn't specified, the diagnostic data is copied to the location specified in the Support Log Location Configuration.
 
-When the SupportLogLocation parameter is used, a folder structure like as follows will be created in the destination path:
+When the `SupportLogLocation` parameter is used, a folder structure like as follows will be created in the destination path:
 
 ```Dos
 <path>\<MMDD>\MpSupport-<hostname>-<HHMM>.cab
@@ -125,7 +121,8 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 3. Inside the policy editor, select **Enabled**.
 
 4. Specify the directory path where you want to copy the support log files in the **Options** field.
-   :::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="The Enabled directory path custom setting" lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
+   
+:::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="The Enabled directory path custom setting" lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 
 5. Select **OK** or **Apply**.
 
@@ -145,7 +142,7 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
->
+
 
 ## See also
 
