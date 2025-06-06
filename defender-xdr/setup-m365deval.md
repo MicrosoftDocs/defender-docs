@@ -14,7 +14,7 @@ ms.collection:
   - m365solution-evalutatemtp
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/28/2024
 ---
 
