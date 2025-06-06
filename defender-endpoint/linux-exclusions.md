@@ -87,7 +87,7 @@ Wildcard|Description|Examples|
 
 ## How to configure the list of exclusions
 
-You can configure exclusions using a management Json configuration, Defender for Endpoint security settings management, or the command line.
+You can configure exclusions using a management JSON configuration, Defender for Endpoint security settings management, or the command line.
 
 ### Using the management console
 
