@@ -73,7 +73,7 @@ The Microsoft Defender mobile app is a security app that needs to constantly be 
 
 ### Steps to exclude
 
-1. Create service principal for the apps that needs to be excluded. [Steps to create service principal.](/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0&tabs=powershell#request&preserve-view=true).
+1. Create service principal for the apps that needs to be excluded. [Steps to create service principal.](/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0&tabs=powershell#request&preserve-view=true)
 
 1. While creating the service principal object above, use these app IDs: **MicrosoftDefenderATP XPlat app (a0e84e36-b067-4d5c-ab4a-3db38e598ae2), Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**. 
 
