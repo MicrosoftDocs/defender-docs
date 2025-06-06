@@ -64,7 +64,7 @@ Most Defender services also have a default data retention period of 180 days. Mo
 
 ## Data sharing
 
-Microsoft Defender XDR shares data among the following Microsoft products, also licensed by the customer:
+Microsoft Defender XDR shares data among the following Microsoft products, also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender for Cloud
 - Microsoft Defender for Identity

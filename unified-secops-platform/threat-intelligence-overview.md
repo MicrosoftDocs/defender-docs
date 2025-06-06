@@ -15,7 +15,7 @@ ms.collection:
 - usx-security
 ms.custom:
 - cx-ti
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 01/24/2025
 # customer intent: As a security operations center business decision maker, I want to learn about threat intelligence tools available in the Microsoft Defender portal to help me understand emerging threats affecting organizations like me and how to manage actionable intelligence.
 ---
