@@ -8,7 +8,7 @@ author: chrisda
 manager: deniseb
 ms.date: 2/27/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 
 ms.localizationpriority: medium
 search.appverid:
