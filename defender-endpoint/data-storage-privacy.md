@@ -29,7 +29,7 @@ ms.date: 05/12/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+> Want to experience Defender for Endpoint? [Sign up for a free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 This section covers some of the most frequently asked questions regarding privacy and data handling for Defender for Endpoint.
 
@@ -70,7 +70,7 @@ In the advanced hunting investigation experience, it's accessible via a query fo
 
 ## Data sharing for Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer.
+Microsoft Defender for Endpoint shares data, including customer data, among the following Microsoft products, also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
