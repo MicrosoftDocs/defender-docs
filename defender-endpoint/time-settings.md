@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: reference
 search.appverid: met150
 ms.date: 09/21/2024
