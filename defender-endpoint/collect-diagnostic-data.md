@@ -122,7 +122,7 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 
 4. Specify the directory path where you want to copy the support log files in the **Options** field.
    
-:::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="The Enabled directory path custom setting" lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
+   :::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="Screenshot showing the enabled directory path custom setting." lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 
 5. Select **OK** or **Apply**.
 
