@@ -57,7 +57,7 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
    Where `<version>` is the actual version that starts with `4.18.2xxxx.x`
    
 > [!NOTE]
-> C:\ProgramData is a hidden folder.  If you don't have a folder that starts with 4.18.2xxxx.x in C:\ProgramData\Microsoft\Windows Defender\Platform\, then you will need to go to C:\Program Files\Windows Defender\
+> `C:\ProgramData` is a hidden folder. If you don't have a folder that starts with `4.18.2xxxx.x` in `C:\ProgramData\Microsoft\Windows Defender\Platform\`, then you will need to go to `C:\Program Files\Windows Defender\`.
 
 1. Type the following command, and then press **Enter**
 
