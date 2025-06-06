@@ -12,7 +12,7 @@ ms.collection:
   - m365-security
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/15/2024
 ---
 
