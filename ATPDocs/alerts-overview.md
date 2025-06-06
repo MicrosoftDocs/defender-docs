@@ -98,7 +98,6 @@ The following table lists the mapping between alert names, their corresponding u
 | [Suspicious modifications to the AD CS security permissions/settings](persistence-privilege-escalation-alerts.md#suspicious-modifications-to-the-ad-cs-security-permissionssettings--external-id-2435) | 2435                | Medium                                                     | Privilege escalation                                            |
 | [Account Enumeration reconnaissance (LDAP)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview) | 2437 | Medium  | Account Discovery, Domain Account |
 | [Directory Services Restore Mode Password Change](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438) | 2438 | Medium  | Persistence, Account Manipulation |
-| [Honeytoken was queried via SAM-R](reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-sam-r-external-id-2439) | 2439                | Low                                                     | Discovery                                            |
 |[Group Policy Tampering ](/defender-for-identity/other-alerts)|2440|Medium|Defense evasion|
 
 > [!NOTE]
