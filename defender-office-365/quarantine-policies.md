@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 05/29/2025
+ms.date: 06/02/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -751,10 +751,12 @@ The effect of **No access** permissions (admin only access) on user capabilities
   - **In quarantine notifications**: Users receive quarantine notifications, but the only available action is **Review message**.
 
 > [!TIP]
-> To enable quarantine notifications while maintaining restricted access, [create a custom quarantine policy](#step-1-create-quarantine-policies-in-the-microsoft-defender-portal) with the following settings:
 >
-> - **Recipient message access** page: Select **Set specific access (Advanced)**, but leave **Select release action preference** and **Select additional actions recipients can take on quarantined messages** blank/unselected (equivalent to the value 0 for the _EndUserQuarantinePermissionsValue_ parameter on the **New-QuarantinePolicy** cmdlet [in Powershell](#create-quarantine-policies-in-powershell)).
-> - **Quarantine notification** page: Select **Enable** and then select **Don't include quarantined messages from blocked sender addresses** (default) or **Include quarantined messages from blocked sender addresses**.
+> - To enable quarantine notifications while maintaining restricted access, [create a custom quarantine policy](#step-1-create-quarantine-policies-in-the-microsoft-defender-portal) with the following settings:
+>   - **Recipient message access** page: Select **Set specific access (Advanced)**, but leave **Select release action preference** and **Select additional actions recipients can take on quarantined messages** blank/unselected (equivalent to the value 0 for the _EndUserQuarantinePermissionsValue_ parameter on the **New-QuarantinePolicy** cmdlet [in Powershell](#create-quarantine-policies-in-powershell)).
+>   - **Quarantine notification** page: Select **Enable** and then select **Don't include quarantined messages from blocked sender addresses** (default) or **Include quarantined messages from blocked sender addresses**.
+>
+> - If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
 
 ##### Limited access
 
