@@ -33,7 +33,7 @@ search.appverid: met150
 
 - Microsoft Defender Antivirus
 
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 This article describes how to collect diagnostic data that's used by Microsoft support and engineering teams when they help troubleshoot issues with Microsoft Defender Antivirus.
 

@@ -210,7 +210,7 @@ If you encounter any issues, [submit in-app feedback](android-support-signin.md#
 
 ## The Microsoft Defender for Endpoint app is now Microsoft Defender in the Play store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview).
 
 ## Vulnerability management
 
