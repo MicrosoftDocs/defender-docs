@@ -28,7 +28,7 @@ Before connecting your Okta account to Microsoft Defender for Identity, make sur
 
 This section provides instructions for connecting Microsoft Defender for Identity to your dedicated Okta account using the connector APIs. This connection gives you visibility into and control over Okta use.
 
-**To connect Okta to Defender for Identity** 
+### Create a dedicated Okta account
 
 1. Create a dedicated Okta account that is used only for Microsoft Defender for Identity.
 1. Assign your Okta account as a Super Admin role.
