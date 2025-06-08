@@ -102,7 +102,7 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
 Defender for Identity capabilities directly on domain controllers use Defender for Endpoint URL endpoints for communication, including streamlined URLs.
 
-For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
+For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server), [Ofigure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain)
 
 ### Onboard Defender for Identity capabilities
 
@@ -110,13 +110,12 @@ Download the Defender for Identity onboarding package from the [Microsoft Defend
 
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
-1. Select Download onboarding package and save the file in a location you can access from your domain controller.
+2. Select Download onboarding package and save the file in a location you can access from your domain controller.
 
-    
    
    ![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png)
    
-1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
+3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
 
 ![screenshot that shows the onboardin script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)
 
@@ -126,7 +125,7 @@ To confirm the sensor has been onboarded:
 
 1. Navigate to **System** > **Settings** > **Identities** > **Sensors**.
 
-1. Check that the onboarded domain controller is listed. 
+2. Check that the onboarded domain controller is listed. 
 
     > [!NOTE]
     > The onboarding doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
