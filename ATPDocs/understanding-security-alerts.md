@@ -55,6 +55,7 @@ You can apply the following filters to get a more focused view of the alerts.
 You can access individual alerts from multiple locations, by selecting the alert name from any of the following:
 - The **Alerts** page
 - The **Incidents** page
+- The **Identities** page
 - The pages of individual **Devices**
 - The **Advanced hunting** page
 
@@ -63,7 +64,8 @@ You can access individual alerts from multiple locations, by selecting the alert
 The alerts page provides context into the alert, by combining attack signals and alerts related to the selected alert to construct a detailed alert story. The alerts page helps you quickly triage, investigate, and take effective action on alerts.
 
 > [!NOTE]
-> Due to, the ongoing transition from classic Defender for Identity alerts to the unified Microsoft Defender XDR alerts, you might notice differences in how alerts are displayed.
+> Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. 
+> While the alert views may show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 1. To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
 
