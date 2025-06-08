@@ -14,9 +14,8 @@ Okta manages how users and customers sign in and get access to key systems. Sinc
 
 Before connecting your Okta account to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
-- An existing Okta account with a Super Admin role. 
-
-Your Okta environment must have one of the following licenses:
+1. An existing Okta account with a Super Admin role. 
+1. Your Okta environment must have one of the following licenses:
 
 - Developer
 
