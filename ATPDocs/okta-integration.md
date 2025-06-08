@@ -62,6 +62,30 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
     :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message":::
 
+### Add Custom user attributes
+
+1. Select **Directory > Profile Editor**
+1. Select **User (default)**
+1. Select **Add Attributes**.
+    1. Set Data type to String.
+    1. Enter the Display name.
+    1. Enter the Variable name.
+    1. Set User permission to Read Only.
+1. Enter the following attributes:
+
+    |Display Name |Variable Name |
+    |---------|---------|
+    |ObjectSid     | ObjectSid        |
+    |ObjectGuid     | ObjectGuid        |
+    |DistinguishedName    | DistinguishedName    |
+    |         |         |
+
+1. Select Save.
+1. Verify that the three custom attributes you added are displayed correctly.
+
+     :::image type="content" source="media/okta-integration/okta-custom-attributes.png" alt-text="Verify that all three custom attributes are displayed correctly":::
+
+
 ### Create a custom Okta role
 
 To support ongoing API access, Read-Only Administrator role and the custom Defender for Identity role are required. 
@@ -122,27 +146,6 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1. Verify that your Okta environment appears in the table as enabled.
 
     :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Verify that your Okta environment appears in the table as enabled":::
-1. Navigate back to your Okta admin console.
-1. Select **Directory > Profile Editor**
-1. Select **User (default)**
-1. Select **Add Attributes**.
-    1. Set Data type to String.
-    1. Enter the Display name.
-    1. Enter the Variable name.
-    1. Set User permission to Read Only.
-1. Enter the following attributes:
-
-    |Display Name |Variable Name |
-    |---------|---------|
-    |ObjectSid     | ObjectSid        |
-    |ObjectGuid     | ObjectGuid        |
-    |DistinguishedName    | DistinguishedName    |
-    |         |         |
-
-1. Select Save.
-1. Verify that the three custom attributes you added are displayed correctly.
-
-     :::image type="content" source="media/okta-integration/okta-custom-attributes.png" alt-text="Verify that all three custom attributes are displayed correctly":::
 
 ## Related articles
 
