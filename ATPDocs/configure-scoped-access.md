@@ -61,9 +61,9 @@ Defender for Identity scoping is currently in Public preview. The following tabl
 |User page and user global search  |   Available      |
 |MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     |   Available      |
 |Health issues       |   Available      |
+|Identities inventory and service accounts discovery page     |  Available      |
 |Identities settings: sensors page, manual tagging, health issues notifications  |   Available      |
 |Defender XDR Incident email notifications     | Unavailable      |
-|Identities inventory and service accounts discovery page     |   Unavailable      |
 |ISPMs and exposure management     |   Unavailable      |
 |Download scheduled reports and Graph API    |   Unavailable      |
 |Device and group global search and entity page     |   Unavailable      |
