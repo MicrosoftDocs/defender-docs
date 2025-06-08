@@ -32,20 +32,22 @@ To enable identity scoping, follow these steps:​
 
     :::image type="content" source="media/custom-roles/create-custom-role.png" alt-text="Screenshot showing the create custom roles button":::
 
-1. Select Add assignments and add the Assignment name.
-    1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
-    1. Select Microsoft Defender for Identity as the data source.
-    1. Under **Scope**, select the user groups (AD domains) or Microsoft Entra ID groups that will be scoped to the assignment.
-     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
-1. Select Add.
 1. You can edit the role at any time. Select the role from the list of custom roles and choose **Edit**.
 
     :::image type="content" source="media/custom-roles/edit-custom-role.png" alt-text="Screenshot showing how to edit a custom role":::
 
+1. Select Add assignments and add the Assignment name.
+    1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
+    1. Select Microsoft Defender for Identity as the data source.
+    1. Under **Scope**, select the user groups (AD domains) that will be scoped to the assignment.
+     :::image type="content" source="media/custom-roles/add-assignment.png" alt-text="Screenshot showing how to add Defender for Identity to your scoping role":::
+1. Select Add.
 
-### Known limitations 
 
-Defender for Identity scoping is currently in Public preview. The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity. Features that are currently unavailable will become available when Identity scoping reaches general availability.
+
+### Known limitations (Preview)
+
+Defender for Identity scoping is currently in Public preview. The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
 
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
@@ -54,12 +56,10 @@ Defender for Identity scoping is currently in Public preview. The following tabl
 
 |Defender for Identity experience |Status |
 |---------|---------|
-|MDI alerts and incidents (includes a user entity) | Available
-|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents,  
-IdentityLogonEvents, IdentityQueryEvents     |   Available      |
+|MDI alerts and incidents  | Available
+|Hunting tables: AlertEvidence+Info, IdentityInfo, IdentityDirectoryEvents, IdentityLogonEvents, IdentityQueryEvents     |   Available      |
 |User page and user global search  |   Available      |
 |MDI alerts based on XDR detection platform (detection source is XDR and service source is MDI)     |   Available      |
-|MDI alerts with no user > scoping based on Active Directory device     |  Available       |
 |Health issues       |   Available      |
 |Identities settings: sensors page, manual tagging, health issues notifications  |   Available      |
 |Defender XDR Incident email notifications     | Unavailable      |
