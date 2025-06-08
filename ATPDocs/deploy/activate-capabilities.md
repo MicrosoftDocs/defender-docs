@@ -89,8 +89,8 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
     :::image type="content" source="media/activate-capabilities/1.jpg" lightbox="media/activate-capabilities/1.jpg" alt-text="Screenshot that shows how to activate the new sensor.":::
    
-       > [!NOTE]
-    > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+> [!NOTE]
+> You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 
@@ -118,7 +118,7 @@ Download the Defender for Identity onboarding package from the [Microsoft Defend
    
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
 
-![screenshot-2025-06-04-170500](media/activate-capabilities/screenshot-2025-06-04-170500.png)
+![screenshot that shows the onboardin script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)
 
 ## Onboarding Confirmation 
 
