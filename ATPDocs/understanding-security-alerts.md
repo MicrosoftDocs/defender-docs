@@ -8,24 +8,24 @@ ms.reviewer: rlitinsky
 
 # View and Manage security alerts
 
-The alerts queue shows a list of alerts that were flagged from identities in your network. By default, the queue displays alerts seen in the last 7 days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
+The alerts queue shows a list of alerts that were flagged from identities in your network. By default, the queue displays alerts seen in the last seven days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
 
 ## View the alerts queue 
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Incidents & alerts** and then to **Alerts**.
 
-Alerts from the last 7 days are displayed with the following information:
+Alerts from the last seven days are displayed with the following information:
 
-  - Alert name
-  - Tags
-  - Severity
-  - Investigation state
-  - Status
-  - Category
-  - Detection source
-  - Impacted assets
-  - First activity
-  - Last activity
+- Alert name
+- Tags
+- Severity
+- Investigation state
+- Status
+- Category
+- Detection source
+- Impacted assets
+- First activity
+- Last activity
 
 :::image type="content" source="media/filtered-alerts.png" alt-text="The Defender for Identity events" lightbox="media/filtered-alerts.png":::
 
@@ -45,7 +45,7 @@ You can apply the following filters to get a more focused view of the alerts.
 
 |Alert |Description  |
 |---------|---------|
-|**Severity**    |   Alert severity is determined based on multiple factors, including the level of access an attacker might already have, the potential outcome if the attack succeeds, and the confidence level that the detection is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics)     |
+|**Severity**    |   Alert severity is based on several factors, including how much access the attacker might have, the potential impact if the attack succeeds, and the likelihood that the alert is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics)     |
 |**Status**    | You can choose to filter the list of alerts based on their Status. For example, you can filter to show only alerts that are **New**, **In Progress**, or **Resolved**.        |
 |**Detection sources**    |  You can filter the alerts based on the following Detection sources:   **Microsoft Defender for Identity** or **Microsoft Defender XDR**     |
 |**Tags**    | You can filter the alerts based on Tags assigned to alerts. |
@@ -65,7 +65,7 @@ The alerts page provides context into the alert, by combining attack signals and
 
 > [!NOTE]
 > Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. 
-> While the alert views may show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+> While the alert views show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 1. To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
 
@@ -105,7 +105,7 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
 Selecting an alert opens the Alert management pane, where you can perform the following actions:
 
 ### Change the status of an alert
-You can categorize alerts as New, In Progress, or Resolved by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to alerts. For example, a team leader can review all New alerts, and decide to assign them to the In Progress queue for further analysis. Alternatively, the team leader might assign the alert to the Resolved queue if they know the alert is benign, or coming from a device that is irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
+You can categorize alerts as New, In Progress, or Resolved by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to alerts. For example, a team leader can review all New alerts, and decide to assign them to the In Progress queue for further analysis. The team leader might assign the alert to the Resolved queue if they know the alert is benign, or coming from a device that is irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
 
 ### Move an alert to another incident
 You can create a new incident from the alert or link to an existing incident.
@@ -130,7 +130,7 @@ For each alert, ask the following questions to determine the alert classificatio
 1. Is the security alert a TP, B-TP, or FP?
 1. How common is this specific security alert in your environment?
 1. Was the alert triggered by the same types of computers or users?
-   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you might decide to exclude it to avoid additional future FP alerts.
+   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you might decide to exclude it to avoid extra future FP alerts.
 
 Following proper investigation, all Defender for Identity security alerts can be classified as one of the following activity types:
 
