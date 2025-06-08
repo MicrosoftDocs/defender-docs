@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-## Prerequsites
+## Prerequisites
 
 To create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of the following:
 
