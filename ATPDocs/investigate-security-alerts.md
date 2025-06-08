@@ -17,8 +17,13 @@ Begin your investigation by selecting an alert from the **Alerts** page in the M
 
 ## Investigate using the alert story
 
-The alert story provides a chronological view of the chain of events related to the alert, including activity that occurred before and after the triggering event and other related entities. It includes a summary of what occurred, a visual graph showing the sequence of users, devices, and domain controllers involved, and technical details relevant to the alert type. The alert story helps you trace how the activity unfolded and understand the full context of the alert.
- 
+The alert story provides a chronological view of the events related to the alert. It shows what happened, when it happened, and which entities were involved before and after the triggering event. It helps you follow the sequence of events and understand how the alert was generated.
+
+The alert graph visually maps the users, devices, and domain controllers involved in the alert. It shows how these entities interacted, making it easier to identify relationships and patterns at a glance.
+
+The Important information section includes additional technical details that support your investigation. It helps you understand what actions were taken, who initiated them, and where the activity originated. This section gives you raw evidence that can help validate the alert and guide your next steps.
+
+Together, the alert story, alert graph, and Important information give you a complete picture of the alert. They help you understand what triggered the alert, which entities were involved, and whether the activity requires further investigation or action.
 
 ## Take action from the details pane
 Once you've selected an alert of interest, the details pane changes to display information about the selected alert, historic information when it's available, and offer recommended actions to take action on this alert.
