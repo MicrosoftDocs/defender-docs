@@ -32,9 +32,7 @@ To enable identity scoping, follow these steps:​
 
     :::image type="content" source="media/custom-roles/create-custom-role.png" alt-text="Screenshot showing the create custom roles button":::
 
-1. In the **Authorization and settings** step, select **Select custom permissions**.
-
-1.  During the role creation process:
+1. Select Add assignments and add the Assignment name.
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
     1. Under **Scope**, select the user groups (AD domains) or Microsoft Entra ID groups that will be scoped to the assignment.
