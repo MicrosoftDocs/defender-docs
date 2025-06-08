@@ -1,22 +1,13 @@
 ---
 title: Enable all Defender for Containers components on AKS via portal
 description: Learn how to enable all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters through the Azure portal.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Tutorial: Enable all Defender for Containers components on AKS via portal
+# Enable all Defender for Containers components on AKS via portal
 
-This tutorial walks you through enabling all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
-
-In this tutorial, you'll learn how to:
-
-> [!div class="checklist"]
-> - Enable the Defender for Containers plan with all components
-> - Configure vulnerability scanning for container registries
-> - Deploy runtime protection to your AKS clusters
-> - Enable security posture management
-> - Verify successful deployment
+This article walks you through enabling all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
 
 ## Prerequisites
 
@@ -38,6 +29,8 @@ The first step is to enable the Defender for Containers plan on your subscriptio
 
 1. On the Defender plans page, locate the **Containers** row and toggle the Status to **On**.
 
+    :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot of the Defender plans page that shows where to toggle the containers plan switch to on is located." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
+
 ## Configure plan components
 
 After enabling the plan, configure which components to enable:
@@ -51,6 +44,8 @@ After enabling the plan, configure which components to enable:
    - **Agentless container vulnerability assessment** - Scans container images for vulnerabilities
    - **Defender DaemonSet** - Provides runtime threat detection
    - **Azure Policy for Kubernetes** - Enables security recommendations and compliance
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows turning on Defender for Containers components." lightbox="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
 
 1. Select **Continue**.
 
@@ -81,6 +76,22 @@ After saving, Defender for Cloud automatically begins deploying the necessary co
    - "Azure Policy for Kubernetes should be installed and enabled on your clusters"
 
 1. Select each recommendation to see the affected resources and remediation progress.
+
+## Deploy the Defender sensor
+
+If the Defender sensor isn't automatically deployed, you can manually trigger deployment:
+
+1. Navigate to the Recommendations page.
+
+1. Search for and select the "Azure Kubernetes Service clusters should have Defender profile enabled" recommendation.
+
+    :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
+
+1. Select all of the relevant affected resources.
+
+1. Select **Fix**.
+
+    :::image type="content" source="media/tutorial-enable-containers-azure/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-azure/affected-fix.png":::
 
 ## Verify component deployment
 
@@ -141,6 +152,47 @@ For optimal runtime protection, enable diagnostic logs:
    - Destination: Send to Log Analytics workspace
 
 1. Select **Save**.
+
+## Configure custom workspace (optional)
+
+By default, Defender for Containers uses a default Log Analytics workspace. To use a custom workspace:
+
+1. Navigate to **Azure Policy**.
+
+1. Search for "Configure Microsoft Defender for Containers to use a custom workspace".
+
+1. Assign this policy to your subscription or resource group.
+
+1. Configure the policy parameters with your custom workspace ID.
+
+## Exclude specific clusters (optional)
+
+You can exclude specific AKS clusters from automatic provisioning by applying tags:
+
+1. Navigate to your AKS cluster.
+
+1. Under **Overview**, select **Tags**.
+
+1. Add one of these tags:
+   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+
+## Monitor ongoing security
+
+After setup, regularly:
+
+1. **Review recommendations** - Address security issues identified for your AKS clusters
+2. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
+3. **Track compliance** - Monitor adherence to security standards and benchmarks
+4. **Scan images** - Review vulnerability findings for container images
+
+## Best practices
+
+1. **Enable all components** - Get comprehensive protection by enabling all available features
+2. **Regular monitoring** - Check the Containers dashboard weekly for new findings
+3. **Automated remediation** - Use Azure Policy to enforce security configurations
+4. **Image hygiene** - Regularly update base images and remove vulnerable packages
+5. **Network segmentation** - Implement network policies to limit container communication
 
 ## Clean up resources
 

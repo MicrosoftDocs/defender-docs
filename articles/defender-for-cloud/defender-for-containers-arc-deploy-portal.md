@@ -14,6 +14,7 @@ This article explains how to enable Microsoft Defender for Containers on your Ar
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additional prerequisites for Arc-enabled Kubernetes:
+
 - Kubernetes cluster connected to Azure Arc
 - Azure Arc-enabled Kubernetes version 1.19 or later
 - Cluster must have outbound connectivity to Azure services
@@ -49,9 +50,11 @@ For detailed instructions, see [Connect an existing Kubernetes cluster to Azure 
 
 1. In the Settings page, ensure the following components are toggled **On**:
    - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment** 
+   - **Agentless container vulnerability assessment**
    - **Defender DaemonSet**
    - **Azure Policy for Kubernetes**
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
 1. Select **Continue**.
 
@@ -67,11 +70,18 @@ After enabling Defender for Containers, you need to deploy the extensions to you
 
 1. Search for the recommendation "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
 
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Microsoft Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
+
 1. Select the recommendation to see affected clusters.
 
 1. Select the clusters you want to protect.
 
+    > [!IMPORTANT]
+    > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
+
 1. Select **Fix** to deploy the extension automatically.
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Animated screenshot that shows deploying a Defender sensor for Azure Arc by using remediation in Defender for Cloud.":::
 
 ### Deploy manually via Azure portal
 
@@ -133,6 +143,26 @@ For optimal security monitoring:
 
 After deployment completes:
 
+### Check extension status
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+
+1. Under **Settings**, select **Extensions**.
+
+1. Verify that both extensions show **Succeeded** status:
+   - Microsoft Defender for Containers
+   - Azure Policy for Kubernetes
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Screenshot that shows the Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+
+### View extension details
+
+1. Select an extension to view detailed information.
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Screenshot that shows full details of an Azure Arc extension on a Kubernetes cluster.":::
+
+### Verify in Defender for Cloud
+
 1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
 
 1. Filter by **Resource type** = **Kubernetes services (Azure Arc)**.
@@ -143,11 +173,36 @@ After deployment completes:
 
 For detailed verification steps, see [Verify Defender for Containers deployment on Arc-enabled Kubernetes](defender-for-containers-arc-verify.md).
 
+## Configure custom workspace (optional)
+
+To use a custom Log Analytics workspace instead of the default:
+
+1. Navigate to **Azure Policy**.
+
+1. Search for "Configure Arc-enabled Kubernetes clusters to install Microsoft Defender's extension with custom workspace".
+
+1. Assign this policy to your subscription or resource group.
+
+1. Configure the policy parameters with your custom workspace ID.
+
+## Exclude specific clusters (optional)
+
+You can exclude specific Arc-enabled clusters from automatic provisioning:
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+
+1. Under **Overview**, select **Tags**.
+
+1. Add one of these tags:
+   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+
 ## Troubleshooting
 
 If extensions fail to install:
 
 1. Check cluster connectivity:
+
    ```bash
    kubectl get nodes
    az connectedk8s show -n <cluster-name> -g <resource-group>
@@ -156,9 +211,52 @@ If extensions fail to install:
 2. Verify outbound connectivity to required endpoints.
 
 3. Check extension status:
+
    ```bash
-   az k8s-extension show --name microsoft-defender --cluster-name <cluster-name> --resource-group <resource-group> --cluster-type connectedClusters
+   az k8s-extension show --name microsoft.azuredefender.kubernetes --cluster-name <cluster-name> --resource-group <resource-group> --cluster-type connectedClusters
    ```
+
+4. Review pod status:
+
+   ```bash
+   kubectl get pods -n mdc
+   ```
+
+## Monitor security status
+
+After successful deployment:
+
+1. Navigate to **Workload protections** > **Containers**.
+
+1. View security insights for your Arc-enabled clusters:
+   - Security recommendations
+   - Runtime alerts
+   - Vulnerability findings
+   - Compliance status
+
+## Best practices
+
+1. **Regular monitoring**: Check the Containers dashboard weekly for new findings.
+
+2. **Extension updates**: Extensions are automatically updated, but verify updates are successful.
+
+3. **Network policies**: Implement Kubernetes network policies for better security.
+
+4. **RBAC**: Configure proper role-based access control on your clusters.
+
+5. **Resource limits**: Set appropriate resource limits for Defender components.
+
+## Clean up resources
+
+To remove Defender for Containers from Arc-enabled clusters:
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+
+1. Under **Settings**, select **Extensions**.
+
+1. Select each Defender-related extension and choose **Uninstall**.
+
+Alternatively, disable the Containers plan in your subscription to stop new deployments.
 
 ## Next steps
 

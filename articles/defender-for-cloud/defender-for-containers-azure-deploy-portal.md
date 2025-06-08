@@ -35,6 +35,8 @@ After enabling the plan, configure which components to enable:
    - **Defender DaemonSet**
    - **Azure Policy for Kubernetes**
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows turning on Defender for Containers components." lightbox="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
+
 1. Select **Continue**.
 
 1. Review the changes and select **Save**.
@@ -119,6 +121,44 @@ After deployment completes, verify that all components are working:
 1. Check that security recommendations are being generated for your clusters.
 
 For detailed verification steps, see [Verify Defender for Containers deployment on Azure (AKS)](defender-for-containers-azure-verify.md).
+
+## Configure custom workspace (optional)
+
+By default, Defender for Containers uses a default Log Analytics workspace. To use a custom workspace:
+
+1. Navigate to **Azure Policy**.
+
+1. Search for "Configure Microsoft Defender for Containers to use a custom workspace".
+
+1. Assign this policy to your subscription or resource group.
+
+1. Configure the policy parameters with your custom workspace ID.
+
+## Exclude specific clusters (optional)
+
+You can exclude specific AKS clusters from automatic provisioning by applying tags:
+
+1. Navigate to your AKS cluster.
+
+1. Under **Overview**, select **Tags**.
+
+1. Add one of these tags:
+   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+
+## Troubleshooting
+
+If extensions fail to deploy:
+
+1. Check cluster health and ensure it's in a running state.
+
+1. Verify you have the necessary permissions (Owner or Contributor role).
+
+1. Review activity logs for deployment errors.
+
+1. Ensure your cluster meets the minimum version requirements.
+
+For more troubleshooting steps, see the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Next steps
 

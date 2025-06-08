@@ -136,12 +136,12 @@
               items:
                 - name: Overview
                   href: defender-for-containers-azure-overview.md
-                - name: Deploy
-                  href: defender-for-containers-azure-deploy.md
-                - name: Deploy via portal
-                  href: defender-for-containers-azure-deploy-portal.md
                 - name: Enable all components via portal
                   href: defender-for-containers-aks-enable-all-portal.md
+                - name: Deploy components via portal
+                  href: defender-for-containers-azure-deploy-portal.md
+                - name: Deploy components programmatically
+                  href: defender-for-containers-azure-deploy.md
                 - name: Verify deployment
                   href: defender-for-containers-azure-verify.md
                 - name: Configure
@@ -152,12 +152,12 @@
               items:
                 - name: Overview
                   href: defender-for-containers-arc-overview.md
-                - name: Deploy
-                  href: defender-for-containers-arc-deploy.md
-                - name: Deploy via portal
-                  href: defender-for-containers-arc-deploy-portal.md
                 - name: Enable all components via portal
                   href: defender-for-containers-arc-enable-all-portal.md
+                - name: Deploy components via portal
+                  href: defender-for-containers-arc-deploy-portal.md
+                - name: Deploy components programmatically
+                  href: defender-for-containers-arc-deploy.md
                 - name: Verify deployment
                   href: defender-for-containers-arc-verify.md
                 - name: Configure
@@ -168,12 +168,12 @@
               items:
                 - name: Overview
                   href: defender-for-containers-eks-overview.md
-                - name: Deploy
-                  href: defender-for-containers-eks-deploy.md
-                - name: Deploy via portal
-                  href: defender-for-containers-eks-deploy-portal.md
                 - name: Enable all components via portal
                   href: defender-for-containers-eks-enable-all-portal.md
+                - name: Deploy components via portal
+                  href: defender-for-containers-eks-deploy-portal.md
+                - name: Deploy components programmatically
+                  href: defender-for-containers-eks-deploy.md
                 - name: Verify deployment
                   href: defender-for-containers-eks-verify.md
                 - name: Configure
@@ -184,12 +184,12 @@
               items:
                 - name: Overview
                   href: defender-for-containers-gke-overview.md
-                - name: Deploy
-                  href: defender-for-containers-gke-deploy.md
-                - name: Deploy via portal
-                  href: defender-for-containers-gke-deploy-portal.md
                 - name: Enable all components via portal
                   href: defender-for-containers-gke-enable-all-portal.md
+                - name: Deploy components via portal
+                  href: defender-for-containers-gke-deploy-portal.md
+                - name: Deploy components programmatically
+                  href: defender-for-containers-gke-deploy.md
                 - name: Verify deployment
                   href: defender-for-containers-gke-verify.md
                 - name: Configure

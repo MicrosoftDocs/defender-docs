@@ -1,28 +1,20 @@
 ---
 title: Enable all Defender for Containers components on Arc-enabled Kubernetes via portal
 description: Learn how to enable all Microsoft Defender for Containers components on your Arc-enabled Kubernetes clusters through the Azure portal.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Tutorial: Enable all Defender for Containers components on Arc-enabled Kubernetes via portal
+# Enable all Defender for Containers components on Arc-enabled Kubernetes via portal
 
-This tutorial walks you through enabling all Microsoft Defender for Containers components on your Arc-enabled Kubernetes clusters using the Azure portal. This ensures comprehensive protection for your on-premises and IaaS Kubernetes environments.
-
-In this tutorial, you'll learn how to:
-
-> [!div class="checklist"]
-> - Connect your Kubernetes cluster to Azure Arc
-> - Enable the Defender for Containers plan with all components
-> - Deploy the Defender and Azure Policy extensions
-> - Configure vulnerability scanning
-> - Verify successful deployment
+This article walks you through enabling all Microsoft Defender for Containers components on your Arc-enabled Kubernetes clusters using the Azure portal. This ensures comprehensive protection for your on-premises and IaaS Kubernetes environments.
 
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additional requirements:
+
 - CNCF-certified Kubernetes cluster (on-premises or IaaS)
 - Cluster version 1.19 or later
 - Outbound HTTPS connectivity to Azure endpoints
@@ -71,6 +63,8 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 
 1. Toggle the **Containers** plan to **On**.
 
+    :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot of the Defender plans page that shows where to toggle the containers plan switch to on is located." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
+
 ## Configure all plan components
 
 1. Select **Settings** next to the Containers plan.
@@ -91,9 +85,14 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 
 1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
 
+    :::image type="content" source="media/tutorial-enable-containers-azure/extension-recommendation.png" alt-text="Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/tutorial-enable-containers-azure/extension-recommendation.png":::
+
 1. Select the recommendation.
 
 1. Select your Arc-enabled clusters.
+
+    > [!IMPORTANT]
+    > Don't select the clusters by their hyperlinked names. Select anywhere else in the relevant row.
 
 1. Select **Fix** to automatically deploy the extensions.
 
@@ -194,6 +193,60 @@ Check for the alert in Defender for Cloud within 5-10 minutes.
 1. Select **Email notifications**.
 
 1. Configure recipients and alert severity levels.
+
+### Exclude specific clusters
+
+You can exclude specific Arc-enabled clusters from automatic provisioning:
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+
+1. Under **Overview**, select **Tags**.
+
+1. Add one of these tags:
+   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+
+## Monitor ongoing security
+
+After setup, regularly:
+
+1. **Review recommendations** - Address security issues identified for your Arc-enabled clusters
+2. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
+3. **Track compliance** - Monitor adherence to security standards and benchmarks
+4. **Scan images** - Review vulnerability findings for container images
+
+## Best practices
+
+1. **Enable all components** - Get comprehensive protection by enabling all available features
+2. **Regular monitoring** - Check the Containers dashboard weekly for new findings
+3. **Alert response** - Investigate high-severity alerts immediately
+4. **Image hygiene** - Regularly update base images and remove vulnerable packages
+5. **Network segmentation** - Implement network policies to limit container communication
+
+## Troubleshooting
+
+If extensions fail to install:
+
+1. Check cluster connectivity:
+
+   ```bash
+   kubectl get nodes
+   az connectedk8s show -n <cluster-name> -g <resource-group>
+   ```
+
+2. Verify outbound connectivity to required endpoints.
+
+3. Check extension status:
+
+   ```bash
+   az k8s-extension show --name microsoft.azuredefender.kubernetes --cluster-name <cluster-name> --resource-group <resource-group> --cluster-type connectedClusters
+   ```
+
+4. Review pod status:
+
+   ```bash
+   kubectl get pods -n mdc
+   ```
 
 ## Clean up resources
 
