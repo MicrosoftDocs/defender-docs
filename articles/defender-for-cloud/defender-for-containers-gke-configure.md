@@ -74,6 +74,7 @@ gcloud artifacts repositories set-iam-policy REPOSITORY \
 ```
 
 Policy example (policy.json):
+
 ```json
 {
   "bindings": [
@@ -322,4 +323,3 @@ gcloud container clusters update CLUSTER_NAME \
 
 - [Verify your configuration](defender-for-containers-gke-verify.md)
 - [Remove Defender for Containers](defender-for-containers-gke-remove.md)
-- [Troubleshoot configuration issues](defender-for-containers-troubleshooting.md)

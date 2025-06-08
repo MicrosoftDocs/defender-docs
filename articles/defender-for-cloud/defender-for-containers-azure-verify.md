@@ -147,6 +147,7 @@ kubectl top pods -n kube-system
 ### No security alerts
 
 If you're not seeing security alerts:
+
 - Ensure diagnostic logs are enabled
 - Verify Log Analytics workspace connection
 - Check that runtime protection is enabled in Defender settings
@@ -154,6 +155,7 @@ If you're not seeing security alerts:
 ### Missing recommendations
 
 If recommendations are missing:
+
 - Verify Azure Policy add-on is enabled
 - Wait up to 24 hours for initial assessment
 - Check that agentless discovery is enabled
@@ -162,4 +164,3 @@ If recommendations are missing:
 
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Remove Defender for Containers](defender-for-containers-azure-remove.md)
-- [Troubleshoot common issues](defender-for-containers-troubleshooting.md)

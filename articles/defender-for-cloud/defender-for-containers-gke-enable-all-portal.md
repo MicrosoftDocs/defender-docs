@@ -1,29 +1,20 @@
 ---
 title: Enable all Defender for Containers components on GCP (GKE) via portal
 description: Learn how to enable all Microsoft Defender for Containers components on your Google Kubernetes Engine (GKE) clusters through the Azure portal.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Tutorial: Enable all Defender for Containers components on GCP (GKE) via portal
+# Enable all Defender for Containers components on GCP (GKE) via portal
 
-This tutorial walks you through enabling comprehensive Microsoft Defender for Containers protection for your Google Kubernetes Engine (GKE) clusters. You'll set up vulnerability scanning, runtime protection, and compliance monitoring across your GCP environment.
-
-In this tutorial, you'll learn how to:
-
-> [!div class="checklist"]
-> - Create a GCP connector in Defender for Cloud
-> - Enable all Defender for Containers components
-> - Configure GCR/Artifact Registry vulnerability scanning
-> - Deploy runtime protection to GKE clusters
-> - Set up compliance and audit monitoring
-> - Verify successful deployment
+This article walks you through enabling comprehensive Microsoft Defender for Containers protection for your Google Kubernetes Engine (GKE) clusters. You'll set up vulnerability scanning, runtime protection, and compliance monitoring across your GCP environment.
 
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 GCP-specific requirements:
+
 - GCP project with Owner or Security Admin role
 - Active GKE clusters (version 1.19+)
 - Container images in GCR or Artifact Registry
@@ -70,13 +61,18 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
 
-1. Select **Configure** next to the Containers plan.
+    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot that shows the containers plan is toggled to on." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
+
+1. Select **Settings** to configure the plan components.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-settings-gcp.png" alt-text="Screenshot of Defender for Cloud's environment settings page showing the settings for the Containers plan." lightbox="media/tutorial-enable-containers-gcp/containers-settings-gcp.png":::
 
 1. Enable all components:
-   - **GKE runtime protection** - Real-time threat detection
-   - **Agentless discovery for Kubernetes** - Automatic cluster discovery
-   - **Agentless container vulnerability assessment** - Registry scanning
-   - **Compliance monitoring** - CIS benchmarks and best practices
+   - **Agentless threat protection** - Real-time threat detection
+   - **Auto provision Defender's sensor for Azure Arc** - Deploys the Defender sensor
+   - **Auto provision Azure Policy extension for Azure Arc** - Deploys Azure Policy
+   - **K8S API access** - Automatic cluster discovery
+   - **Registry access** - Container image vulnerability scanning
 
 1. Select **Continue** and **Next: Configure access**.
 
@@ -84,11 +80,14 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. The portal generates a setup script for GCP permissions.
 
-1. Select **Copy script** to copy the entire script.
+1. Select **Copy** to copy the entire script.
 
-1. Open **Google Cloud Shell** in a new tab.
+    :::image type="content" source="media/tutorial-enable-containers-gcp/copy-button.png" alt-text="Screenshot showing the location of the copy button.":::
+
+1. Select **GCP Cloud Shell** to open Cloud Shell.
 
 1. Paste and run the script. It will:
+
    ```bash
    # Example of what the script does:
    # Creates service account
@@ -128,13 +127,30 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. After connector creation, navigate to **Recommendations**.
 
-1. Search for "GKE clusters should have Defender profile enabled".
+1. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/recommendation-search.png" alt-text="Screenshot showing how to search for the recommendation." lightbox="media/tutorial-enable-containers-gcp/recommendation-search-expanded.png":::
 
 1. Select the recommendation.
 
 1. Select **all** your GKE clusters.
 
+    > [!IMPORTANT]
+    > You must select the clusters one at a time.
+    >
+    > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
+
 1. Select **Fix** to deploy the sensor automatically.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/fix-button.png" alt-text="Screenshot showing the location of the fix button.":::
+
+1. Defender for Cloud generates a script in the language of your choice:
+    - For Linux, select **Bash**
+    - For Windows, select **PowerShell**
+
+1. Select **Download remediation logic**.
+
+1. Run the generated script on your clusters.
 
 ## Configure container registry scanning
 
@@ -151,6 +167,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 ### For Artifact Registry
 
 1. In GCP Console, enable vulnerability scanning:
+
    ```bash
    gcloud artifacts repositories list
    
@@ -180,6 +197,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 For production clusters, use Workload Identity:
 
 1. Enable on your GKE cluster:
+
    ```bash
    gcloud container clusters update CLUSTER_NAME \
        --workload-pool=PROJECT_ID.svc.id.goog
@@ -197,12 +215,12 @@ For production clusters, use Workload Identity:
 
 1. Select your GCP connector.
 
+    :::image type="content" source="media/tutorial-enable-containers-gcp/relevant-connector.png" alt-text="Screenshot showing an example GCP connector." lightbox="media/tutorial-enable-containers-gcp/relevant-connector-expanded.png":::
+
 1. Verify:
    - Status: **Connected**
    - Last sync: Recent timestamp
    - Discovered resources count
-
-    :::image type="content" source="media/tutorial-enable-container-gcp/connector-health.png" alt-text="Screenshot showing healthy GCP connector status." lightbox="media/tutorial-enable-container-gcp/connector-health.png":::
 
 ### View discovered resources
 
@@ -215,8 +233,6 @@ For production clusters, use Workload Identity:
    - Container registries
    - Container images
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gcp-inventory-view.png" alt-text="Screenshot showing GCP resources in inventory." lightbox="media/tutorial-enable-container-gcp/gcp-inventory-view.png":::
-
 ### Check security coverage
 
 1. Navigate to **Workload protections** > **Containers**.
@@ -227,16 +243,16 @@ For production clusters, use Workload Identity:
    - Recent security alerts
    - Compliance scores
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/containers-dashboard-complete.png" alt-text="Screenshot showing complete Containers dashboard with GKE data." lightbox="media/tutorial-enable-container-gcp/containers-dashboard-complete.png":::
-
 ## Test the deployment
 
 1. Connect to a GKE cluster:
+
    ```bash
    gcloud container clusters get-credentials CLUSTER_NAME --region REGION
    ```
 
 2. Trigger a test alert:
+
    ```bash
    kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo test > /etc/passwd"
    ```

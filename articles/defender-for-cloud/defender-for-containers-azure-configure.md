@@ -226,4 +226,3 @@ spec:
 
 - [Verify your configuration](defender-for-containers-azure-verify.md)
 - [Remove Defender for Containers](defender-for-containers-azure-remove.md)
-- [Troubleshoot configuration issues](defender-for-containers-troubleshooting.md)

@@ -242,4 +242,125 @@ EOF
 
 ## Configure container runtime security
 
-# ...rest of file continues...
+### Enable runtime protection for Fargate
+
+For EKS Fargate pods, configure GuardDuty Runtime Monitoring:
+
+```bash
+# Enable GuardDuty Runtime Monitoring
+aws guardduty create-detector --enable --features '{
+    "Name": "RUNTIME_MONITORING", 
+    "Status": "ENABLED",
+    "AdditionalConfiguration": [
+        {
+            "Name": "EKS_ADDON_MANAGEMENT",
+            "Status": "ENABLED"
+        }
+    ]
+}'
+```
+
+### Configure Bottlerocket security
+
+For Bottlerocket nodes, apply security settings:
+
+```toml
+# userdata.toml
+[settings.kernel]
+lockdown = "integrity"
+
+[settings.host-containers.admin]
+enabled = false
+
+[settings.oci-defaults]
+capabilities = ["CAP_NET_BIND_SERVICE"]
+```
+
+## Monitor and tune performance
+
+### Optimize resource usage
+
+Adjust Defender sensor resources based on cluster size:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: defender-performance-config
+  namespace: kube-system
+data:
+  performance: |
+    cpuLimit: 500m
+    memoryLimit: 512Mi
+    cpuRequest: 100m
+    memoryRequest: 128Mi
+    maxEventsPerSecond: 100
+    bufferSize: 10000
+```
+
+### Configure EKS-specific alerts
+
+Set up custom alerts for EKS events:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: defender-eks-alerts
+  namespace: kube-system
+data:
+  alerts: |
+    - name: "unauthorized-eks-api-call"
+      severity: "HIGH"
+      enabled: true
+    - name: "suspicious-iam-activity"
+      severity: "MEDIUM"
+      enabled: true
+    - name: "exposed-eks-dashboard"
+      severity: "HIGH"
+      enabled: true
+```
+
+## Integrate with AWS services
+
+### Configure AWS Security Hub integration
+
+Enable integration with Security Hub:
+
+```bash
+# Enable Security Hub
+aws securityhub enable-security-hub
+
+# Enable Defender findings
+aws securityhub enable-import-findings-for-product \
+    --product-arn arn:aws:securityhub:<region>::product/microsoft/defender-for-cloud
+```
+
+### Set up EventBridge rules
+
+Create rules for Defender events:
+
+```json
+{
+  "Name": "defender-high-severity-alerts",
+  "EventPattern": {
+    "source": ["microsoft.defender"],
+    "detail-type": ["Security Alert"],
+    "detail": {
+      "severity": ["HIGH", "CRITICAL"]
+    }
+  },
+  "Targets": [
+    {
+      "Arn": "arn:aws:sns:region:account:security-alerts",
+      "Id": "1"
+    }
+  ]
+}
+```
+
+## Next steps
+
+- [Verify your configuration](defender-for-containers-eks-verify.md)
+- [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
+- [Review EKS security best practices](https://aws.amazon.com/architecture/security-identity-compliance/)

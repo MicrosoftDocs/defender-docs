@@ -14,6 +14,7 @@ This article explains how to enable Microsoft Defender for Containers on your Go
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additional prerequisites for GKE:
+
 - GCP project with billing enabled
 - Active GKE clusters (version 1.19+)
 - GCP IAM permissions to create service accounts and assign roles
@@ -29,7 +30,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/add-gcp-project.png" alt-text="Screenshot showing Add GCP environment option." lightbox="media/tutorial-enable-container-gcp/add-gcp-project.png":::
+    :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-environment.png" alt-text="Screenshot of selections for adding a GCP environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/add-gcp-environment.png":::
 
 ## Configure the GCP connector
 
@@ -41,7 +42,7 @@ First, connect your GCP project to Microsoft Defender for Cloud:
    - **GCP project ID**: Your GCP project ID
    - **GCP project number**: Your GCP project number
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/create-gcp-connector.png" alt-text="Screenshot showing GCP connector basic configuration." lightbox="media/tutorial-enable-container-gcp/create-gcp-connector.png":::
+    :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-account-details.png" alt-text="Screenshot of the form to fill in the account details for a GCP environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/add-gcp-account-details.png":::
 
 1. Select **Next: Select plans**.
 
@@ -49,14 +50,18 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. In the Select plans page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/gcp-select-plans.png" alt-text="Screenshot showing Containers plan enabled for GCP." lightbox="media/tutorial-enable-container-gcp/gcp-select-plans.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-on.png" alt-text="Screenshot that shows the Containers plan turned on.":::
 
 1. Select **Configure** to set up plan components.
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png" alt-text="Screenshot of settings for the Containers plan in the Defender for Cloud environment settings." lightbox="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png":::
+
 1. Ensure all components are enabled:
-   - **GKE runtime protection** - Runtime threat detection
-   - **Agentless discovery for Kubernetes** - Discovers all GKE clusters
-   - **Agentless container vulnerability assessment** - Scans GCR/Artifact Registry
+   - **Agentless threat detection** - Runtime threat detection
+   - **Auto provision Defender's sensor for Azure Arc** - Deploys the Defender sensor
+   - **Auto provision Azure Policy extension for Azure Arc** - Deploys Azure Policy
+   - **K8S API access** - Discovers all GKE clusters
+   - **Registry access** - Scans GCR/Artifact Registry
 
 1. Select **Next: Configure access**.
 
@@ -66,19 +71,21 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Select **Copy** to copy the setup script.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/configure-access.png" alt-text="Screenshot showing GCP setup script." lightbox="media/tutorial-enable-container-gcp/configure-access.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/copy-button.png" alt-text="Screenshot that shows the location of the copy button.":::
 
-1. Open Google Cloud Shell or your local terminal with gcloud CLI.
+1. Select **GCP Cloud Shell >** button to open Cloud Shell.
 
-1. Run the copied script. It will:
-   - Create a service account for Defender
+    :::image type="content" source="media/defender-for-kubernetes-intro/configure-access-gcp.png" alt-text="Screenshot of the page for configuring access for a GCP environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/configure-access-gcp.png":::
+
+1. Paste and run the script in Cloud Shell. It will:
+   - Create service accounts
    - Assign required IAM roles
    - Generate and download a key file
 
 1. Upload the generated key file:
-   - Select **Upload key file**
-   - Browse to the downloaded JSON key
-   - Select the file
+   - Download the JSON key file from Cloud Shell
+   - In Azure portal, select **Upload key file**
+   - Browse and select the downloaded JSON key
 
 1. Select **Next: Review and create**.
 
@@ -93,49 +100,54 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Wait for the connector creation to complete (5-10 minutes).
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/connector-created-successfully.png" alt-text="Screenshot showing successful GCP connector creation." lightbox="media/tutorial-enable-container-gcp/connector-created-successfully.png":::
-
 ## Deploy the Defender sensor to GKE clusters
 
 ### Automatic deployment
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for "GKE clusters should have Defender profile enabled".
+1. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/recommendation-search.png" alt-text="Screenshot that shows searching for a recommendation." lightbox="media/defender-for-containers-enable-plan-gke/recommendation-search-expanded.png":::
 
 1. Select the recommendation.
 
-1. Select your GKE clusters and choose **Fix**.
+1. Select your unhealthy GKE clusters (one at a time).
 
-### Manual deployment via portal
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot that shows the location of the Fix button.":::
 
-1. Navigate to your GCP connector in **Environment settings**.
+1. Select **Fix**.
 
-1. Select **Manage** > **GKE clusters**.
+1. Choose the script language:
+   - For Linux: Select **Bash**
+   - For Windows: Select **PowerShell**
 
-1. View the list of discovered GKE clusters.
+1. Select **Download remediation logic**.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/discovered-gke-clusters.png" alt-text="Screenshot showing discovered GKE clusters." lightbox="media/tutorial-enable-container-gcp/discovered-gke-clusters.png":::
+1. Run the generated script on each of your GKE clusters.
 
-1. For each cluster, select **Deploy Defender sensor**.
+### View connected clusters
 
-1. Choose your deployment method:
-   - **Helm** (recommended)
-   - **kubectl apply**
+After successful deployment:
 
-1. Follow the provided instructions to deploy to your cluster.
+1. Navigate to **Environment settings**.
+
+1. Select your GCP connector.
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/relevant-connector.png" alt-text="Screenshot that shows an example GCP connector." lightbox="media/defender-for-containers-enable-plan-gke/relevant-connector-expanded.png":::
+
+1. Verify the Containers plan shows as **On** with components enabled.
 
 ## Configure GCR/Artifact Registry scanning
 
 To enable container image vulnerability scanning:
 
-1. In your GCP connector settings, navigate to **Container registries**.
+1. Ensure **Registry access** is enabled in your connector settings.
 
-1. Verify that GCR/Artifact Registry integration is enabled.
+1. If using Artifact Registry, enable vulnerability scanning in GCP:
 
-1. If using Artifact Registry:
    ```bash
-   # Enable vulnerability scanning in GCP
+   # Enable vulnerability scanning
    gcloud artifacts repositories update REPOSITORY \
        --location=LOCATION \
        --enable-vulnerability-scanning
@@ -147,11 +159,16 @@ To enable container image vulnerability scanning:
 
 For enhanced security, configure Workload Identity:
 
-1. In your GKE cluster (GCP Console), ensure Workload Identity is enabled.
+1. Enable Workload Identity on your GKE cluster:
 
-1. In the Defender sensor deployment, use the Workload Identity option.
+   ```bash
+   gcloud container clusters update CLUSTER_NAME \
+       --workload-pool=PROJECT_ID.svc.id.goog
+   ```
 
-1. This provides better security than using service account keys.
+1. Configure the Defender sensor to use Workload Identity.
+
+1. This eliminates the need for service account keys.
 
 ## Configure audit logging
 
@@ -180,9 +197,21 @@ After deployment completes:
 
 1. Verify your GKE clusters appear with security data.
 
-    :::image type="content" source="media/tutorial-enable-container-gcp/view-protected-gke-clusters.png" alt-text="Screenshot showing GKE clusters in inventory." lightbox="media/tutorial-enable-container-gcp/view-protected-gke-clusters.png":::
-
 For detailed verification, see [Verify Defender for Containers deployment on GCP (GKE)](defender-for-containers-gke-verify.md).
+
+## View security alerts
+
+To view alerts from your GKE clusters:
+
+1. Navigate to **Security alerts**.
+
+1. Select **Add filter**.
+
+    :::image type="icon" source="media/defender-for-containers-enable-plan-gke/add-filter.png" border="false":::
+
+1. Select **Resource type** > **GCP GKE Cluster**.
+
+1. Select **Ok**.
 
 ## Monitor security status
 
@@ -204,11 +233,19 @@ For additional security, enable Binary Authorization:
 
 1. Configure Defender to monitor Binary Authorization violations.
 
+## Exclude specific clusters (optional)
+
+You can exclude specific GCP clusters from automatic provisioning:
+
+- For sensor deployment: Apply the `ms_defender_container_exclude_agents` label with value `true`
+- For agentless deployment: Apply the `ms_defender_container_exclude_agentless` label with value `true`
+
 ## Troubleshooting
 
 If clusters don't appear:
 
 1. Verify the service account has correct permissions:
+
    ```bash
    gcloud projects get-iam-policy PROJECT_ID
    ```

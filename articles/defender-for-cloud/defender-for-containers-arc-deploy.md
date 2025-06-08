@@ -271,4 +271,3 @@ done
 
 - [Verify your Defender for Containers deployment](defender-for-containers-arc-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-arc-configure.md)
-- [Troubleshoot common deployment issues](defender-for-containers-troubleshooting.md)

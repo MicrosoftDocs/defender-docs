@@ -45,30 +45,30 @@ This article explains how to enable Microsoft Defender for Containers on your Go
 
 1. In your GCP console, create a service account:
 
-```bash
-# Create service account
-gcloud iam service-accounts create defender-for-containers \
-    --display-name="Defender for Containers"
+    ```bash
+    # Create service account
+    gcloud iam service-accounts create defender-for-containers \
+        --display-name="Defender for Containers"
 
-# Grant required roles
-gcloud projects add-iam-policy-binding PROJECT_ID \
-    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/container.viewer"
+    # Grant required roles
+    gcloud projects add-iam-policy-binding PROJECT_ID \
+        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+        --role="roles/container.viewer"
 
-gcloud projects add-iam-policy-binding PROJECT_ID \
-    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/containerregistry.ServiceAgent"
+    gcloud projects add-iam-policy-binding PROJECT_ID \
+        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+        --role="roles/containerregistry.ServiceAgent"
 
-gcloud projects add-iam-policy-binding PROJECT_ID \
-    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/cloudasset.viewer"
+    gcloud projects add-iam-policy-binding PROJECT_ID \
+        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+        --role="roles/cloudasset.viewer"
 
-# Create and download key
-gcloud iam service-accounts keys create key.json \
-    --iam-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
-```
+    # Create and download key
+    gcloud iam service-accounts keys create key.json \
+        --iam-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
+    ```
 
-2. Upload the key.json file in the Azure portal.
+1. Upload the key.json file in the Azure portal.
 
 ## Enable Defender for Containers
 
@@ -76,15 +76,16 @@ gcloud iam service-accounts keys create key.json \
 
 1. In the connector creation wizard, navigate to **Select plans**.
 
-2. Toggle **Containers** to **On**.
+1. Toggle **Containers** to **On**.
 
-3. Configure the following settings:
+1. Configure the following settings:
+
    - **Agentless container vulnerability assessment**: On
    - **Agentless discovery for Kubernetes**: On
    - **Container registries vulnerability assessments**: On
    - **Runtime threat protection**: On
 
-4. Select **Next: Review and create**.
+1. Select **Next: Review and create**.
 
 ### Using Azure CLI
 
@@ -188,13 +189,13 @@ For private GKE clusters:
 
 1. Configure Private Google Access:
 
-```bash
-gcloud compute networks subnets update SUBNET_NAME \
-    --region=REGION \
-    --enable-private-ip-google-access
-```
+    ```bash
+    gcloud compute networks subnets update SUBNET_NAME \
+        --region=REGION \
+        --enable-private-ip-google-access
+    ```
 
-2. Configure firewall rules:
+1. Configure firewall rules:
 
 ```bash
 # Allow webhook traffic
@@ -223,4 +224,3 @@ kubectl describe pods -n kube-system -l app=microsoft-defender
 
 - [Verify your Defender for Containers deployment](defender-for-containers-gke-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
-- [Troubleshoot common deployment issues](defender-for-containers-troubleshooting.md)
