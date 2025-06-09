@@ -19,7 +19,7 @@ ms.collection:
   - essentials-security
   - essentials-compliance
 ms.custom: 
-ms.topic: conceptual
+ms.topic: concept-article
 adobe-target: true
 ---
 
