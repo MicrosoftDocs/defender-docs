@@ -4,7 +4,7 @@ description: Learn how to enable Microsoft Defender for Endpoint integration in 
 author: elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/01/2025
+ms.date: 06/09/2025
 #customer intent: As a user, I want to learn how to manually enable the Defender for Endpoint integration in Defender for Cloud so that I can protect multicloud and on-premises machines.
 ---
 
@@ -163,6 +163,11 @@ URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Micr
     }
 }
 ```
+
+> [!NOTE]
+> Both the Defender for Endpoint Unified Solution and Defender for Endpoint for Linux are automatically included on new subscriptions when you enable the Defender for Endpoint integration using `microsoft.security/settings/WDATP`.
+>
+> The settings `WDATP_UNIFIED_SOLUTION` and `WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW` are relevant for legacy subscriptions. These settings apply to subscriptions that already have the Defender for Endpoint integration enabled when these features were introduced in August 2021 and Spring 2022.
 
 ## Track Defender for Endpoint deployment status
 

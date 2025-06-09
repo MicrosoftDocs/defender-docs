@@ -60,6 +60,7 @@ These queries are editable and can be customized to a specific resource, set of 
     | where resourceId =~ "/subscriptions/resourcegroups/rgname/providers/microsoft.sql/servers/servername/databases/dbname"
     | where assessmentKey =~ "82e20e14-edc5-4373-bfc4-f13121257c37"
     | project resourceId,
+    subscriptionId,
     assessmentKey,
     subAssessmentId,
     name=properties.displayName,
