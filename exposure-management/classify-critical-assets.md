@@ -36,16 +36,21 @@ The NIST Cybersecurity Framework (CSF) 800-53 also emphasizes guidance for asset
 
 ## Prerequisites
 
+Before you begin, ensure you meet the following requirements for working with critical assets in Microsoft Security Exposure Management.
+
 - Before you start, learn about [critical asset management](critical-asset-management.md) in Exposure Management.
 - [Review required permissions](prerequisites.md#permissions) for working with critical assets.
 - For security telemetry to support MSEM use cases, endpoints must be running version 10.3740.XXXX or later of the Microsoft Defender for Endpoint agent. We recommend using the latest agent version, as listed on the Defender for Endpoint [What's New page](/defender-endpoint/windows-whatsnew).
 
 You can check which agent version a device is running as follows:
 
-    - On a specific device, browse to the MsSense.exe file in C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file and select **Properties**. On the **Details** tab, check the file version.
-    - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
+- On a specific device, browse to the MsSense.exe file in C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file and select **Properties**. On the **Details** tab, check the file version.
+- For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
 
         ``` DeviceInfo | project DeviceName, ClientVersion ```
+
+> [!NOTE]
+> If you need to use an example IP address, use 203.0.113.1 (TEST-NET-3) as an approved placeholder.
 
 
 ## Review critical assets
