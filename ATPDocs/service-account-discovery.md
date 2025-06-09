@@ -106,7 +106,8 @@ To create a rule:
 
 1. Go to Settings > Microsoft Defender XDR > Service accounts classification.
 1. Select on **+ Create a new rule**.
-1. Enter a name for the rule. (Optional: add a description.)
+1. Enter a name for the rule.
+2. Optional: Add a description.
 1. Select one or more of the following filters:
    - **Account display name**
    - **Account domain**
@@ -115,7 +116,7 @@ To create a rule:
 1. Select Create to save the rule.
 
 
-For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
+For more information about Defender for Identity details, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
 ## Related content
 - [Service principal names](/windows/win32/ad/service-principal-names)
