@@ -69,13 +69,13 @@ Sensors running on these operating systems will continue to report to Defender f
 |**Protocol**   |**Transport**         |**Port**         |**From**       |**To**   |
 |------------|---------|---------|-------|--------------|
 |**Internet ports**          | | | | |
-|**SSL** (\*.atp.azure.com) <br><br>Alternately, [configure access through a proxy](configure-proxy.md).   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
+|**SSL** (\*.atp.azure.com) <br><br>Alternatively, [configure access through a proxy](configure-proxy.md).   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
 |**Internal ports**          | | | | |
 |**DNS**            |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
 |**Netlogon**  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|
 |**RADIUS**         |UDP      |1813|RADIUS         |Defender for Identity sensor      |
 |**Localhost ports**: Required for the sensor service updater  <br><br>By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.    | | | | |
-|**SSL** |TCP      |444 |Sensor service|Sensor updater service            |
+|**SSL** |TCP      |443 |Sensor service|Sensor updater service            |
 |**Network Name Resolution (NNR) ports** <br><br>To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.     | | | | |
 |**NTLM over RPC**  |TCP      |Port 135         |Defender for Identity sensor|All devices on network|
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
