@@ -102,7 +102,7 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
 
 Defender for Identity capabilities directly on domain controllers use Defender for Endpoint URL endpoints for communication, including streamlined URLs.
 
-For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server), [Ofigure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain)
+For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server), [Configure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
 
 ### Onboard Defender for Identity capabilities
 
@@ -113,11 +113,11 @@ Download the Defender for Identity onboarding package from the [Microsoft Defend
 2. Select Download onboarding package and save the file in a location you can access from your domain controller.
 
    
-   ![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png)
+   [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png)](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor..png#lightbox)
    
 3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
 
-![screenshot that shows the onboardin script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)
+   [![screenshot that shows the onboarding script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)](media/activate-capabilities/screenshot-2025-06-04-170500.png#lightbox)
 
 ## Onboarding Confirmation 
 
