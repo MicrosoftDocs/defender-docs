@@ -15,7 +15,7 @@ ms.date: 06/09/2025
 
 ## Asset criticality
 
-Asset criticality is a measure of the importance of an asset to your organization's operations and security posture. It reflects a combination of its cyber-role,  production context and  system or subsystem.
+Asset criticality is a measure of the importance of an asset to your organization's operations and security posture. It reflects a combination of its cyber-role,  production context, and  system or subsystem.
 
 :::image type="content" source="media/classify-critical-assets/Asset-criticality.png" alt-text="Flowchart of asset criticality":::
 
@@ -113,9 +113,9 @@ Edit custom classifications as follows.
 1. On the **Critical asset management** page, browse to the classification you want to modify. Only custom classifications can be edited or deleted.
 1. Select **Edit**, **Delete**, or **Turn off**.
 
-## Add assets to predfined classifications
+## Add assets to predefined classifications
 
-1. On the **Critical asset management** page, select the relevant asset classification. The **Pending Approval** column helps find classifications with assets that did not meet the automatic classification threshold and require user approval.
+1. On the **Critical asset management** page, select the relevant asset classification. The **Pending Approval** column helps find classifications with assets that didn't meet the automatic classification threshold and require user approval.
 
     :::image type="content" source="media/classify-critical-assets/add-assets.png" alt-text="Screenshot of predefined classifications":::
 
