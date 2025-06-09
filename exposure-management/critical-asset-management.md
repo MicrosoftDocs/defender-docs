@@ -64,7 +64,7 @@ You can work with critical asset settings as follows:
 
 The critical asset classification logic uses asset behavior from Microsoft Defender workloads and third-party integrations. To implement different logic, turn off the rule and create a custom rule suited to your scenarios.
 
-Some assets that match a classification may not meet the criticality threshold. For example, an asset might be a domain controller, but it may not be deemed critical for your business. Use the asset review feature to add these assets to your defined classification. This  feature allows you to include assets based on your organization's specific criticality criteria.
+Some assets that match a classification might not meet the criticality threshold. For example, an asset might be a domain controller, but it might not be deemed critical for your business. Use the asset review feature to add these assets to your defined classification. This  feature allows you to include assets based on your organization's specific criticality criteria.
 
 ## Critical Asset Protection initiative
 
