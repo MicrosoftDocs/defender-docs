@@ -78,7 +78,6 @@ This section provides instructions for connecting Microsoft Defender for Identit
     |ObjectSid     | ObjectSid        |
     |ObjectGuid     | ObjectGuid        |
     |DistinguishedName    | DistinguishedName    |
-    |         |         |
 
 1. Select Save.
 1. Verify that the three custom attributes you added are displayed correctly.
