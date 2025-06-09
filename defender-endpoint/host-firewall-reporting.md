@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 05/08/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
