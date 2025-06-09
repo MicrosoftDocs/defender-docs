@@ -27,7 +27,8 @@ Alerts from the last seven days are displayed with the following information:
 - First activity
 - Last activity
 
-:::image type="content" source="media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+
+:::image type="content" source="ATPDocs\media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
 
 ## Customize the view of the alerts queue
 
@@ -69,7 +70,7 @@ The alerts page provides context into the alert, by combining attack signals and
 
 To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
 
-    :::image type="content" source="media/filter-alerts-menu.png" alt-text="Screenshot showing the alerts filter menu per service.":::
+:::image type="content" source="media/filter-alerts-menu.png" alt-text="Screenshot showing the alerts filter menu per service.":::
 
 ### Microsoft Defender for Identity alerts
 

@@ -94,7 +94,6 @@ Includes all data Defender for Identity profiled on the entity. Defender for Ide
 
 :::image type="content" source="media/related-entities.png" alt-text="Screenshot showing the Related Entities tab of a Microsoft Defender for Identity alert report for Network mapping reconnaissance (DNS). The table lists related entities with columns for ID, Type, Name, Unique Entity JSON, and Unique Entity Profile JSON. Two computer entities are shown, including one named DC1.":::
 
-![Related entities.](media/related-entities.png)
 
 For more information about how to work with Defender for Identity security alerts, see [Working with security alerts](/defender-for-identity/understanding-security-alerts).
 
