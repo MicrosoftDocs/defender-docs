@@ -9,10 +9,8 @@ ms.reviewer: rlitinsky
 # Activate Microsoft Defender for Identity capabilities directly on a domain controller (Preview)
 
 
-Microsoft Defender for Endpoint customers who have already onboarded their domain controllers can now activate Defender for Identity capabilities directly on a domain controller using the new Microsoft XDR sensor, instead of the [Defender for Identity sensor](deploy-defender-identity.md).
-This article describes how to activate and tests Microsoft Defender for Identity capabilities on your domain controller.
-
-This article describes how to activate and test Microsoft Defender for Identity new sensor capabilities on your domain controller.
+Microsoft Defender for Endpoint customers who have already onboarded their domain controllers can now activate Defender for Identity capabilities directly on a domain controller instead of the [deploying a separate Defender for Identity sensor](deploy-defender-identity.md).
+This article describes how to activate and test Microsoft Defender for Identity capabilities on your domain controller.
 
 > [!NOTE]
 > The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
@@ -22,7 +20,7 @@ This article describes how to activate and test Microsoft Defender for Identity 
 
 
 > [!IMPORTANT]
-> The Defender for XDR sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor [here](quick-installation-guide.md).
+> We recommend activating the sensor built in to the Windows Server 2019 and later for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend [deploying the separate Defender for Identity sensor](quick-installation-guide.md).
 
 ## Prerequisites
 
