@@ -28,7 +28,11 @@ Alerts from the last seven days are displayed with the following information:
 - Last activity
 
 
-:::image type="content" source="ATPDocs\media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+
+:::image type="content" source="ATPDocs/media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+
+:::image type="content" source="ATPDocs/media/understanding-security-alerts/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+
 
 ## Customize the view of the alerts queue
 
@@ -86,7 +90,7 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
     - Move alert to another incident
     - Classify an alert 
 
-:::image type="content" source="media/legacy-mdi-alert-structure.png" alt-text="Screenshot showing the Defender for Identity alert structure" lightbox="media/legacy-mdi-alert-structure.png":::
+:::image type="content" source="media/legacy-mdi-alert-structure.png" alt-text="Screenshot showing the Defender for Identity alert structure." lightbox="media/legacy-mdi-alert-structure.png":::
 
 ### Microsoft Defender XDR alerts
 
