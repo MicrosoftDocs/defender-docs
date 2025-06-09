@@ -112,7 +112,8 @@ After assigning both roles, you can remove the Super Admin role. This ensures th
     - **All users**
     - **All Identity and Access Management resources**
 
-    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Screenshot showing the Resource set information page in Okta. The resource set is named and described as "Microsoft Defender for Identity." Under Resources, two entries are listed: "Users" with "All users" and "Identity and Access Management" with "All Identity and Access Management resources," each with edit and delete icons.":::
+    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Screenshot showing the Resource set information page in Okta. The resource set is named and described as 'Microsoft Defender for Identity.' Under Resources, two entries are listed: 'Users' with 'All users' and 'Identity and Access Management' with 'All Identity and Access Management resources,' each with edit and delete icons.":::
+    
 1. Select **Save selection**.
 
 ### Assign the custom role and resource set
