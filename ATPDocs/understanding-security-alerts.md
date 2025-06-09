@@ -27,7 +27,7 @@ Alerts from the last seven days are displayed with the following information:
 - First activity
 - Last activity
 
-:::image type="content" source="/media/understanding-security-alerts/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+:::image type="content" source="media/understanding-security-alerts/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity."  lightbox="media/understanding-security-alerts/filtered-alerts.png":::
 
 
 
@@ -87,7 +87,7 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
     - Move alert to another incident
     - Classify an alert 
 
-:::image type="content" source="media/understanding-security-alerts/legacy-mdi-alert-structure.png" alt-text="Screenshot showing the Defender for Identity alert structure." lightbox="media/legacy-mdi-alert-structure.png":::
+:::image type="content" source="media/understanding-security-alerts/legacy-mdi-alert-structure.png" alt-text="Screenshot showing the Defender for Identity alert structure." lightbox="media/understanding-security-alerts/legacy-mdi-alert-structure.png":::
 
 ### Microsoft Defender XDR alerts
 
@@ -100,7 +100,7 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
     - Move alert to another incident
     - Classify an alert 
 
-:::image type="content" source="media/understanding-security-alerts/defender-xdr-alert-structure.png" alt-text="Screenshot showing the Defender for XDR alert structure" lightbox="media/defender-xdr-alert-structure.png":::
+:::image type="content" source="media/understanding-security-alerts/defender-xdr-alert-structure.png" alt-text="Screenshot showing the Defender for XDR alert structure" lightbox="media/understanding-security-alerts/defender-xdr-alert-structure.png":::
 
 ## Manage security alerts 
 
@@ -117,13 +117,13 @@ You can create a new incident from the alert or link to an existing incident.
 ### Assign alerts
 If an alert isn't yet assigned, you can select Assign to me to assign the alert to yourself.
 
-:::image type="content" source="media/understanding-security-alerts/alert-state.png" alt-text="Screenshot showing the Alert state section in the Microsoft Defender portal. The Classification field is marked as “Not Set” with a link to “Set Classification.” The Assigned to field shows “Unassigned” with a link labeled “Assign to me.” This section allows users to manage alert ownership and classification." lightbox="media/alert-state.png":::
+:::image type="content" source="media/understanding-security-alerts/alert-state.png" alt-text="Screenshot showing the Alert state section in the Microsoft Defender portal. The Classification field is marked as “Not Set” with a link to “Set Classification.” The Assigned to field shows “Unassigned” with a link labeled “Assign to me.” This section allows users to manage alert ownership and classification." lightbox="media/understanding-security-alerts/alert-state.png":::
 
 ### Add comments to an alert
 You can add comments to an alert to provide additional context or information. This is useful for sharing insights with your team or documenting your investigation process.
 Whenever a change or comment is made to an alert, it's recorded in the Comments and history section.
 
-:::image type="content" source="media/understanding-security-alerts/comments-history.png" alt-text="Screenshot showing the Comments & history section in the Microsoft Defender portal. A text box is provided for entering comments." lightbox="media/comments-history.png":::
+:::image type="content" source="media/understanding-security-alerts/comments-history.png" alt-text="Screenshot showing the Comments & history section in the Microsoft Defender portal. A text box is provided for entering comments." lightbox="media/understanding-security-alerts/comments-history.png":::
 
 ### Classify security alerts
 
@@ -142,7 +142,7 @@ Following proper investigation, all Defender for Identity security alerts can be
 
 - **False positive (FP)**: A false alarm, meaning the activity didn't happen.
 
-:::image type="content" source="media/understanding-security-alerts/classify-alert.png" alt-text="Screenshot showing a Microsoft Defender alert titled “Suspected brute-force attack (LDAP).” The alert is labeled with severity Medium, status New, and classification Unknown. Below, a classification banner includes a message to classify the alert, with buttons labeled “True alert” and “False alert” for user response." lightbox="media/classify-alert.png":::
+:::image type="content" source="media/understanding-security-alerts/classify-alert.png" alt-text="Screenshot showing a Microsoft Defender alert titled “Suspected brute-force attack (LDAP).” The alert is labeled with severity Medium, status New, and classification Unknown. Below, a classification banner includes a message to classify the alert, with buttons labeled “True alert” and “False alert” for user response." lightbox="media/understanding-security-alerts/classify-alert.png":::
 
 > [!NOTE]
 > An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.
