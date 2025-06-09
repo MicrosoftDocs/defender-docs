@@ -41,30 +41,30 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
     :::image type="content" source="media/okta-integration/okta-admin.png" alt-text="Screenshot showing the Okta admin button":::
 
-1. Select **Security** > **API**
+1. Select **Security** > **API**.
 
-   :::image type="content" source="media/okta-integration/okta-side-menu-security-api.png" alt-text="Screenshot showing the Okta sidemenu":::
+   :::image type="content" source="media/okta-integration/okta-side-menu-security-api.png" alt-text="Screenshot showing the Okta sidemenu.":::
 
 1. Select **Tokens**
 1. Select **Create Token**.
 
-     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot showing where to create a token":::
+     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot showing where to create a token.":::
 
 1. In the Create token pop-up:
     1. Enter a name for your Defender for Identity token
     2. Select Any IP
     3. Select Create token.
 
-    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot showing where to enter the Okta token name":::
+    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot showing where to enter the Okta token name.":::
 
 1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token is used to connect Okta to Defender for Identity.
 
-    :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message":::
+    :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the token created successfully pop up message.":::
 
 ### Add Custom user attributes
 
-1. Select **Directory > Profile Editor**
-1. Select **User (default)**
+1. Select **Directory > Profile Editor**.
+1. Select **User (default)**.
 1. Select **Add Attributes**.
     1. Set Data type to String.
     1. Enter the Display name.
@@ -90,30 +90,30 @@ To support ongoing API access, Read-Only Administrator role and the custom Defen
 
 After assigning both roles, you can remove the the Super Admin role. This ensures that only relevant permissions are assigned to your Okta account at all times. 
 
-1. Navigate to **Security > Administrator**
-1. Select the **Roles** tab
-1. Select **Create new role**
-1. Set the role name to **Microsoft Defender for Identity**
+1. Navigate to **Security > Administrator**.
+1. Select the **Roles** tab.
+1. Select **Create new role**.
+1. Set the role name to **Microsoft Defender for Identity**.
 1. Select the permissions you want to assign to this role. Include the following permissions:
     - **Suspend users**
     - **Unsuspend users**
     - **Clear users’ session**
     - **View roles, resources, and admin assignments**
-1. Select **Save role**
+1. Select **Save role**.
 
-:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Assign Okta permissions":::
+:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Assign Okta permissions.":::
 
 ### Create a resource set
 
-1. Select the **Resources** tab
-1. Select **Create new resource set**
-1. Name the resource set **Microsoft Defender for Identity**
+1. Select the **Resources** tab.
+1. Select **Create new resource set**.
+1. Name the resource set **Microsoft Defender for Identity**.
 1. Add the following resources:
     - **All users**
     - **All Identity and Access Management resources**
 
-    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Enter the all users and all identitity and access management resources":::
-1. Select **Save selection**
+    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Enter the all users and all identitity and access management resources.":::
+1. Select **Save selection**.
 
 ### Assign the custom role and resource set
 To complete the configuration in Okta, assign the custom role and resource set to the dedicated account.
@@ -133,17 +133,17 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1.  Navigate to the Microsoft Defender Portal
 1. Select **Settings** > **Identities** > **Okta integration**
 
-    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing how to connect your Okta instance":::
+    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing how to connect your Okta instance.":::
 
 1. Select **+Connect Okta instance**.
-1. Enter your Okta domain (for example, acme.okta.com)
+1. Enter your Okta domain (for example, acme.okta.com).
 1. Paste the API token you copied from your Okta account.
-1. Select **Save**
+1. Select **Save**.
 
-    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot showing the connect okta instance pop up page":::
+    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot showing the connect okta instance pop up page.":::
 1. Verify that your Okta environment appears in the table as enabled.
 
-    :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Verify that your Okta environment appears in the table as enabled":::
+    :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Verify that your Okta environment appears in the table as enabled.":::
 
 ## Related articles
 
