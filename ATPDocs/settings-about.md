@@ -3,6 +3,7 @@ title: About page in Microsoft Defender XDR
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft Defender XDR.
 ms.date: 07/14/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # About page for Defender for Identity

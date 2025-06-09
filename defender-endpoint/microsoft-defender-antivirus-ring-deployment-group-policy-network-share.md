@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 03/12/2025
