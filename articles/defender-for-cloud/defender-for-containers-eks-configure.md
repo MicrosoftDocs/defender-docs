@@ -1,366 +1,371 @@
 ---
 title: Configure Defender for Containers on AWS (EKS)
-description: Learn how to configure advanced settings for Microsoft Defender for Containers on EKS clusters.
+description: Learn how to configure and customize Microsoft Defender for Containers settings for your Amazon EKS clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
 # Configure Defender for Containers on AWS (EKS)
 
-This article explains how to configure advanced settings for Defender for Containers on your Amazon EKS clusters.
+After deploying Defender for Containers on your EKS clusters, you can configure various settings to customize the security coverage according to your needs.
 
-## Configure runtime protection
+## Configure plan components
 
-### Exclude namespaces from monitoring
+You can enable or disable specific Defender for Containers components:
 
-Create a ConfigMap to exclude specific namespaces:
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-config
-  namespace: kube-system
-data:
-  excludedNamespaces: |
-    - kube-system
-    - kube-public
-    - aws-observability
-    - amazon-cloudwatch
-```
+1. Select your AWS connector.
 
-Apply and restart the sensor:
+1. Select **Settings** for the Containers plan.
 
-```bash
-kubectl apply -f defender-config.yaml
-kubectl rollout restart daemonset/microsoft-defender-sensor -n kube-system
-```
+1. Toggle components on or off:
+   - **Agentless discovery for Kubernetes**
+   - **Agentless container vulnerability assessment**
+   - **Defender DaemonSet**
+   - **Azure Policy for Kubernetes**
 
-### Configure EKS-specific monitoring
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
-Configure monitoring for EKS-specific resources:
+1. Select **Continue** and **Save**.
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-eks-config
-  namespace: kube-system
-data:
-  eksFeatures: |
-    monitorFargate: true
-    monitorNodeGroups: true
-    includeEKSAddons: false
-    monitorIAMRoles: true
-```
+## Configure custom Log Analytics workspace
 
-## Configure ECR vulnerability scanning
+By default, Defender for Containers uses an automatically created workspace. To use a custom workspace:
 
-### Advanced ECR scanning settings
+### Using Azure portal
 
-Configure enhanced scanning with Amazon Inspector:
+1. Navigate to **Azure Policy**.
 
-```bash
-# Enable enhanced scanning
-aws ecr put-registry-scanning-configuration \
-    --scan-type ENHANCED \
-    --rules '{
-        "scanFrequency": "CONTINUOUS_SCAN",
-        "repositoryFilters": [
-            {
-                "filter": "prod-*",
-                "filterType": "WILDCARD"
-            }
-        ]
+1. Search for "Configure Arc-enabled Kubernetes clusters to use Defender's sensor with custom workspace".
+
+1. Select **Assign**.
+
+1. Configure the assignment:
+   - **Scope**: Select your subscription or resource group
+   - **Parameters**: Enter your custom workspace resource ID
+   - **Remediation**: Create a remediation task
+
+1. Select **Review + create**.
+
+### Using Azure CLI
+
+```azurecli
+# Assign policy for custom workspace
+az policy assignment create \
+    --name "DefenderCustomWorkspace" \
+    --policy "/providers/Microsoft.Authorization/policyDefinitions/708b60a6-d253-4fe0-9114-4be4c00f012c" \
+    --scope "/subscriptions/{subscriptionId}" \
+    --params '{
+        "logAnalyticsWorkspaceResourceId": {
+            "value": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
+        }
     }'
 ```
 
-### Configure cross-region ECR scanning
+### Update existing deployments
 
-For ECR repositories in different regions:
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::<account>:role/DefenderForCloudRole"
-            },
-            "Action": [
-                "ecr:DescribeRepositories",
-                "ecr:ListImages",
-                "ecr:DescribeImages",
-                "ecr:BatchGetImage"
-            ],
-            "Resource": "arn:aws:ecr:*:<account>:repository/*"
-        }
-    ]
-}
-```
-
-### Scan private ECR repositories
-
-Configure authentication for private repositories:
+For clusters already deployed with the default workspace:
 
 ```bash
-# Create Kubernetes secret with ECR credentials
-kubectl create secret docker-registry ecr-secret \
-    --docker-server=<account-id>.dkr.ecr.<region>.amazonaws.com \
-    --docker-username=AWS \
-    --docker-password=$(aws ecr get-login-password) \
-    -n kube-system
+# Update extension configuration
+az k8s-extension update \
+    --name microsoft-defender \
+    --cluster-type connectedClusters \
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group> \
+    --configuration-settings \
+        "logAnalyticsWorkspaceResourceID=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
 ```
 
-## Configure CloudWatch integration
+## Configure data collection settings
 
-### Customize log collection
+### Adjust collection frequency
 
-Configure which logs to collect:
+Modify the data collection interval for performance optimization:
+
+```bash
+kubectl edit configmap -n mdc azuredefender-config
+```
+
+Add or modify:
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: fluent-bit-config
-  namespace: kube-system
 data:
-  parsers.conf: |
-    [PARSER]
-        Name   json
-        Format json
-        Time_Key time
-        Time_Format %Y-%m-%dT%H:%M:%S.%LZ
-  
-  filters.conf: |
-    [FILTER]
-        Name    kubernetes
-        Match   kube.*
-        Merge_Log On
-        K8S-Logging.Parser  On
-        K8S-Logging.Exclude On
-    
-    [FILTER]
-        Name    grep
-        Match   kube.*
-        Exclude log health-check
+  collection.interval: "60" # seconds
+  batch.size: "1000" # events
 ```
 
-### Configure CloudWatch metrics
+### Configure audit log collection
 
-Enable custom metrics collection:
+For comprehensive security monitoring, ensure audit logs are properly configured:
+
+1. In AWS Console, navigate to your EKS cluster.
+
+1. Select the **Logging** tab.
+
+1. Enable these log types:
+   - **API server**: API requests and responses
+   - **Audit**: Detailed audit trail
+   - **Authenticator**: Authentication decisions
+   - **Controller manager**: State changes
+   - **Scheduler**: Scheduling decisions
+
+### Exclude specific namespaces
+
+To exclude namespaces from monitoring:
 
 ```bash
-# Deploy CloudWatch agent
-kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cloudwatch-namespace.yaml
+kubectl annotate namespace <namespace-name> \
+    microsoft.defender.cloud/exclude="true"
 ```
 
-## Configure security policies
+## Configure container image scanning
 
-### Deploy AWS-specific policies
+### ECR scanning settings
 
-Apply EKS security best practices:
+1. Navigate to your AWS connector in **Environment settings**.
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-eks-policies
-  namespace: kube-system
-data:
-  policies: |
-    - name: "enforce-imdsv2"
-      description: "Enforce IMDSv2 for EC2 instances"
-      enforcement: true
-    - name: "require-eks-pod-identity"
-      description: "Require EKS Pod Identity for service accounts"
-      enforcement: false
-    - name: "block-public-load-balancers"
-      description: "Prevent creation of public load balancers"
-      enforcement: true
-```
+1. Select **Container registries** configuration.
 
-### Configure Pod Security Standards
+1. Configure scanning options:
+   - **Scan frequency**: How often to rescan images
+   - **Scan on push**: Enable/disable immediate scanning
+   - **Vulnerability threshold**: Set severity levels
 
-Enable Pod Security Standards for EKS:
+### Configure scanning exclusions
+
+Exclude specific repositories from scanning:
 
 ```bash
-# Label namespaces with security standards
-kubectl label namespace default \
-    pod-security.kubernetes.io/enforce=restricted \
-    pod-security.kubernetes.io/audit=restricted \
-    pod-security.kubernetes.io/warn=restricted
+# Tag ECR repository to exclude from scanning
+aws ecr put-image-scanning-configuration \
+    --repository-name <repository-name> \
+    --image-scanning-configuration scanOnPush=false
 ```
 
-### Configure admission control policies
+## Configure alert settings
+
+### Customize alert rules
+
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Email notifications**.
+
+1. Configure:
+   - Email recipients for different alert severities
+   - Alert aggregation settings
+   - Notification frequency
+
+### Create custom alert rules
+
+Using Azure Monitor:
+
+```azurecli
+# Create custom alert for suspicious pod creation
+az monitor activity-log alert create \
+    --name "SuspiciousPodCreation" \
+    --resource-group <resource-group> \
+    --condition category=Security and \
+                operationName=Microsoft.ContainerService/managedClusters/pods/write and \
+                level=Warning \
+    --action-group <action-group-id>
+```
+
+### Configure alert suppression
+
+To suppress specific alerts:
+
+1. Navigate to **Security alerts**.
+
+1. Select an alert type to suppress.
+
+1. Choose **Create suppression rule**.
+
+1. Define suppression criteria:
+   - Specific clusters
+   - Container names or patterns
+   - Time windows
+
+## Configure compliance policies
+
+### Enable regulatory standards
+
+1. Navigate to **Regulatory compliance**.
+
+1. Select **Manage compliance policies**.
+
+1. Enable standards relevant to your organization:
+   - CIS Kubernetes Benchmark
+   - PCI DSS 3.2.1
+   - ISO 27001
+   - NIST SP 800-53
+
+### Customize policy parameters
+
+```azurecli
+# Example: Set maximum privileged container age
+az policy assignment create \
+    --name "MaxPrivilegedContainerAge" \
+    --policy "enforce-container-age-limit" \
+    --scope "/subscriptions/{subscriptionId}" \
+    --params '{
+        "maximumAgeDays": {"value": 30},
+        "excludedNamespaces": {"value": ["kube-system", "aws-system"]}
+    }'
+```
+
+## Configure network security
+
+### Network policy integration
+
+Deploy network policies that work with Defender:
 
 ```yaml
-# admission-policy.yaml
-apiVersion: admissionregistration.k8s.io/v1
-kind: ValidatingAdmissionPolicy
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
 metadata:
-  name: security-baseline
+  name: defender-sensor-policy
+  namespace: mdc
 spec:
-  failurePolicy: Fail
-  matchConstraints:
-    resourceRules:
-    - apiGroups: ["apps"]
-      apiVersions: ["v1"]
-      resources: ["deployments"]
-  validations:
-  - expression: |
-      object.spec.template.spec.containers.all(container,
-        !has(container.securityContext) ||
-        !has(container.securityContext.privileged) ||
-        container.securityContext.privileged == false
-      )
-    message: "Containers must not run as privileged"
+  podSelector:
+    matchLabels:
+      app: azuredefender-sensor
+  policyTypes:
+  - Ingress
+  - Egress
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 443
+  - to:
+    - podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - protocol: UDP
+      port: 53
 ```
 
-### Apply security policies
+### Configure private endpoints
+
+For clusters without direct internet access:
+
+1. Set up Azure Private Link for:
+   - Log Analytics workspace
+   - Azure Monitor
+   - Azure Arc services
+
+2. Configure Defender to use private endpoints:
 
 ```bash
-# Apply admission policy
-kubectl apply -f admission-policy.yaml
-
-# Create policy binding
-cat <<EOF | kubectl apply -f -
-apiVersion: admissionregistration.k8s.io/v1
-kind: ValidatingAdmissionPolicyBinding
-metadata:
-  name: security-baseline-binding
-spec:
-  policyName: security-baseline
-  validationActions: [Deny]
-  matchResources:
-    namespaceSelector:
-      matchLabels:
-        environment: production
-EOF
+kubectl edit configmap -n mdc azuredefender-config
 ```
 
-## Configure container runtime security
-
-### Enable runtime protection for Fargate
-
-For EKS Fargate pods, configure GuardDuty Runtime Monitoring:
-
-```bash
-# Enable GuardDuty Runtime Monitoring
-aws guardduty create-detector --enable --features '{
-    "Name": "RUNTIME_MONITORING", 
-    "Status": "ENABLED",
-    "AdditionalConfiguration": [
-        {
-            "Name": "EKS_ADDON_MANAGEMENT",
-            "Status": "ENABLED"
-        }
-    ]
-}'
-```
-
-### Configure Bottlerocket security
-
-For Bottlerocket nodes, apply security settings:
-
-```toml
-# userdata.toml
-[settings.kernel]
-lockdown = "integrity"
-
-[settings.host-containers.admin]
-enabled = false
-
-[settings.oci-defaults]
-capabilities = ["CAP_NET_BIND_SERVICE"]
-```
-
-## Monitor and tune performance
-
-### Optimize resource usage
-
-Adjust Defender sensor resources based on cluster size:
+Add:
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-performance-config
-  namespace: kube-system
 data:
-  performance: |
-    cpuLimit: 500m
-    memoryLimit: 512Mi
-    cpuRequest: 100m
-    memoryRequest: 128Mi
-    maxEventsPerSecond: 100
-    bufferSize: 10000
+  use.private.link: "true"
+  private.link.scope: "/subscriptions/{subscriptionId}/resourceGroups/{rg}/providers/Microsoft.Network/privateLinkScopes/{scopeName}"
 ```
 
-### Configure EKS-specific alerts
+## Performance tuning
 
-Set up custom alerts for EKS events:
+### Resource limits
+
+Adjust resource allocations for the Defender sensor:
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-eks-alerts
-  namespace: kube-system
-data:
-  alerts: |
-    - name: "unauthorized-eks-api-call"
-      severity: "HIGH"
-      enabled: true
-    - name: "suspicious-iam-activity"
-      severity: "MEDIUM"
-      enabled: true
-    - name: "exposed-eks-dashboard"
-      severity: "HIGH"
-      enabled: true
+kubectl edit daemonset -n mdc azuredefender-sensor
 ```
 
-## Integrate with AWS services
+Modify resource limits:
 
-### Configure AWS Security Hub integration
-
-Enable integration with Security Hub:
-
-```bash
-# Enable Security Hub
-aws securityhub enable-security-hub
-
-# Enable Defender findings
-aws securityhub enable-import-findings-for-product \
-    --product-arn arn:aws:securityhub:<region>::product/microsoft/defender-for-cloud
+```yaml
+resources:
+  limits:
+    cpu: "500m"      # Adjust based on cluster size
+    memory: "512Mi"  # Adjust based on workload
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
 ```
 
-### Set up EventBridge rules
+### Configure data retention
 
-Create rules for Defender events:
+1. Navigate to your Log Analytics workspace.
 
-```json
-{
-  "Name": "defender-high-severity-alerts",
-  "EventPattern": {
-    "source": ["microsoft.defender"],
-    "detail-type": ["Security Alert"],
-    "detail": {
-      "severity": ["HIGH", "CRITICAL"]
-    }
-  },
-  "Targets": [
-    {
-      "Arn": "arn:aws:sns:region:account:security-alerts",
-      "Id": "1"
-    }
-  ]
-}
+1. Select **Usage and estimated costs**.
+
+1. Select **Data retention**.
+
+1. Set retention period (default is 30 days, can extend to 730 days).
+
+## Integration settings
+
+### SIEM integration
+
+Export security alerts to your SIEM:
+
+1. Navigate to **Continuous export**.
+
+1. Configure export to:
+   - Event Hub (for real-time streaming)
+   - Log Analytics workspace
+   - Third-party SIEM
+
+### API access configuration
+
+Generate API credentials for programmatic access:
+
+```azurecli
+# Create service principal for API access
+az ad sp create-for-rbac \
+    --name "DefenderContainersAPI" \
+    --role "Security Reader" \
+    --scopes "/subscriptions/{subscriptionId}"
 ```
+
+## Monitoring configuration health
+
+### Health metrics
+
+Monitor configuration effectiveness:
+
+```kusto
+// Check configuration changes
+AzureActivity
+| where OperationNameValue contains "Microsoft.Security"
+| where ActivityStatusValue == "Succeeded"
+| project TimeGenerated, OperationNameValue, Caller, Properties
+| order by TimeGenerated desc
+```
+
+### Configuration drift detection
+
+Set up alerts for configuration changes:
+
+```azurecli
+az monitor activity-log alert create \
+    --name "DefenderConfigChange" \
+    --resource-group <resource-group> \
+    --condition category=Administrative and \
+                operationName=Microsoft.Security/pricings/write \
+    --action-group <action-group-id>
+```
+
+## Best practices
+
+1. **Regular reviews**: Review configuration monthly
+2. **Test changes**: Test configuration changes in non-production first
+3. **Document settings**: Maintain documentation of custom configurations
+4. **Monitor impact**: Watch for performance impact after changes
+5. **Backup settings**: Export configurations before major changes
 
 ## Next steps
 
-- [Verify your configuration](defender-for-containers-eks-verify.md)
-- [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
-- [Review EKS security best practices](https://aws.amazon.com/architecture/security-identity-compliance/)
+- [Verify deployment](defender-for-containers-eks-verify.md) - Confirm configuration changes
+- [Remove Defender for Containers](defender-for-containers-eks-remove.md) - If you need to uninstall

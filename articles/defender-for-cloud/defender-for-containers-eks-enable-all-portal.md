@@ -7,19 +7,17 @@ ms.date: 06/04/2025
 
 # Enable all Defender for Containers components on AWS (EKS) via portal
 
-This article walks you through enabling comprehensive Microsoft Defender for Containers protection for your Amazon EKS clusters using the Azure portal. You'll set up vulnerability scanning, runtime protection, and security posture management across your AWS environment.
+This article walks you through enabling all Microsoft Defender for Containers components on your Amazon EKS clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
 
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-AWS-specific requirements:
+Additional requirements:
 
-- AWS account with administrator access
-- Active EKS clusters (version 1.19+)
-- Amazon ECR repositories with container images
-- AWS CLI configured locally
-- IAM permissions to create roles and policies
+- AWS account with appropriate IAM permissions
+- EKS clusters version 1.19 or later
+- Network connectivity from EKS to Azure endpoints
 
 ## Sign in to Azure
 
@@ -27,241 +25,176 @@ Sign in to the [Azure portal](https://portal.azure.com).
 
 ## Create AWS connector
 
-1. Navigate to **Microsoft Defender for Cloud**.
+If you haven't already connected your AWS account:
 
-1. Select **Environment settings** from the left menu.
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select **Add environment** > **Amazon Web Services**.
+1. Select **+ Add environment** > **Amazon Web Services**.
 
-## Configure connector settings
-
-1. In the **Account details** tab:
-   - **Account name**: Enter a descriptive name (e.g., "Production-AWS")
-   - **AWS account ID**: Enter your 12-digit AWS account ID
-   - **Subscription**: Select your Azure subscription
-   - **Resource group**: Create or select a resource group
-   - **Location**: Choose your preferred Azure region
+1. Enter connector details:
+   - **Connector name**: A descriptive name
+   - **AWS account ID**: Your 12-digit AWS account ID
+   - **Region**: Select your primary region
 
 1. Select **Next: Select plans**.
 
-## Enable Defender for Containers with all features
+## Enable Defender for Containers plan
 
-1. In the **Select plans** page, locate the **Containers** row.
+1. On the **Select plans** page, ensure **Containers** is toggled to **On**.
 
-1. Toggle the plan to **On**.
+    :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot of the Defender plans page that shows where to toggle the containers plan switch to on is located." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
 
-    :::image type="content" source="media/tutorial-enable-containers-aws/aws-containers-enabled.png" alt-text="Screenshot of enabling Defender for Containers for an AWS connector." lightbox="media/tutorial-enable-containers-aws/aws-containers-enabled.png":::
-
-1. Select **Settings** to configure the plan components.
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png" alt-text="Screenshot of the settings for the Containers plan in the Defender for Cloud environment settings with Agentless threat protection highlighted." lightbox="media/defender-for-containers-enable-plan-eks/containers-threat-protection.png":::
+1. Select **Configure** to set up plan components.
 
 1. Ensure all components are enabled:
-   - **Agentless threat protection** - Real-time threat detection. Set to **On** and configure the retention period for audit logs.
-   - **K8S API access** - Automatic EKS discovery. Set to **On**.
-   - **Registry access** - ECR vulnerability scanning. Set to **On**.
+   - **Agentless discovery for Kubernetes**
+   - **Agentless container vulnerability assessment**
+   - **Defender DaemonSet**
+   - **Azure Policy for Kubernetes**
 
-1. Select **Next: Review and generate**.
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
 
-## Set up AWS permissions
+1. Select **Next: Configure access**.
 
-1. The portal generates CloudFormation templates for the required AWS resources.
+## Configure AWS permissions
 
-1. Download the generated CloudFormation templates.
+1. Download the CloudFormation template by selecting **Download**.
 
-1. Open a new browser tab and sign in to your **AWS Console**.
+1. In a new tab, sign in to your AWS account.
 
-## Deploy CloudFormation stacks
+1. Navigate to **CloudFormation** > **Create stack**.
 
-1. In AWS Console, navigate to **CloudFormation**.
+1. Upload the downloaded template.
 
-1. Select **Create stack** > **With new resources**.
+1. Review and create the stack. This creates the necessary IAM roles.
 
-1. Upload the first template:
-   - Select **Upload a template file**
-   - Choose the downloaded template
-   - Select **Next**
+1. Once complete, return to Azure portal and select **Next: Review and create**.
 
-1. Configure stack:
-   - **Stack name**: Use a descriptive name
-   - Review parameters (defaults are usually correct)
-   - Select **Next** twice
-   - Check acknowledgment boxes
-   - Select **Create stack**
+## Connect EKS clusters to Azure Arc
 
-1. Wait for stack creation to complete (shows CREATE_COMPLETE).
+After creating the connector, connect your EKS clusters:
 
-1. Repeat for any additional templates if you have multiple features enabled.
+1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
 
-## Complete connector creation
+1. Filter by **Resource type** = **Kubernetes service**.
 
-1. Return to the Azure portal tab.
+1. Look for recommendations to connect your EKS clusters.
 
-1. Select **Update** to save your configuration.
+    :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
 
-1. The connector creation and configuration process takes 5-10 minutes.
+### Connect clusters using recommendation
 
-## Deploy Defender sensor to EKS clusters
+1. Select the recommendation **EKS clusters should be connected to Azure Arc**.
 
-Once the connector is active, you need to deploy the Defender sensor to your EKS clusters:
-
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Search for "EKS clusters should have Microsoft Defender's extension for Azure Arc installed".
-
-1. Select the recommendation.
-
-1. Select the unhealthy clusters (one at a time).
+1. Select your EKS clusters.
 
 1. Select **Fix**.
 
-1. Defender for Cloud generates a remediation script:
-   - For Linux: Select **Bash**
-   - For Windows: Select **PowerShell**
+    :::image type="content" source="media/tutorial-enable-containers-azure/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-azure/affected-fix.png":::
 
-1. Select **Download remediation logic**.
+1. Copy the generated script.
 
-1. Run the generated script on each of your EKS clusters.
+    :::image type="content" source="media/tutorial-enable-containers-gcp/copy-button.png" alt-text="Screenshot showing the location of the copy button." lightbox="media/tutorial-enable-containers-gcp/copy-button.png":::
 
-## Configure ECR scanning
+1. Run the script on a machine with kubectl access to your EKS cluster.
 
-If you enabled **Registry access**, container images in ECR will be automatically scanned:
+## Deploy Defender extensions
 
-1. The CloudFormation template already configured the necessary permissions.
+Once clusters are connected to Arc, deploy the Defender components:
 
-1. Scanning begins automatically for:
-   - New images pushed to ECR
-   - Existing images in your repositories
+1. Navigate to **Recommendations**.
 
-1. Results appear in the **Recommendations** page within a few hours.
+1. Search for **Azure Arc-enabled Kubernetes clusters should have Defender extension installed**.
 
-## Enable CloudWatch logging
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
+
+1. Select your Arc-enabled EKS clusters.
+
+1. Select **Fix** to deploy the extension.
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Deploy Defender sensor for Azure Arc-enabled clusters using Defender for Cloud's 'Fix' option.":::
+
+## Deploy Azure Policy extension
+
+1. Search for the recommendation **Azure Policy for Kubernetes should be installed and enabled**.
+
+1. Select your Arc-enabled EKS clusters.
+
+1. Select **Fix** to deploy the Policy extension.
+
+## Verify deployment
+
+After deployment completes (typically 10-15 minutes):
+
+1. Navigate to **Workload protections** > **Containers**.
+
+1. Verify your EKS clusters appear with protection enabled.
+
+1. Check that security recommendations are being generated.
+
+### Verify extensions on cluster
+
+Navigate to your Arc-enabled cluster to see installed extensions:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+
+Select an extension to view details:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Full details of an Azure Arc extension on a Kubernetes cluster.":::
+
+## Enable diagnostic logs
 
 For comprehensive monitoring:
 
-1. In AWS Console, navigate to each EKS cluster.
+1. In AWS Console, navigate to your EKS cluster.
 
-1. Select **Logging** tab.
+1. Select **Logging**.
 
-1. Enable these log types:
+1. Enable all log types:
    - API server
    - Audit
    - Authenticator
    - Controller manager
    - Scheduler
 
-1. Select **Update** to save changes.
-
-## Verify deployment
-
-### Check connector health
-
-1. In Azure portal, go to **Environment settings**.
-
-1. Select your AWS connector.
-
-    :::image type="content" source="media/tutorial-enable-containers-aws/aws-account.png" alt-text="Screenshot of Defender for Cloud's environment settings page showing an AWS connector." lightbox="media/tutorial-enable-containers-aws/aws-account.png":::
-
-1. Verify the Containers plan shows as **On** with all components enabled.
-
-### View discovered resources
-
-1. Navigate to **Inventory**.
-
-1. Filter by **Environment** = **AWS**.
-
-1. You should see:
-   - EKS clusters with Arc connected
-   - ECR repositories (if Registry access is enabled)
-   - Container images
-
-### Check security insights
-
-1. Navigate to **Workload protections** > **Containers**.
-
-1. The dashboard displays:
-   - EKS cluster security status
-   - Vulnerable images in ECR
-   - Runtime protection coverage
-   - Compliance scores
-
 ## Test the deployment
 
-Generate a test alert to verify runtime protection:
+Generate a test security alert:
 
-1. Connect to your EKS cluster:
+```bash
+kubectl run test-alert --image=nginx --rm -it --restart=Never -- bash -c "echo 'test' > /etc/passwd"
+```
 
-   ```bash
-   aws eks update-kubeconfig --name <cluster-name> --region <region>
-   ```
+Within 5-10 minutes, check **Security alerts** for the test alert.
 
-2. Run a test command:
+## Monitor security status
 
-   ```bash
-   kubectl run test-alert --image=nginx --rm -it --restart=Never -- bash -c "cat /etc/shadow"
-   ```
+After setup:
 
-3. Within 5-10 minutes, check for alerts in Defender for Cloud.
-
-## Configure notifications
-
-1. Navigate to **Environment settings**.
-
-1. Select **Email notifications**.
-
-1. Configure:
-   - Email recipients
-   - Alert severity levels
-   - Notification frequency
-
-1. Save your settings.
-
-## Monitor ongoing security
-
-After setup, regularly review:
-
-1. **Recommendations**: Address EKS-specific security issues like:
-   - "Container images should have vulnerability findings resolved"
-   - "Kubernetes clusters should disable automounting API credentials"
-   - "Container with privilege escalation should be avoided"
-
-1. **Security alerts**: Investigate runtime threats promptly.
-
-1. **Vulnerability assessment**: Review and remediate vulnerable images.
-
-1. **Regulatory compliance**: Track adherence to standards like:
-   - CIS Kubernetes Benchmark
-   - PCI DSS
-   - AWS Foundational Security Best Practices
+1. **Inventory**: View all protected EKS clusters
+2. **Recommendations**: Review and act on security findings
+3. **Security alerts**: Monitor runtime threats
+4. **Workload protections**: Track overall container security
 
 ## Best practices
 
-1. **Regular reviews**: Check the Containers dashboard weekly.
+1. **Enable all components** for comprehensive protection
+2. **Regular monitoring** - Check dashboard weekly
+3. **Alert response** - Investigate high-severity alerts immediately
+4. **Compliance tracking** - Monitor regulatory compliance status
+5. **Update clusters** - Keep EKS versions current
 
-1. **Automated remediation**: Use Azure Policy to enforce security configurations.
+## Troubleshooting
 
-1. **Image scanning**: Scan images before deploying to production.
+If components fail to deploy:
 
-1. **Network policies**: Implement Kubernetes network policies for microsegmentation.
-
-1. **RBAC**: Use proper role-based access control in your clusters.
-
-## Clean up resources
-
-To disable Defender for Containers on AWS:
-
-1. Navigate to **Environment settings**.
-
-1. Select your AWS connector.
-
-1. Either:
-   - Toggle **Containers** to **Off** to disable the plan
-   - Select **Delete** to remove the entire connector
-
-1. In AWS, optionally delete the CloudFormation stacks.
+1. Verify AWS IAM roles were created correctly
+2. Check network connectivity from EKS to Azure
+3. Ensure clusters meet version requirements
+4. Review activity logs in both Azure and AWS
 
 ## Next steps
 
-- [Configure advanced settings for EKS](defender-for-containers-eks-configure.md)
-- [Review container security best practices](container-security.md)
-- [Implement Kubernetes workload protections](kubernetes-workload-protections.md)
+- [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
+- [Verify deployment](defender-for-containers-eks-verify.md)
+- [Deploy components programmatically](defender-for-containers-eks-deploy.md) - For automation scenarios

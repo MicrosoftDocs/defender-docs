@@ -1,263 +1,298 @@
 ---
 title: Verify Defender for Containers deployment on AWS (EKS)
-description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your EKS clusters.
+description: Learn how to verify that Microsoft Defender for Containers is properly deployed and functioning on your Amazon EKS clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
 # Verify Defender for Containers deployment on AWS (EKS)
 
-After enabling Defender for Containers, verify that all components are properly deployed and functioning on your EKS clusters.
+After deploying Defender for Containers on your EKS clusters, verify that all components are properly installed and functioning correctly.
 
-## Verify AWS connector
+## Verify in Microsoft Defender for Cloud
 
-### Check connector status
+### Check environment connection
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**
-2. Select your AWS connector
-3. Verify status shows as **Connected**
-4. Check that **Containers** plan is **On**
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-### Verify CloudFormation stack
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-```bash
-# Check stack status
-aws cloudformation describe-stacks \
-    --stack-name DefenderContainersEKS \
-    --query 'Stacks[0].StackStatus'
+1. Locate your AWS connector and verify:
+   - Status shows as **Connected**
+   - Last sync time is recent (within the last hour)
+   - No error messages are displayed
 
-# List stack resources
-aws cloudformation list-stack-resources \
-    --stack-name DefenderContainersEKS
-```
+### Verify discovered resources
 
-## Verify sensor deployment
+1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
 
-### Check DaemonSet status
+1. Apply these filters:
+   - **Environment**: AWS
+   - **Resource type**: Kubernetes service
 
-```bash
-# Verify sensor DaemonSet
-kubectl get daemonset -n kube-system microsoft-defender-sensor
+1. Verify that your EKS clusters appear in the list.
 
-# Expected output:
-# NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-# microsoft-defender-sensor   3         3         3       3            3           <none>          5m
-```
+1. Check that each cluster shows:
+   - Defender coverage status
+   - Monitored resources count
+   - Security findings (if any)
 
-### Check pod status
+### Check security coverage
 
-```bash
-# List Defender pods
-kubectl get pods -n kube-system -l app=microsoft-defender
+1. Navigate to **Workload protections** > **Containers**.
 
-# Check pod details
-kubectl describe pods -n kube-system -l app=microsoft-defender
-```
+1. In the coverage section, verify:
+   - Number of protected EKS clusters
+   - Number of monitored container images
+   - Active security policies
 
-### Verify pod logs
+## Verify on EKS clusters
+
+### Check Arc connection
 
 ```bash
-# Check recent logs
-kubectl logs -n kube-system -l app=microsoft-defender --tail=100
+# Set cluster context
+aws eks update-kubeconfig --name <cluster-name> --region <region>
 
-# Look for successful connection
-kubectl logs -n kube-system -l app=microsoft-defender | grep "Successfully connected to Azure"
+# Check Arc agents
+kubectl get pods -n azure-arc
 ```
 
-## Verify IAM configuration
+Expected output:
 
-### Check service account
+```
+NAME                                         READY   STATUS    RESTARTS   AGE
+clusteridentityoperator-xxx                  1/1     Running   0          1h
+config-agent-xxx                             1/1     Running   0          1h
+controller-manager-xxx                       1/1     Running   0          1h
+flux-logs-agent-xxx                          1/1     Running   0          1h
+resource-sync-agent-xxx                      1/1     Running   0          1h
+```
+
+### Verify Defender sensor
 
 ```bash
-# Verify service account
-kubectl get sa microsoft-defender -n kube-system -o yaml
+# Check Defender pods
+kubectl get pods -n mdc
 
-# Check IAM role annotation
-kubectl get sa microsoft-defender -n kube-system \
-    -o jsonpath='{.metadata.annotations.eks\.amazonaws\.com/role-arn}'
+# Check DaemonSet status
+kubectl get daemonsets -n mdc
 ```
 
-### Test IAM role
+Expected output:
+
+```
+NAME                    DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE
+azuredefender-sensor    3         3         3       3            3
+```
+
+### Verify Azure Policy extension
 
 ```bash
-# Get pod name
-POD=$(kubectl get pods -n kube-system -l app=microsoft-defender -o jsonpath='{.items[0].metadata.name}')
+# Check Policy pods
+kubectl get pods -n azurepolicy
 
-# Test AWS API access
-kubectl exec -n kube-system $POD -- aws sts get-caller-identity
+# Verify Policy deployment
+kubectl get deployment -n azurepolicy
 ```
 
-## Verify ECR scanning
+Expected components:
 
-### Check ECR configuration
+- azure-policy pod
+- gatekeeper-controller pods
+- gatekeeper-audit pod
+
+### Check extension status in portal
+
+Navigate to your Arc-enabled cluster to see installed extensions:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+
+View detailed extension information:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Full details of an Azure Arc extension on a Kubernetes cluster.":::
+
+## Test functionality
+
+### Generate a test security alert
+
+1. Run a test command to trigger a benign alert:
+
+    ```bash
+    kubectl run test-alert \
+        --image=nginx \
+        --rm -it \
+        --restart=Never \
+        -- bash -c "echo 'test' > /etc/passwd"
+    ```
+
+1. Wait 5-10 minutes for the alert to appear.
+
+1. Navigate to **Security alerts** in Defender for Cloud.
+
+1. Look for an alert titled "Attempt to write to /etc/passwd detected".
+
+### Verify image scanning
+
+1. Push a test image to your ECR repository:
+
+    ```bash
+    # Tag and push a test image
+    docker pull nginx:latest
+    docker tag nginx:latest <account-id>.dkr.ecr.<region>.amazonaws.com/test:latest
+    docker push <account-id>.dkr.ecr.<region>.amazonaws.com/test:latest
+    ```
+
+1. Wait for scanning to complete (typically 5-15 minutes).
+
+1. Navigate to **Recommendations** > **Container images should have vulnerability findings resolved**.
+
+1. Verify the image appears with vulnerability findings.
+
+### Check security recommendations
+
+1. Navigate to **Recommendations**.
+
+1. Filter by **Resource type** = **Kubernetes service**.
+
+1. Verify you see EKS-specific recommendations such as:
+   - "Kubernetes clusters should disable automounting API credentials"
+   - "Container images should be deployed from trusted registries only"
+   - "Containers should run with a read only root file system"
+
+## Verify logs and metrics
+
+### Check Defender sensor logs
 
 ```bash
-# Verify enhanced scanning
-aws ecr describe-registry \
-    --query 'scanningConfiguration'
+# View sensor logs
+kubectl logs -n mdc -l app=azuredefender-sensor --tail=50
 
-# Check repository scanning
-aws ecr describe-repositories \
-    --query 'repositories[*].[repositoryName,imageScanningConfiguration]'
+# Check for errors
+kubectl logs -n mdc -l app=azuredefender-sensor | grep -i error
 ```
 
-### Test image scanning
+### Verify data collection
+
+1. In Azure portal, navigate to your Log Analytics workspace.
+
+1. Run this query to verify data ingestion:
+
+    ```kusto
+    ContainerLog
+    | where TimeGenerated > ago(1h)
+    | where ClusterName contains "eks"
+    | summarize count() by ClusterName, ContainerName
+    ```
+
+1. Check for security events:
+
+    ```kusto
+    SecurityAlert
+    | where TimeGenerated > ago(24h)
+    | where ResourceId contains "eks"
+    | project TimeGenerated, AlertName, Severity, ResourceId
+    ```
+
+## Troubleshooting verification failures
+
+### Arc agents not running
 
 ```bash
-# Push a test image
-docker pull nginx:latest
-docker tag nginx:latest <account>.dkr.ecr.<region>.amazonaws.com/test:latest
-docker push <account>.dkr.ecr.<region>.amazonaws.com/test:latest
+# Check Arc connectivity
+az connectedk8s show \
+    --name <cluster-name> \
+    --resource-group <resource-group>
 
-# Check scan results (wait 2-3 minutes)
-aws ecr describe-image-scan-findings \
-    --repository-name test \
-    --image-id imageTag=latest
+# Re-run Arc connection if needed
+az connectedk8s connect \
+    --name <cluster-name> \
+    --resource-group <resource-group>
 ```
 
-## Verify CloudWatch integration
-
-### Check log groups
+### Defender sensor issues
 
 ```bash
-# List Defender log groups
-aws logs describe-log-groups \
-    --log-group-name-prefix "/aws/containerinsights"
+# Check sensor configuration
+kubectl describe configmap -n mdc azuredefender-config
 
-# Check log streams
-aws logs describe-log-streams \
-    --log-group-name "/aws/containerinsights/<cluster-name>/defender"
+# Restart sensor pods
+kubectl rollout restart daemonset/azuredefender-sensor -n mdc
 ```
 
-### Query logs
+### No security data appearing
+
+1. Verify network connectivity:
+
+    ```bash
+    # Test connectivity to Azure endpoints
+    kubectl run test-connectivity \
+        --image=busybox \
+        --rm -it \
+        --restart=Never \
+        -- nslookup ods.opinsights.azure.com
+    ```
+
+1. Check IAM permissions in AWS:
 
 ```bash
-# Get recent logs
-aws logs filter-log-events \
-    --log-group-name "/aws/containerinsights/<cluster-name>/defender" \
-    --start-time $(date -u -d '5 minutes ago' +%s)000
+aws iam get-role --role-name DefenderForCloud-Containers-K8s
 ```
 
-## Verify data in Defender for Cloud
+### Missing recommendations
 
-### Check cluster visibility
+If recommendations don't appear:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Inventory**
-2. Filter by **Resource type** = **Kubernetes service**
-3. Verify your EKS clusters appear
+1. Ensure Azure Policy extension is installed.
+1. Wait up to 24 hours for initial assessment.
+1. Check Policy assignment status in Azure portal.
 
-### Verify security alerts
+## Health monitoring
 
-Generate a test alert:
+### Set up alerts for component health
+
+1. Navigate to **Azure Monitor** > **Alerts**.
+
+1. Create alert rules for:
+   - Arc-enabled Kubernetes cluster availability
+   - Extension health status changes
+   - Failed security assessments
+
+### Regular health checks
+
+Create a monitoring routine:
 
 ```bash
-# This triggers a benign test alert
-kubectl run test-alert \
-    --image=nginx \
-    --rm -it \
-    --restart=Never \
-    -- /bin/sh -c "curl http://testmynids.org/uid/index.html"
+#!/bin/bash
+# health-check.sh
+
+echo "Checking Arc connection..."
+az connectedk8s show --name $CLUSTER_NAME --resource-group $RG --query connectivityStatus
+
+echo "Checking Defender pods..."
+kubectl get pods -n mdc --no-headers | grep -v Running
+
+echo "Checking Policy pods..."
+kubectl get pods -n azurepolicy --no-headers | grep -v Running
+
+echo "Checking recent alerts..."
+az security alert list --resource-group $RG --query "[?contains(resourceId, '$CLUSTER_NAME')]" --output table
 ```
 
-Check for alerts in Defender for Cloud within 5-10 minutes.
+## Validation checklist
 
-### Check recommendations
-
-1. Navigate to **Recommendations**
-2. Filter by **Resource type** = **Kubernetes service**
-3. Look for EKS-specific recommendations
-
-## Verify Fargate deployment
-
-For Fargate profiles:
-
-```bash
-# List Fargate profiles
-aws eks list-fargate-profiles --cluster-name <cluster-name>
-
-# Check Fargate pods
-kubectl get pods --all-namespaces -o json | \
-    jq -r '.items[] | select(.spec.nodeName | startswith("fargate")) | 
-    "\(.metadata.namespace)/\(.metadata.name)"'
-```
-
-## Common verification issues
-
-### Sensor pods in CrashLoopBackOff
-
-```bash
-# Check pod events
-kubectl describe pod <pod-name> -n kube-system
-
-# Common causes:
-# - IAM role misconfiguration
-# - Network connectivity issues
-# - Resource constraints
-```
-
-### No data in Defender
-
-1. Verify AWS connector is healthy
-2. Check CloudWatch log group exists
-3. Ensure IAM roles have correct permissions
-4. Verify network connectivity to Azure
-
-### Missing ECR scan results
-
-```bash
-# Verify Inspector is enabled
-aws inspector2 list-coverage \
-    --filter-criteria '{"resourceType":[{"comparison":"EQUALS","value":"ECR"}]}'
-```
-
-### Test Binary Authorization
-
-```bash
-# Create a test policy
-cat <<EOF > /tmp/binary-auth-policy.yaml
-apiVersion: binaryauthorization.grafeas.io/v1beta1
-kind: Policy
-metadata:
-  name: binary-authorization-policy
-spec:
-  globalPolicyEvaluationMode: ENABLE
-  defaultAdmissionRule:
-    evaluationMode: REQUIRE_ATTESTATION
-    enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
-    requireAttestationsBy:
-    - projects/PROJECT_ID/attestors/prod-attestor
-EOF
-
-# Apply the policy
-kubectl apply -f /tmp/binary-auth-policy.yaml
-
-# Test with unsigned image (should fail)
-kubectl run test-unsigned --image=nginx:latest
-
-# Check audit logs
-kubectl logs -n kube-system -l component=admission-controller
-```
-
-## Monitor performance impact
-
-Defender for Containers is designed to have minimal performance impact. However, monitor your clusters for any unusual behavior or performance issues after deployment.
-
-### Check resource usage
-
-```bash
-# Monitor node resource usage
-kubectl top nodes
-
-# Monitor pod resource usage
-kubectl top pods --all-namespaces
-```
-
-### Review Defender metrics
-
-In **Microsoft Defender for Cloud** > **Security policy** > **Kubernetes**, review the metrics and recommendations for your clusters.
+- [ ] AWS connector shows as Connected
+- [ ] EKS clusters appear in Inventory
+- [ ] Arc agents are running (azure-arc namespace)
+- [ ] Defender sensor pods are running (mdc namespace)
+- [ ] Policy pods are running (azurepolicy namespace)
+- [ ] Test security alert generated successfully
+- [ ] Container images are being scanned
+- [ ] Security recommendations are appearing
+- [ ] Logs are flowing to Log Analytics
+- [ ] No error messages in component logs
 
 ## Next steps
 
-- Explore **Microsoft Defender for Cloud** features for Kubernetes.
-- Set up alerts and automation for security events.
-- Regularly review and optimize your security posture.
+- [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
+- [Remove Defender for Containers](defender-for-containers-eks-remove.md) - If you need to uninstall

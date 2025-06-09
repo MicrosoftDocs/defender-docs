@@ -1,270 +1,400 @@
 ---
-title: Deploy Defender for Containers on AWS (EKS)
-description: Learn how to enable Microsoft Defender for Containers on Amazon EKS clusters.
+title: Deploy Defender for Containers components on AWS (EKS) programmatically
+description: Learn how to deploy Microsoft Defender for Containers components on Amazon EKS clusters using CLI, REST API, and automation tools.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy Defender for Containers on AWS (EKS)
+# Deploy Defender for Containers components on AWS (EKS) programmatically
 
-This article explains how to enable Microsoft Defender for Containers on your Amazon EKS clusters.
+This article explains how to deploy Defender for Containers components on your Amazon EKS clusters using command-line tools, APIs, and automation methods.
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-- AWS account connected to Microsoft Defender for Cloud
-- EKS cluster running version 1.19 or later
-- AWS CLI and kubectl configured
-- IAM permissions to create roles and deploy CloudFormation
+Required tools:
 
-## Step 1: Connect AWS account
+- Azure CLI (version 2.40.0 or later)
+- AWS CLI configured with appropriate credentials
+- `kubectl` configured for your EKS clusters
+- Helm 3 (for Kubernetes deployments)
 
-If you haven't already connected your AWS account:
+## Enable Defender for Containers plan
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**
-2. Select **Add environment** > **Amazon Web Services**
-3. Follow the onboarding wizard
+### Using Azure CLI
 
-## Step 2: Enable Defender for Containers
+```azurecli
+# Set variables
+SUBSCRIPTION_ID="<your-subscription-id>"
 
-### Using Azure portal
+# Enable Defender for Containers
+az security pricing create \
+    --name "Containers" \
+    --subscription $SUBSCRIPTION_ID \
+    --tier "Standard"
 
-1. In **Microsoft Defender for Cloud** > **Environment settings**
-2. Select your AWS connector
-3. Toggle **Containers** to **On**
-4. Select **Configure** and enable:
-   - Runtime threat protection
-   - Agentless discovery for Kubernetes
-   - ECR vulnerability scanning
-5. Select **Save**
+# Configure components
+az security pricing update \
+    --name "Containers" \
+    --subscription $SUBSCRIPTION_ID \
+    --tier "Standard" \
+    --subplan "DefenderForContainersGke,DefenderForContainersEks"
+```
+
+### Using REST API
+
+```bash
+# Enable the plan
+curl -X PUT \
+  "https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "pricingTier": "Standard",
+      "subPlan": "DefenderForContainersEks"
+    }
+  }'
+```
+
+## Create AWS connector
+
+### Using Azure CLI
+
+```azurecli
+# Create resource group
+az group create --name "DefenderForContainers-RG" --location "eastus"
+
+# Create AWS connector
+az security aws-connector create \
+    --connector-name "my-aws-connector" \
+    --resource-group "DefenderForContainers-RG" \
+    --aws-account-id "<aws-account-id>" \
+    --offerings '[
+      {
+        "offeringType": "DefenderForContainersEks",
+        "kubernetesService": {
+          "cloudRoleArn": "arn:aws:iam::{accountId}:role/DefenderForCloud-Containers-K8s"
+        },
+        "kubernetesDataCollection": {
+          "cloudRoleArn": "arn:aws:iam::{accountId}:role/DefenderForCloud-DataCollection"
+        },
+        "containerVulnerabilityAssessment": {
+          "cloudRoleArn": "arn:aws:iam::{accountId}:role/DefenderForCloud-ContainerVulnerabilityAssessment"
+        }
+      }
+    ]'
+```
 
 ### Using CloudFormation
+
+Create IAM roles using CloudFormation:
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Microsoft Defender for Containers - EKS IAM Roles'
+
+Resources:
+  DefenderContainersRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DefenderForCloud-Containers-K8s
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+            Action: 'sts:AssumeRole'
+            Condition:
+              StringEquals:
+                'sts:ExternalId': !Ref ExternalId
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
+        - arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+      Policies:
+        - PolicyName: DefenderContainersPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - eks:ListClusters
+                  - eks:DescribeCluster
+                  - ecr:GetAuthorizationToken
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:GetDownloadUrlForLayer
+                  - ecr:DescribeRepositories
+                  - ecr:ListImages
+                  - ecr:DescribeImages
+                Resource: '*'
+
+Parameters:
+  ExternalId:
+    Type: String
+    Description: External ID from Microsoft Defender for Cloud
+```
 
 Deploy the CloudFormation stack:
 
 ```bash
-# Download the template
-curl -o defender-containers-eks.yaml https://aka.ms/defender-containers-eks-cloudformation
-
-# Deploy the stack
 aws cloudformation create-stack \
-    --stack-name DefenderContainersEKS \
-    --template-body file://defender-containers-eks.yaml \
-    --parameters \
-        ParameterKey=DefenderForCloudRoleArn,ParameterValue=<connector-role-arn> \
-        ParameterKey=EKSClusterName,ParameterValue=<cluster-name> \
-    --capabilities CAPABILITY_NAMED_IAM
+  --stack-name DefenderForContainers \
+  --template-body file://defender-roles.yaml \
+  --parameters ParameterKey=ExternalId,ParameterValue=<external-id> \
+  --capabilities CAPABILITY_NAMED_IAM
 ```
 
-## Step 3: Deploy Defender sensor
+## Deploy Arc and Defender extensions
 
-### Automatic deployment
-
-The Defender sensor is automatically deployed through the AWS connector. To verify:
+### Connect EKS to Azure Arc
 
 ```bash
-# Check if sensor is deployed
-kubectl get daemonset -n kube-system | grep defender
+# Set variables
+CLUSTER_NAME="my-eks-cluster"
+RESOURCE_GROUP="DefenderForContainers-RG"
+REGION="eastus"
+
+# Connect cluster to Arc
+az connectedk8s connect \
+    --name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --location $REGION \
+    --tags "Environment=Production" "Team=Security"
+
+# Verify connection
+az connectedk8s show \
+    --name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP
 ```
 
-### Manual deployment
-
-If automatic deployment doesn't occur:
+### Deploy Defender sensor using CLI
 
 ```bash
-# Get the deployment manifest
-curl -o defender-sensor-eks.yaml https://aka.ms/defender-sensor-eks
-
-# Update with your cluster details
-sed -i 's/<CLUSTER_NAME>/<your-cluster-name>/g' defender-sensor-eks.yaml
-sed -i 's/<REGION>/<your-region>/g' defender-sensor-eks.yaml
-
-# Apply the manifest
-kubectl apply -f defender-sensor-eks.yaml
+# Install Defender extension
+az k8s-extension create \
+    --name microsoft-defender \
+    --extension-type microsoft.azuredefender.kubernetes \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --configuration-settings \
+        "logAnalyticsWorkspaceResourceID=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}" \
+        "auditLogPath=/var/log/kube-apiserver/audit.log"
 ```
 
-## Step 4: Configure IAM roles
+### Deploy using Helm
 
-### Create IAM role for Defender
+```bash
+# Add Defender Helm repository
+helm repo add mdc https://azuredefender.azurecr.io/helm/v1/repo
+helm repo update
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Federated": "arn:aws:iam::<account>:oidc-provider/<oidc-provider>"
-            },
-            "Action": "sts:AssumeRoleWithWebIdentity",
-            "Condition": {
-                "StringEquals": {
-                    "<oidc-provider>:sub": "system:serviceaccount:kube-system:microsoft-defender"
-                }
-            }
+# Install Defender sensor
+helm install defender-sensor mdc/azuredefender \
+    --namespace mdc \
+    --create-namespace \
+    --set cluster.name=$CLUSTER_NAME \
+    --set azure.workspaceId=<workspace-id> \
+    --set azure.workspaceKey=<workspace-key>
+```
+
+## Deploy Azure Policy extension
+
+```bash
+# Install Azure Policy extension
+az k8s-extension create \
+    --name azurepolicy \
+    --extension-type Microsoft.PolicyInsights \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP
+```
+
+## Configure agentless features
+
+### Enable agentless discovery using REST API
+
+```bash
+curl -X PATCH \
+  "https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Security/securityConnectors/{connectorName}?api-version=2024-01-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "offerings": [{
+        "offeringType": "DefenderForContainersEks",
+        "kubernetesService": {
+          "enabled": true
         }
-    ]
+      }]
+    }
+  }'
+```
+
+## Batch deployment using scripts
+
+### PowerShell script for multiple clusters
+
+```powershell
+# Deploy to multiple EKS clusters
+$clusters = @("cluster1", "cluster2", "cluster3")
+$resourceGroup = "DefenderForContainers-RG"
+
+foreach ($cluster in $clusters) {
+    # Update kubeconfig
+    aws eks update-kubeconfig --name $cluster
+    
+    # Connect to Arc
+    az connectedk8s connect `
+        --name $cluster `
+        --resource-group $resourceGroup `
+        --location eastus
+    
+    # Install extensions
+    az k8s-extension create `
+        --name microsoft-defender `
+        --extension-type microsoft.azuredefender.kubernetes `
+        --cluster-type connectedClusters `
+        --cluster-name $cluster `
+        --resource-group $resourceGroup
 }
 ```
 
-### Attach policies
+### Bash script for automated deployment
 
 ```bash
-# Create the role
-aws iam create-role \
-    --role-name DefenderForContainersEKSRole \
-    --assume-role-policy-document file://trust-policy.json
+#!/bin/bash
+# deploy-defender-eks.sh
 
-# Attach required policies
-aws iam attach-role-policy \
-    --role-name DefenderForContainersEKSRole \
-    --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+RESOURCE_GROUP="DefenderForContainers-RG"
+WORKSPACE_ID="<workspace-id>"
 
-aws iam attach-role-policy \
-    --role-name DefenderForContainersEKSRole \
-    --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+# Function to deploy Defender to a cluster
+deploy_defender() {
+    local cluster_name=$1
+    local region=$2
+    
+    echo "Deploying to cluster: $cluster_name"
+    
+    # Update kubeconfig
+    aws eks update-kubeconfig --name $cluster_name --region $region
+    
+    # Connect to Arc
+    az connectedk8s connect \
+        --name $cluster_name \
+        --resource-group $RESOURCE_GROUP \
+        --location eastus
+    
+    # Install Defender extension
+    az k8s-extension create \
+        --name microsoft-defender \
+        --extension-type microsoft.azuredefender.kubernetes \
+        --cluster-type connectedClusters \
+        --cluster-name $cluster_name \
+        --resource-group $RESOURCE_GROUP \
+        --configuration-settings \
+            "logAnalyticsWorkspaceResourceID=$WORKSPACE_ID"
+}
+
+# Deploy to all clusters
+deploy_defender "prod-eks-cluster" "us-east-1"
+deploy_defender "dev-eks-cluster" "us-west-2"
 ```
 
-## Step 5: Configure ECR scanning
+## Deploy using ARM templates
 
-### Enable enhanced scanning
-
-```bash
-# Enable enhanced scanning with Inspector
-aws ecr put-registry-scanning-configuration \
-    --scan-type ENHANCED \
-    --region <region>
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Kubernetes/connectedClusters/providers/extensions",
+      "apiVersion": "2022-11-01",
+      "name": "[concat(parameters('clusterName'), '/Microsoft.KubernetesConfiguration/microsoft-defender')]",
+      "properties": {
+        "extensionType": "microsoft.azuredefender.kubernetes",
+        "configurationSettings": {
+          "logAnalyticsWorkspaceResourceID": "[resourceId('Microsoft.OperationalInsights/workspaces', 'defaultWorkspace')]"
+        }
+      }
+    }
+  ]
+}
 ```
 
-### Configure repository scanning
+Deploy the template:
 
-```bash
-# Enable scanning for specific repositories
-aws ecr put-image-scanning-configuration \
-    --repository-name <repo-name> \
-    --image-scanning-configuration scanOnPush=true
+```azurecli
+az deployment group create \
+    --resource-group DefenderForContainers-RG \
+    --template-file defender-extension.json \
+    --parameters clusterName=my-eks-cluster location=eastus
 ```
 
-## Step 6: Configure CloudWatch integration
+## Configure using Infrastructure as Code
 
-### Create log group
+### Terraform example
 
-```bash
-# Create CloudWatch log group
-aws logs create-log-group \
-    --log-group-name /aws/containerinsights/<cluster-name>/defender
-```
+```hcl
+# Configure Defender for Containers
+resource "azurerm_security_center_subscription_pricing" "containers" {
+  tier          = "Standard"
+  resource_type = "Containers"
+  subplan       = "DefenderForContainersEks"
+}
 
-### Enable EKS control plane logging
+# Create AWS connector
+resource "azurerm_security_center_aws_connector" "example" {
+  name                = "example-aws-connector"
+  aws_account_id      = var.aws_account_id
+  resource_group_name = azurerm_resource_group.example.name
 
-```bash
-# Enable audit logs
-aws eks update-cluster-config \
-    --name <cluster-name> \
-    --logging '{"clusterLogging":[{"types":["api","audit","authenticator","controllerManager","scheduler"],"enabled":true}]}'
-```
-
-## Deploy for Fargate
-
-For EKS on Fargate, deploy as a sidecar:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app-with-defender
-spec:
-  template:
-    spec:
-      serviceAccountName: microsoft-defender
-      containers:
-      - name: app
-        image: myapp:latest
-      - name: defender-sidecar
-        image: mcr.microsoft.com/defender-for-cloud/stable/defender-for-containers:latest
-        env:
-        - name: FARGATE_MODE
-          value: "true"
-        - name: CLUSTER_NAME
-          value: "<cluster-name>"
+  offering {
+    type = "DefenderForContainersEks"
+    
+    kubernetes_service {
+      cloud_role_arn = "arn:aws:iam::${var.aws_account_id}:role/DefenderForCloud-Containers-K8s"
+    }
+    
+    kubernetes_data_collection {
+      cloud_role_arn = "arn:aws:iam::${var.aws_account_id}:role/DefenderForCloud-DataCollection"
+    }
+  }
+}
 ```
 
 ## Verify deployment
 
-### Check sensor status
+After deployment, verify components are running:
 
 ```bash
-# Verify DaemonSet
-kubectl get ds -n kube-system microsoft-defender-sensor
+# Check Arc connection
+az connectedk8s list --resource-group $RESOURCE_GROUP
 
-# Check pod logs
-kubectl logs -n kube-system -l app=microsoft-defender --tail=50
+# Check extensions
+az k8s-extension list \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP
+
+# Check pods
+kubectl get pods -n mdc
+kubectl get pods -n azurepolicy
 ```
-
-### Test connection to Azure
-
-```bash
-# Check Azure connectivity
-kubectl exec -n kube-system <defender-pod> -- nslookup ods.opinsights.azure.com
-```
-
-## Configure for specific scenarios
-
-### Private EKS clusters
-
-For private clusters, configure VPC endpoints:
-
-```bash
-# Create VPC endpoints for required services
-aws ec2 create-vpc-endpoint \
-    --vpc-id <vpc-id> \
-    --service-name com.amazonaws.<region>.logs \
-    --route-table-ids <route-table-id>
-```
-
-### Multiple clusters
-
-Deploy to multiple clusters using AWS Systems Manager:
-
-```bash
-# Store configuration in Parameter Store
-aws ssm put-parameter \
-    --name /DefenderForContainers/Config \
-    --value file://defender-config.json \
-    --type SecureString
-
-# Deploy across clusters
-for cluster in cluster1 cluster2 cluster3; do
-    kubectl config use-context $cluster
-    kubectl apply -f defender-sensor-eks.yaml
-done
-```
-
-## Troubleshooting
-
-### Sensor not starting
-
-```bash
-# Check IAM role
-aws sts assume-role-with-web-identity \
-    --role-arn <role-arn> \
-    --role-session-name test \
-    --web-identity-token <token>
-
-# Check security groups
-aws ec2 describe-security-groups \
-    --group-ids <sg-id>
-```
-
-### No data in Defender
-
-1. Verify CloudWatch logs are enabled
-2. Check IAM permissions
-3. Ensure outbound connectivity to Azure endpoints
 
 ## Next steps
 
-- [Verify your Defender for Containers deployment](defender-for-containers-eks-verify.md)
+- [Verify deployment](defender-for-containers-eks-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
-- [Monitor EKS security with Defender for Cloud](defender-for-containers-eks-overview.md)
+- [Remove Defender for Containers](defender-for-containers-eks-remove.md)

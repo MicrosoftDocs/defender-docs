@@ -1,207 +1,347 @@
 ---
 title: Remove Defender for Containers from AWS (EKS)
-description: Learn how to disable and remove Microsoft Defender for Containers from your EKS clusters.
+description: Learn how to remove Microsoft Defender for Containers components from your Amazon EKS clusters and disable the service.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
 # Remove Defender for Containers from AWS (EKS)
 
-This article explains how to disable and remove Defender for Containers from your AWS EKS environment.
+This article explains how to remove Defender for Containers from your EKS clusters and AWS environment. Follow these steps when you need to completely uninstall the service or troubleshoot deployment issues.
 
-> [!IMPORTANT]
-> Disabling Defender for Containers removes security protection from your EKS clusters. Ensure you have alternative security measures in place before proceeding.
+## Remove order
 
-## Disable Defender for Containers plan
+To properly remove Defender for Containers, follow this order:
 
-### Using Azure portal
+1. Remove Kubernetes extensions from clusters
+2. Disconnect clusters from Azure Arc
+3. Remove AWS IAM roles and policies
+4. Disable Defender plan in Azure
+5. Delete AWS connector
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Select your AWS connector.
-3. Select **Settings**.
-4. Toggle **Containers** to **Off**.
-5. Select **Save**.
+## Remove extensions from EKS clusters
+
+### Remove using Azure CLI
+
+```azurecli
+# Set variables
+CLUSTER_NAME="<your-cluster-name>"
+RESOURCE_GROUP="<your-resource-group>"
+
+# Remove Defender sensor extension
+az k8s-extension delete \
+    --name microsoft-defender \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --yes
+
+# Remove Azure Policy extension
+az k8s-extension delete \
+    --name azurepolicy \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --yes
+```
+
+### Remove using kubectl
+
+If Azure CLI removal fails, manually remove components:
+
+```bash
+# Remove Defender components
+kubectl delete namespace mdc
+kubectl delete clusterrolebinding azuredefender-sensor
+kubectl delete clusterrole azuredefender-sensor
+
+# Remove Policy components
+kubectl delete namespace azurepolicy
+kubectl delete namespace gatekeeper-system
+kubectl delete clusterrolebinding azure-policy
+kubectl delete clusterrole azure-policy
+```
+
+### Clean up remaining resources
+
+```bash
+# Remove any remaining ConfigMaps
+kubectl delete configmap -n kube-system azure-defender-config
+
+# Remove webhooks
+kubectl delete validatingwebhookconfigurations gatekeeper-validating-webhook-configuration
+kubectl delete mutatingwebhookconfigurations azure-policy-mutating-webhook-configuration
+```
+
+## Disconnect clusters from Azure Arc
 
 ### Using Azure CLI
 
 ```azurecli
-# Disable Defender for Containers on AWS connector
-az security pricing create \
-    --name 'Containers' \
-    --tier 'Free' \
-    --scope "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Security/securityConnectors/{connector-name}"
+# Disconnect cluster from Arc
+az connectedk8s delete \
+    --name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --yes
 ```
 
-## Remove Defender components from EKS clusters
+### Using kubectl
 
-### Remove the Defender sensor
+If Azure CLI fails, manually remove Arc agents:
 
 ```bash
-# Delete the Defender sensor DaemonSet
-kubectl delete daemonset microsoft-defender-sensor -n kube-system
+# Delete Arc namespace and all resources
+kubectl delete namespace azure-arc
 
-# Delete ConfigMaps
-kubectl delete configmap microsoft-defender-config -n kube-system
-kubectl delete configmap microsoft-defender-eks-config -n kube-system
+# Remove Arc cluster role bindings
+kubectl delete clusterrolebinding azure-arc-operator
+kubectl delete clusterrolebinding azure-arc-reader
 
-# Delete ServiceAccount and RBAC
-kubectl delete serviceaccount microsoft-defender -n kube-system
-kubectl delete clusterrole microsoft-defender
-kubectl delete clusterrolebinding microsoft-defender
-
-# Delete any remaining Defender resources
-kubectl delete all -l app=microsoft-defender -n kube-system
+# Remove Arc CRDs
+kubectl get crd -o name | grep -i arc | xargs kubectl delete
 ```
 
-### Remove ECR integration
+## Remove AWS resources
 
-If you configured ECR scanning:
+### Delete IAM roles
 
-```bash
-# Remove cross-account role
-aws iam delete-role-policy \
-    --role-name DefenderForCloudECRRole \
-    --policy-name DefenderForCloudECRPolicy
-
-aws iam delete-role \
-    --role-name DefenderForCloudECRRole
-
-# Remove ECR scanning configuration
-aws ecr put-registry-scanning-configuration \
-    --scan-type BASIC
-```
-
-### Remove CloudWatch integration
+Remove IAM roles created for Defender:
 
 ```bash
-# Delete CloudWatch namespace
-kubectl delete namespace amazon-cloudwatch
-
-# Remove IAM service account
-eksctl delete iamserviceaccount \
-    --name cloudwatch-agent \
-    --namespace amazon-cloudwatch \
-    --cluster <cluster-name>
-```
-
-## Clean up AWS resources
-
-### Remove IAM roles and policies
-
-```bash
-# List all Defender-related IAM roles
+# List Defender-related roles
 aws iam list-roles --query "Roles[?contains(RoleName, 'DefenderForCloud')]"
 
-# Delete each role (after removing attached policies)
+# Delete each role (first detach policies)
 aws iam detach-role-policy \
-    --role-name <role-name> \
-    --policy-arn <policy-arn>
+    --role-name DefenderForCloud-Containers-K8s \
+    --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 
-aws iam delete-role --role-name <role-name>
+aws iam delete-role --role-name DefenderForCloud-Containers-K8s
+aws iam delete-role --role-name DefenderForCloud-DataCollection
+aws iam delete-role --role-name DefenderForCloud-ContainerVulnerabilityAssessment
 ```
 
-### Remove CloudFormation stacks
+### Delete CloudFormation stacks
 
-If you used CloudFormation for deployment:
+If you used CloudFormation:
 
 ```bash
 # List Defender-related stacks
 aws cloudformation list-stacks \
-    --query "StackSummaries[?contains(StackName, 'DefenderForContainers')]"
+    --query "StackSummaries[?contains(StackName, 'Defender')]"
 
 # Delete stacks
-aws cloudformation delete-stack --stack-name <stack-name>
+aws cloudformation delete-stack --stack-name DefenderForContainers
+aws cloudformation delete-stack --stack-name DefenderForContainersRoles
 ```
 
-## Clean up Azure resources
+### Remove EKS cluster tags
 
-### Delete the AWS connector
+Remove Defender-related tags:
+
+```bash
+# Remove exclusion tags if any
+aws eks untag-resource \
+    --resource-arn arn:aws:eks:region:account:cluster/cluster-name \
+    --tag-keys ms_defender_container_exclude_agents ms_defender_container_exclude
+```
+
+## Disable Defender plan
+
+### Using Azure portal
+
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select your subscription.
+
+1. On the Defender plans page, toggle **Containers** to **Off**.
+
+1. Select **Save**.
+
+### Using Azure CLI
 
 ```azurecli
-# Delete the AWS connector
+# Disable Containers plan
+az security pricing create \
+    --name "Containers" \
+    --subscription $SUBSCRIPTION_ID \
+    --tier "Free"
+```
+
+## Delete AWS connector
+
+### Using Azure portal
+
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Find your AWS connector.
+
+1. Select the **...** (more options) menu.
+
+1. Select **Delete**.
+
+1. Confirm deletion.
+
+### Using Azure CLI
+
+```azurecli
+# Delete AWS connector
 az security connector delete \
     --name <connector-name> \
-    --resource-group <resource-group>
+    --resource-group <resource-group> \
+    --yes
+
+# Delete resource group if no longer needed
+az group delete \
+    --name <resource-group> \
+    --yes
 ```
 
-### Remove policy assignments
+## Clean up Log Analytics data
+
+### Delete custom workspace (optional)
+
+If you created a dedicated workspace:
 
 ```azurecli
-# List policy assignments
-az policy assignment list \
-    --query "[?contains(displayName, 'EKS') || contains(displayName, 'AWS')]"
+# Delete workspace
+az monitor log-analytics workspace delete \
+    --workspace-name <workspace-name> \
+    --resource-group <resource-group> \
+    --yes
+```
 
-# Delete assignments
-az policy assignment delete --name <assignment-name>
+### Remove data from existing workspace
+
+To remove historical data while keeping the workspace:
+
+```kusto
+// Run in Log Analytics workspace
+// Note: This permanently deletes data
+.purge table ContainerLog where ClusterName contains "eks"
+.purge table ContainerInventory where ClusterName contains "eks"
+.purge table SecurityAlert where ResourceId contains "eks"
 ```
 
 ## Verify removal
 
-### Check EKS cluster
+### Check Azure resources
+
+```azurecli
+# Verify connector is deleted
+az security connector list \
+    --resource-group <resource-group>
+
+# Verify Arc clusters are removed
+az connectedk8s list \
+    --resource-group <resource-group>
+
+# Check for remaining extensions
+az k8s-extension list \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP
+```
+
+### Check EKS clusters
 
 ```bash
-# Verify no Defender components remain
-kubectl get all --all-namespaces | grep defender
+# Verify namespaces are removed
+kubectl get namespace | grep -E "mdc|azurepolicy|azure-arc"
 
-# Check for any remaining ConfigMaps
-kubectl get configmap --all-namespaces | grep defender
+# Check for remaining CRDs
+kubectl get crd | grep -E "defender|policy|arc"
 
-# Verify no Defender-related pods are running
-kubectl get pods --all-namespaces | grep defender
+# Verify no Defender pods running
+kubectl get pods --all-namespaces | grep -E "defender|policy|arc"
 ```
 
 ### Check AWS resources
 
 ```bash
-# Verify IAM roles are removed
-aws iam list-roles | grep -i defender
+# Verify IAM roles are deleted
+aws iam list-roles --query "Roles[?contains(RoleName, 'Defender')]"
 
-# Verify CloudFormation stacks are deleted
-aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE | grep -i defender
+# Check CloudFormation stacks
+aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE
 ```
 
-### Check Azure portal
+## Troubleshooting removal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Verify the AWS connector shows Containers as disabled or is removed.
-3. Check that no EKS-related recommendations appear.
+### Extension deletion stuck
 
-## Data retention
-
-> [!NOTE]
-> Historical security data remains according to your retention policies:
-> - Azure: Data in Log Analytics workspace (default 30 days)
-> - AWS: CloudWatch logs (based on your retention settings)
-
-To remove historical data:
-
-### Azure Log Analytics
-
-```kusto
-// Identify tables with EKS data
-search * 
-| where TimeGenerated > ago(1d)
-| where _ResourceId contains "eks"
-| distinct $table
-```
-
-### AWS CloudWatch
+If extension deletion hangs:
 
 ```bash
-# Delete log groups
-aws logs delete-log-group --log-group-name /aws/eks/<cluster-name>/cluster
+# Force delete the extension
+az k8s-extension delete \
+    --name microsoft-defender \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --force \
+    --yes
 ```
 
-## Re-enable Defender for Containers
+### Arc disconnection fails
 
-To re-enable Defender for Containers in the future:
+If Arc disconnection fails:
 
-1. Follow the deployment guide: [Deploy Defender for Containers on AWS (EKS)](defender-for-containers-eks-deploy.md)
-2. All security features will be restored
-3. Historical data (if not purged) will remain available
+```bash
+# Get Arc installation script
+curl -o uninstall-arc.sh https://aka.ms/ArcK8sUninstallScript
+
+# Run uninstall
+bash uninstall-arc.sh
+```
+
+### Resources remain after deletion
+
+Check for and remove:
+
+```bash
+# Finalizers preventing deletion
+kubectl get namespace mdc -o json | jq '.spec.finalizers = []' | kubectl apply -f -
+
+# Stuck webhooks
+kubectl delete validatingwebhookconfigurations --all
+kubectl delete mutatingwebhookconfigurations --all
+```
+
+## Post-removal considerations
+
+### Security monitoring gaps
+
+After removing Defender for Containers:
+
+- Runtime threat detection stops immediately
+- No new vulnerability scans for container images
+- Security recommendations no longer updated
+- Compliance reporting ceases
+
+### Alternative security solutions
+
+Consider implementing:
+
+- Native AWS GuardDuty for EKS
+- Open source solutions (Falco, OPA)
+- Third-party container security platforms
+
+### Data retention
+
+- Security alerts remain in Azure for 90 days
+- Log Analytics data retained per workspace settings
+- Recommendations cleared after 24 hours
+
+## Re-enabling Defender
+
+To re-enable Defender for Containers:
+
+1. Wait at least 30 minutes after complete removal
+2. Follow the deployment guide from the beginning
+3. Use new IAM role names if previous ones were recent
 
 ## Next steps
 
-- [Deploy Defender for Containers on AWS (EKS)](defender-for-containers-eks-deploy.md)
-- [Learn about Defender for Containers features](defender-for-containers-eks-overview.md)
-- [Explore alternative security solutions](https://aws.amazon.com/security/)
+- [Deploy Defender for Containers](defender-for-containers-eks-enable-all-portal.md) - To re-enable protection
+- [Defender for Containers overview](defender-for-containers-eks-overview.md) - Learn about capabilities
