@@ -72,6 +72,8 @@ Some alerts have extra tabs, such as details about:
 
 For example:
 
+:::image type="content" source="media/involved-entities.png" alt-text="Screenshot showing the Microsoft Defender for Identity alert report for Network mapping reconnaissance (DNS). The Summary tab is selected, displaying details such as title, description, start and end times, severity, status, and a link to view in browser. Other tabs include Source Computer, DNS Servers, Network Activities, and Related.":::
+
 ![Involved entities.](media/involved-entities.png)
 
 ## How can I use Defender for Identity information in an investigation?
@@ -89,6 +91,8 @@ Includes the data Defender for Identity learned from Active Directory about the 
 #### Unique Entity Profile Json file
 
 Includes all data Defender for Identity profiled on the entity. Defender for Identity uses the network and event activities captured to learn about the environment's users and computers. Defender for Identity profiles relevant information per entity. This information contributes Defender for Identity's threat identification capabilities.
+
+:::image type="content" source="media/related-entities.png" alt-text="Screenshot showing the Related Entities tab of a Microsoft Defender for Identity alert report for Network mapping reconnaissance (DNS). The table lists related entities with columns for ID, Type, Name, Unique Entity JSON, and Unique Entity Profile JSON. Two computer entities are shown, including one named DC1.":::
 
 ![Related entities.](media/related-entities.png)
 
