@@ -4,7 +4,7 @@ description: For best results, use Microsoft Defender Antivirus together with yo
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
