@@ -8,7 +8,7 @@ ms. reviewer: izauer-bit
 
 # Integrate Okta with Microsoft Defender for Identity
 
-Okta manages how users and customers sign in and get access to key systems. Since it plays a central role in identity and access management, any compromise—whether accidental or intentional—can lead to serious security risks. By integrating Microsoft Defender for Identity with Okta, you gain stronger identity protection. Defender for Identity monitors sign-in activity, detects unusual behavior, and highlights threats related to compromised or misused identities. It also identifies risks like suspicious role assignments or unused high-privilege accounts, using Okta data to deliver clear, actionable insights that help keep your organization secure.
+Okta manages how users and customers sign in and get access to key systems. Since it plays a central role in identity and access management, any compromise whether accidental or intentional can lead to serious security risks. By integrating Microsoft Defender for Identity with Okta, you gain stronger identity protection. Defender for Identity monitors sign-in activity, detects unusual behavior, and highlights threats related to compromised or misused identities. It also identifies risks like suspicious role assignments or unused high-privilege accounts, using Okta data to deliver clear, actionable insights that help keep your organization secure.
 
 ## Prerequisites
 
