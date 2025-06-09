@@ -88,7 +88,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 To support ongoing API access, Read-Only Administrator role and the custom Defender for Identity role are required. 
 
-After assigning both roles, you can remove the the Super Admin role. This ensures that only relevant permissions are assigned to your Okta account at all times. 
+After assigning both roles, you can remove the Super Admin role. This ensures that only relevant permissions are assigned to your Okta account at all times. 
 
 1. Navigate to **Security > Administrator**.
 1. Select the **Roles** tab.
