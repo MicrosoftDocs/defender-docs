@@ -27,7 +27,7 @@ Alerts from the last seven days are displayed with the following information:
 - First activity
 - Last activity
 
-:::image type="content" source="media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name “Suspected brute-force…” Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
+:::image type="content" source="media/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Microsoft Defender portal, filtered for new alerts from Microsoft Defender for Identity. Two alerts are listed with the name Suspected brute-force. Each entry includes columns for severity, investigation state, status, category, detection source, impacted assets, and timestamps for first and last activity." lightbox="media/filtered-alerts.png":::
 
 ## Customize the view of the alerts queue
 
