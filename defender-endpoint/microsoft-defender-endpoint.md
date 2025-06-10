@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-overview
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
 ms.date: 05/07/2025
 ---

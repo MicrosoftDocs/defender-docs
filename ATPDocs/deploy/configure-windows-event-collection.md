@@ -1,7 +1,7 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 01/16/2024
+ms.date: 06/04/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -240,6 +240,7 @@ To configure domain object auditing:
    - **Descendant Computer Objects**
    - **Descendant msDS-GroupManagedServiceAccount Objects**
    - **Descendant msDS-ManagedServiceAccount Objects**
+   - **Descendant msDS-DelegatedManagedServiceAccount Objects**
 
 > [!NOTE]
 > Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
