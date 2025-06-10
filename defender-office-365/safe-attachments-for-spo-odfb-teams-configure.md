@@ -107,7 +107,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 3. On the **Name your alert, categorize it, and choose a severity** page, configure the following settings:
    - **Name**: Type a unique and descriptive name. For example, **Malicious Files in Libraries**.
-   - **Description**: Type an optional description. For example, **Notifies admins when malicious files are detected in SharePoint Online, OneDrive, or Microsoft Teams**.
+   - **Description**: Type an optional description. For example, **Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams**.
    - **Severity**: Select **Low**, **Medium**, or **High** from the dropdown list.
    - **Category**: Select **Threat management** from the dropdown list.
 
@@ -142,7 +142,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 If you'd rather use PowerShell to create the same alert policy as described in the previous section, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
 ```powershell
-New-ActivityAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint Online, OneDrive, or Microsoft Teams" -Category ThreatManagement -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
+New-ActivityAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -Category ThreatManagement -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
 ```
 
 **Note**: The default _Severity_ value is Low. To specify Medium or High, include the _Severity_ parameter and value in the command.

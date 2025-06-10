@@ -9,7 +9,7 @@ ms.reviewer: mkaminska
 manager: deniseb
 ms.custom: nextgen
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 03/26/2025
 ms.collection: 
 - m365-security
