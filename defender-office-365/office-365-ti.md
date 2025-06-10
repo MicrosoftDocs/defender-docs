@@ -31,7 +31,7 @@ appliesto:
 Threat investigation and response capabilities in [Microsoft Defender for Office 365](mdo-about.md) help security analysts and administrators protect their organization's Microsoft 365 for business users by:
 
 - Making it easy to identify, monitor, and understand cyberattacks.
-- Helping to quickly address threats in Exchange Online, SharePoint Online, OneDrive for Business and Microsoft Teams.
+- Helping to quickly address threats in Exchange Online, SharePoint, OneDrive and Microsoft Teams.
 - Providing insights and knowledge to help security operations prevent cyberattacks against their organization.
 - Employing [automated investigation and response in Office 365](air-about.md) for critical email-based threats.
 
