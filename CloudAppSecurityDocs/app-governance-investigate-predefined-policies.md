@@ -15,6 +15,7 @@ Included in this guide is general information about the conditions for triggerin
 > Some alerts may be in preview, so regularly review the updated alert statuses.
 >
 
+
 ## Security alert classifications
 
 Following proper investigation, all app governance alerts can be classified into one of the following activity types:

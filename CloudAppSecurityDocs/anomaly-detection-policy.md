@@ -33,6 +33,49 @@ In addition to native Defender for Cloud Apps alerts, you'll also get the follow
 
 These policies will appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
 
+
+### Dynamic Threat Detection Model
+
+Starting June 2025, Microsoft Defender for Cloud Apps will begin rolling out improvements to its threat protection capabilities. This Dynamic threat detection model enhances Microsoft Defender for Cloud ability to detect threats in near real time, while minimizing false positives, by maintaining a high signal-to-noise ratio (SNR). It enables faster, research-driven updates to detection logic without requiring customer configuration.
+
+The Dynamic Threat Detection Model is a detection delivery mechanism used by Microsoft Defender for Cloud Apps. It enables the system to dynamically adjust detection logic in response to changes in the threat landscape, helping maintain a high signal-to-noise ratio (SNR) without requiring manual configuration.
+
+The Dynamic Threat Detection Model allows the Defender for Cloud Apps system to:
+
+- Continuously adapt detection logic based on evolving threats
+
+- Deliver updated detections directly to tenants
+
+This approach replaces static, fixed-policy logic with a system-driven mechanism that adjusts threat detections automatically and efficiently.
+
+The initial policies being transitioned to the dynamic model include:
+
+- Activity from suspicious IP addresses
+- Suspicious inbox manipulation rule
+- Suspicious email deletion activity
+- Activity from anonymous IP addresses
+S- uspicious inbox forwarding
+
+- Activity from a botnet-associated IP address
+
+ This enhancement introduces a dynamic detection model that enables faster adaptation to emerging threats and improves the overall signal-to-noise ratio (SNR) for threat alerts.
+
+The Microsoft Defender for Cloud Apps dynamic threat detection model improves and maintains a high signal-to-noise-ration (SNR) for detections by constantly evaluating the threat landscape in order to respond faster to new threats and update detection logic. This means that detections can be added, removed, or modified dynamically to ensure optimal protection against emerging threats. The model provides more accurate and timely threat detections, enhancing your overall organization security.
+In some cases, policies may be split into several different detections and alerts in order to provide an additional degree of protection and better understanding for the SOC teams on the threat etymology.
+
+If you wish to retain governance actions, please re-enable the policies from the legacy policies page at Defender portal > Cloud apps > Policy management page.
+
+
+| **Legacy Alert title name** | **New Alert title name** |
+| --- | --- |
+| Activity from suspicious IP addresses | Successful logon from a suspicious IP address |
+| Suspicious inbox manipulation rule | Suspicious inbox manipulation rule |
+| Suspicious email deletion activity (by user) | Suspicious email deletion activity |
+| Activity from anonymous IP addresses | Activity from a TOR IP address |
+| Activity from anonymous IP addresses | Anonymous proxy activity |
+| Suspicious inbox forwarding | Suspicious email forwarding rule created by third-party app |
+
+
 ## Anomaly detection policies
 
 You can see the anomaly detection policies in the Microsoft Defender Portal, by going to **Cloud Apps** -> **Policies** -> **Policy management**. Then choose **Anomaly detection policy** for the policy type.
