@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - usx-security
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
