@@ -25,6 +25,16 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2025
 
+
+
+### Okta integration is now available in Microsoft Defender for Identity
+
+Microsoft Defender for Identity now supports integration with Okta, enabling detection of identity-based threats across cloud and on-premises environments. This integration helps identify suspicious sign-ins, risky role assignments, and potential privilege misuse within your Okta environment.
+
+For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
+
+### Microsoft Defender For Identity PowerShell module updates (version 1.0.0.4)
+
 ### Service account classification rules now available
 
 You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
@@ -32,8 +42,9 @@ For more information, see [Service account discovery](service-account-discovery.
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
 
+
 New Features and Improvements:
-- Added remote domain functionality
+- Added remote domain functionality.
 - Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
 - Added ability to Get/Set/Test the Deleted Objects container permissions.
 - Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
