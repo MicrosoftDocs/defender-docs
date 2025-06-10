@@ -15,7 +15,7 @@ ms.collection:
   - tier1
   - essentials-get-started
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: get-started
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 09/25/2024
