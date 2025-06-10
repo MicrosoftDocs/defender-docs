@@ -16,7 +16,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [View and Manage security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [Security alert name mapping and unique external IDs](understanding-security-alerts.md#classify-security-alerts).
 
 The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by Defender for Identity in your network.
 
@@ -43,7 +43,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
 |---------|---------|
 |MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
-|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+|MITRE attack subtechnique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **Suggested steps for prevention**:
 
@@ -69,7 +69,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
+|MITRE attack subtechnique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
 
 **Suggested steps for prevention**:
 
@@ -95,7 +95,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Credentials from Password Stores (T1555)](https://attack.mitre.org/techniques/T1555/)        |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 ## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 
@@ -109,18 +109,18 @@ In a brute-force attack, the attacker attempts to authenticate with multiple pas
 
 In this detection, an alert is triggered when many authentication failures occur using Kerberos, NTLM, or use of a password spray is detected. Using Kerberos or NTLM, this type of attack is typically committed either *horizontal*, using a small set of passwords across many users, *vertical* with a large set of passwords on a few users, or any combination of the two.
 
-In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. The minimum period before an alert can be triggered is one week.
+In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks prove to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. The minimum period before an alert can be triggered is one week.
 
 **Learning period**:
 
-1 week
+One week
 
 **MITRE**:
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
 |---------|---------|
 |MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
-|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+|MITRE attack subtechnique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **Suggested steps for prevention**:
 
@@ -132,7 +132,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 **Description**:
 
-Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, and identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 To allow Defender for Identity to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Defender for Identity deployment. Once the Defender for Identity initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
@@ -146,7 +146,7 @@ To allow Defender for Identity to accurately profile and learn legitimate users,
 |---------|---------|
 |Secondary MITRE tactic    |[Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)         |
 |MITRE attack technique  |  [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)     |
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack subtechnique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 **Kerberoasting specific suggested steps for prevention**:
 
@@ -173,7 +173,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [Kerberoasting (T1558.003)](https://attack.mitre.org/techniques/T1558/003/)    |
+|MITRE attack subtechnique |   [Kerberoasting (T1558.003)](https://attack.mitre.org/techniques/T1558/003/)    |
 
 ## Suspected AS-REP Roasting attack (external ID 2412)
 
@@ -192,7 +192,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique |   [AS-REP Roasting (T1558.004)](https://attack.mitre.org/techniques/T1558/004/)    |
+|MITRE attack subtechnique |   [AS-REP Roasting (T1558.004)](https://attack.mitre.org/techniques/T1558/004/)    |
 
 **Suggested steps for prevention**:
 
@@ -220,8 +220,8 @@ None
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
-|MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
-|MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
+|MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal, or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
+|MITRE attack subtechnique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
 
 <a name="honeytoken-activity-external-id-2014"></a>
 
@@ -246,7 +246,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Discovery](https://attack.mitre.org/tactics/TA0007)        |
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack subtechnique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 ## Suspected DCSync attack (replication of directory services) (external ID 2006)
 
@@ -261,7 +261,7 @@ Active Directory replication is the process by which changes that are made on on
 In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
-> If you have domain controllers on which Defender for Identity sensors are not installed, those domain controllers are not covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by Defender for Identity as a domain controller. It is highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
+> If you have domain controllers on which Defender for Identity sensors aren't installed, those domain controllers aren't covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it might not immediately be identified by Defender for Identity as a domain controller. It's highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
 
 **Learning period**:
 
@@ -273,7 +273,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)      |
 |MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
-|MITRE attack sub-technique | [DCSync (T1003.006)](https://attack.mitre.org/techniques/T1003/006/)        |
+|MITRE attack subtechnique | [DCSync (T1003.006)](https://attack.mitre.org/techniques/T1003/006/)        |
 
 **Suggested steps for prevention:**:
 
@@ -338,7 +338,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 ## Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate (external ID 2424)
 
@@ -346,7 +346,7 @@ None
 
 **Description**:
 
-Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) may indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
+Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) might indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
 
 **Learning period**:
 
@@ -357,7 +357,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Forge Web Credentials (T1606)](https://attack.mitre.org/techniques/T1606/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 > [!NOTE]
 > Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate alerts are only supported by Defender for Identity sensors on AD FS.
@@ -379,7 +379,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
-|MITRE attack sub-technique | N/A |
+|MITRE attack subtechnique | N/A |
 
 ## Suspected suspicious Kerberos ticket request (external ID 2418)
 
@@ -387,7 +387,7 @@ None
 
 **Description**:
 
-This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers may attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure. 
+This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers might attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure.
 
 **Learning period**:
 
@@ -399,7 +399,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009)      |
 |MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
-|MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
+|MITRE attack subtechnique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
 
 ## Password spray against OneLogin 
 
@@ -407,7 +407,7 @@ None
 
 **Description**:
 
-In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try and find if any of the users is using known\weak password. 
+In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try to find if any of the users is using known\weak password. 
 We recommend investigating the source IP performing the failed logins to determine whether they're legitimate or not. 
 
 **Learning period**:
@@ -419,7 +419,7 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)        |
-|MITRE attack sub-technique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
+|MITRE attack subtechnique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
 
 ## Suspicious OneLogin MFA fatigue 
 
@@ -427,7 +427,7 @@ None
 
 **Description**:
 
-In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system. 
+In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system.
 
 We recommend investigating the source IP performing the failed MFA attempts to determine whether they're legitimate or not and if the user is performing logins. 
 
@@ -440,13 +440,12 @@ None
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
 |MITRE attack technique  | [Multifactor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
-|MITRE attack sub-technique | N/A  |
+|MITRE attack subtechnique | N/A  |
 
 ## See also
 
 - [Investigate assets](investigate-assets.md)
-- [Understanding security alerts](understanding-security-alerts.md)
-- [Manage security alerts](/defender-for-identity/manage-security-alerts)
+- [View and manage alerts](understanding-security-alerts.md)
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
