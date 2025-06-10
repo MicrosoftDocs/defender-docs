@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 03/14/2025
+ms.date: 06/10/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -62,13 +62,12 @@ Access to Defender for Endpoint is done through a browser. The following browser
 
 ## Hardware and software requirements
 
-Devices on your network must be running one of the operating systems below. New features or capabilities are typically provided only on vendor-supported operating systems. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends installing the latest available security patches for any operating system.
+Devices on your network must be running one of the operating systems listed in this article. New features or capabilities are typically provided only on vendor-supported operating systems. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends installing the latest available security patches for any operating system.
 
 ### Windows versions supported by Defender for Endpoint
 
 > [!IMPORTANT]
 > You may continue to use Microsoft Windows after OS support ends; however, it will no longer receive quality updates, new or updated features, or security updates for the operating system itself. However, devices protected by Microsoft Defender for Endpoint will continue to receive regular product updates through existing channels, keeping detection and protection capabilities current. 
->
 
 - Windows 11 Enterprise
 - Windows 11 IoT Enterprise
