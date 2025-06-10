@@ -14,7 +14,7 @@ ms.custom: references_regions
 
 Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. Agentless code scanning automatically scans code and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations without requiring any changes to your build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
 
-You can customize which scanners run, define exactly which organizations, projects, or repositories are included or excluded from scanning.
+You can customize which scanners to run and define exactly which organizations, projects, or repositories to include or exclude from scanning.
 
 ## Prerequisites
 
