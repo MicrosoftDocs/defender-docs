@@ -108,7 +108,7 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
-Scenarios and default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint.
+Scenarios and default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint or Microsoft Defender for Business.
 
 ##### Microsoft Defender Antivirus without devices onboarded to Defender for Endpoint
 
@@ -117,7 +117,7 @@ Scenarios and default settings for PUA protection depend on whether devices are 
 | Windows 10 or later<br/>Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
 | Windows 10 or later<br/>Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
 
-##### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Microsoft Defender for Business
+##### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Defender for Business
 
 | Scenarios |Security intelligence update version | Smart App Locker | PUA protection default setting|
 | -------- | -------- | -------- | -------- |
