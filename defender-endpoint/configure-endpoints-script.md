@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 ms.date: 04/16/2025
 ---
