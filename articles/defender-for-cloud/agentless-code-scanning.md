@@ -1,11 +1,11 @@
 ---
-title: Configure agentless code scanning for Azure DevOps
+title: Configure agentless code scanning
 description: Discover how agentless code scanning in Microsoft Defender for Cloud identifies vulnerabilities in code and IaC configurations in Azure DevOps.
 author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/18/2025
+ms.date: 06/10/2025
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 
@@ -13,7 +13,10 @@ ms.custom: references_regions
 
 # Agentless code scanning in Microsoft Defender for Cloud
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps. It quickly finds vulnerabilities in code and infrastructure-as-code (IaC) setups without needing agents or Continuous Integration and Continuous Deployment (CI/CD) pipeline changes. This approach simplifies setup and maintenance with a single Azure DevOps connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
+Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in **Azure DevOps** and **GitHub**. It automatically scans code and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations without requiring any changes to your build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
+
+> [!NOTE]
+> Agentless code scanning now supports **GitHub** in addition to **Azure DevOps**. You can also **customize which scanners run** and **define exactly which organizations, projects, or repositories are included or excluded** from scanning.
 
 ## Prerequisites
 
@@ -23,7 +26,7 @@ Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable
   - ✔️ [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
 - **Clouds**: Azure commercial clouds
 - **Supported regions**: Australia East, Canada Central, Central US, East Asia, East US, North Europe, Sweden Central, UK South, West Europe
-- **Supported environments**: Azure DevOps connector
+- **Supported environments**: Azure DevOps connector, GitHub connector
 - **Roles and permissions**:
 
   To set up and configure the connector:
@@ -43,6 +46,7 @@ Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable
 - **Enterprise-scale, centralized management**: Automatically scan code across multiple repositories using a single connector. This provides extensive coverage for large environments.  
 - **Rapid insights for quick remediation**: Receive actionable vulnerability insights right after onboarding. This enables quick fixes and reduces exposure time.  
 - **Developer-friendly and seamless**: Operate independently of continuous integration and continuous deployment (CI/CD) pipelines, with no changes or direct developer involvement needed. This allows for continuous security monitoring without disrupting developer productivity or workflows.
+- **Flexible coverage and control:** Choose which scanners run and what gets scanned. You can cover everything by default or customize settings to include or exclude specific organizations, projects, or repositories. This lets you match security coverage to your risk profile and operational needs, without extra complexity.
 
 ## Risks detection capabilities
 
@@ -72,6 +76,7 @@ These tools support a wide range of languages and IaC frameworks, ensuring thoro
 #### Version control systems
 
 - **Azure DevOps**: Full support for repositories connected via the Azure DevOps connector.
+- **GitHub**: Full support for repositories connected via the GitHub connector.
 
 #### Programming languages
 
@@ -89,21 +94,45 @@ These tools support a wide range of languages and IaC frameworks, ensuring thoro
 | **Helm**                 | Helm chart directory structure, YAML files | Follows Helm’s standard chart structure; supports Helm v3  chart files. |
 | **Docker**               | Files named Dockerfile                     | Supports Dockerfiles for container configurations.           |
 | **Azure ARM Templates**  | JSON files                                 | Supports Azure Resource Manager (ARM) IaC templates in  JSON format. |
-| **Azure Bicep**          | .bicep files                               | Supports Bicep IaC templates, a domain-specific language  (DSL) for ARM. |
+| **Azure Bicep**          | `.bicep` files                               | Supports Bicep IaC templates, a domain-specific language  (DSL) for ARM. |
 | **AWS SAM**              | YAML files                                 | Supports AWS Serverless Application Model (SAM) templates  for serverless resources. |
 | **Kustomize**            | YAML files                                 | Supports configuration files for Kubernetes customization  (Kustomize). |
 | **Serverless Framework** | YAML files                                 | Supports templates for the Serverless framework in  defining serverless architectures. |
 | **OpenAPI**              | YAML, JSON files                           | Supports OpenAPI specification files for defining RESTful  APIs. |
 
-## Enable agentless code scanning on your Azure DevOps organizations
+## Enable agentless code scanning on your Azure DevOps and GitHub organizations
 
-To connect your Azure DevOps organizations to Defender for Cloud and enable agentless code scanning, refer to the instructions in [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization). The following visual shows the quick, straightforward setup process, guiding you through each step for seamless onboarding.
+You can connect both Azure DevOps and GitHub organizations to Defender for Cloud to enable agentless code scanning. Follow the steps in [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization) or [Connect your GitHub organizations](quickstart-onboard-github.md#connect-your-github-environment) to get started. The setup process is fast and straightforward, with clear guidance for each step. The visual below shows how simple it is to connect your organizations and start scanning your code for vulnerabilities.
 
 :::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="GIF image showing the setup process for enabling agentless code scanning" lightbox="media/agentless-code-scanning/agentless-code-scanning-setup.gif":::
 
+### Customize scanner coverage and scope
+
+You can control which scanners run and exactly which repositories are included or excluded from agentless scanning. The following options are supported for both GitHub and Azure DevOps:
+
+:::image type="content" source="media/agentless-code-scanning/custom-settings---agentles-scanning.png" alt-text="Screenshot showing the custom settings of agentless code scanning." lightbox="media/agentless-code-scanning/custom-settings---agentles-scanning.png":::
+
+- **Select scanners:**  
+  Turn each code and infrastructure-as-code (IaC) scanner on or off based on your needs.
+
+- **Set scanning scope:**  
+  Decide if you want to scan all repositories by default, or define a custom scope to include or exclude specific organizations, projects, or repositories.
+    - **Exclusion mode:** Scan everything except what you list.
+    - **Inclusion mode:** Only scan what you list.
+
+- **Custom scope options:**  
+  - For **GitHub**, set scope by owner or repository.
+  - For **Azure DevOps**, set scope by organization, project, or repository.
+
+- **Auto-discover new repositories:**  
+    Auto-discovery of new repositories is always limited to the organizations or projects included in the connector’s scope. It is enabled by default when using exclusion mode and no custom scope list is set. Newly created repositories will be scanned automatically.  
+    Auto-discovery is not available in inclusion mode, because only the listed repositories will be scanned.
+
+    This lets you match scanning to your security needs, keep coverage up to date as your environment grows, and avoid unnecessary scans or blind spots.
+
 ## How agentless code scanning works
 
-Agentless code scanning works independently of CI/CD pipelines. It uses the Azure DevOps connector to automatically scan code and Infrastructure-as-Code (IaC) configurations. You don't need to modify pipelines or add extensions. This setup enables broad and continuous security analysis across multiple repositories. Results are processed and shown directly in Microsoft Defender for Cloud.
+Agentless code scanning works independently of CI/CD pipelines. It uses the Azure DevOps or GitHub connector to automatically scan code and Infrastructure-as-Code (IaC) configurations. This setup enables broad and continuous security analysis across multiple repositories. Results are processed and shown directly in Microsoft Defender for Cloud.
 
 :::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-architecture.png" alt-text="Diagram showing the architecture of agentless code scanning." lightbox="media/agentless-code-scanning/agentless-code-scanning-architecture.png":::
 
