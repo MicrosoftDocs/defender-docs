@@ -98,12 +98,12 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### May-2025 (Platform: 4.18.x.x | Engine: 1.1.x.x)
+### May-2025 (Platform: 4.18.25050.x | Engine: 1.1.25050.x)
 
 - Security intelligence update version: **x.x**
 - Release date:  **June 10, 2025 (Engine)** / **June 10, 2025 (Platform)**
-- Platform: **x.x**
-- Engine: **x.x**
+- Platform: **4.18.2050.x**
+- Engine: **1.1.2050.x**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
