@@ -79,7 +79,7 @@ items:
           href: deploy/configure-event-collection.md
           displayName: standalone
     - name: Test the sensor
-      href: test-sensor-onboarding.md
+      href: deploy/test-sensor.md
   - name: Configure event collection
     items:
       - name: Event collection overview 

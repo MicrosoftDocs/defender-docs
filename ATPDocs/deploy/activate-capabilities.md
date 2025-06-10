@@ -18,10 +18,12 @@ We recommend activating this sensor, built in to the Windows Server 2019 and lat
 
 The sensor activated on domain controllers supports the following Defender for Identity functionalities, and is not intended to be a replacement as for the classic sensor deployed on Windows Server 2016 and earlier and Microsoft AD FS, AD CS, and Entra Connect.:
 
-- Investigation features on the [ITDR dashboard](#check-the-itdr-dashboard), [identity inventory](#confirm-entity-page-details), and [identity advanced hunting data](#test-advanced-hunting-tables)
-- [Security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
-- [Alert detections](#test-alert-functionality)
-- [Remediation actions](#test-remediation-actions)
+- Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
+- [Identity inventory](test-sensor.md#confirm-entity-page-details)
+- [Identity advanced hunting data](test-sensor.md#test-advanced-hunting-tables)
+- [Security posture recommendations](test-sensor.md#test-identity-security-posture-management-ispm-recommendations)
+- [Alert detections](test-sensor.md#test-alert-functionality)
+- [Remediation actions](test-sensor.md#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
 
