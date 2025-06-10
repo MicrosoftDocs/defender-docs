@@ -47,9 +47,9 @@ items:
             href: deploy/configure-sensor-settings.md
       - name: Windows 2019 and later (Preview)
         items:
-          - name: Activate the sensor when MDE is only enabled on your domain controller
+          - name: Activate the sensor when MDE is enabled on endpoints
             href: deploy/activate-capabilities.md
-          - name: Deploy the sensor when MDE is enabled on other endpoints
+          - name: Deploy the sensor when MDE is not enabled on endpoints
             items:
             - name: Connect to the Defender for Identity service
               href: deploy/configure-proxy.md
