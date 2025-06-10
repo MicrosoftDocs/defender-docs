@@ -38,12 +38,10 @@ The sensor activated on domain controllers supports the following Defender for I
 - Before activating the Defender for Identity capabilities on your domain controller make sure that the domain controller where you're planning to activate Defender for Identity capabilities doesn't have a [Defender for Identity sensor](deploy-defender-identity.md) already deployed.
 - The domain controller must use one of the following operating systems:
    - Windows Server 2019 or above
-   - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later
+   - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.
 
        > [!IMPORTANT]
-       >
        > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests.
-       >
        > This [out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
 
 - Your domain controller must be onboarded to Microsoft Defender for Endpoint. For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
@@ -110,7 +108,7 @@ You can download the Defender for Identity onboarding package from the [Microsof
 1. Navigate to **System** > **Settings** > **Identities** > **Activation**.
 
 2. Select Download onboarding package and save the file in a location you can access from your domain controller.
-1. 
+
    [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png)](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png#lightbox)
    
 3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
