@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: low
 search.appverid:
   - MET150
@@ -54,7 +54,7 @@ The following table summarizes the values of **AuditLogRecordType** that are rel
 |---|---|---|
 |28|ThreatIntelligence|Phishing and malware events from Exchange Online Protection and Microsoft Defender for Office 365.|
 |41|ThreatIntelligenceUrl|Safe Links time-of-block and block override events from Microsoft Defender for Office 365.|
-|47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint Online, OneDrive for Business, and Microsoft Teams, from Microsoft Defender for Office 365.|
+|47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint, OneDrive, and Microsoft Teams, from Microsoft Defender for Office 365.|
 |64|AirInvestigation|Automated investigation and response events, such as investigation details and relevant artifacts, from Microsoft Defender for Office 365 Plan 2.|
 
 > [!IMPORTANT]
