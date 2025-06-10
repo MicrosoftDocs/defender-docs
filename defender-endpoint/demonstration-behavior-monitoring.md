@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
 ms.date: 03/04/2025
 ---

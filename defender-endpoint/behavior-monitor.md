@@ -6,7 +6,7 @@ ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
