@@ -4,7 +4,7 @@ description: Enable network protection with Group Policy, PowerShell, or Mobile 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 05/19/2025
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: tdoucett

@@ -190,7 +190,7 @@ Application Guard for Office is integrated with Microsoft Defender for Endpoint 
 
 - Active content like macros and ActiveX controls are disabled in Application Guard for Office. To enable active content, the Application Guard protection must be removed.
 
-- Untrusted files from network shares or files shared from OneDrive, OneDrive for Business, or SharePoint Online open as read-only in Application Guard. Users can save a local copy of such files to continue working in the container or remove protection to directly work with the original file.
+- Untrusted files from network shares or files shared from OneDrive or SharePoint open as read-only in Application Guard. Users can save a local copy of such files to continue working in the container or remove protection to directly work with the original file.
 
 - Files that are protected by Information Rights Management (IRM) are blocked by default. If users want to open such files in Protected View, an administrator must configure policy settings for unsupported file types for the organization.
 
