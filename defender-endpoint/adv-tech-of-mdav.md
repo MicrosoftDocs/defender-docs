@@ -82,7 +82,7 @@ An additional layer to help prevent memory-based attacks is to use the Attack Su
 
 ### How many malware threats does Microsoft Defender Antivirus block per month?
 
-[Five billion threats on devices every month](https://www.microsoft.com/en-us/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
+[Five billion threats on devices every month](https://www.microsoft.com/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
 
 ### How does Microsoft Defender Antivirus memory protection help?
 
