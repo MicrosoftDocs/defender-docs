@@ -116,7 +116,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 ##### Use PowerShell to exclude files and folders
 
-1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
+1. Type **powershell** in the Start menu, right-click **Windows PowerShell**, and then select **Run as administrator**.
 
 2. Enter the following cmdlet:
 
