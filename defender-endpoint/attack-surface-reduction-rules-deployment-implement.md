@@ -65,7 +65,7 @@ In the following deployment process, steps 1 – 3 are essentially the same for 
 
 3. Create exclusions.
 
-4. Review: refine, add, or remove exclusions as necessary.
+4. Review, and then refine, add, or remove exclusions as necessary.
 
 5. Set rules to "block" mode.
 
