@@ -12,7 +12,7 @@ ms.collection:
 - ContentEngagementFY23
 - tier2
  - EngageScoreSep2022
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/26/2025
