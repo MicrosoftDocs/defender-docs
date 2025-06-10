@@ -35,22 +35,28 @@ These policies appear on the Defender for Cloud Apps policies page and can be en
 
 ## Dynamic threat detection model
 
-Starting June 2025, Microsoft Defender for Cloud Apps will begin rolling out improvements to its threat protection capabilities. The Microsoft Defender for Cloud Apps dynamic threat detection model improves and maintains a high signal-to-noise-ration (SNR) for detections by constantly evaluating the threat landscape in order to respond faster to new threats and update detection logic resulting in fewer false positives. As a result, you might notice that some of the legacy policies have been removed, while others have been transitioned to the new dynamic model.
+
+Starting June 2025, Microsoft Defender for Cloud Apps began transitioning existing anomaly detection policies to a dynamic threat detection model. This model automatically updates detection logic based on the evolving threat landscape and is designed to improve and maintain a high signal-to-noise ratio (SNR). This approach ensures that detections stay current as attacker behavior changes, without requiring manual configuration or policy updates. The result is more timely and accurate alerts, with fewer outdated or redundant detections. As a result, you might notice that some of the legacy policies have been disabled. 
+
+> [!NOTE]
+> If you previously configured governance actions for a policy, and it has been disabled, you can re-enable it in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
+You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
 The initial policies being transitioned to the dynamic model include:
 
 - [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
-- [Suspicious inbox manipulation rule](#suspicious-inbox-manipulation-rule)
-- [Suspicious email deletion activity](#suspicious-email-deletion-activity)
+- [Suspicious inbox manipulation rules](#suspicious-inbox-manipulation-rules)
+- [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
 - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
-- [Suspicious inbox forwarding](#suspicious-inbox-forwarding)
-- [Activity from a botnet-associated IP address](#activity-from-a-botnet-associated-ip-address)
+- [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
+- Activity from a botnet-associated IP address.
 
-> [!NOTE]
-> If you wish to retain governance actions, you can re-enable the policies via the Microsoft Defender portal > Cloud apps > Policy management page.
+### Alert title changes
 
+As part of the transition to the dynamic model, some alerts now appear with updated titles for clarity:
 
-| **Legacy Alert title name** | **New Alert title name** |
+| **Legacy Alert title** | **Updated Alert title** |
 | --- | --- |
 | Activity from suspicious IP addresses | Successful logon from a suspicious IP address |
 | Suspicious inbox manipulation rule | Suspicious inbox manipulation rule |
@@ -64,7 +70,7 @@ The initial policies being transitioned to the dynamic model include:
 
 You can see the anomaly detection policies in the Microsoft Defender Portal, by going to **Cloud Apps** -> **Policies** -> **Policy management**. Then choose **Anomaly detection policy** for the policy type.
 
- ![new anomaly detection policies.](media/new-anomaly-detection-policies.png)
+:::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies.":::
 
 The following anomaly detection policies are available:
 
@@ -213,7 +219,8 @@ To scope an anomaly detection policy:
 1. Select **Include** to specify the users and groups for who this policy will apply. Any user or group not selected here won't be considered a threat and won't generate an alert.
 1. Select **Exclude** to specify users for who this policy won't apply. Any user selected here won't be considered a threat and won't generate an alert, even if they're members of groups selected under **Include**.
 
-    ![anomaly detection scoping.](media/anomaly-detection-scoping.png)
+    :::image type="content" source="media/anomaly-detection-scoping.png" alt-text="Screenshot that shows how to add scoped access to your anomaly detection policy.":::
+
    
 ## Triage anomaly detection alerts
 
@@ -221,7 +228,9 @@ You can triage the various alerts triggered by the new anomaly detection policie
 
 1. In the **Activity log**, you can open an activity to display the Activity drawer. Select **User** to view the user insights tab. This tab includes information like number of alerts, activities, and where they've connected from, which is important in an investigation.
 
-    ![anomaly detection alert.](media/anomaly-alert-user1.png)
+
+    :::image type="content" source="media/anomaly-alert-user1.png" alt-text="Screenshot that shows the activity log with the number of anomaly detection alerts.":::
+
    
 1. For malware infected files, After files are detected, you can then see a list of **Infected files**. Select the malware file name in the file drawer to open a malware report that provides you with information about that type of malware the file is infected with.
 
