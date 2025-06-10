@@ -14,7 +14,7 @@ ms.collection:
 - m365-security 
 - m365initiative-m365-defender 
 - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-ta
