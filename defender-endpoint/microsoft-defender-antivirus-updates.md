@@ -108,7 +108,8 @@ Updates contain:
 
 #### What's new
 
-- item
+- Windows multisession SKUs are now properly classified as client SKUs for signature versioning
+- `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
 
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
