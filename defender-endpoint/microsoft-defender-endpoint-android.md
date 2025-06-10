@@ -107,7 +107,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
 
-- If a policy is violated, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
+- If a policy is violated or user reset the Microsoft account password, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
 
 - This process results in the devices being shown as noncompliant in the Intune portal. A user can get the device to compliant status by signing in again.
 
