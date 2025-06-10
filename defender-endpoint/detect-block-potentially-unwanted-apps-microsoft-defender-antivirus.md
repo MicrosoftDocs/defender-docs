@@ -123,7 +123,7 @@ Scenarios and default settings for PUA protection depend on whether devices are 
 | -------- | -------- | -------- | -------- |
 | Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client<br/>Windows Server 2019 or later | older than 1.329.495.0 | Feature not available | Audit mode (2)|
 | Windows 11, version 22H2 or later | 1.329.495.0 or later | Available | Audit mode (1)|
-| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client<br/>Windows Serer 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
+| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client<br/>Windows Server 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
 
 > [!TIP]
 > To enforce PUA protection in block mode, use any of the following management methods:
