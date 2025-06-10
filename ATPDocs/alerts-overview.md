@@ -1,17 +1,29 @@
 ---
 title: Security alerts
 description: This article provides a list of the security alerts issued by Microsoft Defender for Identity.
-ms.date: 03/23/2023
-ms.topic: conceptual
-ms.reviewer: morRubin
+ms.date: 05/08/2025
+ms.topic: reference
+ms.reviewer: rlitinsky
 ---
 
 # Security alerts in Microsoft Defender for Identity
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
+## What are Microsoft Defender for Identity security alerts?
 
-Microsoft Defender for Identity security alerts explain the suspicious activities detected by Defender for Identity sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+Microsoft Defender for Identity security alerts provide information about the suspicious activities detected by Defender for Identity sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+
+> [!NOTE]
+> Defender for Identity isn't designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
+
+The Identity alerts page gives you cross-domain signal enrichment and  automated identity response capabilities. The benefit of investigating alerts with [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) is that Microsoft Defender for Identity alerts are correlated with information obtained from each of the other products in the suite. These enhanced alerts are consistent with the other Microsoft Defender XDR alert formats originating from [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security) and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
+
+Alerts originating from Defender for Identity trigger [Microsoft Defender XDR automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
+
+Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. While the alert views may show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+
+For more information, see [View and manage security alerts](understanding-security-alerts.md).
+
+## Alert categories
 
 Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
 
@@ -21,13 +33,10 @@ Defender for Identity security alerts are divided into the following categories 
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about the structure and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md).
 
-## Security alert name mapping and unique external IDs
+##  Map security alerts to unique external ID and MITRE ATT&CK Matrix tactics
 
 The following table lists the mapping between alert names, their corresponding unique external IDs, their severity, and their MITRE ATT&CK Matrix&trade; tactic. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
-
-### External IDs
 
 | Security  alert name                                         | Unique  external ID | Severity                                                 | MITRE  ATT&CK Matrix™                                        |
 | ------------------------------------------------------------ | ------------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
@@ -56,7 +65,7 @@ The following table lists the mapping between alert names, their corresponding u
 | [Suspected   Golden Ticket usage (nonexistent account)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)        | 2027                | High                                                     | Persistence, Privilege Escalation, Lateral movement          |
 | [Suspected   DCShadow attack (domain controller promotion)](other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)    | 2028                | High                                                     | Defense evasion                                              |
 | [Suspected   DCShadow attack (domain controller replication request)](other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029) | 2029                | High                                                     | Defense evasion                                              |
-| [Data   exfiltration over SMB](other-alerts.md#data-exfiltration-over-smb-external-id-2030)                                 | 2030                | High                                                     | Exfiltration, Lateral movement, Command and control          |
+| [Data   exfiltration over SMB](other-alerts.md#data-exfiltration-over-smb-external-id-2030)                                 | 2030                | High                                                     | Exfiltration, Lateral movement, Command, and control          |
 | [Suspicious   communication over DNS](other-alerts.md#suspicious-communication-over-dns-external-id-2031)                          | 2031                | Medium                                                   | Exfiltration                                                 |
 | [Suspected   Golden Ticket usage (ticket anomaly)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)             | 2032                | High                                                     | Persistence, Privilege Escalation, Lateral movement          |
 | [Suspected   Brute Force attack (SMB)](lateral-movement-alerts.md#suspected-brute-force-attack-smb-external-id-2033)                         | 2033                | Medium                                                   | Lateral movement                                             |
@@ -98,14 +107,13 @@ The following table lists the mapping between alert names, their corresponding u
 | [Suspicious modifications to the AD CS security permissions/settings](persistence-privilege-escalation-alerts.md#suspicious-modifications-to-the-ad-cs-security-permissionssettings--external-id-2435) | 2435                | Medium                                                     | Privilege escalation                                            |
 | [Account Enumeration reconnaissance (LDAP)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview) | 2437 | Medium  | Account Discovery, Domain Account |
 | [Directory Services Restore Mode Password Change](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438) | 2438 | Medium  | Persistence, Account Manipulation |
-| [Honeytoken was queried via SAM-R](reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-sam-r-external-id-2439) | 2439                | Low                                                     | Discovery                                            |
 |[Group Policy Tampering ](/defender-for-identity/other-alerts)|2440|Medium|Defense evasion|
 
 > [!NOTE]
-> To disable any security alert, contact support.
+> Contact support to disable security alerts.
 
 ## See Also
 
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Understanding security alerts](understanding-security-alerts.md)
+- [View and manage security alerts](understanding-security-alerts.md)
+- [Investigate security alerts](/defender-for-identity/investigate-security-alerts)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

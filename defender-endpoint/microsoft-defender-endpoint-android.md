@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - mde-android
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/21/2025

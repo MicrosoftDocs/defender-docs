@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/16/2024
+ms.date: 06/09/2025
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365 Plan 2. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
+description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -31,7 +31,7 @@ _User tags_ are identifiers for specific groups of users in [Microsoft Defender 
 - **System tags**: Currently, [Priority account](/microsoft-365/admin/setup/priority-accounts) is the only type of system tag.
 - **Custom tags**: You create these types of tags.
 
-If your organization has Defender for Office 365 Plan 2 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag.
+If your organization has Defender for Office 365 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag.
 
 > [!NOTE]
 > Currently, you can only apply user tags to mailbox users.
