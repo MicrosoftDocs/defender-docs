@@ -29,7 +29,7 @@ items:
   items:
   - name: Deployment overview
     href: deploy/deploy-defender-identity.md
-    name: Deploy a sensor
+  - name: Deploy a sensor
     items:
     - name: Deploy a sensor on a domain controller
       items:
@@ -78,6 +78,8 @@ items:
         - name: Listen for SIEM events
           href: deploy/configure-event-collection.md
           displayName: standalone
+    - name: Test the sensor
+      href: test-sensor-onboarding.md
   - name: Configure event collection
     items:
       - name: Event collection overview 
