@@ -112,7 +112,7 @@ Updates contain:
 - `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
 - The display name and description is now displayed correctly for the [device control](/defender-endpoint/device-control-overview) filter driver in Windows services
 - Improved performance for kernel driver
-- Improvements to Network Protection performance related to packet loss during high network utilization
+- Improvements to [network protection](/defender-endpoint/network-protection#overview-of-network-protection) performance related to packet loss during high network utilization
 - Reliability improvements to Network Protection during service shutdown
 - Enriched Event ID 1000 to include `ScanOnlyIfIdle` and Scan Priority
 - Improved Device Control WPD Device discovery in file explorer
