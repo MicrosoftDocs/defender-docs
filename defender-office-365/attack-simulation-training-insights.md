@@ -4,7 +4,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection: 

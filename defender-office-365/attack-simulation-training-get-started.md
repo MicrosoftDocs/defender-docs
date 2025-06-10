@@ -53,8 +53,8 @@ Watch this short video to learn more about Attack simulation training.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): You need membership in one of the following roles:
     - **Global Administrator**¹
     - **Security Administrator**
-    - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later. 
+    - **Attack Simulation Administrator**²: Create and manage all aspects of attack simulation campaigns.
+    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
     - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
@@ -62,19 +62,19 @@ Watch this short video to learn more about Attack simulation training.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
     >
-    >   Members of Attack Payload Author have the following limitations in attack simulation training:
+    > Members of Attack Payload Author have the following limitations in attack simulation training:
     >
-    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
-    >   - They can't change global settings.
-    >   - They can't change content (for example, notifications), but they can change payloads.
-    >   - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
+    > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    > - They can't change global settings.
+    > - They can't change content (for example, notifications), but they can change payloads.
+    > - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
     >
     > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
     >
-    >   - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
-    >   - They can't change global settings.
-    >   - They can't change content (for example, tenant payloads or notifications).
-    >   - They can access data through read APIs with user scope, but they can't use write APIs.
+    > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
+    > - They can't change global settings.
+    > - They can't change content (for example, tenant payloads or notifications).
+    > - They can access data through read APIs with user scope, but they can't use write APIs.
 
     Currently, [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) isn't supported.
 
@@ -109,7 +109,7 @@ The following social engineering techniques are available:
 
 - **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a link inside of an attachment. When the recipient opens the attachment and clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint Online or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
+- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
 
 - **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
 
