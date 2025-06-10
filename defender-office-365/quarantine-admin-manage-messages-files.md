@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
+description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
 ms.date: 05/21/2025
 appliesto:
@@ -616,7 +616,7 @@ In the details flyout that opens, the following information is available:
 
 - **File details** section:
   - **File Name**
-  - **File URL**: URL that defines the location of the file (for example, in SharePoint Online).
+  - **File URL**: URL that defines the location of the file (for example, in SharePoint).
   - **Malicious content detected on** The date/time the file was quarantined.
   - **Expires**: The date when the file will be deleted from quarantine.
   - **Detected by**
