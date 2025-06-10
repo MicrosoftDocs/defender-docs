@@ -108,22 +108,17 @@ At first, try using PUA protection in audit mode. It detects potentially unwante
 
 ##### Microsoft Defender Antivirus without being onboarded to Microsoft Defender for Endpoint
 
-|Scenarios|Potentially Unwanted Protection (PUA) by default is set to:|
-| -------- | -------- |
-|Windows 11 version 22H2 or later with Smart App Control enabled|Disabled (0) <br> Note: Since Smart App Control has PUA functionality.|
-|Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
-
+|Scenarios| Security intelligence update version |Potentially Unwanted Protection (PUA) by default is set to:|
+| -------- | -------- | -------- |
+| Windows 10 or later, Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
+| Windows 10 or later, Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2)|
 
 ##### Microsoft Defender Antivirus with Microsoft Defender for Endpoint Plan 1 or Plan 2 or Microsoft Defender for Business
 
-| Scenarios |Potentially Unwanted Protection (PUA) by default is set to:|
-| -------- | -------- |
-|Windows 10, version 2004 or later with Security Intelligence Update older than 1.329.495.0|Audit mode (2)|
-|Windows 10, version 2004 or later with Security Intelligence Update 1.329.495.0 or later|Block mode (1)|
-|Windows 11 version 22H2 or later with Security Intelligence Update older than 1.329.495.0|Audit mode (2)|
-|Windows 11 version 22H2 or later with Security Intelligence Update 1.329.495.0 or later|Audit mode (2)|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client with Security Intelligence Update older than 1.329.495.0|Block mode (1)   |
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client with Security Intelligence Update 1.329.495.0 or later|Block mode (1)   |
+| Scenarios |Security intelligence update version | Potentially Unwanted Protection (PUA) by default is set to:|
+| -------- | -------- | -------- |
+| Windows 10, version 2004 or later, Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client, and Windows Serer 2019 or later | older than 1.329.495.0 | Audit mode (2)|
+| Windows 10, version 2004 or later, Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client, and Windows Serer 2019 or later | 1.329.495.0 or later | Block mode (1)|
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
