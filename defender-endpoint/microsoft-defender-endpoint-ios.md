@@ -43,17 +43,21 @@ ms.date: 03/27/2025
 - **For enrolled devices**: Devices are [enrolled](/mem/intune/user-help/enroll-your-device-in-intune-ios) via the Intune Company Portal app to enforce Intune device compliance policies. This configuration requires the end user to be assigned a Microsoft Intune license.
 
    Intune Company Portal app can be downloaded from the [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
-
+  
   > [!NOTE]
   > Apple doesn't permit redirecting users to download other apps (Company Portal/Authenticator) from the App Store. Therefore, users need to complete this step themselves before onboarding to the Microsoft Defender for Endpoint app.
   > Due to iOS platform restrictions, the MDE app allows onboarding without device registration, enabling MDE protections but leaving the device invisible on the security portal. For enrolled scenarios (MDM), the Company Portal or Authenticator app handles registration. For unenrolled scenarios (MAM), this is managed via the Authenticator app.
   > If a user has a valid MDE license and is registered in the Authenticator App or Company Portal App, signing in to the Defender App allows the device appear in the Defender Portal.
   
+  
      Devices are registered with Microsoft Entra ID. This configuration requires the end user to be signed in through [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
-
+  
 - **For unenrolled devices**: Devices are registered with Microsoft Entra ID. This requires the end user to be signed in through [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
 - For more information on how to assign licenses, see [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign).
+
+> [!NOTE]
+> When a user undergoes a Microsoft account password reset, it is expected that the associated mobile device will lose corporate access if the user does not reauthenticate. Once the user reauthenticates, the device will resume communication with the security portal. This policy ensures the security of the user's account and helps prevent unauthorized access.
 
 > [!NOTE]
 > - Defender for Endpoint on iOS requires configuring its VPN to activate the Web Protection feature and to send periodic status signals while the app operates in the background. This VPN is local and pass-through, meaning it doesn't route traffic through a remote VPN server.
