@@ -48,18 +48,18 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. Select **Tokens**
 1. Select **Create Token**.
 
-     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot of the Okta admin portal showing the left-hand navigation menu. The Security section is expanded, displaying options such as General, Authentication Policies, Identity Providers, and others. The API option is highlighted at the bottom of the Security section, indicating where to access API settings.":::
+     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot of the Okta admin portal navigation menu. The API option is highlighted, showing where to access API settings.":::
 
 1. In the Create token pop-up:
     1. Enter a name for your Defender for Identity token
     2. Select Any IP
     3. Select Create token.
 
-    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot of the Okta admin portal on the API > Tokens tab. The interface displays options for Authorization Servers, Tokens, and Trusted Origins. The “Create token” button is highlighted in the lower left area of the screen, indicating where to generate a new API token.":::
+    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot of the Okta admin portal on the API > Tokens tab, indicating how to generate a new API token.":::
 
 1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token is used to connect Okta to Defender for Identity.
 
-    :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the Okta token creation confirmation dialog. A success message states, “Token created successfully!” followed by a warning to save the token now, as it won’t be shown again. Below, the Token Value field displays the token with a copy button.":::
+    :::image type="content" source="media/okta-integration/okta-token-created-successfully.png" alt-text="Screenshot of the Okta token creation success message.":::
 
 ### Add Custom user attributes
 
@@ -81,7 +81,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. Select Save.
 1. Verify that the three custom attributes you added are displayed correctly.
 
-     :::image type="content" source="media/okta-integration/okta-custom-attributes.png" alt-text="Screenshot of the Okta Attributes page. The table lists custom attributes with columns for Display Name, Variable Name, Data type, and Attribute Type. Three attributes are shown: ObjectGuid, DistinguishedName, and ObjectSid. An “Add Attribute” button appears at the top of the table..":::
+     :::image type="content" source="media/okta-integration/okta-custom-attributes.png" alt-text="Screenshot of the Okta Attributes page. Three attributes are shown: ObjectGuid, DistinguishedName, and ObjectSid.":::
 
 
 ### Create a custom Okta role
@@ -101,7 +101,7 @@ After assigning both roles, you can remove the Super Admin role. This ensures th
     - **View roles, resources, and admin assignments**
 1. Select **Save role**.
 
-:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Screenshot showing a list of Okta permissions that need to be assigned when adding a custom role. The User section includes selected permissions such as Suspend users, Unsuspend users, and Clear users sessions. The Identity and Access Management section includes View roles, resources, and admin assignments.":::
+:::image type="content" source="media/okta-integration/okta-permissions.png" alt-text="Screenshot showing a list of Okta permissions that need to be assigned when adding a custom role.":::
 
 ### Create a resource set
 
@@ -112,7 +112,7 @@ After assigning both roles, you can remove the Super Admin role. This ensures th
     - **All users**
     - **All Identity and Access Management resources**
 
-    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="The resource set is named and described as Microsoft Defender for Identity. Under Resources, two entries are listed: Users with All users and Identity and Access Management with All Identity and Access Management resources.":::
+    :::image type="content" source="media/okta-integration/resource-set-information.png" alt-text="Screenshot that shows the resource set name is Microsoft Defender for Identity.":::
 
 
 1. Select **Save selection**.
@@ -135,17 +135,17 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1.  Navigate to the Microsoft Defender Portal
 1. Select **Settings** > **Identities** > **Okta integration**
 
-    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing the Microsoft Defender for Identity settings page. The Settings menu is selected in the left-hand navigation pane, and under General, the Okta Integration option is highlighted. The right panel displays options to connect or disconnect Okta instances":::
+    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing the Microsoft Defender for Identity settings page with the Okta Integration option is highlighted.":::
 
 1. Select **+Connect Okta instance**.
 1. Enter your Okta domain (for example, acme.okta.com).
 1. Paste the API token you copied from your Okta account.
 1. Select **Save**.
 
-    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text=".":::
+    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot showing how to connect your Okta instance.":::
 1. Verify that your Okta environment appears in the table as enabled.
 
-    :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Screenshot showing the Connect Okta Instance configuration screen in the Microsoft Defender portal. The screen includes required fields for Okta domain name and API token. The integration is toggled to “Enabled.” A blue Save button appears at the bottom of the screen.":::
+    :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Screenshot that shows the Okta environment has been added and is enabled.":::
 
 ## Related articles
 
