@@ -126,7 +126,12 @@ Default settings for PUA protection depend on whether devices are onboarded to D
 | Windows 10, version 2004 or later, Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client, and Windows Serer 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
 
 > [!TIP]
-> To enforce Potentially Unwanted Applications (PUA) in block mode, please use one of the management steps below.
+> To enforce Potentially Unwanted Applications (PUA) in block mode, use one of the following management methods:
+> - Defender for Endpoint Security Settings Management
+> - Intune
+> - Configuration Manager
+> - Group Policy
+> - PowerShell
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
