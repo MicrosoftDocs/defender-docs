@@ -29,26 +29,12 @@ items:
   items:
   - name: Deployment overview
     href: deploy/deploy-defender-identity.md
-  - name: Deploy a sensor on a domain controller
+    name: Deploy a sensor
     items:
-     - name: Windows Server 2016 and earlier
-       items:
-        - name: Connect to the Defender for Identity service
-          href: deploy/configure-proxy.md
-        - name: Test connectivity settings
-          href: deploy/test-connectivity.md
-        - name: Download the Defender for Identity sensor
-          href: deploy/download-sensor.md
-        - name: Install the Defender for Identity sensor
-          href: deploy/install-sensor.md
-        - name: Configure the Defender for Identity sensor
-          href: deploy/configure-sensor-settings.md
-     - name: Windows 2019 and later (Preview)
-       items:
-        - name: Activate the sensor when MDE is only enabled on your domain controller
-          href: deploy/activate-capabilities.md
-        - name: Deploy the sensor when MDE is enabled on other endpoints
-          items:
+    - name: Deploy a sensor on a domain controller
+      items:
+      - name: Windows Server 2016 and earlier
+        items:
           - name: Connect to the Defender for Identity service
             href: deploy/configure-proxy.md
           - name: Test connectivity settings
@@ -59,23 +45,39 @@ items:
             href: deploy/install-sensor.md
           - name: Configure the Defender for Identity sensor
             href: deploy/configure-sensor-settings.md
-  - name: Deploy a sensor on Microsoft AD FS / AD CS / Entra Connect servers
-    href: deploy/active-directory-federation-services.md
-  - name: Deploy for multiple Active Directory forests
-    href: deploy/multi-forest.md
-  - name: Configure a standalone sensor
-    items:
-      - name: Prerequisites for a standalone sensor
-        href: deploy/prerequisites-standalone.md
-      - name: Configure port mirroring
-        href: deploy/configure-port-mirroring.md
-        displayName: standalone
-      - name: Configure Windows Event Forwarding
-        href: deploy/configure-event-forwarding.md
-        displayName: standalone
-      - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
-        displayName: standalone
+      - name: Windows 2019 and later (Preview)
+        items:
+          - name: Activate the sensor when MDE is only enabled on your domain controller
+            href: deploy/activate-capabilities.md
+          - name: Deploy the sensor when MDE is enabled on other endpoints
+            items:
+            - name: Connect to the Defender for Identity service
+              href: deploy/configure-proxy.md
+            - name: Test connectivity settings
+              href: deploy/test-connectivity.md
+            - name: Download the Defender for Identity sensor
+              href: deploy/download-sensor.md
+            - name: Install the Defender for Identity sensor
+              href: deploy/install-sensor.md
+            - name: Configure the Defender for Identity sensor
+              href: deploy/configure-sensor-settings.md
+    - name: Deploy a sensor on Microsoft AD FS / AD CS / Entra Connect servers
+      href: deploy/active-directory-federation-services.md
+    - name: Deploy for multiple Active Directory forests
+      href: deploy/multi-forest.md
+    - name: Deploy a standalone sensor
+      items:
+        - name: Prerequisites for a standalone sensor
+          href: deploy/prerequisites-standalone.md
+        - name: Configure port mirroring
+          href: deploy/configure-port-mirroring.md
+          displayName: standalone
+        - name: Configure Windows Event Forwarding
+          href: deploy/configure-event-forwarding.md
+          displayName: standalone
+        - name: Listen for SIEM events
+          href: deploy/configure-event-collection.md
+          displayName: standalone
   - name: Configure event collection
     items:
       - name: Event collection overview 
