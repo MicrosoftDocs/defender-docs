@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen

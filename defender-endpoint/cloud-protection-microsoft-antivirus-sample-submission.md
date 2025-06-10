@@ -8,7 +8,7 @@ ms.author: ewalsh
 ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 04/16/2025
 ms.collection: 
 - m365-security

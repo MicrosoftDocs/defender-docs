@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.date: 03/25/2025
 ---
 
-# Investigate and protect Service Accounts | Microsoft Defender for Identity
+# Investigate and protect Service Accounts
 
 ### What are Service Accounts?
 
@@ -17,7 +17,7 @@ Service accounts are classified into several types:
 - sMSA (Managed Service Accounts): Designed for individual services on a single server rather than groups.
 - User Account: These standard user accounts are typically used for interactive logins but can also be configured to run services.
 
-The auto discovery feature quickly identifies gMSA and sMSA accounts as well as user accounts within Active Directory that meet specific criteria.These criteria include having a [Service Principal Name ](/windows/win32/ad/service-principal-names)(SPN) or a "password never expires" attribute assigned. The feature then classifies these accounts as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
+The auto discovery feature quickly identifies gMSA and sMSA accounts and user accounts within Active Directory that meet specific criteria. These criteria include having a [Service Principal Name](/windows/win32/ad/service-principal-names)(SPN) or a "password never expires" attribute assigned. The feature then classifies these accounts as service accounts. These accounts are then highlighted and presented, along with relevant information including insights into recent authentications and the sources and destinations of those interactions, as part of a dedicated inventory within the Defender experience. This helps you better understand the accounts' purpose so you can more easily spot anomalous activity and understand its implications.
 
 Service account types are displayed in the Identity Info table within Advanced Hunting.
 
@@ -77,7 +77,7 @@ You can use the sort and filter functionality on each service account tab to get
 ### Connections
 
 
-For a deeper dive into what's happening in your service account click on the domain name to see the following information:
+For a deeper dive into what's happening in your service account select the domain name to see the following information:
 
 When you investigate a specific Service account, you see the following details under the connections tab:
 
@@ -96,7 +96,27 @@ When you investigate a specific Service account, you see the following details u
 Last seen   | The date and time of the most recent sign in event over this connection.        |
 
 
-For more information about the following tabs, **Overview**, **Incidents and alerts**,**Observed in organization**, **Timeline**, and **Attack paths**, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
+### Define Service Account classification rules
+
+Service account classification rules let you define your own criteria for identifying service accounts. These rules help you include service accounts that Defender for Identity doesn't identify automatically. For example, some organizations name all their service accounts with a prefix like `srv`. Defender for Identity doesn't automatically detect such naming conventions. By creating a classification rule based on that pattern, you can include those accounts in the Service accounts view.
+
+Classification rules work alongside Defender for Identity’s automatic discovery and provide a more complete and customized view of service accounts in your environment.
+
+To create a rule:
+
+1. Go to Settings > Microsoft Defender XDR > Service accounts classification.
+1. Select on **+ Create a new rule**.
+1. Enter a name for the rule.
+2. Optional: Add a description.
+1. Select one or more of the following filters:
+   - **Account display name**
+   - **Account domain**
+   - **Account SAM name**
+   - **Organizational unit**
+1. Select Create to save the rule.
+
+
+For more information about Defender for Identity details, see: [Investigate assets](/defender-for-identity/investigate-assets#identity-details).
 
 ## Related content
 - [Service principal names](/windows/win32/ad/service-principal-names)

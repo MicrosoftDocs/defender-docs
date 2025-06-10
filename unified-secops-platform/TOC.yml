@@ -62,9 +62,11 @@
       - name: Advanced hunting 
         href: /defender-xdr/advanced-hunting-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json 
     - name: Investigate incidents
-      items:
+      items:        
         - name: Overview
           href: /defender-xdr/incidents-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+        - name: Plan incident response
+          href: plan-incident-response.md
         - name: Correlation and merging
           href: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
         - name: Investigate incidents in Security Copilot
@@ -111,7 +113,9 @@
             - name: Manage content distribution with tenant groups
               href: mto-tenantgroups.md
             - name: Manage tenants in other Microsoft clouds
-              href: mto-cross-cloud.md              
+              href: mto-cross-cloud.md
+            - name: Manage unified role-based access control (URBAC) for multitenant management
+              href: mto-urbac.md                             
             - name: Troubleshoot issues
               href: mto-troubleshoot.md              
         - name: Configure notifications

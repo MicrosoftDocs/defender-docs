@@ -6,6 +6,7 @@ ms.author:  liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/22/2024
+ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Change password for Microsoft Entra seamless SSO account

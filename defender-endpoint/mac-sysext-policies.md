@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ROBOTS: noindex,nofollow
 ms.subservice: macos
 ms.date: 05/08/2025
