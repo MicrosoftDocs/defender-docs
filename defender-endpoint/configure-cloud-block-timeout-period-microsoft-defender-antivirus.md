@@ -9,7 +9,7 @@ ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/10/2024
 ms.collection: 
 - m365-security

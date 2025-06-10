@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 ms.reviewer: mcostea
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
   - MET150
