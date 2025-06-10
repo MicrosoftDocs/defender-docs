@@ -112,7 +112,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 4. Double-click the **Exclude files and paths from Attack surface reduction Rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
 
 > [!WARNING]
-> Do not use quotes as they are not supported for either the **Value name** column or the **Value** column.
+> Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
 
 ##### Use PowerShell to exclude files and folders
 
@@ -127,7 +127,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
    Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
 
    > [!IMPORTANT]
-   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
+   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet overwrites the existing list.
 
 ##### Use MDM CSPs to exclude files and folders
 
@@ -137,7 +137,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusio
 
 You can customize the notification for when a rule is triggered and blocks an app or file. See the [Windows Security](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center#customize-notifications-from-the-windows-defender-security-center) article.
 
-## Additional articles in this deployment collection
+## More articles in this deployment collection
 
 [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
 
