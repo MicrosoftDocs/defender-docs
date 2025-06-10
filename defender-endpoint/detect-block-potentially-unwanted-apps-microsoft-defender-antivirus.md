@@ -108,22 +108,22 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
-Default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint.
+Scenarios and default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint.
 
 ##### Microsoft Defender Antivirus without devices onboarded to Defender for Endpoint
 
-|Scenarios| Security intelligence update version |Potentially Unwanted Protection (PUA) by default is set to:|
+|Scenarios| Security intelligence update version |PUA protection default setting|
 | -------- | -------- | -------- |
-| Windows 10 or later, Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
-| Windows 10 or later, Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
+| Windows 10 or later<br/>Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
+| Windows 10 or later<br/>Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
 
 ##### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Microsoft Defender for Business
 
-| Scenarios |Security intelligence update version | Smart App Locker | Potentially Unwanted Protection (PUA) by default is set to:|
+| Scenarios |Security intelligence update version | Smart App Locker | PUA protection default setting|
 | -------- | -------- | -------- | -------- |
-| Windows 10, version 2004 or later, Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client, and Windows Serer 2019 or later | older than 1.329.495.0 | Feature not available | Audit mode (2)|
+| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client<br/>Windows Server 2019 or later | older than 1.329.495.0 | Feature not available | Audit mode (2)|
 | Windows 11, version 22H2 or later | 1.329.495.0 or later | Available | Audit mode (1)|
-| Windows 10, version 2004 or later, Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client, and Windows Serer 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
+| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the unified Microsoft Defender for Endpoint client<br/>Windows Serer 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
 
 > [!TIP]
 > To enforce Potentially Unwanted Applications (PUA) in block mode, use one of the following management methods:
