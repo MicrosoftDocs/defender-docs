@@ -31,39 +31,23 @@ In addition to native Defender for Cloud Apps alerts, you'll also get the follow
 * Leaked credentials: Triggered when a user's valid credentials have been leaked. For more information, see [Microsoft Entra ID's Leaked credentials detection](/azure/active-directory/identity-protection/concept-identity-protection-risks#user-risk).
 * Risky sign-in: Combines a number of Microsoft Entra ID Protection sign-in detections into a single detection. For more information, see [Microsoft Entra ID's Sign-in risk detections](/azure/active-directory/identity-protection/concept-identity-protection-risks#sign-in-risk).
 
-These policies will appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
+These policies appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
 
+## Dynamic threat detection model
 
-### Dynamic Threat Detection Model
-
-Starting June 2025, Microsoft Defender for Cloud Apps will begin rolling out improvements to its threat protection capabilities. This Dynamic threat detection model enhances Microsoft Defender for Cloud ability to detect threats in near real time, while minimizing false positives, by maintaining a high signal-to-noise ratio (SNR). It enables faster, research-driven updates to detection logic without requiring customer configuration.
-
-The Dynamic Threat Detection Model is a detection delivery mechanism used by Microsoft Defender for Cloud Apps. It enables the system to dynamically adjust detection logic in response to changes in the threat landscape, helping maintain a high signal-to-noise ratio (SNR) without requiring manual configuration.
-
-The Dynamic Threat Detection Model allows the Defender for Cloud Apps system to:
-
-- Continuously adapt detection logic based on evolving threats
-
-- Deliver updated detections directly to tenants
-
-This approach replaces static, fixed-policy logic with a system-driven mechanism that adjusts threat detections automatically and efficiently.
+Starting June 2025, Microsoft Defender for Cloud Apps will begin rolling out improvements to its threat protection capabilities. The Microsoft Defender for Cloud Apps dynamic threat detection model improves and maintains a high signal-to-noise-ration (SNR) for detections by constantly evaluating the threat landscape in order to respond faster to new threats and update detection logic resulting in fewer false positives. As a result, you might notice that some of the legacy policies have been removed, while others have been transitioned to the new dynamic model.
 
 The initial policies being transitioned to the dynamic model include:
 
-- Activity from suspicious IP addresses
-- Suspicious inbox manipulation rule
-- Suspicious email deletion activity
-- Activity from anonymous IP addresses
-S- uspicious inbox forwarding
+- [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
+- [Suspicious inbox manipulation rule](#suspicious-inbox-manipulation-rule)
+- [Suspicious email deletion activity](#suspicious-email-deletion-activity)
+- [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
+- [Suspicious inbox forwarding](#suspicious-inbox-forwarding)
+- [Activity from a botnet-associated IP address](#activity-from-a-botnet-associated-ip-address)
 
-- Activity from a botnet-associated IP address
-
- This enhancement introduces a dynamic detection model that enables faster adaptation to emerging threats and improves the overall signal-to-noise ratio (SNR) for threat alerts.
-
-The Microsoft Defender for Cloud Apps dynamic threat detection model improves and maintains a high signal-to-noise-ration (SNR) for detections by constantly evaluating the threat landscape in order to respond faster to new threats and update detection logic. This means that detections can be added, removed, or modified dynamically to ensure optimal protection against emerging threats. The model provides more accurate and timely threat detections, enhancing your overall organization security.
-In some cases, policies may be split into several different detections and alerts in order to provide an additional degree of protection and better understanding for the SOC teams on the threat etymology.
-
-If you wish to retain governance actions, please re-enable the policies from the legacy policies page at Defender portal > Cloud apps > Policy management page.
+> [!NOTE]
+> If you wish to retain governance actions, you can re-enable the policies via the Microsoft Defender portal > Cloud apps > Policy management page.
 
 
 | **Legacy Alert title name** | **New Alert title name** |
