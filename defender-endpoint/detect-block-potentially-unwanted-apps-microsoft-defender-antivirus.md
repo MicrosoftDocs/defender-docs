@@ -106,22 +106,24 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
-##### Microsoft Defender Antivirus (standalone)
+##### Microsoft Defender Antivirus without being onboarded to Microsoft Defender for Endpoint
 
 |Scenarios|Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- |
-|Windows 11 version 22H2 or later with Smart App Control enabled|Disabled (0) <br>Note: Since Smart App Control has PUA functionality.|
+|Windows 11 version 22H2 or later with Smart App Control enabled|Disabled (0) <br> Note: Since Smart App Control has PUA functionality.|
 |Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016|Audit mode (2)|
 
 
 ##### Microsoft Defender Antivirus with Microsoft Defender for Endpoint Plan 1 or Plan 2 or Microsoft Defender for Business
 
-| Scenarios | Potentially Unwanted Protection (PUA) by default is set to:|
+| Scenarios |Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- |
-|Windows 10, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016 not onboarded to Microsoft Defender for Endpoint | Audit mode (2) |
-|Windows 10, version 2004 or later onboarded to Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business | Block mode (1)|
-|Windows 11 version 22H2 or later with Smart App Control enabled and onboarded with Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 or Microsoft Endpoint for Business|Audit mode (2)|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client and onboarded to Microsoft Defender for Servers Plan 1 or Microsoft Defender for Servers Plan 2 or Microsoft Defender for Endpoint for servers|Block mode (1)   |
+|Windows 10, version 2004 or later with Security Intelligence Update older than 1.329.495.0|Audit mode (2)|
+|Windows 10, version 2004 or later with Security Intelligence Update 1.329.495.0 or later|Block mode (1)|
+|Windows 11 version 22H2 or later with Security Intelligence Update older than 1.329.495.0|Audit mode (2)|
+|Windows 11 version 22H2 or later with Security Intelligence Update 1.329.495.0 or later|Audit mode (2)|
+|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client with Security Intelligence Update older than 1.329.495.0|Block mode (1)   |
+|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with the unified Microsoft Defender for Endpoint client with Security Intelligence Update 1.329.495.0 or later|Block mode (1)   |
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
