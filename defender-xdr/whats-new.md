@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's new in Microsoft Defender XDR
