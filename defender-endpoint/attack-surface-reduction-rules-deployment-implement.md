@@ -44,7 +44,7 @@ Implementing attack surface reduction rules move the first test ring into an ena
 4. Switch problematic rules back to Audit.
 
    > [!NOTE]
-   > For problematic rules (rules creating too much noise), it is better to create exclusions than to turn rules off or switching back to Audit. You will have to determine what is best for your environment.
+   > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You'll have to determine what is best for your environment.
 
 > [!TIP]
 > When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
@@ -57,7 +57,7 @@ Warn mode is effectively a Block instruction, but with the option for the user t
 
 When you're confident that you've correctly configured the attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
-The deployment process, steps 1 – 3,  is essentially the same for each subsequent ring:
+In the follwing deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
 
 1. Test rules in Audit mode.
 
@@ -77,7 +77,7 @@ The deployment process, steps 1 – 3,  is essentially the same for each subsequ
 
 #### Customize attack surface reduction rules
 
-As you continue to expand your attack surface reduction rules deployment, you may find it necessary or beneficial to customize the attack surface reduction rules that you've enabled.
+As you continue to expand your attack surface reduction rules deployment, you might find it necessary or beneficial to customize the attack surface reduction rules that you've enabled.
 
 ##### Exclude files and folders
 
@@ -85,12 +85,12 @@ You can choose to exclude files and folders from being evaluated by attack surfa
 
 For example, consider the ransomware rule:
 
-The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To reemphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as non-problematic usage increases.
+The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To re-emphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as nonproblematic usage increases.
 
 In cases in which blocks aren't self resolved in a timely manner, customers can - _at their own risk_ - make use of either the self-service mechanism or an Indicator of Compromise (IOC)-based "allowlist" capability to unblock the files themselves.
 
 > [!WARNING]
-> Excluding or unblocking files or folders could potentially allow unsafe files to run and infect your devices. Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Files that would have been blocked by a rule will be allowed to run, and there will be no report or event recorded.
+> Excluding or unblocking files or folders could potentially allow unsafe files to run and infect your devices. Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Files that would be blocked by a rule are allowed to run, and there's no report or event recorded.
 
 An exclusion can apply to all rules that allow exclusions or apply to specific rules using [per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions). You can specify an individual file, folder path, or the fully qualified domain name for a resource.
 
