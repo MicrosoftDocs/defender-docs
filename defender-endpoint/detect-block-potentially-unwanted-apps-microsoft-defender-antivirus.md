@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 05/01/2025
+ms.date: 06/10/2025
 ---
 
 # Detect and block potentially unwanted applications
@@ -49,6 +49,8 @@ Microsoft Defender Antivirus is available in the following editions/versions of 
 For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
 
 For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
+
+## What are potentially unwanted applications?
 
 Potentially unwanted applications (PUA) are a category of software that can cause your machine to run slowly, display unexpected ads, or at worst, install other software that might be unexpected or unwanted. PUA isn't considered a virus, malware, or other type of threat, but it might perform actions on endpoints that adversely affect endpoint performance or use. The term *PUA* can also refer to an application that has a poor reputation, as assessed by Microsoft Defender for Endpoint, due to certain kinds of undesirable behavior.
 
@@ -96,7 +98,7 @@ Although Microsoft Defender for Endpoint has its own blocklist based upon a data
 
 The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can detect and block PUA on endpoints in your network.
 
-Microsoft Defender Antivirus blocks detected PUA files and any attempts to download, move, run, or install them. Blocked PUA files are then moved to quarantine. When a PUA file is detected on an endpoint, Microsoft Defender Antivirus sends a notification to the user ([unless notifications are disabled](configure-notifications-microsoft-defender-antivirus.md) in the same format as other threat detections. The notification is prefaced with `PUA:` to indicate its content.
+Microsoft Defender Antivirus blocks detected PUA files and any attempts to download, move, run, or install them. Blocked PUA files are then moved to quarantine. When a PUA file is detected on an endpoint, Microsoft Defender Antivirus sends a notification to the user ([unless notifications are disabled](configure-notifications-microsoft-defender-antivirus.md)) in the same format as other threat detections. The notification is prefaced with `PUA:` to indicate its content.
 
 The notification appears in the usual [quarantine list within the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
@@ -106,14 +108,16 @@ You can enable PUA protection with Microsoft Defender for Endpoint Security Sett
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
-##### Microsoft Defender Antivirus without being onboarded to Microsoft Defender for Endpoint
+Default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint.
+
+##### Microsoft Defender Antivirus without devices onboarded to Defender for Endpoint
 
 |Scenarios| Security intelligence update version |Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- | -------- |
 | Windows 10 or later, Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
 | Windows 10 or later, Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
 
-##### Microsoft Defender Antivirus with Microsoft Defender for Endpoint Plan 1 or Plan 2 or Microsoft Defender for Business
+##### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Microsoft Defender for Business
 
 | Scenarios |Security intelligence update version | Smart App Locker | Potentially Unwanted Protection (PUA) by default is set to:|
 | -------- | -------- | -------- | -------- |
