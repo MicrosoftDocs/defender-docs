@@ -113,12 +113,12 @@ Updates contain:
 - The display name and description is now displayed correctly for the [device control](/defender-endpoint/device-control-overview) filter driver in Windows services
 - Improved performance for kernel driver
 - Improvements to [network protection](/defender-endpoint/network-protection#overview-of-network-protection) performance related to packet loss during high network utilization
-- Reliability improvements to Network Protection during service shutdown
-- Enriched Event ID 1000 to include `ScanOnlyIfIdle` and Scan Priority
-- Improved Device Control WPD Device discovery in file explorer
-- Resolved discrepancy in Device Health report between signature publish and signature install date and time
+- Reliability improvements to network protection during service shutdown
+- Enriched [Event ID 1000](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) to include `ScanOnlyIfIdle` and scan priority
+- Improved device control Windows Portal Device (WPD) device discovery in File explorer. (For more information about device control, see [Device control policy samples and scenarios](/defender-endpoint/device-control-overview#device-control-policy-samples-and-scenarios).)
+- Resolved discrepancy in [device health reports](/defender-endpoint/device-health-reports) between signature publish and signature install date and time
 - Performance improvements when scanning files/folders w/ extended attributes
-- Reliability improvement in Defender kernel driver to avoid crash when there is excessive disk I/O
+- Reliability improvement in the Defender kernel driver to avoid crashing when there is excessive disk I/O
 
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
