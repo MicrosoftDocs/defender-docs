@@ -110,7 +110,7 @@ You can connect both Azure DevOps and GitHub organizations to Defender for Cloud
 
 For both GitHub and Azure DevOps, you can control which scanners run and specify exactly which repositories are included or excluded from agentless scanning.
 
-:::image type="content" source="media/agentless-code-scanning/custom-settings-agentles-scanning.png" alt-text="Screenshot showing the custom settings of agentless code scanning." lightbox="media/agentless-code-scanning/custom-settings-agentles-scanning.png":::
+:::image type="content" source="media/agentless-code-scanning/custom-settings-agentless-scanning.png" alt-text="Screenshot showing the custom settings of agentless code scanning." lightbox="media/agentless-code-scanning/custom-settings-agentless-scanning.png":::
 
 - **Select scanners:** Turn each code and infrastructure-as-code (IaC) scanner on or off based on your needs.
 
