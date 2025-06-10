@@ -19,7 +19,7 @@ ms.custom:
 **Applies to**:
 
 - [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 - Microsoft Defender Antivirus
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint Plan 2.
