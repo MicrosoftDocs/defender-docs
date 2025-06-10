@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/30/2025
+ms.date: 06/10/2025
 search.appverid: met150
 ---
 
@@ -652,7 +652,7 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> When managing ASR rules using **Microsoft Defender for Endpoint security settings management**, the setting for **"Block Webshell creation for Servers"** must be configured as **"Not Configured"** in Group Policy or other local settings. If this rule is set to any other value (e.g., Enabled or Disabled), it may cause conflicts and prevent the policy from applying correctly through security settings management.
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
 
 ### Block Win32 API calls from Office macros
 
