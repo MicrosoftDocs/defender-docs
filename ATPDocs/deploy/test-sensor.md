@@ -7,14 +7,15 @@ ms.reviewer: rlitinsky
 ---
 
 # Test the Defender for Identity sensor on domain controllers 
- 
-The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
-Use the following procedures to test your environment for Defender for Identity capabilities on a domain controller.
+Use the following procedures to test your that your sensors are working.
+Note that the first time you activate the sensor on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
 ## Check the ITDR dashboard
 
-1. In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment. For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
+1. In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment.
+
+For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
 
 ## Confirm entity page details
 
@@ -28,24 +29,24 @@ In the Defender portal, check for the following details:
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
-If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
+If no event data is found on the group timeline, you may need to create some manually. You can do this by, for example, adding and removing users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
 ## Test advanced hunting tables
 
-In the Defender portal's **Advanced hunting** page, use the following sample queries to check that data appears in relevant tables as expected for your environment:
+1. In the Defender portal's **Advanced hunting** page, use the following sample queries to check that data appears in relevant tables as expected for your environment:
 
-```kusto
-IdentityDirectoryEvents
-| where TargetDeviceName contains "DC_FQDN" // insert domain controller FQDN
-
-IdentityInfo 
-| where AccountDomain contains "domain" // insert domain
-
-IdentityQueryEvents 
-| where DeviceName contains "DC_FQDN" // insert domain controller FQDN
-```
+    ```kusto
+    IdentityDirectoryEvents
+    | where TargetDeviceName contains "DC_FQDN" // insert domain controller FQDN
+    
+    IdentityInfo 
+    | where AccountDomain contains "domain" // insert domain
+    
+    IdentityQueryEvents 
+    | where DeviceName contains "DC_FQDN" // insert domain controller FQDN
+    ```
 
 For more information, see [Advanced hunting in the Microsoft Defender portal](/microsoft-365/security/defender/advanced-hunting-microsoft-defender).
 
