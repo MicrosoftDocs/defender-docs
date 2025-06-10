@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 - mde-linux
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
 ms.date: 10/11/2024

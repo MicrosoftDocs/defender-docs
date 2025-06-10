@@ -7,7 +7,7 @@ author: dansimp
 manager: deniseb
 ms.date: 05/08/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection:
