@@ -110,7 +110,7 @@ Updates contain:
 
 - Windows multisession SKUs are now properly classified as client SKUs for signature versioning
 - `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
-- The display name and description is now displayed correctly for the Device Control filter driver in Windows services
+- The display name and description is now displayed correctly for the [device control](/defender-endpoint/device-control-overview) filter driver in Windows services
 - Improved performance for kernel driver
 - Improvements to Network Protection performance related to packet loss during high network utilization
 - Reliability improvements to Network Protection during service shutdown
@@ -157,25 +157,6 @@ Updates contain:
 - Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
 - Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
 - Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
-
-### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
-
-- Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
-- Platform: **4.18.25020.1009**
-- Engine: **1.1.25020.1007**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
-- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
-- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
-- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
-- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
-- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
-- Increased [device control policy](device-control-policies.md) limits.
-- Improved security resilience for Defender update process.
 
 ### Previous version updates: Technical upgrade support only
 
