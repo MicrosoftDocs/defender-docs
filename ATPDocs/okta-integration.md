@@ -39,23 +39,23 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 1. In the Okta console, select **Admin**.
 
-    :::image type="content" source="media/okta-integration/okta-admin.png" alt-text="Screenshot that shows the Okta admin button.":::
+    :::image type="content" source="media/okta-integration/okta-admin.png" alt-text="Screenshot that shows how to access the Admin button in the Okta console.":::
 
 1. Select **Security** > **API**.
 
-   :::image type="content" source="media/okta-integration/okta-side-menu-security-api.png" alt-text="Screenshot of the Okta user interface showing the My Apps dashboard. The left menu includes My Apps, Notifications, and Add apps. The center shows “No new notifications.” The Admin button is highlighted in the top-right corner next to the user profile.":::
+   :::image type="content" source="media/okta-integration/okta-side-menu-security-api.png" alt-text="Screenshot of the Okta admin console navigation menu with Security and API options highlighted in the left pane.":::
 
 1. Select **Tokens**
 1. Select **Create Token**.
 
-     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot of the Okta admin portal navigation menu. The API option is highlighted, showing where to access API settings.":::
+     :::image type="content" source="media/okta-integration/create-an-okta-token.png" alt-text="Screenshot of the Okta API Tokens tab with the Create token button highlighted.":::
 
 1. In the Create token pop-up:
     1. Enter a name for your Defender for Identity token
     2. Select Any IP
     3. Select Create token.
 
-    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot of the Okta admin portal on the API > Tokens tab, indicating how to generate a new API token.":::
+    :::image type="content" source="media/okta-integration/enter-okta-token-details.png" alt-text="Screenshot of the Okta Create token form with fields for token name and IP restriction, and the Create token button highlighted.":::
 
 1. In the **Token created successfully** pop-up, copy the **Token value** and store it securely. This token is used to connect Okta to Defender for Identity.
 
@@ -135,14 +135,14 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1.  Navigate to the Microsoft Defender Portal
 1. Select **Settings** > **Identities** > **Okta integration**
 
-    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing the Microsoft Defender for Identity settings page with the Okta Integration option is highlighted.":::
+    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing the Microsoft Defender for Identity settings page with the Okta Integration option highlighted.":::
 
 1. Select **+Connect Okta instance**.
 1. Enter your Okta domain (for example, acme.okta.com).
 1. Paste the API token you copied from your Okta account.
 1. Select **Save**.
 
-    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot showing how to connect your Okta instance.":::
+    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
 1. Verify that your Okta environment appears in the table as enabled.
 
     :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Screenshot that shows the Okta environment has been added and is enabled.":::
