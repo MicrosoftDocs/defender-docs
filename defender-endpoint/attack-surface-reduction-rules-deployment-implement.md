@@ -44,7 +44,7 @@ When you're implementing attack surface reduction rules, move the first test rin
 4. Switch problematic rules back to Audit.
 
    > [!NOTE]
-   > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You'll have to determine what is best for your environment.
+   > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You have to determine what is best for your environment.
 
 > [!TIP]
 > When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
@@ -57,7 +57,7 @@ Warn mode is effectively a Block instruction, but with the option for the user t
 
 When you're confident that you've correctly configured the attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
-In the follwing deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
+In the following deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
 
 1. Test rules in Audit mode.
 
@@ -77,7 +77,7 @@ In the follwing deployment process, steps 1 – 3 are essentially the same for e
 
 #### Customize attack surface reduction rules
 
-As you continue to expand your attack surface reduction rules deployment, you might find it necessary or beneficial to customize the attack surface reduction rules that you've enabled.
+As you continue to expand your attack surface reduction rules deployment, you might find it necessary or beneficial to customize the attack surface reduction rules that are enabled.
 
 ##### Exclude files and folders
 
