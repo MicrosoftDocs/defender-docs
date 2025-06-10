@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 03/27/2025
+ms.date: 06/10/2025
 search.appverid: met150
 ---
 
@@ -36,15 +36,18 @@ Implementing attack surface reduction rules move the first test ring into an ena
 ## Step 1: Transition attack surface reduction rules from Audit to Block
 
 1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+
 2. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
+
 3. Refine exclusions or create new exclusions as determined necessary.
+
 4. Switch problematic rules back to Audit.
 
-  > [!NOTE]
-  > For problematic rules (rules creating too much noise), it is better to create exclusions than to turn rules off or switching back to Audit. You will have to determine what is best for your environment.
+   > [!NOTE]
+   > For problematic rules (rules creating too much noise), it is better to create exclusions than to turn rules off or switching back to Audit. You will have to determine what is best for your environment.
 
-  > [!TIP]
-  > When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
+> [!TIP]
+> When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
 
 ### How does Warn mode work?
 
@@ -56,13 +59,20 @@ When you're confident that you've correctly configured the attack surface reduct
 
 The deployment process, steps 1 – 3,  is essentially the same for each subsequent ring:
 
-1. Test rules in Audit
-2. Review attack surface reduction-triggered audit events in the Microsoft Defender portal
-3. Create exclusions
-4. Review: refine, add, or remove exclusions as necessary
-5. Set rules to "block"
+1. Test rules in Audit mode.
+
+2. Review attack surface reduction-triggered audit events in the Microsoft Defender portal.
+
+3. Create exclusions.
+
+4. Review: refine, add, or remove exclusions as necessary.
+
+5. Set rules to "block" mode.
+
 6. Review the reporting page in the Microsoft Defender portal.
+
 7. Create exclusions.
+
 8. Disable problematic rules or switch them back to Audit.
 
 #### Customize attack surface reduction rules
@@ -110,14 +120,14 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 2. Enter the following cmdlet:
 
-    ```PowerShell
-    Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
-    ```
+   ```PowerShell
+   Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
+   ```
 
-    Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
+   Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
 
-    > [!IMPORTANT]
-    > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
+   > [!IMPORTANT]
+   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
 ##### Use MDM CSPs to exclude files and folders
 
@@ -142,4 +152,5 @@ You can customize the notification for when a rule is triggered and blocks an ap
 ## See also
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
