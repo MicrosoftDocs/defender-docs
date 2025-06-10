@@ -110,6 +110,15 @@ Updates contain:
 
 - Windows multisession SKUs are now properly classified as client SKUs for signature versioning
 - `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
+- The display name and description is now displayed correctly for the Device Control filter driver in Windows services
+- Improved performance for kernel driver
+- Improvements to Network Protection performance related to packet loss during high network utilization
+- Reliability improvements to Network Protection during service shutdown
+- Enriched Event ID 1000 to include `ScanOnlyIfIdle` and Scan Priority
+- Improved Device Control WPD Device discovery in file explorer
+- Resolved discrepancy in Device Health report between signature publish and signature install date and time
+- Performance improvements when scanning files/folders w/ extended attributes
+- Reliability improvement in Defender kernel driver to avoid crash when there is excessive disk I/O
 
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
