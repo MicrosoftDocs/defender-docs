@@ -10,7 +10,7 @@ ms.author: ewalsh
 ms.reviewer: sugamar
 manager: deniseb
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
  - m365-security
  - m365solution-asr-rules
