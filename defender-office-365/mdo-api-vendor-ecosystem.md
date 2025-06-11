@@ -1,6 +1,6 @@
 ---
-title: Defender for Office 365 API Vendor Ecosystem Integration Guide
-description: Understand how the API Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors.
+title: Defender for Office 365 ICES Vendor Ecosystem Integration Guide
+description: Understand how the ICES Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors.
 author: chrisda
 ms.author: chrisda
 manager: orspodek
@@ -25,18 +25,18 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Microsoft Defender for Office 365 API Vendor Ecosystem integration guide
+# Microsoft Defender for Office 365 ICES Vendor Ecosystem integration guide
 
-The API Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors. Integration supports a multi-layered defense strategy. It allows customers to benefit from niche capabilities from external partners and maintain a unified experience within the Microsoft Defender portal.
+The Integrated Cloud Email Security (ICES) Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors. Integration supports a multi-layered defense strategy. It allows customers to benefit from niche capabilities from external partners and maintain a unified experience within the Microsoft Defender portal.
 
-The benefits of the API Vendor Ecosystem include:
+The benefits of the ICES Vendor Ecosystem include:
 
 - **Unified quarantine**: View and manage quarantined email from both Defender for Office 365 and non-Microsoft vendors in a single interface.
 - **Consolidated dashboards**: Access effectiveness metrics across all integrated solutions to understand detection coverage and outcomes.
 - **Defense in depth**: Enhance protection by layering non-Microsoft capabilities alongside native defenses in Defender for Office 365.
 - **Streamlined operations**: Seamless integration with cloud-native, API-enabled email security vendors through consolidated workflows and insights within the Defender portal.
 
-The rest of this article describes the operation, goals, and deployment considerations for the API Vendor Ecosystem.
+The rest of this article describes the operation, goals, and deployment considerations for the ICES Vendor Ecosystem.
 
 > [!TIP]
 > Currently, specific API details aren't available.
@@ -99,7 +99,7 @@ After you establish policy alignment, you can manage the remainder of the integr
 
 ## Portal experiences
 
-The Defender portal provides a comprehensive and integrated experience for managing both native and non-Microsoft email security solutions. Capabilities are enhanced through participation in the API Vendor ecosystem as described in the following subsections.
+The Defender portal provides a comprehensive and integrated experience for managing both native and non-Microsoft email security solutions. Capabilities are enhanced through participation in the ICES Vendor ecosystem as described in the following subsections.
 
 ### Quarantine
 
@@ -155,7 +155,7 @@ The following dashboards display this information:
 
 ### Q: I have multiple ICES/CAPES solutions. How does that work?
 
-A: Integration with multiple ICES/CAPES vendors is available as long as they're part of the API Vendor Ecosystem partnership.
+A: Integration with multiple ICES/CAPES vendors is available as long as they're part of the ICES Vendor Ecosystem partnership.
 
 The integration works the same: each third-party vendor can provide verdicts on messages in your organization. You can see the third-party detections and identify the third-party vendor responsible for the detection within the Defender portal experiences.
 
@@ -176,7 +176,7 @@ A: The highest verdict takes precedence using the following order (from most ser
 
 ### Q: What if I use a different third-party vendor?
 
-A: Currently, API Vendor Ecosystem integration is available only for Darktrace and KnowBe4. If you use a different ICES/CAPES vendor, you can't take advantage of this integration.
+A: Currently, ICES Vendor Ecosystem integration is available only for Darktrace and KnowBe4. If you use a different ICES/CAPES vendor, you can't take advantage of this integration.
 
 ### Q: Is there a charge for the third-party verdict data and actions by Defender for Office 365 policies?
 
