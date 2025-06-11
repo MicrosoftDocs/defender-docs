@@ -26,6 +26,20 @@ For updates about versions and features released six months ago or earlier, see 
 ## June 2025
 
 
+### Scoped access by Active Directory domain now supported (Preview)
+
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+Scoping by Active Directory domains helps:
+
+- Optimize performance: Focus monitoring on critical assets and reduce noise from non-essential data.
+
+- Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
+
+- Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 
 ### Okta integration is now available in Microsoft Defender for Identity
 
@@ -33,7 +47,6 @@ Microsoft Defender for Identity now supports integration with Okta, enabling det
 
 For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
 
-### Microsoft Defender For Identity PowerShell module updates (version 1.0.0.4)
 
 ### Service account classification rules now available
 
@@ -41,7 +54,6 @@ You can now create custom classification rules to identify service accounts base
 For more information, see [Service account discovery](service-account-discovery.md)
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
-
 
 New Features and Improvements:
 - Added remote domain functionality.

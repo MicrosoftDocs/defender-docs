@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security-compliance
 - tier3
-ms.topic: conceptual
+ms.topic: article
 ms.date: 12/07/2021
 ---
 
