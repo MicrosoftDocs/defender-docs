@@ -35,6 +35,7 @@ This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions.
 - Windows Server 2025
 - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
+- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
 
 For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
