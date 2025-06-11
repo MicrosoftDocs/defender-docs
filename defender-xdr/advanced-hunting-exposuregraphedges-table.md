@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: v-mjosephy
+ms.author: maccruz
 author: mjosephym
 ms.localizationpriority: medium
 manager: rayne-wiselman
