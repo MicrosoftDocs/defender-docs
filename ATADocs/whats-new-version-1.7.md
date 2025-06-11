@@ -4,7 +4,7 @@
 title: What's new in ATA version 1.7
 description: Lists what was new in ATA version 1.7 along with known issues
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: whats-new
 ms.service: advanced-threat-analytics
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 

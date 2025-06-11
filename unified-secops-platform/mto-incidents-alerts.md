@@ -13,7 +13,7 @@ ms.collection:
   - highpri
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/20/2025
 appliesto:
   - Microsoft Defender XDR
