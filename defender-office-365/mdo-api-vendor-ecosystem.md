@@ -10,7 +10,7 @@ f1.keywords:
 ms.service: defender-office-365
 audience: ITPro
 ms.topic: article
-ms.date: 06/04/2025
+ms.date: 06/11/2025
 ms.custom:
 ms.assetid:
 ms.collection:
@@ -26,6 +26,9 @@ appliesto:
 ---
 
 # Microsoft Defender for Office 365 ICES Vendor Ecosystem integration guide
+
+> [!NOTE]
+> Information in this article pertains to features that are part of the ICES Vendor Ecosystem. However, certain functionality might not yet be accessible to all users. Microsoft makes no warranties, expressed or implied, with respect to the timeline of availability.
 
 The Integrated Cloud Email Security (ICES) Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors. Integration supports a multi-layered defense strategy. It allows customers to benefit from niche capabilities from external partners and maintain a unified experience within the Microsoft Defender portal.
 
