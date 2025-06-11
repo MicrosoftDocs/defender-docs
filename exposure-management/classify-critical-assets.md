@@ -83,13 +83,13 @@ Create a custom classification as follows:
 
 1. On the **Create a critical asset classification** page, complete the following information to set your classification criteria:
 
-- **Name** - A new classification name.
-- **Description** - A new classification description.
-- **Query builder**
-  - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
-  - Add one or more Boolean filters that are defined per device, identity, or cloud resource.
+    - **Name** - A new classification name.
+    - **Description** - A new classification description.
+    - **Query builder**
+      - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
+      - Add one or more Boolean filters that are defined per device, identity, or cloud resource.
 
-:::image type="content" source="./media/classify-critical-assets/create-critical-asset-classification.png" alt-text="Screenshot of the page where you create critical asset classifications.":::
+    :::image type="content" source="./media/classify-critical-assets/create-critical-asset-classification.png" alt-text="Screenshot of the page where you create critical asset classifications.":::
 
 1. After setting the criteria, select **Next**.
 1. On the following pages, preview the affected assets, and assign the criticality level.
@@ -157,4 +157,3 @@ To see the sum of exposed critical assets go to the [Security recommendations](/
 ## Next steps
 
 Learn about simulating [attack paths](work-attack-paths-overview.md).
-
