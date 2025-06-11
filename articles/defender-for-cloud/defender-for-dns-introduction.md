@@ -40,4 +40,4 @@ Microsoft Defender for DNS doesn't use any agents.
 
 ## Related content
 
-- Learn how to [Exporting alerts to a SIEM](continuous-export.md).
+- Learn how to [Export alerts to a SIEM](continuous-export.md).
