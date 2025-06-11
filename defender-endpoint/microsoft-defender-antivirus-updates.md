@@ -118,7 +118,7 @@ Updates contain:
 - Improved device control Windows Portal Device (WPD) device discovery in File explorer. (For more information about device control, see [Device control policy samples and scenarios](/defender-endpoint/device-control-overview#device-control-policy-samples-and-scenarios).)
 - Resolved discrepancy in [device health reports](/defender-endpoint/device-health-reports) between signature publish and signature install date and time
 - Performance improvements when scanning files/folders with extended attributes
-- Reliability improvement in the Defender kernel driver to avoid crashing when there is excessive disk input/output
+- Reliability improvement in the Defender kernel driver to avoid crashing when there's excessive disk input/output
 
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
@@ -134,7 +134,7 @@ Updates contain:
 - Fixed Microsoft Defender platform update timestamp to reflect the actual update time.
 - The [1002 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1002) (An anti-malware scan was stopped before it finished) now includes details of the stop reason.
 - Added more details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
-- Improved ASR file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
+- Improved attack surface reduction file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
 - Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
