@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 08/01/2024

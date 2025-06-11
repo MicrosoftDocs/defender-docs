@@ -4,7 +4,7 @@ author: chrisda
 ms.author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: high
 search.appverid:
   - MET150

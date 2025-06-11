@@ -2,7 +2,7 @@
 title: Enable controlled folder access
 description: Learn how to protect your important files by enabling Controlled folder access
 ms.service: defender-endpoint
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 audience: ITPro
 author: emmwalshh

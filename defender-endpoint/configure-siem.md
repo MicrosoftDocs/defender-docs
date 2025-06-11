@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.date: 09/21/2024
 ---
 

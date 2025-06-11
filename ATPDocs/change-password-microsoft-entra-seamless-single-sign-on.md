@@ -4,8 +4,9 @@ description: This report lists all Microsoft Entra seamless SSO computer account
 author:      LiorShapiraa # GitHub alias
 ms.author:  liorshapira
 ms.service: microsoft-defender-for-identity
-ms.topic: article
+ms.topic: how-to
 ms.date:     08/22/2024
+ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Change password for Microsoft Entra seamless SSO account
