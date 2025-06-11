@@ -15,6 +15,15 @@ Included in this guide is general information about the conditions for triggerin
 > Some alerts may be in preview, so regularly review the updated alert statuses.
 >
 
+[!NOTE]
+> To improve threat detection coverage and increase alert accuracy in Microsoft Defender for Cloud Apps, the following anomaly detection policies will be automatically disabled across all tenants.
+>
+> - [Increase in data usage by an overprivileged or highly privileged app](#increase-in-data-usage-by-an-overprivileged-or-highly-privileged-app)
+> - [Unusual activity from an app with priority account consent](#unusual-activity-from-an-app-with-priority-account-consent)
+> - [Access to sensitive data](#access-to-sensitive-data)
+>
+> These policies will remain visible in the Defender portal in a disabled state. If you want to continue using these policies, go to the Policies page under App Governance in the Defender portal, select the policy, and then select Enable.
+
 ## Security alert classifications
 
 Following proper investigation, all app governance alerts can be classified into one of the following activity types:
