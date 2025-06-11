@@ -44,6 +44,9 @@ Defender for Endpoint integration is enabled by default when you enable a Defend
 
     Onboarding might take up to an hour. Defender for Cloud detects any previous Defender for Endpoint installations and reconfigures them to integrate with Defender for Cloud.
 
+> [!NOTE]
+> For Azure VMs created from generalized OS images, MDE will not be automatically provisioned via this setting; however, you can manually enable the MDE agent and extension using Azure CLI, REST API, or Azure Policy.
+
 ### Verify installation on Linux machines
 
 Verify Defender for Endpoint sensor installation on a Linux machine by following these steps:
