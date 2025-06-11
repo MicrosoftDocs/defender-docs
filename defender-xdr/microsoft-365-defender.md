@@ -15,7 +15,7 @@ ms.custom:
 ms.collection:
 - essentials-overview
 - tier1
-ms.topic: conceptual
+ms.topic: overview
 adobe-target: true
 ms.date: 08/19/2024
 appliesto:

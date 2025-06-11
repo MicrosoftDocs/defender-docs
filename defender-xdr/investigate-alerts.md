@@ -14,7 +14,7 @@ ms.collection:
 - m365initiative-m365-defender
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
 - MOE150
 - met150

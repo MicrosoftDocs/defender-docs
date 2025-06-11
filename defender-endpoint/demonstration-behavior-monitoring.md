@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
 ms.date: 03/04/2025
 ---
@@ -27,7 +27,7 @@ ms.date: 03/04/2025
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 

@@ -29,9 +29,6 @@ ms.date: 05/28/2025
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 The [advanced hunting schema](advanced-hunting-schema-tables.md) is updated regularly to add new tables and columns. In some cases, existing columns names are renamed or replaced to improve the user experience. Refer to this article to review naming changes that could impact your queries.
