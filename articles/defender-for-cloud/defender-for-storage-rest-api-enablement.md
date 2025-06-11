@@ -74,20 +74,20 @@ And add the following request body:
             "onUpload": {
                 "isEnabled": true,
                 "capGBPerMonth": 10000,
-				"filters": {
-					"excludeBlobsWithPrefix": [
-						"<excluded-container>/",
-						"<container>/<excluded-blob-prefix>"
-						"<excluded-containers-prefix>"
-					],
-					"excludeBlobsWithSuffix": [
-						".parquet",
-						".tmp",
-						"<excluded-blob-name-suffix>.json"
-					],
-					"excludeBlobsLargerThan": 
+                "filters": {
+                    "excludeBlobsWithPrefix": [
+                        "<excluded-container>/",
+                        "<container>/<excluded-blob-prefix>"
+                        "<excluded-containers-prefix>"
+                    ],
+                    "excludeBlobsWithSuffix": [
+                        ".parquet",
+                        ".tmp",
+                        "<excluded-blob-name-suffix>.json"
+                    ],
+                    "excludeBlobsLargerThan": 
             },
-   			"scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
+            "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
             "isEnabled": true
