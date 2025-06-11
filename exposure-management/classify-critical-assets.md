@@ -17,7 +17,7 @@ ms.date: 06/09/2025
 
 Asset criticality is a measure of the importance of an asset to your organization's operations and security posture. It reflects a combination of its cyber-role, production context, and system or subsystem.
 
-:::image type="content" source="media/classify-critical-assets/Asset-criticality.png" alt-text="Screenshot of a flowchart showing asset criticality.":::
+:::image type="content" source="media/classify-critical-assets/asset-criticality.png" alt-text="Screenshot of a flowchart showing asset criticality.":::
 
 Assets are categorized into four levels of criticality:
 
@@ -26,7 +26,7 @@ Assets are categorized into four levels of criticality:
   - **Medium** - Medium criticality assets have a moderate impact and might affect certain functions or processes.
   - **Low** - Low criticality assets have minimal impact on your business operations and security if compromised.
 
-:::image type="content" source="media/classify-critical-assets/Criticality-levels.png" alt-text="Screenshot of criticality levels diagram.":::
+:::image type="content" source="media/classify-critical-assets/criticality-levels.png" alt-text="Screenshot of criticality levels diagram.":::
 
 Understanding and categorizing assets based on their criticality helps prioritize security efforts and ensures that the most important assets receive the highest level of protection.
 
@@ -137,7 +137,7 @@ You can change the criticality levels and turn off the classification for all as
 1. To see all assets in the classification that are currently considered critical, select the **Assets** tab.
 1. Select the **X** next to the assets you want to remove.
 
-:::image type="content" source="media/classify-critical-assets/Assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
+:::image type="content" source="media/classify-critical-assets/assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
 
 ## Sort by criticality
 

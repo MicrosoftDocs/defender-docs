@@ -70,7 +70,7 @@ Some assets that match a classification might not meet the criticality threshold
 
 The Critical Asset Protection initiative helps prioritize business-critical systems and assets, focusing SOC team efforts on enhancing resiliency, monitoring, and incident response. This initiative is available in the Initiatives section of Exposure Insights in the Microsoft Defender portal.
 
-- The initiative continuously monitors the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures. Use the initiative score to compare the security resilience of critical assets across different environments, helping you identify areas that require additional focus and improvement.
+- The initiative continuously monitors the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures. Use the initiative score to compare the security resilience of critical assets across different environments, helping you identify areas that require more focus and improvement.
 - The initiative provides visibility into all critical assets within your organization, identifies potential gaps in critical asset discovery, and fine-tunes your classifications accordingly. The initiative consolidates information about critical assets and their security resilience into a single view. This comprehensive report enables you to make informed decisions and take proactive measures to safeguard your critical assets.
 
 ## Next steps
