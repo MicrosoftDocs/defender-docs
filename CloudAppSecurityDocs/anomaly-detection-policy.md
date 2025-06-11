@@ -7,7 +7,10 @@ ms.topic: how-to
 
 # Create Defender for Cloud Apps anomaly detection policies
 
-
+> [!IMPORTANT]
+>
+> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning existing anomaly detection policies to a dynamic threat detection model.
+> For more details see the section [Dynamic threat detection model](#dynamic-threat-detection-model) in this article.
 
 The Microsoft Defender for Cloud Apps anomaly detection policies provide out-of-the-box user and entity behavioral analytics (UEBA) and machine learning (ML) so that you're ready from the outset to run advanced threat detection across your cloud environment. Because they're automatically enabled, the new anomaly detection policies immediately start the process of detecting and collating results, targeting numerous behavioral anomalies across your users and the machines and devices connected to your network. In addition, the policies expose more data from the Defender for Cloud Apps detection engine, to help you speed up the investigation process and contain ongoing threats.
 
@@ -35,11 +38,10 @@ These policies appear on the Defender for Cloud Apps policies page and can be en
 
 ## Dynamic threat detection model
 
-
-Starting June 2025, Microsoft Defender for Cloud Apps began transitioning existing anomaly detection policies to a dynamic threat detection model. This model automatically updates detection logic based on the evolving threat landscape and is designed to improve and maintain a high signal-to-noise ratio (SNR). This approach ensures that detections stay current as attacker behavior changes, without requiring manual configuration or policy updates. The result is more timely and accurate alerts, with fewer outdated or redundant detections. As a result, you might notice that some of the legacy policies have been disabled. 
+Microsoft Defender for Cloud apps dynamic Threat detection model automatically updates detection logic based on the evolving threat landscape and is designed to improve and maintain a high signal-to-noise ratio (SNR). This approach ensures that detections stay current as attacker behavior changes, without requiring manual configuration or policy updates. The result is more timely and accurate alerts, with fewer outdated or redundant detections. As a result, you might notice that some of the legacy policies have been disabled.
 
 > [!NOTE]
-> If you previously configured governance actions for a policy, and it has been disabled, you can re-enable it in the Microsoft Defender portal > Cloud Apps > Policy management page.
+> If you previously configured governance actions and email notifications for a policy, and it has been disabled, you can re-enable it in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
@@ -50,13 +52,11 @@ The initial policies being transitioned to the dynamic model include:
 - [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
 - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
 - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
-- Activity from a botnet-associated IP address.
 
-### Alert title changes
 
-As part of the transition to the dynamic model, some alerts now appear with updated titles for clarity:
+As part of the transition to the dynamic model, these alerts now appear with updated titles for clarity:
 
-| **Legacy Alert title** | **Updated Alert title** |
+| **Legacy built-in policy name** | **Updated Alert policy name** |
 | --- | --- |
 | Activity from suspicious IP addresses | Successful logon from a suspicious IP address |
 | Suspicious inbox manipulation rule | Suspicious inbox manipulation rule |

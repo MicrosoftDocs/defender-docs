@@ -27,6 +27,14 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 > Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
 
 
+
+## June 2025
+
+### New Dynamic Threat Detection model
+
+Microsoft Defender for Cloud Apps now uses a dynamic threat detection model that adapts detection logic to evolving attack behavior. This update helps improve alert accuracy and reduces outdated detections. Several legacy anomaly detection policies have been transitioned to this model.
+For more information see: [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md)
+
 ## May 2025 
 
 
