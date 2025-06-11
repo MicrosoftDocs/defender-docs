@@ -36,7 +36,7 @@ The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.m
 This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Cloud Apps in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 
-To make sure the `CloudAppEvents` data is populated:
+To make sure the `CloudAppEvents` table is populated:
 
 1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
 
