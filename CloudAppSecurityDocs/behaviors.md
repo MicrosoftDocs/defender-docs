@@ -76,8 +76,8 @@ The behaviors schema in the **Advanced hunting** page is similar to the [alerts 
 
 |Table name  |Description  |
 |---------|---------|
-|[BehaviorInfo  ](/microsoft-365/security/defender/advanced-hunting-behaviorinfo-table) | Record per behavior with its metadata, including behavior title, MITRE Attack categories, and techniques. (Not available for GCC.) |
-|[BehaviorEntities   ](/microsoft-365/security/defender/advanced-hunting-behaviorentities-table) | Information on the entities that were part of the behavior. Can be multiple records per behavior. (Not available for GCC.)      |
+|[BehaviorInfo  ](/microsoft-365/security/defender/advanced-hunting-behaviorinfo-table) | Record per behavior with its metadata, including behavior title, MITRE Attack categories, and techniques. |
+|[BehaviorEntities   ](/microsoft-365/security/defender/advanced-hunting-behaviorentities-table) | Information on the entities that were part of the behavior. Can be multiple records per behavior.   |
 
 To get complete information on a behavior and its entities, use `BehaviorId` as the primary key for the join. For example:
 
