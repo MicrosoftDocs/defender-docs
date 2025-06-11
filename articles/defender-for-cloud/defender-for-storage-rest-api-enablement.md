@@ -60,7 +60,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 ```rest
 PUT
-https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2022-12-01-preview
+https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2024-08-01-preview
 
 ```
 
@@ -73,9 +73,21 @@ And add the following request body:
         "malwareScanning": {
             "onUpload": {
                 "isEnabled": true,
-                "capGBPerMonth": 10000
+                "capGBPerMonth": 10000,
+				"filters": {
+					"excludeBlobsWithPrefix": [
+						"<excluded-container>/",
+						"<container>/<excluded-blob-prefix>"
+						"<excluded-containers-prefix>"
+					],
+					"excludeBlobsWithSuffix": [
+						".parquet",
+						".tmp",
+						"<excluded-blob-name-suffix>.json"
+					],
+					"excludeBlobsLargerThan": 
             },
-   "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
+   			"scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
             "isEnabled": true
