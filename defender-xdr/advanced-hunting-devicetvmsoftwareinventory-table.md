@@ -30,7 +30,7 @@ ms.date: 03/28/2025
 
 
 > [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 
 The `DeviceTvmSoftwareInventory` table in the advanced hunting schema contains the [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt) inventory of software currently installed on devices in your network, including end of support information. You can, for instance, hunt for events involving devices that are installed with a currently vulnerable software version. Use this reference to construct queries that return information from the table.
@@ -46,7 +46,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 |-------------|-----------|-------------|
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
-| `OSPlatform` | `string` | Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10 and Windows 7. |
+| `OSPlatform` | `string` | Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7. |
 | `OSVersion` | `string` | Version of the operating system running on the device |
 | `OSArchitecture` | `string` | Architecture of the operating system running on the device |
 | `SoftwareVendor` | `string` | Name of the software vendor |
@@ -56,13 +56,13 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `EndOfSupportDate` | `datetime` | End-of-support (EOS) or end-of-life (EOL) date of the software product |
 | `ProductCodeCpe` | `string` | The standard Common Platform Enumeration (CPE) name of the software product version or 'not available' where there's no CPE |
 
-## Related topics
+## Read more
 
-- [Proactively hunt for threats](advanced-hunting-overview.md)
+- [Hunt for threats proactively](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Use shared queries](advanced-hunting-shared-queries.md)
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
-- [Overview of Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+- [Learn about Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
+
