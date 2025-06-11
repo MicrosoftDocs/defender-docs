@@ -22,7 +22,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/28/2025
 ---
 

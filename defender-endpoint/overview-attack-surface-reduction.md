@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.custom: asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 ms.collection: 
 - m365-security

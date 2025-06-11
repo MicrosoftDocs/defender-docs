@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 06/06/2025
 audience: ITPro
 ms.topic: how-to
 author: emmwalshh
@@ -65,7 +65,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 > [!NOTE]
 > If devices aren't enrolled in Microsoft Defender for Endpoint, tamper protection shows up as **Not Applicable** until the onboarding process completes.
-> Tamper protection can prevent changes to security settings from occurring. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Tamper protection may block changes to certain security settings. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 
