@@ -18,17 +18,19 @@ ms.custom:
 - cx-ti
 - cx-ah
 - seo-marvel-apr2020
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
 search.appverid: met150
-ms.date: 10/18/2024
+ms.date: 03/28/2025
 ---
 
 # Choose between guided and advanced modes to hunt in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](/defender/media/guided-hunting/hunting-icon.png).
 
