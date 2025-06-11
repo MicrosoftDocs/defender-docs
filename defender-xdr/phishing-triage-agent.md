@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - MET150
-ms.date: 06/09/2025
+ms.date: 06/13/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
@@ -72,7 +72,7 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 #### Identity
 
 > [!IMPORTANT]
-> Ensure that your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see Conditional access policies for Security Copilot.
+> Ensure that your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 Currently, the Phishing Triage Agent supports the following identity types:
 
@@ -361,7 +361,7 @@ You can check the agent’s card in the Guided Response section to ensure it’s
 1. Confirm that the tenant meets all [prerequisites](#prerequisites) to run the agent.
 2. Ensure the agent’s [identity and role](#create-the-agents-identity-and-assign-permissions)has the [minimum required permissions](#permissions).
 3. Verify the authentication status of the agent’s identity. If using a user identity, check that its properly authenticated and is not expired. See the [identity](#identity) section for more information.
-4. Ensure your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see Conditional access policies for Security Copilot.
+4. Ensure your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 ### Giving feedback to the agent is failing
 
