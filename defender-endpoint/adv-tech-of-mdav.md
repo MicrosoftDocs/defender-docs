@@ -24,7 +24,7 @@ audience: ITPro
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 Microsoft Defender Antivirus and the multiple engines that lead to the advanced detection and prevention technologies under the hood to detect and stop a wide range of threats and attacker techniques at multiple points, as depicted in the following diagram:
 
@@ -82,7 +82,7 @@ An additional layer to help prevent memory-based attacks is to use the Attack Su
 
 ### How many malware threats does Microsoft Defender Antivirus block per month?
 
-[Five billion threats on devices every month](https://www.microsoft.com/en-us/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
+[Five billion threats on devices every month](https://www.microsoft.com/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
 
 ### How does Microsoft Defender Antivirus memory protection help?
 
