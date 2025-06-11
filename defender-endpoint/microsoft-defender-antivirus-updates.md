@@ -119,6 +119,7 @@ Updates contain:
 - Resolved discrepancy in [device health reports](/defender-endpoint/device-health-reports) between signature publish and signature install date and time
 - Performance improvements when scanning files/folders with extended attributes
 - Reliability improvement in the Defender kernel driver to avoid crashing when there's excessive disk input/output
+- Added exponential backoff support to Core Service 1DS manager telemetry module to address memory consumption and DNS flooding issues
 
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
