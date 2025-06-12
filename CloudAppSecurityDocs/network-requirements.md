@@ -8,7 +8,7 @@ ms.topic: reference
 # Network requirements
 
 >[!IMPORTANT]
-> As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by [TBD:] 
+> As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by the 25th of August 2025.
 > Ensure the following endpoints are allowed:
 >
 > - discoveryresources-cdn-prod.cloudappsecurity.com
