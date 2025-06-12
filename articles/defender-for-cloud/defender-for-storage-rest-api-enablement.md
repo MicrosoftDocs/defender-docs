@@ -85,7 +85,7 @@ And add the following request body:
                         ".tmp",
                         "<excluded-blob-name-suffix>.json"
                     ],
-                    "excludeBlobsLargerThan": 
+                    "excludeBlobsLargerThan": 2147483648
             },
             "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
