@@ -8,9 +8,16 @@ ms.topic: how-to
 # Create Defender for Cloud Apps anomaly detection policies
 
 > [!IMPORTANT]
+> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
+> 
+> - [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
+> - [Suspicious inbox manipulation rules](#suspicious-inbox-manipulation-rules)
+> - [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
+> - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
+> - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
 >
-> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning existing anomaly detection policies to a dynamic threat detection model.
-> For more details see the section [Dynamic threat detection model](#dynamic-threat-detection-model) in this article.
+> You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
+
 
 The Microsoft Defender for Cloud Apps anomaly detection policies provide out-of-the-box user and entity behavioral analytics (UEBA) and machine learning (ML) so that you're ready from the outset to run advanced threat detection across your cloud environment. Because they're automatically enabled, the new anomaly detection policies immediately start the process of detecting and collating results, targeting numerous behavioral anomalies across your users and the machines and devices connected to your network. In addition, the policies expose more data from the Defender for Cloud Apps detection engine, to help you speed up the investigation process and contain ongoing threats.
 
@@ -36,35 +43,6 @@ In addition to native Defender for Cloud Apps alerts, you'll also get the follow
 
 These policies appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
 
-## Dynamic threat detection model
-
-Microsoft Defender for Cloud apps dynamic Threat detection model automatically updates detection logic based on the evolving threat landscape and is designed to improve and maintain a high signal-to-noise ratio (SNR). This approach ensures that detections stay current as attacker behavior changes, without requiring manual configuration or policy updates. The result is more timely and accurate alerts, with fewer outdated or redundant detections. As a result, you might notice that some of the legacy policies have been disabled.
-
-> [!NOTE]
-> If you previously configured governance actions and email notifications for a policy, and it has been disabled, you can re-enable it in the Microsoft Defender portal > Cloud Apps > Policy management page.
-
-You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
-
-The initial policies being transitioned to the dynamic model include:
-
-- [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
-- [Suspicious inbox manipulation rules](#suspicious-inbox-manipulation-rules)
-- [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
-- [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
-- [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
-
-
-As part of the transition to the dynamic model, these alerts now appear with updated titles for clarity:
-
-| **Legacy built-in policy name** | **Updated Alert policy name** |
-| --- | --- |
-| Activity from suspicious IP addresses | Successful logon from a suspicious IP address |
-| Suspicious inbox manipulation rule | Suspicious inbox manipulation rule |
-| Suspicious email deletion activity (by user) | Suspicious email deletion activity |
-| Activity from anonymous IP addresses | Activity from a TOR IP address |
-| Activity from anonymous IP addresses | Anonymous proxy activity |
-| Suspicious inbox forwarding | Suspicious email forwarding rule created by third-party app |
-
 
 ## Anomaly detection policies
 
@@ -76,16 +54,16 @@ The following anomaly detection policies are available:
 
 ### Impossible travel
 
-* * This detection identifies two user activities (in a single or multiple sessions) originating from geographically distant locations within a time period shorter than the time it would have taken the user to travel from the first location to the second, indicating that a different user is using the same credentials. This detection uses a machine-learning algorithm that ignores obvious "false positives" contributing to the impossible travel condition, such as VPNs and locations regularly used by other users in the organization. The detection has an initial learning period of seven days during which it learns a new user's activity pattern. The impossible travel detection identifies unusual and impossible user activity between two locations. The activity should be unusual enough to be considered an indicator of compromise and worthy of an alert. To make this work, the detection logic includes different levels of suppression to address scenarios that can trigger false positive, such as VPN activities, or activity from cloud providers that don't indicate a physical location. The [sensitivity slider](#tune-anomaly-detection-policies) allows you to affect the algorithm and define how strict the detection logic is. The higher the sensitivity level, fewer activities will be suppressed as part of the detection logic. In this way, you can adapt the detection according to your coverage needs and your SNR targets.
+This detection identifies two user activities (in a single or multiple sessions) originating from geographically distant locations within a time period shorter than the time it would have taken the user to travel from the first location to the second, indicating that a different user is using the same credentials. This detection uses a machine-learning algorithm that ignores obvious "false positives" contributing to the impossible travel condition, such as VPNs and locations regularly used by other users in the organization. The detection has an initial learning period of seven days during which it learns a new user's activity pattern. The impossible travel detection identifies unusual and impossible user activity between two locations. The activity should be unusual enough to be considered an indicator of compromise and worthy of an alert. To make this work, the detection logic includes different levels of suppression to address scenarios that can trigger false positive, such as VPN activities, or activity from cloud providers that don't indicate a physical location. The [sensitivity slider](#tune-anomaly-detection-policies) allows you to affect the algorithm and define how strict the detection logic is. The higher the sensitivity level, fewer activities will be suppressed as part of the detection logic. In this way, you can adapt the detection according to your coverage needs and your SNR targets.
 
-    > [!NOTE]
-    >
-    > * When the IP addresses on both sides of the travel are considered safe and sensitivity slider is not set to **High**, the travel is trusted and excluded from triggering the Impossible travel detection. For example, both sides are considered safe if they are [tagged as corporate](ip-tags.md). However, if the IP address of only one side of the travel is considered safe, the detection is triggered as normal.
-    > * The locations are calculated on a country/region level. This means that there will be no alerts for two actions originating in the same country/region or in bordering countries/regions.
+> [!NOTE]
+>
+> * When the IP addresses on both sides of the travel are considered safe and sensitivity slider is not set to **High**, the travel is trusted and excluded from triggering the Impossible travel detection. For example, both sides are considered safe if they are [tagged as corporate](ip-tags.md). However, if the IP address of only one side of the travel is considered safe, the detection is triggered as normal.
+> * The locations are calculated on a country/region level. This means that there will be no alerts for two actions originating in the same country/region or in bordering countries/regions.
 
 ### Activity from infrequent country
 
-* This detection considers past activity locations to determine new and infrequent locations. The anomaly detection engine stores information about previous locations used by the user. An alert is triggered when an activity occurs from a location that wasn't recently or never visited by the user. To reduce false positive alerts, the detection suppresses connections that are characterized by common preferences to the user.
+This detection considers past activity locations to determine new and infrequent locations. The anomaly detection engine stores information about previous locations used by the user. An alert is triggered when an activity occurs from a location that wasn't recently or never visited by the user. To reduce false positive alerts, the detection suppresses connections that are characterized by common preferences to the user.
 
 ### Malware detection
 
@@ -110,11 +88,15 @@ Defender for Cloud Apps supports "File Sandboxing" malware detection for the fol
 
 ### Activity from anonymous IP addresses
 
-* This detection identifies that users were active from an IP address that has been identified as an anonymous proxy IP address. These proxies are used by people who want to hide their device's IP address, and may be used for malicious intent. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Activity from a TOR IP address**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
+This detection identifies that users were active from an IP address that has been identified as an anonymous proxy IP address. These proxies are used by people who want to hide their device's IP address, and may be used for malicious intent. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
 
 ### Ransomware activity
 
-* Defender for Cloud Apps extended its ransomware detection capabilities with anomaly detection to ensure a more comprehensive coverage against sophisticated Ransomware attacks. Using our security research expertise to identify behavioral patterns that reflect ransomware activity, Defender for Cloud Apps ensures holistic and robust protection. If Defender for Cloud Apps identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process. This data is collected in the logs received from connected APIs and is then combined with learned behavioral patterns and threat intelligence, for example, known ransomware extensions. For more information about how Defender for Cloud Apps detects ransomware, see [Protecting your organization against ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
+Defender for Cloud Apps extended its ransomware detection capabilities with anomaly detection to ensure a more comprehensive coverage against sophisticated Ransomware attacks. Using our security research expertise to identify behavioral patterns that reflect ransomware activity, Defender for Cloud Apps ensures holistic and robust protection. If Defender for Cloud Apps identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process. This data is collected in the logs received from connected APIs and is then combined with learned behavioral patterns and threat intelligence, for example, known ransomware extensions. For more information about how Defender for Cloud Apps detects ransomware, see [Protecting your organization against ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
 
 ### Activity performed by terminated user
 
@@ -125,9 +107,17 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 
 ### Activity from suspicious IP addresses
 
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Successful logon from a suspicious IP address**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
 * This detection identifies that users were active from an IP address identified as risky by Microsoft Threat Intelligence. These IP addresses are involved in malicious activities, such as performing password spray, Botnet C&C, and may indicate compromised account. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
 
 ### Suspicious inbox forwarding
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email forwarding rule created by third-party app**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 * This detection looks for suspicious email forwarding rules, for example, if a user created an inbox rule that forwards a copy of all emails to an external address.
 
@@ -136,9 +126,18 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 
 ### Suspicious inbox manipulation rules
 
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious inbox manipulation rule**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
 * This detection profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user's account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
 
 ### Suspicious email deletion activity (Preview)
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email deletion activity**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
 
 * This policy profiles your environment and triggers alerts when a user performs suspicious email deletion activities in a single session. This policy may indicate that a user's mailboxes may be compromised by potential attack vectors such as command-and-control communication (C&C/C2) over email.
 
@@ -147,11 +146,11 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 
 ### Suspicious OAuth app file download activities
 
-* Scans the OAuth apps connected to your environment and triggers an alert when an app downloads multiple files from Microsoft SharePoint or Microsoft OneDrive in a manner that is unusual for the user. This may indicate that the user account is compromised.
+Scans the OAuth apps connected to your environment and triggers an alert when an app downloads multiple files from Microsoft SharePoint or Microsoft OneDrive in a manner that is unusual for the user. This may indicate that the user account is compromised.
 
 ### Unusual ISP for an OAuth App
 
-* This policy profiles your environment and triggers alerts when an OAuth app connects to your cloud applications from an uncommon ISP. This policy may indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
+This policy profiles your environment and triggers alerts when an OAuth app connects to your cloud applications from an uncommon ISP. This policy may indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
 
 ### Unusual activities (by user)
 
@@ -172,11 +171,11 @@ These policies look for activities within a single session with respect to the b
 
 ### Multiple failed login attempts
 
-* This detection identifies users that failed multiple login attempts in a single session with respect to the baseline learned, which could indicate on a breach attempt.
+This detection identifies users that failed multiple login attempts in a single session with respect to the baseline learned, which could indicate on a breach attempt.
 
 ### Multiple delete VM activities
 
-* This policy profiles your environment and triggers alerts when users delete multiple VMs in a single session, relative to the baseline in your organization. This might indicate an attempted breach.
+This policy profiles your environment and triggers alerts when users delete multiple VMs in a single session, relative to the baseline in your organization. This might indicate an attempted breach.
 
 ## Enable automated governance
 
@@ -190,19 +189,19 @@ You can enable automated remediation actions on alerts generated by anomaly dete
 
 To affect the anomaly detection engine to suppress or surface alerts according to your preferences:
 
-* In the Impossible Travel policy, you can set the sensitivity slider to determine the level of anomalous behavior needed before an alert is triggered. For example, if you set it to low or medium, it will suppress Impossible Travel alerts from a user's common locations, and if you set it to high, it  will surface such alerts. You can choose from the following sensitivity levels:
+In the Impossible Travel policy, you can set the sensitivity slider to determine the level of anomalous behavior needed before an alert is triggered. For example, if you set it to low or medium, it will suppress Impossible Travel alerts from a user's common locations, and if you set it to high, it  will surface such alerts. You can choose from the following sensitivity levels:
 
   * **Low**: System, tenant, and user suppressions
   * **Medium**: System and user suppressions
   * **High**: Only system suppressions
 
-    Where:
+Where:
 
-    | Suppression type | Description |
-    | --- | --- |
-    | **System** | Built-in detections that are always suppressed. |
-    | **Tenant** | Common activities based on previous activity in the tenant. For example, suppressing activities from an ISP previously alerted on in your organization. |
-    | **User** | Common activities based on previous activity of the specific user. For example, suppressing activities from a location that is commonly used by the user. |
+| Suppression type | Description |
+| --- | --- |
+| **System** | Built-in detections that are always suppressed. |
+| **Tenant** | Common activities based on previous activity in the tenant. For example, suppressing activities from an ISP previously alerted on in your organization. |
+| **User** | Common activities based on previous activity of the specific user. For example, suppressing activities from a location that is commonly used by the user. |
 
 > [!NOTE]
 > Impossible travel, activity from infrequent countries/regions, activity from anonymous IP addresses, and activity from suspicious IP addresses alerts don't apply on failed logins and non-interactive logins.
