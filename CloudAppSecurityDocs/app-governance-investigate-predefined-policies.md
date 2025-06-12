@@ -16,13 +16,13 @@ Included in this guide is general information about the conditions for triggerin
 >
 
 > [!NOTE]
-> To enhance our monitoring efficiency and focus on the most critical alerts, we have streamlined our security policies. The following policies have been automatically disabled:
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled the following three policies:
 >
 > - [Increase in data usage by an overprivileged or highly privileged app](#increase-in-data-usage-by-an-overprivileged-or-highly-privileged-app)
 > - [Unusual activity from an app with priority account consent](#unusual-activity-from-an-app-with-priority-account-consent)
 > - [Access to sensitive data](#access-to-sensitive-data)
 >
-> These policies will remain visible in the Defender portal in a disabled state. If you want to continue using these policies, go to the Policies page under App Governance in the Defender portal, select the policy, and then select Enable.
+> These policies will remain visible in the Defender portal in a disabled state. If you want to continue using these policies, go to the Policies page under App Governance in the Defender portal, select the policy, and then select Activate.
 
 ## Security alert classifications
 
