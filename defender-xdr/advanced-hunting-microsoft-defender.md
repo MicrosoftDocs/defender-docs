@@ -19,7 +19,7 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
-ms.topic: conceptual
+ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
