@@ -15,7 +15,7 @@ Included in this guide is general information about the conditions for triggerin
 > Some alerts might be in preview, so regularly review the updated alert statuses.
 >
 
-[!NOTE]
+> [!NOTE]
 > To enhance our monitoring efficiency and focus on the most critical alerts, we have streamlined our security policies. The following policies have been automatically disabled:
 >
 > - [Increase in data usage by an overprivileged or highly privileged app](#increase-in-data-usage-by-an-overprivileged-or-highly-privileged-app)
