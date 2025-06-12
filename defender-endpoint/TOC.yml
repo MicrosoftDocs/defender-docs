@@ -1051,6 +1051,8 @@
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
             href: respond-machine-alerts.md#check-activity-details-in-action-center
+          - name: Isolation exclusions
+            href: isolation-exclusions.md
 
         - name: Take response actions on a file
           items:
