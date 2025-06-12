@@ -7,17 +7,6 @@ ms.topic: how-to
 
 # Create Defender for Cloud Apps anomaly detection policies
 
-> [!IMPORTANT]
-> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
-> 
-> - [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
-> - [Suspicious inbox manipulation rules](#suspicious-inbox-manipulation-rules)
-> - [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
-> - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
-> - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
->
-> You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
-
 
 The Microsoft Defender for Cloud Apps anomaly detection policies provide out-of-the-box user and entity behavioral analytics (UEBA) and machine learning (ML) so that you're ready from the outset to run advanced threat detection across your cloud environment. Because they're automatically enabled, the new anomaly detection policies immediately start the process of detecting and collating results, targeting numerous behavioral anomalies across your users and the machines and devices connected to your network. In addition, the policies expose more data from the Defender for Cloud Apps detection engine, to help you speed up the investigation process and contain ongoing threats.
 
@@ -51,6 +40,17 @@ You can see the anomaly detection policies in the Microsoft Defender Portal, by 
 :::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies.":::
 
 The following anomaly detection policies are available:
+
+> [!IMPORTANT]
+> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
+> 
+> - [Activity from suspicious IP addresses](#activity-from-suspicious-ip-addresses)
+> - [Suspicious inbox manipulation rules](#suspicious-inbox-manipulation-rules)
+> - [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
+> - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
+> - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
+>
+> You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
 ### Impossible travel
 
