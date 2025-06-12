@@ -6,14 +6,14 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 05/16/2025
+ms.date: 06/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
 ---
@@ -69,7 +69,7 @@ Understand the following prerequisites before you create indicators for files:
 - [File hash computation must be enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line). Run the following command: `mdatp config enable-file-hash-computation --value enabled`
 
 > [!NOTE]
-> On Mac, file indicators support Mach-O files (akin to `.exe` and `.dll` in Windows) scripts, such as sh/bash and AppleScript File (`.scpt`) files only.
+> On macOS, file indicators support three types of files: Mach-O executables, POSIX shell scripts (e.g., those run by sh or bash), and AppleScript files (.scpt). (Mach-O is macOS's native executable format, comparable to .exe and .dll on Windows.)
 
 ### Linux prerequisites
 

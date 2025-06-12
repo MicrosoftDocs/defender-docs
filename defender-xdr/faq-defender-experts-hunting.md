@@ -12,7 +12,7 @@ ms.collection:
   - m365-security
   - tier1
   - essentials-get-started
-ms.topic: conceptual
+ms.topic: faq
 ms.custom: 
 - cx-ti
 - cx-ean

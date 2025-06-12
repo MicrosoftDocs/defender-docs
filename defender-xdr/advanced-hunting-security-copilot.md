@@ -30,10 +30,6 @@ appliesto:
 # Microsoft Security Copilot in advanced hunting
 
 
-**Applies to:**
-
-- Microsoft Defender
-- Microsoft Defender XDR
 
 ## Security Copilot in advanced hunting
 

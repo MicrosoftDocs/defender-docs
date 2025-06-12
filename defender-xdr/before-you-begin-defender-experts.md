@@ -13,7 +13,7 @@ ms.collection:
   - m365initiative-defender-endpoint
   - tier1
   - essentials-compliance
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: 
 - cx-ti
 - cx-ean

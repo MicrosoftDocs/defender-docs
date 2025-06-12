@@ -17,7 +17,7 @@ ms.collection:
   - essentials-overview
   - essentials-get-started
 ms.custom: intro-get-started
-ms.topic: conceptual
+ms.topic: get-started
 ms.date: 04/10/2024
 ---
 
