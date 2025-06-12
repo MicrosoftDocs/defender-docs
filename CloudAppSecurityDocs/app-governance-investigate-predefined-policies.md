@@ -15,14 +15,6 @@ Included in this guide is general information about the conditions for triggerin
 > Some alerts might be in preview, so regularly review the updated alert statuses.
 >
 
-> [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled the following three policies:
->
-> - [Increase in data usage by an overprivileged or highly privileged app](#increase-in-data-usage-by-an-overprivileged-or-highly-privileged-app)
-> - [Unusual activity from an app with priority account consent](#unusual-activity-from-an-app-with-priority-account-consent)
-> - [Access to sensitive data](#access-to-sensitive-data)
->
-> These policies will remain visible in the Defender portal in a disabled state. If you want to continue using these policies, go to the Policies page under App Governance in the Defender portal, select the policy, and then select Activate.
 
 ## Security alert classifications
 
@@ -47,7 +39,11 @@ Use the following general guidelines when investigating any type of alert to gai
 
 This section provides information on each predefined policy alert, along with steps for investigation and remediation.
 
+
 ### Increase in data usage by an overprivileged or highly privileged app
+
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -66,6 +62,9 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
   **Recommended action**: Dismiss the alert.
 
 ### Unusual activity from an app with priority account consent
+
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -228,6 +227,9 @@ Review all activities performed by the app, scopes granted to the app and user a
   **Recommended action**: Dismiss the alert.
 
 ### Access to sensitive data
+
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
