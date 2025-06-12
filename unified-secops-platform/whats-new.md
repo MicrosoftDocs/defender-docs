@@ -26,11 +26,11 @@ This article lists recent features added for unified security operations in the 
 
 ### New Microsoft Sentinel customers only: Automatic onboarding and redirection to the Microsoft Defender portal
 
-New customers onboarding to Microsoft Sentinel now automatically have their workspaces onboarded to the Microsoft Defender portal, and use Microsoft Sentinel in the Defender portal only. For these new customers, accessing Microsoft Sentinel in the Azure portal automatically shows redirection links to Defender.
+New customers onboarding to Microsoft Sentinel with the permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) now automatically have their workspaces onboarded to the Microsoft Defender portal. Users of such workspaces access Microsoft Sentinel in the Defender portal only, and accessing Microsoft Sentinel in the Azure portal automatically shows redirection links to Defender.
 
 This change streamlines the onboarding process and ensures that new customers can immediately take advantage of unified security operations capabilities without the extra step of manually onboarding their workspaces.
 
-For more information, see [Onboard Microsoft Sentinel](quickstart-onboard.md) and [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md).
+For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
 
 ## May 2025
 
