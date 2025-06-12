@@ -6,7 +6,7 @@ ms.author: bcarter
 author: BrendaCarter
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - Ent_O365
