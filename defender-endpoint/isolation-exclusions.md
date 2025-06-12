@@ -57,13 +57,16 @@ There are two modes of isolation: full isolation and selective isolation.
 ## How to Use
 
 ### Prerequisites
-•	Available on Windows (Minimum client version 10.8470) and MacOS (Minimum client version 101.240902).
-•	Requires Global or Security Admin permissions.
-•	Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
-•	Opt-in to the new feature in advanced feature page:
 
- 
-Configuration Steps
+* Available on Windows (Minimum client version 10.8470) and MacOS (Minimum client version 101.240902)
+* Requires Global or Security Admin permissions.
+* Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
+* Opt in to the new feature in advanced feature page:
+
+   :::image type="content" source="{source}" alt-text="{alt-text}":::
+
+### Configuration Steps
+
 Defining Global Exclusions in Settings 
 1.	Navigate to Settings > Endpoints > Isolation Exclusion Rules.
 2.	Select the relevant OS tab (Windows or MacOS).
