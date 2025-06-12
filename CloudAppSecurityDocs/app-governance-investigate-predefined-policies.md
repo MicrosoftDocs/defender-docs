@@ -12,7 +12,7 @@ App governance provides predefined app policy alerts for anomalous activities. T
 Included in this guide is general information about the conditions for triggering alerts. Because predefined policies are nondeterministic by nature, they're only triggered when there's behavior that deviates from the norm. 
 
 > [!TIP]
-> Some alerts may be in preview, so regularly review the updated alert statuses.
+> Some alerts might be in preview, so regularly review the updated alert statuses.
 >
 
 
@@ -39,7 +39,11 @@ Use the following general guidelines when investigating any type of alert to gai
 
 This section provides information on each predefined policy alert, along with steps for investigation and remediation.
 
+
 ### Increase in data usage by an overprivileged or highly privileged app
+
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -59,6 +63,9 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
 
 ### Unusual activity from an app with priority account consent
 
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+
 **Severity**: Medium
 
 Find unusual increases in either data usage or Graph API access errors exhibited by apps that have been given consent by a priority account.
@@ -69,7 +76,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that the increase in data usage or API access errors by an app with consent from a priority account is highly irregular or potentially malicious.
 
-  **Recommended action**: Contact priority account users about the app activities that have caused the increase in data usage or API access errors. Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Contact priority account users about the app activities that have caused the increase in data usage or API access errors. Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is intended and has a legitimate business use in the organization.
 
@@ -79,15 +86,15 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 **Severity**: Medium
 
-Consent requests from a newly created app have been rejected frequently by users. Users typically reject consent requests from apps that have exhibited unexpected behavior or arrived from an untrusted source. Apps that have low consent rates are more likely to be risky or malicious.
+Consent requests from a newly created app have been rejected frequently by users. Users typically reject consent requests from apps that exhibit unexpected behavior or arrived from an untrusted source. Apps that have low consent rates are more likely to be risky or malicious.
 
 **TP or FP?**
 
 Review all activities performed by the app, scopes granted to the app and user activity associated with the app.
 
-- **TP**: Apply this recommended action if you have confirmed that the app is from an unknown source and its activities have been highly irregular or potentially malicious.
+- **TP**: Apply this recommended action if you have confirmed that the app is from an unknown source and its activities are highly irregular or potentially malicious.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -105,7 +112,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that highly irregular, potentially malicious activities have resulted in the detected increase in OneDrive usage.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -123,7 +130,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that highly irregular, potentially malicious activities have resulted in the detected increase in SharePoint usage.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -141,7 +148,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that highly irregular, potentially malicious activities have resulted in the detected increase in Exchange usage.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -159,7 +166,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that the updates to app certificates or secrets and other app activities have been highly irregular or potentially malicious.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -175,9 +182,9 @@ An app made a large number of Graph API calls to create Exchange inbox rules. Th
 
 Review all activities performed by the app, scopes granted to the app and user activity associated with the app.
 
-- **TP**: Apply this recommended action if you have confirmed that the creation of inbox rules and other activities have been highly irregular or potentially malicious.
+- **TP**: Apply this recommended action if you have confirmed that the creation of inbox rules and other activities are highly irregular or potentially malicious.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: Apply this recommended action if you have confirmed that the detected app activity is legitimate.
 
@@ -195,7 +202,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that the content searches on Exchange and other activities have been highly irregular or potentially malicious.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: If you can confirm that no unusual mail search activities were performed by the app or that the app is intended to make unusual mail search activities through Graph API.
 
@@ -213,13 +220,16 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 - **TP**: Apply this recommended action if you have confirmed that the sending of email messages and other activities have been highly irregular or potentially malicious.
 
-  **Recommended action**: Temporarily disable the app, reset the password and then re-enable the app.
+  **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
 - **FP**: If you can confirm that no unusual mail send activities were performed by the app or that the app is intended to make unusual mail send activities through Graph API.
 
   **Recommended action**: Dismiss the alert.
 
 ### Access to sensitive data
+
+> [!NOTE]
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
