@@ -32,15 +32,6 @@ In addition to native Defender for Cloud Apps alerts, you'll also get the follow
 
 These policies appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
 
-
-## Anomaly detection policies
-
-You can see the anomaly detection policies in the Microsoft Defender Portal, by going to **Cloud Apps** -> **Policies** -> **Policy management**. Then choose **Anomaly detection policy** for the policy type.
-
-:::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies.":::
-
-The following anomaly detection policies are available:
-
 > [!IMPORTANT]
 > Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
 > 
@@ -51,6 +42,14 @@ The following anomaly detection policies are available:
 > - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
+
+## Anomaly detection policies
+
+You can see the anomaly detection policies in the Microsoft Defender Portal, by going to **Cloud Apps** -> **Policies** -> **Policy management**. Then choose **Anomaly detection policy** for the policy type.
+
+:::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies.":::
+
+The following anomaly detection policies are available:
 
 ### Impossible travel
 
@@ -109,6 +108,7 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Successful logon from a suspicious IP address**.
+>
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 This detection identifies that users were active from an IP address identified as risky by Microsoft Threat Intelligence. These IP addresses are involved in malicious activities, such as performing password spray, Botnet C&C, and may indicate compromised account. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
@@ -117,6 +117,7 @@ This detection identifies that users were active from an IP address identified a
 
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email forwarding rule created by third-party app**.
+>
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 This detection looks for suspicious email forwarding rules, for example, if a user created an inbox rule that forwards a copy of all emails to an external address.
@@ -127,7 +128,7 @@ This detection looks for suspicious email forwarding rules, for example, if a us
 ### Suspicious inbox manipulation rules
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious inbox manipulation rule**.
+> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled.
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 This detection profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user's account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
@@ -136,6 +137,7 @@ This detection profiles your environment and triggers alerts when suspicious rul
 
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email deletion activity**.
+>
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 
