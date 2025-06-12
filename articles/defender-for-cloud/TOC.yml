@@ -101,6 +101,9 @@
           - name: Resolve agentless scanning error
             displayName: connector, GCP, disc, scanning, error
             href: resolve-disk-scanning-error.md
+          - name: Resolve VPC Service Controls restriction issues
+            displayName: connector, GCP, VPC, service, controls, restriction, issues
+            href: resolve-vpc-service-controls-issues.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
@@ -1274,7 +1277,7 @@
         items:
           - name: Connect Azure DevOps environments
             href: quickstart-onboard-devops.md
-          - name: Configure agentless code scanning for Azure DevOps
+          - name: Configure agentless code scanning (Preview)
             href: agentless-code-scanning.md
           - name: Connect GitHub environments
             href: quickstart-onboard-github.md
