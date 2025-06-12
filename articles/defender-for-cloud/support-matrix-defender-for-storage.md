@@ -33,8 +33,8 @@ The following table summarizes the permissions you need for each scenario. The p
 | Capability | Subscription level | Storage account level |
 |---------|---------|---------|
 | Activity monitoring | Security Admin or Pricings/read, Pricings/write | Security Admin or Microsoft.Security/defenderforstoragesettings/read, Microsoft.Security/defenderforstoragesettings/write |
-| Malware scanning | Subscription Owner or action set 1 | Storage Account Owner or action set 2 |
-| Sensitive data threat detection | Subscription Owner or action set 1 | Storage Account Owner or action set 2 |
+| Malware scanning | Subscription Owner or action set 1 | Action set 2 |
+| Sensitive data threat detection | Subscription Owner or action set 1 |Action set 2 |
 
 > [!NOTE]
 > Activity monitoring is always enabled when you enable Defender for Storage.
