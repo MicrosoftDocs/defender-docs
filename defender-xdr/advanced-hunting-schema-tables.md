@@ -60,6 +60,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Behavior data types in Microsoft Defender for Cloud Apps (not available for GCC) |
 | **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)** (Preview) | Alerts from Microsoft Defender for Cloud Apps (not available for GCC) |
+| **[CampaignInfo](advanced-hunting-campaigninfo-table.md)** (Preview) | Email campaigns identified by Microsoft Defender for Office 365 |
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |
@@ -96,6 +97,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
+| **[FileMaliciousContentInfo](advanced-hunting-emailurlinfo-table.md)** | Files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams |
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
