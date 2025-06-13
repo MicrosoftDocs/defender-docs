@@ -31,13 +31,22 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Prerequisites
+
+To create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of the following:
+
+- Global Administrator or Security Administrator in Microsoft Entra ID.
+- All **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC.
+
+For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+
+> [!TIP]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Create a custom role
 
 The following steps guide you on how to create custom roles in Microsoft Defender XDR Unified RBAC.
 
-> [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -126,6 +135,13 @@ To access and manage roles and permissions, without being a Global Administrator
 
 > [!NOTE]
 > For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you'll need to activate the new Microsoft Defender XDR Unified RBAC model. For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+
+
+## Configure scoped roles for Microsoft Defender for Identity
+
+Scoped access for Microsoft Defender for Identity (MDI) is currently in **Public preview**. You can configure scoped access using Microsoft Defender XDR’s Unified RBAC (URBAC) model. This allows you to restrict access and visibility to specific Active Directory domains, helping align with team responsibilities and reduce unnecessary data exposure.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](/defender-for-identity/configure-scoped-access).
 
 ## Next steps
 
