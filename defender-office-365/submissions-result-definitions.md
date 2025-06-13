@@ -44,6 +44,10 @@ The following table describes the results of submissions to Microsoft:
 - **Status** indicates whether the previously described checks have been completed.
 - **Result** indicates the details that were generated during the analysis using the previously described checks
 
+> [!NOTE]
+> The new AI-powered Submissions Response capability introduces generative AI explanations for email submissions in Microsoft Defender. These explanations aim to provide enterprise administrators with clear, detailed, human-readable rationales for why a message was classified as spam, phishing, or clean. This feature is scoped specifically to email submissions. Submissions involving files, Teams messages, or URLs are currently out of scope. Also user submissions are currently out of scope as well.
+> For the result types like Spam, Bulk, Threats found, No Threats found and Uknowns, you will see the LLM-based response. However, if for any reason the AI-generated explanation is unavailable, the system will fall back to the existing explanation as captured in the following table.
+
 |Status|Result|Description|
 |---|---|---|
 |Being analyzed|Under investigation|The item is being analyzed as previously described. After the analysis is complete, the status is updated and the result shows details of the analysis.|
