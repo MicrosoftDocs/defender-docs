@@ -134,6 +134,7 @@ sections:
 
           - All advanced threat protection types should be enabled in SQL managed instance advanced data security settings
           - All advanced threat protection types should be enabled in SQL server advanced data security settings
+          - Audit usage of custom RBAC roles
           - Container CPU and memory limits should be enforced
           - Container images should be deployed from trusted registries only
           - Container with privilege escalation should be avoided
