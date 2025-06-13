@@ -3,7 +3,7 @@ title: Microsoft Defender for Endpoint alongside other security solutions
 description: See recommendations for running Defender for Endpoint alongside other security solutions.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/30/2025
+ms.date: 06/13/2025
 ms.topic: conceptual
 author: emmwalshh
 ms.author: ewalsh
@@ -29,7 +29,7 @@ search.appverid: met150
 
 Large organizations use a wide variety of security solutions, and running multiple security solutions concurrently can lead to performance issues and conflicts. To help minimize interoperability issues, trusted security solutions can often be configured to mitigate conflicts with each other. Organizations should understand the potential benefits, risks, and mitigation recommendations to make informed choices.  
 
-1. **Disable duplication**. Running multiple security solutions that perform the same function can lead to performance issues and conflicts. It's recommended to avoid redundant capabilities, as this increases the likelihood of problematic product interactions. 
+1. **Avoid duplication**. Running multiple security solutions that perform the same function can lead to performance issues and conflicts. It's recommended to avoid redundant capabilities, as this increases the likelihood of problematic product interactions. 
 
    Microsoft Defender for Endpoint can be configured to disable endpoint detection and response (EDR) in Block Mode, Automated Investigation & Remediation, PUA Protection, Network Discovery & Response, and other capabilities. This can reduce overlap with detection and response functions provided by non-Microsoft endpoint security solutions. Responsibility for these functions falls to the solution actively providing those functions. 
 
