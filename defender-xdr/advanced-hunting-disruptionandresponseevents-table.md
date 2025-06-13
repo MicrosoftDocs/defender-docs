@@ -27,7 +27,13 @@ ms.date: 06/11/2025
 
 
 
-The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information automatic attack disruption events in Microsoft Defender for Endpoint. [ADD MORE DESCRIPTION] Use this reference to construct queries that return information from this table.
+The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. 
+
+Users can use this table to increase their visibility and awareness of active, complex attacks disrupted by automatic attack disruption. Understanding the scope of even complex attacks, their context, impact, and why disruption actions were taken, can help users make better and faster decisions and allocate resources more efficiently.
+
+This advanced hunting table is populated by records from various Microsoft security services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return complete results. For more information about how to deploy supported services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
+Use this reference to construct queries that return information from this table.
 
 > [!TIP]
 > For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
@@ -39,18 +45,18 @@ For information on other tables in the advanced hunting schema, [see the advance
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
 | `ActionType` | `string` | Type of disruption action taken  |
-| `DeviceId` | `string` | Unique identifier for the device that reported the event; the reporting device can be the device that reported the event, the device that blocked the access, or the compromised device itself   |
-| `SourceDeviceId` | `string` | Unique identifier for the device that blocked the traffic or access attempt  |
-| `TargetDeviceId` | `string` | Unique identifier for the device that was contained by other devices in the network   |
+| `DeviceId` | `string` | Unique identifier for the device that reported the event; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack |
+| `SourceDeviceId` | `string` | Unique identifier for the device that the attack originated from  |
+| `TargetDeviceId` | `string` | Unique identifier for the device that was targeted or attacked |
 | `TargetDeviceName ` | `string` | Name of the device that the compromised account attempted to access   |
 | `TargetDomainName ` | `string` | Domain name of the device that the compromised account attempted to access  |
-| `DeviceName` | `string` | Name of the device that reported the event; the reporting device can be the device that reported the event, the device that blocked the access, or the compromised device itself   |
-| `DomainName` | `string` | Domain name that the device that reported the event is joined to; the reporting device can be the device that reported the event, the device that blocked the access, or the compromised device itself  |
+| `DeviceName` | `string` | Name of the device that reported the event; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack  |
+| `DomainName` | `string` | Domain name that the device that reported the event is joined to; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack |
 | `InitiatingProcessId ` | `integer` | Process ID (PID) of the process that triggered that block action, based on the perspective of the device that logged the event  |
 | `InitiatingProcessFileName` | `string` |Name of the process that triggered the block action, based on the perspective of the device that logged the event  |
-| `SourceUserSid` | `string` | The compromised account’s security identifier   |
-| `SourceUserName` | `string` | The compromised account’s user name  |
-| `SourceUserDomainName` | `string` | The compromised account’s domain name   |
+| `SourceUserSid` | `string` | The security identifier of the account where the attack originated from   |
+| `SourceUserName` | `string` | The user name of the account where the attack originated from  |
+| `SourceUserDomainName` | `string` | The domain name of the account where the attack originated from    |
 | `SourceIPAddress` | `string` | IP address where the attacker communication came from, if the IP was not blocked by automatic attack disruption  |
 | `SourcePort` | `integer` | Port where the attacker communication came from  |
 | `IPAddress` | `string` | IP address that was blocked by automatic attack disruption  |
