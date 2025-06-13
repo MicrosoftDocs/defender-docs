@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/09/2025
+ms.date: 06/13/2025
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -31,15 +31,12 @@ _User tags_ are identifiers for specific groups of users in [Microsoft Defender 
 - **System tags**: Currently, [Priority account](/microsoft-365/admin/setup/priority-accounts) is the only type of system tag.
 - **Custom tags**: You create these types of tags.
 
-If your organization has Defender for Office 365 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag.
+If your organization has Defender for Office 365 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag:
 
-> [!NOTE]
-> Currently, you can only apply user tags to mailbox users.
->
-> Your organization can tag a maximum of 250 users using the Priority account system tag.
->
-> Each custom tag has a maximum of 10000 users per tag (if added individually) and your organization can create up to 500 custom tags. However, if you are adding a group to tags, it fetches the first 999 users for the group, and assigns those users. 
->
+- You can assign the Priority account tag to a maximum of 250 users.
+- You can create a maximum of 500 custom user tags.
+- You can assign a custom tag to a maximum of 10000 individual users.
+- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users). 
 
 This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchange/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
