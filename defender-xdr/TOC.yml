@@ -290,6 +290,8 @@
             href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
           - name: DeviceTvmSoftwareVulnerabilitiesKB
             href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+          - name: DisruptionAndResponseEvents
+            href: advanced-hunting-disruptionandresponseevents-table.md            
           - name: EmailAttachmentInfo
             href: advanced-hunting-emailattachmentinfo-table.md
           - name: EmailEvents
