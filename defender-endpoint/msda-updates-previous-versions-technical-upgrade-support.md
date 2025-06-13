@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 05/21/2025
+ms.date: 06/10/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,25 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
+
+- Security intelligence update version: **1.425.1.0**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25020.1007**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
