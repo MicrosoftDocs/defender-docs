@@ -131,14 +131,7 @@ When you open VS Code to create or update queries, alway verify that your desire
 
 If it isn't, select the active branch name in the bottom left corner, and then select the working branch from the **branches** section.
 
-1. Now you can create hunting queries. Queries are stored as .YAML files and contain the query itself and related metadata. Queries are stored in one of the following folders in the `Azure-Sentinel` folder based on their usage and availability in the Defender portal:
-
-   - `\Azure-Sentinel\Hunting Queries\Microsoft 365 Defender\Email Queries`: Available in the **Community queries** section on the **Queries** tab of the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
-   - `\Azure-Sentinel\Solutions\Microsoft Defender XDR\Hunting Queries\Email Queries`: Available as Sentinel queries (Microsoft Defender XDR Solution).
-
-   In most cases, you want to duplicate the same query template in both locations so you can use the query in both scenarios. Add the query to a relevant subfolder in each location.
-
-   For example, the following Kusto Query Language (KQL) query is a basic report of recipients who receive the most phishing messages. When you save this query to a YAML file, the most logical place to save the file is in the `Phish` subfolder in the previously mentioned locations.
+1. Now you can create hunting queries in your working branch. For example, the following Kusto Query Language (KQL) query is a basic report of recipients who receive the most phishing messages.
 
    ```kusto
    EmailEvents
@@ -152,7 +145,20 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png" alt-text="Screenshot of the Advanced Hunting page in the Defender portal with the previous example query and results (no errors)." lightbox="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png":::
 
-3. After completing all YAML fields (including a unique GUID in the **ID** field from the output of the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell), create and save the file as `Top user receiving phish.yaml` in the `Phish` subfolder. The file looks something like this:
+3. In the **Explorer** view of VS Code, go to one of the following parent folders based on the usage and availability of the query in the Defender portal:
+
+   - `\Azure-Sentinel\Hunting Queries\Microsoft 365 Defender\Email Queries`: Available in the **Community queries** section on the **Queries** tab of the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
+   - `\Azure-Sentinel\Solutions\Microsoft Defender XDR\Hunting Queries\Email Queries`: Available as Sentinel queries (Microsoft Defender XDR Solution).
+
+   In most cases, you should ultimately create the query file in both locations so you can use the query in both scenarios.
+
+4. In VS Code, create a new .yaml file in the appropriate subfolder of those locations. There are many subfolders to choose from. In our example, the most logical name and place for our new query file is `Top user receiving phish.yaml` in the `Phish` subfolder.
+
+   You can find more information on the requirements and structure of the .yaml file at [Query Style Guide](https://github.com/Azure/Azure-Sentinel/wiki/Query-Style-Guide) on the Azure-Sentinel repository wiki.
+
+   Use the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell to create a unique GUID for the **id** property of the query file (for example, 36f68d74-3e45-44d8-9915-ød35b7567bcf).
+
+   The finished `Top user receiving phish.yaml` file looks something like this:
 
    ```yml
    id: 36f68d74-3e45-44d8-9915-ød35b7567bcf
@@ -178,29 +184,31 @@ If it isn't, select the active branch name in the bottom left corner, and then s
    version: l.0.0
    ```
 
-   You can find more information on the requirements and structure of the YAML file at [Query Style Guide](https://github.com/Azure/Azure-Sentinel/wiki/Query-Style-Guide) on the Azure-Sentinel repository wiki.
+5. After you complete and save the query file in one location, copy the file to the other location so you can use the query in both Advanced Hunting and Microsoft Sentinel.
 
 ## Step 5: Synchronize the changes from your local computer to the fork in your GitHub account
 
-After you add query YAML files in the cloned repository on your local computer, you need to synchronize those updates back to the forked copy of the Azure Sentinel repository in your GitHub account.
+After you add .yaml query files in the cloned repository on your local computer, you need to synchronize those updates back to the forked copy of the Azure Sentinel repository in your GitHub account.
 
-1. Select the 'Source Control' section on the side panel
+1. In VS Code, select the **Source Control** view.
 
-   <img src="c:\GitHub\defender-docs-pr\defender-office-365\step-by-step-guides/media/image19.png" style="width:0.96876in;height:1.23438in" alt="A screenshot of a computer AI-generated content may be incorrect." />
+   :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-select-source-control.png" alt-text="Screenshot of Visual Studio Code with the Source Control view highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-select-source-control.png":::
 
-2. There will be a Changes section which will list all of the files that have been modified within the current Branch. Clicking any of these file names will also open them and highlight specific lines or characters which have been modified. These changes can be reviewed for issues or mistakes prior to continuing with remaining steps.
+2. In the dialog that opens, a **Changes** section lists all files modified in the current branch:
 
-   <img src="c:\GitHub\defender-docs-pr\defender-office-365\step-by-step-guides/media/image20.png" style="width:2.63023in;height:1.53126in" alt="A screenshot of a computer AI-generated content may be incorrect." />
+   :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-source-control-changes.png" alt-text="Screenshot of the Source Control view in Visual Studio Code with Changes highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-source-control-changes.png":::
 
-3. Within the Message textbox, give a brief description of the changes being made. This should be both short and concise, but also provide a simple description of what changed. A suitable example would be "Added two new MDO queries" or "Modified Phish query to graph results" etc
+   - If you click on the filename, the modified file opens with the modified text highlighted. You can review the changes for issues or mistakes before you continue.
 
-   - Click the Commit button
+   - In the **Message** box, enter a brief description of the changes. Use concise language. For example, **Added a query to list top Phish recipients**. When you're finished, select **Commit**.
 
-     <img src="c:\GitHub\defender-docs-pr\defender-office-365\step-by-step-guides/media/image21.png" style="width:2.6146in;height:1.17709in" alt="A screenshot of a computer AI-generated content may be incorrect." />
+     :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-source-control-message-and-commit.png" alt-text="Screenshot of the Source Control view in Visual Studio Code with the Message box filled out and the Commit button highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-source-control-message-and-commit.png":::
 
-   - Click the 'Publish Branch' button (or alternately the 'Sync Changes' button, if that appears instead) to create the new branch within GitHub and sync the commit.
+   - If you're synchronizing the working branch and its updates into the fork in your GitHub account for the first time, you're presented with **Publish Branch** which you should select.
 
-     <img src="c:\GitHub\defender-docs-pr\defender-office-365\step-by-step-guides/media/image22.png" style="width:2.52606in;height:1.02605in" alt="A screenshot of a computer AI-generated content may be incorrect." />
+     :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-source-control-publish-branch.png" alt-text="Screenshot of the Source Control view in Visual Studio Code with the Publish Branch button highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-source-control-publish-branch.png":::
+
+    In the future, when you synchronize local changes in the working branch into the fork in your GitHub account, you're presented with **Sync Changes** instead.
 
 ## Step 6: Create a pull request from the fork in your GitHub account to the public Azure Sentinel repository
 
@@ -209,19 +217,17 @@ After you synchronize the updates to the forked copy of the repository in your G
 > [!TIP]
 > As long as the pull request hasn't been merged, you can use Step 4 and Step 5 to update the source files in the forked copy of the repository, which modifies the active pull request.
 
-1. From the forked repository that was created earlier (https://github.com/\<UserName\>/Azure-Sentinel) refresh the page and there should now be a notification that the branch has recent changes, and be prompted to begin a Pull Request from this. Click the 'Compare & pull request button'
+1. Go to the `https://github.com/<YourGitHubAccountName>/Azure-Sentinel` link from [Step 1](#step-1-fork-the-azure-sentinel-github-repository-to-your-github-account).
 
-   <img src="c:\GitHub\defender-docs-pr\defender-office-365\step-by-step-guides/media/image23.png" style="width:4.75524in;height:1.19793in" alt="A screenshot of a computer AI-generated content may be incorrect." />
+2. If necessary, refresh the page to see the notification that the working branch you synchronized in the previous step has recent changes. Select **Compare & pull request**. branch has recent changes.
 
-2. Follow the guidance provided in the description and answer as appropriate.
+   :::image type="content" source="../media/add-advanced-hunting-community-queries-create-pull-request.png" alt-text="Screenshot of the Compare & pull request page." lightbox="../media/add-advanced-hunting-community-queries-create-pull-request.png":::
 
-3. If further changes are needed it is possible to select an option to create 'Create draft pull request' to indicate that it is not yet ready to be reviewed and approved, however typically this can be skipped and instead use the 'Create pull request' option.
+3. Follow the guidance provided in the description and answer as appropriate.
 
-4. The changes made within the pull request will be reviewed. The reviewer may request that additional changes to be made to conform to the standards within the repository. These can again be made on the local computer, and repeat the steps above to make a new Commit and sync to GitHub.
+4. If you need to make further changes, you can select **Create draft pull request** to indicate the pull request isn't ready to be reviewed and approved. However, you can usually select **Create pull request** to proceed.
 
-## Conclusion
-
-By following the procedures in this article, you can effectively submit and share new Advanced Hunting queries in the Community queries section of the Microsoft Defender portal, enabling collaboration and tailored threat detection across your security team.
+5. Someone with the permissions to merge the pull request will review your changes. The reviewer might request additional changes to conform with the standards of the repository. You can use [Step 4](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer) and [Step 5](#step-5-synchronize-the-changes-from-your-local-computer-to-the-fork-in-your-github-account) to make requested changes on your local computer and synchronize them back into your fork so they're included in the pull request.
 
 ## See also
 
