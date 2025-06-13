@@ -38,7 +38,8 @@ If your organization has Defender for Office 365 (included in your subscription 
 >
 > Your organization can tag a maximum of 250 users using the Priority account system tag.
 >
-> Each custom tag has a maximum of 999 users per tag and your organization can create up to 500 custom tags.
+> Each custom tag has a maximum of 10000 users per tag (if added individually) and your organization can create up to 500 custom tags. However, if you are adding a group to tags, it fetches the first 999 users for the group, and assigns those users. 
+>
 
 This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchange/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
