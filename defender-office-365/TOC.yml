@@ -562,6 +562,8 @@
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
+        - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+          href: add-advanced-hunting-community-queries.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender
