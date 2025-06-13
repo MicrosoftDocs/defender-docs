@@ -28,9 +28,6 @@ ms.date: 06/13/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-
-
 The `FileMaliciousContentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. Use this reference to construct queries that return information from this table.
 
 > [!TIP]

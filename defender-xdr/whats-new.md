@@ -34,6 +34,8 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2025
 - (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
+- (Preview) The [`CampaignInfo`](advanced-hunting-campaigninfo-table.md) table is now available in advanced hunting. Use it to hunt through information about email campaigns identified by Microsoft Defender for Office 365.
+- (Preview) The [`FileMaliciousContentInfo](advanced-hunting-filemaliciouscontentinfo-table.md) table is now available in advanced hunting. Use it to hunt through information about files that were identified as malicious by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. 
 
 ## May 2025
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
