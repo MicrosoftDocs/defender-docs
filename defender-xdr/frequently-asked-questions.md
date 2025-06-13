@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: faq
 ms.custom: 
 - cx-ti
 - cx-dex

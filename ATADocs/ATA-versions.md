@@ -7,7 +7,7 @@ description: Explains the different support options for Microsoft Advanced Threa
 
 
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: article
 ms.service: advanced-threat-analytics
 
 # optional metadata
