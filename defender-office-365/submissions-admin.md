@@ -827,6 +827,9 @@ The analysis results of the reported item are shown in the details flyout that o
 [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
+> [!NOTE]
+> The new AI-powered Submissions Response capability introduces generative AI explanations for email submissions in Microsoft Defender. These explanations aim to provide enterprise administrators with clear, detailed, human-readable rationales for why a message was classified as spam, phishing, or clean. This feature is scoped specifically to email submissions. Submissions involving files, Teams messages, or URLs are currently out of scope. Also user submissions are currently out of scope as well.
+> [Learn more about AI based submissions response](submissions-result-definitions.md).
 
 ### Actions for admin submissions in Defender for Office 365
 
