@@ -48,7 +48,7 @@ Delegating security functionality, creating exclusions, and configuring settings
 
 ## Customer support
 
-Commercially reasonable support is provided through Microsoft Customer Service and Support and Microsoft managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution. Managing security often means finding an acceptable balance between productivity and risk; if a particular security configuration is causing significant performance problems, some organizations choose to disable the additional protection in favor of increased usability for select device groups. This should also be considered for other device-impacting settings.
+Commercially reasonable support is provided through Microsoft Customer Service & Support and Microsoft-managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution.
 
 ## Example of the "include" that can be added to pages that are relevant to a side by side scenario
 
