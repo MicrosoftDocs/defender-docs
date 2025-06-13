@@ -42,7 +42,7 @@ Large organizations use a wide variety of security solutions, and running multip
    > [!NOTE]
    > For Microsoft Windows performance, for example, see [Performance overview - Windows Client | Microsoft Learn](/troubleshoot/windows-client/performance/performance-overview) and [Performance overview - Windows Server | Microsoft Learn](/troubleshoot/windows-server/performance/performance-overview).
 
-3. **Configurations**. Device hardware and software configurations can have a significant impact on performance and stability, which might be unrelated to security solution interoperability. Solutions and scenario guides are available to help troubleshoot and self-solve performance-related issues, or organizations can leverage available support resources. 
+3. **Consider system configuration**. In side-by-side scenarios, even well configured security tools can be impacted by underlying system limitations. Ensure that endpoints meet hardware requirements and stagger resource-heavy tasks. Built-in telemetry can monitor performance to help isolate interoperability issues from system constraints. Solutions and scenario guides are available to help troubleshoot and self-solve performance-related issues, or organizations can leverage available support resources. 
 
 Delegating security functionality, creating exclusions, and configuring settings can help reduce the likelihood of interoperability issues, but these might not be eliminated completely. Acceptable risk is different for every organization; optimizing for usability might increase risk, and optimizing for security will likely impact usability. Organizations should weigh the benefits of interoperability over potential risks.
 
