@@ -81,7 +81,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
-     - Click in the box, start typing a name to filter the list, and then select the value below the box. select a user or group.
+     - Or, start typing a name to filter the list, and then select the value below the box. 
 
      To add more members, click in an empty area in the box and repeat the previous step.
 
