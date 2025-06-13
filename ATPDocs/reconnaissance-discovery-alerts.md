@@ -2,7 +2,7 @@
 title: Reconnaissance and discovery security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when reconnaissance and discovery attacks are detected against your organization.
 ms.date: 04/16/2023
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: morRubin
 ---
 
@@ -16,7 +16,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [View and manage alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#classify-security-alerts).
 
 The following security alerts help you identify and remediate **Reconnaissance and discovery** phase suspicious activities detected by Defender for Identity in your network.
 
@@ -173,25 +173,6 @@ None
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)        |
 
-## Honeytoken was queried via SAM-R (external ID 2439)
-
-**Severity**: Low
-
-**Description**:
-
-User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
-In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md)
-
-**Learning period**:
-
-None
-
-**MITRE**:
-
-|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
-|---------|---------|
-|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)|
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)|
 
 ## Honeytoken was queried via LDAP (external ID 2429)
 
@@ -239,8 +220,7 @@ None
 ## See also
 
 - [Investigate assets](investigate-assets.md)
-- [Understanding security alerts](understanding-security-alerts.md)
-- [Manage security alerts](/defender-for-identity/manage-security-alerts)
+- [View and manage alerts](understanding-security-alerts.md)
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
