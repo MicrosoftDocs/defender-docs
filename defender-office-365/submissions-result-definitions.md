@@ -16,7 +16,7 @@ ms.collection:
  - tier1
 description: Admins and end-users can learn about the results of submitting entities to Microsoft for analysis.
 ms.service: defender-office-365
-ms.date: 07/26/2024
+ms.date: 06/13/2025
 appliesto:
  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -37,16 +37,28 @@ When admins or users submit items to Microsoft for analysis, we do the following
 [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
 
 > [!NOTE]
-> In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit items to Microsoft for analysis, but the items are analyzed for email authentication and policy hits only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary).
+> 
+> - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit items to Microsoft for analysis, but the items are analyzed for email authentication and policy hits only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary).
+> - AI-powered Submissions Response capability introduces generative AI explanations for email submissions to Microsoft. These explanations aim to provide enterprise admins with clear, detailed, human-readable explanations for why messages were classified. Currently, this feature is scoped to email submissions only, and AI-generated explanations aren't used for the following types of submissions:
+>   - Files
+>   - URLs
+>   - Microsoft Teams messages
+>   - User submissions
+>
+>   AI-generated explanations are available for the following verdicts:
+>
+>   - Spam
+>   - Bulk
+>   - Threats found
+>   - No threats found
+>   - Unknown
+>
+>   If the AI-generated explanation is unavailable, the system falls back to the existing explanation as described in the following table.
 
 The following table describes the results of submissions to Microsoft:
 
 - **Status** indicates whether the previously described checks have been completed.
-- **Result** indicates the details that were generated during the analysis using the previously described checks
-
-> [!NOTE]
-> The new AI-powered Submissions Response capability introduces generative AI explanations for email submissions in Microsoft Defender. These explanations aim to provide enterprise administrators with clear, detailed, human-readable rationales for why a message was classified as spam, phishing, or clean. This feature is scoped specifically to email submissions. Submissions involving files, Teams messages, or URLs are currently out of scope. Also user submissions are currently out of scope as well.
-> For the result types like Spam, Bulk, Threats found, No Threats found and Uknowns, you will see the LLM-based response. However, if for any reason the AI-generated explanation is unavailable, the system will fall back to the existing explanation as captured in the following table.
+- **Result** indicates the details that were generated during the analysis using the previously described checks.
 
 |Status|Result|Description|
 |---|---|---|
