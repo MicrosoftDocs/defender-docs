@@ -5,14 +5,15 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/03/2024
+ms.date: 05/08/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection:
 - m365-security
 - tier2
+- essentials-privacy
 ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
 search.appverid: met150
@@ -112,7 +113,7 @@ Your data is available to you while the license is within the grace period or su
 
 ## Data sharing for Defender for Office 365
 
-Defender for Office 365 shares data, including customer data, among the following Microsoft products, if they're also licensed by a customer:
+Defender for Office 365 shares data, including customer data, among the following Microsoft products, if they're also licensed by a customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft 365 Defender XDR
 - Microsoft Sentinel

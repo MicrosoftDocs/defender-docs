@@ -68,10 +68,14 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
 
-- Red Hat Enterprise Linux 7.2 or higher 
+- Red Hat Enterprise Linux 7.2 and higher 
+
 - Red Hat Enterprise Linux 8.x 
 - Red Hat Enterprise Linux 9.x 
-- CentOS 7.2 or higher, excluding CentOS Stream 
+- CentOS 7.2 and higher, excluding CentOS Stream 
+
+- CentOS 8.x
+
 - Ubuntu 16.04 LTS 
 - Ubuntu 18.04 LTS 
 - Ubuntu 20.04 LTS 
@@ -80,7 +84,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Debian 9 - 12 
 - SUSE Linux Enterprise Server 12.x 
 - SUSE Linux Enterprise Server 15.x 
-- Oracle Linux 7.2 or higher 
+- Oracle Linux 7.2 and higher 
+
 - Oracle Linux 8.x 
 - Oracle Linux 9.x 
 - Amazon Linux 2 
@@ -170,9 +175,8 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires `glibc >= 2.17`, `policycoreutils`, `selinux-policy-targeted`, and `mde-netfilter`.
-- For RHEL6 the mdatp RPM package requires `policycoreutils`, `libselinux`, and `mde-netfilter`.
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, and `mde-netfilter`.
+- The mdatp RPM package requires `glibc >= 2.17`.
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`.
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
@@ -180,11 +184,12 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-
-The `mde-netfilter` package also has the following package dependencies:
-
-- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 ## Installation instructions 
 

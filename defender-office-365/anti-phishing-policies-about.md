@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn about the anti-phishing policies that are available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 05/28/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -44,7 +44,7 @@ Anti-phishing policies in EOP and Defender for Office 365 are both available on 
 - **Impersonation protection**:
   - Protection against user, domain, and sender impersonation.
   - Ability to define trusted senders and domains to reduce false positives.
-- **Advanced phishing detection**:
+- **Phishing email thresholds**:
   - Customizable phishing thresholds to fine-tune detection.
 - **AI and machine learning-based detection**:
   - Improved detection of sophisticated phishing attacks through advanced algorithms.
@@ -61,7 +61,7 @@ The high-level differences between anti-phishing policies in EOP and anti-phishi
 |Spoof settings|✔|✔|
 |First contact safety tip|✔|✔|
 |Impersonation settings||✔|
-|Advanced phishing thresholds||✔|
+|Phishing email thresholds||✔|
 
 <sup>\*</sup> In the default policy, the policy name and description are read-only (the description is blank), and you can't specify who the policy applies to (the default policy applies to all recipients).
 
@@ -158,6 +158,9 @@ In anti-phishing policies, you can control whether `p=quarantine` or `p=reject` 
 
 The relationship between spoof intelligence and whether sender DMARC policies are honored is described in the following table:
 
+> [!TIP]
+> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method mitigates the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from legitimate message senders who fail to conform to standard email authentication practices.
+
 |&nbsp;|Honor DMARC policy On|Honor DMARC policy Off|
 |---|---|---|
 |**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: No action is applied by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
@@ -229,7 +232,7 @@ Depending on the number of recipients in the message, the first contact safety t
 This section describes the policy settings that are only available in anti-phishing policies in Defender for Office 365.
 
 > [!NOTE]
-> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [advanced settings](anti-phishing-policies-about.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured or enabled in the default policy. To enable all protection features, modify the default anti-phishing policy or create other anti-phishing policies.
+> The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) features and [phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) aren't configured in the default policy. To enable all protection features, modify the default anti-phishing policy or create other anti-phishing policies.
 
 ### Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365
 
@@ -377,16 +380,18 @@ Trusted senders and domain are exceptions to the impersonation protection settin
 > - `noreply@emeaemail.teams.microsoft.com`
 > - `no-reply@sharepointonline.com`
 
-### Advanced phishing thresholds in anti-phishing policies in Microsoft Defender for Office 365
+<a name='advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365'></a>
 
-The following advanced phishing thresholds are only available in anti-phishing policies in Defender for Office 365. These thresholds control the sensitivity for applying machine learning models to messages to determine a phishing verdict:
+### Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365
+
+The following phishing email thresholds are available only in anti-phishing policies in Defender for Office 365. These thresholds control the sensitivity for applying machine learning models to messages for phishing verdicts:
 
 - **1 - Standard**: This is the default value. The severity of the action that's taken on the message depends on the degree of confidence that the message is phishing (low, medium, high, or very high confidence). For example, messages that are identified as phishing with a very high degree of confidence have the most severe actions applied, while messages that are identified as phishing with a low degree of confidence have less severe actions applied.
 - **2 - Aggressive**: Messages that are identified as phishing with a high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - **3 - More aggressive**: Messages that are identified as phishing with a medium or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - **4 - Most aggressive**: Messages that are identified as phishing with a low, medium, or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 
-The chance of false positives (good messages marked as bad) increases as you increase this setting. For information about the recommended settings, see [anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+The chance of false positives (good messages marked as bad) increases as you increase this setting. For information about the recommended settings, see [Phishing email thresholds in anti-phishing policies in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 ### Spoofing vs. impersonation
 

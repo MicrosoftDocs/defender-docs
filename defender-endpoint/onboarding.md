@@ -2,8 +2,8 @@
 title: Onboard devices to Microsoft Defender for Endpoint
 description: Learn how to onboard endpoints to Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: deniseb
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,10 +14,10 @@ ms.collection:
   - m365-initiative-defender-endpoint
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/03/2024
+ms.date: 05/08/2025
 ---
 
 # Onboard devices to Microsoft Defender for Endpoint

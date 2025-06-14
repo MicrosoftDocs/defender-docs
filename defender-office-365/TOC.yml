@@ -101,6 +101,9 @@
        items:
        - name: Defender for Office 365 SecOps guide
          href: mdo-sec-ops-guide.md
+     - name: Quickly configure Microsoft Teams protection
+       href: mdo-support-teams-quick-configure.md
+
    - name: Migrate
      items:
        - name: Migrate to Defender for Office 365
@@ -116,6 +119,8 @@
      items:
        - name: Defender for Office 365 SecOps Guide
          href: mdo-sec-ops-guide.md
+       - name: SecOps guide for Teams protection in Defender for Office 365
+         href: mdo-support-teams-sec-ops-guide.md
        - name: Threat classification
          href: mdo-threat-classification.md
        - name: Security recommendations for priority accounts
@@ -140,7 +145,7 @@
              href: anti-malware-protection-faq.yml
            - name: Zero-hour auto purge (ZAP)
              href: zero-hour-auto-purge.md
-           - name: Virus detection in SharePoint Online
+           - name: Virus detection in SharePoint
              href: anti-malware-protection-for-spo-odfb-teams-about.md
          - name: Anti-spam in EOP
            items:
@@ -363,6 +368,8 @@
        href: office-365-ti.md
      - name: Defender for Office 365 SecOps Guide
        href: mdo-sec-ops-guide.md
+     - name: SecOps guide for Teams protection in Defender for Office 365
+       href: mdo-support-teams-sec-ops-guide.md
      - name: Analyze and classify
        items:
        - name: Campaign Views
@@ -531,7 +538,7 @@
           href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
         - name: How to enable DMARC Reporting for Microsoft Online Email Routing Address (MOERA) and parked Domains
           href: step-by-step-guides/how-to-enable-dmarc-reporting-for-microsoft-online-email-routing-address-moera-and-parked-domains.md
-        - name: Use Microsoft Defender for Office 365 in SharePoint Online
+        - name: Use Microsoft Defender for Office 365 in SharePoint
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering
           href: step-by-step-guides/tune-bulk-mail-filtering-walkthrough.md

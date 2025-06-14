@@ -342,6 +342,16 @@ To generate the PDF, perform the following steps:
 
 The report is cached for a couple of minutes. The system provides the previously generated PDF if you try to export the same incident again within a short time frame. To generate a newer version of the PDF, wait for a few minutes for the cache to expire.
 
+## Set up email notifications for incidents
+	
+You can set up the Microsoft Defender portal to notify your staff with an email about new incidents or updates to existing incidents. You can choose to get notifications based on:
+
+- Alert severity
+- Alert sources
+- Device group
+
+To set up email notifications for incidents, see [get email notifications on incidents](m365d-notifications-incidents.md).
+
 ## Next steps
 
 For new and in-process incidents, continue your [incident investigation](investigate-incidents.md).

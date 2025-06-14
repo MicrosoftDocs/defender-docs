@@ -7,13 +7,13 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 03/04/2025
+ms.date: 05/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: get-started
 ---
 
 # Microsoft Defender for Endpoint for US Government customers
@@ -157,7 +157,8 @@ These are the known gaps:
 |---|:---:|:---:|:---:|
 |Microsoft Secure Score|![Yes](media/svg/check-yes.svg)<br/>See note following this table|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Microsoft Threat Experts|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
-|Microsoft Defender for Endpoint Security Configuration Management|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
+|Microsoft Defender for Endpoint Security Configuration Management|![No](media/svg/check-yes.svg)|![No](media/svg/check-yes.svg)|![No](media/svg/check-yes.svg)|
+|Microsoft Defender for IoT enterprise IoT security|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
 
 > [!NOTE]
 > While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
