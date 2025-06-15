@@ -25,7 +25,8 @@ Before connecting your Okta account to Microsoft Defender for Identity, make sur
 
 
 > [!NOTE]
-> If you already connected your Okta environment to Microsoft Defender for Identity, adding the connection to Microsoft Defender for Cloud Apps may cause duplicate Okta data to appear in the Defender portal, such as user activity.
+> If your Okta environment is already integrated with Microsoft Defender for Identity, connecting it to Microsoft Defender for Cloud Apps might cause duplicate Okta data, such as user activity, to appear in the Defender portal.
+
 
 ### Connect Okta to Microsoft Defender for Identity
 
