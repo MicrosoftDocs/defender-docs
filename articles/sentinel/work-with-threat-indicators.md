@@ -4,7 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article explains how to view, create, manage, and visualize threat intelligence in Microsoft Sentinel.
 author: guywi-ms
 ms.topic: how-to
-ms.date: 02/21/2025
+ms.date: 06/15/2025
 ms.author: guywild
 ms.reviewer: alsheheb
 appliesto:
@@ -238,6 +238,22 @@ Workbooks provide powerful interactive dashboards that give you insights into al
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, so extensive documentation and many more templates are available. For more information, see [Create interactive reports with Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview).
 
 There's also a rich resource for [Azure Monitor workbooks on GitHub](https://github.com/microsoft/Application-Insights-Workbooks), where you can download more templates and contribute your own templates.
+
+## Export threat intelligence
+
+This procedure describes how to export threat intelligence from Microsoft Sentinel to external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
+
+<!--this is in the defender portal. does this exist in the azure portal?-->
+
+1. In the Defender portal, select **Threat intelligence > Intel management**
+
+1. Select one or more STIX objects, and then select **Export** at the top of the page.
+
+1. Select the TAXII server you want to export your threat intelligence to, select the checkbox indicating you accept the conditions, and then select **Export**.
+
+     <!--needs screenshot-->
+
+View your export history from the **Exports** tab on the **Intel management** page. You might need to scroll further to the right to view the **Exports** tab. <!--not sure this is correct-->
 
 ## Related content
 

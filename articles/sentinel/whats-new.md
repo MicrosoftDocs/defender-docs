@@ -18,6 +18,21 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## July 2025
+
+- [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
+
+### Export STIX threat intelligence objects (Preview)
+
+Microsoft Sentinel now supports exporting STIX threat intelligence objects to external platforms. If you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector from an external platform, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
+
+Update or install the **Threat Intelligence - TAXII** data connector to use the new export capability.
+
+For more information, see:
+
+- [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](connect-threat-intelligence-taxii.md)
+- [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
+
 ## June 2025
 
 - [Codeless Connector Platform (CCP) renamed.](#microsoft-sentinel-data-connectors)
