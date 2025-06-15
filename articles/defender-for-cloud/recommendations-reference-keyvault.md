@@ -62,7 +62,7 @@ Read this blog to learn how to [protect Your Azure Key Vault and why Azure role 
 
 **Description**: Enable the key vault firewall so that the key vault is not accessible by default to any public IPs or disable public network access for your key vault so that it's not accessible over the public internet. Optionally, you can configure specific IP ranges to limit access to those networks. 
 
-Learn more at: [Network security for Azure Key Vault] [https://docs.microsoft.com/azure/key-vault/general/network-security](https://docs.microsoft.com/azure/key-vault/general/network-security) and [https://aka.ms/akvprivatelink](https://aka.ms/akvprivatelink). (Related policy: [Azure Key Vault should have firewall enabled or public network access disabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F55615ac9-af46-4a59-874e-391cc3dfb490)).
+Learn more at: [Network security for Azure Key Vault](/azure/key-vault/general/network-security) and [https://aka.ms/akvprivatelink](https://aka.ms/akvprivatelink). (Related policy: [Azure Key Vault should have firewall enabled or public network access disabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F55615ac9-af46-4a59-874e-391cc3dfb490)).
 
 **Severity**: Medium
 
