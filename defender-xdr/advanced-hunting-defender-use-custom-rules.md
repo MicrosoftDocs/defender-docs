@@ -16,14 +16,14 @@ ms.collection:
   - m365initiative-m365-defender
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom:
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 08/07/2024
+ms.date: 03/28/2025
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
@@ -43,7 +43,7 @@ For editable functions, more options are available when you select the vertical 
 - **Edit details** – Opens the function side pane to allow you to edit details about the function (except folder names for Sentinel functions).
 - **Delete** – Deletes the function.
 
-### Use adx() operator for Azure Data Explorer queries (Preview)
+### Use adx() operator for Azure Data Explorer queries
 Use the `adx()` operator to query tables stored in Azure Data Explorer. Read [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview) for more details.
 
 This feature was previously only available in log analytics in Microsoft Sentinel. Users can now use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 

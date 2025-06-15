@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/16/2024
+ms.date: 06/13/2025
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365 Plan 2. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
+description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -31,14 +31,12 @@ _User tags_ are identifiers for specific groups of users in [Microsoft Defender 
 - **System tags**: Currently, [Priority account](/microsoft-365/admin/setup/priority-accounts) is the only type of system tag.
 - **Custom tags**: You create these types of tags.
 
-If your organization has Defender for Office 365 Plan 2 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag.
+If your organization has Defender for Office 365 (included in your subscription or as an add-on), you can create custom user tags in addition to using the Priority account tag:
 
-> [!NOTE]
-> Currently, you can only apply user tags to mailbox users.
->
-> Your organization can tag a maximum of 250 users using the Priority account system tag.
->
-> Each custom tag has a maximum of 999 users per tag and your organization can create up to 500 custom tags.
+- You can assign the Priority account tag to a maximum of 250 users.
+- You can create a maximum of 500 custom user tags.
+- You can assign a custom tag to a maximum of 10000 individual users.
+- If you assign a custom user tag to a group, the tag is applied to the first 999 group members (users). 
 
 This article explains how to configure user tags in the Microsoft Defender portal. You can also apply or remove the Priority account tag using the _VIP_ parameter on the [Set-User](/powershell/module/exchange/set-user) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). No PowerShell cmdlets are available to manage custom user tags.
 
@@ -83,7 +81,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
-     - Click in the box, start typing a name to filter the list, and then select the value below the box. select a user or group.
+     - Or, start typing a name to filter the list, and then select the value below the box. 
 
      To add more members, click in an empty area in the box and repeat the previous step.
 

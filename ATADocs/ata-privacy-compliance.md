@@ -4,7 +4,7 @@
 title: Advanced Threat Analytics personal data policy
 description: Provides links to information about how to delete private information and personal data from ATA.
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 
