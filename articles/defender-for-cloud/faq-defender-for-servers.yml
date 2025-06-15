@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 02/19/2025
+  ms.date: 06/15/2025
 title: Common questions about Defender for Servers
 summary: Get answers to common questions about Microsoft Defender for Servers.
 
@@ -129,12 +129,17 @@ sections:
       - question: |
           How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?
         answer: |
-          Operating system: data is updated within 48 hours
-          System updates: data is updated within 24 hours
-          Endpoint protection: data is updated within 8 hours
-          
+          System updates interpretation occurs every 12 hours and every 24 hours for agentless endpoint protection platform.
+ 
           Defender for Cloud typically scans for new data every hour, and refreshes security recommendations accordingly.
 
+      - question: |
+          What is endpoint protection platform (EPP)?
+        answer: |
+          Microsoft Defender for Servers, EPP refers to the core set of security capabilities that protect endpoints (like servers) from threats. These capabilities are typically delivered through Microsoft Defender for Endpoint.
+
+          When you enable Microsoft Defender for Servers, it integrates with Microsoft Defender for Endpoint to provide EPP capabilities. This integration allows Defender for Cloud to access data about vulnerabilities, installed software, and alerts from your endpoints.
+      
       - question: |
           How are VM snapshots collected by agentless scanning secured?
         answer: |
