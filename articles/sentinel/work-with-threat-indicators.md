@@ -243,15 +243,13 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 This procedure describes how to export threat intelligence from Microsoft Sentinel to external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
-<!--this is in the defender portal. does this exist in the azure portal?-->
-
-1. In the Defender portal, select **Threat intelligence > Intel management**
+1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
 1. Select one or more STIX objects, and then select **Export** at the top of the page.
 
 1. Select the TAXII server you want to export your threat intelligence to, select the checkbox indicating you accept the conditions, and then select **Export**.
 
-     <!--needs screenshot-->
+    <!--needs screenshot-->
 
 View your export history from the **Exports** tab on the **Intel management** page. You might need to scroll further to the right to view the **Exports** tab. <!--not sure this is correct-->
 
