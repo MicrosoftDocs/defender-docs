@@ -62,7 +62,7 @@ This page explains how to create a Microsoft Entra application, get an access to
     > [!NOTE]
     > *Microsoft Cloud App Security* doesn't appear in the original list. Start writing its name in the text box to see it appear. Make sure to type this name, even though the product is now called Defender for Cloud Apps.
 
-      ![Screenshot of adding permissions.](media/add-permission.png)
+    :::image type="content" source="media/add-permission.png" alt-text="Screenshot that shows how to add permissions.":::
 
 1. Choose **Delegated permissions** > **Investigation.Read** > select **Add permissions**
 
@@ -162,7 +162,7 @@ Verify to make sure you got a correct token:
 - Validate that you get a 'scp' claim with the desired app permissions
 - In the screenshot below you can see a decoded token acquired from the app in the tutorial:
 
-    ![Screenshot of token validation.](media/webapp-decoded-token.png)
+    :::image type="content" source="media/api-authentication-application/webapp-decoded-token.png" alt-text="Screenshot that shows the decoded token.":::
 
 ## Use the token to access the Microsoft Defender for Cloud Apps API
 
