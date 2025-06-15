@@ -25,8 +25,8 @@ In general, you need to take the following steps to use the APIs:
 This page explains how to create a Microsoft Entra application, get an access token to Microsoft Defender for Cloud Apps and validate the token.
 
 >[!NOTE]
-> When accessing Microsoft Defender for Cloud Apps API on behalf of a user, you will need the correct Application permission and user permission.
-> If you are not familiar with user permissions on Microsoft Defender for Cloud Apps, see [Manage admin access](manage-admins.md).
+> When accessing Microsoft Defender for Cloud Apps API on behalf of a user, you'll need the correct Application permission and user permission.
+> If you aren't familiar with user permissions on Microsoft Defender for Cloud Apps, see [Manage admin access](manage-admins.md).
 
 >[!TIP]
 > If you have the permission to perform an action in the portal, you have the permission to perform the action in the API.
@@ -57,31 +57,37 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 1. Allow your Application to access Microsoft Defender for Cloud Apps and assign it 'Read alerts' permission:
 
-    - On your application page, select **API Permissions** > **Add permission** > **APIs my organization uses** > type *Microsoft Cloud App Security* and then select **Microsoft Cloud App Security**.
+1. On your application page, select **API Permissions** > **Add permission** > **APIs my organization uses** > type *Microsoft Cloud App Security* and then select **Microsoft Cloud App Security**.
 
-    - **Note**: *Microsoft Cloud App Security* doesn't appear in the original list. Start writing its name in the text box to see it appear. Make sure to type this name, even though the product is now called Defender for Cloud Apps.
+    > [!NOTE]
+    > *Microsoft Cloud App Security* doesn't appear in the original list. Start writing its name in the text box to see it appear. Make sure to type this name, even though the product is now called Defender for Cloud Apps.
 
       ![Screenshot of adding permissions.](media/add-permission.png)
 
-    - Choose **Delegated permissions** > **Investigation.Read** > select **Add permissions**
+1. Choose **Delegated permissions** > **Investigation.Read** > select **Add permissions**
 
-      ![Screenshot of adding application permissions.](media/application-permissions-public-client.png)
+    :::image type="content" source="media/application-permissions-public-client.png" alt-text="Screenshot showing how to add application permissions.":::
 
-    - **Important note**: Select the relevant permissions. **Investigation.Read** is only an example. For other permission scopes, see [Supported permission scopes](#supported-permission-scopes)
 
-      - To determine which permission you need, view the **Permissions** section in the API you're interested to call.
+    > [!NOTE]
+    > Select the relevant permissions. **Investigation.Read** is only an example. For other permission scopes, see [Supported permission scopes](#supported-permission-scopes)
 
-    - Select **Grant admin consent**
+1. To determine which permission you need, view the **Permissions** section in the API you're interested to call.
 
-      **Note**: Every time you add permission you must select **Grant admin consent** for the new permission to take effect.
+1. Select **Grant admin consent**
 
-      ![Screenshot of of granting admin permissions.](media/grant-consent.png)
+     > [!NOTE]
+    > Every time you add permission you must select **Grant admin consent** for the new permission to take effect.
 
-1. Write down your application ID and your tenant ID:
+    :::image type="content" source="media/api-authentication-application/grant-consent.png" alt-text="Screenshot that shows the option to grant admin consent." lightbox="media/api-authentication-application/grant-consent.png":::
 
-   - On your application page, go to **Overview** and copy the following information:
 
-        ![Screenshot of the created app ID.](media/app-and-tenant-ids.png)
+1. Write down your application ID and your tenant ID.
+
+1. On your application page, go to **Overview** and copy the following information:
+   
+:::image type="content" source="media/api-authentication-application/app-and-tenant-ids.png" alt-text="Screenshot that shows the created app ID." lightbox="media/api-authentication-application/app-and-tenant-ids.png":::
+
 
 ## Supported permission scopes
 
