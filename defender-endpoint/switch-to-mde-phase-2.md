@@ -36,11 +36,9 @@ search.appverid: met150
 **Welcome to the Setup phase of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This phase includes the following steps:
 
 1. [Reinstall/enable Microsoft Defender Antivirus on your endpoints](#step-1-reinstallenable-microsoft-defender-antivirus-on-your-endpoints).
-2. [Add Defender for Endpoint to the exclusion list for your existing solution](#step-3-add-microsoft-defender-for-endpoint-to-the-exclusion-list-for-your-existing-solution).
-3. [Configure Defender for Endpoint Plan 1 or Plan 2](#step-2-configure-defender-for-endpoint-plan-1-or-plan-2)
-
-4. [Add your existing solution to the exclusion list for Microsoft Defender Antivirus](#step-4-add-your-existing-solution-to-the-exclusion-list-for-microsoft-defender-antivirus).
-5. [Set up your device groups, device collections, and organizational units](#step-5-set-up-your-device-groups-device-collections-and-organizational-units).
+2. [Add Defender for Endpoint to the exclusion list for your existing solution](#step-2-add-microsoft-defender-for-endpoint-to-the-exclusion-list-for-your-existing-solution).
+3. [Configure Defender for Endpoint Plan 1 or Plan 2](#step-3-configure-defender-for-endpoint-plan-1-or-plan-2)
+4. [Set up your device groups, device collections, and organizational units](#step-4-set-up-your-device-groups-device-collections-and-organizational-units).
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
