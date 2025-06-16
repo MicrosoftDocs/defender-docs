@@ -81,7 +81,7 @@ Select the tab for information about exclusions for that operating system.
 
 ### [**Windows**](#tab/Windows)
 
-### Windows 10 and 11
+### Windows
 
 The specific exclusions to configure depend on which version of Windows your endpoints or devices are running, and are listed in the following table.
 
