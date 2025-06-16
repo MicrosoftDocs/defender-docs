@@ -167,25 +167,25 @@ See [Microsoft Authentication Library (MSAL) for Python](https://github.com/Azur
 1. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to access Defender for Cloud Apps.
 1. Run the following command:
 
-```curl
-curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=05a65629-4c1b-48c1-a78b-804c4abdd4af/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
-```
+   ```curl
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=05a65629-4c1b-48c1-a78b-804c4abdd4af/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   ```
 
-You get an answer in the following form:
+   You get an answer in the following form:
 
-```output
-{"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-```
+   ```output
+   {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
+   ```
 
 ## Validate the token
 
 Ensure that you got the correct token:
 
 1. Copy and paste the token you got in the previous step into [JWT](https://jwt.ms) in order to decode it.
-1. Validate that you get a 'roles' claim with the desired permissions
+1. Validate that you get a 'roles' claim with the desired permissions.
 1. In the following image, you can see a decoded token acquired from an app with permissions to all Microsoft Defender for Cloud Apps roles:
 
-:::image type="content" source="media/api-authentication-application/webapp-decoded-token.png" alt-text="Screenshot that shows the decoded token.":::
+   :::image type="content" source="media/api-authentication-application/webapp-decoded-token.png" alt-text="Screenshot that shows the decoded token.":::
 
 
 ## Use the token to access Microsoft Defender for Cloud Apps API
@@ -194,19 +194,19 @@ Ensure that you got the correct token:
 1. Set the authorization header in the http request you send to "Bearer {token}" (Bearer is the authorization scheme).
 1. The expiration time of the token is one hour. You can send more than one request with the same token.
 
-The following is an example of sending a request to get a list of alerts **using C#**:
+   The following is an example of sending a request to get a list of alerts **using C#**:
 
-```C#
-    var httpClient = new HttpClient();
-
-    var request = new HttpRequestMessage(HttpMethod.Get, "https://portal.cloudappsecurity.com/cas/api/v1/alerts/");
-
-    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-    var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
-
-    // Do something useful with the response
-```
+   ```C#
+       var httpClient = new HttpClient();
+   
+       var request = new HttpRequestMessage(HttpMethod.Get, "https://portal.cloudappsecurity.com/cas/api/v1/alerts/");
+   
+       request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+   
+       var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
+   
+       // Do something useful with the response
+   ```
 
 ## See also
 
