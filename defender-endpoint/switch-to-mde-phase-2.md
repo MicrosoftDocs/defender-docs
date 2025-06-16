@@ -112,16 +112,35 @@ The following table lists processes to exclude in your non-Microsoft antivirus/a
 | `SenseCE.exe` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
 | `SenseSampleUploader.exe` | Microsoft Defender for Endpoint Sample Upload module |
 | `SenseNdr.exe` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
-| `` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
-| `` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
-| `` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
+| `SenseSC.exe` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
+| `SenseCM.exe` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
+| `SenseTVM.exe` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
 
 
 ### [**Linux**](#tab/Linux)
 
 ### Linux
 
+The following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
+| Name | Description |
+|--|--|
+| `MpCmdRun.exe` | Microsoft Defender Antivirus command-line utility |
+| `MpDlpCmd.exe` | Microsoft Endpoint DLP command-line utility |
+| `MsMpEng.exe` | Microsoft Defender Antivirus service executable |
+| `ConfigSecurityPolicy.exe` | Microsoft Security Client Policy Configuration Tool |
+| `MpDefenderCoreService.exe` | Microsoft Defender Antivirus Core Service |
+| `MpDlpService.exe` | Microsoft Purview Data Loss Prevention Service |
+| `NisSrv.exe` | Microsoft Defender Antivirus Network Realtime Inspection |
+| `MsSense.exe` | Microsoft Defender for Endpoint service executable |
+| `SenseCnCProxy.exe` | Microsoft Defender for Endpoint communication module |
+| `SenseIR.exe` | Microsoft Defender for Endpoint Sense IR (Incident Response) module |
+| `SenseCE.exe` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
+| `SenseSampleUploader.exe` | Microsoft Defender for Endpoint Sample Upload module |
+| `SenseNdr.exe` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
+| `SenseSC.exe` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
+| `SenseCM.exe` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
+| `SenseTVM.exe` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
 
 ---
 
