@@ -1,5 +1,5 @@
 ---
-title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
+title: Activate Microsoft Defender for Identity capabilities directly on a domain controller (Preview)
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
 ms.date: 08/13/2024
 ms.topic: how-to
@@ -14,7 +14,7 @@ This article describes how to activate and test Microsoft Defender for Identity 
 > The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
 > 
 > Preview features are still in development, have limited or restricted functionality and may be available only in selected geographic areas.
-> For more information, see the [Microsoft Defender XDR preview features](/defender-xdr/preview)
+> For more information, see the [Microsoft Defender XDR preview features](/defender-xdr/preview).
 
 > [!IMPORTANT]
 > The new Defender for Identity sensor (version 3.x) is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor [here](quick-installation-guide.md).
@@ -90,8 +90,8 @@ Activate the Defender for Identity from the [Microsoft Defender portal](https://
    [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/1.jpg)](media/activate-capabilities/1.jpg#lightbox)
 
    
-> [!NOTE]
-> You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
+   > [!NOTE]
+   > You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, where you select specific domain controllers from the list of eligible servers.
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
 
@@ -207,9 +207,9 @@ We recommend simulating risky behavior in a test environment to trigger supporte
     Get-ADObject -Identity ((Get-ADDomain).distinguishedname) -Properties ms-DS-MachineAccountQuota
     ```
 
-1. In Microsoft Secure Score, select **Recommended Actions** to check for a new **Resolve unsecure domain configurations** recommendation. You might want to filter recommendations by the **Defender for Identity** product.
+1. In the Microsoft Secure Score, select **Recommended Actions** to check for a new **Resolve unsecure domain configurations** recommendation. You might want to filter recommendations by the **Defender for Identity** product.
 
-For more information, see [Microsoft Defender for Identity's security posture assessments](../security-assessment.md)
+For more information, see [Microsoft Defender for Identity's security posture assessments](../security-assessment.md).
 
 ### Test alert functionality
 
@@ -253,7 +253,7 @@ Deactivating Defender for Identity capabilities from your domain controller does
 ### Offboard Defender for Identity capabilities on your domain controller 
 Download the Defender for Identity offboarding package from the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Settings** > **Identities** > **Activation**
+1. Navigate to **Settings** > **Identities** > **Activation**.
 
 1. Select Download offboarding package and save the file in a location you can access from your domain controller.  
 ![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor.png)
