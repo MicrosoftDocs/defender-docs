@@ -40,11 +40,26 @@ The following app IDs apply based on your Microsoft cloud environment:
 | Fairfax | bd5667e4-0484-4262-a9db-93faa0893899 |
 | GCCM | 23105e90-1dfc-497a-bb5d-8b18a44ba061 |
 
+
+## Configure Microsoft Information Protection settings
+
 In order to give Defender for Cloud Apps the necessary permissions:
 
 1. Go to **Settings** > **Microsoft Information Protection**.
-1. Under **Inspect protected files**, select **Grant permission** 
-1. Follow the prompt to allow the required permissions in Microsoft Entra ID.
+1. Under **Microsoft Information Protection settings**, configure one or both of the following options:
+
+   - **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings**  
+     When enabled, the App connector scans new files for embedded sensitivity labels from Microsoft Information Protection.
+
+   - **Only scan files for Microsoft Information Protection sensitivity labels and content inspection warnings from this tenant**  
+     When enabled, only sensitivity labels applied within your tenant are scanned. Labels applied by external tenants are disregarded.
+
+1. After selecting your options, select **Save** to apply your changes.
+
+## Configure file policies for protected files
+
+1. In the Defender portal, go to **Policies > Policy management**.
+1. Create or edit a file policy.
 1. You can configure the settings per file policy to determine which policies will scan protected files.
 1. Specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
 
