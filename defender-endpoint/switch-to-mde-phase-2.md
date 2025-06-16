@@ -102,9 +102,9 @@ The following table lists processes to exclude in your non-Microsoft antivirus/a
 | `MpCmdRun.exe` | Microsoft Defender Antivirus command-line utility |
 | `MpDlpCmd.exe` | Microsoft Endpoint DLP command-line utility |
 | `MsMpEng.exe` | Microsoft Defender Antivirus service executable |
-| `` | Microsoft Security Client Policy Configuration Tool |
-| `` | Microsoft Defender Antivirus Core Service |
-| `` | Microsoft Purview Data Loss Prevention Service |
+| `ConfigSecurityPolicy.exe` | Microsoft Security Client Policy Configuration Tool |
+| `MpDefenderCoreService.exe` | Microsoft Defender Antivirus Core Service |
+| `MpDlpService.exe` | Microsoft Purview Data Loss Prevention Service |
 | `` | Microsoft Defender Antivirus Network Realtime Inspection |
 | `` | Microsoft Defender for Endpoint service executable |
 | `` | Microsoft Defender for Endpoint communication module |
