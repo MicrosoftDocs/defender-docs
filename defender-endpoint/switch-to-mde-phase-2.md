@@ -105,13 +105,13 @@ The following table lists processes to exclude in your non-Microsoft antivirus/a
 | `ConfigSecurityPolicy.exe` | Microsoft Security Client Policy Configuration Tool |
 | `MpDefenderCoreService.exe` | Microsoft Defender Antivirus Core Service |
 | `MpDlpService.exe` | Microsoft Purview Data Loss Prevention Service |
-| `` | Microsoft Defender Antivirus Network Realtime Inspection |
-| `` | Microsoft Defender for Endpoint service executable |
-| `` | Microsoft Defender for Endpoint communication module |
-| `` | Microsoft Defender for Endpoint Sense IR (Incident Response) module |
-| `` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
-| `` | Microsoft Defender for Endpoint Sample Upload module |
-| `` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
+| `NisSrv.exe` | Microsoft Defender Antivirus Network Realtime Inspection |
+| `MsSense.exe` | Microsoft Defender for Endpoint service executable |
+| `SenseCnCProxy.exe` | Microsoft Defender for Endpoint communication module |
+| `SenseIR.exe` | Microsoft Defender for Endpoint Sense IR (Incident Response) module |
+| `SenseCE.exe` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
+| `SenseSampleUploader.exe` | Microsoft Defender for Endpoint Sample Upload module |
+| `SenseNdr.exe` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
 | `` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
 | `` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
 | `` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
