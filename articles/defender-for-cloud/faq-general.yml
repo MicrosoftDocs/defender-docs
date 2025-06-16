@@ -84,7 +84,7 @@ sections:
       - question: |
           What triggers a security alert?
         answer: |
-          Microsoft Defender for Cloud automatically collects, analyzes, and fuses log data from your Azure, multicloud, and on-premises resources, the network, and partner solutions like antimalware and firewalls. When threats are detected, a security alert is created. Examples include detection of:
+          Microsoft Defender for Cloud automatically collects, analyzes, and fuses log data from your Azure, multicloud, and on-premises resources, the network, and partner solutions like anti-malware and firewalls. When threats are detected, a security alert is created. Examples include detection of:
           
           * Compromised virtual machines communicating with known malicious IP addresses
           * Advanced malware detected using Windows error reporting
