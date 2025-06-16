@@ -152,21 +152,21 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
    In most cases, you should ultimately create the query file in both locations so you can use the query in both scenarios.
 
-4. In VS Code, create a new .yaml file in the appropriate subfolder of those locations. There are many subfolders to choose from. In our example, the most logical name and place for our new query file is `Top user receiving phish.yaml` in the `Phish` subfolder.
+4. In VS Code, create a new .yaml file in the appropriate subfolder of those locations. There are many subfolders to choose from. In our example, a logical name and location for our new query file is `Top users receiving phish.yaml` in the `Phish` subfolder.
 
    You can find more information on the requirements and structure of the .yaml file at [Query Style Guide](https://github.com/Azure/Azure-Sentinel/wiki/Query-Style-Guide) on the Azure-Sentinel repository wiki.
 
    Use the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell to create a unique GUID for the **id** property of the query file (for example, 36f68d74-3e45-44d8-9915-0d35b7567bcf).
 
-   The finished `Top user receiving phish.yaml` file looks something like this:
+   The finished `Top users receiving phish.yaml` file looks something like this:
 
    ```yml
    id: 36f68d74-3e45-44d8-9915-0d35b7567bcf
    name: Friendly name describing the query
    description: |
-     This is a short description of what the query does
+     A short description of what the query does.
    description-detailed: |
-     This is a much longer description of what the intention of the query is within Defender for Office 365
+     A much longer description of the intention of the query within Defender for Office 365.
    requiredDataConnectors:
    - connectorId: MicrosoftThreatProtection
      dataTypes:
@@ -177,7 +177,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
      - T1566
    query: |
      EmailEvents
-     | where Threat Types has "Phish" and EmaiIdirection == "Inbound"
+     | where Threat Types has "Phish" and EmailDirection == "Inbound"
      | summarize count() by RecipientEmailAddress
      | sort by count_
      | top 15 by count_
