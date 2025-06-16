@@ -19,9 +19,9 @@ You must specify which file elements are included in the inspection: content, me
 
 Before you can inspect encrypted files, you must grant one-time admin consent. 
 
-1. In the Defender portal, go to Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files.
+1. In the Defender portal, go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**.
 
-1. Select Grant permission and follow the prompts in Microsoft Entra ID.
+1. Select Grant permission and to grant Defender for Cloud Apps permission in Microsoft Entra ID.
 
 ## Content inspection for protected files
 
@@ -43,7 +43,7 @@ The following app IDs apply based on your Microsoft cloud environment:
 In order to give Defender for Cloud Apps the necessary permissions:
 
 1. Go to **Settings** > **Microsoft Information Protection**.
-1. Under **Inspect protected files**, select **Grant permission** to grant Defender for Cloud Apps permission in Microsoft Entra ID.
+1. Under **Inspect protected files**, select **Grant permission** 
 1. Follow the prompt to allow the required permissions in Microsoft Entra ID.
 1. You can configure the settings per file policy to determine which policies will scan protected files.
 1. Specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
@@ -51,7 +51,7 @@ In order to give Defender for Cloud Apps the necessary permissions:
 
 ## Next steps
 
-> [Learn how to control cloud apps using policies](control-cloud-apps-with-policies.md)
-> [Integrate with Microsoft Purview for information protection](azip-integration.md)
+- [Learn how to control cloud apps using policies](control-cloud-apps-with-policies.md)
+- [Integrate with Microsoft Purview for information protection](azip-integration.md)
 
 [!INCLUDE [Open support ticket](includes/support.md)]
