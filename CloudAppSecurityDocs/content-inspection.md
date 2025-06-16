@@ -1,35 +1,57 @@
 ---
 title: DLP content inspection
 description: This article describes the process Defender for Cloud Apps follows when performing DLP content inspection on data in your cloud.
-ms.date: 01/29/2023
+ms.date: 06/16/2025
 ms.topic: how-to
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 
+When you enable content inspection, you can choose to inspect content using preset expressions or custom expressions that you define. You can also set a minimum number of content violations that must be detected before a file is considered a policy violation. For example, to trigger a policy when at least 10 credit card numbers are found in a file, set the violation threshold to 10.
+
+When content matches an expression, the matched text is masked by replacing it with "X" characters. By default, Defender for Cloud Apps displays 100 characters of surrounding context before and after each violation. Any numbers in the surrounding context are replaced with "#" characters and aren't stored in Defender for Cloud Apps.
+
+If you want to partially reveal detected values, you can enable the **Unmask the last four characters of a match** option in the file policy. This option reveals only the last four characters of the matched text.
+
+You must specify which file elements are included in the inspection: content, metadata, or file name. By default, content and metadata are inspected.
 
 
-If you enable content inspection, you can choose to use preset expressions or to search for other customized expressions.
+## Prerequisites
 
-You can specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
+Before you can inspect encrypted files, you must grant one-time admin consent. 
 
-You can decide set the minimum number of content violations that you want to match before the file is considered a violation. For example, you can choose 10 if you want to be alerted on files with at least 10 credit card numbers found within its content.
+1. In the Defender portal, go to Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files.
 
-When content is matched against the selected expression, the violation text is replaced with "X" characters. By default, violations are masked and shown in their context displaying 100 characters before and after the violation. Numbers in the context of the expression are replaced with "#" characters and are never stored within Defender for Cloud Apps. When creating a file policy, if you've enabled an inspection method, then you can select the option to **Unmask the last four characters of a match** to unmask the last four characters of the violation itself. It's necessary to set which data types the regular expression searches: content, metadata and/or file name. By default it searches the content and the metadata.
+1. Select Grant permission and follow the prompts in Microsoft Entra ID.
 
 ## Content inspection for protected files
 
-Defender for Cloud Apps allows admins to grant Defender for Cloud Apps permission to decrypt encrypted files and scan their content for violations. This consent is also required to enable scanning labels on encrypted files.
+
+Defender for Cloud Apps allows admins to grant permission to decrypt encrypted files and scan their content for violations. This consent is also required to enable scanning labels on encrypted files.
+
+When you grant consent, Defender for Cloud Apps provisions the Microsoft Cloud App Security (Internal) app in your tenant. This app must remain enabled. The app uses the Azure Rights Management Services > Content.SuperUser permission to decrypt and inspect protected files.
+
+The following app IDs apply based on your Microsoft cloud environment:
+
+**App IDs**
+
+| Environment | App ID |
+|--------------|---------|
+| Public | 25a6a87d-1e19-4c71-9cb0-16e88ff608f1 |
+| Fairfax | bd5667e4-0484-4262-a9db-93faa0893899 |
+| GCCM | 23105e90-1dfc-497a-bb5d-8b18a44ba061 |
 
 In order to give Defender for Cloud Apps the necessary permissions:
 
-1. Go to **Settings** and then **Microsoft Information Protection**.
-2. Under **Inspect protected files**, select **Grant permission** to grant Defender for Cloud Apps permission in Microsoft Entra ID.
-3. Follow the prompt to allow the required permissions in Microsoft Entra ID.
-4. You can configure the settings per file policy to determine which policies will scan protected files.
+1. Go to **Settings** > **Microsoft Information Protection**.
+1. Under **Inspect protected files**, select **Grant permission** to grant Defender for Cloud Apps permission in Microsoft Entra ID.
+1. Follow the prompt to allow the required permissions in Microsoft Entra ID.
+1. You can configure the settings per file policy to determine which policies will scan protected files.
+1. Specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+> [Learn how to control cloud apps using policies](control-cloud-apps-with-policies.md)
+> [Integrate with Microsoft Purview for information protection](azip-integration.md)
 
 [!INCLUDE [Open support ticket](includes/support.md)]
