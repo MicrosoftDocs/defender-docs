@@ -125,7 +125,7 @@ Go to the next section to actually start creating or modifying queries.
 
 ## Step 4: Create Advanced Hunting queries in the working branch in the cloned repository on your local computer
 
-When you open VS Code to create or update queries, alway verify that your desired working branch (not **master**) is the active branch:
+When you open VS Code to create or update queries, always verify your desired working branch is the active branch (not **master**):
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-verify-active-branch.png" alt-text="Screenshot of the active (open) branch highlighted in Visual Studio Code, which is now the new branch that you created in the previous step." lightbox="../media/add-advanced-hunting-community-queries-vs-code-verify-active-branch.png":::
 
@@ -156,28 +156,28 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
    You can find more information on the requirements and structure of the .yaml file at [Query Style Guide](https://github.com/Azure/Azure-Sentinel/wiki/Query-Style-Guide) on the Azure-Sentinel repository wiki.
 
-   Use the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell to create a unique GUID for the **id** property of the query file (for example, 36f68d74-3e45-44d8-9915-ød35b7567bcf).
+   Use the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell to create a unique GUID for the **id** property of the query file (for example, 36f68d74-3e45-44d8-9915-0d35b7567bcf).
 
    The finished `Top user receiving phish.yaml` file looks something like this:
 
    ```yml
-   id: 36f68d74-3e45-44d8-9915-ød35b7567bcf
+   id: 36f68d74-3e45-44d8-9915-0d35b7567bcf
    name: Friendly name describing the query
    description: |
      This is a short description of what the query does
    description-detailed: |
-     This is a much longer description Of what the intention Of the query is within Defender for Office 365
+     This is a much longer description of what the intention of the query is within Defender for Office 365
    requiredDataConnectors:
-   - connectorld: Microsoft ThreatProtection
+   - connectorId: MicrosoftThreatProtection
      dataTypes:
      - EmailEvents
    tactics:
      - InitialAccess
-   relevant Techniques :
+   relevantTechniques:
      - T1566
    query: |
      EmailEvents
-     | where Threat Types has "Phish" and EmailDirection == "Inbound"
+     | where Threat Types has "Phish" and EmaiIdirection == "Inbound"
      | summarize count() by RecipientEmailAddress
      | sort by count_
      | top 15 by count_
