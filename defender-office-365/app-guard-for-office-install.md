@@ -6,7 +6,7 @@ ms.author: maccruz
 author: schmurky
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
 search.appverid:
   - MET150
