@@ -24,7 +24,7 @@ For more information about deploying the sensor in Defender for Containers, see 
 
     To see your version of Helm, run `kubectl get -n mdc daemonsets/microsoft-defender-collectors-ds -o jsonpath='{.metadata.labels.chart}'`.
 
-    For setup instructions and more details, see []
+    For setup instructions and more details, see [Install Defender for Containers sensor using Helm](deploy-helm.md).
 
   - **DNS threat detections**
     This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.

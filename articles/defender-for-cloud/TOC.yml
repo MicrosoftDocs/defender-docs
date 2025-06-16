@@ -937,7 +937,7 @@
         displayName: containers
         href: defender-for-containers-architecture.md
       - name: Defender sensor for Containers changelog
-        href: defender-sensor-changelog.md
+        href: defender-sensor-change-log.md
       - name: Kubernetes node protection
         items:
           - name: Overview

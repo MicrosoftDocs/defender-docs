@@ -146,13 +146,13 @@ az aks list \
 
 To install the Helm chart on an EKS or GKE cluster, make sure the cluster account is connected to Microsoft Defender for Cloud.
 
-[Connect your AWS account - Microsoft Defender for Cloud | Microsoft Learn](/azure/defender-for-cloud/quickstart-onboard-aws?tabs=Defender-for-Containers)
+[Connect your AWS account](quickstart-onboard-aws.md)
 
-[Connect your GCP project - Microsoft Defender for Cloud | Microsoft Learn](/azure/defender-for-cloud/quickstart-onboard-gcp)
+[Connect your GCP project](quickstart-onboard-gcp.md)
 
 ## Get the security connector Azure resource ID
 
-To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource?view=azure-cli-latest#az-resource-show) CLI command to get this value.
+To install the Helm chart on an EKS or GKE cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
 
 For example:
 
