@@ -143,7 +143,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
 2. Test the query on the **Advanced Hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting> to ensure the query contains no mistakes and it returns data as expected.
 
-   :::image type="content" source="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png" alt-text="Screenshot of the Advanced Hunting page in the Defender portal with the previous example query and results (no errors)." lightbox="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png":::
+   :::image type="content" source="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png" alt-text="Screenshot of the Advanced Hunting page in the Defender portal with the previous example query and results without error." lightbox="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png":::
 
 3. In the **Explorer** view of VS Code, go to one of the following parent folders based on the usage and availability of the query in the Defender portal:
 
@@ -215,7 +215,7 @@ After you add .yaml query files in the cloned repository on your local computer,
 After you synchronize the updates to the forked copy of the repository in your GitHub account, you then create a pull request to merge those changes back into the public Azure Sentinel GitHub repository.
 
 > [!TIP]
-> As long as the pull request hasn't been merged, you can use Step 4 and Step 5 to update the source files in the forked copy of the repository, which modifies the active pull request.
+> As long as the pull request hasn't been merged, you can repeat [Step 4](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer) and [Step 5](#step-5-synchronize-the-changes-from-your-local-computer-to-the-fork-in-your-github-account) to update the source files in the forked copy of the repository, which modifies the active pull request.
 
 1. Go to the `https://github.com/<YourGitHubAccountName>/Azure-Sentinel` link from [Step 1](#step-1-fork-the-azure-sentinel-github-repository-to-your-github-account).
 
