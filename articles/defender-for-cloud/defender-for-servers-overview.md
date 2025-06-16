@@ -63,11 +63,11 @@ Plan features are summarized in the table.
 | OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) compute security baselines | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
-| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> AWS, and GCP machines should be onboarded with Azure Arc. [Learn more](enable-periodic-system-updates.md). |
+| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> Only applicable to AWS and GCP machines onboarded with Azure ARC. [Learn more](enable-periodic-system-updates.md). |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[3](#footnote3)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | Machine secrets scanning (agentless) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
-| [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure. <br> <br> AWS and GCP are supported with Azure Arc. |
+| [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP <br><br> Only applicable to AWS and GCP machines onboarded with Azure ARC. |
 | [Just-in-time virtual machine access](just-in-time-access-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure and AWS |
 | [Network map](protect-network-resources.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Free data ingestion (500 MB)](data-ingestion-benefit.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
