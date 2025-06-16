@@ -86,7 +86,7 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 1. On your application page, go to **Overview** and copy the following information:
    
-:::image type="content" source="media/api-authentication-application/app-and-tenant-ids.png" alt-text="Screenshot that shows the created app ID." lightbox="media/api-authentication-application/app-and-tenant-ids.png":::
+   :::image type="content" source="media/api-authentication-application/app-and-tenant-ids.png" alt-text="Screenshot that shows the created app ID." lightbox="media/api-authentication-application/app-and-tenant-ids.png":::
 
 
 ## Supported permission scopes
@@ -158,8 +158,8 @@ namespace MDA
 
 Verify to make sure you got a correct token:
 
-- Copy/paste into [JWT](https://jwt.ms) the token you got in the previous step in order to decode it
-- Validate that you get a 'scp' claim with the desired app permissions
+- Copy/paste into [JWT](https://jwt.ms) the token you got in the previous step in order to decode it.
+- Validate that you get a 'scp' claim with the desired app permissions.
 - In the screenshot below you can see a decoded token acquired from the app in the tutorial:
 
     :::image type="content" source="media/api-authentication-application/webapp-decoded-token.png" alt-text="Screenshot that shows the decoded token.":::
@@ -167,10 +167,10 @@ Verify to make sure you got a correct token:
 ## Use the token to access the Microsoft Defender for Cloud Apps API
 
 - Choose the API you want to use. For more information, see [Defender for Cloud Apps API](api-introduction.md).
-- Set the Authorization header in the HTTP request you send to "Bearer {token}" (Bearer is the Authorization scheme)
-- The Expiration time of the token is 1 hour (you can send more than one request with the same token)
+- Set the Authorization header in the HTTP request you send to "Bearer {token}" (Bearer is the Authorization scheme).
+- The Expiration time of the token is 1 hour (you can send more than one request with the same token).
 
-- Example of sending a request to get a list of alerts **using C#**
+- Example of sending a request to get a list of alerts **using C#**:
 
     ```csharp
     var httpClient = new HttpClient();
