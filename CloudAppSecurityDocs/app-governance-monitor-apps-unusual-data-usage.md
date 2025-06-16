@@ -1,7 +1,7 @@
 ---
 title: Monitor and respond to apps with unusual data usage with app governance | Microsoft Defender for Cloud Apps
 ms.date: 05/23/2025
-ms.topic: conceptual
+ms.topic: concept-article
 description: Monitor and respond to apps with unusual data usage using app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ---
 
