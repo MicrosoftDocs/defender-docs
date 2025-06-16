@@ -23,8 +23,6 @@ Microsoft customers looking to prioritize application security now have a seamle
 
 Developers can [activate a free trial of StackHawk](https://auth.stackhawk.com/signup) and run a Hawkscan, and explore multiple paths tailored to their needs, whether orchestrating workflows through GitHub Actions or Azure DevOps.
 
-When expanding out of the free tier, Microsoft customers can [purchase StackHawk through the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/stackhawkinc1614363947577.stackhawk?tab=overview) to reduce or completely eliminate procurement time.
-
 ## Connect your DevOps environments to Microsoft Defender for Cloud
 
 This feature requires connecting your DevOps environment to Defender for Cloud.
@@ -169,15 +167,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 ### How is StackHawk licensed?
 
-StackHawk is licensed based on the number of code contributors that are provisioned on the platform. For more information on the pricing model, visit the [Azure Marketplace listing](https://azuremarketplace.microsoft.com/marketplace/apps/stackhawkinc1614363947577.stackhawk?tab=overview). For custom pricing, EULA, or a private contract, contact <marketplace-orders@stackhawk.com>.
-
-### Is StackHawk available on the Azure Marketplace?
-
-Yes, StackHawk is available for purchase on the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/stackhawkinc1614363947577.stackhawk?tab=overview).
-
-### If I purchase StackHawk from Azure Marketplace, does it count towards my Microsoft Azure Consumption Commitment (MACC)?
-
-Yes, purchases of [StackHawk](https://azuremarketplace.microsoft.com/marketplace/apps/stackhawkinc1614363947577.stackhawk?tab=overview) through the Azure Marketplace count towards your Microsoft Azure Consumption Commitments (MACC).
+StackHawk is licensed based on the number of code contributors that are provisioned on the platform. For custom pricing, EULA, or a private contract, contact <marketplace-orders@stackhawk.com>.
 
 ## Related content
 
