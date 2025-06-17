@@ -2,7 +2,8 @@
 title: Other security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when other attacks are detected against your organization.
 ms.date: 01/18/2023
-ms.topic: conceptual
+ms.topic: article
+ms.reviewer: morRubin
 ---
 
 # Other security alerts
@@ -15,7 +16,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. **Other**
 
-To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#classify-security-alerts).
 
 The following security alerts help you identify and remediate **Other** phase suspicious activities detected by Defender for Identity in your network.
 
@@ -45,7 +46,7 @@ None
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
 |---------|---------|
 |MITRE attack technique  | [Rogue Domain Controller (T1207)](https://attack.mitre.org/techniques/T1207/)        |
-|MITRE attack sub-technique |   N/A      |
+|MITRE attack subtechnique |   N/A      |
 
 **Suggested steps for prevention**:
 
@@ -78,7 +79,7 @@ None
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
 |---------|---------|
 |MITRE attack technique  | [Rogue Domain Controller (T1207)](https://attack.mitre.org/techniques/T1207/)        |
-|MITRE attack sub-technique |   N/A      |
+|MITRE attack subtechnique |   N/A      |
 
 **Suggested remediation and steps for prevention**:
 
@@ -115,7 +116,7 @@ An alert is opened when there's a deviation from the user's behavior based on a 
 |---------|---------|
 |Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)        |
 |MITRE attack technique  | [External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/)        |
-|MITRE attack sub-technique |     N/A    |
+|MITRE attack subtechnique |     N/A    |
 
 ## Remote code execution attempt (external ID 2019)
 
@@ -137,7 +138,7 @@ None
 |---------|---------|
 |Secondary MITRE tactic    |  [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)       |
 |MITRE attack technique  | [Command and Scripting Interpreter (T1059)](https://attack.mitre.org/techniques/T1059/),[Remote Services (T1021)](https://attack.mitre.org/techniques/T1021/)         |
-|MITRE attack sub-technique |  [PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/), [Windows Remote Management (T1021.006)](https://attack.mitre.org/techniques/T1021/006/)      |
+|MITRE attack subtechnique |  [PowerShell (T1059.001)](https://attack.mitre.org/techniques/T1059/001/), [Windows Remote Management (T1021.006)](https://attack.mitre.org/techniques/T1021/006/)      |
 
 **Suggested steps for prevention:**
 
@@ -146,7 +147,7 @@ None
 1. Implement less-privileged access on domain machines to allow specific users the right to create services.
 
 > [!NOTE]
-> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by Defender for Identity sensors.
+> Remote code execution attempt alerts on attempted use of PowerShell commands are only supported by Defender for Identity sensors.
 
 ## Suspicious service creation (external ID 2026)
 
@@ -167,8 +168,8 @@ None
 |Primary MITRE tactic  | [Execution (TA0002)](https://attack.mitre.org/tactics/TA0002) |
 |---------|---------|
 |Secondary MITRE tactic    |   [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004), [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005), [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)      |
-|MITRE attack technique  | [Remote Services (T1021)](https://attack.mitre.org/techniques/T1021/), [Command and Scripting Interpreter (T1059)](https://attack.mitre.org/techniques/T1059/), [System Services (T1569)](https://attack.mitre.org/techniques/T1569/), [Create or Modify System Process (T1543)](https://attack.mitre.org/techniques/T1543/)      |
-|MITRE attack sub-technique |   [Service Execution (T1569.002)](https://attack.mitre.org/techniques/T1569/002/), [Windows Service (T1543.003)](https://attack.mitre.org/techniques/T1543/003/)      |
+|MITRE attack technique  | [Remote Services (T1021)](https://attack.mitre.org/techniques/T1021/), [Command, and Scripting Interpreter (T1059)](https://attack.mitre.org/techniques/T1059/), [System Services (T1569)](https://attack.mitre.org/techniques/T1569/), [Create or Modify System Process (T1543)](https://attack.mitre.org/techniques/T1543/)      |
+|MITRE attack subtechnique |   [Service Execution (T1569.002)](https://attack.mitre.org/techniques/T1569/002/), [Windows Service (T1543.003)](https://attack.mitre.org/techniques/T1543/003/)      |
 
 **Suggested steps for prevention**:
 
@@ -195,7 +196,7 @@ None
 |Primary MITRE tactic  | [Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
 |---------|---------|
 |MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Exfiltration Over C2 Channel (T1041)](https://attack.mitre.org/techniques/T1041/), [Scheduled Transfer (T1029)](https://attack.mitre.org/techniques/T1029/), [Automated Exfiltration (T1020)](https://attack.mitre.org/techniques/T1020/), [Application Layer Protocol (T1071)](https://attack.mitre.org/techniques/T1071/)       |
-|MITRE attack sub-technique | [DNS (T1071.004)](https://attack.mitre.org/techniques/T1071/004/), [Exfiltration over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)       |
+|MITRE attack subtechnique | [DNS (T1071.004)](https://attack.mitre.org/techniques/T1071/004/), [Exfiltration over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)       |
 
 ## Data exfiltration over SMB (external ID 2030)
 
@@ -213,9 +214,9 @@ None
 
 |Primary MITRE tactic  |[Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
 |---------|---------|
-|Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
+|Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command, and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
 |MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570)](https://attack.mitre.org/techniques/T1570/)      |
-|MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
+|MITRE attack subtechnique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
 
 ## Suspicious deletion of the certificate database entries  (external ID 2433)
 
@@ -223,7 +224,7 @@ None
 
 **Description**:
 
-The deletion of certificate database entries is a red flag, indicating potential malicious activity. This attack could disrupt the functioning of Public Key Infrastructure (PKI) systems, impacting authentication and data integrity. 
+The deletion of certificate database entries is a red flag, indicating potential malicious activity. This attack could disrupt the functioning of Public Key Infrastructure (PKI) systems, impacting authentication, and data integrity. 
 
 **Learning period**:
 
@@ -234,10 +235,10 @@ None
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005) |
 |---------|---------|
 |MITRE attack technique  |   [Indicator Removal (T1070)](https://attack.mitre.org/techniques/T1070/)  |
-|MITRE attack sub-technique |  N/A     |
+|MITRE attack subtechnique |  N/A     |
 
 > [!NOTE]
-> Suspicious deletion of the certificate database entries alerts are only supported by Defender for Identity sensors on AD CS.
+> Suspicious deletions of the certificate database entries alerts are only supported by Defender for Identity sensors on AD CS.
 
 ## Suspicious disable of audit filters of AD CS   (external ID 2434)
 
@@ -256,7 +257,7 @@ None
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
 |---------|---------|
 |MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
-|MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
+|MITRE attack subtechnique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
 
 ## Directory Services Restore Mode Password Change (external ID 2438)
 
@@ -276,7 +277,7 @@ None
 |Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003) |
 |---------|---------|
 |MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
-|MITRE attack sub-technique |  N/A       |
+|MITRE attack subtechnique |  N/A       |
 
 ## Possible Okta session theft 
 
@@ -296,7 +297,7 @@ We recommend investigating the source IP performing the operations to determine 
 |Primary MITRE tactic  | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009) |
 |---------|---------|
 |MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
-|MITRE attack sub-technique |  N/A       |
+|MITRE attack subtechnique |  N/A       |
 
 ## Group Policy Tampering (external ID 2440) (Preview)
 
@@ -324,7 +325,7 @@ None
 | -------- | -------- |
 |MITRE attack technique|Subvert Trust Controls (T1553)|
 |MITRE attack technique  |[Subvert Trust Controls (T1553)](https://attack.mitre.org/techniques/T1553/)|
-|MITRE attack sub-technique | N/A       |
+|MITRE attack subtechnique | N/A       |
 
 ## See also
 

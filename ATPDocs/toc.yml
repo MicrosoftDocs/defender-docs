@@ -53,6 +53,8 @@ items:
         href: deploy/configure-windows-event-collection.md
     - name: Roles and permissions
       href: role-groups.md
+    - name: Configure scoped access
+      href: configure-scoped-access.md
     - name: Configure a Directory Service account
       items:
       - name: Overview
@@ -83,12 +85,14 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
-    - name: Activate Defender for Identity capabilities on your domain controller
+    - name: Activate Defender for Identity capabilities on your domain controller (Preview)
       href: deploy/activate-capabilities.md
-  - name: Integrate with PAM services
-    items:
+- name: Integrate with identity services
+  items:
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
+    - name: Integrate Defender for Identity with Okta (Preview)
+      href: okta-integration.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
@@ -140,26 +144,28 @@ items:
       href: understand-lateral-movement-paths.md
   - name: Alerts
     items:
-    - name: Alerts overview
-      href: alerts-overview.md
-    - name: Understanding security alerts
-      href: understanding-security-alerts.md
-    - name: Investigate security alerts
-      href: manage-security-alerts.md
-    - name: Monitored activities
-      href: monitored-activities.md
-    - name: Understanding Network Name Resolution (NNR)
-      href: nnr-policy.md
-    - name: Reconnaissance and discovery alerts
-      href: reconnaissance-discovery-alerts.md
-    - name: Persistence and privilege escalation alerts
-      href: persistence-privilege-escalation-alerts.md
-    - name: Credential access alerts
-      href: credential-access-alerts.md
-    - name: Lateral movement alerts
-      href: lateral-movement-alerts.md
-    - name: Other alerts
-      href: other-alerts.md
+      - name: Alerts overview
+        href: alerts-overview.md
+      - name: View and manage security alerts
+        href: understanding-security-alerts.md
+      - name: Investigate security alerts
+        href: investigate-security-alerts.md
+      - name: Monitored activities
+        href: monitored-activities.md
+      - name: Understanding Network Name Resolution (NNR)
+        href: nnr-policy.md
+      - name: Alert categories
+        items:
+        - name: Reconnaissance and discovery alerts
+          href: reconnaissance-discovery-alerts.md
+        - name: Persistence and privilege escalation alerts
+          href: persistence-privilege-escalation-alerts.md
+        - name: Credential access alerts
+          href: credential-access-alerts.md
+        - name: Lateral movement alerts
+          href: lateral-movement-alerts.md
+        - name: Other alerts
+          href: other-alerts.md
   - name: Remediation
     items:
     - name: Remediation actions
@@ -257,6 +263,8 @@ items:
            href: security-assessment-unsecure-account-attributes.md
          - name: Weak cipher usage assessment
            href: security-assessment-weak-cipher.md
+     - name: Identity security initiative (Preview)
+       href: identity-security-initiative.md
 - name: Reference
   items:
   - name: Operations guide

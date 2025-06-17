@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux static proxy discovery
 ms.reviewer: gopkr
 description: Describes how to configure Microsoft Defender for Endpoint on Linux, for static proxy discovery.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
 ms.date: 10/11/2024

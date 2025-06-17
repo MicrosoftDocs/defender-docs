@@ -6,14 +6,14 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 04/01/2025
+ms.date: 06/10/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 - mde-ngp
-ms.topic: conceptual
+ms.topic: reference
 ms.subservice: ngp
 search.appverid: met150
 ---
@@ -28,6 +28,75 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
+
+- Security intelligence update version: **1.425.1.0**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25020.1007**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
+
+### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
+
+- Security intelligence update version: **1.423.21.0**
+- Release date: **February 20, 2025** (Engine) / **March 5, 2025** (Platform)
+- Platform: **4.18.25010.11**
+- Engine: **1.1.25010.7**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved handling of [attack surface reduction rule](attack-surface-reduction-rules-reference.md) exclusions.
+- Improved AMSI scan performance with changes to exclusion handling.
+- Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
+- Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
+- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed attack surface reduction warn mode processing when exclusions are applied.
+- Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
+- Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
+- Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
+- Resolved an issue with [tamper protection for exclusions](/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions) where an exclusion policy was handled by System Center Configuration Manager.
+- Fixed issue with device control auditing of removable media.
+- Fixed issue with MDM policy management on Azure Virtual Desktop.
+- Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
+- Improved device control policy enforcement in offline environments.
+- Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
+
+### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
+
+- Security intelligence update version: **1.421.12.0**
+- Release date: **October 30, 2024** (Engine and Platform)
+- Platform: **4.18.24090.11**
+- Engine: **1.1.24090.11**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
+- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
+- Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
+- Fixed `SharedSignatureRoot` processing when an empty value was set.
+- Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
+- Improved performance in specific scenarios where network files were accessed.
+- Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
+- Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
+- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
+
+> [!IMPORTANT]
+> On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
 
 ### August-2024 (Platform: 4.18.24080.9 | Engine: 1.1.24080.9)
 
@@ -259,7 +328,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 #### What's new
 
-- Fixed an issue where Microsoft Defender Antivirus switched from [passive mode to active mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) following an update on Windows Server 2016 and Windows Server 2012 R2 [onboarded using the modern, unified client](onboard-windows-server-2012r2-2016.md)
+- Fixed an issue where Microsoft Defender Antivirus switched from [passive mode to active mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) following an update on Windows Server 2016 and Windows Server 2012 R2 [onboarded using the modern, unified client](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
 - Fixed an issue where [exclusions](defender-endpoint-antivirus-exclusions.md) weren't applied correctly using [gpupdate](/windows-server/administration/windows-commands/gpupdate) when registry policy processing was set to process even if Group Policy Objects didn't change
 - Excluded IP addresses can now be configured using [Intune](/windows/client-management/mdm/defender-csp#configurationexcludedipaddresses)
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on Windows Server 2016
@@ -295,7 +364,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Addressed a deadlock caused by Microsoft Defender Antivirus in rare cases
 - Added `ProcessId` to ASR Warn exclusion events (see [ASR rules configuration summary card](attack-surface-reduction-rules-report.md#asr-rules-configuration-summary-card))
 - Fixed an issue where values specified in [ThreatSeverityDefaultAction](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-threatseveritydefaultaction) weren't honored intermittently
-- Improved error reporting in the [modern, unified agent installer](onboard-windows-server-2012r2-2016.md#functionality-in-the-modern-unified-solution)
+- Improved error reporting in the [modern, unified agent installer](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
 - Fixed the overriding logic in the ASR rule [Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes) configured in warn mode
 - Added support for scanning Zstandard (Zstd) containers/archives
 

@@ -4,6 +4,7 @@ description: This article is updated frequently to let you know what's new in th
 ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
+ms.reviewer: AbbyMSFT
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -22,7 +23,77 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2025
+
+
+### Scoped access by Active Directory domain now supported (Preview)
+
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+Scoping by Active Directory domains helps:
+
+- Optimize performance: Focus monitoring on critical assets and reduce noise from non-essential data.
+
+- Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
+
+- Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+
+### Okta integration is now available in Microsoft Defender for Identity
+
+Microsoft Defender for Identity now supports integration with Okta, enabling detection of identity-based threats across cloud and on-premises environments. This integration helps identify suspicious sign-ins, risky role assignments, and potential privilege misuse within your Okta environment.
+
+For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
+
+
+### Service account classification rules now available
+
+You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
+For more information, see [Service account discovery](service-account-discovery.md)
+
+### Defender For Identity PowerShell module updates (version 1.0.0.4)
+
+New Features and Improvements:
+- Added remote domain functionality.
+- Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
+- Added ability to Get/Set/Test the Deleted Objects container permissions.
+- Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
+
+Bug Fixes:
+- Fixed audit verification checks for non-English operating systems.
+- Fixed DomainObjectAuditing identity redundant parameter bug.
+- Fixed Domain Controller detection logic to confirm AD Web Services is running on the server.
+- Fixed issue with Test-MDIDSA not parsing Deleted Object permissions.
+- Other reliability fixes.
+
+
+## May 2025
+
+###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
+
+
+### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
+The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
+
+
+### Local administrators collection (using SAM-R queries) feature will be disabled
+The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change occurs automatically by the specified date, and no administrative action is required.
+
+### New Health Issue
+
+New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+
 ## April 2025
+
+### Privileged Identity Tag Now Visible in Defender for Identity Inventory
+
+Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **“Privileged account”** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
+Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
+
+Learn more about [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
 
 ### New Defender for Identity and PAM Integration
 
@@ -34,12 +105,11 @@ Microsoft Defender for Identity now supports integration with industry-leading P
 - Delinea
 - BeyondTrust
 
-For more information see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+For more information, see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
 
 ## March 2025
 
 ### New Service Account Discovery page
-
 
 Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
 
@@ -52,11 +122,6 @@ This update provides:
 - A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
 
 For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
-
-
-### New Health Issue
-
-New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
 
 ### Enhanced Identity Inventory
 
@@ -77,7 +142,7 @@ New LDAP query events were added to the `IdentityQueryEvents` table in Advanced 
 ### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
 
 New Features and Improvements:
-- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDIConfiguration.
+- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDI Configuration.
 - Support for getting, testing, and setting the proxy configuration on new MDI sensor.
 - The Active Directory Certificate Services registry value for audit filtering now properly sets the type.
 - New-MDIConfigurationReport now shows the name of the tested GPO and supports Server and Identity arguments.
@@ -121,7 +186,7 @@ Additionally, the **built-in schema reference** for Advanced Hunting in Microsof
 
 ### New Identity guide tour
 
-Explore key MDI features with the new **Identities Tour** in the M365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
+Explore key MDI features with the new **Identities Tour** in the Microsoft 365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
 
 ## December 2024
 
@@ -146,7 +211,7 @@ For more information, see:
 The new Identity security posture assessments (ISPMs) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.   
 These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
 
-- [Accounts with non-default Primary Group ID](/defender-for-identity/accounts-with-non-default-pgid)
+- [Accounts with nondefault Primary Group ID](/defender-for-identity/accounts-with-non-default-pgid)
 
 - [Change Domain Controller computer account old password](/defender-for-identity/domain-controller-account-password-change)
 
@@ -177,18 +242,18 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 **New Microsoft Entra Connect Identity posture recommendations:**
 
 * **Rotate password for Microsoft Entra Connect connector account**
-   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information click [here](rotate-password-microsoft-entra-connect.md).
+   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, click [here](rotate-password-microsoft-entra-connect.md).
 * **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
-   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't actually required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information click [here](remove-replication-permissions-microsoft-entra-connect.md)
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, click [here](remove-replication-permissions-microsoft-entra-connect.md)
 * **Change password for Microsoft Entra seamless SSO account configuration**
-   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
 
 **New Microsoft Entra Connect detections:**
 
 * **Suspicious Interactive Logon to the Microsoft Entra Connect Server**
    * Direct logins to Microsoft Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Microsoft Entra Connect servers, helping you identify and respond to these potential threats faster. It's specifically applicable when the Microsoft Entra Connect server is a standalone server and not operating as a Domain Controller.
 * **User Password Reset by Microsoft Entra Connect Account**
-   *  The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert will be triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
+   *  The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert is triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
 *  **Suspicious writeback by Microsoft Entra Connect on a sensitive user**
    * While Microsoft Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
 
@@ -217,7 +282,7 @@ For more information, see:
 
 ## July 2024
 
-6 New detections are new in public preview:
+Six New detections are new in public preview:
 * **Possible NetSync attack**
     * NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
 * **Possible takeover of a Microsoft Entra seamless SSO account**
@@ -268,7 +333,7 @@ With this data customers can now easily create their own [custom detection rules
 
 Access Defender XDR portal -> Hunting -> Advanced Hunting.
 
-Now, you can copy our recommended query as provided below, and click on “Create detection rule”. Please be aware that our provided query also tracks failed logon attempts, which may generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
+Now, you can copy our recommended query as provided below, and click on “Create detection rule”. Be aware that our provided query also tracks failed logon attempts, which may generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
 
 ```
@@ -440,13 +505,13 @@ This version includes improvements and bug fixes for cloud services and the Defe
 > [!NOTE]
 > If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
-### New Identities area and dashboard in Microsoft 365 Defender  (Preview)
+### New Identities area and dashboard in Microsoft Defender XDR  (Preview)
 
-Defender for Identity customers now have a new **Identities** area in Microsoft 365 Defender for information about identity security with Defender for Identity.
+Defender for Identity customers now have a new **Identities** area in Microsoft Defender XDR for information about identity security with Defender for Identity.
 
-In Microsoft 365 Defender, select **Identities** to see any of the following new pages:
+In Microsoft Defender XDR, select **Identities** to see any of the following new pages:
 
-- **Dashboard**: This page shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
+- **Dashboard**: This page shows graphs and widgets to help you monitor identity threat detection and response activities. For example:
 
    :::image type="content" source="media/dashboard/dashboard.gif" alt-text="An animated GIF showing a sample ITDR Dashboard page.":::
 
@@ -462,7 +527,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Security posture assessments for AD CS sensors (Preview)
 
-Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations. 
+Defenders for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations. 
 
 Recommended actions now include the following new security posture assessments, specifically for certificate templates and certificate authorities.
 
@@ -480,7 +545,7 @@ Recommended actions now include the following new security posture assessments, 
    - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
    - [Enforce encryption for RPC certificate enrollment interface (ESC11)](security-assessment-enforce-encryption-rpc.md)
 
-The new assessments are available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
+The new assessments are available in Microsoft Secure Score, surfacing security issues, and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 
 For example:
 
@@ -489,7 +554,7 @@ For example:
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
 > [!NOTE]
-> While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+> While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ### Defender for Identity release 2.223
 
@@ -562,7 +627,7 @@ While this change results in a decreased number of *Remote code execution attemp
 
 ### Alert sensitivity settings and learning period enhancements
 
-Some Defender for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
+Some Defenders for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
 Defender for Identity now provides the following enhancements for the learning period experience:
 

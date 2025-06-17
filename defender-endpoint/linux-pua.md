@@ -2,8 +2,8 @@
 title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: linux
 search.appverid: met150
 ms.date: 10/11/2024

@@ -3,7 +3,7 @@ title: Evaluate Microsoft Defender Antivirus using Group Policy
 description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Group Policy.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen

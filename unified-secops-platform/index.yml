@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft's unified security operations platform # < 60 chars
+title: Unified security operations with Microsoft Defender # < 60 chars
 summary: Bring together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Microsoft Defender portal. # < 160 chars
 
 metadata:
-  title: Microsoft's unified security operations platform documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Unified security operations documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Bring together the full capabilities of Microsoft Sentinel, Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: unified-secops-platform #Required; use either service or product per approved list. 
   ms.topic: landing-page # Required
@@ -19,17 +19,17 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card 
-  - title: About Microsoft's unified security operations platform
+  - title: About unified security operations in the Defender portal
     linkLists:
       - linkListType: overview
         links:
-          - text: "What is Microsoft's unified SecOps platform?"
+          - text: "What are unified security operations"
             url: overview-unified-security.md
           - text: "Microsoft Defender portal overview"
             url: overview-defender-portal.md
       - linkListType: whats-new
         links:
-          - text: "What's new in Microsoft's unified SecOps platform"
+          - text: "What's new for unified security operations in the Defender portal"
             url: whats-new.md
 
   # Card 
@@ -39,11 +39,11 @@ landingContent:
         links:
           - text: "Plan your deployment"
             url: overview-plan.md
-          - text: "Deploy Microsoft's unified SecOps platform"
+          - text: "Deploy for unified security operations"
             url: overview-deploy.md
       - linkListType: overview
         links:
-          - text: "Zero Trust with unified SecOps"
+          - text: "Zero Trust with unified security operations"
             url: zero-trust.md
 
     # Card 
@@ -53,9 +53,9 @@ landingContent:
         links:
           - text: "Security posture management and risk reduction"
             url: reduce-risk-overview.md
-          - text: "Threat detection in Microsoft's unified SecOps platform"
+          - text: "Detecting threats"
             url: detect-threats-overview.md
-          - text: "Hunting in Microsoft's unified SecOps platform"
+          - text: "Hunting for threats"
             url: hunting-overview.md
           - text: "Advanced hunting"
             url: /defender-xdr/advanced-hunting-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json

@@ -3,6 +3,7 @@ title: Quick installation guide | Microsoft Defender for Identity
 description: Learn how to quickly install Microsoft Defender for Identity on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certificate Services (AD CS) servers.
 ms.date: 08/27/2023
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Quick installation guide

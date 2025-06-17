@@ -10,9 +10,6 @@ ms.date: 03/23/2025
 [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) helps you to manage your company's attack surface and exposure risk effectively. By combining assets and techniques, [attack paths](/security-exposure-management/review-attack-paths) illustrate the end-to-end paths that attackers can use to move from an entry point within your organization to your critical assets.
 Microsoft Defender for Cloud Apps observed an increase in attackers using OAuth applications to access sensitive data in business-critical applications like Microsoft Teams, SharePoint, Outlook, and more. To support investigation and mitigation, these applications are integrated into the attack path and attack surface map views in Microsoft Security Exposure Management.
 
-### Critical Asset Management - Service Principals
-
-Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
 
 ### Prerequisites
 
@@ -44,20 +41,25 @@ Alternatively, you can use one of the following **Entra ID roles**:
 >[!NOTE]
 > Currently available in commercial cloud environments only. Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, DoD, and China Gov.
 
-## View permissions for critical assets
+### Critical Asset Management - Service Principals
+
+Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
+
+#### View permissions for critical assets
 
 To view the full list of permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
 :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
 
-> [!NOTE]  
-> OAuth apps appear in the attack path surface map only when specific conditions are detected.  
-> For example, an OAuth app may appear in the attack path only if a vulnerable component with an easily exploitable entry point is detected that allows lateral movement to service principals with high privileges.
 
 ## Investigation user flow: View attack paths involving OAuth applications
 
 Once you understand which permissions represent high-value targets, use the following steps to investigate how these applications appear in your environment’s attack paths.
 For smaller organizations with a manageable number of attack paths, we recommend following this structured approach to investigate each attack path:
+
+> [!NOTE]  
+> OAuth apps show in the attack path surface map only when specific conditions are detected.  
+> For example, an OAuth app might appear in the attack path if a vulnerable component with an easily exploitable entry point is detected. This entry point allows lateral movement to service principals with high privileges.
 
 1. Go to Exposure Management > Attack surface > Attack paths.
    

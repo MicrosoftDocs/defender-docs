@@ -69,7 +69,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 
 To make sure your Defender for Endpoint subscription is properly provisioned, you can check your license state in either the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) or Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products)).
 
-[Check your license state](production-deployment.md#check-license-state).
+[Check your license state](production-deployment.md#check-your-license-state).
 
 ## Step 2: Set up role-based access control and grant permissions to your security team
 

@@ -1,8 +1,8 @@
 ---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: denisebmsft
-ms.author: deniseb 
+author: emmwalshh
+ms.author: ewalsh 
 manager: deniseb 
 ms.topic: how-to
 ms.service: defender-endpoint
@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 03/12/2025
+ms.date: 06/11/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -143,8 +143,8 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 
 | Service tag name    |    Defender for Endpoint services included   |
 |:---|:---|
-| MicrosoftDefenderForEndpoint | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
-| OneDsCollector | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
+| `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
+| `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
 The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
@@ -194,7 +194,7 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
 
    - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
-   - [Onboard Windows client](onboard-windows-client.md)
+   - [Onboard client devices running Windows or macOS](onboard-client.md)
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
    - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 

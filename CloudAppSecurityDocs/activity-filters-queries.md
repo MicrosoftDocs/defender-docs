@@ -135,7 +135,7 @@ Defender for Cloud Apps also provides you with **Suggested queries**. Suggested 
 - Successful log in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
 
   ![query activities.](media/queries-activity.png)
-
+  
 Additionally, you can use the suggested queries as a starting point for a new query. First, select one of the suggested queries. Then, make changes as needed and finally select **Save as** to create a new **Saved query**.
 
 ### Query activities six months back
@@ -170,8 +170,21 @@ You can export all activities from the past six months by clicking the Export bu
 
 ![Click the export icon to export records.](media/activity-filters-queries/export-button-of-activity-logs.png)
 
-When exporting data:
+> [!NOTE]
+> **Required Permissions for Exporting Capabilities:** To utilize the exporting features, users must be assigned one of the following roles:
+> - **Built-in admin roles in Defender for Cloud Apps-** These roles must be granted via [Microsoft Defender for Cloud Apps Permissions and roles settings](/defender-cloud-apps/manage-admins):
+>   - Global Admin
+>   - Cloud Discovery Global Admin
+>   - Security Operator
+>   - Compliance Admin
+>   - Security Reader
+> - **Microsoft Entra ID Roles-** These roles must be assigned through [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference):
+>   - Global Administrator
+>   - Security Administrator
+>   - Cloud App Security Administrator
+>   - Global Reader
 
+When exporting data:
 - You can choose a date range of up to six months.
 - You can choose to exclude private activities.  
 - The exported file is limited to 100,000 records and is delivered in CSV format.
@@ -183,37 +196,6 @@ To access exported files and check export status, navigate to **Reports -> Cloud
 Reports that include private activities are marked with an Eye icon in the reports page.  
 
 ![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
-
-> [!NOTE] 
->Exporting and viewing activity data up to six months back is restricted to specific roles with elevated permissions.
-
-The following roles are supported:
-
-- `INVITED_ADMIN`
-
-- `GLOBAL_ADMINISTRATOR`
-
-- `SECURITY_ADMINISTRATOR`
-
-- `MCAS_ADMINISTRATOR`
-
-- `DISCOVERY_ADMIN`
-
-- `SECURITY_OPERATOR`
-
-- `COMPLIANCE_ADMIN`
-
-- `SECURITY_READER`
-
-- `GLOBAL_READER`
-
-- `URBAC_ROLES_GLOBAL_ADMINISTRATOR`
-
-- `URBAC_ROLES_COMPLIANCE_ADMINISTRATOR`
-
-- `URBAC_ROLES_SECURITY_READER`
-
-- `URBAC_ROLES_SECURITY_OPERATOR`
 
 ## Next steps
 
