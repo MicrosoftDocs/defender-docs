@@ -75,7 +75,7 @@ These three most recent major releases of macOS are supported.
 - 14 (Sonoma)
 - 13 (Ventura)
 
-- Supported processors: x64 and ARM64
+- Supported processors: x64 and ARM64 (Mx processors)
 
 - Disk space: 1GB
 
