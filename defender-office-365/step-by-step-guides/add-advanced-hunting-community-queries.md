@@ -111,7 +111,7 @@ By default the **master** (main) branch is active when you open your cloned fork
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png" alt-text="Screenshot of the dialog that opens after you select the active (open) branch in Visual Studio Code with Create new branch from... highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png":::
 
-   :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from-master.png" alt-text="Screenshot of the dialog that opens after you select Create new branch from... in Visual Studio Code with the master branch highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from-master.png":::
+   :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-create-new-branch-from-master.png" alt-text="Screenshot of the dialog that opens after you select Create new branch from... in Visual Studio Code with the master branch highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-create-new-branch-from-master.png":::
 
 3. In the **Please provide a new branch name** dialog that opens, enter a suitable name for the branch (for example, `new-mdo-queries`), and then press Enter to confirm.
 
