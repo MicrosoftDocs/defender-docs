@@ -247,11 +247,21 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
 1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page.
 
+    For example, in the Defender portal:
+
+    :::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
+
 1. In the **Export** pane, from the **Export TI** dropdown, select the TAXII server you want to export your threat intelligence to.
 
-    If there isn't a TAXII server listed, you need to [configure a TAXII server for export](#configure-a-taxii-server-for-export) first. Select the **Configure Export to TAXII server** link to do so.
+    If there isn't a TAXII server listed, you need to configure a TAXII server for export first. To do so:
 
-    1. In the **Configuration** area, enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary).
+    1. Select the **Configure Export to TAXII server** link below the **Export TI** dropdown. The **Data connectors** page opens, showing the **Threat intelligence - TAXII Export** data connector.
+    
+    1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
+    
+    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). For example, in the Defender portal:
+
+        :::image type="content" source="media/work-with-threat-indicators/configure-taxii-export.png" alt-text="Screenshot that shows configuring the TAXII server for export." lightbox="media/work-with-threat-indicators/configure-taxii-export.png":::
 
     1. When you're done, select **Add** to add your server.
 
