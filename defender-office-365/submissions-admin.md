@@ -829,7 +829,7 @@ The analysis results of the reported item are shown in the details flyout that o
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 > [!NOTE]
-> AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
+> **Currently in Preview**, AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ### Actions for admin submissions in Defender for Office 365
 
