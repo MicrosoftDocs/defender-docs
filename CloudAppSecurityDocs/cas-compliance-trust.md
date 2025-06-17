@@ -31,7 +31,7 @@ Defender for Cloud Apps operates in the Microsoft Azure data centers in the foll
 |Customer provisioning location  |Data storage location  |
 |---------|---------|
 |**Customers whose tenants are provisioned in the United States**     |  United States       |
-|**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    Either the European Union and/or the United Kingdom      |
+|**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    The European Union or the United Kingdom, depending on service availability.      |
 |**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned.    |
 
 In addition to the locations above, the App Governance features within Defender for Cloud Apps operate in the Microsoft Azure data centers in the following geographical regions listed below. Customer with App Governance enabled will have data stored within the data storage location the customer provisions in above, and in a second data storage location as described below: 
@@ -52,7 +52,13 @@ In addition to the locations above, the App Governance features within Defender 
 
 Customer data collected by Defender for Cloud Apps is either stored in your tenant location, as described in the previous tables, or in the geographic location of another online service that Defender for Cloud Apps shares data with, as defined by the data storage rules of that online service.
 
-If Defender for Cloud Apps data is stored in your tenant location, your tenant isn't movable after having been created. To view your Defender for Cloud Apps tenant location in the Microsoft Defender portal, go to **Settings > Cloud Apps > About > Region**.
+
+### View your data storage location
+
+To view your Defender for Cloud Apps tenant location in the Microsoft Defender portal, go to **Settings > Cloud Apps > About > Region**.
+
+> [!NOTE]
+> If Defender for Cloud Apps data is stored in your tenant location, your tenant isn't movable after having been created.
  
 ## Data retention
 
