@@ -117,24 +117,17 @@ For macOS devices, the following table lists processes to exclude in your non-Mi
 
 For Linux servers, the following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
-| Name | Description |
-|--|--|
-| `MpCmdRun.exe` | Microsoft Defender Antivirus command-line utility |
-| `MpDlpCmd.exe` | Microsoft Endpoint DLP command-line utility |
-| `MsMpEng.exe` | Microsoft Defender Antivirus service executable |
-| `ConfigSecurityPolicy.exe` | Microsoft Security Client Policy Configuration Tool |
-| `MpDefenderCoreService.exe` | Microsoft Defender Antivirus Core Service |
-| `MpDlpService.exe` | Microsoft Purview Data Loss Prevention Service |
-| `NisSrv.exe` | Microsoft Defender Antivirus Network Realtime Inspection |
-| `MsSense.exe` | Microsoft Defender for Endpoint service executable |
-| `SenseCnCProxy.exe` | Microsoft Defender for Endpoint communication module |
-| `SenseIR.exe` | Microsoft Defender for Endpoint Sense IR (Incident Response) module |
-| `SenseCE.exe` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
-| `SenseSampleUploader.exe` | Microsoft Defender for Endpoint Sample Upload module |
-| `SenseNdr.exe` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
-| `SenseSC.exe` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
-| `SenseCM.exe` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
-| `SenseTVM.exe` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
+| Process | Location | Purpose |
+|---|---|---|
+| `wdavdaemon` | `/opt/microsoft/mdatp/sbin/` | Core daemon (service). Uses FANotify for both antimalware and EDR purposes (TALPA on older RHEL). |
+| `wdavdaemon enterprise` | `/opt/microsoft/mdatp/sbin/` | EDR engine. Used for enrichment, also leverages auditd on most Linux platforms. |
+| `wdavdaemon unprivileged` | `/opt/microsoft/mdatp/sbin/` | Antivirus engine |
+| `mdatp_audisp_plugin` | `/opt/microsoft/mdatp/sbin/` | Auditd log ingestion |
+| `crashpad_handler` | `/opt/microsoft/mdatp/sbin/` | Collects crash dumps |
+| `mdatp` | `/opt/microsoft/mdatp/sbin/Wdavdaemonclient` | Command line utility |
+| `telemetryd_v2` | `/opt/microsoft/mdatp/sbin/` | Telemetry daemon for EDR |
+| `mde_netfilter` | `/opt/microsoft/mde_netfilter/sbin` | Packet filter for Network protection, also used for response capabilities |
+
 
 ---
 
