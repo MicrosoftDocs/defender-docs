@@ -93,25 +93,14 @@ The specific exclusions to configure depend on which version of Windows your end
 
 For macOS devices, the following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
-| Name | Description |
-|--|--|
-| `MpCmdRun.exe` | Microsoft Defender Antivirus command-line utility |
-| `MpDlpCmd.exe` | Microsoft Endpoint DLP command-line utility |
-| `MsMpEng.exe` | Microsoft Defender Antivirus service executable |
-| `ConfigSecurityPolicy.exe` | Microsoft Security Client Policy Configuration Tool |
-| `MpDefenderCoreService.exe` | Microsoft Defender Antivirus Core Service |
-| `MpDlpService.exe` | Microsoft Purview Data Loss Prevention Service |
-| `NisSrv.exe` | Microsoft Defender Antivirus Network Realtime Inspection |
-| `MsSense.exe` | Microsoft Defender for Endpoint service executable |
-| `SenseCnCProxy.exe` | Microsoft Defender for Endpoint communication module |
-| `SenseIR.exe` | Microsoft Defender for Endpoint Sense IR (Incident Response) module |
-| `SenseCE.exe` | Microsoft Defender for Endpoint Sense CE (Classification Engine) module |
-| `SenseSampleUploader.exe` | Microsoft Defender for Endpoint Sample Upload module |
-| `SenseNdr.exe` | Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module |
-| `SenseSC.exe` | Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module |
-| `SenseCM.exe` | Microsoft Defender for Endpoint Sense CM (Configuration Management) |
-| `SenseTVM.exe` | Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management) |
-
+| Process | Location | Purpose |
+|--|--|--|
+| `wdavdaemon_enterprise` | `/Library/Application Support/Microsoft/Defender/` | EDR engine |
+| `wdavdaemon_unprivileged` | `/Library/Application Support/Microsoft/Defender/` | Antivirus engine |
+| `telemetryd_v1` | `/Library/Application Support/Microsoft/Defender/` | Telemetry daemon for EDR |
+| `Netext` | `/Library/SystemExtensions/*/com.microsoft.wdav.netext.systemextension/Contents/MacOS/` | Network extension |
+| `Epsext` | `/Library/SystemExtensions/*/com.microsoft.wdav.epsext.systemextension/Contents/MacOS/` | Endpoint security extension |
+| `msupdate` | `/Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS | Microsoft AutoUpdate update tool |
 
 ### [**Linux**](#tab/Linux)
 
@@ -128,9 +117,7 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | `telemetryd_v2` | `/opt/microsoft/mdatp/sbin/` | Telemetry daemon for EDR |
 | `mde_netfilter` | `/opt/microsoft/mde_netfilter/sbin` | Packet filter for Network protection, also used for response capabilities |
 
-
 ---
-
 
 > [!IMPORTANT]
 > As a best practice, keep your organization's devices and endpoints up to date. Make sure to get the **[latest updates for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fswitch-to-mde-phase-2.md/main/76b249d7-f914-4c03-3eaf-48aa43b2fa4a/microsoft-defender-antivirus-updates.md)**, and keep your organization's operating systems and productivity apps up to date.
