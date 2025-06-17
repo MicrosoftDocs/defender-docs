@@ -30,7 +30,11 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 
 1. Take appropriate action on those accounts and remove their 'Replication Directory Changes' and 'Replication Directory Changes All' permissions by unchecking the following permissions:  
   
-![Screenshot of the replication permissions.](media/remove-replication-permissions-microsoft-entra-connect/permissions.png)
+[![Screenshot that shows Replicationconfiguration](media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png)](media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png#lightbox)
+
+
+
+
 
 > [!IMPORTANT]
 > For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. It has been detected that your Microsoft Entra Connect configuration does not utilize Password Hash Sync, which means that replication permissions are not necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account is not required for Replication Permissions by any other applications.
