@@ -5,7 +5,7 @@ author: dcurwin
 ms.topic: how-to
 ms.date: 06/16/2025
 ms.author: dacurwin
-
+ai-usage: ai-assisted
 ---
 
 # Install Defender for Containers sensor using Helm
