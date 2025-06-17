@@ -130,7 +130,7 @@ In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZUR
 Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
 
 > [!NOTE]
-> This script can create a Log Analytics workspace in your Azure account.
+> This script might create a Log Analytics workspace in your Azure account.
 
 Run the following command to check that the installation succeeded:
 
@@ -138,7 +138,7 @@ Run the following command to check that the installation succeeded:
 helm list --namespace mdc
 ```
 
-You see the STATUS field set to **deployed**.
+The STATUS field should read **deployed**.
 
 ## Existing recommendation to provision sensor
 
