@@ -43,13 +43,13 @@ When the Defender portal is configured to include Microsoft Sentinel as a data s
 
 ### Manual correlation of alerts
 
-While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
+While Microsoft Defender already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
 
 For more information on moving an alert from one incident to another, see [Move alerts from one incident to another in the Microsoft Defender portal](move-alert-to-another-incident.md).
 
 ## Incident correlation and merging
 
-The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents and alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
+The Defender portal's correlation activities don't stop when incidents are created. Defender continues to detect commonalities and relationships between incidents and alerts across incidents. When multiple incidents are determined to be sufficiently alike, Defender merges the incidents into a single incident.
 
 ### Criteria for merging incidents
 
@@ -97,7 +97,7 @@ For example, if the incidents weren't merged because they were assigned to two d
 
 Merging incidents together is preferable to unlinking alerts from one incident and linking them to another, because all the incident information (for example, the activity log) is preserved.
 
-For now, only two incidents at a time can be merged manually.
+Currently, five incidents at a time can be merged manually.
 
 Other rules governing manual merging are the same as automatic merging. See [Details of the merge process](#details-of-the-merge-process) above.
 
