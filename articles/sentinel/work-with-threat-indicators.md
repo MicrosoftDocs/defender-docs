@@ -245,11 +245,17 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
-1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page.
+1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page. For example:
 
-    For example, in the Defender portal:
+    #### [Defender portal](#tab/defender-portal)
 
     :::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
+
+    #### [Azure portal](#tab/azure-portal)
+
+    :::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
+
+    ---
 
 1. In the **Export** pane, from the **Export TI** dropdown, select the TAXII server you want to export your threat intelligence to.
 
@@ -259,9 +265,17 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
     
     1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
     
-    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). For example, in the Defender portal:
-    
+    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. For example:
+
+        #### [Defender portal](#tab/defender-portal)
+
         :::image type="content" source="media/work-with-threat-indicators/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export.png":::
+
+        #### [Azure portal](#tab/azure-portal)
+
+        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export-azure.png":::
+
+        ---
 
     1. When you're done, select **Add** to add your server.
 
