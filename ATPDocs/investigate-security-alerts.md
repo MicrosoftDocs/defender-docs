@@ -24,7 +24,8 @@ The Important information section includes additional technical details that sup
 Together, the alert story, alert graph, and Important information give you a complete picture of the alert. They help you understand what triggered the alert, which entities were involved, and whether the activity requires further investigation or action.
 
 > [!NOTE]
-> The **alert story** is only visible for alerts that use the classic Defender for Identity structure.  
+> The **alert story** is only visible for alerts that use the classic Defender for Identity structure. 
+> For more information about differences in how alerts are presented in the Defender portal, see [View and manage alerts](understanding-security-alerts.md).
 
 ## Take action from the details pane
 Once you've selected an alert of interest, the details pane changes to display information about the selected alert, historic information when it's available, and offer recommended actions to take action on this alert.
@@ -38,6 +39,7 @@ To get more details on a security alert, select **Export** on an alert details p
 
 > [!NOTE]
 > The **export to Excel** option is also only available for alerts that use the classic Defender for Identity structure.
+> For more information about differences in how alerts are presented in the Defender portal, see [View and manage alerts](understanding-security-alerts.md).
 
 
 The downloaded file includes summary details about the alert on the first tab, including:
