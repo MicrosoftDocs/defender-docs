@@ -1,7 +1,7 @@
 ---
 title:  Microsoft Defender for Cloud Apps – privacy
 description: Learn about how Microsoft Defender for Cloud Apps manages user privacy.
-ms.date: 11/24/2024
+ms.date: 06/17/2025
 ms.topic: concept-article
 ---
 # Privacy with Microsoft Defender for Cloud Apps
@@ -22,7 +22,7 @@ Microsoft Defender for Cloud Apps collects information from your configured clou
 - User and group configurations
 
 > [!NOTE]
-> The data collected from the various applications is dependent on the customer-provided data from the various applications and may include personal information.
+> The data collected from the various applications is dependent on the customer-provided data from the various applications and might include personal information.
 
 ## Data storage location
 
@@ -68,7 +68,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 ## Data sharing for Microsoft Defender for Cloud Apps
 
-Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
+Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments might occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud
