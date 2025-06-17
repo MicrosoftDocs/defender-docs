@@ -81,8 +81,6 @@ Select the tab for information about exclusions for that operating system.
 
 ### [**Windows**](#tab/Windows)
 
-### Windows
-
 The specific exclusions to configure depend on which version of Windows your endpoints or devices are running, and are listed in the following table.
 
 | OS | Exclusions |
@@ -93,9 +91,7 @@ The specific exclusions to configure depend on which version of Windows your end
 
 ### [**macOS**](#tab/macOS)
 
-### macOS
-
-The following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
+For macOS devices, the following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
 | Name | Description |
 |--|--|
@@ -119,9 +115,7 @@ The following table lists processes to exclude in your non-Microsoft antivirus/a
 
 ### [**Linux**](#tab/Linux)
 
-### Linux
-
-The following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
+For Linux servers, the following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
 | Name | Description |
 |--|--|
