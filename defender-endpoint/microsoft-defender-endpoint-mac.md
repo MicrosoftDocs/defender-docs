@@ -32,10 +32,8 @@ ms.date: 03/24/2025
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
 
->[!CAUTION]
->If you wish to run multiple security solutions side by side, please read more about the considerations for performance, configuration and support [here](includes/side-by-side-scenarios.md). 
->You may have already configured mutual security exclusions for devices onboarded to Microsoft Defender for Endpoint. If you still need to set mutual exclusions to avoid conflicts, please consult [Add Microsoft Defender for Endpoint to the exclusion list for your existing solution](/defender-endpoint/switch-to-mde-phase-2#step-3-add-microsoft-defender-for-endpoint-to-the-exclusion-list-for-your-existing-solution). 
-
+ 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## What's new in the latest release
 
