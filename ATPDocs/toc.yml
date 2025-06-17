@@ -85,7 +85,7 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
-    - name: Activate Defender for Identity capabilities on your domain controller
+    - name: Activate Defender for Identity capabilities on your domain controller (Preview)
       href: deploy/activate-capabilities.md
 - name: Integrate with identity services
   items:
