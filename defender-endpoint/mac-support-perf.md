@@ -155,6 +155,10 @@ To troubleshoot and mitigate performance issues, follow these steps:
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
 
+## Troubleshoot performance issues from Behavior Monitoring
+
+Please refer to the guide in our support page for [Behavior Monitoring](behavior-monitor-macos.md).
+
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on macOS.
