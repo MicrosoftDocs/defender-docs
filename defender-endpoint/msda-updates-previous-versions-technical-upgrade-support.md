@@ -6,14 +6,14 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 04/07/2025
+ms.date: 06/10/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 - mde-ngp
-ms.topic: conceptual
+ms.topic: reference
 ms.subservice: ngp
 search.appverid: met150
 ---
@@ -28,6 +28,51 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
+
+- Security intelligence update version: **1.425.1.0**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25020.1007**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
+
+### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
+
+- Security intelligence update version: **1.423.21.0**
+- Release date: **February 20, 2025** (Engine) / **March 5, 2025** (Platform)
+- Platform: **4.18.25010.11**
+- Engine: **1.1.25010.7**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved handling of [attack surface reduction rule](attack-surface-reduction-rules-reference.md) exclusions.
+- Improved AMSI scan performance with changes to exclusion handling.
+- Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
+- Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
+- Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
+- Fixed attack surface reduction warn mode processing when exclusions are applied.
+- Fixed performance handling with file transfers having Mark of the Web (MoTW) set.
+- Implemented `AzureAd` cache to handle offline environments with [device control](device-control-overview.md).
+- Resolved an issue with `TrustLabelProtectionStatus` being reset after a Microsoft Defender platform update.
+- Resolved an issue with [tamper protection for exclusions](/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions) where an exclusion policy was handled by System Center Configuration Manager.
+- Fixed issue with device control auditing of removable media.
+- Fixed issue with MDM policy management on Azure Virtual Desktop.
+- Added support for wildcards in [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) trusted process.
+- Improved device control policy enforcement in offline environments.
+- Fixed issue in the `WDNisDrv.sys` driver that caused system hangs during shutdown.
 
 ### September-2024 (Platform: 4.18.24090.11 | Engine 1.1.24090.11)
 

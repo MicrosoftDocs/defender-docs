@@ -3,10 +3,10 @@ title: Use network protection to help prevent connections to malicious or suspic
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/25/2025
+ms.date: 06/10/2025
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr
@@ -76,8 +76,8 @@ There might be up to two hours of latency (usually less) between when an indicat
 
 Network protection requires devices running one of the following operating systems:
 
-- Windows 10 or 11 (Pro or Enterprise) (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
-- Windows Server, version 1803 or later (see [Supported Windows versions](minimum-requirements.md#supported-windows-versions))
+- Windows 10 or 11 (Pro or Enterprise) (see [Supported Windows versions](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint))
+- Windows Server, version 1803 or later (see [Supported Windows versions](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint))
 - macOS version 12 (Monterey) or later (see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md))
 - A supported Linux version (see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md))
 

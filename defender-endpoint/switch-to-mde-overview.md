@@ -50,4 +50,7 @@ The process of migrating to Defender for Endpoint can be divided into three phas
 ## Next step
 
 - Proceed to [Prepare for your migration](switch-to-mde-phase-1.md).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

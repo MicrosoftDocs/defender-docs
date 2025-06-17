@@ -6,7 +6,7 @@ ms.author: bcarter
 author: BrendaCarter
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - Ent_O365
@@ -92,9 +92,9 @@ To support the goals for baseline protection, configure tenant-wide sharing poli
 
 |Area|Includes a default policy|Recommendation|
 |---|---|---|
-|**Sharing** (SharePoint Online and OneDrive for Business)|Yes|External sharing is enabled by default. These settings are recommended: <ul><li>Allow sharing to authenticated external users and using anonymous access links (default setting).</li><li>Anonymous access links expire in this many days. Enter a number, if desired, such as 30 days.</li><li>Default link type \> select Internal (people in the organization only). Users who wish to share using anonymous links must choose this option from the sharing menu.</li></ul> <br/> More information: [External sharing overview](/sharepoint/external-sharing-overview)|
+|**Sharing** (SharePoint and OneDrive)|Yes|External sharing is enabled by default. These settings are recommended: <ul><li>Allow sharing to authenticated external users and using anonymous access links (default setting).</li><li>Anonymous access links expire in this many days. Enter a number, if desired, such as 30 days.</li><li>Default link type \> select Internal (people in the organization only). Users who wish to share using anonymous links must choose this option from the sharing menu.</li></ul> <br/> More information: [External sharing overview](/sharepoint/external-sharing-overview)|
 
-SharePoint admin center and OneDrive for Business admin center include the same settings. The settings in either admin center apply to both.
+SharePoint admin center and OneDrive admin center include the same settings. The settings in either admin center apply to both.
 
 ## Configure settings in Microsoft Entra ID
 
@@ -112,7 +112,7 @@ Multi-factor authentication requires apps that support modern authentication. Ap
 
 For secure environments, be sure to disable authentication for apps that don't support modern authentication. You can do this in Microsoft Entra ID with a control that is coming soon.
 
-In the meantime, use one of the following methods to block access for apps in SharePoint Online and OneDrive for Business that don't support modern authentication:
+In the meantime, use one of the following methods to block access for apps in SharePoint and OneDrive that don't support modern authentication:
 
 - **SharePoint admin center**:
   1. In the SharePoint admin center at <https://admin.microsoft.com/sharepoint>, go to **Policies** \> **Access control**.

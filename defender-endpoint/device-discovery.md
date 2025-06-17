@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -16,9 +16,9 @@ ms.collection:
 - m365-initiative-defender-endpoint
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: met150
-ms.date: 04/23/2024
+ms.date: 05/08/2025
 ---
 
 # Device discovery overview

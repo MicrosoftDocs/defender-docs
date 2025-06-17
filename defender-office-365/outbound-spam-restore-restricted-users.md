@@ -20,7 +20,7 @@ description: Admins can learn how to remove user accounts from the Restricted en
 ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 11/2/2023
+ms.date: 05/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

@@ -34,7 +34,7 @@ landingContent:
           url: defender-endpoint-plan-1.md
         - text: Defender for Endpoint on Linux
           url: microsoft-defender-endpoint-linux.md
-        - text: Defender for Endpoint on Mac
+        - text: Defender for Endpoint on Mac overview
           url: microsoft-defender-endpoint-mac.md
         - text: Defender for Endpoint on Android
           url: microsoft-defender-endpoint-android.md

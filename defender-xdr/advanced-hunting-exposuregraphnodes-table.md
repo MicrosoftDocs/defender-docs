@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: v-mjosephy
+ms.author: maccruz
 author: mjosephym
 ms.localizationpriority: medium
 manager: rayne-wiselman
@@ -17,8 +17,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/12/2024
+ms.date: 03/28/2025
 ---
 
 # ExposureGraphNodes

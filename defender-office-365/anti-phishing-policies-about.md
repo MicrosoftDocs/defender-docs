@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn about the anti-phishing policies that are available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 05/28/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -157,6 +157,9 @@ In anti-phishing policies, you can control whether `p=quarantine` or `p=reject` 
 :::image type="content" source="media/anti-phishing-policies-honor-dmarc-settings.png" alt-text="DMARC settings in an anti-phishing policy." lightbox="media/anti-phishing-policies-honor-dmarc-settings.png":::
 
 The relationship between spoof intelligence and whether sender DMARC policies are honored is described in the following table:
+
+> [!TIP]
+> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method mitigates the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from legitimate message senders who fail to conform to standard email authentication practices.
 
 |&nbsp;|Honor DMARC policy On|Honor DMARC policy Off|
 |---|---|---|

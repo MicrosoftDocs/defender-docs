@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 audience: Admin
 ms.localizationpriority: high
 ms.collection: 

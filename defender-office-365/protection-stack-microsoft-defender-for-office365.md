@@ -8,7 +8,7 @@ manager: deniseb
 ms.date: 02/24/2025
 ms.reviewer: gigarrub
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 description: Follow the path of an incoming message through the threat filtering stack in Microsoft Defender for Office 365.
 ms.service: defender-office-365
