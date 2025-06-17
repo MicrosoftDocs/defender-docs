@@ -30,7 +30,7 @@ The sensor activated on domain controllers supports the following Defender for I
 > [!NOTE]
 > The capabilities described in this article are currently available as Preview features. Preview features are features that aren't complete, but are made available on a "preview" basis so customers can get early access and provide feedback.
 > Preview features are still in development, have limited or restricted functionality and may be available only in selected geographic areas.
-> For more information, see the [Microsoft Defender XDR preview features](/defender-xdr/preview)
+> For more information, see the [Microsoft Defender XDR preview features](/defender-xdr/preview).
 
 
 ## Prerequisites
@@ -143,7 +143,7 @@ Deactivating Defender for Identity capabilities from your domain controller does
 
 Download the Defender for Identity offboarding package from the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Settings** > **Identities** > **Activation**
+1. Navigate to **Settings** > **Identities** > **Activation**.
 
 1. Select Download offboarding package and save the file in a location you can access from your domain controller.  
 ![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor.png)

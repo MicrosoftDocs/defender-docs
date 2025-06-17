@@ -2,7 +2,7 @@
 title: Prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites required for a successful Microsoft Defender for Identity deployment.
 ms.date: 08/28/2023
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
 
