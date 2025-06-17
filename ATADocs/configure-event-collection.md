@@ -4,7 +4,7 @@
 title: Configure Windows Event Forwarding in Advanced Threat Analytics
 description: Describes your options for configuring Windows Event Forwarding with ATA
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 

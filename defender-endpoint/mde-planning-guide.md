@@ -15,7 +15,7 @@ ms.collection:
   - tier1
   - essentials-get-started
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: get-started
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 09/25/2024
@@ -69,5 +69,7 @@ Here's a list of prerequisites required to deploy Defender for Endpoint:
 ## Next step
 
 Start your deployment with [Step 1 - Set up Microsoft Defender for Endpoint deployment](production-deployment.md)
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

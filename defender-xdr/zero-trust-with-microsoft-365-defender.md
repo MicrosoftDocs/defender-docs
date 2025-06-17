@@ -17,7 +17,7 @@ ms.collection:
   - essentials-security
   - essentials-compliance
 ms.custom: 
-ms.topic: conceptual
+ms.topic: get-started
 adobe-target: true
 ms.date: 05/31/2024
 ---

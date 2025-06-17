@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's new in Microsoft Defender XDR
@@ -33,8 +33,8 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## June 2025
-
 - (Preview) Microsoft Copilot now provides suggested prompts as part of incident summaries in the Microsoft Defender portal. Suggested prompts help you get more insights into the specific assets involved in an incident. For more information, see [Summarize incidents with Microsoft Copilot in Microsoft Defender](security-copilot-m365d-incident-summary.md).   
+- (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
 
 ## May 2025
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
@@ -102,7 +102,7 @@ You can also get product updates and important notifications through the [messag
 - (GA) [Content distribution via tenant groups in multitenant management](/unified-secops-platform/mto-tenantgroups) is now generally available. Create tenant groups to manage content across tenants in multitenant management in Microsoft Defender XDR.
 - Microsoft Defender Experts for XDR now offers [scoped coverage](defender-experts-scoped-coverage.md) for customers who wish to define a specific set of devices and/or users, based on geography, subsidiary, or function, for which they'd like Defender Experts to provide support.
 - (Preview) The [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature in Microsoft Defender advanced hunting now allows linking of Microsoft Sentinel query results. In both the Microsoft Defender unified experience and in [Defender XDR advanced hunting](advanced-hunting-link-to-incident.md), you can now specify whether an entity is an impacted asset or related evidence.
-- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries-preview), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
+- (Preview) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
 - New documentation library for  [unified security operations in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). The Microsoft Defender portal brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI. Learn about the features and functionality available in the Defender portal, and then start to plan your deployment.
 - (GA) In advanced hunting, you can now add your frequently used schema tables, functions, queries, and detection rules in the **[Favorites](advanced-hunting-query-results.md#add-items-to-favorites)** sections under each tab for quicker access.
 
