@@ -253,7 +253,7 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
     #### [Azure portal](#tab/azure-portal)
 
-    :::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
+    :::image type="content" source="media/work-with-threat-indicators/export-azure.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
 
     ---
 
