@@ -243,23 +243,6 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 This procedure describes how to export threat intelligence from Microsoft Sentinel to external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
-### Configure a TAXII server for export
-
-Before you can export threat intelligence, you need to connect Microsoft Sentinel to a TAXII server for export.
-
-1. In the Microsoft Sentinel **Data connectors** page, search for and select the **Threat intelligence - TAXII Export** data connector. On the side, select **Open connector page**.
-
-1. In the **Configuration** area, enter the following details:
-
-    - **Friendly name (for server)**. This name is only visible to you, and is used to identify the TAXII server in Microsoft Sentinel. <!--who's YOU in this story?-->
-    - **API root URL.** The URL of the TAXII server's API root. This is the endpoint that Microsoft Sentinel will use to connect to the TAXII server.
-    - **Collection ID**. The ID of the collection on the TAXII server where you want to export your threat intelligence. This is typically provided by the TAXII server administrator.
-    - **Username** / **Password**. The credentials required to authenticate with the TAXII server. These are typically provided by the TAXII server administrator, and are only visible to you. <!--who's YOU in this story?-->
-
-    When you're done, select **Add** to add your server.
-
-### Export threat intelligence to a TAXII server
-
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
 1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page.
@@ -267,6 +250,10 @@ Before you can export threat intelligence, you need to connect Microsoft Sentine
 1. In the **Export** pane, from the **Export TI** dropdown, select the TAXII server you want to export your threat intelligence to.
 
     If there isn't a TAXII server listed, you need to [configure a TAXII server for export](#configure-a-taxii-server-for-export) first. Select the **Configure Export to TAXII server** link to do so.
+
+    1. In the **Configuration** area, enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary).
+
+    1. When you're done, select **Add** to add your server.
 
 1. Select that you understand the terms of the export, and then select **Export**. This action can't be undone.
 
