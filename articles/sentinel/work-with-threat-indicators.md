@@ -260,8 +260,8 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
     1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
     
     1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). For example, in the Defender portal:
-
-        :::image type="content" source="media/work-with-threat-indicators/add-taxii-export.png" alt-text="Screenshot that shows configuring the TAXII server for export." lightbox="media/work-with-threat-indicators/add-taxii-export.png":::
+    
+        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export.png":::
 
     1. When you're done, select **Add** to add your server.
 
