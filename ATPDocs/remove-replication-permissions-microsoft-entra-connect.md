@@ -30,7 +30,7 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 
 1. Take appropriate action on those accounts and remove their 'Replication Directory Changes' and 'Replication Directory Changes All' permissions by unchecking the following permissions:  
   
-![Replicationconfiguration](media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png)
+[![Screenshot that shows Replicationconfiguration](media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png)](media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png#lightbox)
 
 
 
