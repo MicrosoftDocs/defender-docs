@@ -133,6 +133,8 @@
               displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
                 azure arc, multicloud
               href: defender-for-containers-enable.md
+            - name: Deploy with Helm
+              href: deploy-helm.md
             - name: Defender for Containers resources and offboarding
               displayName: defender, containers, offboard, resources
               href: defender-for-containers-offboard.md
@@ -948,6 +950,8 @@
       - name: How does Defender for Containers work?
         displayName: containers
         href: defender-for-containers-architecture.md
+      - name: Defender sensor for Containers changelog
+        href: defender-sensor-change-log.md
       - name: Kubernetes node protection
         items:
           - name: Overview
