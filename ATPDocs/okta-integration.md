@@ -147,7 +147,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1. Paste the API token you copied from your Okta account.
 1. Select **Save**.
 
-:::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
+    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
 
 1. Verify that your Okta environment appears in the table as enabled.
 
