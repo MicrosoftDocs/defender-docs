@@ -27,6 +27,11 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 > Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
 
 
+## June 2025 
+
+**Revamped Cloud Discovery Executive Summary report**  
+The Executive Summary report has been redesigned. The updated report has been streamlined from 26 pages to 6 pages, providing a modern, cleaner design that highlights the most valuable and actionable information. For more details, see [How to generate a Cloud Discovery executive report](/cloud-discovery-dashboards#generate-a-cloud-discovery-executive-report).
+
 ## May 2025 
 
 
