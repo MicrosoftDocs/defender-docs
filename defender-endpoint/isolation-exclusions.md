@@ -72,6 +72,7 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 1. Navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
 1. Select the relevant OS tab (Windows or MacOS).
 1.	Add:
+
    * Remote IP Address (IPv4/IPv6 with optional CIDR notation/list of IPs)
       i. Valid input examples:
          1.	Single IP address: 1.1.1.1
