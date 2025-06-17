@@ -122,7 +122,7 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 > [!IMPORTANT]
 > As a best practice, keep your organization's devices and endpoints up to date. Make sure to get the **[latest updates for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fswitch-to-mde-phase-2.md/main/76b249d7-f914-4c03-3eaf-48aa43b2fa4a/microsoft-defender-antivirus-updates.md)**, and keep your organization's operating systems and productivity apps up to date.
 
-## Step 3: Configure Defender for Endpoint Plan 1 or Plan 2
+## Step 3: Configure Defender for Endpoint
 
 This article describes how to configure your Defender for Endpoint capabilities before devices are onboarded.
 
