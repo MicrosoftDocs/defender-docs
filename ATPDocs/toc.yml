@@ -91,7 +91,7 @@ items:
   items:
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
-    - name: Integrate Defender for Identity with Okta
+    - name: Integrate Defender for Identity with Okta (Preview)
       href: okta-integration.md
 - name: Manage
   items:
