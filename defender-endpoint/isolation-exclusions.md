@@ -37,50 +37,49 @@ Network isolation in MDE restricts a compromised device's communication to preve
 Isolation exclusions allow designated processes or endpoints to bypass this restriction, ensuring essential functions (e.g., remote remediation or monitoring) continue while limiting broader network exposure.
 
 > [!WARNING]
-> Any exclusion weakens device isolation and increases security risks. To minimize risk, configure exclusions only when strictly necessary.
+> **Any exclusion weakens device isolation and increases security risks. To minimize risk, configure exclusions only when strictly necessary**.
 
 Regularly review and update exclusions to align with security policies.
 
 ## Isolation modes
 
-There are two modes of isolation: full isolation and selective isolation.
+There are two modes of isolation: **full isolation**and **selective isolation**.
 
-* Full isolation:
+* **Full isolation**:
 
    * In this mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent.
    * Exclusions are not applied in full isolation mode. This is the most secure option, suitable for scenarios where a high level of containment is necessary.
 
-* Selective isolation:
+* **Selective isolation**:
 
-   * Selective isolation allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device’s isolated state.
+   * Selective isolation allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device's isolated state.
 
 ## How to Use
 
 ### Prerequisites
 
-* Available on Windows (Minimum client version 10.8470) and MacOS (Minimum client version 101.240902)
+* Available on Windows (minimum client version 10.8470) and MacOS (minimum client version 101.240902)
 * Requires Global or Security Admin permissions.
 * Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
-* Opt in to the new feature in advanced feature page:
+* Opt in to the new feature in the advanced features page:
 
    :::image type="content" source="{source}" alt-text="{alt-text}":::
 
-### Configuration Steps
+### Configuration steps
 
-Defining Global Exclusions in Settings 
-1.	Navigate to Settings > Endpoints > Isolation Exclusion Rules.
-2.	Select the relevant OS tab (Windows or MacOS).
-3.	Add:
-•	Remote IP Address (IPv4/IPv6 with optional CIDR notation/ list of IPs)
-i.	Valid input examples:
-1.	Single IP address: 1.1.1.1
-2.	IPv6 address: 2001:db8:85a3::8a2e:370:7334
-3.	IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-a.	This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255.
-b.	The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
+#### Defining Global Exclusions in Settings
 
-
-•	Connection Direction (Inbound/Outbound)
+1. Navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
+1. Select the relevant OS tab (Windows or MacOS).
+1.	Add:
+   * Remote IP Address (IPv4/IPv6 with optional CIDR notation/list of IPs)
+      i. Valid input examples:
+         1.	Single IP address: 1.1.1.1
+         1. IPv6 address: 2001:db8:85a3::8a2e:370:7334
+         1. IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
+            a. This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255.
+            b. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.\
+   * Connection Direction (Inbound/Outbound)
 i.	Example: 
 1.	Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
 a.	Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
