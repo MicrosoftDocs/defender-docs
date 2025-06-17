@@ -74,12 +74,13 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 1.	Add:
 
    * Remote IP Address (IPv4/IPv6 with optional CIDR notation/list of IPs)
-      i. Valid input examples:
-         1.	Single IP address: 1.1.1.1
-         1. IPv6 address: 2001:db8:85a3::8a2e:370:7334
-         1. IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-            a. This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255.
-            b. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.\
+
+        1. Valid input examples:
+           * Single IP address: 1.1.1.1
+           * IPv6 address: 2001:db8:85a3::8a2e:370:7334
+           * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
+              1. This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255.
+              1. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
    * Connection Direction (Inbound/Outbound)
 i.	Example: 
 1.	Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
