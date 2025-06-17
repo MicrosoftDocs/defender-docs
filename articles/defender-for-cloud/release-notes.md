@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Public Preview)](#agentless-code-scanning-github-support-and-customizable-coverage-now-available-public-preview) |
+| June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Public Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-public-preview) |
 
 
 ### Agentless code scanning – GitHub support and customizable coverage now available (Public Preview)
