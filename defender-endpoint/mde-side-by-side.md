@@ -50,8 +50,3 @@ Delegating security functionality, creating exclusions, and configuring settings
 
 Commercially reasonable support is provided through Microsoft Customer Service & Support and Microsoft-managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution.
 
-## Example of the "include" that can be added to pages that are relevant to a side by side scenario
-
-This content won't be shown on this page (for review only)
-
-[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
