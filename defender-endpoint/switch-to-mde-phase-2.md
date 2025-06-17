@@ -106,16 +106,16 @@ For macOS devices, the following table lists processes to exclude in your non-Mi
 
 For Linux servers, the following table lists processes to exclude in your non-Microsoft antivirus/antimalware solution:
 
-| Process | Location | Purpose |
-|---|---|---|
-| `wdavdaemon` | `/opt/microsoft/mdatp/sbin/` | Core daemon (service). Uses FANotify for both antimalware and EDR purposes (TALPA on older RHEL). |
-| `wdavdaemon enterprise` | `/opt/microsoft/mdatp/sbin/` | EDR engine. Used for enrichment, also leverages auditd on most Linux platforms. |
-| `wdavdaemon unprivileged` | `/opt/microsoft/mdatp/sbin/` | Antivirus engine |
-| `mdatp_audisp_plugin` | `/opt/microsoft/mdatp/sbin/` | Auditd log ingestion |
-| `crashpad_handler` | `/opt/microsoft/mdatp/sbin/` | Collects crash dumps |
-| `mdatp` | `/opt/microsoft/mdatp/sbin/Wdavdaemonclient` | Command line utility |
-| `telemetryd_v2` | `/opt/microsoft/mdatp/sbin/` | Telemetry daemon for EDR |
-| `mde_netfilter` | `/opt/microsoft/mde_netfilter/sbin` | Packet filter for Network protection, also used for response capabilities |
+| Process | Location |
+|---|---|
+| `wdavdaemon`<br/>Core daemon (service). Uses FANotify for both antimalware and EDR purposes (TALPA on older RHEL). | `/opt/microsoft/mdatp/sbin/` |
+| `wdavdaemon enterprise`<br/>EDR engine. Used for enrichment, also leverages auditd on most Linux platforms. | `/opt/microsoft/mdatp/sbin/`  |
+| `wdavdaemon unprivileged`<br/> Antivirus engine  | `/opt/microsoft/mdatp/sbin/` |
+| `mdatp_audisp_plugin`<br/>Auditd log ingestion  | `/opt/microsoft/mdatp/sbin/` |
+| `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
+| `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
+| `telemetryd_v2`<br/>Telemetry daemon for EDR | `/opt/microsoft/mdatp/sbin/` |
+| `mde_netfilter` <br/>Packet filter for Network protection, also used for response capabilities | `/opt/microsoft/mde_netfilter/sbin` |
 
 ---
 
