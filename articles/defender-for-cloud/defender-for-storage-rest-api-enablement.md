@@ -101,7 +101,7 @@ And add the following request body:
 To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
 To have more granular control over on-upload malware scanning and exclude specific containers, blob types or sizes, use the `filters` property.  
-Learn more about the [on-upload malware scanning filters](/azure/defender-for-cloud/on-upload-malware-scanning).
+Learn more about the [on-upload malware scanning filters](on-upload-malware-scanning.md).
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
 
