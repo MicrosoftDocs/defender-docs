@@ -15,7 +15,7 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 ## Sensor versions available per release
 
-### Defender for Containers Sensor v0.9.17
+### Defender for Containers Sensor v0.9.17 Preview
 
 - **Released:** June 17, 2025
 - **What's included:**
