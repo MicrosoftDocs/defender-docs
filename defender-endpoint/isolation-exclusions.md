@@ -70,30 +70,40 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 #### Defining Global Exclusions in Settings
 
 1. Navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
+
 1. Select the relevant OS tab (Windows or MacOS).
+
 1.	Add:
 
-   * Remote IP Address (IPv4/IPv6 with optional CIDR notation/list of IPs)
+   * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
 
-        1. Valid input examples:
-           * Single IP address: 1.1.1.1
-           * IPv6 address: 2001:db8:85a3::8a2e:370:7334
-           * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-              This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
+      * **Valid input examples**:
 
-   * Connection Direction (Inbound/Outbound)
+         * Single IP address: 1.1.1.1
+
+         * IPv6 address: 2001:db8:85a3::8a2e:370:7334
+
+         * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
+
+            This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
+
+   * **Connection Direction** (Inbound/Outbound)
+
       Example:
 
       * Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
-          Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
-      * Inbound connection: If the device is listening to incoming connections, define an inbound rule
 
-   * Process Path (Windows only)
-i.	The file path of an executable is simply its location on the endpoint.
-You can define one executable to be used in each rule.
-For example:
- C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe. 
-ii.	Exclusion will not apply to any child processes created by this process.
+         Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
+      * Inbound connection: If the device is listening to incoming connections, define an **inbound rule**.
+
+   * **Process Path** (Windows only)
+
+      * The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.
+
+         For example: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.`
+
+      * Exclusion will not apply to any child processes created by this process.
+
 •	Service Name (Windows only)
 i.	Windows service short names can be used in cases you want to exclude a service (not an application), that is sending or receiving traffic. 
 Service short names can be retrieved by running the Get-Service command from PowerShell.
