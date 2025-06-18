@@ -86,4 +86,4 @@ GET  https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery
 
 ## Related content
 
-For more information, see [Working with discovered apps](discovered-apps.md) and the [Microsoft Graph API reference](/graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta).
+For more information, see [Working with discovered apps](discovered-apps.md) and the [Microsoft Graph API reference](/graph/api/resources/security-cloudappdiscovery-overview?view=graph-rest-beta&preserve-view=true).
