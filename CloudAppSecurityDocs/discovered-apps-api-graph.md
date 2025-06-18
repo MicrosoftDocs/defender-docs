@@ -1,4 +1,4 @@
----
+ ---
 title: Work with discovered apps via Graph API | Microsoft Defender for Cloud Apps
 description: Learn how to work with apps discovered by Microsoft Defender for Cloud Apps via Graph API.
 ms.topic: how-to #Don't change
@@ -36,7 +36,7 @@ For more information, see:
 To get a high level summary of all the data available on your **Discovered apps** page, run the following GET command:
 
 ```http
-GET https://graph.microsoft.com/beta/dataDiscovery/cloudAppDiscovery/uploadedStreams
+GET https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams
 ```
 
 To drill down to data for a specific stream:
