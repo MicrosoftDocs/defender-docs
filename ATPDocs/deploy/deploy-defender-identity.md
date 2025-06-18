@@ -44,20 +44,18 @@ There are also differences in the complexity of setting up the sensors. This tab
 |Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
 |---------|---------|---------|
 |Connectivity requirements|Requires streamlined URLs        |No connectivity requirements|
-|[Health alerts](../health-alerts.md)|All supported|Partial support.|
+|[Health alerts](../health-alerts.md)|All supported|Partial support|
 |Sensor updates|Automatic updates around once weekly.|Occurs automatically as part of Windows update|
-|Directory Service account (DSA) |Recommended, requires configuration        |  Not required|
-|Group Managed Service Account (gMSA)        |Recommended, requires configuration        | Not supported |
-|Remote calls to SAM-R | Recommended, requires configuration        |Not required         |
+|Directory Service account (DSA) |Supported, requires configuration        |  Not supported|
+|Group Managed Service Account (gMSA)        |Supported, requires configuration        | Not supported |
+|Remote calls to SAM-R | Supported, requires configuration        |Not supported         |
 |[Defender for Identity action accounts](manage-action-accounts.md)    |Supported, requires configuration         |Not supported |
 |[Multiple Active Directory forests](multi-forest.md)     | Supported, requires configuration        | Not supported|
 |VPN integration         |Supported       |Not supported      |
 |[Silent installation on multiple domain controllers](install-sensor.md#perform-a-defender-for-identity-silent-installation)         | Supported       |Not supported        |
 
-
 > [!NOTE]
-> We recommend the Windows server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
-
+> We recommend the Windows Server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
 
 ## Deployment process
 

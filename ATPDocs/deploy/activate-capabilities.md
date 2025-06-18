@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Activate the Windows server sensor on a domain controller (Preview)
+# Activate the Windows Server sensor on a domain controller (Preview)
 
 Microsoft Defender for Endpoint customers who have onboarded their domain controllers can activate the Windows Server sensor directly on the domain controller. 
 
@@ -33,7 +33,7 @@ We recommend activating this sensor, built in to the Windows Server, for custome
        > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. [This out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
 
 - Your domain controller must be onboarded to Microsoft Defender for Endpoint. For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
-- To access the Defender for Identity **Activation** page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
+- You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
     - `Security setting (All permissions)`
 
@@ -43,34 +43,30 @@ Defender for Identity detections rely on specific Windows Event Log entries to e
 
 Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
-
-For example, the following command defines all settings for the domain, creates group policy objects, and links them.
+You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
 
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All
 ```
+For more information, see:
+- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
+- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
 
 ## For customers with domain controllers onboarded to Defender for Endpoint 
 
-Microsoft Defender for Endpoint customers, who have onboarded their domain controllers to Defender for Endpoint, can activate the Windows Server Defender for Identity sensor.
+Microsoft Defender for Endpoint customers who have onboarded the domain controller to Defender for Endpoint, can activate the Windows Server Defender for Identity sensor.
 
 ### Activate the Defender for Identity sensor
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 
-   The **Activation Page** displays all servers from your device inventory, and the server's activation state.
+   The **Activation Page** displays all servers from your device inventory, and the server's activation state. You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
 
-1. Select the domain controller where you want to activate Defender for Identity, and then select **Activate**. Confirm your selection when prompted. 
+1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
    [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/1.jpg)](media/activate-capabilities/1.jpg#lightbox)
 
-> [!NOTE]
-> You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
-
-1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to go to the **Settings > Identities > Sensors** page, where you can check your sensor health.  
+1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
 
     [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/2.jpg)](media/activate-capabilities/2.jpg#lightbox)
  
@@ -97,11 +93,10 @@ This solution uses Defender for Endpoint URL endpoints for communication, includ
 To confirm the sensor is working: 
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Sensors**.
-
-2. Check that the onboarded domain controller is listed. 
+1. Check that the onboarded domain controller is listed. 
 
 > [!NOTE]
-> The activation doesn't require a restart/reboot. The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes.
+> The first time you activate Defender for Identity capabilities on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes. The activation doesn't require a restart/reboot. 
 
 ## Next steps
 - [Manage and update Microsoft Defender for Identity sensors](../sensor-settings.md).

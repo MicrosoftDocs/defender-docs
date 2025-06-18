@@ -47,7 +47,7 @@ items:
             href: deploy/configure-sensor-settings.md
       - name: Windows 2019 and later (Preview)
         items:
-          - name: Activate the sensor when MDE is enabled on endpoints
+          - name: Activate the Windows Server sensor when MDE is enabled on endpoints
             href: deploy/activate-capabilities.md
           - name: Deploy the sensor when MDE is not enabled on endpoints
             items:
