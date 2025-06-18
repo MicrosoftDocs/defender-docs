@@ -63,7 +63,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 * Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 * Opt in to the new feature in the advanced features page:
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-1.png" alt-text="Screenshot of exclusions1.":::
+:::image type="content" source="./media/isolation-exclusions/exclusions-1.png" alt-text="Screenshot of exclusions1." lightbox="./media/isolation-exclusions/exclusions-1.png":::
 
 ### Configuration steps
 
@@ -130,9 +130,9 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 **These global rules apply whenever selective isolation is enabled for a device.**
  
-:::image type="content" source="./media/isolation-exclusions/exclusions-2.png" alt-text="Screenshot of exclusions2.":::
+:::image type="content" source="./media/isolation-exclusions/exclusions-2.png" alt-text="Screenshot of exclusions2." lightbox="./media/isolation-exclusions/exclusions-2.png":::
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-3.png" alt-text="Screenshot of exclusions3.":::
+:::image type="content" source="./media/isolation-exclusions/exclusions-3.png" alt-text="Screenshot of exclusions3." lightbox="./media/isolation-exclusions/exclusions-3.png":::
  
 #### Applying Selective Isolation to a Specific Device
 
@@ -141,11 +141,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 1.	Check Use isolation exclusions to apply defined exclusion rules.
 1.	Confirm the action.
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-4.png" alt-text="Screenshot of exclusions4.":::
+:::image type="content" source="./media/isolation-exclusions/exclusions-4.png" alt-text="Screenshot of exclusions4." lightbox="./media/isolation-exclusions/exclusions-4.png":::
 
 Exclusions that were applied to a specific device can be later reviewed in the Action Center history.
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-5.png" alt-text="Screenshot of exclusions5.":::
+:::image type="content" source="./media/isolation-exclusions/exclusions-5.png" alt-text="Screenshot of exclusions5." lightbox="./media/isolation-exclusions/exclusions-5.png":::
  
 #### API Configuration
 
