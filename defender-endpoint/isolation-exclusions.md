@@ -66,6 +66,8 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 #### Defining Global Exclusions in Settings
 
+[[NEED AN INTRO STATEMENT ABOUT WHAT WE'RE GOING TO BE DOING]]
+
 1. Navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
 
 1. Select the relevant OS tab (Windows or macOS).
