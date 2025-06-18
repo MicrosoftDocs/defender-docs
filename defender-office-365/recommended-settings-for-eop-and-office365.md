@@ -309,7 +309,7 @@ Quarantine policies define what users are able to do to quarantined messages, an
 
 The policy named AdminOnlyAccessPolicy enforces the historical capabilities for messages that were quarantined as malware as described in the table [here](quarantine-end-user.md).
 
-Users can't release their own messages that were quarantined as malware by Safe Attachments, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+Users can't release their own messages that were quarantined as malware or phishing by Safe Attachments, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined messages.
 
 |Security feature name|Default in custom|Built-in protection|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|:---:|---|
