@@ -59,7 +59,9 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint, Cisco Webex)
 
-   ![policy_create alerts.](media/policy_create-alerts.png)
+  :::image type="content" source="../ATPDocs/media/governance-actions/governance-actions-box.png" alt-text="Screenshot that shows the available file governance actions for Box and Dropbox.":::
+
+
   
 ## Malware governance actions (Preview)
 
