@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: batamig
 ms.author: bagol
 ms.topic: concept-article
-ms.date: 06/15/2025
+ms.date: 06/18/2025
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -24,9 +24,9 @@ The listed features were released in the last six months. For information about 
 
 ### Export STIX threat intelligence objects (Preview)
 
-Microsoft Sentinel now supports exporting STIX threat intelligence objects to external platforms. If you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector from an external platform, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
+Microsoft Sentinel now supports exporting STIX threat intelligence objects to to other destinations, such as external platforms. If you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector from an external platform, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
 
-Exporting TI objects is supported from both the Defender portal and the Azure portal:
+Exporting TI objects is currently supported for TAXII 2.1-based platforms only, and for both the Defender portal and the Azure portal:
 
 #### [Defender portal](#tab/defender-portal)
 

@@ -4,7 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article explains how to view, create, manage, and visualize threat intelligence in Microsoft Sentinel.
 author: guywi-ms
 ms.topic: how-to
-ms.date: 06/15/2025
+ms.date: 06/18/2025
 ms.author: guywild
 ms.reviewer: alsheheb
 appliesto:
@@ -22,6 +22,10 @@ Accelerate threat detection and remediation with streamlined creation and manage
 - Manage threat intelligence by viewing, curating, and visualizing 
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
+
+## Prerequisites
+
+- You need the permissions of a [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) or higher role assigned to your user account to manage threat intelligence.
 
 ## Access the management interface
 
@@ -241,7 +245,7 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 ## Export threat intelligence
 
-This procedure describes how to export threat intelligence from Microsoft Sentinel to external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
+This procedure describes how to export threat intelligence from Microsoft Sentinel to to other destinations, such as external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
@@ -279,9 +283,16 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
     1. When you're done, select **Add** to add your server.
 
-1. Select that you understand the terms of the export, and then select **Export**. This action can't be undone.
+    Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
 
-Your export history is listed on the **Bulk operation history** page, accessible from the toolbar by selecting **Bulk operations > View history**.
+1. Select **Export**. This action can't be undone.
+
+**To access the export history**:
+
+1. Navigate to the exported item in either the **Intel management** (Defender portal) or **Threat intelligence** page (Azure portal).
+1. In the **Exports** column, select **View export history** to show the export history for that item.
+
+Your general export history is also listed on the **Bulk operation history** page, accessible from the toolbar by selecting **Bulk operations > View history**.
 
 ## Related content
 

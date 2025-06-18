@@ -1,10 +1,10 @@
 ---
 title: Roles and permissions in Microsoft Sentinel
 description: Learn how Microsoft Sentinel assigns permissions to users using Azure role-based access control, and identify the allowed actions for each role.
-author: yelevin
+author: batamig
 ms.topic: conceptual
 ms.date: 03/07/2024
-ms.author: yelevin
+ms.author: bagol
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -35,7 +35,7 @@ All Microsoft Sentinel built-in roles grant read access to the data in your Micr
 
 - [**Microsoft Sentinel Responder**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-responder) can, in addition to the permissions for Microsoft Sentinel Reader, manage incidents like assign, dismiss, and change incidents.
 
-- [**Microsoft Sentinel Contributor**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor) can, in addition to the permissions for Microsoft Sentinel Responder, install and update solutions from content hub, and create and edit Microsoft Sentinel resources like workbooks, analytics rules, and more.
+- [**Microsoft Sentinel Contributor**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor) can, in addition to the permissions for Microsoft Sentinel Responder, install and update solutions from content hub, create and edit Microsoft Sentinel resources like workbooks, analytics rules, export threat intelligence, and more.
 
 - [**Microsoft Sentinel Playbook Operator**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-playbook-operator) can list, view, and manually run playbooks.
 
