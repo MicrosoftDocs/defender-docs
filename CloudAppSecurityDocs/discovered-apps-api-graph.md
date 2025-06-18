@@ -1,11 +1,9 @@
- ---
+---
 title: Work with discovered apps via Graph API | Microsoft Defender for Cloud Apps
 description: Learn how to work with apps discovered by Microsoft Defender for Cloud Apps via Graph API.
 ms.topic: how-to #Don't change
-ms.date: 06/24/2024
-
+ms.date: 06/18/2025
 #customer intent: As a security engineer, I want to work with discovered apps via API so that I can customize and automate the Microsoft Defender for Cloud Apps **Discovered apps** page functionality.
-
 ---
 
 # Work with discovered apps via Graph API (Preview)
