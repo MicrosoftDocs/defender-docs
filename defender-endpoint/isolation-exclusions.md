@@ -104,79 +104,91 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 
       * Exclusion will not apply to any child processes created by this process.
 
-•	Service Name (Windows only)
-i.	Windows service short names can be used in cases you want to exclude a service (not an application), that is sending or receiving traffic. 
-Service short names can be retrieved by running the Get-Service command from PowerShell.
-You can define one service to be used in each rule. 
-Example:  termservice
-•	The Package Family Name (PFN) is a unique identifier assigned to Windows app packages. The PFN format follows this structure:
-<Name>_<PublisherId> 
+   * **Service Name** (Windows only)
 
-Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
-For example, Fetching new Microsoft Teams PFN:
-Run Get-AppxPackage *teams*
-Fetch PackageFamilyName property - Should be MSTeams_8wekyb3d8bbwe
-Supported on:
-Windows 11 (24H2)
-Windows Server 2025
-Windows 11 (22H2)Windows 11, version 23H2 KB5050092
-Windows Server, Version 23H2
-Windows 10 22H2 - KB 5050081
-4.	Save and apply changes.
-These global rules apply whenever selective isolation is enabled for a device.
- 
+      Windows service short names can be used in cases you want to exclude a service (not an application), that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.
 
+      Example: termservice
+
+   * The **Package Family Name (PFN)** is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>` 
+
+      Package family names can be retrieved by running the *Get-AppxPackage* command from PowerShell. For example, fetching new Microsoft Teams PFN:
+      
+      Run Get-AppxPackage *teams*
+
+      Fetch PackageFamilyName property - Should be MSTeams_8wekyb3d8bbwe
+
+      Supported on:
+     
+      * Windows 11 (24H2)
+      * Windows Server 2025
+      * Windows 11 (22H2)Windows 11, version 23H2 KB5050092
+      * Windows Server, Version 23H2
+      * Windows 10 22H2 - KB 5050081
+  
+1.	Save and apply changes.
+
+**These global rules apply whenever selective isolation is enabled for a device.**
  
-Applying Selective Isolation to a Specific Device
+Image
+
+Image
+ 
+#### Applying Selective Isolation to a Specific Device
+
 1.	Navigate to the device page in the portal.
-2.	Select Isolate device and choose Selective Isolation.
-3.	Check Use isolation exclusions to apply defined exclusion rules.
-4.	Confirm the action.
+1.	Select Isolate device and choose Selective Isolation.
+1.	Check Use isolation exclusions to apply defined exclusion rules.
+1.	Confirm the action.
+
+Image
+
+Exclusions that were applied to a specific device can be later reviewed in the Action Center history.
+
+Image
  
+#### API Configuration
 
-
-
-
-
-
- 
-Exclusions that were applied to a specific device can be later reviewed in the Action Center history. 
- 
-API Configuration
 To trigger isolation with exclusions via API, set IsolationType param = “Selective”.
  
-Exclusion Logic
-•	Within a single rule, conditions use AND logic (all must match).
-•	Between different rules, conditions use OR logic (any matching rule applies).
-•	Undefined conditions are treated as "any" (i.e., unrestricted for that parameter).
-For example, if the following rules are defined: 
-Rule1: 
- 	process path = c:\example.exe
- Ip = 1.1.1.1
-Direction - Out
-Rule 2:
-process path = c:\example_2.exe
-Direction - Out
-Rule 3:
-Ip address: 18.18.18.18
-Direction - In
--	example.exe will only be able to initiate network connections to remote IP 1.1.1.1.
--	example_2.exe can initiate network connections to every IP address.
--	The device can receive inbound connection from Ip address 18.18.18.18.
-Limitations
-•	Only supports Windows and MacOS.
-•	Process Path and Service Name exclusions are Windows-only.
+## Exclusion Logic
+
+* Within a single rule, conditions use AND logic (all must match).
+* Between different rules, conditions use OR logic (any matching rule applies).
+* Undefined conditions are treated as "any" (i.e., unrestricted for that parameter).
+
+   For example, if the following rules are defined: 
+
+      Rule 1: 
+
+         process path = c:\example.exe<br>Ip = 1.1.1.1<br>Direction - Out
+      
+      Rule 2:
+
+         process path = c:\example_2.exe<br>Direction - Out
+
+      Rule 3:
+
+         Ip address: 18.18.18.18<br>Direction - In
+   
+   * example.exe will only be able to initiate network connections to remote IP 1.1.1.1.
+   * example_2.exe can initiate network connections to every IP address.
+   * The device can receive inbound connection from Ip address 18.18.18.18.
+
+## Limitations
+
+* Only supports Windows and MacOS.
+* Process Path and Service Name exclusions are Windows-only.
 
 When a device is isolated, any new Isolation Exclusion Rules added from the portal will not apply to the currently isolated device. Instead, newly added exclusions will only take effect for future isolation requests.
+
 If an exclusion needs to be applied to a device that is already isolated, the following steps must be taken:
-1.	Unisolate the device.
-2.	Ensure the exclusion rule is in place.
-3.	Re-isolate the device for the updated exclusion rule to take effect.
+
+1. Unisolate the device.
+1.	Ensure the exclusion rule is in place.
+1.	Re-isolate the device for the updated exclusion rule to take effect.
+
 This behavior ensures that isolation rules remain consistent throughout the duration of an active isolation session.
-
-
-
-6. If these steps don't resolve the issue, contact support.
 
 ## Related articles
 
