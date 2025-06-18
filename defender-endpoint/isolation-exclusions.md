@@ -63,7 +63,7 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 * Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 * Opt in to the new feature in the advanced features page:
 
-   :::image type="content" source="{source}" alt-text="{alt-text}":::
+Image
 
 ### Configuration steps
 
@@ -157,7 +157,7 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
 * Between different rules, conditions use OR logic (any matching rule applies).
 * Undefined conditions are treated as "any" (i.e., unrestricted for that parameter).
 
-   For example, if the following rules are defined: 
+   For example, if the following rules are defined:
 
       Rule 1: 
 
