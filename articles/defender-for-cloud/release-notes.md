@@ -38,7 +38,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 June 18, 2025
 
-Agentless code scanning has been updated with key capabilities that expand coverage and control:
+We have updated the agentless code scanning feature to include key capabilities that extend both coverage and control. These updates include:
 - Support for GitHub repositories, in addition to Azure DevOps
 - Customizable scanner selection – choose which tools (e.g., Bandit, Checkov, ESLint) to run
 - Granular scope configuration – include or exclude specific organizations, projects, or repositories
