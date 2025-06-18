@@ -10,7 +10,8 @@ ms.date: 06/18/2025
 
 Microsoft Defender for Cloud Apps supports a Microsoft Graph API that you can use to work with discovered cloud apps, to customize and automate the **Discovered apps** page functionality in the Microsoft Defender portal.
 
-This article provides sample procedures for using the [uploadedStreams API](graph/api/security-datadiscoveryreport-list-uploadedstreams?view=graph-rest-beta&preserve-view=true&tabs=http) for common purposes.
+This article provides sample procedures for using the [uploadedStreams API](/graph/api/security-datadiscoveryreport-list-uploadedstreams?view=graph-rest-beta&preserve-view=true&tabs=http) for common purposes.
+
 
 ## Prerequisites
 
