@@ -27,6 +27,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## June 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
+
+
+### Agentless code scanning – GitHub support and customizable coverage now available (Preview)
+
+June 18, 2025
+
+We have updated the agentless code scanning feature to include key capabilities that extend both coverage and control. These updates include:
+- Support for GitHub repositories, in addition to Azure DevOps
+- Customizable scanner selection – select which tools (e.g., Bandit, Checkov, ESLint) to run
+- Granular scope configuration – include or exclude specific organizations, projects, or repositories
+
+Agentless code scanning provides scalable security scanning for code and infrastructure-as-code (IaC) without requiring changes to CI/CD pipelines. It helps security teams detect vulnerabilities and misconfigurations without interrupting developer workflows.
+
+Learn more about [configuring agentless code scanning in Azure DevOps or GitHub](https://aka.ms/DevOpsSecurity/AgentlessCodeScanning/Docs).
+
 ## May 2025
 
 |Date | Category | Update|
