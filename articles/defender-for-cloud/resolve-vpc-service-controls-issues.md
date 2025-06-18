@@ -14,7 +14,7 @@ Google Cloud Platform (GCP) Virtual Private Cloud (VPC) Service Controls provide
 
 To allow Microsoft Defender for Cloud to scan resources within these protected environments, you need to configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This configuration ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
 
-If you're unsure whether your Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshooting-guide.md#defender-api-calls-to-gcp) to find out.
+If you're unsure whether your Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshoot-connectors.md#defender-api-calls-to-gcp) to find out.
 
 ## Prerequisites
 

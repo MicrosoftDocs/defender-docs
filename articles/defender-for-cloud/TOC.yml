@@ -697,6 +697,9 @@
           href: workflow-automation.yml
     - name: Resolve connector issues
       items:
+      - name: Troubleshoot connectors guide
+        displayName: troubleshoot, connectors, guide 
+        href: troubleshoot-connectors.md
       - name: Amazon Web Services (AWS) connector
         items:
         - name: Connect a Sentinel connected AWS account
