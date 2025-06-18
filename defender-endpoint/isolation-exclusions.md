@@ -79,15 +79,16 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
            * Single IP address: 1.1.1.1
            * IPv6 address: 2001:db8:85a3::8a2e:370:7334
            * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-              1. This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255.
-              1. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
-   * Connection Direction (Inbound/Outbound)
-i.	Example: 
-1.	Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
-a.	Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
-2.	Inbound connection: If the device is listening to incoming connections, define an inbound rule.
+              This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
 
-•	Process Path (Windows only)
+   * Connection Direction (Inbound/Outbound)
+      Example:
+
+      * Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
+          Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
+      * Inbound connection: If the device is listening to incoming connections, define an inbound rule
+
+   * Process Path (Windows only)
 i.	The file path of an executable is simply its location on the endpoint.
 You can define one executable to be used in each rule.
 For example:
