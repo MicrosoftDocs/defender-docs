@@ -17,6 +17,12 @@ Key points:
 - Resolving usernames is done ad-hoc, per-username by deciphering a given encrypted username.
 - Anonymization capabilities aren't supported when using the "Defender for Cloud Apps Proxy" stream.
 
+## Prerequisites
+
+Before you can use cloud discovery data anonymization, ensure you have the following:
+
+- The [Cloud Discovery global admin](defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled at the time of role assignment.
+
 ## How data anonymization works
 
 1. There are three ways to apply data anonymization:
