@@ -198,8 +198,8 @@ In supported protection features that quarantine email messages, the assigned qu
 |&nbsp;&nbsp;&nbsp;Mailbox intelligence impersonation (_MailboxIntelligenceProtectionAction_)|Yes (_MailboxIntelligenceQuarantineTag_)|
 |**[Anti-malware policies](anti-malware-policies-configure.md)**|Yes (_QuarantineTag_)|
 |**[Safe Attachments protection](safe-attachments-about.md)**||
-|&nbsp;&nbsp;&nbsp;Email messages with attachments that are quarantined as malware by Safe Attachments policies (_Enable_ and _Action_)|Yes (_QuarantineTag_)|
-|&nbsp;&nbsp;&nbsp;Files that are quarantined as malware by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)|No|
+|&nbsp;&nbsp;&nbsp;Email messages with attachments that are quarantined as malware or phishing by Safe Attachments policies (_Enable_ and _Action_)|Yes (_QuarantineTag_)|
+|&nbsp;&nbsp;&nbsp;Files that are quarantined as malware or phishing by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)|No|
 |**[Exchange mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) with the action: 'Deliver the message to the hosted quarantine' (_Quarantine_)**|No|
 
 The default quarantine policies that are used by each protection feature are described in the related tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
@@ -211,7 +211,7 @@ The rest of this step explains how to assign quarantine policies for supported f
 ## Assign quarantine policies in supported policies in the Microsoft Defender portal
 
 > [!NOTE]
-> Users can't release their own messages that were quarantined as **malware** by anti-malware or Safe Attachments policies, or as **high confidence phishing** by anti-spam policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
+> Users can't release their own messages that were quarantined as **malware** by anti-malware policies, **malware** or **phishing** by Safe Attachments policies, or as **high confidence phishing** by anti-spam policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
 
 ### Anti-spam policies
 
@@ -409,7 +409,7 @@ For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/po
 
 3. On the **Settings** page or flyout, view or select a quarantine policy in the **Quarantine policy** box.
 
-   Users can't release their own messages that were quarantined as malware by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+   Users can't release their own messages that were quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
 
    :::image type="content" source="media/quarantine-tags-in-safe-attachments-policies.png" alt-text="The Quarantine policy selections in a Safe Attachments policy." lightbox="media/quarantine-tags-in-safe-attachments-policies.png":::
 
