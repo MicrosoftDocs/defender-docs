@@ -19,9 +19,9 @@ Key points:
 
 ## Prerequisites
 
-Before you can use cloud discovery data anonymization, ensure you have the following:
+To resolve (deanonymize) usernames in Cloud Discovery data:
 
-- The [Cloud Discovery global admin](manage-admins.md#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled at the time of role assignment.
+- You must have the [Cloud Discovery global admin](manage-admins.md#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled during role assignment.
 
 ## How data anonymization works
 
