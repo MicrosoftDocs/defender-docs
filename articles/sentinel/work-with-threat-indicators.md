@@ -261,9 +261,11 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
     ---
 
-1. In the **Export** pane, from the **Export TI** dropdown, select the TAXII server you want to export your threat intelligence to.
+1. In the **Export** pane, from the **Export TI** dropdown, select the server you want to export your threat intelligence to.
 
-    If there isn't a TAXII server listed, you need to configure a TAXII server for export first. To do so:
+    If there isn't a server listed, you need to configure a server for export first. Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
+
+    **To add a server for export:**
 
     1. Select the **Configure Export to TAXII server** link below the **Export TI** dropdown. The **Data connectors** page opens, showing the **Threat intelligence - TAXII Export** data connector.
     
@@ -283,7 +285,6 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
     1. When you're done, select **Add** to add your server.
 
-    Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
 
 1. Select **Export**. This action can't be undone.
 
