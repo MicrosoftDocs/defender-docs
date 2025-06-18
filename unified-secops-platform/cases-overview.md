@@ -44,9 +44,9 @@ The following specific capabilities and features support these use cases and sce
 - [Improve collaboration, quality, and accountability by assigning tasks and due dates](#tasks).
 - [Handle escalations and complex cases by linking multiple incidents to a case](#link-incidents).
 - [Manage access to your cases using RBAC](#requirements).
-- [Add rich-text comments to provide links, tables, and formatting to the activity log (in Preview)](#activity-log).
-- [Upload attachments to store files like documents, CSVs, and encrypted zip files containing malware samples (in Preview)](#attachments).
-- [Manage cases in multiple tenants via the multitenant management portal (in Preview)](mto-manage-cases.md).
+- [Add rich-text comments to provide links, tables, and formatting to the activity log](#activity-log).
+- [Upload attachments to store files like documents, CSVs, and encrypted zip files containing malware samples](#attachments).
+- [Manage cases in multiple tenants via the multitenant management portal](mto-manage-cases.md).
 
 As we build on this foundation of case management, we're prioritizing these additional robust capabilities as we evolve this solution:
 
