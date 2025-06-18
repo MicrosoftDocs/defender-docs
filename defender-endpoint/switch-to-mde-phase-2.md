@@ -109,9 +109,8 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | Process | Location |
 |---|---|
 | `wdavdaemon`<br/>Core daemon (service). Uses FANotify for both antimalware and EDR purposes (TALPA on older RHEL). | `/opt/microsoft/mdatp/sbin/` |
-| `wdavdaemon enterprise`<br/>EDR engine. Used for enrichment, also leverages auditd on most Linux platforms. | `/opt/microsoft/mdatp/sbin/`  |
+| `wdavdaemon enterprise`<br/>EDR engine. Used for enrichment. | `/opt/microsoft/mdatp/sbin/`  |
 | `wdavdaemon unprivileged`<br/> Antivirus engine  | `/opt/microsoft/mdatp/sbin/` |
-| `mdatp_audisp_plugin`<br/>Auditd log ingestion  | `/opt/microsoft/mdatp/sbin/` |
 | `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
 | `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
 | `telemetryd_v2`<br/>Telemetry daemon for EDR | `/opt/microsoft/mdatp/sbin/` |
