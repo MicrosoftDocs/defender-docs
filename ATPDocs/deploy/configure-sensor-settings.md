@@ -74,8 +74,6 @@ Use the following procedures to validate your Defender for Identity sensor insta
 > If you're installing on an AD FS or AD CS server, you use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment).
 >
 
-
-
 ### Validate successful deployment
 
 To validate that the Defender for Identity sensor has been successfully deployed:

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Deployment Overview
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 05/13/2025
+ms.date: 06/18/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -29,8 +29,35 @@ Defender for Identity uses two types of sensors to collect data from your identi
 - **Defender for Identity sensor**: The original Defender for Identity sensor is designed for domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers. The Defender for Identity sensor collects data from the network and Windows events.
 - **The Windows Server sensor (Preview)**: You can activate the Windows Server sensor on domain controllers running Windows Server 2019 or later. This sensor is integrated directly into the Windows operating system, without the need for another agent. The sensor doesn't require a .NET framework to be installed on the Operating System. This sensor enables new onboarding and activation capabilities and closer integration between Defender for Identity and Defender for Endpoint. 
 
+There are some differences between the functionality of the two sensors. The Windows server sensor supports the following Defender for Identity functionality:
+
+- Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
+- [Identity inventory](test-sensor.md#confirm-entity-page-details)
+- [Identity advanced hunting data](test-sensor.md#test-advanced-hunting-tables)
+- [Security posture recommendations](test-sensor.md#test-identity-security-posture-management-ispm-recommendations)
+- [Alert detections](test-sensor.md#test-alert-functionality)
+- [Remediation actions](test-sensor.md#test-remediation-actions)
+- [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
+
+There are also differences in the complexity of setting up the sensors. This table describes the differences in functionality and required configurations of the sensors. 
+
+|Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
+|---------|---------|---------|
+|Connectivity requirements|Requires streamlined URLs        |No connectivity requirements|
+|[Health alerts](health-alerts.md)|All supported|Partial support.|
+|Sensor updates|Automatic updates around once weekly.|Occurs automatically as part of Windows update|
+|Directory Service account (DSA) |Recommended, requires configuration        |  Not required|
+|Group Managed Service Account (gMSA)        |Recommended, requires configuration        | Not supported |
+|Remote calls to SAM-R | Recommended, requires configuration        |Not required         |
+|[Defender for Identity action accounts](manage-action-accounts.md)    |Supported, requires configuration         |Not supported |
+|[Multiple Active Directory forests](multi-forest.md)     | Supported, requires configuration        | Not supported|
+|VPN integration         |Supported       |Not supported      |
+|[Silent installation on multiple domain controllers](install-sensor.md#perform-a-defender-for-identity-silent-installation)         | Supported       |Not supported        |
+
+
 > [!NOTE]
 > We recommend the Windows server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
+
 
 ## Deployment process
 
@@ -48,18 +75,17 @@ The following procedures help you complete the deployment process:
 1. [**Prepare your environment**](prerequisites.md).
 1. [**Plan your capacity**](capacity-planning.md).
 1. [**Set up roles and permissions**](../role-groups.md).
-1. **Install a sensor**. Depending on your environment, either install the Microsoft Defender for Identity sensor or activate the Windows Server sensor.
+1. **Deploy a sensor**. Depending on your environment, either install the Microsoft Defender for Identity sensor or activate the Windows Server sensor.
     For more information, see:
     - [Activate a Windows Server sensor (preview) on a domain controller](activate-capabilities.md).
     - [Install a Defender for Identity sensor for AD FS, AD CS, and Microsoft Entra Connect](active-directory-federation-services.md).
+    - When deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation)
 1. [**Configure Windows event collection**](event-collection-overview.md).
 1. (Optional).[**Configure a Directory Service account (DSA)**](directory-service-accounts.md).
-    We recommend that you configure a DSA for Defender for Identity for full security coverage. For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities.
+    If you're installing the classic Defender for Identity sensor, we recommend that you configure a DSA for Defender for Identity for full security coverage. For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities.
 1. (Optional).[**Configure remote calls to SAM**](remote-calls-sam.md).
-    We recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
-
-We recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) when deploying on multiple domain controllers.
+     If you're installing the classic Defender for Identity sensor, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 ## Next steps
-- [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json)
-- [Get started with Microsoft Defender XDR](/microsoft-365/security/defender/get-started)
+- [**Prepare your environment**](prerequisites.md).
+- Set up [Microsoft Defender for Identity role groups](../role-groups.md).

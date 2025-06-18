@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 01/16/2025
+ms.date: 06/18/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -98,6 +98,8 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](directory-service-accounts.md) password.|High|Global health issues tab|
 
 ### Sensor outdated
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
@@ -110,6 +112,8 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |The Defender for Identity sensor stopped itself and restarts automatically to protect the domain controller from a low memory condition.|The Defender for Identity sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This issue occurs when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|Sensors health issues tab|
 
 ### Sensor service failed to start
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
@@ -160,30 +164,40 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |The Defender for Identity sensor is running an Npcap component that is not configured as required.|The Npcap installation is missing the required configuration options.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 
 ### NTLM Auditing is not enabled
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a day, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Directory Services Advanced Auditing is not enabled as required
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per sensor).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Sensors health issues tab|
 
 ### Directory Services Object Auditing is not enabled as required
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration doesn't include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure domain object auditing](configure-windows-event-collection.md#configure-domain-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Auditing on the Configuration container is not enabled as required
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Auditing on the Configuration container isn't enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the Domain's Configuration container is not enabled as required.|Enable the Directory Services Auditing on the Domain's Configuration container according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Auditing on the ADFS container is not enabled as required
+> [!NOTE]
+> This issue is currently only supported by the Defender for Identity classic sensor. This issue is not detected by the Windows Server sensor.
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|

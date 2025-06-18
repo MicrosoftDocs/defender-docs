@@ -17,7 +17,6 @@ items:
     href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-
 - name: Deploy
   items:
   - name: Deployment overview
@@ -135,6 +134,8 @@ items:
     - name: Adjust alert thresholds
       href: advanced-settings.md
       displayName: advanced settings
+  - name: Remove a Defender for Identity sensor
+    href: remove-sensor.md
   - name: Troubleshooting
     items:
     - name: Troubleshooting known issues

@@ -8,10 +8,9 @@ ms.reviewer: rlitinsky
 
 # Install a Microsoft Defender for Identity sensor
 
-> [!IMPORTANT]
-> The new sensor is recommended for customers looking to deploy core identity protections to new domain controllers running Windows Server 2019 or newer. For all other identity infrastructure, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the classic sensor. [Learn more about the new sensor](/defender-for-identity/deploy/activate-capabilities)
+This article describes how to install a Microsoft Defender for Identity classic sensor, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
 
-This article describes how to install a Microsoft Defender for Identity classic sensor, including a standalone sensor. The default recommendation is to use the UI. However:
+We recommend alternate installation methods for these use cases:
 
 - When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#perform-a-defender-for-identity-silent-installation) instead.
 
@@ -33,7 +32,7 @@ Before you start, make sure that you have:
 
 - Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you might receive a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
 
-## Install the classic sensor by using the UI
+## Install the classic sensor in the Defender portal
 
 Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Entra Connect server.
 
