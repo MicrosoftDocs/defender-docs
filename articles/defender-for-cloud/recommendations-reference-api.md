@@ -45,6 +45,18 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
+### Unused API endpoints should be disabled and removed from Function Apps (Preview)
+
+**Description & related policy**: 	API endpoints that have not received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these HTTP-triggered endpoints from Azure Function Apps.
+
+**Severity**: Low
+
+### Unused API endpoints should be disabled and removed from Logic Apps (Preview)
+
+**Description & related policy**: 	API endpoints that have not received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these endpoints from Azure Logic Apps.
+
+**Severity**: Low
+
 ## API management recommendations
 
 ### API Management subscriptions should not be scoped to all APIs
