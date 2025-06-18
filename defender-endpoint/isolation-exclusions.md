@@ -171,7 +171,8 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
    Rule 3:
 
       Ip address: 18.18.18.18<br>Direction - In
-```
+
+   ```
    * example.exe will only be able to initiate network connections to remote IP 1.1.1.1.
    * example_2.exe can initiate network connections to every IP address.
    * The device can receive inbound connection from Ip address 18.18.18.18.
