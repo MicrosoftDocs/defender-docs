@@ -32,9 +32,9 @@ ms.date: 03/04/2025
 
 Isolation exclusion refers to the ability to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
 
-Network isolation in MDE restricts a compromised device's communication to prevent threat spread, but certain critical services, like management tools or security solutions, may need to remain operational. 
+Network isolation in Microsoft Defender for Endpoint (MDE) restricts a compromised device's communication to prevent threat spread, but certain critical services, like management tools or security solutions, might need to remain operational.
 
-Isolation exclusions allow designated processes or endpoints to bypass this restriction, ensuring essential functions (e.g., remote remediation or monitoring) continue while limiting broader network exposure.
+Isolation exclusions allow designated processes or endpoints to bypass this restriction, ensuring essential functions (for example, remote remediation or monitoring) continue while limiting broader network exposure.
 
 > [!WARNING]
 > **Any exclusion weakens device isolation and increases security risks. To minimize risk, configure exclusions only when strictly necessary**.
@@ -43,12 +43,12 @@ Regularly review and update exclusions to align with security policies.
 
 ## Isolation modes
 
-There are two modes of isolation: **full isolation**and **selective isolation**.
+There are two modes of isolation: **full isolation** and **selective isolation**.
 
 * **Full isolation**:
 
    * In this mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent.
-   * Exclusions are not applied in full isolation mode. This is the most secure option, suitable for scenarios where a high level of containment is necessary.
+   * Exclusions aren't applied in full isolation mode. This is the most secure option, suitable for scenarios where a high level of containment is necessary.
 
 * **Selective isolation**:
 
@@ -58,7 +58,7 @@ There are two modes of isolation: **full isolation**and **selective isolation**.
 
 ### Prerequisites
 
-* Available on Windows (minimum client version 10.8470) and MacOS (minimum client version 101.240902)
+* Available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902)
 * Requires Global or Security Admin permissions.
 * Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 * Opt in to the new feature in the advanced features page:
@@ -71,7 +71,7 @@ Image
 
 1. Navigate to **Settings** > **Endpoints** > **Isolation Exclusion Rules**.
 
-1. Select the relevant OS tab (Windows or MacOS).
+1. Select the relevant OS tab (Windows or macOS).
 
 1.	Add:
 
@@ -102,7 +102,7 @@ Image
 
          For example: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.`
 
-      * Exclusion will not apply to any child processes created by this process.
+      * Exclusion won't apply to any child processes created by this process.
 
    * **Service Name** (Windows only)
 
@@ -122,7 +122,7 @@ Image
      
       * Windows 11 (24H2)
       * Windows Server 2025
-      * Windows 11 (22H2)Windows 11, version 23H2 KB5050092
+      * Windows 11 (22H2) Windows 11, version 23H2 KB5050092
       * Windows Server, Version 23H2
       * Windows 10 22H2 - KB 5050081
   
@@ -155,7 +155,7 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
 
 * Within a single rule, conditions use AND logic (all must match).
 * Between different rules, conditions use OR logic (any matching rule applies).
-* Undefined conditions are treated as "any" (i.e., unrestricted for that parameter).
+* Undefined conditions are treated as "any" (that is, unrestricted for that parameter).
 
    For example, if the following rules are defined:
 
@@ -177,16 +177,16 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
 
 ## Limitations
 
-* Only supports Windows and MacOS.
+* Only supports Windows and macOS.
 * Process Path and Service Name exclusions are Windows-only.
 
-When a device is isolated, any new Isolation Exclusion Rules added from the portal will not apply to the currently isolated device. Instead, newly added exclusions will only take effect for future isolation requests.
+When a device is isolated, any new Isolation Exclusion Rules added from the portal won't apply to the currently isolated device. Instead, newly added exclusions will only take effect for future isolation requests.
 
 If an exclusion needs to be applied to a device that is already isolated, the following steps must be taken:
 
 1. Unisolate the device.
 1.	Ensure the exclusion rule is in place.
-1.	Re-isolate the device for the updated exclusion rule to take effect.
+1.	Reisolate the device for the updated exclusion rule to take effect.
 
 This behavior ensures that isolation rules remain consistent throughout the duration of an active isolation session.
 
