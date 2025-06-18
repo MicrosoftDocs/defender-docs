@@ -17,24 +17,25 @@ items:
     href: /defender-xdr/pilot-deploy-overview?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-- name: Plan and prepare
-  items:
-  - name: Prerequisites
-    href: deploy/prerequisites.md
-  - name: Roles and permissions
-    href: role-groups.md
-  - name: Capacity planning
-    href: deploy/capacity-planning.md
+
 - name: Deploy
   items:
   - name: Deployment overview
     href: deploy/deploy-defender-identity.md
+  - name: Plan and prepare
+    items:
+    - name: Roles and permissions
+      href: role-groups.md
+    - name: Capacity planning
+      href: deploy/capacity-planning.md
   - name: Deploy a sensor
     items:
     - name: Deploy a sensor on a domain controller
       items:
       - name: Windows Server 2016 and earlier
         items:
+          - name: Prerequisites
+            href: deploy/prerequisites.md
           - name: Connect to the Defender for Identity service
             href: deploy/configure-proxy.md
           - name: Test connectivity settings
@@ -51,6 +52,8 @@ items:
             href: deploy/activate-capabilities.md
           - name: Deploy the sensor when MDE is not enabled on endpoints
             items:
+            - name: Prerequisites
+              href: deploy/prerequisites.md
             - name: Connect to the Defender for Identity service
               href: deploy/configure-proxy.md
             - name: Test connectivity settings
@@ -62,47 +65,6 @@ items:
             - name: Configure the Defender for Identity sensor
               href: deploy/configure-sensor-settings.md
     - name: Deploy a sensor on Microsoft AD FS / AD CS / Entra Connect servers
-    - name: Defender for Identity prerequisites
-      href: deploy/prerequisites.md
-    - name: Plan your Defender for Identity capacity
-      href: deploy/capacity-planning.md
-  - name: Deploy Defender for Identity
-    items:
-    - name: Configure connectivity settings
-      href: deploy/configure-proxy.md
-      displayName: proxy
-    - name: Test connectivity settings
-      href: deploy/test-connectivity.md
-    - name: Download the Defender for Identity sensor
-      href: deploy/download-sensor.md
-    - name: Install the Defender for Identity sensor
-      href: deploy/install-sensor.md
-    - name: Configure the Defender for Identity sensor
-      href: deploy/configure-sensor-settings.md
-  - name: Post-deployment configuration
-    items:
-    - name: Configure event collection
-      items:
-      - name: Event collection overview 
-        href: deploy/event-collection-overview.md
-      - name: Configure audit policies for Windows event logs
-        href: deploy/configure-windows-event-collection.md
-    - name: Roles and permissions
-      href: role-groups.md
-    - name: Configure scoped access
-      href: configure-scoped-access.md
-    - name: Configure a Directory Service account
-      items:
-      - name: Overview
-        href: deploy/directory-service-accounts.md
-        displayName: Directory Service Account, DSA
-      - name: Configure a DSA with a gMSA
-        href: deploy/create-directory-service-account-gmsa.md
-    - name: Configure remote calls to SAM
-      href: deploy/remote-calls-sam.md
-  - name: Extra deployment scenarios
-    items:
-    - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
       href: deploy/active-directory-federation-services.md
     - name: Deploy for multiple Active Directory forests
       href: deploy/multi-forest.md

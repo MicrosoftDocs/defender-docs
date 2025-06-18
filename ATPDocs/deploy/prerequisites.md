@@ -1,7 +1,7 @@
 ---
 title: Prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites required for a successful Microsoft Defender for Identity deployment.
-ms.date: 08/28/2023
+ms.date: 06/18/2025
 ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
@@ -20,13 +20,9 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 ## Required permissions
 
-- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one Security administrator.
+- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
 
-    You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft Defender XDR **Settings** area and create the workspace.
-
-    For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
-
-- We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
+We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
 ## Connectivity requirements
 
@@ -34,7 +30,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 |Method  |Description  |Considerations |Learn more |
 |---------|---------|---------|---------|
-|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll need to configure your proxy later in the deployment process. Proxy configurations include allowing traffic to the sensor URL, and configuring Defender for Identity URLs to any explicit allowlists used by your proxy or firewall. |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) <br><br>[Run a silent installation with a proxy configuration](install-sensor.md#command-for-running-a-silent-installation-with-a-proxy-configuration)   |
+|**Proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.<br><br> If you choose this option, you'll need to configure your proxy later in the deployment process. Proxy configurations include allowing traffic to the sensor URL, and configuring Defender for Identity URLs to any explicit allowlists used by your proxy or firewall. |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) <br><br>[Run a silent installation with a proxy configuration](install-sensor.md#command-for-running-a-silent-installation-with-a-proxy-configuration)   |
 |**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer's express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
 |**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don't have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
