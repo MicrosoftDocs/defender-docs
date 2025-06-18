@@ -21,7 +21,7 @@ Key points:
 
 Before you can use cloud discovery data anonymization, ensure you have the following:
 
-- The [Cloud Discovery global admin](defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled at the time of role assignment.
+- The [Cloud Discovery global admin](manage-admins.md#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled at the time of role assignment.
 
 ## How data anonymization works
 
