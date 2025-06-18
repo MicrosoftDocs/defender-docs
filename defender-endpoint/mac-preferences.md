@@ -995,6 +995,8 @@ The following templates contain entries for all settings described in this docum
                 <dict>
                     <key>enforcementLevel</key>
                     <string>real_time</string>
+                    <key>behaviorMonitoring</key>
+                    <string>enabled</string>
                     <key>scanAfterDefinitionUpdate</key>
                     <true/>
                     <key>scanArchives</key>
