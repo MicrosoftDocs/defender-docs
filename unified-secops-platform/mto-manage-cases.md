@@ -25,7 +25,7 @@ Case management in the [**Microsoft Defender multitenant portal**](https://mto.s
 - Assign tasks to collaborators and configure due dates
 - Handle escalations and complex cases by linking multiple incidents to a case
 - Manage access to your cases using RBAC
-- Manage cases from multiple tenants (Preview)
+- Manage cases from multiple tenants
 
 ## View cases in the multitenant portal
 

@@ -17,6 +17,9 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
 ms.date: 05/02/2025
 ---
@@ -25,8 +28,7 @@ ms.date: 05/02/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 ## Understand advanced hunting quotas and usage parameters
 
