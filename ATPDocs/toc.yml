@@ -135,7 +135,7 @@ items:
       href: advanced-settings.md
       displayName: advanced settings
   - name: Remove a Defender for Identity sensor
-    href: remove-sensor.md
+    href: deploy/remove-sensor.md
   - name: Troubleshooting
     items:
     - name: Troubleshooting known issues
