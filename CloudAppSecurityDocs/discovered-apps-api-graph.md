@@ -20,7 +20,7 @@ Before you start using the Graph API, make sure to create an app and get an acce
 
 - Take note of your app secret and copy its value to use later on in your scripts.
 
-You'll also need cloud app data streaming into Microsoft Defender for Cloud Apps.
+- You need cloud app data streaming into Microsoft Defender for Cloud Apps.
 
 For more information, see:
 
