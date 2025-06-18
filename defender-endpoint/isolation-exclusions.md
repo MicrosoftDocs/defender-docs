@@ -63,7 +63,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 * Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 * Opt in to the new feature in the advanced features page:
 
-Image
+:::image type="content" source="./media/isolation-exclusions/exclusions1.png" alt-text="Screenshot of exclusions1.":::
 
 ### Configuration steps
 
@@ -130,9 +130,9 @@ Image
 
 **These global rules apply whenever selective isolation is enabled for a device.**
  
-Image
+:::image type="content" source="./media/isolation-exclusions/exclusions2.png" alt-text="Screenshot of exclusions2.":::
 
-Image
+:::image type="content" source="./media/isolation-exclusions/exclusions3.png" alt-text="Screenshot of exclusions3.":::
  
 #### Applying Selective Isolation to a Specific Device
 
@@ -141,11 +141,11 @@ Image
 1.	Check Use isolation exclusions to apply defined exclusion rules.
 1.	Confirm the action.
 
-Image
+:::image type="content" source="./media/isolation-exclusions/exclusions4.png" alt-text="Screenshot of exclusions4.":::
 
 Exclusions that were applied to a specific device can be later reviewed in the Action Center history.
 
-Image
+:::image type="content" source="./media/isolation-exclusions/exclusions5.png" alt-text="Screenshot of exclusions5.":::
  
 #### API Configuration
 
