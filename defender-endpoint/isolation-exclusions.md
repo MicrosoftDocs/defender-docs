@@ -45,14 +45,11 @@ Regularly review and update exclusions to align with security policies.
 
 There are two modes of isolation: **full isolation** and **selective isolation**.
 
-* **Full isolation**:
+* **Full isolation**: In full isolation mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent. Exclusions aren't applied in full isolation mode.
 
-   * In this mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent.
-   * Exclusions aren't applied in full isolation mode. This is the most secure option, suitable for scenarios where a high level of containment is necessary.
+   Full isolation mode is the most secure option, suitable for scenarios where a high level of containment is necessary.
 
-* **Selective isolation**:
-
-   * Selective isolation allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device's isolated state.
+* **Selective isolation**: Selective isolation mode allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device's isolated state.
 
 ## How to Use
 
