@@ -20,6 +20,12 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
+## June 2025
+
+### Case management now generally available in the Defender multitenant portal
+
+The Microsoft Defender portal's case management feature is now generally available in the Defender multitenant portal. For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
+
 ## May 2025
 
 - [Unified role-based access control in multitenant portal (Preview)](#unified-role-based-access-control-in-multitenant-management-preview)
