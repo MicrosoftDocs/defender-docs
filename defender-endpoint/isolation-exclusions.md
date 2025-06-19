@@ -84,83 +84,21 @@ There are two modes of isolation: **full isolation** and **selective isolation**
    | **Rule name** | Provide a name for the rule. |
    | **Rule description** | Describe the purpose of the rule. |
    |**Process path** (Windows only) | The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.<br><br>Example: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.`<br><br>**Note**: Exclusion won't apply to any child processes created by the specified process. |
-| **Service name** (Windows only) | Windows service short names can be used in cases you want to exclude a service (not an application) that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.<br><br>Example: termservice |
+| **Service name** (Windows only) | Windows service short names can be used in cases you want to exclude a service (not an application) that is sending or receiving traffic. Service short names can be retrieved by running the *Get-Service* command from PowerShell. You can define one service to be used in each rule.<br><br>Example: termservice |
 | **Package family name** | The Package Family Name (PFN) is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>`<br><br>Package family names can be retrieved by running the *Get-AppxPackage* command from PowerShell. For example, to get the new Microsoft Teams PFN, run `Get-AppxPackage MSTeams`, and look for the value of the **PackageFamilyName** property.<br><br>Supported on:<br>- Windows 11 (24H2)<br>- Windows Server 2025<br>- Windows 11 (22H2) Windows 11, version 23H2 KB5050092<br>- Windows Server, Version 23H2<br>- Windows 10 22H2 - KB 5050081 |
 | **Direction** | The connection direction (Inbound/Outbound). Examples:<br><br>**Outbound connection**: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule. Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.<br><br>**Inbound connection**: If the device is listening to incoming connections, define an **inbound rule**.|
 | **Remote IP** | The IP(s) not subject to network isolation as per the rule.<br><br>Supported IP formats:<br>- IPv4/IPv6, with optional CIDR notation<br>- A list of IPs<br><br>Valid input examples:<br>- Single IP address: `1.1.1.1`<br>- IPV6 address: `2001:db8:85a3::8a2e:370:7334`<br>- IP address with CIDR notation (IPv4 or IPv6): `1.1.1.1/24`<br>&nbsp;&nbsp;This example defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
 
-      * **Valid input examples**:
-
-         * Single IP address: 1.1.1.1
-
-         * IPv6 address: 2001:db8:85a3::8a2e:370:7334
-
-         * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-
-            This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
-                                   |
-
-   * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
-
-      * **Valid input examples**:
-
-         * Single IP address: 1.1.1.1
-
-         * IPv6 address: 2001:db8:85a3::8a2e:370:7334
-
-         * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
-
-            This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
-
-   * **Connection Direction** (Inbound/Outbound)
-
-      Example:
-
-      * Outbound connection: If the device initiates a connection, for instance, an HTTPS connection to a remote backend server, define only an outbound rule.
-
-         Example: The device sends a request to 1.1.1.1 (outbound), then no inbound rule is needed, as the response from the server is automatically accepted as part of the connection.
-      * Inbound connection: If the device is listening to incoming connections, define an **inbound rule**.
-
-   * **Process Path** (Windows only)
-
-      * The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.
-
-         For example: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.`
-
-      * Exclusion won't apply to any child processes created by this process.
-
-   * **Service Name** (Windows only)
-
-      Windows service short names can be used in cases you want to exclude a service (not an application), that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.
-
-      Example: termservice
-
-   * The **Package Family Name (PFN)** is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>` 
-
-      Package family names can be retrieved by running the *Get-AppxPackage* command from PowerShell. For example, fetching new Microsoft Teams PFN:
-      
-      Run Get-AppxPackage *teams*
-
-      Fetch PackageFamilyName property - Should be MSTeams_8wekyb3d8bbwe
-
-      Supported on:
-     
-      * Windows 11 (24H2)
-      * Windows Server 2025
-      * Windows 11 (22H2) Windows 11, version 23H2 KB5050092
-      * Windows Server, Version 23H2
-      * Windows 10 22H2 - KB 5050081
-  
-1.	Save and apply changes.
+  1.	Save and apply changes.
 
 **These global rules apply whenever selective isolation is enabled for a device.**
 
 ### Step 2: Apply selective isolation to a specific device
 
 1.	Navigate to the device page in the portal.
-1.	Select Isolate device and choose Selective Isolation.
-1.	Check Use isolation exclusions to apply defined exclusion rules.
-1.	Confirm the action.
+1.	Select **Isolate device** and choose **Selective isolation**.
+1.	Check **Use isolation exclusions** to apply defined exclusion rules.
+1.	Select **Confirm**.
 
 :::image type="content" source="./media/isolation-exclusions/apply-exclusion-rule.png" alt-text="Screenshot showing how to apply an exclusion rule to a device." lightbox="./media/isolation-exclusions/apply-exclusion-rule.png":::
 
@@ -170,7 +108,7 @@ Exclusions that were applied to a specific device can be later reviewed in the A
  
 ### API Configuration
 
-To trigger isolation with exclusions via API, set IsolationType param = “Selective”.
+To trigger isolation with exclusions via API, set the IsolationType parameter to "Selective". See [Isolate machine API](./api/isolate-machine) for detail.
  
 ## Exclusion Logic
 
