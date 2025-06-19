@@ -59,7 +59,7 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint, Cisco Webex)
 
-  :::image type="content" source="media/governance-actions/governance-actions-box.png" alt-text="Screenshot that shows the available file governance actions for Box and Dropbox.":::
+      :::image type="content" source="media/governance-actions/governance-actions-box.png" alt-text="Screenshot that shows the available file governance actions for Box and Dropbox." lightbox="media/governance-actions/governance-actions-box.png":::
 
 
   
@@ -83,7 +83,7 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint)
 
-:::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions.":::
+:::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions." lightbox="media/governance-actions/governance-actions-dropbox-google-workspace.png":::
 
 > [!NOTE]
 > In SharePoint and OneDrive, Defender for Cloud Apps supports user quarantine only for files in Shared Documents libraries (SharePoint Online) and files in the Documents library (OneDrive for Business).
