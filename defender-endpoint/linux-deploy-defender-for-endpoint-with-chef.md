@@ -36,6 +36,8 @@ You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linu
 
 To use another method, refer to the [See also](#see-also) section.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Prerequisites
 
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
