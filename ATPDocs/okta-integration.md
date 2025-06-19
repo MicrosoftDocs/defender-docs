@@ -6,7 +6,7 @@ ms.topic: how-to
 ms. reviewer: izauer-bit 
 ---
 
-# Integrate Okta with Microsoft Defender for Identity
+# Integrate Okta with Microsoft Defender for Identity (Preview)
 
 Okta manages how users and customers sign in and get access to key systems. Since it plays a central role in identity and access management, any compromise whether accidental or intentional can lead to serious security risks. By integrating Microsoft Defender for Identity with Okta, you gain stronger identity protection. Defender for Identity monitors sign-in activity, detects unusual behavior, and highlights threats related to compromised or misused identities. It also identifies risks like suspicious role assignments or unused high-privilege accounts, using Okta data to deliver clear, actionable insights that help keep your organization secure.
 
@@ -22,6 +22,11 @@ Before connecting your Okta account to Microsoft Defender for Identity, make sur
 
 > [!NOTE]
 > The Super Admin role is required only to create the API token. Once the token is created, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
+
+
+> [!NOTE]
+> If your Okta environment is already integrated with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-okta), connecting it to Microsoft Defender for Identity might cause duplicate Okta data, such as user activity, to appear in the Defender portal.
+
 
 ### Connect Okta to Microsoft Defender for Identity
 
@@ -142,7 +147,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1. Paste the API token you copied from your Okta account.
 1. Select **Save**.
 
-:::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
+    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
 
 1. Verify that your Okta environment appears in the table as enabled.
 
@@ -151,3 +156,4 @@ To complete the configuration in Okta, assign the custom role and resource set t
 ## Related articles
 
 - [Defender for Identity VPN integration in Microsoft Defender XDR](vpn-integration.md)
+- [Microsoft Defender for Identity extends ITDR capabilities to Okta identities](https://techcommunity.microsoft.com/blog/MicrosoftThreatProtectionBlog/microsoft-defender-for-identity-extends-itdr-capabilities-to-okta-identities/4418955)
