@@ -4,7 +4,7 @@ description: Get an overview of the Defender for Servers plan in Microsoft Defen
 ms.topic: concept-article
 ms.author: elkrieger
 author: elazark
-ms.date: 06/16/2025
+ms.date: 06/19/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
@@ -59,11 +59,11 @@ Plan features are summarized in the table.
 | [Software inventory discovery](asset-inventory.md) <sup>[1](#footnote1)</sup> | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Regulatory compliance assessment](concept-regulatory-compliance-standards.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Different standards are available for different environments. Learn more about [compliance cloud availability](concept-regulatory-compliance-standards.md#available-compliance-standards). |
 | [Vulnerability scanning (agent-based)](auto-deploy-vulnerability-assessment.md) | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
-| OS baseline misconfigurations based on [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations <sup>[2](#footnote2)</sup> | :::image type="icon" source="./media/icons/yes-icon.png":::  | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS. <br><br> Only applicable to machines onboarded with Azure ARC. |
+| OS baseline misconfigurations based on [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations <sup>[2](#footnote2)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP. <br><br> Only applicable to machines onboarded with Azure ARC. |
 | OS recommendations based on [Linux](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) and [Windows](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline) compute security baselines | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [Vulnerability scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
-| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> Only applicable to AWS and GCP machines onboarded with Azure ARC. [Learn more](enable-periodic-system-updates.md). |
+| [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> Only applicable to machines onboarded with Azure ARC. [Learn more](enable-periodic-system-updates.md). |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[3](#footnote3)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | |
 | [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | Machine secrets scanning (agentless) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
