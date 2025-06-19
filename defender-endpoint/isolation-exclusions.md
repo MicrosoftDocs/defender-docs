@@ -17,10 +17,9 @@ search.appverid: met150
 ms.date: 03/04/2025
 ---
 
-# Isolation exclusions
+# Isolation exclusions (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 
