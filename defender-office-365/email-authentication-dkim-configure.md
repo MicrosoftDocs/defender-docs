@@ -109,7 +109,19 @@ Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<Initi
 - **Hostname**: The values are the same for all Microsoft 365 organizations: `selector1._domainkey` and `selector2._domainkey`.
 - **\<CustomDomainWithDashes\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
 - **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used to enroll in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
-- **\<DynamicPartitionCharacter\>**: A dynamically generated character that's used for both selectors.
+- **\<DynamicPartitionCharacter\>**: A dynamically generated character that's used for both selectors such as .r, .n, or other suffixes,The value is automatically assigned by Microsoft when a new custom domain is added          and DKIM is enabled. 
+    This character is part of the updated DKIM record format introduced for newly added custom domains in Microsoft 365 at the time the custom domain is added and DKIM is enabled in Microsoft 365
+          
+    Existing domains and initial tenant domains continue using the older .onmicrosoft.com format.
+          
+    The character is determined by Microsoft’s internal routing logic and is not configurable.
+    
+    To retrieve the correct DKIM CNAME values including the assigned <DynamicPartitionCharacter>, you should run the following PowerShell command:
+    
+      Get-DkimSigningConfig -Identity yourdomain.com | Format-List Name,Enabled,Status,Selector1CNAME,Selector2CNAME
+    
+    Now you have the values that must be published in your DNS, including the dynamic partition character 
+
 - **v1**: The current CNAME format version that's used for both selectors.
 - **dkim.mail.microsoft**: The parent DNS zone that's the same for both selectors.
 
