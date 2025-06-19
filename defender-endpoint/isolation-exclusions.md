@@ -81,9 +81,13 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
    |Field|Description|
    |:-----|:-----|
-   |Rule name| Provide a name for the rule. |
-   |Rule description| Describe the purpose of the rule. |
-   |Remote IP|The IP(s) not subject to network isolation as per the rule.<br>Supported formats:(IPv4/IPv6 with optional CIDR notation/list of IPs<br><br>Valid input examples:<br>-Single IP address: 1.1.1.1<br>IPV6 address: 2001:db8:85a3::8a2e:370:7334<br>This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
+   | **Rule name** | Provide a name for the rule. |
+   | **Rule description** | Describe the purpose of the rule. |
+   |**Process path** (Windows only) | The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.|
+| **Service name** (Windows only) | Windows service short names can be used in cases you want to exclude a service (not an application) that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.<br><br>Example: termservice |
+| **Package family name** | The Package Family Name (PFN) is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>` |
+| **Direction** | The connection direction (Inbound/Outbound) |
+| **Remote IP** | The IP(s) not subject to network isolation as per the rule.<br>Supported IP formats:<br>IPv4/IPv6, with optional CIDR notation<br>A list of IPs<br><br>Valid input examples:<br>-Single IP address: 1.1.1.1<br>-IPV6 address: 2001:db8:85a3::8a2e:370:7334<br>-IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24<br>This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
 
       * **Valid input examples**:
 
@@ -170,9 +174,9 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
  
 ## Exclusion Logic
 
+* All rules that match will be applied.
 * Within a single rule, conditions use AND logic (all must match).
-* Between different rules, conditions use OR logic (any matching rule applies).
-* Undefined conditions are treated as "any" (that is, unrestricted for that parameter).
+* Undefined conditions in a rule are treated as "any" (that is, unrestricted for that parameter).
 
    For example, if the following rules are defined:
 
