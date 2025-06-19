@@ -50,16 +50,18 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 * **Selective isolation**: Selective isolation mode allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device's isolated state.
 
-## How to Use
+## How to use isolation exclusions
 
 ### Prerequisites
 
-* Available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902)
+* Isolation exclusion is available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902).
 * Requires Global or Security Admin permissions.
-* Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
-* Opt in to the new feature in the advanced features page:
+* Isolation exclusion must be enabled. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Rxclusion Rules** feature.
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-1.png" alt-text="Screenshot of exclusions1." lightbox="./media/isolation-exclusions/exclusions-1.png":::
+   :::image type="content" source="./media/isolation-exclusions/exclusions-1.png" alt-text="Screenshot of exclusions1." lightbox="./media/isolation-exclusions/exclusions-1.png":::
+
+   > [!NOTE]
+   > Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 
 ### Configuration steps
 
@@ -71,7 +73,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 1. Select the relevant OS tab (Windows or macOS).
 
-1.	Add:
+1. Select **+ Add exclusion rule**
+
+   :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/exclusions-2.png":::
+
+1. On the Add new exclusion rule page, fill in required fields.
 
    * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
 
@@ -179,10 +185,7 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
    * example_2.exe can initiate network connections to every IP address.
    * The device can receive inbound connection from Ip address 18.18.18.18.
 
-## Limitations
-
-* Only supports Windows and macOS.
-* Process Path and Service Name exclusions are Windows-only.
+## Considerations and limitations
 
 When a device is isolated, any new Isolation Exclusion Rules added from the portal won't apply to the currently isolated device. Instead, newly added exclusions will only take effect for future isolation requests.
 
@@ -194,7 +197,7 @@ If an exclusion needs to be applied to a device that is already isolated, the fo
 
 This behavior ensures that isolation rules remain consistent throughout the duration of an active isolation session.
 
-## Related articles
+## Related content
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
