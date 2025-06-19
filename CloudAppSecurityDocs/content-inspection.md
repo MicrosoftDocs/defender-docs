@@ -14,6 +14,8 @@ If you want to partially reveal detected values, you can enable the **Unmask the
 
 You must specify which file elements are included in the inspection: content, metadata, or file name. By default, content and metadata are inspected.
 
+This enables inspection of protected content, helping you detect sensitive data, enforce compliance, and apply governance actions on encrypted files. It helps reduce false positives and align policy enforcement with internal classification standards.
+
 
 ## Prerequisites
 
@@ -24,7 +26,6 @@ Before you can inspect encrypted files, you must grant one-time admin consent.
 1. Select Grant permission and to grant Defender for Cloud Apps permission in Microsoft Entra ID.
 
 ## Content inspection for protected files
-
 
 Defender for Cloud Apps allows admins to grant permission to decrypt encrypted files and scan their content for violations. This consent is also required to enable scanning labels on encrypted files.
 
@@ -48,20 +49,21 @@ In order to give Defender for Cloud Apps the necessary permissions:
 1. Go to **Settings** > **Microsoft Information Protection**.
 1. Under **Microsoft Information Protection settings**, configure one or both of the following options:
 
-   - **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings**  
-     When enabled, the App connector scans new files for embedded sensitivity labels from Microsoft Information Protection.
+   - **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings.** When enabled, the App connector scans new files for embedded sensitivity labels from Microsoft Information Protection.
 
-   - **Only scan files for Microsoft Information Protection sensitivity labels and content inspection warnings from this tenant**  
-     When enabled, only sensitivity labels applied within your tenant are scanned. Labels applied by external tenants are disregarded.
+   - **Only scan files for Microsoft Information Protection sensitivity labels and content inspection warnings from this tenant.** When enabled, only sensitivity labels applied within your tenant are scanned. Labels applied by external tenants are disregarded.
 
 1. After selecting your options, select **Save** to apply your changes.
 
 ## Configure file policies for protected files
 
-1. In the Defender portal, go to **Policies > Policy management**.
-1. Create or edit a file policy.
-1. You can configure the settings per file policy to determine which policies will scan protected files.
-1. Specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
+1. In the Defender portal, go to **Settings > Cloud Apps > Policies > Policy management**.
+1. Follow the steps to [create a new file policy](data-protection-policies.md#create-a-new-file-policy).
+1. Select either **Apply to all files**, or **Apply to selected files** to specify which files will be scanned. This option is useful if you have an inner classification keyword standard that you want to exclude from the policy.
+1. Select **Inspection method** > **Data Classification Service** to enable content inspection for the policy.
+1. Check both boxes - **Inspect protected files** and **Unmask the last 4 characters of a match**.
+
+:::image type="content" source="media/content-inspection/inspection-method-data-classification-service.png" alt-text="Screenshot that shows the Data classification service inspection method.":::
 
 
 ## Next steps
