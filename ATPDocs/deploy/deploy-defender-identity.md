@@ -10,16 +10,15 @@ ms.reviewer: rlitinsky
 
 This article explains the Microsoft Defender for Identity deployment process.
 
-Defender for Identity uses sensors to detect signals from your Identity Infrastructure servers such as:
-- Domain controllers
-- Active Directory
+Defender for Identity uses sensors to collect signals from your Identity Infrastructure servers such as:
+- Active Directory Domain controllers
 - Active Directory Federation Services (AD FS)
 - Active Directory Certification Services (AD CS)
 - Microsoft Entra Connect servers
 
 Defender for Identity uses these signals to detect threats like privilege escalation or high-risk lateral movement and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
 
-We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you're deploying in a Microsoft AD FS, AD CS, or Microsoft Entra Connect farm or cluster, install the sensor on each server in the farm or cluster.
+We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have an AD FS, AD CS, or Microsoft Entra Connect farm or cluster in your environment, install the sensor on each server.
 
 Defender for Identity data centers are located in Europe, the UK, Switzerland, North America, Central America, the Caribbean, Australia East, Asia, and India. Your workspace instance is automatically created in the Azure region closest to the geographical location of your Microsoft Entra tenant. Once created, Defender for Identity workspaces can't be moved.
 
@@ -39,23 +38,22 @@ There are some differences between the functionality of the two sensors. The Win
 - [Remediation actions](test-sensor.md#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
+> [!NOTE]
+> We recommend the Windows Server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructure servers, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
+
 There are also differences in the complexity of setting up the sensors. This table describes the differences in functionality and required configurations of the sensors. 
 
 |Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
 |---------|---------|---------|
-|Connectivity requirements|Requires streamlined URLs        |No connectivity requirements|
+|Connectivity requirements|[Requires connectivity](prerequisites.md#required-ports) to `*.atp.azure.com`|[Requires MDE streamlined URLs][Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain)|
 |[Health issues](../health-alerts.md)|All supported|Partial support|
 |Sensor updates|Automatic updates around once weekly.|Occurs automatically as part of Windows update|
-|Directory Service account (DSA) |Supported, requires configuration        |  Not supported|
-|Group Managed Service Account (gMSA)        |Supported, requires configuration        | Not supported |
-|Remote calls to SAM-R | Supported, requires configuration        |Not supported         |
-|[Defender for Identity action accounts](manage-action-accounts.md)    |Supported, requires configuration         |Not supported |
-|[Multiple Active Directory forests](multi-forest.md)     | Supported, requires configuration        | Not supported|
-|VPN integration         |Supported       |Not supported      |
+|[Directory Service account (DSA)](directory-service-accounts.md)|Supported, requires configuration        |  Not required|
+|[Group Managed Service Account (gMSA)](directory-service-accounts.md#supported-dsa-account-options) |Supported, requires configuration        | Not required |
+|[Remote calls to SAM-R](remote-calls-sam.md) | Supported, requires configuration        |Not supported         |
+|[Defender for Identity action accounts](manage-action-accounts.md)    |Supported, requires configuration         |Not required|
+|[VPN integration](../vpn-integration.md) |Supported       |Not supported      |
 |[Silent installation on multiple domain controllers](install-sensor.md#perform-a-defender-for-identity-silent-installation)         | Supported       |Not supported        |
-
-> [!NOTE]
-> We recommend the Windows Server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
 
 ## Deployment process
 
@@ -79,9 +77,9 @@ The following procedures help you complete the deployment process:
     - [Install a Defender for Identity sensor for AD FS, AD CS, and Microsoft Entra Connect](active-directory-federation-services.md).
     - When deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation)
 1. [**Configure Windows event collection**](event-collection-overview.md).
-1. (Optional).[**Configure a Directory Service account (DSA)**](directory-service-accounts.md).
+1. [**Configure a Directory Service account (DSA)**](directory-service-accounts.md).
     If you're installing the classic Defender for Identity sensor, we recommend that you configure a DSA for Defender for Identity for full security coverage. For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities.
-1. (Optional).[**Configure remote calls to SAM**](remote-calls-sam.md).
+1. [**Configure remote calls to SAM**](remote-calls-sam.md).
      If you're installing the classic Defender for Identity sensor, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 ## Next steps
