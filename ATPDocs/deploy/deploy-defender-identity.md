@@ -44,7 +44,7 @@ There are also differences in the complexity of setting up the sensors. This tab
 |Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
 |---------|---------|---------|
 |Connectivity requirements|Requires streamlined URLs        |No connectivity requirements|
-|[Health alerts](../health-alerts.md)|All supported|Partial support|
+|[Health issues](../health-alerts.md)|All supported|Partial support|
 |Sensor updates|Automatic updates around once weekly.|Occurs automatically as part of Windows update|
 |Directory Service account (DSA) |Supported, requires configuration        |  Not supported|
 |Group Managed Service Account (gMSA)        |Supported, requires configuration        | Not supported |
