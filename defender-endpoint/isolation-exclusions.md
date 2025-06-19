@@ -75,9 +75,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 1. Select **+ Add exclusion rule**
 
-   :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/exclusions-2.png":::
+   :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/add-new-exclusion-rule.png":::
 
 1. On the Add new exclusion rule page, fill in required fields.
+
+   :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isoation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
 
    * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
 
@@ -134,9 +136,9 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 **These global rules apply whenever selective isolation is enabled for a device.**
  
-:::image type="content" source="./media/isolation-exclusions/exclusions-2.png" alt-text="Screenshot of exclusions2." lightbox="./media/isolation-exclusions/exclusions-2.png":::
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-3.png" alt-text="Screenshot of exclusions3." lightbox="./media/isolation-exclusions/exclusions-3.png":::
+
+
  
 #### Applying Selective Isolation to a Specific Device
 
