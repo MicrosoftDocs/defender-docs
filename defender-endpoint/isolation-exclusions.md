@@ -75,11 +75,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
    :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/add-new-exclusion-rule.png":::
 
-1. On the Add new exclusion rule page, fill in required fields.
+1. On the **Add new exclusion rule** page, fill in the parameters. Red asterisks denote mandatory parameters.
 
    :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isoation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
 
-   |Field|Description|
+   | Parameter | Description |
    |:-----|:-----|
    | **Rule name** | Provide a name for the rule. |
    | **Rule description** | Describe the purpose of the rule. |
@@ -87,7 +87,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 | **Service name** (Windows only) | Windows service short names can be used in cases you want to exclude a service (not an application) that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.<br><br>Example: termservice |
 | **Package family name** | The Package Family Name (PFN) is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>` |
 | **Direction** | The connection direction (Inbound/Outbound) |
-| **Remote IP** | The IP(s) not subject to network isolation as per the rule.<br><br>Supported IP formats:<br>* IPv4/IPv6, with optional CIDR notation<br>* A list of IPs<br><br>Valid input examples:<br>- Single IP address: 1.1.1.1<br>- IPV6 address: 2001:db8:85a3::8a2e:370:7334<br><li>IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24<br>This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
+| **Remote IP** | The IP(s) not subject to network isolation as per the rule.<br><br>Supported IP formats:<br>- IPv4/IPv6, with optional CIDR notation<br>- A list of IPs<br><br>Valid input examples:<br>- Single IP address: 1.1.1.1<br>- IPV6 address: 2001:db8:85a3::8a2e:370:7334<br>- IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24<br>This example defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
 
       * **Valid input examples**:
 
