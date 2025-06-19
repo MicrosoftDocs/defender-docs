@@ -81,6 +81,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
    :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isoation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
 
+   |Field|Description|
+   |:-----|:-----|
+   |Rule name| Provide a name for the rule. |
+   |Rule description| Describe the purpose of the rule. |
+
    * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
 
       * **Valid input examples**:
