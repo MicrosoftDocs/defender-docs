@@ -45,7 +45,7 @@ There are also differences in the complexity of setting up the sensors. This tab
 
 |Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
 |---------|---------|---------|
-|Connectivity requirements|[Requires connectivity](prerequisites.md#required-ports) to `*.atp.azure.com`|[Requires MDE streamlined URLs][Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain)|
+|Connectivity requirements|[Requires connectivity](prerequisites.md#required-ports) to `*.atp.azure.com`|[Requires MDE streamlined URLs](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain)|
 |[Health issues](../health-alerts.md)|All supported|Partial support|
 |Sensor updates|Automatic updates around once weekly.|Occurs automatically as part of Windows update|
 |[Directory Service account (DSA)](directory-service-accounts.md)|Supported, requires configuration        |  Not required|
