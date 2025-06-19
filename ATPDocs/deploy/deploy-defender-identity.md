@@ -26,10 +26,10 @@ Defender for Identity data centers are located in Europe, the UK, Switzerland, N
 ## Microsoft Defender for Identity sensors
 Defender for Identity uses two types of sensors to collect data from your identity infrastructure:
 
-- **Defender for Identity sensor**: The original Defender for Identity sensor is designed for domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers. The Defender for Identity sensor collects data from the network and Windows events.
-- **The Windows Server sensor (Preview)**: You can activate the Windows Server sensor on domain controllers running Windows Server 2019 or later. This sensor is integrated directly into the Windows operating system, without the need for another agent. The sensor doesn't require a .NET framework to be installed on the Operating System. This sensor enables new onboarding and activation capabilities and closer integration between Defender for Identity and Defender for Endpoint. 
+- **Classic Defender for Identity sensor**: The classic Defender for Identity sensor is designed for domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers. The Defender for Identity sensor collects data from the network and Windows events.
+- **The Unified sensor (Preview)**: You can activate the Unified sensor on domain controllers running Windows Server 2019 or later. This sensor is included directly into the Windows operating system, without the need for another agent. The sensor doesn't require a .NET framework to be installed on the Operating System. This sensor enables new onboarding and activation capabilities and closer integration between Defender for Identity and Defender for Endpoint. 
 
-There are some differences between the functionality of the two sensors. The Windows server sensor supports the following Defender for Identity functionality:
+There are some differences between the functionality of the two sensors. The Unified sensor supports the following Defender for Identity functionality:
 
 - Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
 - [Identity inventory](test-sensor.md#confirm-entity-page-details)
@@ -41,7 +41,7 @@ There are some differences between the functionality of the two sensors. The Win
 
 There are also differences in the complexity of setting up the sensors. This table describes the differences in functionality and required configurations of the sensors. 
 
-|Functionality  |Classic Defender for Identity Sensor | Windows Server sensor  |
+|Functionality  |Classic Defender for Identity Sensor | Unified sensor  |
 |---------|---------|---------|
 |Connectivity requirements|Requires streamlined URLs        |No connectivity requirements|
 |[Health alerts](../health-alerts.md)|All supported|Partial support|
@@ -55,7 +55,7 @@ There are also differences in the complexity of setting up the sensors. This tab
 |[Silent installation on multiple domain controllers](install-sensor.md#perform-a-defender-for-identity-silent-installation)         | Supported       |Not supported        |
 
 > [!NOTE]
-> We recommend the Windows Server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
+> We recommend the Unified sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).
 
 ## Deployment process
 
@@ -73,9 +73,9 @@ The following procedures help you complete the deployment process:
 1. [**Prepare your environment**](prerequisites.md).
 1. [**Plan your capacity**](capacity-planning.md).
 1. [**Set up roles and permissions**](../role-groups.md).
-1. **Deploy a sensor**. Depending on your environment, either install the Microsoft Defender for Identity sensor or activate the Windows Server sensor.
+1. **Deploy a sensor**. Depending on your environment, either install the Microsoft Defender for Identity sensor or activate the Unified sensor.
     For more information, see:
-    - [Activate a Windows Server sensor (preview) on a domain controller](activate-capabilities.md).
+    - [Activate a Unified sensor (preview) on a domain controller](activate-capabilities.md).
     - [Install a Defender for Identity sensor for AD FS, AD CS, and Microsoft Entra Connect](active-directory-federation-services.md).
     - When deploying on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation)
 1. [**Configure Windows event collection**](event-collection-overview.md).
