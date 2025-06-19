@@ -20,7 +20,7 @@ The Unified sensor supports the following Defender for Identity functionality:
 - [Remediation actions](test-sensor.md#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
-We recommend activating this sensor, built in to the Windows Server, for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructures, or for customers looking to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
+We recommend activating this built-in sensor for customers deploying core identity protections on new domain controllers running Windows Server 2019 or later. For other identity infrastructures, or for the most comprehensive protections, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
 
 ## Prerequisites
 
