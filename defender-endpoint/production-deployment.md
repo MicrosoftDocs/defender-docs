@@ -17,7 +17,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/15/2025
+ms.date: 06/19/2025
 ---
 
 # Prepare to deploy Microsoft Defender for Endpoint deployment
@@ -40,8 +40,10 @@ In this deployment scenario, you're guided through the steps on:
 - Tenant configuration
 - Network configuration
 
-> [!NOTE]
-> For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
