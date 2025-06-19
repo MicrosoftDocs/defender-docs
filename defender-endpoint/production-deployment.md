@@ -40,8 +40,7 @@ In this deployment scenario, you're guided through the steps on:
 - Tenant configuration
 - Network configuration
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
 
