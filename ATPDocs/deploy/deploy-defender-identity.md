@@ -53,7 +53,6 @@ There are also differences in the complexity of setting up the sensors. This tab
 |[Remote calls to SAM-R](remote-calls-sam.md) | Supported, requires configuration        |Not supported         |
 |[Defender for Identity action accounts](manage-action-accounts.md)    |Supported, requires configuration         |Not required|
 |[VPN integration](../vpn-integration.md) |Supported       |Not supported      |
-|[Silent installation on multiple domain controllers](install-sensor.md#perform-a-defender-for-identity-silent-installation)         | Supported       |Not supported        |
 
 ## Deployment process
 
