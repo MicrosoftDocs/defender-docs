@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/09/2025
+ms.date: 06/19/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS prerequisites
@@ -31,6 +31,9 @@ This article lists the prerequisites for installing and configuring Microsoft De
 - [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 
 ## Prerequisites, installation, and configuration instructions
 
