@@ -4,9 +4,9 @@ description: Guide to understanding the detection technology shown on the Email 
 author: chrisda
 ms.author: chrisda
 manager: deniseb
-ms.service:  microsoft-365-security
-ms.topic:    how-to
-ms.date:     07/03/2023
+ms.service: microsoft-365-security
+ms.topic: how-to
+ms.date: 06/19/2025
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -44,6 +44,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Impersonation user|Impersonation of protected senders that you specified in anti-phishing policies.|[Impersonation insight overview](../anti-phishing-mdo-impersonation-insight.md)|
 |IP reputation|The message was sent from an IP that was identified as potentially malicious.||
 |LLM content analysis|Analysis by Microsoft's purpose-built large language models to detect harmful email.||
+|Mail bombing|Malicious subscriptions to a large number of legitimate newsletters or subscription services as a form of distributed denial of service (DDoS) attack.||
 |Mailbox intelligence impersonation|Sender detected as impersonating an address in the user's personal sender map.|[Mailbox intelligence impersonation protection](../anti-phishing-policies-about.md)|
 |Mixed analysis detection|Multiple filters contributed to the verdict for this message.||
 |Spoof DMARC|The message failed DMARC authentication.|[How Microsoft 365 handles inbound email that fails DMARC](../email-authentication-dmarc-configure.md)|
