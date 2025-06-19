@@ -1,16 +1,16 @@
 ---
-title: Activate the Unified sensor on a domain controller 
+title: Activate the Windows Server sensor on a domain controller 
 description: Learn about how to activate the Microsoft Defender for Identity sensor on domain controllers.
 ms.date: 06/18/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Activate the Unified sensor on a domain controller (Preview)
+# Activate the Windows Server sensor on a domain controller (Preview)
 
-Microsoft Defender for Endpoint customers can activate the built-in Unified sensor directly on onboarded domain controllers.
+Microsoft Defender for Endpoint customers can activate the built-in Windows Server sensor directly on onboarded domain controllers.
 
-The Unified sensor supports the following Defender for Identity functionality:
+The Windows Server sensor supports the following Defender for Identity functionality:
 
 - Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
 - [Identity inventory](test-sensor.md#confirm-entity-page-details)
