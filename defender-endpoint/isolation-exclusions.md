@@ -179,19 +179,19 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
    ```
    Rule 1: 
 
-      process path = c:\example.exe
-      Ip = 1.1.1.1
-      Direction - Out
+      Process path = c:\example.exe
+      Remote IP = 1.1.1.1
+      Direction = Outbound
       
    Rule 2:
 
-      process path = c:\example_2.exe
-      Direction - Out
+      Process path = c:\example_2.exe
+      Direction = Outbound
 
    Rule 3:
 
-      Ip address: 18.18.18.18
-      Direction - In
+      Remote IP = 18.18.18.18
+      Direction = Inbound
 
    ```
    * *example.exe* will only be able to initiate network connections to remote IP 1.1.1.1.
