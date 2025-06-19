@@ -108,7 +108,7 @@ Exclusions that were applied to a specific device can be later reviewed in the A
  
 ### API Configuration
 
-To trigger isolation with exclusions via API, set the IsolationType parameter to "Selective". See [Isolate machine API](./api/isolate-machine) for detail.
+To trigger isolation with exclusions via API, set the IsolationType parameter to "Selective". See [Isolate machine API](/defender-endpoint/api/isolate-machine) for detail.
  
 ## Exclusion Logic
 
