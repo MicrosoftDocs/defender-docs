@@ -55,7 +55,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 ### Prerequisites
 
 * Isolation exclusion is available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902).
-* Requires Global or Security Admin permissions.
+* Enabling isolation exclusion requires Security Admin permissions or above.
 * Isolation exclusion must be enabled. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Rxclusion Rules** feature.
 
    :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::
