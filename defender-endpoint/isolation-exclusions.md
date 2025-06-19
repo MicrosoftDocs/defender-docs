@@ -83,7 +83,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
    |:-----|:-----|
    | **Rule name** | Provide a name for the rule. |
    | **Rule description** | Describe the purpose of the rule. |
-   |**Process path** (Windows only) | The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.|
+   |**Process path** (Windows only) | The file path of an executable is simply its location on the endpoint. You can define one executable to be used in each rule.<br><br>Example: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.`<br><br>**Note**: Exclusion won't apply to any child processes created by the specified process. |
 | **Service name** (Windows only) | Windows service short names can be used in cases you want to exclude a service (not an application) that is sending or receiving traffic. Service short names can be retrieved by running the Get-Service command from PowerShell. You can define one service to be used in each rule.<br><br>Example: termservice |
 | **Package family name** | The Package Family Name (PFN) is a unique identifier assigned to Windows app packages. The PFN format follows this structure: `<Name>_<PublisherId>` |
 | **Direction** | The connection direction (Inbound/Outbound) |
