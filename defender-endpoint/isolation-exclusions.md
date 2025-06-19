@@ -50,7 +50,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 * **Selective isolation**: Selective isolation mode allows administrators to apply exclusions to ensure that critical tools and network communications can still function, even while maintaining the device's isolated state.
 
-## How to use isolation exclusions
+## How to define and apply isolation exclusions
 
 ### Prerequisites
 
@@ -63,9 +63,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
    > [!NOTE]
    > Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
 
-### Configuration steps
-
-#### Defining Global Exclusions in Settings
+### Step 1: Define global exclusions in settings
 
 [[NEED AN INTRO STATEMENT ABOUT WHAT WE'RE GOING TO BE DOING]]
 
@@ -85,6 +83,18 @@ There are two modes of isolation: **full isolation** and **selective isolation**
    |:-----|:-----|
    |Rule name| Provide a name for the rule. |
    |Rule description| Describe the purpose of the rule. |
+   |Remote IP|The IP(s) not subject to network isolation as per the rule.<br>Supported formats:(IPv4/IPv6 with optional CIDR notation/list of IPs<br><br>Valid input examples:<br>-Single IP address: 1.1.1.1<br>IPV6 address: 2001:db8:85a3::8a2e:370:7334<br>This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.| 
+
+      * **Valid input examples**:
+
+         * Single IP address: 1.1.1.1
+
+         * IPv6 address: 2001:db8:85a3::8a2e:370:7334
+
+         * IP address with CIDR notation (IPv4 or IPv6): 1.1.1.1/24
+
+            This defines a range of IP addresses. In this case, it includes all IPs from 1.1.1.0 to 1.1.1.255. The /24 represents the subnet mask, which specifies that the first 24 bits of the address are fixed, and the remaining 8 bits define the address range.
+                                   |
 
    * **Remote IP Address** (IPv4/IPv6 with optional CIDR notation/list of IPs)
 
@@ -145,7 +155,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 
  
-#### Applying Selective Isolation to a Specific Device
+### Step 2: Apply selective isolation to a specific device
 
 1.	Navigate to the device page in the portal.
 1.	Select Isolate device and choose Selective Isolation.
@@ -158,7 +168,7 @@ Exclusions that were applied to a specific device can be later reviewed in the A
 
 :::image type="content" source="./media/isolation-exclusions/exclusions-5.png" alt-text="Screenshot of exclusions5." lightbox="./media/isolation-exclusions/exclusions-5.png":::
  
-#### API Configuration
+### API Configuration
 
 To trigger isolation with exclusions via API, set IsolationType param = “Selective”.
  
@@ -188,9 +198,9 @@ To trigger isolation with exclusions via API, set IsolationType param = “Selec
       Direction - In
 
    ```
-   * example.exe will only be able to initiate network connections to remote IP 1.1.1.1.
-   * example_2.exe can initiate network connections to every IP address.
-   * The device can receive inbound connection from Ip address 18.18.18.18.
+   * *example.exe* will only be able to initiate network connections to remote IP 1.1.1.1.
+   * *example_2.exe* can initiate network connections to every IP address.
+   * The device can receive inbound connection from IP address 18.18.18.18.
 
 ## Considerations and limitations
 
