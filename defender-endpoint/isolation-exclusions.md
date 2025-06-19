@@ -58,7 +58,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 * Requires Global or Security Admin permissions.
 * Isolation exclusion must be enabled. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Rxclusion Rules** feature.
 
-   :::image type="content" source="./media/isolation-exclusions/exclusions-1.png" alt-text="Screenshot of exclusions1." lightbox="./media/isolation-exclusions/exclusions-1.png":::
+   :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::
 
    > [!NOTE]
    > Once the feature is enabled, the default exclusions for classic Teams and Outlook will no longer apply, and the exclusions list will start empty across all platforms.
@@ -150,11 +150,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 1.	Save and apply changes.
 
 **These global rules apply whenever selective isolation is enabled for a device.**
- 
 
-
-
- 
 ### Step 2: Apply selective isolation to a specific device
 
 1.	Navigate to the device page in the portal.
@@ -162,11 +158,11 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 1.	Check Use isolation exclusions to apply defined exclusion rules.
 1.	Confirm the action.
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-4.png" alt-text="Screenshot of exclusions4." lightbox="./media/isolation-exclusions/exclusions-4.png":::
+:::image type="content" source="./media/isolation-exclusions/apply-exclusion-rule.png" alt-text="Screenshot showing how to apply an exclusion rule to a device." lightbox="./media/isolation-exclusions/apply-exclusion-rule.png":::
 
 Exclusions that were applied to a specific device can be later reviewed in the Action Center history.
 
-:::image type="content" source="./media/isolation-exclusions/exclusions-5.png" alt-text="Screenshot of exclusions5." lightbox="./media/isolation-exclusions/exclusions-5.png":::
+:::image type="content" source="./media/isolation-exclusions/review-exclusions.png" alt-text="Screenshot showing exclusions in the Action Center history." lightbox="./media/isolation-exclusions/review-exclusions.png":::
  
 ### API Configuration
 
