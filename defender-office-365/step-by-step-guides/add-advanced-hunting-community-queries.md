@@ -55,7 +55,7 @@ Because you don't have admin permissions to the Azure Sentinel GitHub repository
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-create-new-fork.png" alt-text="Screenshot of the Create a new fork page." lightbox="../media/add-advanced-hunting-community-queries-create-new-fork.png":::
 
-3. After the fork is successfully created, you're taken to the URL of the Azure-Sentinel repository fork in your GitHub account: `https://github.com/<YourGitHubAccountName>/Azure-Sentinel`. On this page, select **Code**. On the **Local** tab of the drop down that opens, select :::image type="icon" source="../media/github-copy-url-to-clipboard-icon.png" border="false"::: **Copy url to clipboard** from the **HTTPS** tab of the **Clone** section. The copied URL is: `https://github.com/<YourGitHubAccountName>/Azure-Sentinel.git`.
+3. After the fork is successfully created, you're taken to the URL of the Azure-Sentinel repository fork in your GitHub account: `https://github.com/<YourGitHubAccountName>/Azure-Sentinel`. On this page, select **Code**. On the **Local** tab of the drop-down that opens, select :::image type="icon" source="../media/github-copy-url-to-clipboard-icon.png" border="false"::: **Copy url to clipboard** from the **HTTPS** tab of the **Clone** section. The copied URL is: `https://github.com/<YourGitHubAccountName>/Azure-Sentinel.git`.
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-clone-fork.png" alt-text="Screenshot of Copy url to clipboard from the Code button on your forked copy of the Azure-Sentinel page." lightbox="../media/add-advanced-hunting-community-queries-clone-fork.png":::
 
@@ -85,7 +85,7 @@ After you fork the Azure Sentinel GitHub repository to your GitHub account, you 
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-cloning-repo.png" alt-text="Screenshot of the progress dialog in Visual Studio Code as the Azure-Sentinel repository is being cloned." lightbox="../media/add-advanced-hunting-community-queries-vs-code-cloning-repo.png":::
 
-7. After cloning completes, a **Would you like to open the clone repository?** dialog opens. Select **Open** to open the cloned repository in VS Code (for example, the `C:\GitHub\Azure-Sentinel` folder an its contents).
+7. After cloning completes, a **Would you like to open the clone repository?** dialog opens. Select **Open** to open the cloned repository in VS Code (for example, the `C:\GitHub\Azure-Sentinel` folder and its contents).
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-open-cloned-repo.png" alt-text="Screenshot of the Would you like to open the clone repository? dialog from Visual Studio Code dialog that opens after cloning the repository completes, with Open highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-open-cloned-repo.png":::
 
