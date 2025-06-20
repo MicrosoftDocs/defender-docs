@@ -41,6 +41,8 @@ Exclusions can be useful to avoid incorrect detections on files or software that
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Supported exclusion scopes
 
 As described in an earlier section, we support two exclusion scopes: antivirus (`epp`) and global (`global`) exclusions.
