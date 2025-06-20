@@ -2,11 +2,11 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. Learn how to enhance your cloud security posture. 
 ms.topic: overview
-ms.date: 06/17/2025
+ms.date: 06/20/2025
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---
 
-# Microsoft Defender for Cloud overview
+# What is Microsoft Defender for Cloud?
 
 Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) that includes security measures and practices designed to protect cloud-based applications from various cyber threats and vulnerabilities. Defender for Cloud includes:
 
