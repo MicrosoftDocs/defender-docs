@@ -32,7 +32,7 @@ This article assumes you have a production Microsoft 365 tenant and are piloting
 
 Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
-[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+[!INCLUDE [side-by-side-scenarios](../defender-endpoint/includes/side-by-side-scenarios.md)]
 
 ## End-to-end deployment for Microsoft Defender XDR
 
