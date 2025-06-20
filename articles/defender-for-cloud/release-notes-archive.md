@@ -856,7 +856,6 @@ Will be applied to the following recommendations:
 | May 22 | Update |[Configure email notifications for attack paths](#update-configure-email-notifications-for-attack-paths) |
 | May 21 | Update |[Advanced hunting in Microsoft Defender XDR includes Defender for Cloud alerts and incidents](#update-advanced-hunting-in-microsoft-defender-xdr-includes-defender-for-cloud-alerts-and-incidents) |
 | May 9 | Preview | [Checkov integration for IaC scanning in Defender for Cloud](#preview-checkov-integration-for-iac-scanning-in-defender-for-cloud) |
-| May 7 | GA | [Permissions management in Defender for Cloud](#ga-permissions-management-in-defender-for-cloud) |
 | May 6 | Preview | [AI multicloud security posture management is available for Azure and AWS](#preview-ai-multicloud-security-posture-management). |
 | May 6 | Limited preview | [Threat protection for AI workloads in Azure](#limited-preview-threat-protection-for-ai-workloads-in-azure). |
 | May 2 | Update |[Security policy management](#ga-security-policy-management). |
@@ -3143,7 +3142,6 @@ Updates in July include:
 - [General availability (GA) of the Cloud-native security agent for Kubernetes runtime protection](#general-availability-ga-of-the-cloud-native-security-agent-for-kubernetes-runtime-protection)
 - [Defender for Container's VA adds support for the detection of language specific packages (Preview)](#defender-for-containers-va-adds-support-for-the-detection-of-language-specific-packages-preview)
 - [Protect against the Operations Management Infrastructure vulnerability CVE-2022-29149](#protect-against-the-operations-management-infrastructure-vulnerability-cve-2022-29149)
-- [Integration with Entra Permissions Management](#integration-with-entra-permissions-management)
 - [Key Vault recommendations changed to "audit"](#key-vault-recommendations-changed-to-audit)
 - [Deprecate API App policies for App Service](#deprecate-api-app-policies-for-app-service)
 
