@@ -3,7 +3,7 @@ title: Connect your GCP project
 description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
 ms.topic: install-set-up-deploy
 ms.date: 06/20/2025
----
+=======
 
 # Connect your GCP project to Microsoft Defender for Cloud
 
@@ -347,5 +347,6 @@ Connecting your GCP project is part of the multicloud experience available in Mi
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
 - Set up your [on-premises machines](quickstart-onboard-machines.md) and [AWS account](quickstart-onboard-aws.md).
-- [Troubleshoot your multicloud connectors](troubleshooting-guide.md#troubleshoot-connectors).
+- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
+- [Resolve Domain Restricted Sharing policy](resolve-gcp-sharing-policy.md).
 - Get answers to [common questions](faq-general.yml) about connecting your GCP project.

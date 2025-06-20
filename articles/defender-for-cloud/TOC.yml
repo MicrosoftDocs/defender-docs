@@ -82,16 +82,12 @@
         - name: Connect Azure subscriptions
           displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           href: connect-azure-subscription.md
-        - name: Amazon Web Services (AWS) accounts
-          items:
-          - name: Connect AWS accounts
-            displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-            href: quickstart-onboard-aws.md
-        - name: Google Cloud Platform (GCP)
-          items:
-          - name: Connect GCP projects
-            displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-            href: quickstart-onboard-gcp.md
+        - name: Connect AWS accounts
+          displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          href: quickstart-onboard-aws.md
+        - name: Connect GCP projects
+          displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          href: quickstart-onboard-gcp.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
@@ -690,6 +686,9 @@
           href: workflow-automation.yml
     - name: Resolve connector issues
       items:
+      - name: Troubleshoot connectors guide
+        displayName: troubleshoot, connectors, guide 
+        href: troubleshoot-connectors.md
       - name: Amazon Web Services (AWS) connector
         items:
         - name: Connect a Sentinel connected AWS account
