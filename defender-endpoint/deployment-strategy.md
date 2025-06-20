@@ -32,6 +32,8 @@ We understand that every enterprise environment is unique, so we've provided sev
 
 :::image type="content" source="/defender/media/defender-endpoint/onboarding-architecture-2.png" alt-text="The deployment flow":::
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Step 1: Identify your architecture
 
 Depending on your environment, some tools are better suited for certain architectures. Use the following table to decide which Defender for Endpoint architecture best suits your organization.
