@@ -2,7 +2,7 @@
 title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 05/04/2025
+ms.date: 06/20/2025
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -54,8 +54,6 @@ To complete the procedures in this article, you need:
 - Access to an AWS account.
 
 - Contributor level permission for the relevant Azure subscription.
-  
-- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md#before-you-start) for your tenant.
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
