@@ -56,7 +56,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 * Isolation exclusion is available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902).
 * Enabling isolation exclusion requires Security Admin permissions or above.
-* Isolation exclusion must be enabled. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Rxclusion Rules** feature.
+* Isolation exclusion must be enabled. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Exclusion Rules** feature.
 
    :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::
 
@@ -77,7 +77,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 1. On the **Add new exclusion rule** page, fill in the parameters. Red asterisks denote mandatory parameters.
 
-   :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isoation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
+   :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isolation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
 
    | Parameter | Description |
    |:-----|:-----|
