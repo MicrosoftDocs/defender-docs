@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 04/16/2025
+ms.date: 06/11/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -143,8 +143,8 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 
 | Service tag name    |    Defender for Endpoint services included   |
 |:---|:---|
-| MicrosoftDefenderForEndpoint | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
-| OneDsCollector | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
+| `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
+| `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
 The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
