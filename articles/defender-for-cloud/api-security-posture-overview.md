@@ -21,7 +21,7 @@ APIs are entry points into cloud-native apps. They connect services, apps, and d
 API security posture management in Defender for Cloud offers the following capabilities:
 
 - **Gain visibility into your APIs**:  
-  Provides a unified view of APIs across Azure API Management and those hosted in Function Apps and Logic Apps, with automated onboarding into Defender for Cloud.
+  Get a centralized view of managed APIs across Azure API Management and APIs hosted in Function Apps and Logic Apps, with automated onboarding into Defender for Cloud.
 - **Assess API security recommendations with risk factors** *(Azure API Management only)* to:  
   - Identify and remediate unauthenticated API risks.  
   - Detect APIs exposed to the internet.  
