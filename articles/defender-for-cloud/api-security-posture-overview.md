@@ -11,7 +11,7 @@ ms.date: 06/18/2025
 
 # Improve your API security posture
 
-APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks and misconfigurations. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API posture and risk assessments for your Azure API Management APIs.
+APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks from misconfigurations and vulnerabilities. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API posture and risk assessments for your Azure API Management APIs.
 
 > [!NOTE]
 > **API discovery and security posture for APIs hosted in Function Apps and Logic Apps is now available in Public Preview.** This includes visibility into APIs and identification of inactive or dormant APIs.
