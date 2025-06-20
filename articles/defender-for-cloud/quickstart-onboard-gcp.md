@@ -2,7 +2,7 @@
 title: Connect your GCP project
 description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
 ms.topic: install-set-up-deploy
-ms.date: 01/29/2025
+ms.date: 06/20/2025
 ---
 
 # Connect your GCP project to Microsoft Defender for Cloud
@@ -46,8 +46,6 @@ To complete the procedures in this article, you need:
 - Access to a GCP project.
 
 - Contributor level permission for the relevant Azure subscription.
-
-- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
 
 You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 

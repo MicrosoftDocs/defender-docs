@@ -4,7 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 author: dcurwin
 ms.author: dacurwin
 ms.topic: reference
-ms.date: 05/25/2025
+ms.date: 06/20/2025
 ---
 
 # Defender for Cloud-What's new archive
@@ -894,12 +894,6 @@ While in preview, Checkov must be explicitly invoked through the 'tools' input p
 
 Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md) and configuring the MSDO CLI for [Azure DevOps](azure-devops-extension.yml) and [GitHub](github-action.md).
 
-### GA: Permissions management in Defender for Cloud
-
-May 7, 2024
-
-[Permissions management](permissions-management.md) is now generally available in Defender for Cloud.
-
 ### Preview: AI multicloud security posture management
 
 May 6, 2024
@@ -1476,7 +1470,6 @@ For a list of all supported operating systems, see [Registries and images suppor
 |--|--|
 | November 30 | [Four alerts are deprecated](#four-alerts-are-deprecated) |
 | November 27 | [General availability of agentless secrets scanning in Defender for Servers and Defender CSPM](#general-availability-of-agentless-secrets-scanning-in-defender-for-servers-and-defender-cspm) |
-| November 22 | [Enable permissions management with Defender for Cloud (Preview)](#enable-permissions-management-with-defender-for-cloud-preview) |
 | November 22 | [Defender for Cloud integration with ServiceNow](#defender-for-cloud-integration-with-servicenow) |
 | November 20 | [General Availability of the autoprovisioning process for SQL Servers on machines](#general-availability-of-the-autoprovisioning-process-for-sql-servers-on-machines-plan)|
 | November 15 | [General availability of Defender for APIs](#general-availability-of-defender-for-apis) |
@@ -1515,18 +1508,6 @@ Agentless secrets scanning utilizes cloud APIs to capture snapshots of your disk
 With this release, Defender for Cloud's detection capabilities now support other database types, data store signed URLs, access tokens, and more.
 
 Learn how to [manage secrets with agentless secrets scanning](secret-scanning.md).
-
-### Enable permissions management with Defender for Cloud (Preview)
-
-November 22, 2023
-
-Microsoft now offers both Cloud-Native Application Protection Platforms (CNAPP) and Cloud Infrastructure Entitlement Management (CIEM) solutions with [Microsoft Defender for Cloud (CNAPP)](defender-for-cloud-introduction.md) and [Microsoft Entra permissions management](/entra/permissions-management/) (CIEM).
-
-Security administrators can get a centralized view of their unused or excessive access permissions within Defender for Cloud.
-
-Security teams can drive the least privilege access controls for cloud resources and receive actionable recommendations for resolving permissions risks across Azure, AWS, and GCP cloud environments as part of their Defender Cloud Security Posture Management (CSPM), without any extra licensing requirements.
-
-Learn how to [Enable permissions management in Microsoft Defender for Cloud (Preview)](enable-permissions-management.md).
 
 ### Defender for Cloud integration with ServiceNow
 
@@ -3201,14 +3182,6 @@ Operations Management Infrastructure (OMI) is a collection of cloud-based servic
 Log Analytics integrated with Azure HDInsight running OMI version 13 requires a patch to remediate [CVE-2022-29149](https://nvd.nist.gov/vuln/detail/CVE-2022-29149). Review the report about this vulnerability in the [Microsoft Security Update guide](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29149) for information about how to identify resources that are affected by this vulnerability and remediation steps.
 
 If you have Defender for Servers enabled with Vulnerability Assessment, you can use [this workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/OMI%20Vulnerability%20Dashboard) to identify affected resources.
-
-### Integration with Entra Permissions Management
-
-Defender for Cloud has integrated with [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/), a cloud infrastructure entitlement management (CIEM) solution that provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP.
-
-Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](/azure/active-directory/cloud-infrastructure-entitlement-management/ui-dashboard).
-
-Learn more about [Entra Permission Management (formerly Cloudknox)](other-threat-protections.md#entra-permission-management-formerly-cloudknox)
 
 ### Key Vault recommendations changed to "audit"
 
