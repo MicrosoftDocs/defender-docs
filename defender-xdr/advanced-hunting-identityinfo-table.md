@@ -39,6 +39,8 @@ The following schema is the unified `IdentityInfo` schema that streamlines a sim
 
 Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
 
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Mirosoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](https://learn.microsoft.com/en-us/defender-xdr/deploy-supported-services).
+
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` [*](#mdi-only) | `datetime` | The date and time that the line was written to the database. <br><br>This is used when there are multiple lines for each identity, such as when a change is detected, or if 24 hours have passed since the last database line was added. |
