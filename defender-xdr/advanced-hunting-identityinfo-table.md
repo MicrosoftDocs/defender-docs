@@ -39,7 +39,7 @@ The following schema is the unified `IdentityInfo` schema that streamlines a sim
 
 Defender portal users who have not onboarded a Sentinel workspace that has the UEBA service turned on cannot view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Mirosoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](https://learn.microsoft.com/en-us/defender-xdr/deploy-supported-services).
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Mirosoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
