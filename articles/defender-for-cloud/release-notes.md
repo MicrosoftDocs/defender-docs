@@ -38,7 +38,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 June 25, 2025
 
-Defender for Cloud now extends its API discovery and security posture capabilities to include APIs hosted in **Azure Function Apps** and **Logic Apps**, in addition to its existing support for Azure API Management.
+Defender for Cloud now extends its API discovery and security posture capabilities to include APIs hosted in **Azure Function Apps** and **Logic Apps**, in addition to its existing support for APIs published in Azure API Management.
 
 This enhancement empowers security teams with a comprehensive and continuously updated view of their organization’s API attack surface. Key capabilities include:
 
