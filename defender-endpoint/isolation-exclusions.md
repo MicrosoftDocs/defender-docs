@@ -102,7 +102,7 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 1.	Select **Isolate device** and choose **Selective isolation**.
 1.	Check **Use isolation exclusions to allow specific communication while the device is isolated** and enter a comment.
 
-  :::image type="content" source="./media/isolation-exclusions/apply-exclusion-rule.png" alt-text="Screenshot showing how to apply an exclusion rule to a device." lightbox="./media/isolation-exclusions/apply-exclusion-rule.png"::: 
+  :::image type="content" source="./media/isolation-exclusions/apply-exclusion-rule.png" alt-text="Screenshot showing how to apply an exclusion rule to a device."::: 
 
 1.	Select **Confirm**.
 
