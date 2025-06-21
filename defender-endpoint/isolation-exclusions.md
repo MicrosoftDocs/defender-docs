@@ -76,7 +76,7 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 
    :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/add-new-exclusion-rule.png":::
 
-1. In the **Add new exclusion rule** dialog that appears., fill in the parameters. Red asterisks denote mandatory parameters.
+1. The **Add new exclusion rule** dialog appears:
 
    :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isolation exclusion rule.":::
 
