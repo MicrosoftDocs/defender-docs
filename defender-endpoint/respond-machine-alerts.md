@@ -216,7 +216,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
    - `iptables`
    - `ip6tables`
    - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
-- Selective isolation is available for devices running Windows 10, version 1709 or later, and Windows 11. For more information about selective isolation, see [Isolation exclusions](/defender-endpoint/isolation-exclusions.md).
+- Selective isolation is available for devices running Windows 10, version 1709 or later, and Windows 11. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
 - You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
