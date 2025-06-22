@@ -75,11 +75,11 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 
 1. Select **+ Add exclusion rule**
 
-   :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule." lightbox="./media/isolation-exclusions/add-new-exclusion-rule.png":::
+   :::image type="content" source="./media/isolation-exclusions/add-new-exclusion-rule.png" alt-text="Screenshot showing how to add a new isolation exclusion rule.":::
 
 1. The **Add new exclusion rule** dialog appears:
 
-   :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isolation exclusion rule.":::
+   :::image type="content" source="./media/isolation-exclusions/exclusion-rule-definition.png" alt-text="Screenshot showing the fields required for defining an isolation exclusion rule." lightbox="./media/isolation-exclusions/exclusion-rule-definition.png":::
 
    Fill in the isolation exclusion parameters. Red asterisks denote mandatory parameters. The parameters and their valid values are described in the following table.
 
@@ -111,10 +111,9 @@ Exclusions that were applied to a specific device can be reviewed in the Action 
 
 :::image type="content" source="./media/isolation-exclusions/review-exclusions.png" alt-text="Screenshot showing exclusions in the Action Center history." lightbox="./media/isolation-exclusions/review-exclusions.png":::
  
-### API Configuration
+#### Apply selective isolation via API
 
-> [!NOTE]
-> Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](/defender-endpoint/api/isolate-machine).
+Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](/defender-endpoint/api/isolate-machine).
  
 ## Exclusion Logic
 
