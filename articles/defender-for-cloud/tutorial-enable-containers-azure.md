@@ -53,6 +53,8 @@ If you would prefer to [assign a custom workspace](defender-for-containers-enabl
 
 You can enable the Defender for Containers plan and deploy all of the relevant components in different ways. We walk you through the steps to accomplish this using the Azure portal. Learn how to [deploy the Defender sensor](defender-for-containers-enable.md#deploy-the-defender-sensor) with REST API, Azure CLI or with a Resource Manager template.
 
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
+
 **To deploy the Defender sensor in Azure:**
 
 1. Sign in to the [Azure portal](https://portal.azure.com).

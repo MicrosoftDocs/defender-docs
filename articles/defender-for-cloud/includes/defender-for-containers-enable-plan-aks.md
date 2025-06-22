@@ -63,6 +63,8 @@ To deploy the Defender sensor on specific clusters:
 
 You can enable the Defender for Containers plan and deploy all of the relevant components by using the Azure portal, the REST API, or an Azure Resource Manager template. For detailed steps, select the relevant tab.
 
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
+
 After the Defender sensor is deployed, a default workspace is automatically assigned. You can [assign a custom workspace](../defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) in place of the default workspace through Azure Policy.
 
 > [!NOTE]
