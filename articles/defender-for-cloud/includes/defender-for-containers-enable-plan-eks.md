@@ -70,7 +70,7 @@ To view the alerts and recommendations for your EKS clusters, use the filters on
 
 ## Deploy the Defender sensor
 
-[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
+[!INCLUDE [Install with Helm note](helm-install-note.md)]
 
 To deploy the Defender sensor on your AWS clusters:
 

@@ -118,7 +118,7 @@ To deploy the solution to specific clusters:
 
 ## Deploy the Defender sensor
 
-[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
+[!INCLUDE [Install with Helm note](helm-install-note.md)]
 
 To deploy the Defender sensor on your GCP clusters:
 
