@@ -40,8 +40,7 @@ search.appverid: met150
 3. Configure Defender for Endpoint Plan 1 or Plan 2.
 4. Set up your device groups, device collections, and organizational units.
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Step 1: Reinstall/enable Microsoft Defender Antivirus on your endpoints
 
