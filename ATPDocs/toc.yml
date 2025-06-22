@@ -88,15 +88,15 @@ items:
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
         href: deploy/configure-windows-event-collection.md
-      - name: Configure a Directory Service account
-        items:
-        - name: Overview
-          href: deploy/directory-service-accounts.md
-          displayName: Directory Service Account, DSA
-        - name: Configure a DSA with a gMSA
-          href: deploy/create-directory-service-account-gmsa.md
-        - name: Configure remote calls to SAM
-          href: deploy/remote-calls-sam.md
+  - name: Configure a Directory Service account
+    items:
+    - name: Overview
+      href: deploy/directory-service-accounts.md
+      displayName: Directory Service Account, DSA
+    - name: Configure a DSA with a gMSA
+      href: deploy/create-directory-service-account-gmsa.md
+  - name: Configure remote calls to SAM
+    href: deploy/remote-calls-sam.md
   - name: Configure action accounts
     href: deploy/manage-action-accounts.md
 - name: Integrate with identity services

@@ -8,34 +8,23 @@ ms.reviewer: rlitinsky
 
 # Activate the Windows Server sensor on a domain controller (Preview)
 
-Microsoft Defender for Endpoint customers can activate the built-in Windows Server sensor directly on onboarded domain controllers.
+For complete protection of your on-premises deployment, we recommend activating the Defender for Identity sensor on all applicable servers.
 
-The Windows Server sensor supports the following Defender for Identity functionality:
-
-- Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
-- [Identity inventory](test-sensor.md#confirm-entity-page-details)
-- [Identity advanced hunting data](test-sensor.md#test-advanced-hunting-tables)
-- [Security posture recommendations](test-sensor.md#test-identity-security-posture-management-ispm-recommendations)
-- [Alert detections](test-sensor.md#test-alert-functionality)
-- [Remediation actions](test-sensor.md#test-remediation-actions)
-- [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
-
-We recommend activating this built-in sensor for customers deploying core identity protections on new domain controllers running Windows Server 2019 or later. For other identity infrastructures, or for the most comprehensive protections, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
+This article describes onboarding for new domain controllers running Windows Server 2019 or later. For domain controllers running older operating systems, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
 
 ## Prerequisites
 
-- Before activating the Defender for Identity capabilities on your domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.
-- The domain controller must have one of these Operating Systems:
-   - Windows Server 2019 or later
-   - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.
-
-       > [!IMPORTANT]
-       > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. [This out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
-
-- Your domain controller must be onboarded to Microsoft Defender for Endpoint. For more information, see [Onboard a Windows server](/microsoft-365/security/defender-endpoint/onboard-windows-server).
-- You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
+ - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
     - `Security setting (All permissions)`
+ - Before activating the sensor on your domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.
+ - The domain controller must have both:
+    - Windows Server 2019 or later
+    - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.
+
+   > [!NOTE]
+   > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. [This out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
+_ Your environment doesn't use Azure ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
 
 ## Configure Windows auditing
 
@@ -45,14 +34,27 @@ Configure Windows event collection on your domain controller to support Defender
 
 You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
 
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
+    ```powershell
+    Set-MDIConfiguration -Mode Domain -Configuration All
+    ```
 For more information, see:
 - [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
 - [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+ 
+## Check the Activation State
 
-## For customers with domain controllers onboarded to Defender for Endpoint 
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
+1. The **Activation** page contains an **activation state** for each domain controller. See the **activation state** to let you know what you need to do to onboard the domain controller to Defender for Identity.
+
+|Activation State  |Next steps  |
+|---------|---------|
+|Install classic sensor|[Deploy the classic Defender for Identity sensor](install-sensor.md) from the **Sensors page**.|
+|Needs OS update     |This domain controller is running an unsupported operating system version for the new sensor. Update the server to Windows Server 2019 or later to use the new sensor. |
+|Activate new sensor |The domain controller is already onboarded to Defender for Endpoint, and the sensor can be activated.   |
+|Download the onboarding package     |Either:<br> - Onboarded the domain controller to Defender for Endpoint, and then activate the sensor, or<br>- use the Defender for Identity onboarding package to onboard. |
+ 
+
+## Domain controllers onboarded to Defender for Endpoint 
 
 Microsoft Defender for Endpoint customers who have onboarded the domain controller to Defender for Endpoint, can activate the Windows Server Defender for Identity sensor.
 
@@ -70,11 +72,13 @@ Microsoft Defender for Endpoint customers who have onboarded the domain controll
 
     [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/2.jpg)](media/activate-capabilities/2.jpg#lightbox)
  
-## For customers without domain controllers onboarded to Defender for Endpoint 
+## Domain controllers not onboarded to Defender for Endpoint 
+The Defender for Identity sensor uses Defender for Endpoint URL endpoints for communication, including streamlined URLs. If the domain controller has not been onboarded to Defender for Endpoint, follow these steps to activate the sensor.
 
-This solution uses Defender for Endpoint URL endpoints for communication, including streamlined URLs. For more information, see:
- - [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server)
- - [Configure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
+### Configure Defender for Endpoint streamlined URLs
+
+1. [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server)
+1. [Configure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
 
 ### Download the Defender for Identity onboarding package
 
@@ -84,7 +88,7 @@ This solution uses Defender for Endpoint URL endpoints for communication, includ
 
    [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png)](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png#lightbox)
    
-3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an Administrator.
+3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal, and run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an administrator.
 
    [![screenshot that shows the onboarding script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)](media/activate-capabilities/screenshot-2025-06-04-170500.png#lightbox)
 
