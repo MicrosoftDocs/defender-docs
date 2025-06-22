@@ -73,7 +73,7 @@ This table provides an example of the deployment rings you might use:
 |Deployment ring|Description|
 |---|---|
 |Evaluate|Ring 1: Identify 50 devices to onboard to the service for testing.|
-|Pilot|Ring 2: Identify and onboard the next 50-100 endpoints in a production environment. Microsoft Defender for Endpoint supports various endpoints that you can onboard to the service, for more information, see [Select deployment method](deployment-strategy.md#step-2-select-your-deployment-method).|
+|Pilot|Ring 2: Identify and onboard the next 50-100 endpoints in a production environment. Microsoft Defender for Endpoint supports various endpoints that you can onboard to the service. For more information, see [Select deployment method](deployment-strategy.md#step-2-select-your-deployment-method).|
 |Full deployment|Ring 3: Roll out service to the rest of environment in larger increments. For more information, see [Get started with your Microsoft Defender for Endpoint deployment](mde-planning-guide.md).
 
 ### Exit criteria
