@@ -43,59 +43,59 @@ For more information on permissions, see [Permission pre-requisites](manage-rbac
 > [!TIP]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
+To create custom roles for the Microsoft Sentinel data lake using the **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard?tabs=defender-portal) and [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json).
+
+
 ## Create a custom role
 
-The following steps guide you on how to create custom roles in Microsoft Defender XDR Unified RBAC.
+The following steps describe how to create custom roles in the Microsoft Defender portal.
 
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com). In the navigation pane on the side, scroll down and select **Permissions**.
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+1. On the **Permissions** page, under **Microsoft Defender XDR**, select **Roles** > **Create custom role**.
 
-2. In the navigation pane, go to **System > Permissions**.
+1. In the wizard that opens, on the **Basics** tab, enter the role name and an optional description, and then select **Next**.
 
-3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+1. On the **Choose permissions** page, select each of the following as needed to configure permissions for that area:
 
-4. Select **Create custom role**.
+    - **Security operations**
+    - **Security posture**
+    - **Authorization and settings**
+    - **Data Operations**
 
-5. Enter the Role name and description.
+    Hover over the description column for each permission group for a detailed description of the permissions available in that group. 
 
-6. Select **Next** to choose the permissions you want to assign. Permissions are organized in three different categories:
+    An additional **Authorization and settings** side pane slides open for each permission group you select, where you can choose the specific permissions to assign to the role.
 
-   :::image type="content" source="/defender/media/defender/m365-defender-rbac-permissions1.png" alt-text="Screenshot of the permissions screen" lightbox="/defender/media/defender/m365-defender-rbac-permissions1.png":::
+    If you select **All read-only permissions**, or **All read and manage permissions**, any new permissions later added to these categories are also automatically assigned under this role.
 
-7. Select a permission category (for example, Security operations), and then review the permissions available. You can choose to assign the following different levels of permissions:
+    For more information, see [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md).
 
-    - Select all read-only permissions – Users are assigned with all the read-only permissions in this category.
-    - Select all read and manage permissions – Users are assigned all permissions in this category (read and manage permissions).
-    - Select custom permissions – Users are assigned the custom permissions selected.
-
-   :::image type="content" source="/defender/media/defender/m365-defender-rbac-assignments-fig.png" alt-text="Screenshot of the permissions flyout screen" lightbox="/defender/media/defender/m365-defender-rbac-assignments-fig.png":::
-
-    For more information on the RBAC custom permissions, see [About RBAC custom permissions](custom-permissions-details.md).
-
+1. When you're done assigning permissions for each permission group, select **Apply** and then **Next** to continue on to the next permission group.
+    
     > [!NOTE]
     > If all read-only or all read and manage permissions are assigned, any new permissions added to this category in the future are automatically assigned under this role.
     >
     > If you have assigned custom permissions and new permissions are added to this category, you will need to re-assign your roles with the new permissions if needed.
 
-8. Once you have selected your permissions, select **Apply** and then **Next** to assign users and data sources.
+1. Once you have selected your permissions for any relevant permission group, select **Apply** and then **Next** to assign users and data sources.
 
-9. Select **Add assignments** and add the Assignment name.
+1. On the **Assign users and data sources** page, select **Add assignment**.
 
-10. Under **data sources**, choose if the assigned users will have the selected permissions across all the available products, or only for specific data sources:
+    1. On the **Add assignment** side pane, enter the following details:
 
-     :::image type="content" source="/defender/media/defender/defender-rbac-add-assignments-small.png" alt-text="Screenshot of the assignments screen" lightbox="/defender/media/defender/defender-rbac-add-assignments.png":::
+        - **Assignment name**: Enter a descriptive name for the assignment.
+        - **Employees**: Select Microsoft Entra security groups or individual users to assign users to the role.
+        - **Data sources**: Select the **Data sources** drop down and then select the services where the assigned users will have the selected permissions. If you assigned read-only permissions for a single data source, such as Microsoft Defender for Endpoint, the assigned users can't read alerts in the other services, such as Microsoft Defender for Office 365 or Microsoft Defender for Identity.
 
-    If a user selects all read-only permissions for a single data source, for example, Microsoft Defender for Endpoint, they will not be able to read alerts for Microsoft Defender for Office 365 or Microsoft Defender for Identity.
+    1. Select **Include future data sources automatically** to include all other data sources supported by Microsoft Defender unified RBAC. If this option is selected, any future data sources that are added for unified RBAC support are also automatically added to the assignment.
 
-    > [!NOTE]
-    > By selecting **Include future data sources automatically** all supported data sources within Microsoft Defender XDR Unified RBAC and any future data sources that are added are automatically assigned to this assignment.
-
-11. In **Assigned users and groups** choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
+    1. In the **Data collections** area on the **Add assignments** side pane, the Microsoft Sentinel default data lake is listed by default. Select **Edit** to either remove access to the data lake, or define a custom data lake selection.
 
     > [!NOTE]
     > In Microsoft Defender XDR Unified RBAC, you can create as many assignments as needed under the same role with same permissions. For example, you can have an assignment within a role that has access to all data sources and then a separate assignment for a team that only needs access to Endpoint alerts from the Defender for Endpoint data source. This enables maintaining the minimum number of roles.
 
-12. Select **Next** to review and finish creating the role and then select **Submit**.
+1. Back on the **Assign users and data sources** page, select **Next** to review the role and assignment details. Select **Submit** to create the role.
 
 ## Create a role to access and manage roles and permissions
 

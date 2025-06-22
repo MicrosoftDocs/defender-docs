@@ -19,6 +19,10 @@ ms.date: 03/02/2025
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
 
+## August 2025
+
+Starting in August 2025, Microsoft Defender XDR Unified RBAC also supports Microsoft Sentinel data lake permissions when Microsoft Sentinel is onboarded to the Defender portal. For more information, see <!--data lake link--> and [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md).
+
 ## March 2025
 
 Starting March 2, 2025, new Microsoft Defender for Identity tenants will have the Unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
