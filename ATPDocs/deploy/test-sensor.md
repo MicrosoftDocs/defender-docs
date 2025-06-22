@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Test the Defender for Identity sensor on domain controllers 
 
-Use the following procedures to test your that your sensors are working.
+Use the following procedures to test that your sensors are working.
 Note that the first time you activate the sensor on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
 ## Check the ITDR dashboard
