@@ -34,9 +34,9 @@ Configure Windows event collection on your domain controller to support Defender
 
 You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
 
-    ```powershell
-    Set-MDIConfiguration -Mode Domain -Configuration All
-    ```
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
 For more information, see:
 - [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
 - [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
