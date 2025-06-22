@@ -45,9 +45,9 @@ items:
             href: deploy/install-sensor.md
           - name: Configure the Defender for Identity sensor
             href: deploy/configure-sensor-settings.md
-      - name: Windows 2019 and later (Preview)
+      - name: Windows 2019 and later
         items:
-          - name: Activate the Windows Server sensor when MDE is enabled on endpoints
+          - name: Activate the sensor when MDE is enabled on endpoints (Preview)
             href: deploy/activate-capabilities.md
           - name: Deploy the sensor when MDE is not enabled on endpoints
             items:
