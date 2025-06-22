@@ -490,6 +490,8 @@
        href: mdo-data-retention.md
      - name: Privacy in Defender for Office 365
        href: mdo-privacy.md
+     - name: Defender for Office 365 ICES Vendor Ecosystem integration guide
+       href: mdo-ices-vendor-ecosystem.md
      - name: External email senders - Microsoft 365 resources
        items:
        - name: Microsoft 365 services for external email senders
@@ -562,6 +564,8 @@
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
+        - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+          href: step-by-step-guides/add-advanced-hunting-community-queries.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender

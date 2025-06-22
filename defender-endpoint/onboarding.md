@@ -33,6 +33,8 @@ ms.date: 05/08/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Onboard devices using any of the supported management tools
 
 The deployment tool you use influences how you onboard endpoints to the service. Refer to your selected [deployment method](deployment-strategy.md#step-2-select-your-deployment-method).
