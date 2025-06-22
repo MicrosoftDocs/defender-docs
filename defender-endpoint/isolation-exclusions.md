@@ -58,7 +58,7 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 ### Prerequisites
 
 * Isolation exclusion is available on Windows (minimum client version 10.8470) and macOS (minimum client version 101.240902).
-* Isolation exclusion must be enabled. Enabling isolation exclusion requires Security Admin permissions or above. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Exclusion Rules** feature.
+* Isolation exclusion must be enabled. Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Exclusion Rules** feature.
 
    :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::
 
@@ -113,7 +113,8 @@ Exclusions that were applied to a specific device can be reviewed in the Action 
  
 ### API Configuration
 
-To trigger isolation with exclusions via API, set the IsolationType parameter to "Selective". See [Isolate machine API](/defender-endpoint/api/isolate-machine) for detail.
+> [!NOTE]
+> Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](/defender-endpoint/api/isolate-machine).
  
 ## Exclusion Logic
 
@@ -147,13 +148,7 @@ Rule 3:
 
 ## Considerations and limitations
 
-When a device is isolated, any new isolation exclusion rules added from the portal won't apply to the currently isolated device. Instead, newly added exclusions will only take effect for future isolation requests.
-
-If an exclusion needs to be applied to a device that is already isolated, the following steps must be taken:
-
-1. Unisolate the device.
-1.	Ensure that the relevant, correctly defined exclusion rule is in place.
-1.	Reisolate the device for the updated exclusion rule to take effect.
+Changes to exclusion rules only impact new isolation requests. Devices that were already isolated remain with the exclusions that were defined when they were applied. To apply updated exclusion rules to isolated devices, release those devices from isolation and then reisolate them.
 
 This behavior ensures that isolation rules remain consistent throughout the duration of an active isolation session.
 
