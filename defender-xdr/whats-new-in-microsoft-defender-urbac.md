@@ -21,7 +21,16 @@ This article provides information about new features and important product updat
 
 ## August 2025
 
-Starting in August 2025, Microsoft Defender XDR Unified RBAC also supports Microsoft Sentinel data lake permissions when Microsoft Sentinel is onboarded to the Defender portal. For more information, see <!--data lake link--> and [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md).
+### Onboard to Microsoft Sentinel data lake with Microsoft Defender Unified RBAC (Preview)
+
+Starting in August 2025, Microsoft Defender Unified RBAC supports onboarding to Microsoft Sentinel data lake, providing customers the ability to configure read or write permissions to the default data lake workspace. Support for unified RBAC is available in addition the support provided by global Microsoft Entra ID roles.
+
+For more information, see:
+
+- [Microsoft Sentinel data lake permissions](/sentinel/graph/sentinel-lake-permissions?branch=pr-en-us-301045) <!--fix this link before publish-->
+- [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md)
+- [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md)
+- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
 
 ## March 2025
 

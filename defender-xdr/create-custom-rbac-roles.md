@@ -24,10 +24,15 @@ appliesto:
 - Microsoft Defender for Cloud
 - Microsoft Security Exposure Management
 - Microsoft Defender for Cloud Apps
+- Microsoft Sentinel data lake
 #customer intent: As a security administrator, I want to create custom roles in Microsoft Defender XDR Unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
 # Create custom roles with Microsoft Defender XDR Unified RBAC
+
+This article describes how to create custom roles in Microsoft Defender XDR Unified role-based access control (RBAC). Microsoft Defender XDR Unified RBAC enables you to create custom roles with specific permissions and assign them to users or groups, allowing for granular control over access to Microsoft Defender portal experiences.
+
+Creating custom roles for [Microsoft Sentinel data lake](/azure/sentinel/graph/sentinel-lake-overview?branch=pr-en-us-301045) is supported in Preview. <!--update link-->
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -43,8 +48,10 @@ For more information on permissions, see [Permission pre-requisites](manage-rbac
 > [!TIP]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-To create custom roles for the Microsoft Sentinel data lake using the **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard?tabs=defender-portal) and [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json).
+To create custom roles for the Microsoft Sentinel data lake using the **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. For more information, see:
 
+- [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard?tabs=defender-portal)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json)
 
 ## Create a custom role
 

@@ -27,21 +27,15 @@ appliesto:
 ---
 
 # Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
-
-In Microsoft Defender XDR Unified role-based access control (RBAC) you can select permissions from each permission group to customize a role.
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 
-## Microsoft Defender XDR Unified RBAC permission details
+Use Microsoft Defender Unified role-based access control (RBAC) to manage permissions for users and groups in your organization. Unified RBAC supports selecting permissions from each permission group to customize a role.
 
-The following table lists the permissions available to configure for your users based on the tasks they need to do:
+This article provides details about the permissions available to configure for your users, based on the tasks they need to do.
 
-> [!NOTE]
-> Unless otherwise stated, all permissions are applicable to all supported workloads and will be applied to the data scope selected during the data source and assignment stage.
+Unless otherwise stated, all permissions are applicable to all supported workloads and will be applied to the data scope selected during the data source and assignment stage.
 
-### Security operations – Security data
+## Security operations – Security data
 
 Permissions for managing day-to-day operations and responding to incidents and advisories.
 
@@ -56,14 +50,14 @@ Permissions for managing day-to-day operations and responding to incidents and a
 |Email & collaboration quarantine|Manage|View and release email from quarantine.|
 |Email & collaboration advanced actions|Manage|Move or Delete email to the junk email folder, deleted items or inbox, including soft and hard delete of email.|
 
-### Security operations – Raw data (Email & collaboration)
+## Security operations – Raw data (Email & collaboration)
 
 |Permission name|Level|Description|
 |---|---|---|---|
 |Email & collaboration metadata|Read|View email and collaboration data in a hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
 |Email & collaboration content|Read|View and download email content and attachments.|
 
-### Security posture – Posture management
+## Security posture – Posture management
 
 Permissions for managing the organization's security posture and performing vulnerability management.
 
@@ -76,7 +70,7 @@ Permissions for managing the organization's security posture and performing vuln
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply to security industry baselines.|
 |Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
 
-### Authorization and settings
+## Authorization and settings
 
 Permissions to manages the security and system settings and to create and assign roles.
 
@@ -86,6 +80,18 @@ Permissions to manages the security and system settings and to create and assign
 |Core security settings|Read / Manage|View or manage core security settings for the Microsoft Defender portal.|
 |Detection tuning| Manage |Manage tasks related to detections in the Microsoft Defender portal including Custom detections, Alerts Tuning and Threat Indicators of compromise.|
 |System settings|Read / Manage|View or manage general systems settings for the Microsoft Defender portal.|
+
+
+### Data operations
+
+Permissions for managing the organization's security data and controlling advanced analytics permissions.
+
+The following permissions can be assigned to the default data collection, with all ingested Microsoft Sentinel data lake data. For more information, see [Microsoft Sentinel data lake](/azure/sentinel/graph/sentinel-lake-overview?branch=pr-en-us-301045). <!--update link-->
+
+|Permission name|Level|Description|
+|---|---|---|
+|Data | Read / Manage | Manage data retention, move data between tiers, create lake tables, and manage connectors for the Microsoft Sentinel data lake. |
+|Analytics Jobs Schedule | Read / Manage | Schedule and manage analytics jobs within the Microsoft Sentinel data lake using Lake Explorer, Azure Data Explorer, or Notebooks.|
 
 ## Next steps
 
