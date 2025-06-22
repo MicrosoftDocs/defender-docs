@@ -210,6 +210,8 @@
                 href: mac-pua.md
               - name: Protect macOS security settings using tamper protection
                 href: tamperprotection-macos.md
+              - name: Configure security intelligence updates on Mac
+                href: mac-support-offline-security-intelligence-update.md
               - name: Device control
                 items:
                 - name: Device control overview on Mac
