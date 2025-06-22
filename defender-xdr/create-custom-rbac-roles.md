@@ -3,7 +3,7 @@ title: Create custom roles with Microsoft Defender XDR Unified role-based access
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: diannegali
-author: siosulli
+author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,33 +12,41 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 11/17/2024
+ms.date: 04/25/2025
 ms.reviewer: 
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365 P2
+- Microsoft Defender Vulnerability Management
+- Microsoft Defender for Cloud
+- Microsoft Security Exposure Management
+- Microsoft Defender for Cloud Apps
+#customer intent: As a security administrator, I want to create custom roles in Microsoft Defender XDR Unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
 # Create custom roles with Microsoft Defender XDR Unified RBAC
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
+## Prerequisites
 
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
-- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Security Exposure Management](/security-exposure-management/)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
+To create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of the following:
+
+- Global Administrator or Security Administrator in Microsoft Entra ID.
+- All **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC.
+
+For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+
+> [!TIP]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Create a custom role
 
 The following steps guide you on how to create custom roles in Microsoft Defender XDR Unified RBAC.
 
-> [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -127,6 +135,13 @@ To access and manage roles and permissions, without being a Global Administrator
 
 > [!NOTE]
 > For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you'll need to activate the new Microsoft Defender XDR Unified RBAC model. For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+
+
+## Configure scoped roles for Microsoft Defender for Identity
+
+Scoped access for Microsoft Defender for Identity (MDI) is currently in **Public preview**. You can configure scoped access using Microsoft Defender XDR’s Unified RBAC (URBAC) model. This allows you to restrict access and visibility to specific Active Directory domains, helping align with team responsibilities and reduce unnecessary data exposure.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](/defender-for-identity/configure-scoped-access).
 
 ## Next steps
 

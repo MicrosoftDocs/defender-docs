@@ -4,10 +4,6 @@ metadata:
   
   title: Advanced Threat Analytics frequently asked questions
   description: Provides a list of frequently asked questions about ATA and the associated answers
-  keywords:
-  author: batamig
-  ms.author: bagol
-  manager: raynew
   ms.date: 03/07/2019
   ms.topic: conceptual
   ms.service: advanced-threat-analytics
@@ -36,7 +32,7 @@ sections:
         answer: |
           If you have an active Enterprise Agreement, you can download the software from the Microsoft Volume Licensing Center (VLSC).
           
-          If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
+          If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you don't have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
           
       - question: |
           What should I do if the ATA Gateway won't start?
@@ -88,12 +84,12 @@ sections:
       - question: |
           Does ATA work with encrypted traffic?
         answer: |
-          ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding. Detections based on network protocols with encrypted traffic (for example, LDAPS and IPSEC) will not be analyzed.
+          ATA relies on analyzing multiple network protocols, and events collected from the SIEM or via Windows Event Forwarding. Detections based on network protocols with encrypted traffic (for example, LDAPS and IPSEC) won't be analyzed.
 
       - question: |
           Does ATA work with Kerberos Armoring?
         answer: |
-          Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
+          Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which won't work.
 
       - question: |
           How many ATA Gateways do I need?
@@ -103,7 +99,7 @@ sections:
       - question: |
           How much storage do I need for ATA?
         answer: |
-          For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage. For more information about ATA Center sizing see, [ATA Capacity Planning](ata-capacity-planning.md).
+          For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage. For more information about ATA Center sizing, see, [ATA Capacity Planning](ata-capacity-planning.md).
           
       - question: |
           Why are certain accounts considered sensitive?
@@ -112,7 +108,7 @@ sections:
           
           To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group).
           
-          In addition, you can manually tag a user, group or computer as sensitive. For more information, see [Tag sensitive accounts](tag-sensitive-accounts.md).
+          In addition, you can manually tag a user, group, or computer as sensitive. For more information, see [Tag sensitive accounts](tag-sensitive-accounts.md).
           
       - question: |
           How do I monitor a virtual domain controller using ATA?
@@ -124,7 +120,7 @@ sections:
           The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists. If your virtual domain controllers move between hosts, you need to perform one of the following steps:
           
           - When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
-          - Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
+          - Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it's moved, the ATA Gateway moves with it.
           - There are some virtual switches that can send traffic between hosts.
           
       - question: |
@@ -141,12 +137,12 @@ sections:
       - question: |
           What kind of storage do I need for ATA?
         answer: |
-          We recommend fast storage (7200-RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
+          We recommend fast storage (7200-RPM disks aren't recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives aren't recommended).
 
       - question: |
           How many NICs does the ATA Gateway require?
         answer: |
-          The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATA Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
+          The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This doesn't apply to the ATA Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
           
       - question: |
           What kind of integration does ATA have with SIEMs?
@@ -169,20 +165,20 @@ sections:
       - question: |
           Is this going to be a part of Microsoft Entra ID or on-premises Active Directory?
         answer: |
-          This solution is currently a standalone offering—it is not a part of Microsoft Entra ID or on-premises Active Directory.
+          This solution is currently a standalone offering—it isn't a part of Microsoft Entra ID or on-premises Active Directory.
 
       - question: |
           Do you have to write your own rules and create a threshold/baseline?
         answer: |
-          With Microsoft Advanced Threat Analytics, there is no need to create rules, thresholds, or baselines and then fine-tune. ATA analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATA starts to detect behavioral suspicious activities. On the other hand, ATA will start detecting known malicious attacks and security issues immediately after deployment.
+          With Microsoft Advanced Threat Analytics, there's no need to create rules, thresholds, or baselines and then fine-tune. ATA analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATA starts to detect behavioral suspicious activities. On the other hand, ATA will start detecting known malicious attacks and security issues immediately after deployment.
 
       - question: |
-          If you are already breached, can Microsoft Advanced Threat Analytics identify abnormal behavior?
+          If you're already breached, can Microsoft Advanced Threat Analytics identify abnormal behavior?
         answer: |
-          Yes, even when ATA is installed after you have been breached, ATA can still detect suspicious activities of the hacker. ATA is not only looking at the user's behavior but also against the other users in the organization security map. During the initial analysis time, if the attacker's behavior is abnormal, then it is identified as an "outlier" and ATA keeps reporting on the abnormal behavior. Additionally ATA can detect the suspicious activity if the hacker attempts to steal another users credentials, such as Pass-the-Ticket, or attempts to perform a remote execution on one of the domain controllers.
+          Yes, even when ATA is installed after you have been breached, ATA can still detect suspicious activities of the hacker. ATA isn't only looking at the user's behavior but also against the other users in the organization security map. During the initial analysis time, if the attacker's behavior is abnormal, then it's identified as an "outlier" and ATA keeps reporting on the abnormal behavior. Additionally ATA can detect the suspicious activity if the hacker attempts to steal another user's credentials, such as Pass-the-Ticket, or attempts to perform a remote execution on one of the domain controllers.
 
       - question: |
-          Does this only leverage traffic from Active Directory?
+          Does this only use traffic from Active Directory?
         answer: |
           In addition to analyzing Active Directory traffic using deep packet inspection technology, ATA can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. ATA can also collect events from the event logs if the organization configures Windows Event Log forwarding.
 
@@ -197,9 +193,9 @@ sections:
           No. ATA monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
 
       - question: |
-          Does ATA monitor computer accounts as well as user accounts?
+          Does ATA monitor computer accounts and user accounts?
         answer: |
-          Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, ATA monitors all computer accounts behavior and all other entities in the environment.
+          Yes. Since computer accounts (and any other entities) can be used to perform malicious activities, ATA monitors all computer accounts behavior and all other entities in the environment.
 
       - question: |
           Can ATA support multi-domain and multi-forest?
@@ -209,7 +205,7 @@ sections:
       - question: |
           Can you see the overall health of the deployment?
         answer: |
-          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur.           
+          Yes, you can view the overall health of the deployment and specific issues related to configuration, connectivity, etc., and you're alerted as they occur.           
 
 additionalContent: |
 

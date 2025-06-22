@@ -12,10 +12,10 @@ ms.collection:
   - m365-security
   - tier1
   - essentials-manage
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
-- cx-ean
+- cx-dex
 search.appverid: met150
 ms.date: 10/31/2024
 ---

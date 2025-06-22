@@ -1,6 +1,6 @@
 ---
 title: Incidents and alerts in the Microsoft Defender portal
-description: An introduction to incidents and alerts, and the differences between them, in the unified security operations platform in the Microsoft Defender portal.
+description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -15,7 +15,7 @@ ms.collection:
   - usx-security
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150

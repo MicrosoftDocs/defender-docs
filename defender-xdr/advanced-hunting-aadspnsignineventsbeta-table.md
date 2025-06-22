@@ -17,14 +17,15 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 04/03/2024
+ms.date: 03/28/2025
 ---
 
 # AADSpnSignInEventsBeta
 
-**Applies to:**
-- Microsoft Defender XDR
 
 > [!IMPORTANT]
 > The `AADSpnSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. Microsoft will eventually move all sign-in schema information to the `IdentityLogonEvents` table.

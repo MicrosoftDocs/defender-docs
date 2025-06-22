@@ -4,17 +4,17 @@ ms.reviewer:
 description: Learn the steps and requirements to integrate your solution with Microsoft Defender for Endpoint and be a partner.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Become a Microsoft Defender for Endpoint partner

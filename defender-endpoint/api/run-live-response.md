@@ -30,7 +30,7 @@ ms.date: 04/18/2023
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -42,13 +42,13 @@ Runs a sequence of live response commands on a device
 
 ## Limitations
 
-1. Rate limitations for this API are 10 calls per minute (additional requests are responded with HTTP 429).
+1. Rate limitations for this API are 10 calls per minute (more requests are responded with HTTP 429).
 
 2. 25 concurrently running sessions (requests exceeding the throttling limit receives a "429 - Too many requests" response).
 
 3. If the machine isn't available, the session is queued for up to three days.
 
-4. RunScript command timeouts after 10 minutes.
+4. RunScript command time-outs after 10 minutes.
 
 5. Live response commands can't be queued up and can only be executed one at a time.
 
@@ -61,7 +61,7 @@ Runs a sequence of live response commands on a device
 8. Multiple live response sessions can't be executed on the same machine (if live response action is already running, subsequent requests are responded to with HTTP 400 - ActiveRequestAlreadyExists).
 
 > [!NOTE]
-> Live response actions initiated from the Device page are not available in the machineactions API.
+> Live response actions initiated from the Device page aren't available in the `machineactions` API.
 
 ## Minimum Requirements
 
@@ -85,12 +85,16 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
     
   - **Windows Server 2022**
-  - **macOS** [(requires additional configuration profiles)](../microsoft-defender-endpoint-mac.md)
+
+- **Windows Server 2025**
+
+  - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
       - 13 (Ventura)
       - 12 (Monterey)
       - 11 (Big Sur)
-  - **Linux**
-      - [Supported Linux server distributions and kernel versions](../microsoft-defender-endpoint-linux.md)
+
+  - **Linux servers**
+      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## Permissions
 
@@ -126,14 +130,14 @@ POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliver
 |Command Type|Parameters|Description|
 |---|---|---|
 |PutFile|Key: FileName <p> Value: \<file name\>|Puts a file from the library to the device. Files are saved in a working folder and are deleted when the device restarts by default. NOTE: Doesn't have a response result. |
-|RunScript|Key: ScriptName <br> Value: \<Script from library\> <p> Key: Args <br> Value: \<Script arguments\>|Runs a script from the library on a device. <p>  The Args parameter is passed to your script. <p> Timeouts after 10 minutes.|
+|RunScript|Key: ScriptName <br> Value: \<Script from library\> <p> Key: Args <br> Value: \<Script arguments\>|Runs a script from the library on a device. <p>  The Args parameter is passed to your script. <p> Time-outs after 10 minutes.|
 |GetFile|Key: Path <br> Value: \<File path\>|Collect file from a device. NOTE: Backslashes in path must be escaped.|
 
 ## Response
 
-- If successful, this method returns 201 Created.
+- If successful, this method returns `201 Created`.
 
-  Action entity. If machine with the specified ID wasn't found - 404 Not Found.
+- Action entity. If machine with the specified ID wasn't found, you see `404 Not Found`.
 
 ## Example
 
@@ -242,4 +246,5 @@ Content-type: application/json
 - [Get machine action API](get-machineaction-object.md)
 - [Get live response result](get-live-response-result.md)
 - [Cancel machine action](cancel-machine-action.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

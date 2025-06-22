@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # Start Investigation API
@@ -25,6 +25,7 @@ ms.date: 12/18/2020
 **Applies to:**
 - [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -48,12 +49,13 @@ Your organization must have Defender for Endpoint (see [Minimum requirements for
 
 Currently, AIR only supports the following OS versions:
 
-- Windows Server 2019
-- Windows Server 2022
-- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
-- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
-- Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
 - Windows 11
+- Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
+- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
+- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
+- Windows Server 2025
+- Windows Server 2022
+- Windows Server 2019
 
 ## Permissions
 

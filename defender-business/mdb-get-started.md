@@ -6,7 +6,7 @@ author: chrisda
 ms.author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 07/03/2024

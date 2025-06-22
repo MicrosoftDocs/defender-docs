@@ -2,8 +2,9 @@
 title: Microsoft Defender for Identity – privacy
 description: Learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
 ms.date: 06/06/2024
-ms.topic: conceptual
+ms.topic: article
 #customerIntent: To learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
+ms.reviewer: rlitinsky
 ---
 
 # Privacy with Microsoft Defender for Identity
@@ -22,13 +23,14 @@ For more information see: [Microsoft Defender for Identity monitored activities]
 
 Defender for Identity operates in the Microsoft Azure data centers in the following locations:
 
-- European Union (West Europe, North Europe)
-- United Kingdom (UK South) 
-- United States (East US, West US, West US2)
-- Australia (Australia East)
-- Switzerland (Switzerland North)
-- Singapore (Southeast Asia)
+- Asia (Southeast Asia)
+- Australia (Australia East, Australia Southeast)
+- Europe (West Europe, North Europe)
 - India (Central India, South India)
+- North America (East US, West US, West US2)
+- Switzerland (Switzerland North, Switzerland West)
+- United Kingdom (UK South)
+
 
 Customer data collected by the service might be stored as follows:
 
@@ -44,7 +46,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 ## Data sharing
 
-Defender for Identity shares data, including customer data, among any of the following Microsoft products that are also licensed by the customer:
+Defender for Identity shares data, including customer data, among any of the following Microsoft products that are also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps

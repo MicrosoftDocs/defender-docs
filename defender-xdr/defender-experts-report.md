@@ -13,12 +13,12 @@ manager: dansimp
 audience: ITPro
 ms.custom: 
 - cx-ti
-- cx-dex
+- cx-ean
 ms.collection: 
 - m365-security 
 - tier1
 - essentials-manage
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/07/2025
 ---
 

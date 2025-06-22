@@ -2,7 +2,8 @@
 title: Role groups | Microsoft Defender for Identity
 description: Learn about working with Microsoft Defender for Identity role groups.
 ms.date: 01/15/2024
-ms.topic: conceptual
+ms.topic: article
+ms.reviewer: LiorShapiraa
 ---
 
 # Microsoft Defender for Identity role groups
@@ -14,6 +15,9 @@ Microsoft Defender for Identity offers role-based security to safeguard data acc
 Users that are already [Global Administrators](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrators](/entra/identity/role-based-access-control/permissions-reference) on your tenant's Microsoft Entra ID are also automatically Defender for Identity administrator. Microsoft Entra Global and Security Administrators don't need extra permissions to access Defender for Identity.
 
 For other users, enable and use Microsoft 365 role-based access control (RBAC) to create custom roles and to support more Entra ID roles such as Security operator or Security Reader by default to manage access to Defender for Identity.
+
+> [!IMPORTANT]
+>Starting March 2, 2025, new Microsoft Defender for Identity tenants can only configure permissions through Microsoft Defender XDR [Unified Role-Based Access Control (RBAC)](/defender-xdr/manage-rbac). Tenants with roles assigned or exported before this date will retain their current configuration.
 
 When creating your custom roles, make sure that you apply the permissions listed in the following table:
 
@@ -41,14 +45,16 @@ The following table details the specific permissions required for Defender for I
 | ------------------- | ---------------------- |
 | **Onboard Defender for Identity** (create workspace)   |  [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) |
 | **Configure Defender for Identity settings**      | One of the following Microsoft Entra roles:<br>- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference)<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference)<br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read`<br/>- `Authorization and settings/Security settings/All permissions`<br/>- `Authorization and settings/System settings/Read`<br/>- `Authorization and settings/System settings/All permissions` |
-|**View Defender for Identity settings**      | One of the following Microsoft Entra roles:<br>- [Global Reader](/entra/identity/role-based-access-control/permissions-reference)<br>- [Security Reader](/entra/identity/role-based-access-control/permissions-reference) <br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read` <br/>- `Authorization and settings/System settings/Read`|
+|**View Defender for Identity settings**      | Microsoft Entra roles:<br>- [Security Reader](/entra/identity/role-based-access-control/permissions-reference) <br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Authorization and settings/Security settings/Read` <br/>- `Authorization and settings/System settings/Read`|
 |**Manage Defender for Identity security alerts and activities**                           | One of the following Microsoft Entra roles:<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference)<br> **Or** <br>The following [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br />- `Security operations/Security data/Alerts (Manage)`<br/>- `Security operations/Security data /Security data basics (Read)` |
 | **View Defender for Identity security assessments** <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> The following [Unified RBAC permissions](#unified-role-based-access-control-rbac): `Security operations/Security data /Security data basics (Read)`|
 |**View the Assets / Identities page**|[Permissions](/defender-cloud-apps/manage-admins) to access Defender for Cloud Apps <br> **Or** <br> One of the Microsoft Entra roles required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions) |
 |**Perform Defender for Identity response actions** |A [custom role](/microsoft-365/security/defender/create-custom-rbac-roles) defined with permissions for **Response (manage)**<br> **Or** <br> One of the following Microsoft Entra roles:<br>- [Security Operator](/entra/identity/role-based-access-control/permissions-reference) |
 
-
 ## Defender for Identity security groups
+
+ > [!IMPORTANT]
+> Starting March 2, Defender for Identity will no longer create Microsoft Entra ID security groups. Tenants can still configure the same permissions through  Microsoft Defender XDR [Unified Role-Based Access Control (RBAC)](/defender-xdr/manage-rbac)
 
 Defender for Identity provides the following security groups to help manage access to Defender for Identity resources:
 
@@ -82,6 +88,12 @@ The following table lists the activities available for each security group:
 Defender for Identity uses Microsoft Entra security groups as a basis for role groups.
 
 Manage your role groups from [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) on the Azure portal. Only Microsoft Entra users can be added or removed from security groups.
+
+## Assign Identity scoping
+
+User Role-Based Access Control (URBAC) enables organizations to define custom roles that restrict visibility to specific Active Directory domains. Individuals assigned to these scoped roles will only see data, such as alerts, identities, and activities, related to the Active Directory domains included in their Defender XDR role assignment.
+
+For more information, see: [Scoped access for Microsoft Defender for Identity](configure-scoped-access.md)
 
 ## Next step
 

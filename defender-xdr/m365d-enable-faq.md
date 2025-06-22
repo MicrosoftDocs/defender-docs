@@ -4,16 +4,16 @@ description: Get answers to the most commonly asked questions about topics and i
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150
@@ -25,7 +25,6 @@ appliesto:
 # Microsoft Defender XDR frequently asked questions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Read responses to the most commonly asked questions about [Microsoft Defender XDR](microsoft-365-defender.md), including required licenses and permissions, deploying support services, initial settings, and feedback.
 
@@ -73,15 +72,15 @@ Microsoft Defender XDR is available at: <a href="https://go.microsoft.com/fwlink
 
 Accounts assigned the following Microsoft Entra roles can access Microsoft Defender XDR functionality and data:
 
-- Global administrator
-- Security administrator
-- Security Operator
-- Global Reader
-- Security Reader
-- Compliance Administrator
-- Compliance Data Administrator
-- Application Administrator
-- Cloud Application Administrator
+- [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
+- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- [Security Operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)
+- [Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader)
+- [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+- [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)
+- [Compliance Data Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-data-administrator)
+- [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
+- [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
 > [!NOTE]
 > Role-based access control settings in Microsoft Defender for Endpoint influence access to data. For more information, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).

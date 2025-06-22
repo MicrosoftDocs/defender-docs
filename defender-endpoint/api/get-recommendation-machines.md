@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/01/2025
 ---
 
 # List devices by recommendation
@@ -99,4 +99,5 @@ Here is an example of the response.
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

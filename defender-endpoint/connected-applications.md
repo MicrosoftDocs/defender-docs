@@ -3,18 +3,18 @@ title: Connected applications in Microsoft Defender for Endpoint
 ms.reviewer:
 description: View connected partner applications that use standard OAuth 2.0 protocol to authenticate and provide tokens for use with Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Connected applications in Microsoft Defender for Endpoint

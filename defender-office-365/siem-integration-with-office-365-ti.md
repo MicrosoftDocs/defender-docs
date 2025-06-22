@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: low
 search.appverid:
   - MET150
@@ -33,7 +33,7 @@ If your organization is using a security information and event management (SIEM)
 
 SIEM integration enables you to view information, such as malware or phish detected by Microsoft Defender for Office 365, in your SIEM server reports.
 
-- To see an example of SIEM integration with Microsoft Defender for Office 365, see [Tech Community blog: Improve the Effectiveness of your SOC with Defender for Office 365 and the O365 Management API](https://techcommunity.microsoft.com/t5/microsoft-security-and/improve-the-effectiveness-of-your-soc-with-office-365-atp-and/ba-p/1525185).
+- To see an example of SIEM integration with Microsoft Defender for Office 365, see [Microsoft Security Blog - Improve the Effectiveness of your SOC with Defender for Office 365 and the O365 Management API](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/improve-the-effectiveness-of-your-soc-with-office-365-atp-and-the-o365-managemen/1525185).
 - To learn more about the Office 365 Management APIs, see [Office 365 Management APIs overview](/office/office-365-management-api/office-365-management-apis-overview).
 
 ## How SIEM integration works
@@ -54,7 +54,7 @@ The following table summarizes the values of **AuditLogRecordType** that are rel
 |---|---|---|
 |28|ThreatIntelligence|Phishing and malware events from Exchange Online Protection and Microsoft Defender for Office 365.|
 |41|ThreatIntelligenceUrl|Safe Links time-of-block and block override events from Microsoft Defender for Office 365.|
-|47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint Online, OneDrive for Business, and Microsoft Teams, from Microsoft Defender for Office 365.|
+|47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint, OneDrive, and Microsoft Teams, from Microsoft Defender for Office 365.|
 |64|AirInvestigation|Automated investigation and response events, such as investigation details and relevant artifacts, from Microsoft Defender for Office 365 Plan 2.|
 
 > [!IMPORTANT]

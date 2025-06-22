@@ -3,7 +3,7 @@ title: Evaluate Microsoft Defender Antivirus using Group Policy
 description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Group Policy.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
@@ -184,8 +184,8 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 
 | OS | PowerShell cmdlet |
 | --- | --- |
-| Windows Server 2012 R2Windows Server 2022 and later	| set-MpPreference -AllowNetworkProtectionOnWinServer $true |
-| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | set-MpPreference -AllowNetworkProtectionOnWinServer $true and set-MpPreference -AllowNetworkProtectionDownLevel $ true
+| Windows Server 2012 R2 and later    | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
+| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $ true` |
 
 ## Attack Surface Reduction Rules
 

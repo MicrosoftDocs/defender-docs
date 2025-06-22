@@ -28,7 +28,7 @@ ms.date: 12/18/2020
 > [!WARNING]
 > This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API that can query more tables is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

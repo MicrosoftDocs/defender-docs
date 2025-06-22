@@ -6,9 +6,6 @@ ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
-manager: raynew
 ms.date: 02/14/2024
 audience: ITPro
 ms.topic: concept-article

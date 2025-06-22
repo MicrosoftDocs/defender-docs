@@ -7,7 +7,9 @@
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
       - name: What's new 
-        href: whats-new.md      
+        href: whats-new.md
+      - name: Integration and licensing
+        href: integration-licensing.md       
       - name: Compare Secure Score and Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
@@ -68,6 +70,9 @@
           href: initiatives.md
         - name: Security initiatives catalog
           href: initiatives-list.md
+          items:
+           - name: External attack surface management initiative
+             href: external-attack-surface-management-initiative.md
         - name: Investigate security initiative metrics
           href: security-metrics.md
         - name: Review security recommendations

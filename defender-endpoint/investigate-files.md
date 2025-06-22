@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/10/2023
 ms.subservice: edr
 search.appverid: met150
@@ -27,7 +27,7 @@ search.appverid: met150
 - [Microsoft Defender XDR](/defender-xdr)
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Investigate the details of a file associated with a specific alert, behavior, or event to help determine if the file exhibits malicious activities, identify the attack motivation, and understand the potential scope of the breach.
 

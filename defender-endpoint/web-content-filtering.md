@@ -4,9 +4,9 @@ description: Use web content filtering in Microsoft Defender for Endpoint to tra
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
-ms.reviewer: tdoucett
+ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 02/10/2025
+ms.date: 06/06/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
 ---
@@ -28,8 +28,7 @@ search.appverid: met150
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
-
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## What is web content filtering?
 
@@ -59,7 +58,7 @@ Before trying out this feature, make sure you meet the requirements described in
 | Requirement | Description |
 |:---|:---|
 | Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft 365 E5 Security<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
-| Portal access | You must have access to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. |
+| Portal access | You must have access to the [Microsoft Defender portal](https://security.microsoft.com). |
 | Operating system | Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- For information on macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For information on Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 | Browser | Your organization's devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla FireFox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
 | Related protection | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices. |
@@ -81,7 +80,7 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 ## Turn on web content filtering
 
-1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
 
@@ -104,13 +103,13 @@ Policies can be deployed to block any of the following parent or child categorie
 | **Uncategorized** | - **Newly registered domains**: Sites that are newly registered in the past 30 days and haven't yet been moved to another category.<br/><br/>- **Parked domains**: Sites that have no content or are parked for later use. |
 
 > [!NOTE]
-> Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories.
+> Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories. *Remote proxy sites* are categorized as *Illegal Software*. This classification is based on their inherent ability to route traffic to any destination, which can include access to unwanted, malicious, or illegal content. As with any other blocked site, an organization can choose to use an "allow" indicator to allow access to a site that would otherwise be blocked based on its Web Content Filtering category.
 
 ### Create a policy
 
 To add a new policy, follow these steps:
 
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
 
 2. Specify a name.
 
@@ -143,7 +142,7 @@ It's possible to override the blocked category in web content filtering to allow
 
 To define a custom indicator, follow these steps:
 
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
 
 2. Enter the domain of the site.
 
@@ -151,11 +150,11 @@ To define a custom indicator, follow these steps:
 
 ### Dispute categories
 
-If you encounter a domain that has been incorrectly categorized, you can dispute the category directly from the Microsoft Defender portal.
+If you encounter a domain that has been incorrectly categorized, you can dispute the category directly in the Microsoft Defender portal.
 
 To dispute the category of a domain, navigate to **Reports** \> **Web protection** \> **Web content filtering categories details** \> **Domains**. On the domains tab of the Web Content Filtering reports, find the ellipsis beside each of the domains. Hover over the ellipsis and then select **Dispute Category**.
 
-A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For manual unblocking, create a [custom allow indicator](indicator-ip-domain.md) .
+A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For manual unblocking, create a [custom allow indicator](indicator-ip-domain.md).
 
 ## Web content filtering cards and details
 
@@ -169,7 +168,7 @@ In the first 30 days of using this feature, your organization might not have eno
 
 :::image type="content" source="media/web-activity-by-category600.png" alt-text="The web activity by category card" lightbox="media/web-activity-by-category600.png":::
 
-### Web content filtering  summary card
+### Web content filtering summary card
 
 This card displays the distribution of blocked access attempts across the different parent web content categories. Select one of the colored bars to view more information about a specific parent web category.
 
@@ -188,9 +187,7 @@ You can access the **Report details** for each card by selecting a table row or 
 :::image type="content" source="media/web-protection-report-details.png" alt-text="The web protection report details" lightbox="media/web-protection-report-details.png":::
 
 - **Web categories**: Lists the web content categories that have had access attempts in your organization. Select a specific category to open a summary flyout.
-
-- **Domains**: Lists the web domains that have been accessed or blocked in your organization. Select a specific domain to view detailed information about that domain.
-
+- **Domains**: Lists the web domains that have been accessed or blocked in your organization.
 - **Device groups**: Lists all the device groups that have generated web activity in your organization
 
 Use the time range filter at the top left of the page to select a time period. You can also filter the information or customize the columns. Select a row to open a flyout pane with even more information about the selected item.
@@ -208,4 +205,5 @@ If you are using Microsoft 365 Business Premium or Microsoft Defender for Busine
 - [Monitor web security](web-protection-monitoring.md)
 - [Respond to web threats](web-protection-response.md)
 - [Requirements for Network Protection](web-content-filtering.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -112,7 +112,7 @@ The **Post-delivery activities** report shows information about email messages t
 
 The report shows real-time information with updated threat information.
 
-On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Post-delivery activities**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/ZapReport>.
+On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Post-delivery activities**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/PostDeliveryActivities>.
 
 :::image type="content" source="media/post-delivery-activities-widget.png" alt-text="The Post-delivery activities widget on the Email & collaboration reports page." lightbox="media/post-delivery-activities-widget.png":::
 

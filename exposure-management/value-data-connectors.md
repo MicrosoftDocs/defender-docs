@@ -47,6 +47,9 @@ Benefits of using the external data connectors include:
 - Visualizing through the Attack Map tool
 - Exploring using advanced hunting queries via KQL
 
+> [!NOTE]
+> Currently vulnerabilities retrieved from data connectors only appear in the Exposure Graph, and can be explored in the Attack Surface Map or using Advanced Hunting.
+
 ### Connectors data in the Device Inventory
 
 In the Device Inventory, you'll see the discovery sources for each device, which are the products from which we got any report on this device. These might include Microsoft Security products like MDE, MDC, and MDI, and also external data sources like Qualys or ServiceNow CMDB. You can filter on one or more discovery sources within the inventory to view devices that were discovered specifically by those sources.
@@ -99,8 +102,9 @@ This query will return all vulnerabilities (CVEs) reported by Rapid7 on ingested
 
 ```kusto
 ExposureGraphEdges
-| where EdgeLabel == "affecting"
-| where tostring(EdgeProperties.rawData.reportInfo.reportedBy) == "rapid7"
+| where EdgeLabel == "affecting" 
+| where SourceNodeLabel == "Cve" 
+| where isnotempty(EdgeProperties.rawData.rapid7ReportInfo)
 | project AssetName = TargetNodeName, CVE = SourceNodeName
 ```
 
@@ -108,8 +112,9 @@ This query will return all vulnerabilities (CVEs) reported by Tenable on ingeste
 
 ```kusto
 ExposureGraphEdges
-| where EdgeLabel == "affecting"
-| where tostring(EdgeProperties.rawData.reportInfo.reportedBy) == "tenable"
+| where EdgeLabel == "affecting" 
+| where SourceNodeLabel == "Cve" 
+| where isnotempty(EdgeProperties.rawData.tenableReportInfo)
 | project AssetName = TargetNodeName, CVE = SourceNodeName
 ```
 

@@ -3,8 +3,8 @@ title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -16,7 +16,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 03/26/2025
 ---
 
 # Visit the Action center to see remediation actions
@@ -42,7 +42,7 @@ The following table compares the new, unified Action center to the previous Acti
 |---------|---------|
 |Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365](/defender-office-365/mdo-about)|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
 |Is located at:<br/>[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)         |Is located at:<br/>[https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)     |
-| In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, choose **Action center**. <p>:::image type="content" source="media/action-center-nav-new.png" alt-text="The navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-new.png"::: | In the Microsoft Defender portal, choose **Automated investigations** > **Action center**. <p>:::image type="content" source="media/action-center-nav-old.png" alt-text="An older version of the navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-old.png":::  |
+| In the [Microsoft Defender portal](https://security.microsoft.com), choose **Action center**. <p>:::image type="content" source="media/action-center-nav-new.png" alt-text="The navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-new.png"::: | In the Microsoft Defender portal, choose **Automated investigations** > **Action center**. <p>:::image type="content" source="media/action-center-nav-old.png" alt-text="An older version of the navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-old.png":::  |
 
 The unified Action center brings together remediation actions across Defender for Endpoint and Defender for Office 365. It defines a common language for all remediation actions, and provides a unified investigation experience.
 
@@ -57,7 +57,7 @@ You can use the unified Action center if you have appropriate permissions and on
 
 To get to the unified Action center in the improved Microsoft Defender portal:
 
-1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, select **Action center**.
 

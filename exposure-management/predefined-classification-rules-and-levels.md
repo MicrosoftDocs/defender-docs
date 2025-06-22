@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 11/16/2024
+ms.date: 03/16/2025
 ---
 
 # Predefined classifications
@@ -42,7 +42,7 @@ Current asset types are:
 | Security Operations Admin Device         | Device     | High        | Critical devices used to configure, manage, and monitor the security within an organization are vital for security operations administration and are at high risk of cyber threats. They require top-level security measures to prevent unauthorized access.  Note: We apply a logic to identify devices belonging to an admin based on multiple factors, including the frequent usage of administrative tools.|
 | Network Admin Device         | Device     | Medium                    | Critical devices used to configure, manage, and monitor the network assets within the organization are vital for network administration and are at high risk of cyber threats. They require top-level security to prevent unauthorized access. _Note: We apply a logic to identify devices belonging to an admin based on multiple factors, including the frequent usage of administrative tools._|
 | VMware ESXi                | Device     | High                      | The VMware ESXi hypervisor is essential for running and managing virtual machines within your infrastructure. As a bare-metal hypervisor, it's providing the foundation for creating and managing virtual resources. |
-| VMware vCenter             | Device     | High                      | The VMware vCenter Server is crucial for managing virtual environments. It provides centralized management of virtual machines and ESXi hosts. If it fails, it could disrupt the administration and control of your virtual infrastructure, including provisioning, migration, load balancing of virtual machines, and datacenter automation. However, as there are often redundant vCenter Servers and High Availability configurations, the immediate halt of all operations might not occur. Its failure could still cause significant inconvenience and potential performance issues |
+| VMware vCenter             | Device     | High                      | The VMware vCenter Server is crucial for managing virtual environments. It provides centralized management of virtual machines and ESXi hosts. If it fails, it could disrupt the administration and control of your virtual infrastructure, including provisioning, migration, load balancing of virtual machines, and datacenter automation. However, as there are often redundant vCenter Servers and High Availability configurations, the immediate halt of all operations might not occur. Its failure could still cause significant inconvenience and potential performance issues. |
 | Hyper-V Server             | Device     | High                      | The Hyper-V hypervisor is essential for running and managing virtual machines within your infrastructure, serving as the core platform for their creation and management. If the Hyper-V host fails, it can lead to the unavailability of hosted virtual machines, potentially causing downtime and disrupting business operations. Moreover, it can result in significant performance degradation and operational challenges. Ensuring the reliability and stability of Hyper-V hosts is therefore critical for maintaining seamless operations in a virtual environment. |
 
 ##### Identity
@@ -73,6 +73,7 @@ Current asset types are:
 | Password Administrator                        | Identity   | Very High                 | Identities in this role can reset passwords for nonadministrators and Password Administrators. |
 | Privileged Authentication Administrator       | Identity   | Very High                 | Identities in this role can view, set, and reset authentication method information for any user (admin or nonadmin). |
 | Privileged Role Administrator                 | Identity   | Very High                 | Identities in this role can manage role assignments in Microsoft Entra ID, and all aspects of Privileged Identity Management. |
+| Security Operations Admin User                | Identity   | High                      | Identities in this role can configure, manage, monitor, and respond to threats within the organization.  **Note**: This rule’s logic relies on the predefined critical device classification “Security Operations Admin Device”.  |
 | Security Administrator                        | Identity   | High                      | Identities in this role can read security information and reports, and manage configuration in Microsoft Entra ID and Office 365. |
 | Security Operator                             | Identity   | High                      | Identities in this role can create and manage security events.    |
 | Security Reader                               | Identity   | High                      | Identities in this role can read security information and reports in Microsoft Entra ID and Office 365. |
@@ -102,6 +103,13 @@ Current asset types are:
 | Yammer Administrator                          | Identity   | High                      | Identities in this role can manage all aspects of the Yammer service. |
 | Authentication Extensibility Administrator    | Identity   | High                      | Identities in this role can customize sign in and sign up experiences for users by creating and managing custom authentication extensions. |
 | Lifecycle Workflows Administrator             | Identity   | High                      | Identities in this role create and manage all aspects of workflows and tasks associated with Lifecycle Workflows in Microsoft Entra ID. |
+| Senior Executive (Technology)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Technology. |
+| Senior Executive (Finance)         | Identity | Very High | Identities with this classification belong to senior executives in the field of Finance. |
+| Senior Executive (Operations)      | Identity | Very High | Identities with this classification belong to senior executives in the field of Operations. |
+| Senior Executive (Marketing)   | Identity | Very High | Identities with this classification belong to senior executives in the field of Marketing. |
+| Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
+| Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
+| Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |
 
 ##### Cloud resource
 

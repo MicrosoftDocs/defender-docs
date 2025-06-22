@@ -11,7 +11,7 @@ ms.author: vpattnaik
 author: vpattnai
 ms.custom: 
 - cx-ti
-- cx-dex
+- cx-ean
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,7 +19,7 @@ ms.collection:
   - m365-security
   - tier1
   - essentials-manage
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 12/24/2024
 ---

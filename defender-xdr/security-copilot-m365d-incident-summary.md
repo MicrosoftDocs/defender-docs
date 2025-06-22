@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - security-copilot
   - magic-ai-copilot
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
@@ -59,7 +59,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - A summary of timelines of how the attack unfolded.
 - The assets involved in the attack.
 - Indicators of compromise (IoCs).
-- Names of [threat actors](/microsoft-365/security/intelligence/microsoft-threat-actor-naming) involved.
+- Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
 
 To summarize an incident, perform the following steps:
 

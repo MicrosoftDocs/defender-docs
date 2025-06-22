@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: nextgen
 ms.date: 07/25/2024
 ms.reviewer: yongrhee
@@ -22,8 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**

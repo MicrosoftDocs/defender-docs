@@ -2,7 +2,8 @@
 title: Event collection overview | Microsoft Defender for Identity
 description: Learn about required event collection for Microsoft Defender for Identity sensors on AD FS servers, AD CS servers, Microsoft Entra Connect servers, and domain controllers.
 ms.date: 08/10/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
+ms.reviewer: rlitinsky
 ---
 
 # Event collection with Microsoft Defender for Identity
@@ -50,7 +51,7 @@ The following event is required for Microsoft Entra Connect servers:
 
 - 4624: An account was successfully logged on
 
-For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect).
+For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect).
 
 ### Other required Windows events
 

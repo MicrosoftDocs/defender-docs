@@ -15,7 +15,7 @@ ms.collection:
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 03/01/2025
 ---
 
 # List machines API
@@ -25,8 +25,9 @@ ms.date: 04/17/2024
 **Applies to:** 
 - [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -34,7 +35,7 @@ ms.date: 04/17/2024
 
 ## API description
 
-Retrieves a collection of [Machines](machine.md) that have communicated with  Microsoft Defender for Endpoint cloud.
+Retrieves a collection of [Machines](machine.md) that have communicated with Microsoft Defender for Endpoint.
 
 Supports [OData V4 queries](https://www.odata.org/documentation/).
 
@@ -47,7 +48,7 @@ See examples at [OData queries with Defender for Endpoint](exposed-apis-odata-sa
 
 - You can get devices last seen according to your configured retention period.
 - Maximum page size is 10,000.
-- Rate limitations for this API are 100 calls per minute and 1500 calls per hour. 
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
 
 ## Permissions
 
@@ -58,13 +59,11 @@ Application|Machine.ReadWrite.All|'Read and write all machine information'
 Delegated (work or school account)|Machine.Read|'Read machine information'
 Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
-> - Response will include only devices, that the user have access to, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md))
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (see [Create and manage roles](../user-roles.md)).
+
+Responses include only devices that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
 
 ## HTTP request
 
@@ -84,7 +83,7 @@ Empty
 
 ## Response
 
-If successful and machines exists - 200 OK with list of [machine](machine.md) entities in the body. If no recent machines - 404 Not Found.
+If successful, and the machines exist, you see `200 OK` with list of [machine](machine.md) entities in the body. If there are no recent machines, you see `404 Not Found`.
 
 ## Example
 

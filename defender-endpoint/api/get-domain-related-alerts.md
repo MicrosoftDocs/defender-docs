@@ -27,7 +27,7 @@ ms.date: 12/18/2020
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -40,7 +40,7 @@ Retrieves a collection of [Alerts](alerts.md) related to a given domain address.
 ## Limitations
 
 - You can query on alerts last updated according to your configured retention period.
-- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -53,13 +53,11 @@ Application|Alert.ReadWrite.All|'Read and write all alerts'
 Delegated (work or school account)|Alert.Read|'Read alerts'
 Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - Response will include only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (See [Create and manage roles](../user-roles.md)).
+
+A response includes only alerts, associated with devices, that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
@@ -79,7 +77,7 @@ Empty
 
 ## Response
 
-If successful and domain exists - 200 OK with list of [alert](alerts.md) entities. If domain does not exist - 200 OK with an empty set.
+If successful and domain exists - 200 OK with list of [alert](alerts.md) entities. If domain doesn't exist - 200 OK with an empty set.
 
 ## Example
 
@@ -90,4 +88,5 @@ Here's an example of the request.
 ```http
 GET https://api.securitycenter.microsoft.com/api/domains/client.wns.windows.com/alerts
 ```
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

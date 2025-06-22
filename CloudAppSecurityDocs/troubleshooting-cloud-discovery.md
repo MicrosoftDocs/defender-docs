@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting cloud discovery errors 
 description: This article provides a list of cloud discovery frequent errors and resolution recommendations for each.
-ms.date: 05/15/2024
+ms.date: 02/19/2025
 ms.topic: conceptual
 ---
 # Troubleshooting cloud discovery errors
@@ -18,7 +18,7 @@ If you integrated Microsoft Defender for Endpoint with Defender for Cloud Apps, 
 
 |Issue|Resolution|
 |----|----|
-|**Defender-managed endpoints** reports do not appear in the list|Make sure the devices you're connecting to are Windows 10 version 1809 or later, and that you waited the necessary two hours that it takes before your data is accessible.|
+|**Defender-managed endpoints** reports don't appear in the list|Make sure the devices you're connecting to are Windows 10 version 1809 or later, and that you waited the necessary two hours that it takes before your data is accessible.|
 |**Discovery reports are empty** |If the endpoint device is behind a forward proxy, you can send logs from your forward proxy using a log collector|
 
 ## Log parsing errors
@@ -39,11 +39,11 @@ You can track the processing of cloud discovery logs using the governance log. T
 
 |Issue|Resolution|
 |----|----|
-|Couldn't connect to the log collector over FTP| 1. Verify that you're using FTP credentials and not SSH credentials. <br />2. Verify that the FTP client you are using is not set to SFTP.  |
+|Couldn't connect to the log collector over FTP| 1. Verify that you're using FTP credentials and not SSH credentials. <br />2. Verify that the FTP client you're using isn't set to SFTP (Secure File Transfer Protocol).  |
 |Failed updating collector configuration | 1. Verify that you entered the latest access token. <br />2. Verify in your firewall that the log collector is allowed to initiate outbound traffic on port 443.|
-|Logs sent to the collector do not appear in the portal | 1.  Check to see if there are failed parsing tasks in the Governance log.  <br />  &nbsp;&nbsp;&nbsp;&nbsp;If so, troubleshoot the error with the Log Parsing error table above.<br /> 2. If not, check the data sources and Log collector configuration in the portal. <br /> &nbsp;&nbsp;&nbsp;&nbsp;a. In the Data source page, verify that the name of data source is **NSS** and that it is configured correctly. <br />&nbsp;&nbsp;&nbsp;&nbsp;b. In the Log collectors page, verify that the data source is linked to the right log collector. <br /> 3. Check the local configuration of the on-premises log collector machine.  <br />&nbsp;&nbsp;&nbsp;&nbsp;a. Log in to the log collector over SSH and run the collector_config utility.<br/>&nbsp;&nbsp;&nbsp;&nbsp;b. Confirm that your firewall or proxy is sending logs to the log collector using the protocol you defined (Syslog/TCP, Syslog/UDP or FTP) and that it's sending them to the correct port and directory.<br /> &nbsp;&nbsp;&nbsp;&nbsp;c. Run netstat on the machine and verify that it receives incoming connections from your firewall or proxy <br /> 4.   Verify that the log collector is allowed to initiate outbound traffic on port 443. |
-|Log collector status: Created | The log collector deployment was not completed. Complete the on-premises deployment steps according to the deployment guide.|
-|Log collector status: Disconnected | No data received in the last 24 hours from any of the linked data sources. |
+|Logs sent to the collector don't appear in the portal | 1. Check to see if there are failed parsing tasks in the Governance log.  <br />  &nbsp;&nbsp;&nbsp;&nbsp;If so, troubleshoot the error with the Log Parsing error table above.<br /> 2. If not, check the data sources and Log collector configuration in the portal. <br /> &nbsp;&nbsp;&nbsp;&nbsp;a. In the Data source page, verify that the name of data source is **NSS** and that it's configured correctly. <br />&nbsp;&nbsp;&nbsp;&nbsp;b. In the Log collectors page, verify that the data source is linked to the right log collector. <br /> 3. Check the local configuration of the on-premises log collector machine.  <br />&nbsp;&nbsp;&nbsp;&nbsp;a. Log in to the log collector over SSH and run the collector_config utility.<br/>&nbsp;&nbsp;&nbsp;&nbsp;b. Confirm that your firewall or proxy is sending logs to the log collector using the protocol you defined (Syslog/TCP, Syslog/UDP, or FTP) and that it's sending them to the correct port and directory.<br /> &nbsp;&nbsp;&nbsp;&nbsp;c. Run netstat on the machine and verify that it receives incoming connections from your firewall or proxy <br /> 4.   Verify that the log collector is allowed to initiate outbound traffic on port 443. |
+|Log collector status: Created | The log collector deployment wasn't completed. Complete the on-premises deployment steps according to the deployment guide.|
+|Log collector status: Disconnected | If you see this issue, it means no data has been received in the last 24 hours from any of the linked data sources. Contact Microsoft Defender for Cloud Apps support and provide the log files for investigation. Our team analyzes the logs to identify when the last sync occurred and what caused the disconnection. |
 |Failed pulling latest collector image| If you get this error during Docker deployment, it could be that you don't have enough memory on the host. To check this, run this command on the host: `docker pull mcr.microsoft.com/mcas/logcollector`. If it returns this error: `failed to register layer: Error processing tar file(exist status 1): write /opt/jdk/jdk1.8.0_152/src.zip: no space left on device` contact your host machine administrator to provide more space.|
 
 ## Discovery dashboard errors

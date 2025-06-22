@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 11/27/2024
+ms.date: 03/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -47,14 +47,19 @@ This article describes how admins can manage entries for email senders in the Mi
 
 - For blocking inbound and outbound email from a domain, any subdomains in that domain, and any email addresses in that domain, create the block entry using the syntax: `*.TLD`, where `TLD` can be any top-level domain, internal domain, or email address domain.
 
-- For blocking inbound and outbound email from a sudomain in a domain and any email addresses in that subdomain, create the block entry using the syntax: `*.SD1.TLD`, `*.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, etc. for internal domains and email address domains.
+- For blocking inbound and outbound email from a subdomain in a domain and any email addresses in that subdomain, create the block entry using the syntax: `*.SD1.TLD`, `*.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, etc. for internal domains and email address domains.
 
 - For details about the syntax for spoofed sender entries, see the [Domain pair syntax for spoofed sender entries](#domain-pair-syntax-for-spoofed-sender-entries) section later in this article.
 
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+    - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
+      - **Authorization and settings/Security settings/Detection tuning (manage)**
+    - *Read-only access to the Tenant Allow/Block List*: 
+      - **Authorization and settings/Security settings/Read-only**.
+      - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
@@ -73,11 +78,64 @@ This article describes how admins can manage entries for email senders in the Mi
 
 ### Create allow entries for domains and email addresses
 
-You can't create allow entries for domains and email addresses directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
-Instead, you use the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a blocked message as **I've confirmed it's clean** and then select **Allow this message**, an allow entry for the sender is added to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
+To create allow entries for domains and email addresses, use either of the following methods:
+
+- From the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a blocked message as **I've confirmed it's clean** and then select **Allow this message**, an allow entry for the sender is added to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
+
+  This method is required to override malware and high confidence phishing verdicts.
+
+- From the **Domains & addresses** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+
+  This method is available to override the following verdicts only:
+
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
 
 [!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
+
+#### Use the Microsoft Defender portal to create allow entries for domains and email addresses in the Tenant Allow/Block List
+
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+
+2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
+
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
+
+4. In the **Allow domains & addresses** flyout that opens, configure the following settings:
+
+   - **Domains & addresses**: Enter one email address or domain per line, up to a maximum of 20.
+
+   - **Remove allow entry after**: Select from the following values:
+       - **45 days after last used date** (default)
+       - **1 day**
+       - **7 days**
+       - **Specific date**: The maximum value is 30 days from today.
+
+   - **Optional note**: Enter descriptive text for why you're allowing the email addresses or domains.
+
+5. When you're finished in the **Block domains & addresses** flyout, select **Add**.
+
+Back on the **Domains & email addresses** tab, the entry is listed.
+
+##### Use PowerShell to create allow entries for domains and email addresses in the Tenant Allow/Block List
+
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+
+```powershell
+New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "DomainOrEmailAddress1","DomainOrEmailAddress1",..."DomainOrEmailAddressN" [-RemoveAfter 45] [-Notes <String>]
+```
+
+This example adds an allow entry for the specified email addresses. Because we didn't use the ExpirationDate or RemoverAfter parameters, the entry expires after 45 days from last used date.
+
+```powershell
+New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "test@gooddomain.com","test2@gooddomain.com"
+```
+
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
 
 ### Create block entries for domains and email addresses
 
@@ -102,7 +160,7 @@ Email from these blocked senders is marked as *high confidence phishing* and qua
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block domains & addresses** flyout that opens, configure the following settings:
 
@@ -147,6 +205,10 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 
 - **Value**: The domain or email address.
 - **Action**: The value **Allow** or **Block**.
+- **Override verdicts**: The available values are:
+    - **Up to malware** for block entries.
+    - **Up to regular confidence phishing** for allow entries created directly in Tenant Allow/Block List.
+    - **Up to high confidence phishing** for allow entries created via submissions. Allow entries created via submissions automatically update directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.

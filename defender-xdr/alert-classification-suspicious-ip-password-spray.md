@@ -1,6 +1,6 @@
 ---
 title: Alert classification for suspicious IP address related to password spraying activity
-description: Alert classification for suspicious IP address related to password spraying activity to review the alerts and take recommended actions to remediate the attack and protect your network.
+description: Investigate and review alerts related to suspicious IP address related to password spraying activity and take recommended actions to protect your network.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
@@ -13,19 +13,19 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 02/11/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for suspicious IP addresses related to password spray attacks that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for suspicious IP addresses related to password spray attacks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat actors use password guessing techniques to gain access to user accounts. In a password spray attack, the threat actor might resort to a few of the most used passwords against many different accounts. Attackers successfully compromise accounts using password spraying since many users still utilize default and weak passwords.
 
@@ -37,7 +37,7 @@ The intended results of using this guide are:
 
 - You've taken the necessary action if IP addresses have been performing password spray attacks.
 
-## Investigation steps
+## Investigate the alert
 
 This section contains step-by-step guidance to respond to the alert and take the recommended actions to protect your organization from further attacks.
 

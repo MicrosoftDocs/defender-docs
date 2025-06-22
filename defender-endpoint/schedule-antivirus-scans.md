@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 02/05/2025
+ms.date: 04/30/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
 manager: deniseb
 ms.subservice: ngp
@@ -22,8 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -57,6 +56,12 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 | You have installed or re-enabled Microsoft Defender Antivirus | Quick scan or full scan <br/><br/>A quick scan checks the processes, memory, profiles, and certain locations on the device. If you prefer, you can choose to run a full scan after you have enabled or installed Microsoft Defender Antivirus. Just keep in mind it can take a while to run a full scan. |
 
 ## Important points to keep in mind
+
+- You can configure two types of scheduled scans:
+
+    1. **Daily Scan**: Runs once per day and can only be a **quick scan**.
+
+    2. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
 
 - By default, Microsoft Defender Antivirus checks for an update 15 minutes before the time of any scheduled scans. You can [manage the schedule for when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) to override this default.
 
@@ -98,6 +103,5 @@ This optimization applies to machines running Windows 10 Anniversary Update (ver
 
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-- [Onboard non-Windows devices](configure-endpoints-non-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

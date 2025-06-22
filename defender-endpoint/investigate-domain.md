@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 07/05/2023
 ms.subservice: edr
 search.appverid: met150
@@ -27,7 +27,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Investigate a domain to see if the devices and servers in your enterprise network have been communicating with a known malicious domain.
 

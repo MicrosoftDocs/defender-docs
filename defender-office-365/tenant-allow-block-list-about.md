@@ -8,7 +8,7 @@ manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/20/2024
+ms.date: 03/03/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -34,7 +34,7 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override the Defender for Office 365 or EOP filtering verdicts. The list is used during mail flow or time of click for incoming messages from external senders.
 
-Entries for **Domains and email addresses** and **Spoofed senders** apply to internal messages sent within the organization. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
+Entries for **Domains and email addresses** and **Spoofed senders** apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 
 The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
@@ -79,9 +79,17 @@ Block entries for [spoofed senders](tenant-allow-block-list-email-spoof-configur
 
 ## Allow entries in the Tenant Allow/Block List
 
-In most cases, you can't directly create allow entries in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that could have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that could have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List:
 
-- **Domains and email addresses**, **files**, and **URLs**: You can't create allow entries directly in the Tenant Allow/Block List. Instead you use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email](submissions-admin.md#report-good-email-to-microsoft)**, **[email attachment](submissions-admin.md#report-good-email-attachments-to-microsoft)**, or **[URL](submissions-admin.md#report-good-urls-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message**, **Allow this file**, or **Allow this URL** to create an allow entry for the domains and email addresses, files, or URLs.
+- **Domains and email addresses** and **URLs**: You can create allow entries directly in the Tenant Allow/Block List to override the following verdicts:
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
+
+  For malware and high confidence phishing verdicts, you can't create allow entries directly in the Tenant Allow/Block List. Instead, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email](submissions-admin.md#report-good-email-to-microsoft)** or **[URL](submissions-admin.md#report-good-urls-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message** or **Allow this URL** to create an allow entry for the domains and email addresses or URLs.
+
+- **Files**: You can't create allow entries directly in the Tenant Allow/Block List. Instead, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email attachment](submissions-admin.md#report-good-email-attachments-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this file** to create an allow entry for the files.
 
 - **Spoofed senders**:
   - If spoof intelligence already blocked the message as spoofing, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to [report the email to Microsoft](submissions-admin.md#report-good-email-to-microsoft) as **I've confirmed it's clean**, and then select **Allow this message**.
@@ -109,4 +117,4 @@ The following list describes what happens in the Tenant Allow/Block List when yo
 
 After you add an allow entry on the **Submissions** page or a block entry in the Tenant Allow/Block List, the entry should start working immediately (within 5 minutes).
 
-If Microsoft learned from the allow entry, the built-in [alert policy](/purview/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.
+If Microsoft learned from the allow entry, the built-in [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.

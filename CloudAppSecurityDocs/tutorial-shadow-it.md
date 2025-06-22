@@ -101,6 +101,3 @@ The nature of cloud apps means that they're updated daily and new apps appear al
 
 [!INCLUDE [Open support ticket](includes/support.md)]
 
-## Learn more
-
-- Try our interactive guide: [Discover and manage cloud app usage with Microsoft Defender for Cloud Apps](https://mslearn.cloudguides.com/guides/Discover%20and%20manage%20cloud%20app%20usage%20with%20Microsoft%20Cloud%20App%20Security)

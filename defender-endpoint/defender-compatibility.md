@@ -13,8 +13,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.topic: conceptual
-ms.date: 02/18/2024
+ms.topic: concept-article
+ms.date: 03/25/2025
 ms.subservice: ngp
 ---
 

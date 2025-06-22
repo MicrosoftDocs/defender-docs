@@ -1,7 +1,7 @@
 ---
 title:  Microsoft Defender for Cloud Apps – privacy
 description: Learn about how Microsoft Defender for Cloud Apps manages user privacy.
-ms.date: 11/24/2024
+ms.date: 06/17/2025
 ms.topic: concept-article
 ---
 # Privacy with Microsoft Defender for Cloud Apps
@@ -21,6 +21,9 @@ Microsoft Defender for Cloud Apps collects information from your configured clou
 - System settings and policies
 - User and group configurations
 
+> [!NOTE]
+> The data collected from the various applications is dependent on the customer-provided data from the various applications and might include personal information.
+
 ## Data storage location
 
 Defender for Cloud Apps operates in the Microsoft Azure data centers in the following geographical regions: 
@@ -28,8 +31,8 @@ Defender for Cloud Apps operates in the Microsoft Azure data centers in the foll
 |Customer provisioning location  |Data storage location  |
 |---------|---------|
 |**Customers whose tenants are provisioned in the United States**     |  United States       |
-|**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    Either the European Union and/or the United Kingdom      |
-|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned    |
+|**Customers whose tenants are provisioned in the European Union or the United Kingdom**     |    The European Union or the United Kingdom, depending on service availability.      |
+|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned.    |
 
 In addition to the locations above, the App Governance features within Defender for Cloud Apps operate in the Microsoft Azure data centers in the following geographical regions listed below. Customer with App Governance enabled will have data stored within the data storage location the customer provisions in above, and in a second data storage location as described below: 
 
@@ -45,11 +48,17 @@ In addition to the locations above, the App Governance features within Defender 
 | **Customers whose tenants are provisioned in Japan** | Japan  |
 | **Customers whose tenants are provisioned in India** | India  |
 | **Customers whose tenants are provisioned in Asia Pacific**  | Asia Pacific  |
-|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned   |
+|**Customers whose tenants are provisioned in any other region**     |     The United States and/or a data center in the region that's nearest to the location of where the customer's Microsoft Entra tenant has been provisioned.   |
 
 Customer data collected by Defender for Cloud Apps is either stored in your tenant location, as described in the previous tables, or in the geographic location of another online service that Defender for Cloud Apps shares data with, as defined by the data storage rules of that online service.
 
-If Defender for Cloud Apps data is stored in your tenant location, your tenant isn't movable after having been created. To view your Defender for Cloud Apps tenant location in the Microsoft Defender portal, go to **Settings > Cloud Apps > About > Region**.
+
+### View your data storage location
+
+To view your Defender for Cloud Apps tenant location in the Microsoft Defender portal, go to **Settings > Cloud Apps > About > Region**.
+
+> [!NOTE]
+> If Defender for Cloud Apps data is stored in your tenant location, your tenant isn't movable after having been created.
  
 ## Data retention
 
@@ -59,7 +68,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 ## Data sharing for Microsoft Defender for Cloud Apps
 
-Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer:
+Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments might occur, depending on the location of the service offering.
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud
@@ -71,4 +80,4 @@ Defender for Cloud Apps shares data, including customer data, among the followin
 
 ## Related content
 
-For more information, see the [Microsoft Service Trust portal](https://www.microsoft.com/en-us/trust-center/product-overview).
+For more information, see the [Microsoft compliance offerings](/compliance/regulatory/offering-nist-sp-800-171).

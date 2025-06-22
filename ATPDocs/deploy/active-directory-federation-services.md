@@ -3,6 +3,7 @@ title: Configure sensors for AD FS, AD CS, and Microsoft Entra Connect | Microso
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers.
 ms.date: 11/02/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
@@ -54,9 +55,6 @@ Configure the SQL server to allow the Directory Service Account with the followi
 - *log in*
 - *read*
 - *select*
-
-> [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group Managed Service Account (gMSA) as the Directory Service Account, make sure that you grant the SQL server the [required permissions](create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
 
 ### Grant access to the AD FS database
 

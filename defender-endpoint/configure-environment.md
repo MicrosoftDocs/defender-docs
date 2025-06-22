@@ -14,16 +14,16 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 02/04/2025
+ms.date: 06/11/2025
 ---
 
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -31,7 +31,7 @@ Before you onboard devices to Defender for Endpoint, make sure your network is c
 
 > [!NOTE]
 > - After May 8, 2024, you have the option to keep streamlined connectivity ([consolidated set of URLs](https://aka.ms/MDE-streamlined-urls)) as the default onboarding method, or downgrade to standard connectivity through (**Settings > Endpoints > Advanced Features**). For onboarding through Intune or Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded aren't reonboarded automatically. In such cases, create a new policy in Intune, where it's recommended to first assign the policy to a set of test devices to verify connectivity is successful, and then expand the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script, while newly onboarded devices automatically receive streamlined onboarding.
-> - The new *.endpoint.security.microsoft.com consolidated domain needs to be reachable for all devices, for current and future functionality, regardless whether you continue to use Standard connectivity.
+> - The new `*.endpoint.security.microsoft.com` consolidated domain needs to be reachable for all devices, for current and future functionality, regardless whether you continue to use Standard connectivity.
 > - New regions default to streamlined connectivity and can't downgrade to Standard. Read more at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server
@@ -40,7 +40,7 @@ The following downloadable spreadsheet lists the services and their associated U
 
 |Spreadsheet of domains list| Description|
 |--|--|
-| Microsoft Defender for Endpoint consolidated URL list (Streamlined) | Spreadsheet of consolidated URLs. <br/>[Download the spreadsheet here](https://aka.ms/MDE-streamlined-urls).<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2022 or later<br>- Windows Server 2019<br>- Windows Server 2012 R2, Windows Server 2016 running [Defender for Endpoint modern unified solution](configure-server-endpoints.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- anti-malware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you're moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md)<br><br>Windows 10 versions 1607, 1703, 1709, 1803 (RS1-RS4) are supported through the streamlined onboarding package but require a longer URL list (see updated URL sheet). These versions don't support reonboarding (must be fully offboarded first). <br><br>Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Servers not upgraded to Unified Agent (MMA) must continue using MMA onboarding method.  
+| Microsoft Defender for Endpoint consolidated URL list (Streamlined) | Spreadsheet of consolidated URLs. <br/>[Download the spreadsheet here](https://aka.ms/MDE-streamlined-urls).<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2022 or later<br>- Windows Server 2019<br>- Windows Server 2012 R2, Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- anti-malware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you're moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md)<br><br>Windows 10 versions 1607, 1703, 1709, 1803 (RS1-RS4) are supported through the streamlined onboarding package but require a longer URL list (see updated URL sheet). These versions don't support reonboarding (must be fully offboarded first). <br><br>Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Servers not upgraded to Unified Agent (MMA) must continue using MMA onboarding method.  
 |Microsoft Defender for Endpoint URL list for commercial customers (Standard)| Spreadsheet of specific DNS records for service locations, geographic locations, and OS for commercial customers. <p> [Download the spreadsheet here.](https://aka.ms/MDE-standard-urls) <p> Microsoft Defender for Endpoint Plan 1 and Plan 2 share the same proxy service URLs. In your firewall, open all the URLs where the geography column is WW. For rows where the geography column isn't WW, open the URLs to your specific data location. To verify your data location setting, see [Verify data storage location and update data retention settings for Microsoft Defender for Endpoint](preferences-setup.md). Don't exclude the URL `*.blob.core.windows.net` from any kind of network inspection. Instead, exclude only the blob URLs that are specific to MDE and listed in the spreadsheet of domains list.
 | Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
 
@@ -62,7 +62,7 @@ The following destinations are required to allow Defender for Endpoint communica
 To determine the exact destinations in use for your subscription within the domains listed above, see [Microsoft Monitoring Agent (MMA) Service URL connections](verify-connectivity.md#microsoft-monitoring-agent-mma-service-url-connections).
 
 > [!NOTE]
-> Services using MMA-based solutions aren't able to use the new streamlined connectivity solution (consolidated URL and option to use static IPs). For Windows Server 2016 and Windows Server 2012 R2, you'll need to update to the new unified solution. Instructions to onboard these operating systems with the new unified solution are at [Onboard Windows servers](configure-server-endpoints.md), or migrate already onboarded devices to the new unified solution at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
+> Services using MMA-based solutions aren't able to use the new streamlined connectivity solution (consolidated URL and option to use static IPs). For Windows Server 2016 and Windows Server 2012 R2, you'll need to update to the new unified solution. Instructions to onboard these operating systems with the new unified solution are at [Onboard Windows servers](onboard-server.md), or migrate already onboarded devices to the new unified solution at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
 ## For devices without Internet access / without a proxy
 

@@ -13,19 +13,19 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 04/05/2023
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a SOC analyst, I want to know how to review and classify suspicious inbox manipulation rules alerts so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification for suspicious inbox manipulation rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Threat actors can use compromised user accounts for many malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, deleting traces, and sending phishing mails. Malicious inbox rules are common during business email compromise (BEC) and phishing campaigns and it's important to monitor for them consistently.
 

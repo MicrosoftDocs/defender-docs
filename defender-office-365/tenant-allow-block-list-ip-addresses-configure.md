@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block IPv6 addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 09/20/2024
+ms.date: 02/26/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -29,6 +29,9 @@ appliesto:
 In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for IPv6 addresses in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 This article describes how admins can manage entries for IPv6 addresses in the Microsoft Defender portal and in Exchange Online PowerShell.
+
+> [!NOTE]
+> IPv4 ranges aren't supported yet. Admins can create and manage entries for IPv4 addresses in the [Connection filter policy](connection-filter-policies-configure.md).
 
 ## What do you need to know before you begin?
 
@@ -49,7 +52,12 @@ This article describes how admins can manage entries for IPv6 addresses in the M
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Exchange Online permissions** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+    - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
+      - **Authorization and settings/Security settings/Detection tuning (manage)**
+    - *Read-only access to the Tenant Allow/Block List*: 
+      - **Authorization and settings/Security settings/Read-only**.
+      - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).

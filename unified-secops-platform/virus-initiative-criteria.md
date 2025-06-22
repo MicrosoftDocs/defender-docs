@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
 ms.date: 12/2/2024
 ---
@@ -40,7 +40,9 @@ To be considered for the MVI program, your organization must meet all the follow
 |Test Provider|Lab Test Type|Minimum Level/Score|
 |---|---|---|
 |[AV-Comparatives](https://www.av-comparatives.org/testmethod/real-world-protection-tests)|Real-World Protection Test or Malware Protection Test|Certified/Approved/Standard|
-|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Real-World Protection Test for MVI, AV-Test|97% (Real-World Protection test for MVI)/Certified (AV-Test Home)/ Approved (AV-Test Enterprise)|
+|[AVLab Cybersecurity Foundation](https://avlab.pl/en/)|Advanced In-The-Wild Malware Test|Excellent (99%)|
+|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Real-World Protection Test for MVI, AV-Test|97% (Real-World Protection test for MVI)/Certified (AV-Test Home)/Approved (AV-Test Enterprise)|
+|[MRG Effitas](https://www.mrg-effitas.com/)|360 Assessment and Certification|Level 2|
 |[SE Labs](https://selabs.uk/en/reports/)|Endpoint Security (EPS) or Enterprise Advanced Security (EAS)|AAA|
 |[SKD Labs](https://www.skdlabs.com/html/english/)|Starcheck Anti-malware Real-time protection and cleaning|Starcheck Certified|
 |[VB 100](https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1)|VB100|Detection rate of 95% with Grade C or higher|

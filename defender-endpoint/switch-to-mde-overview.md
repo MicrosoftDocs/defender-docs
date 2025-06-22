@@ -16,7 +16,7 @@ ms.collection:
 - tier1
 ms.topic: solution-overview
 ms.custom: migrationguides
-ms.date: 10/24/2023
+ms.date: 09/21/2024
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 ms.subservice: onboard
 search.appverid: met150
@@ -35,6 +35,8 @@ If you're ready to move from a non-Microsoft endpoint protection solution to [Mi
 
 When you migrate to Defender for Endpoint, you begin with your non-Microsoft antivirus/antimalware protection in active mode. Then, you configure Microsoft Defender Antivirus in passive mode, and configure Defender for Endpoint features. Then, you onboard your organization's devices, and verify that everything is working correctly. Finally, you remove the non-Microsoft solution from your devices.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## The migration process
 
 :::image type="content" source="media/phase-diagrams/migration-phases.png" alt-text="The MDE migration process" lightbox="media/phase-diagrams/migration-phases.png":::
@@ -50,4 +52,7 @@ The process of migrating to Defender for Endpoint can be divided into three phas
 ## Next step
 
 - Proceed to [Prepare for your migration](switch-to-mde-phase-1.md).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
