@@ -50,15 +50,15 @@ A mirror server is any server in the customer's environment that can connect to 
 
 ## How offline security intelligence update works
 
-Organizations need to set up a mirror server, which is a local Web/NFS server that's reachable by the Microsoft cloud.<br>
+Organizations need to set up a mirror server, which is a local Web/NFS server that's reachable by the Microsoft cloud.
 
-Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job/task scheduler on the local server.<br>
+Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job/task scheduler on the local server.
 
-macOS endpoints running Defender for Endpoint pull the downloaded signatures from this mirror server at a user-defined time interval.<br>
+macOS endpoints running Defender for Endpoint pull the downloaded signatures from this mirror server at a user-defined time interval.
 
-Signatures pulled on the macOS endpoints from the local server are first verified before getting loaded into the AV engine.<br>
+Signatures pulled on the macOS endpoints from the local server are first verified before getting loaded into the AV engine.
 
-To trigger and configure the update process, update the managed config json file on the macOS endpoints.<br>
+To trigger and configure the update process, update the managed config json file on the macOS endpoints.
 
 The status of the update can be seen on the mdatp CLI.
 
@@ -139,7 +139,7 @@ After cloning the repo/downloaded zip file, the local directory structure should
 
 ConsoleCopy
 
-user@vm:~/mdatp-xplat$ tree linux/definition_downloader/<br>linux/definition_downloader/<br>├── README.md<br>├── settings.json<br>├── settings.ps1<br>├── xplat_offline_updates_download.ps1<br>└── xplat_offline_updates_download.sh<br><br>0 directories, 5 files<br>
+user@vm:~/mdatp-xplat$ tree linux/definition_downloader/<br>linux/definition_downloader/<br>├── README.md<br>├── settings.json<br>├── settings.ps1<br>├── xplat_offline_updates_download.ps1<br>└── xplat_offline_updates_download.sh<br><br>0 directories, 5 files
 
 > [!NOTE]
 > Go through the README.md file to understand in detail about how to use the script.
@@ -166,7 +166,7 @@ Bash:
 
 PowerShell:
 ```powershell
-./xplat_offline_updates_download.ps1<br>
+./xplat_offline_updates_download.ps1
 ```
 
 > [!NOTE]
@@ -213,7 +213,7 @@ To test if the settings are applied correctly on the macOS endpoints, run the fo
 Bash
 
 ```bash
-mdatp health --details definitions<br>
+mdatp health --details definitions
 ```
 A sample output would look like the following code snippet:
 
@@ -237,10 +237,10 @@ To trigger the "offline security intelligence update" manually to download the s
 
 Bash
 ```bash
-mdatp definitions update<br>
+mdatp definitions update
 ```
 
-## Check update status*
+## Check update status
 
 After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: mdatp health --details --definitions.
 
@@ -249,7 +249,9 @@ Verify the following fields:
 ```
 Console
 
-user@vm:~$ mdatp health --details definitions<br>...<br>definitions_status                          : "up_to_date"
+user@vm:~$ mdatp health --details definitions
+...
+definitions_status                          : "up_to_date"
 ...
 definitions_update_fail_reason              : ""
 ...
@@ -270,7 +272,7 @@ Check the status of the "offline security intelligence update" feature by using 
 Bash
 
 ```bash
-mdatp health --details definitions<br>
+mdatp health --details definitions
 ```
 
 This command should provide us with some user-friendly message in the definitions_update_fail_reason section.
@@ -287,7 +289,7 @@ Try performing the connectivity test to check if mirror server is reachable from
 
 Bash
 ```bash
-mdatp connectivity test<br>
+mdatp connectivity test
 ```
 Try to trigger a manual update using the following command:
 
