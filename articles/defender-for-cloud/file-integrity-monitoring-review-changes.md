@@ -14,7 +14,7 @@ In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integr
 File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md) with Defender for Cloud.
 
 > [!NOTE]
-> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
+> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA ended in November 2024.
 
 This article shows you how to review file changes.
 

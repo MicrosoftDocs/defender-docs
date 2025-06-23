@@ -308,6 +308,5 @@ The Defender sensor in AKS V1.28 and below isn't supported on Arm64 nodes.
 
 ## Next steps
 
-- Learn how [Defender for Cloud collects data using the Log Analytics Agent](monitoring-components.md).
 - Learn how [Defender for Cloud manages and safeguards data](data-security.md).
 - Review the [platforms that support Defender for Cloud](security-center-os-coverage.md).
