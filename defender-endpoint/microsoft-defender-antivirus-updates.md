@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/13/2025
+ms.date: 06/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -247,26 +247,12 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
-### 1.417.472.0
+### 1.431.97.0
 
-- Defender package version: `1.417.472.0`
-- Security intelligence version: `1.417.472.0`
-- Engine version: `1.24080.9`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.415.295.0
-
-- Defender package version: `1.415.295.0`
-- Security intelligence version: `1.415.295.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.97.0`
+- Security intelligence version: `1.431.97.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.6`
 
 #### Fixes
 
@@ -276,12 +262,28 @@ After a new package version is released, support for the previous two versions i
 
 - None
 
-### 1.415.235.0
+### 1.431.54.0
 
-- Defender package version: `1.415.235.0`
-- Security intelligence version: `1.415.235.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.54.0`
+- Security intelligence version: `1.431.54.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.2`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+
+### 1.429.122.0
+
+- Defender version: `1.429.122.0`
+- Signature version: `1.429.122.0`
+- Platform version: `4.18.25040.2`
+- Engine version: `1.25040.1`
 
 #### Fixes
 
