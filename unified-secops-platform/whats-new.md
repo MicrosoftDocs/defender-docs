@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 04/24/2025
+ms.date: 07/01/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -32,6 +32,11 @@ This change streamlines the onboarding process and ensures that new customers ca
 
 For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?branch=pr-en-us-301249#automatic-onboarding-and-redirects-for-new-customers). <!--fix link-->
 
+## June 2025
+
+### Case management now generally available in the Defender multitenant portal
+
+The Microsoft Defender portal's case management feature is now generally available in the Defender multitenant portal. For more information, see [View and manage cases across multiple tenants in the Microsoft Defender multitenant portal](mto-manage-cases.md).
 
 ## May 2025
 
