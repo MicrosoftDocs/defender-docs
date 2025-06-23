@@ -72,11 +72,9 @@ Fig. 2: Process flow diagram on the macOS endpoint for security intelligence upd
 
 The mirror server can run any of the following operating systems:
 
-Linux (any flavor)
-
-Windows (any version)
-
-Mac (any version)
+* Linux (any flavor)
+* Windows (any version)
+* Mac (any version)
 
 ## Prerequisites
 
@@ -141,6 +139,20 @@ ConsoleCopy
 
 user@vm:~/mdatp-xplat$ tree linux/definition_downloader/<br>linux/definition_downloader/<br>├── README.md<br>├── settings.json<br>├── settings.ps1<br>├── xplat_offline_updates_download.ps1<br>└── xplat_offline_updates_download.sh<br><br>0 directories, 5 files
 
+```
+ConsoleCopy
+
+user@vm:~/mdatp-xplat$ tree linux/definition_downloader/
+linux/definition_downloader/
+├── README.md
+├── settings.json
+├── settings.ps1
+├── xplat_offline_updates_download.ps1
+└── xplat_offline_updates_download.sh
+
+0 directories, 5 files
+```
+
 > [!NOTE]
 > Go through the README.md file to understand in detail about how to use the script.
 
@@ -190,9 +202,22 @@ Once the mirror server is set up, we need to propagate this URL to the Linux end
 
 Use the following sample mdatp_managed.json and update the parameters as per the configuration and copy the file to the location /etc/opt/microsoft/mdatp/managed/mdatp_managed.json.
 
-JSON
-
-{￼  "cloudService": {￼    "automaticDefinitionUpdateEnabled": true,￼    "definitionUpdatesInterval": 1202￼  },￼  "antivirusEngine": {￼    "offlineDefinitionUpdateUrl": "<http://172.22.199.67:8000/mac/production/>",￼    "offlineDefintionUpdateFallbackToCloud":false,￼    "offlineDefinitionUpdate": "enabled"￼  },￼  "features": {￼    "offlineDefinitionUpdateVerifySig": "enabled"￼  }￼}￼
+```json
+{
+  "cloudService": {
+    "automaticDefinitionUpdateEnabled": true,
+    "definitionUpdatesInterval": 1202
+  },
+  "antivirusEngine": {
+    "offlineDefinitionUpdateUrl": "<http://172.22.199.67:8000/mac/production/>",
+    "offlineDefintionUpdateFallbackToCloud":false,
+    "offlineDefinitionUpdate": "enabled"
+  },
+  "features": {
+    "offlineDefinitionUpdateVerifySig": "enabled"
+  }
+}
+```
 
 | **Field Name** | **Values** | **Comments** |
 |---|---|---|
@@ -219,8 +244,18 @@ A sample output would look like the following code snippet:
 
 ```
 ConsoleCopy
-
-user@vm:~$ mdatp health --details definitions<br>automatic_definition_update_enabled         : true [managed]<br>definitions_updated                         : Mar 14, 2024 at 12:13:17 PM<br>definitions_updated_minutes_ago             : 2<br>definitions_version                         : "1.407.417.0"<br>definitions_status                          : "up_to_date"<br>definitions_update_source_uri               : "<https://go.microsoft.com/fwlink/?linkid=2144709>"<br>definitions_update_fail_reason              : ""<br>offline_definition_url_configured           : "<http://172.XX.XXX.XX:8000/linux/production/>" [managed]<br>offline_definition_update                   : "enabled" [managed]<br>offline_definition_update_verify_sig        : "enabled"<br>offline_definition_update_fallback_to_cloud : false[managed]
+user@vm:~$ mdatp health --details definitions
+automatic_definition_update_enabled         : true [managed]
+definitions_updated                         : Mar 14, 2024 at 12:13:17 PM
+definitions_updated_minutes_ago             : 2
+definitions_version                         : "1.407.417.0"
+definitions_status                          : "up_to_date"
+definitions_update_source_uri               : "<https://go.microsoft.com/fwlink/?linkid=2144709>"
+definitions_update_fail_reason              : ""
+offline_definition_url_configured           : "<http://172.XX.XXX.XX:8000/linux/production/>" [managed]
+offline_definition_update                   : "enabled" [managed]
+offline_definition_update_verify_sig        : "enabled"
+offline_definition_update_fallback_to_cloud : false[managed]
 ```
 
 ## Triggering the offline security intelligence updates
