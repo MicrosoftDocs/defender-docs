@@ -62,11 +62,11 @@ To trigger and configure the update process, update the managed config json file
 
 The status of the update can be seen on the mdatp CLI.
 
-![Process flow diagram on the Mirror Server for downloading the security intelligence updates](media/image1.png)
+:::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
-Fig. 1: Process flow diagram on the Mirror Server for downloading the security intelligence updates
+Fig. 1: Process flow diagram on the Mirror Server for downloading the security intelligence updates.
 
-![Process flow diagram on the Linux endpoint for security intelligence updates](media/My experience in the field has taught me that customers love visual aids, especially flow charts. This flowchart exists in the Linux offline updates documentation as well)
+:::image type="content" source="./media/offline-update-diag-2.png" alt-text="Process flow diagram on the Linux endpoint for security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
 Fig. 2: Process flow diagram on the macOS endpoint for security intelligence updates
 
