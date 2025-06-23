@@ -16,7 +16,7 @@ When vulnerabilities are found, they're grouped inside a single recommendation.
 
 > [!NOTE]
 > Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect host information for assessment.
-> The MMA is retiring, and the Docker host hardening feature will be deprecated in November 2024.
+> The MMA is retired, and the Docker host hardening feature was deprecated in November 2024.
 
 ## Prerequisites
 
