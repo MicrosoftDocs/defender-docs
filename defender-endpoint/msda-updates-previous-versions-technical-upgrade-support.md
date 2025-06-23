@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 06/16/2025
+ms.date: 06/23/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -886,7 +886,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 - None
 
-###  June-2021 (Platform: 4.18.2106.5 | Engine: 1.1.18300.4)
+### June-2021 (Platform: 4.18.2106.5 | Engine: 1.1.18300.4)
 
 - Security intelligence update version: **1.343.17.0**
 - Released: **June 28, 2021**
@@ -1054,7 +1054,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 - None
 
-###  August-2020 (Platform: 4.18.2008.9 | Engine: 1.1.17400.5)
+### August-2020 (Platform: 4.18.2008.9 | Engine: 1.1.17400.5)
 
 - Security intelligence update version: **1.323.9.0**
 - Released: **August 27, 2020**
@@ -1242,6 +1242,50 @@ Microsoft regularly releases [security intelligence updates and product updates 
 ## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
+
+### 1.417.472.0
+
+- Defender package version: `1.417.472.0`
+- Security intelligence version: `1.417.472.0`
+- Engine version: `1.24080.9`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.415.295.0
+
+- Defender package version: `1.415.295.0`
+- Security intelligence version: `1.415.295.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.415.235.0
+
+- Defender package version: `1.415.235.0`
+- Security intelligence version: `1.415.235.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.411.111.0
 
