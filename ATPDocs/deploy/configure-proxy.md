@@ -14,7 +14,6 @@ In some organizations, the domain controllers aren't directly connected to the i
 
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
->
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
@@ -128,13 +127,6 @@ To configure your proxy, copy your proxy configuration in user context to the **
 1. If the `LocalService` doesn't have the correct proxy settings, then copy the proxy setting from the `Current_User` to the `LocalService`, under the `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registry key.
 
     Make sure to paste the value from the `Current_User`'s `DefaultConnectionSettings` registry key as `REG_BINARY`.
-
-## Related content
-
-For more information, see:
-
-- [Run a silent installation with a proxy configuration](install-sensor.md#command-for-running-a-silent-installation-with-a-proxy-configuration)
-- [Test Microsoft Defender for Identity connectivity](test-connectivity.md)
 
 ## Next step
 

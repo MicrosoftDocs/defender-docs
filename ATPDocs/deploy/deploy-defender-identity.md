@@ -22,21 +22,13 @@ We recommend installing Defender for Identity sensors on all domain controllers,
 
 Defender for Identity data centers are located in Europe, the UK, Switzerland, North America, Central America, the Caribbean, Australia East, Asia, and India. Your workspace instance is automatically created in the Azure region closest to the geographical location of your Microsoft Entra tenant. Once created, Defender for Identity workspaces can't be moved.
 
-## Microsoft Defender for Identity sensors
+## Microsoft Defender for Identity deployment options
 Defender for Identity uses two types of sensors to collect data from your identity infrastructure:
 
 - **Classic Defender for Identity sensor**: The classic Defender for Identity sensor is designed for domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers. The Defender for Identity sensor collects data from the network and Windows events.
 - **The Windows Server sensor (Preview)**: You can activate the Windows Server sensor on domain controllers running Windows Server 2019 or later. This sensor is included directly into the Windows operating system, without the need for another agent. The sensor doesn't require a .NET framework to be installed on the Operating System. This sensor enables new onboarding and activation capabilities and closer integration between Defender for Identity and Defender for Endpoint. 
 
-There are some differences between the functionality of the two sensors. The Windows Server sensor supports the following Defender for Identity functionality:
-
-- Investigation features on the [ITDR dashboard](test-sensor.md#check-the-itdr-dashboard)
-- [Identity inventory](test-sensor.md#confirm-entity-page-details)
-- [Identity advanced hunting data](test-sensor.md#test-advanced-hunting-tables)
-- [Security posture recommendations](test-sensor.md#test-identity-security-posture-management-ispm-recommendations)
-- [Alert detections](test-sensor.md#test-alert-functionality)
-- [Remediation actions](test-sensor.md#test-remediation-actions)
-- [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
+T
 
 > [!NOTE]
 > We recommend the Windows Server sensor for customers who want to deploy core identity protections to new domain controllers running Windows Server 2019 or later. For all other identity infrastructure servers, or for customers who want to deploy the most robust identity protections available from Microsoft Defender for Identity today, we recommend deploying the Defender for Identity sensor. [Learn more about the Defender for XDR sensor](/defender-for-identity/deploy/activate-capabilities).

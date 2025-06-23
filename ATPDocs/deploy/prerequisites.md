@@ -20,7 +20,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 ## Required permissions
 
-- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
+- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with a user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
 
 We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
@@ -39,7 +39,7 @@ For more information, see [Microsoft Defender for Identity architecture](../arch
 
 ## Sensor requirements and recommendations
 
-The following table summarizes requirements and recommendations for the domain controller, AD FS, AD CS, Microsoft Entra Connect server where you install the Defender for Identity sensor.
+The following table summarizes the server requirements and recommendations for the Defender for Identity sensor.
 
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
@@ -47,6 +47,11 @@ The following table summarizes requirements and recommendations for the domain c
 |**Performance**   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
 |**Network interface configuration** | If you're using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. See [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
 |**Maintenance window**     |   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and might require a restart.      |
+|AD FS federation servers     |In AD FS environments, Defender for Identity sensors are supported only on the federation servers. They're not required on Web Application Proxy (WAP) servers.       |
+|Microsoft Entra Connect servers     |For Microsoft Entra Connect servers, you need to install the sensors on both active and staging servers.       |
+|AD CS servers    |Defender for Identity sensor for AD CS supports only AD CS servers with Certification Authority Role Service. You don't need to install sensors on any AD CS servers that are offline.       |
+
+
 
 ### Minimum operating system requirements
 
@@ -54,11 +59,7 @@ The following table summarizes requirements and recommendations for the domain c
 
 #### Legacy operating systems
 
-Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023.
-
-We recommend that you plan to upgrade those servers as Microsoft no longer supports the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
-
-Sensors running on these operating systems continue to report to Defender for Identity and even receive the sensor updates, but some of the new functionalities won't be available as they might rely on operating system capabilities.
+Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023. Sensors running on these operating systems continue to report to Defender for Identity and even receive the sensor updates, but some functionality that relies on operating system capabilities might not be available. We recommend that you upgrade any servers using these operating systems. 
 
 ### Required ports
 
@@ -114,20 +115,12 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
 
-The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
+The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Related content
 
 This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server or Microsoft Entra Connect, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
 
-For more information, see:
-
-- [Deploying Microsoft Defender for Identity on AD FS, AD CS and Microsoft Entra Connect servers](active-directory-federation-services.md)
-- [Microsoft Defender for Identity multi-forest support](multi-forest.md)
-- [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
-- [Defender for Identity architecture](../architecture.md)
 
 ## Next step
-
-> [!div class="step-by-step"]
-> [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)
+[Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)

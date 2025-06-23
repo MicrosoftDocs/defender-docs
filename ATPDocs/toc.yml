@@ -29,9 +29,7 @@ items:
       href: deploy/capacity-planning.md
   - name: Deploy a sensor
     items:
-    - name: Deploy a sensor on a domain controller
-      items:
-      - name: Windows Server 2016 and earlier
+      - name: Deploy the Defender for Identity sensor v2.x
         items:
           - name: Prerequisites
             href: deploy/prerequisites.md
@@ -45,27 +43,9 @@ items:
             href: deploy/install-sensor.md
           - name: Configure the Defender for Identity sensor
             href: deploy/configure-sensor-settings.md
-      - name: Windows 2019 and later
-        items:
-          - name: Activate the sensor when MDE is enabled on endpoints (Preview)
-            href: deploy/activate-capabilities.md
-          - name: Deploy the sensor when MDE is not enabled on endpoints
-            items:
-            - name: Prerequisites
-              href: deploy/prerequisites.md
-            - name: Connect to the Defender for Identity service
-              href: deploy/configure-proxy.md
-            - name: Test connectivity settings
-              href: deploy/test-connectivity.md
-            - name: Download the Defender for Identity sensor
-              href: deploy/download-sensor.md
-            - name: Install the Defender for Identity sensor
-              href: deploy/install-sensor.md
-            - name: Configure the Defender for Identity sensor
-              href: deploy/configure-sensor-settings.md
-    - name: Deploy a sensor on Microsoft AD FS / AD CS / Entra Connect servers
-      href: deploy/active-directory-federation-services.md
-    - name: Deploy for multiple Active Directory forests
+      - name: Deploy the Defender for Identity sensor v3.x
+        href: deploy/activate-capabilities.md
+    - name: Deploy a sensor for multiple Active Directory forests
       href: deploy/multi-forest.md
     - name: Deploy a standalone sensor
       items:
