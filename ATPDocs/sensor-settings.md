@@ -58,6 +58,8 @@ The sensors page provides the following information about each sensor:
 
   * **Standalone sensor**
  
+  * **Entra Connect sensor**. If your sensor is installed on a domain controller server with Entra Connect configured, such as in a testing environment, the sensor type is shown as **Domain controller sensor** instead.
+ 
   * **ADCS sensor** (Active Directory Certificate Services). If your sensor is installed on a domain controller server with AD CS configured, such as in a testing environment, the sensor type is shown as **Domain controller sensor** instead.
 
 * **Domain**: Displays the fully qualified domain name of the Active Directory domain where the sensor is installed.
@@ -186,9 +188,9 @@ Every few minutes, Defender for Identity sensors check whether they have the lat
 
 1. Sensors selected for **Delayed update** start their update process 72 hours after the Defender for Identity cloud service is updated. These sensors will then use the same update process as automatically updated sensors.
 
-For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md#sensor-outdated) is triggered, and is sent as a notification.
+    For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md#sensor-outdated) is triggered, and is sent as a notification.
 
-![Sensor update failure.](media/sensor-outdated.png)
+    ![Sensor update failure.](media/sensor-outdated.png)
 
 ### Silently update the Defender for Identity sensor
 
