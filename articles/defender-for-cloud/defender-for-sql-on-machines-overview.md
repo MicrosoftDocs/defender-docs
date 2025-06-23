@@ -26,7 +26,7 @@ The Defender for SQL Servers on Machines plan in Microsoft Defender for Cloud us
 
 > [!NOTE]
 > The Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is set to retire.
-> Use of the MMA for the Defender for SQL Servers on Machines plan will be phased out by August 2024.
+> Use of the MMA for the Defender for SQL Servers on Machines plan was phased out in August 2024.
 > AMA replaces MMA for the Defender for SQL Servers on Machines plan.
 
 ## Autoprovisioning of AMA for SQL

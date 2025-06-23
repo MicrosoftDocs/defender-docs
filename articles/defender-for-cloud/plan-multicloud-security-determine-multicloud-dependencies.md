@@ -31,7 +31,7 @@ Defender for Cloud provides Cloud Security Posture Management (CSPM) features fo
 ## CWPP
 
 > [!NOTE]
-> As the Log Analytics agent is set to retire in August 2024 and as part of the Defender for Cloud [updated strategy](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation), all **Defender for Servers** features and capabilities will be provided either through Microsoft Defender for Endpoint integration or agentless scanning, without dependency on either the Log Analytics agent (MMA) or Azure Monitor agent (AMA). For more information about this change, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
+> As the Log Analytics agent retired in August 2024 and as part of the Defender for Cloud [updated strategy](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation), all **Defender for Servers** features and capabilities will be provided either through Microsoft Defender for Endpoint integration or agentless scanning, without dependency on either the Log Analytics agent (MMA) or Azure Monitor agent (AMA). For more information about this change, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 In Defender for Cloud, you enable specific plans to get Cloud Workload Platform Protection (CWPP) features. Plans to protect multicloud resources include:
 
