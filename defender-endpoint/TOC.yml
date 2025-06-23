@@ -803,6 +803,8 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Defender for Endpoint passive mode
+        href: microsoft-defender-passive-mode.md
       - name: Microsoft Defender Antivirus and third-party antivirus solutions without
           Defender for Endpoint
         href: defender-antivirus-compatibility-without-mde.md
