@@ -33,7 +33,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 ### New Dynamic Threat Detection model
 
 Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter and more responsive security coverage.
-For more information see: [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md)
+For more information, see [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md).
 
 ## May 2025 
 
