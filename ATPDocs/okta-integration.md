@@ -100,9 +100,8 @@ After assigning both roles, you can remove the Super Admin role. This ensures th
 1. Select **Create new role**.
 1. Set the role name to **Microsoft Defender for Identity**.
 1. Select the permissions you want to assign to this role. Include the following permissions:
-    - **Suspend users**
-    - **Unsuspend users**
-    - **Clear users’ session**
+    - **Edit user's lifecycle states**
+    - **Edit user's authenticator operations**
     - **View roles, resources, and admin assignments**
 1. Select **Save role**.
 
