@@ -30,7 +30,8 @@ New customers onboarding to Microsoft Sentinel with the permissions of a subscri
 
 This change streamlines the onboarding process and ensures that new customers can immediately take advantage of unified security operations capabilities without the extra step of manually onboarding their workspaces.
 
-For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
+For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?branch=pr-en-us-301249#automatic-onboarding-and-redirects-for-new-customers). <!--fix link-->
+
 
 ## May 2025
 
