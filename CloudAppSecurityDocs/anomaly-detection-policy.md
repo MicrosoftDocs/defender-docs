@@ -47,7 +47,7 @@ These policies appear on the Defender for Cloud Apps policies page and can be en
 
 You can see the anomaly detection policies in the Microsoft Defender Portal, by going to **Cloud Apps** -> **Policies** -> **Policy management**. Then choose **Anomaly detection policy** for the policy type.
 
-:::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies.":::
+:::image type="content" source="media/new-anomaly-detection-policies.png" alt-text="Screenshot showing how to filter anomaly detection policies." lightbox="media/new-anomaly-detection-policies.png":::
 
 The following anomaly detection policies are available:
 
@@ -230,7 +230,7 @@ You can triage the various alerts triggered by the new anomaly detection policie
 1. In the **Activity log**, you can open an activity to display the Activity drawer. Select **User** to view the user insights tab. This tab includes information like number of alerts, activities, and where they've connected from, which is important in an investigation.
 
 
-    :::image type="content" source="media/anomaly-alert-user1.png" alt-text="Screenshot that shows the activity log with the number of anomaly detection alerts.":::
+    :::image type="content" source="media/anomaly-alert-user1.png" alt-text="Screenshot that shows the activity log with the number of anomaly detection alerts." lightbox="media/anomaly-alert-user1.png" :::
 
    
 1. For malware infected files, After files are detected, you can then see a list of **Infected files**. Select the malware file name in the file drawer to open a malware report that provides you with information about that type of malware the file is infected with.
