@@ -106,4 +106,4 @@ Follow these steps to verify the Microsoft Defender Antivirus is in passive mode
 
 ## Additional resources
 
-[Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility)
+[Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
