@@ -103,7 +103,7 @@ The following minimum system specifications are required for the mirror server:
 > [!NOTE]
 > This configuration may vary depending on the number of requests that are served and the load each server must process.
 
-## Configuring the mirror server
+## Configure the mirror server
 
 > [!NOTE]
 > The management and ownership of the mirror server lies solely with the customer as it resides in the customer's private environment. The mirror server doesn't need to have Defender for Endpoint installed.
@@ -258,23 +258,21 @@ offline_definition_update_verify_sig        : "enabled"
 offline_definition_update_fallback_to_cloud : false[managed]
 ```
 
-## Triggering the offline security intelligence updates
+## Trigger the offline security intelligence updates
 
-#### Automatic update
+* Automatic update
 
-If the fields automaticDefinitionUpdateEnabled and offline_definition_update in the managed json are set to true, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
+   If the fields automaticDefinitionUpdateEnabled and offline_definition_update in the managed json are set to true, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
 
-By default, this periodic interval is **8 hours**. But it can be configured by setting the definitionUpdatesInterval parameter in the managed json.
+   By default, this periodic interval is **8 hours**. But it can be configured by setting the definitionUpdatesInterval parameter in the managed json.
 
-#### Manual update
+* Manual update
 
-To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
+   To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
 
-Bash
-```bash
-mdatp definitions update
-```
-
+   ```bash
+   mdatp definitions update
+   ```
 ## Check update status
 
 After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: mdatp health --details --definitions.
