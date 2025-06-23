@@ -1276,63 +1276,92 @@ The versions listed in this section are no longer supported. To view current ver
 ### 1.423.160.0
 
 - Defender package version: `1.423.160.0`
-Platform version: `4.18.25010.11`
-Engine version: 1.25010.7`
-Security intelligence version: 1.423.160.0
-Fixes
-None
-Additional information
-None
-1.423.227.0
-Version
-Package version: 1.423.227.0
-Platform version: 4.18.25010.11
-Engine version: 1.25010.7
-Security intelligence version: 1.423.227.0
-Fixes
-None
-Additional information
-None
-1.421.1259.0
-Version
-Package version: 1.421.1259.0
-Platform version: 4.18.24090.11
-Engine version: 1.24090.11
-Security intelligence version: 1.421.1259.0
-Fixes
-None
-Additional information
-None
-1.421.825.0
-Version
-Package version: 1.421.825.0
-Platform version: 4.18.24120.1
-Engine version: 1.24120.1
-Security intelligence version: 1.421.825.0
-Fixes
-None
-Additional information
-None
-1.419.396.0
-Version
-Package version: 1.419.396.0
-Platform version: 4.18.24090.11
-Engine version: 1.24090.2
-Security intelligence version: 1.419.396.0
-Fixes
-None
-Additional information
-None
-1.419.12.0
-Version
-Package version: 1.419.12.0
-Platform version: 4.18.24090.2
-Engine version: 1.24090.2
-Security intelligence version: 1.419.12.0
-Fixes
-None
-Additional information
-None
+- Platform version: `4.18.25010.11`
+- Engine version: `1.25010.7`
+- Security intelligence version: `1.423.160.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.423.227.0
+
+- Defender package version: `1.423.227.0`
+- Platform version: `4.18.25010.11`
+- Engine version: `1.25010.7`
+- Security intelligence version: `1.423.227.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.421.1259.0
+
+- Defender package version: `1.421.1259.0`
+- Platform version: `4.18.24090.11`
+- Engine version: `1.24090.11`
+- Security intelligence version: `1.421.1259.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.421.825.0
+
+- Defender package version: `1.421.825.0`
+- Platform version: `4.18.24120.1`
+- Engine version: `1.24120.1`
+- Security intelligence version: `1.421.825.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.419.396.0
+
+- Defender package version: `1.419.396.0`
+- Platform version: `4.18.24090.11`
+- Engine version: `1.24090.2`
+- Security intelligence version: `1.419.396.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.419.12.0
+
+- Defender package version: `1.419.12.0`
+- Platform version: `4.18.24090.2`
+- Engine version: `1.24090.2`
+- Security intelligence version: `1.419.12.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.417.472.0
 
