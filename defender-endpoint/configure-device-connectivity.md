@@ -162,11 +162,11 @@ The following table lists the current static IP ranges covered by the MicrosoftD
 
 Configure devices to communicate through your connectivity infrastructure. Ensure devices meet prerequisites and have updated sensor and Microsoft Defender Antivirus versions.  For more information, see [Configure device proxy and Internet connection settings ](configure-proxy-internet.md).
 
-### Stage 3. Verify client connectivity preonboarding
+### Stage 3. Verify client connectivity pre-onboarding
 
 For more information, see [Verify client connectivity](verify-connectivity.md).
 
-The following preonboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
+The following pre-onboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 
