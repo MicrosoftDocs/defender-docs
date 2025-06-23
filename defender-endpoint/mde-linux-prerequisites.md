@@ -31,6 +31,8 @@ This article lists hardware and software requirements for Defender for Endpoint 
 
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md) 
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## License requirements
 
 To onboard servers to Defender for Endpoint, server licenses are required. You can choose from the following options:
