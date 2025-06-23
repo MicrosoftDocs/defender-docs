@@ -302,36 +302,32 @@ Update failed.
 
 ### Common troubleshooting steps
 
-Check the status of the "offline security intelligence update" feature by using the following command:
+* Check the status of the "offline security intelligence update" feature by using the following command:
 
-Bash
+   ```bash
+   mdatp health --details definitions
+   ```
+   This command provides a user-friendly message in the **definitions_update_fail_reason** section.
 
-```bash
-mdatp health --details definitions
-```
+* Check if `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
 
-This command should provide us with some user-friendly message in the definitions_update_fail_reason section.
+* Check if `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
 
-Check if `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
+   * `definitions_update_source_uri` is the source from where the signatures were downloaded.
+   * `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-Check if `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
+* Try performing the connectivity test to check if mirror server is reachable from the host:
 
-`definitions_update_source_uri` is the source from where the signatures were downloaded.
+   ```bash
+   mdatp connectivity test
+   ```
 
-`offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
+* Try to trigger a manual update using the following command:
 
-Try performing the connectivity test to check if mirror server is reachable from the host:
+   ```bash
+   mdatp definitions update
+   ```
 
-Bash
-```bash
-mdatp connectivity test
-```
-Try to trigger a manual update using the following command:
-
-Bash
-```bash
-mdatp definitions update
-```
 ## See also
 
 - [Linux resources](linux-resources.md)
