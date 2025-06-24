@@ -71,10 +71,6 @@ Defender for Cloud provides several ways to monitor and address access risk:
 
 - [CIEM Workbook](/azure/defender-for-cloud/custom-dashboards-azure-workbooks): The CIEM workbook provides a customizable visual report of your cloud identity security posture. You can use this workbook to view insights about your identities, unhealthy recommendations, and attack paths.
 
-## Known limitations
-
-AWS and GCP accounts that were onboarded to Permissions Management before being onboarded to Defender for Cloud can't be integrated through Microsoft Defender for Cloud.
-              
 ## Related content
 
 Learn how to [enable CIEM](enable-permissions-management.md) in Microsoft Defender for Cloud.
