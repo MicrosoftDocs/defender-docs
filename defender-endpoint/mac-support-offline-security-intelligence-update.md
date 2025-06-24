@@ -15,7 +15,7 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/22/2025
+ms.date: 06/24/2025
 ---
 
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
