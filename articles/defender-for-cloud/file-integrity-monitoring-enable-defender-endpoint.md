@@ -63,21 +63,25 @@ File Integrity Monitoring isn't enabled by default. You can enable it in the Mic
 
 1. Select **Edit configuration**.
 
-1. In the **Workspace selection** dropdown, select the workspace where you want to store the File Integrity Monitoring data. (Optional) Or, select **Create new** to create a new workspace.
+1. Select a workspace to store the File Integrity Monitoring data. (Optional) Or, select **Create new** to create a new workspace.
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the File Integrity Monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
-1. Under the **Recommended to monitor** rule section, select the **Edit**. 
+1. Under the **Recommended to monitor** rule section, select **Edit**. 
 
 1. Select the [files and registries](file-integrity-monitoring-overview.md#recommended-items-to-monitor) recommended for monitoring. 
 
     Ensure the **Status** toggle is set to **Enabled** and select the **Change types** you want to monitor. By default, all entities recommended for monitoring are selected. You can remove entities from monitoring by selecting the three dot button next to the monitoring rule and then selecting **Delete**. 
 
-   :::image type="content" source="edit-default-rule.png" alt-text="Screenshot of the File Integrity Monitoring default rule configuration." lightbox="edit-default-rule.png":::
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/files-registries.png" alt-text="Screenshot that shows the file registries that need to be corrected." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/files-registries.png":::
 
 1. Select **Apply** to save your changes.
 
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/edit-rule.png" alt-text="Screenshot that shows the edit rule screen." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/edit-rule.png":::
+
 1. (Optional) Select **+ Add rule** to create a custom rule.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/add-rule.png" alt-text="Screenshot that shows the Add a rule window." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/add-rule.png":::
 
     1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a**Rule description**.
     
