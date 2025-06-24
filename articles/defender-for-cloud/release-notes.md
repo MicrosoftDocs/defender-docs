@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 06/04/2025
+ms.date: 06/24/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,10 +31,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 11 | Preview | [Agentless FIM is now available in preview (Preview)](#agentless-fim-is-now-available-in-preview) |
+| June 24 | Preview | [Agentless FIM is now available in preview (Preview)](#agentless-fim-is-now-available-in-preview) |
 | June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
 
 ### Agentless FIM is now available in preview
+
+June 24, 2025
 
 Agentless File Integrity Monitoring (FIM) is now available in preview. This capability complements the generally available (GA) FIM solution based on the Microsoft Defender for Endpoint agent, and introduces support for custom file and registry monitoring.
 
