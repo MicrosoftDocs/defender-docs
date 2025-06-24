@@ -43,7 +43,7 @@ Defender for Cloud now extends its API discovery and security posture capabiliti
 This enhancement empowers security teams with a comprehensive and continuously updated view of their organization’s API attack surface. Key capabilities include:
 
 - **Centralized API Inventory**: Automatically discover and catalog APIs across supported Azure services.
-- **Security Risk Assessments**: Identify and prioritize risks, including identification of dormant APIs that may warrant removal.
+- **Security Risk Assessments**: Identify and prioritize risks, including identification of dormant APIs that may warrant removal, as well as unencrypted APIs that could expose sensitive data.
 
 These capabilities are **automatically available** to all **Defender for Cloud Security Posture Management (DCSPM)** customers who have enabled the [API Security Posture Management extension](enable-api-security-posture.md).
 
