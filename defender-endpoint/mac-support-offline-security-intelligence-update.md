@@ -283,8 +283,7 @@ definitions_status                          : "up_to_date"
 definitions_update_fail_reason              : ""
 ...
 ```
-
-### Common troubleshooting steps
+## Common troubleshooting steps
 
 * Check the status of the "offline security intelligence update" feature by using the following command:
 
