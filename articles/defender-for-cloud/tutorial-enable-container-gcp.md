@@ -3,6 +3,7 @@ title: Protect your Google Cloud Platform (GCP) project containers with Defender
 description: Learn how to enable the Defender for Containers plan on your Google Cloud Platform (GCP) project for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.date: 05/13/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Protect your Google Cloud Platform (GCP) containers with Defender for Containers

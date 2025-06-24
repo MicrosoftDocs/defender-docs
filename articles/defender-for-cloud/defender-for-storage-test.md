@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.date: 05/16/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to test the Defender for Storage data security features so that I can validate its capabilities and ensure the security of my storage accounts.
 ---
 

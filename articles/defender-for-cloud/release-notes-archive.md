@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: reference
 ms.date: 05/25/2025
+ms.custom: sfi-ga-nochange, sfi-image-nochange
 ---
 
 # Defender for Cloud-What's new archive

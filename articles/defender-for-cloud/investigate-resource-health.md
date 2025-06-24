@@ -3,6 +3,7 @@ title: Tutorial - Investigate the health of your resources
 description: 'Tutorial: Learn how to investigate the health of your resources using Microsoft Defender for Cloud.'
 ms.topic: tutorial
 ms.date: 05/20/2025
+ms.custom: sfi-image-blocked
 ---
 
 # Tutorial: Investigate the health of your resources

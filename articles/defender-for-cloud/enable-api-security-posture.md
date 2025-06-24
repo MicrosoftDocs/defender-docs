@@ -5,6 +5,7 @@ ms.author: dacurwin
 author: dcurwin
 ms.topic: how-to
 ms.date: 11/05/2024
+ms.custom: sfi-image-nochange
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management.
 ---
 

@@ -5,6 +5,7 @@ ms.date: 11/05/2023
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
+ms.custom: sfi-image-nochange
 ---
 
 # Classify APIs with sensitive data exposure

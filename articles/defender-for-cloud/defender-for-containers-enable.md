@@ -4,7 +4,7 @@ description: Configure the container protections of Microsoft Defender for Conta
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, sfi-image-nochange
 zone_pivot_groups: k8s-host
 ms.date: 03/13/2025
 ---

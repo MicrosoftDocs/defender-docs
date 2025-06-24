@@ -5,6 +5,7 @@ ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
 ms.date: 12/11/2024
+ms.custom: sfi-image-nochange
 #customer intent: As a workload owner, I want to learn how to assign access to my AWS or GCP connector so that I can view the suggested recommendations provided by Defender for Cloud.
 ---
 
