@@ -162,7 +162,7 @@ The settings.json file consists of a few variables that the user can configure t
 | `logFilePath` | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues. |
 | `downloadMacUpdates` | bool | The script downloads the Mac-specific updates to the `downloadFolder`. |
 | `downloadPreviewUpdates` | bool | Downloads the preview version of the updates available for the specific OS. |
-| `backupPreviousUpdates` | bool | Allows the script to copy the previous update in the `_back folder`, and new updates are downloaded to `downloadFolder`. |
+| `backupPreviousUpdates` | bool | Allows the script to copy the previous update in the `_back` folder, and new updates are downloaded to `downloadFolder`. |
 
 ## Execute the offline security intelligence downloader script
 
