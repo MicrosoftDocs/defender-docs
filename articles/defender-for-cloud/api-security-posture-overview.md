@@ -58,7 +58,7 @@ To use API security posture capabilities in Microsoft Defender for Cloud, you mu
 1. **Enable the Defender Cloud Security Posture Management (CSPM) plan** in your subscription.  
 2. **Enable the [API Security Posture Management extension](enable-api-security-posture.md)** to allow Defender for Cloud to discover APIs and assess their posture.
 
-Once enabled, Defender for Cloud will automatically begin onboarding supported APIs and providing visibility and insights.
+Once enabled, Defender for Cloud will automatically begin onboarding supported APIs and providing visibility and security insights.
 
 ## Related content  
 - [Enable API security posture with Defender CSPM](enable-api-security-posture.md).  
