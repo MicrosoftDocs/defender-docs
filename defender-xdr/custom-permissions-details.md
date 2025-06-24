@@ -82,7 +82,7 @@ Permissions to manages the security and system settings and to create and assign
 |System settings|Read / Manage|View or manage general systems settings for the Microsoft Defender portal.|
 
 
-### Data operations
+## Data operations
 
 Permissions for managing the organization's security data and controlling advanced analytics permissions.
 
