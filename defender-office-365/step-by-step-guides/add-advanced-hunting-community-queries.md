@@ -47,7 +47,7 @@ Because you don't have admin permissions to the Azure Sentinel GitHub repository
    - **Owner**: Verify your GitHub account name is shown.
    - **Repository name**: Verify the value **Azure-Sentinel**.
    - **Description**: Verify the description text.
-   - **Copy the master branch only**: Verify this option is selected.
+   - **Copy the main branch only**: Verify this option is selected.
 
    When you're finished on the **Create a new fork page**, select **Create new fork**.
 

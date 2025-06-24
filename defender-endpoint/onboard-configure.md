@@ -32,6 +32,8 @@ ms.date: 09/30/2024
 
 In this step, you're ready to configure Microsoft Defender for Endpoint capabilities.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Configure capabilities
 
 In many cases, organizations have existing endpoint security products in place. The bare minimum being an antivirus solution, but in some cases, an organization might have existing endpoint detection and response solution.

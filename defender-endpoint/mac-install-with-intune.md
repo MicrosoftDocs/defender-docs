@@ -33,6 +33,8 @@ This article describes how to deploy Microsoft Defender for Endpoint on macOS th
 
 Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information. For a description of prerequisites and system requirements for the current software version, see [Microsoft Defender for Endpoint on MacOS prerequisites](/defender-endpoint/microsoft-defender-endpoint-mac-prerequisites).
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Overview
 
 The following table summarizes the steps to deploy and manage Microsoft Defender for Endpoint on macOS via Microsoft Intune. See the following table for more detailed steps:
