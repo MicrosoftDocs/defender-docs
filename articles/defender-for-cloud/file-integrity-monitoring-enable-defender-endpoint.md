@@ -23,43 +23,67 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) must be enabled on your subscription.
-- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent must be installed through the Defender for Servers [extensions](faq-defender-for-servers.yml) on machines you want to monitor.
-- Non-Azure machines must be connected with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
-- For extra coverage and monitoring custom paths, [agentless machine scanning](concept-agentless-data-collection.md) must be enabled on your subscription.
+- You must enable [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) on your subscription.
+
+- You must install the [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent through the Defender for Servers [extensions](faq-defender-for-servers.yml) on machines you want to monitor.
+
+- You must connect Non-Azure machines with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+
+- You must enable [agentless machine scanning](concept-agentless-data-collection.md) on your subscription to gain extra coverage and the ability to monitor custom paths.
 
 - You need **Workspace owner** and **Security admin** permissions to enable and disable File Integrity Monitoring. **Security reader** permissions can view results.
 
 ## Verify Defender for Endpoint client version
 
-1. For machines running Windows Server 2019 or later, the Defender for Endpoint agent is updated as part of continuous operating system updates. Make sure Windows machines have the latest update installed. Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
-1. For machines running Windows Servers 2016 and Windows Server 2012 R2, [update machines manually to the latest agent version](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac). You can install [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB 5005292 is periodically updated with the latest agent version.
-1. For Linux machines, the Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, it attempts to update the agent version each time the Virtual Machine (VM) reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
+Before you begin, verify that the Defender for Endpoint client version on your machines is at least the minimum version required for File Integrity Monitoring.
+
+- **Windows Server 2019 or later** - the Defender for Endpoint agent is updated as part of continuous operating system updates. Make sure Windows machines have the latest update installed. 
+
+    Learn more about using the [Windows Servers Update Service to install machines at scale](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+
+- **Windows Servers 2016 and Windows Server 2012 R2** - You must [update machines manually to the latest agent version](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac). 
+
+    You can install [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB 5005292 is periodically updated with the latest agent version.
+
+- **Linux machines** - The Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, the machine attempts to update the agent version each time the Virtual Machine (VM) reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
 
 ## Enable File Integrity Monitoring
 
+File Integrity Monitoring isn't enabled by default. You can enable it in the Microsoft Defender for Cloud portal.
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Microsoft Defender for Cloud**.
-
-1. In the Defender for Cloud menu, select **Environment settings**.
-
-1. Select the relevant subscription.
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings** > **relevant subscription**.
 
 1. Locate the Defenders for Servers plan and select **Settings**.
-1. In the **File Integrity Monitoring** section, switch the toggle to **On**. Then select **Edit configuration**.
+
+1. In the **File Integrity Monitoring** section, switch the toggle to **On**.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png" alt-text="Screenshot of how to enable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png":::
 
-1. The **File Integrity Monitoring configuration** pane opens. In the **Workspace selection** dropdown, select the workspace where you want to store the File Integrity Monitoring data. If you want to create a new workspace, select **Create new**.
+1. Select **Edit configuration**.
+
+1. In the **Workspace selection** dropdown, select the workspace where you want to store the File Integrity Monitoring data. (Optional) Or, select **Create new** to create a new workspace.
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the File Integrity Monitoring configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
-1. In the lower section of the **File Integrity Monitoring configuration** pane, select the **Edit** link in the **Recommended to monitor** rule section to choose the [files and registries](file-integrity-monitoring-overview.md#recommended-items-to-monitor) recommended for monitoring. Make sure the **Status** toggle is set to **Enabled** and select the **Change types** you want to monitor. By default, all entities recommended for monitoring are selected. You can remove entities from monitoring by clicking **...** next to the monitoring rule and then selecting **Delete**. Select **Apply** to save your changes.
+1. Under the **Recommended to monitor** rule section, select the **Edit**. 
+
+1. Select the [files and registries](file-integrity-monitoring-overview.md#recommended-items-to-monitor) recommended for monitoring. 
+
+    Ensure the **Status** toggle is set to **Enabled** and select the **Change types** you want to monitor. By default, all entities recommended for monitoring are selected. You can remove entities from monitoring by selecting the three dot button next to the monitoring rule and then selecting **Delete**. 
 
    :::image type="content" source="edit-default-rule.png" alt-text="Screenshot of the File Integrity Monitoring default rule configuration." lightbox="edit-default-rule.png":::
 
-1. To create a custom rule, select **+ Add rule**. In the **Add new custom rule** section, enter a **Rule name** and, optionally, a **Rule description**. Make sure the **Status** toggle is set to **Enabled**. Select the **Change types** and define **Entity type** and **Entity path** for your custom rules. Select **Apply** to save your changes, or **Delete rule** to delete the rule configuration.
+1. Select **Apply** to save your changes.
+
+1. (Optional) Select **+ Add rule** to create a custom rule.
+
+    1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a**Rule description**. 
+    1. Ensure **Status** toggle is set to **Enabled**. 
+    1. Select the **Change types** and define **Entity type** and **Entity path** for your custom rules. 
+    1. Select **Apply** to save your changes.
+    1. (Optional) Select **Delete rule** to delete a rule configuration.
 
 1. Select **Apply**.
 
@@ -77,27 +101,28 @@ Review the File Integrity Monitoring enablement to ensure it's correct and all p
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png" alt-text="Screenshot of the File Integrity Monitoring page that shows where the settings button is located." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-settings.png":::
 
-1. Check for missing prerequisites.
+1. Check for any missing prerequisites.
 
 1. Select a subscription and review corrective actions for the necessary workspace.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png" alt-text="Screenshot of the File Integrity Monitoring page that shows the missing prerequisites." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/corrective-actions.png":::
 
+1. Select the checkbox for any required fixes.
+
 1. Select **Apply**.
 
 ## Disable File Integrity Monitoring
 
-If you disable File Integrity Monitoring, no new events are collected. However, the data collected before you disabled the feature remains in the Log Analytics workspace, in accordance with the workspace retention policy.
+If you disable File Integrity Monitoring, no new events are collected. However, the data collected before the disablement, remains in the Log Analytics workspace, in accordance with the workspace retention policy.
 
 Disable as follows:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Search for and select **Microsoft Defender for Cloud**.
-1. In the Defender for Cloud menu, select **Environment settings**.
 
-1. Select the relevant subscription.
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings** > **relevant subscription**.
 
 1. Locate the Defenders for Servers plan and select **Settings**.
+
 1. In the **File Integrity Monitoring** section, switch the toggle to **Off**.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png" alt-text="Screenshot of how to disable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png":::
