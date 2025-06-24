@@ -40,7 +40,7 @@ For more information, see [Create Defender for Cloud Apps anomaly detection poli
 
 ### Revamped Cloud Discovery Executive Summary report
 
-The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more details, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report)
+The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more details, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report).
 
 ### New Applications inventory page now available in Defender XDR
 
