@@ -79,10 +79,14 @@ File Integrity Monitoring isn't enabled by default. You can enable it in the Mic
 
 1. (Optional) Select **+ Add rule** to create a custom rule.
 
-    1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a**Rule description**. 
-    1. Ensure **Status** toggle is set to **Enabled**. 
-    1. Select the **Change types** and define **Entity type** and **Entity path** for your custom rules. 
+    1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a**Rule description**.
+    
+    1. Ensure **Status** toggle is set to **Enabled**.
+    
+    1. Select the **Change types** and define **Entity type** and **Entity path** for your custom rules.
+    
     1. Select **Apply** to save your changes.
+    
     1. (Optional) Select **Delete rule** to delete a rule configuration.
 
 1. Select **Apply**.
