@@ -228,9 +228,6 @@ Use the following sample mdatp_managed.json and update the parameters as per the
 | **offlineDefinitionUpdateFallbackToCloud** | True/False | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
 | **offlineDefinitionUpdateVerifySig** | enabled/disabled | When set to enabled, downloaded definitions are verified on the endpoints; else, vice versa. |
 
-> [!NOTE]
-> As of today, the "offline security intelligence update" feature can be configured on macOS via managed json only. Integration with security settings management on the security portal is in our roadmap.
-
 ## Verify the configuration
 
 To test if the settings are applied correctly on the macOS endpoints, run the following command:
@@ -289,14 +286,6 @@ definitions_status                          : "up_to_date"
 definitions_update_fail_reason              : ""
 ...
 ```
-
-## Troubleshooting and diagnostics
-
-### Issues: MDATP update failure
-
-Update stuck, or update didn't trigger.
-
-Update failed.
 
 ### Common troubleshooting steps
 
