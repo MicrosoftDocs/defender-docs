@@ -1,6 +1,6 @@
 ---
-title: Permissions Management (CIEM)
-description: Learn about permissions (CIEM) in Microsoft Defender for Cloud and enhance the security of your cloud infrastructure.
+title: Cloud infrastructure entitlement management (CIEM)
+description: Learn about CIEM in Microsoft Defender for Cloud and enhance the security of your cloud infrastructure.
 ms.topic: concept-article
 author: Elazark
 ms.author: elkrieger
