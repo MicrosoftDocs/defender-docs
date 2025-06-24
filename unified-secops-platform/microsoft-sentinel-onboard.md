@@ -31,7 +31,7 @@ ms.date: 06/12/2025
 
 Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. Using Microsoft Sentinel in the Defender portal together with Microsoft Defender XDR services, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. 
 
-This article is relevant for customers whose Microsoft Sentinel workspaces are not yet connected to the Defender portal. New customers onboarding to Microsoft Sentinel after July 1, 2025, with permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator), are automatically onboarded to the Defender portal.
+This article is relevant for customers whose Microsoft Sentinel workspaces are not yet connected to the Defender portal. In most cases, customers onboarding to Microsoft Sentinel after July 1, 2025, with permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator), are [automatically onboarded to the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?branch=pr-en-us-301249#automatic-onboarding-and-redirects-for-new-customers). <!--fix link-->
 
 For more information, see:
 
