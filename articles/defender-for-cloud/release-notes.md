@@ -42,8 +42,6 @@ Agentless File Integrity Monitoring (FIM) is now available in preview. This capa
 
 Agentless FIM enables organizations to monitor file and registry changes across their environment without deploying other agents. It provides a lightweight, scalable alternative while maintaining compatibility with the existing agent-based solution.
 
-Learn more about [File integrity monitoring](file-integrity-monitoring-overview.md)
-
 Key capabilities include:
 - **Custom monitoring**: Meet specific compliance and security requirements by defining and monitoring custom file paths and registry keys.
 - **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
