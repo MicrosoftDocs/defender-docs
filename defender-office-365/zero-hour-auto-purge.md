@@ -36,7 +36,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, zero-hour auto pu
 ZAP doesn't work in standalone EOP environments that protect on-premises mailboxes.
 
 > [!NOTE]
-> Currently in Preview, ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
+> ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
 
 Spam and malware signatures in the service are updated in real-time on a daily basis. However, users can still receive malicious messages. For example:
 
