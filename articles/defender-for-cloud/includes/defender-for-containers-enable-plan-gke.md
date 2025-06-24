@@ -118,6 +118,8 @@ To deploy the solution to specific clusters:
 
 ## Deploy the Defender sensor
 
+[!INCLUDE [Install with Helm note](helm-install-note.md)]
+
 To deploy the Defender sensor on your GCP clusters:
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Add environment** > **Google Cloud Platform**.
