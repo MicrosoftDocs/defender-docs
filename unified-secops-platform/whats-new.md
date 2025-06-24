@@ -48,8 +48,7 @@ For more information, see:
 
 - [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard)
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
-- [Changes for new customers](/azure/sentinel/overview#changes-for-new-customers)
-For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal?branch=pr-en-us-301249#automatic-onboarding-and-redirects-for-new-customers). <!--fix link-->
+- [Changes for new customers](https://aka.ms/changes-for-sentinel-customers-july-25)
 
 ## June 2025
 
