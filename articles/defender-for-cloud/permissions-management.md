@@ -8,7 +8,7 @@ ms.date: 05/08/2024
 #customer intent: As a user, I want to understand how to manage permissions effectively so that I can enhance the security of my cloud infrastructure.
 ---
 
-# Cloud Infrastructure Entitlement Management
+# Cloud infrastructure entitlement management (CIEM)
 
 > [!NOTE]
 > Effective April 1, 2025, Microsoft Entra Permissions Management will no longer be available for purchase.
@@ -17,7 +17,7 @@ ms.date: 05/08/2024
 > 
 > The deprecation of Microsoft Entra Permissions Management doesn't affect any existing CIEM capabilities in Microsoft Defender for Cloud. Learn more about [the future of CIEM in Microsoft Defender for Cloud](https://aka.ms/mdc-ciem).
 
-Microsoft Defender for Cloud includes native Cloud Infrastructure Entitlement Management (CIEM) capabilities within the Defender [Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan to help organizations discover, assess, and manage identity and access risks across their multicloud environments. These capabilities are designed to secure infrastructure by enforcing the principle of least privilege (PoLP), reducing the attack surface, and preventing the misuse of human and workload-based identities across Azure, AWS, and GCP.
+Microsoft Defender for Cloud includes native cloud infrastructure Entitlement Management (CIEM) capabilities within the Defender [Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan to help organizations discover, assess, and manage identity and access risks across their multicloud environments. These capabilities are designed to secure infrastructure by enforcing the principle of least privilege (PoLP), reducing the attack surface, and preventing the misuse of human and workload-based identities across Azure, AWS, and GCP.
 
 ## How Defender for Cloud analyzes permissions
 
