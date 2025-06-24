@@ -82,28 +82,12 @@
         - name: Connect Azure subscriptions
           displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           href: connect-azure-subscription.md
-        - name: Amazon Web Services (AWS) accounts
-          items:
-          - name: Connect AWS accounts
-            displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-            href: quickstart-onboard-aws.md
-          - name: Connect a Sentinel connected AWS account
-            displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, Sentinel
-            href: sentinel-connected-aws.md
-        - name: Google Cloud Platform (GCP)
-          items:
-          - name: Connect GCP projects
-            displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-            href: quickstart-onboard-gcp.md
-          - name: Resolve Domain Restricted Sharing policy
-            displayName: connector, GCP, domain, restricted, sharing, policy
-            href: resolve-gcp-sharing-policy.md
-          - name: Resolve agentless scanning error
-            displayName: connector, GCP, disc, scanning, error
-            href: resolve-disk-scanning-error.md
-          - name: Resolve VPC Service Controls restriction issues
-            displayName: connector, GCP, VPC, service, controls, restriction, issues
-            href: resolve-vpc-service-controls-issues.md
+        - name: Connect AWS accounts
+          displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          href: quickstart-onboard-aws.md
+        - name: Connect GCP projects
+          displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+          href: quickstart-onboard-gcp.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
@@ -145,6 +129,8 @@
               displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
                 azure arc, multicloud
               href: defender-for-containers-enable.md
+            - name: Deploy with Helm
+              href: deploy-helm.md
             - name: Defender for Containers resources and offboarding
               displayName: defender, containers, offboard, resources
               href: defender-for-containers-offboard.md
@@ -238,11 +224,6 @@
               - name: Overview Microsoft Defender XDR integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
                 href: concept-integration-365.md
-          - name: Microsoft Entra Permissions Management
-            items:
-              - name: Enable the Microsoft Entra Permissions Management integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
-                href: enable-permissions-management.md
           - name: Microsoft Defender external attack surface management (EASM)
             items:
               - name: Overview Microsoft Defender EASM integration
@@ -334,9 +315,6 @@
         href: concept-easm.md
       - name: Critical assets protection
         href: critical-assets-protection.md
-      - name: Permissions management (CIEM)
-        displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-        href: permissions-management.md
       - name: Agentless machine scanning
         href: concept-agentless-data-collection.md
       - name: Internet exposure analysis
@@ -522,9 +500,6 @@
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Enable permissions management (CIEM)
-          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-          href: enable-permissions-management.md
     - name: API security posture
       items:
         - name: Enable API security posture with Defender CSPM
@@ -709,7 +684,28 @@
         - name: Automate responses to alerts
           displayName: workflow, alerts, response
           href: workflow-automation.yml
-
+    - name: Resolve connector issues
+      items:
+      - name: Troubleshoot connectors guide
+        displayName: troubleshoot, connectors, guide 
+        href: troubleshoot-connectors.md
+      - name: Amazon Web Services (AWS) connector
+        items:
+        - name: Connect a Sentinel connected AWS account
+          displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, Sentinel
+          href: sentinel-connected-aws.md
+      - name: Google Cloud Platform (GCP) connector
+        items:
+        - name: Resolve Domain Restricted Sharing policy
+          displayName: connector, GCP, domain, restricted, sharing, policy
+          href: resolve-gcp-sharing-policy.md
+        - name: Resolve agentless scanning error
+          displayName: connector, GCP, disc, scanning, error
+          href: resolve-disk-scanning-error.md
+        - name: Resolve VPC Service Controls restriction issues
+          displayName: connector, GCP, VPC, service, controls, restriction, issues
+          href: resolve-vpc-service-controls-issues.md
+        
 - name: Protect data
   items:
   - name: Overview data and AI security dashboard
@@ -942,6 +938,8 @@
       - name: How does Defender for Containers work?
         displayName: containers
         href: defender-for-containers-architecture.md
+      - name: Defender sensor for Containers changelog
+        href: defender-sensor-change-log.md
       - name: Kubernetes node protection
         items:
           - name: Overview

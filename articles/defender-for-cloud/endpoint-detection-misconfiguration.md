@@ -25,7 +25,7 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
 >
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
-> - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
+> - The use of MMA is retired. Scanning using the MMA was deprecated in November 2024.
 
 ## Prerequisites
 

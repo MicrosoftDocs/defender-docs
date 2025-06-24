@@ -152,7 +152,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 - **Scan frequency**:
     - The security posture of repositories, pipelines, and service connections is assessed when you create the connector and then every eight hours.
-    - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then every 2-4 days.  
+    - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then every 2-4 days. 
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
 ## View and manage scan results
@@ -170,7 +170,7 @@ After the scans finish, you can access security findings within Microsoft Defend
    - [Repositories should have infrastructure as code scanning findings resolved](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/6588c4d4-fbbb-4fb8-be45-7c2de7dc1b3b/showSecurityCenterCommandBar~/false) - Flags security misconfigurations in IaC templates.  
      :::image type="content" source="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png" alt-text="Screenshot of recommendation Azure DevOps repositories should have infrastructure as code scanning findings resolved." lightbox="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png":::
 
-1. For the full range of recommendations supported for both platforms, see: [Azure DevOps and GitHub security recommendations](/azure/defender-for-cloud/recommendations-reference-devops).
+1. For the full range of recommendations supported for both platforms, see: [Azure DevOps and GitHub security recommendations](recommendations-reference-devops.md).
 
    Recommendations include items such as requiring multi-reviewer approvals, restricting secret access, and enforcing best practices for both Azure DevOps and GitHub environments.
 
