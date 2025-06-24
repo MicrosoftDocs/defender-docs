@@ -199,7 +199,7 @@ Learn more in [Introduction to Microsoft Defender for Key Vault](defender-for-ke
 
 **Severity**: Medium
 
-### Azure overprovisioned identities should have only the necessary permissions (Preview)
+### Azure overprovisioned identities should have only the necessary permissions
 
 **Description**: Overprovisioned identities, or over permissioned identities, don't use many of their granted permissions. Regularly right-size permissions of these identities to reduce the risk of permissions misuse, either accidental or malicious. This action decreases the potential blast radius during a security incident.
 
@@ -248,7 +248,7 @@ For more information regarding deleting KMS keys, see [Deleting KMS keys](https:
 
 **Severity**: High
 
-### AWS overprovisioned identities should have only the necessary permissions (Preview)
+### AWS overprovisioned identities should have only the necessary permissions
 
 **Description**: An over-provisioned active identity is an identity that has access to privileges that they haven't used. Over-provisioned active identities, especially for non-human accounts that have defined actions and responsibilities, can increase the blast radius in the event of a user, key, or resource compromise. Remove unneeded permissions and establish review processes to achieve the least privileged permissions.
 
@@ -646,7 +646,7 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
-### Unused identities in your AWS environment should be removed (Preview)
+### Unused identities in your AWS environment should be removed
 
 **Description**: Inactive identities are human and non-human entities that haven't performed any action on any resource in the last 90 days. Inactive IAM identities with high-risk permissions in your AWS account can be prone to attack if left as is and leave organizations open to credential misuse or exploitation. Proactively detecting and responding to unused identities helps you prevent unauthorized entities from gaining access to your AWS resources.
 
@@ -908,7 +908,7 @@ GCP facilitates up to 10 external service account keys per service account to fa
 
 **Severity**: Medium
 
-### GCP overprovisioned identities should have only the necessary permissions (Preview)
+### GCP overprovisioned identities should have only the necessary permissions
 
 **Description**: An over-provisioned active identity is an identity that has access to privileges that they haven't used. Over-provisioned active identities, especially for nonhuman accounts that have very defined actions and responsibilities, can increase the blast radius in the event of a user, key, or resource compromise The principle of least privilege states that a resource should only have access to the exact resources it needs in order to function. This principle was developed to address the risk of compromised identities granting an attacker access to a wide range of resources.
 
