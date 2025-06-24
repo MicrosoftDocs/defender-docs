@@ -43,7 +43,7 @@ Understand not just who has access, but the potential risk of what they can acce
 
 ### Identity risk insights
 
-Receive proactive guidance to reduce identity-related risk. Defender for Cloud surfaces [recommendations](/azure/defender-for-cloud/recommendations-reference-identity-access) such as:
+Receive proactive guidance to reduce identity-related risk. Defender for Cloud surfaces recommendations such as:
 
 - Removing inactive, guest, or blocked accounts with access
 
@@ -67,7 +67,7 @@ Defender for Cloud provides several ways to monitor and address access risk:
 
 - [Attack Path Analysis](/azure/defender-for-cloud/how-to-manage-attack-path): The Attack Path Analysis page lets you view attack paths that an attacker could take to reach a specific resource. With Attack Path Analysis, you can view a visual representation of the attack path and see which resources are exposed to the internet. Internet exposure often serves as an entry point for attack paths, especially when the resource has vulnerabilities. Internet-exposed resources often lead to targets with sensitive data.
 
-- [Recommendations](/azure/defender-for-cloud/recommendations-reference-identity-access): Defender for Cloud provides [risk-based recommendations](/azure/defender-for-cloud/recommendations-reference-identity-access) for various CIEM misconfigurations. The built-in recommendations provide guidance for remediating inactive identities, overprovisioned permissions, and insecure identity settings.
+- [Recommendations](recommendations-reference-identity-access.md): Defender for Cloud provides risk-based recommendations for various CIEM misconfigurations. The built-in recommendations provide guidance for remediating inactive identities, overprovisioned permissions, and insecure identity settings.
 
 - [CIEM Workbook](/azure/defender-for-cloud/custom-dashboards-azure-workbooks): The CIEM workbook provides a customizable visual report of your cloud identity security posture. You can use this workbook to view insights about your identities, unhealthy recommendations, and attack paths.
 
