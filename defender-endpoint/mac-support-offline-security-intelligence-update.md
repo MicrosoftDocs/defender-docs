@@ -25,7 +25,7 @@ ms.date: 06/24/2025
 **Applies to:**
 
 * Microsoft Defender for Endpoint on macOS
-* Microsoft Defender for Servers Plan 1 or Plan 2
+* Microsoft Defender for Endpoint Plan 1 or Plan 2
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
