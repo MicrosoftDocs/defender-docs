@@ -18,13 +18,14 @@ search.appverid: met150
 ms.date: 06/22/2025
 ---
 
-# Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS 
+# Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applicable to:**
+**Applies to:**
 
-Microsoft Defender for Endpoint on macOS
+* Microsoft Defender for Endpoint on macOS
+* Microsoft Defender for Servers Plan 1 or Plan 2
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
@@ -135,10 +136,6 @@ Extract the zip.
 
 After cloning the repo/downloaded zip file, the local directory structure should be as follows:
 
-ConsoleCopy
-
-user@vm:~/mdatp-xplat$ tree linux/definition_downloader/<br>linux/definition_downloader/<br>├── README.md<br>├── settings.json<br>├── settings.ps1<br>├── xplat_offline_updates_download.ps1<br>└── xplat_offline_updates_download.sh<br><br>0 directories, 5 files
-
 ```
 ConsoleCopy
 
@@ -160,12 +157,12 @@ The settings.json file consists of a few variables that the user can configure t
 
 | **Field Name** | **Value** | **Description** |
 |---|---|---|
-| **downloadFolder** | string | Maps to the location where the script downloads the files to. |
-| **downloadLinuxUpdates** | bool | When set to true, the script downloads the Linux specific updates to the downloadFolder. |
-| **logFilePath** | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues. |
-| **downloadMacUpdates** | bool | The script downloads the Mac-specific updates to the downloadFolder. |
-| **downloadPreviewUpdates** | bool | Downloads the preview version of the updates available for the specific OS. |
-| **backupPreviousUpdates** | bool | Allows the script to copy the previous update in the \_back folder, and new updates are downloaded to downloadFolder. |
+| `downloadFolder` | string | Maps to the location where the script downloads the files to. |
+| `downloadLinuxUpdates` | bool | When set to true, the script downloads the Linux specific updates to the `downloadFolder`. |
+| `logFilePath` | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues. |
+| `downloadMacUpdates` | bool | The script downloads the Mac-specific updates to the `downloadFolder`. |
+| `downloadPreviewUpdates` | bool | Downloads the preview version of the updates available for the specific OS. |
+| `backupPreviousUpdates` | bool | Allows the script to copy the previous update in the `_back folder`, and new updates are downloaded to `downloadFolder`. |
 
 ## Execute the offline security intelligence downloader script
 
@@ -221,12 +218,12 @@ Use the following sample mdatp_managed.json and update the parameters as per the
 
 | **Field Name** | **Values** | **Comments** |
 |---|---|---|
-| **automaticDefinitionUpdateEnabled** | True/False | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
-| **definitionUpdatesInterval** | Numeric | Time of interval between each automatic update of signatures (in seconds). |
-| **offlineDefinitionUpdateUrl** | String | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
-| **offlineDefinitionUpdate** | enabled/disabled | When set to enabled, the "offline security intelligence update" feature is enabled, and vice versa. |
-| **offlineDefinitionUpdateFallbackToCloud** | True/False | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
-| **offlineDefinitionUpdateVerifySig** | enabled/disabled | When set to enabled, downloaded definitions are verified on the endpoints; else, vice versa. |
+| `automaticDefinitionUpdateEnabled` | `true`/`false` | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
+| `definitionUpdatesInterval` | Numeric | Time of interval between each automatic update of signatures (in seconds). |
+| `offlineDefinitionUpdateUrl` | String | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
+| `offlineDefinitionUpdate` | `enabled`/`disabled` | When set to `enabled`, the "offline security intelligence update" feature is enabled, and vice versa. |
+| `offlineDefinitionUpdateFallbackToCloud` | `true`/`false` | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
+| `offlineDefinitionUpdateVerifySig` | `enabled`/`disabled` | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. |
 
 > [!NOTE]
 > As of today, the "offline security intelligence update" feature can be configured on macOS via managed json only. Integration with security settings management on the security portal is in our roadmap.
@@ -328,6 +325,7 @@ Update failed.
 
 ## See also
 
+- TBD
 - [Linux resources](linux-resources.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
