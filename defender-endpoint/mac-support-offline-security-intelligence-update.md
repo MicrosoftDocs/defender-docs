@@ -79,30 +79,30 @@ The mirror server can run any of the following operating systems:
 
 ## Prerequisites
 
-Defender for Endpoint version 101.25012.0003 or later must be installed on the macOS endpoints.
+* Defender for Endpoint version 101.25012.0003 or later must be installed on the macOS endpoints.
 
-The macOS endpoints need to have connectivity to the mirror server.
+* The macOS endpoints need to have connectivity to the mirror server.
 
-The macOS endpoint must be running any of the Defender for Endpoint-supported distributions.
+* The macOS endpoint must be running any of the Defender for Endpoint-supported distributions.
 
-The mirror server can be either an HTTP/HTTPS server or a network share server, for example, an NFS Server.
+* The mirror server can be either an HTTP/HTTPS server or a network share server, for example, an NFS Server.
 
-The mirror server needs to have access to the following URLs:
+* The mirror server needs to have access to the following URLs:
 
-<https://github.com/microsoft/mdatp-xplat.git>
+   * <https://github.com/microsoft/mdatp-xplat.git>
 
-<https://go.microsoft.com/fwlink/?linkid=2144709>
+   * <https://go.microsoft.com/fwlink/?linkid=2144709>
 
-The mirror server should support bash or PowerShell.
+* The mirror server should support bash or PowerShell.
 
-The following minimum system specifications are required for the mirror server:
+* The following minimum system specifications are required for the mirror server:
 
-| **CPU Core** | **RAM** | **Free disk** | **Swap** |
-|---|---|---|---|
-| **2 cores (Preferred 4 Core)** | 1 GB Min (Preferred 4 GB) | 2 GB | System Dependent |
+   | **CPU Core** | **RAM** | **Free disk** | **Swap** |
+   |---|---|---|---|
+   | **2 cores (Preferred 4 Core)** | 1 GB Min (Preferred 4 GB) | 2 GB | System Dependent |
 
-> [!NOTE]
-> This configuration may vary depending on the number of requests that are served and the load each server must process.
+   > [!NOTE]
+   > This configuration may vary depending on the number of requests that are served and the load each server must process.
 
 ## Configure the mirror server
 
