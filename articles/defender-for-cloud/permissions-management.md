@@ -63,7 +63,7 @@ Defender for Cloud correlates identity risks with attack path analysis, surfacin
 
 Defender for Cloud provides several ways to monitor and address access risk:
 
-- [Cloud Security Explorer](azure/defender-for-cloud/how-to-manage-cloud-security-explorer): The Security Explorer allows you to query all identities in your environment with access to resources. This allows you to get a complete mapping of all your cloud entitlements with contextual information for the resources that the identities have permissions to.
+- [Cloud Security Explorer](/azure/defender-for-cloud/how-to-manage-cloud-security-explorer): The Security Explorer allows you to query all identities in your environment with access to resources. This allows you to get a complete mapping of all your cloud entitlements with contextual information for the resources that the identities have permissions to.
 
 - [Attack Path Analysis](/azure/defender-for-cloud/how-to-manage-attack-path): The Attack Path Analysis page lets you view attack paths that an attacker could take to reach a specific resource. With Attack Path Analysis, you can view a visual representation of the attack path and see which resources are exposed to the internet. Internet exposure often serves as an entry point for attack paths, especially when the resource has vulnerabilities. Internet-exposed resources often lead to targets with sensitive data.
 
