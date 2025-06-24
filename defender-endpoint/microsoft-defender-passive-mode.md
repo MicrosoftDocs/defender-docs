@@ -16,9 +16,9 @@ search.appverid: met150
 ms.date: 03/26/2025
 ---
 
-[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
-
 # Defender Antivirus in passive mode
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 Microsoft Defender for Endpoint is a comprehensive security solution designed to protect your devices from evolving threats. One of its key features enables Microsoft Defender Antivirus to coexist with non-Microsoft antimalware solutions while still providing valuable endpoint detection and response capabilities.
 
@@ -31,6 +31,8 @@ Some of the key benefits of Defender Antivirus in passive mode are:
 * **Security intelligence updates** - Microsoft Defender Antivirus continues to receive updates to stay aware of the latest threats.
 
 * **Data Loss Prevention (DLP)** - Endpoint DLP functionalities operate normally, ensuring sensitive data is safeguarded.
+
+For more information, see [How Microsoft Defender Antivirus affects Defender for Endpoint functionality](microsoft-defender-antivirus-compatibility.md#how-microsoft-defender-antivirus-affects-defender-for-endpoint-functionality).
 
 >[!NOTE]
 >Passive mode disables Microsoft Defender Antivirus scheduled scans unless specific configurations are applied.
@@ -47,7 +49,7 @@ Some of the key benefits of Defender Antivirus in passive mode are:
 
 ## Configure passive mode
 
-On Windows 10 or newer, Defender Antivirus will automatically enter passive mode when a non-Microsoft antimalware solution is installed and registered. 
+On Windows 10 or newer, Defender Antivirus automatically enters passive mode when a non-Microsoft antimalware solution is installed and registered.
 
 For Windows Server operating systems, follow the instructions in this section to configure passive mode for Microsoft Defender for Endpoint.
 
