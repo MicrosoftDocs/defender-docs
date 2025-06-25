@@ -39,8 +39,8 @@ This integration allows Defender for Servers to use the endpoint detection and r
 
 Defender for Servers offers two plans:
 
-- **Defender for Servers Plan 1** is entry-level and focuses on the EDR capabilities provided by the Defender for Endpoint integration.
-- **Defender for Servers Plan 2** provides the same features as Plan 1 and other capabilities.
+- **Defender for Servers Plan 1 (P1)** is entry-level and focuses on the EDR capabilities provided by the Defender for Endpoint integration.
+- **Defender for Servers Plan 2 (P2)** provides the same features as Plan 1 and other capabilities.
 
 ## Plan pricing
 
