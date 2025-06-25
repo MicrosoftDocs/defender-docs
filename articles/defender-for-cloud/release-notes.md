@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 06/24/2025
+ms.date: 06/25/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,12 +31,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 24 | Preview | [Agentless File Integrity Monitoring (Preview)](#agentless-file-integrity-monitoring-preview) |
+| June 25 | Preview | [Agentless File Integrity Monitoring (Preview)](#agentless-file-integrity-monitoring-preview) |
 | June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
 
 ### Agentless File Integrity Monitoring (Preview)
 
-June 24, 2025
+June 25, 2025
 
 Agentless File Integrity Monitoring (FIM) is now available in preview. This capability complements the generally available (GA) FIM solution based on the Microsoft Defender for Endpoint agent, and introduces support for custom file and registry monitoring.
 
@@ -45,7 +45,6 @@ Agentless FIM enables organizations to monitor file and registry changes across 
 Key capabilities include:
 - **Custom monitoring**: Meet specific compliance and security requirements by defining and monitoring custom file paths and registry keys.
 - **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
-- **Agentless architecture**: No agent installation required. Data is collected via agentless scanning and streamed to your selected workspace on a 24-hour cadence. 
 
 Learn more about [File integrity monitoring](file-integrity-monitoring-overview.md) and how to [Enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
 
