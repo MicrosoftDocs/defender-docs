@@ -24,7 +24,7 @@ Defender for Cloud offers two CSPM plan options:
 
 ## Plan availability
 
-Learn more about [Defender CSPM pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+Learn more about [Defender CSPM pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 The following table summarizes each plan and their cloud availability.
 
