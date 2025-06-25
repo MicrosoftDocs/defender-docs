@@ -48,7 +48,7 @@ This enhancement empowers security teams with a comprehensive and continuously u
 
 These capabilities are **automatically available** to all **Defender for Cloud Security Posture Management (DCSPM)** customers who have enabled the [API Security Posture Management extension](enable-api-security-posture.md).
 
-**Rollout Timeline**: The rollout of these updates will begin on June 25, 2025, and is expected to reach all [supported regions](regional-availability#api-security-posture-management-dcspm) within one week.
+**Rollout Timeline**: The rollout of these updates will begin on June 25, 2025, and is expected to reach all [supported regions](regional-availability.md#api-security-posture-management-dcspm) within one week.
 
 ### Agentless File Integrity Monitoring (Preview)
 
