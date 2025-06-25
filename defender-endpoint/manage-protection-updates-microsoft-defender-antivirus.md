@@ -81,7 +81,7 @@ Each source has typical scenarios that depend on how your network is configured,
 |---|---|
 |Windows Server Update Service|You're using Windows Server Update Service to manage updates for your network.|
 |Microsoft Update|You want your endpoints to connect directly to Microsoft Update. This option is useful for endpoints that irregularly connect to your enterprise network, or if you don't use Windows Server Update Service to manage your updates.|
-|File share|You have devices that aren't connected to the Internet (such as virtual machines, or VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments.|
+|UNC Share|You have devices that aren't connected to the Internet (such as virtual machines, or VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments. Product updates can also be deployed using this method. |
 |Microsoft Endpoint Configuration Manager|You're using Microsoft Endpoint Configuration Manager to update your endpoints.|
 |Security intelligence updates and platform updates for Microsoft Defender Antivirus and other Microsoft anti-malware (formerly referred to as MMPC)|[Make sure devices are updated to support SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus Security intelligence and platform updates are delivered through Windows Update. As of October 21, 2019, security intelligence updates and platform updates are SHA-2 signed exclusively. <br/>Download the latest protection updates because of a recent infection or to help provision a strong, base image for [VDI deployment](deployment-vdi-microsoft-defender-antivirus.md). This option should be used only as a final fallback source, and not the primary source. It's only to be used if updates can't be downloaded from Windows Server Update Service or Microsoft Update for [a specified number of days](manage-outdated-endpoints-microsoft-defender-antivirus.md#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
@@ -273,6 +273,24 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 
     > [!NOTE]
     > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
+
+## Enable product updates using UNC share
+
+To enable product updates using UNC share, download KB4052623 and copy it into the architecture folders as `updateplatform.exe`. These files are updated monthly and need to get manually updated by you.
+
+**Example structure**
+
+```dos
+[UNC Share]\ 
+    x86\ 
+       mpam-fe.exe 
+       mpam-d.exe 
+       updateplatform.exe 
+    x64\ 
+       mpam-fe.exe 
+       mpam-d.exe 
+       updateplatform.exe 
+```
 
 ## Related articles
 
