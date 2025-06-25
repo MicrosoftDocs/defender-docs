@@ -40,7 +40,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 June 25, 2025
 
 Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. 
-Index tags can be enabled or disabled at the subscription and storage account level through the Azure Portal or via API.
+Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)
 
