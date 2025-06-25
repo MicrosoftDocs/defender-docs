@@ -35,7 +35,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### API endpoints that are unused should be disabled and removed from the Azure API Management service
 
-**Description & related policy**: As a security best practice, API endpoints that haven't received traffic for 30 days are considered unused, and should be removed from the Azure API Management service. Keeping unused API endpoints might pose a security risk. These might be APIs that should have been deprecated from the Azure API Management service, but have accidentally been left active. Such APIs typically do not receive the most up-to-date security coverage.
+**Description & related policy**: As a security best practice, API endpoints that haven't received traffic for 30 days are considered unused, and should be removed from the Azure API Management service. Keeping unused API endpoints might pose a security risk. These might be APIs that should have been deprecated from the Azure API Management service, but have accidentally been left active. Such APIs typically don't receive the most up-to-date security coverage.
 
 **Severity**: Low
 
@@ -47,31 +47,31 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### Unused API endpoints should be disabled and removed from Function Apps (Preview)
 
-**Description & related policy**: 	API endpoints that have not received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these HTTP-triggered endpoints from Azure Function Apps.
+**Description & related policy**: 	API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these HTTP-triggered endpoints from Azure Function Apps.
 
 **Severity**: Low
 
 ### Unused API endpoints should be disabled and removed from Logic Apps (Preview)
 
-**Description & related policy**: 	API endpoints that have not received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these endpoints from Azure Logic Apps.
+**Description & related policy**: 	API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these endpoints from Azure Logic Apps.
 
 **Severity**: Low
 
 ## API management recommendations
 
-### API Management subscriptions should not be scoped to all APIs
+### API Management subscriptions shouldn't be scoped to all APIs
 
 **Description & related policy**: API Management subscriptions should be scoped to a product or an individual API instead of all APIs, which could result in excessive data exposure.
 
 **Severity**: Medium
 
-### API Management calls to API backends should not bypass certificate thumbprint or name validation
+### API Management calls to API backends shouldn't bypass certificate thumbprint or name validation
 
 **Description & related policy**: API Management should validate the backend server certificate for all API calls. Enable SSL certificate thumbprint and name validation to improve the API security.
 
 **Severity**: Medium
 
-### API Management direct management endpoint should not be enabled
+### API Management direct management endpoint shouldn't be enabled
 
 **Description & related policy**: The direct management REST API in Azure API Management bypasses Azure Resource Manager role-based access control, authorization, and throttling mechanisms, thus increasing the vulnerability of your service.
 
@@ -103,7 +103,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### API Management calls to API backends should be authenticated
 
-**Description & related policy**: Calls from API Management to backends should use some form of authentication, whether via certificates or credentials. Does not apply to Service Fabric backends.
+**Description & related policy**: Calls from API Management to backends should use some form of authentication, whether via certificates or credentials. Doesn't apply to Service Fabric backends.
 
 **Severity**: Medium
 
