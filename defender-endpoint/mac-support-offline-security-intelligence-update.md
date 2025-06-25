@@ -57,7 +57,7 @@ Signatures are downloaded from Microsoft cloud on this mirror server by executin
 
 macOS endpoints running Defender for Endpoint pull the downloaded signatures from this mirror server at a user-defined time interval.
 
-Signatures pulled on the macOS endpoints from the local server are first verified before getting loaded into the AV engine.
+Signatures pulled on the macOS endpoints from the local server are first verified before getting loaded into the antivirus engine.
 
 To trigger and configure the update process, update the managed config json file on the macOS endpoints.
 
@@ -101,7 +101,7 @@ The mirror server can run any of the following operating systems:
    | **2 cores (Preferred 4 Core)** | 1 GB Min (Preferred 4 GB) | 2 GB | System Dependent |
 
    > [!NOTE]
-   > This configuration may vary depending on the number of requests that are served and the load each server must process.
+   > This configuration might vary depending on the number of requests that are served and the load each server must process.
 
 ## Configure the mirror server
 
@@ -131,7 +131,7 @@ Copy the zip file to the folder where you want to keep the script.
 Extract the zipped folder.
 
 > [!NOTE]
-> Schedule a [**cron job**](/defender-endpoint/linux-update-mde-linux) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
+> Schedule a **cron job** or a **launchd job** to keep the repo/downloaded zip file updated to the latest version at regular intervals.
 
 After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
 
@@ -178,7 +178,7 @@ PowerShell:
 ```
 
 > [!NOTE]
-> Schedule a [**cron job**](/defender-endpoint/linux-update-mde-linux) to execute this script to download the latest security intelligence updates in the mirror server at regular intervals.
+> Schedule a **cron job** or a **launchd job** to execute this script to download the latest security intelligence updates in the mirror server at regular intervals.
 
 ## Host the offline security intelligence updates on the mirror server
 
@@ -188,11 +188,11 @@ Once the signatures zip is downloaded, the mirror server can be used to host it.
 
 Once hosted, copy the absolute path of the hosted server (up to and not including the arch_\* directory).
 
-For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (www.example.server.com:8000) is hosting the /tmp/wdav-update path, the corresponding URI is: www.example.server.com:8000/linux/production/.
+For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (www.example.server.com:8000) is hosting the /tmp/wdav-update path, the corresponding URI is: www.example.server.com:8000/mac/production/.
 
-We can also use the absolute path of directory (local/remote mount point) like /tmp/wdav-update/linux/production.
+We can also use the absolute path of directory (local/remote mount point) like /tmp/wdav-update/mac/production.
 
-Once the mirror server is set up, we need to propagate this URL to the Linux endpoints as the offlineDefinitionUpdateUrl in the Managed Configuration as described in the next section.
+Once the mirror server is set up, we need to propagate this URL to the Mac endpoints as the offlineDefinitionUpdateUrl in the Managed Configuration as described in the next section.
 
 ## Configure the endpoints
 
@@ -245,7 +245,7 @@ definitions_version                         : "1.407.417.0"
 definitions_status                          : "up_to_date"
 definitions_update_source_uri               : "<https://go.microsoft.com/fwlink/?linkid=2144709>"
 definitions_update_fail_reason              : ""
-offline_definition_url_configured           : "<http://172.XX.XXX.XX:8000/linux/production/>" [managed]
+offline_definition_url_configured           : "<http://172.XX.XXX.XX:8000/mac/production/>" [managed]
 offline_definition_update                   : "enabled" [managed]
 offline_definition_update_verify_sig        : "enabled"
 offline_definition_update_fallback_to_cloud : false[managed]
@@ -261,7 +261,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 * Manual update
 
-   To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
+   To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Mac endpoints, run the following command:
 
    ```bash
    mdatp definitions update
