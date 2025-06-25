@@ -31,7 +31,9 @@ Microsoft Defender for Storage is now enabled for this subscription, and is full
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection, you can select **Settings** and change the status of the relevant feature to **Off** and save the changes.
 
-If you want to change the malware scanning size capping per storage account per month for malware, change the settings in **Edit configuration** and save the changes.
+If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, change the settings in **Edit configuration** and save the changes.
+
+![User's image](media/defender-for-storage-azure-portal-enablement/image.png)
 
 If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
 
@@ -50,7 +52,23 @@ In the storage account menu, in the **Security + networking** section, selec
     > [!TIP]
     > To configure On-upload malware scanning settings, such as monthly capping, select Settings after Defender for Storage was enabled.
 
-If you want to disable Defender for Storage on the storage account or disable one of the features (on-upload malware scanning or Sensitive data threat detection), select **Settings**, edit the settings, and select **Save**.
+If you want to disable Defender for Storage on the storage account or modify one of the features –
+
+- On-upload malware scanning
+
+- Sensitive data threat detection
+
+- Set limit of GB scanned per month
+
+- Filter on-upload scans
+
+- Store scan results as Blob Index Tags
+
+- Send scan results to Event-Grid topic
+
+- Send scan results to Log Analytics
+
+Select __Settings__, edit the settings, and select __Save__.
 
 ---
 
