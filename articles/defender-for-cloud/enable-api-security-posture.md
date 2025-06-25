@@ -13,7 +13,7 @@ ms.date: 04/25/2025
 The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud gives you a complete view of your APIs across Azure API Management, Function Apps, and Logic Apps. It helps you improve API security by finding misconfigurations and vulnerabilities. This article explains how to enable API security posture management in your Defender CSPM plan and assess your API security. Defender CSPM onboards APIs without an agent and regularly checks for risks and sensitive data exposure. It provides prioritized risk insights and mitigation through API attack path analysis and security recommendations.
 
 > [!NOTE]
-> API discovery and security posture capabilities in Microsoft Defender for Cloud now also support **Function Apps** and **Logic Apps**. This feature is currently available in **Preview**. Supported Azure Function App hosting tiers include Premium, Elastic Premium, Dedicated (App Service), and App Service Environment (ASE). For Azure Logic Apps, supported tiers include Standard (Single-Tenant) and App Service Environment (ASE). Consumption tier Function Apps, Consumption tier Logic Apps, and Azure Arc-enabled Logic Apps are not supported. 
+> API discovery and security posture capabilities in Microsoft Defender for Cloud now also support **Function Apps** and **Logic Apps**. This feature is currently available in **Preview**. 
 
 ## Prerequisites
   
@@ -23,6 +23,29 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 - The **Subscription Owner** must enable the CSPM plan to access all features.  
 - Ensure the APIs you want to protect are deployed in [Azure API Management](/azure/api-management/api-management-key-concepts), [Function Apps](/azure/azure-functions/functions-overview), or [Logic Apps](/azure/logic-apps/logic-apps-overview).
+
+## Cloud and region support
+
+API Security Posture Management within Defender CSPM is available in the Azure commercial cloud, in the following regions:
+
+- Asia (Southeast Asia, EastAsia)
+- Australia (Australia East, Australia Southeast, Australia Central, Australia Central 2)
+- Brazil (Brazil South, Brazil Southeast)
+- Canada (Canada Central, Canada East)
+- Europe (West Europe, North Europe)
+- India (Central India, South India, West India)
+- Japan (Japan East, Japan West)
+- UK (UK South, UK West)
+- US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
+
+Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-cloud-environment.md).
+
+## API support
+
+**Feature** | **Supported**
+--- | ---
+Availability | **Azure API Management:** This feature is available in the Premium, Standard, Basic, and Developer tiers of Azure API Management. Does not support APIs that are exposed using the API Management [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview), or managed using API Management [workspaces](/azure/api-management/workspaces-overview). <br/><br/>**Azure App Services:** Supported Azure Function App hosting tiers include Premium, Elastic Premium, Dedicated (App Service), and App Service Environment (ASE). For Azure Logic Apps, supported tiers include Standard (Single-Tenant) and App Service Environment (ASE). Consumption tier Function Apps, Consumption tier Logic Apps, and Azure Arc-enabled Logic Apps are not supported.
+API types | Support only for REST APIs.
 
 ## Enable API security posture management extension
   
