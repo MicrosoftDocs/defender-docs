@@ -83,7 +83,7 @@ File Integrity Monitoring isn't enabled by default. You can enable it in the Mic
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/add-rule.png" alt-text="Screenshot that shows the Add a rule window." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/add-rule.png":::
 
-    1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a**Rule description**.
+    1. Under the **Add new custom rule** section, enter a **Rule name** and (Optional) a **Rule description**.
     
     1. Ensure **Status** toggle is set to **Enabled**.
     
