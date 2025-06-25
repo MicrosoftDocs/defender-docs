@@ -33,7 +33,9 @@ If you want to turn off the on-upload malware scanning or sensitive data threat 
 
 If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, change the settings in **Edit configuration** and save the changes.
 
-![User's image](media/defender-for-storage-azure-portal-enablement/image.png)
+![defender-for-storage-sub-settings](media/defender-for-storage-azure-portal-enablement/defender-for-storage-sub-settings.png)
+
+
 
 If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
 
