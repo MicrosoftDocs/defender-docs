@@ -37,6 +37,8 @@ If you want to change the malware scanning size capping per storage account per 
 
 
 
+
+
 If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
