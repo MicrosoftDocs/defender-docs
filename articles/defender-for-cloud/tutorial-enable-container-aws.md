@@ -66,6 +66,8 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
 
 ## Deploy the Defender sensor in EKS clusters
 
+[!INCLUDE [Install with Helm note](./includes/helm-install-note.md)]
+
 Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernetes should be installed and running on your EKS clusters. There's a dedicated Defender for Cloud recommendation that can be used to install these extensions (and Azure Arc if necessary):
 
 - `EKS clusters should have Microsoft Defender's extension for Azure Arc installed`
