@@ -63,13 +63,13 @@ To trigger and configure the update process, update the managed config json file
 
 The status of the update can be seen on the mdatp CLI.
 
+The process flow for downloading security intelligence updates to the mirror server is illustrated by the following diagram.
+
 :::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
-Fig. 1: Process flow diagram on the Mirror Server for downloading the security intelligence updates.
+The process flow for security intelligence updates on the macOS endpoint is illustrated by the following diagram.
 
 :::image type="content" source="./media/offline-update-diag-2.png" alt-text="Process flow diagram on the macOS endpoint for security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
-
-Fig. 2: Process flow diagram on the macOS endpoint for security intelligence updates
 
 The mirror server can run any of the following operating systems:
 
@@ -89,9 +89,8 @@ The mirror server can run any of the following operating systems:
 
 * The mirror server needs to have access to the following URLs:
 
-   * <https://github.com/microsoft/mdatp-xplat.git>
-
-   * <https://go.microsoft.com/fwlink/?linkid=2144709>
+   * https://github.com/microsoft/mdatp-xplat.git
+   * https://go.microsoft.com/fwlink/?linkid=2144709
 
 * The mirror server should support bash or PowerShell.
 
