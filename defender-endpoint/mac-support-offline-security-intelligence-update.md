@@ -35,19 +35,19 @@ A mirror server is any server in the customer's environment that can connect to 
 
 ## Key benefits
 
-* The ability to control and manage the frequency of signature downloads to the local server and the frequency at which endpoints pull the signatures from the local server.
+* Your security team can control and manage the frequency of signature downloads to the local server and the frequency at which endpoints pull signatures from the local server.
 
-* The addition of an extra layer of protection and control, since the downloaded signatures can be tested on a test device before being propagated to the entire fleet.
+* You have an extra layer of protection and control, as the downloaded signatures can be tested on a test device before they're propagated to the entire fleet.
 
-* The reduction of network bandwidth, as only one local server polls the Microsoft cloud to get the latest signatures on behalf of your entire fleet.
+* You need less network bandwidth, since only one local server polls the Microsoft cloud to get the latest signatures on behalf of your entire fleet.
 
-* The ability of the local server to run any of the three operating systems - Windows, Mac, and Linux. There is no requirement to install Defender for Endpoint.
+* Your mirror server can run Windows, Mac, or Linux, and you don't have to install Defender for Endpoint on that server.
 
-* The provisioning of the most up-to-date antivirus protection, as signatures are always downloaded along with the latest compatible anti-virus engine.
+* You get the most up-to-date antivirus protection, because signatures are always downloaded along with the latest compatible antivirus engine.
 
-* Migration of signature with n-1 version to a backup folder on the local server, in each iteration. Provision to pull the n-1 signature version from the backup folder to your endpoints, if there's any issue with the latest signature.
+* Older versions of signatures (n-1) are moved to a backup folder on your mirror server in each iteration. If there's an issue with the latest updates, you can pull the n-1 signature version from the backup folder to your devices.
 
-* The option to fall back to online updates from the Microsoft cloud (traditional method), in the rare event of an offline update failure.
+* In the rare event that offline update fails, you can configure a fallback option to get online updates from the Microsoft cloud.
 
 ## How offline security intelligence update works
 
