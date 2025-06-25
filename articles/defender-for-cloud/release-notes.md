@@ -31,8 +31,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| June 25 | Preview | [API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)](#api-discovery-and-security-posture-for-apis-hosted-in-function-apps-and-logic-apps-preview) |
 | June 25 | Preview | [Agentless File Integrity Monitoring (Preview)](#agentless-file-integrity-monitoring-preview) |
 | June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
+
+### API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)
+
+June 25, 2025
+
+Defender for Cloud now extends its API discovery and security posture capabilities to include APIs hosted in **Azure Function Apps** and **Logic Apps**, in addition to its existing support for APIs published in Azure API Management.
+
+This enhancement empowers security teams with a comprehensive and continuously updated view of their organization’s API attack surface. Key capabilities include:
+
+- **Centralized API Inventory**: Automatically discover and catalog APIs across supported Azure services.
+- **Security Risk Assessments**: Identify and prioritize risks, including identification of dormant APIs that may warrant removal, as well as unencrypted APIs that could expose sensitive data.
+
+These capabilities are **automatically available** to all **Defender for Cloud Security Posture Management (DCSPM)** customers who have enabled the [API Security Posture Management extension](enable-api-security-posture.md).
+
+**Rollout Timeline**: The rollout of these updates will begin on June 25, 2025, and is expected to reach all [supported regions](regional-availability.md#api-security-posture-management-dcspm) within one week.
 
 ### Agentless File Integrity Monitoring (Preview)
 
