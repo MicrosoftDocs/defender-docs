@@ -27,10 +27,10 @@ Starting in August 2025, Microsoft Defender Unified RBAC supports onboarding to 
 
 For more information, see:
 
-- [Microsoft Sentinel data lake permissions](/sentinel/graph/sentinel-lake-permissions?branch=pr-en-us-301045) <!--fix this link before publish-->
+- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
 - [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md)
 - [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md)
-- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
+- [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview)
 
 ## March 2025
 

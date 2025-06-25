@@ -32,7 +32,7 @@ search.appverid: met150
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
 - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
-- [Microsoft Sentinel data lake](/azure/sentinel/graph/sentinel-lake-onboarding?branch=pr-en-us-301045) <!--fix link-->
+- [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
@@ -47,8 +47,10 @@ The Microsoft Defender XDR Unified role-based access control (RBAC) model provid
 
 ## What's supported by the Microsoft Defender XDR Unified RBAC model
 
-Centralized permissions management is supported for the following solutions:
+Centralized permissions management is supported for the following services:
 
+|Service name  |Unified RBAC support  |
+|---------|---------|
 |**Microsoft Defender XDR**|Centralized permissions management for Microsoft Defender XDR experiences.|
 |**Microsoft Defender for Endpoint**|Full support for all endpoint data and actions. All roles are compatible with the device group's scope as defined on the device groups page. Limiting permissions to different device groups is accomplished in the Devices Groups page.|
 |**Microsoft Defender Vulnerability Management**|Centralized permissions management for all  Defender Vulnerability Management capabilities.|
@@ -57,10 +59,10 @@ Centralized permissions management is supported for the following solutions:
 |**Microsoft Defender for Cloud**|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
 |**Microsoft Security Exposure Management**|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
 |**Microsoft Defender for Cloud Apps**|Full support for all cloud apps data and actions. </br></br> **Note:** Once Unified RBAC is activated, some built-in scoped roles will no longer be supported. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions).|
-|**Microsoft Sentinel data lake** | Supports permission management for the Microsoft Sentinel data lake default workspace. <br><br> Microsoft Sentinel workspaces that are onboarded to the Defender portal can also be onboarded to the data lake. Users holding built-in roles in Azure RBAC receive parallel permissions in these workspaces in the Microsoft Sentinel data lake experiences, such as the lake explorer and notebooks.|
+|**Microsoft Sentinel data lake** | Supports permission management for the Microsoft Sentinel data lake default workspace. <br><br> Microsoft Sentinel workspaces that are onboarded to the Defender portal can also be onboarded to the data lake. Users holding built-in roles in Azure RBAC receive parallel permissions in these workspaces in the Microsoft Sentinel data lake experiences, such as the lake explorer and notebooks. For more information, see [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview).|
 
 > [!NOTE]
-> Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview portal.
+> Scenarios and experiences controlled by Compliance permissions are managed in the Microsoft Purview portal.
 
 ## Before you start
 
