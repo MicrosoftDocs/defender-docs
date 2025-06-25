@@ -192,7 +192,7 @@ For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, a
 
 We can also use the absolute path of directory (local/remote mount point) like /tmp/wdav-update/mac/production.
 
-Once the mirror server is set up, we need to propagate this URL to the Mac endpoints as the offlineDefinitionUpdateUrl in the Managed Configuration as described in the next section.
+Once the mirror server is set up, we need to propagate this URL to the Mac endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
 
 ## Configure the endpoints
 
@@ -235,8 +235,7 @@ mdatp health --details definitions
 ```
 A sample output would look like the following code snippet:
 
-```
-ConsoleCopy
+```Console
 user@vm:~$ mdatp health --details definitions
 automatic_definition_update_enabled         : true [managed]
 definitions_updated                         : Mar 14, 2024 at 12:13:17 PM
@@ -272,9 +271,7 @@ After triggering the "offline security intelligence update" by either the automa
 
 Verify the following fields:
 
-```
-Console
-
+```Console
 user@vm:~$ mdatp health --details definitions
 ...
 definitions_status                          : "up_to_date"
