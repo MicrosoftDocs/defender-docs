@@ -29,13 +29,13 @@ ms.date: 06/24/2025
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
-This feature makes it possible for an organization to use a local hosting server (referred to as a *mirror server* in this document) to update the security intelligence (also referred to in this document as "definitions" or "signatures") on macOS endpoints that have limited or no exposure to the internet.
+This feature makes it possible for an organization to use a local hosting server (referred to as a *mirror server* in this document) to update the security intelligence (also referred to in this document as *definitions* or *signatures*) on macOS endpoints that have limited or no exposure to the internet.
 
 A mirror server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other macOS endpoints pull the signatures from the mirror server at a predefined interval.
 
 ## Key benefits
 
-* The ability to control and manage the frequency of signature downloads on the local server and the frequency at which endpoints pull the signatures from the local server.
+* The ability to control and manage the frequency of signature downloads to the local server and the frequency at which endpoints pull the signatures from the local server.
 
 * The addition of an extra layer of protection and control, since the downloaded signatures can be tested on a test device before being propagated to the entire fleet.
 
@@ -43,7 +43,7 @@ A mirror server is any server in the customer's environment that can connect to 
 
 * The ability of the local server to run any of the three operating systems - Windows, Mac, and Linux. There is no requirement to install Defender for Endpoint.
 
-* Provision for the most up-to-date antivirus protection, as signatures are always downloaded along with the latest compatible anti-virus engine.
+* The provisioning of the most up-to-date antivirus protection, as signatures are always downloaded along with the latest compatible anti-virus engine.
 
 * Migration of signature with n-1 version to a backup folder on the local server, in each iteration. Provision to pull the n-1 signature version from the backup folder to your endpoints, if there's any issue with the latest signature.
 
