@@ -4,7 +4,7 @@ description: Learn how to enable File Integrity Monitoring when you collect data
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 06/24/2025
+ms.date: 06/25/2025
 #customer intent: As a security administrator, I want to enable File Integrity Monitoring so that I can detect unauthorized changes to critical files.
 ---
 
