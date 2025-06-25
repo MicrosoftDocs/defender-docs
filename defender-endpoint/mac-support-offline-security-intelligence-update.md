@@ -176,7 +176,7 @@ PowerShell:
 ```
 
 > [!NOTE]
-> Schedule a **cron job** or a **launchd job** to execute this script to download the latest security intelligence updates in the mirror server at regular intervals.
+> Schedule a **cron job** or a **launchd job** to execute this script to download the latest security intelligence updates to the mirror server at regular intervals.
 
 ## Host the offline security intelligence updates on the mirror server
 
@@ -184,7 +184,7 @@ Once the script is executed, the latest signatures get downloaded to the folder 
 
 Once the signatures zip is downloaded, the mirror server can be used to host it. The mirror server can be hosted using any of the HTTP/HTTPS/network share servers.
 
-Once hosted, copy the absolute path of the hosted server (up to and not including the arch_\* directory).
+Once hosted, copy the absolute path of the hosted server (up to but not including the arch_\* directory).
 
 For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (www.example.server.com:8000) is hosting the /tmp/wdav-update path, the corresponding URI is: www.example.server.com:8000/mac/production/.
 
@@ -194,7 +194,7 @@ Once the mirror server is set up, we need to propagate this URL to the Mac endpo
 
 ## Configure the endpoints
 
-Use the following sample mdatp_managed.json and update the parameters as per the configuration and copy the file to the location /etc/opt/microsoft/mdatp/managed/mdatp_managed.json.
+Use the following sample mdatp_managed.json file and update the parameters as per the configuration, then copy the file to the location /etc/opt/microsoft/mdatp/managed/mdatp_managed.json.
 
 ```json
 {
@@ -203,7 +203,7 @@ Use the following sample mdatp_managed.json and update the parameters as per the
     "definitionUpdatesInterval": 1202
   },
   "antivirusEngine": {
-    "offlineDefinitionUpdateUrl": "<http://172.22.199.67:8000/mac/production/>",
+    "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/mac/production/",
     "offlineDefintionUpdateFallbackToCloud":false,
     "offlineDefinitionUpdate": "enabled"
   },
@@ -219,7 +219,7 @@ Use the following sample mdatp_managed.json and update the parameters as per the
 | `definitionUpdatesInterval` | Numeric | Time of interval between each automatic update of signatures (in seconds). |
 | `offlineDefinitionUpdateUrl` | String | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
 | `offlineDefinitionUpdate` | `enabled`/`disabled` | When set to `enabled`, the "offline security intelligence update" feature is enabled, and vice versa. |
-| `offlineDefinitionUpdateFallbackToCloud` | `true`/`false` | Determine Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
+| `offlineDefinitionUpdateFallbackToCloud` | `true`/`false` | Determine the Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
 | `offlineDefinitionUpdateVerifySig` | `enabled`/`disabled` | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. |
 
 ## Verify the configuration
@@ -238,9 +238,9 @@ definitions_updated                         : Mar 14, 2024 at 12:13:17 PM
 definitions_updated_minutes_ago             : 2
 definitions_version                         : "1.407.417.0"
 definitions_status                          : "up_to_date"
-definitions_update_source_uri               : "<https://go.microsoft.com/fwlink/?linkid=2144709>"
+definitions_update_source_uri               : "https://go.microsoft.com/fwlink/?linkid=2144709"
 definitions_update_fail_reason              : ""
-offline_definition_url_configured           : "<http://172.XX.XXX.XX:8000/mac/production/>" [managed]
+offline_definition_url_configured           : "http://172.XX.XXX.XX:8000/mac/production/" [managed]
 offline_definition_update                   : "enabled" [managed]
 offline_definition_update_verify_sig        : "enabled"
 offline_definition_update_fallback_to_cloud : false[managed]
@@ -248,13 +248,13 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ## Trigger the offline security intelligence updates
 
-* Automatic update
+* **Automatic update**
 
-   If the fields automaticDefinitionUpdateEnabled and offline_definition_update in the managed json are set to true, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
+   If the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
 
-   By default, this periodic interval is **8 hours**. But it can be configured by setting the definitionUpdatesInterval parameter in the managed json.
+   By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
-* Manual update
+* **Manual update**
 
    To trigger the "offline security intelligence update" manually to download the signatures from the mirror server on the Mac endpoints, run the following command:
 
@@ -305,7 +305,6 @@ definitions_update_fail_reason              : ""
 
 ## See also
 
-- TBD
-- [Linux resources](linux-resources.md)
-- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+- [Mac resources](mac-resources.md)
+- [Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
+- [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
