@@ -42,6 +42,21 @@ June 25, 2025
 Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. 
 Index tags can be enabled or disabled at the subscription and storage account level through the Azure Portal or via API.
 
+### API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)
+
+June 25, 2025
+
+Defender for Cloud now extends its API discovery and security posture capabilities to include APIs hosted in **Azure Function Apps** and **Logic Apps**, in addition to its existing support for APIs published in Azure API Management.
+
+This enhancement empowers security teams with a comprehensive and continuously updated view of their organization’s API attack surface. Key capabilities include:
+
+- **Centralized API Inventory**: Automatically discover and catalog APIs across supported Azure services.
+- **Security Risk Assessments**: Identify and prioritize risks, including identification of dormant APIs that may warrant removal, as well as unencrypted APIs that could expose sensitive data.
+
+These capabilities are **automatically available** to all **Defender for Cloud Security Posture Management (DCSPM)** customers who have enabled the [API Security Posture Management extension](enable-api-security-posture.md).
+
+**Rollout Timeline**: The rollout of these updates will begin on June 25, 2025, and is expected to reach all [supported regions](regional-availability.md#api-security-posture-management-dcspm) within one week.
+
 ### Agentless File Integrity Monitoring (Preview)
 
 June 25, 2025
