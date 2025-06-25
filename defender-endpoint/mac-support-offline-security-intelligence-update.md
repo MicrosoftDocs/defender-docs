@@ -29,7 +29,7 @@ ms.date: 06/24/2025
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
-This feature makes it possible for an organization to use a local hosting server (referred to as a *mirror server* in this document) to update the security intelligence (also referred to in this document as *definitions* or *signatures*) on macOS endpoints that have limited or no exposure to the internet.
+This feature makes it possible for an organization to use a local hosting server (referred to as a *mirror server* in this document) to update the security intelligence (referred to in this document as *definitions* or *signatures*) on macOS endpoints that have limited or no exposure to the internet.
 
 A mirror server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other macOS endpoints pull the signatures from the mirror server at a predefined interval.
 
@@ -53,21 +53,21 @@ A mirror server is any server in the customer's environment that can connect to 
 
 Organizations need to set up a mirror server, which is a local Web/NFS server that's reachable by the Microsoft cloud.
 
-Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job/task scheduler on the local server.
+Signatures are downloaded from Microsoft cloud to this mirror server by executing a script using cron job/task scheduler on the local server.
 
 macOS endpoints running Defender for Endpoint pull the downloaded signatures from this mirror server at a user-defined time interval.
 
-Signatures pulled on the macOS endpoints from the local server are first verified before getting loaded into the antivirus engine.
+Signatures pulled to the macOS endpoints from the local server are first verified before getting loaded into the antivirus engine.
 
 To trigger and configure the update process, update the managed config json file on the macOS endpoints.
 
 The status of the update can be seen on the mdatp CLI.
 
-The process flow for downloading security intelligence updates to the mirror server is illustrated by the following diagram.
+The process flow for downloading security intelligence updates to the mirror server is illustrated in the following diagram.
 
 :::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
-The process flow for security intelligence updates on the macOS endpoint is illustrated by the following diagram.
+The process flow for security intelligence updates on the macOS endpoint is illustrated in the following diagram.
 
 :::image type="content" source="./media/offline-update-diag-2.png" alt-text="Process flow diagram on the macOS endpoint for security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
@@ -85,7 +85,7 @@ The mirror server can run any of the following operating systems:
 
 * The macOS endpoint must be running any of the Defender for Endpoint-supported distributions.
 
-* The mirror server can be either an HTTP/HTTPS server or a network share server, for example, an NFS Server.
+* The mirror server can be either an HTTP/HTTPS server or a network share server, for example, an NFS server.
 
 * The mirror server needs to have access to the following URLs:
 
@@ -114,7 +114,7 @@ Microsoft hosts an offline security intelligence downloader script in the follow
 
 Perform the following steps to get the downloader script:
 
-### Option 1: Clone the repo (Preferred)
+### Option 1: Clone the repo (preferred)
 
 [Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
 
@@ -135,9 +135,7 @@ Extract the zipped folder.
 
 After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
 
-```
-ConsoleCopy
-
+```Console
 user@vm:~/mdatp-xplat$ tree linux/definition_downloader/
 linux/definition_downloader/
 ├── README.md
