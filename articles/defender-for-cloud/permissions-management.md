@@ -21,21 +21,21 @@ Microsoft Defender for Cloud includes native cloud infrastructure Entitlement Ma
 
 ## How Defender for Cloud analyzes permissions
 
-Defender for Cloud continuously analyzes identity configurations and usage patterns to identify excessive, unused, or misconfigured permissions. It assesses human and non-human identities, including users, service principals, managed identities, and service accounts, and provides recommendations to reduce the risk of privilege misuse.
+Defender for Cloud continuously analyzes identity configurations and usage patterns to identify excessive, unused, or misconfigured permissions. It assesses human and non-human identities, including users, service principals, groups, managed identities, and service accounts, and provides recommendations to reduce the risk of privilege misuse.
 
 CIEM capabilities in Defender for Cloud support:
 
-- Microsoft Entra ID identities and RBAC assignments
+- Microsoft Entra ID users, groups, and service principals
 
-- AWS IAM users, roles, and policies
+- AWS IAM users, roles, groups, serverless functions, and compute resources
 
-- Google Cloud IAM roles and service accounts
+- Google Cloud IAM users, groups, service accounts, and serverless functions
 
 ## Key capabilities
 
 ### Multicloud identity discovery
 
-Track and analyze permissions across Azure, AWS, and GCP in a single, unified view. Identify which users, service principals, or federated accounts have access to cloud resources and how those permissions are used.
+Track and analyze permissions across Azure, AWS, and GCP in a single, unified view. Identify which users, groups, service principals, or AWS roles have access to cloud resources and how those permissions are used.
 
 ### Effective permission analysis
 
