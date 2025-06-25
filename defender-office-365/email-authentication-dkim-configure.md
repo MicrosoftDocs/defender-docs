@@ -136,7 +136,7 @@ For example, your organization has the following domains in Microsoft 365:
 
 You need to create two CNAME records in DNS in each custom domain, for a total of four CNAME records:
 
-- <u>CNAME records in the cohovineyard.com domain</u>>:
+- <u>CNAME records in the cohovineyard.com domain</u>:
 
   **Hostname**: `selector1._domainkey`<br>
   **Points to address or value**: `selector1-cohovineyard-com._domainkey.cohovineyardandwinery.n-v1.dkim.mail.microsoft`
