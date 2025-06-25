@@ -3,11 +3,11 @@ title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 04/09/2025
-manager: deniseb
+ms.date: 06/25/2025
+manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -31,6 +31,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Purview](/purview/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## July 2025
+
+- For Microsoft Sentinel customers using the Defender portal, Microsoft Threat Intelligence alerts now highlight activity from nation state actors, ransomware campaigns, and fraudulent operations. These alerts are correlated with other alerts and events in the Defender portal, enhancing your ability to track multi-stage attacks, fully view ongoing events, understand threat activity, prioritize response, and coordinate remediation. For more information, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
 
 ## June 2025
 - (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
