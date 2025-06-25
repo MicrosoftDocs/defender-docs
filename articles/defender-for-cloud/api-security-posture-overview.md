@@ -1,6 +1,6 @@
 ---
 title: API security posture overview
-description: Learn how Microsoft Defender for Cloud enhances API security posture management for your APIs in Azure API Management.
+description: Learn how Microsoft Defender for Cloud enhances API security posture management for your APIs across Azure API Management, Function Apps, and Logic Apps.
 ms.author: dacurwin
 author: dcurwin
 ms.service: defender-for-cloud
@@ -14,7 +14,7 @@ ms.date: 06/18/2025
 APIs are entry points into cloud-native apps. They connect services, apps, and data, making them targets for attackers. API security posture management helps protect APIs by assessing risks from misconfigurations and vulnerabilities. The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud offers API posture and risk assessments for your Azure API Management APIs.
 
 > [!NOTE]
-> **API discovery and security posture for APIs hosted in Function Apps and Logic Apps is now available in Public Preview.** This includes visibility into APIs and identification of inactive or dormant APIs.
+> **API discovery and security posture for APIs hosted in Function Apps and Logic Apps is now available in Public Preview.** This includes visibility into APIs and identification of inactive or dormant APIs, as well as APIs that permit unencrypted traffic which may pose security risk.
 
 ## Capabilities
 
@@ -28,6 +28,8 @@ API security posture management in Defender for Cloud offers the following capab
   - Identify sensitive data exposure in API endpoints, including requests and responses, URL paths, and query parameters (integrated with Microsoft Purview), powered by analyzing sampled API traffic logs.
 - **Identify inactive or dormant APIs**:  
   Surface APIs that are no longer in use across Azure API Management, Function Apps, and Logic Apps.
+- **Identify APIs allowing unencrypted traffic**:  
+  Surface APIs that permit unencrypted communication, which may introduce risk.
 - **Understand cloud application exposure risks** by linking APIs to backend environments like virtual machines, containers, storage, and databases.
 - **Address API-driven attack paths** and prioritize mitigation with cloud [security explorer and API-led attack path analysis](concept-attack-path.md).
 
