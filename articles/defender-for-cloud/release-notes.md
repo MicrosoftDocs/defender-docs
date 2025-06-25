@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 25 | Preview | [Optional index tags for storing malware scanning results (Preview)](#Optional-index-tags-for-storing-malware-scanning-results-preview) |
+| June 25 | Preview | [Optional index tags for storing malware scanning results (Preview)](#optional-index-tags-for-storing-malware-scanning-results-preview) |
 | June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
 
 ### Optional index tags for storing malware scanning results (Preview)
