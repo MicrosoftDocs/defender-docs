@@ -89,8 +89,8 @@ The mirror server can run any of the following operating systems:
 
 * The mirror server needs to have access to the following URLs:
 
-   * https://github.com/microsoft/mdatp-xplat.git
-   * https://go.microsoft.com/fwlink/?linkid=2144709
+   * `https://github.com/microsoft/mdatp-xplat.git`
+   * `https://go.microsoft.com/fwlink/?linkid=2144709`
 
 * The mirror server should support bash or PowerShell.
 
@@ -110,7 +110,7 @@ The mirror server can run any of the following operating systems:
 
 ## Get the offline security intelligence downloader script
 
-Microsoft hosts an offline security intelligence downloader script on [this GitHub repo](https://github.com/microsoft/mdatp-xplat).
+Microsoft hosts an offline security intelligence downloader script in the following GitHub repo: https://github.com/microsoft/mdatp-xplat.
 
 Perform the following steps to get the downloader script:
 
@@ -120,20 +120,20 @@ Perform the following steps to get the downloader script:
 
 Navigate to the directory where you want to clone the repo.
 
-Execute the command: git clone <https://github.com/microsoft/mdatp-xplat.git>
+Run the command: `git clone https://github.com/microsoft/mdatp-xplat.git`
 
 ### Option 2: Download the zip file
 
-Download the zip file of the repo [from here](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
+Download the zip file of the repo: https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip.
 
 Copy the zip file to the folder where you want to keep the script.
 
-Extract the zip.
+Extract the zipped folder.
 
 > [!NOTE]
 > Schedule a [**cron job**](/defender-endpoint/linux-update-mde-linux) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
 
-After cloning the repo/downloaded zip file, the local directory structure should be as follows:
+After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
 
 ```
 ConsoleCopy
@@ -157,7 +157,7 @@ The settings.json file consists of a few variables that the user can configure t
 | **Field Name** | **Value** | **Description** |
 |---|---|---|
 | `downloadFolder` | string | Maps to the location where the script downloads the files to. |
-| `downloadLinuxUpdates` | bool | When set to true, the script downloads the Linux specific updates to the `downloadFolder`. |
+| `downloadLinuxUpdates` | bool | When set to `true`, the script downloads the Linux specific updates to the `downloadFolder`. |
 | `logFilePath` | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues. |
 | `downloadMacUpdates` | bool | The script downloads the Mac-specific updates to the `downloadFolder`. |
 | `downloadPreviewUpdates` | bool | Downloads the preview version of the updates available for the specific OS. |
