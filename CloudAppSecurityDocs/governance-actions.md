@@ -83,6 +83,12 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint)
 
+**Note**: These actions are restricted to users with specific administrative roles. If the options described are not visible or accessible, please confirm with your system administrator that your account has one of the following roles assigned:
+ - Security Operator
+ - Security administrator
+ - Global administrator
+ - Cloud app security administrator
+   
 :::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions." lightbox="media/governance-actions/governance-actions-dropbox-google-workspace.png":::
 
 > [!NOTE]
