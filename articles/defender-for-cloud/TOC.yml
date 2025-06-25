@@ -224,11 +224,6 @@
               - name: Overview Microsoft Defender XDR integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
                 href: concept-integration-365.md
-          - name: Microsoft Entra Permissions Management
-            items:
-              - name: Enable the Microsoft Entra Permissions Management integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Entra Permissions Management
-                href: enable-permissions-management.md
           - name: Microsoft Defender external attack surface management (EASM)
             items:
               - name: Overview Microsoft Defender EASM integration
@@ -320,7 +315,7 @@
         href: concept-easm.md
       - name: Critical assets protection
         href: critical-assets-protection.md
-      - name: Permissions management (CIEM)
+      - name: Cloud infrastructure entitlement management (CIEM)
         displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
         href: permissions-management.md
       - name: Agentless machine scanning
@@ -508,7 +503,7 @@
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Enable permissions management (CIEM)
+        - name: Enable cloud infrastructure entitlement management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
     - name: API security posture
