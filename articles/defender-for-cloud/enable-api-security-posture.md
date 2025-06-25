@@ -10,10 +10,10 @@ ms.date: 04/25/2025
 
 # Enable API security posture with Defender CSPM  
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud gives you a complete view of your APIs across Azure API Management, Function Apps, and Logic Apps. It helps you improve API security by finding misconfigurations and vulnerabilities. This article explains how to enable API security posture management in your Defender CSPM plan and assess your API security. Defender CSPM onboards APIs without an agent and regularly checks for risks and sensitive data exposure. It provides prioritized risk insights and mitigation through API attack path analysis and security recommendations.  
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud gives you a complete view of your APIs across Azure API Management, Function Apps, and Logic Apps. It helps you improve API security by finding misconfigurations and vulnerabilities. This article explains how to enable API security posture management in your Defender CSPM plan and assess your API security. Defender CSPM onboards APIs without an agent and regularly checks for risks and sensitive data exposure. It provides prioritized risk insights and mitigation through API attack path analysis and security recommendations.
 
 > [!NOTE]
-> API discovery and security posture capabilities in Microsoft Defender for Cloud now also support **Function Apps** and **Logic Apps**. This feature is currently available in **Preview**.
+> API discovery and security posture capabilities in Microsoft Defender for Cloud now also support **Function Apps** and **Logic Apps**. This feature is currently available in **Preview**. Supported Azure Function App hosting tiers include Premium, Elastic Premium, Dedicated (App Service), and App Service Environment (ASE). For Azure Logic Apps, supported tiers include Standard (Single-Tenant) and App Service Environment (ASE). Consumption tier Function Apps, Consumption tier Logic Apps, and Azure Arc-enabled Logic Apps are not supported. 
 
 ## Prerequisites
   
