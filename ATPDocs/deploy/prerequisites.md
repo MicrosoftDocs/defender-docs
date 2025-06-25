@@ -18,11 +18,11 @@ Deploying Defender for Identity requires one of the following Microsoft 365 lice
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
-## Required permissions
+## Roles and permissions
 
-- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with a user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
-
-We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
+- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
+- You must have a user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
+- We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
 ## Connectivity requirements
 
@@ -50,8 +50,6 @@ The following table summarizes the server requirements and recommendations for t
 |AD FS federation servers     |In AD FS environments, Defender for Identity sensors are supported only on the federation servers. They're not required on Web Application Proxy (WAP) servers.       |
 |Microsoft Entra Connect servers     |For Microsoft Entra Connect servers, you need to install the sensors on both active and staging servers.       |
 |AD CS servers    |Defender for Identity sensor for AD CS supports only AD CS servers with Certification Authority Role Service. You don't need to install sensors on any AD CS servers that are offline.       |
-
-
 
 ### Minimum operating system requirements
 
@@ -117,10 +115,5 @@ We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/
 
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
-## Related content
-
-This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server or Microsoft Entra Connect, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
-
-
 ## Next step
-[Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)
+[Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
