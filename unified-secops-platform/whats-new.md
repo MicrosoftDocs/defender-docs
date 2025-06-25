@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 04/24/2025
+ms.date: 07/01/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -19,6 +19,14 @@ ms.topic: concept-article
 # What's new for Microsoft unified security operations
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
+
+## July 2025
+
+### Microsoft Threat Intelligence alert enahncements for Microsoft Sentinel customers in the Defender portal
+
+For Microsoft Sentinel customers working in the Defender portal, Microsoft Threat Intelligence alerts now higlight activity from nation state actors, ransomware campaigns, and fraudulent operations. These alerts are correlated with other alerts and events in the Defender portal, enhancing your ability to track multi-stage attacks, fully view ongoing events, understand threat activity, prioritize response, and coordinate remediation. 
+
+For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
 ## June 2025
 
