@@ -228,8 +228,6 @@ Use the following sample mdatp_managed.json and update the parameters as per the
 
 To test if the settings are applied correctly on the macOS endpoints, run the following command:
 
-Bash
-
 ```bash
 mdatp health --details definitions
 ```
@@ -267,7 +265,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
    ```
 ## Check update status
 
-After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: mdatp health --details --definitions.
+After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: `mdatp health --details --definitions`.
 
 Verify the following fields:
 
