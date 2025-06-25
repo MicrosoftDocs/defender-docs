@@ -80,10 +80,6 @@ sections:
         answer: | 
           Yes, Endor Labs is available for purchase on the [Microsoft commercial marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/endorlabsinc1711052071976.test123?tab=Overview). The prices listed on the marketplace don't reflect the cost that your organization pays. If you enroll through the marketplace, Endor Labs representatives work with your organization to generate a custom quote. Purchases of Endor Labs made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
 
-      - question: | 
-          Does Endor Labs offer a free trial? 
-        answer: | 
-          Yes, a full-featured, 30-day free trial is available. Begin your trial at [Endor Labs free trial](https://www.endorlabs.com/free-trial).
 
 additionalContent: |
 

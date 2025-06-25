@@ -32,7 +32,8 @@ And add the following request body:
                 "name": "OnUploadMalwareScanning",
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
-                    "CapGBPerMonthPerStorageAccount": "10000"
+                    "CapGBPerMonthPerStorageAccount": "10000",
+					"
                 }
             },
             {
@@ -50,7 +51,9 @@ To modify the monthly threshold for malware scanning in your storage accounts, a
 
 If you want to turn off the on-upload malware scanning or Sensitive data threat detection features, you can change the isEnabled value to **False** under Sensitive data discovery.
 
-To disable the entire Defender plan, set the pricingTier property value to **Free** and remove the `subPlan` and extensions properties.
+If you want to turn off the use of blob index tags, you can change the `BlobScanResultsOptions` value to __None__.  If it is not set, all scan results will be published to blob index tags.
+
+To disable the entire Defender plan, set the `pricingTier` property value to **Free** and remove the `subPlan` and extensions properties.
 
 Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go, and JavaScript.
 
@@ -104,6 +107,8 @@ To have more granular control over on-upload malware scanning and exclude specif
 Learn more about the [on-upload malware scanning filters](on-upload-malware-scanning.md).
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
+
+If you want to turn off the use of blob index tags, you can change the `BlobScanResultsOptions` value to __None__.  If it is not set, all scan results will be published to blob index tags.
 
 To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 

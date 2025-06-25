@@ -48,6 +48,8 @@ The Microsoft Defender for Cloud prepurchase discount applies to usage from the 
 - Microsoft Defender CSPM
 - Microsoft Defender for APIs
 
+- Microsoft Defender for AI
+
 For more information about available DCU tiers and pricing discounts, see the reservation purchase experience in the following section.
 
 ## Purchase Defender for Cloud commit units
@@ -79,6 +81,14 @@ You can buy Defender for Cloud plans in the [Azure portal](https://portal.azure.
 >
 > - The prices listed on the **Reservation** page are always presented in USD.
 > - Defender Credit Units are deducted at USD retail prices.
+
+## View plan utilization after purchase
+
+To view reservation plan utilization in the Azure portal, sign in, go to the **Reservations** section, and review the list of reservations where you have **Owner** or **Reader** access.
+
+You can also access reservation utilization through APIs, PowerShell, or the CLI.
+
+For more information, see the full documentation [here](/azure/cost-management-billing/reservations/reservation-utilization).
 
 ## Change scope and ownership
 

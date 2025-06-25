@@ -3,14 +3,17 @@ title: Overview of file integrity monitoring in Microsoft Defender for Cloud
 description: Learn about tracking file change with file integrity monitoring in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
-ms.topic: how-to
-ms.date: 02/19/2025
+ms.topic: conceptual
+ms.date: 06/24/2025
 ---
+
 # File integrity monitoring
 
-The file integrity monitoring feature in [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) in Microsoft Defender for Cloud helps to keep enterprise assets and resources secure by scanning and analyzing operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. File integrity monitoring helps you to:
+The file integrity monitoring feature in Microsoft Defender for Cloud's [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md), scans and analyzes operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
 
-- Meet compliance requirements. File integrity monitoring is often required by regulatory compliance standards such as PCI-DSS and ISO 17799.
+File integrity monitoring helps you to:
+
+- Meet compliance requirements. Regulatory compliance standards such as PCI-DSS and ISO 17799 often require file integrity monitoring.
 - Improve posture and identify potential security issues by detecting suspicious changes to files.
 
 ## Monitor suspicious activity
@@ -23,12 +26,13 @@ File integrity monitoring examines operating system files, Windows registries, a
 
 ## Data collection
 
-File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines.
+File integrity monitoring uses the Microsoft Defender for Endpoint agent and agentless scanning to collect data from machines.
 
-- The Defender for Endpoint agent collects data from machines in accordance with the files and resources defined for file integrity monitoring.
-- Data collected by the Defender for Endpoint agent is stored for access and analysis in a Log Analytics workspace.
-- Collected file integrity monitoring data is part of the [500 MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
-- File integrity monitoring provides information about file and resource changes, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
+- Data collected by the Defender for Endpoint agent and agentless scanning is analyzed for file and registry changes and change logs are stored for access and analysis in a Log Analytics workspace.
+- The **Defender for Endpoint agent** collects data from machines in accordance with the files and resources defined for file integrity monitoring. Change events collected via Defender for Endpoint are streamed to your selected workspace in **near realtime**.
+- **Agentless scanning** provides insights into file integrity monitoring events in accordance with the files and resources defined for file integrity monitoring. Change events collected via agentless scanning are streamed to your selected workspace on a **24-hour cadence**.
+- Collected file integrity monitoring data is part of the [500-MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
+- File integrity monitoring gives information about file and resource changes. It includes the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
 ### Migrate to the new version
 
@@ -39,7 +43,7 @@ File integrity monitoring previously used the Log Analytics agent (also known as
 After enabling Defender for Servers Plan 2, you enable and configure file integrity monitoring. It isn't enabled by default.
 
 - You select a Log Analytics workspace in which to store change events for monitored files/resources. You can use an existing workspace, or define a new one.
-- Defender for Cloud recommends resources to monitor with file integrity monitoring.
+- Defender for Cloud recommends resources to monitor with file integrity monitoring. With agentless scanning, you can define custom paths for monitoring in addition to recommended resources.
 
 ## Choose what to monitor
 
@@ -47,7 +51,7 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning.
-- If you choose files that are frequently changed by applications or operating system (such as log files and text files) it will create noise, making it difficult to identify an attack.
+- Choose files that are frequently changed by applications or operating system (such as log files and text files) creates noise, making it difficult to identify an attack.
 
 ### Recommended items to monitor
 
