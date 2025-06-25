@@ -112,9 +112,6 @@ Threat Explorer and Real-time detections contain the following elements:
 - **Date/time filters**: By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
   :::image type="content" source="media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="media/te-rtd-date-filter.png":::
-
-  > [!TIP]
-  > Users with trial licenses assigned can filter only within the last 15 days.
   
 - **Property filters (queries)**: Filter the results in the view by the available message, file, or threat properties. The available filterable properties depend on the view. Some properties are available in many views, while other properties are limited to a specific view.
 
