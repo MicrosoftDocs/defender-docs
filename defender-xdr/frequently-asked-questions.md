@@ -36,6 +36,7 @@ ms.date: 10/30/2024
 | **Can your experts help me improve my security posture?** | Yes, our experts provide necessary guidance regularly to improve your security posture.
 | **Can Defender Experts for XDR help with an active compromise or vulnerability?** | No, Defender Experts currently don't provide incident response services. Contact your Microsoft representative or fill out the [Experiencing a Cybersecurity Incident?](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRypQlJUvhTFIvfpiAfrpFQdUOTdRRFpDUFQ1TzNLVFZXV0VUOVlVN0szUiQlQCN0PWcu) form to engage Microsoft Incident Response for incident response assistance. |
 | **How can my organization participate in the Defender Experts for XDR service?** | Contact your Microsoft representative to express interest in Defender Experts for XDR.|
+|**How is AI used in the Defender Experts service?**| AI is used to support the Defender Experts service by enhancing the speed, scale, and consistency of security operations. We use a combination of generative, agentic, and foundational AI to power workflows such as incident triage, investigation, and summarization by analyzing signals like telemetry and historical analyst actions. Defender Experts analysts review and validate these AI-generated insights to ensure quality and accuracy. AI helps scale expert capabilities, and human analysts remain central to the service, ensuring customers receive trusted, expert-reviewed outcomes.|
 
 ### See also
 
