@@ -82,11 +82,11 @@ Permissions to manages the security and system settings and to create and assign
 |System settings|Read / Manage|View or manage general systems settings for the Microsoft Defender portal.|
 
 
-## Data operations
+## Data operations (Preview)
 
-Permissions for managing the organization's security data and controlling advanced analytics permissions.
+Permissions for managing the organization's security data and controlling advanced analytics permissions, supported for Microsoft Sentinel workspaces [onboarded to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard) and the [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview).
 
-The following permissions can be assigned to the default data collection, with all ingested Microsoft Sentinel data lake data. For more information, see [Microsoft Sentinel data lake](/azure/sentinel/graph/sentinel-lake-overview?branch=pr-en-us-301045). <!--update link-->
+The following permissions can be assigned to the default data collection, with all ingested Microsoft Sentinel data lake data.
 
 |Permission name|Level|Description|
 |---|---|---|
