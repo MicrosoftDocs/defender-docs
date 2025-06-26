@@ -37,7 +37,7 @@ Identify your architecture and your requirements, and then use the table below t
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
-- [Deploy the Defender for Identity sensor v3.x](activate-sensor-version-3.md)
+- [Deploy the Defender for Identity sensor v3.x](activate-sensor.md)
 - [Deploy the Defender for Identity sensor v2.x](configure-proxy.md)
 
 

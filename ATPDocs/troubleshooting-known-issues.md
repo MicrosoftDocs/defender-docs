@@ -484,7 +484,7 @@ If permissions need to be reconfigured, please follow the steps outlined in this
 
 ## Next steps
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
