@@ -61,7 +61,7 @@ items:
         - name: Prerequisites
           href: deploy/prerequisites-sensor-version-3.md
         - name: Activate the Defender for Identity sensor
-          href: deploy/activate-capabilities.md
+          href: deploy/activate-sensor.md
     - name: Deploy a sensor for multiple Active Directory forests
       href: deploy/multi-forest.md
     - name: Deploy a standalone sensor

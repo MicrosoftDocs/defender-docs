@@ -49,8 +49,6 @@ This section describes all the health issues for each component, listing the cau
 
 Sensor-specific health issues are displayed in the **Sensor health issues** tab and domain related or aggregated health issues are displayed in the **Global health issues** tab as detailed in the following tables:
 
-### Network configuration mismatch for sensors running on VMware
-
 |Alert|Description|Resolution|Severity|Displayed in|Supported by Sensor version|
 |----|----|----|----|----|----|
 |The virtual machines that the listed Defender for Identity sensors is installed on has a network configuration mismatch. |This issue might affect the performance and reliability of the sensors.|Review the network interface settings, including disabling the Large Send Offload (LSO), and follow the instructions in [here](https://aka.ms/mdi/vmware-sensor-issue).|High|Sensors health issues tab|All|
@@ -84,10 +82,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |Auditing for AD CS servers isn't enabled as required. (This configuration is validated once a day, per sensor).|The Advanced Auditing Policy Configuration or AD CS auditing isn't enabled as required.|Enable the Advanced Auditing Policy Configuration and AD CS auditing according to the guidance as described in the [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|All|
 |Failed to retrieve Microsoft Entra Connect service configuration|The sensor is unable to retrieve the configuration from the Microsoft Entra Connect service (also known as Microsoft Azure AD sync).|Ensure that the Microsoft Entra connect service **(Microsoft Azure AD Sync)** is running and follow the instructions in [Configure permissions for the Microsoft Entra Connect (ADSync) database](deploy/active-directory-federation-services.md#configure-permissions-for-the-microsoft-entra-connect-adsync-database) to grant the sensor the necessary permissions. If the issue persists, follow the troubleshooting guidance at [SQL connectivity issues with Microsoft Entra Connect](/entra/identity/hybrid/connect/tshoot-connect-tshoot-sql-connectivity).|Medium|Sensors health issues tab|All|
 
-## Next steps
+## See also
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
-- [Defender for Identity capacity planning](deploy/capacity-planning.md)
-- [Configure event collection](deploy/configure-event-collection.md)
-- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
+- [Work with Defender for Identity's ITDR dashboard](dashboard.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

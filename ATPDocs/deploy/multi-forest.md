@@ -55,5 +55,5 @@ You may see ad-hoc traffic when the Defender for Identity sensor detects cross f
 ## Related content
 
 - [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
-- [Microsoft Defender for Identity prerequisites](prerequisites.md)
+- [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md)
 - [Directory Service Accounts for Microsoft Defender for Identity](directory-service-accounts.md)

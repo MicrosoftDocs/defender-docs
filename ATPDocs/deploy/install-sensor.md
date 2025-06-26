@@ -26,7 +26,7 @@ Before you start, make sure that you have:
 
 - Relevant server specifications and network requirements. For more information, see:
 
-  - [Microsoft Defender for Identity prerequisites](prerequisites.md)
+  - [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md)
   - [Configure sensors for AD FS, AD CS, and Microsoft Entra Connect](active-directory-federation-services.md)
   - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 

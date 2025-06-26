@@ -37,7 +37,7 @@ Identify your architecture and your requirements, and then use the table below t
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
-- [Deploy the Defender for Identity sensor v3.x](activate-capabilities.md)
+- [Deploy the Defender for Identity sensor v3.x](activate-sensor-version-3.md)
 - [Deploy the Defender for Identity sensor v2.x](configure-proxy.md)
 
 
@@ -54,5 +54,5 @@ Watch the following video for a step-by-step demo and to learn about:
 
 
 ## Next steps
-- [Prepare your environment](prerequisites.md).
+- [Prepare your environment](prerequisites-sensor-version-2.md).
 - Set up [Microsoft Defender for Identity role groups](../role-groups.md).
