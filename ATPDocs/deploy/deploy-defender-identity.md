@@ -26,19 +26,17 @@ Once you've completed the steps to prepare your environment and assigned roles a
 
 Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment. 
 
-|Server configuration   |Server Operating System  |Infrastructure Considerations  |Sensor version  |
+|Server configuration   |Server Operating System  |Infrastructure Considerations  |Recommended deployment |
 |---------|---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later        |         | v3.x        |
-|Domain controller      | Windows Server 2019 or later        |You need:<br> - VPN integration<br> - ExpressRoute <br> - NNR and the DC is not onboarded to MDE     |  v2.x     |
-|Domain controller      |Windows Server 2016 or earlier         |         |v2.x         |
-|AD FS     |    NA     |         |   v2.x      |
-|AD CS     |  NA       |         |   v2.x      |
-|Entra Connect|  NA    |        |   v2.x     |
+|Domain controller     | Windows Server 2019 or later        |         | [Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)        |
+|Domain controller      | Windows Server 2019 or later        |You need:<br> - VPN integration<br> - ExpressRoute <br> - NNR and the DC is not onboarded to MDE     |  [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)    |
+|Domain controller      |Windows Server 2016 or earlier         |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
+|AD FS     |    NA     |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|AD CS     |  NA       |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|Entra Connect|  NA    |        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
-- [Deploy the Defender for Identity sensor v3.x](activate-sensor.md)
-- [Deploy the Defender for Identity sensor v2.x](configure-proxy.md)
 
 
 ## Deployment process
