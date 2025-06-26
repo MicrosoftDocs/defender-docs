@@ -70,6 +70,8 @@ Hover over a category in the chart to see a breakdown of the number of messages 
 
 ### Threat detections report
 
+<!--- https://go.microsoft.com/fwlink/?linkid=2323912 --->
+
 :::image type="content" source="media/email-collab-overview-mdo-threat-detections.png" alt-text="Screenshot of the Threat detections card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-threat-detections.png":::
 
 ## Optimize section
@@ -78,9 +80,13 @@ The reports available in the **Optimize** section are described in the following
 
 ### Priority accounts report
 
+<!--- https://go.microsoft.com/fwlink/?linkid=2323312 --->
+
 :::image type="content" source="media/email-collab-overview-optimize-priority-accounts.png" alt-text="Screenshot of the Priority accounts card in the Optimize section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-optimize-priority-accounts.png":::
 
 ### Posture recommendations report
+
+<!--- https://go.microsoft.com/fwlink/?linkid=2323914 --->
 
 :::image type="content" source="media/email-collab-overview-optimize-posture-recommendations.png" alt-text="Screenshot of the Posture recommendations card in the Optimize section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-optimize-posture-recommendations.png":::
 
@@ -106,11 +112,15 @@ The reports available in the **Compare solutions** section are described in the 
 
 ### Email detections report
 
+<!--- https://go.microsoft.com/fwlink/?linkid=2323918 --->
+
 :::image type="content" source="media/email-collab-overview-compare-solutions-email-detections.png" alt-text="Screenshot of the Email detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-email-detections.png":::
 
 email-collab-overview-compare-solutions-email-detections
 
 ### Non-Microsoft detections report
+
+<!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
 
 :::image type="content" source="media/email-collab-overview-compare-solutions-non-microsoft.png" alt-text="Screenshot of the Non-Microsoft detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-non-microsoft.png":::
 
@@ -125,5 +135,7 @@ The reports available in the **Insights** section are described in the following
 ### Emerging threats report
 
 ### Microsoft 365 Secure Email Gateway performance report
+
+<!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
 
 :::image type="content" source="media/email-collab-overview-insights-m365-secure-email-gateway.png" alt-text="Screenshot of the Microsoft 365 Secure Email Gateway performance card in the Insights section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-insights-m365-secure-email-gateway.png":::
