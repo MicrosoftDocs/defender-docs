@@ -39,6 +39,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## June 2025
+
+- Defender for Office 365 is now able to detect and classify mail bombing attacks. Mail bombing is malicious subscriptions to a large number of legitimate newsletters or subscription services as a form of distributed denial of service (DDoS) attack. Mail bombing is now an available **Detection technology** value in [Threat Explorer](threat-explorer-real-time-detections-about.md), [the Email entity page](mdo-email-entity-page.md), and the [Email summary panel](mdo-email-entity-page.md#the-email-summary-panel). Mail bombing is also an available **DetectionMethods** value in [Advanced Hunting](/defender-xdr/advanced-hunting-overview).
+
 ## May 2025
 
 - In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
