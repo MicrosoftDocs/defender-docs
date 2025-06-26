@@ -17,11 +17,10 @@ You can also define which file elements are inspected—content, metadata, or fi
 
 ## Prerequisites
 
-Before you can inspect encrypted files, you must grant one-time admin consent.  This action can only be performed by a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+To inspect encrypted files, a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow) must first grant one‑time admin consent to Defender for Cloud Apps in Microsoft Entra ID.
 
-1. In the Defender portal, go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**.
+To do this, in the Defender portal go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**, and select **Grant permission**.
 
-1. Select Grant permission and to grant Defender for Cloud Apps permission in Microsoft Entra ID.
 
 ## Content inspection for protected files
 
@@ -40,7 +39,9 @@ The following app IDs apply based on your Microsoft cloud environment:
 | GCCM | 23105e90-1dfc-497a-bb5d-8b18a44ba061 |
 
 >[!NOTE]
->These app IDs represent the internal service principal used by Defender for Cloud Apps in each environment (Public, Fairfax, and GCCM) to enable inspection and enforcement of protected files. Disabling or removing this app breaks inspection and prevent DLP policies from applying to protected files. Always verify that the app ID for your environment is present and enabled to maintain inspection and enforcement capabilities.
+>App IDs are internal service principals used by Defender for Cloud Apps in Public, Fairfax, and GCC‑M environments to inspect and enforce DLP policies on protected files.
+>Don't remove or disable these App IDs. Doing so breaks inspection and prevent DLP policies from applying to protected files.
+>Always verify that the App ID for your environment is present and enabled.
 
 ## Configure Microsoft Information Protection settings
 
@@ -59,7 +60,7 @@ In order to give Defender for Cloud Apps the necessary permissions:
 
 1. In the Defender portal, go to **Settings > Cloud Apps > Policies > Policy management**.
 1. Follow the steps to [create a new file policy](data-protection-policies.md#create-a-new-file-policy).
-1. Select either **Apply to all files**, or **Apply to selected files** to specify which files will be scanned. This option is useful if you have an inner classification keyword standard that you want to exclude from the policy.
+1. Select either **Apply to all files**, or **Apply to selected files** to specify which files to scan. This option is useful if you have an inner classification keyword standard that you want to exclude from the policy.
 1. Select **Inspection method** > **Data Classification Service** to enable content inspection for the policy.
 1. Check both boxes - **Inspect protected files** and **Unmask the last 4 characters of a match**.
 
