@@ -173,8 +173,8 @@ To export Cloud discovery logs from the cloud discovery dashboard:
 
 1. Above the table, select the export button. For example:
 
-    ![Screenshot of the export button.](media/export-button.png)
-   
+    :::image type="content" source="media/activity-filters/export-button.png" alt-text="Screenshot that shows the export button.":::
+
    
 1. Select the range of the report and select **Export**. This process may take some time.
 
