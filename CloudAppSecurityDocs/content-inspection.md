@@ -17,16 +17,14 @@ You can also define which file elements are inspected—content, metadata, or fi
 
 ## Prerequisites
 
-To inspect encrypted files, a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow) must first grant one‑time admin consent to Defender for Cloud Apps in Microsoft Entra ID.
+To inspect encrypted files, and enable scanning of labels a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow) must first grant one‑time admin consent to Defender for Cloud Apps in Microsoft Entra ID.
 
 To do this, in the Defender portal go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**, and select **Grant permission**.
 
 
 ## Content inspection for protected files
 
-Defender for Cloud Apps allows admins to grant permission to decrypt encrypted files and scan their content for violations. This consent is also required to enable scanning labels on encrypted files.
-
-When you grant consent, Defender for Cloud Apps provisions the Microsoft Cloud App Security (Internal) app in your tenant. This app must remain enabled. The app uses the Azure Rights Management Services > Content.SuperUser permission to decrypt and inspect protected files.
+Once consent is granted, Defender for Cloud Apps provisions the Microsoft Cloud App Security (Internal) app in your tenant. The app uses the Azure Rights Management Services > Content.SuperUser permission to decrypt and inspect protected files.
 
 The following app IDs apply based on your Microsoft cloud environment:
 
