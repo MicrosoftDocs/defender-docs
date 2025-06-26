@@ -39,6 +39,7 @@ This function returns a table that has the following column:
 |------------|---------------|-------------|
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 
+Up to 1,000 results are returned. 
 
 ## Syntax
 
