@@ -92,7 +92,7 @@ Selecting it opens the Activity drawer **User** tab provides the following insig
     - **ISPs**: The number of ISPs the user connected from in the past 30 days.
     - **IP addresses**: The number of IP addresses the user connected from in the past 30 days.
 
-:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png:::
+:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png":::
 
 
 #### IP address insights
