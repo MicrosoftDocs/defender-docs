@@ -23,12 +23,12 @@ The **Activity log** can be filtered to enable you to find specific activities. 
 For example, you can use the **Activity log** to find users in your organization who are using operating systems or browsers that are out of date, as follows:
 After you connect an app to Defender for Cloud Apps in the **Activity log** page, use the advanced filter and select **User agent tag**. Then select **Outdated browser** or **Outdated operating system**.
 
-:::image type="content" source="media/activity-filters/activity-example-outdated.png" alt-text="Screenshot that shows the Activity log with an outdated browser example.":::
+:::image type="content" source="media/activity-filters/activity-example-outdated.png" alt-text="Screenshot that shows the Activity log with an outdated browser example." lightbox="media/activity-filters/activity-example-outdated.png":::
 
 
 The basic filter provides great tools to start filtering your activities.
 
-:::image type="content" source="media/activity-filters/activity-log-filter-basic.png" alt-text="Screenshot that shows the basic activity log filter.":::
+:::image type="content" source="media/activity-filters/activity-log-filter-basic.png" alt-text="Screenshot that shows the basic activity log filter." lightbox="media/activity-filters/activity-log-filter-basic.png":::
 
 
 You can expand the basic filter by selecting **Advanced filters** to drill down into more specific activities.
@@ -70,7 +70,7 @@ You can also use the icons at the top of the tab to:
 - View activities from the same period (48 hours)
 
 
-:::image type="content" source="media/activity-filters/activity-drawer.png" alt-text="Screenshot that shows the activity drawer.":::
+:::image type="content" source="media/activity-filters/activity-drawer.png" alt-text="Screenshot that shows the activity drawer." lightbox="media/activity-filters/activity-drawer.png":::
 
 
 For a list of governance actions available, see [Activity governance actions](governance-actions.md#activity-governance-actions).
@@ -92,7 +92,7 @@ Selecting it opens the Activity drawer **User** tab provides the following insig
     - **ISPs**: The number of ISPs the user connected from in the past 30 days.
     - **IP addresses**: The number of IP addresses the user connected from in the past 30 days.
 
-:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities and frequent alert locations for Defender for Cloud apps.":::
+:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png:::
 
 
 #### IP address insights
@@ -121,7 +121,7 @@ To view IP address insights:
         - Set as a VPN IP address and add to allowlist
         - Set as a Risky IP and add to blocklist
 
-:::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows Ip adress activities over the last 30 days.":::
+:::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows Ip address activities over the last 30 days." lightbox="media/activity-filters/ip-address-insights.png":::
 
 
 > [!NOTE]
