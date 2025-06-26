@@ -17,7 +17,7 @@ You can also define which file elements are inspected—content, metadata, or fi
 
 ## Prerequisites
 
-Before you can inspect encrypted files, you must grant one-time admin consent.  This action can only be performed by a [Global Administrator](entra/identity/enterprise-apps/configure-admin-consent-workflow)
+Before you can inspect encrypted files, you must grant one-time admin consent.  This action can only be performed by a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow)
 
 1. In the Defender portal, go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**.
 
