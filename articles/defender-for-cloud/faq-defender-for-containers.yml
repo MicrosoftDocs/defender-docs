@@ -204,6 +204,15 @@ sections:
 
           To get vulnerability assessments for running images, either enable [Agentless discovery for Kubernetes](defender-for-containers-enable.md#enablement-method-per-capability) or deploy the [Defender sensor](defender-for-containers-enable.md#enablement-method-per-capability) on your Kubernetes clusters.
 
+      - question: |
+          What happened to Microsoft Defender for Kubernetes?
+        answer: |
+          Microsoft Defender for Kubernetes has been deprecated and replaced with [Microsoft Defender for Containers](defender-for-containers-introduction.md). Existing subscriptions with Defender for Kubernetes enabled can continue to use it, but new subscriptions cannot enable this deprecated plan. 
+
+          All new container security capabilities and improvements are available only in Microsoft Defender for Containers. We recommend upgrading to Microsoft Defender for Containers to access the latest features and enhanced protection capabilities.
+
+          
+
         
 
 additionalContent: |
