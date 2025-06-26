@@ -1,29 +1,23 @@
 ---
 title: DLP content inspection
 description: This article describes the process Defender for Cloud Apps follows when performing DLP content inspection on data in your cloud.
-ms.date: 06/16/2025
+ms.date: 06/26/2025
 ms.topic: how-to
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 
-When you enable content inspection, you can choose to inspect content using preset expressions or custom expressions that you define. You can also set a minimum number of content violations that must be detected before a file is considered a policy violation. For example, to trigger a policy when at least 10 credit card numbers are found in a file, set the violation threshold to 10.
+
+Data Loss Prevention (DLP) in Defender for Cloud Apps relies on content inspection for identifying sensitive data within files. This inspection allows you to define expressions, thresholds, and rules that determine when files violate your organization’s data protection policies. Together, DLP policies and content inspection enable automated detection, alerting, and enforcement across files stored in connected cloud applications.
+
+When you enable content inspection, you can choose to inspect content using preset expressions or custom expressions that you define. You can also set a minimum number of content violations that must be detected before a file is considered as a policy violation. For example, to trigger a policy when at least 10 credit card numbers are found in a file, set the violation threshold to 10.
 
 When content matches an expression, the matched text is masked by replacing it with "X" characters. By default, Defender for Cloud Apps displays 100 characters of surrounding context before and after each violation. Any numbers in the surrounding context are replaced with "#" characters and aren't stored in Defender for Cloud Apps.
 
+This approach is critical for meeting compliance regulations. For example, if an employee shares a file containing sensitive information such as credit card numbers or ID numbers with an unauthorized party (such as a vendor), the file policy can alert administrators or block the activity. This ensures that sensitive data is protected and that vendors or external parties can't access information that violates compliance policies.
+
 If you want to partially reveal detected values, you can enable the **Unmask the last four characters of a match** option in the file policy. This option reveals only the last four characters of the matched text.
 
-You must specify which file elements are included in the inspection: content, metadata, or file name. By default, content and metadata are inspected.
-
-This enables inspection of protected content, helping you detect sensitive data, enforce compliance, and apply governance actions on encrypted files. It helps reduce false positives and align policy enforcement with internal classification standards.
-
-
-## Prerequisites
-
-Before you can inspect encrypted files, you must grant one-time admin consent. 
-
-1. In the Defender portal, go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**.
-
-1. Select Grant permission and to grant Defender for Cloud Apps permission in Microsoft Entra ID.
+You must specify which file elements are included in the inspection: content, metadata, or file name. By default, content and metadata are inspected. This enables inspection of protected content, helping you detect sensitive data, enforce compliance, and apply governance actions on encrypted files. It helps reduce false positives and align policy enforcement with internal classification standards.
 
 ## Content inspection for protected files
 
@@ -41,6 +35,8 @@ The following app IDs apply based on your Microsoft cloud environment:
 | Fairfax | bd5667e4-0484-4262-a9db-93faa0893899 |
 | GCCM | 23105e90-1dfc-497a-bb5d-8b18a44ba061 |
 
+>[!NOTE]
+>These app IDs represent the internal service principal (app registration) used by Defender for Cloud Apps in each environment (Public, Fairfax, and GCCM) to enable inspection and enforcement of protected files. Disabling or removing this app breaks inspection and prevent DLP policies from applying to protected files. Always verify that the app ID for your environment is present and enabled to maintain inspection and enforcement capabilities.
 
 ## Configure Microsoft Information Protection settings
 
