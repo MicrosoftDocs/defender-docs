@@ -6,7 +6,7 @@ ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
 
-# Microsoft Defender for Identity sensor v3.x prerequisites
+# Microsoft Defender for Identity sensor v3.x prerequisites (Preview)
 
 This article describes the requirements for installing the Microsoft Defender for Identity sensor v3.x.
 

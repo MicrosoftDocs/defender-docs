@@ -56,27 +56,27 @@ items:
           href: deploy/remote-calls-sam.md
         - name: Configure action accounts
           href: deploy/manage-action-accounts.md
-    - name: Deploy the Defender for Identity sensor v3.x
+        - name: Deploy a standalone sensor
+          items:
+          - name: Prerequisites for a standalone sensor
+            href: deploy/prerequisites-standalone.md
+          - name: Configure port mirroring
+            href: deploy/configure-port-mirroring.md
+            displayName: standalone
+          - name: Configure Windows Event Forwarding
+            href: deploy/configure-event-forwarding.md
+            displayName: standalone
+          - name: Listen for SIEM events
+            href: deploy/configure-event-collection.md
+            displayName: standalone
+    - name: Deploy the Defender for Identity sensor v3.x (Preview)
       items:
         - name: Prerequisites
           href: deploy/prerequisites-sensor-version-3.md
-        - name: Activate the Defender for Identity sensor
+        - name: Activate the Defender for Identity sensor (Preview)
           href: deploy/activate-sensor.md
     - name: Deploy a sensor for multiple Active Directory forests
       href: deploy/multi-forest.md
-    - name: Deploy a standalone sensor
-      items:
-      - name: Prerequisites for a standalone sensor
-        href: deploy/prerequisites-standalone.md
-      - name: Configure port mirroring
-        href: deploy/configure-port-mirroring.md
-        displayName: standalone
-      - name: Configure Windows Event Forwarding
-        href: deploy/configure-event-forwarding.md
-        displayName: standalone
-      - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
-        displayName: standalone
     - name: Test the sensor
       href: deploy/test-sensor.md
   - name: Configure event collection
