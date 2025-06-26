@@ -29,7 +29,7 @@ Identify your architecture and your requirements, and then use the table below t
 |Server configuration   |Server Operating System  |Infrastructure Considerations  |Recommended deployment |
 |---------|---------|---------|---------|
 |Domain controller     | Windows Server 2019 or later        |         | [Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)        |
-|Domain controller      | Windows Server 2019 or later        |You need:<br> - VPN integration<br> - ExpressRoute <br> - NNR and the DC is not onboarded to MDE     |  [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)    |
+|Domain controller      | Windows Server 2019 or later        |You need:<br> - VPN integration<br> - ExpressRoute <br> - Optimal NNR, but your domain controller is not onboarded to MDE     |  [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)    |
 |Domain controller      |Windows Server 2016 or earlier         |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
 |AD FS     |    NA     |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |AD CS     |  NA       |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
