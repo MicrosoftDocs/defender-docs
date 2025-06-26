@@ -36,7 +36,7 @@ You can remove the extension from currently running machines by using the Azure 
 
 ### Use the Azure CLI to remove the Defender sensor
 
-1. Remove the Azure Arc extension for Microsoft Defender for Kubernetes by using the following commands:
+1. Remove the Azure Arc extension for Microsoft Defender for Containers by using the following commands:
 
     ```azurecli
     az login
