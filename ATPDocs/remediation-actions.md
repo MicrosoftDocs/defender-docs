@@ -33,7 +33,7 @@ To perform any of the [supported actions](#supported-actions), you need to:
 
 ## Supported actions
 
-The following Defender for Identity actions can be performed directly on your on-premises identities:
+The following Defender for Identity actions can be performed on Identities:
 
 - **Disable user in Active Directory**: This will temporarily prevent a user from signing in to the on-premises network. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
 
@@ -44,6 +44,10 @@ The following Defender for Identity actions can be performed directly on your on
 - **Suspend User in Entra ID** - Block new sign-ins and access to cloud resources
 
 - **Require User to Sign In Again** - Revoke a user’s active sessions
+
+- **Suspend User in Okta** -  Temporarily disables a user account. This action can be used when a legit user account was found to be compromised and needed to be disabled
+
+- **Deativate User in Okta** - This action can be used when a non-legit malicous account was detected, to deactivate the account permanently.
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
@@ -56,6 +60,8 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 |Require User to Sign In Again          | - Global Administrator <br>|
 | Disable/Enable User in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
 | Force Password Reset in Active Directory | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr)|
+| Suspend User in Okta | A custom role defined with permissions for Response (manage) Or One of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator|
+| Deativate User in Okta | A custom role defined with permissions for Response (manage) Or One of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator|
 
 
 ## Related videos
