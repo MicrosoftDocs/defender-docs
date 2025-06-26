@@ -16,7 +16,7 @@ Deactivating Defender for Identity capabilities from your domain controller does
 
 1. In the [Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Activation**.
 1. Select **Download offboarding package** and save the file in a location you can access from your domain controller.  
-![Screenshot that shows how to offboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-offboard-the-new-sensor.png)
+![Screenshot that shows how to offboard the new sensor.](media/screenshot-that-shows-how-to-offboard-the-new-sensor.png)
 1. From the domain controller, extract the zip file, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
 
 ## Uninstall a sensor
@@ -24,7 +24,7 @@ Deactivating Defender for Identity capabilities from your domain controller does
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
 1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-    ![Screenshot that shows how to delete a sensor.](media/activate-capabilities/screenshot-that-shows-how-to-delete-a-sensor.png)
+    ![Screenshot that shows how to delete a sensor.](media/screenshot-that-shows-how-to-delete-a-sensor.png)
 
 ## Uninstall a sensor v2.x from a domain controller
 
