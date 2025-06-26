@@ -41,7 +41,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## June 2025
 
-- Defender for Office 365 is now able to detect and classify mail bombing attacks. Mail bombing is malicious subscriptions to a large number of legitimate newsletters or subscription services as a form of distributed denial of service (DDoS) attack. Mail bombing is now an available **Detection technology** value in [Threat Explorer](threat-explorer-real-time-detections-about.md), [the Email entity page](mdo-email-entity-page.md), and the [Email summary panel](mdo-email-entity-page.md#the-email-summary-panel). Mail bombing is also an available **DetectionMethods** value in [Advanced Hunting](/defender-xdr/advanced-hunting-overview).
+- Defender for Office 365 is now able to detect and classify mail bombing attacks. Mail bombing is a distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.
+
+  Mail bombing is now an available **Detection technology** value in [Threat Explorer](threat-explorer-real-time-detections-about.md), [the Email entity page](mdo-email-entity-page.md), and the [Email summary panel](mdo-email-entity-page.md#the-email-summary-panel). Mail bombing is also an available **DetectionMethods** value in [Advanced Hunting](/defender-xdr/advanced-hunting-overview).
 
 ## May 2025
 
