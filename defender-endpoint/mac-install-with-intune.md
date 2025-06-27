@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/24/2025
+ms.date: 06/27/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
