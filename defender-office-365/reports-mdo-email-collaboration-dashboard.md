@@ -18,7 +18,7 @@ ms.collection:
 description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
-ms.date: 6/26/2025
+ms.date: 6/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -116,7 +116,7 @@ The graph on the **Priority accounts** card shows how many message senders you d
 
 To designate more accounts, select **Add employees** to go to the **Priority accounts** page in the Microsoft 365 admin center at <https://admin.cloud.microsoft/?#/priorityaccounts>.
 
-<!---https://go.microsoft.com/fwlink/?linkid=2324017; should go to https://admin.cloud.microsoft/?#/priorityaccounts; instead goes to https://security.microsoft.com/emailandcollabreport--->
+<!---https://go.microsoft.com/fwlink/?linkid=2324017> --->
 
 Hover over a category in the chart to see the number of **Onboarded** priority accounts and **Open slots**. The maximum number of priority accounts is 250.
 
@@ -126,14 +126,23 @@ Hover over a category in the chart to see the number of **Onboarded** priority a
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2323914 --->
 
-The graph on the **Policy recommendations** card shows the number of users protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) as a percentage of the total number of users (the value 100% means everyone is protected).
+The graph on the **Policy recommendations** card shows the number of users directly protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) policies as a percentage of the total number of users (the value 100% means everyone is protected). The numbers are taken from whether the following recommended actions in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) have the **Status** value `Completed`:
 
-Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users who get Safe Links or Safe Attachments protection).
+- <u>Safe Links</u>:
+  - **Ensure Safe Links for Office applications is enabled**
+  - **Create Safe Links policies for email messages**
+- <u>Safe Attachments</u>:
+  - **Turn on Safe Attachments in block mode**
+  - **Ensure Safe Attachments policy is enabled**
 
-Although the [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)), users get a higher level of protection from the following settings:
+Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users protected by Safe Links or Safe Attachment policies as defined by the recommended actions in Microsoft Secure Score).
 
-- Membership in the **Apply Defender for Office 365 protection** setting in the [standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
-- Membership in a custom [Safe Links](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) policies.
+**Notes**:
+
+- The [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
+- Users get a higher level of Safe Links and Safe Attachments protection from either of the following settings:
+  - [Turn on the Standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users), and make sure the users are included in **Defender for Office 365 protection**.
+  - Create custom [Safe Links policies](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment policies](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) with the users as members.
 
 :::image type="content" source="media/email-collab-overview-optimize-posture-recommendations.png" alt-text="Screenshot of the Posture recommendations card in the Optimize section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-optimize-posture-recommendations.png":::
 
@@ -167,7 +176,7 @@ The **Tenant allow types** card shows a table with the types of allow entries in
 
 ### Exchange transport rules card
 
-<!--- https://go.microsoft.com/fwlink/?linkid=2324013 should go to https://admin.cloud.microsoft/exchange#/transportrules; instead goes to https://security.microsoft.com/emailandcollabreport --->
+<!--- https://go.microsoft.com/fwlink/?linkid=2324013 --->
 
 The **Exchange transport rules** card shows the mail flow rules (also known as transport rules) that allowed messages that would otherwise be blocked:
 
@@ -184,7 +193,7 @@ The information in the **Compare solutions** section is described in the followi
 
 ### Email detections card
 
-<!--- https://go.microsoft.com/fwlink/?linkid=2323918 should go to https://learn.microsoft.com/defender-office-365/mdo-ices-vendor-ecosystem--->
+<!--- https://go.microsoft.com/fwlink/?linkid=2323918--->
 
 The graph on the **Email detections** shows Microsoft and non-Microsoft detections as part of [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
 
