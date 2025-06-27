@@ -62,14 +62,13 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 ## macOS Deprecation
 
-- Microsoft Defender for Endpoint no longer supports Big Sur (11).
-- macOS 12 (Monterey) won't be supported starting December 2024.
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
 
 ## Releases for Defender for Endpoint on macOS
 
-### Behavior Monitoring for macOS is now in public preview
+### Behavior Monitoring for macOS is now generally available
 
-Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
 ### May-2025 (Build: 101.25042.0009  | Release version: 20.125042.9.0)
 
@@ -96,6 +95,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - Hardware UUID is now displayed in the Security Portal
 - Bug and performance fixes
+- **(GA) Behavior Monitoring for macOS**: For information on Behavior Monitoring for Microsoft Defender for Endpoint on macOS, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
 
