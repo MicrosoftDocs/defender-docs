@@ -64,7 +64,7 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
-1. Under Configuration tab, On the **Policies** tab, select **+ Create** > **+ New Policy**.
+1. Under Configuration tab, On the **Policies** tab, select **+ Create** > **+ New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
