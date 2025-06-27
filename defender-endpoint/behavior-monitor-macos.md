@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 06/06/2025
+ms.date: 06/27/2025
 ms.subservice: ngp
 audience: ITPro
 ms.collection:
@@ -40,9 +40,10 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - The device must be onboarded to Microsoft Defender for Endpoint.
 - For the best experience, Microsoft Defender should be up-to-date with the latest version.
-
+- The minimum Microsoft Defender for Endpoint version number must be [101.25032.0006](/defender-endpoint/mac-whatsnew#apr-2025-build-101250320006---release-version-2012503260) or newer. The version number refers to the `app_version` (also known as **Platform update**).
 - Real-time protection (RTP) must be enabled.
 - [Cloud-delivered protection](/defender-endpoint/mac-preferences) must be enabled.
+
 ## Deployment instructions for behavior monitoring
 
 Behavior Monitoring will soon be on by default. You can confirm your device’s enrollment status by checking the output of ***mdatp health --details features*** in your terminal. If not already enabled, you must configure it.
@@ -279,12 +280,12 @@ NRI should have a low impact on network performance. Instead of holding the conn
    sudo mdatp config behavior-monitoring --value enabled   
    ```
  
-3. Enable network protection in block mode:
+1. Enable network protection in block mode:
 
    ```Bash
    sudo mdatp config network-protection enforcement-level --value block
    ```
-
+   
 1. Enable network real-time inspection (NRI):
 
    ```Bash
