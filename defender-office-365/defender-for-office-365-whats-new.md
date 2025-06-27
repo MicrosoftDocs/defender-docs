@@ -45,6 +45,8 @@ For more information on what's new with other Microsoft Defender security produc
 
   Mail bombing is now an available **Detection technology** value in [Threat Explorer](threat-explorer-real-time-detections-about.md), [the Email entity page](mdo-email-entity-page.md), and the [Email summary panel](mdo-email-entity-page.md#the-email-summary-panel). Mail bombing is also an available **DetectionMethods** value in [Advanced Hunting](/defender-xdr/advanced-hunting-overview).
 
+  For more information, see [MC1096885](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1096885).
+
 ## May 2025
 
 - In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
