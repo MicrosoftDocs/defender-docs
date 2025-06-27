@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/24/2025
+ms.date: 06/27/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -32,6 +32,8 @@ This article describes how to deploy Microsoft Defender for Endpoint on macOS th
 ## Prerequisites and system requirements
 
 Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information. For a description of prerequisites and system requirements for the current software version, see [Microsoft Defender for Endpoint on MacOS prerequisites](/defender-endpoint/microsoft-defender-endpoint-mac-prerequisites).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Overview
 
@@ -62,7 +64,7 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
-1. On the **Policies** tab, select **Create** > **New Policy**. 
+1. Under Configuration tab, On the **Policies** tab, select **+ Create** > **+ New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
