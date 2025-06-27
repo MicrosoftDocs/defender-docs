@@ -88,7 +88,7 @@ Defender for Cloud Apps supports "File Sandboxing" malware detection for the fol
 ### Activity from anonymous IP addresses
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Activity from a TOR IP address**.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Activity from a TOR IP address** and **Anonymous proxy activity**.
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 This detection identifies that users were active from an IP address that has been identified as an anonymous proxy IP address. These proxies are used by people who want to hide their device's IP address, and may be used for malicious intent. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
@@ -107,7 +107,7 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 ### Activity from suspicious IP addresses
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Successful logon from a suspicious IP address**.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Successful logon from a suspicious IP address**.
 >
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
@@ -116,7 +116,7 @@ This detection identifies that users were active from an IP address identified a
 ### Suspicious inbox forwarding
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email forwarding rule created by third-party app**.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email forwarding rule created by third-party app**.
 >
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
@@ -128,7 +128,7 @@ This detection looks for suspicious email forwarding rules, for example, if a us
 ### Suspicious inbox manipulation rules
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model.
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 This detection profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user's account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
@@ -136,7 +136,7 @@ This detection profiles your environment and triggers alerts when suspicious rul
 ### Suspicious email deletion activity (Preview)
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert accuracy, this policy has been disabled and renamed to **Suspicious email deletion activity**.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email deletion activity**.
 >
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
