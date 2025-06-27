@@ -55,9 +55,9 @@ This article provides instructions on how to run the tool via Live Response on W
 
    Repeat this step for the `MDEClientAnalyzerPreview.zip` file.
 
-6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
+1. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
-   ```console
+      ```console
    Putfile MDEClientAnalyzerPreview.zip
    Run MDELiveAnalyzer.ps1
    GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
@@ -65,7 +65,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
-
+   
 ### Additional information
 
 - The latest *preview* version of MDE Client Analyzer can be downloaded at [https://aka.ms/MDEClientAnalyzerPreview](https://aka.ms/MDEClientAnalyzerPreview).
@@ -108,24 +108,24 @@ The following script performs the first six steps of the [Running the Binary ver
 
    ```bash
    #! /usr/bin/bash
-
+   
    echo "Starting Client Analyzer Script. Running As:"
    whoami
-
+   
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
-
+   echo 'c65a4e4c6851d130942bfacd147a9d18b8a92b4f50facf519477fd1c41a1c323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
-
+   
    echo "Unzipping SupportToolLinuxBinary.zip"
-   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
-
+   unzip -q /tmp/XMDEClientAnalyzerBinary/XMDEClientAnalyzer/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   
    echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
+   
    ```
-
+   
 #### Python Client Analyzer Install Script
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
