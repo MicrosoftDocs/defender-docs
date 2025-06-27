@@ -39,6 +39,7 @@ The information on the **Overview** page is organized into the following areas:
 For the permissions required to view the dashboard and reports, see [What permissions are needed to view these reports?](reports-email-security.md#what-permissions-are-needed-to-view-these-reports).
 
 :::image type="content" source="media/email-collab-overview.png" alt-text="Screenshot of the Email and collaboration overview report page in the Microsoft Defender portal." lightbox="media/email-collab-overview.png":::
+
 By default, the data on the page is shown for the last 30 days. But, you can show data for the last 60 days or the last 90 days by selecting the **Last 30 days** drop down at the top of the page.
 
 ## Defender for Office 365 summary
