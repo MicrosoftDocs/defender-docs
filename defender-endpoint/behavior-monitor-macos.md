@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 06/06/2025
+ms.date: 06/27/2025
 ms.subservice: ngp
 audience: ITPro
 ms.collection:
