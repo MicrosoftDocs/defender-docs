@@ -1,5 +1,5 @@
 ---
-title: Defender for Office 365 dashboard
+title: Defender for Office 365 Overview dashboard
 f1.keywords:
   - CSH
 ms.author: chrisda
@@ -15,7 +15,7 @@ ms.assetid:
 ms.collection:
   - m365-security
   - tier2
-description: Admins can learn about the information on the Microsoft Defender for Office 365 dashboard in the Microsoft Defender portal.
+description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
 ms.date: 6/26/2025
@@ -24,9 +24,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# The Microsoft Defender for Office 365 dashboard
+# The Microsoft Defender for Office 365 Overview dashboard
 
-The Microsoft Defender for Office 365 dashboard in the Microsoft Defender portal shows the effectiveness of Defender for Office 365. You open the dashboard in the [Defender portal](https://security.microsoft.com) at **Email & collaboration** \> **Overview**, or directly at <https://security.microsoft.com/emailandcollaborationoverviewreport>.
+The Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal shows the effectiveness of Defender for Office 365. You open the dashboard in the [Defender portal](https://security.microsoft.com) at **Email & collaboration** \> **Overview**, or directly at <https://security.microsoft.com/emailandcollaborationoverviewreport>.
 
 The information on the **Overview** page is organized into the following areas:
 
@@ -59,9 +59,9 @@ The graph on the **Efficacy** card visually represents the protection given by D
   - User deletions.
   - Non-Microsoft security provider deletions.
 
-The percentage value shown is the number of messages in each category divided by the total number of total malicious malware and phishing email during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+The percentage value is the number of messages in each category divided by the total number of malicious malware and phishing email during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
 
-Hover over a category in the chart to see the number of messages in each category for the review period.
+Hover over a category in the chart to see the number of messages in each category for the review period. Hover over the percentage to see the total number of messages
 
 :::image type="content" source="media/email-collab-overview-mdo-efficacy.png" alt-text="Screenshot of the Efficacy card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-efficacy.png":::
 
@@ -71,7 +71,7 @@ Hover over a category in the chart to see the number of messages in each categor
 >   - False negatives undetected by Microsoft aren't included in the efficacy calculations. Submitting undetected entities enables us to include those counts in the **Uncaught** calculations.
 >   - False positives detected by Microsoft are removed from the efficacy calculations.
 >
-> Based on customer feedback, we determined the **Pre-delivery**, **Post-delivery**, and **Uncaught** components most accurately reflect an organization's protection state. To create a different efficacy calculation, see [Build custom email security reports and dashboards with workbooks in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/build-custom-email-security-reports-and-dashboards-with-workbooks-in-microsoft-s/4352242) or the advanced hunting query in the [Appendix](#appendix-advanced-hunting-efficacy-query-in-defender-for-office-365-plan-2) section.
+> Based on customer feedback, we determined the **Pre-delivery**, **Post-delivery**, and **Uncaught** components most accurately reflect an organization's protection state. To create a different efficacy report, see [Build custom email security reports and dashboards with workbooks in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/build-custom-email-security-reports-and-dashboards-with-workbooks-in-microsoft-s/4352242) or the advanced hunting query in the [Appendix](#appendix-advanced-hunting-efficacy-query-in-defender-for-office-365-plan-2) section.
 
 ### Threat detections card
 
@@ -128,9 +128,9 @@ Hover over a category in the chart to see the number of **Onboarded** priority a
 
 The graph on the **Policy recommendations** card shows the number of users protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) as a percentage of the total number of users (the value 100% means everyone is protected).
 
-Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (those who get Safe Links or Safe Attachments protection).
+Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users who get Safe Links or Safe Attachments protection).
 
-Although the [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy give a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)), users get a higher level of protection from the following settings:
+Although the [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)), users get a higher level of protection from the following settings:
 
 - Membership in the **Apply Defender for Office 365 protection** setting in the [standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 - Membership in a custom [Safe Links](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) policies.
@@ -169,7 +169,7 @@ The **Tenant allow types** card shows a table with the types of allow entries in
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324013 should go to https://admin.cloud.microsoft/exchange#/transportrules; instead goes to https://security.microsoft.com/emailandcollabreport --->
 
-The **Exchange transport rules** card shows the mail flow rules (also known as transport rules) that allowed messages that would otherwise have been blocked:
+The **Exchange transport rules** card shows the mail flow rules (also known as transport rules) that allowed messages that would otherwise be blocked:
 
 - **Rule ID**
 - **Messages allowed**: The number of messages allowed during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
@@ -188,7 +188,7 @@ The information in the **Compare solutions** section is described in the followi
 
 The graph on the **Email detections** shows Microsoft and non-Microsoft detections as part of [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
 
-- **Defender mailflow detections**
+- **Defender mail flow detections**
 - **Defender post-delivery detections**
 - **Non-Microsoft post-delivery detections**
 - **Duplicate detections Duplicate post-delivery detections**
@@ -236,13 +236,13 @@ The **Emerging threats** card shows any notable campaigns observed by Microsoft 
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
 
-The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of misses are normalized per 1000 active users.
+The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of missed messages is normalized per 1,000 active users.
 
 :::image type="content" source="media/email-collab-overview-insights-m365-secure-email-gateway.png" alt-text="Screenshot of the Microsoft 365 Secure Email Gateway performance card in the Insights section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-insights-m365-secure-email-gateway.png":::
 
 ## Appendix: Advanced hunting efficacy query in Defender for Office 365 Plan 2
 
-Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data that's shown on the [**Efficacy** card](#efficacy-card).
+Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Efficacy** card](#efficacy-card).
 
 > [!NOTE]
 > The numbers might differ slightly due to the different refresh rates for advanced hunting vs. reporting data.
