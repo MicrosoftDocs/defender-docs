@@ -179,13 +179,13 @@ On the script page of the Run Script wizard, choose your script from the list (M
 2. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration` $true or $false command, where `$false` = enabled and `$true` = disabled. For example:
 
    ```powershell
-   Set-MpPreferences -DisableCoreServiceECSIntegration $false 
+   Set-MpPreference -DisableCoreServiceECSIntegration $false 
    ```
 
-3. Use the `Set-MpPreferences -DisableCoreServiceTelemetry` $true or $false command, for example: 
+3. Use the `Set-MpPreference -DisableCoreServiceTelemetry` $true or $false command, for example: 
 
    ```powershell
-   Set-MpPreferences -DisableCoreServiceTelemetry $true
+   Set-MpPreference -DisableCoreServiceTelemetry $true
    ```
 
 #### Use the Registry to update the policies for Microsoft Defender Core service.
