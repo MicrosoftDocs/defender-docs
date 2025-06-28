@@ -26,8 +26,8 @@ Microsoft Defender for Cloud Apps is a security tool and therefore doesn't requi
 Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID applications to function properly. Do not disable these applications in Microsoft Entra ID:
 
 - Microsoft Defender for Cloud Apps - APIs (ID: 972bb84a-1d27-4bd3-8306-6b8e57679e8c)
-- Microsoft Defender for Cloud Apps - Customer Experience (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
-- Microsoft Defender for Cloud Apps - Information Protection (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - Customer Experience (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - Information Protection (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
 - Microsoft Defender for Cloud Apps - MIP Server (ID: 0858ddce-8fca-4479-929b-4504feeed95e)
 
 ## Access Defender for Cloud Apps
