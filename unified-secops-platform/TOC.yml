@@ -92,6 +92,9 @@
           href: cases-overview.md
         - name: Manage multiple tenants
           items: 
+            - name: Multitenant identities
+              href: multitenant-identities-inventory.md
+              displayName: MTO
             - name: Overview
               href: mto-overview.md
             - name: Set up multitenant management
