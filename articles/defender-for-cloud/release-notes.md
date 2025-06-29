@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 29 | Upcoming change | Azure Kubernetes Service (AKS) ephemeral OS disk support update |
+| June 29 | Upcoming change | [Azure Kubernetes Service (AKS) ephemeral OS disk support update](#azure-kubernetes-service-aks-ephemeral-os-disk-support-update) |
 | June 25 | Preview | [Optional index tags for storing malware scanning results (Preview)](#optional-index-tags-for-storing-malware-scanning-results-preview) |
 | June 25 | Preview | [API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)](#api-discovery-and-security-posture-for-apis-hosted-in-function-apps-and-logic-apps-preview) |
 | June 25 | Preview | [Agentless File Integrity Monitoring (Preview)](#agentless-file-integrity-monitoring-preview) |
@@ -43,7 +43,7 @@ June 29, 2025
 
 Agentless scanning in Azure Kubernetes Service (AKS) might not capture files on ephemeral OS disks because these disks are temporary and locally stored. This behavior aligns with the architecture of agentless scanning, which relies on persistent disk snapshots for analysis. Because of this, malware or vulnerabilities on ephemeral disks might be missed. 
 
-Learn more about the update [Prerequisites](enable-agentless-scanning-vms.md#prerequisites)
+Learn how to [enable agentless machine scanning](enable-agentless-scanning-vms.md#prerequisites)
 
 ### Optional index tags for storing malware scanning results (Preview)
 
