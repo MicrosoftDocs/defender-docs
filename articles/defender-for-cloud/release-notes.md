@@ -41,9 +41,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 June 29, 2025
 
-Agentless scanning in Azure Kubernetes Service (AKS) may not capture files on ephemeral OS disks since these disks are temporary and locally stored. This behavior aligns with the architecture of agentless scanning, which relies on persistent disk snapshots for analysis. Consequently, malware or vulnerabilities on ephemeral disks may be missed. Documentation has been updated to reflect this limitation, including a comment under 'Unsupported' for AKS clusters with ephemeral OS disks and a note at the top of the documentation.
+Agentless scanning in Azure Kubernetes Service (AKS) might not capture files on ephemeral OS disks because these disks are temporary and locally stored. This behavior aligns with the architecture of agentless scanning, which relies on persistent disk snapshots for analysis. Because of this, malware or vulnerabilities on ephemeral disks might be missed. 
 
-Learn more about the update
+Learn more about the update [Prerequisites](enable-agentless-scanning-vms.md#prerequisites)
 
 ### Optional index tags for storing malware scanning results (Preview)
 
