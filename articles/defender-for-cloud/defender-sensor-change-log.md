@@ -15,16 +15,17 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 ## Sensor versions available per release
 
-### Defender for Containers Sensor v0.9.17 Preview
+### Sensor v0.9.17 Preview
 
 - **Released:** June 17, 2025
 - **What's included:**
+
   - **Helm-based deployment support**
-    Introduces a new deployment method for the Defender for Containers sensor using Helm. This option lets you deploy and manage the sensor more easily, and access the latest capabilities in Public Preview or GA.
+  Introduces a new deployment method for the sensor using Helm. This option lets you deploy and manage the sensor more easily, and access the latest capabilities in Public Preview or GA.
+  
+      To see your version of Helm, run `kubectl get -n mdc daemonsets/microsoft-defender-collectors-ds -o jsonpath='{.metadata.labels.chart}'`.
 
-    To see your version of Helm, run `kubectl get -n mdc daemonsets/microsoft-defender-collectors-ds -o jsonpath='{.metadata.labels.chart}'`.
-
-    For setup instructions and more details, see [Install Defender for Containers sensor using Helm](deploy-helm.md).
+      For setup instructions and more details, see [Install Defender for Containers sensor using Helm](deploy-helm.md).
 
   - **DNS threat detections**
     This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.
