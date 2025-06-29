@@ -24,7 +24,23 @@ You can navigate to the identity inventory page by selecting **Assets > Identiti
 
 
 
-The total number of identities, critical assets, disabled identities, and service accounts for all tenants are shown at the top of the page.
+![Screenshot of inventory](media/multitenant-identities-inventory/screenshot-of-inventory.png)
+
+  
+  
+At the top of the page, the following identities counts are available for all tenants:
+
+**Total**: The total number of identities.
+
+**Critical:** The number of your critical assets.
+
+**Disabled:** The number of all disabled identities in your organization.
+
+**Services:** The number of all service accounts both on-premises and cloud.
+
+You can use this information to help you prioritize devices for security posture improvements.
+
+Highly privileged identities card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
 
 There are several options you can choose from to customize the identities list view. On the top navigation you can:
 
@@ -41,9 +57,11 @@ There are several options you can choose from to customize the identities list v
 > [!NOTE]
 > When exporting the identities list to a CSV file, a maximum of 5,000 identities are displayed.
 
-To manage a device, select a specific device from the list. Device management tasks like managing tags, device exclusion, and reporting inaccuracy becomes available at the top of the device list.
+To view full identity details, select a specific identity from the list. Tenant ID and Tenant name are available in the identity side panel and page:
 
-[![Screenshot of choosing a device from the device inventory list](https://learn.microsoft.com/en-us/unified-secops-platform/media/mto-tenant-devices/devices-choose-device.png)](/unified-secops-platform/media/mto-tenant-devices/devices-choose-device.png)
+![Screenshot of tenant details](media/multitenant-identities-inventory/screenshot-of-tenant-details.png)
 
-Selecting a device by clicking on the device name opens the device page in a new tab. You can further apply other actions on the device in the new tab.The **Devices** page in multitenant management enables you to quickly manage tenants and devices.
+
+
+
 
