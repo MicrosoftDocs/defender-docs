@@ -38,7 +38,7 @@ At the top of the page, the following identities counts are available for all te
 
 **Services:** The number of all service accounts both on-premises and cloud.
 
-You can use this information to help you prioritize devices for security posture improvements.
+You can use this information to help you prioritize identities for security posture improvements.
 
 Highly privileged identities card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
 
