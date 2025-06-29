@@ -102,7 +102,8 @@ Set your kubeconfig context to the target cluster, and run the script with the c
 install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
 ```
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the defender for containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
+For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
 - Set up a security connector for your AWS or GCP account
 
