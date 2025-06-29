@@ -59,8 +59,7 @@ There are several options you can choose from to customize the identities list v
 
 To view full identity details, select a specific identity from the list. Tenant ID and Tenant name are available in the identity side panel and page:
 
-![Screenshot of tenant details](media/multitenant-identities-inventory/screenshot-of-tenant-details.png)
-
+![Screenshot of tenant details on identity](media/multitenant-identities-inventory/screenshot-of-tenant-details-on-identity.png)
 
 
 
