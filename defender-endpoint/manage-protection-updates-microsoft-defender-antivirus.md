@@ -276,7 +276,15 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 
 ## Enable platform updates using UNC share
 
-To enable platform updates using UNC share, download KB4052623 for [x86](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x86) or [amd64](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x64) and copy it into the architecture folders as `updateplatform.exe`. These files are updated monthly and need to get manually updated by you.
+To enable platform updates using UNC share, download KB4052623 and copy it into the architecture folders as `updateplatform.exe`. These files are updated monthly and need to get manually updated by you.
+
+KB4052623 is available for the following architectures:
+
+* [x86](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x86)
+
+* [amd64](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x64)
+
+* [arm64](https://go.microsoft.com/fwlink/?LinkID=851034&clcid=0x409&arch=arm64) 
 
 **Example structure**
 
