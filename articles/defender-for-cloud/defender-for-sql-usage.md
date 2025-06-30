@@ -41,9 +41,9 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
         - Publisher: Microsoft.AzureData
         - Type: WindowsAgent.SqlServer
 
-- **Supported SQL Server versions** - SQL Server 2012 R2 (11.x) and later versions.
+- **Supported SQL Server versions** - SQL Server 2012 (11.x) and later versions.
 
-- **Supported operating systems**- SQL Server 2012 R2 and later versions.
+- **Supported operating systems**- Windows Server 2012 R2 and later versions.
 
 ## Enable the plan
 
