@@ -185,14 +185,16 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> For version older than `101.25032.0000`:
-> - RPM package needs: `mde-netfilter`, `pcre`
-> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
-> - The `mde-netfilter` package also has the following package dependencies:
-```
-- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
-```## Installation instructions 
+> 
+> For versions older than `101.25032.0000`, the following requirements apply:
+> - RPM package needs: `mde-netfilter` and `pcre`
+> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
+> 
+> The `mde-netfilter` package also has the following package dependencies:
+> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
+> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+
+## Installation instructions 
 
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
 
