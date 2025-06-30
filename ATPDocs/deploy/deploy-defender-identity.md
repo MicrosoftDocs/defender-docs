@@ -22,7 +22,7 @@ Identify your architecture and your requirements, and then use the table below t
 
 |Server configuration   |Server Operating System  |Requirements and considerations  |Recommended deployment |
 |---------|---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later with the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.        |         | [Defender for Identity sensor v3.x * (Preview)](prerequisites-sensor-version-3.md)        |
+|Domain controller     | Windows Server 2019 or later with the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.        |         | [Defender for Identity sensor v3.x (Preview)](prerequisites-sensor-version-3.md)        |
 |      |Windows Server 2016 or earlier         |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
 |Active Directory Federation Services (AD FS)     |    NA     |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |Active Directory Certificate Services (AD CS)     |  NA       |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
@@ -37,17 +37,6 @@ Identify your architecture and your requirements, and then use the table below t
 > - Doesn't provide full functionality of health alerts, posture recommendations or security alerts
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
-
-## Deployment process
-
-Watch the following video for a step-by-step demo and to learn about:
-
-- How Defender for Identity sensors protect your organization against identity-based attacks.
-- How to download and install the sensor.
-- How to find potential sensor and configuration health issues.
-- How to view identity-related posture assessments in a Microsoft Secure Score.
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=de930a92-f552-4c09-92dc-1ab03c2e1131]
 
 ## Next steps
 - [Prepare your environment](prerequisites-sensor-version-2.md).

@@ -36,11 +36,11 @@ The process for activating the sensor depends on your configuration.
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
-   [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/1.jpg)](media/activate-capabilities/1.jpg#lightbox)
+   [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/activate.jpg)](media/activate-capabilities/activate.jpg#lightbox)
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
 
-    [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/2.jpg)](media/activate-capabilities/2.jpg#lightbox)
+    [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/successfully-activated.png)](media/activate-capabilities/successfully-activated.png#lightbox)
 
 
 ## Onboard the domain controller 
@@ -52,7 +52,7 @@ If the domain controller has not been onboarded to Defender for Endpoint, follow
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select **Download onboarding package**, and save the file in a location you can access from your domain controller.
 
-   [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png)](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png#lightbox)
+   [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/download-onboarding.png)](media/activate-capabilities/download-onboarding.png#lightbox)
    
 1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal.
 1. Run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an administrator.
