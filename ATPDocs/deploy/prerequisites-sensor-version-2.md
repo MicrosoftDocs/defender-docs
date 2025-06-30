@@ -50,6 +50,7 @@ The following table summarizes the server requirements and recommendations for t
 |AD FS federation servers     |In AD FS environments, Defender for Identity sensors are supported only on the federation servers. They're not required on Web Application Proxy (WAP) servers.       |
 |Microsoft Entra Connect servers     |For Microsoft Entra Connect servers, you need to install the sensors on both active and staging servers.       |
 |AD CS servers    |Defender for Identity sensor for AD CS supports only AD CS servers with Certification Authority Role Service. You don't need to install sensors on any AD CS servers that are offline.       |
+|Time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 
 ### Minimum operating system requirements
 
@@ -105,8 +106,21 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Time synchronization
-The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
+## Configure Windows auditing
+
+Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+
+Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+
+You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
+
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
+For more information, see:
+- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
+- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+ 
 
 ## Test your prerequisites
 

@@ -40,11 +40,9 @@ The following table summarizes the server requirements and recommendations for t
 |Prerequisite / Recommendation |Description  |
 |---------|---------|
 |Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.|
-|Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs.|
+|Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
-|Connectivity|Requires Microsoft Defender for Endpoint [streamlined URLs](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain).   |
-|Network interface configuration | If you're using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. See [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
-|Maintenance window|We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and might require a restart.      |
+|Connectivity|Requires Microsoft Defender for Endpoint [streamlined URLs](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain). If MDE is installed, there are no additional connectivity requirements.   |
 |Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.|
 |Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 |ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
@@ -58,14 +56,9 @@ The following table summarizes the server requirements and recommendations for t
 |Protocol   |Transport         |Port         |From       |To   |Notes|
 |------------|---------|---------|-------|--------------|-----|
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |    |
-|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|   |
 |RADIUS     |UDP      |1813|RADIUS         |Defender for Identity sensor      |   |
-|Localhost ports   | | | | |Localhost ports are required for the sensor service updater. By default, localhost to localhost traffic is allowed unless blocked by a custom firewall policy.|
-|SSL|TCP      |444 |Sensor service|Sensor updater service            |   |
 |Network Name Resolution (NNR) ports  | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.   |
-|NTLM over RPC|TCP      |Port 135         |Defender for Identity sensor|All devices on network|   |
-|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network|    |
-|RDP |TCP      |3389 |Defender for Identity sensor|All devices on network|Only the first packet of `Client hello` queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|  
+
 
 ### Dynamic memory requirements
 
@@ -79,6 +72,22 @@ The following table describes memory requirements on the server used for the Def
 
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
+
+## Configure Windows auditing
+
+Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+
+Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+
+You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
+
+```powershell
+Set-MDIConfiguration -Mode Domain -Configuration All
+```
+For more information, see:
+- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
+- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+ 
 
 ## Test your prerequisites
 

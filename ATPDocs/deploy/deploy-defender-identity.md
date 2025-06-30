@@ -8,15 +8,9 @@ ms.reviewer: rlitinsky
 
 # Microsoft Defender for Identity deployment overview
 
-This article explains the Microsoft Defender for Identity deployment process.
+Defender for Identity uses sensors to collect signals from your on-premises identity infrastructure. This article explains the Microsoft Defender for Identity deployment process.
 
-Defender for Identity uses sensors to collect signals from your Identity Infrastructure servers such as:
-- Active Directory Domain controllers
-- Active Directory Federation Services (AD FS)
-- Active Directory Certification Services (AD CS)
-- Microsoft Entra Connect servers
-
-Defender for Identity uses these signals to detect threats like privilege escalation or high-risk lateral movement and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
+Defender for Identity uses signals to detect threats like privilege escalation or high-risk lateral movement and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
 
 We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have an AD FS, AD CS, or a Microsoft Entra Connect farm or cluster in your environment, install the sensor on each server.
 
@@ -26,18 +20,16 @@ Once you've completed the steps to prepare your environment and assigned roles a
 
 Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment. 
 
-|Server configuration   |Server Operating System  |Infrastructure Considerations  |Recommended deployment |
+|Server configuration   |Server Operating System  |Requirements and considerations  |Recommended deployment |
 |---------|---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later        |         | [Defender for Identity sensor v3.x (Preview)](prerequisites-sensor-version-3.md)        |
-|Domain controller      | Windows Server 2019 or later        |You need:<br> - VPN integration<br> - ExpressRoute <br> - Optimal NNR, but your domain controller is not onboarded to MDE     |  [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)    |
-|Domain controller      |Windows Server 2016 or earlier         |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
-|AD FS     |    NA     |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|AD CS     |  NA       |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|Domain controller     | Windows Server 2019 or later with the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.        |         | [Defender for Identity sensor v3.x (Preview)](prerequisites-sensor-version-3.md)        |
+|      |         |If you need:<br> - VPN integration<br> - ExpressRoute <br> - Optimal NNR, but your domain controller is not onboarded to MDE     |  [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)    |
+|      |Windows Server 2016 or earlier         |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
+|Active Directory Federation Services (AD FS)     |    NA     |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|Active Directory Certificate Services (AD CS)     |  NA       |         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |Entra Connect|  NA    |        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
-
-
 
 ## Deployment process
 
