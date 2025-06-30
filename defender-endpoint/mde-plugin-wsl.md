@@ -23,8 +23,7 @@ search.appverid: MET150
 
 **Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 ## Overview
 
@@ -294,7 +293,7 @@ Check the following things:
 - If your machine has a proxy setup, run the command `healthCheck --extendedProxy`. This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender.
 
    ![Extend HealthCheck Proxy doc](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
-            
+  
 - If the steps mentioned above do not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
    **In Windows 11**
