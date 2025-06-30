@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity sensor v3.x prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites for installing the Microsoft Defender for Identity sensor version 3.x.
-ms.date: 06/18/2025
+ms.date: 06/30/2025
 ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
@@ -12,10 +12,12 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations 
 
-Before activating the Defender for Identity sensor v3.x, note that this version of the sensor has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
-- Network Name Resolution (NNR): Defender for Identity sensor version 3.x requires a healthy Defender for Endpoint deployment configured with [streamlined URLs](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain) for optimal NNR.
-- Health alerts: The Defender for Identity sensor version 3.x supports most, but not all of the health alerts supported by version 2.x. See [health alerts](../health-alerts.md) for an indication of which alerts are supported.
-- Security alerts: The Defender for Identity sensor version 3.x supports most, but not all of the security alerts supported by version 2.x.
+Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
+The Defender for Identity sensor v3.x:
+ - Requires that Defender for Endpoint is deployed
+ - Doesn't support VPN integration
+ - Doesn't support ExpressRoute
+ - Doesn't provide full functionality of health alerts, posture recommendations or security alerts.
 
 ## Licensing requirements
 
@@ -42,11 +44,10 @@ The following table summarizes the server requirements and recommendations for t
 |Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.|
 |Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
-|Connectivity|Requires Microsoft Defender for Endpoint [streamlined URLs](../../defender-endpoint/configure-device-connectivity.md#option-1-configure-connectivity-using-the-simplified-domain). If MDE is installed, there are no additional connectivity requirements.   |
+|Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
 |Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.|
 |Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 |ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
-
 
 > [!NOTE]
 > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. [This out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
@@ -58,7 +59,6 @@ The following table summarizes the server requirements and recommendations for t
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |    |
 |RADIUS     |UDP      |1813|RADIUS         |Defender for Identity sensor      |   |
 |Network Name Resolution (NNR) ports  | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.   |
-
 
 ### Dynamic memory requirements
 

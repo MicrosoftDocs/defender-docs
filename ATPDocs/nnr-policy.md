@@ -13,8 +13,7 @@ Network Name Resolution (NNR) is a main component of  Microsoft Defender for Ide
 Using NNR, Defender for Identity can correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Defender for Identity profiles entities, including computers, and generates security alerts for suspicious activities.
 
 > [!NOTE]
-> The Defender for Identity sensor version 3.x requires a healthy Defender for Endpoint deployment configured with [streamlined URLs](../defender-endpoint/configure-device-connectivity.md) for optimal NNR.
-
+> For optimal NNR, the Defender for Identity sensor version 3.x requires a Defender for Endpoint deployment.
 
 To resolve IP addresses to computer names, Defender for Identity sensors look up the IP addresses using the following methods:
 
