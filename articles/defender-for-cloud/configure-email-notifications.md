@@ -4,7 +4,7 @@ description: Learn how to fine-tune the Microsoft Defender for Cloud security al
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 05/19/2024
+ms.date: 06/30/2025
 ms.custom: mode-other
 #customer intent: As a user, I want to learn how to customize email notifications for alerts and attack paths in Microsoft Defender for Cloud.
 ---
