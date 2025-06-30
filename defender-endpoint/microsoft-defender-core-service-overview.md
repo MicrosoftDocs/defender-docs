@@ -8,7 +8,7 @@ ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 11/25/2024
+ms.date: 06/30/2025
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
