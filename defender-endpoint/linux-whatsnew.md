@@ -43,19 +43,20 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
-### June-2025 Build: 101.25042.0002 | Release version: 30.125042.0002.0
+### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
 
-|Build:             |**101.25042.0002**    |
+|Build:             |**101.25042.0003**    |
 |-------------------|----------------------|
-|Released:          |**June 4, 2025**      |
-|Published:         |**June 4, 2025**      |
-|Release version:   |**30.125042.0002.0**  |
+|Released:          |**June 30, 2025**      |
+|Published:         |**June 30, 2025**      |
+|Release version:   |**30.125042.0003.0**  |
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
 What's new
-
+- The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 - Removed external dependency of uuid-runtime from MDE package
+- Other stability improvements and bug fixes
 
 ### May-2025 Build: 101.25032.0010 | Release version: 30.125032.0010.0
 
