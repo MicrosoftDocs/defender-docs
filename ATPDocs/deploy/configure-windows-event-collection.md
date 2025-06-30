@@ -235,15 +235,16 @@ To configure domain object auditing:
 
         Now, all relevant changes to directory services appear as 4662 events when they're triggered.
 
-1. Repeat the steps in this procedure, but for **Applies to**, select the following object types:
+1. Repeat the steps in this procedure, but for **Applies to**, select the following object types <sup>1</sup>
    - **Descendant Group Objects**
    - **Descendant Computer Objects**
    - **Descendant msDS-GroupManagedServiceAccount Objects**
    - **Descendant msDS-ManagedServiceAccount Objects**
-   - **Descendant msDS-DelegatedManagedServiceAccount Objects**
+   - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>2</sup>
 
 > [!NOTE]
-> Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
+> 1. Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
+> 2. The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 ## Configure auditing on AD FS
 

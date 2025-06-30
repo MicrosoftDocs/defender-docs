@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 04/02/2025
+ms.date: 06/19/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -489,7 +489,7 @@ In the **View data by Email \> Phish** and **Chart breakdown by Detection Techno
 - **Impersonation brand**: Sender impersonation of well-known brands.
 - **Impersonation domain**<sup>\*</sup>: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 - **Impersonation user**<sup>\*</sup>: Impersonation of protected senders that you specified in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) or learned through mailbox intelligence.
-- **LLM content analysis**: Analyis by Microsoft's purpose-built large language models to detect harmful email.
+- **LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.
 - **Mailbox intelligence impersonation**<sup>\*</sup>: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 - **Mixed analysis detection**: Multiple filters contributed to the message verdict.
 - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
