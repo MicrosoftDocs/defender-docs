@@ -1,7 +1,7 @@
 ---
 title: Enable Defender for Storage with Infrastructure as Code
 description: Learn how to enable and configure Microsoft Defender for Storage with Infrastructure as Code (IaC) templates.
-ms.date: 08/08/2023
+ms.date: 06/30/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage using Infrastructure as Code templates so that I can ensure all storage accounts are protected.
 ---
@@ -169,7 +169,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
 ```
 
 > [!NOTE]
-> The `azapi_resource_action` used here is an action that is specific to the configuration of Microsoft Defender for Storage. It's different from the typical resource declarations in Terraform, and it's used to perform specific actions on the resource, such as enabling or disabling features.
+> The `azapi_resource_action` used here's an action that is specific to the configuration of Microsoft Defender for Storage. It's different from the typical resource declarations in Terraform, and it's used to perform specific actions on the resource, such as enabling or disabling features.
 
 **Modifying the monthly cap for malware scanning**:
 
@@ -244,7 +244,7 @@ To disable the entire Defender plan for the storage account, set the `isEnabled`
 Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) documentation.
 
 > [!TIP]
-> Malware scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
+> Malware scanning can be configured to send scanning results to: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
 
 Learn more on how to [set up response for malware scanning results.](defender-for-storage-configure-malware-scan.md)
 
