@@ -15,7 +15,7 @@ Whether your app is already listed in the cloud app catalog, or it's new, submit
 In addition to submitting the form:
 
 - If the app is **not currently listed** in the catalog, you can [create a custom app](cloud-discovery-custom-apps.md) to monitor and manage its use in your environment.
-- If the app is listed but the **risk score doesn't reflect your internal security evaluation**, you can [manually override the app’s risk score](cloud-app-catalog.md#overwrite-risk-score) to align with your organization’s policies.
+- If the app is listed but the **risk score doesn't reflect your internal security evaluation**, you can [manually override the app’s risk score](risk-score.md#override-the-risk-score) to align with your organization’s policies.
 
 These options provide flexibility while Microsoft processes submitted updates through the attestation workflow.
 
