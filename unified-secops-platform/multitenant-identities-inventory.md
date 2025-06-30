@@ -5,11 +5,11 @@
 
 title: Multitenant identities
 description: A multi-tenant identity inventory
-author:      LiorShapiraa # GitHub alias
+author: LiorShapiraa
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date:     06/29/2025
+ms.date: 06/29/2025
 ---
 
 # Identities
@@ -22,12 +22,8 @@ The Identity inventory page lists all the identities in each tenant that you hav
 
 You can navigate to the identity inventory page by selecting **Assets > Identities** in Microsoft Defender XDR's navigation menu.
 
-
-
-![Screenshot of inventory](media/multitenant-identities-inventory/screenshot-of-inventory.png)
-
-  
-  
+:::image type="content" source="media/multitenant-identities-inventory/screenshot-of-inventory.png" alt-text="Screenshot of inventory." lightbox="media/multitenant-identities-inventory/screenshot-of-inventory.png":::
+   
 At the top of the page, the following identities counts are available for all tenants:
 
 **Total**: The total number of identities.
