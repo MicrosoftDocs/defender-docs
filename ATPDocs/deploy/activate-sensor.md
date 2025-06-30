@@ -8,14 +8,12 @@ ms.reviewer: rlitinsky
 
 # Activate the Windows Server sensor v3.x on a domain controller (Preview)
 
-This article describes onboarding for new domain controllers running Windows Server 2019 or later. For domain controllers running older operating systems, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
-
-For complete protection of your on-premises deployment, we recommend activating the Defender for Identity sensor on all applicable servers.
+For complete protection of your on-premises deployment, we recommend activating the Defender for Identity sensor on all applicable servers. This article describes onboarding for new domain controllers running Windows Server 2019 or later. For domain controllers running older operating systems, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
 
 ## Prerequisites
 See [Microsoft Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md) for all system requirements before proceeding with activating the sensor.
 
-## The Activation process
+## The Activation page
 
 The **Activation** page displays all servers from your device inventory. Defender for Identity detects all of your servers and their configuration. The server's activation state lets you know what you need to do to onboard the domain controller to Defender for Identity.
 
@@ -23,15 +21,15 @@ You can choose to activate eligible domain controllers either automatically, whe
 
 |Activation State  |Next steps  |
 |---------|---------|
-|Install classic sensor|[Deploy the classic Defender for Identity sensor](install-sensor.md) from the **Sensors page**.|
-|Needs OS update     |This domain controller is running an unsupported operating system version for the new sensor. Update the server to Windows Server 2019 or later to use the new sensor. |
 |Activate new sensor |The domain controller is already onboarded to Defender for Endpoint. [Activate the sensor](#activate-the-defender-for-identity-sensor).|
-|Download the onboarding package     |[Onboard the domain controller to Defender for Endpoint](#onboard-the-domain-controller-to-defender-for-endpoint).|
- 
-## Activation process
+|Install classic sensor|[Deploy the classic Defender for Identity sensor](install-sensor.md) from the **Sensors page**.|
+|Download onboarding package     |[Onboard the domain controller to Defender for Endpoint](#onboard-the-domain-controller-to-defender-for-endpoint).|
+|OS update is required     |This domain controller is running an unsupported operating system version for the new sensor. Update the server to Windows Server 2019 or later to use the new sensor. |
+
+## The Activation process
 The process for activating the sensor depends on your configuration.
 - If you have a Defender for Endpoint deployment, simply [activate the sensor](#activate-the-defender-for-identity-sensor).
-- If the domain controller is not onboarded to Defender for Endpoint, [onboard the domain controller](#onboard-the-domain-controller) by configuring Defender for Endpoint streamlined URLs, and then download the onboarding package.
+- If the domain controller is not onboarded to Defender for Endpoint, [onboard the domain controller](#onboard-the-domain-controller) by configuring Defender for Endpoint streamlined URLs, and then downloading and running the onboarding package.
 
 ## Activate the Defender for Identity sensor
 
@@ -49,20 +47,14 @@ The process for activating the sensor depends on your configuration.
 
 If the domain controller has not been onboarded to Defender for Endpoint, follow these steps to activate the sensor.
 
-### Configure Defender for Endpoint streamlined URLs
-
 1. [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server)
 1. [Configure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
-
-### Download the Defender for Identity onboarding package
-
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
-
-2. Select **Download onboarding package**, and save the file in a location you can access from your domain controller.
+1. Select **Download onboarding package**, and save the file in a location you can access from your domain controller.
 
    [![Screenshot that shows how to onboard the new sensor.](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png)](media/activate-capabilities/screenshot-that-shows-how-to-onboard-the-new-sensor.png#lightbox)
    
-3. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal.
+1. From the domain controller, extract the zip file you downloaded from the Microsoft Defender portal.
 1. Run the `DefenderForIdentityOnlyOnboardingScript.cmd` script as an administrator.
 
    [![screenshot that shows the onboarding script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)](media/activate-capabilities/screenshot-2025-06-04-170500.png#lightbox)

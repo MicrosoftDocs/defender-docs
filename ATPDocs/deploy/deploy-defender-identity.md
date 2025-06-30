@@ -36,7 +36,6 @@ Identify your architecture and your requirements, and then use the table below t
 > - Doesn't support ExpressRoute
 > - Doesn't provide full functionality of health alerts, posture recommendations or security alerts
 
-
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
 ## Deployment process
@@ -49,7 +48,6 @@ Watch the following video for a step-by-step demo and to learn about:
 - How to view identity-related posture assessments in a Microsoft Secure Score.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=de930a92-f552-4c09-92dc-1ab03c2e1131]
-
 
 ## Next steps
 - [Prepare your environment](prerequisites-sensor-version-2.md).
