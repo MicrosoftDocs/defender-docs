@@ -43,7 +43,7 @@ items:
           href: deploy/install-sensor.md
         - name: Configure the Defender for Identity sensor
           href: deploy/configure-sensor-settings.md
-        - name: configure sensors for AD FS, AD CS, and Entra Connect
+        - name: Configure sensors for AD FS, AD CS, and Entra Connect
           href: deploy/active-directory-federation-services.md
         - name: Configure a Directory Service account
           items:
