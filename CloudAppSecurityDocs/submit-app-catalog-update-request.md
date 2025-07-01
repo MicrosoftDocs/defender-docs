@@ -37,7 +37,7 @@ To request a risk score update:
 1. Select **Request score update**.
 
 This triggers a review of the app’s risk factors and other data.
-For official guidance, see [Customize app risk scores](/risk-score.md).
+For official guidance, see [Customize the risk score](risk-score.md#customize-the-risk-score).
 
 
 **Other requests**
@@ -60,9 +60,9 @@ After you submit a ticket:
 
 While your request is being reviewed:
 
-- If the app isn’t listed in the catalog, you can [create a custom app](https://learn.microsoft.com/en-us/defender-cloud-apps/cloud-discovery-custom-apps) to track and manage it in your environment.
-- If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can [override the app’s risk score](https://learn.microsoft.com/en-us/defender-cloud-apps/risk-score) manually.
- 
+- If the app isn’t listed in the catalog, you can [add custom apps to cloud discovery](cloud-discovery-custom-apps.md) to track and manage it in your environment.
+- If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can [override the app’s risk score](risk-score.md#override-the-risk-score) manually.
+
 ## Validation and processing timeline
 
 All catalog update requests undergo a thorough validation process to ensure accuracy and relevance. All app catalog requests must meet the following criteria:
