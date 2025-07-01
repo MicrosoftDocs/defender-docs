@@ -47,6 +47,8 @@ For more information on what's new with other Microsoft Defender security produc
 
   For more information, see [MC1096885](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1096885).
 
+-   AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md) .
+
 ## May 2025
 
 - In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
