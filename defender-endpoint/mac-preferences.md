@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/21/2025
+ms.date: 07/01/2025
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
@@ -995,6 +995,8 @@ The following templates contain entries for all settings described in this docum
                 <dict>
                     <key>enforcementLevel</key>
                     <string>real_time</string>
+                    <key>behaviorMonitoring</key>
+                    <string>enabled</string>
                     <key>scanAfterDefinitionUpdate</key>
                     <true/>
                     <key>scanArchives</key>
