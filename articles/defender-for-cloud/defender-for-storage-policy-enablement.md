@@ -2,12 +2,12 @@
 title: Enable Defender for Storage with an Azure built-in policy
 description: Learn how to enable and configure the Microsoft Defender for Storage plan at scale with an Azure built-in policy.
 ms.topic: install-set-up-deploy
-ms.date: 08/15/2023
+ms.date: 06/30/2025
 ---
 
 # Enable and configure at scale with an Azure built-in policy
 
-We recommend enabling Defender for Storage via a policy. This method facilitates enablement at scale and ensures a consistent security policy is applied across all existing and future storage accounts within the defined scope, such as entire management groups. This keeps the storage accounts protected with Defender for Storage according to the organization's defined configuration.
+Defender for Storage should be enabled via a built-in policy. This method facilitates enablement at scale and ensures a consistent security policy is applied across all existing and future storage accounts within the defined scope, such as entire management groups. This keeps the storage accounts protected with Defender for Storage according to the organization's defined configuration.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
