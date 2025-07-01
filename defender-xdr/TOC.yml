@@ -94,6 +94,9 @@
           href: investigate-incidents.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
+        - name: Merge incidents manually
+          href: merge-incidents-manually.md
+        - name: Alerts
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Investigate entity pages
