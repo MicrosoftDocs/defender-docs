@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/17/2025
+ms.date: 07/01/2025
 ---
 
 # Microsoft Defender for Endpoint on macOS
