@@ -1,7 +1,7 @@
 ---
 title: Classify APIs with sensitive data exposure
 description: Learn how to monitor your APIs for sensitive data exposure.
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Classify APIs with sensitive data exposure
 
-Once your APIs are onboarded, Defender for APIs starts monitoring your APIs for sensitive data exposure. APIs are classified with both built-in and custom sensitive information types and labels as defined by your organization's Microsoft Purview Information Protection (MIP) Purview governance rules. If you don't have MIP Purview configured, APIs are classified with the Microsoft Defender for Cloud default classification rule set with the following features.
+Once your APIs are onboarded, Defender for APIs starts monitoring your APIs for sensitive data exposure. APIs are classified with both built-in and custom sensitive information types and labels as defined by your organization's Microsoft Purview Information Protection (MIP) governance rules. If you don't have MIP Purview configured, APIs are classified with the Microsoft Defender for Cloud default classification rule set with the following features.
 
 Within Defender for APIs inventory experience, you can search for sensitivity labels or sensitive information types by adding a filter to identify APIs with custom classifications and information types.
 

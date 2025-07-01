@@ -1,7 +1,7 @@
 ---
 title: Enable sensitive data threat detection
 description: Learn how to enable and configure sensitive data threat detection in Microsoft Defender for Storage to protect your data and enhance security.
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -15,7 +15,7 @@ Sensitive data threat detection is enabled by default when you enable Defender f
 
 ## Use the sensitivity context in the security alerts
 
-The sensitive data threat detection capability helps security teams identify and prioritize data security incidents for faster response times. Defenders for Storage alerts include findings of sensitivity scanning and indications of operations performed on resources containing sensitive data.
+The sensitive data threat detection capability helps security teams identify and prioritize data security incidents for faster response times. Defender for Storage alerts include findings of sensitivity scanning and indications of operations performed on resources containing sensitive data.
 
 In the alert’s extended properties, you can find sensitivity scanning findings for a **blob container**:
 

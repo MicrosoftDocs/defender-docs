@@ -28,7 +28,7 @@ After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft 
 1. Navigate to **Configure access**. Here you can perform token exchange, change the organizations/groups onboarded, or toggle autodiscovery.
 
     > [!NOTE]
-    > If you're the owner of the connector, reauthorizing your environment to make changes be **optional**.
+    > If you're the owner of the connector, reauthorizing your environment to make changes is **optional**.
     > If you're trying to take ownership of the connector, you must reauthorize using your access token. This change is irreversible as soon as you select "Reauthorize".
 
 1. Use **Edit connector account** component to make changes to onboarded inventory. If an organization/group is greyed out, ensure that you have proper permissions to the environment and the scope isn't onboarded elsewhere in the Tenant.

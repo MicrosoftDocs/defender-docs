@@ -1,7 +1,7 @@
 ---
 title: Enable Defender for Storage with Infrastructure as Code
 description: Learn how to enable and configure Microsoft Defender for Storage with Infrastructure as Code (IaC) templates.
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage using Infrastructure as Code templates so that I can ensure all storage accounts are protected.
 ---
@@ -169,7 +169,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
 ```
 
 > [!NOTE]
-> The `azapi_resource_action` used here's an action that is specific to the configuration of Microsoft Defender for Storage. It's different from the typical resource declarations in Terraform, and it's used to perform specific actions on the resource, such as enabling or disabling features.
+> The `azapi_resource_action` used here is an action that is specific to the configuration of Microsoft Defender for Storage. It's different from the typical resource declarations in Terraform, and it's used to perform specific actions on the resource, such as enabling or disabling features.
 
 **Modifying the monthly cap for malware scanning**:
 
