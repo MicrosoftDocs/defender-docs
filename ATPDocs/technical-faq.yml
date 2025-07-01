@@ -68,8 +68,6 @@ sections:
           
           - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components and provides remediation paths to reduce the attack surface.
           
-          - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
-          
           - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Microsoft Entra ID Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
           
           - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. 
@@ -150,7 +148,7 @@ sections:
 
       - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
         answer: |
-          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID will also benefit of security value provided by Microsoft Entra ID (based on license level) and of Investigation Priority Scoring.
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID.
 
   - name: WinPcap and Npcap drivers
     questions: 
