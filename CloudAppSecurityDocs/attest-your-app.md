@@ -7,17 +7,9 @@ ms.topic: article
 # Attest your apps
 
 
-
 Microsoft Defender for Cloud Apps enables you to attest your app, so that you make sure that the compliance and security details we use to rate your app in our cloud app catalog are up to date.
 
 Whether your app is already listed in the cloud app catalog, or it's new, submit a [self-attestation questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR4CRHM-U7CtKpJma_QJAnSlUMEpLQzBaQ1hWNDMxUEhRNFI3Q0FZUkdWRC4u). For details on the self-attestation process, contact casfeedback@microsoft.com.
-
-In addition to submitting the form:
-
-- If the app is **not currently listed** in the catalog, you can [create a custom app](cloud-discovery-custom-apps.md) to monitor and manage its use in your environment.
-- If the app is listed but the **risk score doesn't reflect your internal security evaluation**, you can [manually override the app’s risk score](risk-score.md#override-the-risk-score) to align with your organization’s policies.
-
-These options provide flexibility while Microsoft processes submitted updates through the attestation workflow.
 
 Follow the service attributes described below to successfully complete the submission of the questionnaire:
 
