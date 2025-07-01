@@ -46,7 +46,7 @@ This article describes how to install, configure, update, and use Defender for E
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.
 
-To get the latest features, including preview capabilities (such as endpoint detection and response for your Mac devices), configure your macOS device running Defender for Endpoint to use the Beta channel (formerly `Insider-Fast`).
+To get the latest features, including preview capabilities, configure your macOS device running Defender for Endpoint to use the Beta channel (formerly `Insider-Fast`).
 
 ## How to install Microsoft Defender for Endpoint on Mac
 
