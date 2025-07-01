@@ -133,7 +133,7 @@ If your host machine contains multiple proxy settings, the plug-in selects the p
 
 3. Network & Internet proxy settings.
 
-For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
+   For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
 
 > [!NOTE]
 > The `DefenderProxyServer` registry key is no longer supported. Follow the steps described earlier in this article to configure proxy in plug-in.
