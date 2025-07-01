@@ -4,7 +4,7 @@ description: Learn how to enable enhanced security features in Microsoft Defende
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/09/2023
+ms.date: 06/30/2025
 ---
 
 # Enable Microsoft Defender for Azure Cosmos DB
@@ -145,13 +145,13 @@ You can use sample Microsoft Defender for Azure Cosmos DB alerts to evaluate the
 
 1. Select the subscription.
 
-1. Select the relevant Microsoft Defender plan(s).
+1. Select the relevant Microsoft Defender for Cloud plan(s).
 
 1. Select **Create sample alerts**.
 
     :::image type="content" source="media/quickstart-enable-defender-for-cosmos/sample-alerts.png" alt-text="Screenshot showing the order needed to create an alert.":::
 
-After a few minutes, the alerts will appear in the security alerts page. Alerts will also appear anywhere that you've configured to receive your Microsoft Defender for Cloud security alerts. For example, connected SIEMs, and email notifications.
+After a few minutes, the alerts will appear in the security alerts page. Alerts appear anywhere that you configure to receive your Microsoft Defender for Cloud security alerts. For example, connected SIEMs, and email notifications.
 
 ## Next steps
 

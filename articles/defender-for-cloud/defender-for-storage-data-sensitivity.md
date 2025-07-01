@@ -1,7 +1,7 @@
 ---
 title: Sensitive data threat detection in Defender for Storage
 description: Understand how Microsoft Defender for Storage detects and protects sensitive data from exposure, enhancing your organization's data security.
-ms.date: 05/16/2024
+ms.date: 07/01/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
