@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/03/2025
+ms.date: 07/01/2025
 ---
 
 # Supported Microsoft Defender for Endpoint capabilities by platform
