@@ -62,7 +62,7 @@ In order to give Defender for Cloud Apps the necessary permissions:
 1. Select **Inspection method** > **Data Classification Service** to enable content inspection for the policy.
 1. Check both boxes - **Inspect protected files** and **Unmask the last 4 characters of a match**.
 
-:::image type="content" source="media/content-inspection/inspection-method-data-classification-service.png" alt-text="Screenshot that shows the Data classification service inspection method.":::
+   :::image type="content" source="media/content-inspection/inspection-method-data-classification-service.png" alt-text="Screenshot that shows the Data classification service inspection method.":::
 
 
 ## Next steps
