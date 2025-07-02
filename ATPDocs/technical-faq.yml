@@ -148,7 +148,7 @@ sections:
 
       - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
         answer: |
-          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID.
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID will also benefit of security value provided by Microsoft Entra ID based on license level. 
 
   - name: WinPcap and Npcap drivers
     questions: 
