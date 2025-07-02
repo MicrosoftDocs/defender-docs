@@ -58,7 +58,7 @@ For _read or unread messages_ that are found to contain malware after delivery, 
 > [!NOTE]
 > Users can't release their own messages that were quarantined as malware, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
 
-ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
+ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md).
 
 ### Zero-hour auto purge (ZAP) for phishing
 

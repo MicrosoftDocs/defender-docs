@@ -41,7 +41,7 @@ The rest of this article contains specifics about each method.
 > [!TIP]
 > Always submit messages in your blocked sender lists to Microsoft for analysis. For instructions, see [Report questionable email to Microsoft](submissions-admin.md#report-questionable-email-to-microsoft). If the messages or message sources are determined to be harmful, Microsoft can automatically block the messages, and you won't need to manually maintain the entry in blocked sender lists.
 >
-> Instead of blocking email, you also have several options to allow email from specific sources using _safe sender lists_. For more information, see [Create safe sender lists](create-safe-sender-lists-in-office-365.md).
+> Instead of blocking email, you also have several options to allow email from specific sources using _safe sender lists_. For more information, see [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md).
 >
 > A standard SMTP email message can contain different sender email addresses as described in [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication). Frequently, the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) and From address (also known as the `5322.From` address or P2 sender) are the same. However, when email is sent on behalf of someone else, the addresses can be different. Blocked sender lists and blocked domain lists in anti-spam policies inspect the From address only. This behavior is similar to Outlook Blocked Senders that use the From address.
 

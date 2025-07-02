@@ -68,7 +68,7 @@ To configure EOP and Defender for Office 365 features, you need permissions. The
 
 **Details**:
 
-Email authentication (also known as _email validation_) is a group of standards to verify that email messages are legitimate, unaltered, and come from expected sources for the sender's email domain. For more information, see [Email authentication in EOP](email-authentication-about.md).
+Email authentication (also known as _email validation_) is a group of standards to verify that email messages are legitimate, unaltered, and come from expected sources for the sender's email domain. For more information, see [Email authentication in Microsoft 365](email-authentication-about.md).
 
 We'll proceed with the assumption that you're using one or more [custom domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365 for email (for example contoso.com) , so you need to create specific email authentication DNS records for each custom domain that you're using for email.
 
@@ -206,7 +206,7 @@ Keep in mind that the following protection feature configurations are unaffected
 - [Globally turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md)
 - [Globally turn on and configure Safe Documents](safe-documents-in-e5-plus-security-about.md) (available and meaningful only with licenses that aren't included in Defender for Office 365 (for example, Microsoft 365 A5 or Microsoft 365 E5 Security))
 
-To turn on and configure preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+To turn on and configure preset security policies, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 The decision to use custom policies instead of or in addition to preset security policies ultimately comes down to the following business requirements:
 

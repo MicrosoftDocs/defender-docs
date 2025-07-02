@@ -304,7 +304,7 @@ The **Post-delivery activities** report is available only in organizations with 
 
 ## Spoof detections report
 
-The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in EOP](anti-phishing-protection-spoofing-about.md).
+The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in Microsoft 365](anti-phishing-protection-spoofing-about.md).
 
 The aggregate and detail views of the report allows for 90 days of filtering.
 
@@ -1031,7 +1031,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 
 ## Top malware report
 
-The **Top malware** report shows the various kinds of malware that was detected by [anti-malware protection in EOP](anti-malware-protection-about.md).
+The **Top malware** report shows the various kinds of malware that was detected by [Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top malware**.
 
@@ -1165,8 +1165,8 @@ You need to be assigned permissions before you can view and use the reports that
 
 If you don't see data in the reports, check the report filters and double-check that your protection policies are configured to detect and take action on messages. For more information, see the following articles:
 
-- [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
+- [Configuration analyzer for protection policies in Microsoft 365](configuration-analyzer-for-security-policies.md)
+- [Preset security policies in Microsoft 365](preset-security-policies.md)
 - [How do I turn off spam filtering?](anti-spam-protection-faq.yml#how-do-i-turn-off-spam-filtering-)
 
 ## Download and export report information
@@ -1356,9 +1356,9 @@ In the **Save as** dialog that opens, you see the default name of the .csv file 
 
 ## Related articles
 
-[Anti-spam protection in EOP](anti-spam-protection-about.md)
+[Anti-spam protection in Microsoft 365](anti-spam-protection-about.md)
 
-[Anti-malware protection in EOP](anti-malware-protection-about.md)
+[Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md)
 
 [View mail flow reports in the EAC](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 

@@ -57,11 +57,11 @@ The individual fields and values are described in the following table.
 |---|---|
 |`ARC`|The `Authenticated Received Chain (ARC)` protocol has the following fields: <ul><li>`AAR`: Records the content of the **Authentication-results** header from DMARC.</li><li>`AMS`: Includes cryptographic signatures of the message.</li><li>`AS`: Includes cryptographic signatures of the message headers. This field contains a tag of a chain validation called `"cv="`, which includes the outcome of the chain validation as **none**, **pass**, or **fail**.</li></ul>|
 |`CAT:`|The category of protection policy that's applied to the message: <ul><li>`AMP`: Anti-malware</li><li>`BIMP`: Brand impersonation<sup>\*</sup></li><li>`BULK`: Bulk</li><li>`DIMP`: Domain impersonation<sup>\*</sup></li><li>`FTBP`: Anti-malware [common attachments filter](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies)</li><li>`GIMP`: [Mailbox intelligence](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) impersonation<sup>\*</sup></li><li>`HPHSH` or `HPHISH`: High confidence phishing</li><li>`HSPM`: High confidence spam</li><li>`INTOS`: Intra-Organization phishing</li><li>`MALW`: Malware</li><li>`OSPM`: Outbound spam</li><li>`PHSH`: Phishing</li><li>`SAP`: Safe Attachments<sup>\*</sup></li><li>`SPM`: Spam</li><li>`SPOOF`: Spoofing</li><li>`UIMP`: User impersonation<sup>\*</sup></li></ul> <br/> <sup>\*</sup>Defender for Office 365 only. <br/><br/> An inbound message might be flagged by multiple forms of protection and multiple detection scans. Policies are applied in an order of precedence, and the policy with the highest priority is applied first. For more information, see [What policy applies when multiple protection methods and detection scans run on your email](how-policies-and-protections-are-combined.md).|
-|`CIP:[IP address]`|The connecting IP address. You can use this IP address in the IP Allow List or the IP Block List. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).|
+|`CIP:[IP address]`|The connecting IP address. You can use this IP address in the IP Allow List or the IP Block List. For more information, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).|
 |`CTRY`|The source country/region as determined by the connecting IP address, which might not be the same as the originating sending IP address.|
 |`DIR`|The Directionality of the message: <ul><li>`INB`: Inbound message.</li><li>`OUT`: Outbound message.</li><li>`INT`: Internal message.</li></ul>|
 |`H:[helostring]`|The HELO or EHLO string of the connecting email server.|
-|`IPV:CAL`|The message skipped spam filtering because the source IP address was in the IP Allow List. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).|
+|`IPV:CAL`|The message skipped spam filtering because the source IP address was in the IP Allow List. For more information, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).|
 |`IPV:NLI`|The IP address wasn't found on any IP reputation list.|
 |`LANG`|The language that the message was written in as specified by the country code (for example, ru_RU for Russian).|
 |`PTR:[ReverseDNS]`|The PTR record (also known as the reverse DNS lookup) of the source IP address.|
@@ -85,7 +85,7 @@ The following table describes useful fields in the **X-Microsoft-Antispam** mess
 
 |Field|Description|
 |---|---|
-|`BCL`|The bulk complaint level (BCL) of the message. A higher BCL indicates a bulk mail message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).|
+|`BCL`|The bulk complaint level (BCL) of the message. A higher BCL indicates a bulk mail message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).|
 
 ## Authentication-results message header
 

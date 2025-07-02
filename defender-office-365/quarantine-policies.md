@@ -48,7 +48,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Quarantine policies** page, use <https://security.microsoft.com/quarantinePolicies>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - If you change the quarantine policy that's assigned to a supported protection feature, the change affects quarantined message _after_ you make the change. Messages that were quarantined before you made the change aren't affected by the settings of the new quarantine policy assignment.
 
@@ -227,7 +227,7 @@ The rest of this step explains how to assign quarantine policies for supported f
 
    :::image type="content" source="media/quarantine-tags-in-anti-spam-policies.png" alt-text="The Quarantine policy selections in an anti-spam policy" lightbox="media/quarantine-tags-in-anti-spam-policies.png":::
 
-Full instructions for creating and modifying anti-spam policies are described in [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+Full instructions for creating and modifying anti-spam policies are described in [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
 #### Anti-spam policies in PowerShell
 
@@ -297,7 +297,7 @@ Spoof intelligence is available in EOP and Defender for Office 365. User imperso
 
 Full instructions for creating and modifying anti-phishing policies are available in the following articles:
 
-- [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md)
+- [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 #### Anti-phishing policies in PowerShell
@@ -323,7 +323,7 @@ If you'd rather use PowerShell to assign quarantine policies in anti-phishing po
   Specify a different quarantine policy only if you want to change the default end-user capabilities on quarantined messages for that particular anti-phishing action.
 
 - A new anti-phishing policy in PowerShell requires an anti-phish policy using the **New-AntiPhishPolicy** cmdlet (settings), and an exclusive anti-phish rule using the **New-AntiPhishRule** cmdlet (recipient filters). For instructions, see the following articles:
-  - [Use PowerShell to configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+  - [Use PowerShell to configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
   - [Use Exchange Online PowerShell to configure anti-phishing policies](anti-phishing-policies-mdo-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
 
 This example creates a new anti-phish policy named Research Department with the following settings:

@@ -38,16 +38,16 @@ There are two major factors that determine which policy is applied to a message:
 
   |Order|Email protection|Category|Where to manage|
   |:---:|---|---|---|
-  |1|Malware|`CAT:MALW`|[Configure anti-malware policies in EOP](anti-malware-policies-configure.md)|
-  |2|High confidence phishing|`CAT:HPHSH`|[Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
-  |3|Phishing|`CAT:PHSH`|[Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
-  |4|High confidence spam|`CAT:HSPM`|[Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
-  |5|Spoofing|`CAT:SPOOF`|[Spoof intelligence insight in EOP](anti-spoofing-spoof-intelligence.md)|
+  |1|Malware|`CAT:MALW`|[Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md)|
+  |2|High confidence phishing|`CAT:HPHSH`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
+  |3|Phishing|`CAT:PHSH`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
+  |4|High confidence spam|`CAT:HSPM`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
+  |5|Spoofing|`CAT:SPOOF`|[Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md)|
   |6<sup>\*</sup>|User impersonation (protected users)|`CAT:UIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
   |7<sup>\*</sup>|Domain impersonation (protected domains)|`CAT:DIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
   |8<sup>\*</sup>|Mailbox intelligence (contact graph)|`CAT:GIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
-  |9|Spam|`CAT:SPM`|[Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
-  |10|Bulk|`CAT:BULK`|[Configure anti-spam policies in EOP](anti-spam-policies-configure.md)|
+  |9|Spam|`CAT:SPM`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
+  |10|Bulk|`CAT:BULK`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
 
   <sup>\*</sup> These features are available only in anti-phishing policies in Microsoft Defender for Office 365.
 

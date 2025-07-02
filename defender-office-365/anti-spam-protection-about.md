@@ -45,7 +45,7 @@ EOP uses the following spam filtering verdicts to classify messages:
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), messages that are identified as high confidence phishing are always quarantined, and users can't release their own quarantined high confidence phishing messages, regardless of any available settings that admins configure.
 - **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
 
-For more information about anti-spam protection, see the [Anti-spam protection FAQ](anti-spam-protection-faq.yml)
+For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml)
 
 In the default anti-spam policy and in custom anti-spam policies, you can configure the actions to take based on these verdicts. In the Standard and Strict [preset security policies](preset-security-policies.md), the actions are already configured and unmodifiable as described in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
@@ -102,7 +102,7 @@ You can use a condition or exception only once, but the condition or exception c
 
 EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. Messages from bulk senders are also known as _bulk mail_ or _gray mail_.
 
-For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+For more information about BCL, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
 
 > [!TIP]
 > By default, the PowerShell only setting _MarkAsSpamBulkMail_ is `On` in anti-spam policies in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). This setting dramatically affects the results of a **Bulk compliant level (BCL) met or exceeded** filtering verdict:
@@ -116,7 +116,7 @@ The **Test mode** settings, the **Increase spam score** settings, and most of th
 
 These settings aren't configured in the default anti-spam policy by default, or in the Standard or Strict [preset security policies](preset-security-policies.md).
 
-For complete information about ASF settings, see [Advanced Spam Filter (ASF) settings in EOP](anti-spam-policies-asf-settings-about.md).
+For complete information about ASF settings, see [Advanced Spam Filter (ASF) settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
 
 The other settings that are available in this category are:
 

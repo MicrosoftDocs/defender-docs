@@ -45,7 +45,7 @@ You can use outbound spam filter policies to control automatic forwarding to ext
 - **On - Forwarding is enabled**: Automatic external forwarding is allowed and not restricted.
 - **Off - Forwarding is disabled**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
-For instructions on how to configure these settings, see [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md).
+For instructions on how to configure these settings, see [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md).
 
 > [!NOTE]
 >

@@ -33,7 +33,7 @@ appliesto:
 
 In organizations with Microsoft Defender for Office 365, Safe Links provides URL scanning of links in messages, Microsoft Teams, and supported Office 365 apps. For more information, see [Safe Links in Microsoft Defender for Office 365](safe-links-about.md).
 
-Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Links policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Links policies aren't affected. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Links policies that apply to specific users, group, or domains.
 

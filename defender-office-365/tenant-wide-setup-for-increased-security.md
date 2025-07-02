@@ -49,7 +49,7 @@ Most protection features in Exchange Online Protection (EOP) and Defender for Of
 
 We recommend turning on and using the Standard and/or Strict preset security policies for all recipients. For more information, see the following articles:
 
-- Turn on and configure preset security policies: [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+- Turn on and configure preset security policies: [Preset security policies in Microsoft 365](preset-security-policies.md).
 - Difference in settings between Standard and Strict preset security policies: [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies).
 - Complete list of all features and settings in default policies, Standard preset security policies, and Strict preset security policies: [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
 

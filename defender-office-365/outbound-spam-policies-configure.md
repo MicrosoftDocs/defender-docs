@@ -43,7 +43,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
@@ -507,6 +507,6 @@ For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFil
 
 [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md)
 
-[Anti-spam protection FAQ](anti-spam-protection-faq.yml)
+[Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml)
 
 [Auto forwarded messages report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report)

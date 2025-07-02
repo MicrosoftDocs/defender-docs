@@ -31,16 +31,16 @@ appliesto:
 
 In Microsoft 365 organizations with Exchange Online mailboxes or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, inbound connection details are associated with the destination organization. The default connection filter policy for the organization is applied to the connection, which helps identify good or bad source email servers controlled by the organization. The key components of the default connection filter policy are:
 
-- **IP Allow List**: Skip spam filtering for all incoming messages from the specified source IP addresses or IP address ranges. All incoming messages are scanned for malware and high confidence phishing. For other scenarios where spam filtering still occurs on messages from servers in the IP Allow List, see the [Scenarios where messages from sources in the IP Allow List are still filtered](#scenarios-where-messages-from-sources-in-the-ip-allow-list-are-still-filtered) section later in this article. For more information about how the IP Allow List should fit into your overall safe senders strategy, see [Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md).
+- **IP Allow List**: Skip spam filtering for all incoming messages from the specified source IP addresses or IP address ranges. All incoming messages are scanned for malware and high confidence phishing. For other scenarios where spam filtering still occurs on messages from servers in the IP Allow List, see the [Scenarios where messages from sources in the IP Allow List are still filtered](#scenarios-where-messages-from-sources-in-the-ip-allow-list-are-still-filtered) section later in this article. For more information about how the IP Allow List should fit into your overall safe senders strategy, see [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md).
 
-- **IP Block List**: Block all incoming messages from the specified source IP addresses or IP address ranges. The incoming messages are rejected, aren't marked as spam, and no other filtering occurs. For more information about how the IP Block List should fit into your overall blocked senders strategy, see [Create block sender lists in EOP](create-block-sender-lists-in-office-365.md).
+- **IP Block List**: Block all incoming messages from the specified source IP addresses or IP address ranges. The incoming messages are rejected, aren't marked as spam, and no other filtering occurs. For more information about how the IP Block List should fit into your overall blocked senders strategy, see [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md).
 
 - **Safe list**: The _safe list_ in the connection filter policy is a dynamic allow list that requires no customer configuration. Microsoft identifies these trusted email sources from subscriptions to various third-party lists. You enable or disable the use of the safe list; you can't configure the servers in the list. Spam filtering is skipped on incoming messages from the email servers on the safe list.
 
-This article describes how to configure the default connection filter policy in the Microsoft 365 Microsoft Defender portal or in Exchange Online PowerShell. For more information about how EOP uses connection filtering is part of your organization's overall anti-spam settings, see [Anti-spam protection](anti-spam-protection-about.md).
+This article describes how to configure the default connection filter policy in the Microsoft 365 Microsoft Defender portal or in Exchange Online PowerShell. For more information about how Microsoft 365 uses connection filtering is part of your organization's overall anti-spam settings, see [Anti-spam protection](anti-spam-protection-about.md).
 
 > [!NOTE]
-> The IP Allow List, safe list, and the IP Block List are one part of your overall strategy to allow or block email in your organization. For more information, see [Create safe sender lists](create-safe-sender-lists-in-office-365.md) and [Create blocked sender lists](create-block-sender-lists-in-office-365.md).
+> The IP Allow List, safe list, and the IP Block List are one part of your overall strategy to allow or block email in your organization. For more information, see [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md) and [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md).
 >
 > IPv6 ranges aren't supported. You can create and manage entries for IPv6 addresses in the [Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
 >
@@ -50,7 +50,7 @@ This article describes how to configure the default connection filter policy in 
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.

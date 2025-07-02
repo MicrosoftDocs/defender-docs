@@ -33,7 +33,7 @@ summary: |
 
   For questions and answers about the quarantine, see [Quarantine FAQ](quarantine-faq.yml).
 
-  For questions and answers about anti-malware protection, see [Anti-malware protection FAQ](anti-malware-protection-faq.yml).
+  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection for email in Microsoft 365](anti-malware-protection-faq.yml).
 
   For questions and answers about anti-spoofing protection, see [Anti-spoofing protection FAQ](anti-phishing-protection-spoofing-faq.yml).
 
@@ -78,8 +78,8 @@ sections:
           For more information, see the following articles:
 
           - [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)
-          - [Configure anti-spam policies in EOP](anti-spam-policies-configure.md)
-          - [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
+          - [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)
+          - [Preset security policies in Microsoft 365](preset-security-policies.md)
 
       - question: |
           If I change an anti-spam policy, how long does it take for the changes to take effect?
@@ -89,7 +89,7 @@ sections:
       - question: |
           Is bulk email filtering automatically enabled?
         answer: |
-          Yes. For more information about bulk email, see [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md) and [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+          Yes. For more information about bulk email, see [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md) and [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
 
       - question: |
           Does the service provide URL filtering?
@@ -123,7 +123,7 @@ sections:
         answer: |
           If more than half of the mail that is sent from a user through the service within a certain time frame (for example, per hour), is determined to be spam by EOP, the user is blocked from sending messages. In most cases, if an outbound message is determined to be spam, it's routed through the high-risk delivery pool, which reduces the probability of the normal outbound-IP pool being added to a block list.
 
-          Notifications are automatically sent when users are blocked due to sending outbound spam or exceeding sending limits. For more information, see [Outbound spam protection in EOP](outbound-spam-protection-about.md).
+          Notifications are automatically sent when users are blocked due to sending outbound spam or exceeding sending limits. For more information, see [Outbound spam protection in Microsoft 365](outbound-spam-protection-about.md).
 
       - question: |
           Can I use a third-party anti-spam and anti-malware provider with Microsoft 365?

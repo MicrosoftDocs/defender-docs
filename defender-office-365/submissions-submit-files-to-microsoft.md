@@ -40,7 +40,7 @@ But what can you do if you receive a message with a suspicious attachment or hav
 
 ## What do you need to know before you begin?
 
-- All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection in EOP](anti-malware-protection-about.md).
+- All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md).
 
 - Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the procedures in this article to report them.
 

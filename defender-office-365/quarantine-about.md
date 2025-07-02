@@ -50,8 +50,8 @@ The default actions for protection features in EOP and Defender for Office 365, 
 
 For anti-spam and anti-phishing protection, admins can also modify the default policy or create custom policies to quarantine messages instead of delivering them to the Junk Email folder. For instructions, see the following articles:
 
-- [Configure anti-spam policies in EOP](anti-spam-policies-configure.md)
-- [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md)
+- [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)
+- [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 The protection policies for [supported features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) have one or more _quarantine policies_ assigned to them (each action within the protection policy has an associated quarantine policy assignment).
@@ -66,7 +66,7 @@ _Quarantine policies_ define what users are able to do or not do to quarantined 
 > [!TIP]
 > You can create customized [quarantine notifications for different languages](quarantine-policies.md#customize-quarantine-notifications-for-different-languages). You can also [use a custom logo in quarantine notifications](quarantine-policies.md#customize-all-quarantine-notifications).
 
-The default quarantine policies that are assigned to protection feature verdicts enforce the historical capabilities that users get for their quarantined messages (messages where they're a recipient). For more information, see the table in [Find and release quarantined messages as a user in EOP](quarantine-end-user.md). For example, only admins can work with messages that were quarantined as malware or high confidence phishing. By default, users can work with their messages that were quarantined as spam, bulk, phishing, spoof, user impersonation, domain impersonation, or mailbox intelligence.
+The default quarantine policies that are assigned to protection feature verdicts enforce the historical capabilities that users get for their quarantined messages (messages where they're a recipient). For more information, see the table in [Find and release quarantined messages as a user in Microsoft 365](quarantine-end-user.md). For example, only admins can work with messages that were quarantined as malware or high confidence phishing. By default, users can work with their messages that were quarantined as spam, bulk, phishing, spoof, user impersonation, domain impersonation, or mailbox intelligence.
 
 Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users, and also turn on quarantine notifications. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
@@ -75,12 +75,12 @@ Admins can create and apply custom quarantine policies that define less restrict
 
 Both users and admins can work with quarantined messages:
 
-- Admins can work with all types of quarantined messages for all users, including messages that were quarantined as malware, high confidence phishing, or as a result of mail flow rules (also known as transport rules). For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
+- Admins can work with all types of quarantined messages for all users, including messages that were quarantined as malware, high confidence phishing, or as a result of mail flow rules (also known as transport rules). For more information, see [Manage quarantined messages and files as an admin in Microsoft 365](quarantine-admin-manage-messages-files.md).
 
   > [!TIP]
   > For the permissions required to download and release any messages from quarantine, see the permissions entry [here](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin).
 
-- Users can work with their quarantined messages based on the protection feature that quarantined the message, and the setting in corresponding quarantine policy. For more information, see [Find and release quarantined messages as a user in EOP](quarantine-end-user.md).
+- Users can work with their quarantined messages based on the protection feature that quarantined the message, and the setting in corresponding quarantine policy. For more information, see [Find and release quarantined messages as a user in Microsoft 365](quarantine-end-user.md).
 
 - Admins can report false positives to Microsoft from quarantine. For more information, see [Take action on quarantined email](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-email) and [Take action on quarantined files](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-files).
 

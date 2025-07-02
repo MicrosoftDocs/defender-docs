@@ -284,7 +284,7 @@ See [What permissions are needed to view these reports?](reports-email-security.
 
 If you don't see data in the reports, check the report filters and double-check that your policies are set up correctly. Safe Links policies and Safe Attachments policies from Built-in protection, preset security policies, or custom policies need to be in effect and acting on messages. For more information, see the following articles:
 
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
-- [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md)
+- [Preset security policies in Microsoft 365](preset-security-policies.md)
+- [Configuration analyzer for protection policies in Microsoft 365](configuration-analyzer-for-security-policies.md)
 - [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md)
 - [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)

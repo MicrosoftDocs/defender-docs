@@ -38,10 +38,10 @@ However, security needs to be balanced with productivity. This can include balan
 
 Microsoft 365 organizations with mailboxes in Exchange Online are protected by Exchange Online Protection (EOP). This protection includes:
 
-- Email with suspected malware is automatically quarantined. Whether recipients are notified about quarantined malware messages is controlled by the quarantine policy and the settings in the anti-malware policy. For more information, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- Email with suspected malware is automatically quarantined. Whether recipients are notified about quarantined malware messages is controlled by the quarantine policy and the settings in the anti-malware policy. For more information, see [Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md).
+- Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
-For more information about EOP, see [Exchange Online Protection overview](eop-about.md).
+For more information about EOP, see [Default email protections in Microsoft 365](eop-about.md).
 
 Because Microsoft wants to keep our customers secure by default, some tenants overrides aren't applied for malware or high confidence phishing. These overrides include:
 
@@ -52,12 +52,12 @@ Because Microsoft wants to keep our customers secure by default, some tenants ov
 
 If you want to temporarily allow certain messages that are still being blocked by Microsoft, do so using [admin submissions](submissions-admin.md#report-good-email-to-microsoft).
 
-More information on these overrides can be found in [Create safe sender lists](create-safe-sender-lists-in-office-365.md).
+More information on these overrides can be found in [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md).
 
 > [!NOTE]
 > The **Move message to Junk Email folder** action for a **High confidence phishing email** verdict in EOP anti-spam policies has been deprecated. Anti-spam policies that use this action for high confidence phishing messages are converted to **Quarantine message**. The **Redirect message to email address** action for high confidence phishing messages is unaffected.
 
-Secure by default isn't a setting that can be turned on or off, but is the way our filtering works out of the box to keep potentially dangerous or unwanted messages out of your mailboxes. Malware and high confidence phishing messages should be quarantined. By default, only admins can manage messages that are quarantined as malware or high confidence phishing, and they can also report false positives to Microsoft from there. For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
+Secure by default isn't a setting that can be turned on or off, but is the way our filtering works out of the box to keep potentially dangerous or unwanted messages out of your mailboxes. Malware and high confidence phishing messages should be quarantined. By default, only admins can manage messages that are quarantined as malware or high confidence phishing, and they can also report false positives to Microsoft from there. For more information, see [Manage quarantined messages and files as an admin in Microsoft 365](quarantine-admin-manage-messages-files.md).
 
 ## More on why we're doing this
 

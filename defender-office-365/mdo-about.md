@@ -24,7 +24,7 @@ ms.service: defender-office-365
 adobe-target: true
 ms.date: 06/09/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -33,7 +33,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Microsoft Defender for Office 365 is a seamless integration into Microsoft 365 subscriptions that protects against threats in email, links (URLS), file attachments, and collaboration tools. This article explains the _protection ladder_ in Microsoft 365 organizations. The protection ladder starts with Exchange Online Protection (EOP) and continues through to Defender for Office 365, which includes Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
+Microsoft Defender for Office 365 is a seamless integration into Microsoft 365 subscriptions that protects against threats in email, links (URLS), file attachments, and collaboration tools. This article explains the _protection ladder_ in Microsoft 365 organizations. The protection ladder starts with the default email protections in Microsoft 365, and continues through to Defender for Office 365, which includes Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
@@ -44,13 +44,13 @@ This article is intended for Security Operations (SecOps) personnel, admins in M
 >
 > If you're new to your Microsoft 365 subscription and would like to know your licenses before you begin, go the **Your products** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/subscriptions>.
 
-All Microsoft 365 subscriptions include built-in security and protection features. The goals and available actions of these features vary. In Microsoft 365, there are three main security services (or products):
+The following list describes the Defender for Office 365 core email security solutions:
 
-1. **Exchange Online Protection (EOP)**: Included in any subscription that includes Exchange Online mailboxes. Also available as a [standalone subscription](/exchange/standalone-eop/standalone-eop) to protect on-premises email environments.
-2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions with Exchange Online mailboxes that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
-3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions with Exchange Online mailboxes that cater to enterprise organizations (for example, Microsoft 365 E5, Microsoft 365 A5, and Microsoft 365 GCC G5).
+1. **Default email protections in Microsoft 365**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
+2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
+3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 E5, Microsoft 365 A5, and Microsoft 365 GCC G5).
 
-Defender for Office 365 always includes EOP. Defender for Office 365 is also available as an add-in subscription to many Microsoft 365 subscriptions with Exchange Online mailboxes.
+Defender for Office 365 is also available as an add-in subscription to many Microsoft 365 subscriptions with cloud mailboxes.
 
 Defender for Office 365 Plan 1 contains a subset of the features that are available in Plan 2. Defender for Office 365 Plan 2 contains many features that aren't available in Plan 1.
 
@@ -63,31 +63,31 @@ Defender for Office 365 Plan 1 contains a subset of the features that are availa
 >
 > Use [this page](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365#pmg-allup-content) to compare plans and purchase Defender for Office 365.
 
-EOP and Defender for Office 365 can be summarized with the following descriptions:
+The protections in Microsoft 365 can be summarized with the following descriptions:
 
-- **EOP** prevents broad, volume-based, known email attacks.
+- **Default email protections in Microsoft 365** prevent broad, volume-based, known email attacks.
 - **Defender for Office 365 Plan 1** protects email and collaboration features from zero-day malware, phishing, and business email compromise (BEC).
 - **Defender for Office 365 Plan 2** adds phishing simulations, post-breach investigation, hunting, and response, and automation.
 
-However, you can also think about the _architecture_ of EOP and Defender for Office 365 as _cumulative layers of security_, where each layer has a different _security emphasis_. This architecture is shown in the following diagram:
+However, you can also think about the _architecture_ of protection in Microsoft 365 as _cumulative layers of security_, where each layer has a different _security emphasis_. This architecture is shown in the following diagram:
 
-:::image type="content" source="media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about EOP and Defender for Office 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="media/eop-mdop1-mdop2-comparison.png":::
+:::image type="content" source="media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about protections in Microsoft 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="media/eop-mdop1-mdop2-comparison.png":::
 
-EOP and Defender for Office 365 are capable of protecting, detecting, investigating, and responding to threats. But as you move up the protection ladder, the _available features_ and _automation_ increase.
+Microsoft 365 is capable of protecting, detecting, investigating, and responding to threats. But as you move up the protection ladder, the _available features_ and _automation_ increase.
 
 Whether you're using the onmicrosoft.com domain only or custom domains for email in Microsoft 365, it's important to configure email authentication for your used and unused domains. SPF, DKIM, and DMARC records in DNS allow Microsoft 365 to more accurately protect against spoofing attacks. For more information, see [Email authentication in Microsoft 365](email-authentication-about.md).
 
-## The Microsoft 365 security ladder from EOP to Defender for Office 365
+## The Microsoft 365 security ladder
 
-It can be difficult to identity the advantages of Defender for Office 365 over EOP. The following subsections describe the capabilities of each product using the following security emphases:
+It can be difficult to identity the advantages of Defender for Office 365. The following subsections describe the capabilities of each product using the following security emphases:
 
 - Preventing and detecting threats.
 - Investigating threats.
 - Responding to threats.
 
-### EOP capabilities
+### Default email protection capabilities
 
-The capabilities of **EOP** are summarized in the following table:
+The default email protection capabilities in Microsoft 365 are summarized in the following table:
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
@@ -95,13 +95,13 @@ The capabilities of **EOP** are summarized in the following table:
 
 <sup>\*</sup> The associated protection polices are available in default policies, custom policies, and [the Standard and Strict preset security policies](preset-security-policies.md). For help with deciding which method to use, see [Determine your protection policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
 
-For more information about EOP, see [Exchange Online Protection overview](eop-about.md).
+For more information, see [Default email protections in Microsoft 365](eop-about.md).
 
 ### Defender for Office 365 Plan 1 capabilities
 
-Defender for Office 365 Plan 1 expands on the _prevention_ and _detection_ capabilities of EOP.
+Defender for Office 365 Plan 1 expands on the _prevention_ and _detection_ capabilities in Microsoft 365.
 
-The additional features that you get in **Defender for Office 365 Plan 1** on top of EOP are described in the following table:
+The additional features that you get in **Defender for Office 365 Plan 1** on top of the default email protections are described in the following table:
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|

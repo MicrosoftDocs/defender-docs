@@ -34,7 +34,7 @@ appliesto:
 
 Although we empower security administrators to customize their security settings, there are two security levels in EOP and Microsoft Defender for Office 365 that we recommend: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help prevent unwanted mail from reaching user Inboxes in most situations.
 
-To automatically apply the Standard or Strict settings to users, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+To automatically apply the Standard or Strict settings to users, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 This article describes the default settings, and also the recommended Standard and Strict settings to help protect your users. The tables contain the settings in the Microsoft Defender portal and PowerShell (Exchange Online PowerShell or standalone Exchange Online Protection PowerShell for organizations without Exchange Online mailboxes).
 
@@ -46,8 +46,8 @@ This article describes the default settings, and also the recommended Standard a
 > - [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
 > - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-junk-email-settings-in-outlook)
 > - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
-> - [Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md)
-> - [Create blocked sender lists in EOP](create-block-sender-lists-in-office-365.md)
+> - [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md)
+> - [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md)
 
 ## Anti-spam, anti-malware, and anti-phishing protection in EOP
 
@@ -55,7 +55,7 @@ Anti-spam, anti-malware, and anti-phishing are EOP features that can be configur
 
 ### EOP anti-malware policy settings
 
-To create and configure anti-malware policies, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
+To create and configure anti-malware policies, see [Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md).
 
 Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -86,7 +86,7 @@ Users can't release their own messages that were quarantined as malware, regardl
 
 ### EOP anti-spam policy settings
 
-To create and configure anti-spam policies, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+To create and configure anti-spam policies, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
 Wherever you select **Quarantine message** as the action for a spam filter verdict, a **Select quarantine policy** box is available. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -97,7 +97,7 @@ Admins can create or use quarantine policies with more restrictive or less restr
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
 |**Bulk email threshold & spam properties**|||||
-|**Bulk email threshold** (_BulkThreshold_)|7|6|5|For details, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).|
+|**Bulk email threshold** (_BulkThreshold_)|7|6|5|For details, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).|
 |**Bulk email spam** (_MarkAsSpamBulkMail_)|(`On`)|(`On`)|(`On`)|This setting is only available in PowerShell.|
 |**Increase spam score** settings||||All of these settings are part of the Advanced Spam Filter (ASF). For more information, see the [ASF settings in anti-spam policies](#asf-settings-in-anti-spam-policies) section in this article.|
 |**Mark as spam** settings||||Most of these settings are part of ASF. For more information, see the [ASF settings in anti-spam policies](#asf-settings-in-anti-spam-policies) section in this article.|
@@ -130,7 +130,7 @@ Admins can create or use quarantine policies with more restrictive or less restr
 
 #### ASF settings in anti-spam policies
 
-For more information about Advanced Spam Filter (ASF) settings in anti-spam policies, see [Advanced Spam Filter (ASF) settings in EOP](anti-spam-policies-asf-settings-about.md).
+For more information about Advanced Spam Filter (ASF) settings in anti-spam policies, see [Advanced Spam Filter (ASF) settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
 
 |Security feature name|Default|Recommended<br/>Standard|Recommended<br/>Strict|Comment|
 |---|:---:|:---:|:---:|---|
@@ -156,7 +156,7 @@ For more information about Advanced Spam Filter (ASF) settings in anti-spam poli
 
 #### EOP outbound spam policy settings
 
-To create and configure outbound spam policies, see [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md).
+To create and configure outbound spam policies, see [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md).
 
 For more information about the default sending limits in the service, see [Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
@@ -175,7 +175,7 @@ For more information about the default sending limits in the service, see [Sendi
 
 ### EOP anti-phishing policy settings
 
-For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md).
+For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
 
 The spoof settings are inter-related, but the **Show first contact safety tip** setting has no dependency on spoof settings.
 
@@ -212,7 +212,7 @@ Extra security benefits come with a Microsoft Defender for Office 365 subscripti
 >   - Modify the default anti-phishing policy.
 >   - Create more anti-phishing policies.
 >
-> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 >
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) protection and [Safe Documents](safe-documents-in-e5-plus-security-about.md) protection have no dependencies on Safe Links policies.
 >
@@ -269,13 +269,13 @@ Admins can create or use quarantine policies with more restrictive or less restr
 
 #### EOP anti-phishing policy settings in Microsoft Defender for Office 365
 
-These settings are also available in [anti-spam policy settings in EOP](#eop-anti-spam-policy-settings).
+These settings are also available in [anti-spam policy settings in Microsoft 365](#eop-anti-spam-policy-settings).
 
 ### Safe Attachments settings
 
 Safe Attachments in Microsoft Defender for Office 365 includes global settings that have no relationship to Safe Attachments policies, and settings that are specific to each Safe Links policy. For more information, see [Safe Attachments in Defender for Office 365](safe-attachments-about.md).
 
-Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 #### Global settings for Safe Attachments
 
@@ -321,7 +321,7 @@ Users can't release their own messages that were quarantined as malware or phish
 
 For more information about Safe Links protection, see [Safe Links in Defender for Office 365](safe-links-about.md).
 
-Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy or in custom Safe Links policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy or in custom Safe Links policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 To configure Safe Links policy settings, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
 

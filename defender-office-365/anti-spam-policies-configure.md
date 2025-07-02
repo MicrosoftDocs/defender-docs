@@ -44,7 +44,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
@@ -113,13 +113,13 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 5. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
-   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
 
    - **Spam properties** section:
 
      - **Increase spam score**, **Mark as spam**<sup>\*</sup> and **Test mode**: Advanced Spam Filter (ASF) settings that are turned off by default.
 
-       For details about these settings, see [Advanced Spam Filter settings in EOP](anti-spam-policies-asf-settings-about.md).
+       For details about these settings, see [Advanced Spam Filter settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
 
        <sup>\*</sup> The **Contains specific languages** and **From these countries** settings aren't part of ASF.
 

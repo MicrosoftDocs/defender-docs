@@ -526,7 +526,7 @@ Preset security policies use special versions of the individual protection polic
   - [Anti-phishing policies (spoofing protection)](anti-phishing-policies-about.md#spoof-settings) named **Standard Preset Security Policy** and **Strict Preset Security Policy** (spoof settings).
 
   > [!NOTE]
-  > Outbound spam policies aren't part of preset security policies. The default outbound spam policy automatically protects members of preset security policies. Or, you can create custom outbound spam policies to customize the protection for members of preset security policies. For more information, see [Configure outbound spam filtering in EOP](outbound-spam-policies-configure.md).
+  > Outbound spam policies aren't part of preset security policies. The default outbound spam policy automatically protects members of preset security policies. Or, you can create custom outbound spam policies to customize the protection for members of preset security policies. For more information, see [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md).
 
 - **Microsoft Defender for Office 365 policies**: These policies are in organizations with Microsoft 365 E5 or Defender for Office 365 add-on subscriptions:
   - Anti-phishing policies in Defender for Office 365 named **Standard Preset Security Policy** and **Strict Preset Security Policy**, which include:

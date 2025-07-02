@@ -105,7 +105,7 @@ For more information about publishing a null MX, see [RFC 7505](https://tools.ie
 
 ## Override From address enforcement
 
-To bypass the From address requirements for inbound email, you can use the IP Allow List (connection filtering) or mail flow rules (also known as transport rules) as described in [Create safe sender lists in Microsoft 365](create-safe-sender-lists-in-office-365.md). Outlook.com doesn't allow overrides of any kind, even through support requests.
+To bypass the From address requirements for inbound email, you can use the IP Allow List (connection filtering) or mail flow rules (also known as transport rules) as described in [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md). Outlook.com doesn't allow overrides of any kind, even through support requests.
 
 You can't override the From address requirements for outbound email that you send from Microsoft 365 or Outlook.com.
 

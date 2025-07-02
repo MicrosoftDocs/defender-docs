@@ -188,7 +188,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## August 2023
 
 - If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we now do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page.
-- **Default intra-organizational protection**: By default, messages sent between internal users that are identified as high confidence phishing are quarantined. Admins change this setting in the default anti-spam policy or in custom policies (opt-out of intra-org protection or include other spam filtering verdicts). For configuration information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- **Default intra-organizational protection**: By default, messages sent between internal users that are identified as high confidence phishing are quarantined. Admins change this setting in the default anti-spam policy or in custom policies (opt-out of intra-org protection or include other spam filtering verdicts). For configuration information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
 ## July 2023
 
@@ -348,7 +348,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - New first contact safety tip setting within anti-phishing policies. This safety tip is shown when recipients first receive an email from a sender or don't often receive email from a sender. For more information on this setting and how to configure it, see the following articles:
   - [First contact safety tip](anti-phishing-policies-about.md#first-contact-safety-tip)
-  - [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md)
+  - [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
   - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 ## April/May 2021

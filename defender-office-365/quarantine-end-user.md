@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine in EOP](quarantine-about.md).
+In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine in Microsoft 365](quarantine-about.md).
 
 As an ordinary user (not an admin), the **default** capabilities that are available to you as a recipient of a quarantined message are described in the following table:
 
@@ -64,9 +64,9 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages that have expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages that have expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
-- By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
+- By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin in Microsoft 365](quarantine-admin-manage-messages-files.md).
 
 - For information about the order of precedence for user allows and blocks and organization allows and blocks, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
 

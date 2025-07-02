@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantined messages in EOP](quarantine-about.md).
+In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantined messages in Microsoft 365](quarantine-about.md).
 
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
@@ -56,7 +56,7 @@ For instructions, see [Configure global quarantine notification settings](quaran
 For shared mailboxes, quarantine notifications are supported only for users who are granted FullAccess permission to the mailbox. For more information, see [Use the EAC to edit shared mailbox delegation](/Exchange/collaboration-exo/shared-mailboxes#use-the-eac-to-edit-shared-mailbox-delegation).
 
 > [!NOTE]
-> By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user in EOP](quarantine-end-user.md).
+> By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user in Microsoft 365](quarantine-end-user.md).
 >
 > Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
 >

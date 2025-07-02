@@ -33,7 +33,7 @@ appliesto:
 
 In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
 
-Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Attachments policies that apply to specific users, group, or domains.
 

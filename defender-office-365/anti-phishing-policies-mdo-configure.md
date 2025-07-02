@@ -40,7 +40,7 @@ The default anti-phishing policy automatically applies to all recipients. For gr
 
 You configure anti-phishing policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 
-For anti-phishing policy procedures in organizations without Defender for Office 365, see [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md).
+For anti-phishing policy procedures in organizations without Defender for Office 365, see [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
 
 ## What do you need to know before you begin?
 

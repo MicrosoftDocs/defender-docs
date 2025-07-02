@@ -214,7 +214,7 @@ The **Analysis** view contains information that helps you analyze the message in
     The **Go to Exchange admin center** link opens the **Rules** page in the new Exchange admin center at <https://admin.exchange.microsoft.com/#/transportrules>.
 
   - **Connector**: If the message was delivered through an Inbound connector, the connector name is shown. For more information about connectors, see [Configure mail flow using connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
-  - **Bulk complaint level (BCL)**: A higher BCL value indicates the message is more likely to be spam. For more information, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+  - **Bulk complaint level (BCL)**: A higher BCL value indicates the message is more likely to be spam. For more information, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
   - **Policy**: If a policy type is listed here (for example, **Spam**), select **Configure** :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: to open the related policy page (for example, the **Anti-spam policies** page at <https://security.microsoft.com/antispam>).
   - **Policy action**
   - **Alert ID**: Select the Alert ID value to open the details page for the alert (as if you found and selected the alert from the **Alerts** page at <https://security.microsoft.com/alerts>). The :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy to clipboard** action is also available to copy the Alert ID value.

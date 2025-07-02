@@ -27,7 +27,7 @@ appliesto:
 
 In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk sender threshold and the quality of the bulk sender.
 
-EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
 
 The bulk senders insight has the following capabilities:
 

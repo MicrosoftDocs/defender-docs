@@ -123,7 +123,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Admin initiated time travel**
      - **Antimalware policy block by file type**: [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies)
      - **Antispam policy settings**
-     - **Connection policy**: [Configure connection filtering](connection-filter-policies-configure.md)
+     - **Connection policy**: [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md)
      - **Exchange transport rule** (mail flow rule)
      - **Exclusive mode (User override)**: The **Only trust email from addresses in my Safe senders and domains list and Safe mailing lists** setting in the [safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
      - **Filtering skipped due to on-prem organization**

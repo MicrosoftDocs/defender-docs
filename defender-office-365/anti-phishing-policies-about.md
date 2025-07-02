@@ -67,7 +67,7 @@ The high-level differences between anti-phishing policies in EOP and anti-phishi
 
 To configure anti-phishing policies, see the following articles:
 
-- [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md)
+- [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 The rest of this article describes the settings that are available in anti-phishing policies in EOP and Defender for Office 365.
@@ -121,7 +121,7 @@ The following spoof settings are available in anti-phishing policies in EOP and 
 
   When spoof intelligence is enabled, the **spoof intelligence insight** shows spoofed senders that were automatically detected and allowed or blocked by spoof intelligence. You can manually override the spoof intelligence verdict to allow or block the detected spoofed senders from the insight. But when you do, the spoofed sender disappears from the spoof intelligence insight, and is visible only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. Or, you can manually create allow or block entries for spoofed senders in the Tenant Allow/Block List, even if they're not detected by the spoof intelligence insight. For more information, see the following articles:
 
-  - [Spoof intelligence insight in EOP](anti-spoofing-spoof-intelligence.md)
+  - [Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md)
   - [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list)
 
   > [!NOTE]

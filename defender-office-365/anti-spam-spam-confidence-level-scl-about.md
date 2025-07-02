@@ -33,7 +33,7 @@ The following table describes what the SCL values mean and the default action th
 
 |SCL value|Definition|Default action|
 |:---:|---|---|
-|-1|The message skipped spam filtering. For example, the message is from a safe sender, was sent to a safe recipient, or is from an email source server on the IP Allow List. For more information, see [Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md).|Deliver the message to recipient Inbox folders.|
+|-1|The message skipped spam filtering. For example, the message is from a safe sender, was sent to a safe recipient, or is from an email source server on the IP Allow List. For more information, see [Create allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md).|Deliver the message to recipient Inbox folders.|
 |0, 1|Spam filtering determined the message wasn't spam.|Deliver the message to recipient Inbox folders.|
 |5, 6|Spam filtering marked the message as **Spam**|**Default anti-spam policy, new anti-spam policies, and [Standard preset security policy](preset-security-policies.md)**: Deliver the message to recipient Junk Email folders. <br/><br/> **Strict preset security policy**: [Quarantine the message](quarantine-end-user.md).|
 |7, 8, 9|Spam filtering marked the message as **High confidence spam**|**Default anti-spam policy and new anti-spam policies**: Deliver the message to recipient Junk Email folders. <br/><br/> **Standard and Strict preset security policies**: [Quarantine the message](quarantine-end-user.md).|
@@ -47,9 +47,9 @@ The following table describes what the SCL values mean and the default action th
 > - DMARC failures.
 > - [Mail flow rules (also known as transport rules)](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-For more information about actions you can take on messages based on the spam filtering verdict, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+For more information about actions you can take on messages based on the spam filtering verdict, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
-Similar to the SCL, the bulk complaint level (BCL) identifies bad bulk email (also known as _gray mail_). A higher BCL value indicates the message is more likely to exhibit undesirable spam-like behavior. You configure the BCL threshold in anti-spam policies. For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md), [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md), and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md).
+Similar to the SCL, the bulk complaint level (BCL) identifies bad bulk email (also known as _gray mail_). A higher BCL value indicates the message is more likely to exhibit undesirable spam-like behavior. You configure the BCL threshold in anti-spam policies. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md), [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md), and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md).
 
 ****
 

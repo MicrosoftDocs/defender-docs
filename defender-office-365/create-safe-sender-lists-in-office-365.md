@@ -50,7 +50,7 @@ The rest of this article contains specifics about each method.
 >
 > Always submit messages in your safe sender lists to Microsoft for analysis. For instructions, see [Report good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft). If the messages or message sources are determined to be benign, Microsoft can automatically allow the messages, and you won't need to manually maintain the entry in safe sender lists.
 >
-> Instead of allowing email, you also have several options to block email from specific sources using _blocked sender lists_. For more information, see [Create block sender lists in EOP](create-block-sender-lists-in-office-365.md).
+> Instead of allowing email, you also have several options to block email from specific sources using _blocked sender lists_. For more information, see [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md).
 
 ## Use allow entries in the Tenant Allow/Block List
 
@@ -76,7 +76,7 @@ The following example assumes you need email from contoso.com to skip spam filte
 
      This condition checks the email authentication status of the sending email domain to ensure that the sending domain isn't being spoofed. For more information about email authentication, see [Email authentication in Microsoft 365](email-authentication-about.md).
 
-   - **IP Allow List**: Specify the source IP address or address range in the connection filter policy. For instructions, see [Configure connection filtering](connection-filter-policies-configure.md).
+   - **IP Allow List**: Specify the source IP address or address range in the connection filter policy. For instructions, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
 
      Use this setting if the sending domain doesn't use email authentication. Be as restrictive as possible when it comes to the source IP addresses in the IP Allow List. We recommend an IP address range of /24 or less (less is better). Don't use IP address ranges that belong to consumer services (for example, outlook.com) or shared infrastructures.
 
@@ -130,7 +130,7 @@ When messages skip spam filtering due to entries in a user's Safe Senders list, 
 > [!CAUTION]
 > Without additional verification like mail flow rules, email from sources in the IP Allow List skips spam filtering and sender authentication (SPF, DKIM, DMARC) checks. This method creates a high risk of attackers successfully delivering email to the Inbox that would otherwise be filtered. Messages that are determined to be malware or high confidence phishing are filtered. For more information, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
 
-The next best option is to add the source email servers to the IP Allow List in the connection filter policy. For details, see [Configure connection filtering in EOP](connection-filter-policies-configure.md).
+The next best option is to add the source email servers to the IP Allow List in the connection filter policy. For details, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
 
 - It's important that you keep the number of allowed IP addresses to a minimum, so avoid using entire IP address ranges whenever possible.
 - Don't use IP address ranges that belong to consumer services (for example, outlook.com) or shared infrastructures.
@@ -144,7 +144,7 @@ The next best option is to add the source email servers to the IP Allow List in 
 >
 > Don't use popular domains (for example, microsoft.com) in allowed domain lists.
 
-The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. The detailed steps can be found in [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. The detailed steps can be found in [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
 The maximum limit for these lists is approximately 1,000 entries, but you can enter a maximum of 30 entries in the Microsoft Defender portal. Use PowerShell to add more than 30 entries.
 

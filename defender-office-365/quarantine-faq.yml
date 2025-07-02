@@ -34,9 +34,9 @@ summary: |
   > [!NOTE]
   > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
-  For questions and answers about anti-spam protection, see [Anti-spam protection FAQ](anti-spam-protection-faq.yml).
+  For questions and answers about anti-spam protection, see [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml).
 
-  For questions and answers about anti-malware protection, see [Anti-malware protection FAQ](anti-malware-protection-faq.yml).
+  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection for email in Microsoft 365](anti-malware-protection-faq.yml).
 
   For questions and answers about anti-spoofing protection, see [Anti-spoofing protection FAQ](anti-phishing-protection-spoofing-faq.yml).
 
@@ -61,7 +61,7 @@ sections:
           - Custom anti-spam policies.
           - The Standard preset security policy.
 
-          Admins can configure the default anti-spam or custom policies to quarantine spam or bulk email messages instead. For more information, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+          Admins can configure the default anti-spam or custom policies to quarantine spam or bulk email messages instead. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
           The Strict preset security policy quarantines messages that are classified as spam or bulk.
 
@@ -87,7 +87,7 @@ sections:
         answer: |
           Quarantine policies define whether users can access quarantined messages based on why the message was quarantined.
 
-          For the default access to quarantined messages, see the table in [Find and release quarantined messages as a user in EOP](quarantine-end-user.md)
+          For the default access to quarantined messages, see the table in [Find and release quarantined messages as a user in Microsoft 365](quarantine-end-user.md)
 
           Users can't release their own messages that were quarantined as **malware** by anti-malware or Safe Attachments policies, or as **high confidence phishing** by anti-spam policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
 

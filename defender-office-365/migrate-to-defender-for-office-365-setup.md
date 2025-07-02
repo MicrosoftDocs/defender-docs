@@ -64,7 +64,7 @@ When you're ready to begin testing, add these groups as exceptions to [the SCL=-
 
   So, instead of using preset security policies, you're going to manually create custom policies with settings that are similar to, but in some cases are different than, the settings of Standard and Strict preset security policies.
 
-- If you want to experiment with settings that **significantly** differ from our Standard or Strict recommended values, you should consider creating and using additional and specific distribution groups for the pilot users in those scenarios. You can use the Configuration Analyzer to see how secure your settings are. For instructions, see [Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md).
+- If you want to experiment with settings that **significantly** differ from our Standard or Strict recommended values, you should consider creating and using additional and specific distribution groups for the pilot users in those scenarios. You can use the Configuration Analyzer to see how secure your settings are. For instructions, see [Configuration analyzer for protection policies in Microsoft 365](configuration-analyzer-for-security-policies.md).
 
   For most organizations, the best approach is to start with policies that closely align with our recommended Standard settings. After as much observation and feedback as you're able to do in your available time frame, you can move to more aggressive settings later. Impersonation protection and delivery to the Junk Email folder vs. delivery to quarantine might require customization.
 
@@ -142,7 +142,7 @@ By creating production policies, even if they aren't applied to all users, you c
 For the recommended settings, see [Recommended Safe Attachments policy settings](recommended-settings-for-eop-and-office365.md#safe-attachments-policy-settings). The Standard and Strict recommendations are the same. To create the policy, see [Set up Safe Attachments policies](safe-attachments-policies-configure.md). Be sure to use the group **MDOPilot\_SafeAttachments** as the condition of the policy (who the policy applies to).
 
 > [!NOTE]
-> The **Built-in protection** preset security policy gives Safe Attachments protection to all recipients that aren't defined in any Safe Attachments policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+> The **Built-in protection** preset security policy gives Safe Attachments protection to all recipients that aren't defined in any Safe Attachments policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 ### Create pilot Safe Links policies
 
@@ -154,7 +154,7 @@ Chances for false positives in Safe Links are also pretty low, but you should co
 For the recommended settings, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings). The Standard and Strict recommendations are the same. To create the policy, see [Set up Safe Links policies](safe-links-policies-configure.md). Be sure to use the group **MDOPilot\_SafeLinks** as the condition of the policy (who the policy applies to).
 
 > [!NOTE]
-> The **Built-in protection** preset security policy gives Safe Links protection to all recipients that aren't defined in any Safe Links policies. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
+> The **Built-in protection** preset security policy gives Safe Links protection to all recipients that aren't defined in any Safe Links policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
 ### Create pilot anti-spam policies
 
@@ -172,7 +172,7 @@ Create two anti-phishing policies for pilot users:
 - A policy that uses the Standard settings, except for impersonation detection actions as described below. Use the group **MDOPilot\_SpamPhish\_Standard** as the condition of the policy (who the policy applies to).
 - A policy that uses the Strict settings, except for impersonation detection actions as described below. Use the group **MDOPilot\_SpamPhish\_Strict** as the condition of the policy (who the policy applies to). This policy should have a higher priority (lower number) than the policy with the Standard settings.
 
-For spoof detections, the recommended Standard action is **Move the message to the recipients' Junk Email folders**, and the recommended Strict action is **Quarantine the message**. Use the spoof intelligence insight to observe the results. Overrides are explained in the next section. For more information, see [Spoof intelligence insight in EOP](anti-spoofing-spoof-intelligence.md).
+For spoof detections, the recommended Standard action is **Move the message to the recipients' Junk Email folders**, and the recommended Strict action is **Quarantine the message**. Use the spoof intelligence insight to observe the results. Overrides are explained in the next section. For more information, see [Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md).
 
 For impersonation detections, ignore the recommended Standard and Strict actions for the pilot policies. Instead, use the value **Don't apply any action** for the following settings:
 

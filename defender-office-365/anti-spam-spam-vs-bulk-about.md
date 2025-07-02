@@ -33,13 +33,13 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 
   For the default actions that are taken on spam and high confidence spam messages in the default anti-spam policy and in the Standard and Strict [preset security policies](preset-security-policies.md), see the **Spam** and **High confidence spam** entries in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
-  In the default anti-spam policy and in custom anti-spam policies, you can configure the action to take on spam filtering verdicts. For instructions, see [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+  In the default anti-spam policy and in custom anti-spam policies, you can configure the action to take on spam filtering verdicts. For instructions, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
   If you disagree with the spam filtering verdict, you can report messages as spam or good to Microsoft in several ways, as described in [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
 - **Bulk email** (also known as _gray mail_), is more difficult to classify. Whereas spam is a constant threat, bulk email is often one-time advertisements or marketing messages. Some users want bulk email messages (and in fact, they have deliberately signed up to receive them), while other users consider bulk email to be spam. For example, some users want to receive advertising messages from the Contoso Corporation or invitations to an upcoming conference on cybersecurity, while other users consider these same messages to be spam.
 
-  For more information about how bulk email is identified, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+  For more information about how bulk email is identified, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
 
 ## How to manage bulk email
 
@@ -47,8 +47,8 @@ Because of the mixed reaction to bulk email, there isn't universal guidance that
 
 Anti-spam policies have a default BCL threshold that's used to identify bulk email as spam, and a specific action to take on those bulk messages. For more information, see the following articles:
 
-- [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md)
-- [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
+- [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md)
+- [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 - [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)
 
 Another option that's easy to overlook: if a user complains about receiving bulk email, but the messages are from reputable senders that pass spam filtering in EOP, have the user check for an unsubscribe option in the bulk email message.

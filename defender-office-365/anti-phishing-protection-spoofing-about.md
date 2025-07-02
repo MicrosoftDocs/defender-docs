@@ -46,7 +46,7 @@ The following anti-spoofing technologies are available in EOP:
 
   :::image type="content" source="media/eop-anti-spoofing-protection.png" alt-text="The EOP anti-spoofing checks" lightbox="media/eop-anti-spoofing-protection.png":::
 
-- **Spoof intelligence insight**: Review detected spoofed messages from senders in internal and external domains during the last seven days. For more information, see [Spoof intelligence insight in EOP](anti-spoofing-spoof-intelligence.md).
+- **Spoof intelligence insight**: Review detected spoofed messages from senders in internal and external domains during the last seven days. For more information, see [Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md).
 
 - **Allow or block spoofed senders in the Tenant Allow/Block List**: When you override the verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that only appears on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoof senders before they're detected by spoof intelligence. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 
