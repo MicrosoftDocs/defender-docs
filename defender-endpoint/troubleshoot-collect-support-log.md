@@ -114,7 +114,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo 'c65a4e4c6851d130942bfacd147a9d18b8a92b4f50facf519477fd1c41a1c323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
    
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
@@ -140,7 +140,7 @@ The following script performs the first six steps of the [Running the Python ver
   
    echo "Getting XMDEClientAnalyzer.zip"
    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c  
 
    echo "Unzipping XMDEClientAnalyzer.zip"
    unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
