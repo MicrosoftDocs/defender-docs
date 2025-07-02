@@ -90,7 +90,7 @@ The following permissions can be assigned to the default data collection, with a
 
 |Permission name|Level|Description|
 |---|---|---|
-|Data | Read / Manage | Manage data retention, move data between tiers, create lake tables, and manage connectors for the Microsoft Sentinel data lake. |
+|Data |  Manage | Manage data retention, move data between tiers, create lake tables, and manage connectors for the Microsoft Sentinel data lake. |
 |Analytics Jobs Schedule | Read / Manage | Schedule and manage analytics jobs within the Microsoft Sentinel data lake using Lake Explorer, Azure Data Explorer, or Notebooks.|
 
 ## Next steps
