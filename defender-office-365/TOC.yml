@@ -355,6 +355,8 @@
            href: reports-email-security.md
          - name: Defender for Office 365 reports
            href: reports-defender-for-office-365.md
+         - name: Defender for Office 365 Overview dashboard
+           href: reports-mdo-email-collaboration-dashboard.md
        - name: Safe Documents in Microsoft 365 A5 or E5 Security
          items:
          - name: Safe Documents in A5 or E5 Security
@@ -564,6 +566,8 @@
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
+        - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+          href: step-by-step-guides/add-advanced-hunting-community-queries.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender

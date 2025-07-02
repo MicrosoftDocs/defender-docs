@@ -31,6 +31,8 @@ ms.date: 04/10/2025
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Ansible. To use another method, refer to the [See also](#see-also) section.
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 A successful deployment requires the completion of all of the following tasks:
 
 - [Prerequisites and system requirements](#prerequisites-and-system-requirements-applicable-to-both-the-methods)

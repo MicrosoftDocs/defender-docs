@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 04/24/2025
+ms.date: 07/01/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -19,6 +19,22 @@ ms.topic: concept-article
 # What's new for Microsoft unified security operations
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
+
+## July 2025
+
+### Microsoft Sentinel in the Defender portal to be retired July 2026
+
+Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+Starting in **July 2026**, Microsoft Sentinel will be supported in the Defender portal only, and any remaining customers using the Azure portal will be automatically redirected.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
 
 ## June 2025
 
@@ -67,6 +83,9 @@ If two incidents should be merged because they describe the same attack story, b
 For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
 
 To understand more about merging incidents, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
+
+For instructions on merging incidents manually, see [Merge incidents manually in the Microsoft Defender portal](/defender-xdr/merge-incidents-manually).
+
 
 ### Multi workspace and multi tenant support for Microsoft Sentinel (Preview)
 

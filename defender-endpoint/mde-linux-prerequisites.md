@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 06/30/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -30,6 +30,8 @@ This article lists hardware and software requirements for Defender for Endpoint 
 - [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) 
 
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md) 
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## License requirements
 
@@ -115,8 +117,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > The workstation and desktop versions of these distributions are unsupported
 > Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions).
 > After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
-> Currently, Rocky and Alma distributions aren't supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
-> The minimal requirement for the kernel version is `3.10.0-327` or later.
+> Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
 > Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system.
@@ -184,12 +185,14 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> For version older than `101.25032.0000`:
-> - RPM package needs: `mde-netfilter`, `pcre`
-> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
-> - The `mde-netfilter` package also has the following package dependencies:
-    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> 
+> For versions older than `101.25032.0000`, the following requirements apply:
+> - RPM package needs: `mde-netfilter` and `pcre`
+> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
+> 
+> The `mde-netfilter` package also has the following package dependencies:
+> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
+> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 ## Installation instructions 
 
@@ -224,5 +227,5 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
- > [!TIP]
+> [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
