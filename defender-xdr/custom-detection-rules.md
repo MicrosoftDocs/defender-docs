@@ -149,7 +149,8 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 > [!TIP]
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
-When you edit a rule, it will run with the applied changes in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time.
+When you edit a rule, the changes are applied in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time. There might also be small delays in specific runs, whereby the configured frequency is not 100% accurate.
+
 
 ##### Continuous (NRT) frequency
 
