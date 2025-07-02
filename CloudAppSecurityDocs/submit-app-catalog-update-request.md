@@ -1,6 +1,6 @@
 ---
 title: Submit an App Catalog update request
-description: This article provides instructions for app owners and non-app owners on how to submit an update request for an app in the Defender for Cloud Apps catalog.
+description: This article provides instructions for app owners and nonapp owners on how to submit an update request for an app in the Defender for Cloud Apps catalog.
 ms.date: 06/30/2025
 ms.topic: how-to
 ---
@@ -27,12 +27,12 @@ While your request is being reviewed:
 - If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can [override the app’s risk score](risk-score.md#override-the-risk-score) manually.
 
 
-## Non-owners requesting updates
+## Nonowners requesting updates
 
 If you're not the app owner but want to do one of the following:
 
 - Request a risk score update. For official guidance, see [Customize the risk score](risk-score.md#customize-the-risk-score).
-- Suggest a change to the cloud app catalog. For more details see: [Suggest a change to the cloud app catalog](risk-score.md#suggest-a-change-to-the-cloud-app-catalog)
+- Suggest a change to the cloud app catalog. For more information, see: [Suggest a change to the cloud app catalog](risk-score.md#suggest-a-change-to-the-cloud-app-catalog)
 
 **Other requests**
 
