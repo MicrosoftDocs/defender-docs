@@ -83,6 +83,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `PolicyHash` | `string` | Unique hash of the policy  |
 | `DataSources` | `array` |Products or services that provided information for the event; for example: Microsoft Defender for Endpoint |
 | `IsPolicyOn` | `boolean` |Indicates the current state of the policy on the device at the time of the disruption event; possible values: true (the policy is on, therefore it was applied or enforced), false (the policy was turned off or revoked from the device) |
+|`ReportType` | `string` | The nature and impact level of the reported event; possible values: Prevented (the action, such as a connection or authentication attempt, was fully blocked before execution), Blocked (an active connection or session was forcibly terminated, with partial impact on the device), PolicyUpdated (the client received and possibly applied a new policy) |
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)
