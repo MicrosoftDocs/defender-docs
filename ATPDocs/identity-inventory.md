@@ -110,7 +110,7 @@ Sort option applies to Display name, Domain, and Created time columns.
 
 - **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-At the top of each device inventory tab, the following device counts are available:
+At the top of the page, the following identities counts are available:
 
 - __Total__: The total number of identities. 
 
@@ -120,7 +120,7 @@ At the top of each device inventory tab, the following device counts are availab
 
 - **Services:** The number of all service accounts both on-premises and cloud.
 
-You can use this information to help you prioritize devices for security posture improvements.
+You can use this information to help you prioritize identities for security posture improvements.
 
 ### Navigate to the Identity inventory page
 

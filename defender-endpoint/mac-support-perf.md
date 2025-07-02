@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
-ms.date: 06/10/2025
+ms.date: 06/20/2025
 ---
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -154,6 +154,10 @@ To troubleshoot and mitigate performance issues, follow these steps:
 9. Configure Microsoft Defender for Endpoint on macOS with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection. 
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
+
+## Troubleshoot performance issues from Behavior Monitoring
+
+See the guide on our support page for [Behavior Monitoring](behavior-monitor-macos.md).
 
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
