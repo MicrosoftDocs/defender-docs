@@ -52,13 +52,7 @@ For detailed licensing information, see the [Product Terms site](https://www.mic
 
 ## Browser requirements
 
-Access to Defender for Endpoint is done through a browser. The following browsers are supported:
-
-- Microsoft Edge
-- Google Chrome
-
-> [!NOTE]
-> Although other browsers might work, the mentioned browsers are the ones supported.
+Access Microsoft Defender for Endpoint and other [Microsoft Defender XDR](/defender-xdr/) experiences in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
 
 ## Hardware and software requirements
 
@@ -69,36 +63,29 @@ Devices on your network must be running one of the operating systems listed in t
 > [!IMPORTANT]
 > You may continue to use Microsoft Windows after OS support ends; however, it will no longer receive quality updates, new or updated features, or security updates for the operating system itself. However, devices protected by Microsoft Defender for Endpoint will continue to receive regular product updates through existing channels, keeping detection and protection capabilities current. 
 
-- Windows 11 Enterprise
-- Windows 11 IoT Enterprise
-- Windows 11 Education
-- Windows 11 Pro
-- Windows 11 Pro Education
-- [Windows 10 and 11 on Arm](/windows/arm/overview)
-- Windows 10 Enterprise
-- [Windows 10 Enterprise LTSC 2016 (or later)](/windows/whats-new/ltsc/)
-- Windows 10 IoT Enterprise (including LTSC)
-- Windows 10 Education
-- Windows 10 Pro
-- Windows 10 Pro Education
+- Windows 10 and 11 Enterprise, IoT Enterprise, Education, Pro, Pro Education including [Windows on Arm](/windows/arm/overview)
+
+- [Windows Enterprise LTSC 2016 (and later)](/windows/whats-new/ltsc/)
+
+- [Windows Enterprise multi-session](/azure/virtual-desktop/windows-multisession-faq)
+
 - Windows Server
   - Windows Server 2012 R2
   - Windows Server 2016
-  - Windows Server, version 1803 or later
-  - Windows Server 2019 and later
-  - Windows Server 2019 core edition
-  - Windows Server 2022
-  - Windows Server 2022 core edition
-  - Windows Server 2025
-- Azure Virtual Desktop
-- Windows 365 running one of the previously listed operating systems/versions
+  - Windows Server Semi-Annual Channel, version 1803 and above
+    
+  - Windows Server 2019 and later (including Core installation type)
+    
+- [Windows 365](/windows-365/) Cloud PCs and supported [Azure (Windows) Virtual Desktop](/azure/virtual-desktop/) machines running one of the previously listed operating systems/versions
 
-The following operating systems work with Defender for Endpoint, provided you're using the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA):
+- [Azure Local](/azure/azure-local) Nodes running Azure Stack HCI OS, version 21H1 and above
 
-- Windows 8.1 Enterprise
-- Windows 8.1 Pro
-- Windows 7 SP1 Enterprise
-- Windows 7 SP1 Pro
+The following Windows operating systems work with Defender for Endpoint, provided you're using the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA):
+
+- Windows 7 SP1 Pro, Enterprise
+
+- Windows 8.1 Pro, Enterprise
+
 - Windows Server 2008 R2 SP1
 
 > [!NOTE]
@@ -115,16 +102,16 @@ To add anti-malware protection to these older operating systems, you can use [Sy
 - [iOS](microsoft-defender-endpoint-ios.md)
 
 > [!NOTE]
-> - Make sure to confirm that the Linux distributions and versions of Android, iOS, and macOS are compatible with Defender for Endpoint.
-> - Although Windows 10 IoT Enterprise is a supported OS in Microsoft Defender for Endpoint and enables OEMs/ODMs to distribute it as part of their product or solution, customers should follow the OEM/ODM's guidance around host-based installed software and supportability. 
-> - Endpoints running mobile versions of Windows (such as Windows CE and Windows 10 Mobile) aren't supported.
-> - Virtual Machines running Windows 10 Enterprise 2016 LTSB can encounter performance issues when used on non-Microsoft virtualization platforms.
-> - For virtual environments, we recommend using Windows 10 Enterprise LTSC 2019 or later.
-> - [Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md) don't include server licenses. To onboard servers to those plans, you need another license, such as Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering). To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-> - If your organization is a small or medium-sized business, see [Microsoft Defender for Business requirements](/defender-business/mdb-requirements).
-> - Windows 11 24H2 Home devices that are upgraded to a supported edition might require you to run the following command before onboarding: `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`
+- Make sure to confirm that the Linux distributions and versions of Android, iOS, and macOS are compatible with Defender for Endpoint.
+- Although Windows 10 IoT Enterprise is a supported OS in Microsoft Defender for Endpoint and enables OEMs/ODMs to distribute it as part of their product or solution, customers should follow the OEM/ODM's guidance around host-based installed software and supportability. 
+- Endpoints running mobile versions of Windows (such as Windows CE and Windows 10 Mobile) aren't supported.
+- Virtual Machines running Windows 10 Enterprise 2016 LTSB can encounter performance issues when used on non-Microsoft virtualization platforms.
+- For virtual environments, we recommend using Windows 10 Enterprise LTSC 2019 or later.
+- [Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md) don't include server licenses. To onboard servers to those plans, you need another license, such as Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering). To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
+- If your organization is a small or medium-sized business, see [Microsoft Defender for Business requirements](/defender-business/mdb-requirements).
+> - Windows 11 24H2 Home devices that have been upgraded to a supported edition might require you to run the following command before onboarding: `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`
 > For more information about edition upgrades and features, see ([Windows features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
-
+> 
 ### Hardware requirements
 
 The minimum hardware requirements for Defender for Endpoint on Windows devices are the same as the requirements for the operating system itself (that is, they aren't in addition to the requirements for the operating system).
@@ -177,6 +164,7 @@ If you're running a non-Microsoft anti-malware client and use Mobile Device Mana
 ## Related articles
 
 - [Set up Microsoft Defender for Endpoint deployment](production-deployment.md)
+
 - [Onboard devices](onboard-configure.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
