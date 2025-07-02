@@ -342,7 +342,19 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. The API pulls data in your organization as Json responses. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results. Unlike the full software vulnerabilities assessment (JSON response), which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device, the delta export JSON response API call is used to fetch only the changes that happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you only get specific information on new, fixed, and updated vulnerabilities. Delta export JSON response API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed?" or "how many new vulnerabilities were added to my organization?"
 
 > [!NOTE]
-> It's highly recommended you use the full export software vulnerabilities assessment by device API call at least once a week and this extra export software vulnerabilities changes by device (delta) API call all the other days of the week. Unlike the other Assessments JSON response APIs, the "delta export" isn't a full export. The delta export includes only the changes that happened between a selected date and the current date (the "delta" API call).
+> We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage; the API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint  will just read latest Flat from blob.
+> A successful completion of Full VA export will trigger __delta export__ that captures the changes from latest Flat VA processed by Delta to new Flat VA.
+> > __RBAC-scoped duplicates__
+> > Because exports are scoped by __RBACGroup__, a device that moves from one RBAC group to another will appear __twice__ in a Delta export when you query with the global view (`RBACGroup=*`): once under its previous group with status "Fixed" and once under its current group with status "New". Use the `rbacGroupId` and device identifiers together (or de-duplicate on your side) if you need a single authoritative record per device.
+> 
+> Recommended pull pattern
+> 
+1. __Baseline__ – Download the full VA(Flat VA) export on your preferred cadence (weekly is often sufficient).
+
+1. __Stay current__ – delta export between full snapshots(Delta can be queried up to 14 days into the past).
+
+1. __Handle RBAC moves__ – When processing a Delta, de-duplicate entries where the same `Id(deviceId_software_` version _ cve`)`appears under multiple `rbacGroupId` values.
+
 
 #### 3.1.1 Limitations
 
@@ -391,13 +403,14 @@ Each returned record contains all the data from the full export software vulnera
 |DeviceId|String|Unique identifier for the device in the service.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1|
 |DeviceName|String|Fully qualified domain name (FQDN) of the device.|johnlaptop.europe.contoso.com|
 |DiskPaths|Array[string]|Disk evidence that the product is installed on the device.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]|
-|EventTimestamp|String|The time this delta event was found.|2021-01-11T11:06:08.291Z|
+|EventTimestamp|String|The time this delta event was found.|2020-11-03 10:13:34.8476880|
 |ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit|
+|IsOnboarded |Boolean|Indicates whether a device is onboarded or not.| Possible values are true or false.|
 |FirstSeenTimestamp|String|First time the CVE of this product was seen on the device.|2020-11-03 10:13:34.8476880|
 |ID|String|Unique identifier for the record.|123ABG55_573AG&mnp!|
 |LastSeenTimestamp|String|Last time the software was reported on the device.|2020-11-03 10:13:34.8476880|
 |OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See Microsoft Defender Vulnerability Management supported operating systems and platforms for details.|Windows10 and Windows 11|
-|RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." If the organization doesn't contain any RBAC groups, the value is "None."|Servers|
+|RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value is "Unassigned." |Servers|
 |RecommendationReference|string|A reference to the recommendation ID related to this software.|va--microsoft--silverlight|
 |RecommendedSecurityUpdate |String|Name or description of the security update provided by the software vendor to address the vulnerability.|April 2020 Security Updates|
 |RecommendedSecurityUpdateId |String|Identifier of the applicable security updates or identifier for the corresponding guidance or knowledge base (KB) articles|4550961|
@@ -588,5 +601,6 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 Other related
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
