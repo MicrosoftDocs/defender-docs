@@ -33,7 +33,7 @@ items:
       items:
         - name: Prerequisites
           href: deploy/prerequisites-sensor-version-2.md
-        - name: Deploy a sensor for multiple Active Directory forests
+        - name: Multi-forest considerations
           href: deploy/multi-forest.md
         - name: Connect to the Defender for Identity service
           href: deploy/configure-proxy.md
