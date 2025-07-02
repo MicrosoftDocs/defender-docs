@@ -21,24 +21,18 @@ Complete the [Self-Attestation Questionnaire](https://forms.office.com/Pages/Res
 
 Your submission will be reviewed by the catalog team to validate the app and its attributes.
 
+While your request is being reviewed:
+
+- If the app isn’t listed in the catalog, you can [add custom apps to cloud discovery](cloud-discovery-custom-apps.md) to track and manage it in your environment.
+- If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can [override the app’s risk score](risk-score.md#override-the-risk-score) manually.
+
 
 ## Non-owners requesting updates
 
 If you're not the app owner but want to do one of the following:
 
-- Suggest a change to an app’s risk score.
-- Request reprofiling of an app based on outdated data or new risk factors.
-
-To request a risk score update:
-
-1. Sign in to [Microsoft Defender XDR](https://security.microsoft.com).
-1. Go to **Cloud apps > Cloud app catalog**.
-1. Locate and select the app.
-1. Select **Request score update**.
-
-This triggers a review of the app’s risk factors and other data.
-For official guidance, see [Customize the risk score](risk-score.md#customize-the-risk-score).
-
+- Request a risk score update. For official guidance, see [Customize the risk score](risk-score.md#customize-the-risk-score).
+- Suggest a change to the cloud app catalog. For more details see: [Suggest a change to the cloud app catalog](risk-score.md#suggest-a-change-to-the-cloud-app-catalog)
 
 **Other requests**
 
@@ -49,19 +43,13 @@ This includes general inquiries, metadata corrections, or requests that require 
 
 [Open support ticket](/defender-cloud-apps/support-and-ts)
 
-After you submit a ticket:
+## After you submit a ticket:
 
 - Allow time for support to review your request. They might contact you for extra context or documentation.
 - If your request is valid, support forwards it to the catalog team for validation and processing.
 - If approved, you receive an estimated timeline for when the update will appear in the catalog.
 - If the request can't be fulfilled due to product design constraints, you receive a clear explanation.
 
-## What you can do while waiting for an App Catalog update
-
-While your request is being reviewed:
-
-- If the app isn’t listed in the catalog, you can [add custom apps to cloud discovery](cloud-discovery-custom-apps.md) to track and manage it in your environment.
-- If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can [override the app’s risk score](risk-score.md#override-the-risk-score) manually.
 
 ## Validation and processing timeline
 
