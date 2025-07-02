@@ -1,14 +1,14 @@
 ---
-title: Test Microsoft Defender for Identity sensors on domain controllers
+title: Validate the Microsoft Defender for Identity sensor deployment on domain controllers
 description: Learn about how to check that the Microsoft Defender for Identity sensors have been onboarded correctly.
 ms.date: 06/10/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Test the Defender for Identity sensor on domain controllers 
+# Validate the Defender for Identity sensor deployment on domain controllers 
 
-Use the following procedures to test that your sensors are working.
+Use the following procedures to check that your sensors are working.
 Note that the first time you activate the sensor on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
 ## Check the ITDR dashboard

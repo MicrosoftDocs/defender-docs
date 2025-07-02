@@ -14,10 +14,10 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
- - Requires that Defender for Endpoint is deployed
- - Doesn't support VPN integration
- - Doesn't support ExpressRoute
- - Doesn't provide full functionality of health alerts, posture recommendations or security alerts.
+ - Requires that Defender for Endpoint is deployed on your endpoints
+ - Doesn't currently support VPN integration
+ - Doesn't currently support ExpressRoute
+ - Doesn't currently offer full functionality of health alerts, posture recommendations or security alerts
 
 ## Licensing requirements
 
@@ -42,7 +42,7 @@ The following table summarizes the server requirements and recommendations for t
 |Prerequisite / Recommendation |Description  |
 |---------|---------|
 |Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.|
-|Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended|
+|Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
 |Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
 |Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.|
@@ -51,14 +51,6 @@ The following table summarizes the server requirements and recommendations for t
 
 > [!NOTE]
 > After the March 2024 Cumulative Update is installed, LSASS might experience a memory leak on domain controllers during on-premises and cloud-based Active Directory Domain Controllers service Kerberos authentication requests. [This out-of-band update: KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3) addresses this issue.
-
-### Required ports
-
-|Protocol   |Transport         |Port         |From       |To   |Notes|
-|------------|---------|---------|-------|--------------|-----|
-|DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |    |
-|RADIUS     |UDP      |1813|RADIUS         |Defender for Identity sensor      |   |
-|Network Name Resolution (NNR) ports  | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.   |
 
 ### Dynamic memory requirements
 

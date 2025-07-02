@@ -1,25 +1,26 @@
 ---
 title: Uninstall the sensor
 description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 01/30/2023
+ms.date: 07/02/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Uninstall the Microsoft Defender for Identity sensor
+# Remove the Microsoft Defender for Identity sensor
 
 This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
 
-## Prerequisites
+<!--## Prerequisites
 
-Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. You must remove Defender for Identity from Defender for Endpoint before uninstalling the sensor.
+Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. You must remove Defender for Identity from Defender for Endpoint before deactivating the sensor.
 
 1. In the [Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Activation**.
 1. Select **Download offboarding package** and save the file in a location you can access from your domain controller.  
 ![Screenshot that shows how to offboard the new sensor.](media/screenshot-that-shows-how-to-offboard-the-new-sensor.png)
 1. From the domain controller, extract the zip file, and run the `DefenderForIdentityOnlyOffboardingScript_valid_until_YYYY-MM-DD.cmd` script as an Administrator.
+-->
 
-## Uninstall a sensor
+## Delete a sensor
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
 1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.

@@ -23,32 +23,31 @@ You can choose to activate eligible domain controllers either automatically, whe
 |---------|---------|
 |Activate new sensor |The domain controller is already onboarded to Defender for Endpoint. [Activate the sensor](#activate-the-defender-for-identity-sensor).|
 |Install classic sensor|[Deploy the classic Defender for Identity sensor](install-sensor.md) from the **Sensors page**.|
-|Download onboarding package     |[Onboard the domain controller to Defender for Endpoint](#onboard-the-domain-controller).|
+<!--|Download onboarding package     |[Onboard the domain controller to Defender for Endpoint](#onboard-the-domain-controller).|-->
 |OS update is required     |This domain controller is running an unsupported operating system version for the new sensor. Update the server to Windows Server 2019 or later to use the new sensor. |
 
-## The Activation process
+<!--## The Activation process
 The process for activating the sensor depends on your configuration.
 - If you have a Defender for Endpoint deployment, simply [activate the sensor](#activate-the-defender-for-identity-sensor).
-- If the domain controller is not onboarded to Defender for Endpoint, [onboard the domain controller](#onboard-the-domain-controller) by configuring Defender for Endpoint streamlined URLs, and then downloading and running the onboarding package.
+- If the domain controller is not onboarded to Defender for Endpoint, [onboard the domain controller](#onboard-the-domain-controller) by configuring Defender for Endpoint streamlined URLs, and then downloading and running the onboarding package.-->
 
 ## Activate the Defender for Identity sensor
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
-   [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/activate.jpg)](media/activate-capabilities/activate.jpg#lightbox)
+   [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/activate.png)](media/activate-capabilities/activate.png#lightbox)
 
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
 
     [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/successfully-activated.png)](media/activate-capabilities/successfully-activated.png#lightbox)
 
-
+<!--->
 ## Onboard the domain controller 
 
-If the domain controller has not been onboarded to Defender for Endpoint, follow these steps to activate the sensor.
+If the domain controller has not been onboarded to Defender for Endpoint for Servers, follow these steps to activate the sensor.
 
-1. [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server)
-1. [Configure connectivity using streamlined connection](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
+1. [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) using [streamlined URLs](/microsoft-365/security/defender-endpoint/configure-device-connectivity#option-1-configure-connectivity-using-the-simplified-domain).
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select **Download onboarding package**, and save the file in a location you can access from your domain controller.
 
@@ -59,13 +58,14 @@ If the domain controller has not been onboarded to Defender for Endpoint, follow
 
    [![screenshot that shows the onboarding script.](media/activate-capabilities/screenshot-2025-06-04-170500.png)](media/activate-capabilities/screenshot-2025-06-04-170500.png#lightbox)
 
+<!-->
 
-## Confirm onboarding 
+## Confirm sensor activation 
 
 To confirm the sensor is working: 
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Sensors**.
-1. Check that the onboarded domain controller is listed. 
+1. Check that the activated domain controller is listed. 
 
 > [!NOTE]
 > The first time you activate the Defender for Identity sensor on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations are shown within five minutes. The activation doesn't require a restart/reboot. 

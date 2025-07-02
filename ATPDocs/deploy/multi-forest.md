@@ -1,12 +1,12 @@
 ---
-title: Multi-forest support | Microsoft Defender for Identity
+title: Multi-forest considerations | Microsoft Defender for Identity
 description: Learn about how Microsoft Defender for Identity supports multiple Active Directory forests.
 ms.date: 08/10/2023
 ms.topic: article
 ms.reviewer: martin77s
 ---
 
-# Microsoft Defender for Identity multi-forest support
+# Microsoft Defender for Identity multi-forest considerations
 
 Microsoft Defender for Identity supports organizations with multiple Active Directory forests, giving you the ability to easily monitor activity and profile users across forests.
 
@@ -20,7 +20,7 @@ Securing your multiple Active Directory forests with Defender for Identity provi
 
 > [!NOTE]
 > Each Defender for Identity sensor can only report to a single Defender for Identity workspace.
->
+
 
 ## Detection activity across multiple forests
 
