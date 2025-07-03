@@ -32,13 +32,27 @@ Ensure the following endpoints are allowed:
 For the full list of required outbound IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
 
 
+### “Behaviors” data type in Microsoft Defender for Cloud Apps - General Availability
+
+The **Behaviors** data type significantly enhances overall threat detection accuracy by reducing alerts on generic anomalies and surfacing alerts only when observed patterns align with real security scenarios. You can now use **Behaviors** to conduct investigations in [Advanced Hunting](https://learn.microsoft.com/defender-xdr/advanced-hunting-overview), build better [custom detections](https://learn.microsoft.com/defender-xdr/custom-detection-rules) based on behavioral signals, and benefit from automatic inclusion of context-related behaviors into [incidents](https://learn.microsoft.com/defender-xdr/incidents-overview). This provides clearer context and helps security operations teams to reduce alert fatigue, prioritize, and respond more efficiently.
+
+For more information, see:
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
+- [TechCommunity Blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/transform-the-way-you-investigate-by-using-behaviors--new-detections-in-xdr-star/3825154).
+
 ### New Dynamic Threat Detection model
 
 Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter and more responsive security coverage.
+
 For more information, see [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md).
+
 
 ## May 2025 
 
+
+### Revamped Cloud Discovery Executive Summary report
+
+The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more details, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report).
 
 ### New Applications inventory page now available in Defender XDR
 
@@ -116,7 +130,7 @@ Defender for Cloud Apps customers can now configure Role-Based Access Control (R
 For more information, see:
 
 - [Configure admin access](/defender-cloud-apps/manage-admins)
-- [Investigate behaviors with advanced hunting (Preview)](/defender-cloud-apps/behaviors)
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
 
 ## February 2025
  
