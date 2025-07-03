@@ -214,7 +214,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Collaboration security for Microsoft Teams**: With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using URLs and messages has increased as well. Microsoft Defender for Office 365 is extending its [Safe Links](safe-links-about.md) protection with increased capabilities for zero-hour auto purge (ZAP), quarantine, and end user reporting of potential malicious messages to their admins. For more information, see [Microsoft Defender for Office 365 support for Microsoft Teams (Preview)](mdo-support-teams-about.md).
 - **Built-in protection: Safe Links time of click protection enabled for email**: By default, Microsoft now protects URLs in email messages at time of click as part of this update to Safe Links settings (_EnableSafeLinksForEmail_) within the Built-in protection preset security policy. To learn about the specific Safe Links protections in the Built-in protection policy, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
-- **Quarantine notifications enabled in preset security policies**: If your organization has enabled or will enable the Standard or Strict preset security policies, the policies will be automatically updated to use the new DefaultFullAccessWithNotificationPolicy quarantine policy (notifications enabled) wherever the DefaultFullAccessPolicy (notifications disabled) was used. To learn more about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md). For more information about specific settings in preset security policies, see [Microsoft recommendations for EOP and Defender for Office 365 security settings](recommended-settings-for-eop-and-office365.md).
+- **Quarantine notifications enabled in preset security policies**: If your organization has enabled or will enable the Standard or Strict preset security policies, the policies will be automatically updated to use the new DefaultFullAccessWithNotificationPolicy quarantine policy (notifications enabled) wherever the DefaultFullAccessPolicy (notifications disabled) was used. To learn more about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md). For more information about specific settings in preset security policies, see [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 ## January 2023
 
@@ -348,7 +348,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - New first contact safety tip setting within anti-phishing policies. This safety tip is shown when recipients first receive an email from a sender or don't often receive email from a sender. For more information on this setting and how to configure it, see the following articles:
   - [First contact safety tip](anti-phishing-policies-about.md#first-contact-safety-tip)
-  - [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
+  - [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
   - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 ## April/May 2021

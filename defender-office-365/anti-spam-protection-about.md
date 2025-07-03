@@ -21,7 +21,7 @@ description: Admins can learn about the anti-spam settings and filters that help
 ms.service: defender-office-365
 ms.date: 05/14/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -47,7 +47,7 @@ EOP uses the following spam filtering verdicts to classify messages:
 
 For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml)
 
-In the default anti-spam policy and in custom anti-spam policies, you can configure the actions to take based on these verdicts. In the Standard and Strict [preset security policies](preset-security-policies.md), the actions are already configured and unmodifiable as described in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+In the default anti-spam policy and in custom anti-spam policies, you can configure the actions to take based on these verdicts. In the Standard and Strict [preset security policies](preset-security-policies.md), the actions are already configured and unmodifiable as described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
 To configure the default anti-spam policy, and to create, modify, and remove custom anti-spam policies, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
@@ -65,14 +65,14 @@ To configure the default anti-spam policy, and to create, modify, and remove cus
 > - High confidence phishing messages are still filtered. Other features in EOP aren't affected (for example, messages are always scanned for malware).
 > - If you need to bypass spam filtering for SecOps mailboxes or phishing simulations, don't use mail flow rules. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 >
-> In hybrid environments where EOP protects on-premises Exchange mailboxes, you need to configure two mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the EOP spam headers that are added to messages. For details, see [Configure EOP to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+> In hybrid environments where EOP protects on-premises Exchange mailboxes, you need to configure two mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the EOP spam headers that are added to messages. For details, see [Configure Microsoft 365 to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
 ## Anti-spam policies
 
 Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections.
 
 > [!TIP]
-> To see the anti-spam policy settings in the default policy, the Standard preset security policy, and the Strict preset security policy, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+> To see the anti-spam policy settings in the default policy, the Standard preset security policy, and the Strict preset security policy, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
 ### Recipient filters in anti-spam policies
 
@@ -147,7 +147,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
 
   ³ You can use this value as a condition in [Mail flow rules in Exchange Server](/exchange/policy-and-compliance/mail-flow-rules/mail-flow-rules) to filter or route messages for mailboxes in on-premises Exchange environments only (not in Exchange Online).
 
-  ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   ⁵ Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined high confidence phishing messages.
 
@@ -159,11 +159,11 @@ These settings aren't configured in the default anti-spam policy by default, or 
   - **All phishing and high confidence spam messages**
   - **All phishing and spam messages**
 
-  For the default values that are used in the default anti-spam policy and in the Standard and Strict preset security policies, see the **Intra-Organizational messages to take action on** entry in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  For the default values that are used in the default anti-spam policy and in the Standard and Strict preset security policies, see the **Intra-Organizational messages to take action on** entry in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
 - **Retain spam in quarantine for this many days**: Specifies how long to keep the message in quarantine if you selected **Quarantine message** as the action for a spam filtering verdict. After the time period expires, the message is deleted, and isn't recoverable. A valid value is from 1 to 30 days.
 
-  For the default values that are used in the default anti-spam policy and in the Standard and Strict preset security policies, see the **Retain spam in quarantine for this many days** entry in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  For the default values that are used in the default anti-spam policy and in the Standard and Strict preset security policies, see the **Retain spam in quarantine for this many days** entry in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   > [!TIP]
   > This setting also controls how long messages that were quarantined by **anti-phishing** policies are retained. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).

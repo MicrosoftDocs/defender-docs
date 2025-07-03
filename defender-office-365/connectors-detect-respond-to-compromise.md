@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 6/14/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -38,7 +38,7 @@ This article explains the symptoms of a compromised connector and how to regain 
 A compromised connector exhibits one or more of the following characteristics:
 
 - A sudden spike in outbound mail volume.
-- A mismatch between the `5321.MailFrom` address (also known as the **MAIL FROM** address, P1 sender, or envelope sender) and the `5322.From` address (also known as the From address or P2 sender) in outbound email. For more information about these senders, see [How EOP validates the From address to prevent phishing](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
+- A mismatch between the `5321.MailFrom` address (also known as the **MAIL FROM** address, P1 sender, or envelope sender) and the `5322.From` address (also known as the From address or P2 sender) in outbound email. For more information about these senders, see [How Microsoft 365 validates the From address to prevent phishing](anti-phishing-from-email-address-validation.md#an-overview-of-email-message-standards).
 - Outbound mail sent from a domain that isn't provisioned or registered.
 - The connector is blocked from sending or relaying mail.
 - The presence of an inbound connector that wasn't created by an admin.

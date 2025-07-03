@@ -22,7 +22,7 @@ description: Admins can learn about quarantine in Exchange Online Protection (EO
 ms.service: defender-office-365
 ms.date: 06/17/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -46,12 +46,12 @@ Whether a detected message is quarantined by default depends on the following fa
 
 <sup>\*</sup> Malware filtering is skipped on SecOps mailboxes that are identified in the advanced delivery policy. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
-The default actions for protection features in EOP and Defender for Office 365, including preset security policies, are described in the feature tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+The default actions for protection features in EOP and Defender for Office 365, including preset security policies, are described in the feature tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 For anti-spam and anti-phishing protection, admins can also modify the default policy or create custom policies to quarantine messages instead of delivering them to the Junk Email folder. For instructions, see the following articles:
 
 - [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)
-- [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
+- [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 The protection policies for [supported features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) have one or more _quarantine policies_ assigned to them (each action within the protection policy has an associated quarantine policy assignment).

@@ -21,7 +21,7 @@ description: Manual configurations for Exchange Online Protection, Microsoft Def
 ms.service: defender-office-365
 ms.date: 10/16/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -51,7 +51,7 @@ We recommend turning on and using the Standard and/or Strict preset security pol
 
 - Turn on and configure preset security policies: [Preset security policies in Microsoft 365](preset-security-policies.md).
 - Difference in settings between Standard and Strict preset security policies: [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies).
-- Complete list of all features and settings in default policies, Standard preset security policies, and Strict preset security policies: [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+- Complete list of all features and settings in default policies, Standard preset security policies, and Strict preset security policies: [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 Custom policies are required if the business needs of your organization require policy settings that are *different than* or *aren't defined in* preset security policies. Or, if your organization requires a different user experience for quarantined messages (including notifications). For more information, see [Determine your protection policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
 

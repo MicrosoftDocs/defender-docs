@@ -20,12 +20,12 @@ description: Admins can learn how to use the configuration analyzer to find and 
 ms.service: defender-office-365
 ms.date: 1/29/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Configuration analyzer for protection policies in EOP and Microsoft Defender for Office 365
+# Configuration analyzer for protection policies in Microsoft 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -33,20 +33,20 @@ Configuration analyzer in the Microsoft Defender portal provides a central locat
 
 The following types of policies are analyzed by the configuration analyzer:
 
-- **Exchange Online Protection (EOP) policies**: Includes Microsoft 365 organizations with Exchange Online mailboxes and standalone EOP organizations without Exchange Online mailboxes:
+- **Default email protection policies in Microsoft 365**: Includes all Microsoft 365 organizations with cloud mailboxes:
   - [Anti-spam policies](anti-spam-policies-configure.md).
   - [Anti-malware policies](anti-malware-policies-configure.md).
-  - [EOP anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
+  - [Default anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
 
 - **Microsoft Defender for Office 365 policies**: Includes organizations with Microsoft 365 E5 or Defender for Office 365 add-on subscriptions:
   - Anti-phishing policies in Microsoft Defender for Office 365, which include:
-    - The same [spoof settings](anti-phishing-policies-about.md#spoof-settings) that are available in the EOP anti-phishing policies.
+    - The same [spoof settings](anti-phishing-policies-about.md#spoof-settings) that are available in the default anti-phishing protection policies.
     - [Impersonation settings](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Phishing email thresholds](anti-phishing-policies-about.md#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Safe Links policies](safe-links-policies-configure.md).
   - [Safe Attachments policies](safe-attachments-policies-configure.md).
 
-The Standard and Strict policy setting values that are used as baselines are described in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+The Standard and Strict policy setting values that are used as baselines are described in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 The configuration analyzer also checks the following non-policy settings:
 
@@ -138,7 +138,7 @@ On the **Standard protection** or **Strict protection** tab of the configuration
 - **Why?**: Information about why we recommend the value for the setting.
 - The specific setting to change and the value to change it to.
 - **View policy**: The link takes you to the details flyout of the affected policy in the Microsoft Defender portal where you can manually update the setting.
-- A link to [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+- A link to [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 > [!TIP]
 > To see details about other recommendations without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous** and **Next** at the top of the flyout.

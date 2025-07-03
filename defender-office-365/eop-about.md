@@ -34,7 +34,7 @@ The default email protections in Microsoft 365 are on by default via the default
 
 - [Anti-malware protection](anti-malware-protection-about.md)
 - [Anti-spam protection](anti-spam-protection-about.md)
-- [Anti-phishing (spoof) protection](anti-phishing-protection-about.md#anti-phishing-protection-in-eop)
+- [Anti-phishing (spoofing) protection](anti-phishing-protection-about.md#default-anti-phishing-protection-in-microsoft-365)
 
 These default policies apply to all recipients. You can't turn them off, but you can override them by turning on and configuring [preset security policies](preset-security-policies.md) or creating custom policies.
 
@@ -63,7 +63,7 @@ The following diagram shows how the default email protections in Microsoft 365 w
 
    - Anti-phishing policies identify messages as spoofing.
 
-   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
+   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
 
 A message that successfully passes all of these protection layers is delivered to the recipients.
 
@@ -104,7 +104,7 @@ For information about requirements, important limits, and feature availability a
 |Inbound anti-spam|[Anti-spam protection in Microsoft 365](anti-spam-protection-about.md) <br/><br/> [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml) <br/><br/> [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
 |Outbound anti-spam|[Outbound spam protection in Microsoft 365](outbound-spam-protection-about.md) <br/><br/> [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md) <br/><br/> [Control automatic external email forwarding in Microsoft 365](outbound-spam-policies-external-email-forwarding.md)|
 |Connection filtering|[Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md)|
-|Anti-phishing|[Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md) <br/><br/> [Configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md)|
+|Anti-phishing|[Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md) <br/><br/> [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)|
 |Anti-spoofing protection|[Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md) <br/><br/> [Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
 |Zero-hour auto purge (ZAP) for delivered malware, spam, and phishing messages|[ZAP in Exchange Online](zero-hour-auto-purge.md)|
 |Tenant Allow/Block List|[Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|

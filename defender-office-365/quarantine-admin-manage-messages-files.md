@@ -20,7 +20,7 @@ description: Admins can learn how to view and manage quarantined messages for al
 ms.service: defender-office-365
 ms.date: 05/21/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -39,7 +39,7 @@ Users can manage most quarantined email messages based on the _quarantine policy
 
 Admins and also users (depending on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) for the organization) can report false positives to Microsoft from quarantine.
 
-You view and manage quarantined messages in the Microsoft Defender portal or in PowerShell (Exchange Online PowerShell for Microsoft 365 organizations with mailboxes in Exchange Online; standalone EOP PowerShell for organizations without Exchange Online mailboxes).
+You view and manage quarantined messages in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Watch this short video to learn how to manage quarantined messages as an admin.
 
@@ -96,7 +96,7 @@ By default, only the first 100 entries are shown until you scroll down to the bo
 > [!TIP]
 > For answers to frequently asked questions about quarantined messages, select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: **Resolution to common issues** at the top of the page. Or, see the following articles:
 >
-> - [Quarantined email messages in EOP and Defender for Office 365](quarantine-about.md)
+> - [Quarantined email messages in Microsoft 365](quarantine-about.md)
 > - [Quarantine policies](quarantine-policies.md)
 > - [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md)
 

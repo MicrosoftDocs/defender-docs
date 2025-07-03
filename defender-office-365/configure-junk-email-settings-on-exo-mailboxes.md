@@ -18,7 +18,7 @@ description: Admins can learn how to configure the junk email settings in Exchan
 ms.service: defender-office-365
 ms.date: 01/27/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -50,7 +50,7 @@ Admins can use Exchange Online PowerShell to configure entries in the safelist c
 
 - You need to be assigned permissions in Exchange Online before you can do the procedures in this article. Specifically, you need the **Mail Recipients** role (which is assigned to the **Organization Management**, **Recipient Management**, and **Custom Mail Recipients** role groups by default) or the **User Options** role (which is assigned to the **Organization Management** and **Help Desk** role groups by default). To add users to role groups in Exchange Online, see [Modify role groups in Exchange Online](/Exchange/permissions-exo/role-groups#modify-role-groups). Users with default permissions can do these same procedures on their own mailboxes, as long as they have [access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
-- In hybrid environments where EOP protects on-premises Exchange mailboxes, you need to configure mail flow rules (also known as transport rules) in on-premises Exchange. These mail flow rules translate the EOP spam filtering verdict so that the junk email rule in the mailbox can move the message to the Junk Email folder. For more information, see [Configure EOP to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid). The Exchange transport rules allow a mail flow rule to be stored in the cloud.
+- In hybrid environments where EOP protects on-premises Exchange mailboxes, you need to configure mail flow rules (also known as transport rules) in on-premises Exchange. These mail flow rules translate the EOP spam filtering verdict so that the junk email rule in the mailbox can move the message to the Junk Email folder. For more information, see [Configure Microsoft 365 to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid). The Exchange transport rules allow a mail flow rule to be stored in the cloud.
 
   > [!TIP]
   > Once the rule is stored in the cloud (after you manually create it in Microsoft 365 to match the rule in Exchange) the rule replicates in hybrid environments.
@@ -108,7 +108,7 @@ For detailed syntax and parameter information, see [Set-MailboxJunkEmailConfigur
 
 ### How do you know that you've successfully configured the safelist collection on a mailbox?
 
-To verify that you've successfully configured the safelist collection on a mailbox, use any of the following procedures:
+To verify you successfully configured the safelist collection on a mailbox, use any of the following procedures:
 
 - Replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run the following command to verify the property values:
 

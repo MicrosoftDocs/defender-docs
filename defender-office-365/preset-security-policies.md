@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 03/24/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -29,7 +29,7 @@ appliesto:
 
 _Preset security policies_ allow you to apply protection features to users based on our recommended settings. Unlike custom policies that are infinitely configurable, virtually all of the settings in preset security policies aren't configurable, and are based on our observations in the datacenters. The settings in preset security policies provide a balance between keeping harmful content away from users while avoiding unnecessary disruptions.
 
-Depending on your organization, preset security policies provide many of the protection features that are available in [Exchange Online Protection (EOP)](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md).
+Depending on your organization, preset security policies provide many of the protection features that are available in the [default email protections in Microsoft 365](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md).
 
 The following preset security policies are available:
 
@@ -65,7 +65,7 @@ The rest of this article how to configure preset security policies.
 
    Slide the toggle of the one you want to configure to :::image type="icon" source="media/scc-toggle-on.png" border="false":::, and then select **Manage protection settings** to start the configuration wizard.
 
-3. On the **Apply Exchange Online Protection** page, identify the internal recipients that the [EOP protections](#policies-in-preset-security-policies) apply to (recipient conditions):
+3. On the **Apply Exchange Online Protection** page, identify the internal recipients that the [default protections in Microsoft 365](#policies-in-preset-security-policies) apply to (recipient conditions):
 
    - **All recipients**
 
@@ -216,7 +216,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
 
 ## How do you know these procedures worked?
 
-To verify that you've successfully assigned the **Standard protection** or **Strict protection** security policy to a user, use a protection setting where the default value is different than the **Standard protection** setting, which is different that the **Strict protection** setting.
+To verify you successfully assigned the **Standard protection** or **Strict protection** security policy to a user, use a protection setting where the default value is different than the **Standard protection** setting, which is different that the **Strict protection** setting.
 
 For example, for email that's detected as spam (not high confidence spam) verify that the message is delivered to the Junk Email folder for **Standard protection** users, and quarantined for **Strict protection** users.
 
@@ -227,19 +227,19 @@ Or, for [bulk mail](anti-spam-bulk-complaint-level-bcl-about.md), verify that th
 In PowerShell, preset security policies consist of the following elements:
 
 - **Individual security policies**: For example, anti-malware policies, anti-spam policies, anti-phishing policies, Safe Links policies, and Safe Attachments policies. These policies are visible using the standard policy management cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
-  - <u>EOP policies</u>:
-     - **[Get-AntiPhishPolicy](/powershell/module/exchange/get-antiphishpolicy)**
-     - **[Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy)** (anti-spam policies)
-     - **[Get-MalwareFilterPolicy](/powershell/module/exchange/get-malwarefilterpolicy)**
+  - <u>Default email protection policies</u>:
+    - **[Get-AntiPhishPolicy](/powershell/module/exchange/get-antiphishpolicy)**
+    - **[Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy)** (anti-spam policies)
+    - **[Get-MalwareFilterPolicy](/powershell/module/exchange/get-malwarefilterpolicy)**
   - <u>Defender for Office 365 policies</u>:
-     - **[Get-SafeAttachmentPolicy](/powershell/module/exchange/get-safeattachmentpolicy)**
-     - **[Get-SafeLinksPolicy](/powershell/module/exchange/get-safelinkspolicy)**
+    - **[Get-SafeAttachmentPolicy](/powershell/module/exchange/get-safeattachmentpolicy)**
+    - **[Get-SafeLinksPolicy](/powershell/module/exchange/get-safelinkspolicy)**
 
   > [!WARNING]
   > Do not attempt to create, modify, or remove the individual security policies that are associated with preset security policies. The only supported method for creating the individual security policies for Standard or Strict preset security policies is to turn on the preset security policy in the Microsoft Defender portal for the first time.
 
 - **Rules**: Separate rules are used for the Standard preset security policy, the Strict preset security policy, and the Built-in protection preset security policy. The rules define the recipient conditions and exceptions for the policies (who the policies apply to). You manage these rules using the following cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
-  - <u>Rules for Exchange Online Protection (EOP) protections</u>:
+  - <u>Rules for default email protection policies</u>:
     - **[Disable-EOPProtectionPolicyRule](/powershell/module/exchange/disable-eopprotectionpolicyrule)**
     - **[Enable-EOPProtectionPolicyRule](/powershell/module/exchange/enable-eopprotectionpolicyrule)**
     - **[Get-EOPProtectionPolicyRule](/powershell/module/exchange/get-eopprotectionpolicyrule)**
@@ -542,7 +542,7 @@ As previously described, you can apply EOP protections to different users than D
 
 Fundamentally, you can't modify the individual policy settings in the protection profiles. Customizing the corresponding default policy or creating a new custom policy has no effect due to the [order of precedence](#order-of-precedence-for-preset-security-policies-and-other-policies) when the same user (recipient) is defined in multiple policies (the Standard and Strict preset security policies are _always_ applied first).
 
-- The Standard, Strict, and Built-in protection policy setting values, including the associated [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy), are listed in the feature tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+- The Standard, Strict, and Built-in protection policy setting values, including the associated [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy), are listed in the feature tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 - You can also use Exchange Online PowerShell to quickly see all of the policy setting values as explained [earlier in this article](#use-powershell-to-view-individual-security-policies-for-preset-security-policies).
 
 But, you need to configure the individual users (senders) and domains to receive [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) in Defender for Office 365. Otherwise, preset security policies automatically configure the following types of impersonation protection:
@@ -577,7 +577,7 @@ The differences in Safe Attachments and Safe Links policy settings in the Built-
 |&nbsp;&nbsp;**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|Selected (`$true`)|Not selected (`$false`)|
 |&nbsp;&nbsp;**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|Not selected (`$false`)|Selected (`$true`)|
 
-For details about these settings, see the feature tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+For details about these settings, see the feature tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 ### Order of precedence for preset security policies and other policies
 

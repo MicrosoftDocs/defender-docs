@@ -20,7 +20,7 @@ description: Admins can learn about the differences between junk email (spam) an
 ms.service: defender-office-365
 ms.date: 07/25/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -31,7 +31,7 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 
 - **Junk email** is spam, which is an unsolicited and universally unwanted message (when identified correctly). EOP rejects spam based on the reputation of the source email server. If a message passes source IP inspection, it continues through spam filtering. If the message is classified as **Spam** or **High confidence spam** by spam filtering, what happens to the message depends on the verdict and the anti-spam policy that detected the message.
 
-  For the default actions that are taken on spam and high confidence spam messages in the default anti-spam policy and in the Standard and Strict [preset security policies](preset-security-policies.md), see the **Spam** and **High confidence spam** entries in [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  For the default actions that are taken on spam and high confidence spam messages in the default anti-spam policy and in the Standard and Strict [preset security policies](preset-security-policies.md), see the **Spam** and **High confidence spam** entries in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   In the default anti-spam policy and in custom anti-spam policies, you can configure the action to take on spam filtering verdicts. For instructions, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
 
@@ -49,7 +49,7 @@ Anti-spam policies have a default BCL threshold that's used to identify bulk ema
 
 - [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md)
 - [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
-- [EOP anti-spam policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)
+- [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings)
 
 Another option that's easy to overlook: if a user complains about receiving bulk email, but the messages are from reputable senders that pass spam filtering in EOP, have the user check for an unsubscribe option in the bulk email message.
 

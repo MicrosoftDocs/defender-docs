@@ -20,7 +20,7 @@ description: Admins can learn how to configure connection filtering in Exchange 
 ms.service: defender-office-365
 ms.date: 02/26/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -146,7 +146,7 @@ For detailed syntax and parameter information, see [Set-HostedConnectionFilterPo
 
 ## How do you know these procedures worked?
 
-To verify that you've successfully modified the default connection filter policy, do any of the following steps:
+To verify you successfully modified the default connection filter policy, do any of the following steps:
 
 - On the **Anti-spam policies** page in the Microsoft Defender portal at <https://security.microsoft.com/antispam>, select **Connection filter policy (Default)** from the list by clicking anywhere in the row other than the check box next to the name, and verify the policy settings in the details flyout that opens.
 

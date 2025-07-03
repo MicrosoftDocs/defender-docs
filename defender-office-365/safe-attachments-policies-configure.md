@@ -31,7 +31,7 @@ appliesto:
 > [!IMPORTANT]
 > This article is intended for business customers who have [Microsoft Defender for Office 365](defender-for-office-365-whats-new.md). If you're a home user looking for information about attachment scanning in Outlook, see [Advanced Outlook.com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
+In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
 
 Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
 
@@ -454,7 +454,7 @@ For detailed syntax and parameter information, see [Enable-SafeAttachmentRule](/
 
 ### Use PowerShell to set the priority of safe attachment rules
 
-The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, if you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2, the existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
+The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2. The existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
 
 To set the priority of a safe attachment rule in PowerShell, use the following syntax:
 
@@ -462,7 +462,7 @@ To set the priority of a safe attachment rule in PowerShell, use the following s
 Set-SafeAttachmentRule -Identity "<RuleName>" -Priority <Number>
 ```
 
-This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
+This example sets the priority of the rule named Marketing Department to 2. All existing rules with priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
 ```powershell
 Set-SafeAttachmentRule -Identity "Marketing Department" -Priority 2
@@ -510,7 +510,7 @@ For detailed syntax and parameter information, see [Remove-SafeAttachmentRule](/
 
 ## How do you know these procedures worked?
 
-To verify that you've successfully created, modified, or removed Safe Attachments policies, do any of the following steps:
+To verify you successfully created, modified, or removed Safe Attachments policies, do any of the following steps:
 
 - On the **Safe Attachments** page in the Microsoft Defender portal at <https://security.microsoft.com/safeattachmentv2>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking on the name, and view the details in the fly out.
 

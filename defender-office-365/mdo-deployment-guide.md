@@ -26,9 +26,9 @@ appliesto:
 
 # Get started with Microsoft Defender for Office 365
 
-In new Microsoft 365 organizations with Microsoft Defender for Office 365 (included or as an add-on subscription), this article describes the configuration steps that you need to do in [Exchange Online Protection (EOP)](eop-about.md) and [Defender for Office 365](mdo-about.md) in the earliest days of your organization.
+In new Microsoft 365 organizations with Microsoft Defender for Office 365 (included or as an add-on subscription), this article describes the configuration steps you need to do in the earliest days of your organization.
 
-Although your Microsoft 365 organization includes a default level of protection from the moment you create it (or add Defender for Office 365 to it), the steps in this article give you an actionable plan to unleash the full protection capabilities of EOP and Defender for Office 365. After you complete the steps, you can also use this article to show management that you're maximizing your investment in Microsoft 365.
+Although your Microsoft 365 organization includes a default level of protection from the moment you create it (or add Defender for Office 365 to it), the steps in this article give you an actionable plan to unleash the full protection capabilities of Defender for Office 365. After you complete the steps, you can also use this article to show management that you're maximizing your investment in Microsoft 365.
 
 > [!TIP]
 > For information about configuring protection for Microsoft Teams, see the following articles:
@@ -37,7 +37,7 @@ Although your Microsoft 365 organization includes a default level of protection 
 > - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
-The steps to configure EOP and Defender for Office 365 are described in the following diagram:
+The steps to configure Defender for Office 365 are described in the following diagram:
 
 :::image type="content" source="media/mdo-deployment-guide.png" alt-text="A conceptual diagram showing the steps to configure Defender for Office 365." lightbox="media/mdo-deployment-guide.png":::
 
@@ -96,7 +96,7 @@ If you're using the \*.onmicrosoft.com domain for email (also known as the Micro
 
 As you can probably imagine, a lot of protection policies are available in EOP and Defender for Office 365. There are three basic types of protection policies:
 
-- **Default policies**: These policies exist from the moment the organization is created. They apply to all recipients in the organization, you can't turn the policies off, and you can't modify who the policies apply to. But you can modify the security settings in the policies just like custom policies. The settings in the default policies are described in the tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+- **Default policies**: These policies exist from the moment the organization is created. They apply to all recipients in the organization, you can't turn the policies off, and you can't modify who the policies apply to. But you can modify the security settings in the policies just like custom policies. The settings in the default policies are described in the tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 - **Preset security policies**: Preset security are actually _profiles_ that contain _most_ of the available protection policies in EOP and Defender for Office 365 with settings that are tailored to specific levels of protection. The preset security policies are:
   - The Strict preset security policy.
   - The Standard preset security policy.
@@ -106,7 +106,7 @@ As you can probably imagine, a lot of protection policies are available in EOP a
 
   Built-in protection in Defender for Office 365 is on by default to provides basic Safe Attachments and Safe Links protection for all recipients. You can specify recipient exceptions to identify users who don't get the protection.
 
-  In Standard and Strict preset security policies in Defender for Office 365 organizations, you need to configure entries and optional exceptions for user and domain impersonation protection. All other settings are locked into our recommended standard and strict values (many of which are the same). You can see the Standard and Strict values in the tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md), and you can see the differences between Standard and Strict [here](preset-security-policies.md#policy-settings-in-preset-security-policies).
+  In Standard and Strict preset security policies in Defender for Office 365 organizations, you need to configure entries and optional exceptions for user and domain impersonation protection. All other settings are locked into our recommended standard and strict values (many of which are the same). You can see the Standard and Strict values in the tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md), and you can see the differences between Standard and Strict [here](preset-security-policies.md#policy-settings-in-preset-security-policies).
 
   As new protection capabilities are added to EOP and Defender for Office 365 and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
 
@@ -183,7 +183,7 @@ Now that you know about the different types of protection policies and how they'
 - Use preset security policies and custom policies.
 - Use custom policies only.
 
-Remember, default policies (and Built-in protection in Defender for Office 365) automatically protect all recipients in the organization (anyone who isn't defined in the Standard or Strict preset security policy or in custom policies). So even if you do nothing, all recipients in the organization get the default protections as described in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md).
+Remember, default policies (and Built-in protection in Defender for Office 365) automatically protect all recipients in the organization (anyone who isn't defined in the Standard or Strict preset security policy or in custom policies). So even if you do nothing, all recipients in the organization get the default protections as described in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 It's also important to realize that you aren't locked into your initial decision forever. The information in the [recommended settings tables](recommended-settings-for-eop-and-office365.md) and the [comparison table for Standard and Strict](preset-security-policies.md#policy-settings-in-preset-security-policies) should allow you to make an informed decision. But if needs, results, or circumstances change, it's not difficult to switch to a different strategy later.
 
@@ -214,7 +214,7 @@ The decision to use custom policies instead of or in addition to preset security
 - Users require settings that _aren't configured_ in preset security policies (for example, blocking email from specific countries or in specific languages in anti-spam policies).
 - Users need a _quarantine experience_ that's different from the unmodifiable settings in preset security policies. [Quarantine policies](quarantine-policies.md#appendix) define what users can do to their quarantined messages based on why the message was quarantined, and whether recipients are notified about their quarantined messages. The default end-user quarantine experience is summarized in the table [here](quarantine-end-user.md) and the quarantine policies that are used in the Standard and Strict preset security policies are described in the tables [here](recommended-settings-for-eop-and-office365.md).
 
-Use the information in [Recommended settings for EOP and Microsoft Defender for Office 365 security](recommended-settings-for-eop-and-office365.md) to compare the available settings in custom policies or default policies versus what's configured in the Standard and Strict preset security policies.
+Use the information in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md) to compare the available settings in custom policies or default policies versus what's configured in the Standard and Strict preset security policies.
 
 Design guidelines for multiple custom policies for a specific feature (for example, anti-malware policies) include:
 
