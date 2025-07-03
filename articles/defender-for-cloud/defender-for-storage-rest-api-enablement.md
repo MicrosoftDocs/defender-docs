@@ -63,7 +63,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 ```rest
 PUT
-https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2024-08-01-preview
+https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2025-02-01-preview
 
 ```
 
