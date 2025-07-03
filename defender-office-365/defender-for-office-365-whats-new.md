@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 7/1/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -46,6 +46,8 @@ For more information on what's new with other Microsoft Defender security produc
   Mail bombing is now an available **Detection technology** value in [Threat Explorer](threat-explorer-real-time-detections-about.md), [the Email entity page](mdo-email-entity-page.md), and the [Email summary panel](mdo-email-entity-page.md#the-email-summary-panel). Mail bombing is also an available **DetectionMethods** value in [Advanced Hunting](/defender-xdr/advanced-hunting-overview).
 
   For more information, see [MC1096885](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1096885).
+
+- AI-powered Submissions Response introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ## May 2025
 

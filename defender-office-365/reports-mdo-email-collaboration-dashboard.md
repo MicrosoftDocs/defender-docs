@@ -46,11 +46,13 @@ By default, the data on the page is shown for the last 30 days. But, you can sho
 
 The information in the **Defender for Office 365** summary at the top of the page is described in the following subsections.
 
-### Efficacy card
+<a name='efficacy-card'></a>
+
+### Phish / Malware Efficacy card
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324012 --->
 
-The graph on the **Efficacy** card visually represents the protection given by Defender for Office 365 against phishing and malware in email messages:
+The graph on the **Phish / Malware Efficacy** card visually represents the protection given by Defender for Office 365 against phishing and malware in email messages:
 
 - **Pre-delivery**: Items detected before they reach the recipient's mailbox.
 - **Post-delivery**: Items removed after the item was delivered to the recipient's mailbox via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
@@ -252,175 +254,93 @@ The graph on the **Microsoft 365 Secure Email Gateway performance** card compare
 
 ## Appendix: Advanced hunting efficacy query in Defender for Office 365 Plan 2
 
-Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Efficacy** card](#efficacy-card).
+Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Phish / Malware Efficacy** card](#phish--malware-efficacy-card).
 
 > [!NOTE]
 > The numbers might differ slightly due to the different refresh rates for advanced hunting vs. reporting data.
 
 ```kusto
 // This query by default will take the last 30 days of data. 
-
 // The query and calculation can be tweaked to meet individual needs, and will update over time to get incrementally more accurate. 
-
 // Ben Harris - Microsoft Defender for Office 365 PM. 
-
 let _startTime = ago(30d); 
-
 let _endTime = now(); 
-
 // Get all mailflow detected as clean at time of delivery 
-
 let EmailEventsClean = materialize( 
-
     EmailEvents 
-
     | where Timestamp between (_startTime .. _endTime) and EmailDirection == "Inbound" 
-
     | where ThreatTypes !contains "Phish" and ThreatTypes !contains "Malware" 
-
     | project NetworkMessageId,ThreatTypes 
-
 ); 
-
 // Get all mailflow detected as phish or malware at time of delivery 
-
 let EmailEventsThreats = materialize( 
-
     EmailEvents 
-
     | where Timestamp between (_startTime .. _endTime) and EmailDirection == "Inbound" 
-
     | where ThreatTypes contains "Phish" or ThreatTypes contains "Malware" 
-
     | extend MDO_detection = parse_json(DetectionMethods) 
-
     | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0])) 
-
     | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)") 
-
     | project NetworkMessageId,FirstDetection,FirstSubcategory,MDO_detection,ThreatTypes 
-
 ); 
-
 // Get all post delivery ZAP / Redelivery events, and arg_max them to ensure we have the latest verdict to work with for each 
-
 let EmailPostDeliveryFiltered = materialize( 
-
     EmailPostDeliveryEvents 
-
     | where Timestamp between (_startTime .. datetime_add('day', 7, _endTime)) 
-
     | where ActionType in ("Malware ZAP","Phish ZAP","Redelivery") 
-
     | extend Key = strcat(NetworkMessageId , "-", RecipientEmailAddress) 
-
     | summarize arg_max(Timestamp, *) by Key 
-
     | project Action,ActionType,ActionResult,ThreatTypes,NetworkMessageId 
-
 ); 
-
 // Optional - get all admin submissions for malware or phish, so we can also count these in the miss bucket. 
-
 let CloudAppEventsFiltered = materialize( 
-
     CloudAppEvents 
-
     | where Timestamp between (_startTime .. datetime_add('day', 7, _endTime)) 
-
     | where ActionType == "AdminSubmissionSubmitted" 
-
     | extend SubmissionType = tostring(parse_json(RawEventData).SubmissionType) 
-
     | extend NetworkMessageId = tostring(parse_json(RawEventData).ObjectId) 
-
     | where SubmissionType in ("1", "2") 
-
     | project SubmissionType,NetworkMessageId 
-
 ); 
-
 // get the number of threats caught in mailflow 
-
 let Mal_Phish_Mailflow = toscalar( 
-
     EmailEventsThreats 
-
-    | summarize count(NetworkMessageId) 
-
+    | summarize count() 
 ); 
-
 // get the number of threats caught in mailflow which turned out to be false positives (FPs) so we can correct the calculation 
-
 let FP_ZAP = toscalar( 
-
     EmailPostDeliveryFiltered 
-
     | where ThreatTypes !contains "Phish" and ThreatTypes !contains "Malware" and ActionType == "Redelivery" 
-
     | join kind=leftsemi (EmailEventsThreats) on NetworkMessageId 
-
-    | summarize count(NetworkMessageId) 
-
+    | summarize count() 
 ); 
-
 // get the number of threats successfully cleaned up post delivery, ignoring where administrative policy stopped action 
-
 let FN_ZAP_Successful = toscalar( 
-
     EmailPostDeliveryFiltered 
-
     | where ActionType in ("Malware ZAP","Phish ZAP") and ActionResult in ("Success","AdminPolicy") 
-
     | join kind=leftsemi (EmailEventsClean) on NetworkMessageId 
-
-    | summarize count(NetworkMessageId) 
-
+    | summarize count() 
 ); 
-
 // get the number of threats unsuccessfully cleaned up post delivery. 
-
 let FN_ZAP_Unsuccessful = toscalar( 
-
     EmailPostDeliveryFiltered 
-
     | where ActionType in ("Malware ZAP","Phish ZAP") and ActionResult !in ("Success","AdminPolicy") 
-
     | join kind=leftsemi (EmailEventsClean) on NetworkMessageId 
-
-    | summarize count(NetworkMessageId) 
-
+    | summarize count() 
 ); 
-
 // join the administrative submissions to clean mailflow to find the additional miss 
-
 let FN_Admin_Submissions = toscalar( 
-
     CloudAppEventsFiltered 
-
     | join kind=rightsemi (EmailEventsClean) on NetworkMessageId 
-
-    | summarize count(NetworkMessageId) 
-
+    | summarize count() 
     ); 
-
     // print each result, and run the calculation to work out effectiveness at time of delivery and post delivery. 
-
 union withsource=Table 
-
     (print StatisticName="Mal/Phish Mailflow totals - Minus FPs", Value=toreal(Mal_Phish_Mailflow) - toreal(FP_ZAP)), 
-
     (print StatisticName="Admin Mal/Phish FNs Submitted", Value=toreal(FN_Admin_Submissions)), 
-
     (print StatisticName="Mal/Phish FPs Reverse Zapped", Value=toreal(FP_ZAP)), 
-
     (print StatisticName="Mal / Phish Successfully Zapped", Value=toreal(FN_ZAP_Successful)), 
-
     (print StatisticName="Mal / Phish UN-Successfully Zapped", Value=toreal(FN_ZAP_Unsuccessful)), 
-
     (print StatisticName="Effectiveness Post Delivery", Value=abs(round(((toreal(FN_Admin_Submissions)+toreal(FN_ZAP_Unsuccessful))/(toreal(Mal_Phish_Mailflow)+toreal(FN_ZAP_Successful)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_Admin_Submissions)-toreal(FP_ZAP))*100-100),2))), 
-
     (print StatisticName="Effectiveness Pre-Delivery", Value=abs(round(((toreal(FN_Admin_Submissions)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_ZAP_Successful))/(toreal(Mal_Phish_Mailflow)+toreal(FN_ZAP_Successful)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_Admin_Submissions)-toreal(FP_ZAP))*100-100),2))) 
-
 | project StatisticName, Value
 ```
