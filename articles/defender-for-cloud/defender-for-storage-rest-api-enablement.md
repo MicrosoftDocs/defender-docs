@@ -33,7 +33,7 @@ And add the following request body:
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
                     "CapGBPerMonthPerStorageAccount": "10000",
-					"
+					
                 }
             },
             {
@@ -63,7 +63,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 ```rest
 PUT
-https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2024-08-01-preview
+https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2025-02-01-preview
 
 ```
 
@@ -90,6 +90,7 @@ And add the following request body:
                     ],
                     "excludeBlobsLargerThan": 2147483648
             },
+			
             "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
