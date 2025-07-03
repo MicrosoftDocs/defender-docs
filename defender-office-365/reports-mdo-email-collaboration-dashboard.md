@@ -46,11 +46,13 @@ By default, the data on the page is shown for the last 30 days. But, you can sho
 
 The information in the **Defender for Office 365** summary at the top of the page is described in the following subsections.
 
+<a name='efficacy-card'></a>
+
 ### Phish / Malware Efficacy card
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324012 --->
 
-The graph on the **Efficacy** card visually represents the protection given by Defender for Office 365 against phishing and malware in email messages:
+The graph on the **Phish / Malware Efficacy** card visually represents the protection given by Defender for Office 365 against phishing and malware in email messages:
 
 - **Pre-delivery**: Items detected before they reach the recipient's mailbox.
 - **Post-delivery**: Items removed after the item was delivered to the recipient's mailbox via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
@@ -252,7 +254,7 @@ The graph on the **Microsoft 365 Secure Email Gateway performance** card compare
 
 ## Appendix: Advanced hunting efficacy query in Defender for Office 365 Plan 2
 
-Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Efficacy** card](#efficacy-card).
+Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Phish / Malware Efficacy** card](#phish--malware-efficacy-card).
 
 > [!NOTE]
 > The numbers might differ slightly due to the different refresh rates for advanced hunting vs. reporting data.
