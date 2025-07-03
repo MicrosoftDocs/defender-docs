@@ -31,7 +31,7 @@ To see the available Training modules, open the Microsoft Defender portal at <ht
 >   - Malicious digital QR codes
 >   - Malicious printed QR codes
 >
-> - The following modules will be retired from the training catalog. After August 20 2025, admins can no longer assign these trainings.
+> - The following modules will be retired from the training catalog:
 >   - Security Essentials for IT Administrators 01: Introduction and Overview
 >   - Security Essentials for IT Administrators 02: Core Principles of Cyber Security
 >   - Security Essentials for IT Administrators 03: Security Program Management
