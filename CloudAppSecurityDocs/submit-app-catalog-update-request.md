@@ -50,6 +50,8 @@ All catalog update requests undergo a thorough validation process to ensure accu
 
 Once the request is validated and accepted by the catalog team, updates are processed manually. The standard turnaround time from request submission to catalog update is approximately three weeks.
 
+After you submit a support ticket, the support team reviews your request and might contact you for additional context or documentation. Valid requests are escalated to the catalog team for further validation and processing. If approved, you’ll receive an estimated timeline for when the update will appear in the catalog. If the request can’t be fulfilled due to product design constraints, support will provide a clear explanation.
+
 ## Related articles
 
 - [Find your cloud app and calculate risk scores](risk-score.md)
