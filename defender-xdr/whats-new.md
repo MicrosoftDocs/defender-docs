@@ -32,8 +32,12 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## July 2025
+- (Preview) The [`DisruptionAndResponseEvents`](advanced-hunting-disruptionandresponseevents-table.md) table, now available in advanced hunting, contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. Increase your visibility and awareness of active, complex attacks disrupted by attack disruption to understand the attacks' scope, context, impact, and actions taken.
+
 ## June 2025
 - (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
+
 
 ## May 2025
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
