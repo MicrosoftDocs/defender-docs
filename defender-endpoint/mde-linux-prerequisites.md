@@ -92,7 +92,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Oracle Linux 9.x 
 - Amazon Linux 2 
 - Amazon Linux 2023 
-- Fedora 33-38 
+- Fedora 33-42
 - Rocky 8.7 and higher 
 - Rocky 9.2 and higher 
 - Alma 8.4 and higher 
