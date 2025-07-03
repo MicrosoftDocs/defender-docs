@@ -110,6 +110,7 @@ See the following table for a list of events recorded by the service.
    |64|Starting stopped external service. Name: %1, exit code: %2|Starting an external service.|Normal operating notification; no action required.|
    |65|Failed to load Microsoft Security Events Component Minifilter driver. Failure code: %1|Failed to load MsSecFlt.sys filesystem minifilter.|Reboot the device. If this error persists, contact Support.|
    |66|Policy update: Latency mode - %1|The C&C connection frequency policy was updated.|Normal operating notification; no action required.|
+   |67|Contacted server %1 times, failed %2 times and succeeded %3 times. URI: https://edr-weu.eu.endpoint.security.microsoft.com/edr/. Last HTTP error code: 0|?|?|
    |68|The start type of the service is unexpected. Service name: %1, actual start type: %2, expected start type: %3|Unexpected external service start type.|Fix the external service start type.|
    |69|The service is stopped. Service name: %1|The external service is stopped.|Start the external service.|
    |70|Policy update: Allow sample collection - %1|The sample collection policy was updated.|Normal operating notification; no action required.|
