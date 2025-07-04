@@ -57,7 +57,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
 1. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
-      ```console
+         ```console
    Putfile MDEClientAnalyzerPreview.zip
    Run MDELiveAnalyzer.ps1
    GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
@@ -114,7 +114,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo 'c65a4e4c6851d130942bfacd147a9d18b8a92b4f50facf519477fd1c41a1c323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
    
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
