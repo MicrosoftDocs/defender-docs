@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 07/04/2025
 ---
 
 # Before you begin using Defender Experts for XDR
