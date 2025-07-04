@@ -132,6 +132,7 @@ With the query in the query editor, select **Create detection rule** and specify
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 

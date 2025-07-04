@@ -180,7 +180,7 @@ These values are explained at [Authentication-results message header](message-he
 Admins and users can examine the message headers to discover how Microsoft 365 identified the sender as a suspicious spoofed sender or legitimate.
 
 > [!TIP]
-> It's important to understand that a composite authentication failure doesn't directly result in a message being blocked. Our system using a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
+> It's important to understand that a composite authentication failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
 
 The following examples focus on the results of email authentication only (the `compauth` value and reason). Other Microsoft 365 protection technologies can identify messages that pass email authentication as spoofed, or identify messages that fail email authentication as legitimate.
 
