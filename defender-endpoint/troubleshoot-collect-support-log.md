@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/27/2025
+ms.date: 07/04/2025
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -140,7 +140,7 @@ The following script performs the first six steps of the [Running the Python ver
   
    echo "Getting XMDEClientAnalyzer.zip"
    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c  
 
    echo "Unzipping XMDEClientAnalyzer.zip"
    unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
