@@ -44,7 +44,7 @@ This article describes the default settings, and also the recommended Standard a
 > We recommend that you leave the Junk Email Filter in Outlook set to **No automatic filtering** to prevent unnecessary conflicts (both positive and negative) with the spam filtering verdicts from Microsoft 365. For more information, see the following articles:
 >
 > - [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
-> - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-junk-email-settings-in-outlook)
+> - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-outlook-junk-email-settings)
 > - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
 > - [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md)
 > - [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md)
@@ -216,7 +216,7 @@ If your Microsoft 365 subscription includes Defender for Office 365 or you purch
 >
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) protection and [Safe Documents](safe-documents-in-e5-plus-security-about.md) protection have no dependencies on Safe Links policies.
 >
-> - [Microsoft Teams protection](#microsoft-teams-protection-settings) has no dependency on preset security policies, any custom policies, or any default policies.
+> - [Microsoft Teams protection settings in Microsoft Defender for Office 365](#microsoft-teams-protection-settings-in-microsoft-defender-for-office-365) has no dependency on preset security policies, any custom policies, or any default policies.
 
 We recommend the Standard or Strict configurations for Defender for Office 365 as described in the tables in the following subsections.
 

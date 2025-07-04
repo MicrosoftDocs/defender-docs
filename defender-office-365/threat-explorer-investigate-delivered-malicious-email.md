@@ -129,7 +129,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Filtering skipped due to on-prem organization**
      - **IP region filter from policy**: The **From these countries** filter in [anti-spam policies](anti-spam-protection-about.md#spam-properties-in-anti-spam-policies).
      - **Language filter from policy**: The **Contains specific languages** filter in [anti-spam policies](anti-spam-protection-about.md#spam-properties-in-anti-spam-policies).
-     - **Phishing Simulation**: [Configure third-party phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy)
+     - **Phishing Simulation**: [Configure third-party phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy)
      - **Quarantine release**: [Release quarantined email](quarantine-admin-manage-messages-files.md#release-quarantined-email)
      - **SecOps Mailbox**: [Configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
      - **Sender address list (Admin Override)**: The allowed senders list or blocked senders list in [anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).

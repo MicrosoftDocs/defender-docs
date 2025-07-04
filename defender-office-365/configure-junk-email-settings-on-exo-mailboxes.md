@@ -40,7 +40,7 @@ Microsoft 365 is able to deliver messages to the Junk Email folder based on the 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
 > [!NOTE]
-> Messages from senders in user Safe Senders lists skip content filtering (the SCL is -1). To prevent users from adding entries to their Safe Senders lists, use Group Policy as mentioned in the [About junk email settings in Outlook](#about-junk-email-settings-in-outlook) section later in this article. Policy filtering, Content filtering, and Defender for Office 365 checks are still applied to the messages.
+> Messages from senders in user Safe Senders lists skip content filtering (the SCL is -1). To prevent users from adding entries to their Safe Senders lists, use Group Policy as mentioned in the [About junk email settings in Outlook](#about-outlook-junk-email-settings) section later in this article. Policy filtering, Content filtering, and Defender for Office 365 checks are still applied to the messages.
 >
 > Microsoft 365 uses a mail flow delivery agent to route messages to the Junk Email folder. It doesn't use the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. Microsoft 365 routes messages based on the actions set in anti-spam policies. The user's Safe Senders list and Blocked Senders list continue to work as usual.
 

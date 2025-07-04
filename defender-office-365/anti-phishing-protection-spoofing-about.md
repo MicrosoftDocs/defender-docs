@@ -197,4 +197,4 @@ Admins of organizations that regularly send email to Microsoft 365 need to ensur
 
 In Microsoft 365, senders in user allowlists bypass parts of the filtering stack, including spoof protection. For more information, see [Outlook Safe Senders](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
 
-If possible, admins should avoid using allowed sender lists or allowed domain lists in anti-spam policies. These senders bypass most of the filtering stack (high confidence phishing and malware messages are always quarantined). For more information, see [Use allowed sender lists or allowed domain lists](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists).
+If possible, admins should avoid using allowed sender lists or allowed domain lists in anti-spam policies. These senders bypass most of the filtering stack (high confidence phishing and malware messages are always quarantined). For more information, see [Use allowed sender lists or allowed domain lists](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists-in-anti-spam-policies).

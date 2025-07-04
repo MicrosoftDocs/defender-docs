@@ -142,7 +142,7 @@ Hover over a category in the chart to see the number of **Impacted users** (the 
 
 **Notes**:
 
-- The [Built-in protection](preset-security-policies.md#preset-security-policies-in-mcirosoft-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
+- The [Built-in protection](preset-security-policies.md#preset-security-policies-in-microsoft-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
 - Users get a higher level of Safe Links and Safe Attachments protection from either of the following settings:
   - [Turn on the Standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users), and make sure the users are included in **Defender for Office 365 protection**.
   - Create custom [Safe Links policies](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment policies](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) with the users as members.
