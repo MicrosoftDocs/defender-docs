@@ -22,7 +22,7 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 06/09/2025
+ms.date: 07/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -33,18 +33,20 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Microsoft Defender for Office 365 is a seamless integration into Microsoft 365 subscriptions that protects against threats in email, links (URLS), file attachments, and collaboration tools. This article explains the _protection ladder_ in Microsoft 365 organizations. The protection ladder starts with the default email protections in Microsoft 365, and continues through to Defender for Office 365, which includes Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
+Although all Microsoft 365 organizations with cloud mailboxes include default email protections, Microsoft Defender for Office 365 is the primary email security solution for Microsoft 365.
+
+This article explains the _protection ladder_ that starts with the default email protections, and continues through to Defender for Office 365, which includes Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
-This article is intended for Security Operations (SecOps) personnel, admins in Microsoft 365, or decisions makers who want to learn more about Defender for Office 365.
+This article is intended for Security Operations (SecOps) personnel, Microsoft 365 admins, or decisions makers who want to learn more about Defender for Office 365.
 
 > [!TIP]
 > If you're using **Outlook.com**, **Microsoft 365 Family**, or **Microsoft 365 Personal**, and need information about _Safelinks_ or _advanced attachment scanning_, see [Advanced Outlook.com security for Microsoft 365 subscribers](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 >
 > If you're new to your Microsoft 365 subscription and would like to know your licenses before you begin, go the **Your products** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/subscriptions>.
 
-The following list describes the Defender for Office 365 core email security solutions:
+The protection ladder in Defender for Office 365 contains the following elements:
 
 1. **Default email protections in Microsoft 365**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
 2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
@@ -63,21 +65,21 @@ Defender for Office 365 Plan 1 contains a subset of the features that are availa
 >
 > Use [this page](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365#pmg-allup-content) to compare plans and purchase Defender for Office 365.
 
-The protections in Microsoft 365 can be summarized with the following descriptions:
+The protection ladder in Defender for Office 365 can be summarized by the following descriptions:
 
 - **Default email protections in Microsoft 365** prevent broad, volume-based, known email attacks.
 - **Defender for Office 365 Plan 1** protects email and collaboration features from zero-day malware, phishing, and business email compromise (BEC).
 - **Defender for Office 365 Plan 2** adds phishing simulations, post-breach investigation, hunting, and response, and automation.
 
-However, you can also think about the _architecture_ of protection in Microsoft 365 as _cumulative layers of security_, where each layer has a different _security emphasis_. This architecture is shown in the following diagram:
+However, you can also think about the _architecture_ of protection in Defender for Office 365 as _cumulative layers of security_, where each layer has a different _security emphasis_. This architecture is shown in the following diagram:
 
-:::image type="content" source="media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about protections in Microsoft 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="media/eop-mdop1-mdop2-comparison.png":::
+:::image type="content" source="media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about protections in Defender for Office 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="media/eop-mdop1-mdop2-comparison.png":::
 
-Microsoft 365 is capable of protecting, detecting, investigating, and responding to threats. But as you move up the protection ladder, the _available features_ and _automation_ increase.
+All levels of the protection ladder are capable of protecting, detecting, investigating, and responding to threats. But as you move up the protection ladder, the _available features_ and _automation_ increase.
 
 Whether you're using the onmicrosoft.com domain only or custom domains for email in Microsoft 365, it's important to configure email authentication for your used and unused domains. SPF, DKIM, and DMARC records in DNS allow Microsoft 365 to more accurately protect against spoofing attacks. For more information, see [Email authentication in Microsoft 365](email-authentication-about.md).
 
-## The Microsoft 365 security ladder
+## The Defender for Office 365 security ladder
 
 It can be difficult to identity the advantages of Defender for Office 365. The following subsections describe the capabilities of each product using the following security emphases:
 
@@ -87,7 +89,7 @@ It can be difficult to identity the advantages of Defender for Office 365. The f
 
 ### Default email protection capabilities
 
-The default email protection capabilities in Microsoft 365 are summarized in the following table:
+The default email protection capabilities included in all Microsoft 365 organizations with cloud mailboxes are summarized in the following table:
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
@@ -99,7 +101,7 @@ For more information, see [Default email protections in Microsoft 365](eop-about
 
 ### Defender for Office 365 Plan 1 capabilities
 
-Defender for Office 365 Plan 1 expands on the _prevention_ and _detection_ capabilities in Microsoft 365.
+Defender for Office 365 Plan 1 expands on _prevention_ and _detection_ capabilities.
 
 The additional features that you get in **Defender for Office 365 Plan 1** on top of the default email protections are described in the following table:
 

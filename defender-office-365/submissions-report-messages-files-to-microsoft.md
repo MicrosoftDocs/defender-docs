@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Wondering what to do with suspicious email messages, URLs, email attachments, or files? In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft.
+Wondering what to do with suspicious email messages, URLs, email attachments, or files? In all Microsoft 365 organizations with cloud mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft.
 
 In addition, admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also have several methods for reporting files.
 

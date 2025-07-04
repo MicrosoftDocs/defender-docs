@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, we take managing outbound spam seriously. Even if one customer intentionally or unintentionally sends spam from their organization, that action can degrade the reputation of the whole service and can affect email delivery for other customers.
+In all Microsoft 365 organizations with cloud mailboxes, we take managing outbound spam seriously. Even if one customer intentionally or unintentionally sends spam from their organization, that action can degrade the reputation of the whole service and can affect email delivery for other customers.
 
 This article describes the controls and notifications that are designed to help prevent outbound spam, and what you can do if you need to send mass mailings.
 

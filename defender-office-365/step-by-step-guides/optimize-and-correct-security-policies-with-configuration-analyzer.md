@@ -22,7 +22,7 @@ Configuration analyzer is a central location and single pane of glass for admini
 
 ## What you'll need
 
-- Exchange Online Protection
+- A Microsoft 365 organization with cloud mailboxes.
 - Sufficient permissions (Security Administrator role)
 - 5 minutes to perform the steps below.
 

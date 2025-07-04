@@ -23,7 +23,7 @@ appliesto:
  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Submission result definitions in Exchange Online Protection and Defender for Office 365
+# Submission result definitions in Microsoft 365
 
 In Microsoft 365 organizations with mailboxes in Exchange Online, [user reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether user reported email messages are sent to Microsoft for analysis. Even if the messages aren't initially sent to Microsoft, admins can manually send or resend email messages (including user reported email messages) from the **Submissions** page in, email attachments, URLs, and (in Microsoft Defender for Office 365 Plan 2 only) Microsoft Teams messages. For more information, see [How do I report a suspicious email or file to Microsoft?](submissions-report-messages-files-to-microsoft.md).
 
@@ -34,7 +34,7 @@ When admins or users submit items to Microsoft for analysis, we do the following
 - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
 - **Grader analysis**: Review done by human graders to confirm whether messages are malicious.
 
-[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
+[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
 > [!NOTE]
 >

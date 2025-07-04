@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, several things happen if an [inbound connector](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) is detected as potentially compromised:
+In all Microsoft 365 organizations with cloud mailboxes, several things happen if an [inbound connector](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) is detected as potentially compromised:
 
 - The connector is prevented from sending or relaying email.
 - The connector is added to the **Restricted entities** page in the Microsoft Defender portal.

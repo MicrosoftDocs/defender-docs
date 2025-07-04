@@ -270,7 +270,7 @@ On the **Safe Links** page, the **Status** value of the policy is now **On** or 
 
 ### Use the Microsoft Defender portal to set the priority of custom Safe Links policies
 
-Safe Links policies are processed in the order that they're displayed on the **Safe Links** page:
+Safe Links policies are processed in the order they're displayed on the **Safe Links** page:
 
 - The Safe Links policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
 - The Safe Links policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).

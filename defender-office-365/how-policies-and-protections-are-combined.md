@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, inbound email might be flagged by multiple forms of protection. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
+In all Microsoft 365 organizations with cloud mailboxes, inbound email might be flagged by multiple forms of protection. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
 
 In general, a policy that's applied to a message is identified in the **X-Forefront-Antispam-Report** header in the **CAT (Category)** property. For more information, see [Anti-spam message headers](message-headers-eop-mdo.md).
 

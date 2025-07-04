@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantined messages in Microsoft 365](quarantine-about.md).
+In all Microsoft 365 organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantined messages in Microsoft 365](quarantine-about.md).
 
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).

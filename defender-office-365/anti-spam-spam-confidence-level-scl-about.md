@@ -16,20 +16,20 @@ ms.collection:
   - tier2
 ms.custom: 
   - seo-marvel-apr2020
-description: Admins can learn about the spam confidence level (SCL) that applied to messages in Exchange Online Protection (EOP).
+description: Admins can learn about the spam confidence level (SCL) that applied to messages in Microsoft 365 by anti-spam filtering.
 ms.service: defender-office-365
-ms.date: 11/03/2023
+ms.date: 07/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Spam confidence level (SCL) in EOP
+# Spam confidence level (SCL) in Microsoft 365
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, inbound messages go through spam filtering in EOP and are assigned a spam score. That score is mapped to an individual spam confidence level (SCL) value that's added to the message in an X-header. A higher SCL value indicates a message is more likely to be spam. EOP takes action on the message based on the SCL value.
+In all Microsoft 365 organizations with cloud mailboxes, inbound messages go through spam filtering and get a spam score. That score is mapped to an individual spam confidence level (SCL) value added to the message in an X-header. A higher SCL value indicates a message is more likely to be spam. Microsoft 365 takes action on the message based on the SCL value.
 
-The following table describes what the SCL values mean and the default action that's taken on those messages:
+The following table describes what the SCL values mean and the default action taken on those messages:
 
 |SCL value|Definition|Default action|
 |:---:|---|---|

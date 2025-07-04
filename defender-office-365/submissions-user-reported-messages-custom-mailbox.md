@@ -73,7 +73,7 @@ After you verify the reporting mailbox meets all of these requirements, use the 
 
 - For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
-- For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Exchange Online Protection and Defender for Office 365](submissions-result-definitions.md).
+- For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
 
 ## Use the Microsoft Defender portal to configure user reported settings
 
@@ -148,7 +148,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   > [!TIP]
   > For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
   >
-  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Exchange Online Protection and Defender for Office 365](submissions-result-definitions.md).
+  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
 
   - **Microsoft and my reporting mailbox**: User reported messages go to Microsoft for analysis and to the specified reporting mailbox. Admins or security operations (SecOps) personnel can analyze the messages.
 
@@ -222,7 +222,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   > [!TIP]
   > For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
   >
-  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Exchange Online Protection and Defender for Office 365](submissions-result-definitions.md).
+  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
 
   - **Send reported messages to**: Select one of the following options:
     - **My reporting mailbox only** : Microsoft pulls metadata about user reported messages from the third party reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user> with the **Result** value **Not Submitted to Microsoft**.

@@ -585,7 +585,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: The same values as in the chart.
-- **Bulk complaint level**: When the **Detection** value **Bulk** is selected, the slider is available to filter the report by the selected BCL range. You can use this information to confirm or adjust the BCL threshold in anti-spam policies to allow more or less bulk email into your organization.
+- **Bulk complaint level**: When the **Detection** value **Bulk** is selected (alone or with other values), the slider is available to filter the report by the selected BCL range. You can use this information to confirm or adjust the BCL threshold in anti-spam policies to allow more or less bulk email into your organization.
 
   If the **Detection** value **Bulk** isn't selected, the slider is grayed-out and bulk detections aren't included in the report.
 

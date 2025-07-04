@@ -63,7 +63,7 @@ The following diagram shows how the default email protections in Microsoft 365 w
 
    - Anti-phishing policies identify messages as spoofing.
 
-   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
+   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md) and [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
 
 A message that successfully passes all of these protection layers is delivered to the recipients.
 

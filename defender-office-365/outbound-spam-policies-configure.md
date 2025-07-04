@@ -230,7 +230,7 @@ On the **Anti-spam policies** page, the **Status** value of the policy is now **
 
 ### Use the Microsoft Defender portal to set the priority of custom outbound spam policies
 
-Outbound spam policies are processed in the order that they're displayed on the **Anti-spam policies** page:
+Outbound spam policies are processed in the order they're displayed on the **Anti-spam policies** page:
 
 - Custom outbound spam policies are applied in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).

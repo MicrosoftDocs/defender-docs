@@ -229,7 +229,7 @@ On the **Safe Attachments** page, the **Status** value of the policy is now **On
 
 ### Use the Microsoft Defender portal to set the priority of custom Safe Attachments policies
 
-Safe Attachments policies are processed in the order that they're displayed on the **Safe Attachments** page:
+Safe Attachments policies are processed in the order they're displayed on the **Safe Attachments** page:
 
 - The Safe Attachments policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
 - The Safe Attachments policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).

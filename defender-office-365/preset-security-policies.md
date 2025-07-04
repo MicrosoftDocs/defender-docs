@@ -13,7 +13,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-description: Admins can learn how to apply Standard and Strict policy settings across the protection features of Exchange Online Protection (EOP) and Microsoft Defender for Office 365
+description: Admins can learn how to apply Standard and Strict policy settings across the default email protections in Microsoft 365 and Microsoft Defender for Office 365
 ms.service: defender-office-365
 search.appverid: met150
 ms.date: 03/24/2025
@@ -23,11 +23,11 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Preset security policies in EOP and Microsoft Defender for Office 365
+# Preset security policies in Microsoft 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-_Preset security policies_ allow you to apply protection features to users based on our recommended settings. Unlike custom policies that are infinitely configurable, virtually all of the settings in preset security policies aren't configurable, and are based on our observations in the datacenters. The settings in preset security policies provide a balance between keeping harmful content away from users while avoiding unnecessary disruptions.
+_Preset security policies_ allow you to apply email protection features to users based on our recommended settings. Unlike custom policies that are infinitely configurable, virtually all of the settings in preset security policies aren't configurable, and are based on our observations in the datacenters. The settings in preset security policies provide a balance between keeping harmful content away from users while avoiding unnecessary disruptions.
 
 Depending on your organization, preset security policies provide many of the protection features that are available in the [default email protections in Microsoft 365](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md).
 
@@ -35,7 +35,10 @@ The following preset security policies are available:
 
 - **Standard** preset security policy.
 - **Strict** preset security policy.
-- **Built-in protection** preset security policy (default policies for Safe Attachments and Safe Links protection in Defender for Office 365; applied to all users who aren't specifically excluded, or who aren't included in the **Standard** or **Strict** preset security policies, or in custom Safe Attachments or Safe Links policies).
+- **Built-in protection** preset security policy. Gives basic Safe Attachments and Safe Links protection in Defender for Office 365to all users who:
+  - Aren't specifically excluded from Built-in protection.
+  - Aren't included in the **Standard** or **Strict** preset security policies.
+  - Aren't included in custom Safe Attachments or Safe Links policies.
 
 For details about these preset security policies, see the [Appendix](#appendix) section at the end of this article.
 

@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine in Microsoft 365](quarantine-about.md).
+In all Microsoft 365 organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages. For more information, see [Quarantine in Microsoft 365](quarantine-about.md).
 
 As an ordinary user (not an admin), the **default** capabilities that are available to you as a recipient of a quarantined message are described in the following table:
 

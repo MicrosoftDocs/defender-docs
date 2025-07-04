@@ -20,12 +20,12 @@ metadata:
   ms.custom: seo-marvel-apr2020
   ms.service: defender-office-365
 
-title: Quarantined messages FAQ
+title: Frequently asked questions - Quarantined messages
 summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
   **Applies to**
-  - [Exchange Online Protection](eop-about.md)
+  - [Default email protections in Microsoft 365](eop-about.md)
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
@@ -174,7 +174,7 @@ sections:
 
           For example, copy the following PowerShell code into NotePad and save the file as .ps1 in a location that's easy for you to find (for example, C:\Data\QuarantineRelease.ps1).
 
-          Then, after you connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) or [Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell), run the following command to run the script:
+          Then, after you connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following command to run the script:
 
           ```powershell
           & C:\Data\QuarantineRelease.ps1

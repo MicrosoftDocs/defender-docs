@@ -76,7 +76,7 @@ In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft 
 
     :::image type="content" source="media/connector-compromise-sender-ip.png" alt-text="Sender IP and your organization's on-prem IP address" lightbox="media/connector-compromise-sender-ip.png":::
 
-In [Microsoft Defender for Office 365](mdo-about.md) or [Exchange Online Protection](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
+In [Microsoft Defender for Office 365](mdo-about.md) or [the default email protections in Microsoft 365](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
 
 1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, useOpen **Suspicious connector activity** alert in <https://security.microsoft.com/alerts>.
 

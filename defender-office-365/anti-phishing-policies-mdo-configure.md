@@ -415,7 +415,7 @@ On the **Anti-phishing** page, the **Status** value of the policy is now **On** 
 
 ### Use the Microsoft Defender portal to set the priority of custom anti-phishing policies
 
-Anti-phishing policies are processed in the order that they're displayed on the **Anti-phishing** page:
+Anti-phishing policies are processed in the order they're displayed on the **Anti-phishing** page:
 
 - The anti-phishing policy named **Strict Preset Security Policy** associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
 - The anti-phishing policy named **Standard Preset Security Policy** associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).

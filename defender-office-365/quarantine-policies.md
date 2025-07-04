@@ -120,7 +120,7 @@ Back on the **Quarantine policy** page, the policy that you created is now liste
 > [!TIP]
 > The PermissionToAllowSender permission in quarantine policies in PowerShell isn't used.
 
-If you'd rather use PowerShell to create quarantine policies, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) or [standalone Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell) and use the following syntax:
+If you'd rather use PowerShell to create quarantine policies, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use the following syntax:
 
 ```powershell
 New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 to 236> [-EsnEnabled $true]
@@ -381,7 +381,7 @@ If you'd rather use PowerShell to assign quarantine policies in anti-malware pol
   Get-MalwareFilterPolicy | Format-Table Name,QuarantineTag
   ```
 
-- A new anti-malware policy in PowerShell requires a malware filter policy using the **New-MalwareFilterPolicy** cmdlet (settings), and an exclusive malware filter rule using the **New-MalwareFilterRule** cmdlet (recipient filters). For instructions, see [Use Exchange Online PowerShell to configure anti-malware policies](anti-malware-policies-configure.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-anti-malware-policies).
+- A new anti-malware policy in PowerShell requires a malware filter policy using the **New-MalwareFilterPolicy** cmdlet (settings), and an exclusive malware filter rule using the **New-MalwareFilterRule** cmdlet (recipient filters). For instructions, see [Use Exchange Online PowerShell to configure anti-malware policies](anti-malware-policies-configure.md#use-powershell-to-configure-anti-malware-policies).
 
 This example creates a malware filter policy named Research Department that uses the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions to the quarantined messages.
 
