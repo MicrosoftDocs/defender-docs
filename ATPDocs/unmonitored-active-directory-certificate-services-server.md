@@ -24,10 +24,10 @@ Unmonitored Active Directory Certificate Services (AD CS) servers pose a signifi
 
 1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions to discover which of your ADCS servers are unmonitored.
 
-    :::image type="content" source="unmonitored-adcs-servers/recommended-actions-unmonitored-adcs-servers.png" alt-text="Screenshot that shows the recommended action for an ADCS server." lightbox="unmonitored-adcs-servers/recommended-actions-unmonitored-adcs-servers.png":::
+    :::image type="content" source="media/unmonitored-adcs-servers/recommended-actions-unmonitored-active-directory-certificate-services-servers.png" alt-text="Screenshot that shows the recommended actions for an unmonitored ADCS server." lightbox="media/unmonitored-adcs-servers/recommended-actions-unmonitored-adcs-servers.png":::
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
-1. Take appropriate action on those servers by [configuring monitoring sensors](/deploy/active-directory-federation-services.md).
+1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. The list of impacted entities is updated within a few minutes of you implementing the recommendations. The status might still take time until it's marked as Completed.
