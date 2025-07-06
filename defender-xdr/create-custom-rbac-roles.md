@@ -2,17 +2,17 @@
 title: Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 04/25/2025
+ms.date: 07/06/2025
 ms.reviewer: 
 search.appverid: met150
 appliesto:
@@ -48,7 +48,7 @@ For more information on permissions, see [Permission prerequisites](manage-rbac.
 > [!TIP]
 > Microsoft recommends that you use roles with the fewest permissions. This practice helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-To create custom roles for the Microsoft Sentinel data lake using the **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. For more information, see:
+To create custom roles for the Microsoft Sentinel data lake using the **Security Operations** or **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. 
 
 - [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard?tabs=defender-portal)
 - [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json)
@@ -68,7 +68,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
     - **Security operations**
     - **Security posture**
     - **Authorization and settings**
-    - **Data Operations** (Preview). Supported for Microsoft Sentinel workspaces onboarded both the Defender portal and the Microsoft Sentinel data lake.
+    - **Data Operations** (Preview). Supported for the **Microsoft Sentinel data lake** data collection.
 
     Hover over the description column for each permission group for a detailed description of the permissions available in that group. 
 
@@ -106,39 +106,38 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
 ## Create a role to access and manage roles and permissions
 
-To access and manage roles and permissions, without being a Global Administrator or Security Administrator in Microsoft Entra ID, you need to create a role with **Authorization** permissions. To create this role:
+To access and manage roles and permissions, without being a Global Administrator or Security Administrator in Microsoft Entra ID, create a role with **Authorization** permissions. To create this role:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as Global Administrator or Security Administrator.
 
-2. In the navigation pane, select **Permissions**.
+1. In the navigation pane, select **Permissions > Microsoft Defender XDR > Roles > Create custom role**.
 
-3. Select **Roles** under Microsoft Defender XDR.
+1. Enter your role name and description, and then select **Next**.
 
-4. Select **Create custom role**.
+1. Select **Authorization and settings**, and then on the **Authorization and settings** side pane, select **Select custom permissions**.
 
-5. Enter the Role name and description.
+1. Under **Authorization**, select one of the following options:
 
-6. Select **Next** and choose the **Authorization and settings** option.
+    - **Select all permissions**. Users are able to create and manage roles and permissions.
+    - **Read-only**. Users can access and view roles and permissions in a read-only mode.
 
-7. On the Authorization and settings category flyout, choose **Select custom permissions** and under **Authorization** select either:
-
-    - Select all permissions - users are able to create and manage roles and permissions.
-    - Read-only - uses can access and view roles and permissions in a read-only mode.
+    For example:
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="/defender/media/defender/m365-defender-rbac-authorization-role.png":::
 
-8. Select **Apply** and then **Next** to assign users and data sources.
+1. Select **Apply** and then **Next** to assign users and data sources.
 
-9. Select **Add assignments** and enter the Assignment name.
+1. Select **Add assignments** and enter the **Assignment name**.
 
-10. To choose the **data sources** users assigned the Authorization permission has access to:
+1. To choose the data sources that users assigned with the *Authorization* permission have access to, select one of the following options:
 
-    - Select **Choose all data sources** to grant users permissions to create new roles and manage roles for all data sources.
-    - Select **Select specific data sources** to grant users permissions to create new roles and manage roles for a specific data source. For example, select Microsoft Defender for Endpoint from the dropdown to grant users the Authorization permission for the Microsoft Defender for Endpoint data source only.
+    - **Choose all data sources**: This grants users permissions to create new roles and manage roles for all data sources.
+    - **Select specific data sources**: This grants users permissions to create new roles and manage roles for a specific data source. For example, select **Microsoft Defender for Endpoint** from the dropdown to grant users the *Authorization* permission for the Microsoft Defender for Endpoint data source only.
+    - **Microsoft Sentinel data lake collection**: Select this option to grant users the *Authorization* permission for the Microsoft Sentinel data lake.
 
-11. In **Assigned users and groups** – choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
+1. In **Assigned users and groups** – choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
 
-12. Select **Next** to review and finish creating the role and then select **Submit**.
+1. Select **Next** to review and finish creating the role and then select **Submit**.
 
 > [!NOTE]
 > For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you need to activate the new Microsoft Defender XDR Unified RBAC model. For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).

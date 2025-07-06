@@ -2,17 +2,17 @@
 title: Details of custom permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Learn about the custom permissions available in Microsoft Defender XDR Security role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 04/25/2025
+ms.date: 07/06/2025
 ms.reviewer:
 search.appverid: met150
 appliesto:
@@ -86,7 +86,7 @@ Permissions to manages the security and system settings and to create and assign
 
 Permissions for managing the organization's security data and controlling advanced analytics permissions, supported for Microsoft Sentinel workspaces [onboarded to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard) and the [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview).
 
-The following permissions can be assigned to the default data collection, with all ingested Microsoft Sentinel data lake data.
+The following permissions can be assigned to the Microsoft Sentinel data collection, which includes lake data stored in the default lake workspace.
 
 |Permission name|Level|Description|
 |---|---|---|
