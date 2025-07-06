@@ -10,7 +10,7 @@ ms.reviewer: rlitinsky
 
 This article describes how to use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor.
 
-While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
 
 The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS / AD CS / Entra Connect servers, as the performance impact on these servers is extremely minimal to not existent.
 
@@ -22,7 +22,7 @@ The sizing tool measures the capacity needed for domain controllers only. There 
 
 - Download the [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>).
 - Review the [Defender for Identity architecture](../architecture.md) article.
-- Review the [Defender for Identity prerequisites](prerequisites.md) article.
+- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article.
 
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 
