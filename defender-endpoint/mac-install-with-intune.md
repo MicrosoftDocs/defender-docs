@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/24/2025
+ms.date: 06/27/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -64,7 +64,7 @@ Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 1. In the [Intune admin center](https://intune.microsoft.com/#home), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
-1. On the **Policies** tab, select **Create** > **New Policy**. 
+1. Under Configuration tab, On the **Policies** tab, select **+ Create** > **+ New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 

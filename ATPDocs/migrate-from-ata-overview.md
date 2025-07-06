@@ -27,7 +27,6 @@ In contrast to the ATA sensor, the Defender for Identity sensor also uses data s
 
 - Support for [multi-forest environments](deploy/multi-forest.md)
 - [Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)
-- [UEBA capabilities](/cloud-app-security/tutorial-ueba)
 - Direct integrations with other services like Microsoft Defender for Cloud Apps and Microsoft Entra for a hybrid view of what's taking place in both on-premises and hybrid environments
 - And more
 
