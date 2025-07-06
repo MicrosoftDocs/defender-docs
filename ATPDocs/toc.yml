@@ -204,7 +204,7 @@ items:
        - name: Unmonitored Entra Connect servers
          href: unmonitored-entra-connect-servers.md
        - name: Unmonitored ADCS servers
-         href: unmonitored-active-directory-certificate-services-servers.md
+         href: unmonitored-active-directory-certificate-services-server.md
        - name: Unsecure domain configurations
          href: security-assessment-unsecure-domain-configurations.md
      - name: Certificates
