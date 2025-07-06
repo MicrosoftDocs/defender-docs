@@ -38,6 +38,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 July 3, 2025
 
 Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Chainguard container images, and identify vulnerabilities in Chainguard Images and Wolfi to validate that they're shipping the most secure builds possible. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+> [!NOTE]
+> As additional image types are being scanned, your bill might increase.
 
 ## June 2025
 
