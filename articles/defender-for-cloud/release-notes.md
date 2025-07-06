@@ -49,7 +49,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 - Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
-For more information see: [https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-sensor-change-log](/azure/defender-for-cloud/defender-sensor-change-log)
+For more information see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
 ### Optional index tags for storing malware scanning results (Preview)
 
