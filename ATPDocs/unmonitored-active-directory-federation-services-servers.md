@@ -24,13 +24,13 @@ Unmonitored Active Directory Federation Services (ADFS) servers represent a high
 
 1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions to discover which of your ADFS servers are unmonitored.
 
-    :::image type="content" source="media/unmonitored-adfs-server/recommended-actions-unmonitored-active-directory-federation-services-server.png" alt-text="Screenshot that shows the recommended actions for an unmonitored ADFS server.":::
+    :::image type="content" source="media/unmonitored-adfs-server/recommended-actions-unmonitored-active-directory-federation-services-server.png" alt-text="Screenshot that shows the recommended actions for an unmonitored ADFS server." lightbox="media/unmonitored-adfs-server/recommended-actions-unmonitored-active-directory-federation-services-server.png":::
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
 
 > [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours. The list of impacted entities is updated within a few minutes of you implementing the recommendations. The status might still take time until it's marked as Completed.
+> Assessment details are updated in near real time. However, scores and statuses are refreshed every 24 hours. The list of impacted entities is updated within a few minutes of implementing recommendations, but the overall status might take longer to show as Completed.
 
 ## Next steps
 

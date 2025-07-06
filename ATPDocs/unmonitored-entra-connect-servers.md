@@ -33,7 +33,7 @@ Because these servers operate at the intersection of on-premises and cloud ident
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
 
 > [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours. The list of impacted entities is updated within a few minutes of you implementing the recommendations. The status might still take time until it's marked as Completed.
+> Assessment details are updated in near real time. However, scores and statuses are refreshed every 24 hours. The list of impacted entities is updated within a few minutes of implementing recommendations, but the overall status might take longer to show as Completed.
 
 ## Next steps
 
