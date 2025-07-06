@@ -17,8 +17,6 @@ If you're a verified app vendor or developer, complete the [Self-Attestation Que
 
 - Update risk attributes.
 
-The catalog team reviews your submission for validation and accuracy.
-
 **While your request is being reviewed:**
 
 - If the app isn’t listed in the catalog, you can [add it as a custom app](cloud-discovery-custom-apps.md) in Cloud Discovery to monitor usage in your environment.
@@ -48,9 +46,10 @@ All catalog update requests undergo a thorough validation process to ensure accu
 - The app must qualify as a SaaS product.
 - The request must include complete and verifiable information.
 
-Once the request is validated and accepted by the catalog team, updates are processed manually. The standard turnaround time from request submission to catalog update is approximately three weeks.
+Valid requests are escalated to the catalog team for further validation and processing. If approved, you’ll receive an estimated timeline for when the update will appear in the catalog. If the request can’t be fulfilled due to product design constraints, support will provide a clear explanation.
 
-After you submit a support ticket, the support team reviews your request and might contact you for additional context or documentation. Valid requests are escalated to the catalog team for further validation and processing. If approved, you’ll receive an estimated timeline for when the update will appear in the catalog. If the request can’t be fulfilled due to product design constraints, support will provide a clear explanation.
+The standard turnaround time from request submission to catalog update is approximately three weeks.
+
 
 ## Related articles
 
