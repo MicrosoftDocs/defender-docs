@@ -32,7 +32,7 @@ appliesto:
 
 This article describes how to create custom roles in Microsoft Defender XDR Unified role-based access control (RBAC). Microsoft Defender XDR Unified RBAC enables you to create custom roles with specific permissions and assign them to users or groups, allowing for granular control over access to Microsoft Defender portal experiences.
 
-Creating custom roles for [Microsoft Sentinel data lake](/azure/sentinel/graph/sentinel-lake-overview?branch=pr-en-us-301045) is supported in Preview. <!--update link-->
+Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview) is supported in Preview.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -68,7 +68,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
     - **Security operations**
     - **Security posture**
     - **Authorization and settings**
-    - **Data Operations**
+    - **Data Operations** (Preview). Supported for Microsoft Sentinel workspaces onboarded both the Defender portal and the Microsoft Sentinel data lake.
 
     Hover over the description column for each permission group for a detailed description of the permissions available in that group. 
 
