@@ -199,6 +199,12 @@ items:
          href: security-assessment-remove-local-admins.md   
        - name: Unmonitored domain controllers
          href: security-assessment-unmonitored-domain-controller.md
+       - name: Unmonitored ADFS servers
+         href: unmonitored-adfs-servers.md
+       - name: Unmonitored Entra Connect servers
+         href: unmonitored-entra-connect-servers.md
+       - name: Unmonitored ADCS servers
+         href: unmonitored-adcs-servers.md
        - name: Unsecure domain configurations
          href: security-assessment-unsecure-domain-configurations.md
      - name: Certificates
