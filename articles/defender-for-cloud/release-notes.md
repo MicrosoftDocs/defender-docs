@@ -43,11 +43,25 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| June 30 | Preview | [Defender for container DNS detections based on Helm (Preview)](#optional-index-tags-for-storing-malware-scanning-results-preview) |
+| June 30 | Preview | [Defender for container DNS detections based on Helm (Preview)](#defender-for-container-dns-detections-based-on-helm-preview) |
 | June 25 | Preview | [Optional index tags for storing malware scanning results (Preview)](#optional-index-tags-for-storing-malware-scanning-results-preview) |
 | June 25 | Preview | [API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)](#api-discovery-and-security-posture-for-apis-hosted-in-function-apps-and-logic-apps-preview) |
 | June 25 | Preview | [Agentless File Integrity Monitoring (Preview)](#agentless-file-integrity-monitoring-preview) |
 | June 18 | Preview | [Agentless code scanning – GitHub support and customizable coverage now available (Preview)](#agentless-code-scanning--github-support-and-customizable-coverage-now-available-preview) |
+
+### Defender for container DNS detections based on Helm (Preview)
+
+**What's included:**
+
+- **Helm-based deployment support** 
+
+  For setup instructions and more details, see [Install Defender for Containers sensor using Helm](/azure/defender-for-cloud/deploy-helm).
+  
+- **DNS threat detections** 
+
+- Improves memory efficiency and reduces CPU consumption for large cluster deployments.
+
+For more information see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
 ### Optional index tags for storing malware scanning results (Preview)
 
