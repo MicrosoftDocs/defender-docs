@@ -37,7 +37,7 @@ All catalog update requests undergo a thorough validation process to ensure accu
 - The app must qualify as a SaaS product.
 - The request must include complete and verifiable information.
 
-The standard turnaround time from request submission to catalog update is approximately three weeks.
+We typically update the catalog within three weeks of receiving your request.
 
 ## All other requests
 
