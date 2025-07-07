@@ -11,7 +11,7 @@ ms.reviewer: LiorShapiraa
 
 # Security Assessment: Unmonitored ADFS servers
 
-This article describes Microsoft Defender for Identity's unmonitored Active Directory Federation Services (ADFS) servers security posture assessment report.
+This article describes the Microsoft Defender for Identity's unmonitored Active Directory Federation Services (ADFS) servers security posture assessment report.
 
 ## What risk do unmonitored ADFS servers pose to an organization?
 
