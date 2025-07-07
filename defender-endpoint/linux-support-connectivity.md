@@ -56,7 +56,7 @@ Testing connection with https://uk-v20.events.data.microsoft.com/ping ... [OK]
 Testing connection with https://v20.events.data.microsoft.com/ping ... [OK]
 ```
 
-If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-that-devices-can-connect-to-defender-for-endpoint-cloud-services).
+If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
 
 Failures with curl error 35 or 60, indicate certificate pinning rejection. Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
 
