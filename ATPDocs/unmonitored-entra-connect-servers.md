@@ -1,6 +1,6 @@
 ---
 title: 'Security Assessment: Unmonitored Microsoft Entra Connect servers'
-description: 'This recommendation indicates whether there are unmonitored Microsoft Entra Connect servers in your environment. The goal is to ensure that all Microsoft Entra Connect servers are monitored by Microsoft Defender for Identity.'
+description: 'Detect unmonitored Microsoft Entra Connect servers and deploy Defender for Identity sensors to protect your hybrid identity infrastructure from privilege escalation.'
 author: LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity

@@ -1,6 +1,6 @@
 ---
 title: 'Security Assessment: Unmonitored ADFS servers'
-description: 'This recommendation tells you if your environment has any unmonitored ADFS servers. Make sure Microsoft Defender for Identity monitors all ADFS servers.'
+description: 'Identify unmonitored ADFS servers and deploy Defender for Identity sensors to reduce risk.'
 author: LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -18,7 +18,7 @@ This article describes Microsoft Defender for Identity's unmonitored Active Dire
 
 ## What risk do unmonitored ADFS servers pose to an organization?
 
-Unmonitored Active Directory Federation Services (ADFS) servers pose a significant security risk to organizations. As the gateway for federated authentication and single sign-on, ADFS controls access to both cloud and on-premises resources. If an ADFS server is compromised, attackers can issue forged tokens and impersonate any user, including privileged accounts. Such attacks may bypass multi-factor authentication (MFA), conditional access, and other downstream security controls, making them particularly dangerous. Without proper monitoring, suspicious activity on ADFS servers can go undetected for extended periods. Deploying Microsoft Defender for Identity sensors on ADFS servers is essential, as it enables real-time detection of suspicious behavior and helps prevent token forgery, abuse of trust relationships, and stealthy lateral movement within the environment.
+Unmonitored Active Directory Federation Services (ADFS) servers pose a significant security risk to organizations. As the gateway for federated authentication and single sign-on, ADFS controls access to both cloud and on-premises resources. If an ADFS server is compromised, attackers can issue forged tokens and impersonate any user, including privileged accounts. Such attacks may bypass multi-factor authentication (MFA), conditional access, and other downstream security controls, making them particularly dangerous. Without proper monitoring, suspicious activity on ADFS servers can go undetected for extended periods. Deploying Microsoft Defender for Identity version 2.0 sensors on ADFS servers is essential, as it enables real-time detection of suspicious behavior and helps prevent token forgery, abuse of trust relationships, and stealthy lateral movement within the environment.
 
 ## How do I use this security assessment?
 

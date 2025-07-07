@@ -1,6 +1,6 @@
 ---
 title: 'Security Assessment: Unmonitored ADCS servers'
-description: 'This recommendation indicates whether there are unmonitored ADCS servers in your environment. The goal is to ensure that all ADCS servers are monitored by Microsoft Defender for Identity.'
+description: 'Detect unmonitored ADCS servers and deploy Defender for Identity sensors to help prevent unauthorized certificate issuance and privilege escalation.'
 author: LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -18,7 +18,7 @@ This article describes Microsoft Defender for Identity's unmonitored Active Dire
 
 ## What risk do unmonitored ADCS servers pose to an organization?
 
-Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to an organization’s identity infrastructure. As the backbone of certificate issuance and trust, AD CS is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, these servers can be exploited to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploying Microsoft Defender for Identity version 2 sensors on all AD CS servers helps mitigate this risk by providing real-time visibility into suspicious activity, detecting advanced threats, and generating actionable alerts based on security events and network behavior.
+Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to an organization’s identity infrastructure. As the backbone of certificate issuance and trust, AD CS is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, these servers can be exploited to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploying Microsoft Defender for Identity version 2.0 sensors on all AD CS servers helps mitigate this risk by providing real-time visibility into suspicious activity, detecting advanced threats, and generating actionable alerts based on security events and network behavior.
 
 ## How do I use this security assessment?
 
