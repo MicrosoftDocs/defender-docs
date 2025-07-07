@@ -49,7 +49,6 @@ The following table summarizes extension requirements for CWPP.
 |Microsoft Defender for Endpoint extension |✔|||
 |Vulnerability assessment| ✔| ||
 |Agentless Disk Scanning| ✔ | ✔ ||
-|Log Analytics or Azure Monitor Agent (preview) extension|✔| |✔|
 |Defender sensor| | ✔| |
 |Azure Policy for Kubernetes | | ✔| |
 |Kubernetes audit log data | | ✔| |
@@ -84,7 +83,6 @@ The following components and requirements are needed to receive full protection 
   To autoprovision the Azure Arc agent, the OS configuration agent on [GCP VM instances](./quickstart-onboard-gcp.md?pivots=env-settings) and the AWS Systems Manager (SSM) agent for [AWS EC2 instances](./quickstart-onboard-aws.md?pivots=env-settings) must be configured. [Learn more](/azure/azure-arc/servers/agent-overview) about the agent.
 - **Defender for Endpoint capabilities**: The [Microsoft Defender for Endpoint](./integration-defender-for-endpoint.md?tabs=linux) agent provides comprehensive endpoint detection and response (EDR) capabilities.
 - **Vulnerability assessment**: Using either the integrated [Qualys vulnerability scanner](./deploy-vulnerability-assessment-vm.md), or the [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management) solution.
-- **Log Analytics agent/[Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) (AMA) (in preview)**: Collects security-related configuration information and event logs from machines.
 
 #### Check networking requirements
 

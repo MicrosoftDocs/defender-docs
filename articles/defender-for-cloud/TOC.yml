@@ -25,10 +25,6 @@
         - name: Common questions about permissions
           displayName: permissions, common questions, faq, frequently asked questions
           href: faq-permissions.yml
-        - name: Common questions about data collection, agents, agentless and workspaces
-          displayName: data collection, agents, workspaces, common questions, agentless,
-            faq, frequently asked questions
-          href: faq-data-collection-agents.yml
         - name: Common questions about regulatory compliance
           displayName: regulatory, compliance, regulatory compliance, common questions,
             faq, frequently asked questions
@@ -143,9 +139,6 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-        - name: Protect resources that report to a Log Analytics workspace
-          displayName: workSystem, namespace, enable, plans
-          href: enable-plan-workspace.md
     - name: Integrate partner integrations
       expanded: false
       items:
@@ -762,9 +755,6 @@
     - name: Deploy the Azure Monitor agent
       displayName: AMA, Azure monitor agent
       href: auto-deploy-azure-monitoring-agent.md
-    - name: Working with the Log Analytics agent
-      displayName: log analytics, agent
-      href: working-with-log-analytics-agent.md
   - name: Defender for APIs
     items: 
     - name: About Defender for APIs
