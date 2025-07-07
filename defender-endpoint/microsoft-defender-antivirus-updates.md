@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/22/2025
+ms.date: 06/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -71,6 +71,7 @@ You can manage the distribution of updates through one of the following methods:
 - [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
 - [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
 - The usual methods you use to deploy Microsoft and Windows updates to endpoints in your network.
+- UNC Share
 
 For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
@@ -98,6 +99,29 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
+
+- Security intelligence update version: **1.431.19.0**
+- Release date:  **June 13, 2025 (Engine)** / **June 13, 2025 (Platform)**
+- Platform: **4.18.25050.5**
+- Engine: **1.1.25050.6**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Windows multisession SKUs are now properly classified as client SKUs for signature versioning
+- `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
+- The display name and description is now displayed correctly for the [device control](/defender-endpoint/device-control-overview) filter driver in Windows services
+- Improved performance for kernel driver
+- Improvements to [network protection](/defender-endpoint/network-protection#overview-of-network-protection) performance related to packet loss during high network utilization
+- Reliability improvements to network protection during service shutdown
+- Enriched [Event ID 1000](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) to include `ScanOnlyIfIdle` and scan priority
+- Improved device control Windows Portal Device (WPD) device discovery in File explorer. (For more information about device control, see [Device control policy samples and scenarios](/defender-endpoint/device-control-overview#device-control-policy-samples-and-scenarios).)
+- Resolved discrepancy in [device health reports](/defender-endpoint/device-health-reports) between signature publish and signature install date and time
+- Performance improvements when scanning files/folders with extended attributes
+- Reliability improvement in the Defender kernel driver to avoid crashing when there's excessive disk input/output
+- Added exponential backoff support to Core Service 1DS manager telemetry module to address memory consumption and DNS flooding issues
+
 ### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
 
 - Security intelligence update version: **1.429.3.0**
@@ -112,7 +136,7 @@ Updates contain:
 - Fixed Microsoft Defender platform update timestamp to reflect the actual update time.
 - The [1002 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1002) (An anti-malware scan was stopped before it finished) now includes details of the stop reason.
 - Added more details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
-- Improved ASR file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
+- Improved attack surface reduction file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
 - Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
@@ -135,25 +159,6 @@ Updates contain:
 - Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
 - Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
 - Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
-
-### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
-
-- Security intelligence update version: **1.425.1.0**
-- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
-- Platform: **4.18.25020.1009**
-- Engine: **1.1.25020.1007**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
-- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
-- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
-- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
-- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
-- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
-- Increased [device control policy](device-control-policies.md) limits.
-- Improved security resilience for Defender update process.
 
 ### Previous version updates: Technical upgrade support only
 
@@ -243,26 +248,12 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
-### 1.417.472.0
+### 1.431.97.0
 
-- Defender package version: `1.417.472.0`
-- Security intelligence version: `1.417.472.0`
-- Engine version: `1.24080.9`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.415.295.0
-
-- Defender package version: `1.415.295.0`
-- Security intelligence version: `1.415.295.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.97.0`
+- Security intelligence version: `1.431.97.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.6`
 
 #### Fixes
 
@@ -272,12 +263,28 @@ After a new package version is released, support for the previous two versions i
 
 - None
 
-### 1.415.235.0
+### 1.431.54.0
 
-- Defender package version: `1.415.235.0`
-- Security intelligence version: `1.415.235.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.54.0`
+- Security intelligence version: `1.431.54.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.2`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+
+### 1.429.122.0
+
+- Defender version: `1.429.122.0`
+- Signature version: `1.429.122.0`
+- Platform version: `4.18.25040.2`
+- Engine version: `1.25040.1`
 
 #### Fixes
 
@@ -296,7 +303,7 @@ After a new package version is released, support for the previous two versions i
 |[Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) | You can schedule when protection updates should be downloaded. |
 |[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) | If an endpoint misses an update or scheduled scan, you can force an update or scan the next time a user signs in. |
 |[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) | You can set protection updates to be downloaded at startup or after certain cloud-delivered protection events. |
-|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| You can specify settings, such as whether updates should occur on battery power that 's especially useful for mobile devices and virtual machines. |
+|[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| You can specify settings, such as whether updates should occur on battery power that's especially useful for mobile devices and virtual machines. |
 | [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.   |
 
 > [!TIP]

@@ -26,6 +26,20 @@ For updates about versions and features released six months ago or earlier, see 
 ## June 2025
 
 
+### Scoped access by Active Directory domain now supported (Preview)
+
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+Scoping by Active Directory domains helps:
+
+- Optimize performance: Focus monitoring on critical assets and reduce noise from non-essential data.
+
+- Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
+
+- Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 
 ### Okta integration is now available in Microsoft Defender for Identity
 
@@ -33,7 +47,6 @@ Microsoft Defender for Identity now supports integration with Okta, enabling det
 
 For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
 
-### Microsoft Defender For Identity PowerShell module updates (version 1.0.0.4)
 
 ### Service account classification rules now available
 
@@ -41,7 +54,6 @@ You can now create custom classification rules to identify service accounts base
 For more information, see [Service account discovery](service-account-discovery.md)
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
-
 
 New Features and Improvements:
 - Added remote domain functionality.
@@ -60,7 +72,7 @@ Bug Fixes:
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-sensor.md).
 
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
@@ -72,7 +84,7 @@ The remote collection of local administrators group members from endpoints using
 
 ### New Health Issue
 
-New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+New [health issue](health-alerts.md) for cases where sensors running on VMware have network configuration mismatch.
 
 ## April 2025
 
@@ -249,7 +261,7 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 
 * New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
 * Enhanced accuracy for the **DC sync attack** detection.
-* New [health issue](health-alerts.md#sensor-failed-to-retrieve-microsoft-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
+* New [health issue](health-alerts.md) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
 * Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Microsoft Entra Connect servers.
 
 [Learn more about the new sensor](deploy/active-directory-federation-services.md)

@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 05/21/2025
+ms.date: 06/23/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,25 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
+
+- Security intelligence update version: **1.425.1.0**
+- Release date: **March 12, 2025** (Engine) / **March 31, 2025** (Platform)
+- Platform: **4.18.25020.1009**
+- Engine: **1.1.25020.1007**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Systems controlled by `SharedSignatureRoot` can be updated by running signature update commands.
+- If you're currently using a shared signature path to update VDI environments, you can now use signature update commands through [MpCmdRun](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus), PowerShell, and the user interface to update to latest drops in your signature update shares.
+- Shared root signature setting updates are now applied without requiring a system restart. (If this setting is turned off and on multiple times, a system reboot is necessary.) 
+- Improved logic for handling [restore from quarantine](/defender-endpoint/restore-quarantined-files-microsoft-defender-antivirus).
+- Fixed fallback issue with [Update-MpSignature](/powershell/module/defender/update-mpsignature).
+- Increased [device control policy](device-control-policies.md) limits.
+- Improved security resilience for Defender update process.
 
 ### January-2025 (Platform: 4.18.25010.11 | Engine: 1.1.25010.7)
 
@@ -602,7 +621,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved WARN mode for [ASR rule](attack-surface-reduction-rules-reference.md)
 - Improved certificate handling of OSX
 - Improved logging for scanning FilesStash location
-- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
+- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
 
 #### Known Issues
 
@@ -867,7 +886,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 - None
 
-###  June-2021 (Platform: 4.18.2106.5 | Engine: 1.1.18300.4)
+### June-2021 (Platform: 4.18.2106.5 | Engine: 1.1.18300.4)
 
 - Security intelligence update version: **1.343.17.0**
 - Released: **June 28, 2021**
@@ -1035,7 +1054,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 - None
 
-###  August-2020 (Platform: 4.18.2008.9 | Engine: 1.1.17400.5)
+### August-2020 (Platform: 4.18.2008.9 | Engine: 1.1.17400.5)
 
 - Security intelligence update version: **1.323.9.0**
 - Released: **August 27, 2020**
@@ -1224,6 +1243,170 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
 
+### 1.427.707.0
+
+- Defender package version: `1.427.707.0`
+- Platform version: `4.18.25030.2`
+- Engine version: `1.25030.1`
+- Security intelligence version: `1.427.707.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.423.282.0
+
+- Defender package version: `1.423.282.0`
+- Platform version: `4.18.25010.11`
+- Engine version: `1.25010.7`
+- Security intelligence version: `1.423.282.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.423.160.0
+
+- Defender package version: `1.423.160.0`
+- Platform version: `4.18.25010.11`
+- Engine version: `1.25010.7`
+- Security intelligence version: `1.423.160.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.423.227.0
+
+- Defender package version: `1.423.227.0`
+- Platform version: `4.18.25010.11`
+- Engine version: `1.25010.7`
+- Security intelligence version: `1.423.227.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.421.1259.0
+
+- Defender package version: `1.421.1259.0`
+- Platform version: `4.18.24090.11`
+- Engine version: `1.24090.11`
+- Security intelligence version: `1.421.1259.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.421.825.0
+
+- Defender package version: `1.421.825.0`
+- Platform version: `4.18.24120.1`
+- Engine version: `1.24120.1`
+- Security intelligence version: `1.421.825.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.419.396.0
+
+- Defender package version: `1.419.396.0`
+- Platform version: `4.18.24090.11`
+- Engine version: `1.24090.2`
+- Security intelligence version: `1.419.396.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.419.12.0
+
+- Defender package version: `1.419.12.0`
+- Platform version: `4.18.24090.2`
+- Engine version: `1.24090.2`
+- Security intelligence version: `1.419.12.0`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.417.472.0
+
+- Defender package version: `1.417.472.0`
+- Security intelligence version: `1.417.472.0`
+- Engine version: `1.24080.9`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.415.295.0
+
+- Defender package version: `1.415.295.0`
+- Security intelligence version: `1.415.295.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+### 1.415.235.0
+
+- Defender package version: `1.415.235.0`
+- Security intelligence version: `1.415.235.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
 ### 1.411.111.0
 
 - Defender package version: `1.411.111.0`
@@ -1386,7 +1569,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20221014.1`
 - Platform version: `4.18.2209.7`
 - Engine version: `1.1.19700.3`
-- Signature version: `1.373.208.0`
+- Security intelligence version: `1.373.208.0`
 
 #### Fixes
 
@@ -1401,7 +1584,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220929.1`
 - Platform version: `4.18.2207.7`
 - Engine version: `1.1.19600.3`
-- Signature version: `1.373.1243.0`
+- Security intelligence version: `1.373.1243.0`
 
 #### Fixes
 
@@ -1416,7 +1599,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220925.2`
 - Platform version: `4.18.2207.7`
 - Engine version: `1.1.19600.3`
-- Signature version: `1.373.1371.0`
+- Security intelligence version: `1.373.1371.0`
 
 #### Fixes
 
@@ -1431,7 +1614,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220901.4`
 - Platform version: `4.18.2205.7`
 - Engine version: `1.1.19500.2`
-- Signature version: `1.373.1371.0`
+- Security intelligence version: `1.373.1371.0`
 
 #### Fixes
 
@@ -1446,7 +1629,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220802.1`
 - Platform version: `4.18.2205.7`
 - Engine version: `1.1.19400.3`
-- Signature version: `1.371.1205.0`
+- Security intelligence version: `1.371.1205.0`
 
 #### Fixes
 
@@ -1461,7 +1644,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220629.5`
 - Platform version: `4.18.2205.7`
 - Engine version: `1.1.19300.2`
-- Signature version: `1.369.220.0`
+- Security intelligence version: `1.369.220.0`
 
 #### Fixes
 
@@ -1476,7 +1659,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220603.3`
 - Platform version: `4.18.2203.5`
 - Engine version: `1.1.19200.6`
-- Signature version: `1.367.1009.0`
+- Security intelligence version: `1.367.1009.0`
 
 #### Fixes
 
@@ -1491,7 +1674,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220506.6`
 - Platform version: `4.18.2203.5`
 - Engine version: `1.1.19200.5`
-- Signature version: `1.363.1436.0`
+- Security intelligence version: `1.363.1436.0`
 
 #### Fixes
 
@@ -1506,7 +1689,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220321.1`
 - Platform version: `4.18.2202.4`
 - Engine version: `1.1.19000.8`
-- Signature version: `1.351.337.0`
+- Security intelligence version: `1.351.337.0`
 
 #### Fixes
 
@@ -1521,7 +1704,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220305.1`
 - Platform version: `4.18.2201.10`
 - Engine version: `1.1.18900.3`
-- Signature version: `1.359.1405.0`
+- Security intelligence version: `1.359.1405.0`
 
 #### Fixes
 
@@ -1536,7 +1719,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220203.1`
 - Platform version: `4.18.2111.5`
 - Engine version: `1.1.18900.2`
-- Signature version: `1.357.32.0`
+- Security intelligence version: `1.357.32.0`
 
 #### Fixes
 
@@ -1551,7 +1734,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `20220105.1`
 - Platform version: `4.18.2111.5`
 - Engine version: `1.1.18800.4`
-- Signature version: `1.355.1482.0`
+- Security intelligence version: `1.355.1482.0`
 
 #### Fixes
 
@@ -1567,7 +1750,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2112.01`
 - Platform version: `4.18.2110.6`
 - Engine version: `1.1.18700.4`
-- Signature version: `1.353.2283.0`
+- Security intelligence version: `1.353.2283.0`
 
 #### Fixes
 
@@ -1582,7 +1765,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2111.02`
 - Platform version: `4.18.2110.6`
 - Engine version: `1.1.18700.4`
-- Signature version: `1.353.613.0`
+- Security intelligence version: `1.353.613.0`
 
 #### Fixes
 
@@ -1597,7 +1780,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2110.01`
 - Platform version: `4.18.2109.6`
 - Engine version: `1.1.18500.10`
-- Signature version: `1.349.2103.0`
+- Security intelligence version: `1.349.2103.0`
 
 #### Fixes
 
@@ -1612,7 +1795,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2109.01`
 - Platform version: `4.18.2107.4`
 - Engine version: `1.1.18400.5`
-- Signature version: `1.347.891.0`
+- Security intelligence version: `1.347.891.0`
 
 #### Fixes
 
@@ -1627,7 +1810,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2108.01`
 - Platform version: `4.18.2107.4`
 - Engine version: `1.1.18300.4`
-- Signature version: `1.343.2244.0`
+- Security intelligence version: `1.343.2244.0`
 
 #### Fixes
 
@@ -1642,7 +1825,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2107.02`
 - Platform version: `4.18.2105.5`
 - Engine version: `1.1.18300.4`
-- Signature version: `1.343.658.0`
+- Security intelligence version: `1.343.658.0`
 
 #### Fixes
 
@@ -1657,7 +1840,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2106.01`
 - Platform version: `4.18.2104.14`
 - Engine version: `1.1.18100.6`
-- Signature version: `1.339.1923.0`
+- Security intelligence version: `1.339.1923.0`
 
 #### Fixes
 
@@ -1672,7 +1855,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2105.01`
 - Platform version: `4.18.2103.7`
 - Engine version: `1.1.18100.6`
-- Signature version: `1.339.42.0`
+- Security intelligence version: `1.339.42.0`
 
 #### Fixes
 
@@ -1688,7 +1871,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2104.01`
 - Platform version: `4.18.2102.4`
 - Engine version: `1.1.18000.5`
-- Signature version: `1.335.232.0`
+- Security intelligence version: `1.335.232.0`
 
 #### Fixes
 
@@ -1703,7 +1886,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2103.01`
 - Platform version: `4.18.2101.9`
 - Engine version: `1.1.17800.5`
-- Signature version: `1.331.2302.0`
+- Security intelligence version: `1.331.2302.0`
 
 #### Fixes
 
@@ -1718,7 +1901,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2102.03`
 - Platform version: `4.18.2011.6`
 - Engine version: `1.1.17800.5`
-- Signature version: `1.331.174.0`
+- Security intelligence version: `1.331.174.0`
 
 #### Fixes
 
@@ -1733,7 +1916,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2101.02`
 - Platform version: `4.18.2011.6`
 - Engine version: `1.1.17700.4`
-- Signature version: `1.329.1796.0`
+- Security intelligence version: `1.329.1796.0`
 
 #### Fixes
 
@@ -1748,7 +1931,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2012.01`
 - Platform version: `4.18.2010.7`
 - Engine version: `1.1.17600.5`
-- Signature version: `1.327.1991.0`
+- Security intelligence version: `1.327.1991.0`
 
 #### Fixes
 
@@ -1763,7 +1946,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2011.02`
 - Platform version: `4.18.2010.7`
 - Engine version: `1.1.17600.5`
-- Signature version: `1.327.658.0`
+- Security intelligence version: `1.327.658.0`
 
 #### Fixes
 
@@ -1778,7 +1961,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2011.01`
 - Platform version: `4.18.2009.7`
 - Engine version: `1.1.17600.5`
-- Signature version: `1.327.344.0`
+- Security intelligence version: `1.327.344.0`
 
 #### Fixes
 
@@ -1793,7 +1976,7 @@ The versions listed in this section are no longer supported. To view current ver
 - Package version: `1.1.2011.01`
 - Platform version: `4.18.2008.9`
 - Engine version: `1.1.17400.5`
-- Signature version: `1.327.2216.0`
+- Security intelligence version: `1.327.2216.0`
 
 #### Fixes
 

@@ -80,7 +80,7 @@ To configure the severity for alerts sent to Microsoft Defender for Endpoint:
 1. Under **Alerts**, select the global severity level for alerts.
 1. Select **Save**.
 
-    ![Screenshot of the Defender for Endpoint alert settings.](media/mde-alert-severity-settings.png)
+    :::image type="content" source="media/mde-alert-severity-settings.png" alt-text="Screenshot that shows the Defender for Endpoint alert settings." lightbox="media/mde-alert-severity-settings.png":::
 
 ## Next steps
 

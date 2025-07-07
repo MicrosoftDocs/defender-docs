@@ -44,6 +44,8 @@ Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protec
 | 7. Deploy updates. | Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. <br/><br/>See [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md). |
 | 8. Configure network protection (preview) | Network protection helps prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. <br/><br/>See [Network protection for Linux](network-protection-linux.md). |
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Options for configuring security settings
 
 To configure your security settings in Defender for Endpoint on Linux, you have two main options:

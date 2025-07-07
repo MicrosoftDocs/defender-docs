@@ -560,11 +560,14 @@
     items:
     - name: Migration guides overview
       href: migration-guides.md
+    - name: Considerations for side-by-side deployment
+      href: mde-side-by-side.md
     - name: Migrate servers to Defender for Cloud
       href: migrating-mde-server-to-cloud.md
     - name: Migrate to Defender for Endpoint
-      href: switch-to-mde-overview.md
       items:
+      - name: Overview
+        href: switch-to-mde-overview.md
       - name: Phase 1 - Prepare
         href: switch-to-mde-phase-1.md
       - name: Phase 2 - Setup
@@ -1043,6 +1046,8 @@
             href: respond-machine-alerts.md#restrict-app-execution
           - name: Isolate devices from the network
             href: respond-machine-alerts.md#isolate-devices-from-the-network
+          - name: Isolation exclusions
+            href: isolation-exclusions.md
           - name: Contain devices from the network
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network

@@ -45,7 +45,7 @@ To ensure that your application connector is set to show data in Microsoft Secur
    > [!NOTE]
    > If you have multiple instances of the same app, you can send security recommendations for each instance separately. Security recommendations for the selected instance are added to Microsoft Security Exposure Management in addition to the current recommendations.
 
-Security recommendations appear automatically in Microsoft Security Exposure Management. Recommendations are based on Microsoft benchmarks, and they might take up to 24 hours to update.
+Security recommendations appear automatically in Microsoft Security Exposure Management. Recommendations are based on Microsoft benchmarks, and they might take time to update.
 
 In [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), filter the **Recommended actions** tab by product to view any recommended actions. If you have multiple instances of an app, you can choose to filter recommendations from specific instances only. The following example shows options for filtering specific instances.
 
