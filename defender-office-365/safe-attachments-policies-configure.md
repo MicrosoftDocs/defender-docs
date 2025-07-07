@@ -41,6 +41,8 @@ For greater granularity, you can also use the procedures in this article to crea
 > Instead of creating and managing custom Safe Attachments policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
+>
+> Typically, email attachment scanning completes within 15 minutes. Sometimes, it takes longer due to retry delays and processing time to analyze the file in the virtual environment.
 
 You configure Safe Attachments policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 

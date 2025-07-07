@@ -59,7 +59,7 @@ Use the following procedures to configure auditing on the domain controllers tha
 
 This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity via the UI.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
 
 To configure your Advanced Audit Policy settings:
 
@@ -114,7 +114,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
 
 To configure your settings, run:
 
@@ -167,7 +167,7 @@ This section describes the extra configuration steps that you need for auditing 
 > - Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
 > - When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data.
 
-**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md#ntlm-auditing-is-not-enabled)
+**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md)
 
 To configure NTLM auditing:
 
@@ -192,7 +192,7 @@ To collect events for object changes, such as for event 4662, you must also conf
 > [!IMPORTANT]
 > Review and audit your policies (via the [UI](#configure-advanced-audit-policy-settings-from-the-ui) or [PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)) before you enable event collection, to ensure that the domain controllers are properly configured to record the necessary events. If this auditing is configured properly, it should have a minimal effect on server performance.
 
-**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md)
 
 To configure domain object auditing:
 
@@ -248,7 +248,7 @@ To configure domain object auditing:
 
 ## Configure auditing on AD FS
 
-**Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
+**Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md)
 
 To configure auditing on Active Directory Federation Services (AD FS):
 
@@ -333,8 +333,7 @@ To configure auditing on Microsoft Entra Connect servers:
 >[!NOTE]
 > The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
 
-**Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
-
+**Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md)
 1. Open the ADSI Edit tool. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
 
 1. On the **Action** menu, select **Connect to**.

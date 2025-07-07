@@ -11,7 +11,7 @@ ms.reviewer: rlitinsky
 This article describes how Microsoft Defender for Identity uses Directory Service Accounts (DSAs).
 
 >[!NOTE]
->Regardless of the Directory Service Accounts configured, the sensor service will operate under the LocalService identity, and the updater service will operate under the LocalSystem identity.
+>Regardless of the Directory Service Accounts configured, the sensor service operates under the LocalService identity, and the updater service operates under the LocalSystem identity.
 
 
 While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
