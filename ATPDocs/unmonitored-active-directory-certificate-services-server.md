@@ -11,7 +11,7 @@ ms.reviewer: LiorShapiraa
 
 # Security Assessment: Unmonitored ADCS servers
 
-This article describes Microsoft Defender for Identity's unmonitored Active Directory Certificate Services (ADCS) servers security posture assessment report.
+This article describes the security posture assessment report for unmonitored Active Directory Certificate Services (AD CS) servers by Microsoft Defender for Identity.
 
 
 ## What risk do unmonitored ADCS servers pose to an organization?
