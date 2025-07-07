@@ -19,7 +19,7 @@ If you're a verified app vendor or developer, complete the [Self-Attestation Que
 
 **While we review your request:**
 
-- If the app isn’t listed in the catalog, you can [add it as a custom app](cloud-discovery-custom-apps.md) in Cloud Discovery to monitor usage in your environment.
+- If the app isn’t in the catalog, you can [add it as a custom app](cloud-discovery-custom-apps.md) in Cloud Discovery to monitor its usage in your environment.
 - If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can manually [override the app’s risk score](risk-score.md#override-the-risk-score).
 
 ## Nonowners requesting updates
