@@ -24,7 +24,7 @@ If you're a verified app vendor or developer, complete the [Self-Attestation Que
 
 ## Nonowners requesting updates
 
-You're not the app owner, but you want to help improve the accuracy of the app catalog:
+Even if you're not the app owner, you can help improve the app catalog's accuracy:
 
 - You can [request a risk score update](risk-score.md#customize-the-risk-score) for apps in use by your organization.
 - You can [suggest a change to the cloud app catalog](risk-score.md#suggest-a-change-to-the-cloud-app-catalog) if you find a new app in your environment that hasn't been scored by Defender for Cloud Apps, or if you want to request a review for a new risk factor, a score update, or outdated app data.
