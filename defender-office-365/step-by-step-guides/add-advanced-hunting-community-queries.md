@@ -177,7 +177,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
      - T1566
    query: |
      EmailEvents
-     | where Threat Types has "Phish" and EmailDirection == "Inbound"
+     | where ThreatTypes has "Phish" and EmailDirection == "Inbound"
      | summarize count() by RecipientEmailAddress
      | sort by count_
      | top 15 by count_
