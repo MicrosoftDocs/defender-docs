@@ -193,7 +193,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 The following external package dependencies exist for the `mdatp` package:
 
 - The `mdatp RPM` package requires - `glibc >= 2.17`
-- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`,`uuid-runtime`
+- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`
 - For Mariner the `mdatp` package requires `attr`,`diffutils`, `libacl`, `libattr`,`libselinux-utils`, `selinux-policy`, `policycoreutils`
 
 > [!NOTE]
