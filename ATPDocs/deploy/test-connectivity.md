@@ -9,9 +9,9 @@ ms.reviewer: rlitinsky
 
 # Test Microsoft Defender for Identity connectivity
 
-The Defender for Identity sensor requires network connectivity to the Defender for Identity service, and most organizations control access to the internet via firewall or proxies. For example, when using a proxy, you can allow access to port 443 via a single URL. For more information, see [Required ports](prerequisites.md#required-ports).
+The Defender for Identity sensor requires network connectivity to the Defender for Identity service. Depending on which version of the sensor you deployed, see [Sensor v2.x prerequisites](prerequisites-sensor-version-2.md) or [Sensor v3.x prerequisites](prerequisites-sensor-version-2.md).
 
-After preparing the server that you're going to use for your Microsoft Defender for Identity sensor and configuring proxy settings as needed, we recommend that you test connectivity to make sure that your server can access the Defender for Identity cloud service. Use the procedures in this article even after deploying if your sensor server is experiencing connectivity issues.
+After preparing the server that you're going to use for your Microsoft Defender for Identity sensor we recommend that you test connectivity to make sure that your server can access the Defender for Identity cloud service. Use the procedures in this article even after deploying if your sensor server is experiencing connectivity issues.
 
 For more information, see [Required ports](../prerequisites.md#ports).
 

@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 01/12/2025
+ms.date: 06/27/2025
 ---
 
 # General information on Microsoft Defender Experts for Hunting service

@@ -22,7 +22,7 @@ This article lists recent features added for unified security operations in the 
 
 ## July 2025
 
-### Microsoft Sentinel in the Defender portal to be retired July 2026
+### Microsoft Sentinel in the Azure portal to be retired July 2026
 
 Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
 

@@ -188,7 +188,7 @@ Every few minutes, Defender for Identity sensors check whether they have the lat
 
 1. Sensors selected for **Delayed update** start their update process 72 hours after the Defender for Identity cloud service is updated. These sensors will then use the same update process as automatically updated sensors.
 
-    For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md#sensor-outdated) is triggered, and is sent as a notification.
+    For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md) is triggered, and is sent as a notification.
 
     ![Sensor update failure.](media/sensor-outdated.png)
 
@@ -230,6 +230,6 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 ## Next steps
 
+* [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
 * [Configure event forwarding](deploy/configure-event-forwarding.md)
-* [Defender for Identity prerequisites](deploy/prerequisites.md)
 * [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
