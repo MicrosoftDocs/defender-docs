@@ -31,7 +31,7 @@ Unmonitored Active Directory Certificate Services (AD CS) servers pose a signifi
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
 
 > [!NOTE]
-> Assessment details are updated in near real time. However, scores and statuses are refreshed every 24 hours. The list of impacted entities is updated within a few minutes of implementing recommendations, but the overall status might take longer to show as Completed.
+> Assessment details update in near real time. However, scores and statuses refresh every 24 hours. The list of impacted entities updates within a few minutes of implementing recommendations, but the overall status might take longer to show as Completed.
 
 ## Next steps
 
