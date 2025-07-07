@@ -176,7 +176,7 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
 
 - The mdatp RPM package requires `glibc >= 2.17`.
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`.
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
