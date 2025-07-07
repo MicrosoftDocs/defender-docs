@@ -28,9 +28,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### New security posture assessments for unmonitored identity servers
 
-Microsoft Defender for Identity now includes three security posture assessments that identify unmonitored identity infrastructure. These assessments help you detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren’t monitored.
+Microsoft Defender for Identity now includes three security posture assessments that detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren’t monitored.
 
-Use these assessments to improve monitoring coverage and strengthen your identity security posture.
+Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
 
 For more details, see:
 
