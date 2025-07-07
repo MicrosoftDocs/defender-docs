@@ -65,6 +65,9 @@ You can run any query that you already have access to in the multitenant managem
    | take 10
    ```
 
+>[!IMPORTANT]
+> Running queries across multiple tenants using the `adx(x)` operator will run separate ADX queries per tenant and aggregate them, which might return duplicate results. Use the `adx(x)` operator with multiple tenants only if you need to join tenant results with ADX data. For more information, see [Use Microsoft Sentinel functions, saved queries, and custom rules](/defender-xdr/advanced-hunting-defender-use-custom-rules#use-adx-operator-for-azure-data-explorer-queries).
+
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 ### Use adx(x) operator for Azure Data Explorer queries carefully
