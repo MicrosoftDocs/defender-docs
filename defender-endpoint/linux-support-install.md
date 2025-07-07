@@ -78,7 +78,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 The following external package dependencies exist for the mdatp package:
 
 - The mdatp RPM package requires `glibc >= 2.17`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`
 > For version older than `101.25032.0000`:
 > - RPM package needs: `mde-netfilter`, `pcre`
 > - DEBIAN package needs: `mde-netfilter`, `libpcre3`
