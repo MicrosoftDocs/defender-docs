@@ -144,11 +144,7 @@ To add attachments to your case, go to the **Case details** page, select the **A
 
 ## Limitations
 
-Case management in the Defender portal has the following limitations:
-
-- **Cases:** Up to 100,000 cases per tenant.
-- **Linked incidents:** Up to 100 incidents to each case.
-- **Attachments:** Up to 500 GB of attachments per tenant.
+See [Case management limits](/azure/sentinel/sentinel-service-limits#case-management-limits).
 
 ## Related content
 
