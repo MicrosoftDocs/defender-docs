@@ -19,7 +19,7 @@ This article describes Microsoft Defender for Identity's unmonitored Active Dire
 Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to your organization’s identity infrastructure. AD CS, the backbone of certificate issuance and trust, is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, attackers can exploit these servers to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploy Microsoft Defender for Identity version 2.0 sensors on all AD CS servers to mitigate this risk. These sensors provide real-time visibility into suspicious activity, detect advanced threats, and generate actionable alerts based on security events and network behavior.
 
 > [!NOTE]
->  This security assessment is only available if Microsoft Defender for Endpoint detected an eligible ADCS server in the environment.
+>  This security assessment is available only if Microsoft Defender for Endpoint detects an eligible AD CS server in the environment.
 
 ## How do I use this security assessment?
 
