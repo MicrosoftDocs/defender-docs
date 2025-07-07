@@ -18,7 +18,7 @@ This article describes the Microsoft Defender for Identity's unmonitored Active 
 Unmonitored Active Directory Federation Services (ADFS) servers are a significant security risk to organizations. ADFS controls access to both cloud and on-premises resources as the gateway for federated authentication and single sign-on. If attackers compromise an ADFS server, they can issue forged tokens and impersonate any user, including privileged accounts. Such attacks might bypass multi-factor authentication (MFA), conditional access, and other downstream security controls, making them particularly dangerous. Without proper monitoring, suspicious activity on ADFS servers might go undetected for extended periods. Deploying Microsoft Defender for Identity version 2.0 sensors on ADFS servers is essential. These sensors enable real-time detection of suspicious behavior and help prevent token forgery, abuse of trust relationships, and stealthy lateral movement within the environment.
 
 > [!NOTE]
->  This security assessment is only available if Microsoft Defender for Endpoint detected an eligible ADFS server in the environment.
+> This security assessment is only available if Microsoft Defender for Endpoint detects an eligible ADFS server in the environment.
 
 
 ## How do I use this security assessment?
