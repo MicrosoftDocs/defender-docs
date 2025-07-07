@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Submit an App Catalog update request
 
-To maintain the accuracy and security of the Microsoft Defender for Cloud Apps (MDA) catalog, use the appropriate submission method based on your relationship to the app and the type of update required.
+To keep the Microsoft Defender for Cloud Apps (MDA) catalog accurate and secure, use the right submission method based on your relationship to the app and the type of update needed.
 
 ## App owners or verified vendors
 
