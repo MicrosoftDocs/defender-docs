@@ -18,13 +18,13 @@ This article describes Microsoft Defender for Identity's unmonitored Active Dire
 
 ## What risk do unmonitored ADCS servers pose to an organization?
 
-Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to an organization’s identity infrastructure. As the backbone of certificate issuance and trust, AD CS is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, these servers can be exploited to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploying Microsoft Defender for Identity version 2 sensors on all Active Directory Certificate Services (AD CS) servers helps mitigate this risk by providing real-time visibility into suspicious activity, detecting advanced threats, and generating actionable alerts based on security events and network behavior.
+Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to an organization’s identity infrastructure. As the backbone of certificate issuance and trust, AD CS is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, these servers can be exploited to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploying Microsoft Defender for Identity version 2 sensors on all AD CS servers helps mitigate this risk by providing real-time visibility into suspicious activity, detecting advanced threats, and generating actionable alerts based on security events and network behavior.
 
 ## How do I use this security assessment?
 
-1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions to discover which of your ADCS servers are unmonitored.
+1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions to discover which of your AD CS servers are unmonitored.
 
-    :::image type="content" source="media/unmonitored-adcs-servers/recommended-actions-unmonitored-active-directory-certificate-services-servers.png" alt-text="Screenshot that shows the recommended actions for an unmonitored ADCS server." lightbox="media/unmonitored-adcs-servers/recommended-actions-unmonitored-active-directory-certificate-services-servers.png":::
+    :::image type="content" source="media/unmonitored-adcs-servers/recommended-actions-unmonitored-active-directory-certificate-services-servers.png" alt-text="Screenshot that shows the recommended actions for an unmonitored AD CS server." lightbox="media/unmonitored-adcs-servers/recommended-actions-unmonitored-active-directory-certificate-services-servers.png":::
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
