@@ -12,7 +12,7 @@ ms.reviewer: LiorShapiraa
 
 # Security Assessment: Unmonitored Microsoft Entra Connect servers
 
-This article describes Microsoft Defender for Identity's unmonitored Microsoft Entra Connect servers security posture assessment report. 
+This article describes the Microsoft Defender for Identity's unmonitored Microsoft Entra Connect servers security posture assessment report.
 
 ## What risk do unmonitored Microsoft Entra Connect servers pose to an organization? 
 
