@@ -49,7 +49,7 @@ You can run any query that you already have access to in the multitenant managem
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png":::
 
-When you select multiple tenants, the query runs independently in each tenant, and the combined results are displayed in a single table. For example, the sample query below (`DeviceEvents | take 10`) returns 10 results per tenant, resulting in a total equal to 10 multiplied by the number of tenants selected.
+    When you select multiple tenants, the query runs independently in each tenant, and the combined results are displayed in a single table. For example, the sample query below (`DeviceEvents | take 10`) returns 10 results per tenant, resulting in a total equal to 10 multiplied by the number of tenants selected.
       
 1. When you're done, select **Apply** > **Run query**.
 
