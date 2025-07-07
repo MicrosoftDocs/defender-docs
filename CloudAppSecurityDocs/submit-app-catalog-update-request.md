@@ -31,7 +31,7 @@ You're not the app owner, but you want to help improve the accuracy of the app c
 
 ## Validation and processing timeline
 
-All catalog update requests undergo a thorough validation process to ensure accuracy and relevance. All app catalog requests must meet the following criteria:
+We thoroughly validate all catalog update requests to ensure accuracy and relevance. All app catalog requests must meet these criteria:
 
 - The submitted domain must map to a known application.
 - The app must qualify as a SaaS product.
