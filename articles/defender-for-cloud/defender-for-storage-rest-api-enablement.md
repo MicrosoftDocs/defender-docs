@@ -89,8 +89,8 @@ And add the following request body:
                         "<excluded-blob-name-suffix>.json"
                     ],
                     "excludeBlobsLargerThan": 2147483648
+				}
             },
-			
             "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
