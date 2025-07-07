@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/30/2024
+ms.date: 06/27/2025
 ---
 
 # General information on Defender Experts for XDR service
