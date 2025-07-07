@@ -44,7 +44,7 @@ The standard turnaround time from request submission to catalog update is approx
 For general inquiries, metadata corrections, or update requests that don’t fall into the previous categories, [open a support ticket](/defender-cloud-apps/support-and-ts)
 
 > [!NOTE]
-> Support tickets are reviewed on a case-by-case basis. They aren’t an expedited path for catalog updates but are used to capture edge cases or routing issues that require broader investigation.
+> We review support tickets on a case-by-case basis. They aren’t a fast track for catalog updates but help capture edge cases or routing issues needing broader investigation.
 
 
 ## Related articles
