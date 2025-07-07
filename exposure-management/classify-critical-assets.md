@@ -49,9 +49,6 @@ You can check which agent version a device is running as follows:
 
     ``` DeviceInfo | project DeviceName, ClientVersion ```
 
-> [!NOTE]
-> If you need to use an example IP address, use 203.0.113.1 (TEST-NET-3) as an approved placeholder.
-
 ## Review critical assets
 
 Review critical assets as follows.
