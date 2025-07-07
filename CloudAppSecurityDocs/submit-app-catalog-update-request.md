@@ -22,21 +22,12 @@ If you're a verified app vendor or developer, complete the [Self-Attestation Que
 - If the app isn’t listed in the catalog, you can [add it as a custom app](cloud-discovery-custom-apps.md) in Cloud Discovery to monitor usage in your environment.
 - If the app is listed but its risk score doesn’t reflect your organization’s security posture, you can manually [override the app’s risk score](risk-score.md#override-the-risk-score).
 
-
 ## Nonowners requesting updates
 
 You're not the app owner, but you want to help improve the accuracy of the app catalog:
 
 - You can [request a risk score update](risk-score.md#customize-the-risk-score) for apps in use by your organization.
 - You can [suggest a change to the cloud app catalog](risk-score.md#suggest-a-change-to-the-cloud-app-catalog) if you find a new app in your environment that hasn't been scored by Defender for Cloud Apps, or if you want to request a review for a new risk factor, a score update, or outdated app data.
-
-**All other requests**
-
-For general inquiries, metadata corrections, or update requests that don’t fall into the previous categories, [open a support ticket](/defender-cloud-apps/support-and-ts)
-
-> [!NOTE]
-> Support tickets are reviewed on a case-by-case basis. They aren’t an expedited path for catalog updates but are used to capture edge cases or routing issues that require broader investigation.
-
 
 ## Validation and processing timeline
 
@@ -47,6 +38,13 @@ All catalog update requests undergo a thorough validation process to ensure accu
 - The request must include complete and verifiable information.
 
 The standard turnaround time from request submission to catalog update is approximately three weeks.
+
+## All other requests
+
+For general inquiries, metadata corrections, or update requests that don’t fall into the previous categories, [open a support ticket](/defender-cloud-apps/support-and-ts)
+
+> [!NOTE]
+> Support tickets are reviewed on a case-by-case basis. They aren’t an expedited path for catalog updates but are used to capture edge cases or routing issues that require broader investigation.
 
 
 ## Related articles
