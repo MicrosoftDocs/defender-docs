@@ -121,7 +121,7 @@ Various tools can help you discover the average packet/second counter for your d
 > By default, Defender for Identity supports up to 350 sensors. If you want to install more sensors, contact Defender for Identity support.
 
 > [!IMPORTANT]
-> If your domain controller runs low on available memory, a corresponding health issue will appear in the Defender for Identity portal to alert you of this condition. Learn more about [health issues](/health-alerts.md).
+> If your domain controller runs low on available memory, a corresponding health issue will appear in the Defender for Identity portal to alert you of this condition. Learn more about [health issues](../health-alerts.md).
 
 
 ## Next step
