@@ -1,23 +1,36 @@
 ---
 title: What's new in Microsoft Defender XDR Unified role-based access control (RBAC)
-description: See what features are available in the latest release of Microsoft Defender XDR Unified role-based access control (RBAC)
+description: See what features are available in the latest release of Microsoft Defender XDR unified role-based access control (RBAC)
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security-compliance
   - tier2
 ms.topic: whats-new
-ms.date: 03/02/2025
+ms.date: 07/06/2025
 ---
 
 # What's new in Microsoft Defender XDR Unified role-based access control (RBAC)
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
+
+## August 2025
+
+### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)
+
+Starting in August 2025, Microsoft Sentinel data lake permissions are provided through Microsoft Defender XDR unified RBAC. Support for unified RBAC is available in addition the support provided by global Microsoft Entra ID roles.
+
+For more information, see:
+
+- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
+- [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md)
+- [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md)
+- [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview)
 
 ## March 2025
 
