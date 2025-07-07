@@ -70,14 +70,6 @@ You can run any query that you already have access to in the multitenant managem
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
-### Use adx(x) operator for Azure Data Explorer queries carefully
-
-Consider carefully before using the `adx(x)` operator for queries on multiple tenants. Advanced hunting in the multitenant portal sends each query to each of the selected tenants in parallel. The tenants returns the results, which are then aggregated and sent back to the portal. Using the `adx(x)` operator in your queries effectively queries ADX multiple times, once for each tenant, and the returned and aggregated data might include duplicate information.
-
-We recommend using the `adx(x)` operator with multiple tenants only when you want to join results from each tenant with ADX data. 
-
-For more information, see [Use Microsoft Sentinel functions, saved queries, and custom rules](/defender-xdr/advanced-hunting-defender-use-custom-rules#use-adx-operator-for-azure-data-explorer-queries).
-
 ## Run cross-workspace queries
 
 To run queries across multiple workspaces in the same tenant, use the [workspace( ) expression](/azure/azure-monitor/logs/cross-workspace-query#query-across-log-analytics-workspaces-using-workspace), with the workspace identifier as the argument in your query to refer to a table in a different workspace.
