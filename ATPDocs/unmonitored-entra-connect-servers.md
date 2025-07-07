@@ -16,7 +16,7 @@ This article describes Microsoft Defender for Identity's unmonitored Microsoft E
 
 ## What risk do unmonitored Microsoft Entra Connect servers pose to an organization? 
 
-Unmonitored Microsoft Entra Connect servers (formerly Azure AD Connect) represent a significant security risk in hybrid identity environments. These servers synchronize identities between on-premises Active Directory and Entra ID. As a result, they have the power to introduce, modify, or remove accounts and attributes that directly affect cloud access.
+Unmonitored Microsoft Entra Connect servers (formerly Azure AD Connect) pose a significant security risk in hybrid identity environments. These servers synchronize identities between on-premises Active Directory and Entra ID. They can introduce, modify, or remove accounts and attributes that directly affect cloud access.
 
 If an attacker compromises a Microsoft Entra Connect server, they can inject shadow admins, manipulate group memberships, or sync malicious changes into the cloud without triggering traditional alerts.
 
