@@ -188,7 +188,8 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > For versions older than `101.25032.0000`, the following requirements apply:
 > - RPM package needs: `mde-netfilter` and `pcre`
 > - DEBIAN package needs: `mde-netfilter` and `libpcre3`
-> 
+>
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 > The `mde-netfilter` package also has the following package dependencies:
 > - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
 > - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
