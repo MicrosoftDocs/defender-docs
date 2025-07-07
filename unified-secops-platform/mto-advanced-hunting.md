@@ -49,6 +49,8 @@ You can run any query that you already have access to in the multitenant managem
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png":::
 
+   When selecting multiple tenants, the query is sent to each tenant separately and the results are then gathered and presented to the user in a single table. For example, this means that for the sample query shown below (`DeviceEvents | take 10`), 10 results are returned from each tenant, and the sum total of results are equal to 10 times the number of tenants that you queried.
+      
 1. When you're done, select **Apply** > **Run query**.
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png":::
@@ -67,7 +69,6 @@ You can run any query that you already have access to in the multitenant managem
    | union workspace("WorkpaceA").Usage
    | take 10
    ```
-
 
 > [!NOTE]
 > If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
