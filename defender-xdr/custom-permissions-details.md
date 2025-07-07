@@ -54,7 +54,7 @@ Permissions for managing day-to-day operations and responding to incidents and a
 
 |Permission name|Level|Description|
 |---|---|---|---|
-|Email & collaboration metadata|Read|View email and collaboration data in a hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
+|Email & collaboration metadata|Read|View email and collaboration data in hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
 |Email & collaboration content|Read|View and download email content and attachments.|
 
 ## Security posture – Posture management
@@ -67,12 +67,12 @@ Permissions for managing the organization's security posture and performing vuln
 |Exception handling|Manage|Create security recommendation exceptions and manage active exceptions in Defender Vulnerability Management.|
 |Remediation handling|Manage|Create remediation tickets, submit new requests, and manage remediation activities in Defender Vulnerability Management.|
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
-|Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply to security industry baselines.|
+|Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply with security industry baselines.|
 |Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
 
 ## Authorization and settings
 
-Permissions to manages the security and system settings and to create and assign roles.
+Permissions to manage the security and system settings and to create and assign roles.
 
 |Permission name|Level|Description|
 |---|---|---|
