@@ -85,6 +85,7 @@ The following external package dependencies exist for the mdatp package:
 > - The `mde-netfilter` package also has the following package dependencies:
     - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
     - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-depedency for Debian/Ubuntu.
 
 ## Installation failed
 
