@@ -77,7 +77,6 @@ To start using case management, select **Cases** in the Defender portal to acces
 
 :::image type="content" source="media/cases-overview/cases-queue-view.png" alt-text="Screenshot of the cases queue in the Defender portal.":::
 
-The maximum allowed per tenant is 100,000 cases.
 
 ## Case details
 
@@ -127,8 +126,6 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
-Each case has a threshold of 100 linked incidents.
-
 ### Activity log
 
 Need to write down notes, or that key detection logic to pass along? Create rich text comments and review the audit events in the activity log. Comments are a great place to quickly add information&mdash;including such things as queries, tables, links, and structured content&mdash;to a case.
@@ -144,6 +141,14 @@ Share reports, emails, screenshots, log files, and more, all centralized in the 
 :::image type="content" source="media/cases-overview/case-attachments.png" alt-text="Screenshot of the details of the Attachments tab of a case.":::
 
 To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
+
+## Limitations
+
+Case management in the Defender portal has the following limitations:
+
+- **Case limit:** Up to 100,000 cases per tenant.
+- **Linked incidents:** Up to 100 incidents to each case.
+- **Attachments:** Up to 500 GB of attachments per tenant.
 
 ## Related content
 
