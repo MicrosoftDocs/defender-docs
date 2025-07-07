@@ -18,7 +18,7 @@ This article describes Microsoft Defender for Identity's unmonitored Microsoft E
 
 Unmonitored Microsoft Entra Connect servers (formerly Azure AD Connect) represent a significant security risk in hybrid identity environments. These servers synchronize identities between on-premises Active Directory and Entra ID. As a result, they have the power to introduce, modify, or remove accounts and attributes that directly affect cloud access.
 
-If an attacker compromises a Microsoft Entra Connect server, they can inject shadow admins, manipulate group memberships, or sync malicious changes into the cloud—all without triggering traditional alerts.
+If an attacker compromises a Microsoft Entra Connect server, they can inject shadow admins, manipulate group memberships, or sync malicious changes into the cloud without triggering traditional alerts.
 
 These servers operate at the intersection of on-premises and cloud identity, making them a prime target for privilege escalation and stealthy persistence. Without monitoring, such attacks can go undetected. Deploying Microsoft Defender for Identity version 2.0 sensors on Microsoft Entra Connect servers is critical. These sensors help detect suspicious activity in real time, protect the integrity of your hybrid identity bridge, and prevent full-domain compromise from a single point of failure.
 
