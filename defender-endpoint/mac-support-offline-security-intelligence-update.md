@@ -106,12 +106,12 @@ The mirror server can run any of the following operating systems:
 
 ## Configure the mirror server
 
-Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
+Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed. **Management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment**.
 
-While management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
+While management and ownership of the mirror server lies solely with the customer, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
 
-- <>`python_http_server.sh`: Uses Python 3's built-in HTTP server module to serve files from a specified directory.
-- `caddy_http_server.sh`: Installs and configures the Caddy web server to serve files from a specified directory.
+- [`python_http_server.sh`](#python3): Uses Python 3's built-in HTTP server module to serve files from a specified directory.
+- [`caddy_http_server.sh`](#caddy): Installs and configures the Caddy web server to serve files from a specified directory.
 
 To check that the service is set up correctly after you've set up the server, navigate to "https://localhost:8080".
 
@@ -122,7 +122,7 @@ For production or advanced use cases, refer to the official documentation for ea
 
 Always review and adapt scripts to your environment and security requirements.
 
-**Using Python 3 to set up a basic HTTP file server on macOS**
+<a id="python3"/>**Using Python 3 to set up a basic HTTP file server on macOS**
 
 ```bash
 #!/bin/bash
@@ -150,7 +150,7 @@ python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$FOLDER"
 
 ```
 
-**Using Caddy to set up a basic HTTP file server on macOS**
+<a id="caddy"/>**Using Caddy to set up a basic HTTP file server on macOS**
 
 ```bash
 #!/bin/bash
