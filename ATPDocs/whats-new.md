@@ -23,8 +23,26 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-## June 2025
 
+## July 2025
+
+### New security posture assessments for unmonitored identity servers
+
+Microsoft Defender for Identity now includes three security posture assessments that detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
+
+Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
+
+For more details, see:
+
+[Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
+
+[Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
+
+[Security Assessment: Unmonitored Entra Connect servers](unmonitored-entra-connect-servers.md)
+
+
+
+## June 2025
 
 ### Scoped access by Active Directory domain now supported (Preview)
 
