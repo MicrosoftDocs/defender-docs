@@ -175,4 +175,4 @@ az monitor diagnostic-settings create \
 
 - [Verify your Defender for Containers deployment](defender-for-containers-azure-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
-- [Enable all components via portal](defender-for-containers-aks-enable-all-portal.md)
+- [Enable all components via portal](defender-for-containers-azure-enable-all-portal.md)

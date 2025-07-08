@@ -124,7 +124,7 @@
                 - name: Overview
                   href: defender-for-containers-azure-overview.md
                 - name: Enable all components via portal
-                  href: defender-for-containers-aks-enable-all-portal.md
+                  href: defender-for-containers-azure-enable-all-portal.md
                 - name: Deploy components via portal
                   href: defender-for-containers-azure-deploy-portal.md
                 - name: Deploy components programmatically

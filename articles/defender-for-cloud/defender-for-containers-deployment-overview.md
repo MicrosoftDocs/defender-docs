@@ -28,24 +28,30 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 - Automatic deployment through Azure Policy
 - Registry scanning for Azure Container Registry
 - Runtime protection and threat detection
+- No cross-cloud connector required
 
 ### [Arc-enabled Kubernetes](defender-for-containers-arc-overview.md)
 For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
 - Hybrid cloud security management
 - Support for any CNCF-certified Kubernetes distribution
 - Centralized security through Azure
+- Works with OpenShift, Rancher, Tanzu, and more
 
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
 For Amazon Elastic Kubernetes Service clusters:
 - Multi-cloud security management
 - AWS connector-based deployment
 - Integration with AWS security services
+- ECR vulnerability scanning
+- CloudFormation template deployment
 
 ### [GCP (GKE)](defender-for-containers-gcp-overview.md)
 For Google Kubernetes Engine clusters:
 - Multi-cloud security management
 - GCP connector-based deployment
 - Integration with GCP security services
+- GCR and Artifact Registry scanning
+- Support for GKE Autopilot
 
 ## Common features across all environments
 
@@ -57,9 +63,28 @@ Before deploying Defender for Containers, ensure you have:
 
 [!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
 
+## Deployment options
+
+For each environment, you can choose between:
+
+- **Portal deployment** - Guided experience through Azure portal
+- **Programmatic deployment** - Automation using CLI, API, or Infrastructure as Code
+
+## Key capabilities
+
+- **Vulnerability assessment** - Scan container images for known vulnerabilities
+- **Runtime threat protection** - Detect and prevent threats in running containers
+- **Compliance monitoring** - Assess against security benchmarks
+- **Network security** - Monitor and control container network traffic
+- **Admission control** - Prevent deployment of non-compliant workloads
+
 ## Next steps
 
-- [Deploy Defender for Containers on Azure (AKS)](defender-for-containers-azure-overview.md)
-- [Deploy Defender for Containers on Arc-enabled Kubernetes](defender-for-containers-arc-overview.md)
-- [Deploy Defender for Containers on AWS (EKS)](defender-for-containers-aws-overview.md)
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-overview.md)
+Choose your environment to get started:
+
+- [Deploy on Azure (AKS)](defender-for-containers-azure-overview.md) - For native Azure deployments
+- [Deploy on Arc-enabled Kubernetes](defender-for-containers-arc-overview.md) - For hybrid and on-premises
+- [Deploy on AWS (EKS)](defender-for-containers-aws-overview.md) - For Amazon EKS clusters
+- [Deploy on GCP (GKE)](defender-for-containers-gcp-overview.md) - For Google GKE clusters
+
+For a comparison of features across environments, see [Support matrix for Defender for Containers](support-matrix-defender-for-containers.md).

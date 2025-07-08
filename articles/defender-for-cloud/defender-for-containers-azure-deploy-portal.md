@@ -163,5 +163,5 @@ For more troubleshooting steps, see the [support matrix](support-matrix-defender
 ## Next steps
 
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
-- [Enable all Defender for Containers components via portal](defender-for-containers-aks-enable-all-portal.md)
+- [Enable all Defender for Containers components via portal](defender-for-containers-azure-enable-all-portal.md)
 - [Review security recommendations for AKS](recommendations-reference-container.md)
