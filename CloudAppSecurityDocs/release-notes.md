@@ -28,12 +28,12 @@ To support ongoing security enhancements and maintain service availability, Micr
 
 To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
 
-- Allow outbound traffic on port 443 to the following IP ranges:
+Allow outbound traffic on port 443 to the following IP ranges:
   - `51.54.53.136/29`
   - `51.54.114.160/29`
   - `62.11.173.176/29`
 
-- If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
+If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
 
 Add the following endpoint to your firewall allowlist on port 443:
   - `discoveryresources-cdn-prod.cloudappsecurity.com`
