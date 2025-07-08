@@ -35,19 +35,11 @@ To avoid service disruption, take action by **August 25, 2025**, and update your
 
 - If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
 
-Whitelist the following endpoint on port 443:
+Add the following endpoint to your firewall allowlist on port 443:
   - `discoveryresources-cdn-prod.cloudappsecurity.com`
 
 For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
 
-
-
-As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by [TBD:]
-Ensure the following endpoints are allowed:
-- discoveryresources-cdn-prod.cloudappsecurity.com
-- discoveryresources-cdn-gov.cloudappsecurity.us
-
-For the full list of required outbound IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
 
 ## June 2025
 

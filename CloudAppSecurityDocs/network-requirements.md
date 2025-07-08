@@ -20,7 +20,7 @@ ms.topic: reference
 >
 > If you use Azure service tags for outbound traffic, add the Azure Gov service tag `AzureFrontDoor.MicrosoftSecurity` tag to your firewall allowlist.
 >
-> Whitelist the following endpoint on port 443:
+> Add the following endpoint to your firewall allowlist on port 443:
 > - `discoveryresources-cdn-prod.cloudappsecurity.com`
 >
 > For the full list of required IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
