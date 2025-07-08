@@ -1,7 +1,7 @@
 ---
 title: What is third-party network signal enrichment in Microsoft Defender Experts for XDR?
 ms.reviewer:
-description: This documents describes how incorporating third-party network signals can enrich the Microsoft Defender Experts for XDR service.
+description: This document describes how incorporating third-party network signals can enrich the Microsoft Defender Experts for XDR service.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -42,22 +42,22 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 **Scenario:** A suspicious sign-in attempt is detected on a critical server.
 
 1. **Detection:** Microsoft Defender Experts for Hunting identifies the suspicious sign-in attempt and generates an alert.
-2. **Correlation:** The Open XDR platform correlates this alert with other data, such as unusual network traffic and failed login attempts from the same IP address.
+2. **Correlation:** The Open XDR platform correlates this alert with other data, such as unusual network traffic and failed sign-in attempts from the same IP address.
 3. **Investigation:** Security analysts use the Open XDR platform to investigate the incident, reviewing logs and other data to understand the scope of the threat.
 4. **Response:** Automated response actions are triggered, including isolating the affected server and blocking the malicious IP address.
 
 ## Ingesting third-party network signals for enrichment
 To enable third-party network signals enrichment, you must have a Microsoft Sentinel instance that's onboarded to Microsoft Defender Microsoft. [Learn more about Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
 
-Your Sentinel instance must also haave the following settings and configurations:
+Your Sentinel instance must also have the following settings and configurations:
 
 1.	Data ingestion is enabled, and at least one of the following supported network signals is ingested:
     - Palo Alto Networks (PAN-OS firewall)
     - Zscaler (Zscaler Internet Access and Zscaler Private Access)
     - Fortinet Firewall
-2.	Sentinel built-in data connectors is used to ingest the third-party network signals into the *[CommonSecurityLog](/azure/sentinel/data-source-schema-reference)* table
+2.	Sentinel built-in data connectors are used to ingest the third-party network signals into the *[CommonSecurityLog](/azure/sentinel/data-source-schema-reference)* table.
 3.	Opt-in to Sentinel Research Data Access (RDA) is turned on. It's turned on by default on all Sentinel instances but if it's turned off, in your Azure portal go to **Microsoft Sentinel** > **Configuration** > **Settings** > **How do we use your data?** to turn it on. 
-4.	Azure Lighthouse is configured on the tenant to allow Defender Experts analysts to access the customer’s Sentinel instance.
+4.	[Azure Lighthouse](/azure/lighthouse/overview) is configured on the tenant to allow Defender Experts analysts to access the customer’s Sentinel instance.
 
 
 ### See also
