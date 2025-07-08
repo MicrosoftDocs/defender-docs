@@ -6,7 +6,7 @@ author:                    nic-name
 ms.author:                 noriordan
 manager:                   dolmont
 audience:                  ITPro
-ms.topic:                  article
+ms.topic: concept-article
 ms.date:                   05/30/2022 
 ms.service:                microsoft-365-security
 ms.subservice:             m365d

@@ -6,11 +6,11 @@ ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 06/06/2025
+ms.date: 06/10/2025
 ms.reviewer: pahuijbr, yongrhee
 manager: deniseb
 ms.subservice: ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
@@ -56,8 +56,8 @@ On at least two devices that are experiencing the same issue, obtain the `.cab` 
    
    Where `<version>` is the actual version that starts with `4.18.2xxxx.x`
    
-> [!NOTE]
-> `C:\ProgramData` is a hidden folder. If you don't have a folder that starts with `4.18.2xxxx.x` in `C:\ProgramData\Microsoft\Windows Defender\Platform\`, then you will need to go to `C:\Program Files\Windows Defender\`.
+   > [!NOTE]
+   > `C:\ProgramData` is a hidden folder. If you don't have a folder that starts with `4.18.2xxxx.x` in `C:\ProgramData\Microsoft\Windows Defender\Platform\`, then you will need to go to `C:\Program Files\Windows Defender\`.
 
 1. Type the following command, and then press **Enter**
 
@@ -125,24 +125,6 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
    :::image type="content" source="media/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="Screenshot showing the enabled directory path custom setting." lightbox="media/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 
 5. Select **OK** or **Apply**.
-
-> [!TIP]
-> **Performance tip** Due to various factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are: 
->
-> - Top paths that impact scan time
-> - Top files that impact scan time
-> - Top processes that impact scan time
-> - Top file extensions that impact scan time
-> - Combinations – for example:
->   - top files per extension
->   - top paths per extension
->   - top processes per path
->   - top scans per file
->   - top scans per file per process
->
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
-> See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-
 
 ## See also
 

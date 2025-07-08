@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
 ms.date: 06/06/2025
@@ -40,6 +40,8 @@ Exclusions can be useful to avoid incorrect detections on files or software that
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Supported exclusion scopes
 

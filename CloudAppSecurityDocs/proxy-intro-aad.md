@@ -2,7 +2,7 @@
 title: Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how Microsoft Defender for Cloud Apps provides Conditional Access app control.
 ms.date: 02/29/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Conditional Access app control in Microsoft Defender for Cloud Apps
 
@@ -73,7 +73,7 @@ Apply session and access controls to any interactive single sign-on that uses th
 Additionally, if you're using Microsoft Entra ID apps, apply session and access controls to:
 
 - Any interactive single sign-on that uses the OpenID Connect authentication protocol.
-- Apps hosted on-premises and configured with the [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy).
+- Apps hosted on-premises and configured with the [Microsoft Entra application proxy](/entra/identity/app-proxy/).
 
 Microsoft Entra ID apps are also automatically onboarded for Conditional Access app control, whereas apps that use other IdPs must be [onboarded manually](conditional-access-app-control-how-to-overview.md).
 
