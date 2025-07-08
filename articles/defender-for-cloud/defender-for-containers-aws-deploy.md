@@ -395,6 +395,6 @@ kubectl get pods -n azurepolicy
 
 ## Next steps
 
-- [Verify deployment](defender-for-containers-eks-verify.md)
-- [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
-- [Remove Defender for Containers](defender-for-containers-eks-remove.md)
+- [Verify deployment](defender-for-containers-aws-verify.md)
+- [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
+- [Remove Defender for Containers](defender-for-containers-aws-remove.md)

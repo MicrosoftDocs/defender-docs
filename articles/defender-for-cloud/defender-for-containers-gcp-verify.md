@@ -191,6 +191,6 @@ gcloud artifacts docker images list --repository=REPOSITORY --location=LOCATION
 
 ## Next steps
 
-- [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
-- [Remove Defender for Containers](defender-for-containers-gke-remove.md)
+- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
+- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
 - [Review container security best practices](container-security.md)

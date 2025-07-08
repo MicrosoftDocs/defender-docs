@@ -35,13 +35,13 @@ For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
 - Support for any CNCF-certified Kubernetes distribution
 - Centralized security through Azure
 
-### [AWS (EKS)](defender-for-containers-eks-overview.md)
+### [AWS (EKS)](defender-for-containers-aws-overview.md)
 For Amazon Elastic Kubernetes Service clusters:
 - Multi-cloud security management
 - AWS connector-based deployment
 - Integration with AWS security services
 
-### [GCP (GKE)](defender-for-containers-gke-overview.md)
+### [GCP (GKE)](defender-for-containers-gcp-overview.md)
 For Google Kubernetes Engine clusters:
 - Multi-cloud security management
 - GCP connector-based deployment
@@ -61,5 +61,5 @@ Before deploying Defender for Containers, ensure you have:
 
 - [Deploy Defender for Containers on Azure (AKS)](defender-for-containers-azure-overview.md)
 - [Deploy Defender for Containers on Arc-enabled Kubernetes](defender-for-containers-arc-overview.md)
-- [Deploy Defender for Containers on AWS (EKS)](defender-for-containers-eks-overview.md)
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gke-overview.md)
+- [Deploy Defender for Containers on AWS (EKS)](defender-for-containers-aws-overview.md)
+- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-overview.md)

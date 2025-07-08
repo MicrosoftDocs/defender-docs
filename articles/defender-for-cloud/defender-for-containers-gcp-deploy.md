@@ -222,5 +222,5 @@ kubectl describe pods -n kube-system -l app=microsoft-defender
 
 ## Next steps
 
-- [Verify your Defender for Containers deployment](defender-for-containers-gke-verify.md)
-- [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
+- [Verify your Defender for Containers deployment](defender-for-containers-gcp-verify.md)
+- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)

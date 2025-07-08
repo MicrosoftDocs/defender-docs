@@ -321,5 +321,5 @@ gcloud container clusters update CLUSTER_NAME \
 
 ## Next steps
 
-- [Verify your configuration](defender-for-containers-gke-verify.md)
-- [Remove Defender for Containers](defender-for-containers-gke-remove.md)
+- [Verify your configuration](defender-for-containers-gcp-verify.md)
+- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)

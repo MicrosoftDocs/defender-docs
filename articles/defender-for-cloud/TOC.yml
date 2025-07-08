@@ -154,35 +154,35 @@
             - name: AWS (EKS)
               items:
                 - name: Overview
-                  href: defender-for-containers-eks-overview.md
+                  href: defender-for-containers-aws-overview.md
                 - name: Enable all components via portal
-                  href: defender-for-containers-eks-enable-all-portal.md
+                  href: defender-for-containers-aws-enable-all-portal.md
                 - name: Deploy components via portal
-                  href: defender-for-containers-eks-deploy-portal.md
+                  href: defender-for-containers-aws-deploy-portal.md
                 - name: Deploy components programmatically
-                  href: defender-for-containers-eks-deploy.md
+                  href: defender-for-containers-aws-deploy.md
                 - name: Verify deployment
-                  href: defender-for-containers-eks-verify.md
+                  href: defender-for-containers-aws-verify.md
                 - name: Configure
-                  href: defender-for-containers-eks-configure.md
+                  href: defender-for-containers-aws-configure.md
                 - name: Remove
-                  href: defender-for-containers-eks-remove.md
+                  href: defender-for-containers-aws-remove.md
             - name: GCP (GKE)
               items:
                 - name: Overview
-                  href: defender-for-containers-gke-overview.md
+                  href: defender-for-containers-gcp-overview.md
                 - name: Enable all components via portal
-                  href: defender-for-containers-gke-enable-all-portal.md
+                  href: defender-for-containers-gcp-enable-all-portal.md
                 - name: Deploy components via portal
-                  href: defender-for-containers-gke-deploy-portal.md
+                  href: defender-for-containers-gcp-deploy-portal.md
                 - name: Deploy components programmatically
-                  href: defender-for-containers-gke-deploy.md
+                  href: defender-for-containers-gcp-deploy.md
                 - name: Verify deployment
-                  href: defender-for-containers-gke-verify.md
+                  href: defender-for-containers-gcp-verify.md
                 - name: Configure
-                  href: defender-for-containers-gke-configure.md
+                  href: defender-for-containers-gcp-configure.md
                 - name: Remove
-                  href: defender-for-containers-gke-remove.md
+                  href: defender-for-containers-gcp-remove.md
             - name: Deploy with Helm
               href: deploy-helm.md
             - name: Defender for Containers resources and offboarding

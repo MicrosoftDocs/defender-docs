@@ -367,5 +367,5 @@ az monitor activity-log alert create \
 
 ## Next steps
 
-- [Verify deployment](defender-for-containers-eks-verify.md) - Confirm configuration changes
-- [Remove Defender for Containers](defender-for-containers-eks-remove.md) - If you need to uninstall
+- [Verify deployment](defender-for-containers-aws-verify.md) - Confirm configuration changes
+- [Remove Defender for Containers](defender-for-containers-aws-remove.md) - If you need to uninstall

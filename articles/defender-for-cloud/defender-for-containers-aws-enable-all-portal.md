@@ -195,6 +195,6 @@ If components fail to deploy:
 
 ## Next steps
 
-- [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
-- [Verify deployment](defender-for-containers-eks-verify.md)
-- [Deploy components programmatically](defender-for-containers-eks-deploy.md) - For automation scenarios
+- [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
+- [Verify deployment](defender-for-containers-aws-verify.md)
+- [Deploy components programmatically](defender-for-containers-aws-deploy.md) - For automation scenarios

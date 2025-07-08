@@ -197,7 +197,7 @@ After deployment completes:
 
 1. Verify your GKE clusters appear with security data.
 
-For detailed verification, see [Verify Defender for Containers deployment on GCP (GKE)](defender-for-containers-gke-verify.md).
+For detailed verification, see [Verify Defender for Containers deployment on GCP (GKE)](defender-for-containers-gcp-verify.md).
 
 ## View security alerts
 
@@ -258,6 +258,6 @@ If clusters don't appear:
 
 ## Next steps
 
-- [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
-- [Enable all Defender for Containers components via portal](defender-for-containers-gke-enable-all-portal.md)
+- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
+- [Enable all Defender for Containers components via portal](defender-for-containers-gcp-enable-all-portal.md)
 - [Review GKE security best practices](container-security.md)

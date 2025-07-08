@@ -230,12 +230,12 @@ gcloud container images scan IMAGE_URI
 
 To re-enable Defender for Containers in the future:
 
-1. Follow the deployment guide: [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gke-deploy.md)
+1. Follow the deployment guide: [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-deploy.md)
 2. All security features will be restored
 3. Historical data (if not purged) will remain available
 
 ## Next steps
 
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gke-deploy.md)
-- [Learn about Defender for Containers features](defender-for-containers-gke-overview.md)
+- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-deploy.md)
+- [Learn about Defender for Containers features](defender-for-containers-gcp-overview.md)
 - [Explore alternative security solutions](https://cloud.google.com/security)

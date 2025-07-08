@@ -72,6 +72,6 @@ Additionally for GKE:
 
 ## Next steps
 
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gke-deploy.md)
-- [Verify your Defender for Containers deployment](defender-for-containers-gke-verify.md)
-- [Configure Defender for Containers settings](defender-for-containers-gke-configure.md)
+- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-deploy.md)
+- [Verify your Defender for Containers deployment](defender-for-containers-gcp-verify.md)
+- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)

@@ -327,6 +327,6 @@ To disable Defender for Containers:
 
 ## Next steps
 
-- [Configure advanced settings for GKE](defender-for-containers-gke-configure.md)
+- [Configure advanced settings for GKE](defender-for-containers-gcp-configure.md)
 - [Implement container security best practices](container-security.md)
 - [Investigate runtime protection for Kubernetes](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)

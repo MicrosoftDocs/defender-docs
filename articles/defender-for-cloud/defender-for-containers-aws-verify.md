@@ -294,5 +294,5 @@ az security alert list --resource-group $RG --query "[?contains(resourceId, '$CL
 
 ## Next steps
 
-- [Configure Defender for Containers settings](defender-for-containers-eks-configure.md)
-- [Remove Defender for Containers](defender-for-containers-eks-remove.md) - If you need to uninstall
+- [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
+- [Remove Defender for Containers](defender-for-containers-aws-remove.md) - If you need to uninstall

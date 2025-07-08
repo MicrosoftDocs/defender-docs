@@ -343,5 +343,5 @@ To re-enable Defender for Containers:
 
 ## Next steps
 
-- [Deploy Defender for Containers](defender-for-containers-eks-enable-all-portal.md) - To re-enable protection
-- [Defender for Containers overview](defender-for-containers-eks-overview.md) - Learn about capabilities
+- [Deploy Defender for Containers](defender-for-containers-aws-enable-all-portal.md) - To re-enable protection
+- [Defender for Containers overview](defender-for-containers-aws-overview.md) - Learn about capabilities

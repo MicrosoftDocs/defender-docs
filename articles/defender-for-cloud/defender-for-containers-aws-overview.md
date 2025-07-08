@@ -93,6 +93,6 @@ Defender for Containers pricing is based on:
 
 ## Next steps
 
-- [Enable all components via portal](defender-for-containers-eks-enable-all-portal.md) - Recommended for initial setup
-- [Deploy components via portal](defender-for-containers-eks-deploy-portal.md) - For selective component deployment
-- [Deploy components programmatically](defender-for-containers-eks-deploy.md) - For automation and scale
+- [Enable all components via portal](defender-for-containers-aws-enable-all-portal.md) - Recommended for initial setup
+- [Deploy components via portal](defender-for-containers-aws-deploy-portal.md) - For selective component deployment
+- [Deploy components programmatically](defender-for-containers-aws-deploy.md) - For automation and scale
