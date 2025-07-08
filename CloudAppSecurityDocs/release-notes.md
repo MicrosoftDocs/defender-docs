@@ -20,9 +20,27 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
-## June 2025
+## July 2025
 
-### Firewall configuration update required
+### Updated network requirements for GCC and Gov customers
+
+To support ongoing security enhancements and maintain service availability, Microsoft Defender for Cloud Apps now requires updated firewall configurations for customers in GCC and Gov environments.
+
+To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
+
+- Allow outbound traffic on port 443 to the following IP ranges:
+  - `51.54.53.136/29`
+  - `51.54.114.160/29`
+  - `62.11.173.176/29`
+
+- If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
+
+Whitelist the following endpoint on port 443:
+  - `discoveryresources-cdn-prod.cloudappsecurity.com`
+
+For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
+
+
 
 As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by [TBD:]
 Ensure the following endpoints are allowed:
@@ -30,6 +48,8 @@ Ensure the following endpoints are allowed:
 - discoveryresources-cdn-gov.cloudappsecurity.us
 
 For the full list of required outbound IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
+
+## June 2025
 
 
 ### “Behaviors” data type in Microsoft Defender for Cloud Apps - General Availability

@@ -8,14 +8,22 @@ ms.topic: reference
 # Network requirements
 
 >[!IMPORTANT]
-> As part of ongoing security enhancements in Microsoft Defender for Cloud Apps, you are required to update your firewall allowlist by the 25th of August 2025.
-> Ensure the following endpoints are allowed:
+> **Important notice for GCC and Gov customers**
+> To prevent service disruption in Microsoft Defender for Cloud Apps, take immediate action by August 25, 2025.
+> Update your firewall configuration as follows:
 >
-> - discoveryresources-cdn-prod.cloudappsecurity.com
-> - discoveryresources-cdn-gov.cloudappsecurity.us
+> Allow outbound traffic on port 443 to the following IP ranges:
 >
-> For the full list of required outbound IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
-
+> - `51.54.53.136/29`
+> - `51.54.114.160/29`
+> - `62.11.173.176/29`
+>
+> If you use Azure service tags for outbound traffic, add the Azure Gov service tag `AzureFrontDoor.MicrosoftSecurity` tag to your firewall allowlist.
+>
+> Whitelist the following endpoint on port 443:
+> - `discoveryresources-cdn-prod.cloudappsecurity.com`
+>
+> For the full list of required IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
 
@@ -72,8 +80,8 @@ To use Defender for Cloud Apps in the Microsoft Defender Portal:
       |US3|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
       |EU1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
       |EU2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
-      |Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
-      |GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
+      |Gov US1|13.72.19.4, 52.227.143.223, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|*.us1.portal.cloudappsecurity.us|
+      |GCC| 52.227.23.181, 52.227.180.126, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|*.us1.portal.cloudappsecuritygov.com|
 
       > [!NOTE]
       > For portal access, instead of a wildcard (\*), you can choose to open only your specific tenant URL. For example, based on the screenshot above you can open: `contoso.us.portal.cloudappsecurity.com`. To determine your tenant URL, see the earlier section [View your data center](#view-your-data-center), and look for **API URL**.
@@ -158,8 +166,8 @@ To enable Defender for Cloud Apps to connect to your SIEM, add **outbound port 4
 |US3|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|
 |EU1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|
 |EU2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|
-|Gov US1|13.72.19.4, 52.227.143.223|
-|GCC| 52.227.23.181, 52.227.180.126|
+|Gov US1|13.72.19.4, 52.227.143.223, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29 |
+|GCC| 52.227.23.181, 52.227.180.126, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|
 
 > [!NOTE]
 >
