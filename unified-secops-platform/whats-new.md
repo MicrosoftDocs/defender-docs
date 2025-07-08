@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/01/2025
+ms.date: 07/08/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -21,6 +21,21 @@ ms.topic: concept-article
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
 ## July 2025
+
+- [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
+- [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
+
+### No limit on the number of workspaces you can onboard to the Defender portal
+
+There is no longer any limit to the number of workspaces you can onboard to the Defender portal.
+
+Limitations still apply to the number of workspaces you can include in a Log Analytics query, and in the number of workspaces you can or should include in a scheduled analytics rule. 
+
+For more information, see:
+
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+- [Extend Microsoft Sentinel across workspaces and tenants](/azure/sentinel/extend-sentinel-across-workspaces-tenants)
 
 ### Microsoft Sentinel in the Azure portal to be retired July 2026
 
@@ -193,24 +208,6 @@ Microsoft Sentinel workbooks are now available for viewing directly in the Micro
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
 For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).
-
-## November 2024
-
-- [Microsoft Sentinel availability in Microsoft Defender portal](#microsoft-sentinel-availability-in-microsoft-defender-portal)
-- [Feature availability for Government clouds](#feature-availability-for-government-clouds)
-
-### Microsoft Sentinel availability in Microsoft Defender portal
-
-We previously announced Microsoft Sentinel is generally available in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
-
- - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
- - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-
-### Feature availability for Government clouds
-
-In the Defender portal, all Microsoft Sentinel features that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
-
-For more information, see [Microsoft Sentinel feature support for Azure commercial/other clouds](/azure/sentinel/feature-availability#experience-in-the-defender-portal) and [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov).
 
 ## Related content
 
