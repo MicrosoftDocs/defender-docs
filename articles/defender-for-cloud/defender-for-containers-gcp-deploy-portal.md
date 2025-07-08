@@ -63,6 +63,8 @@ First, connect your GCP project to Microsoft Defender for Cloud:
    - **K8S API access** - Discovers all GKE clusters
    - **Registry access** - Scans GCR/Artifact Registry
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+
 1. Select **Next: Configure access**.
 
 ## Configure GCP permissions
@@ -125,6 +127,26 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 1. Select **Download remediation logic**.
 
 1. Run the generated script on each of your GKE clusters.
+
+### Deploy to specific clusters
+
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for the recommendation **GKE clusters should have Microsoft Defender's extension for Azure Arc installed**.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Google Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-gcp/recommendation-search.png":::
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
+
+1. Select the recommendation to view affected clusters.
+
+1. Select the clusters where you want to deploy the sensor.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-gcp/affected-fix.png":::
+
+1. Select **Fix** to automatically deploy the extension.
+
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Deploy Defender sensor for Azure Arc-enabled clusters using Defender for Cloud's 'Fix' option.":::
 
 ### View connected clusters
 
@@ -258,6 +280,6 @@ If clusters don't appear:
 
 ## Next steps
 
+- [Deploy components programmatically](defender-for-containers-gcp-deploy.md)
+- [Verify deployment](defender-for-containers-gcp-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
-- [Enable all Defender for Containers components via portal](defender-for-containers-gcp-enable-all-portal.md)
-- [Review GKE security best practices](container-security.md)

@@ -55,7 +55,25 @@ Defender for Containers integrates with:
 
 Before enabling Defender for Containers on GKE:
 
-[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
+- An Azure subscription. If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
+- Microsoft Defender for Cloud on your Azure subscription. Learn how to [set up Microsoft Defender for Cloud](get-started.md).
+- Contributor access to the relevant Azure subscription.
+- Contributor permission on the relevant GCP project.
+
+### Network requirements
+
+The Defender sensor requires access to these endpoints:
+
+| Domain | Port | Description |
+|--------|------|-------------|
+| *.ods.opinsights.azure.com | 443 | Log Analytics data ingestion |
+| *.oms.opinsights.azure.com | 443 | Log Analytics communication |
+| *.blob.core.windows.net | 443 | Storage account access |
+| *.servicebus.windows.net | 443 | Event Hub for real-time data |
+| login.microsoftonline.com | 443 | Azure Active Directory authentication |
+| *.security.azure.com | 443 | Defender for Cloud communication |
+
+For Arc-enabled clusters, see [Azure Arc network requirements](/azure/azure-arc/kubernetes/network-requirements).
 
 Additionally for GKE:
 - GKE cluster version 1.19 or later
@@ -72,6 +90,6 @@ Additionally for GKE:
 
 ## Next steps
 
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-deploy.md)
-- [Verify your Defender for Containers deployment](defender-for-containers-gcp-verify.md)
-- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
+- [Enable all components via portal](defender-for-containers-gcp-enable-all-portal.md) - Recommended for initial setup
+- [Deploy components via portal](defender-for-containers-gcp-deploy-portal.md) - For selective component deployment
+- [Deploy components programmatically](defender-for-containers-gcp-deploy.md) - For automation and scale

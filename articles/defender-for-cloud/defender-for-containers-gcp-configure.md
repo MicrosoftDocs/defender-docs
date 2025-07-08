@@ -56,7 +56,7 @@ data:
 
 ## Configure vulnerability scanning
 
-### Advanced GCR/Artifact Registry settings
+### Configure GCR/Artifact Registry scanning
 
 Configure enhanced scanning for Google registries:
 
@@ -64,28 +64,19 @@ Configure enhanced scanning for Google registries:
 # Enable vulnerability scanning for all repositories
 for repo in $(gcloud artifacts repositories list --format="value(name)"); do
     gcloud artifacts repositories update $repo \
-        --enable-vulnerability-scanning
+        --enable-vulnerability-scanning \
+        --location=LOCATION
 done
 
-# Configure scanning policies
-gcloud artifacts repositories set-iam-policy REPOSITORY \
-    policy.json \
-    --location=LOCATION
-```
+# Grant permissions for scanning
+gcloud projects add-iam-policy-binding PROJECT_ID \
+    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/artifactregistry.reader"
 
-Policy example (policy.json):
-
-```json
-{
-  "bindings": [
-    {
-      "role": "roles/artifactregistry.reader",
-      "members": [
-        "serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com"
-      ]
-    }
-  ]
-}
+# Add label to exclude repository
+gcloud artifacts repositories update REPOSITORY_NAME \
+    --location=LOCATION \
+    --update-labels=defender-exclude=true
 ```
 
 ### Configure scan exclusions
@@ -319,7 +310,26 @@ gcloud container clusters update CLUSTER_NAME \
     --logging=SYSTEM,WORKLOAD,API_SERVER
 ```
 
+### Configure Workload Identity
+
+For enhanced security with GKE:
+
+```bash
+# Create Kubernetes service account
+kubectl create serviceaccount defender-sensor -n kube-system
+
+# Bind to GCP service account
+kubectl annotate serviceaccount defender-sensor -n kube-system \
+    iam.gke.io/gcp-service-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
+
+# Create IAM policy binding
+gcloud iam service-accounts add-iam-policy-binding \
+    defender-for-containers@PROJECT_ID.iam.gserviceaccount.com \
+    --role roles/iam.workloadIdentityUser \
+    --member "serviceAccount:PROJECT_ID.svc.id.goog[kube-system/defender-sensor]"
+```
+
 ## Next steps
 
-- [Verify your configuration](defender-for-containers-gcp-verify.md)
-- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
+- [Verify deployment](defender-for-containers-gcp-verify.md) - Confirm configuration changes
+- [Remove Defender for Containers](defender-for-containers-gcp-remove.md) - If you need to uninstall

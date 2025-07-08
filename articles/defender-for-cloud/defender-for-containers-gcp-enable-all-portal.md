@@ -61,7 +61,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot that shows the containers plan is toggled to on." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
+    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-enabled-gcp.png" alt-text="Screenshot showing Containers plan enabled." lightbox="media/tutorial-enable-containers-gcp/containers-enabled-gcp.png":::
 
 1. Select **Settings** to configure the plan components.
 
@@ -129,7 +129,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/recommendation-search.png" alt-text="Screenshot showing how to search for the recommendation." lightbox="media/tutorial-enable-containers-gcp/recommendation-search-expanded.png":::
+    :::image type="content" source="media/tutorial-enable-containers-gcp/relevant-connector.png" alt-text="Screenshot showing how to select the relevant connector." lightbox="media/tutorial-enable-containers-gcp/relevant-connector.png":::
 
 1. Select the recommendation.
 
@@ -151,6 +151,24 @@ gcloud services enable cloudresourcemanager.googleapis.com
 1. Select **Download remediation logic**.
 
 1. Run the generated script on your clusters.
+
+## Connect GKE clusters to Azure Arc
+
+After creating the connector, you need to connect your GKE clusters to Azure Arc:
+
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for the recommendation **GKE clusters should be connected to Azure Arc**.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Google Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-gcp/recommendation-search.png":::
+
+1. Select the recommendation.
+
+1. Select **Fix**.
+
+    :::image type="content" source="media/tutorial-enable-containers-gcp/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-gcp/affected-fix.png":::
+
+1. Follow any additional prompts to complete the connection.
 
 ## Configure container registry scanning
 
@@ -327,6 +345,6 @@ To disable Defender for Containers:
 
 ## Next steps
 
-- [Configure advanced settings for GKE](defender-for-containers-gcp-configure.md)
-- [Implement container security best practices](container-security.md)
-- [Investigate runtime protection for Kubernetes](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
+- [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
+- [Verify deployment](defender-for-containers-gcp-verify.md)
+- [Deploy components programmatically](defender-for-containers-gcp-deploy.md) - For automation scenarios

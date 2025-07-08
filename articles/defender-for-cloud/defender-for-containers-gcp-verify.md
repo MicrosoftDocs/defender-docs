@@ -149,34 +149,6 @@ Check for the alert in Defender for Cloud within 5-10 minutes.
 kubectl exec -n kube-system -it $(kubectl get pods -n kube-system -l app=microsoft-defender -o jsonpath='{.items[0].metadata.name}') -- defender-sensor status
 ```
 
-### Verify runtime threat detection
-
-Test the runtime protection with a simulated threat:
-
-```bash
-# Connect to your GKE cluster
-gcloud container clusters get-credentials CLUSTER_NAME --zone ZONE
-
-# Run a test that triggers an alert
-kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "cat /etc/shadow"
-
-# Check for alerts in Defender for Cloud
-# The alert should appear within 5-10 minutes
-```
-
-### Check vulnerability scanning
-
-```bash
-# List images in GCR
-gcloud container images list
-
-# Check vulnerability scanning status in Artifact Registry
-gcloud artifacts docker images list --repository=REPOSITORY --location=LOCATION
-
-# View scan results in the Azure portal
-# Navigate to Recommendations > "Container images should have vulnerability findings resolved"
-```
-
 ## Configure monitoring
 
 ### Set up alerts
@@ -189,8 +161,17 @@ gcloud artifacts docker images list --repository=REPOSITORY --location=LOCATION
 1. In Azure portal, go to **Microsoft Defender for Cloud** > **Settings** > **Email notifications**.
 2. Configure email notifications for security alerts and recommendations.
 
+## Check extension status in portal
+
+Navigate to your Arc-enabled cluster to see installed extensions:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+
+View detailed extension information:
+
+:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Full details of an Azure Arc extension on a Kubernetes cluster.":::
+
 ## Next steps
 
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
-- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
-- [Review container security best practices](container-security.md)
+- [Remove Defender for Containers](defender-for-containers-gcp-remove.md) - If you need to uninstall

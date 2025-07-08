@@ -67,15 +67,16 @@ gcloud iam service-accounts remove-iam-policy-binding \
     --member "serviceAccount:PROJECT_ID.svc.id.goog[kube-system/defender-sa]"
 ```
 
-## Clean up GCP resources
+## Remove GCP resources
 
-### Remove IAM service account and permissions
+### Delete Service Account
 
 ```bash
-# List IAM policy bindings for the service account
-gcloud projects get-iam-policy PROJECT_ID \
-    --flatten="bindings[].members" \
-    --filter="bindings.members:serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com"
+# List Defender-related service accounts
+gcloud iam service-accounts list --filter="displayName:Defender"
+
+# Delete service account
+gcloud iam service-accounts delete defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
 
 # Remove IAM policy bindings
 gcloud projects remove-iam-policy-binding PROJECT_ID \
@@ -90,40 +91,18 @@ gcloud projects remove-iam-policy-binding PROJECT_ID \
     --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
     --role="roles/cloudasset.viewer"
 
-# Delete the service account
-gcloud iam service-accounts delete \
-    defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
+gcloud projects remove-iam-policy-binding PROJECT_ID \
+    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/artifactregistry.reader"
 ```
 
-### Remove Binary Authorization policies
-
-If you configured Binary Authorization:
+### Remove GKE cluster labels
 
 ```bash
-# Reset to default policy
-cat > default-policy.yaml << EOF
-admissionWhitelistPatterns:
-- namePattern: gcr.io/PROJECT_ID/*
-defaultAdmissionRule:
-  evaluationMode: ALWAYS_ALLOW
-  enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
-EOF
-
-gcloud container binauthz policy import default-policy.yaml
-
-# Delete attestor
-gcloud container binauthz attestors delete defender-attestor
-```
-
-### Clean up logging and monitoring
-
-```bash
-# Delete log sinks
-gcloud logging sinks delete defender-alerts
-
-# Delete notification channels
-gcloud alpha monitoring channels list --filter="displayName:Defender" --format="value(name)" | \
-    xargs -I {} gcloud alpha monitoring channels delete {}
+# Remove exclusion labels if any
+gcloud container clusters update CLUSTER_NAME \
+    --zone ZONE \
+    --remove-labels=ms_defender_container_exclude_agents,ms_defender_container_exclude
 ```
 
 ## Clean up Azure resources
@@ -236,6 +215,5 @@ To re-enable Defender for Containers in the future:
 
 ## Next steps
 
-- [Deploy Defender for Containers on GCP (GKE)](defender-for-containers-gcp-deploy.md)
-- [Learn about Defender for Containers features](defender-for-containers-gcp-overview.md)
-- [Explore alternative security solutions](https://cloud.google.com/security)
+- [Deploy Defender for Containers](defender-for-containers-gcp-enable-all-portal.md) - To re-enable protection
+- [Defender for Containers overview](defender-for-containers-gcp-overview.md) - Learn about capabilities

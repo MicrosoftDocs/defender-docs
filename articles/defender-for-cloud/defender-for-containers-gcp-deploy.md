@@ -63,6 +63,10 @@ This article explains how to enable Microsoft Defender for Containers on your Go
         --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
         --role="roles/cloudasset.viewer"
 
+    gcloud projects add-iam-policy-binding PROJECT_ID \
+        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
+        --role="roles/artifactregistry.reader"
+
     # Create and download key
     gcloud iam service-accounts keys create key.json \
         --iam-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
@@ -130,6 +134,11 @@ kubectl get daemonset -n kube-system | grep defender
 ### Manual deployment
 
 ```bash
+# Get GKE cluster credentials
+gcloud container clusters get-credentials CLUSTER_NAME \
+    --zone ZONE \
+    --project PROJECT_ID
+
 # Download the deployment YAML
 curl -o defender-sensor-gke.yaml https://aka.ms/defender-for-containers-sensor-gke
 
@@ -220,7 +229,73 @@ kubectl logs -n kube-system -l app=microsoft-defender --tail=50
 kubectl describe pods -n kube-system -l app=microsoft-defender
 ```
 
+## Deploy using Infrastructure as Code
+
+### Terraform example
+
+```hcl
+# Configure Defender for Containers on GCP
+resource "azurerm_security_center_subscription_pricing" "containers" {
+  tier          = "Standard"
+  resource_type = "Containers"
+  subplan       = "DefenderForContainersGke"
+}
+
+# Create GCP connector
+resource "azurerm_security_center_gcp_connector" "example" {
+  name                = "example-gcp-connector"
+  resource_group_name = azurerm_resource_group.example.name
+  project_id          = var.gcp_project_id
+  
+  offering {
+    type = "DefenderForContainersGke"
+    
+    kubernetes_service {
+      cloud_role_arn = google_service_account.defender.email
+    }
+    
+    kubernetes_data_collection {
+      cloud_role_arn = google_service_account.defender.email
+    }
+  }
+}
+```
+
+### ARM template deployment
+
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "connectorName": {
+      "type": "string"
+    },
+    "gcpProjectId": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Security/securityConnectors",
+      "apiVersion": "2024-01-01",
+      "name": "[parameters('connectorName')]",
+      "properties": {
+        "hierarchyIdentifier": "[parameters('gcpProjectId')]",
+        "environmentName": "GCP",
+        "offerings": [
+          {
+            "offeringType": "DefenderForContainersGke"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 ## Next steps
 
-- [Verify your Defender for Containers deployment](defender-for-containers-gcp-verify.md)
+- [Verify deployment](defender-for-containers-gcp-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
+- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
