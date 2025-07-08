@@ -29,6 +29,9 @@ appliesto:
 
 Safe Attachments in [Microsoft Defender for Office 365](mdo-about.md) provides an additional layer of protection for email attachments that have already been scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md). Specifically, Safe Attachments uses a virtual environment to check attachments in email messages for harmful attachments (for example, malware, ransomware, and phishing) before they're delivered to recipients (a process known as _detonation_).
 
+> [!TIP]
+> Typically, email attachment scanning completes within 15 minutes. Sometimes, it takes longer due to retry delays and processing time to analyze the file in the virtual environment.
+
 Safe Attachments protection for email messages is controlled by Safe Attachments policies. Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies). For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md). You can also create Safe Attachments policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md).
 
 The following table describes scenarios for Safe Attachments in Microsoft 365 and Office 365 organizations that include Microsoft Defender for Office 365 (in other words, lack of licensing is never an issue in the examples).
