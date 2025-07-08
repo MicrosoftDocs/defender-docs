@@ -106,14 +106,11 @@ The mirror server can run any of the following operating systems:
 
 ## Configure the mirror server
 
-> [!NOTE]
-> The management and ownership of the mirror server lies solely with the customer as it resides in the customer's private environment. The mirror server doesn't need to have Defender for Endpoint installed.
-
 Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
 
 While management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
 
-- `python_http_server.sh`: Uses Python 3's built-in HTTP server module to serve files from a specified directory.
+- <>`python_http_server.sh`: Uses Python 3's built-in HTTP server module to serve files from a specified directory.
 - `caddy_http_server.sh`: Installs and configures the Caddy web server to serve files from a specified directory.
 
 To check that the service is set up correctly after you've set up the server, navigate to "https://localhost:8080".
