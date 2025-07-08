@@ -122,7 +122,8 @@ For production or advanced use cases, refer to the official documentation for ea
 
 Always review and adapt scripts to your environment and security requirements.
 
-<a id="python3"/>**Using Python 3 to set up a basic HTTP file server on macOS**
+<a id="python3"/>
+**Sample script: Setting up a basic HTTP file server on macOS using Python 3**
 
 ```bash
 #!/bin/bash
@@ -150,8 +151,8 @@ python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$FOLDER"
 
 ```
 
-<a id="caddy"/>**Using Caddy to set up a basic HTTP file server on macOS**
-
+<a id="caddy"/>
+**Sample script: Setting up a basic HTTP file server on macOS using using Caddy**
 ```bash
 #!/bin/bash
 # caddy_http_server.sh
