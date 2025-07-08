@@ -9,6 +9,7 @@ ms.topic: reference
 
 >[!IMPORTANT]
 > **Important notice for GCC and Gov customers**
+>
 > To prevent service disruption in Microsoft Defender for Cloud Apps, take immediate action by August 25, 2025.
 > Update your firewall configuration as follows:
 >
