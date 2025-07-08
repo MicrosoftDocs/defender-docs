@@ -142,7 +142,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Select **Fix** to deploy the sensor automatically.
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button.":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot showing the Fix button for deploying the Defender sensor.":::
 
 1. Defender for Cloud generates a script in the language of your choice:
     - For Linux, select **Bash**
@@ -164,9 +164,12 @@ After creating the connector, you need to connect your GKE clusters to Azure Arc
 
 1. Select the recommendation.
 
-1. Select **Fix**.
+1. Select the affected GKE clusters.
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/defender-for-containers-enable-plan-gke/affected-fix.png":::
+1. Select **Fix** to connect the clusters to Azure Arc.
+
+    > [!NOTE]
+    > The Fix button will generate scripts to connect your GKE clusters to Azure Arc. Follow the provided instructions to complete the connection.
 
 1. Follow any additional prompts to complete the connection.
 
