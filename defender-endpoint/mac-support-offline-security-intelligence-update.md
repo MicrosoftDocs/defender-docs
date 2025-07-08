@@ -15,7 +15,7 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/24/2025
+ms.date: 07/14/2025
 ---
 
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
@@ -109,6 +109,112 @@ The mirror server can run any of the following operating systems:
 > [!NOTE]
 > The management and ownership of the mirror server lies solely with the customer as it resides in the customer's private environment. The mirror server doesn't need to have Defender for Endpoint installed.
 
+Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
+
+While management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
+
+- `python_http_server.sh`: Uses Python 3's built-in HTTP server module to serve files from a specified directory.
+- `caddy_http_server.sh`: Installs and configures the Caddy web server to serve files from a specified directory.
+
+To check that the service is set up correctly after you've set up the server, navigate to "https://localhost:8080".
+
+For production or advanced use cases, refer to the official documentation for each server:
+
+- [Python HTTP server documentation](https://docs.python.org/3/library/http.server.html)
+- [Caddy documentation](https://caddyserver.com/docs/)
+
+Always review and adapt scripts to your environment and security requirements.
+
+**Using Python 3 to set up a basic HTTP file server on macOS**
+
+```bash
+#!/bin/bash
+# python_http_server.sh
+# Starts a simple HTTP server using Python 3
+
+# Check for Python 3
+if ! command -v python3 &> /dev/null; then
+  echo "Python 3 is not installed. Please install it first."
+  exit 1
+fi
+
+PORT=8080
+FOLDER="."
+
+if [ ! -z "$1" ]; then
+  PORT=$1
+fi
+if [ ! -z "$2" ]; then
+  FOLDER=$2
+fi
+
+echo "Starting Python HTTP server on port $PORT (localhost only), serving folder: $FOLDER..."
+python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$FOLDER"
+
+```
+
+**Using Caddy to set up a basic HTTP file server on macOS**
+
+```bash
+#!/bin/bash
+# caddy_http_server.sh
+# Installs and configures Caddy HTTP server on macOS
+
+PORT=8080
+FOLDER="."
+
+if [ ! -z "$1" ]; then
+  PORT=$1
+fi
+if [ ! -z "$2" ]; then
+  FOLDER=$2
+fi
+
+check_homebrew() {
+  if ! command -v brew &> /dev/null; then
+    echo "Homebrew is required to install Caddy."
+    read -p "Would you like to install Homebrew? (y/n): " install_brew
+    if [[ "$install_brew" =~ ^[Yy]$ ]]; then
+      echo "Installing Homebrew..."
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      export PATH="/opt/homebrew/bin:$PATH"
+    else
+      echo "Please install Caddy manually and restart this script."
+      exit 1
+    fi
+  fi
+}
+
+install_caddy() {
+  if ! brew list caddy &> /dev/null; then
+    echo "Installing Caddy via Homebrew..."
+    brew install caddy
+  else
+    echo "Caddy is already installed."
+  fi
+}
+
+# Check for Caddy
+if ! command -v caddy &> /dev/null; then
+  echo "Caddy is not installed."
+  check_homebrew
+  install_caddy
+else
+  echo "Caddy is already installed."
+fi
+
+# Create a simple Caddyfile
+cat <<EOL > Caddyfile
+localhost:${PORT} {
+  root * ${FOLDER}
+  file_server browse
+}
+EOL
+
+echo "Caddyfile created. Starting Caddy server on port $PORT..."
+caddy run --config ./Caddyfile
+
+```
 ## Get the offline security intelligence downloader script
 
 Microsoft hosts an offline security intelligence downloader script in the following GitHub repo: https://github.com/microsoft/mdatp-xplat.
