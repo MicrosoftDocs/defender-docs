@@ -2,7 +2,7 @@
 title: Enable Microsoft Defender for Storage using REST API
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using REST API.
 ms.topic: install-set-up-deploy
-ms.date: 08/08/2023
+ms.date: 06/30/2025
 ---
 
 # Enable and configure with REST API
@@ -32,7 +32,8 @@ And add the following request body:
                 "name": "OnUploadMalwareScanning",
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
-                    "CapGBPerMonthPerStorageAccount": "10000"
+                    "CapGBPerMonthPerStorageAccount": "10000",
+					
                 }
             },
             {
@@ -50,7 +51,9 @@ To modify the monthly threshold for malware scanning in your storage accounts, a
 
 If you want to turn off the on-upload malware scanning or Sensitive data threat detection features, you can change the isEnabled value to **False** under Sensitive data discovery.
 
-To disable the entire Defender plan, set the pricingTier property value to **Free** and remove the `subPlan` and extensions properties.
+If you want to turn off the use of blob index tags, you can change the `BlobScanResultsOptions` value to __None__.  If it isn't set, all scan results are published to blob index tags.
+
+To disable the entire Defender plan, set the `pricingTier` property value to **Free** and remove the `subPlan` and extensions properties.
 
 Learn more about [updating Defender plans with the REST API](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) in HTTP, Java, Go, and JavaScript.
 
@@ -60,7 +63,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 
 ```rest
 PUT
-https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2022-12-01-preview
+https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2025-02-01-preview
 
 ```
 
@@ -73,9 +76,22 @@ And add the following request body:
         "malwareScanning": {
             "onUpload": {
                 "isEnabled": true,
-                "capGBPerMonth": 10000
+                "capGBPerMonth": 10000,
+                "filters": {
+                    "excludeBlobsWithPrefix": [
+                        "<excluded-container>/",
+                        "<container>/<excluded-blob-prefix>"
+                        "<excluded-containers-prefix>"
+                    ],
+                    "excludeBlobsWithSuffix": [
+                        ".parquet",
+                        ".tmp",
+                        "<excluded-blob-name-suffix>.json"
+                    ],
+                    "excludeBlobsLargerThan": 2147483648
+				}
             },
-   "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
+            "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
             "isEnabled": true
@@ -88,7 +104,12 @@ And add the following request body:
 
 To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
 
+To have more granular control over on-upload malware scanning and exclude specific containers, blob types, or sizes, use the `filters` property.
+Learn more about the [on-upload malware scanning filters](on-upload-malware-scanning.md).
+
 If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
+
+If you want to turn off the use of blob index tags, you can change the `BlobScanResultsOptions` value to __None__.  If it isn't set, all scan results are published to blob index tags.
 
 To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
@@ -97,7 +118,7 @@ Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/a
 ---
 
 > [!TIP]
-> Malware scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
+> Malware scanning can be configured to send scanning results to: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
 
 Learn more on how to [set up response for malware scanning](defender-for-storage-configure-malware-scan.md) results.
 

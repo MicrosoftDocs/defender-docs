@@ -1,7 +1,7 @@
 ---
 title: Resolve Domain Restricted Sharing policy
 description: Troubleshoot deployment issues for your GCP connector within Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/21/2025
+ms.date: 06/03/2025
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
@@ -20,7 +20,7 @@ This page guides you through the steps to resolve the Domain Restricted Sharing 
 
 - [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
 
-- Access to a GCP project.
+- [A connected GCP project](quickstart-onboard-gcp.md).
 
 - Contributor level permission for the relevant Azure subscription.
 
@@ -47,5 +47,5 @@ The change might take several minutes to propagate. After the change is applied,
 ## Related content
 
 - [Assign access to workload owners](assign-access-to-workload.md).
-- [Troubleshoot your multicloud connectors](troubleshooting-guide.md#troubleshoot-connectors).
+- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
 - Get answers to [common questions](faq-general.yml) about connecting your GCP project.

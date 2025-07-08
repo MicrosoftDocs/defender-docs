@@ -8,7 +8,7 @@ ms.date: 05/18/2025
 
 # Prepare for retirement of the Log Analytics agent
 
-The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is retiring in November 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
+The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [retired in November 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
 
 This article summarizes plans for agent retirement.
 
@@ -341,43 +341,6 @@ Here are 2 sample queries you can use:
     | summarize count() by subAssessmentId, status
     ```
 
-## Prepare Defender for SQL on Machines
-
-You can learn more about the [Defender for SQL Server on machines Log Analytics agent's deprecation plan](upcoming-changes.md#defender-for-sql-server-on-machines).
-
-If you're using the current Log Analytics agent/Azure Monitor agent autoprovisioning process, you should migrate to the new Azure Monitoring Agent for SQL Server on machines autoprovisioning process. The migration process is seamless and provides continuous protection for all machines.
-
-### Migrate to the SQL server-targeted AMA autoprovisioning process
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Search for and select **Microsoft Defender for Cloud**.
-1. In the Defender for Cloud menu, select **Environment settings**.
-1. Select the relevant subscription.
-1. Under the Databases plan, select **Action required**.
-
-   :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/select-action-required.png" alt-text="Screenshot that shows where to select Action required." lightbox="media/prepare-deprecation-log-analytics-mma-agent/select-action-required.png":::
-
-1. In the pop-up window, select **Enable**.
-
-    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/select-enable-sql.png" alt-text="Screenshot that shows selecting enable from popup window." lightbox="media/prepare-deprecation-log-analytics-mma-agent/select-enable-sql.png":::
-
-1. Select **Save**.
-
-Once the SQL server-targeted AMA autoprovisioning process is enabled, you should disable the Log Analytics agent/Azure Monitor agent autoprovisioning process and uninstall the MMA on all SQL servers:
-
-To disable the Log Analytics agent:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Search for and select **Microsoft Defender for Cloud**.
-1. In the Defender for Cloud menu, select **Environment settings**.
-1. Select the relevant subscription.
-1. Under the Database plan, select **Settings**.
-1. Toggle the Log Analytics agent to **Off**.
-
-    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/toggle-log-analytics-off.png" alt-text="Screenshot that shows toggling Log Analytics to Off." lightbox="media/prepare-deprecation-log-analytics-mma-agent/toggle-log-analytics-off.png":::
-
-1. Select **Continue**.
-1. Select **Save**.
 
 ## Migration planning
 

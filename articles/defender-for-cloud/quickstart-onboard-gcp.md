@@ -2,7 +2,7 @@
 title: Connect your GCP project
 description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
 ms.topic: install-set-up-deploy
-ms.date: 01/29/2025
+ms.date: 06/18/2025
 ---
 
 # Connect your GCP project to Microsoft Defender for Cloud
@@ -332,7 +332,7 @@ To view all the active recommendations for your resources by resource type, use 
 :::image type="content" source="./media/quickstart-onboard-gcp/gcp-resource-types-in-inventory.png" alt-text="Screenshot of GCP options in the asset inventory page's resource type filter." lightbox="media/quickstart-onboard-gcp/gcp-resource-types-in-inventory.png":::
 
 > [!NOTE]
-> As the Log Analytics agent (also known as MMA) is set to retire in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
+> As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 ## Integrate with Microsoft Defender XDR
 
@@ -349,5 +349,6 @@ Connecting your GCP project is part of the multicloud experience available in Mi
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
 - Set up your [on-premises machines](quickstart-onboard-machines.md) and [AWS account](quickstart-onboard-aws.md).
-- [Troubleshoot your multicloud connectors](troubleshooting-guide.md#troubleshoot-connectors).
+- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
+- [Resolve Domain Restricted Sharing policy](resolve-gcp-sharing-policy.md).
 - Get answers to [common questions](faq-general.yml) about connecting your GCP project.

@@ -34,6 +34,48 @@ Read this blog to learn how to [protect Your Azure Key Vault and why Azure role 
 
 **Type**: Control plane
 
+### Key Vault secrets should have an expiration date
+
+**Description**: Secrets should have a defined expiration date and not be permanent. Secrets that are valid forever provide a potential attacker with more time to compromise them. It is a recommended security practice to set expiration dates on secrets. (Related policy: [Key Vault secrets should have an expiration date](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F98728c90-32c7-4049-8429-847dc0f4fe37)).
+
+**Severity**: High
+
+**Type**: Control plane
+
+### Key Vault keys should have an expiration date
+
+**Description**: Cryptographic keys should have a defined expiration date and not be permanent. Keys that are valid forever provide a potential attacker with more time to compromise the key. It is a recommended security practice to set expiration dates on cryptographic keys. (Related policy: [Key Vault keys should have an expiration date](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F152b15f7-8e1f-4c1f-ab71-8c010ba5dbc0)).
+
+**Severity**: High
+
+**Type**: Control plane
+
+### Key vaults should have soft delete enabled
+
+**Description**: Deleting a key vault without soft delete enabled permanently deletes all secrets, keys, and certificates stored in the key vault. Accidental deletion of a key vault can lead to permanent data loss. Soft delete allows you to recover an accidentally deleted key vault for a configurable retention period. (Related policy: [Key vaults should have soft delete enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d)).
+
+**Severity**: High
+
+**Type**: Control plane
+
+### Azure Key Vault should have firewall enabled or public network access disabled
+
+**Description**: Enable the key vault firewall so that the key vault is not accessible by default to any public IPs or disable public network access for your key vault so that it's not accessible over the public internet. Optionally, you can configure specific IP ranges to limit access to those networks. 
+
+Learn more at: [Network security for Azure Key Vault](/azure/key-vault/general/network-security) and [https://aka.ms/akvprivatelink](https://aka.ms/akvprivatelink). (Related policy: [Azure Key Vault should have firewall enabled or public network access disabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F55615ac9-af46-4a59-874e-391cc3dfb490)).
+
+**Severity**: Medium
+
+**Type**: Control plane
+
+### Azure Key Vaults should use private link
+
+**Description**: Azure Private Link lets you connect your virtual networks to Azure services without a public IP address at the source or destination. The Private Link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to key vault, you can reduce data leakage risks. Learn more about private links at: [[https://aka.ms/akvprivatelink](https://aka.ms/akvprivatelink).] (Related policy: [Azure Key Vaults should use private link](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailAdaptor.ReactView/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa6abeaec-4d90-4a02-805f-6b26c4d3fbe9)).
+
+**Severity**: Medium
+
+**Type**: Control plane
+
 ## Related content
 
 - [Learn about security recommendations](security-policy-concept.md)

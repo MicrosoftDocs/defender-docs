@@ -15,6 +15,9 @@ The following screenshot shows AWS accounts displayed in the Defender for Cloud 
 
 You can learn more by watching the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
 
+> [!NOTE]
+> If you have an AWS account that is connected to Microsoft Sentinel, you can't connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+
 ## AWS authentication process
 
 Defender for Cloud and AWS use federated authentication. All resources related to authentication are created as part of the CloudFormation template deployment, including:
@@ -139,7 +142,7 @@ Make sure the selected Log Analytics workspace has a security solution installed
 [Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
 
 > [!NOTE]
-> As the Log Analytics agent (also known as MMA) is set to retire in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
+> As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 Defender for Servers assigns tags to your Azure ARC resources on top of your EC2 instances to manage the autoprovisioning process. You must have these tags properly assigned to your resources so that Defender for Cloud can manage them: `AccountId`, `Cloud`, `InstanceId`, and `MDFCSecurityConnector`.
 
@@ -328,4 +331,4 @@ Connecting your AWS account is part of the multicloud experience available in Mi
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
 - Set up your [on-premises machines](quickstart-onboard-machines.md) and [GCP projects](quickstart-onboard-gcp.md).
 - Get answers to [common questions](faq-general.yml) about onboarding your AWS account.
-- [Troubleshoot your multicloud connectors](troubleshooting-guide.md#troubleshoot-connectors).
+- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
