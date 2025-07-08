@@ -142,7 +142,8 @@ First, connect your GCP project to Microsoft Defender for Cloud:
 
 1. Select the clusters where you want to deploy the sensor.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-gcp/affected-fix.png":::
+    > [!NOTE]
+    > Select the clusters by clicking anywhere in the row except the cluster name hyperlink.
 
 1. Select **Fix** to automatically deploy the extension.
 

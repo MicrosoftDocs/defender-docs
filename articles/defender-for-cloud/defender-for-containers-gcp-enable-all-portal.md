@@ -61,7 +61,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-enabled-gcp.png" alt-text="Screenshot showing Containers plan enabled." lightbox="media/tutorial-enable-containers-gcp/containers-enabled-gcp.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-on.png" alt-text="Screenshot showing Containers plan enabled.":::
 
 1. Select **Settings** to configure the plan components.
 
@@ -142,7 +142,7 @@ gcloud services enable cloudresourcemanager.googleapis.com
 
 1. Select **Fix** to deploy the sensor automatically.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/fix-button.png" alt-text="Screenshot showing the location of the fix button.":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button.":::
 
 1. Defender for Cloud generates a script in the language of your choice:
     - For Linux, select **Bash**
@@ -166,7 +166,7 @@ After creating the connector, you need to connect your GKE clusters to Azure Arc
 
 1. Select **Fix**.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-gcp/affected-fix.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/defender-for-containers-enable-plan-gke/affected-fix.png":::
 
 1. Follow any additional prompts to complete the connection.
 
