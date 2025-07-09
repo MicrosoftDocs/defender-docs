@@ -102,7 +102,7 @@ Set your kubeconfig context to the target cluster, and run the script with the c
 install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
 ```
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the defender for containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
 For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
 - Set up a security connector for your AWS or GCP account
@@ -169,29 +169,25 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --reuse-values
 ```
 
-## Security Rules for Gated Deployment
+## Security rules for gated deployment
 
 You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
 
-**Accessing Security Rules**
+### Accessing security rules
 
-1.   Navigate to the __Microsoft Defender for Cloud (MDC) Dashboard__
+1. Navigate to the __Microsoft Defender for Cloud (MDC) Dashboard__.
+1. In the left navigation pane, select __Environment settings__.
+1. Click on the __Security rules__ tile.
 
-2.   In the left navigation pane, select __Environment settings__
+### Configuring vulnerability assessment rules
 
-3.   Click on the __Security rules__ tile
+1. Within the Security rules page, navigate to __Vulnerability assessment__ under the __Gated deployment__ section.
+1. Create or edit your security rules as needed.
 
-**Configuring Vulnerability Assessment Rules**
-
-1.      Within the Security rules page, navigate to __Vulnerability assessment__ under the __Gated deployment__ section
-
-2.      Create or edit your security rules as needed
-
-Important Notes for Helm Installations
-
-·       __Subscription Support Warning__: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
-
-·       __Skip Auto-Installation__: If prompted to enable gating in the third tab of the security rule edit window, make sure to press __Skip__. This option enables auto-installation, which conflicts with your existing Helm deployment.
+> [!IMPORTANT]
+> For Helm Installations:
+> - __Subscription Support Warning__: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+> - __Skip Auto-Installation__: If prompted to enable gating in the third tab of the security rule edit window, make sure to press __Skip__. This option enables auto-installation, which conflicts with your existing Helm deployment.
 
 ![User's image](media/deploy-helm/image.png)
 
