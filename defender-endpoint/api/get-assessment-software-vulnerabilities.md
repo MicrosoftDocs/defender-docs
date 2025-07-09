@@ -31,9 +31,7 @@ ms.date: 07/09/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-Returns all known software vulnerabilities and their details for all devices, on a per-device basis.
-
-Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
+The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 
 1. [Export software vulnerabilities assessment: **JSON response**](#1-export-software-vulnerabilities-assessment-json-response)  The API pulls all data in your organization as Json responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
@@ -116,7 +114,6 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 |SoftwareVendor|String|Name of the software vendor.|Google|
 |SoftwareVersion|String|Version number of the software product.|81.0.4044.138|
 |VulnerabilitySeverityLevel|String|Severity level assigned to the security vulnerability based on the CVSS score.|Medium|
-|||||
 
 ### 1.6 Examples
 
@@ -299,19 +296,13 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 > - The files are GZIP compressed & in multiline JSON format.
 > - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
->
 > - Each record is 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
 > - Some extra columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
-
-<br>
-
-****
 
 Property (ID)|Data type|Description|Example of a returned value
 :---|:---|:---|:---
 Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
 GeneratedTime|String|The time that the export was generated.|2021-05-20T08:00:00Z
-|
 
 ### 2.6 Examples
 
@@ -394,10 +385,6 @@ Each returned record contains all the data from the full export software vulnera
 > - Some other columns might be returned in the response. These columns are temporary and might be removed so use only the documented columns.
 > - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output isn't necessarily returned in the same order listed in this table.
 
-<br>
-
-****
-
 |Property (ID)|Data type|Description|Example of returned value|
 |:---|:---|:---|:---|
 |CveId |String|Unique identifier assigned to the security vulnerability under the Common Vulnerabilities and Exposures (CVE) system.|CVE-2020-15992|
@@ -422,7 +409,6 @@ Each returned record contains all the data from the full export software vulnera
 |SoftwareVersion|String|Version number of the software product.|81.0.4044.138|
 |Status|String|**New** (for a new vulnerability introduced on a device)  (1) **Fixed** (if this vulnerability doesn't exist anymore on the device, which means it was remediated). (2) **Updated** (if a vulnerability on a device changed. The possible changes are: CVSS score, exploitability level, severity level, DiskPaths, RegistryPaths, RecommendedSecurityUpdate). |Fixed|
 |VulnerabilitySeverityLevel|String|Severity level that is assigned to the security vulnerability and is based on the CVSS score.|Medium|
-|||||
 
 #### Clarifications
 
@@ -599,10 +585,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 - [Export assessment methods and properties per device](get-assessment-methods-properties.md)
 - [Export secure configuration assessment per device](get-assessment-secure-config.md)
 - [Export software inventory assessment per device](get-assessment-software-inventory.md)
-
-Other related
-
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
