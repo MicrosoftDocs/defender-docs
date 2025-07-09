@@ -79,22 +79,27 @@
     - name: Investigate and respond to threats
       items:
       - name: Overview
-        href: incidents-overview.md
+        href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Investigate incidents
+      - name: Investigate and respond to incidents
         items:
-        - name: Incidents
+        - name: Plan incident response
+          href: /unified-secops-platform/plan-incident-response
+        - name: Investigate incidents  
           href: investigate-incidents.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
+        - name: Merge incidents manually
+          href: merge-incidents-manually.md
         - name: Alerts
+        - name: Investigate alerts
           href: investigate-alerts.md
-        - name: Entity pages
+        - name: Investigate entity pages
           items:
           - name: User
             href: investigate-users.md
@@ -109,7 +114,9 @@
         - name: Investigate and respond to container threats
           href: investigate-respond-container-threats.md
         - name: Investigate insider risk threats
-          href: irm-investigate-alerts-defender.md                         
+          href: irm-investigate-alerts-defender.md
+        - name: Create data security investigations
+          href: create-dsi-in-defender.md                                    
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -286,6 +293,8 @@
             href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
           - name: DeviceTvmSoftwareVulnerabilitiesKB
             href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+          - name: DisruptionAndResponseEvents
+            href: advanced-hunting-disruptionandresponseevents-table.md            
           - name: EmailAttachmentInfo
             href: advanced-hunting-emailattachmentinfo-table.md
           - name: EmailEvents
@@ -308,14 +317,24 @@
             href: advanced-hunting-identitylogonevents-table.md
           - name: IdentityQueryEvents
             href: advanced-hunting-identityqueryevents-table.md
+          - name: MessageEvents
+            href: advanced-hunting-messageevents-table.md
+          - name: MessagePostDeliveryEvents
+            href: advanced-hunting-messagepostdeliveryevents-table.md
+          - name: MessageUrlInfo
+            href: advanced-hunting-messageurlinfo-table.md                                    
+          - name: OAuthAppInfo
+            href: advanced-hunting-oauthappinfo-table.md            
           - name: UrlClickEvents
             href: advanced-hunting-urlclickevents-table.md
         - name: Custom detections
           items:
           - name: Custom detections overview
             href: custom-detections-overview.md
-          - name: Create & manage detection rules
+          - name: Create detection rules
             href: custom-detection-rules.md
+          - name: Manage detection rules
+            href: custom-detection-manage.md            
         - name: Take action on query results
           href: advanced-hunting-take-action.md
         - name: Link query results to an incident
@@ -408,6 +427,12 @@
           href: advanced-hunting-security-copilot.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
+        - name: Security Copilot agents in Microsoft Defender
+          items:
+          - name: Overview
+            href: security-copilot-agents-defender.md          
+          - name: Phishing Triage Agent
+            href: phishing-triage-agent.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -483,7 +508,9 @@
         - name: Troubleshoot service issues
           href: troubleshoot.md
         - name: Create Custom Defender XDR reports
-          href: defender-xdr-custom-reports.md                        
+          href: defender-xdr-custom-reports.md
+        - name: Visualize impact with the unified security summary
+          href: security-summary-report.md                                   
         - name: Microsoft Defender XDR APIs
           items:
             - name: Overview

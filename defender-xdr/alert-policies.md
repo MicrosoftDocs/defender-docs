@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 alert policies"
+title: Alert policies in the Microsoft Defender portal
 f1.keywords:
 - NOCSH
 ms.author: diannegali
@@ -23,7 +23,7 @@ ms.custom:
 description: "Create alert policies in the Microsoft Defender portal to monitor potential threats."
 ---
 
-# Alert policies in Microsoft 365
+# Alert policies in the Microsoft Defender portal
 
 You can use alert policies and the alerts dashboard in the Microsoft Defender portal to create alert policies and then view the alerts that are generated when users perform activities that match the conditions of an alert policy. There are several default alert policies that help you monitor activities, such as assigning admin privileges in Exchange Online, malware attacks, phishing campaigns, and unusual levels of file deletions or external sharing.
 
@@ -96,7 +96,7 @@ You can also define user tags as a condition of an alert policy. This definition
 - **When the alert is triggered**. You can configure a setting that defines how often an activity can occur before an alert is triggered. This allows you to set up a policy to generate an alert every time an activity matches the policy conditions, when a certain threshold is exceeded, or when the occurrence of the activity the alert is tracking becomes unusual for your organization.
 
     ![Configure how alerts are triggered, based on when the activity occurs, a threshold, or unusual activity for your organization.](media/howalertsaretriggered.png)
-
+  
     If you select the setting based on unusual activity, Microsoft establishes a baseline value that defines the normal frequency for the selected activity. It takes up to seven days to establish this baseline, during which alerts aren't generated. After the baseline is established, an alert is triggered when the frequency of the activity tracked by the alert policy greatly exceeds the baseline value. For auditing-related activities (such as file and folder activities), you can establish a baseline based on a single user or based on all users in your organization; for malware-related activities, you can establish a baseline based on a single malware family, a single recipient, or all messages in your organization.
 
     > [!NOTE]
@@ -344,4 +344,12 @@ Here are some tasks you can perform to manage alerts.
   - The name (and link) of the corresponding alert policy.
   - The incident where the alert is aggregated.
 
-- [**Tune an alert**](investigate-alerts.md#tune-an-alert): You can set properties, conditions, and actions to hide or resolve an alert.
+- **[Tune an alert](investigate-alerts.md#tune-an-alert)**: You can set properties, conditions, and actions to hide or resolve an alert.
+- **Change the severity level for an alert policy**
+
+   1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) using credentials for an administrator account in your Microsoft 365 organization.
+   2. Navigate to **Email & Collaboration > Policies & rules** page, then select **Alerts policy**.
+   3. Select the policy you want to update from the list. In the **Actions** column, select the three dots then select **Edit**.
+   4. In the **Edit Policy** pane, select the dropdown menu to adjust the **Severity** level. If applicable, you can also modify the **Trigger settings** for the policy.
+   5. Select **Next** to proceed to rest of the steps.
+   6. Select **Submit** to apply the new changes to the policy, then select **Done** to finish editing.

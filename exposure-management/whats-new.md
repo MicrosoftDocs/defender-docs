@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/16/2025
+ms.date: 05/26/2025
 
 ---
 
@@ -23,6 +23,25 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## May 2025
+
+### Enhanced External Attack Surface Management integration with Exposure Management
+
+This new integration allows you to incorporate detailed external attack surface data from Microsoft Defender External Attack Surface Management (MDEASM) into Exposure Management. This provides a comprehensive risk overview directly within the External Attack Surface initiative page, helping to identify and reduce external exposures more effectively. Additionally, it supports graph exploration, enabling users to analyze relationships between assets and vulnerabilities seamlessly.
+
+For more information, see [External attack surface management initiative](external-attack-surface-management-initiative.md).
+
+### Enhanced support for device groups scoping
+
+The device groups scoping within Exposure Management has been expanded. This update enhances the existing capability to filter the list of affected devices based on your assigned scope by extending it to security metrics and exposed entities in recommendations. With this enhancement, initiative scores, metric progress, security events, and historical insights will now be calculated and displayed according to your specific user scope. As a result, the data presented, including on the Overview page, will be tailored to align with your designated scope.
+
+We will also support the device groups filter, which is already available in Microsoft Defender Vulnerability Management experiences. This filter enables end users to refine their view within their access scope, allowing them to focus on specific devices as needed. Once the filter is adjusted based on the user’s selection, all related data will be refreshed accordingly.
+
+> [!NOTE]
+> The device groups scoping capability applies only to data associated with Endpoint devices.
+
+For more information, see [Review security initiatives](initiatives.md)
 
 ## March 2025
 
@@ -81,9 +100,9 @@ The following predefined classification rules were added to the critical assets 
 
 For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
-### New documentation library for Microsoft's unified security operations platform
+### New documentation library for unified security operations in the Microsoft Defender portal
 
-Find centralized documentation about [Microsoft's unified SecOps platform in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). Microsoft's unified SecOps platform brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. Learn about the features and functionality available with Microsoft's unified SecOps platform, then start to plan your deployment.
+Find centralized documentation about [unified security operations in the Microsoft Defender portal](/unified-secops-platform/overview-unified-security). The Defender portal brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, Microsoft Security Exposure Management, and generative AI. Learn about the features and functionality available for unified security operations, and then start to plan your deployment.
 
 ## November 2024
 

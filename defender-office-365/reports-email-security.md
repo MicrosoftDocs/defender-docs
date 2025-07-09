@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 02/24/2025
+ms.date: 06/19/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -112,11 +112,16 @@ On the **Compromised users** page, the :::image type="icon" source="media/m365-c
 The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Exchange Online Protection (EOP) or Defender for Microsoft 365.
 
 > [!TIP]
-> If a message is sent to five recipients, we count it as five different messages, not one message.
+> - If a message is sent to five recipients, we count it as five different messages, not one message.
 >
-> The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
+> - The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
 >
-> The aggregate message count in the Mailflow status report could also be more than the message count in Threat Explorer or Real-time detections due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity. ZAP removes messages from mailboxes after delivery, so ZAP activity doesn't affect message counts in the Mailflow status report. ZAP activity does affect message counts in Threat Explorer or Real-time detections. In Defender for Office 365, use the [Post-delivery activities report](reports-defender-for-office-365.md#post-delivery-activities-report) to understand the lifecycle of ZAP on messages in the organization.
+> - The aggregate message count in the Mailflow status report could also be more than the message count in the following locations due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity:
+>   - Threat Explorer or Real-time detections.
+>   - The details table of the Threat protection status report.
+>   - The output of the [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) or [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) cmdlets in Exchange Online PowerShell.
+>
+>   ZAP removes messages from mailboxes after delivery, so ZAP activity doesn't affect message counts in the Mailflow status report. ZAP activity does affect message counts in Threat Explorer or Real-time detections. In Defender for Office 365, use the [Post-delivery activities report](reports-defender-for-office-365.md#post-delivery-activities-report) to understand the lifecycle of ZAP on messages in the organization.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Mailflow status summary**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/mailflowStatusReport>.
 
@@ -484,6 +489,7 @@ In the **View data by Email \> Phish** and **Chart breakdown by Detection Techno
 - **Impersonation brand**: Sender impersonation of well-known brands.
 - **Impersonation domain**<sup>\*</sup>: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 - **Impersonation user**<sup>\*</sup>: Impersonation of protected senders that you specified in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) or learned through mailbox intelligence.
+- **LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.
 - **Mailbox intelligence impersonation**<sup>\*</sup>: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 - **Mixed analysis detection**: Multiple filters contributed to the message verdict.
 - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).
@@ -618,14 +624,14 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 
 In the **View data by Email \> Malware** and **Chart breakdown by Detection Technology** view, the following information is shown in the chart:
 
+- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware.
+- **Campaign**<sup>\*</sup>: Messages identified as part of a [campaign](campaigns.md).
 - **File detonation**<sup>\*</sup>: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.
 - **File detonation reputation**<sup>\*</sup>: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.
 - **File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.
-- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware.
-- **URL malicious reputation**
 - **URL detonation**<sup>\*</sup>: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.
 - **URL detonation reputation**<sup>\*</sup>: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.
-- **Campaign**<sup>\*</sup>: Messages identified as part of a [campaign](campaigns.md).
+- **URL malicious reputation**
 
 <sup>\*</sup> Defender for Office 365 only
 

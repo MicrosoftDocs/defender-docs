@@ -5,9 +5,9 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 01/16/2025
+ms.date: 06/19/2025
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.service: defender-office-365
 ms.localizationpriority: medium
 ms.collection:
@@ -99,6 +99,8 @@ The details pane on the left side of the page contains collapsible sections with
     - **Impersonation brand**: Sender impersonation of well-known brands.
     - **Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
     - **Impersonation user**: Impersonation of protected senders that you specified in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) or learned through mailbox intelligence.
+    - **LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.
+    - **Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.
     - **Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
     - **Mixed analysis detection**: Multiple filters contributed to the message verdict.
     - **Spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).

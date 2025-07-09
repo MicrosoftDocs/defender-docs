@@ -1,7 +1,7 @@
 ---
 title: Protect your Google Cloud Platform environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Cloud Platform app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 03/04/2025
 ms.topic: how-to
 ---
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
@@ -47,7 +47,8 @@ For more information about remediating threats from apps, see [Governing connect
 
 ## Protect GCP in real time
 
-Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
+Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [
+blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
 ## Connect Google Cloud Platform to Microsoft Defender for Cloud Apps
 
@@ -166,8 +167,6 @@ This procedure describes how to add the GCP connection details to connect Google
     **For an existing connector**
 
     1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
-
-        ![Screenshot of the Connected Apps page, showing edit Security Auditing link.](media/connect-gcp-app-edit-audit.png)
 
     1. In the **Enter details** page, do the following, and then select **Submit**.
         1. In the **Organization ID** box, enter the organization you made a note of earlier.

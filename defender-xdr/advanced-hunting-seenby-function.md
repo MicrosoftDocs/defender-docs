@@ -17,8 +17,11 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/29/2022
+ms.date: 03/28/2025
 ---
 
 # SeenBy()
@@ -26,8 +29,7 @@ ms.date: 03/29/2022
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 The `SeenBy()` function is invoked to see a list of onboarded devices that have seen a certain device using the device discovery feature.
 
@@ -37,6 +39,7 @@ This function returns a table that has the following column:
 |------------|---------------|-------------|
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 
+Up to 1,000 results are returned. 
 
 ## Syntax
 
@@ -47,7 +50,7 @@ invoke SeenBy(x)
 - where **x** is the device ID of interest
 
 > [!TIP]
-> Enrichment functions will show supplemental information only when they are available. Availability of information is varied and depends on a lot of factors. Make sure to consider this when using SeenBy() in your queries or in creating custom detections. For best results, we recommend using the SeenBy() function with the DeviceInfo table.
+> Enrichment functions show supplemental information only when they're available. Availability of information is varied and depends on many factors. Make sure to consider this when using SeenBy() in your queries or in creating custom detections. For best results, we recommend using the SeenBy() function with the DeviceInfo table.
 
 ### Example: Obtain list of onboarded devices that have seen a device
 
@@ -57,7 +60,7 @@ DeviceInfo
 | limit 100 | invoke SeenBy()
 ```
 
-## Related topics
+## Related articles
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)

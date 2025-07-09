@@ -3,17 +3,17 @@ title: Configure alert notifications that are sent to MSSPs
 description: Configure alert notifications that are sent to MSSPs
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/26/2025
 ---
 
 # Configure alert notifications that are sent to MSSPs

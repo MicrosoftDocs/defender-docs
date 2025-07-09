@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 03/02/2025
+  ms.date: 05/21/2025
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -29,7 +29,7 @@ summary: |
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
-  This article provides frequently asked questions and answers about quarantined email messages for Microsoft 365 organizations with mailboxes in Exchange Online, or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes.
+  This article provides frequently asked questions (FAQ) and answers about quarantined email messages for Microsoft 365 organizations with mailboxes in Exchange Online, or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes.
 
   > [!NOTE]
   > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
@@ -116,6 +116,8 @@ sections:
 
           By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
 
+          If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue. 
+
           > [!TIP]
           > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
 
@@ -133,7 +135,7 @@ sections:
 
             If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off. Forced release might cause messages to be released multiple times.
 
-            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine has not occurred.
+            You receive an error if you try to bulk release multiple messages to all recipients and a recipient-level message delete was done on any of the messages. The admin needs to release that specific message only to the recipient where delete from quarantine hasn't occurred.
 
           - Inbox rules ([created by users in Outlook](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) or by admins using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
 
@@ -249,7 +251,9 @@ sections:
         answer: |
           See the permissions entry [here](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin).
 
-          > [!TIP]
+          > [!NOTE]
+          > Currently, roles assigned through Azure Privileged Identity Management aren't supported in quarantine. For more information about PIM, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](/defender-office-365/pim-in-mdo-configure).
+          >
           > The ability to manage quarantined messages using [Exchange Online permissions](/exchange/permissions-exo/permissions-exo) ended in February 2023 per MC447339.
           >
           > Guest admins from other organizations can't manage quarantined messages. The admin needs to be in the same organization as the recipients.

@@ -18,7 +18,7 @@ ms.collection:
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 03/21/2025
+ms.date: 06/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -31,7 +31,7 @@ appliesto:
 > [!IMPORTANT]
 > This article is intended for business customers who have [Microsoft Defender for Office 365](defender-for-office-365-whats-new.md). If you're a home user looking for information about attachment scanning in Outlook, see [Advanced Outlook.com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against malware in messages. After message attachments are scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
+In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [anti-malware protection in Exchange Online Protection (EOP)](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
 
 Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md).
 
@@ -41,6 +41,8 @@ For greater granularity, you can also use the procedures in this article to crea
 > Instead of creating and managing custom Safe Attachments policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
+>
+> Typically, email attachment scanning completes within 15 minutes. Sometimes, it takes longer due to retry delays and processing time to analyze the file in the virtual environment.
 
 You configure Safe Attachments policies in the Microsoft Defender portal or in Exchange Online PowerShell.
 
@@ -93,8 +95,10 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
      - The specified Microsoft 365 Groups.
    - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-     > [!TIP]
-     > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
+   > [!TIP]
+   > Leave **Users**, **Groups**, and **Domains** blank to create a policy that applies to all recipients.
+   > 
+   > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
    Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.
 
@@ -133,14 +137,14 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
 
    - **Quarantine policy**: Select the quarantine policy that applies to messages that are quarantined by Safe Attachments (**Block** or **Dynamic Delivery**). Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
-     By default, the quarantine policy named AdminOnlyAccessPolicy is used for malware detections by Safe Attachments policies. For more information about this quarantine policy, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+     By default, the quarantine policy named AdminOnlyAccessPolicy is used for detections by Safe Attachments policies. For more information about this quarantine policy, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
      > [!NOTE]
-     > Quarantine notifications are disabled in the policy named AdminOnlyAccessPolicy. To notify recipients that have messages quarantined as malware by Safe Attachments, create or use an existing quarantine policy where quarantine notifications are turned on. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
+     > Quarantine notifications are disabled in the policy named AdminOnlyAccessPolicy. To notify recipients that have messages quarantined as malware or phishing by Safe Attachments, create or use an existing quarantine policy where quarantine notifications are turned on. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
      >
-     > Users can't release their own messages that were quarantined as malware by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+     > Users can't release their own messages that were quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined messages.
 
-   - **Redirect messages with detected attachments**: If you select **Enable redirect**, you can specify an email address in the **Send messages that contain monitored attachments to the specified email address** box to send messages that contain malware attachments for analysis and investigation.
+   - **Redirect messages with detected attachments**: If you select **Enable redirect**, you can specify an email address in the **Send messages that contain monitored attachments to the specified email address** box to send messages that contain detected attachments for analysis and investigation.
 
      > [!NOTE]
      > Redirection is available only for the **Monitor** action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
@@ -266,7 +270,7 @@ Back on the **Safe Attachments** page, the removed policy is no longer listed.
 
 In PowerShell, the basic elements of a Safe Attachments policy are:
 
-- **The safe attachment policy**: Specifies the actions for unknown malware detections, whether to send messages with malware attachments to a specified email address, and whether to deliver messages if Safe Attachments scanning can't complete.
+- **The safe attachment policy**: Specifies the actions for detections, whether to send messages with detected attachments to a specified email address, and whether to deliver messages if Safe Attachments scanning can't complete.
 - **The safe attachment rule**: Specifies the priority and recipient filters (who the policy applies to).
 
 The difference between these two elements isn't obvious when you manage Safe Attachments policies in the Microsoft Defender portal:
@@ -308,7 +312,7 @@ New-SafeAttachmentPolicy -Name "<PolicyName>" -Enable $true [-AdminDisplayName "
 
 This example creates a safe attachment policy named Contoso All with the following values:
 
-- Block messages that are found to contain malware by Safe Documents scanning (we aren't using the _Action_ parameter, and the default value is `Block`).
+- Block messages that are found to contain harmful attachments by Safe Attachments scanning (we aren't using the _Action_ parameter, and the default value is `Block`).
 - The default quarantine policy is used (AdminOnlyAccessPolicy), because we aren't using the _QuarantineTag_ parameter.
 
 ```powershell

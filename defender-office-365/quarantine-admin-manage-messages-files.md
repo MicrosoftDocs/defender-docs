@@ -16,9 +16,9 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
+description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 02/11/2025
+ms.date: 05/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -72,7 +72,9 @@ Watch this short video to learn how to manage quarantined messages as an admin.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
     - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader** or **Security Reader** roles.
 
-  > [!TIP]
+  > [!NOTE]
+  > Currently, roles assigned through Azure Privileged Identity Management aren't supported in quarantine. For more information about PIM, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](/defender-office-365/pim-in-mdo-configure).
+  >
   > The ability to manage quarantined messages using [Exchange Online permissions](/exchange/permissions-exo/permissions-exo) ended in February 2023 per MC447339.
   >
   > Guest admins from other organizations can't manage quarantined messages. The admin needs to be in the same organization as the recipients.
@@ -539,7 +541,7 @@ Admins can search the audit log to find events for messages that were deleted fr
 1. In the Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
 
    > [!TIP]
-   > You can also get to the **Audit** page in the Microsoft Purview compliance portal at <https://compliance.microsoft.com/auditlogsearch>
+   > You can also get to the **Audit** page in the Microsoft Purview portal at <https://purview.microsoft.com/auditlogsearch>
 
 2. On the **Audit** page, verify that the **New Search** tab is selected, and then configure the following settings:
 
@@ -614,7 +616,7 @@ In the details flyout that opens, the following information is available:
 
 - **File details** section:
   - **File Name**
-  - **File URL**: URL that defines the location of the file (for example, in SharePoint Online).
+  - **File URL**: URL that defines the location of the file (for example, in SharePoint).
   - **Malicious content detected on** The date/time the file was quarantined.
   - **Expires**: The date when the file will be deleted from quarantine.
   - **Detected by**
@@ -700,8 +702,10 @@ When you select multiple quarantined files on the **Files** tab by selecting the
 
 ## Use the Microsoft Defender portal to manage Microsoft Teams quarantined messages
 
-> [!TIP]
+> [!NOTE]
 > [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) is currently in Preview, isn't available in all organizations, and is subject to change.
+>
+> Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
 Quarantine in Microsoft Teams is available only in organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 

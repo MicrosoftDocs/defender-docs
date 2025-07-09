@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 03/12/2025
@@ -33,7 +33,7 @@ ms.date: 03/12/2025
 - Windows
 - Windows Server
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 

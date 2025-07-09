@@ -185,8 +185,8 @@ conceptualContent:
            text: See more
            url: /defender-for-iot/    
 
-        - title: Microsoft's unified security operations platform
-          summary: End-to-end SecOps with Microsoft Sentinel
+        - title: Microsoft Sentinel
+          summary: End-to-end security operations
           links:
           - url: /unified-secops-platform/overview-unified-security
             itemType: overview

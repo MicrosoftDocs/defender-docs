@@ -1,12 +1,13 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 02/20/2025
+ms.date: 05/13/2025
 ms.topic: overview
 ---
 
 # What's new in Microsoft Defender for Cloud Apps
 
+>
 *Applies to: Microsoft Defender for Cloud Apps*
 
 This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
@@ -18,6 +19,87 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+
+>[!IMPORTANT]
+> **Take Immediate Action by April, 29 2025**, to ensure optimal service quality and prevent the interruption of some services. This change will only affect your organization if you're using a firewall allowlist that restricts outbound traffic based on IP addresses or Azure service tags. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively use as an additional Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’, that will be adjusted to reflect the above range by April 28, 2025.\
+> This update should be completed and the IP addresses or new Azure service tag added to your firewall's allowlist by April 29, 2025.
+> This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.\
+> Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
+
+
+## June 2025
+
+### “Behaviors” data type in Microsoft Defender for Cloud Apps - General Availability
+
+The **Behaviors** data type significantly enhances overall threat detection accuracy by reducing alerts on generic anomalies and surfacing alerts only when observed patterns align with real security scenarios. You can now use **Behaviors** to conduct investigations in [Advanced Hunting](https://learn.microsoft.com/defender-xdr/advanced-hunting-overview), build better [custom detections](https://learn.microsoft.com/defender-xdr/custom-detection-rules) based on behavioral signals, and benefit from automatic inclusion of context-related behaviors into [incidents](https://learn.microsoft.com/defender-xdr/incidents-overview). This provides clearer context and helps security operations teams to reduce alert fatigue, prioritize, and respond more efficiently.
+
+For more information, see:
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
+- [TechCommunity Blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/transform-the-way-you-investigate-by-using-behaviors--new-detections-in-xdr-star/3825154).
+
+### New Dynamic Threat Detection model
+
+Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter and more responsive security coverage.
+
+For more information, see [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md).
+
+
+## May 2025 
+
+
+### Revamped Cloud Discovery Executive Summary report
+
+The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more details, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report).
+
+### New Applications inventory page now available in Defender XDR
+
+The new Applications page in Microsoft Defender XDR provides a unified inventory of all SaaS and connected OAuth applications across your environment. This view helps streamline application discovery, monitoring, and risk assessment.
+
+For more information, see [Application inventory overview](applications-inventory.md).
+
+
+### Changes to Microsoft Defender for Cloud Apps SIEM agent availability
+
+As part of our ongoing convergence process across Microsoft Defender workloads, [Microsoft Defender for Cloud Apps SIEM agents](siem.md) will be deprecated starting November 2025.
+
+To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+- For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+- For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
+- For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+- To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+
+For detailed guidance see: [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md)
+
+
+### New and improved Cloud App Catalog page
+
+The Cloud app catalog page has been revamped to meet security standards. The new design includes improved navigation, making it easier for you to discover and manage your cloud applications.
+
+For more information, see: [Find your cloud app and calculate risk scores](risk-score.md).
+
+## April 2025
+
+
+### OAuth app information is now available in attack paths (Preview)
+
+The Security Exposure Management platform now includes OAuth applications as part of the attack path and attack surface map experiences. This enhancement enables you to visualize how attackers could exploit OAuth apps to move laterally within your environment and access critical assets. By identifying these attack paths and investigating associated permissions, you can reduce exposure and improve the security posture of your Microsoft 365 services.
+
+For more information, see [Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+
+### OAuthAppInfo table added to Defender XDR advanced hunting (Preview)
+
+The [OAuthAppInfo](/defender-xdr/advanced-hunting-oauthappinfo-table) table is now available in Defender XDR advanced hunting, enabling security teams to explore and analyze OAuth app-related metadata with enhanced visibility.
+
+This table provides details on Microsoft 365-connected OAuth applications that are registered with Microsoft Entra ID and accessible through the Defender for Cloud Apps app governance capability.
+
+### New Applications page in Defender XDR (Preview)
+
+The new Applications page consolidates all SaaS and connected OAuth applications into a single, unified inventory. This centralized view streamlines application discovery, monitoring, and management, providing greater visibility and control across your environment.
+
+The page surfaces key insights such as risk scores, usage patterns, publisher verification status, and privilege levels. These insights help you quickly identify and address high-risk or untagged applications.
+
+For more information, see [Application inventory overview](applications-inventory.md)
+
 
 ## March 2025
 
@@ -38,7 +120,7 @@ Defender for Cloud Apps customers can now configure Role-Based Access Control (R
 For more information, see:
 
 - [Configure admin access](/defender-cloud-apps/manage-admins)
-- [Investigate behaviors with advanced hunting (Preview)](/defender-cloud-apps/behaviors)
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
 
 ## February 2025
  
@@ -48,7 +130,7 @@ For more information, see:
  
  The new *Permissions filter and export capabilities allow you to quickly identify apps with specific permissions to access Microsoft 365.
  
- You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
+ You can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enables you to get deeper visibility into apps accessing emails using legacy EWS API.
  
  We're also expanding the coverage of privilege level feature for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification enables you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365.
  
@@ -105,7 +187,7 @@ For more information, see:
 
 The Enterprise application 'Microsoft Defender for Cloud Apps – Session Controls' is used internally by the Conditional Access App Control service.  
 Ensure there's no CA policy restricting access to this application.
-For policies that restrict all or certain applications, please ensure this application is listed as an exception or confirm that the blocking policy is deliberate.  
+For policies that restrict all or certain applications, ensure this application is listed as an exception or confirm that the blocking policy is deliberate.  
 
 For more information, see [Sample: Create Microsoft Entra ID Conditional Access policies for use with Defender for Cloud Apps](session-policy-aad.md#sample-create-microsoft-entra-id-conditional-access-policies-for-use-with-defender-for-cloud-apps).
 
@@ -121,7 +203,7 @@ For more information, see:
 ### SaaS Security initiative in Exposure Management
 
 [Microsoft Security Exposure Management](/security-exposure-management/) offers a focused, metric-driven way of tracking exposure in specific security areas using security [initiatives](/security-exposure-management/initiatives). The "SaaS security initiative" provides a centralized location for all best practices related to SaaS security, categorized into 12 measurable metrics. These metrics are designed to assist in effectively managing and prioritizing the large number of security recommendations.
-This capability is General Availability (Worldwide) - Note Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High and DoD
+This capability is General Availability (Worldwide) - Note Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, and DoD
 
 For more information, see [SaaS security initiative](saas-security-initiative.md).
 
@@ -139,13 +221,13 @@ For more information, see [filters on app governance](/defender-cloud-apps/app-g
 
 ### Visibility into privilege level for popular Microsoft first-party APIs (Preview)
 
-Defender for Cloud Apps users who use app governance can now gain visibility into privilege level for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification will enable you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365. 
+Defender for Cloud Apps users who use app governance can now gain visibility into privilege level for all popular Microsoft first-party API permissions. The enhanced coverage of privilege level classification enables you to view and monitor apps with powerful permissions into legacy and other non-Graph APIs that have access to Microsoft 365. 
 
 For more information, see [OAuth app permission related details on app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
 
 ### Granular data usage insights into EWS API access (Preview)
 
-Defender for Cloud Apps users who use app governance can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights will enable you to get deeper visibility into apps accessing emails using legacy EWS API.
+Defender for Cloud Apps users who use app governance can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
 
 For more information, see [OAuth app data usage insights on app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
 
@@ -154,7 +236,7 @@ For more information, see [OAuth app data usage insights on app governance](/def
 ### New anomaly data in advanced hunting CloudAppEvents table
 
 Defender for Cloud Apps users who use advanced hunting in the Microsoft Defender portal, can now utilize the new *LastSeenForUser* and *UncommonForUser* columns for queries and detections rules.  
-The new columns are designed to assist you to better __identify uncommon activities__ that may appear suspicious, and allow you to create more accurate custom detections, as well as investigate any suspicious activities that arise.
+The new columns are designed to assist you to better __identify uncommon activities__ that might appear suspicious, and allow you to create more accurate custom detections, and investigate any suspicious activities that arise.
 
 For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/microsoft-365/security/defender/advanced-hunting-cloudappevents-table).
 
@@ -175,13 +257,13 @@ For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/micro
 
 ## September 2024
 
-### Enforce Edge in-browser when accessing business apps
+### Enforce Microsoft Edge in-browser when accessing business apps
 
-Administrators who understand the power of Edge in-browser protection, can now require their users to use Edge when accessing corporate resources. 
+Administrators who understand the power of Microsoft Edge in-browser protection, can now require their users to use Microsoft Edge when accessing corporate resources. 
 
-A primary reason is security, since the barrier to circumventing session controls using Edge is much higher than with reverse proxy technology.
+A primary reason is security, since the barrier to circumventing session controls using Microsoft Edge is higher than with reverse proxy technology.
 
-For more information, see [Enforce Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
+For more information, see [Enforce Microsoft Edge in-browser protection when accessing business apps](in-browser-protection.md#enforce-microsoft-edge-browser-protection-when-accessing-business-apps).
 
 ### Connect Mural to Defender for Cloud Apps (Preview)
 
@@ -196,13 +278,13 @@ For more information, see:
 
 ### Removing the ability to email end users about blocked actions
 
-Effective October 1st, 2024, we will discontinue the feature that notifies end users via email when their action is blocked by session policies.
+Effective October 1, 2024, we'll discontinue the feature that notifies end users via email when their action is blocked by session policies.
 
 This option ensures that if a user's action is blocked, they get both a browser message and an email notification.
 
 Admins can no longer configure this setting when creating new session policies.
 
-Existing session policies with this setting will not trigger email notifications to end users when a block action occurs.
+Existing session policies with this setting won't trigger email notifications to end users when a block action occurs.
 
 End users will continue to receive the block message directly through the browser and will stop receiving block notification via email.
 
@@ -241,7 +323,7 @@ For more information, see [Configure custom URL for MDA block pages](mde-govern.
 
 ### In-browser protection for macOS users and newly supported policies (Preview)
 
-Edge browser users from macOS who are scoped to session policies are now protected with in-browser protection.
+Microsoft Edge browser users from macOS who are scoped to session policies are now protected with in-browser protection.
 
 The following session policies are now supported:
 
@@ -252,7 +334,7 @@ The following session policies are now supported:
 
 See [In-browser protection](in-browser-protection.md).
 
-  In-browser protection is supported with the last 2 stable versions of Edge (for example, if the newest Edge is 126, in-browser protection works for v126 and v125). 
+  In-browser protection is supported with the last two stable versions of Microsoft Edge (for example, if the newest Microsoft Edge is 126, in-browser protection works for v126 and v125). 
 
 See [Microsoft Edge releases](/deployedge/microsoft-edge-release-schedule#microsoft-edge-releases).
 

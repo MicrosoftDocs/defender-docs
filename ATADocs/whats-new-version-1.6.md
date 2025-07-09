@@ -3,12 +3,8 @@
 
 title: What's new in Advanced Threat Analytics version 1.6
 description: Lists what was new in ATA version 1.6 along with known issues
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: whats-new
 ms.service: advanced-threat-analytics
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 
