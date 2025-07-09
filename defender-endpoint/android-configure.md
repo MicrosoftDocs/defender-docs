@@ -199,28 +199,6 @@ Turning the above privacy controls on or off won't affect the device compliance 
 
 Privacy control for phish report can be used to disable the collection of domain name or website information in the phish threat report. This setting gives organizations the flexibility to choose whether they want to collect the domain name when a malicious or phish website is detected and blocked by Defender for Endpoint.
 
-### Configure privacy for phishing alert report on Android Device Administrator enrolled devices:
-
-Use the following steps to turn it on for targeted users:
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator.
-   - **Profile**: Select "Custom" and select **Create**.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderExcludeURLInReport**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 1 to enable privacy setting. The default value is 0.
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
-Using this privacy control won't affect the device compliance check or conditional access.
-
 ### Configure privacy for phishing alert report on Android Enterprise work profile
 
 Use the following steps to turn on privacy for targeted users in the work profile:
@@ -239,28 +217,6 @@ Turning the above privacy controls on or off won't affect the device compliance 
 ## Configure privacy for malware threat report
 
 Privacy control for malware threat report can be used to disable the collection of app details (name and package information) from the malware threat report. This setting gives organizations the flexibility to choose whether they want to collect the app name when a malicious app is detected.
-
-### Configure privacy for malware alert report on Android Device Administrator enrolled devices:
-
-Use the following steps to turn it on for targeted users:
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator.
-   - **Profile**: Select "Custom" and select **Create**.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderExcludeAppInReport**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 1 to enable privacy setting. The default value is 0.
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
-Using this privacy control won't affect the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
 
 ### Configure privacy for malware alert report on Android Enterprise work profile
 
@@ -285,9 +241,10 @@ Use the following steps to configure Disable out sign:
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
-4. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
+1. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
 
-   - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles and 0 for device administrator mode.
+   - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles.
+      
    - Admins need to make Disable Sign Out = 0 to enable the sign out button in the app. Users are able to see the sign out button once the policy is pushed.
 
 5. Select **Next** and assign this profile to targeted devices and users.
