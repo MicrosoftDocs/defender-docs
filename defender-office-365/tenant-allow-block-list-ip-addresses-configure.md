@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block IPv6 addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 02/26/2025
+ms.date: 07/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -45,9 +45,15 @@ This article describes how admins can manage entries for IPv6 addresses in the M
   - CIDR IPv6 range. For example, 2001:0db8::/32. 1-128 range is supported.
 
 - Entry limits for IP addresses:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 IP entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 IP entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 IP entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 total IP entries:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 total IP entries:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 total IP entries:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - An entry should be active within 5 minutes.
 
@@ -158,7 +164,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 New-TenantAllowBlockListItems -ListType IP -Block -Entries "IPAddress1","IPAddress2",..."IPAddressN" <-ExpirationDate Date | -NoExpiration> [-Notes <String>]
 ```
 
-This example adds an block entry for the specified IP address that never expires.
+This example adds a block entry for the specified IP address that never expires.
 
 ```powershell
 New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration

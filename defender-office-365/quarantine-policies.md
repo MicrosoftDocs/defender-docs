@@ -16,23 +16,23 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 06/11/2025
+ms.date: 07/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Quarantine policies
+# Quarantine policies in Microsoft 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Exchange Online Protection (EOP) and Microsoft Defender for Office 365, _quarantine policies_ allow admins to define the user experience for quarantined messages:
+In all Microsoft 365 organizations with cloud mailboxes, _quarantine policies_ allow admins to define the user experience for quarantined messages:
 
 - What users are allowed to do to their own quarantined messages (messages where they're a recipient) based on why the message was quarantined.
 - Whether users receive periodic (every four hours, daily, or weekly) notifications about their quarantined messages via [quarantine notifications](quarantine-quarantine-notifications.md).
 
-Traditionally, users have been allowed or denied levels of interactivity with quarantine messages based on why the message was quarantined. For example, users can view and release messages that were quarantined as spam or bulk, but they can't view or release messages that were quarantined as high confidence phishing or malware.
+Traditionally, users are allowed or denied levels of interactivity with quarantine messages based on why the message was quarantined. For example, users can view and release messages quarantined as spam or bulk, but they can't view or release messages quarantined as high confidence phishing or malware.
 
 Default quarantine policies enforce these historical user capabilities, and are automatically assigned in [supported protection features](#step-2-assign-a-quarantine-policy-to-supported-features) that quarantine messages.
 
@@ -40,7 +40,7 @@ For details about the elements of a quarantine policy, default quarantine polici
 
 If you don't like the default user capabilities for quarantined messages for a specific feature (including the lack of quarantine notifications), you can create and use custom quarantine policies as described in this article.
 
-You create and assign quarantine policies in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) (Exchange Online PowerShell for Microsoft 365 organizations with Exchange Online mailboxes; standalone EOP PowerShell in EOP organizations without Exchange Online mailboxes).
+You create and assign quarantine policies in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## What do you need to know before you begin?
 
@@ -50,9 +50,9 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- If you change the quarantine policy that's assigned to a supported protection feature, the change affects quarantined message _after_ you make the change. Messages that were quarantined before you made the change aren't affected by the settings of the new quarantine policy assignment.
+- If you change the quarantine policy assigned to a supported protection feature, the change affects quarantined message _after_ you make the change. The new quarantine policy assignment doesn't affect messages quarantined before you made the change.
 
-- How long messages that were quarantined by anti-spam and anti-phishing protection are held before they expire is controlled by the **Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_) in anti-spam policies. For more information, see the table in [Quarantine retention](quarantine-about.md#quarantine-retention).
+- How long messages quarantined by anti-spam and anti-phishing protection are held before they expire is controlled by the **Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_) in anti-spam policies. For more information, see the table in [Quarantine retention](quarantine-about.md#quarantine-retention).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)**, or **Security operations/Security Data/Email & collaboration quarantine (manage)**.
@@ -81,7 +81,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
    - **Set specific access (Advanced)**: Use this value to specify custom permissions. Configure the following settings that appear:
      - **Select release action preference**: Select one of the following values from the dropdown list:
-       - Blank: Users can't release or request the release of their messages from quarantine. This is the default value.
+       - Blank: Users can't release or request the release of their messages from quarantine. The default value.
        - **Allow recipients to request a message to be released from quarantine**
        - **Allow recipients to release a message from quarantine**
      - **Select additional actions recipients can take on quarantined messages**: Select some, all, or none of the following values:
@@ -128,7 +128,7 @@ New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 
 
 - The _ESNEnabled_ parameter with the value `$true` turns on quarantine notifications. Quarantine notifications are turned off by default (the default value is `$false`).
 
-- The _EndUserQuarantinePermissionsValue_ parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the available end-user quarantine permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False.
+- The _EndUserQuarantinePermissionsValue_ parameter uses a decimal value converted from a binary value. The binary value corresponds to the available end-user quarantine permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False.
 
   The required order and values for each individual permission are described in the following table:
 
@@ -198,11 +198,11 @@ In supported protection features that quarantine email messages, the assigned qu
 |&nbsp;&nbsp;&nbsp;Mailbox intelligence impersonation (_MailboxIntelligenceProtectionAction_)|Yes (_MailboxIntelligenceQuarantineTag_)|
 |**[Anti-malware policies](anti-malware-policies-configure.md)**|Yes (_QuarantineTag_)|
 |**[Safe Attachments protection](safe-attachments-about.md)**||
-|&nbsp;&nbsp;&nbsp;Email messages with attachments that are quarantined as malware or phishing by Safe Attachments policies (_Enable_ and _Action_)|Yes (_QuarantineTag_)|
-|&nbsp;&nbsp;&nbsp;Files that are quarantined as malware or phishing by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)|No|
+|&nbsp;&nbsp;&nbsp;Email messages with attachments quarantined as malware or phishing by Safe Attachments policies (_Enable_ and _Action_)|Yes (_QuarantineTag_)|
+|&nbsp;&nbsp;&nbsp;Files quarantined as malware or phishing by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)|No|
 |**[Exchange mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) with the action: 'Deliver the message to the hosted quarantine' (_Quarantine_)**|No|
 
-The default quarantine policies that are used by each protection feature are described in the related tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
+The default quarantine policies used by each protection feature are described in the related tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
 
 The default quarantine policies, preset permission groups, and permissions are described in the [Appendix](#appendix) section at the end of this article.
 
@@ -211,7 +211,13 @@ The rest of this step explains how to assign quarantine policies for supported f
 ## Assign quarantine policies in supported policies in the Microsoft Defender portal
 
 > [!NOTE]
-> Users can't release their own messages that were quarantined as **malware** by anti-malware policies, **malware** or **phishing** by Safe Attachments policies, or as **high confidence phishing** by anti-spam policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
+> Users can't release their own quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
+>
+> - Messages quarantined as malware by anti-malware policies.
+> - Messages quarantined as malware or phishing by Safe Attachments policies.
+> - Messages quarantined as high confidence phishing by anti-spam policies.
+>
+> If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
 ### Anti-spam policies
 
@@ -231,7 +237,7 @@ Full instructions for creating and modifying anti-spam policies are described in
 
 #### Anti-spam policies in PowerShell
 
-If you'd rather use PowerShell to assign quarantine policies in anti-spam policies, connect to Exchange Online PowerShell or Exchange Online Protection PowerShell and use the following syntax:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in anti-spam policies, use the following syntax:
 
 ```powershell
 <New-HostedContentFilterPolicy -Name "<Unique name>" | Set-HostedContentFilterPolicy -Identity "<Policy name>"> [-SpamAction Quarantine] [-SpamQuarantineTag <QuarantineTagName>] [-HighConfidenceSpamAction Quarantine] [-HighConfidenceSpamQuarantineTag <QuarantineTagName>] [-PhishSpamAction Quarantine] [-PhishQuarantineTag <QuarantineTagName>] [-HighConfidencePhishQuarantineTag <QuarantineTagName>] [-BulkSpamAction Quarantine] [-BulkQuarantineTag <QuarantineTagName>] ...
@@ -249,14 +255,14 @@ If you'd rather use PowerShell to assign quarantine policies in anti-spam polici
 
   Specify a different quarantine policy to turn on quarantine notifications or change the default end-user capabilities on quarantined messages for that particular spam filtering verdict.
 
-  Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined high confidence phishing messages.
+  Users can't release their own messages quarantined as high confidence phishing by anti-spam policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
 - In PowerShell, a new anti-spam policy in PowerShell requires a spam filter policy using the **New-HostedContentFilterPolicy** cmdlet (settings), and an exclusive spam filter rule using the **New-HostedContentFilterRule** cmdlet (recipient filters). For instructions, see [Use PowerShell to create anti-spam policies](anti-spam-policies-configure.md#use-powershell-to-create-anti-spam-policies).
 
 This example creates a new spam filter policy named Research Department with the following settings:
 
 - The action for all spam filtering verdicts is set to Quarantine.
-- The default quarantine policy named AdminOnlyAccessPolicy that assigns **No access** permissions replaces the default quarantine policy that's used (high confidence phishing messages are quarantined by default and the AdminOnlyAccessPolicy quarantine policy is used by default).
+- The default quarantine policy named AdminOnlyAccessPolicy that assigns **No access** permissions replaces the default quarantine policy (high confidence phishing messages are quarantined by default and the AdminOnlyAccessPolicy quarantine policy is used by default).
 
 ```powershell
 New-HostedContentFilterPolicy -Name "Research Department" -SpamAction Quarantine -SpamQuarantineTag AdminOnlyAccessPolicy -HighConfidenceSpamAction Quarantine -HighConfidenceSpamQuarantineTag AdminOnlyAccessPolicy -PhishSpamAction Quarantine -PhishQuarantineTag AdminOnlyAccessPolicy -BulkSpamAction Quarantine -BulkQuarantineTag AdminOnlyAccessPolicy
@@ -274,7 +280,7 @@ For detailed syntax and parameter information, see [Set-HostedContentFilterPolic
 
 ### Anti-phishing policies
 
-Spoof intelligence is available in EOP and Defender for Office 365. User impersonation protection, domain impersonation protection, and mailbox intelligence protection are available only in Defender for Office 365. For more information, see [Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md).
+Spoof intelligence is available in all Microsoft 365 organizations with cloud mailboxes. User impersonation protection, domain impersonation protection, and mailbox intelligence protection are available only in Microsoft 365 organizations with Defender for Office 365. For more information, see [Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
@@ -302,7 +308,7 @@ Full instructions for creating and modifying anti-phishing policies are availabl
 
 #### Anti-phishing policies in PowerShell
 
-If you'd rather use PowerShell to assign quarantine policies in anti-phishing policies, connect to Exchange Online PowerShell or Exchange Online Protection PowerShell and use the following syntax:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in anti-phishing policies, use the following syntax:
 
 ```powershell
 <New-AntiPhishPolicy -Name "<Unique name>" | Set-AntiPhishPolicy -Identity "<Policy name>"> [-EnableSpoofIntelligence $true] [-AuthenticationFailAction Quarantine] [-SpoofQuarantineTag <QuarantineTagName>] [-EnableMailboxIntelligence $true] [-EnableMailboxIntelligenceProtection $true] [-MailboxIntelligenceProtectionAction Quarantine] [-MailboxIntelligenceQuarantineTag <QuarantineTagName>] [-EnableOrganizationDomainsProtection $true] [-EnableTargetedDomainsProtection $true] [-TargetedDomainProtectionAction Quarantine] [-TargetedDomainQuarantineTag <QuarantineTagName>] [-EnableTargetedUserProtection $true] [-TargetedUserProtectionAction Quarantine] [-TargetedUserQuarantineTag <QuarantineTagName>] ...
@@ -329,7 +335,7 @@ If you'd rather use PowerShell to assign quarantine policies in anti-phishing po
 This example creates a new anti-phish policy named Research Department with the following settings:
 
 - The action for all spam filtering verdicts is set to Quarantine.
-- The default quarantine policy named AdminOnlyAccessPolicy that assigns **No access** permissions replaces the default quarantine policy that's used.
+- The default quarantine policy named AdminOnlyAccessPolicy that assigns **No access** permissions replaces the default quarantine policy.
 
 ```powershell
 New-AntiPhishPolicy -Name "Research Department" -AuthenticationFailAction Quarantine -SpoofQuarantineTag NoAccess -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -MailboxIntelligenceQuarantineTag NoAccess -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
@@ -357,7 +363,7 @@ For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powers
 
    Quarantine notifications are disabled in the policy named AdminOnlyAccessPolicy. To notify recipients that have messages quarantined as malware, create or use an existing quarantine policy where quarantine notifications are turned on. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
-   Users can't release their own messages that were quarantined as malware by anti-malware policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+   Users can't release their own messages quarantined as malware by anti-malware policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
    :::image type="content" source="media/quarantine-tags-in-anti-malware-policies.png" alt-text="The Quarantine policy selections in an anti-malware policy." lightbox="media/quarantine-tags-in-anti-malware-policies.png":::
 
@@ -365,7 +371,7 @@ Full instructions for creating and modifying anti-malware policies are available
 
 #### Anti-malware policies in PowerShell
 
-If you'd rather use PowerShell to assign quarantine policies in anti-malware policies, connect to Exchange Online PowerShell or Exchange Online Protection PowerShell and use the following syntax:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in anti-malware policies, use the following syntax:
 
 ```powershell
 <New-AntiMalwarePolicy -Name "<Unique name>" | Set-AntiMalwarePolicy -Identity "<Policy name>"> [-QuarantineTag <QuarantineTagName>]
@@ -373,7 +379,7 @@ If you'd rather use PowerShell to assign quarantine policies in anti-malware pol
 
 - When you create new anti-malware policies without using the _QuarantineTag_ parameter, the default quarantine policy named AdminOnlyAccessPolicy is used.
 
-  Users can't release their own messages that were quarantined as malware, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+  Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
   To see the important parameter values in existing anti-phish policies, run the following command:
 
@@ -409,7 +415,7 @@ For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/po
 
 3. On the **Settings** page or flyout, view or select a quarantine policy in the **Quarantine policy** box.
 
-   Users can't release their own messages that were quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+   Users can't release their own messages quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
    :::image type="content" source="media/quarantine-tags-in-safe-attachments-policies.png" alt-text="The Quarantine policy selections in a Safe Attachments policy." lightbox="media/quarantine-tags-in-safe-attachments-policies.png":::
 
@@ -417,7 +423,7 @@ Full instructions for creating and modifying Safe Attachments policies are descr
 
 #### Safe Attachments policies in PowerShell
 
-If you'd rather use PowerShell to assign quarantine policies in Safe Attachments policies, connect to Exchange Online PowerShell or Exchange Online Protection PowerShell and use the following syntax:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in Safe Attachments policies, use the following syntax:
 
 ```powershell
 <New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
@@ -427,7 +433,7 @@ If you'd rather use PowerShell to assign quarantine policies in Safe Attachments
 
 - When you create new Safe Attachments policies without using the _QuarantineTag_ parameter, the default quarantine policy named AdminOnlyAccessPolicy is used for malware detections by Safe Attachments.
 
-  Users can't release their own messages that were quarantined as malware, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
+  Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
   To see the important parameter values, run the following command:
 
@@ -455,7 +461,7 @@ For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/p
 
 ## Configure global quarantine notification settings in the Microsoft Defender portal
 
-The global settings for quarantine policies allow you to customize the quarantine notifications that are sent to recipients of quarantined messages if quarantine notifications are turned on in the quarantine policy. For more information about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md).
+The global settings for quarantine policies allow you to customize the quarantine notifications sent to recipients of quarantined messages if quarantine notifications are enabled in the quarantine policy. For more information about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md).
 
 ### Customize quarantine notifications for different languages
 
@@ -469,7 +475,7 @@ You can use the procedures in this section to customize the **Sender display nam
 
 - The **Subject** field of quarantine notification messages.
 
-- The **Disclaimer** text that's added to the bottom of quarantine notifications (max. 200 characters). The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
+- The **Disclaimer** text added to the bottom of quarantine notifications (max. 200 characters). The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
 
 :::image type="content" source="media/quarantine-tags-esn-customization-disclaimer.png" alt-text="A custom disclaimer at the bottom of a quarantine notification." lightbox="media/quarantine-tags-esn-customization-disclaimer.png":::
 
@@ -494,7 +500,7 @@ To create customized quarantine notifications for up to three languages, do the 
 
       Although this box isn't the first setting, you need to configure it first. If you enter values in the **Sender display name**, **Subject**, or **Disclaimer** boxes before you select the language, those values disappear.
 
-   2. After you select the language, enter values for **Sender display name**, **Subject**, and **Disclaimer**. The values must be unique for each language. If you try to reuse a value in a different language, you'll get an error when you select **Save**.
+   2. After you select the language, enter values for **Sender display name**, **Subject**, and **Disclaimer**. The values must be unique for each language. If you try to reuse a value in a different language, you get an error when you select **Save**.
 
    3. Select the **Add** button near the **Choose language** box.
 
@@ -532,15 +538,15 @@ When you're finished in the **Quarantine notifications flyout**, select **Save**
 
 ### Use PowerShell to configure global quarantine notification settings
 
-If you'd rather use PowerShell to configure global quarantine notification settings, connect to Exchange Online PowerShell or Exchange Online Protection PowerShell and use the following syntax:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to configure global quarantine notification settings, use the following syntax:
 
 ```powershell
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('Language1','Language2','Language3') -MultiLanguageCustomDisclaimer ('Language1 Disclaimer','Language2 Disclaimer','Language3 Disclaimer') -ESNCustomSubject ('Language1 Subject','Language2 Subject','Language3 Subject') -MultiLanguageSenderName ('Language1 Sender Display Name','Language2 Sender Display Name','Language3 Sender Display Name') [-EndUserSpamNotificationCustomFromAddress <InternalUserEmailAddress>] [-OrganizationBrandingEnabled <$true | $false>] [-EndUserSpamNotificationFrequency <04:00:00 | 1.00:00:00 | 7.00:00:00>]
 ```
 
-- You can specify a maximum of 3 available languages. The value Default is en-US. The value English is everything else (en-GB, en-CA, en-AU, etc.).
+- You can specify a maximum of three available languages. The value Default is en-US. The value English is everything else (en-GB, en-CA, en-AU, etc.).
 - For each language, you need to specify unique _MultiLanguageCustomDisclaimer_, _ESNCustomSubject_, and _MultiLanguageSenderName_ values.
-- If any of the text values contain quotation marks, you need to escape the quotation mark with an additional quotation mark. For example, change `d'assistance` to `d''assistance`.
+- If any of the text values contain quotation marks, you need to escape the quotation mark with an extra quotation mark. For example, change `d'assistance` to `d''assistance`.
 
 This example configures the following settings:
 
@@ -755,7 +761,7 @@ The effect of **No access** permissions (admin only access) on user capabilities
 > [!TIP]
 >
 > - To enable quarantine notifications while maintaining restricted access, [create a custom quarantine policy](#step-1-create-quarantine-policies-in-the-microsoft-defender-portal) with the following settings:
->   - **Recipient message access** page: Select **Set specific access (Advanced)**, but leave **Select release action preference** and **Select additional actions recipients can take on quarantined messages** blank/unselected (equivalent to the value 0 for the _EndUserQuarantinePermissionsValue_ parameter on the **New-QuarantinePolicy** cmdlet [in Powershell](#create-quarantine-policies-in-powershell)).
+>   - **Recipient message access** page: Select **Set specific access (Advanced)**, but leave **Select release action preference** and **Select additional actions recipients can take on quarantined messages** blank/unselected (equivalent to the value 0 for the _EndUserQuarantinePermissionsValue_ parameter on the **New-QuarantinePolicy** cmdlet [in PowerShell](#create-quarantine-policies-in-powershell)).
 >   - **Quarantine notification** page: Select **Enable** and then select **Don't include quarantined messages from blocked sender addresses** (default) or **Include quarantined messages from blocked sender addresses**.
 
 ##### Limited access
@@ -820,7 +826,7 @@ If the **Block sender** permission is disabled, users can't block senders from q
 For more information about the Blocked Senders list, see [Block messages from someone](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667) and [Use Exchange Online PowerShell to configure the safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine depending on the policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks). To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. The policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks) determines whether messages from the sender are delivered to the Junk Email folder or to quarantine. To delete messages from the blocked sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
 ##### Delete permission
 
@@ -829,7 +835,7 @@ The **Delete** permission (_PermissionToDelete_) allows users to delete their ow
 If the **Delete** permission is enabled:
 
 - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
-- No effect in quarantine notifications. Deleting a quarantined message from the quarantine notification is not possible.
+- No effect in quarantine notifications. Deleting a quarantined message from the quarantine notification isn't possible.
 
 If the **Delete** permission is disabled, users can't delete their own messages from quarantine (the action isn't available).
 
@@ -850,7 +856,13 @@ If the **Preview** permission is disabled, users can't preview their own message
 ##### Allow recipients to release a message from quarantine permission
 
 > [!NOTE]
-> As explained previously, this permission isn't honored for messages that were quarantined as **malware** by anti-malware or Safe Attachments policies, or as **high confidence phishing** by anti-spam policies. If the quarantine policy gives users this permission, users are instead allowed to _request_ the release of their quarantined malware or high confidence phishing messages.
+> As explained previously, this permission isn't honored in the following scenarios, regardless of how the quarantine policy is configured:
+  >
+  > - Messages quarantined as malware by anti-malware policies.
+  > - Messages quarantined as malware or phishing by Safe Attachments policies.
+  > - Messages quarantined as high confidence phishing by anti-spam policies.
+  >
+  > If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
 The **Allow recipients to release a message from quarantine** permission (_PermissionToRelease_) allows users to release their own quarantined messages without admin approval.
 

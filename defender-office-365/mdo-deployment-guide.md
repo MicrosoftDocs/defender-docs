@@ -302,7 +302,7 @@ You need to become familiar with how to block and (temporarily) allow message se
 - The **Submissions** page at <https://security.microsoft.com/reportsubmission>.
 - The **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence>.
 
-In general, it's easier to create blocks than allows, because unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+In general, it's easier to create blocks than allows, because unnecessary allow entries expose your organization to malicious email that the system would otherwise filter.
 
 - **Block**:
 

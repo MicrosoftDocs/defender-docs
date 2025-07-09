@@ -15,11 +15,11 @@ ms.assetid: 3a137e28-1174-42d5-99af-f18868b43e86
 ms.collection:
   - m365-security
   - tier2
-description: "Admins can learn how to find and use the email security reports that are available in the Microsoft Defender portal. This article helps answer the question, 'What is the Threat protection status report in EOP and Microsoft Defender for Office 365?'"
+description: "Admins can learn how to find and use the email security reports that are available in the Microsoft Defender portal. This article helps answer the question, 'What is the Threat protection status report in Microsoft 365'"
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 06/19/2025
+ms.date: 07/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -48,7 +48,7 @@ The rest of this article describes the reports that are exclusive to Defender fo
 
 ## Email security report changes in the Microsoft Defender portal
 
-The Exchange Online Protection (EOP) and Microsoft Defender for Office 365 reports in the Microsoft Defender portal that were replaced, moved, or deprecated are described in the following table.
+Reports replaced, moved, or deprecated are described in the following table.
 
 |Deprecated report and cmdlets|New report and cmdlets|Message Center ID|Date|
 |---|---|:---:|:---:|
@@ -109,12 +109,13 @@ On the **Compromised users** page, the :::image type="icon" source="media/m365-c
 
 ## Mailflow status report
 
-The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Exchange Online Protection (EOP) or Defender for Microsoft 365.
+The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Microsoft 365.
 
 > [!TIP]
+>
 > - If a message is sent to five recipients, we count it as five different messages, not one message.
 >
-> - The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. The increased message counts in these other reporting features aren't caused by a mismatch or counting the same item multiple times. The increased message counts are the result of showing all detected threats involved at the same time.
+> - The Mailflow status report shows the **primary threat** responsible for blocking or quarantining messages. [Threat Explorer or Real-time detections](threat-explorer-real-time-detections-about.md) and [Advanced hunting in Defender for Office 365 Plan 2](/defender-xdr/advanced-hunting-overview) show **primary and secondary threats** responsible for blocking or quarantining messages. Mismatch or counting the same item multiple times doesn't cause the increased message counts in these other reporting features. The increased message counts are the result of showing all detected threats involved at the same time.
 >
 > - The aggregate message count in the Mailflow status report could also be more than the message count in the following locations due to [zero-hour autopurge (ZAP)](zero-hour-auto-purge.md) activity:
 >   - Threat Explorer or Real-time detections.
@@ -140,7 +141,7 @@ On the **Mailflow status report** page, the **Type** tab is selected by default.
 - **Good mail**: Email determined not to be spam or allowed by user or organizational policies.
 - **Phishing email**: Email blocked as phishing by various filters.
 - **Spam**: Email blocked as spam by various filters.
-- **Edge protection**: Email rejected at the edge/perimeter before examination by EOP or Defender for Office 365.
+- **Edge protection**: Email rejected at the edge/perimeter before examination by Microsoft 365.
 - **Rule messages**: Email quarantined by mail flow rules (also known as transport rules).
 - **Data loss prevention**: Email quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 
@@ -195,7 +196,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   > [!NOTE]
   > To see data for a specific date, use the day after. For example, to see January 10 data, use January 11 in the filter. Today's data is available for filtering tomorrow.
   >
-  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications will be. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
+  > Report data for some days is updated continuously, so the longer you wait to run the report, the more stable the message counts and classifications are. For example, to return comprehensive weekly data from Sunday the 10th to Saturday the 17th, run the report on Friday the 23rd. The same report run on Sunday the 18th or Tuesday the 20th might contain slightly different message counts and classifications.
 
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Type**: Select one or more of the following values:
@@ -225,8 +226,6 @@ The **Mailflow** tab shows you how Microsoft's email threat protection features 
 :::image type="content" source="media/mail-flow-status-report-mailflow-view.png" alt-text="The Mailflow view in the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view.png":::
 
 The aggregate view and details table view allow for 90 days of filtering.
-
-The information in the diagram is color-coded by **EOP** and **Defender for Office 365** technologies.
 
 The diagram is organized into the following horizontal bands:
 
@@ -415,7 +414,7 @@ On the **Submissions** page, the **[Export](#export-report-data)** action is ava
 
 ## Threat protection status report
 
-The **Threat protection status** report is available in both EOP and Defender for Office 365. However, the reports contain different data. For example, EOP customers can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
+The **Threat protection status** report is available in all Microsoft 365 organizations with cloud mailboxes, and in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription). However, the reports contain different data. For example, Microsoft 365 organization without Defender for Office 365 can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
 
 The report provides the count of email messages with malicious content. For example:
 
@@ -430,8 +429,8 @@ You can use the information in this report to identify trends or determine wheth
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Submissions**, and then select **View details**. Or, to go directly to the report, use one of the following URLS:
 
-- **Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
-- **EOP**: <https://security.microsoft.com/reports/TPSAggregateReport>
+- **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReport>
+- **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
 
 :::image type="content" source="media/threat-protection-status-report-widget.png" alt-text="The Threat protection status widget on the Email & collaboration reports page." lightbox="media/threat-protection-status-report-widget.png":::
 
@@ -995,7 +994,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 In the **View data by System override** and **Chart breakdown by Delivery location** view, the following override reason information is shown in the chart:
 
 - **Junk Mail folder not enabled**
-- **SecOps mailbox**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+- **SecOps mailbox**: For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
 In the details table below the chart, the following information is available:
 
@@ -1054,9 +1053,9 @@ On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-c
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report is available in both EOP and Defender for Office 365; however, the reports contain different data. For example, EOP customers can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+The **Top senders and recipients** report is available in all Microsoft 365 organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Microsoft 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-The **Top senders and recipients** report shows the top 20 message senders in the organization, as well as the top 20 recipients for messages detected by EOP and Defender for Office 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
+The **Top senders and recipients** report shows the top 20 message senders in the organization, and the top 20 recipients for messages detected by Microsoft 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top senders and recipients**.
 
@@ -1066,15 +1065,16 @@ Hover over a wedge in the pie chart to see the number of messages for the sender
 
 Select **View details** to go to the **Top senders and recipients** page. Or, to go directly to the report, use one of the following URLs:
 
-- **Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
-- **EOP**: <https://security.microsoft.com/reports/TopSenderRecipient>
+- **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
+- **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
+
 
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 
 - **Show data for Top mail senders** (default view)
 - **Show data for Top mail recipients**
 - **Show data for Top spam recipients**
-- **Show data for Top malware recipients** (EOP)
+- **Show data for Top malware recipients**
 - **Show data for Top phishing recipients**
 - **Show data for Top malware recipients (MDO)**
 - **Show data for Top phish recipients (MDO)**
@@ -1181,7 +1181,7 @@ Depending on the report and the specific view in the report, one or more of the 
 
 > [!TIP]
 >
-> - The exported data is affected by any filters that are configured in the report at the time of export.
+> - Configured filters at the time of export affect the exported data.
 > - If the exported data exceeds 150,000 entries, the data is split into multiple files.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
@@ -1189,7 +1189,7 @@ Depending on the report and the specific view in the report, one or more of the 
 2. In the **Export conditions** flyout that opens, review, and configure the following settings:
 
    - **Select a view to export**: Select one of the following values:
-     - **Summary**: Data from the last 90 days is available. This is the default value.
+     - **Summary**: Data from the last 90 days is available. The default value.
      - **Details**: Data from the last 30 days is available. A date range of one day is supported.
    - **Date (UTC)**:
      - **Start date**: The default value is three months ago.

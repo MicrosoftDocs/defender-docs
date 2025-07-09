@@ -52,7 +52,7 @@ The protection ladder in Defender for Office 365 contains the following elements
 2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
 3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 E5, Microsoft 365 A5, and Microsoft 365 GCC G5).
 
-Defender for Office 365 is also available as an add-in subscription to many Microsoft 365 subscriptions with cloud mailboxes.
+Defender for Office 365 is also available as an add-on subscription to many Microsoft 365 subscriptions with cloud mailboxes.
 
 Defender for Office 365 Plan 1 contains a subset of the features that are available in Plan 2. Defender for Office 365 Plan 2 contains many features that aren't available in Plan 1.
 

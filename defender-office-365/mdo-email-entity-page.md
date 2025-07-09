@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/19/2025
+ms.date: 07/07/2025
 audience: ITPro
 ms.topic: article
 ms.service: defender-office-365
@@ -161,7 +161,7 @@ The details pane on the left side of the page contains collapsible sections with
 
   <sup>\*</sup> The :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy to clipboard** action is available to copy the value.
 
-The tabs (views) along the top of the page allow you to investigate email efficiently. These views are described in the following subsections.
+The tabs (views) along the top of the page allows you to investigate email efficiently. These views are described in the following subsections.
 
 ### Timeline view
 
@@ -203,11 +203,11 @@ The **Analysis** view contains information that helps you analyze the message in
   - **Confidence level**: Values are **High**, **Medium**, or **Low**.
   - **Priority account protection**: Values are **Yes** or **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Email detection details** section: Information about protection features or overrides that affected the message:
-  - **All Overrides**: All organization or user settings that had the possibility to alter the intended delivery location of the message. For example, if the message matched a mail flow rule and a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md), both settings are listed here. The **Primary Override : Source** property value identifies the setting that actually affected the delivery of the message.
+  - **All Overrides**: All organization or user settings that had the possibility to alter the intended delivery location of the message. For example, if the message matched a mail flow rule and a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md), both settings are listed here. The **Primary Override : Source** property value identifies the setting that affected the delivery of the message.
   - **Primary Override : Source**: Shows the organization or user setting that altered the intended delivery location of the message (allowed instead of blocked, or blocked instead of allowed). For example:
-    - The message was blocked by a mail flow rule.
-    - The message was allowed due to an entry in the user's [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md).
-  - **Exchange transport rules** (mail flow rules): If the message was affected by mail flow rules, the rule names and GUID vales are shown. Actions taken on messages by mail flow rules occur before spam and phishing verdicts.
+    - A mail flow rule blocked the message.
+    - An entry in the user's [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md) allowed the message.
+  - **Exchange transport rules** (mail flow rules): If mail flow rules affected the message, the rule names and GUID vales are shown. Actions taken on messages by mail flow rules occur before spam and phishing verdicts.
 
     The :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy to clipboard** action is available to copy the rule GUID. For more information about mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).
 
@@ -246,7 +246,7 @@ The **Analysis** view contains information that helps you analyze the message in
   - **[Domain-based Message Authentication (DMARC)](email-authentication-dmarc-configure.md)**
     - `Pass`: The DMARC check for the message passed.
     - `Fail`: The DMARC check for the message failed.
-    - `BestGuessPass`: The DMARC TXT record for the domain doesn't, but if one existed, the DMARC check for the message would have passed.
+    - `BestGuessPass`: The DMARC TXT record for the domain doesn't exist. If it existed, the DMARC check for the message would pass.
     - None: Indicates that no DMARC TXT record exists for the sending domain in DNS.
   - **[DomainKeys identified mail (DKIM)](email-authentication-dkim-configure.md)**: Values are:
     - `Pass`: The DKIM check for the message passed.
@@ -260,7 +260,7 @@ The **Analysis** view contains information that helps you analyze the message in
     - `None`: The domain doesn't have an SPF record, or the SPF record doesn't evaluate to a result.
     - `TempError`: The SPF check encountered a temporary error (for example, a DNS error). The same check later might succeed.
     - `PermError`: The SPF check encountered a permanent error. For example, the domain has a [badly formatted SPF record](email-authentication-spf-configure.md#troubleshooting-spf-txt-records).
-  - **Composite authentication**: SPF, DKIM, DMARC, and other information determines if the message sender (the From address) is authentic. For more information, see [Composite authentication](email-authentication-about.md#composite-authentication).
+  - **Composite authentication**: SPF, DKIM, DMARC, and other information determine if the message sender (the From address) is authentic. For more information, see [Composite authentication](email-authentication-about.md#composite-authentication).
 - **Related entities** section: Information about attachments and URLs in the message:
   - **Entity**: Selecting **Attachments** or **URLs** takes you to the Attachments view or the URL view of the Email entity page for the message.
   - **Total count**
@@ -307,7 +307,7 @@ If you select an entry in the **Attachments** view by clicking on the **Attachme
     - **Level2**: The next level file.
     - and so on.
 
-    The detonation chain and the CSV file might show just the top level item if none of the entities linked to it were found to be problematic or were detonated.
+    The detonation chain and the CSV file might show just the top level item if none of the linked entities were found to be problematic or were detonated.
 
   - **Summary** section: If no detonation summary information is available, the value **No detonation summary** is shown. Otherwise, the following detonation summary information is available:
     - **Analysis time**
@@ -319,7 +319,7 @@ If you select an entry in the **Attachments** view by clicking on the **Attachme
 
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
-  - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. There might not be any behavior details for container files like ZIP or RAR that contain other files.
+  - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files found during detonation. There might not be any behavior details for container files like ZIP or RAR that contain other files.
 
      If no behavior details information is available, the value **No detonation behaviors** is shown. Otherwise, you can select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to download the behavioral details information to a CSV file. The default filename is **Behavior details.csv** and the default location is the **Downloads** folder. If a file with that name already exists, the filename is appended with a number (for example, **Behavior details(1).csv**). The CSV file contains the following information:
     - **Time**
@@ -344,7 +344,7 @@ When you're finished in the file details flyout, select :::image type="icon" sou
 If you select an entry in the **Attachments** view by selecting the check box next to the filename, the :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Block** action is available. This action adds the file as a [block entry in the Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list). Selecting **Block** starts the **Take action** wizard:
 
 1. On the **Choose actions** page, configure one of following settings in the **Block file** section:
-   - **Never expire** on: This is the default value :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
+   - **Never expire** on: The default value :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
    - **Never expire** off: Slide the toggle to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: and then select a date in the **Remove on** box.
 
    When you're finished on the **Choose actions** page, select **Next**.
@@ -388,7 +388,7 @@ If you select an entry in the **URL** view by clicking on the **URL** value, a d
     - **Level2**: The next level file.
     - and so on.
 
-    The detonation chain and the CSV file might show just the top level item if none of the entities linked to it were found to be problematic or were detonated.
+    The detonation chain and the CSV file might show just the top level item if none of the linked entities were found to be problematic or were detonated.
 
   - **Summary** section: If no detonation summary information is available, the value **No detonation summary** is shown. Otherwise, the following detonation summary information is available:
     - **Analysis time**
@@ -398,7 +398,7 @@ If you select an entry in the **URL** view by clicking on the **URL** value, a d
 
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
-  - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation.
+  - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files found during detonation.
 
      If no behavior details information is available, the value **No detonation behaviors** is shown. Otherwise, you can select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to download the behavioral details information to a CSV file. The default filename is **Behavior details.csv** and the default location is the **Downloads** folder. If a file with that name already exists, the filename is appended with a number (for example, **Behavior details(1).csv**). The CSV file contains the following information:
     - **Time**
@@ -422,7 +422,7 @@ When you're finished in the file details flyout, select :::image type="icon" sou
 If you select an entry in the **URL** view by selecting the check box next to the filename, the :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Block** action is available. This action adds the URL as a [block entry in the Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list). Selecting **Block** starts the **Take action** wizard:
 
 1. On the **Choose actions** page, configure one of following settings in the **Block URL** section:
-   - **Never expire** on: This is the default value :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
+   - **Never expire** on: The default value :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
    - **Never expire** off: Slide the toggle to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: and then select a date in the **Remove on** box.
 
    When you're finished on the **Choose actions** page, select **Next**.
@@ -487,7 +487,7 @@ The following actions are available at the top of the Email entity page:
 
 ## The Email summary panel
 
-The _Email summary panel_ is the email details flyout that's available in many features in Exchange Online Protection (EOP) and Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
+The _Email summary panel_ is the email details flyout that's available in many features in the default email protections in Microsoft 365 and in Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
 
 Where to find the Email summary panel is described in the [Where to find the Email entity page](#where-to-find-the-email-entity-page) section earlier in this article. The rest of this section describes the information that's available on the Email summary panel across all features.
 

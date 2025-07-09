@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 03/27/2025
+ms.date: 07/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -29,7 +29,7 @@ appliesto:
 In all Microsoft 365 organizations with cloud mailboxes, admins can create and manage entries for URLs in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 > [!NOTE]
-> To allow phishing URLs from third-party phishing simulations, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
+> To allow phishing URLs from non-Microsoft phishing simulations, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
 
 This article describes how admins can manage entries for URLs in the Microsoft Defender portal and in Exchange Online PowerShell.
 
@@ -42,9 +42,15 @@ This article describes how admins can manage entries for URLs in the Microsoft D
 - For URL entry syntax, see the [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list) section later in this article.
 
 - - Entry limits for URLs:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 URL entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 URL entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 URL entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 total URL entries:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 total URL entries:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 total URL entries:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - You can enter a maximum of 250 characters in a URL entry.
 
@@ -73,7 +79,7 @@ This article describes how admins can manage entries for URLs in the Microsoft D
 
 ## Create allow entries for URLs
 
-Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
+Unnecessary allow entries expose your organization to malicious email that the system would otherwise filter, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
 To create allow entries for URLs, use either of the following methods:
 
@@ -345,13 +351,13 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 
   For example, `t.co` is allowed; `.com` or `contoso.` aren't allowed.
 
-- Subpaths aren't implied for allows.
+- Subpaths aren't implied for allow entries.
 
   For example, `contoso.com` doesn't include `contoso.com/a`.
 
 - Wildcards (*) are allowed in the following scenarios:
 
-  - A left wildcard must be followed by a period to specify a subdomain. (applicable only for blocks)
+  - A period must follow a left wildcard to specify a subdomain. (applicable only for block entries)
 
     For example, `*.contoso.com` is allowed; `*contoso.com` isn't allowed.
 
@@ -384,11 +390,11 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `*.<TLD>/*`
 
 - **Block match**:
-  - a.TLD
-  - TLD/abcd
-  - b.abcd.TLD
-  - TLD/contoso.com
-  - TLD/q=contoso.com
+  - `a.TLD`
+  - `TLD/abcd`
+  - `b.abcd.TLD`
+  - `TLD/contoso.com`
+  - `TLD/q=contoso.com`
   - `www.abcd.com\xyz.TLD`
   - `www.abcd.com\xyz.TLD?q=1234`
   - `www.abcd.TLD`
@@ -401,26 +407,26 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow match**: contoso.com
 
 - **Allow not matched**:
-  - abc-contoso.com
-  - contoso.com/a
-  - abc.xyz.contoso.com/a/b/c
-  - payroll.contoso.com
-  - test.com/contoso.com
-  - test.com/q=contoso.com
+  - `abc-contoso.com`
+  - `contoso.com/a`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `payroll.contoso.com`
+  - `test.com/contoso.com`
+  - `test.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
 - **Block match**:
-  - contoso.com
-  - contoso.com/a
-  - abc.xyz.contoso.com/a/b/c
-  - payroll.contoso.com
-  - test.com/contoso.com
-  - test.com/q=contoso.com
+  - `contoso.com`
+  - `contoso.com/a`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `payroll.contoso.com`
+  - `test.com/contoso.com`
+  - `test.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
-- **Block not matched**: abc-contoso.com
+- **Block not matched**: `abc-contoso.com`
 
 #### Scenario: Left wildcard (subdomain)
 
@@ -431,12 +437,12 @@ Valid URL entries and their results are described in the following subsections.
 
 - **Allow match** and **Block match**:
   - `www.contoso.com`
-  - xyz.abc.contoso.com
+  - `xyz.abc.contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.com
-  - test.com/contoso.com
+  - `123contoso.com`
+  - `contoso.com`
+  - `test.com/contoso.com`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard at top of path
@@ -444,13 +450,13 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `contoso.com/a/*`
 
 - **Allow match** and **Block match**:
-  - contoso.com/a/b
-  - contoso.com/a/b/c
-  - contoso.com/a/?q=joe@t.com
+  - `contoso.com/a/b`
+  - `contoso.com/a/b/c`
+  - `contoso.com/a/?q=joe@t.com`
 
 - **Allow not matched** and **Block not matched**:
-  - contoso.com
-  - contoso.com/a
+  - `contoso.com`
+  - `contoso.com/a`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
@@ -462,13 +468,13 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `~contoso.com`
 
 - **Allow match** and **Block match**:
-  - contoso.com
+  - `contoso.com`
   - `www.contoso.com`
-  - xyz.abc.contoso.com
+  - `xyz.abc.contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.com/abc
+  - `123contoso.com`
+  - `contoso.com/abc`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard suffix
@@ -476,13 +482,13 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `contoso.com/*`
 
 - **Allow match** and **Block match**:
-  - contoso.com/?q=whatever@fabrikam.com
-  - contoso.com/a
-  - contoso.com/a/b/c
-  - contoso.com/ab
-  - contoso.com/b
-  - contoso.com/b/a/c
-  - contoso.com/ba
+  - `contoso.com/?q=whatever@fabrikam.com`
+  - `contoso.com/a`
+  - `contoso.com/a/b/c`
+  - `contoso.com/ab`
+  - `contoso.com/b`
+  - `contoso.com/b/a/c`
+  - `contoso.com/ba`
 
 - **Allow not matched** and **Block not matched**: contoso.com
 
@@ -494,13 +500,13 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `*.contoso.com/*`
 
 - **Allow match** and **Block match**:
-  - abc.contoso.com/ab
-  - abc.xyz.contoso.com/a/b/c
+  - `abc.contoso.com/ab`
+  - `abc.xyz.contoso.com/a/b/c`
   - `www.contoso.com/a`
   - `www.contoso.com/b/a/c`
-  - xyz.contoso.com/ba
+  - `xyz.contoso.com/ba`
 
-- **Allow not matched** and **Block not matched**: contoso.com/b
+- **Allow not matched** and **Block not matched**: `contoso.com/b`
 
 #### Scenario: Left and right tilde
 
@@ -510,71 +516,71 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `~contoso.com~`
 
 - **Allow match** and **Block match**:
-  - contoso.com
-  - contoso.com/a
+  - `contoso.com`
+  - `contoso.com/a`
   - `www.contoso.com`
   - `www.contoso.com/b`
-  - xyz.abc.contoso.com
-  - abc.xyz.contoso.com/a/b/c
-  - contoso.com/b/a/c
-  - test.com/contoso.com
+  - `xyz.abc.contoso.com`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `contoso.com/b/a/c`
+  - `test.com/contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.org
-  - test.com/q=contoso.com
+  - `123contoso.com`
+  - `contoso.org`
+  - `test.com/q=contoso.com`
 
 #### Scenario: IP address
 
 **Entry**: `1.2.3.4`
 
-- **Allow match** and **Block match**: 1.2.3.4
+- **Allow match** and **Block match**: `1.2.3.4`
 
 - **Allow not matched** and **Block not matched**:
-  - 1.2.3.4/a
-  - 11.2.3.4/a
+  - `1.2.3.4/a`
+  - `11.2.3.4/a`
 
 #### IP address with right wildcard
 
 **Entry**: `1.2.3.4/*`
 
 - **Allow match** and **Block match**:
-  - 1.2.3.4/b
-  - 1.2.3.4/baaaa
+  - `1.2.3.4/b`
+  - `1.2.3.4/baaaa`
 
 ### Examples of invalid entries
 
 The following entries are invalid:
 
 - **Missing or invalid domain values**:
-  - contoso
-  - \*.contoso.\*
-  - \*.com
-  - \*.pdf
+  - `contoso`
+  - `*.contoso.*`
+  - `*.com`
+  - `*.pdf`
 
 - **Wildcard on text or without spacing characters**:
-  - \*contoso.com
-  - contoso.com\*
-  - \*1.2.3.4
-  - 1.2.3.4\*
-  - contoso.com/a\*
-  - contoso.com/ab\*
+  - `*contoso.com`
+  - `contoso.com*`
+  - `*1.2.3.4`
+  - `1.2.3.4*`
+  - `contoso.com/a*`
+  - `contoso.com/ab*`
 
 - **IP addresses with ports**:
-  - contoso.com:443
-  - abc.contoso.com:25
+  - `contoso.com:443`
+  - `abc.contoso.com:25`
 
 - **Non-descriptive wildcards**:
-  - \*
-  - \*.\*
+  - `*`
+  - `*.*`
 
 - **Middle wildcards**:
-  - conto\*so.com
-  - conto~so.com
+  - `conto\*so.com`
+  - `conto~so.com`
 
 - **Double wildcards**
-  - contoso.com/\*\*
-  - contoso.com/\*/\*
+  - `contoso.com/**`
+  - `contoso.com/*/*`
 
 ## Related articles
 

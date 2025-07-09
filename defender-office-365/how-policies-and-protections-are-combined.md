@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 03/25/2025
+ms.date: 07/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -28,9 +28,9 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, inbound email might be flagged by multiple forms of protection. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
+In all Microsoft 365 organizations with cloud mailboxes, multiple protection features might flag inbound email. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
 
-In general, a policy that's applied to a message is identified in the **X-Forefront-Antispam-Report** header in the **CAT (Category)** property. For more information, see [Anti-spam message headers](message-headers-eop-mdo.md).
+In general, a policy applied to a message is identified in the **X-Forefront-Antispam-Report** header in the **CAT (Category)** property. For more information, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 There are two major factors that determine which policy is applied to a message:
 
@@ -58,18 +58,18 @@ There are two major factors that determine which policy is applied to a message:
   3. Anti-phishing, Safe Links, and Safe Attachments in [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365) (when enabled).
   4. Custom anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies (when created).
 
-     Custom policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order that *custom policies* of that type (anti-spam, anti-malware, anti-phishing, etc.) are applied, but doesn't affect where custom policies are applied in the overall order.
+     Custom threat protection policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order of application for that type of threat protection policy (anti-spam, anti-malware, anti-phishing, etc.). The priority value doesn't affect where custom threat protection policies are applied in the overall order.
 
   5. Of equal value:
      - The Safe Links and Safe Attachments policies in the [Built-in protection preset security policy](preset-security-policies.md#profiles-in-preset-security-policies)<sup>\*</sup>.
-     - The default policies for anti-malware, anti-spam, and anti-phishing.
+     - The default threat protection policies for anti-malware, anti-spam, and anti-phishing.
 
-     You can configure exceptions to the Built-in protection preset security policy, but you can't configure exceptions to the default policies (they apply to all recipients and you can't turn them off).
+     You can configure exceptions to the Built-in protection preset security policy, but you can't configure exceptions to the default threat protection policies (they apply to all recipients and you can't turn them off).
 
   <sup>\*</sup> Defender for Office 365 only.
 
   > [!IMPORTANT]
-  > The priority order matters if you have the same recipient intentionally or unintentionally included in multiple policies, because *only* the first policy of that type (anti-spam, anti-malware, anti-phishing, etc.) is applied to that recipient, regardless of how many other policies that the recipient is included in. There's never a merging or combining of the settings in multiple policies for the recipient. The recipient is unaffected by the settings of the remaining policies of that type.
+  > The priority order matters if the same recipient is intentionally or unintentionally included in multiple policies, because *only* the first policy of that type (anti-spam, anti-malware, anti-phishing, etc.) is applied to that recipient, regardless of how many other policies that the recipient is included in. There's never a merging or combining of the settings in multiple policies for the recipient. The recipient is unaffected by the settings of the remaining policies of that type.
 
 For example, the group named "Contoso Executives" is included in the following policies:
 
@@ -99,10 +99,10 @@ To make sure that recipients get the protection settings that you want, use the 
 
 ## Appendix
 
-It's important to understand how user allows and blocks, tenant allows and blocks, and filtering stack verdicts in EOP and Defender for Office 365 complement or contradict each other.
+It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the default email protections in Microsoft 365 and in Defender for Office 365 complement or contradict each other.
 
 - For information about filtering stacks and how they're combined, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
-- After the filtering stack determines a verdict, only then are tenant policies and their configured actions evaluated.
+- After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.
 - If the same email address or domain exists in a user's Safe Senders list and Blocked Senders list, the Safe Senders list takes precedence.
 - If the same entity (email address, domain, spoofed sending infrastructure, file, or URL) exists in an allow entry and a block entry in the Tenant Allow/Block List, the block entry takes precedence.
 - If you use a file type in the [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies), allowing the same file in the Tenant Allow/Block list or Exchange mail flow rules (also known as transport rules) doesn't override the verdict.
@@ -115,34 +115,36 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
 |---|---|---|
 |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
 |High confidence phishing|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
-|Phishing|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
-|High confidence spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
-|Spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
+|Phishing|**User wins**: Email delivered to user's Inbox|**Organization wins**: The applicable anti-spam policy determines the action|
+|High confidence spam|**User wins**: Email delivered to user's Inbox|**Organization wins**: The applicable anti-spam policy determines the action|
+|Spam|**User wins**: Email delivered to user's Inbox|**Organization wins**: The applicable anti-spam policy determines the action|
 |Bulk|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 |Not spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 
-- In Exchange Online, the domain allow in the Safe Sender's list might not work if the message is quarantined by any of the following conditions:
+- In Exchange Online, the domain allow in the Safe Sender's list might not work if any of the following scenarios quarantined the message:
   - The message is identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
   - [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies) are configured to quarantine instead of move mail to the Junk Email folder.
   - The email address, URL, or file in the email message is also in a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 
 For more information about the safelist collection and anti-spam settings on user mailboxes, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
-### Tenant allows and blocks
+<a name='tenant-allows-and-blocks'></a>
 
-Tenant allows and blocks are able to override some filtering stack verdicts as described in the following tables:
+### Organization allows and blocks
+
+Organization allows and blocks are able to override some filtering stack verdicts as described in the following tables:
 
 - [Advanced delivery policy](advanced-delivery-policy-configure.md) (skip filtering for designated SecOps mailboxes and phishing simulation URLs):
 
   |Filtering stack verdict|Advanced delivery policy allow|
   |---|---|
-  |Malware|**Tenant wins**: Email delivered to mailbox|
-  |High confidence phishing|**Tenant wins**: Email delivered to mailbox|
-  |Phishing|**Tenant wins**: Email delivered to mailbox|
-  |High confidence spam|**Tenant wins**: Email delivered to mailbox|
-  |Spam|**Tenant wins**: Email delivered to mailbox|
-  |Bulk|**Tenant wins**: Email delivered to mailbox|
-  |Not spam|**Tenant wins**: Email delivered to mailbox|
+  |Malware|**Organization wins**: Email delivered to mailbox|
+  |High confidence phishing|**Organization wins**: Email delivered to mailbox|
+  |Phishing|**Organization wins**: Email delivered to mailbox|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|
+  |Spam|**Organization wins**: Email delivered to mailbox|
+  |Bulk|**Organization wins**: Email delivered to mailbox|
+  |Not spam|**Organization wins**: Email delivered to mailbox|
 
 - [Exchange mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules):
 
@@ -150,13 +152,13 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |---|---|---|
   |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined except in complex routing|**Filter wins**: Email quarantined|
-  |Phishing|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Phishing action in the applicable anti-spam policy|
-  |High confidence spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Bulk|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Not spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
+  |Phishing|**Organization wins**: Email delivered to mailbox|**Organization wins**: Phishing action in the applicable anti-spam policy|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Bulk|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Not spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
 
-  <sup>\*</sup> Organizations that use a third-party security service or device in front of Microsoft 365 should consider using [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) (contact the third-party for availability) and [Enhanced Filtering for Connectors (also known as skip listing)](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) instead of an SCL=-1 mail flow rule. These improved methods reduce email authentication issues and encourage [defense-in-depth](step-by-step-guides/defense-in-depth-guide.md) email security.
+  <sup>\*</sup> Organizations that use a non-Microsoft security service or device in front of Microsoft 365 should consider using [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) (contact the service for availability) and [Enhanced Filtering for Connectors (also known as skip listing)](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) instead of an SCL=-1 mail flow rule. These improved methods reduce email authentication issues and encourage [defense-in-depth](step-by-step-guides/defense-in-depth-guide.md) email security.
 
 - IP Allow List and IP Block List in [connection filter policies](connection-filter-policies-configure.md):
 
@@ -164,11 +166,11 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |---|---|---|
   |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
-  |Phishing|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email silently dropped|
-  |High confidence spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email silently dropped|
-  |Spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email silently dropped|
-  |Bulk|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email silently dropped|
-  |Not spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email silently dropped|
+  |Phishing|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email silently dropped|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email silently dropped|
+  |Spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email silently dropped|
+  |Bulk|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email silently dropped|
+  |Not spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email silently dropped|
 
 - Allow and block settings in [anti-spam policies](anti-spam-policies-configure.md):
   - Allowed sender and domain list.
@@ -180,11 +182,11 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |---|---|---|
   |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
-  |Phishing|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Phishing action in the applicable anti-spam policy|
-  |High confidence spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Bulk|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
-  |Not spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
+  |Phishing|**Organization wins**: Email delivered to mailbox|**Organization wins**: Phishing action in the applicable anti-spam policy|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Bulk|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Not spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
 
 - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list): There are two types of allow entries:
   - **Message level** allow entries act on the entire message, regardless of the entities in the message. Allow entries for email address and domains are message level allow entries. These allow entries override bulk and spam verdicts, and high confidence phishing verdicts from machine learning models.
@@ -194,33 +196,35 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |---|---|
   |Malware|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined|
-  |Phishing|**Tenant wins**: Email delivered to mailbox|
-  |High confidence spam|**Tenant wins**: Email delivered to mailbox|
-  |Spam|**Tenant wins**: Email delivered to mailbox|
-  |Bulk|**Tenant wins**: Email delivered to mailbox|
-  |Not spam|**Tenant wins**: Email delivered to mailbox|
+  |Phishing|**Organization wins**: Email delivered to mailbox|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|
+  |Spam|**Organization wins**: Email delivered to mailbox|
+  |Bulk|**Organization wins**: Email delivered to mailbox|
+  |Not spam|**Organization wins**: Email delivered to mailbox|
 
 - [Block entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list):
 
   |Filtering stack verdict|Email address/domain|Spoof|File|URL|
   |---|---|---|---|---|
-  |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|**Tenant wins**: Email quarantined|**Filter wins**: Email quarantined|
-  |High confidence phishing|**Tenant wins**: Email quarantined|**Filter wins**: Email quarantined|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-  |Phishing|**Tenant wins**: Email quarantined|**Tenant wins**: Spoof action in the applicable anti-phishing policy|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-  |High confidence spam|**Tenant wins**: Email quarantined|**Tenant wins**: Spoof action in the applicable anti-phishing policy|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-  |Spam|**Tenant wins**: Email quarantined|**Tenant wins**: Spoof action in the applicable anti-phishing policy|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-  |Bulk|**Tenant wins**: Email quarantined|**Tenant wins**: Spoof action in the applicable anti-phishing policy|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-  |Not spam|**Tenant wins**: Email quarantined|**Tenant wins**: Spoof action in the applicable anti-phishing policy|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
+  |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|**Organization wins**: Email quarantined|**Filter wins**: Email quarantined|
+  |High confidence phishing|**Organization wins**: Email quarantined|**Filter wins**: Email quarantined|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+  |Phishing|**Organization wins**: Email quarantined|**Organization wins**: Spoof action in the applicable anti-phishing policy|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+  |High confidence spam|**Organization wins**: Email quarantined|**Organization wins**: Spoof action in the applicable anti-phishing policy|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+  |Spam|**Organization wins**: Email quarantined|**Organization wins**: Spoof action in the applicable anti-phishing policy|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+  |Bulk|**Organization wins**: Email quarantined|**Organization wins**: Spoof action in the applicable anti-phishing policy|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+  |Not spam|**Organization wins**: Email quarantined|**Organization wins**: Spoof action in the applicable anti-phishing policy|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
 
-### User and tenant settings conflict
+<a name='user-and-tenant-settings-conflict'></a>
 
-The following table describes how conflicts are resolved if an email is affected by both user allow/block settings and tenant allow/block settings:
+### When user and organization settings conflict
 
-|Type of tenant allow/block|User's Safe Senders/Recipients list|User's Blocked Senders list|
+The following table describes how conflicts are resolved if both user allow/block settings and organization allow/block settings affect a message:
+
+|Type of organization allow/block|User's Safe Senders/Recipients list|User's Blocked Senders list|
 |---|---|---|
-|Block entries in the Tenant Allow/Block List for: <ul><li>Email addresses and domains</li><li>Files</li><li>URLs</li></ul>|**Tenant wins**: Email quarantined|**Tenant wins**: Email quarantined|
-|Block entries for spoofed senders in the Tenant Allow/Block List|**Tenant wins**: Spoof intelligence action in the applicable anti-phishing policy|**Tenant wins**: Spoof intelligence action in the applicable anti-phishing policy|
-|Advanced delivery policy|**User wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to mailbox|
+|Block entries in the Tenant Allow/Block List for: <ul><li>Email addresses and domains</li><li>Files</li><li>URLs</li></ul>|**Organization wins**: Email quarantined|**Organization wins**: Email quarantined|
+|Block entries for spoofed senders in the Tenant Allow/Block List|**Organization wins**: Spoof intelligence action in the applicable anti-phishing policy|**Organization wins**: Spoof intelligence action in the applicable anti-phishing policy|
+|Advanced delivery policy|**User wins**: Email delivered to mailbox|**Organization wins**: Email delivered to mailbox|
 |Block settings in anti-spam policies|**User wins**: Email delivered to mailbox|**User wins**: Email delivered to user's Junk Email folder|
 |Honor DMARC policy|**User wins**: Email delivered to mailbox|**User wins**: Email delivered to user's Junk Email folder|
 |Blocks by mail flow rules|**User wins**: Email delivered to mailbox|**User wins**: Email delivered to user's Junk Email folder|

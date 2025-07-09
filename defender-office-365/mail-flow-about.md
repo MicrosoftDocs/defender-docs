@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ms.assetid: e109077e-cc85-4c19-ae40-d218ac7d0548
 ms.custom: 
   - seo-marvel-apr2020
-description: Admin can learn about the options for configuring mail flow and routing in Exchange Online Protection (EOP).
+description: Admin can learn about the options for configuring mail flow and routing in all Microsoft 365 organizations with cloud mailboxes.
 ms.service: defender-office-365
 ms.collection: 
 - m365-security
@@ -32,17 +32,17 @@ In all Microsoft 365 organizations with cloud mailboxes, all messages sent to yo
 
 ## Working with messages and message access options
 
-EOP offers flexibility in how your messages are routed. The following articles explain steps in the mail flow process:
+Microsoft 365 offers flexibility in how your messages are routed. The following articles explain steps in the mail flow process:
 
 - [Directory Based Edge Blocking](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking) rejects messages to invalid recipients at the service network perimeter by default.
 
-- [View or edit accepted domains in Microsoft 365](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) describes how to manage domains that are associated with your EOP service.
+- [View or edit accepted domains in Microsoft 365](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) describes how to manage email domains associated with Microsoft 365.
 
-- Your EOP service can help you manage subdomains that you add to your organization. Learn more about subdomains at [Enable mail flow for subdomains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/enable-mail-flow-for-subdomains).
+- You can manage subdomains you add to your organization. Learn more about subdomains at [Enable mail flow for subdomains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/enable-mail-flow-for-subdomains).
 
 - [Configure mail flow using connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) introduces connectors and shows how you can use them to customize mail routing. Scenarios include ensuring secure communication with a partner organization and setting up a smart host.
 
-- [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) describes how to configure connectors if your mail is routed to a service or device before EOP.
+- [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) describes how to configure connectors if your internet mail is routed to a service or device before delivery to Microsoft 365.
 
 - In hybrid environments where Microsoft 365 protects on-premises Exchange mailboxes, you need to configure two mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the Microsoft 365 spam headers added to messages. For details, see [Configure Microsoft 365 to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 

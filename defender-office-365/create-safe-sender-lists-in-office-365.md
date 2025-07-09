@@ -110,7 +110,7 @@ When a message skips spam filtering due to a mail flow rule, the value `SFV:SKN`
 ## Use Outlook Safe Senders
 
 > [!CAUTION]
-> This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
+> This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 
 Instead of an organizational setting, users or admins can add the sender email addresses to the Safe Senders list in the mailbox. Safe Senders list entries in the mailbox affect that mailbox only. For instructions, see the following articles:
 
@@ -131,7 +131,7 @@ When messages skip spam filtering due to entries in a user's Safe Senders list, 
 ## Use the IP Allow List in the default connection filter policy
 
 > [!CAUTION]
-> Without other verification (for example, using mail flow rules), email from sources in the IP Allow List skips spam filtering and sender email authentication (SPF, DKIM, and DMARC). This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
+> Without other verification (for example, using mail flow rules), email from sources in the IP Allow List skips spam filtering and sender email authentication (SPF, DKIM, and DMARC). This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 
 The next best option is to add the source email servers to the IP Allow List in the default connection filter policy. For details, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
 
@@ -143,7 +143,7 @@ The next best option is to add the source email servers to the IP Allow List in 
 
 > [!CAUTION]
 >
-> This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
+> This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 >
 > Don't use popular domains (for example, microsoft.com) in allowed domain lists.
 

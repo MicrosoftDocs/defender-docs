@@ -77,7 +77,7 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - United Kingdom
 - United States
 
-In Exchange Online Protection (EOP), the following data is stored at rest in the local region geo:
+In the default email protections in Microsoft 365, the following data is stored at rest in the local region geo:
 
 - Alerts
 - Attachments
