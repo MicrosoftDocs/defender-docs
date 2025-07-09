@@ -74,6 +74,8 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
+- Cloud Tamper Protection - Initiating cloud applications tamper protection maintaining security products resiliency during breach. Focused on hardening and mitigating against known compromised cloud admin accounts actions starting with hardening the Microsoft Defender portal. Disabling critical actions targeted by Hybrid threat actors such as – Live Response sessions, new offboarding blobs downloads and alert suppression modifications. 
+
 For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender XDR.
 
 ## Identify when an attack disruption happens in your environment
