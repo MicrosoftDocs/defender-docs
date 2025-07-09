@@ -169,6 +169,32 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --reuse-values
 ```
 
+## Security Rules for Gated Deployment
+
+You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
+
+**Accessing Security Rules**
+
+1.   Navigate to the __Microsoft Defender for Cloud (MDC) Dashboard__
+
+2.   In the left navigation pane, select __Environment settings__
+
+3.   Click on the __Security rules__ tile
+
+**Configuring Vulnerability Assessment Rules**
+
+1.      Within the Security rules page, navigate to __Vulnerability assessment__ under the __Gated deployment__ section
+
+2.      Create or edit your security rules as needed
+
+Important Notes for Helm Installations
+
+·       __Subscription Support Warning__: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+
+·       __Skip Auto-Installation__: If prompted to enable gating in the third tab of the security rule edit window, make sure to press __Skip__. This option enables auto-installation, which conflicts with your existing Helm deployment.
+
+![User's image](media/deploy-helm/image.png)
+
 ## Next steps
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)
