@@ -342,7 +342,7 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 Returns a table with an entry for every unique combination of DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. The API pulls data in your organization as Json responses. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results. Unlike the full software vulnerabilities assessment (JSON response), which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device, the delta export JSON response API call is used to fetch only the changes that happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you only get specific information on new, fixed, and updated vulnerabilities. Delta export JSON response API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed?" or "how many new vulnerabilities were added to my organization?"
 
 > [!NOTE]
-> We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage; the API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint  will just read latest Flat from blob.
+> We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage; the API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint will just read latest Flat OR Delta After sinceTime.
 > A successful completion of Full VA export will trigger __delta export__ that captures the changes from latest Flat VA processed by Delta to new Flat VA.
 > > __RBAC-scoped duplicates__
 > > Because exports are scoped by __RBACGroup__, a device that moves from one RBAC group to another will appear __twice__ in a Delta export when you query with the global view (`RBACGroup=*`): once under its previous group with status "Fixed" and once under its current group with status "New". Use the `rbacGroupId` and device identifiers together (or de-duplicate on your side) if you need a single authoritative record per device.
@@ -354,6 +354,8 @@ Returns a table with an entry for every unique combination of DeviceId, Software
 1. __Stay current__ – delta export between full snapshots(Delta can be queried up to 14 days into the past).
 
 1. __Handle RBAC moves__ – When processing a Delta, de-duplicate entries where the same `Id(deviceId_software_` version _ cve`)`appears under multiple `rbacGroupId` values.
+
+1. When "Status" = Fix" the calcualtion of  "EventTimestamp"- "FirstSeenTimestamp" should give you an estimation on when the CVE was fixed up to a granularity of 6 hours(because of Delta worker run interval).
 
 
 #### 3.1.1 Limitations
@@ -473,7 +475,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
             "exploitabilityLevel": "NoExploit",
             "recommendationReference": "va-_-google-_-chrome",
             "status": "Fixed",
-            "eventTimestamp": "2021-01-11T11:06:08.291Z"
+            "eventTimestamp": "2020-11-03 10:13:34.8476880"
         },
         {
             "id": "00e59c61234533860738ecf488eec8abf296e41e_onedrive_20.64.329.3__",
@@ -500,7 +502,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
             "exploitabilityLevel": "NoExploit",
             "recommendationReference": "va-_-microsoft-_-onedrive",
             "status": "Fixed",
-            "eventTimestamp": "2021-01-11T11:06:08.291Z"
+            "eventTimestamp": "2020-11-03 10:13:34.8476880"
         },
         {
             "id": "01aa8c73095bb12345918663f3f94ce322107d24_firefox_83.0.0.0_CVE-2020-26971_",
@@ -529,7 +531,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
             "exploitabilityLevel": "NoExploit",
             "recommendationReference": "va-_-mozilla-_-firefox",
             "status": "Fixed",
-            "eventTimestamp": "2021-01-11T11:06:08.291Z"
+            "eventTimestamp": "2020-11-03 10:13:34.8476880"
         },
         {
             "id": "026f0fcb12345fbd2decd1a339702131422d362e_project_16.0.13701.20000__",
@@ -556,7 +558,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
             "exploitabilityLevel": "NoExploit",
             "recommendationReference": "va-_-microsoft-_-project",
             "status": "Fixed",
-            "eventTimestamp": "2021-01-11T11:06:08.291Z"
+            "eventTimestamp": "2020-11-03 10:13:34.8476880"
         },
         {
             "id": "038df381234510b357ac19d0113ef622e4e212b3_chrome_81.0.4044.138_CVE-2020-16011_",
@@ -585,7 +587,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
             "exploitabilityLevel": "NoExploit",
             "recommendationReference": "va-_-google-_-chrome",
             "status": "Fixed",
-            "eventTimestamp": "2021-01-11T11:06:08.291Z"
+            "eventTimestamp": "2020-11-03 10:13:34.8476880"
         }
     ],
     "@odata.nextLink": "https://wpatdadi-eus-stg.cloudapp.net/api/machines/SoftwareVulnerabilitiesTimeline?sincetime=2021-01-11&pagesize=5&$skiptoken=eyJFeHBvcnREZWZpbml0aW9uIjp7IlRpbWVQYXRoIjoiMjAyMS0wMS0xMS8xMTAxLyJ9LCJFeHBvcnRGaWxlSW5kZXgiOjAsIkxpbmVTdG9wcGVkQXQiOjV9"
