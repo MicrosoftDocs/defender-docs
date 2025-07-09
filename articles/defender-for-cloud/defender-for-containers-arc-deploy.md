@@ -1,88 +1,80 @@
 ---
-title: Deploy Defender for Containers on Arc-enabled Kubernetes
-description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters.
+title: Deploy Defender for Containers on Arc-enabled Kubernetes programmatically
+description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using CLI, API, or Infrastructure as Code.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy Defender for Containers on Arc-enabled Kubernetes
+# Deploy Defender for Containers on Arc-enabled Kubernetes programmatically
 
-This article explains how to enable Microsoft Defender for Containers on your Arc-enabled Kubernetes clusters.
+This article describes how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using programmatic methods.
+
+> [!TIP]
+> For Azure portal deployment instructions, see [Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal](defender-for-containers-arc-deploy-portal.md).
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-- Kubernetes cluster already connected to Azure Arc
-- Azure CLI with `connectedk8s` and `k8s-configuration` extensions installed
-- `cluster-admin` role on the Kubernetes cluster
-- Helm 3 installed on your local machine
+Additionally:
+- Azure CLI with the k8s-extension extension
+- kubectl configured to access your cluster
+- Helm 3.0 or later (for Helm deployment)
 
-## Verify Arc connection
+## Connect your cluster to Azure Arc
 
-Before enabling Defender, verify your cluster is properly connected to Arc:
+First, ensure your Kubernetes cluster is connected to Azure Arc:
 
-```azurecli
-# List Arc-enabled Kubernetes clusters
-az connectedk8s list --resource-group <resource-group> --output table
+```bash
+# Register Azure Arc providers
+az provider register --namespace Microsoft.Kubernetes
+az provider register --namespace Microsoft.KubernetesConfiguration
+az provider register --namespace Microsoft.ExtendedLocation
 
-# Check cluster status
-az connectedk8s show \
+# Connect cluster to Azure Arc
+az connectedk8s connect \
     --name <cluster-name> \
     --resource-group <resource-group> \
-    --query "{name:name, state:connectivityStatus, distribution:distribution}"
+    --location <location>
 ```
 
 ## Enable Defender for Containers
 
-### Using Azure portal
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-2. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-
-3. Select the subscription containing your Arc-enabled clusters.
-
-4. In the Defender plans page, toggle **Containers** to **On**.
-
-5. Select **Settings** and ensure all components are enabled:
-   - **Agentless discovery for Kubernetes** - On
-   - **Runtime threat protection** - On
-
-6. Select **Save**.
-
 ### Using Azure CLI
 
 ```azurecli
-# Enable Defender for Containers
+# Enable Defender for Containers on subscription
 az security pricing create \
-    --name 'Containers' \
-    --tier 'Standard'
+    --name Containers \
+    --tier Standard
 
-# Enable extensions
-az security pricing extension create \
-    --name 'Containers' \
-    --pricing-tier 'Standard' \
-    --extension-name 'AgentlessDiscoveryForKubernetes' \
-    --extension-value '{"isEnabled":"true"}'
+# Enable Arc auto-provisioning
+az security auto-provisioning-setting update \
+    --name ArcK8s \
+    --auto-provision On
+```
+
+### Using REST API
+
+```bash
+# Enable via REST API
+curl -X PUT \
+  "https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "pricingTier": "Standard"
+    }
+  }'
 ```
 
 ## Deploy the Defender extension
 
-The Defender extension is automatically deployed through Azure Policy. To manually deploy:
-
-### Using Azure portal
-
-1. Navigate to your Arc-enabled Kubernetes cluster.
-2. Select **Extensions** under **Settings**.
-3. Select **+ Add**.
-4. Search for **Microsoft Defender for Containers**.
-5. Select **Create** and follow the wizard.
-
 ### Using Azure CLI
 
 ```azurecli
-# Install the Defender extension
+# Deploy Defender extension
 az k8s-extension create \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
@@ -90,184 +82,199 @@ az k8s-extension create \
     --resource-group <resource-group> \
     --extension-type microsoft.azuredefender.kubernetes \
     --configuration-settings \
-        logAnalyticsWorkspaceResourceID="<workspace-resource-id>" \
+        logAnalyticsWorkspaceResourceID="/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>" \
         auditLogPath="/var/log/kube-apiserver/audit.log"
 ```
 
-### Using Helm (alternative method)
+### Using Helm
 
 ```bash
-# Add the Defender Helm repository
-helm repo add mdc https://azuredefender.blob.core.windows.net/azuredefender/helm/mdc/
+# Add Azure Arc Helm repository
+helm repo add azure-arc https://azurearck8s.azurecr.io/helm/v1/repo
 helm repo update
 
-# Install the Defender chart
-helm install defender-sensor mdc/azuredefender \
-    --namespace kube-system \
-    --set credentials.workspaceId=<WORKSPACE_ID> \
-    --set credentials.workspaceKey=<WORKSPACE_KEY> \
-    --set credentials.domain=<AZURE_DOMAIN>
+# Create namespace
+kubectl create namespace mdc
+
+# Install Defender extension
+helm install azure-defender azure-arc/azure-defender \
+    --namespace mdc \
+    --set systemDefaultRegistry=<registry-url> \
+    --set global.credentials.workspaceId=<workspace-id> \
+    --set global.credentials.workspaceKey=<workspace-key> \
+    --set global.clusterName=<cluster-name>
 ```
 
-## Deploy Azure Policy for Kubernetes
+### Using GitOps
 
-Azure Policy for Kubernetes provides additional security recommendations:
+```yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: defender-extension
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: "./clusters/production"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  postBuild:
+    substitute:
+      cluster_name: "${CLUSTER_NAME}"
+      workspace_id: "${WORKSPACE_ID}"
+```
 
-```azurecli
-# Install Azure Policy extension
-az k8s-extension create \
-    --name azurepolicy \
+## Configure registry authentication (on-premises)
+
+For clusters with private registries:
+
+```bash
+# Create secret for registry authentication
+kubectl create secret docker-registry regcred \
+    --namespace mdc \
+    --docker-server=<registry-url> \
+    --docker-username=<username> \
+    --docker-password=<password>
+
+# Update extension with registry credentials
+az k8s-extension update \
+    --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
     --cluster-name <cluster-name> \
     --resource-group <resource-group> \
-    --extension-type Microsoft.PolicyInsights.AzurePolicy
+    --configuration-settings \
+        registryCredentialSecret="regcred"
 ```
 
-## Configure data collection
+## Deploy to air-gapped environments
 
-### Enable audit log collection
-
-For clusters that store audit logs in a custom location:
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-config
-  namespace: kube-system
-data:
-  auditLogPath: "/var/log/kubernetes/audit/audit.log"
-  collectAuditLogs: "true"
-```
-
-### Configure Log Analytics agent
-
-If not using the Azure Monitor agent:
+For disconnected clusters:
 
 ```bash
-# Deploy Log Analytics agent
-kubectl apply -f https://raw.githubusercontent.com/microsoft/OMS-docker/master/Kubernetes/omsagent-daemonset.yaml
+# Export images to local registry
+docker pull mcr.microsoft.com/azuredefender/stable/microsoft-defender-collector:latest
+docker pull mcr.microsoft.com/azuredefender/stable/microsoft-defender-publisher:latest
 
-# Configure with your workspace
-kubectl create secret generic omsagent-secret \
-    --from-literal=WSID=<WORKSPACE_ID> \
-    --from-literal=KEY=<WORKSPACE_KEY> \
-    -n kube-system
+docker tag mcr.microsoft.com/azuredefender/stable/microsoft-defender-collector:latest <local-registry>/microsoft-defender-collector:latest
+docker tag mcr.microsoft.com/azuredefender/stable/microsoft-defender-publisher:latest <local-registry>/microsoft-defender-publisher:latest
+
+docker push <local-registry>/microsoft-defender-collector:latest
+docker push <local-registry>/microsoft-defender-publisher:latest
+
+# Deploy with local registry
+az k8s-extension create \
+    --name microsoft.azuredefender.kubernetes \
+    --cluster-type connectedClusters \
+    --cluster-name <cluster-name> \
+    --resource-group <resource-group> \
+    --extension-type microsoft.azuredefender.kubernetes \
+    --configuration-settings \
+        systemDefaultRegistry="<local-registry>" \
+        logAnalyticsWorkspaceResourceID="/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
 ```
 
-## Configure container registry connections
+## Apply network policies
 
-### For on-premises registries
-
-Create a secret for private registry authentication:
-
-```bash
-# Create registry secret
-kubectl create secret docker-registry regcred \
-    --docker-server=<registry-url> \
-    --docker-username=<username> \
-    --docker-password=<password> \
-    --docker-email=<email> \
-    -n kube-system
-
-# Patch the Defender service account
-kubectl patch serviceaccount microsoft-defender \
-    -n kube-system \
-    -p '{"imagePullSecrets": [{"name": "regcred"}]}'
-```
-
-### Configure registry scanning
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: defender-registry-config
-  namespace: kube-system
-data:
-  registries: |
-    - url: "myregistry.local:5000"
-      authentication: "basic"
-      username: "scanner"
-      insecure: false
-    - url: "harbor.company.com"
-      authentication: "token"
-      insecure: false
-```
-
-## Configure network policies (if required)
-
-For clusters with strict network policies:
+For restricted environments:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: defender-network-policy
-  namespace: kube-system
+  namespace: mdc
 spec:
   podSelector:
     matchLabels:
       app: microsoft-defender
   policyTypes:
-  - Ingress
   - Egress
   egress:
   - to:
     - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 443
   - to:
-    - podSelector: {}
-  - ports:
+    ports:
     - protocol: TCP
-      port: 443  # HTTPS to Azure
-    - protocol: TCP
-      port: 80   # HTTP for metadata
+      port: 53
+    - protocol: UDP
+      port: 53
 ```
 
-## Verify deployment
+## Infrastructure as Code examples
 
-```bash
-# Check extension status
-az k8s-extension show \
-    --name microsoft.azuredefender.kubernetes \
-    --cluster-type connectedClusters \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group>
+### Terraform
 
-# Verify pods are running
-kubectl get pods -n kube-system -l app=microsoft-defender
+```hcl
+resource "azurerm_security_center_subscription_pricing" "containers" {
+  tier          = "Standard"
+  resource_type = "Containers"
+}
 
-# Check daemonset status
-kubectl get daemonset -n kube-system microsoft-defender-sensor
+resource "azurerm_arc_kubernetes_cluster_extension" "defender" {
+  name           = "microsoft.azuredefender.kubernetes"
+  cluster_id     = azurerm_arc_kubernetes_cluster.example.id
+  extension_type = "microsoft.azuredefender.kubernetes"
+
+  configuration_settings = {
+    "logAnalyticsWorkspaceResourceID" = azurerm_log_analytics_workspace.example.id
+    "auditLogPath"                    = "/var/log/kube-apiserver/audit.log"
+  }
+}
 ```
 
-## Enable on multiple clusters
+### ARM Template
 
-For deploying to multiple Arc clusters, use Azure Policy:
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.KubernetesConfiguration/extensions",
+      "apiVersion": "2023-05-01",
+      "name": "microsoft.azuredefender.kubernetes",
+      "properties": {
+        "extensionType": "microsoft.azuredefender.kubernetes",
+        "configurationSettings": {
+          "logAnalyticsWorkspaceResourceID": "[parameters('workspaceResourceId')]"
+        }
+      }
+    }
+  ]
+}
+```
 
-1. Create a policy assignment at the subscription or management group level.
-2. Use the built-in policy definition: **Deploy Defender for Containers components**.
-3. Configure parameters for all clusters.
+### Batch deployment script
 
-Or use a script:
+Deploy to multiple Arc clusters:
 
 ```bash
 #!/bin/bash
-CLUSTERS=("cluster1" "cluster2" "cluster3")
-RG="my-resource-group"
+# Deploy Defender to all Arc-enabled clusters
 
-for cluster in "${CLUSTERS[@]}"; do
-    echo "Enabling Defender on $cluster"
+# Get all Arc clusters
+clusters=$(az connectedk8s list --query "[].{name:name, rg:resourceGroup}" -o tsv)
+
+# Deploy extension to each cluster
+while IFS=$'\t' read -r name rg; do
+    echo "Deploying Defender to cluster: $name"
     az k8s-extension create \
         --name microsoft.azuredefender.kubernetes \
         --cluster-type connectedClusters \
-        --cluster-name $cluster \
-        --resource-group $RG \
-        --extension-type microsoft.azuredefender.kubernetes
-done
+        --cluster-name "$name" \
+        --resource-group "$rg" \
+        --extension-type microsoft.azuredefender.kubernetes \
+        --no-wait
+done <<< "$clusters"
 ```
 
 ## Next steps
 
-- [Verify your Defender for Containers deployment](defender-for-containers-arc-verify.md)
+- [Verify deployment](defender-for-containers-arc-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-arc-configure.md)
+- [Deploy via portal](defender-for-containers-arc-deploy-portal.md)

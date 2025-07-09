@@ -1,176 +1,147 @@
 ---
-title: Deploy Defender for Containers components on AWS (EKS) via portal
-description: Learn how to deploy specific Microsoft Defender for Containers components on Amazon EKS clusters using the Azure portal.
+title: Deploy specific Defender for Containers components on AWS (EKS) via portal
+description: Learn how to deploy individual Microsoft Defender for Containers components on Amazon EKS clusters when you already have the plan enabled.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy Defender for Containers components on AWS (EKS) via portal
+# Deploy specific Defender for Containers components on AWS (EKS) via portal
 
-This article explains how to deploy specific Defender for Containers components on your Amazon EKS clusters using the Azure portal. Use this approach when you want to enable only certain features or have already enabled the plan but need to deploy additional components.
+This article explains how to deploy specific Defender for Containers components on your Amazon EKS clusters when you already have the plan enabled but need to add or fix individual components.
+
+## When to use this guide
+
+Use this guide if you:
+- Already have Defender for Containers enabled but some components are missing
+- Want to deploy to specific clusters only
+- Need to troubleshoot failed component deployments
+- Want to exclude certain clusters from protection
+
+If you're setting up Defender for Containers for the first time, see [Enable all Defender for Containers components on AWS (EKS)](defender-for-containers-aws-enable-all-portal.md).
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
-
-Additional prerequisites for EKS:
-
-- AWS account connected to Defender for Cloud
+- AWS connector already created in Defender for Cloud
 - Defender for Containers plan enabled on your subscription
-- EKS clusters version 1.19 or later
+- IAM roles and permissions already configured
+- Some or all EKS clusters may already be connected to Azure Arc
 
-## Deploy the Defender sensor
+## Check component status
 
-The Defender sensor provides runtime threat detection for your EKS clusters.
+1. Navigate to **Environment settings** in Defender for Cloud.
+2. Select your AWS connector.
+3. Select **Containers** to view component status:
+   - ✅ Green checkmark = Component enabled and deployed
+   - ⚠️ Yellow warning = Component enabled but not deployed to all clusters
+   - ❌ Red X = Component disabled or failed
 
-### Deploy to specific clusters
+## Deploy missing components
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+### Connect specific EKS clusters to Azure Arc
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+If some clusters aren't connected:
 
-1. Search for the recommendation **EKS clusters should have Microsoft Defender's extension for Azure Arc installed**.
+1. Go to **Recommendations** in Defender for Cloud.
+2. Search for "EKS clusters should be connected to Azure Arc".
+3. Select the recommendation.
+4. Select only the clusters you want to connect.
+5. Select **Fix** and follow the provided script.
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Microsoft Defender for Cloud's recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
+### Deploy Defender sensor to specific clusters
 
-1. Select the recommendation to view affected clusters.
+To deploy the sensor to selected clusters:
 
-1. Select the clusters where you want to deploy the sensor.
+1. Go to **Recommendations**.
+2. Search for "EKS clusters should have Microsoft Defender's extension for Azure Arc installed".
+3. Select the recommendation.
+4. Select specific clusters that need the sensor.
+5. Select **Fix**.
 
-1. Select **Fix** to automatically deploy the extension.
+### Fix failed deployments
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Deploy Defender sensor for Azure Arc-enabled clusters using Defender for Cloud's 'Fix' option.":::
+If components show as failed:
 
-### Deploy using remediation script
+1. Select the affected cluster in the recommendation.
+2. Review the error message.
+3. Common fixes:
+   - **Permission issues**: Update IAM roles
+   - **Network issues**: Check connectivity to Azure endpoints
+   - **Resource limits**: Increase cluster resources
 
-1. In the recommendation page, select **Fix (preview)**.
+## Configure component settings
 
-1. Select the affected resources.
+### Enable/disable specific components
 
-1. Choose your preferred script language:
-   - For Linux: Select **Bash**
-   - For Windows: Select **PowerShell**
+1. Navigate to your AWS connector settings.
+2. Select **Containers**.
+3. Toggle individual components:
+   - **Cloud Security Posture Management** - Security recommendations
+   - **Kubernetes sensor** - Runtime protection
+   - **Agentless discovery** - Inventory without agents
+   - **Container registry vulnerability** - ECR scanning
 
-1. Select **Download remediation logic**.
+### Configure scanning exclusions
 
-1. Run the generated script on each cluster with appropriate credentials.
+To exclude specific registries or repositories:
 
-## Deploy Azure Policy extension
+```json
+{
+  "properties": {
+    "exclusionTags": {
+      "Environment": "Development",
+      "Scanner": "Skip"
+    }
+  }
+}
+```
 
-Azure Policy for Kubernetes provides security recommendations for your clusters.
+## Deploy by cluster tags
 
-### Enable via recommendations
+Deploy to clusters with specific tags:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. In the extension deployment recommendation.
+2. Use filters to select by tags:
+   - Environment: Production
+   - Team: Security
+   - Region: us-east-1
 
-1. Search for **Azure Policy for Kubernetes should be installed and enabled on your clusters**.
+## Verify deployment
 
-1. Select the recommendation.
+After deployment:
 
-1. Select affected EKS clusters.
+1. Check recommendation status - should show "Healthy"
+2. Navigate to **Inventory** > **Containers** to see protected clusters
+3. Review **Security alerts** for any new detections
 
-1. Select **Fix** to deploy the extension.
+## Troubleshooting
 
-## Enable agentless features
+### Sensor deployment fails
 
-Some features don't require any deployment to your clusters:
+```bash
+# Check Arc connectivity
+az connectedk8s show --name <cluster-name> --resource-group <rg>
 
-### Agentless discovery
-
-1. Navigate to your AWS connector in **Environment settings**.
-
-1. Select **Settings** for the Containers plan.
-
-1. Ensure **Agentless discovery for Kubernetes** is toggled **On**.
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
-
-1. Select **Continue** and **Save**.
-
-### ECR vulnerability scanning
-
-1. In the connector settings, ensure **Container registries** is enabled.
-
-1. ECR repositories in the same AWS account are automatically discovered.
-
-1. Images are scanned upon push and periodically thereafter.
-
-## Configure diagnostic logs
-
-For comprehensive monitoring, enable EKS audit logs:
-
-1. In the AWS Console, navigate to your EKS cluster.
-
-1. Select the **Logging** tab.
-
-1. Enable these log types:
-   - API server
-   - Audit
-   - Authenticator
-   - Controller manager
-   - Scheduler
-
-1. Logs are automatically collected by the Defender sensor when enabled.
-
-## Selective deployment by tag
-
-You can control which clusters receive Defender components using tags:
-
-### Exclude from sensor deployment
-
-1. In AWS Console, add this tag to your EKS cluster:
-   - Key: `ms_defender_container_exclude_agents`
-   - Value: `true`
-
-### Exclude from all features
-
-1. Add this tag to exclude from all Defender features:
-   - Key: `ms_defender_container_exclude`
-   - Value: `true`
-
-## Monitor deployment status
-
-### Check in Defender for Cloud
-
-1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
-
-1. Filter by **Resource type** = **Kubernetes service**.
-
-1. Look for your EKS clusters with their protection status.
-
-### Check in AWS
-
-1. In AWS Console, view your EKS cluster.
-
-1. Check the add-ons or workloads section for:
-   - Azure Arc agents
-   - Defender sensor pods
-   - Policy agent pods
-
-### Verify extension installation
-
-After deployment, verify the extensions are installed:
-
-:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
-
-To view detailed extension information:
-
-:::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Full details of an Azure Arc extension on a Kubernetes cluster.":::
-
-## Troubleshooting deployment
-
-If components fail to deploy:
-
-1. Verify the AWS connector is healthy in Environment settings.
-
-2. Check that required permissions exist in AWS.
-
-3. Ensure clusters have outbound connectivity.
-
-4. Review activity logs in both Azure and AWS.
+# Verify extension status
+az k8s-extension show --name microsoft-defender \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <rg>
+```
+
+### Components show as unhealthy
+
+1. Check cluster logs:
+   ```bash
+   kubectl logs -n kube-system -l app=microsoft-defender
+   ```
+
+2. Verify network connectivity to:
+   - *.ods.opinsights.azure.com
+   - *.oms.opinsights.azure.com
+   - *.security.azure.com
 
 ## Next steps
 
-- [Deploy components programmatically](defender-for-containers-aws-deploy.md)
 - [Verify deployment](defender-for-containers-aws-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
+- [Enable all components](defender-for-containers-aws-enable-all-portal.md) - For fresh installations

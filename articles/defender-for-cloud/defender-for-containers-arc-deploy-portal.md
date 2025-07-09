@@ -1,265 +1,263 @@
 ---
-title: Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal
-description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using the Azure portal.
+title: Deploy specific Defender for Containers components on Arc-enabled Kubernetes via portal
+description: Learn how to deploy individual Microsoft Defender for Containers components on Arc-enabled Kubernetes clusters when you already have the plan enabled.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal
+# Deploy specific Defender for Containers components on Arc-enabled Kubernetes via portal
 
-This article explains how to enable Microsoft Defender for Containers on your Arc-enabled Kubernetes clusters using the Azure portal.
+This article explains how to deploy specific Defender for Containers components on your Arc-enabled Kubernetes clusters when you already have the plan enabled but need to add or fix individual components.
+
+## When to use this guide
+
+Use this guide if you:
+- Already have Defender for Containers enabled but some components are missing
+- Want to deploy to specific Arc-enabled clusters only
+- Need to troubleshoot failed component deployments
+- Have different security requirements for different clusters
+- Want to exclude certain clusters from protection
+
+If you're setting up Defender for Containers for the first time, see [Enable all Defender for Containers components on Arc-enabled Kubernetes](defender-for-containers-arc-enable-all-portal.md).
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+- Defender for Containers plan already enabled on your subscription
+- Kubernetes clusters already connected to Azure Arc
+- Appropriate Azure RBAC permissions
+- Network connectivity from clusters to Azure
 
-Additional prerequisites for Arc-enabled Kubernetes:
-
-- Kubernetes cluster connected to Azure Arc
-- Azure Arc-enabled Kubernetes version 1.19 or later
-- Cluster must have outbound connectivity to Azure services
-
-## Connect your Kubernetes cluster to Azure Arc
-
-If your cluster isn't already connected to Azure Arc:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Navigate to **Azure Arc** > **Kubernetes clusters**.
-
-1. Select **Add**.
-
-1. Follow the instructions to:
-   - Install the Azure Arc agents
-   - Connect your cluster to Azure Arc
-   - Verify the connection
-
-For detailed instructions, see [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-
-## Enable the Defender for Containers plan
+## Check component status
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+2. Select your subscription.
+3. Under **Defender plans**, verify **Containers** shows as **On**.
+4. Check Arc clusters:
+   - Go to **Inventory** > **Containers**
+   - Filter by **Environment: Azure Arc**
+   - Review protection status for each cluster
 
-1. Select the relevant Azure subscription containing your Arc-enabled clusters.
+## Deploy missing components
 
-1. On the Defender plans page, toggle the **Containers** plan to **On**.
+### Deploy Defender extension to specific clusters
 
-1. Select **Settings** to configure the plan components.
+1. Go to **Recommendations**.
+2. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
+3. Select the recommendation.
+4. Filter and select specific clusters:
+   - By name
+   - By resource group
+   - By tags
+   - By distribution (OpenShift, Rancher, etc.)
+5. Select **Fix**.
 
-## Configure plan components
+### Deploy Azure Policy extension
 
-1. In the Settings page, ensure the following components are toggled **On**:
-   - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment**
-   - **Defender DaemonSet**
-   - **Azure Policy for Kubernetes**
+For clusters missing policy enforcement:
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+1. Navigate to the Arc-enabled Kubernetes cluster.
+2. Select **Extensions** under **Settings**.
+3. Select **+ Add**.
+4. Search for "Azure Policy".
+5. Configure and install.
 
-1. Select **Continue**.
+### Manual extension deployment
 
-1. Review the changes and select **Save**.
+For specific configurations:
 
-## Deploy extensions to your Arc-enabled clusters
+1. Navigate to your Arc-enabled cluster.
+2. Select **Extensions** > **+ Add**.
+3. Select **Microsoft Defender**.
+4. Configure:
+   - Log Analytics workspace
+   - Audit log path (distribution-specific)
+   - Registry credentials (if needed)
+5. Select **Create**.
 
-After enabling Defender for Containers, you need to deploy the extensions to your Arc-enabled Kubernetes clusters:
+## Configure by cluster distribution
 
-### Deploy using recommendations
+### OpenShift clusters
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+For OpenShift-specific configuration:
 
-1. Search for the recommendation "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
+1. When deploying the extension, set:
+   ```json
+   {
+     "auditLogPath": "/var/log/openshift-apiserver/audit.log",
+     "nodeSelector": {
+       "node-role.kubernetes.io/master": ""
+     }
+   }
+   ```
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-recommendation.png" alt-text="Screenshot that shows the Microsoft Defender for Cloud recommendation for deploying the Defender sensor for Azure Arc-enabled Kubernetes clusters." lightbox="media/defender-for-kubernetes-azure-arc/extension-recommendation.png":::
+### Rancher clusters
 
-1. Select the recommendation to see affected clusters.
+For Rancher RKE/RKE2:
 
-1. Select the clusters you want to protect.
+1. Configure audit log path:
+   - RKE: `/var/log/kubernetes/audit.log`
+   - RKE2: `/var/log/kube-audit/audit.log`
 
-    > [!IMPORTANT]
-    > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
+### VMware Tanzu
 
-1. Select **Fix** to deploy the extension automatically.
+For Tanzu clusters:
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Animated screenshot that shows deploying a Defender sensor for Azure Arc by using remediation in Defender for Cloud.":::
+1. Ensure audit logging is enabled
+2. Set appropriate PSP/PSA policies
+3. Configure network policies if required
 
-### Deploy manually via Azure portal
+## Deploy by environment type
 
-1. Navigate to your Arc-enabled Kubernetes cluster.
+### On-premises clusters
 
-1. Under **Settings**, select **Extensions**.
+Additional considerations:
 
-1. Select **+ Add**.
+1. **Private registries**: Configure authentication
+   ```bash
+   kubectl create secret docker-registry regcred \
+     --namespace mdc \
+     --docker-server=<registry> \
+     --docker-username=<username> \
+     --docker-password=<password>
+   ```
 
-1. Search for and select **Microsoft Defender for Containers**.
+2. **Proxy configuration**: If using proxy
+3. **Air-gapped**: Use local image repository
 
-1. Select **Create** and follow the installation wizard:
-   - Review the terms
-   - Configure the Log Analytics workspace
-   - Complete the installation
+### Edge locations
 
-1. Repeat the process to add the **Azure Policy for Kubernetes** extension.
+For edge computing scenarios:
 
-## Configure Log Analytics workspace
+1. Consider bandwidth limitations
+2. Configure appropriate resource limits
+3. Set up local log aggregation
 
-The Defender extension requires a Log Analytics workspace:
+## Configure exclusions
 
-1. During extension installation, select an existing workspace or create a new one.
+### Exclude specific clusters
 
-1. Choose the DefaultWorkspace-[subscription-id]-[region] or a custom workspace.
+1. **By tags**:
+   - Add tag `DefenderExclude: True` to Arc cluster
+   
+2. **By configuration**:
+   - Don't deploy extension to specific clusters
+   
+3. **Namespace exclusion**:
+   ```yaml
+   apiVersion: v1
+   kind: Namespace
+   metadata:
+     name: development
+     annotations:
+       microsoft.defender.exclude: "true"
+   ```
 
-1. Ensure the workspace is in a [supported region](support-matrix-defender-for-containers.md).
+### Exclude workloads
 
-## Enable Azure Policy for Kubernetes
+Configure scan exclusions:
 
-To get security recommendations for your Arc-enabled clusters:
-
-1. In your Arc-enabled cluster, under **Settings**, select **Extensions**.
-
-1. Select **+ Add** and search for **Azure Policy for Kubernetes**.
-
-1. Install the extension following the wizard.
-
-1. After installation, navigate to **Policies** to verify it's enabled.
-
-## Configure diagnostic logs
-
-For optimal security monitoring:
-
-1. Navigate to your Arc-enabled Kubernetes cluster.
-
-1. Under **Settings**, select **Diagnostic settings**.
-
-1. Select **+ Add diagnostic setting**.
-
-1. Configure:
-   - Name: Provide a descriptive name
-   - Logs: Select all available categories
-   - Destination: Send to your Log Analytics workspace
-
-1. Select **Save**.
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microsoft-defender-config
+  namespace: mdc
+data:
+  excludeNamespaces: "kube-system,kube-public,development"
+  excludeImages: "*/debug:*,*/test:*"
+```
 
 ## Verify deployment
 
-After deployment completes:
-
 ### Check extension status
 
-1. Navigate to your Arc-enabled Kubernetes cluster.
+1. In Azure portal:
+   - Navigate to Arc-enabled cluster
+   - Select **Extensions**
+   - Verify "Microsoft Defender" shows as **Installed**
 
-1. Under **Settings**, select **Extensions**.
+2. Via Azure CLI:
+   ```azurecli
+   az k8s-extension show \
+     --name microsoft.azuredefender.kubernetes \
+     --cluster-type connectedClusters \
+     --cluster-name <cluster-name> \
+     --resource-group <resource-group>
+   ```
 
-1. Verify that both extensions show **Succeeded** status:
-   - Microsoft Defender for Containers
-   - Azure Policy for Kubernetes
+### Verify on cluster
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Screenshot that shows the Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+```bash
+# Check pods
+kubectl get pods -n mdc
 
-### View extension details
+# Check logs
+kubectl logs -n mdc -l app=microsoft-defender
 
-1. Select an extension to view detailed information.
-
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Screenshot that shows full details of an Azure Arc extension on a Kubernetes cluster.":::
-
-### Verify in Defender for Cloud
-
-1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
-
-1. Filter by **Resource type** = **Kubernetes services (Azure Arc)**.
-
-1. Verify your Arc-enabled clusters appear with security findings.
-
-1. Check **Recommendations** for Arc-specific security guidance.
-
-For detailed verification steps, see [Verify Defender for Containers deployment on Arc-enabled Kubernetes](defender-for-containers-arc-verify.md).
-
-## Configure custom workspace (optional)
-
-To use a custom Log Analytics workspace instead of the default:
-
-1. Navigate to **Azure Policy**.
-
-1. Search for "Configure Arc-enabled Kubernetes clusters to install Microsoft Defender's extension with custom workspace".
-
-1. Assign this policy to your subscription or resource group.
-
-1. Configure the policy parameters with your custom workspace ID.
-
-## Exclude specific clusters (optional)
-
-You can exclude specific Arc-enabled clusters from automatic provisioning:
-
-1. Navigate to your Arc-enabled Kubernetes cluster.
-
-1. Under **Overview**, select **Tags**.
-
-1. Add one of these tags:
-   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
-   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+# Verify connectivity
+kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://login.microsoftonline.com
+```
 
 ## Troubleshooting
 
-If extensions fail to install:
+### Extension installation fails
 
-1. Check cluster connectivity:
-
+1. **Check Arc connectivity**:
    ```bash
-   kubectl get nodes
-   az connectedk8s show -n <cluster-name> -g <resource-group>
+   az connectedk8s show \
+     --name <cluster-name> \
+     --resource-group <resource-group>
    ```
 
-2. Verify outbound connectivity to required endpoints.
+2. **Review prerequisites**:
+   - Supported Kubernetes version
+   - Arc agents healthy
+   - Network connectivity
 
-3. Check extension status:
+### Extension unhealthy
 
+1. Check pod status:
    ```bash
-   az k8s-extension show --name microsoft.azuredefender.kubernetes --cluster-name <cluster-name> --resource-group <resource-group> --cluster-type connectedClusters
+   kubectl describe pods -n mdc
    ```
 
-4. Review pod status:
+2. Common issues:
+   - **ImagePullBackOff**: Registry access issues
+   - **CrashLoopBackOff**: Configuration problems
+   - **Pending**: Resource constraints
 
-   ```bash
-   kubectl get pods -n mdc
-   ```
+### No security alerts
 
-## Monitor security status
+1. Verify audit logs are accessible
+2. Check log path configuration
+3. Ensure proper RBAC permissions
+4. Test with sample alert
 
-After successful deployment:
+## Advanced configuration
 
-1. Navigate to **Workload protections** > **Containers**.
+### Custom resource limits
 
-1. View security insights for your Arc-enabled clusters:
-   - Security recommendations
-   - Runtime alerts
-   - Vulnerability findings
-   - Compliance status
+```yaml
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
+```
 
-## Best practices
+### Multi-cluster deployment
 
-1. **Regular monitoring**: Check the Containers dashboard weekly for new findings.
+For deploying to multiple clusters:
 
-2. **Extension updates**: Extensions are automatically updated, but verify updates are successful.
-
-3. **Network policies**: Implement Kubernetes network policies for better security.
-
-4. **RBAC**: Configure proper role-based access control on your clusters.
-
-5. **Resource limits**: Set appropriate resource limits for Defender components.
-
-## Clean up resources
-
-To remove Defender for Containers from Arc-enabled clusters:
-
-1. Navigate to your Arc-enabled Kubernetes cluster.
-
-1. Under **Settings**, select **Extensions**.
-
-1. Select each Defender-related extension and choose **Uninstall**.
-
-Alternatively, disable the Containers plan in your subscription to stop new deployments.
+1. Use Azure Policy for at-scale deployment
+2. Create custom initiatives
+3. Use tags for targeting
+4. Automate with scripts
 
 ## Next steps
 
+- [Verify deployment](defender-for-containers-arc-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-arc-configure.md)
-- [Enable all Defender for Containers components via portal](defender-for-containers-arc-enable-all-portal.md)
-- [Review security recommendations for Arc-enabled clusters](defender-for-containers-introduction.md)
+- [Enable all components](defender-for-containers-arc-enable-all-portal.md) - For fresh installations

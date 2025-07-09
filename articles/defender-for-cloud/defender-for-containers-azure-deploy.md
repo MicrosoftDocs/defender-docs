@@ -1,46 +1,44 @@
 ---
-title: Deploy Defender for Containers on Azure (AKS)
-description: Learn how to enable Microsoft Defender for Containers on Azure Kubernetes Service (AKS) clusters using various deployment methods.
+title: Deploy Defender for Containers on Azure (AKS) programmatically
+description: Learn how to enable Microsoft Defender for Containers on Azure Kubernetes Service (AKS) clusters using CLI, PowerShell, or Infrastructure as Code.
 ms.topic: how-to
 ms.date: 06/04/2025
-ms.custom: devx-track-azurecli
 ---
 
-# Deploy Defender for Containers on Azure (AKS)
+# Deploy Defender for Containers on Azure (AKS) programmatically
 
-This article explains how to enable Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters using Azure CLI, PowerShell, or ARM templates.
+This article describes how to enable Microsoft Defender for Containers on Azure Kubernetes Service (AKS) clusters using programmatic methods.
 
 > [!TIP]
 > For Azure portal deployment instructions, see [Deploy Defender for Containers on Azure (AKS) using Azure portal](defender-for-containers-azure-deploy-portal.md).
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
+[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
+
+Additionally:
+- Azure CLI or Azure PowerShell installed
+- Appropriate permissions to create and modify AKS clusters
+- Owner or Contributor role on the subscription
 
 ## Enable Defender for Containers
-
-Choose your preferred deployment method:
 
 ### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
-# Enable Defender for Containers on a subscription
+# Enable Defender for Containers on subscription
 az security pricing create \
-    --name 'Containers' \
-    --tier 'Standard'
+    --name Containers \
+    --tier Standard
 
-# Enable all extensions
-az security pricing extension create \
-    --name 'Containers' \
-    --pricing-tier 'Standard' \
-    --extension-name 'AgentlessDiscoveryForKubernetes' \
-    --extension-value '{"enabled":"true"}'
+# Enable all components
+az security auto-provisioning-setting update \
+    --name ContainersSensor \
+    --auto-provision On
 
-az security pricing extension create \
-    --name 'Containers' \
-    --pricing-tier 'Standard' \
-    --extension-name 'ContainerRegistriesVulnerabilityAssessments' \
-    --extension-value '{"enabled":"true"}'
+az security auto-provisioning-setting update \
+    --name ContainersVulnerabilityAssessment \
+    --auto-provision On
 ```
 
 ### [PowerShell](#tab/powershell)
@@ -51,21 +49,17 @@ Set-AzSecurityPricing `
     -Name "Containers" `
     -PricingTier "Standard"
 
-# Enable extensions
-$extensions = @{
-    "AgentlessDiscoveryForKubernetes" = @{"enabled" = "true"}
-    "ContainerRegistriesVulnerabilityAssessments" = @{"enabled" = "true"}
-}
+# Enable auto-provisioning
+Set-AzSecurityAutoProvisioningSetting `
+    -Name "ContainersSensor" `
+    -EnableAutoProvision
 
-foreach ($ext in $extensions.GetEnumerator()) {
-    Set-AzSecurityPricingExtension `
-        -Name "Containers" `
-        -ExtensionName $ext.Key `
-        -ExtensionValue ($ext.Value | ConvertTo-Json)
-}
+Set-AzSecurityAutoProvisioningSetting `
+    -Name "ContainersVulnerabilityAssessment" `
+    -EnableAutoProvision
 ```
 
-### [ARM template](#tab/arm-template)
+### [ARM Template](#tab/arm)
 
 ```json
 {
@@ -78,101 +72,248 @@ foreach ($ext in $extensions.GetEnumerator()) {
             "name": "Containers",
             "properties": {
                 "pricingTier": "Standard",
-                "extensions": [
-                    {
-                        "name": "AgentlessDiscoveryForKubernetes",
-                        "isEnabled": "true"
-                    },
-                    {
-                        "name": "ContainerRegistriesVulnerabilityAssessments", 
-                        "isEnabled": "true"
-                    }
-                ]
+                "subPlan": "DefenderForContainersAks"
             }
         }
     ]
 }
 ```
 
-Deploy the template:
-
-```azurecli
-az deployment sub create \
-    --location eastus \
-    --template-file defender-containers.json
-```
-
 ---
 
 ## Deploy the Defender sensor
 
-After enabling Defender for Containers, the Defender sensor is automatically deployed to your AKS clusters through Azure Policy. This process typically takes 5-10 minutes.
-
-### Monitor deployment status
+### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
-# Check if the Defender extension is installed
-az k8s-extension show \
-    --name microsoft-defender \
-    --cluster-type managedClusters \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group>
-```
-
-### Manual deployment (if needed)
-
-If automatic deployment doesn't occur:
-
-```azurecli
-# Install the Defender extension manually
-az k8s-extension create \
-    --name microsoft-defender \
-    --extension-type microsoft.azuredefender.kubernetes \
-    --cluster-type managedClusters \
-    --cluster-name <cluster-name> \
-    --resource-group <resource-group> \
-    --configuration-settings \
-        logAnalyticsWorkspaceResourceID=<workspace-resource-id> \
-        auditLogPath=/var/log/kube-apiserver/audit.log
-```
-
-## Enable Azure Policy for Kubernetes
-
-Azure Policy for Kubernetes is required for security recommendations:
-
-```azurecli
-# Enable Azure Policy add-on
-az aks enable-addons \
-    --addons azure-policy \
+# Deploy to specific AKS cluster
+az aks update \
     --name <cluster-name> \
-    --resource-group <resource-group>
+    --resource-group <resource-group> \
+    --enable-defender
+
+# Deploy with monitoring enabled
+az aks update \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
+    --enable-defender \
+    --enable-azure-monitor-metrics
 ```
 
-## Configure diagnostic logs
+### [PowerShell](#tab/powershell)
 
-Enable diagnostic logs for runtime threat detection:
+```powershell
+# Enable Defender on AKS cluster
+$cluster = Get-AzAksCluster `
+    -Name <cluster-name> `
+    -ResourceGroupName <resource-group>
+
+$cluster.SecurityProfile = @{
+    Defender = @{
+        LogAnalyticsWorkspaceResourceId = "/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+        SecurityMonitoring = @{
+            Enabled = $true
+        }
+    }
+}
+
+$cluster | Set-AzAksCluster
+```
+
+### [Helm](#tab/helm)
+
+```bash
+# Add Defender Helm repository
+helm repo add defender https://aka.ms/defender-for-containers/helm
+helm repo update
+
+# Install Defender sensor
+helm install microsoft-defender-sensor defender/microsoft-defender-sensor \
+    --namespace mdc \
+    --create-namespace \
+    --set credentials.workspaceId=<WORKSPACE_ID> \
+    --set credentials.workspaceKey=<WORKSPACE_KEY> \
+    --set clusterName=<CLUSTER_NAME>
+```
+
+---
+
+## Assign a custom Log Analytics workspace (optional)
+
+To assign a custom workspace programmatically:
+
+### [Azure CLI](#tab/azure-cli)
+
+```azurecli
+# Configure custom workspace
+az aks update \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
+    --workspace-resource-id "/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+```
+
+### [PowerShell](#tab/powershell)
+
+```powershell
+# Configure custom workspace
+Set-AzAksCluster `
+    -Name <cluster-name> `
+    -ResourceGroupName <resource-group> `
+    -WorkspaceResourceId "/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+```
+
+### [ARM Template](#tab/arm)
+
+```json
+{
+    "type": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-01-01",
+    "name": "[parameters('clusterName')]",
+    "properties": {
+        "securityProfile": {
+            "defender": {
+                "logAnalyticsWorkspaceResourceId": "[parameters('workspaceResourceId')]",
+                "securityMonitoring": {
+                    "enabled": true
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## Enable diagnostic logging
+
+Configure diagnostic settings programmatically:
+
+### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
 # Create diagnostic setting
 az monitor diagnostic-settings create \
-    --name "AKS-Diagnostics" \
-    --resource "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
+    --name DefenderDiagnostics \
+    --resource /subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.ContainerService/managedClusters/<cluster-name> \
     --logs '[
-        {"category": "kube-apiserver", "enabled": true},
-        {"category": "kube-audit", "enabled": true},
-        {"category": "kube-controller-manager", "enabled": true},
-        {"category": "kube-scheduler", "enabled": true},
-        {"category": "guard", "enabled": true}
+        {
+            "category": "kube-audit-admin",
+            "enabled": true
+        },
+        {
+            "category": "guard",
+            "enabled": true
+        }
     ]' \
-    --workspace <log-analytics-workspace-id>
+    --workspace /subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>
 ```
 
-## Assign a custom Log Analytics workspace (optional)
+### [PowerShell](#tab/powershell)
 
-[!INCLUDE[defender-for-containers-assign-workspace-aks](includes/defender-for-containers-assign-workspace-aks.md)]
+```powershell
+# Configure diagnostic settings
+$log = @()
+$log += New-AzDiagnosticSettingLogSettingsObject `
+    -Category "kube-audit-admin" `
+    -Enabled $true
+
+$log += New-AzDiagnosticSettingLogSettingsObject `
+    -Category "guard" `
+    -Enabled $true
+
+New-AzDiagnosticSetting `
+    -Name "DefenderDiagnostics" `
+    -ResourceId "/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" `
+    -WorkspaceId "/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>" `
+    -Log $log
+```
+
+---
+
+## Infrastructure as Code examples
+
+### Terraform
+
+```hcl
+resource "azurerm_kubernetes_cluster" "example" {
+  name                = "example-aks"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  dns_prefix          = "exampleaks"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 3
+    vm_size    = "Standard_D2_v2"
+  }
+
+  microsoft_defender {
+    log_analytics_workspace_id = azurerm_log_analytics_workspace.example.id
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
+resource "azurerm_security_center_subscription_pricing" "example" {
+  tier          = "Standard"
+  resource_type = "Containers"
+  subplan       = "DefenderForContainersAks"
+}
+```
+
+### Bicep
+
+```bicep
+resource aksCluster 'Microsoft.ContainerService/managedClusters@2024-01-01' = {
+  name: clusterName
+  location: location
+  properties: {
+    securityProfile: {
+      defender: {
+        logAnalyticsWorkspaceResourceId: workspaceId
+        securityMonitoring: {
+          enabled: true
+        }
+      }
+    }
+  }
+}
+
+resource defenderPricing 'Microsoft.Security/pricings@2024-01-01' = {
+  name: 'Containers'
+  properties: {
+    pricingTier: 'Standard'
+    subPlan: 'DefenderForContainersAks'
+  }
+}
+```
+
+## Batch deployment script
+
+Deploy to multiple clusters:
+
+```bash
+#!/bin/bash
+# Deploy Defender to all AKS clusters in subscription
+
+# Get all AKS clusters
+clusters=$(az aks list --query "[].{name:name, rg:resourceGroup}" -o tsv)
+
+# Enable Defender on each cluster
+while IFS=$'\t' read -r name rg; do
+    echo "Enabling Defender on cluster: $name"
+    az aks update \
+        --name "$name" \
+        --resource-group "$rg" \
+        --enable-defender \
+        --no-wait
+done <<< "$clusters"
+```
 
 ## Next steps
 
-- [Verify your Defender for Containers deployment](defender-for-containers-azure-verify.md)
+- [Verify deployment](defender-for-containers-azure-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Enable all components via portal](defender-for-containers-azure-enable-all-portal.md)

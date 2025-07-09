@@ -1,237 +1,235 @@
 ---
-title: Deploy Defender for Containers on GCP (GKE)
-description: Learn how to enable Microsoft Defender for Containers on Google Kubernetes Engine (GKE) clusters.
+title: Deploy Defender for Containers on GCP (GKE) programmatically
+description: Learn how to enable Microsoft Defender for Containers on Google Kubernetes Engine (GKE) clusters using CLI, API, or Infrastructure as Code.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy Defender for Containers on GCP (GKE)
+# Deploy Defender for Containers on GCP (GKE) programmatically
 
-This article explains how to enable Microsoft Defender for Containers on your Google Kubernetes Engine (GKE) clusters.
+This article describes how to enable Microsoft Defender for Containers on Google Kubernetes Engine (GKE) clusters using programmatic methods.
+
+> [!TIP]
+> For Azure portal deployment instructions, see [Deploy Defender for Containers on GCP (GKE) using Azure portal](defender-for-containers-gcp-deploy-portal.md).
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-- GKE cluster running version 1.19 or later
-- GCP project with billing enabled
-- Required GCP APIs enabled:
-  - Kubernetes Engine API
-  - Container Registry API
-  - Cloud Resource Manager API
-  - Cloud Asset API
+Additionally for GCP:
+- gcloud CLI installed and configured
+- Appropriate GCP project permissions
+- Azure CLI installed for connector creation
 
 ## Create a GCP connector
-
-### Using Azure portal
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-2. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-
-3. Select **Add environment** > **Google Cloud Platform**.
-
-4. Enter the following details:
-   - **Name**: A unique name for your connector
-   - **Subscription**: Select your Azure subscription
-   - **Resource Group**: Select or create a resource group
-   - **Location**: Choose your preferred Azure region
-   - **GCP project ID**: Your GCP project ID
-   - **Service account key**: Upload the JSON key file
-
-5. Select **Next: Configure access**.
-
-### Configure GCP permissions
-
-1. In your GCP console, create a service account:
-
-    ```bash
-    # Create service account
-    gcloud iam service-accounts create defender-for-containers \
-        --display-name="Defender for Containers"
-
-    # Grant required roles
-    gcloud projects add-iam-policy-binding PROJECT_ID \
-        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-        --role="roles/container.viewer"
-
-    gcloud projects add-iam-policy-binding PROJECT_ID \
-        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-        --role="roles/containerregistry.ServiceAgent"
-
-    gcloud projects add-iam-policy-binding PROJECT_ID \
-        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-        --role="roles/cloudasset.viewer"
-
-    gcloud projects add-iam-policy-binding PROJECT_ID \
-        --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-        --role="roles/artifactregistry.reader"
-
-    # Create and download key
-    gcloud iam service-accounts keys create key.json \
-        --iam-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
-    ```
-
-1. Upload the key.json file in the Azure portal.
-
-## Enable Defender for Containers
-
-### Using Azure portal
-
-1. In the connector creation wizard, navigate to **Select plans**.
-
-1. Toggle **Containers** to **On**.
-
-1. Configure the following settings:
-
-   - **Agentless container vulnerability assessment**: On
-   - **Agentless discovery for Kubernetes**: On
-   - **Container registries vulnerability assessments**: On
-   - **Runtime threat protection**: On
-
-1. Select **Next: Review and create**.
 
 ### Using Azure CLI
 
 ```azurecli
+# Create resource group for connector
+az group create --name <resource-group> --location <location>
+
 # Create GCP connector
 az security connector create \
-    --name 'myGCPConnector' \
-    --resource-group 'myResourceGroup' \
-    --location 'eastus' \
-    --offerings '[{
-        "offeringType": "CspmMonitorGcp"
-    }]' \
-    --environment-data '{
-        "environmentType": "GcpProject",
-        "projectDetails": {
-            "projectId": "my-gcp-project",
-            "projectNumber": "123456789"
+    --name <connector-name> \
+    --resource-group <resource-group> \
+    --hierarchy-identifier <gcp-project-id> \
+    --environment-name GCP \
+    --offerings "[{
+        'offeringType': 'DefenderForContainersGke',
+        'nativeCloudConnection': {
+            'serviceAccountEmailAddress': 'microsoft-defender-containers@<project-id>.iam.gserviceaccount.com',
+            'workloadIdentityProviderId': '<project-number>'
         }
-    }'
+    }]"
+```
 
-# Enable Defender for Containers
+### Using REST API
+
+```bash
+curl -X PUT \
+  "https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Security/securityConnectors/{connectorName}?api-version=2024-01-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "hierarchyIdentifier": "{gcpProjectId}",
+      "environmentName": "GCP",
+      "offerings": [
+        {
+          "offeringType": "DefenderForContainersGke"
+        }
+      ]
+    }
+  }'
+```
+
+## Configure GCP permissions
+
+### Create service account and assign roles
+
+```bash
+# Set project
+export PROJECT_ID=<your-project-id>
+gcloud config set project $PROJECT_ID
+
+# Create service account
+gcloud iam service-accounts create microsoft-defender-containers \
+    --display-name="Microsoft Defender for Containers"
+
+# Assign required roles
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="serviceAccount:microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/container.viewer"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="serviceAccount:microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/containerregistry.ServiceAgent"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="serviceAccount:microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/cloudasset.viewer"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="serviceAccount:microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/artifactregistry.reader"
+
+# Create and download key
+gcloud iam service-accounts keys create defender-key.json \
+    --iam-account=microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com
+```
+
+### Configure Workload Identity Federation
+
+```bash
+# Create Workload Identity Pool
+gcloud iam workload-identity-pools create defender-pool \
+    --location="global" \
+    --display-name="Defender for Containers Pool"
+
+# Create provider
+gcloud iam workload-identity-pools providers create-oidc defender-provider \
+    --location="global" \
+    --workload-identity-pool="defender-pool" \
+    --issuer-uri="https://login.microsoftonline.com/<tenant-id>" \
+    --allowed-audiences="api://AzureSecurityCenter"
+
+# Grant access
+gcloud iam service-accounts add-iam-policy-binding \
+    microsoft-defender-containers@$PROJECT_ID.iam.gserviceaccount.com \
+    --role="roles/iam.workloadIdentityUser" \
+    --member="principalSet://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/defender-pool/*"
+```
+
+## Enable Defender for Containers
+
+### Using Azure CLI
+
+```azurecli
+# Enable Defender plan
 az security pricing create \
-    --name 'Containers' \
-    --tier 'Standard' \
-    --scope "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Security/securityConnectors/{connector-name}"
+    --name Containers \
+    --tier Standard
+
+# Update connector with offering details
+az security connector update \
+    --name <connector-name> \
+    --resource-group <resource-group> \
+    --offerings "[{
+        'offeringType': 'DefenderForContainersGke',
+        'nativeCloudConnection': {
+            'serviceAccountEmailAddress': 'microsoft-defender-containers@<project-id>.iam.gserviceaccount.com',
+            'workloadIdentityProviderId': 'projects/<project-number>/locations/global/workloadIdentityPools/defender-pool/providers/defender-provider'
+        },
+        'dataPipelineNativeCloudConnection': {
+            'serviceAccountEmailAddress': 'microsoft-defender-containers@<project-id>.iam.gserviceaccount.com',
+            'workloadIdentityProviderId': 'projects/<project-number>/locations/global/workloadIdentityPools/defender-pool/providers/defender-provider'
+        },
+        'auditLogsAutoProvisioningFlag': true,
+        'defenderAgentAutoProvisioningFlag': true,
+        'policyAgentAutoProvisioningFlag': true
+    }]"
+```
+
+## Connect GKE clusters to Azure Arc
+
+### Using gcloud and Azure CLI
+
+```bash
+# Get GKE cluster credentials
+gcloud container clusters get-credentials <cluster-name> \
+    --zone <zone> \
+    --project $PROJECT_ID
+
+# Connect to Azure Arc
+az connectedk8s connect \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
+    --location <location> \
+    --tags "Datacenter=GCP" "Environment=Production"
+```
+
+### Batch connection script
+
+```bash
+#!/bin/bash
+# Connect all GKE clusters to Azure Arc
+
+# Get all GKE clusters
+clusters=$(gcloud container clusters list --format="value(name,zone)")
+
+# Connect each cluster
+while IFS=$'\t' read -r name zone; do
+    echo "Connecting cluster: $name"
+    
+    # Get credentials
+    gcloud container clusters get-credentials "$name" --zone "$zone"
+    
+    # Connect to Arc
+    az connectedk8s connect \
+        --name "$name" \
+        --resource-group <resource-group> \
+        --location <location> \
+        --no-wait
+done <<< "$clusters"
 ```
 
 ## Deploy the Defender sensor
 
-The Defender sensor is automatically deployed to your GKE clusters after enabling the plan. If manual deployment is needed:
-
-### Automatic deployment verification
-
-```bash
-# Check if the admission webhook is configured
-kubectl get validatingwebhookconfigurations | grep defender
-
-# Verify DaemonSet deployment
-kubectl get daemonset -n kube-system | grep defender
-```
-
 ### Manual deployment
 
 ```bash
-# Get GKE cluster credentials
-gcloud container clusters get-credentials CLUSTER_NAME \
-    --zone ZONE \
-    --project PROJECT_ID
-
-# Download the deployment YAML
+# Download deployment YAML
 curl -o defender-sensor-gke.yaml https://aka.ms/defender-for-containers-sensor-gke
 
-# Update the YAML with your workspace details
-sed -i 's/WORKSPACE_ID/your-workspace-id/g' defender-sensor-gke.yaml
-sed -i 's/WORKSPACE_KEY/your-workspace-key/g' defender-sensor-gke.yaml
+# Update with your workspace details
+sed -i 's/WORKSPACE_ID/<your-workspace-id>/g' defender-sensor-gke.yaml
+sed -i 's/WORKSPACE_KEY/<your-workspace-key>/g' defender-sensor-gke.yaml
 
-# Deploy to your cluster
+# Deploy to cluster
 kubectl apply -f defender-sensor-gke.yaml
 ```
 
-## Configure GKE-specific settings
-
-### Enable Workload Identity
-
-For enhanced security, configure Workload Identity:
+### Using Helm
 
 ```bash
-# Enable Workload Identity on cluster
-gcloud container clusters update CLUSTER_NAME \
-    --workload-pool=PROJECT_ID.svc.id.goog
+# Add Defender Helm repository
+helm repo add defender https://aka.ms/defender-for-containers/helm
+helm repo update
 
-# Create Kubernetes service account
-kubectl create serviceaccount defender-sa -n kube-system
-
-# Bind to GCP service account
-gcloud iam service-accounts add-iam-policy-binding \
-    defender-for-containers@PROJECT_ID.iam.gserviceaccount.com \
-    --role roles/iam.workloadIdentityUser \
-    --member "serviceAccount:PROJECT_ID.svc.id.goog[kube-system/defender-sa]"
-
-# Annotate Kubernetes service account
-kubectl annotate serviceaccount defender-sa \
-    -n kube-system \
-    iam.gke.io/gcp-service-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
+# Install Defender sensor
+helm install microsoft-defender-sensor defender/microsoft-defender-sensor \
+    --namespace mdc \
+    --create-namespace \
+    --set credentials.workspaceId=<WORKSPACE_ID> \
+    --set credentials.workspaceKey=<WORKSPACE_KEY> \
+    --set clusterName=<CLUSTER_NAME> \
+    --set gke.enabled=true
 ```
 
-### Configure GCR/Artifact Registry scanning
+## Infrastructure as Code examples
 
-Enable vulnerability scanning for your registries:
-
-```bash
-# For Artifact Registry
-gcloud artifacts repositories update REPOSITORY \
-    --location=LOCATION \
-    --enable-vulnerability-scanning
-
-# Grant permissions for scanning
-gcloud projects add-iam-policy-binding PROJECT_ID \
-    --member="serviceAccount:defender-for-containers@PROJECT_ID.iam.gserviceaccount.com" \
-    --role="roles/artifactregistry.reader"
-```
-
-## Configure network settings
-
-For private GKE clusters:
-
-1. Configure Private Google Access:
-
-    ```bash
-    gcloud compute networks subnets update SUBNET_NAME \
-        --region=REGION \
-        --enable-private-ip-google-access
-    ```
-
-1. Configure firewall rules:
-
-```bash
-# Allow webhook traffic
-gcloud compute firewall-rules create allow-defender-webhook \
-    --allow tcp:443 \
-    --source-ranges 10.0.0.0/8 \
-    --target-tags gke-nodes
-```
-
-## Verify deployment
-
-After deployment, verify all components are working:
-
-```bash
-# Check sensor status
-kubectl get pods -n kube-system -l app=microsoft-defender
-
-# Verify connectivity
-kubectl logs -n kube-system -l app=microsoft-defender --tail=50
-
-# Check for any errors
-kubectl describe pods -n kube-system -l app=microsoft-defender
-```
-
-## Deploy using Infrastructure as Code
-
-### Terraform example
+### Terraform
 
 ```hcl
 # Configure Defender for Containers on GCP
@@ -242,26 +240,24 @@ resource "azurerm_security_center_subscription_pricing" "containers" {
 }
 
 # Create GCP connector
-resource "azurerm_security_center_gcp_connector" "example" {
-  name                = "example-gcp-connector"
+resource "azurerm_security_center_connector" "gcp" {
+  name                = "gcp-connector"
   resource_group_name = azurerm_resource_group.example.name
-  project_id          = var.gcp_project_id
+  hierarchy_identifier = var.gcp_project_id
+  environment_name     = "GCP"
   
   offering {
     type = "DefenderForContainersGke"
     
-    kubernetes_service {
-      cloud_role_arn = google_service_account.defender.email
-    }
-    
-    kubernetes_data_collection {
-      cloud_role_arn = google_service_account.defender.email
+    native_cloud_connection {
+      service_account_email = "microsoft-defender-containers@${var.gcp_project_id}.iam.gserviceaccount.com"
+      workload_identity_provider_id = "projects/${var.gcp_project_number}/locations/global/workloadIdentityPools/defender-pool/providers/defender-provider"
     }
   }
 }
 ```
 
-### ARM template deployment
+### ARM Template
 
 ```json
 {
@@ -285,7 +281,10 @@ resource "azurerm_security_center_gcp_connector" "example" {
         "environmentName": "GCP",
         "offerings": [
           {
-            "offeringType": "DefenderForContainersGke"
+            "offeringType": "DefenderForContainersGke",
+            "auditLogsAutoProvisioningFlag": true,
+            "defenderAgentAutoProvisioningFlag": true,
+            "policyAgentAutoProvisioningFlag": true
           }
         ]
       }
@@ -294,8 +293,31 @@ resource "azurerm_security_center_gcp_connector" "example" {
 }
 ```
 
+## Configure GKE Binary Authorization
+
+```bash
+# Create attestor
+gcloud container binauthz attestors create defender-attestor \
+    --attestation-authority-note=defender-note \
+    --attestation-authority-note-project=$PROJECT_ID
+
+# Create policy
+cat > binary-auth-policy.yaml <<EOF
+admissionWhitelistPatterns:
+- namePattern: gcr.io/$PROJECT_ID/*
+defaultAdmissionRule:
+  evaluationMode: REQUIRE_ATTESTATION
+  enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
+  requireAttestationsBy:
+  - projects/$PROJECT_ID/attestors/defender-attestor
+EOF
+
+# Apply policy
+gcloud container binauthz policy import binary-auth-policy.yaml
+```
+
 ## Next steps
 
 - [Verify deployment](defender-for-containers-gcp-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
-- [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
+- [Deploy via portal](defender-for-containers-gcp-deploy-portal.md)
