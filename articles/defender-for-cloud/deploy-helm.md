@@ -173,24 +173,16 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 
 You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
 
-### Accessing security rules
-
-Follow these steps:
+Accessing security rules:
 
 1. Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
+1. In the left navigation pane, select **Environment settings**.
+1. Click on the **Security rules** tile.
 
-2. In the left navigation pane, select **Environment settings**.
-
-3. Click on the **Security rules** tile.
-
-### Configuring vulnerability assessment rules
-
-Follow these steps:
+Configuring vulnerability assessment rules:
 
 1. Within the Security rules page, navigate to **Vulnerability assessment** under the **Gated deployment** section.
-
-2. Create or edit your security rules as needed.
-
+1. Create or edit your security rules as needed.
 
 > [!IMPORTANT]
 > For Helm installations
