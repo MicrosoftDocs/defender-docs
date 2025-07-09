@@ -179,29 +179,6 @@ From version 1.0.3425.0303 of Microsoft Defender for Endpoint on Android, you're
 - For Android Enterprise with a work profile, only apps installed on the work profile will be supported.
 - For other BYOD modes, by default, vulnerability assessment of apps will **not** be enabled. However, when the device is on administrator mode, admins can explicitly enable this feature through Microsoft Intune to get the list of apps installed on the device. For more information, see details below.
 
-### Configure privacy for device administrator mode
-
-Use the following steps to **enable vulnerability assessment of apps** from devices in **device administrator** mode for targeted users.
-
-> [!NOTE]
-> By default, this is turned off for devices enrolled with device admin mode.
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) , go to **Devices** > **Configuration profiles** > **Create profile** and enter the following settings:
-
-   - **Platform**: Select Android device administrator
-   - **Profile**: Select "Custom" and select Create.
-
-2. In the **Basics** section, specify a name and description of the profile.
-
-3. In the **Configuration settings**, select Add **OMA-URI** setting:
-
-   - **Name**: Enter a unique name and description for this OMA-URI setting so you can find it easily later.
-   - OMA-URI: **./Vendor/MSFT/DefenderATP/DefenderTVMPrivacyMode**
-   - Data type: Select Integer in the drop-down list.
-   - Value: Enter 0 to disable privacy setting (By default, the value is 1)
-
-4. Select **Next** and assign this profile to targeted devices/users.
-
 ### Configure privacy for Android Enterprise work profile
 
 Defender for Endpoint supports vulnerability assessment of apps in the work profile. However, in case you want to turn off this feature for targeted users, you can use the following steps:
