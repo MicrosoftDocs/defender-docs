@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: rayne-wiselman
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -32,6 +32,7 @@ ms.date: 07/09/2025
 The `GraphApiAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. Use this reference to construct queries that return information from this table.
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
+
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
