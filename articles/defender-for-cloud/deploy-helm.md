@@ -191,10 +191,11 @@ Follow these steps:
 
 2. Create or edit your security rules as needed.
 
+
 > [!IMPORTANT]
 > For Helm installations
-> - __Subscription Support Warning__: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
-> - __Skip Auto-Installation__: If prompted to enable gating in the third tab of the security rule edit window, make sure to press __Skip__. This option enables auto-installation, which conflicts with your existing Helm deployment.
+> - **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+> - **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
 >
 > :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
 
