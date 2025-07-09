@@ -17,7 +17,7 @@ The Defender for Identity sensor v3.x:
  - Requires that Defender for Endpoint is deployed on your endpoints
  - Doesn't currently support VPN integration
  - Doesn't currently support ExpressRoute
- - Doesn't currently offer full functionality of health alerts, posture recommendations or security alerts
+ - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or Advanced Hunting data.
 
 ## Licensing requirements
 
