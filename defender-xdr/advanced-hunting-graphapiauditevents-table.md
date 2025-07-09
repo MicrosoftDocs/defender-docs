@@ -43,7 +43,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ClientRequestId` | `string` | Identifier for the client request sent; if none is available, the operation identifier is used instead |
 | `EntityType ` | `string` | Type of object, such as a file, a process, a device, or a user, that made the request |
 | `RequestUri` | `string` | Uniform resource identifier (URI) of the request |
-| `AccountObjectId` | `string` | Unique identifier for the account making the request || `OperationId` | `string` | Identifier for a batch of requests; the same identifier is used for all requests in a batch but if requests are non-batched, the identifier is unique per request |
+| `AccountObjectId` | `string` | Unique identifier for the account making the request |
+| `OperationId` | `string` | Identifier for a batch of requests; the same identifier is used for all requests in a batch but if requests are non-batched, the identifier is unique per request |
 | `Location` | `string` | Name of the region that served the request |
 | `RequestDuration` | `string` | Duration of the request in milliseconds |
 | `RequestId` | `string` | Unique identifier of the request |
