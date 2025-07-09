@@ -185,7 +185,7 @@ You can define security rules to control what is allowed to be deployed into you
 1. Create or edit your security rules as needed.
 
 > [!IMPORTANT]
-> For Helm installations:
+> For Helm installations
 > - __Subscription Support Warning__: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
 > - __Skip Auto-Installation__: If prompted to enable gating in the third tab of the security rule edit window, make sure to press __Skip__. This option enables auto-installation, which conflicts with your existing Helm deployment.
 >
