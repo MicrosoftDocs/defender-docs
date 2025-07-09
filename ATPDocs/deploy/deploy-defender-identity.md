@@ -34,7 +34,7 @@ Identify your architecture and your requirements, and then use the table below t
 > - Requires that Defender for Endpoint is deployed on your endpoints
 > - Doesn't currently support VPN integration
 > - Doesn't currently support ExpressRoute
-> - Doesn't currently offer full functionality of health alerts, posture recommendations or security alerts
+> - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 
