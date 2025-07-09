@@ -83,7 +83,7 @@ Set-AzSecurityAutoProvisioningSetting `
 
 ## Deploy the Defender sensor
 
-### [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli-deploy)
 
 ```azurecli
 # Deploy to specific AKS cluster
@@ -100,7 +100,7 @@ az aks update \
     --enable-azure-monitor-metrics
 ```
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell-deploy)
 
 ```powershell
 # Enable Defender on AKS cluster
@@ -120,7 +120,7 @@ $cluster.SecurityProfile = @{
 $cluster | Set-AzAksCluster
 ```
 
-### [Helm](#tab/helm)
+### [Helm](#tab/helm-deploy)
 
 ```bash
 # Add Defender Helm repository
@@ -142,7 +142,7 @@ helm install microsoft-defender-sensor defender/microsoft-defender-sensor \
 
 To assign a custom workspace programmatically:
 
-### [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli-workspace)
 
 ```azurecli
 # Configure custom workspace
@@ -152,7 +152,7 @@ az aks update \
     --workspace-resource-id "/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
 ```
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell-workspace)
 
 ```powershell
 # Configure custom workspace
@@ -162,7 +162,7 @@ Set-AzAksCluster `
     -WorkspaceResourceId "/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
 ```
 
-### [ARM Template](#tab/arm)
+### [ARM Template](#tab/arm-workspace)
 
 ```json
 {
@@ -188,7 +188,7 @@ Set-AzAksCluster `
 
 Configure diagnostic settings programmatically:
 
-### [Azure CLI](#tab/azure-cli)
+### [Azure CLI](#tab/azure-cli-diag)
 
 ```azurecli
 # Create diagnostic setting
@@ -208,7 +208,7 @@ az monitor diagnostic-settings create \
     --workspace /subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>
 ```
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell-diag)
 
 ```powershell
 # Configure diagnostic settings
