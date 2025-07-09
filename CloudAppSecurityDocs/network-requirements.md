@@ -69,7 +69,6 @@ To use Defender for Cloud Apps in the Microsoft Defender Portal:
     static2.sharepointonline.com
     *.blob.core.windows.net
     discoveryresources-cdn-prod.cloudappsecurity.com
-    discoveryresources-cdn-gov.cloudappsecurity.us    
     ```
 
 1. Allow the following items based on your data center:
