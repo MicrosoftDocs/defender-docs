@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -50,6 +50,13 @@ Eliminating your existing protection service in favor of Defender for Office 365
 The high-level migration steps are illustrated in the following diagram. The actual steps are listed in the section named [The migration process](#the-migration-process) later in this article.
 
 :::image type="content" source="media/mdo-migration-overview.png" alt-text="The process of migration from a third-party protection solution or device to Defender for Office 365" lightbox="media/mdo-migration-overview.png":::
+
+> [!TIP]
+> For information about configuring protection for Microsoft Teams, see the following articles:
+>
+> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 ## Why use the steps in this guide?
 

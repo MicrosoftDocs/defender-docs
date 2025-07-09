@@ -3,6 +3,7 @@ title: Troubleshooting the sensor using logs  | Microsoft Defender for Identity
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
 ms.date: 02/21/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs
@@ -43,7 +44,7 @@ Defender for Identity sensor deployment logs:
 
 ## Related content
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md)
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

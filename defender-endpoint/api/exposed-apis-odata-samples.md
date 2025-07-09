@@ -1,12 +1,12 @@
 ---
 title: OData queries with Microsoft Defender for Endpoint
-ms.reviewer: 
+ms.reviewer: yongrhee
 description: Use these examples of Open Data Protocol (OData) queries to help with data access protocols in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 03/21/2025
+ms.date: 05/20/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -44,7 +44,7 @@ Not all properties are filterable.
 ## Properties that support $filter
 
 - [Alert](alerts.md): `alertCreationTime`, `lastUpdateTime`, `incidentId`,`InvestigationId`, `status`, `severity`, and `category`.
-- [Machine](machine.md): `ComputerDnsName`, `LastSeen`, `HealthStatus`, `OsPlatform`, `onboardingStatus`, `RiskScore`, and `RbacGroupId`.
+- [Machine](machine.md): `ComputerDnsName`, `LastSeen`, `exposureLevel`, `HealthStatus`, `OsPlatform`, `onboardingStatus`, `RiskScore`, and `RbacGroupId`.
 - [MachineAction](machineaction.md): `Status`, `MachineId`, `Type`, `Requestor`, and `CreationDateTimeUtc`.
 - [Indicator](ti-indicator.md): `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`, `severity`, and `action`.
 

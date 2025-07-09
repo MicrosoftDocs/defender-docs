@@ -3,8 +3,8 @@ title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -16,7 +16,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 03/26/2025
 ---
 
 # Visit the Action center to see remediation actions

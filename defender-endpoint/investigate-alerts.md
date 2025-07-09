@@ -2,8 +2,8 @@
 title: Investigate Microsoft Defender for Endpoint alerts
 description: Use the investigation options to get details on alerts are affecting your network, what they mean, and how to resolve them.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
-ms.date: 04/24/2018
+ms.topic: concept-article
+ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150
 ---

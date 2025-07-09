@@ -12,19 +12,18 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 05/03/2024
+ms.date: 04/25/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Setup guides for Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Setup guides for Microsoft Defender XDR deployment give you tailored guidance and resources for planning and deploying security controls for your tenant, apps, and services. 
 

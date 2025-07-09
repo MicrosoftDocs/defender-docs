@@ -4,8 +4,8 @@ description: Turn on cloud protection to benefit from fast and advanced protecti
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: denisebmsft
-ms.author: deniseb
+author: emmwalshh
+ms.author: ewalsh
 ms.date: 11/10/2024
 ms.reviewer: pahuijbr
 manager: deniseb
@@ -59,10 +59,15 @@ The following table summarizes the features and capabilities that depend on clou
 
 You can turn Microsoft Defender Antivirus cloud protection on or off by using one of several methods, such as:
 
-- [Microsoft Intune](#use-microsoft-intune-to-turn-on-cloud-protection)  
-- [Group Policy](#use-group-policy-to-turn-on-cloud-protection)
-- [PowerShell cmdlets](#use-powershell-cmdlets-to-turn-on-cloud-protection)
-- [Windows Management Instruction](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection) (WMI)
+- [Turn on cloud protection in Microsoft Defender Antivirus](#turn-on-cloud-protection-in-microsoft-defender-antivirus)
+  - [Why cloud protection should be turned on](#why-cloud-protection-should-be-turned-on)
+  - [Methods to configure cloud protection](#methods-to-configure-cloud-protection)
+  - [Use Microsoft Intune to turn on cloud protection](#use-microsoft-intune-to-turn-on-cloud-protection)
+  - [Use Group Policy to turn on cloud protection](#use-group-policy-to-turn-on-cloud-protection)
+  - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-cmdlets-to-turn-on-cloud-protection)
+  - [Use Windows Management Instruction (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
+  - [Turn on cloud protection on individual clients with the Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app)
+  - [See also](#see-also)
 
 You can also use [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection). And, you can turn cloud protection on or off on individual endpoints by using the [Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app). 
 

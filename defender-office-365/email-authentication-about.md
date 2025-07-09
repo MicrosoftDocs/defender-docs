@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MET150
 ms.assetid:
@@ -17,7 +17,7 @@ ms.custom: TopSMBIssues
 ms.localizationpriority: high
 description: Admins can learn how email authentication (SPF, DKIM, DMARC) works and how Microsoft 365 uses traditional email authentication and composite email authentication to identify messages as spoofing, or pass messages that would otherwise be identified as spoofing.
 ms.service: defender-office-365
-ms.date: 3/7/2024
+ms.date: 05/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -180,7 +180,7 @@ These values are explained at [Authentication-results message header](message-he
 Admins and users can examine the message headers to discover how Microsoft 365 identified the sender as a suspicious spoofed sender or legitimate.
 
 > [!TIP]
-> It's important to understand that a composite authentication failure doesn't directly result in a message being blocked. Our system using a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
+> It's important to understand that a composite authentication failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
 
 The following examples focus on the results of email authentication only (the `compauth` value and reason). Other Microsoft 365 protection technologies can identify messages that pass email authentication as spoofed, or identify messages that fail email authentication as legitimate.
 

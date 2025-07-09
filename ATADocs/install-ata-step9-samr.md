@@ -3,12 +3,8 @@
 
 title: Configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics
 description: Describes how to configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics (ATA)
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 
@@ -61,7 +57,7 @@ To ensure that Windows clients and servers allow the ATA service account to perf
 If you've defined the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting in any GPO that applies to computers in your domain, you need to add the ATA service account to the list of allowed accounts for that setting:
 
 >[!NOTE]
->The setting is not enabled by default. If you have not enabled it previously, you don't need to modify it to allow Defender for Identity to make remote calls to SAM.
+>The setting isn't enabled by default. If you haven't enabled it previously, you don't need to modify it to allow Defender for Identity to make remote calls to SAM.
 
 To add the service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
 

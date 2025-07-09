@@ -2,8 +2,8 @@
 title: Investigate an IP address associated with an alert
 description: Use the investigation options to examine possible communication between devices and external IP addresses.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
-ms.date: 04/24/2018
+ms.topic: how-to
+ms.date: 03/26/2025
 ms.subservice: edr
 search.appverid: met150
 ---

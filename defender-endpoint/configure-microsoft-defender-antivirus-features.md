@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 02/18/2024
+ms.date: 03/26/2025
 ---
 
 # Configure Microsoft Defender Antivirus features

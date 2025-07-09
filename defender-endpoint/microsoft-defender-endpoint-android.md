@@ -11,10 +11,10 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - mde-android
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 06/10/2025
 ---
 
 # Microsoft Defender for Endpoint on Android
@@ -26,7 +26,7 @@ ms.date: 03/21/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=en-us&country=us)
+> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Android.
 
@@ -85,7 +85,7 @@ Microsoft Defender for Endpoint on Android supports installation on both modes o
 
 > [!NOTE]
 > **Microsoft Defender for Endpoint on Android is available on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx) now.**
-> > You can connect to Google Play from Intune to deploy the Microsoft Defender for Endpoint app across Device Administrator and Android Enterprise enrollment modes.
+> You can connect to Google Play from Intune to deploy the Microsoft Defender for Endpoint app across Device Administrator and Android Enterprise enrollment modes.
 
 ### Required permissions
 
@@ -107,7 +107,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 - Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
 
-- If a policy is violated, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
+- If a policy is violated, or the user has reset their Microsoft account password, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
 
 - This process results in the devices being shown as noncompliant in the Intune portal. A user can get the device to compliant status by signing in again.
 

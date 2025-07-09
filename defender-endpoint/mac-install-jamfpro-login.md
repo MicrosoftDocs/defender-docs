@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/08/2025
 ---
 
 # Sign in to Jamf Pro

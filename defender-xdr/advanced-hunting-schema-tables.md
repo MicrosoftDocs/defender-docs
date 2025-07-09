@@ -17,17 +17,17 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/20/2024
+ms.date: 03/28/2025
 ---
 
 # Understand the advanced hunting schema
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -90,6 +90,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[DeviceTvmSoftwareInventory](advanced-hunting-devicetvmsoftwareinventory-table.md)** | Inventory of software installed on devices, including their version information and end-of-support status |
 | **[DeviceTvmSoftwareVulnerabilities](advanced-hunting-devicetvmsoftwarevulnerabilities-table.md)** | Software vulnerabilities found on devices and the list of available security updates that address each vulnerability |
 | **[DeviceTvmSoftwareVulnerabilitiesKB](advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md)** | Knowledge base of publicly disclosed vulnerabilities, including whether exploit code is publicly available |
+| **[DisruptionAndResponseEvents](advanced-hunting-disruptionandresponseevents-table.md)** (Preview)|  [Automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR|
 | **[EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md)** | Information about files attached to emails |
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |
@@ -101,6 +102,10 @@ The following reference lists all the tables in the schema. Each table name link
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)** | Queries for Active Directory objects, such as users, groups, devices, and domains |
+| **[MessageEvents](advanced-hunting-messageevents-table.md)** (Preview) | Messages sent and received within your organization at the time of delivery |
+| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)** (Preview) | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
+| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** (Preview) | URLs sent through Microsoft Teams messages in your organization |
+| **[OAuthAppInfo](advanced-hunting-oauthappinfo-table.md)** (Preview) | Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability |
 | **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** | Safe Links clicks from email messages, Teams, and Office 365 apps |
 
 ## Related topics

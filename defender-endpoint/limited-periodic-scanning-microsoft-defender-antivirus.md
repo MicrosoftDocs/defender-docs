@@ -3,11 +3,11 @@ title: Enable the limited periodic Microsoft Defender Antivirus scanning feature
 description: Limited periodic scanning lets you use Microsoft Defender Antivirus in addition to your other installed AV providers
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
-ms.date: 02/18/2024
+ms.date: 03/26/2025
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: ngp

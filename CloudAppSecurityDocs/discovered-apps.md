@@ -66,9 +66,9 @@ You also might want to identify specific app instances that are in use by invest
 :::image type="content" source="media/discovered-apps/subdomains-image.png" alt-text="Subdomain filter.":::
 
 > [!NOTE]
-> Deep dives into discovered apps are supported only only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
+> Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
 >
-> If Defender for Cloud Apps can't match the subdomain detected in the traffic logs with the data stored in the app catalogue, the subdomain is tagged as **Other**.
+> If Defender for Cloud Apps can't match the subdomain detected in the traffic logs with the data stored in the app catalog, the subdomain is tagged as **Other**.
 
 ## Discover resources and custom apps
 
@@ -102,6 +102,9 @@ The best way to get an overview of Shadow IT use across your organization is by 
 1. From the **Cloud discovery** page, select **Actions** > **Generate Cloud Discovery executive report**.
 
 1. Optionally, change the report name, and then select **Generate**.
+   
+> [!NOTE]
+> The executive summary report is revamped to a 6-pager report with a goal to provide a clear, concise & actionable overview while preserving the depth and integrity of the original analysis.
 
 ## Exclude entities
 
@@ -154,7 +157,7 @@ We recommend deleting cloud discovery data in the following cases:
 - If many users or IP addresses recently started working again after being offline for some time, their activity is identified as anomalous and might give you false positive violations.
 
 > [!IMPORTANT]
-> Make sure you want to delete data before doing so. This action is irreversbile and deletes **all** cloud discovery data in the system.
+> Make sure you want to delete data before doing so. This action is irreversible and deletes **all** cloud discovery data in the system.
 >
 
 **To delete cloud discovery data**:

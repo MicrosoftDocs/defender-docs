@@ -17,7 +17,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 10/10/2023
+ms.date: 03/26/2025
 ---
 
 # Better together: Microsoft Defender Antivirus and Office 365
@@ -28,7 +28,7 @@ ms.date: 10/10/2023
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - Microsoft 365
 
 **Platforms**

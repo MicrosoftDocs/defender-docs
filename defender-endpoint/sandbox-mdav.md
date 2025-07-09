@@ -3,12 +3,12 @@ title: Run Microsoft Defender Antivirus in a sandbox environment
 description: This article describes how to run Microsoft Defender Antivirus in a sandbox to further strengthen against tampering.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
-ms.date: 02/26/2024
+ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:
 - m365-security
