@@ -176,12 +176,15 @@ You can define security rules to control what is allowed to be deployed into you
 ### Accessing security rules
 
 1. Navigate to the __Microsoft Defender for Cloud (MDC) Dashboard__.
+
 1. In the left navigation pane, select __Environment settings__.
+
 1. Click on the __Security rules__ tile.
 
 ### Configuring vulnerability assessment rules
 
 1. Within the Security rules page, navigate to __Vulnerability assessment__ under the __Gated deployment__ section.
+
 1. Create or edit your security rules as needed.
 
 > [!IMPORTANT]
