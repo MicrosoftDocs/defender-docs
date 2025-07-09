@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 03/12/2024
+ms.date: 07/09/2025
 ---
 
 # GraphApiAuditEvents (Preview)
@@ -38,20 +38,20 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IdentityProvider` | `string` | Identity provider that authenticated the subject of the token |
 | `ApiVersion` | `string` | The API version of the event |
 | `ApplicationId` | `string` | Unique identifier for the application |
+| `IPAddress` | `string` | The IP address of the client from where the request was made |
 | `ClientRequestId` | `string` | Identifier for the client request sent; if none is available, the operation identifier is used instead |
+| `EntityType ` | `string` | Type of object, such as a file, a process, a device, or a user, that made the request |
 | `RequestUri` | `string` | Uniform resource identifier (URI) of the request |
-| `OperationId` | `string` | Identifier for a batch of requests; the same identifier is used for all requests in a batch but if requests are non-batched, the identifier is unique per request |
-| `AccountObjectId` | `string` | Unique identifier for the user making the request |
+| `AccountObjectId` | `string` | Unique identifier for the account making the request || `OperationId` | `string` | Identifier for a batch of requests; the same identifier is used for all requests in a batch but if requests are non-batched, the identifier is unique per request |
 | `Location` | `string` | Name of the region that served the request |
 | `RequestDuration` | `string` | Duration of the request in milliseconds |
+| `RequestId` | `string` | Unique identifier of the request |
 | `RequestMethod` | `string` | HTTP method of the request |
 | `Timestamp` | `string` | Date and time when the request was recorded |
 | `ResponseStatusCode` | `string` | HTTP response status code for the request |
 | `Scopes` | `string` | Scopes in token claims |
-| `RequesterRoles` | `string` | Denotes the tenant-wide roles assigned to the user making the request|
-| `RequestDetails` | `string` | Contains information about the request, like the IP address of the client from where the request occurred, the URI of the request, the user-agent information related to request, the application display name | 
-| `UserAgent` | `string` |User agent information from the web browser or other client application|
-| `EntityType` | `string` | Type of entity that performed the action | 
+| `UniqueTokenIdentifier` | `string` | Unique identifier embedded in every access token and ID token that were issued |
+
 
 ## Related articles
 
@@ -60,4 +60,5 @@ For information on other tables in the advanced hunting schema, [see the advance
 - [Use shared queries](advanced-hunting-shared-queries.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
