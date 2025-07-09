@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/11/2025
+ms.date: 07/09/2025
 ---
 
 # Export software vulnerabilities assessment per device
