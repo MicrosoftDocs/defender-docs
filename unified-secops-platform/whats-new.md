@@ -209,24 +209,6 @@ Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you 
 
 For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).
 
-## November 2024
-
-- [Microsoft Sentinel availability in Microsoft Defender portal](#microsoft-sentinel-availability-in-microsoft-defender-portal)
-- [Feature availability for Government clouds](#feature-availability-for-government-clouds)
-
-### Microsoft Sentinel availability in Microsoft Defender portal
-
-We previously announced Microsoft Sentinel is generally available in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
-
- - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
- - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-
-### Feature availability for Government clouds
-
-In the Defender portal, all Microsoft Sentinel features that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
-
-For more information, see [Microsoft Sentinel feature support for Azure commercial/other clouds](/azure/sentinel/feature-availability#experience-in-the-defender-portal) and [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov).
-
 ## Related content
 
 For more information on what's new with other Microsoft Defender security products and Microsoft Sentinel, see:

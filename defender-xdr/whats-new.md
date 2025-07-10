@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/09/2025
+ms.date: 07/09/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -33,6 +33,8 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## July 2025
+- (Preview) The [GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
+
 - (Preview) The [`DisruptionAndResponseEvents`](advanced-hunting-disruptionandresponseevents-table.md) table, now available in advanced hunting, contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. Increase your visibility and awareness of active, complex attacks disrupted by attack disruption to understand the attacks' scope, context, impact, and actions taken.
 
 ## June 2025
