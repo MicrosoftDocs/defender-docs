@@ -19,11 +19,11 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
-description: Zero-hour auto purge (ZAP) in all Microsoft 365 organizations with cloud mailboxes handles messages in mailboxes retroactively identified as spam, phishing, or malware.
+description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxes handles messages in mailboxes retroactively identified as spam, phishing, or malware.
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -31,7 +31,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365.
+In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365.
 
 > [!NOTE]
 > ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
@@ -56,7 +56,7 @@ For _read or unread messages_ found to contain malware after delivery, ZAP quara
 > [!NOTE]
 > Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
 
-ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md).
+ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
 
 ### Zero-hour auto purge (ZAP) for phishing
 
@@ -73,7 +73,7 @@ For _read or unread messages_ identified as _phishing_ after delivery (not _high
 
 By default, ZAP for phishing is enabled in anti-spam policies.
 
-For more information about configuring spam filtering verdicts, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+For more information about configuring spam filtering verdicts, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 ### Zero-hour auto purge (ZAP) for high confidence phishing
 
@@ -105,7 +105,7 @@ By default, users can view and manage messages that were quarantined as spam or 
 
 By default, ZAP for spam is enabled in anti-spam policies.
 
-For more information about configuring spam filtering verdicts, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+For more information about configuring spam filtering verdicts, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 ### How to see if ZAP moved your message
 
@@ -192,7 +192,7 @@ Follow the normal process for [reporting false positives to Microsoft](submissio
 
 ZAP takes action on a message based on the configuration of anti-spam policies as described earlier in this article.
 
-### How is ZAP affected by the exceptions to default email protections in Microsoft 365 and Defender for Office 365?
+### How is ZAP affected by the exceptions to default email protections for cloud mailboxes and Defender for Office 365?
 
 The following features might override ZAP actions:
 

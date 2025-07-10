@@ -1,5 +1,5 @@
 ---
-title: Configure default anti-phishing protection policies in Microsoft 365
+title: Configure anti-phishing policies for all cloud mailboxes
 f1.keywords:
   - NOCSH
 ms.author: chrisda
@@ -13,24 +13,24 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-description: Admins can learn how to create, modify, and delete the default anti-phishing protection policies available in all Microsoft 365 organizations with cloud mailboxes.
+description: Admins can learn how to create, modify, and delete the anti-phishing policies for all cloud mailboxes.
 ms.service: defender-office-365
 search.appverid: met150
 ms.date: 04/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
 ---
 
-# Configure default anti-phishing protection policies in Microsoft 365
+# Configure anti-phishing policies for all cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, default anti-phishing protection policies provide anti-spoofing protection. For more information, see [Spoof settings in anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
+In all organizations with cloud mailboxes, anti-phishing policies for all cloud mailboxes provide anti-spoofing protection. For more information, see [Spoof settings in anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
 
 The default anti-phishing policy automatically applies to all recipients. For greater granularity, you can also create custom anti-phishing policies that apply to specific users, groups, or domains in your organization.
 
 > [!TIP]
-> Instead of creating and managing custom anti-phishing policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+> Instead of creating and managing custom anti-phishing policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 
 You configure anti-phishing policies in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -52,7 +52,7 @@ For anti-phishing policy procedures in organizations with Microsoft Defender for
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- For our recommended settings for anti-phishing policies in Defender for Office 365, see [Anti-phishing policy in Defender for Office 365 settings](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+- For our recommended settings for anti-phishing policies in Defender for Office 365, see [Anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
   > [!TIP]
   > Settings in the default or custom anti-phishing policies are ignored if a recipient is also included in the [Standard or Strict preset security policies](preset-security-policies.md). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
@@ -514,7 +514,7 @@ For detailed syntax and parameter information, see [Remove-AntiPhishRule](/power
 
 ## How do you know these procedures worked?
 
-To verify you successfully configured default anti-phishing protection policies in Microsoft 365, do any of the following steps:
+To verify you successfully configured anti-phishing policies for all cloud mailboxes, do any of the following steps:
 
 - On the **Anti-phishing** page in the Microsoft Defender portal at <https://security.microsoft.com/antiphishing>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking on the name and viewing the details in the flyout that appears.
 

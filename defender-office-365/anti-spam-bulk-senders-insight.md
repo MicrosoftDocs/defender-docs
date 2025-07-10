@@ -18,16 +18,16 @@ description: Admins can learn about the Bulk senders insight page in the Microso
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Bulk senders insight in Microsoft 365
+# Bulk senders insight in cloud organizations
 
-In all Microsoft 365 organizations with cloud mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to view information about bulk email (also known as gray mail) detections in your organization.
+In all organizations with cloud mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to view information about bulk email (also known as gray mail) detections in your organization.
 
-Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL threshold value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
+Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL threshold value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
 
 The bulk senders insight has the following capabilities:
 

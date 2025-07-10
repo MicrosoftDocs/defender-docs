@@ -18,18 +18,18 @@ description: Admins can learn about bulk complaint level (BCL) values that are u
 ms.service: defender-office-365
 ms.date: 07/02/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Bulk complaint level (BCL) in Microsoft 365
+# Bulk complaint level (BCL) in cloud organizations
 
-All Microsoft 365 organizations with cloud mailboxes assign a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and non-Microsoft sources to identify bulk mail and determine the appropriate BCL value.
+All organizations with cloud mailboxes assign a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and non-Microsoft sources to identify bulk mail and determine the appropriate BCL value.
 
 Bulk senders vary in their sending patterns, content creation, and recipient acquisition practices. Good bulk senders send desired messages with relevant content to their subscribers. These messages generate few complaints from recipients. Other bulk senders send unsolicited messages that closely resemble spam and generate many complaints from recipients. Messages from a bulk sender are known as bulk mail or gray mail.
 
-Spam filtering marks messages as **Bulk email** based on the BCL threshold in anti-spam polices and takes the specified action on the message. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md) and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md)
+Spam filtering marks messages as **Bulk email** based on the BCL threshold in anti-spam policies and takes the specified action on the message. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md)
 
 The BCL thresholds are described in the following table:
 
@@ -74,4 +74,4 @@ The bulk senders insight is available in the following locations in the Defender
 - In the properties of the default anti-spam policy or custom anti-spam policies.
 - On the **Email & collaboration reports and insights** page at <https://security.microsoft.com/emailandcollabreport>.
 
-For more information, see [Bulk senders insight in Microsoft 365](anti-spam-bulk-senders-insight.md).
+For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.md).

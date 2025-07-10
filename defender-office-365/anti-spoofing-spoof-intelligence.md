@@ -21,16 +21,16 @@ description: Admins can learn about the spoof intelligence insight in Microsoft 
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Spoof intelligence insight in Microsoft 365
+# Spoof intelligence insight for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, inbound email messages are automatically protected against spoofing. Microsoft 365 uses **spoof intelligence** as part of your organization's overall defense against phishing. For more information, see [Anti-spoofing protection in Microsoft 365](anti-phishing-protection-spoofing-about.md).
+In all organizations with cloud mailboxes, inbound email messages are automatically protected against spoofing. Microsoft 365 uses **spoof intelligence** as part of your organization's overall defense against phishing. For more information, see [Anti-spoofing protection](anti-phishing-protection-spoofing-about.md).
 
 When a sender spoofs an email address, they appear to be a user in one of your organization's domains, or a user in an external domain that sends email to your organization. Attackers who spoof senders to send spam or phishing email need to be blocked. But there are scenarios where legitimate senders are spoofing. For example:
 
@@ -80,11 +80,11 @@ The rest of this article explains how to use the spoof intelligence insight in t
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- For our recommended settings for anti-phishing policies, see [Default anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#default-anti-phishing-protection-policy-settings).
+- For our recommended settings for anti-phishing policies, including spoof intelligence, see [Anti-phishing policy settings for all cloud mailboxes](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes).
 
-- You enable and disable spoof intelligence in anti-phishing policies. Spoof intelligence is enabled by default. For more information, see [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md) or [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
-
-- For our recommended settings for spoof intelligence, see [Default anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#default-anti-phishing-protection-policy-settings).
+- You enable and disable spoof intelligence in anti-phishing policies. Spoof intelligence is enabled by default. For more information, see one of the following articles:
+  - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](anti-phishing-policies-eop-configure.md)
+  - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 ## Find the spoof intelligence insight in the Microsoft Defender portal
 
@@ -208,8 +208,8 @@ Be diligent about spoofing and phishing protection. Here are related ways to che
 - Check the **Spoof Mail Report**. Use this report often to view and help manage spoofed senders. For information, see [Spoof Detections report](reports-email-security.md#spoof-detections-report).
 
 - Review your SPF, DKIM, and DMARC configuration. For more information, see the following articles:
-  - [Email authentication in Microsoft 365](email-authentication-about.md)
-  - [Set up SPF to help prevent spoofing](email-authentication-spf-configure.md)
-  - [Use DKIM to validate outbound email sent from your custom domain](email-authentication-dkim-configure.md)
-  - [Use DMARC to validate email](email-authentication-dmarc-configure.md)
+  - [Email authentication](email-authentication-about.md)
+  - [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md)
+  - [Set up DKIM to sign mail from your cloud domain](email-authentication-dkim-configure.md)
+  - [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
   - [Configure trusted ARC sealers](email-authentication-arc-configure.md)

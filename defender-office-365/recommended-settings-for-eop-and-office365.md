@@ -19,43 +19,47 @@ ms.collection:
   - tier1
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ms.service: defender-office-365
-ms.date: 04/28/2025
+ms.date: 07/10/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Recommended email and collaboration security settings for Microsoft 365
+# Recommended email and collaboration threat policy settings for cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**The default email protections** are the core of security for Microsoft 365 subscriptions and help keep malicious emails from reaching user mailboxes. But with new, more sophisticated attacks emerging every day, improved protections are often required. **Microsoft Defender for Office 365** contains more features that give more layers of security, control, and investigation.
+Although all organizations with cloud mailboxes include default email protections, Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
 
-Although we empower security admins to customize their security settings, there are two security levels that we recommend: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help keep unwanted email out of user mailboxes in most situations.
+We recommend two security levels: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help keep unwanted email out of user mailboxes in most situations.
 
-To automatically apply the Standard or Strict settings to users, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+To automatically apply the Standard or Strict settings to users, use [Preset security policies](preset-security-policies.md).
 
-This article describes the default settings, and also the recommended Standard and Strict settings to help protect users. The tables contain the settings in the Microsoft Defender portal and Exchange Online PowerShell.
+This article describes the default threat policy settings, and also the recommended Standard and Strict settings to help protect users. The tables contain the settings in the Microsoft Defender portal and Exchange Online PowerShell.
 
 > [!NOTE]
+> You can use the configuration analyzer to compare the settings in custom threat policies to the recommended Standard or Strict values. For more information, see [Configuration analyzer for threat policies](configuration-analyzer-for-security-policies.md).
+>
 > The Office 365 Advanced Threat Protection Recommended Configuration Analyzer (ORCA) module for PowerShell can help admins find the current values of these settings. Specifically, the **Get-ORCAReport** cmdlet generates an assessment of anti-spam, anti-phishing, and other message hygiene settings. You can download the ORCA module at <https://www.powershellgallery.com/packages/ORCA/>.
 >
 > We recommend that you leave the Junk Email Filter in Outlook set to **No automatic filtering** to prevent unnecessary conflicts (both positive and negative) with the spam filtering verdicts from Microsoft 365. For more information, see the following articles:
 >
-> - [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
+> - [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
 > - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-outlook-junk-email-settings)
 > - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
-> - [Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md)
-> - [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md)
+> - [Create sender allowlists](create-safe-sender-lists-in-office-365.md)
+> - [Create sender blocklists](create-block-sender-lists-in-office-365.md)
 
-## Default email protections in Microsoft 365
+<a name='eop-anti-malware-policy-settings'></a>
 
-The default email protections described in this section are available in all Microsoft 365 organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
+## Default email protections for cloud mailboxes
+
+The default email protections described in this section are available in all organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
 
 ### Anti-malware policy settings
 
-To create and configure anti-malware policies, see [Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md).
+To create and configure anti-malware policies, see [Configure anti-malware policies](anti-malware-policies-configure.md).
 
 Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -86,7 +90,7 @@ Users can't release their own messages quarantined as malware, regardless of how
 
 ### Anti-spam policy settings
 
-To create and configure anti-spam policies, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+To create and configure anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 Wherever you select **Quarantine message** as the action for a spam filter verdict, a **Select quarantine policy** box is available. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -97,7 +101,7 @@ Admins can create or use quarantine policies with more restrictive or less restr
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|
 |**Bulk email threshold & spam properties**|||||
-|**Bulk email threshold** (_BulkThreshold_)|7|6|5|For details, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).|
+|**Bulk email threshold** (_BulkThreshold_)|7|6|5|For details, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).|
 |**Bulk email spam** (_MarkAsSpamBulkMail_)|(`On`)|(`On`)|(`On`)|This setting is only available in PowerShell.|
 |**Increase spam score** settings||||All of these settings are part of the Advanced Spam Filter (ASF). For more information, see the [ASF settings in anti-spam policies](#asf-settings-in-anti-spam-policies) section in this article.|
 |**Mark as spam** settings||||Most of these settings are part of ASF. For more information, see the [ASF settings in anti-spam policies](#asf-settings-in-anti-spam-policies) section in this article.|
@@ -130,7 +134,7 @@ Admins can create or use quarantine policies with more restrictive or less restr
 
 #### ASF settings in anti-spam policies
 
-For more information about Advanced Spam Filter (ASF) settings in anti-spam policies, see [Advanced Spam Filter (ASF) settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
+For more information about Advanced Spam Filter (ASF) settings in anti-spam policies, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
 
 |Security feature name|Default|Recommended<br/>Standard|Recommended<br/>Strict|Comment|
 |---|:---:|:---:|:---:|---|
@@ -156,7 +160,7 @@ For more information about Advanced Spam Filter (ASF) settings in anti-spam poli
 
 #### Outbound spam policy settings
 
-To create and configure outbound spam policies, see [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md).
+To create and configure outbound spam policies, see [Configure outbound spam filtering](outbound-spam-policies-configure.md).
 
 For more information about the default sending limits in the service, see [Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
@@ -169,13 +173,15 @@ For more information about the default sending limits in the service, see [Sendi
 |**Set an internal message limit** (_RecipientLimitInternalPerHour_)|0|1000|800|The default value 0 means use the service defaults.|
 |**Set a daily message limit** (_RecipientLimitPerDay_)|0|1000|800|The default value 0 means use the service defaults.|
 |**Restriction placed on users who reach the message limit** (_ActionWhenThresholdReached_)|**Restrict the user from sending mail until the following day** (`BlockUserForToday`)|**Restrict the user from sending mail** (`BlockUser`)|**Restrict the user from sending mail** (`BlockUser`)||
-|**Automatic forwarding rules** (_AutoForwardingMode_)|**Automatic - System-controlled** (`Automatic`)|**Automatic - System-controlled** (`Automatic`)|**Automatic - System-controlled** (`Automatic`)|The value **Automatic - System-controlled** (`Automatic`) is equivalent to **Off - Forwarding is disabled** (`Off`). For more information, see [Control automatic external email forwarding in Microsoft 365](outbound-spam-policies-external-email-forwarding.md).|
+|**Automatic forwarding rules** (_AutoForwardingMode_)|**Automatic - System-controlled** (`Automatic`)|**Automatic - System-controlled** (`Automatic`)|**Automatic - System-controlled** (`Automatic`)|The value **Automatic - System-controlled** (`Automatic`) is equivalent to **Off - Forwarding is disabled** (`Off`). For more information, see [Control automatic external email forwarding](outbound-spam-policies-external-email-forwarding.md).|
 |**Send a copy of outbound messages that exceed these limits to these users and groups** (_BccSuspiciousOutboundMail_ and _BccSuspiciousOutboundAdditionalRecipients_)|Not selected (`$false` and Blank)|Not selected (`$false` and Blank)|Not selected (`$false` and Blank)|This setting works only in the default outbound spam policy. It doesn't work in custom outbound spam policies that you create. <br/><br/> The Microsoft SecureScore recommendation **Ensure Exchange Online Spam Policies are set to notify administrators** suggests that you configure this value.|
 |**Notify these users and groups if a sender is blocked due to sending outbound spam** (_NotifyOutboundSpam_ and _NotifyOutboundSpamRecipients_)|Not selected (`$false` and Blank)|Not selected (`$false` and Blank)|Not selected (`$false` and Blank)|The default [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **User restricted from sending email** already sends email notifications to members of the **TenantAdmins** group (**Global Administrator** members) when users are blocked due to exceeding the limits in the policy. For instructions, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). <br/><br/> Although we recommend that you use the alert policy rather than this setting in the outbound spam policy to notify admins and other users, the Microsoft SecureScore recommendation **Ensure Exchange Online Spam Policies are set to notify administrators** suggests that you configure this value.|
 
-### Default anti-phishing protection policy settings
+<a name='eop-anti-phishing-policy-settings'></a>
 
-The anti-phishing policy settings described in this section are part of the default email protections included in all Microsoft 365 organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
+### Anti-phishing policy settings for all cloud mailboxes
+
+The anti-phishing policy settings described in this section are part of the default email protections included in all organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 The spoof settings are inter-related, but the **Show first contact safety tip** setting has no dependency on spoof settings.
 
@@ -210,19 +216,19 @@ If your Microsoft 365 subscription includes Defender for Office 365 or you purch
 > - The default anti-phishing policy in Defender for Office 365 provides [spoof protection](anti-phishing-policies-about.md#spoof-settings) and mailbox intelligence for all recipients. However, the other available [impersonation protection](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) and [phishing email thresholds](#phishing-email-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) settings aren't configured in the default policy. To enable all anti-phishing protection features, do one or more of the following steps:
 >   - Turn on and use the Standard and/or Strict [preset security policies](preset-security-policies.md) and configure impersonation protection there.
 >   - Modify the default anti-phishing policy.
->   - Create more anti-phishing policies.
+>   - Create custom anti-phishing policies.
 >
-> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+> - Although there's no default Safe Attachments policy or Safe Links policy, the **Built-in protection** preset security policy provides Safe Attachments protection and Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments or Safe Links policies. For more information, see [Preset security policies](preset-security-policies.md).
 >
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) protection and [Safe Documents](safe-documents-in-e5-plus-security-about.md) protection have no dependencies on Safe Links policies.
 >
-> - [Microsoft Teams protection settings in Microsoft Defender for Office 365](#microsoft-teams-protection-settings-in-microsoft-defender-for-office-365) has no dependency on preset security policies, any custom policies, or any default policies.
+> - [Microsoft Teams protection settings in Microsoft Defender for Office 365](#microsoft-teams-protection-settings-in-microsoft-defender-for-office-365) have no dependency on preset security policies, any custom threat policies, or the default threat policies.
 
 We recommend the Standard or Strict configurations for Defender for Office 365 as described in the tables in the following subsections.
 
 ### Anti-phishing policy settings in Microsoft Defender for Office 365
 
-All Microsoft 365 organizations with cloud mailboxes get default anti-phishing protection [as previously described](#default-anti-phishing-protection-policy-settings), but Defender for Office 365 includes more features and control to help prevent, detect, and remediate against phishing attacks. To create and configure these anti-phishing policies, see [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md).
+All Microsoft 365 organizations with cloud mailboxes get anti-phishing protection [as previously described](#anti-phishing-policy-settings-for-all-cloud-mailboxes). But Defender for Office 365 includes more features and control to help prevent, detect, and remediate phishing attacks. To create and configure these anti-phishing policies, see [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
 <a name='advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365'></a>
 
@@ -267,15 +273,15 @@ Admins can create or use quarantine policies with more restrictive or less restr
 
 ¹ As described in [Full access permissions and quarantine notifications](quarantine-policies.md#full-access-permissions-and-quarantine-notifications), your organization might use NotificationEnabledPolicy instead of DefaultFullAccessPolicy. Quarantine notifications are turned on in NotificationEnabledPolicy and turned off in DefaultFullAccessPolicy.
 
-#### Default anti-phishing protection policy settings in Defender for Office 365
+#### Anti-phishing policy settings for all cloud mailboxes in Defender for Office 365
 
-The previously described [default anti-phishing protection policy settings](#default-anti-phishing-protection-policy-settings) are also available in Defender for Office 365.
+The previously described [anti-phishing policy settings for all cloud mailboxes](#anti-phishing-policy-settings-for-all-cloud-mailboxes) are also available in Defender for Office 365.
 
 ### Safe Attachments settings
 
 Safe Attachments in Defender for Office 365 includes global settings that have no relationship to Safe Attachments policies, and settings that are specific to each Safe Attachments policy. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
 
-Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard or Strict preset security policies or in custom Safe Attachments policies. For more information, see [Preset security policies](preset-security-policies.md).
 
 #### Global settings for Safe Attachments
 
@@ -321,7 +327,7 @@ Users can't release their own messages quarantined as malware or phishing by Saf
 
 For more information about Safe Links protection, see [Safe Links in Defender for Office 365](safe-links-about.md).
 
-Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy or in custom Safe Links policies. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy or in custom Safe Links policies. For more information, see [Preset security policies](preset-security-policies.md).
 
 To configure Safe Links policy settings, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
 
@@ -358,7 +364,7 @@ For more information about Microsoft Teams protection, see [Microsoft Defender f
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 
 > [!NOTE]
-> Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any default policies, or any custom policies. The **Standard** and **Strict** values indicate our **recommended** values.
+> Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any custom threat policies, or the default threat policies. The **Standard** and **Strict** values indicate our **recommended** values.
 
 |Security feature name|Default|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|---|

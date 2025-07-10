@@ -21,19 +21,19 @@ description: Admins can learn about the anti-spam settings and filters that help
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Anti-spam protection in Microsoft 365
+# Anti-spam protection in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!NOTE]
 > This article is intended for admins. For end-user articles, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089) and [Learn about junk email and phishing](https://support.microsoft.com/office/86c1d76f-4d5a-4967-9647-35665dc17c31).
 
-In all Microsoft 365 organizations with cloud mailboxes, email messages are automatically protected against spam (junk email).
+In all organizations with cloud mailboxes, email messages are automatically protected against spam (junk email).
 
 To help reduce junk email, Microsoft 365 includes junk email protection using proprietary spam filtering (also known as _content filtering_) technologies to identify and separate junk email from legitimate email. Spam filtering learns from known spam and phishing threats and user feedback from our consumer platform, Outlook.com. Ongoing feedback from [admins](submissions-admin.md) and [users](submissions-outlook-report-messages.md) helps ensure our filtering technologies are continually trained and improved.
 
@@ -45,11 +45,11 @@ Microsoft 365 uses the following spam filtering verdicts to classify messages:
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), high confidence phishing messages are always quarantined. Users can't release their own quarantined high confidence phishing messages, regardless of any available settings configured by admins.
 - **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
 
-For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml)
+For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection for clooud mailboxes](anti-spam-protection-faq.yml)
 
 In the default anti-spam policy and in custom anti-spam policies, you can configure the actions to take based on these verdicts. In the Standard and Strict [preset security policies](preset-security-policies.md), the actions are already configured and unmodifiable as described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
-To configure the default anti-spam policy, and to create, modify, and remove custom anti-spam policies, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+To configure the default anti-spam policy, and to create, modify, and remove custom anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 > [!TIP]
 >
@@ -103,7 +103,7 @@ You can use a condition or exception only once, but the condition or exception c
 
 Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. Messages from bulk senders are also known as _bulk mail_ or _gray mail_.
 
-For more information about BCL, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
+For more information about BCL, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
 
 > [!TIP]
 > By default, the PowerShell only setting _MarkAsSpamBulkMail_ is `On` in anti-spam policies in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). This setting dramatically affects the results of a **Bulk compliant level (BCL) met or exceeded** filtering verdict:
@@ -117,7 +117,7 @@ The **Test mode** settings, the **Increase spam score** settings, and most of th
 
 These settings aren't configured in the default anti-spam policy by default, or in the Standard or Strict [preset security policies](preset-security-policies.md).
 
-For complete information about ASF settings, see [Advanced Spam Filter (ASF) settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
+For complete information about ASF settings, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
 
 The other settings that are available in this category are:
 
@@ -142,7 +142,7 @@ These settings aren't configured in the default anti-spam policy by default, or 
   |**Quarantine message**: Sends the message to quarantine instead of the intended recipients. <br/><br/> You select or use the default _quarantine policy_ for the spam filtering verdict in the **Select quarantine policy** box that appears.⁴ Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy). <br/><br/> You specify how long the messages are held in quarantine in the available **Retain spam in quarantine for this many days** box.|✔|✔|✔<sup>\*</sup>|✔<sup>\*</sup> ⁵|✔|
   |**No action**|||||✔|
 
-  ¹ Microsoft 365 uses a mail flow delivery agent to route messages to the Junk Email folder. It doesn't use the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. For more information, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
+  ¹ Microsoft 365 uses a mail flow delivery agent to route messages to the Junk Email folder. It doesn't use the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. For more information, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
   ² For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
 
@@ -214,7 +214,7 @@ The following features mostly replace these lists:
 
 If preset security policies are [turned on](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users), the Standard and Strict preset security policies are applied before any custom anti-spam policies or the default policy. If you create multiple custom anti-spam policies, you can specify the order of policy application. Policy processing stops for eligible recipients after the application of the first eligible policy (the highest priority policy for that recipient).
 
-For more information about the order of precedence and how multiple policies are evaluated, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md) and [Order of precedence for preset security policies and other policies](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies).
+For more information about the order of precedence and how multiple policies are evaluated, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md) and [Order of precedence for preset security policies and other policies](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies).
 
 ## Default anti-spam policy
 

@@ -31,14 +31,14 @@ appliesto:
 > [!IMPORTANT]
 > This article is intended for business customers who have [Microsoft Defender for Office 365](defender-for-office-365-whats-new.md). If you're a home user looking for information about attachment scanning in Outlook, see [Advanced Outlook.com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
+In organizations with Microsoft Defender for Office 365, Safe Attachments is an additional layer of protection against harmful files in email messages (for example, malware, ransomware, or phishing). After message attachments are scanned by [Anti-malware protection](anti-malware-protection-about.md), Safe Attachments opens files in a virtual environment to see what happens when the attachment is opened (a process known as _detonation_) before the messages are delivered to recipients. For more information, see [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-about.md).
 
-Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+Although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients by default. Recipients who are specified in the Standard or Strict preset security policies or in custom Safe Attachments policies aren't affected. For more information, see [Preset security policies](preset-security-policies.md).
 
 For greater granularity, you can also use the procedures in this article to create Safe Attachments policies that apply to specific users, group, or domains.
 
 > [!TIP]
-> Instead of creating and managing custom Safe Attachments policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+> Instead of creating and managing custom Safe Attachments policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 >

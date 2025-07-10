@@ -57,9 +57,9 @@ For pricing information, see [Microsoft Defender for Office 365](https://www.mic
 
 ### Policies
 
-Defender for Office 365 includes the default email protections in Microsoft 365, which are present in all Microsoft 365 organizations with cloud mailboxes, and features exclusive to Defender for Office 365.
+Defender for Office 365 includes the default email protections for cloud mailboxes and features exclusive to Defender for Office 365.
 
-The protection features of EOP and Defender for Office 365 are implemented using policies. **Policies that are exclusive to Defender for Office 365 are created for you as needed**:
+The email and collaboration protection features of Microsoft 365 are implemented using policies. **Policies exclusive to Defender for Office 365 are created for you as needed**:
 
 - [Impersonation protection in anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
 - [Safe Attachments for email messages](safe-attachments-about.md)
@@ -67,13 +67,13 @@ The protection features of EOP and Defender for Office 365 are implemented using
   - Safe Links detonates URLs during mail flow. To prevent specific URLs from being detonated, submit the URLs to Microsoft as good URLs. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
   - Safe Links doesn't wrap URL links in email message bodies.
 
-Your eligibility for an evaluation or trial means you already have EOP. **No new or special EOP policies are created for your evaluation or trial of Defender for Office 365 Plan 2**. Existing EOP policies in your Microsoft 365 organization remain able to act on messages (for example, send messages to the Junk Email folder or to quarantine):
+Your eligibility for an evaluation or trial means you already have cloud mailboxes in Microsoft 365, so existing threat policies remain able to act on messages (for example, send messages to the Junk Email folder or to quarantine):
 
 - [Anti-malware policies](anti-malware-protection-about.md)
 - [Inbound anti-spam protection](anti-spam-protection-about.md)
 - [Anti-spoofing protection in anti-phishing policies](anti-phishing-policies-about.md#spoof-settings)
 
-The default policies for these EOP features are always on, apply to all recipients, and are always applied last after any custom policies.
+The default threat policies for these features are always on, apply to all recipients, and are always applied last after any custom threat policies.
 
 ### Audit mode vs. blocking mode for Defender for Office 365
 
@@ -102,13 +102,13 @@ The key factors that determine which modes are available to you are:
 - Whether or not you currently have Defender for Office 365 (Plan 1 or Plan 2) as described in the next section.
 - How email is delivered to your Microsoft 365 organization as described in the following scenarios:
 
-  - Mail from the internet flows directly Microsoft 365, but your current subscription has only the [default email protections in Microsoft 365](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+  - Mail from the internet flows directly into Microsoft 365, but your current subscription has only the [default email protections for cloud mailboxes](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
-    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with the default email protections in Microsoft 365 and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
+    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with the default email protections for cloud mailboxes and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
     In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section.
 
-  - You're currently using a non-Microsoft service or device for email protection of your Microsoft 365 mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
+  - You're currently using a non-Microsoft service or device for email protection of your cloud mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
 
     :::image type="content" source="media/mdo-migration-before.png" alt-text="Diagram of mail flowing from the internet through a non-Microsoft protection service or device before delivery into Microsoft 365." lightbox="media/mdo-migration-before.png":::
 
@@ -149,7 +149,7 @@ The information from the previous list is summarized in the following table:
 
 |Organization|Enroll from<br>the Trials page?|Enroll from<br>the Evaluation page?|Available modes|Evaluation<br>period|
 |---|:---:|:---:|---|---|
-|Standalone EOP (no Exchange Online mailboxes) <br><br> Microsoft 365 E3|Yes|Yes|Audit mode <br><br> Blocking mode¹|90 days|
+|Microsoft 365 E3|Yes|Yes|Audit mode <br><br> Blocking mode¹|90 days|
 |Defender for Office 365 Plan 1 <br><br> Microsoft 365 Business Premium|Yes|Yes|Audit mode <br><br> Blocking mode¹|90 days²|
 |Microsoft 365 E5|No|Yes|Audit mode <br><br> Blocking mode¹ ³|Unlimited|
 
@@ -474,7 +474,7 @@ A: Yes. For the protection of the service, no one in any program or subscription
 
 ### Q: In what order are policies evaluated?
 
-A: See [Order of precedence for preset security policies and other policies](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies).
+A: See [Order of precedence for preset security policies and other policies](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies).
 
 ## Policy settings associated with Defender for Office 365 evaluations and trials
 

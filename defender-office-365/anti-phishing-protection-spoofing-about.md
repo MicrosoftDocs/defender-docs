@@ -21,36 +21,36 @@ ms.custom:
   - TopSMBIssues
   - seo-marvel-apr2020
 ms.localizationpriority: high
-description: Admins can learn how the default anti-spoofing protection features in all Microsoft 365 organizations with cloud mailboxes can help mitigate against phishing attacks from spoofed senders and domains.
+description: Admins can learn how the default anti-spoofing protection features in all organizations with cloud mailboxes can help mitigate against phishing attacks from spoofed senders and domains.
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Anti-spoofing protection in Microsoft 365
+# Anti-spoofing protection for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-All Microsoft 365 organizations with cloud mailboxes include features to help protect against spoofed (forged) senders Spoofing is a common technique used by attackers. **Spoofed messages appear to originate from someone or somewhere other than the actual source**. This technique is often used in phishing campaigns designed to get user credentials.
+All organizations with cloud mailboxes include features to help protect against spoofed (forged) senders Spoofing is a common technique used by attackers. **Spoofed messages appear to originate from someone or somewhere other than the actual source**. This technique is often used in phishing campaigns designed to get user credentials.
 
 Anti-spoofing technology in Microsoft 365 specifically examines forgery of the From header in the message body (also known as the `5322.From` address, From address or P2 sender), because email clients show the From header value as the message sender. When Microsoft 365 has high confidence the From header is forged, the message is identified as spoofed.
 
-The following anti-spoofing technologies are available in the default email protections in Microsoft 365:
+The following anti-spoofing technologies are available in the default email protections for cloud mailboxes:
 
-- **Email authentication**: An integral part of any anti-spoofing effort is the use of email authentication (also known as email validation) by SPF, DKIM, and DMARC records in DNS. You can configure these records for your domains so destination email systems can check the validity of messages that claim to be from senders in your domains. For inbound messages, Microsoft 365 requires email authentication of sender domains. For more information, see [Email authentication in Microsoft 365](email-authentication-about.md).
+- **Email authentication**: An integral part of any anti-spoofing effort is the use of email authentication (also known as email validation) by SPF, DKIM, and DMARC records in DNS. You can configure these records for your domains so destination email systems can check the validity of messages that claim to be from senders in your domains. For inbound messages, Microsoft 365 requires email authentication of sender domains. For more information, see [Email authentication](email-authentication-about.md).
 
   Microsoft 365 analyzes and blocks messages based on the combination of standard email authentication methods and sender reputation techniques.
 
   :::image type="content" source="media/eop-anti-spoofing-protection.png" alt-text="Diagram showing Microsoft 365 anti-spoofing checks." lightbox="media/eop-anti-spoofing-protection.png":::
 
-- **Spoof intelligence insight**: Review detected spoofed messages from senders in internal and external domains during the last seven days. For more information, see [Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md).
+- **Spoof intelligence insight**: Review detected spoofed messages from senders in internal and external domains during the last seven days. For more information, see [Spoof intelligence insight](anti-spoofing-spoof-intelligence.md).
 
 - **Allow or block spoofed senders in the Tenant Allow/Block List**: When you override the verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that only appears on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoof senders before spoof intelligence detects them. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 
-- **Anti-phishing policies**: In the default email protections in Microsoft 365 and in Microsoft Defender for Office 365, anti-phishing policies contain the following anti-spoofing settings:
+- **Anti-phishing policies**: In the default email protections for cloud mailboxes and in Microsoft Defender for Office 365, anti-phishing policies contain the following anti-spoofing settings:
   - Turn spoof intelligence on or off.
   - Turn unauthenticated sender indicators in Outlook on or off.
   - Specify the action for blocked spoofed senders.

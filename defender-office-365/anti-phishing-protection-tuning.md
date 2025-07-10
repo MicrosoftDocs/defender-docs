@@ -17,7 +17,7 @@ description: Admins can learn to identify the reasons why and how a phishing mes
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -28,7 +28,7 @@ Although Microsoft 365 includes many anti-phishing features, some phishing messa
 
 ## First things first: deal with any compromised accounts and make sure you block any more phishing messages from getting through
 
-If a recipient's account was compromised as a result of the phishing message, follow the steps in [Responding to a compromised email account in Microsoft 365](responding-to-a-compromised-email-account.md).
+If a recipient's account was compromised as a result of the phishing message, follow the steps in [Responding to a compromised cloud email account](responding-to-a-compromised-email-account.md).
 
 If you have Microsoft Defender for Office 365 (included or in an add-on subscription), you can use [Office 365 Threat Intelligence](office-365-ti.md) to identify other users who also received the phishing message. Defender for Office 365 includes more ways to block phishing messages:
 
@@ -46,12 +46,12 @@ Reporting phishing messages is helpful in tuning the filters that are used to pr
 
 You can examine the headers of the phishing message to see if there's anything that you can do yourself to prevent more phishing messages from coming through. In other words, examining the messages headers can help you identify any settings in your organization that were responsible for allowing the phishing messages in.
 
-Specifically, you should check the **X-Forefront-Antispam-Report** header field in the message headers for indications of skipped filtering for spam or phishing in the Spam Filtering Verdict (SFV) value. Messages that skip filtering have an entry of `SCL:-1`, which means one of your settings overrode the phishing verdict and allowed delivery of the message. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers in Microsoft 365](message-headers-eop-mdo.md).
+Specifically, you should check the **X-Forefront-Antispam-Report** header field in the message headers for indications of skipped filtering for spam or phishing in the Spam Filtering Verdict (SFV) value. Messages that skip filtering have an entry of `SCL:-1`, which means one of your settings overrode the phishing verdict and allowed delivery of the message. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 > [!TIP]
 > You can copy and paste the contents of a message header into the [Message Header Analyzer](https://mha.azurewebsites.net/) tool. This tool helps parse headers and presents them in a human readable format.
 
-You can also use the [configuration analyzer](configuration-analyzer-for-security-policies.md) to compare your security policies to the Standard and Strict recommendations.
+You can also use the [configuration analyzer](configuration-analyzer-for-security-policies.md) to compare your threat policies to the Standard and Strict recommendations.
 
 ## Best practices to stay protected
 
@@ -83,9 +83,9 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
   For configuration instructions, see:
 
-  - [Set up SPF to help prevent spoofing](email-authentication-spf-configure.md)
-  - [Use DKIM to validate outbound email sent from your custom domain](email-authentication-dkim-configure.md)
-  - [Use DMARC to validate email](email-authentication-dmarc-configure.md)
+  - [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md)
+  - [Set up DKIM to sign mail from your cloud domain](email-authentication-dkim-configure.md)
+  - [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 - We recommend that mail for your Microsoft 365 domain is delivered directly to Microsoft 365 (point the MX record of your Microsoft 365 domain to Microsoft 365). If you must use a non-Microsoft service in front of Microsoft 365, use Enhanced Filtering for Connectors. For instructions, see [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 

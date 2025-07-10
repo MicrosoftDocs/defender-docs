@@ -27,7 +27,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Security recommendations for priority accounts in Microsoft 365
+# Security recommendations for priority accounts in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -67,15 +67,15 @@ For instructions, see [Step 1. Increase sign-in security for remote workers with
 
 ## Use Strict preset security policies for priority accounts
 
-Priority users require more stringent actions for the default email protections in Microsoft 365 and the protections in Defender for Office 365.
+Priority users require more stringent actions for the default email protections for cloud mailboxes and the protections in Defender for Office 365.
 
 For example, instead of delivering messages that were classified as spam to the Junk Email folder, you should quarantine those same messages intended for priority accounts.
 
 You can implement this stringent approach for priority accounts by using the Strict profile in preset security policies.
 
-Preset security policies are a convenient and central location to apply our recommended Strict policy settings for all threat policies in Microsoft 365 and Defender for Office 365. For more information, see [Preset security policies in Microsoft 365](preset-security-policies.md).
+Preset security policies are a convenient and central location to apply our recommended Strict policy settings for all threat policies in Microsoft 365 and Defender for Office 365. For more information, see [Preset security policies](preset-security-policies.md).
 
-For details about how the Strict policy settings differ from the default and Standard policy settings, see [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
+For details about how the Strict policy settings differ from the default and Standard policy settings, see [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 ## Apply user tags to priority accounts
 

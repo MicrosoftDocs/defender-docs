@@ -18,16 +18,16 @@ description: Admins can learn how to use quarantine policies to control what use
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Quarantine policies in Microsoft 365
+# Quarantine policies in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, _quarantine policies_ allow admins to define the user experience for quarantined messages:
+In all organizations with cloud mailboxes, _quarantine policies_ allow admins to define the user experience for quarantined messages:
 
 - What users are allowed to do to their own quarantined messages (messages where they're a recipient) based on why the message was quarantined.
 - Whether users receive periodic (every four hours, daily, or weekly) notifications about their quarantined messages via [quarantine notifications](quarantine-quarantine-notifications.md).
@@ -202,7 +202,7 @@ In supported protection features that quarantine email messages, the assigned qu
 |&nbsp;&nbsp;&nbsp;Files quarantined as malware or phishing by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)|No|
 |**[Exchange mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) with the action: 'Deliver the message to the hosted quarantine' (_Quarantine_)**|No|
 
-The default quarantine policies used by each protection feature are described in the related tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
+The default quarantine policies used by each protection feature are described in the related tables in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 The default quarantine policies, preset permission groups, and permissions are described in the [Appendix](#appendix) section at the end of this article.
 
@@ -233,7 +233,7 @@ The rest of this step explains how to assign quarantine policies for supported f
 
    :::image type="content" source="media/quarantine-tags-in-anti-spam-policies.png" alt-text="The Quarantine policy selections in an anti-spam policy" lightbox="media/quarantine-tags-in-anti-spam-policies.png":::
 
-Full instructions for creating and modifying anti-spam policies are described in [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+Full instructions for creating and modifying anti-spam policies are described in [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 #### Anti-spam policies in PowerShell
 
@@ -280,7 +280,7 @@ For detailed syntax and parameter information, see [Set-HostedContentFilterPolic
 
 ### Anti-phishing policies
 
-Spoof intelligence is available in all Microsoft 365 organizations with cloud mailboxes. User impersonation protection, domain impersonation protection, and mailbox intelligence protection are available only in Microsoft 365 organizations with Defender for Office 365. For more information, see [Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md).
+Spoof intelligence is available in all organizations with cloud mailboxes. User impersonation protection, domain impersonation protection, and mailbox intelligence protection are available only in Microsoft 365 organizations with Defender for Office 365. For more information, see [Anti-phishing policies](anti-phishing-policies-about.md).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
@@ -303,7 +303,7 @@ Spoof intelligence is available in all Microsoft 365 organizations with cloud ma
 
 Full instructions for creating and modifying anti-phishing policies are available in the following articles:
 
-- [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
+- [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 #### Anti-phishing policies in PowerShell
@@ -322,15 +322,15 @@ If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to
   Get-AntiPhishPolicy | Format-List EnableSpoofIntelligence,AuthenticationFailAction,SpoofQuarantineTag,EnableTargetedUserProtection,TargetedUserProtectionAction,TargetedUserQuarantineTag,EnableTargetedDomainsProtection,EnableOrganizationDomainsProtection,TargetedDomainProtectionAction,TargetedDomainQuarantineTag,EnableMailboxIntelligence,EnableMailboxIntelligenceProtection,MailboxIntelligenceProtectionAction,MailboxIntelligenceQuarantineTag
   ```
 
-  For information about the default and recommended action values for Standard and Strict configurations, see [Default anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#default-anti-phishing-protection-policy-settings) and [Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  For information about the default and recommended action values for Standard and Strict configurations, see [Anti-phishing policy settings for all cloud mailboxes](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes) and [Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-- If you create a new anti-phishing policy without specifying the quarantine policy for the anti-phishing action, the default quarantine policy for that action is used. The default quarantine policies for each anti-phishing action are shown in [Default anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#default-anti-phishing-protection-policy-settings) and [Anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+- If you create a new anti-phishing policy without specifying the quarantine policy for the anti-phishing action, the default quarantine policy for that action is used. The default quarantine policies for each anti-phishing action are shown in [Anti-phishing policy settings for all cloud mailboxes](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes) and [Anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
   Specify a different quarantine policy only if you want to change the default end-user capabilities on quarantined messages for that particular anti-phishing action.
 
 - A new anti-phishing policy in PowerShell requires an anti-phish policy using the **New-AntiPhishPolicy** cmdlet (settings), and an exclusive anti-phish rule using the **New-AntiPhishRule** cmdlet (recipient filters). For instructions, see the following articles:
-  - [Use PowerShell to configure anti-phishing policies in Microsoft 365](anti-phishing-policies-eop-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
-  - [Use Exchange Online PowerShell to configure anti-phishing policies](anti-phishing-policies-mdo-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+  - [Use Exchange Online PowerShell to configure anti-phishing if you don't have Defender for Office 365](anti-phishing-policies-eop-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+  - [Use Exchange Online PowerShell to configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
 
 This example creates a new anti-phish policy named Research Department with the following settings:
 
@@ -573,7 +573,7 @@ For detailed syntax and parameter information, see [Set-QuarantinePolicy](/power
 
 If you'd rather use PowerShell to view quarantine policies, do any of the following steps:
 
-- To view a summary list of all default or custom policies, run the following command:
+- To view a summary list of all default or custom quarantine policies, run the following command:
 
   ```powershell
   Get-QuarantinePolicy | Format-Table Name
@@ -718,7 +718,7 @@ The relationship between permissions, permissions groups, and the default quaran
 
 #### Full access permissions and quarantine notifications
 
-The default quarantine policy named DefaultFullAccessPolicy duplicates the historical _permissions_ for less harmful quarantined messages, but _quarantine notifications_ aren't turned on in the quarantine policy. Where DefaultFullAccessPolicy is used by default is described in the feature tables in [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
+The default quarantine policy named DefaultFullAccessPolicy duplicates the historical _permissions_ for less harmful quarantined messages, but _quarantine notifications_ aren't turned on in the quarantine policy. Where DefaultFullAccessPolicy is used by default is described in the feature tables in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 To give organizations the permissions of DefaultFullAccessPolicy with quarantine notifications turned on, we selectively included a default policy named NotificationEnabledPolicy based on the following criteria:
 
@@ -740,7 +740,7 @@ To give users **Full access** permissions _and_ quarantine notifications, organi
 The following sections describe the effects of preset permission groups and individual permissions for users in quarantined messages and in quarantine notifications.
 
 > [!NOTE]
-> As explained earlier, quarantine notifications are turned on only in the default policies named DefaultFullAccessWithNotificationPolicy or ([if your organization is old enough](#full-access-permissions-and-quarantine-notifications)) NotificationEnabledPolicy.
+> As explained earlier, quarantine notifications are turned on only in the default quarantine policies named DefaultFullAccessWithNotificationPolicy or ([if your organization is old enough](#full-access-permissions-and-quarantine-notifications)) NotificationEnabledPolicy.
 
 #### Preset permissions groups
 

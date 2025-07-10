@@ -214,7 +214,7 @@ The **Analysis** view contains information that helps you analyze the message in
     The **Go to Exchange admin center** link opens the **Rules** page in the new Exchange admin center at <https://admin.exchange.microsoft.com/#/transportrules>.
 
   - **Connector**: If the message was delivered through an Inbound connector, the connector name is shown. For more information about connectors, see [Configure mail flow using connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
-  - **Bulk complaint level (BCL)**: A higher BCL value indicates the message is more likely to be spam. For more information, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
+  - **Bulk complaint level (BCL)**: A higher BCL value indicates the message is more likely to be spam. For more information, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
   - **Policy**: If a policy type is listed here (for example, **Spam**), select **Configure** :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: to open the related policy page (for example, the **Anti-spam policies** page at <https://security.microsoft.com/antispam>).
   - **Policy action**
   - **Alert ID**: Select the Alert ID value to open the details page for the alert (as if you found and selected the alert from the **Alerts** page at <https://security.microsoft.com/alerts>). The :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy to clipboard** action is also available to copy the Alert ID value.
@@ -476,7 +476,7 @@ The following actions are available at the top of the Email entity page:
 - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Data Investigator** or **eDiscovery Manager** role groups. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in Microsoft 365 mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _hard deleted_.
@@ -487,7 +487,7 @@ The following actions are available at the top of the Email entity page:
 
 ## The Email summary panel
 
-The _Email summary panel_ is the email details flyout that's available in many features in the default email protections in Microsoft 365 and in Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
+The _Email summary panel_ is the email details flyout that's available in many features in the default email protections for cloud mailboxes and in Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
 
 Where to find the Email summary panel is described in the [Where to find the Email entity page](#where-to-find-the-email-entity-page) section earlier in this article. The rest of this section describes the information that's available on the Email summary panel across all features.
 

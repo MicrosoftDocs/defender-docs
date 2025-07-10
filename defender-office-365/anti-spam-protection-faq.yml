@@ -25,7 +25,7 @@ summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
   **Applies to**
-  - [Default email protections in Microsoft 365](eop-about.md)
+  - [Default email protections for cloud mailboxes](eop-about.md)
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
@@ -33,7 +33,7 @@ summary: |
 
   For questions and answers about the quarantine, see [Quarantine FAQ](quarantine-faq.yml).
 
-  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection for email in Microsoft 365](anti-malware-protection-faq.yml).
+  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection](anti-malware-protection-faq.yml).
 
   For questions and answers about anti-spoofing protection, see [Anti-spoofing protection FAQ](anti-phishing-protection-spoofing-faq.yml).
 
@@ -49,14 +49,14 @@ sections:
 
             By default, messages that are identified as spam are moved to the Junk Email folder by the Standard preset security policy, custom anti-spam policies (configurable), and the default anti-spam policy (configurable). In the Strict preset security policy, spam messages are quarantined.
 
-            For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md) and [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
+            For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
             > [!IMPORTANT]
             > In hybrid environments where Microsoft 365 protects on-premises Exchange mailboxes, you need to configure two mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the Microsoft 365 spam headers added to messages. For details, see [Configure Microsoft 365 to deliver spam to the Junk Email folder in hybrid environments](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
             >
             > After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
 
-          - **Outbound messages:** The message is either routed through the [high-risk delivery pool](outbound-spam-high-risk-delivery-pool-about.md) or is returned to the sender in a non-delivery report (also known as an NDR or bounce message). For more information about outbound spam protection, see [Outbound spam controls](outbound-spam-protection-about.md).
+          - **Outbound messages:** The message is either routed through the [high-risk delivery pool](outbound-spam-high-risk-delivery-pool-about.md) or is returned to the sender in a non-delivery report (also known as an NDR or bounce message). For more information, see [Outbound spam protection](outbound-spam-protection-about.md).
 
       - question: |
           What's a zero-day spam variant and how is it handled by the service?
@@ -80,8 +80,8 @@ sections:
           For more information, see the following articles:
 
           - [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings)
-          - [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)
-          - [Preset security policies in Microsoft 365](preset-security-policies.md)
+          - [Configure anti-spam policies](anti-spam-policies-configure.md)
+          - [Preset security policies](preset-security-policies.md)
 
       - question: |
           If I change an anti-spam policy, how long does it take for the changes to take effect?
@@ -91,7 +91,7 @@ sections:
       - question: |
           Is bulk email filtering automatically enabled?
         answer: |
-          Yes. For more information about bulk email, see [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md) and [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).
+          Yes. For more information about bulk email, see [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md) and [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
 
       - question: |
           Does the service provide URL filtering?
@@ -125,7 +125,7 @@ sections:
         answer: |
           If more than half of the email sent by a user within a certain time frame (for example, per hour) is identified as spam, the user is blocked from sending messages. In most cases, outbound spam is routed through the high-risk delivery pool, which reduces the probability of the normal outbound IP pool being added to blocklists.
 
-          Notifications are automatically sent when users are blocked due to sending outbound spam or exceeding sending limits. For more information, see [Outbound spam protection in Microsoft 365](outbound-spam-protection-about.md).
+          Notifications are automatically sent when users are blocked due to sending outbound spam or exceeding sending limits. For more information, see [Outbound spam protection](outbound-spam-protection-about.md).
 
       - question: |
           Can I use a non-Microsoft anti-spam and anti-malware provider with Microsoft 365?
@@ -159,7 +159,7 @@ sections:
           - **The HELO/EHLO and MAIL FROM commands should be consistent, present, and use a domain name rather than an IP address**: The HELO/EHLO command should be configured to match the reverse DNS of the sending IP address. This setting helps ensure that the domain remains the same across the various parts of the message headers.
 
           - **Ensure that proper SPF records are set up in DNS**: SPF records are a mechanism for validating that mail sent from a domain really is coming from that domain and isn't spoofed. For more information about SPF records, see the following links:
-            - [Set up SPF to help prevent spoofing](email-authentication-spf-configure.md)
+            - [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md)
             - [Domains FAQ](/microsoft-365/admin/setup/domains-faq#how-can-i-validate-spf-records-for-my-domain)
 
           - **Signing email with DKIM, sign with relaxed canonicalization**: If a sender wants to sign their messages using Domain Keys Identified Mail (DKIM) and they want to send outbound mail through the service, they should sign using the relaxed header canonicalization algorithm. Signing with strict header canonicalization may invalidate the signature when it passes through the service.

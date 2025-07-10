@@ -15,21 +15,21 @@ ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the header fields that the default email protections in Microsoft 365 add to incoming email messages. These header fields provide information about the message and how it was processed.
+description: Admins can learn about the header fields that the default email protections for cloud mailboxes add to incoming email messages. These header fields provide information about the message and how it was processed.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 ms.date: 07/07/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Anti-spam message headers in Microsoft 365
+# Anti-spam message headers in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, Microsoft 365 scans all incoming messages for spam, malware, and other threats. The results of these scans are added to the following header fields in messages:
+In all organizations with cloud mailboxes, Microsoft 365 scans all incoming messages for spam, malware, and other threats. The results of these scans are added to the following header fields in messages:
 
 - **X-Forefront-Antispam-Report**: Contains information about the message and about how it was processed.
 - **X-Microsoft-Antispam**: Contains additional information about bulk mail and phishing.
@@ -57,27 +57,27 @@ The individual fields and values are described in the following table.
 |---|---|
 |`ARC`|The `Authenticated Received Chain (ARC)` protocol has the following fields: <ul><li>`AAR`: Records the content of the **Authentication-results** header from DMARC.</li><li>`AMS`: Includes cryptographic signatures of the message.</li><li>`AS`: Includes cryptographic signatures of the message headers. This field contains a tag of a chain validation called `"cv="`, which includes the outcome of the chain validation as **none**, **pass**, or **fail**.</li></ul>|
 |`CAT:`|The category of threat policy applied to the message: <ul><li>`AMP`: Anti-malware</li><li>`BIMP`: Brand impersonation<sup>\*</sup></li><li>`BULK`: Bulk</li><li>`DIMP`: Domain impersonation<sup>\*</sup></li><li>`FTBP`: Anti-malware [common attachments filter](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies)</li><li>`GIMP`: [Mailbox intelligence](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) impersonation<sup>\*</sup></li><li>`HPHSH` or `HPHISH`: High confidence phishing</li><li>`HSPM`: High confidence spam</li><li>`INTOS`: Intra-Organization phishing</li><li>`MALW`: Malware</li><li>`OSPM`: Outbound spam</li><li>`PHSH`: Phishing</li><li>`SAP`: Safe Attachments<sup>\*</sup></li><li>`SPM`: Spam</li><li>`SPOOF`: Spoofing</li><li>`UIMP`: User impersonation<sup>\*</sup></li></ul> <br/> <sup>\*</sup>Defender for Office 365 only. <br/><br/> Multiple forms of protection and multiple detection scans might flag an inbound message. Policies are applied in an order of precedence, and the policy with the highest priority is applied first. For more information, see [What policy applies when multiple protection methods and detection scans run on your email](how-policies-and-protections-are-combined.md).|
-|`CIP:[IP address]`|The connecting IP address. You can use this IP address in the IP Allow List or the IP Block List. For more information, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).|
+|`CIP:[IP address]`|The connecting IP address. You can use this IP address in the IP Allow List or the IP Block List. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).|
 |`CTRY`|The source country/region as determined by the connecting IP address, which might not be the same as the originating sending IP address.|
 |`DIR`|The Directionality of the message: <ul><li>`INB`: Inbound message.</li><li>`OUT`: Outbound message.</li><li>`INT`: Internal message.</li></ul>|
 |`H:[helostring]`|The HELO or EHLO string of the connecting email server.|
-|`IPV:CAL`|The message skipped spam filtering because the source IP address was in the IP Allow List. For more information, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).|
+|`IPV:CAL`|The message skipped spam filtering because the source IP address was in the IP Allow List. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).|
 |`IPV:NLI`|The IP address wasn't found on any IP reputation list.|
 |`LANG`|The language that the message was written in as specified by the country code (for example, ru_RU for Russian).|
 |`PTR:[ReverseDNS]`|The PTR record (also known as the reverse DNS lookup) of the source IP address.|
 |`SCL`|The spam confidence level (SCL) of the message. A higher value indicates the message is more likely to be spam. For more information, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).|
 |`SFTY`|The message was identified as phishing and is also marked with one of the following values: <ul><li>9.19: Domain impersonation. The sending domain is attempting to [impersonate a protected domain](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). The safety tip for domain impersonation is added to the message (if domain impersonation is enabled).</li><li>9.20: User impersonation. The sending user is attempting to impersonate a user in the recipient's organization, or [a protected user specified in an anti-phishing policy](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) in Microsoft Defender for Office 365. The safety tip for user impersonation is added to the message (if user impersonation is enabled).</li><li>9.25: First contact safety tip. This value _might_ be an indication of a suspicious or phishing message. For more information, see [First contact safety tip](anti-phishing-policies-about.md#first-contact-safety-tip).</li></ul>|
-|`SFV:BLK`|Filtering was skipped and the message was blocked because it was sent from an address in a user's Blocked Senders list. <p> For more information about how admins can manage a user's Blocked Senders list, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:BLK`|Filtering was skipped and the message was blocked because it was sent from an address in a user's Blocked Senders list. <p> For more information about how admins can manage a user's Blocked Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
 |`SFV:NSPM`|Spam filtering marked the message as nonspam and the message was sent to the intended recipients.|
-|`SFV:SFE`|Filtering was skipped and the message was allowed because it was sent from an address in a user's Safe Senders list. <p> For more information about how admins can manage a user's Safe Senders list, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
-|`SFV:SKA`|The message skipped spam filtering and was delivered to the Inbox because the sender was in the allowed senders list or allowed domains list in an anti-spam policy. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).|
-|`SFV:SKB`|The message was marked as spam because it matched a sender in the blocked senders list or blocked domains list in an anti-spam policy. For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).|
+|`SFV:SFE`|Filtering was skipped and the message was allowed because it was sent from an address in a user's Safe Senders list. <p> For more information about how admins can manage a user's Safe Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:SKA`|The message skipped spam filtering and was delivered to the Inbox because the sender was in the allowed senders list or allowed domains list in an anti-spam policy. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
+|`SFV:SKB`|The message was marked as spam because it matched a sender in the blocked senders list or blocked domains list in an anti-spam policy. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
 |`SFV:SKN`|The message was marked as nonspam before processing by spam filtering. For example, the message was marked as SCL -1 or **Bypass spam filtering** by a mail flow rule.|
 |`SFV:SKQ`|The message was released from the quarantine and was sent to the intended recipients.|
 |`SFV:SKS`|The message was marked as spam before processing by spam filtering. For example, the message was marked as SCL 5 to 9 by a mail flow rule.|
 |`SFV:SPM`|The message was marked as spam by spam filtering.|
-|`SRV:BULK`|The message was identified as bulk email by spam filtering and the bulk complaint level (BCL) threshold. When the _MarkAsSpamBulkMail_ parameter is `On` (it's on by default), a bulk email message is marked as spam (SCL 6). For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).|
-|`X-CustomSpam: [ASFOption]`|The message matched an Advanced Spam Filter (ASF) setting. To see the X-header value for each ASF setting, see [Advanced Spam Filter (ASF) settings](anti-spam-policies-asf-settings-about.md). <br><br> **Note**: ASF adds `X-CustomSpam:` X-header fields to messages _after_ Exchange mail flow rules (also known as transport rules) process messages. You can't use mail flow rules to identify and act on messages filtered by ASF.|
+|`SRV:BULK`|The message was identified as bulk email by spam filtering and the bulk complaint level (BCL) threshold. When the _MarkAsSpamBulkMail_ parameter is `On` (it's on by default), a bulk email message is marked as spam (SCL 6). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
+|`X-CustomSpam: [ASFOption]`|The message matched an Advanced Spam Filter (ASF) setting. To see the X-header value for each ASF setting, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md). <br><br> **Note**: ASF adds `X-CustomSpam:` X-header fields to messages _after_ Exchange mail flow rules (also known as transport rules) process messages. You can't use mail flow rules to identify and act on messages filtered by ASF.|
 
 ## X-Microsoft-Antispam message header fields
 
@@ -85,7 +85,7 @@ The following table describes useful fields in the **X-Microsoft-Antispam** mess
 
 |Field|Description|
 |---|---|
-|`BCL`|The bulk complaint level (BCL) of the message. A higher BCL indicates a bulk mail message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in Microsoft 365](anti-spam-bulk-complaint-level-bcl-about.md).|
+|`BCL`|The bulk complaint level (BCL) of the message. A higher BCL indicates a bulk mail message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).|
 
 ## Authentication-results message header
 

@@ -20,18 +20,18 @@ description: Admins can learn about the available and preferred options to allow
 ms.service: defender-office-365
 ms.date: 09/16/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Create allowlists in Microsoft 365
+# Create sender allowlists for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-All Microsoft 365 organizations with cloud mailboxes offer multiple ways of allowing inbound email from trusted senders. Collectively, you can think of these options as _allowlists_.
+All organizations with cloud mailboxes offer multiple ways of allowing inbound email from trusted senders. Collectively, you can think of these options as _allowlists_.
 
-The following list contains the available methods in Microsoft 365 to allow senders from most recommended to least recommended:
+The following list contains the available methods to allow senders from most recommended to least recommended:
 
 1. Allow entries for domains and email addresses (including spoofed senders) in the Tenant Allow/Block List.
 2. Exchange mail flow rules (also known as transport rules).
@@ -50,7 +50,7 @@ The rest of this article contains specifics about each method.
 >
 > Always submit messages in your allowlists to Microsoft for analysis. For instructions, see [Report good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft). If the messages or message sources are determined to be benign, Microsoft can automatically stop blocking the messages, and you don't need to manually maintain entries in your own allowlists.
 >
-> Instead of allowing email, you also have several options to block email from specific sources using _blocked sender lists_. For more information, see [Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md).
+> Instead of allowing email, you also have several options to block email from specific sources using _blocked sender lists_. For more information, see [Create sender blocklists](create-block-sender-lists-in-office-365.md).
 
 ## Use allow entries in the Tenant Allow/Block List
 
@@ -74,9 +74,9 @@ The following example assumes you need email from contoso.com to skip spam filte
      - **Enter text** (header name): `Authentication-Results`
      - **Enter words** (header value): `dmarc=pass` or `dmarc=bestguesspass` (add both values).
 
-     This condition checks the email authentication status of the sending email domain to ensure that the sending domain isn't being spoofed. For more information about email authentication, see [Email authentication in Microsoft 365](email-authentication-about.md).
+     This condition checks the email authentication status of the sending email domain to ensure that the sending domain isn't being spoofed. For more information about email authentication, see [Email authentication](email-authentication-about.md).
 
-   - **IP Allow List**: Specify the source IP address or address range in the connection filter policy. For instructions, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
+   - **IP Allow List**: Specify the source IP address or address range in the default connection filter policy. For instructions, see [Configure connection filtering](connection-filter-policies-configure.md).
 
      Use this setting if the sending domain doesn't use email authentication. Be as restrictive as possible when it comes to the source IP addresses in the IP Allow List. We recommend an IP address range of /24 or less (less is better). Don't use IP address ranges that belong to consumer services (for example, outlook.com) or shared infrastructures.
 
@@ -115,7 +115,7 @@ When a message skips spam filtering due to a mail flow rule, the value `SFV:SKN`
 Instead of an organizational setting, users or admins can add the sender email addresses to the Safe Senders list in the mailbox. Safe Senders list entries in the mailbox affect that mailbox only. For instructions, see the following articles:
 
 - **Users**: [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
-- **Admins**: [Configure junk email settings on Exchange Online mailboxes in Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
+- **Admins**: [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
 This method isn't desirable in most situations since senders bypass parts of the filtering stack. Although you trust the sender, the sender can still be compromised and send malicious content. You should let our filters check every message and then [report the false positive/negative to Microsoft](submissions-report-messages-files-to-microsoft.md) if we got it wrong. Bypassing the filtering stack also interferes with [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
 
@@ -133,7 +133,7 @@ When messages skip spam filtering due to entries in a user's Safe Senders list, 
 > [!CAUTION]
 > Without other verification (for example, using mail flow rules), email from sources in the IP Allow List skips spam filtering and sender email authentication (SPF, DKIM, and DMARC). This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 
-The next best option is to add the source email servers to the IP Allow List in the default connection filter policy. For details, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
+The next best option is to add the source email servers to the IP Allow List in the default connection filter policy. For details, see [Configure connection filtering](connection-filter-policies-configure.md).
 
 - It's important that you keep the number of allowed IP addresses to a minimum, so avoid using entire IP address ranges whenever possible.
 - Don't use IP address ranges that belong to consumer services (for example, outlook.com) or shared infrastructures.
@@ -147,7 +147,7 @@ The next best option is to add the source email servers to the IP Allow List in 
 >
 > Don't use popular domains (for example, microsoft.com) in allowed domain lists.
 
-The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. The detailed steps can be found in [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. The detailed steps can be found in [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 The maximum limit for these lists is approximately 1,000 entries, but you can enter a maximum of 30 entries in the Microsoft Defender portal. Use PowerShell to add more than 30 entries.
 

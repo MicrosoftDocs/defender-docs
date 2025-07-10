@@ -14,12 +14,12 @@ ms.collection:
   - tier3
 ms.custom: 
   - seo-marvel-apr2020
-description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
+description: Admins can learn how the order of protection settings and the priority order of threat policies affect the application of protection in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, multiple protection features might flag inbound email. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
+In all organizations with cloud mailboxes, multiple protection features might flag inbound email. For example, anti-spoofing protection that's available to all Microsoft 365 customers, and impersonation protection that's available to Microsoft Defender for Office 365 customers only. Messages also pass through multiple detection scans for malware, spam, phishing, etc. Given all this activity, there might be some confusion as to which policy is applied.
 
 In general, a policy applied to a message is identified in the **X-Forefront-Antispam-Report** header in the **CAT (Category)** property. For more information, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
@@ -38,16 +38,16 @@ There are two major factors that determine which policy is applied to a message:
 
   |Order|Email protection|Category|Where to manage|
   |:---:|---|---|---|
-  |1|Malware|`CAT:MALW`|[Configure anti-malware policies for email in Microsoft 365](anti-malware-policies-configure.md)|
-  |2|High confidence phishing|`CAT:HPHSH`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
-  |3|Phishing|`CAT:PHSH`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
-  |4|High confidence spam|`CAT:HSPM`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
-  |5|Spoofing|`CAT:SPOOF`|[Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md)|
+  |1|Malware|`CAT:MALW`|[Configure anti-malware policies](anti-malware-policies-configure.md)|
+  |2|High confidence phishing|`CAT:HPHSH`|[Configure anti-spam policies](anti-spam-policies-configure.md)|
+  |3|Phishing|`CAT:PHSH`|[Configure anti-spam policies](anti-spam-policies-configure.md)|
+  |4|High confidence spam|`CAT:HSPM`|[Configure anti-spam policies](anti-spam-policies-configure.md)|
+  |5|Spoofing|`CAT:SPOOF`|[Spoof intelligence insight](anti-spoofing-spoof-intelligence.md)|
   |6<sup>\*</sup>|User impersonation (protected users)|`CAT:UIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
   |7<sup>\*</sup>|Domain impersonation (protected domains)|`CAT:DIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
   |8<sup>\*</sup>|Mailbox intelligence (contact graph)|`CAT:GIMP`|[Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)|
-  |9|Spam|`CAT:SPM`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
-  |10|Bulk|`CAT:BULK`|[Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
+  |9|Spam|`CAT:SPM`|[Configure anti-spam policies](anti-spam-policies-configure.md)|
+  |10|Bulk|`CAT:BULK`|[Configure anti-spam policies](anti-spam-policies-configure.md)|
 
   <sup>\*</sup> These features are available only in anti-phishing policies in Microsoft Defender for Office 365.
 
@@ -58,13 +58,13 @@ There are two major factors that determine which policy is applied to a message:
   3. Anti-phishing, Safe Links, and Safe Attachments in [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365) (when enabled).
   4. Custom anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies (when created).
 
-     Custom threat protection policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order of application for that type of threat protection policy (anti-spam, anti-malware, anti-phishing, etc.). The priority value doesn't affect where custom threat protection policies are applied in the overall order.
+     Custom threat policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order of application for that type of threat policy (anti-spam, anti-malware, anti-phishing, etc.). The priority value doesn't affect where custom threat policies are applied in the order of processing as described in the previous table.
 
   5. Of equal value:
      - The Safe Links and Safe Attachments policies in the [Built-in protection preset security policy](preset-security-policies.md#profiles-in-preset-security-policies)<sup>\*</sup>.
-     - The default threat protection policies for anti-malware, anti-spam, and anti-phishing.
+     - The default policies for anti-malware, anti-spam, and anti-phishing.
 
-     You can configure exceptions to the Built-in protection preset security policy, but you can't configure exceptions to the default threat protection policies (they apply to all recipients and you can't turn them off).
+     You can configure exceptions to the Built-in protection preset security policy, but you can't configure exceptions to the default threat policies (they apply to all recipients and you can't turn them off).
 
   <sup>\*</sup> Defender for Office 365 only.
 
@@ -93,13 +93,13 @@ As another example, consider the following custom anti-phishing policies in Micr
 
 To make sure that recipients get the protection settings that you want, use the following guidelines for policy memberships:
 
-- Assign a smaller number of users to higher priority policies, and a larger number of users to lower priority policies. Remember, default policies are always applied last.
-- Configure higher priority policies to have stricter or more specialized settings than lower priority policies. You have complete control over the settings in custom policies and the default policies, but no control over most settings in preset security policies.
-- Consider using fewer custom policies (only use custom policies for users who require more specialized settings than the Standard or Strict preset security policies, or the default policies).
+- Assign a smaller number of users to higher priority policies, and a larger number of users to lower priority policies. Remember, default threat policies are always applied last.
+- Configure higher priority policies to have stricter or more specialized settings than lower priority policies. You have complete control over the settings in custom threat policies and the default threat policies, but no control over most settings in preset security policies.
+- Consider using fewer custom policies (only use custom policies for users who require more specialized settings than the Standard or Strict preset security policies, or the default threat policies).
 
 ## Appendix
 
-It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the default email protections in Microsoft 365 and in Defender for Office 365 complement or contradict each other.
+It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the default email protections for cloud mailboxes and in Defender for Office 365 complement or contradict each other.
 
 - For information about filtering stacks and how they're combined, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 - After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.
@@ -126,7 +126,7 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
   - [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies) are configured to quarantine instead of move mail to the Junk Email folder.
   - The email address, URL, or file in the email message is also in a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 
-For more information about the safelist collection and anti-spam settings on user mailboxes, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
+For more information about the safelist collection and anti-spam settings on user mailboxes, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
 <a name='tenant-allows-and-blocks'></a>
 
@@ -160,7 +160,7 @@ Organization allows and blocks are able to override some filtering stack verdict
 
   <sup>\*</sup> Organizations that use a non-Microsoft security service or device in front of Microsoft 365 should consider using [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) (contact the service for availability) and [Enhanced Filtering for Connectors (also known as skip listing)](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) instead of an SCL=-1 mail flow rule. These improved methods reduce email authentication issues and encourage [defense-in-depth](step-by-step-guides/defense-in-depth-guide.md) email security.
 
-- IP Allow List and IP Block List in [connection filter policies](connection-filter-policies-configure.md):
+- IP Allow List and IP Block List in [connection filtering](connection-filter-policies-configure.md):
 
   |Filtering stack verdict|IP Allow List|IP Block List|
   |---|---|---|
@@ -176,7 +176,7 @@ Organization allows and blocks are able to override some filtering stack verdict
   - Allowed sender and domain list.
   - Blocked sender and domain list.
   - Block messages from specific countries/regions or in specific languages.
-  - Block messages based on [Advanced Spam Filter (ASF) settings](anti-spam-policies-asf-settings-about.md).
+  - Block messages based on [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
 
   |Filtering stack verdict|Anti-spam policy allows|Anti-spam policy blocks|
   |---|---|---|
@@ -190,7 +190,7 @@ Organization allows and blocks are able to override some filtering stack verdict
 
 - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list): There are two types of allow entries:
   - **Message level** allow entries act on the entire message, regardless of the entities in the message. Allow entries for email address and domains are message level allow entries. These allow entries override bulk and spam verdicts, and high confidence phishing verdicts from machine learning models.
-  - **Entity level** allow entries act on the filtering verdict of entities. Allow entries for URLs, spoofed senders, and files are entity level allow entries. To override malware and high confidence phishing verdicts, you need to use entity level allow entries, which you can create by submission only due to [Secure by default in Microsoft 365](secure-by-default.md).
+  - **Entity level** allow entries act on the filtering verdict of entities. Allow entries for URLs, spoofed senders, and files are entity level allow entries. To override malware and high confidence phishing verdicts, you need to use entity level allow entries, which you can create by submission only due to [Secure by default](secure-by-default.md).
 
   |Filtering stack verdict|Email address/domain|
   |---|---|

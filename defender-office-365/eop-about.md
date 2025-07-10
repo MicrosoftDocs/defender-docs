@@ -1,5 +1,5 @@
 ---
-title: Default email protections in Microsoft 365
+title: Default email protections for cloud mailboxes
 f1.keywords: 
   - NOCSH
 ms.author: chrisda
@@ -15,42 +15,42 @@ ms.localizationpriority: medium
 ms.assetid: 1270a65f-ddc3-4430-b500-4d3a481efb1e
 ms.custom: 
   - seo-marvel-apr2020
-description: Learn how the default email protections in Microsoft 365 can help protect your on-premises email organization in standalone and hybrid environments.
+description: Learn how the default email protections for cloud mailboxes can help protect your on-premises email organization in standalone and hybrid environments.
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Default email protections in Microsoft 365
+# Default email protections for cloud mailboxes
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The default email protections in Microsoft 365 protect your Microsoft 365 organization from spam, malware, phishing and other email threats. These protections are included in all Microsoft 365 organizations with cloud mailboxes.
+The default email protections for cloud mailboxes protect your Microsoft 365 organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
 
-The default email protections in Microsoft 365 are on by default via the default policies for:
+The default email protections for cloud mailboxes are on by default via the default threat policies for:
 
 - [Anti-malware protection](anti-malware-protection-about.md)
 - [Anti-spam protection](anti-spam-protection-about.md)
 - [Anti-phishing (spoofing) protection](anti-phishing-protection-about.md#default-anti-phishing-protection-in-microsoft-365)
 
-These default policies apply to all recipients. You can't turn them off, but you can override them by turning on and configuring [preset security policies](preset-security-policies.md) or creating custom policies.
+The default threat policies for these features apply to all recipients. You can't turn them off, but you can override them by turning on and configuring [preset security policies](preset-security-policies.md) or creating custom threat policies.
 
-You can customize the security settings in the default policies, create custom policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+You can customize the security settings in the default threat policies, create custom threat policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 
-The rest of this article explains how the default email protections in Microsoft 365 work and the features they contain.
+The rest of this article explains how the default email protections for cloud mailboxes work and the features they contain.
 
-## How the default email protections in Microsoft 365 work
+## How the default email protections for cloud mailboxes work
 
-The following diagram shows how the default email protections in Microsoft 365 work.
+The following diagram shows how the default email protections for cloud mailboxes work.
 
-:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="A diagram of email from the internet or Customer feedback entering Microsoft 365 and passing through the default email protections in Microsoft 365." lightbox="media/tp_emailprocessingineopt3.png":::
+:::image type="content" source="media/tp_emailprocessingineopt3.png" alt-text="A diagram of email from the internet or Customer feedback entering Microsoft 365 and passing through the default email protections for cloud mailboxes." lightbox="media/tp_emailprocessingineopt3.png":::
 
-1. Incoming messages in Microsoft 365 initially pass through connection filtering, which checks the sender's reputation. Most spam is rejected at this point. For more information, see [Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md).
+1. Incoming messages in Microsoft 365 initially pass through connection filtering, which checks the sender's reputation. Most spam is rejected at this point. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).
 
-2. If malware is found in the message or a message attachment, the message is delivered to quarantine. By default, only admins can view and interact with malware quarantined messages. But, admins can create and use [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to specify what users are allowed to do to quarantined messages. To learn more about malware protection, see [Anti-malware protection in Microsoft 365](anti-malware-protection-about.md).
+2. If malware is found in the message or a message attachment, the message is delivered to quarantine. By default, only admins can view and interact with malware quarantined messages. But, admins can create and use [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to specify what users are allowed to do to quarantined messages. To learn more about malware protection, see [Anti-malware protection](anti-malware-protection-about.md).
 
 3. Policy filtering evaluates the message against any [Exchange mail flow rules (also known as transport rules)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) configured to act on messages. For example, a rule can notify a manager about messages from a specific sender.
 
@@ -63,7 +63,7 @@ The following diagram shows how the default email protections in Microsoft 365 w
 
    - Anti-phishing policies identify messages as spoofing.
 
-   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md) and [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md).
+   You can configure the action to take on the message based on the filtering verdict (for example, quarantine or move to the Junk Email folder), and what users can do to the quarantined messages using [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 A message that successfully passes all of these protection layers is delivered to the recipients.
 
@@ -84,11 +84,11 @@ The following communication channels are available for issues and new features i
 - The [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=exchange%2Conline%2Cprotection) is a good resource for finding out information about upcoming new features.
 - We also post blog articles about new features to the [Microsoft 365 Blogs](https://www.microsoft.com/microsoft-365/blog/) website.
 
-### Features in the default email protections in Microsoft 365
+### Features in the default email protections for cloud mailboxes
 
-This section provides a high-level overview of the main features that are available in the Default email protections in Microsoft 365.
+This section provides a high-level overview of the main features that are available in the default email protections for cloud mailboxes.
 
-For information about requirements, important limits, and feature availability across all EOP subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+For information about requirements, important limits, and feature availability across all subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
 
 > [!TIP]
 >
@@ -99,23 +99,23 @@ For information about requirements, important limits, and feature availability a
 |Feature|Comments|
 |---|---|
 |**Protection**||
-|Preset security policies|[Preset security policies in Microsoft 365](preset-security-policies.md) <br/><br/> [Configuration analyzer for protection policies in Microsoft 365](configuration-analyzer-for-security-policies.md)|
-|Anti-malware|[Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md) <br/><br/> [Frequently asked questions: Anti-malware protection for email in Microsoft 365](anti-malware-protection-faq.yml) <br/><br/> [Configure anti-malware policies in Microsoft 365](anti-malware-policies-configure.md)|
-|Inbound anti-spam|[Anti-spam protection in Microsoft 365](anti-spam-protection-about.md) <br/><br/> [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml) <br/><br/> [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md)|
-|Outbound anti-spam|[Outbound spam protection in Microsoft 365](outbound-spam-protection-about.md) <br/><br/> [Configure outbound spam filtering in Microsoft 365](outbound-spam-policies-configure.md) <br/><br/> [Control automatic external email forwarding in Microsoft 365](outbound-spam-policies-external-email-forwarding.md)|
-|Connection filtering|[Configure connection filtering in Microsoft 365](connection-filter-policies-configure.md)|
-|Anti-phishing|[Anti-phishing policies in Microsoft 365](anti-phishing-policies-about.md) <br/><br/> [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)|
-|Anti-spoofing protection|[Spoof intelligence insight in Microsoft 365](anti-spoofing-spoof-intelligence.md) <br/><br/> [Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
+|Preset security policies|[Preset security policies](preset-security-policies.md) <br/><br/> [Configuration analyzer](configuration-analyzer-for-security-policies.md)|
+|Anti-malware|[Anti-malware protection](anti-malware-protection-about.md) <br/><br/> [Frequently asked questions: Anti-malware protection](anti-malware-protection-faq.yml) <br/><br/> [Configure anti-malware policies](anti-malware-policies-configure.md)|
+|Inbound anti-spam|[Anti-spam protection](anti-spam-protection-about.md) <br/><br/> [Frequently asked questions: Anti-spam protection](anti-spam-protection-faq.yml) <br/><br/> [Configure anti-spam policies](anti-spam-policies-configure.md)|
+|Outbound anti-spam|[Outbound spam protection](outbound-spam-protection-about.md) <br/><br/> [Configure outbound spam filtering](outbound-spam-policies-configure.md) <br/><br/> [Control automatic external email forwarding](outbound-spam-policies-external-email-forwarding.md)|
+|Connection filtering|[Configure connection filtering](connection-filter-policies-configure.md)|
+|Anti-phishing|[Anti-phishing policies](anti-phishing-policies-about.md) <br/><br/> [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md)|
+|Anti-spoofing protection|[Spoof intelligence insight](anti-spoofing-spoof-intelligence.md) <br/><br/> [Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
 |Zero-hour auto purge (ZAP) for delivered malware, spam, and phishing messages|[ZAP in Exchange Online](zero-hour-auto-purge.md)|
 |Tenant Allow/Block List|[Manage the Tenant Allow/Block List](tenant-allow-block-list-about.md)|
-|Blocklists for message senders|[Create sender blocklists in Microsoft 365](create-block-sender-lists-in-office-365.md)|
-|Allowlists for message senders|[Create sender allowlists in Microsoft 365](create-safe-sender-lists-in-office-365.md)|
+|Blocklists for message senders|[Create sender blocklists](create-block-sender-lists-in-office-365.md)|
+|Allowlists for message senders|[Create sender allowlists](create-safe-sender-lists-in-office-365.md)|
 |Directory Based Edge Blocking (DBEB)|[Use Directory Based Edge Blocking to reject messages sent to invalid recipients](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking)|
 |**Quarantine and submissions**||
 |Admin submission|[Use Admin submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md)|
 |User reported message settings|[User reported settings](submissions-user-reported-messages-custom-mailbox.md)|
-|Quarantine - admins|[Manage quarantined messages and files as an admin in Microsoft 365](quarantine-admin-manage-messages-files.md) <br/><br/> [Quarantined messages FAQ](quarantine-faq.yml) <br/><br/> [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md) <br/><br/> [Anti-spam message headers in Microsoft 365](message-headers-eop-mdo.md) <br/><br/> You can analyze the message headers of quarantined messages using the [Message Header Analyzer at](https://mha.azurewebsites.net/).|
-|Quarantine - end-users|[Find and release quarantined messages as a user in Microsoft 365](quarantine-end-user.md) <br/><br/> [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md) <br/><br/> [Quarantine policies](quarantine-policies.md)|
+|Quarantine - admins|[Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md) <br/><br/> [Frequently asked questions: Quarantined messages](quarantine-faq.yml) <br/><br/> [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md) <br/><br/> [Anti-spam message headers](message-headers-eop-mdo.md) <br/><br/> You can analyze the message headers of quarantined messages using the [Message Header Analyzer at](https://mha.azurewebsites.net/).|
+|Quarantine - end-users|[Find and release quarantined messages as a user](quarantine-end-user.md) <br/><br/> [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md) <br/><br/> [Quarantine policies](quarantine-policies.md)|
 |**Mail flow**||
 |Mail flow rules|[Mail flow rules (transport rules) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <br/><br/> [Mail flow rule conditions and exceptions (predicates) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <br/><br/> [Mail flow rule actions in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <br/><br/> [Manage mail flow rules in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <br/><br/> [Mail flow rule procedures in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
 |Accepted domains|[Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)|

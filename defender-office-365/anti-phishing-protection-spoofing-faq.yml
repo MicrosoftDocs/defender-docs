@@ -23,15 +23,15 @@ summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
   **Applies to**
-  - [Default email protections in Microsoft 365](eop-about.md)
+  - [Default email protections for cloud mailboxes](eop-about.md)
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
-  This article provides frequently asked questions and answers about anti-spoofing protection for all Microsoft 365 organizations with cloud mailboxes.
+  This article provides frequently asked questions and answers about anti-spoofing protection for all organizations with cloud mailboxes.
 
-  For questions and answers about anti-spam protection, see [Frequently asked questions: Anti-spam protection in Microsoft 365](anti-spam-protection-faq.yml).
+  For questions and answers about anti-spam protection, see [Frequently asked questions: Anti-spam protection](anti-spam-protection-faq.yml).
 
-  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection for email in Microsoft 365](anti-malware-protection-faq.yml)
+  For questions and answers about anti-malware protection, see [Frequently asked questions: Anti-malware protection](anti-malware-protection-faq.yml)
 
 sections:
   - name: Ignored
@@ -51,7 +51,7 @@ sections:
       - question: |
           Is spoof intelligence available to Microsoft 365 customers without Defender for Office 365?
         answer: |
-          Yes. As of October 2018, spoof intelligence is available to all Microsoft 365 organizations with cloud mailboxes.
+          Yes. As of October 2018, spoof intelligence is available to all organizations with cloud mailboxes.
 
       - question: |
           How can I report spam or non-spam messages back to Microsoft?
@@ -80,7 +80,7 @@ sections:
         answer: |
           No. This ASF setting is no longer required. Anti-spoofing protection considers both SPF hard fails and a wider set of criteria. If you have anti-spoofing enabled and the **SPF record: hard fail** (_MarkAsSpamSpfRecordHardFail_) turned on, you'll probably get more false positives.
 
-          We recommend that you disable this feature as it provides almost no additional benefit for detecting spam or phishing message, and would instead generate mostly false positives. For more information, see [Advanced Spam Filter (ASF) settings in Microsoft 365](anti-spam-policies-asf-settings-about.md).
+          We recommend that you disable this feature as it provides almost no additional benefit for detecting spam or phishing messages, and would instead generate mostly false positives. For more information, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
 
       - question: |
           Does Sender Rewriting Scheme help fix forwarded email?

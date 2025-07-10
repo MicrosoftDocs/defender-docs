@@ -20,7 +20,7 @@ description: Admins can learn how to view and manage quarantined messages for al
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -29,7 +29,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by the default email protections in Microsoft 365. Admins can view, release, and delete all types of quarantined messages and files for all users.
+In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by the default email protections for cloud mailboxes. Admins can view, release, and delete all types of quarantined messages and files for all users.
 
 Admins in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription) can also manage files quarantined by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) and Microsoft Teams messages [quarantined by zero-hour auto purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
@@ -94,7 +94,7 @@ By default, only the first 100 entries are shown until you scroll down to the bo
 > [!TIP]
 > For answers to frequently asked questions about quarantined messages, select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: **Resolution to common issues** at the top of the page. Or, see the following articles:
 >
-> - [Quarantined email messages in Microsoft 365](quarantine-about.md)
+> - [Quarantine](quarantine-about.md)
 > - [Quarantine policies](quarantine-policies.md)
 > - [Use quarantine notifications to release and report quarantined messages](quarantine-quarantine-notifications.md)
 
@@ -170,7 +170,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
+- **Policy type**: Filter messages by what type of threat policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -536,7 +536,7 @@ When you select up to 100 quarantined messages on the **Email** tab by selecting
 
 ### Find who deleted a quarantined message
 
-By default, many security policy verdicts allow users to delete their quarantined messages (messages where they're a recipient). For more information, see the table at [Manage quarantined messages and files as a user](quarantine-end-user.md).
+By default, many threat policy verdicts allow users to delete their quarantined messages (messages where they're a recipient). For more information, see the table at [Manage quarantined messages and files as a user](quarantine-end-user.md).
 
 Admins can search the audit log to find events for messages that were deleted from quarantine by using the following procedures:
 

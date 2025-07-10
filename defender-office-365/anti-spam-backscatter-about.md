@@ -20,12 +20,12 @@ description: In this article, admins can about backscatter and how Microsoft 365
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Backscatter in Microsoft 365
+# Backscatter in cloud organizations
 
 *Backscatter* is non-delivery reports (also known as NDRs or bounce messages) that you receive for messages you didn't send. Spammers often use real email addresses as the From address to lend credibility to their messages. When a nonexistent recipient receives spam, the destination email server unwittingly sends the NDR to the forged sender in the From address (also known as the `5322.From` address or P2 sender).
 

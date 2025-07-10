@@ -18,7 +18,7 @@ ms.custom:
 description: Learn about allow entries and block entries in the Tenant Allow/Block List in Microsoft 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -30,7 +30,7 @@ appliesto:
 > [!IMPORTANT]
 > To allow phishing URLs that are part of non-Microsoft attack simulation training, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
 
-You might occasionally disagree with the filtering verdict from the default email protections in Microsoft 365 or from Microsoft Defender for Office 365. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative).
+You might occasionally disagree with the filtering verdict from the default email protections for cloud mailboxes or from Microsoft Defender for Office 365. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative).
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow or time of click for incoming messages from external senders.
 

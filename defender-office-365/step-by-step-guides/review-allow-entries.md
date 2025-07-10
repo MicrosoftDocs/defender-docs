@@ -99,4 +99,4 @@ Hopefully you found this article to be useful, with some basic queries to get yo
 
 Learn more about advanced hunting: [Overview - Advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Learn more about authentication: [Email Authentication in Microsoft 365](../email-authentication-about.md).
+Learn more about authentication: [Email authentication](../email-authentication-about.md).

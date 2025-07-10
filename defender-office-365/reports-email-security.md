@@ -21,7 +21,7 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -303,7 +303,7 @@ The **Post-delivery activities** report is available only in organizations with 
 
 ## Spoof detections report
 
-The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection in Microsoft 365](anti-phishing-protection-spoofing-about.md).
+The **Spoof detections** report shows information about messages blocked or allowed due to spoofing. For more information about spoofing, see [Anti-spoofing protection](anti-phishing-protection-spoofing-about.md).
 
 The aggregate and detail views of the report allows for 90 days of filtering.
 
@@ -343,7 +343,7 @@ The details table below the graph shows the following information:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-For more information about composite authentication result codes, see [Anti-spam message headers in Microsoft 365](message-headers-eop-mdo.md).
+For more information about composite authentication result codes, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
@@ -414,7 +414,7 @@ On the **Submissions** page, the **[Export](#export-report-data)** action is ava
 
 ## Threat protection status report
 
-The **Threat protection status** report is available in all Microsoft 365 organizations with cloud mailboxes, and in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription). However, the reports contain different data. For example, Microsoft 365 organization without Defender for Office 365 can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
+The **Threat protection status** report is available in all organizations with cloud mailboxes, and in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription). However, the reports contain different data. For example, Microsoft 365 organization without Defender for Office 365 can view information about malware detected in email, but not information about malicious files detected by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
 
 The report provides the count of email messages with malicious content. For example:
 
@@ -936,7 +936,7 @@ In the **View data by System override** and **Chart breakdown by Reason** view, 
 - **On-premises skip**
 - **Organization allowed domains**: The domain is specified in the [allowed domains list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 - **Organization allowed senders**: The sender is specified in the [allowed senders list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
-- **Phishing simulation**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+- **Phishing simulation**: For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 - **Sender Domain List**
 - **TABL - Both URL and file allowed**
 - **TABL - File allowed**
@@ -1030,7 +1030,7 @@ On the **Threat protection status** page, the :::image type="icon" source="media
 
 ## Top malware report
 
-The **Top malware** report shows the various kinds of malware that was detected by [Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md).
+The **Top malware** report shows the various kinds of malware that was detected by [Anti-malware protection](anti-malware-protection-about.md).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Top malware**.
 
@@ -1053,7 +1053,7 @@ On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-c
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report is available in all Microsoft 365 organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Microsoft 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+The **Top senders and recipients** report is available in all organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Microsoft 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 The **Top senders and recipients** report shows the top 20 message senders in the organization, and the top 20 recipients for messages detected by Microsoft 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
 
@@ -1163,10 +1163,10 @@ You need to be assigned permissions before you can view and use the reports that
 
 ## What if the reports aren't showing data?
 
-If you don't see data in the reports, check the report filters and double-check that your protection policies are configured to detect and take action on messages. For more information, see the following articles:
+If you don't see data in the reports, check the report filters and double-check that your threat policies are configured to detect and take action on messages. For more information, see the following articles:
 
-- [Configuration analyzer for protection policies in Microsoft 365](configuration-analyzer-for-security-policies.md)
-- [Preset security policies in Microsoft 365](preset-security-policies.md)
+- [Configuration analyzer](configuration-analyzer-for-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
 - [How do I turn off spam filtering?](anti-spam-protection-faq.yml#how-do-i-turn-off-spam-filtering-)
 
 ## Download and export report information
@@ -1356,9 +1356,9 @@ In the **Save as** dialog that opens, you see the default name of the .csv file 
 
 ## Related articles
 
-[Anti-spam protection in Microsoft 365](anti-spam-protection-about.md)
+[Anti-spam protection](anti-spam-protection-about.md)
 
-[Anti-malware protection for email in Microsoft 365](anti-malware-protection-about.md)
+[Anti-malware protection](anti-malware-protection-about.md)
 
 [View mail flow reports in the EAC](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 

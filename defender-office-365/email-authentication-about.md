@@ -1,5 +1,5 @@
 ---
-title: Email authentication in Microsoft 365
+title: Email authentication
 f1.keywords:
   - NOCSH
 ms.author: chrisda
@@ -19,16 +19,16 @@ description: Admins can learn how email authentication (SPF, DKIM, DMARC) works 
 ms.service: defender-office-365
 ms.date: 07/07/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Email authentication in Microsoft 365
+# Email authentication in cloud organizations
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-As a Microsoft 365 organization with cloud mailboxes, protecting the integrity of email messages from senders in your domains is important. Recipients should feel confident that messages from senders in your domain really came from senders in your domain.
+As an organization with cloud mailboxes, protecting the integrity of email messages from senders in your domains is important. Recipients should feel confident that messages from senders in your domain really came from senders in your domain.
 
 Email authentication (also known as _email validation_) is a group of standards to identify and prevent the delivery of email messages from forged senders (also known as _spoofing_). Spoofed senders are commonly used in business email compromise (BEC), phishing, and other email attacks. These standards include:
 
@@ -41,9 +41,9 @@ It's important to realize that these standards are _interdependent building bloc
 
 To configure email authentication for mail **sent from** Microsoft 365 organizations with cloud mailboxes, see the following articles:
 
-- [Set up SPF to help prevent spoofing](email-authentication-spf-configure.md)
-- [Use DKIM to validate outbound email sent from your custom domain](email-authentication-dkim-configure.md)
-- [Use DMARC to validate email](email-authentication-dmarc-configure.md)
+- [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md)
+- [Set up DKIM to sign mail from your cloud domain](email-authentication-dkim-configure.md)
+- [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 To prevent email authentication failures due to services that modify **inbound** mail sent to your Microsoft 365 organization, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
 
@@ -108,7 +108,7 @@ Clearly, SMTP email needs verifying message senders are who they claim to be!
 
 This section describes why you need SPF, DKIM, and DMARC for domains on the internet.
 
-- **SPF**: As explained in [Set up SPF to identify valid email sources for your Microsoft 365 domain](email-authentication-spf-configure.md), SPF uses a TXT record in DNS to:
+- **SPF**: As explained in [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md), SPF uses a TXT record in DNS to:
   - Identify valid sources of mail from the MAIL FROM domain.
   - What to do if the destination email server receives mail from an undefined source ('hard fail' to reject the message; 'soft fail' to accept and mark the message).
 
@@ -126,7 +126,7 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
 
   - Each domain and any subdomains require their own individual SPF records. Subdomains don't inherit the SPF record of the parent domain. This behavior becomes problematic if you want to allow email from defined and used subdomains, but prevent email from undefined and unused subdomains.
 
-- **DKIM**: As explained in [Set up DKIM to sign mail from your Microsoft 365 domain](email-authentication-dkim-configure.md), DKIM uses a domain to digitally sign important elements of the message (including the From address) and stores the signature in the message header. The destination server verifies that the signed elements of the message weren't altered.
+- **DKIM**: As explained in [Set up DKIM to sign mail from your cloud domain](email-authentication-dkim-configure.md), DKIM uses a domain to digitally sign important elements of the message (including the From address) and stores the signature in the message header. The destination server verifies that the signed elements of the message weren't altered.
 
   **How DKIM helps SPF**: DKIM can validate messages that fail SPF. For example:
 
@@ -142,7 +142,7 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
   - Register a domain (for example, proseware.com) and configure DKIM for the domain.
   - Send email with the From email addresses in a different domain (for example, woodgrovebank.com).
 
-- **DMARC**: As explained in [Set up DMARC to validate the From address domain for senders in Microsoft 365](email-authentication-dmarc-configure.md), DMARC uses SPF and DKIM to check for alignment between domains in the MAIL FROM and From addresses. DMARC also specifies the action the destination email system should take on messages that fail DMARC, and identifies where to send DMARC results (both pass and fail).
+- **DMARC**: As explained in [Set up DMARC to validate the From address domain for cloud mailbox senders](email-authentication-dmarc-configure.md), DMARC uses SPF and DKIM to check for alignment between domains in the MAIL FROM and From addresses. DMARC also specifies the action the destination email system should take on messages that fail DMARC, and identifies where to send DMARC results (both pass and fail).
 
   **How DMARC helps SPF and DKIM**: As previously described, SPF makes no attempt to match the domain in MAIL FROM domain and From addresses. DKIM doesn't care if the domain that signed the message matches the domain in the From address.
 

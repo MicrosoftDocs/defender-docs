@@ -280,7 +280,7 @@ The diagram contains the following information:
 
   ² Review your anti-spam policies, because these messages should be quarantined, not delivered.
 
-- **Message destinations**: Investigate messages that were delivered to recipients (either to the Inbox or the Junk Email folder), even if users didn't select the payload URL in the message. You can also remove the quarantined messages from quarantine. For more information, see [Quarantined email messages in Microsoft 365](quarantine-about.md).
+- **Message destinations**: Investigate messages that were delivered to recipients (either to the Inbox or the Junk Email folder), even if users didn't select the payload URL in the message. You can also remove the quarantined messages from quarantine. For more information, see [Quarantine](quarantine-about.md).
   - **Deleted folder**
   - **Dropped**
   - **External**: The recipient is located in your on-premises email organization in hybrid environments.

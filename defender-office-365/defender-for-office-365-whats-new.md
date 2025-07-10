@@ -78,7 +78,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## December 2024
 
-- [Considerations for integrating non-Microsoft security services with Microsoft 365](mdo-integrate-security-service.md): Considerations and recommendations for deploying a defense-in-depth email security strategy using third-party security services.
+- [Considerations for integrating non-Microsoft security services with Microsoft 365](mdo-integrate-security-service.md): Considerations and recommendations for deploying a defense-in-depth email security strategy using non-Microsoft security services.
 
 ## November 2024
 
@@ -113,7 +113,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how the default email protections in Microsoft 365 and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
+- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how the default email protections for cloud mailboxes and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
 
 ## May 2024
 
@@ -161,7 +161,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## December 2023
 
-- **QR code related phishing protection within default email protections in Microsoft 365 and Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
+- **QR code related phishing protection in the default email protections for cloud mailboxes and in Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
 - **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!TIP]
@@ -188,7 +188,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## August 2023
 
 - If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we now do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page.
-- **Default intra-organizational protection**: By default, messages sent between internal users that are identified as high confidence phishing are quarantined. Admins change this setting in the default anti-spam policy or in custom policies (opt-out of intra-org protection or include other spam filtering verdicts). For configuration information, see [Configure anti-spam policies in Microsoft 365](anti-spam-policies-configure.md).
+- **Default intra-organizational protection**: By default, messages sent between internal users that are identified as high confidence phishing are quarantined. Admins change this setting in the default anti-spam policy or in custom policies (opt-out of intra-org protection or include other spam filtering verdicts). For configuration information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 ## July 2023
 
@@ -213,13 +213,13 @@ For more information on what's new with other Microsoft Defender security produc
 ## March 2023
 
 - **Collaboration security for Microsoft Teams**: With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using URLs and messages has increased as well. Microsoft Defender for Office 365 is extending its [Safe Links](safe-links-about.md) protection with increased capabilities for zero-hour auto purge (ZAP), quarantine, and end user reporting of potential malicious messages to their admins. For more information, see [Microsoft Defender for Office 365 support for Microsoft Teams (Preview)](mdo-support-teams-about.md).
-- **Built-in protection: Safe Links time of click protection enabled for email**: By default, Microsoft now protects URLs in email messages at time of click as part of this update to Safe Links settings (_EnableSafeLinksForEmail_) within the Built-in protection preset security policy. To learn about the specific Safe Links protections in the Built-in protection policy, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
-- **Quarantine notifications enabled in preset security policies**: If your organization enabled or will enable the Standard or Strict preset security policies, the policies are automatically updated to use the new DefaultFullAccessWithNotificationPolicy quarantine policy (notifications enabled) wherever the DefaultFullAccessPolicy (notifications disabled) was used. To learn more about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md). For more information about specific settings in preset security policies, see [Recommended email and collaboration security settings for Microsoft 365](recommended-settings-for-eop-and-office365.md).
+- **Built-in protection: Safe Links time of click protection enabled for email**: By default, Microsoft now protects URLs in email messages at time of click as part of this update to Safe Links settings (_EnableSafeLinksForEmail_) within the Built-in protection preset security policy. To learn about the specific Safe Links protections in the Built-in protection preset security policy, see [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
+- **Quarantine notifications enabled in preset security policies**: If your organization enabled or will enable the Standard or Strict preset security policies, the policies are automatically updated to use the new DefaultFullAccessWithNotificationPolicy quarantine policy (notifications enabled) wherever the DefaultFullAccessPolicy (notifications disabled) was used. To learn more about quarantine notifications, see [Quarantine notifications](quarantine-quarantine-notifications.md). For more information about specific settings in preset security policies, see [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
 ## January 2023
 
 - **Automatic Tenant Allow/Block List expiration management is now available in Microsoft Defender for Office 365**: Microsoft now automatically removes allow entries from the Tenant Allow/Block List once the system has learned from it. Alternatively, Microsoft extends the expiration time of the allow entries if the system hasn't learned yet. This behavior prevents legitimate email from going to junk or quarantine.
-- **Configuring third-party phishing simulations in Advanced Delivery:** We expanded "Simulation URLs to allow" limit to 30 URLs. To learn how to configure, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md)
+- **Configuring non-Microsoft phishing simulations in Advanced Delivery:** We expanded "Simulation URLs to allow" limit to 30 URLs. To learn how to configure, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md)
 - [Enhanced user telemetry in the simulation reports in Attack Simulation Training](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/attack-simulation-training-new-insights-into-targeted-user-behavior/3673105): As part of our enhanced user telemetry, administrators can now view more details about how their targeted users are interacting with the phishing payload from phishing simulation campaigns.
 
 ## December 2022
@@ -354,7 +354,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - New first contact safety tip setting within anti-phishing policies. This safety tip is shown when recipients first receive an email from a sender or don't often receive email from a sender. For more information on this setting and how to configure it, see the following articles:
   - [First contact safety tip](anti-phishing-policies-about.md#first-contact-safety-tip)
-  - [Configure default anti-phishing protection policies in Microsoft 365](anti-phishing-policies-eop-configure.md)
+  - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](anti-phishing-policies-eop-configure.md)
   - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 ## April/May 2021

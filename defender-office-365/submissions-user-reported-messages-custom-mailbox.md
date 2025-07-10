@@ -18,7 +18,7 @@ description: "Admins can configure where user reported messages go for analysis:
 ms.service: defender-office-365
 ms.date: 02/24/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -32,7 +32,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, you can identify 
 User reported settings and the reporting mailbox work with the following message reporting tools:
 
 - [The built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)
-- [Supported third-party reporting tools](#options-for-third-party-reporting-tools)
+- [Supported non-Microsoft reporting tools](#options-for-non-microsoft-reporting-tools)
 
 Delivering user reported messages to a reporting mailbox instead of directly to Microsoft allows admins to selectively and manually submit messages to Microsoft from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [Admin submission](submissions-admin.md).
 
@@ -42,12 +42,12 @@ Delivering user reported messages to a reporting mailbox instead of directly to 
 
 ## Configuration requirements for the reporting mailbox
 
-Before you get started, you need to use the following steps to configure Exchange Online Protection and Defender for Office 365 so user reported messages are delivered to the reporting mailbox without being filtered:
+Before you get started, you need to use the following steps so user reported messages are delivered to the reporting mailbox without being filtered:
 
 - Identify the reporting mailbox as a SecOps mailbox. For instructions, see [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
   > [!NOTE]
-  > This step is especially important if you use [Attack simulation training](attack-simulation-training-get-started.md) or a third-party product to do phishing simulations. If you don't configure the reporting mailbox as a SecOps mailbox, a user reported message might trigger a training assignment by the phishing simulation product.
+  > This step is especially important if you use [Attack simulation training](attack-simulation-training-get-started.md) or a non-Microsoft product to do phishing simulations. If you don't configure the reporting mailbox as a SecOps mailbox, a user reported message might trigger a training assignment by the phishing simulation product.
 
 - Exclude the reporting mailbox from data loss prevention (DLP) if you have DLP. For more information, see [Data loss prevention Exchange conditions and actions reference](/purview/dlp-exchange-conditions-and-actions).
 
@@ -73,7 +73,7 @@ After you verify the reporting mailbox meets all of these requirements, use the 
 
 - For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
-- For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
+- For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions](submissions-result-definitions.md).
 
 ## Use the Microsoft Defender portal to configure user reported settings
 
@@ -93,12 +93,12 @@ On the **User reported settings** page, the available settings for reporting mes
 
     For details, see the [Options for Microsoft reporting tools](#options-for-microsoft-reporting-tools) section in this article.
 
-  - Use a third-party, non-Microsoft add-in to report email messages.
-    - Configure user reported messages from a third-party reporting mailbox to Microsoft.
+  - Use a non-Microsoft add-in to report email messages.
+    - Configure user reported messages from a non-Microsoft reporting mailbox to Microsoft.
     - Decide whether to customize the feedback email sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
     - Decide whether users can report email messages from quarantine as they release quarantined messages.
 
-    For details, see the [Options for third-party reporting tools](#options-for-third-party-reporting-tools) section in this article.
+    For details, see the [Options for non-Microsoft reporting tools](#options-for-non-microsoft-reporting-tools) section in this article.
 
 ### Options for Microsoft reporting tools
 
@@ -148,7 +148,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   > [!TIP]
   > For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
   >
-  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
+  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions](submissions-result-definitions.md).
 
   - **Microsoft and my reporting mailbox**: User reported messages go to Microsoft for analysis and to the specified reporting mailbox. Admins or security operations (SecOps) personnel can analyze the messages.
 
@@ -197,23 +197,25 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
 When you're finished on the **User reported settings** page, select **Save**.
 
-### Options for third-party reporting tools
+<a name='options-for-third-party-reporting-tools'></a>
 
-If you're using a third-party reporting solution for end users, you gain the following benefits by integrating the reporting solution with the Defender for Office 365 reporting experience:
+### Options for non-Microsoft reporting tools
+
+If you're using a non-Microsoft reporting solution for end users, you gain the following benefits by integrating the reporting solution with the Defender for Office 365 reporting experience:
 
 - Defender incident management
 - Microsoft analysis
 - In-product phishing triage
 - Native automated response capabilities
 
-Examples of third-party reporting solutions include:
+Examples of non-Microsoft reporting solutions include:
 
 - KnowBe4 Phish Alert Button
 - Cofense Report Phishing
 - Hoxhunt report button
 - PhishAlarm
 
-The message formatting requirements for integrating third-party reporting solutions with Defender for Office 365 are described in the next section.
+The message formatting requirements for integrating non-Microsoft reporting solutions with Defender for Office 365 are described in the next section.
 
 When **Monitor reported messages in Outlook** is selected and you also select **Use a non-Microsoft add-in button**, the following options are available on the **User reported settings** page:
 
@@ -222,14 +224,14 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   > [!TIP]
   > For more information about how Microsoft stores and handle your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
   >
-  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions in Microsoft 365](submissions-result-definitions.md).
+  > For more information about the available **Result** values for user reported messages on **User reported** tab of the **Submissions** page after analysis by Microsoft, see [Submission result definitions](submissions-result-definitions.md).
 
   - **Send reported messages to**: Select one of the following options:
-    - **My reporting mailbox only** : Microsoft pulls metadata about user reported messages from the third party reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user> with the **Result** value **Not Submitted to Microsoft**.
+    - **My reporting mailbox only** : Microsoft pulls metadata about user reported messages from the non-Microsoft reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user> with the **Result** value **Not Submitted to Microsoft**.
 
-    - **Microsoft and My reporting mailbox**: Microsoft pulls metadata and message content about user reported messages from the third party reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+    - **Microsoft and My reporting mailbox**: Microsoft pulls metadata and message content about user reported messages from the non-Microsoft reporting mailbox. Messages appear on the **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
-  - **Add an Exchange Online mailbox to send reported messages to**: Specify an existing internal reporting mailbox to hold user reported messages from third-party reporting tools. In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
+  - **Add an Exchange Online mailbox to send reported messages to**: Specify an existing internal reporting mailbox to hold user reported messages from non-Microsoft reporting tools. In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
 
 - **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
 
@@ -261,9 +263,11 @@ When you're finished on the **User reported settings** page, select **Save**.
 > [!TIP]
 > If **Monitor reported messages in Microsoft Teams** is selected in the **Microsoft Teams** section when **Use a non-Microsoft add-in button** is also selected, the settings in the **Email notifications** sections are available. But, these settings apply only to user-reported Teams messages. For more information, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
-#### Message submission format for third-party reporting tools
+<a name='message-submission-format-for-third-party-reporting-tools'></a>
 
-Messages sent by third-party reporting tools to the reporting mailbox required specific formatting so they're correctly identified on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
+#### Message submission format for non-Microsoft reporting tools
+
+Messages sent by non-Microsoft reporting tools to the reporting mailbox required specific formatting so they're correctly identified on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
 Messages that don't follow the required formatting are always identified as phishing.
 
@@ -312,7 +316,7 @@ The difference between these two elements isn't obvious when you manage the user
 
   After you visit the **User reported settings** page for the first time (even if you don't change any settings), the report submission policy named DefaultReportSubmissionPolicy is created with the default values and is visible in PowerShell.
 
-  Only after you specify a reporting mailbox (used by Microsoft or third-party reporting tools) and save the changes on the **User reported settings page** is the report submission rule named DefaultReportSubmissionRule created. It might take several seconds before the rule is visible in PowerShell.
+  Only after you specify a reporting mailbox (used by Microsoft or non-Microsoft reporting tools) and save the changes on the **User reported settings page** is the report submission rule named DefaultReportSubmissionRule created. It might take several seconds before the rule is visible in PowerShell.
 
   > [!NOTE]
   > The default settings on the **User reported settings** page include **Send reported messages to** \> **Microsoft and my reporting mailbox** with a blank value for the reporting mailbox. In PowerShell, there's no report submission rule. This default configuration means the reporting mailbox is the global admin's Exchange Online mailbox. The global admin isn't _shown_ as the reporting mailbox in the output of the **Get-ReportSubmissionPolicy** and **Get-ReportSubmissionRule** cmdlets or on the **User reported settings** page until _after_ the first user in the organization reports a message from Outlook. [Learn more about what Microsoft does to your submitted messages](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
@@ -525,7 +529,9 @@ New-ReportSubmissionPolicy -ReportJunkToCustomizedAddress $false -ReportNotJunkT
 
 Because a reporting mailbox isn't used, the report submission rule isn't needed or created.
 
-#### Use PowerShell to configure reporting in Outlook to use third-party reporting tools
+<a name='use-powershell-to-configure-reporting-in-outlook-to-use-third-party-reporting-tools'></a>
+
+#### Use PowerShell to configure reporting in Outlook to use non-Microsoft reporting tools
 
 This example creates the report submission policy and the report submission rule with the following settings:
 
@@ -568,7 +574,7 @@ New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPoli
 Turning off reporting in Outlook has the following consequences:
 
 - The built-in **Report** button is unavailable in all Outlook platforms.
-- Third-party reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
+- Non-Microsoft reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
 - **Allow reporting for quarantined messages** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
 
 This example creates the report submission policy with reporting in Outlook turned off (**Outlook** section \> **Monitor reported messages in Outlook** not selected): `-EnableThirdPartyAddress $false` is the default value, so you don't need to use the parameter. `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $false, -ReportJunkToCustomizedAddress $false, -ReportNotJunkToCustomizedAddress $false, and -ReportPhishToCustomizedAddress $false` are required.

@@ -18,7 +18,7 @@ description: Admins can learn how to use the advanced delivery policy in Microso
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections in Microsoft 365</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -115,6 +115,8 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configured are displayed. If you removed all entries, the list is empty.
 
+<a name='powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
+
 ## Use the Microsoft Defender portal to configure non-Microsoft phishing simulations in the advanced delivery policy
 
 To configure a non-Microsoft phishing simulation, you need to provide the following information:
@@ -208,6 +210,8 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 - The **Type** column contains the value **Sending IP**, **Domain**, or **Allowed simulation URL** for each entry.
 - The **Date** column shows when the entry was created.
 - To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+
+<a name='use-the-microsoft-defender-portal-to-modify-or-remove-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
 
 ## Use the Microsoft Defender portal to modify or remove non-Microsoft phishing simulations in the advanced delivery policy
 
@@ -367,6 +371,8 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 For detailed syntax and parameter information, see [Remove-ExoSecOpsOverrideRule](/powershell/module/exchange/remove-exosecopsoverriderule).
 
+<a name='powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
+
 ## PowerShell procedures for non-Microsoft phishing simulations in the advanced delivery policy
 
 In PowerShell, the basic elements of non-Microsoft phishing simulations in the advanced delivery policy are:
@@ -384,6 +390,8 @@ This behavior has the following results:
 - You modify the settings in the policy and the rule separately.
 - When you remove a policy from PowerShell, the corresponding rule is also removed.
 - When you remove a rule from PowerShell, the corresponding policy isn't removed. You need to remove the corresponding policy manually.
+
+<a name='use-powershell-to-configure-third-party-phishing-simulations'></a>
 
 ### Use PowerShell to configure non-Microsoft phishing simulations
 

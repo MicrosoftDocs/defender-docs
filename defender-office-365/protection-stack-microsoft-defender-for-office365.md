@@ -98,7 +98,7 @@ In this phase the filtering stack begins to handle the specific contents of the 
 
 6. **Machine learning models** act on the header, body content, and URLs of a message to detect phishing attempts.
 
-7. Microsoft uses a determination of reputation from URL sandboxing and URL reputation from third party feeds in **URL reputation blocking**, to block any message with a known malicious URL.
+7. Microsoft uses a determination of reputation from URL sandboxing and URL reputation from non-Microsoft feeds in **URL reputation blocking**, to block any message with a known malicious URL.
 
 8. **Content heuristics** can detect suspicious messages based on structure and word frequency within the body of the message, using machine learning models.
 
