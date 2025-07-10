@@ -26,9 +26,10 @@ Deactivating Defender for Identity capabilities from your domain controller does
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
 2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-    ![Screenshot that shows how to delete a sensor.](media/screenshot-that-shows-how-to-delete-a-sensor.png)
->[!NOTE]
->This action removes the v3.x sensor and stops monitoring on that domain controller.   
+   :::image type="content" source="media/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor." lightbox="media/screenshot-that-shows-how-to-delete-a-sensor.png":::
+
+    >[!NOTE]
+    >This action removes the v3.x sensor and stops monitoring on that domain controller.   
 
 ## Delete and uninstall a sensor v2.x from a domain controller
 
