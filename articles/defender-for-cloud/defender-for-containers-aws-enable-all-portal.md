@@ -9,7 +9,7 @@ ms.date: 06/04/2025
 
 This article walks you through enabling all Microsoft Defender for Containers components on your Amazon EKS clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
 
-## In this article
+## Article contents
 
 - [Prerequisites](#prerequisites)
 - [Create AWS connector](#create-aws-connector)

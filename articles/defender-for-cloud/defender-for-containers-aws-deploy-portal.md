@@ -138,7 +138,7 @@ Set up continuous monitoring:
    - For detailed diagnostics, see [Verify Defender sensor](defender-for-containers-aws-verify.md#verify-defender-sensor)
 
 3. **Common solutions**:
-   - **Permission issues**: [Update IAM roles](defender-for-containers-aws-configure.md#configure-aws-permissions)
+   - **Permission issues**: Update IAM roles in AWS Console
    - **Network issues**: [Check connectivity requirements](defender-for-containers-aws-verify.md#no-security-data-appearing)
    - **Resource limits**: Increase node resources or add nodes to cluster
 

@@ -9,7 +9,7 @@ ms.date: 06/04/2025
 
 This article explains how to deploy Defender for Containers components on your Amazon EKS clusters using command-line tools, APIs, and automation methods.
 
-## In this article
+## Article contents
 
 Jump to the deployment method you need:
 
@@ -362,7 +362,7 @@ az deployment group create \
     --parameters clusterName=my-eks-cluster location=eastus
 ```
 
-## Configure using Infrastructure as Code
+## Deploy using Infrastructure as Code
 
 ### Terraform example
 
