@@ -10,7 +10,7 @@ ms.reviewer: LiorShapiraa
 # Defender for Identity notifications in Microsoft Defender XDR
 
 >[!NOTE]
->This feature is currently supported only by the Defender for Identity sensor version 2.x
+>This feature is currently supported only by the Defender for Identity sensor version 2.x.
 
 Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
