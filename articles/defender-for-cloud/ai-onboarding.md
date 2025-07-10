@@ -59,7 +59,7 @@ User prompt evidence consists of prompts and model responses. Both are considere
 
 1. Select **Continue**.
 
-### **Enable Data Security for Azure AI with Microsoft Purview (Preview)**
+### **Enable Data Security for Azure AI with Microsoft Purview**
 
 > [!NOTE]
 > This feature requires a Microsoft Purview license, which isn't included with Microsoft Defender for Cloud's Defender for AI Services plan.

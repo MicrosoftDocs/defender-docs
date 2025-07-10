@@ -102,7 +102,8 @@ Set your kubeconfig context to the target cluster, and run the script with the c
 install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
 ```
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
+For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
 - Set up a security connector for your AWS or GCP account
 
@@ -167,6 +168,26 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --devel \
 --reuse-values
 ```
+
+## Security rules for gated deployment
+
+You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
+
+Accessing security rules
+- Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
+- In the left navigation pane, select **Environment settings**.
+- Click on the **Security rules** tile.
+
+Configuring vulnerability assessment rules
+- Within the Security rules page, navigate to **Vulnerability assessment** under the **Gated deployment** section.
+- Create or edit your security rules as needed.
+
+> [!IMPORTANT]
+> For Helm installations
+> - **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+> - **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
+>
+> :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
 
 ## Next steps
 

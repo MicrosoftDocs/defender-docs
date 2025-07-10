@@ -87,7 +87,7 @@ To simulate a security alert:
 
 1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Security alerts** and look for the alert on the relevant resource.
 
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png" alt-text="Screenshot of a sample alert from Microsoft Defender for Kubernetes." lightbox="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png":::
+    :::image type="content" source="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png" alt-text="Screenshot of a sample alert from Microsoft Defender for Containers." lightbox="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png":::
 
 ::: zone pivot="defender-for-container-arc,defender-for-container-eks,defender-for-container-gke"
 [!INCLUDE [Remove the sensor](./includes/defender-for-containers-remove-extension.md)]

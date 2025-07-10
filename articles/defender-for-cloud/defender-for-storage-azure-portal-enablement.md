@@ -2,7 +2,7 @@
 title: Enable Defender for Storage using the Azure portal
 description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using the Azure portal.
 ms.topic: install-set-up-deploy
-ms.date: 08/15/2023
+ms.date: 06/30/2025
 ---
 
 # Enable and configure with the Azure portal
@@ -31,7 +31,7 @@ Microsoft Defender for Storage is now enabled for this subscription, and is full
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection, you can select **Settings** and change the status of the relevant feature to **Off** and save the changes.
 
-If you want to change the malware scanning size capping per storage account per month for malware, change the settings in **Edit configuration** and save the changes.
+If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, change the settings in **Edit configuration** and save the changes.
 
 If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
 
@@ -50,12 +50,28 @@ In the storage account menu, in the **Security + networking** section, selec
     > [!TIP]
     > To configure On-upload malware scanning settings, such as monthly capping, select Settings after Defender for Storage was enabled.
 
-If you want to disable Defender for Storage on the storage account or disable one of the features (on-upload malware scanning or Sensitive data threat detection), select **Settings**, edit the settings, and select **Save**.
+You can disable Defender for Storage on storage accounts or modify one of the features –
+
+- On-upload malware scanning
+
+- Sensitive data threat detection
+
+- Set limit of GB scanned per month
+
+- Filter on-upload scans
+
+- Store scan results as Blob Index Tags
+
+- Send scan results to Event Grid topic
+
+- Send scan results to Log Analytics
+
+Select __Settings__, edit the settings, and select __Save__.
 
 ---
 
 > [!TIP]
-> Malware scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
+> Malware scanning can be configured to send scanning results to the following actions: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
 
 ## Next steps
 
