@@ -98,13 +98,14 @@ The sensors page provides the following information about each sensor:
 
 * **Version**:  Displays the sensor version installed.
 
-* **Delayed update**:Displays the sensor's delayed update mechanism state. Possible values are:
+* **Delayed update**: Displays the sensor's delayed update mechanism state. Possible values are:
 
   * Enabled
 
   * Disabled
+
     >[!NOTE]
->This feature is supported only by the Defender for Identity sensor version 2.x
+    >This feature is supported only by the Defender for Identity sensor version 2.x.
 
 * **Health status**: Displays the overall health status of the sensor with a colored icon representing the highest severity open health alert. Possible values are:
 
@@ -146,7 +147,7 @@ Defender for Identity sensors support two kinds of updates:
 
 ### Delayed sensor update
 >[!NOTE]
->This feature is supported only by the Defender for Identity sensor version 2.x
+>This feature is supported only by the Defender for Identity sensor version 2.x.
 
 Given the rapid speed of ongoing Defender for Identity development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. Defender for Identity enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
 
