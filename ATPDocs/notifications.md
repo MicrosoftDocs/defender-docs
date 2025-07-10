@@ -1,13 +1,16 @@
 ---
 title: Microsoft Defender for Identity notifications
 description: Learn how to use and configure Microsoft Defender for Identity notifications in Microsoft Defender XDR.
-ms.date: 09/03/2023
+ms.date: 10/07/2025
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to work with Defender for Identity notifications to make sure I'm up to date about events detected by Defender for Identity.
 ms.reviewer: LiorShapiraa
 ---
 
 # Defender for Identity notifications in Microsoft Defender XDR
+
+>[!NOTE]
+>This feature is currently supported only by the Defender for Identity sensor version 2.x
 
 Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
