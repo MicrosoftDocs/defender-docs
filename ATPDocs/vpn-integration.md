@@ -10,7 +10,7 @@ ms.reviewer: martin77s
 # Defender for Identity VPN integration in Microsoft Defender XDR
 
 >[!NOTE]
->This feature is currently supported only by the Defender for Identity sensor version 2.x
+>This feature is currently supported only by the Defender for Identity sensor version 2.x.
 
 Microsoft Defender for Identity can integrate with your VPN solution by listening to RADIUS accounting events forwarded to Defender for Identity sensors, such as the IP addresses and locations where connections originated. VPN accounting data can help your investigations by providing more information about user activity, such as the locations from where computers are connecting to the network, and an extra detection for abnormal VPN connections.
 
