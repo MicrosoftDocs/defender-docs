@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/01/2025
+ms.date: 07/08/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -22,27 +22,26 @@ This article lists recent features added for unified security operations in the 
 
 ## July 2025
 
-- [Microsoft Sentinel in the Defender portal to be deprecated July 2026](#microsoft-sentinel-in-the-defender-portal-to-be-deprecated-july-2026)
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
-
-### Microsoft Sentinel in the Defender portal to be deprecated July 2026
-
-Microsoft is transitioning Microsoft Sentinel from the Azure portal to the Microsoft Defender portal to provide a unified, efficient, and modern experience for security teams. This move integrates Microsoft Sentinel with Microsoft Defender's extensive threat protection capabilities, enhancing security outcomes.
-
-Starting in **July 2026**, Microsoft Sentinel will be supported only in the Microsoft Defender portal, and any remaining customers in the Azure portal will be automatically redirected to the Defender portal. We recommend that such customers start planning their migration to the Defender portal to ensure a smooth transition and take full advantage of the new features offered by Microsoft Defender.
-
-For more information, see:
-
-- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
-- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender)
-- [Microsoft Sentinel in the Azure portal deprecation timeline](/azure/sentinel/overview#microsoft-sentinel-in-the-azure-portal-deprecation-timeline)
-- [It’s Time to Move: Retiring Microsoft Sentinel’s Azure Portal for Greater Security](https://aka.ms/time-to-move-to-defender)
+- [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
+- [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
 
 ### For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal
 
-For this update, new Microsoft Sentinel customers are customers who are [onboarding the first workspace in their tenant to Microsoft Sentinel](/azure/sentinel/quickstart-onboard) on or after **July 1, 2025**.
+For this update, new Microsoft Sentinel customers are customers who are [onboarding the first workspace in their tenant to Microsoft Sentinel](/azure/sentinel/quickstart-onboard) after **July 1, 2025**.
 
-Starting **July 1, 2025**, such new customers who are not Azure Lighthouse-delegated users, and who have the permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator), have their workspaces automatically onboarded to the Defender portal together with onboarding to Microsoft Sentinel. Users of such workspaces, who also aren't Azure Lighthouse-delegated users, see links in Microsoft Sentinel in the Azure portal that redirect them to the Defender portal. Such users use Microsoft Sentinel in the Defender portal only.
+Starting on **July 1 2025**, such new customers who are also:
+
+- not Azure Lighthouse-delegated users and
+- who have the permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)
+
+Have their workspaces automatically onboarded to the Defender portal together with onboarding to Microsoft Sentinel. Users of such workspaces, who also aren't Azure Lighthouse-delegated users, see links in Microsoft Sentinel in the Azure portal that redirect them to the Defender portal.
+
+For example:
+
+:::image type="content" source="media/whats-new/redirect-no-defender.png" alt-text="Screenshot of a redirect link in the Azure portal.":::
+
+Such users use Microsoft Sentinel in the Defender portal only.
 
 New customers who don't have relevant permissions aren't automatically onboarded to the Defender portal, but they do still see redirection links in the Azure portal, together with prompts to have a user with relevant permissions manually onboard the workspace to the Defender portal.
 
@@ -53,6 +52,32 @@ For more information, see:
 - [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard)
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 - [Changes for new customers](https://aka.ms/changes-for-sentinel-customers-july-25)
+
+### No limit on the number of workspaces you can onboard to the Defender portal
+
+There is no longer any limit to the number of workspaces you can onboard to the Defender portal.
+
+Limitations still apply to the number of workspaces you can include in a Log Analytics query, and in the number of workspaces you can or should include in a scheduled analytics rule. 
+
+For more information, see:
+
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
+- [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal)
+- [Extend Microsoft Sentinel across workspaces and tenants](/azure/sentinel/extend-sentinel-across-workspaces-tenants)
+
+### Microsoft Sentinel in the Azure portal to be retired July 2026
+
+Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+Starting in **July 2026**, Microsoft Sentinel will be supported in the Defender portal only, and any remaining customers using the Azure portal will be automatically redirected.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
 
 ## June 2025
 
@@ -101,6 +126,9 @@ If two incidents should be merged because they describe the same attack story, b
 For example, if the incidents weren't merged because they were assigned to two different people, you can remove the assignment of one of the incidents and then merge the incidents manually.
 
 To understand more about merging incidents, see [Alert correlation and incident merging in the Microsoft Defender portal](/defender-xdr/alerts-incidents-correlation).
+
+For instructions on merging incidents manually, see [Merge incidents manually in the Microsoft Defender portal](/defender-xdr/merge-incidents-manually).
+
 
 ### Multi workspace and multi tenant support for Microsoft Sentinel (Preview)
 
@@ -208,24 +236,6 @@ Microsoft Sentinel workbooks are now available for viewing directly in the Micro
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
 For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data) and [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).
-
-## November 2024
-
-- [Microsoft Sentinel availability in Microsoft Defender portal](#microsoft-sentinel-availability-in-microsoft-defender-portal)
-- [Feature availability for Government clouds](#feature-availability-for-government-clouds)
-
-### Microsoft Sentinel availability in Microsoft Defender portal
-
-We previously announced Microsoft Sentinel is generally available in the Microsoft Defender portal. For preview, Microsoft Sentinel is now available in the Defender portal without Microsoft Defender XDR or an E5 license. For more information, see:
-
- - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
- - [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md)
-
-### Feature availability for Government clouds
-
-In the Defender portal, all Microsoft Sentinel features that are in general availability are now available in both commercial and GCC High and DoD clouds. Features still in preview are available only in the commercial cloud.
-
-For more information, see [Microsoft Sentinel feature support for Azure commercial/other clouds](/azure/sentinel/feature-availability#experience-in-the-defender-portal) and [Microsoft Defender XDR for US Government customers](/defender-xdr/usgov).
 
 ## Related content
 

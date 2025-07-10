@@ -16,6 +16,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "ATPDocs/deploy/quick-installation-guide.md",
+      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/deploy/prerequisites.md",
+      "redirect_url": "deploy/prerequisites-sensor-version-2",
+      "redirect_document_id": false
+    },
+        {
+      "source_path": "ATPDocs/deploy/activate-capabilities.md",
+      "redirect_url": "deploy/activate-sensor",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/configure-event-collection.md",
       "redirect_url": "deploy/configure-event-collection",
       "redirect_document_id": false
