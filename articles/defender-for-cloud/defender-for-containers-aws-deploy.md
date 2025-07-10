@@ -9,6 +9,26 @@ ms.date: 06/04/2025
 
 This article explains how to deploy Defender for Containers components on your Amazon EKS clusters using command-line tools, APIs, and automation methods.
 
+## In this article
+
+Jump to the deployment method you need:
+
+- [Enable Defender plan](#enable-defender-for-containers-plan)
+  - [Azure CLI](#using-azure-cli)
+  - [REST API](#using-rest-api)
+- [Create AWS connector](#create-aws-connector)
+  - [Azure CLI](#using-azure-cli-1)
+  - [CloudFormation](#using-cloudformation)
+- [Deploy Arc and extensions](#deploy-arc-and-defender-extensions)
+  - [Single cluster](#connect-eks-to-azure-arc)
+  - [Multiple clusters](#batch-deployment-using-scripts)
+- [Infrastructure as Code](#deploy-using-infrastructure-as-code)
+  - [Terraform](#terraform-example)
+  - [ARM Templates](#deploy-using-arm-templates)
+
+> [!TIP]
+> For a guided portal experience, see [Enable all components via portal](defender-for-containers-aws-enable-all-portal.md).
+
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]

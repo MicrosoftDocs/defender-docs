@@ -9,6 +9,18 @@ ms.date: 06/04/2025
 
 This article walks you through enabling all Microsoft Defender for Containers components on your Amazon EKS clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
 
+## In this article
+
+- [Prerequisites](#prerequisites)
+- [Create AWS connector](#create-aws-connector)
+- [Configure AWS permissions](#configure-aws-permissions)
+- [Connect EKS clusters](#connect-eks-clusters-to-azure-arc)
+- [Deploy security components](#deploy-defender-extensions)
+- [Verify and test](#verify-deployment)
+
+> [!NOTE]
+> This guide covers the complete setup process for new deployments. If you already have Defender for Containers enabled and need to fix or add components, see [Deploy specific components](defender-for-containers-aws-deploy-portal.md).
+
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
@@ -19,24 +31,22 @@ Additional requirements:
 - EKS clusters version 1.19 or later
 - Network connectivity from EKS to Azure endpoints
 
-## Sign in to Azure
-
-Sign in to the [Azure portal](https://portal.azure.com).
-
 ## Create AWS connector
 
 If you haven't already connected your AWS account:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Select **+ Add environment** > **Amazon Web Services**.
+2. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Enter connector details:
+3. Select **+ Add environment** > **Amazon Web Services**.
+
+4. Enter connector details:
    - **Connector name**: A descriptive name
    - **AWS account ID**: Your 12-digit AWS account ID
    - **Region**: Select your primary region
 
-1. Select **Next: Select plans**.
+5. Select **Next: Select plans**.
 
 ## Enable Defender for Containers plan
 

@@ -12,6 +12,7 @@ This article explains how to deploy specific Defender for Containers components 
 ## When to use this guide
 
 Use this guide if you:
+
 - Already have Defender for Containers enabled but some components are missing
 - Want to deploy to specific clusters only
 - Need to troubleshoot failed component deployments
@@ -113,24 +114,38 @@ After deployment:
 2. Navigate to **Inventory** > **Containers** to see protected clusters
 3. Review **Security alerts** for any new detections
 
+### Monitor ongoing health
+
+Set up continuous monitoring:
+
+1. Create alerts for component health changes
+2. Review weekly security recommendations
+3. Monitor alert trends in the dashboard
+
 ## Troubleshooting
 
 ### Sensor deployment fails
 
-```bash
-# Check Arc connectivity
-az connectedk8s show --name <cluster-name> --resource-group <rg>
+1. **Check Arc connectivity**:
+   - Navigate to **Azure Arc** > **Kubernetes clusters**
+   - Select your cluster and check "Connected" status
+   - If disconnected, see [Verify Arc connection](defender-for-containers-aws-verify.md#check-arc-connection)
 
-# Verify extension status
-az k8s-extension show --name microsoft-defender \
-  --cluster-type connectedClusters \
-  --cluster-name <cluster-name> \
-  --resource-group <rg>
-```
+2. **Review extension status**:
+   - In the Arc cluster, select **Extensions**
+   - Click on **microsoft-defender** extension
+   - Check the error message in the status
+   - For detailed diagnostics, see [Verify Defender sensor](defender-for-containers-aws-verify.md#verify-defender-sensor)
+
+3. **Common solutions**:
+   - **Permission issues**: [Update IAM roles](defender-for-containers-aws-configure.md#configure-aws-permissions)
+   - **Network issues**: [Check connectivity requirements](defender-for-containers-aws-verify.md#no-security-data-appearing)
+   - **Resource limits**: Increase node resources or add nodes to cluster
 
 ### Components show as unhealthy
 
 1. Check cluster logs:
+
    ```bash
    kubectl logs -n kube-system -l app=microsoft-defender
    ```

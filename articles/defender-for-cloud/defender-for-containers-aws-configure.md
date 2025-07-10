@@ -5,9 +5,35 @@ ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Configure Defender for Containers on AWS (EKS)
+# Configure Defender for Containers on AWS
 
 After deploying Defender for Containers on your EKS clusters, you can configure various settings to customize the security coverage according to your needs.
+
+## Configuration areas
+
+Jump to the configuration you need:
+
+### Core settings
+
+- [Enable/disable plan components](#configure-plan-components)
+- [Custom Log Analytics workspace](#configure-custom-log-analytics-workspace)
+- [Data collection settings](#configure-data-collection-settings)
+
+### Security features
+
+- [Container image scanning](#configure-container-image-scanning)
+- [Alert settings and rules](#configure-alert-settings)
+- [Compliance policies](#configure-compliance-policies)
+- [Network security](#configure-network-security)
+
+### Advanced configuration
+
+- [Performance tuning](#performance-tuning)
+- [Integration settings](#integration-settings)
+- [Monitoring configuration](#monitoring-configuration-health)
+
+> [!TIP]
+> Most organizations start with [configuring plan components](#configure-plan-components) and [alert settings](#configure-alert-settings).
 
 ## Configure plan components
 

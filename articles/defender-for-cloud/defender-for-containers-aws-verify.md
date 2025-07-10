@@ -7,7 +7,25 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on AWS (EKS)
 
-After deploying Defender for Containers on your EKS clusters, verify that all components are properly installed and functioning correctly.
+After deploying Defender for Containers on your EKS clusters, use this guide to verify all components are functioning correctly.
+
+## Validation checklist
+
+Complete these verification steps in order:
+
+- [ ] [AWS connector shows as Connected](#check-environment-connection)
+- [ ] [EKS clusters appear in Inventory](#verify-discovered-resources)
+- [ ] [Arc agents are running](#check-arc-connection) (azure-arc namespace)
+- [ ] [Defender sensor pods are running](#verify-defender-sensor) (mdc namespace)
+- [ ] [Policy pods are running](#verify-azure-policy-extension) (azurepolicy namespace)
+- [ ] [Test security alert generated successfully](#generate-a-test-security-alert)
+- [ ] [Container images are being scanned](#verify-image-scanning)
+- [ ] [Security recommendations are appearing](#check-security-recommendations)
+- [ ] [Logs are flowing to Log Analytics](#verify-data-collection)
+- [ ] [No error messages in component logs](#check-defender-sensor-logs)
+
+> [!TIP]
+> If any validation step fails, see the [Troubleshooting](#troubleshooting-verification-failures) section for that component.
 
 ## Verify in Microsoft Defender for Cloud
 
@@ -278,19 +296,6 @@ kubectl get pods -n azurepolicy --no-headers | grep -v Running
 echo "Checking recent alerts..."
 az security alert list --resource-group $RG --query "[?contains(resourceId, '$CLUSTER_NAME')]" --output table
 ```
-
-## Validation checklist
-
-- [ ] AWS connector shows as Connected
-- [ ] EKS clusters appear in Inventory
-- [ ] Arc agents are running (azure-arc namespace)
-- [ ] Defender sensor pods are running (mdc namespace)
-- [ ] Policy pods are running (azurepolicy namespace)
-- [ ] Test security alert generated successfully
-- [ ] Container images are being scanned
-- [ ] Security recommendations are appearing
-- [ ] Logs are flowing to Log Analytics
-- [ ] No error messages in component logs
 
 ## Next steps
 
