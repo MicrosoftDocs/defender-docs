@@ -1,7 +1,7 @@
 ---
 title: Manage and update sensors
 description: Learn how to manage and update your Microsoft Defender for Identity sensors.
-ms.date: 01/29/2023
+ms.date: 07/10/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -104,6 +104,9 @@ The sensors page provides the following information about each sensor:
 
   * Disabled
 
+    >[!NOTE]
+    >This feature is supported only by the Defender for Identity sensor version 2.x.
+
 * **Health status**: Displays the overall health status of the sensor with a colored icon representing the highest severity open health alert. Possible values are:
 
   * **Healthy (green icon)**: No opened health issues
@@ -143,6 +146,8 @@ Defender for Identity sensors support two kinds of updates:
 > * Defender for Identity sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the Defender for Identity service consumes too much memory, the service is automatically stopped and restarted by the Defender for Identity sensor updater service.
 
 ### Delayed sensor update
+>[!NOTE]
+>This feature is supported only by the Defender for Identity sensor version 2.x.
 
 Given the rapid speed of ongoing Defender for Identity development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. Defender for Identity enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
 
@@ -188,7 +193,7 @@ Every few minutes, Defender for Identity sensors check whether they have the lat
 
 1. Sensors selected for **Delayed update** start their update process 72 hours after the Defender for Identity cloud service is updated. These sensors will then use the same update process as automatically updated sensors.
 
-    For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md#sensor-outdated) is triggered, and is sent as a notification.
+    For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md) is triggered, and is sent as a notification.
 
     ![Sensor update failure.](media/sensor-outdated.png)
 
@@ -230,6 +235,6 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 ## Next steps
 
+* [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
 * [Configure event forwarding](deploy/configure-event-forwarding.md)
-* [Defender for Identity prerequisites](deploy/prerequisites.md)
 * [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

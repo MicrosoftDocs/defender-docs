@@ -169,7 +169,7 @@ sections:
         answer: Yes. It is required to manually remove the Sensor to remove the WinPcap drivers. The reinstallation using the latest package will install the Npcap drivers.
 
       - question: How can I check whether my current installation of Defender for Identity uses Npcap or WinPcap?
-        answer: You can see that 'Npcap OEM' is installed through the Add/Remove programs (appwiz.cpl), and if there was an open [health issue](health-alerts.md#sensor-has-issues-with-packet-capturing-component) for this, it will be automatically closed.
+        answer: You can see that 'Npcap OEM' is installed through the Add/Remove programs (appwiz.cpl), and if there was an open [health issue](health-alerts.md) for this, it will be automatically closed.
 
       - question: I have more than five domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
@@ -297,7 +297,6 @@ sections:
 
 additionalContent: |
   ## Related content
-  - [Defender for Identity prerequisites](deploy/prerequisites.md)
   - [Defender for Identity capacity planning](deploy/capacity-planning.md)
   - [Configure event collection](deploy/configure-event-collection.md)
   - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
