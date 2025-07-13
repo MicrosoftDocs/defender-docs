@@ -23,7 +23,7 @@ Think about your broad requirements:
 - **Determine ownership**. Figure out where multicloud capabilities fall under your teams. Review the [determine ownership requirements](plan-multicloud-security-determine-ownership-requirements.md#determine-ownership-requirements) and [determine access control requirements](plan-multicloud-security-determine-access-control-requirements.md#determine-access-control-requirements) articles to answer these questions:
 
   - How will your organization use Defender for Cloud as a multicloud solution?
-  - What [cloud security posture management (CSPM)](plan-multicloud-security-determine-multicloud-dependencies.md) and [cloud workload protection (CWP)](plan-multicloud-security-determine-multicloud-dependencies.md) capabilities do you want to adopt?
+  - What [cloud security posture management (CSPM)](plan-multicloud-security-determine-multicloud-dependencies.md) and [cloud workload protection platform (CWPP)](plan-multicloud-security-determine-multicloud-dependencies.md) capabilities do you want to adopt?
   - Which teams will own the different parts of Defender for Cloud?
   - What is your process for responding to security alerts and recommendations? Remember to consider Defender for Cloud’s governance feature when making decisions about recommendation processes.
   - How will security teams collaborate to prevent friction during remediation?

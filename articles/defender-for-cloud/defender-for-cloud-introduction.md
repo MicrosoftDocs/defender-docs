@@ -54,7 +54,7 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 
 ## Protect cloud workloads
 
-Proactive security principles require implementing security practices to protect your workloads from threats. Cloud workload protections (CWPP) provide workload-specific recommendations to guide you to the right security controls to protect your workloads.
+Proactive security principles require implementing security practices to protect your workloads from threats. Cloud workload protection platform (CWPP) provide workload-specific recommendations to guide you to the right security controls to protect your workloads.
 
 When your environment is threatened, security alerts immediately indicate the nature and severity of the threat so you can plan your response. After identifying a threat in your environment, respond quickly to limit the risk to your resources.
 
