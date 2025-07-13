@@ -9,17 +9,39 @@ ms.date: 06/04/2025
 
 This article walks you through enabling all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management.
 
+## Article contents
+
+- [Prerequisites](#prerequisites)
+- [Enable Defender plan](#enable-defender-for-containers-plan)
+- [Configure components](#configure-plan-components)
+- [Monitor deployment](#monitor-deployment-progress)
+- [Deploy Defender sensor](#deploy-the-defender-sensor)
+- [Verify deployment](#verify-component-deployment)
+- [Enable diagnostics](#enable-diagnostic-logs-recommended)
+- [Advanced configuration](#configure-custom-workspace-optional)
+
+> [!NOTE]
+> This guide covers the complete setup process for new deployments. If you already have Defender for Containers enabled and need to fix or add components, see [Deploy specific components](defender-for-containers-azure-deploy-portal.md).
+
+## When to use this guide
+
+Use this guide if you're:
+
+- Setting up Defender for Containers on Azure for the first time
+- Want to enable all security features at once
+- Need comprehensive protection for all your AKS clusters
+
+If you already have Defender for Containers enabled and need to deploy specific components, see [Deploy specific Defender for Containers components on Azure (AKS)](defender-for-containers-azure-deploy-portal.md).
+
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
 
-## Sign in to Azure
-
-Sign in to the [Azure portal](https://portal.azure.com).
-
 ## Enable Defender for Containers plan
 
 The first step is to enable the Defender for Containers plan on your subscription:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Navigate to **Microsoft Defender for Cloud**.
 
@@ -182,17 +204,17 @@ You can exclude specific AKS clusters from automatic provisioning by applying ta
 After setup, regularly:
 
 1. **Review recommendations** - Address security issues identified for your AKS clusters
-2. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
-3. **Track compliance** - Monitor adherence to security standards and benchmarks
-4. **Scan images** - Review vulnerability findings for container images
+1. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
+1. **Track compliance** - Monitor adherence to security standards and benchmarks
+1. **Scan images** - Review vulnerability findings for container images
 
 ## Best practices
 
 1. **Enable all components** - Get comprehensive protection by enabling all available features
-2. **Regular monitoring** - Check the Containers dashboard weekly for new findings
-3. **Automated remediation** - Use Azure Policy to enforce security configurations
-4. **Image hygiene** - Regularly update base images and remove vulnerable packages
-5. **Network segmentation** - Implement network policies to limit container communication
+1. **Regular monitoring** - Check the Containers dashboard weekly for new findings
+1. **Automated remediation** - Use Azure Policy to enforce security configurations
+1. **Image hygiene** - Regularly update base images and remove vulnerable packages
+1. **Network segmentation** - Implement network policies to limit container communication
 
 ## Clean up resources
 

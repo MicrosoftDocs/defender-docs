@@ -7,7 +7,23 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on Azure (AKS)
 
-After enabling Defender for Containers, verify that all components are properly deployed and functioning.
+After enabling Defender for Containers, use this guide to verify all components are functioning correctly.
+
+## Validation checklist
+
+Complete these verification steps in order:
+
+- [ ] [Defender plan shows as enabled](#verify-plan-enablement)
+- [ ] [Defender sensor pods are running](#verify-sensor-deployment) (kube-system namespace)
+- [ ] [Azure Policy add-on is enabled](#verify-azure-policy-add-on)
+- [ ] [Log Analytics data is flowing](#verify-data-collection)
+- [ ] [Container images are being scanned](#verify-container-image-scanning)
+- [ ] [Test security alert generated successfully](#test-security-detection)
+- [ ] [Security recommendations are appearing](#verify-recommendations)
+- [ ] [No error messages in component logs](#check-defender-sensor-logs)
+
+> [!TIP]
+> If any validation step fails, see the [Troubleshooting](#common-verification-issues) section for that component.
 
 ## Verify plan enablement
 
@@ -48,6 +64,16 @@ kubectl get pods -n kube-system -l app=microsoft-defender
 
 # Check pod logs
 kubectl logs -n kube-system -l app=microsoft-defender --tail=50
+```
+
+### Check Defender sensor logs
+
+```bash
+# View recent logs
+kubectl logs -n kube-system -l app=microsoft-defender --tail=100
+
+# Check for errors
+kubectl logs -n kube-system -l app=microsoft-defender | grep ERROR
 ```
 
 ## Verify Azure Policy add-on
@@ -144,23 +170,60 @@ kubectl top nodes
 kubectl top pods -n kube-system
 ```
 
+Common causes:
+
+- **Insufficient resources**: Increase node size or add nodes
+- **Network policies**: Ensure egress to Azure endpoints is allowed
+- **RBAC issues**: Verify cluster has proper permissions
+
 ### No security alerts
 
 If you're not seeing security alerts:
 
-- Ensure diagnostic logs are enabled
-- Verify Log Analytics workspace connection
-- Check that runtime protection is enabled in Defender settings
+1. Ensure diagnostic logs are enabled
+2. Verify Log Analytics workspace connection
+3. Check that runtime protection is enabled in Defender settings
+4. Wait 5-10 minutes after generating test events
 
 ### Missing recommendations
 
 If recommendations are missing:
 
-- Verify Azure Policy add-on is enabled
-- Wait up to 24 hours for initial assessment
-- Check that agentless discovery is enabled
+1. Verify Azure Policy add-on is enabled
+2. Wait up to 24 hours for initial assessment
+3. Check that agentless discovery is enabled
+4. Ensure clusters aren't excluded via tags
+
+### No vulnerability scan results
+
+For missing vulnerability scans:
+
+1. Verify ACR integration is configured
+2. Check that images have been pushed recently
+3. Ensure vulnerability assessment is enabled
+4. Wait up to 4 hours for initial scans
+
+## Performance validation
+
+### Check resource usage
+
+```bash
+# Check Defender sensor resource usage
+kubectl top pods -n kube-system -l app=microsoft-defender
+
+# Monitor over time
+watch kubectl top pods -n kube-system -l app=microsoft-defender
+```
+
+### Verify minimal impact
+
+Defender sensors should use:
+
+- CPU: < 100m per node (typical)
+- Memory: < 200Mi per node (typical)
 
 ## Next steps
 
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
+- [Troubleshoot common issues](defender-for-containers-troubleshooting.md)
 - [Remove Defender for Containers](defender-for-containers-azure-remove.md)
