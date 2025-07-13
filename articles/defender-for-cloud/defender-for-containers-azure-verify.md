@@ -225,5 +225,4 @@ Defender sensors should use:
 ## Next steps
 
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
-- [Troubleshoot common issues](defender-for-containers-troubleshooting.md)
 - [Remove Defender for Containers](defender-for-containers-azure-remove.md)

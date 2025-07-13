@@ -14,7 +14,7 @@ Microsoft Defender for Containers provides enterprise-grade security for Azure K
 Defender for Containers is a cloud-native security solution that protects containerized applications throughout their lifecycle. For Azure environments, it provides seamless integration with AKS to deliver real-time protection, continuous security assessments, and actionable recommendations without requiring complex configurations or third-party tools.
 
 > [!TIP]
-> For a comprehensive overview of Defender for Containers capabilities across all environments, see [Overview of Microsoft Defender for Containers](defender-for-containers-overview.md).
+> For a comprehensive overview of Defender for Containers capabilities across all environments, see [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
 The solution helps security and DevOps teams prevent vulnerabilities from reaching production, detect and respond to runtime threats, and maintain compliance with security standards—all through a unified experience in Microsoft Defender for Cloud.
 
@@ -44,8 +44,6 @@ Defender for Containers delivers security across three critical areas:
 ## Architecture overview
 
 The Defender for Containers architecture on Azure is designed for simplicity and effectiveness:
-
-:::image type="content" source="media/defender-for-containers-azure/architecture-diagram.png" alt-text="Diagram showing Defender for Containers architecture on Azure with AKS clusters, ACR, and Azure components." lightbox="media/defender-for-containers-azure/architecture-diagram-full.png":::
 
 **Defender Sensor**: Deployed as a DaemonSet on each AKS cluster, collects runtime telemetry and security events with minimal performance impact.
 
