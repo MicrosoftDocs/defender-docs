@@ -31,7 +31,7 @@ Identify your architecture and your requirements, and then use the table below t
 > [!NOTE]
 > The Defender for Identity sensor version 3.x is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 > The Defender for Identity sensor v3.x:
-> - Requires that Defender for Endpoint is deployed on your endpoints
+> - Requires that Defender for Endpoint is deployed
 > - Doesn't currently support VPN integration
 > - Doesn't currently support ExpressRoute
 > - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.

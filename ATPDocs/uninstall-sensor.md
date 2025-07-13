@@ -1,7 +1,7 @@
 ---
 title: Uninstall the sensor
 description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 07/02/2025
+ms.date: 07/07/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -22,21 +22,24 @@ Deactivating Defender for Identity capabilities from your domain controller does
 
 ## Delete a sensor
 
+### For sensor v3.x
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
-1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-    ![Screenshot that shows how to delete a sensor.](media/screenshot-that-shows-how-to-delete-a-sensor.png)
+   :::image type="content" source="media/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor." lightbox="media/screenshot-that-shows-how-to-delete-a-sensor.png":::
 
-## Uninstall a sensor v2.x from a domain controller
+    >[!NOTE]
+    >This action removes the v3.x sensor and stops monitoring on that domain controller.   
 
-The following steps describe how to uninstall a sensor v2.x from a domain controller.
-
-1. Sign in to the domain controller with administrative privileges.
-1. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
-1. Select the sensor installation, select **Uninstall**, and follow the instructions to remove the sensor.
+## Delete and uninstall a sensor v2.x from a domain controller
 
 > [!IMPORTANT]
 > We recommend removing the sensor from the domain controller before demoting the domain controller.
+> 
+1. Sign in to the domain controller with administrative privileges.
+2. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
+3. Select the sensor installation, select **Uninstall**, and follow the instructions to remove the sensor.
+4. After uninstallation is complete, go to the Microsoft Defender portal > Settings > Identities > Sensors, select the domain controller, and choose Delete.
 
 ## Remove an orphaned sensor
 
