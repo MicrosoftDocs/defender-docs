@@ -1,4 +1,4 @@
----
+<img width="1838" height="203" alt="image" src="https://github.com/user-attachments/assets/0929ebc6-e539-444b-9ff5-275f77eeb84b" />---
 title: Install Defender for Containers sensor Using Helm
 description: Learn how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters using Helm, including prerequisites, scripts, and troubleshooting steps.
 author: dcurwin
@@ -159,9 +159,9 @@ You can define security rules to control what is allowed to be deployed into you
 > [!IMPORTANT]
 > For Helm installations:
 > 
-> **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
->  **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
-
+> - **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+>  - **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
+> 
 > :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
 
 ## Existing recommendation to provision sensor
