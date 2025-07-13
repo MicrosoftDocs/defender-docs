@@ -106,7 +106,7 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 - For Microsoft Entra sign-in activities, Defender for Cloud Apps only surfaces interactive sign-in activities and sign-in activities from legacy protocols such as ActiveSync. 
 
 > [!NOTE]
-> Microsoft Defender for Cloud Apps also shows non-interactive sign-in events in certain scenarios, such as sign-in activities labeled `Call: OrgIdWsTrust2:process`.
+> Microsoft Defender for Cloud Apps shows non-interactive sign-in events in certain scenarios, such as sign-in activities labeled `Call: OrgIdWsTrust2:process`.
 
 Non-interactive sign-in activities can be viewed in the Microsoft Entra audit log.
 
