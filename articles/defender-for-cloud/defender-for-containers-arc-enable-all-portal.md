@@ -7,26 +7,51 @@ ms.date: 06/04/2025
 
 # Enable all Defender for Containers components on Arc-enabled Kubernetes via portal
 
-This article walks you through enabling all Microsoft Defender for Containers components on your Arc-enabled Kubernetes clusters using the Azure portal. This ensures comprehensive protection for your on-premises and IaaS Kubernetes environments.
+This article walks you through enabling all Microsoft Defender for Containers components on your Arc-enabled Kubernetes clusters using the Azure portal. This comprehensive approach ensures you get full protection including vulnerability scanning, runtime threat detection, and security posture management for your on-premises and multi-cloud Kubernetes environments.
+
+## Article contents
+
+- [Prerequisites](#prerequisites)
+- [Connect cluster to Arc](#connect-your-cluster-to-azure-arc)
+- [Enable Defender plan](#enable-defender-for-containers-plan)
+- [Configure components](#configure-all-plan-components)
+- [Deploy extensions](#deploy-extensions-to-arc-enabled-clusters)
+- [Configure workspace](#configure-log-analytics-workspace)
+- [Verify deployment](#verify-extension-deployment)
+- [Enable scanning](#enable-vulnerability-scanning)
+- [Test and monitor](#test-the-deployment)
+
+> [!NOTE]
+> This guide covers the complete setup for new deployments. If you already have Defender for Containers enabled and need to fix or add components, see [Deploy specific components](defender-for-containers-arc-deploy-portal.md).
+
+## When to use this guide
+
+Use this guide if you're:
+
+- Setting up Defender for Containers on Arc-enabled clusters for the first time
+- Want comprehensive protection for all your on-premises or multi-cloud clusters
+- Need to secure multiple distributions (OpenShift, Rancher, Tanzu, etc.)
+- Looking for a guided, visual deployment experience
+
+For selective deployment or troubleshooting existing deployments, see [Deploy specific Defender for Containers components on Arc-enabled Kubernetes](defender-for-containers-arc-deploy-portal.md).
 
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Additional requirements:
+Additional Arc-specific requirements:
 
 - CNCF-certified Kubernetes cluster (on-premises or IaaS)
 - Cluster version 1.19 or later
 - Outbound HTTPS connectivity to Azure endpoints
 - Azure CLI installed locally or Azure Cloud Shell
-
-## Sign in to Azure
-
-Sign in to the [Azure portal](https://portal.azure.com).
+- Sufficient cluster resources for Arc and Defender components
 
 ## Connect your cluster to Azure Arc
 
 If your Kubernetes cluster isn't already connected to Azure Arc:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Navigate to **Azure Arc** in the Azure portal.
 
@@ -92,7 +117,7 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 1. Select your Arc-enabled clusters.
 
     > [!IMPORTANT]
-    > Don't select the clusters by their hyperlinked names. Select anywhere else in the relevant row.
+    > Select the checkbox next to the cluster name, not the hyperlinked name itself.
 
 1. Select **Fix** to automatically deploy the extensions.
 
@@ -110,7 +135,7 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
    - Configure the Log Analytics workspace
    - Complete installation
 
-1. Repeat to install **Azure Policy for Kubernetes** extension.
+1. Repeat to install **Azure Policy for Kubernetes** extension if needed.
 
 ## Configure Log Analytics workspace
 
@@ -128,7 +153,7 @@ During extension deployment:
 
 1. Verify both extensions show as **Succeeded**:
    - Microsoft Defender for Containers
-   - Azure Policy for Kubernetes
+   - Azure Policy for Kubernetes (if deployed)
 
 1. Select each extension to view configuration details.
 
@@ -140,9 +165,18 @@ For Arc-enabled clusters, configure registry scanning:
    - Vulnerability scanning is automatically enabled
    - Ensure ACR is in the same subscription or connected
 
-1. For other registries:
-   - Configure registry credentials in Defender settings
-   - Enable scanning for specific registries
+1. For private registries:
+
+   ```bash
+   # Create registry credentials
+   kubectl create secret docker-registry regcred \
+       --namespace mdc \
+       --docker-server=<registry-url> \
+       --docker-username=<username> \
+       --docker-password=<password>
+   ```
+
+1. Update extension configuration to use credentials.
 
 ## Monitor deployment progress
 
@@ -206,22 +240,39 @@ You can exclude specific Arc-enabled clusters from automatic provisioning:
    - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
    - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
 
+## Distribution-specific considerations
+
+### OpenShift
+
+- Ensure Security Context Constraints (SCCs) are properly configured
+- Audit log path: `/var/log/openshift-apiserver/audit.log`
+
+### Rancher
+
+- Configure appropriate namespaces exclusions
+- Consider Rancher-specific RBAC settings
+
+### VMware Tanzu
+
+- Enable audit logging if not already configured
+- Ensure PSP/PSA policies allow Defender components
+
 ## Monitor ongoing security
 
 After setup, regularly:
 
-1. **Review recommendations** - Address security issues identified for your Arc-enabled clusters
-2. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
-3. **Track compliance** - Monitor adherence to security standards and benchmarks
-4. **Scan images** - Review vulnerability findings for container images
+1. **Review recommendations** - Address security issues for Arc-enabled clusters
+1. **Investigate alerts** - Respond to runtime threats detected
+1. **Track compliance** - Monitor adherence to CIS benchmarks
+1. **Update components** - Keep Arc and Defender extensions current
 
 ## Best practices
 
-1. **Enable all components** - Get comprehensive protection by enabling all available features
-2. **Regular monitoring** - Check the Containers dashboard weekly for new findings
-3. **Alert response** - Investigate high-severity alerts immediately
-4. **Image hygiene** - Regularly update base images and remove vulnerable packages
-5. **Network segmentation** - Implement network policies to limit container communication
+1. **Enable all components** - Get comprehensive protection
+1. **Configure exclusions carefully** - Only exclude non-production namespaces
+1. **Monitor resource usage** - Ensure adequate cluster capacity
+1. **Regular updates** - Keep extensions and Arc agents current
+1. **Alert response** - Establish procedures for security alerts
 
 ## Troubleshooting
 
@@ -234,15 +285,18 @@ If extensions fail to install:
    az connectedk8s show -n <cluster-name> -g <resource-group>
    ```
 
-2. Verify outbound connectivity to required endpoints.
+1. Verify outbound connectivity to required endpoints.
 
-3. Check extension status:
+1. Check extension status:
 
    ```bash
-   az k8s-extension show --name microsoft.azuredefender.kubernetes --cluster-name <cluster-name> --resource-group <resource-group> --cluster-type connectedClusters
+   az k8s-extension show --name microsoft.azuredefender.kubernetes \
+       --cluster-name <cluster-name> \
+       --resource-group <resource-group> \
+       --cluster-type connectedClusters
    ```
 
-4. Review pod status:
+1. Review pod status:
 
    ```bash
    kubectl get pods -n mdc
@@ -264,5 +318,5 @@ To disable Defender for Containers:
 ## Next steps
 
 - [Configure advanced settings for Arc-enabled clusters](defender-for-containers-arc-configure.md)
-- [Investigate security alerts](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
+- [Investigate security alerts](defender-for-kubernetes-alerts.md)
 - [Review and implement security recommendations](recommendations-reference-container.md)

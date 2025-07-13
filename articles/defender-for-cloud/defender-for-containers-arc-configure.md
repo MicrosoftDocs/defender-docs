@@ -9,6 +9,31 @@ ms.date: 06/04/2025
 
 This article explains how to configure advanced settings for Defender for Containers on your Arc-enabled Kubernetes clusters.
 
+## Configuration areas
+
+Jump to the configuration you need:
+
+### Core settings
+
+- [Configure runtime protection](#configure-runtime-protection)
+- [Configure vulnerability scanning](#configure-vulnerability-scanning)
+- [Configure security policies](#configure-security-policies)
+
+### Distribution-specific
+
+- [OpenShift configuration](#openshift-specific-configuration)
+- [Rancher configuration](#rancher-specific-configuration)
+- [VMware Tanzu configuration](#configure-for-vmware-tanzu)
+
+### Advanced features
+
+- [Configure alerts](#configure-alerts-and-notifications)
+- [Resource optimization](#configure-resource-optimization)
+- [Multi-cluster policies](#configure-multi-cluster-policies)
+
+> [!TIP]
+> Start with [runtime protection](#configure-runtime-protection) and [distribution-specific](#configure-for-specific-distributions) settings for your environment.
+
 ## Configure runtime protection
 
 ### Exclude namespaces from monitoring
@@ -70,6 +95,13 @@ data:
     excludeSystemNamespaces: true
 ```
 
+Apply Security Context Constraints:
+
+```bash
+oc adm policy add-scc-to-user privileged system:serviceaccount:mdc:microsoft-defender
+oc adm policy add-scc-to-user hostaccess system:serviceaccount:mdc:microsoft-defender
+```
+
 ### Rancher-specific configuration
 
 ```yaml
@@ -83,6 +115,21 @@ data:
     monitorCattleSystem: false
     excludeRancherNamespaces: true
     customAuditPath: /var/log/rancher/audit.log
+```
+
+### Configure for VMware Tanzu
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microsoft-defender-tanzu
+  namespace: mdc
+data:
+  tanzuConfig: |
+    enablePSP: true
+    monitorSystemNamespaces: false
+    customLogPath: /var/log/kubernetes/audit.log
 ```
 
 ## Configure vulnerability scanning
@@ -111,13 +158,33 @@ kubectl patch configmap microsoft-defender-config -n mdc --type merge -p '
 ```azurecli
 # Update extension configuration
 az k8s-extension update \
-    --name microsoft-defender \
+    --name microsoft.azuredefender.kubernetes \
     --cluster-name <cluster-name> \
     --resource-group <resource-group> \
     --cluster-type connectedClusters \
     --configuration-settings \
         scanFrequency=24h \
         scanOnPush=true
+```
+
+### Air-gapped registry configuration
+
+For disconnected environments:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microsoft-defender-airgap
+  namespace: mdc
+data:
+  airgapConfig: |
+    localRegistry: "internal-registry.company.com"
+    skipTLSVerify: false
+    caCertificate: |
+      -----BEGIN CERTIFICATE-----
+      [Your CA Certificate]
+      -----END CERTIFICATE-----
 ```
 
 ## Configure security policies
@@ -148,7 +215,7 @@ data:
 ```bash
 # Enable specific CIS controls
 az k8s-extension update \
-    --name microsoft-defender \
+    --name microsoft.azuredefender.kubernetes \
     --cluster-name <cluster-name> \
     --resource-group <resource-group> \
     --cluster-type connectedClusters \
@@ -235,6 +302,24 @@ spec:
                 - linux
 ```
 
+### Edge deployment optimization
+
+For resource-constrained edge environments:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: defender-edge-config
+  namespace: mdc
+data:
+  edgeOptimization: |
+    reducedTelemetry: true
+    localProcessing: true
+    batchSize: 100
+    flushInterval: 300s
+```
+
 ## Configure multi-cluster policies
 
 For organizations with multiple Arc clusters:
@@ -259,7 +344,7 @@ az policy assignment create \
 ```bash
 # Configure compliance standards
 az k8s-extension update \
-    --name microsoft-defender \
+    --name microsoft.azuredefender.kubernetes \
     --cluster-name <cluster-name> \
     --resource-group <resource-group> \
     --cluster-type connectedClusters \
@@ -286,6 +371,39 @@ data:
         .metadata.labels."company.com/env" != null
 ```
 
+## Configure for specific scenarios
+
+### High-security environments
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: defender-high-security
+  namespace: mdc
+data:
+  securityConfig: |
+    enforceNetworkPolicies: true
+    blockPrivilegedContainers: true
+    requireSignedImages: true
+    enableAuditAllActions: true
+```
+
+### Development environments
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: defender-dev-config
+  namespace: mdc
+data:
+  devConfig: |
+    reducedAlerts: true
+    excludeTestNamespaces: true
+    suppressInfoAlerts: true
+```
+
 ## Monitor configuration changes
 
 ```kusto
@@ -298,23 +416,30 @@ ConfigurationChange
 | order by TimeGenerated desc
 ```
 
-## Troubleshooting
+## Troubleshooting configuration
 
-If you encounter issues:
+If configuration changes aren't taking effect:
 
-1. Check the [support matrix](support-matrix-defender-for-containers.md) for compatibility.
-
-1. Review extension logs:
+1. Verify ConfigMap is applied:
 
    ```bash
-   kubectl logs -n azure-arc deployment/azure-arc-controllers
+   kubectl get configmap -n mdc microsoft-defender-config -o yaml
    ```
 
-1. Verify cluster connectivity to Azure endpoints.
+1. Restart Defender components:
 
-1. Consult the [general troubleshooting guide](/azure/defender-for-cloud/troubleshooting-guide).
+   ```bash
+   kubectl rollout restart deployment -n mdc
+   ```
+
+1. Check logs for configuration errors:
+
+   ```bash
+   kubectl logs -n mdc deployment/microsoft-defender-controller | grep -i config
+   ```
 
 ## Next steps
 
 - [Verify your configuration](defender-for-containers-arc-verify.md)
+- [Deploy to additional clusters](defender-for-containers-arc-deploy.md)
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)
