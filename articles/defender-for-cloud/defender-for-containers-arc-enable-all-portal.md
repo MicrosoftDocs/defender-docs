@@ -318,5 +318,4 @@ To disable Defender for Containers:
 ## Next steps
 
 - [Configure advanced settings for Arc-enabled clusters](defender-for-containers-arc-configure.md)
-- [Investigate security alerts](defender-for-kubernetes-alerts.md)
 - [Review and implement security recommendations](recommendations-reference-container.md)
