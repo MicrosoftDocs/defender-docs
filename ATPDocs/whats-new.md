@@ -26,6 +26,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2025
 
+### Identity scoping is now available in Governance environments
+
+Following our June Public Preview announcement, Scoping is now also supported in government (GOV) environments. Organizations in these envriemnts, can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
 ### New security posture assessments for unmonitored identity servers
 
 Microsoft Defender for Identity now includes three security posture assessments that detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
