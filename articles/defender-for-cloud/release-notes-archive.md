@@ -4207,7 +4207,7 @@ Other changes in November include:
 
 According to the [2021 State of the Cloud report](https://info.flexera.com/CM-REPORT-State-of-the-Cloud#download), 92% of organizations now have a multicloud strategy. At Microsoft, our goal is to centralize security across environments, and to help security teams work more effectively.
 
-**Microsoft Defender for Cloud**  is a Cloud Security Posture Management (CSPM) and cloud workload protection platform (CWPP) solution that discovers weaknesses across your cloud configuration, helps strengthen the overall security posture of your environment, and protects workloads across multicloud and hybrid environments.
+**Microsoft Defender for Cloud**  is a Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP) solution that discovers weaknesses across your cloud configuration, helps strengthen the overall security posture of your environment, and protects workloads across multicloud and hybrid environments.
 
 At Ignite 2019, we shared our vision to create the most complete approach for securing your digital estate and integrating XDR technologies under the Microsoft Defender brand. Unifying Azure Security Center and Azure Defender under the new name **Microsoft Defender for Cloud** reflects the integrated capabilities of our security offering and our ability to support any cloud platform.
 
