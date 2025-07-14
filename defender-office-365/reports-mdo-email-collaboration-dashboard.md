@@ -18,7 +18,7 @@ ms.collection:
 description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
-ms.date: 6/27/2025
+ms.date: 07/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -131,10 +131,8 @@ Hover over a category in the chart to see the number of **Onboarded** priority a
 
 The graph on the **Policy recommendations** card shows the number of users directly protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) policies as a percentage of the total number of users (the value 100% means everyone is protected). The numbers are taken from whether the following recommended actions in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) have the **Status** value `Completed`:
 
-- <u>Safe Links</u>:
-  - **Create Safe Links policies for email messages**
-- <u>Safe Attachments</u>:
-  - **Ensure Safe Attachments policy is enabled**
+- <u>Safe Links</u>: **Create Safe Links policies for email messages**
+- <u>Safe Attachments</u>: **Ensure Safe Attachments policy is enabled**
 
 Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users protected by Safe Links or Safe Attachment policies as defined by the recommended actions in Microsoft Secure Score).
 
