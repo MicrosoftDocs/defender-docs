@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 Scoping is now supported in government (GOV) environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
 
-For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 ### New security posture assessments for unmonitored identity servers
 
@@ -353,7 +353,8 @@ This version includes improvements and bug fixes for cloud services and the Defe
 ### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
 
 To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
-With this data customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity
+
+With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
 Access Defender XDR portal -> Hunting -> Advanced Hunting.
 
