@@ -106,10 +106,10 @@ The mirror server can run any of the following operating systems:
 
 ## Configure the mirror server
 
-Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
-
 > [!NOTE]
 > Management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment.
+
+Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
 
 While management and ownership of the mirror server lies solely with the customer, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
 
@@ -323,8 +323,8 @@ Use the following sample mdatp_managed.json file and update the parameters as pe
 | **Field Name** | **Values** | **Comments** |
 |---|---|---|
 | `automaticDefinitionUpdateEnabled` | `true`/`false` | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
-| `definitionUpdatesInterval` | Numeric | Time of interval between each automatic update of signatures (in seconds). |
-| `offlineDefinitionUpdateUrl` | String | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
+| `definitionUpdatesInterval` | numeric | Time of interval between each automatic update of signatures (in seconds). |
+| `offlineDefinitionUpdateUrl` | string | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). |
 | `offlineDefinitionUpdate` | `enabled`/`disabled` | When set to `enabled`, the "offline security intelligence update" feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud` | `true`/`false` | Determine the Defender for Endpoint security intelligence update approach when "offline mirror server" fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when "offline security intelligence update" failed; else, vice versa. |
 | `offlineDefinitionUpdateVerifySig` | `enabled`/`disabled` | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. |
@@ -359,7 +359,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
    If the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
 
-   By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
+   By default, this periodic interval is **8 hours**. It can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
 * **Manual update**
 
