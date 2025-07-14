@@ -32,12 +32,12 @@ You can also check protection coverage for all subscriptions and resources using
 Some features are turned on by default when you enable Defender for Servers. You can modify plan features manually as follows:
 
 1. In subscription enabled for Defender for Cloud, select **Environment settings**.
-1. Under Cloud Workload Protection (CWP), in the **Servers** entry > **Monitoring coverage** column, select **Settings**.
+1. Locate Defender for Servers and select **Settings**.
 1. In **Settings and monitoring**, select the setting you want to modify.
 
     **Feature** | **Details** | **Modify plan**
     --- | --- | ---
-    **Vulnerability assessment** | When you enable Defender for Servers Plan 1 (P1) or 2 (P2), [vulnerability scanning](auto-deploy-vulnerability-assessment.md) is enabled by default.<br/> | [Manually configure](deploy-vulnerability-assessment-defender-vulnerability-management.md) vulnerability scanning settings.
+    **Vulnerability assessment** | When you enable Defender for Servers Plan 1 (P1) or Plan 2 (P2), [vulnerability scanning](auto-deploy-vulnerability-assessment.md) is enabled by default.<br/> | [Manually configure](deploy-vulnerability-assessment-defender-vulnerability-management.md) vulnerability scanning settings.
     **Endpoint protection**. | When you enable Defender for Servers Plan 1 (P1) or 2 (P2), Defender for Endpoint is integrated by default. Protection features from Defender for Endpoint are available. Automatic provisioning of the Defender for Endpoint agent on connected machines is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
     **Agentless scanning** |  [Agentless scanning](concept-agentless-data-collection.md) provides a number of scanning capabilities. It's enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](exclude-machines-agentless-scanning.md).
     **File integrity monitoring** | When you enable Defender for Servers Plan 2, you can turn on file integrity monitoring. It's not turned on by default |  [Learn about](file-integrity-monitoring-compare-baselines.md) and [enable](file-integrity-monitoring-enable-defender-endpoint.md) file integrity monitoring

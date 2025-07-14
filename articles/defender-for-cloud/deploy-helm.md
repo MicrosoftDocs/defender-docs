@@ -22,7 +22,7 @@ If your Defender for Containers plan isn't already enabled, follow these steps:
 
 1. In the Azure portal, go to **Microsoft Defender for Cloud**, and select the subscription for the clusters where you want to install the Helm chart. In EKS and GKE, select the environment with those clusters (the security connector for the EKS or GKE account with the cluster).
 
-1. Under **Cloud Workload Protection (CWP)**, find the **Containers** plan and set the toggle to **On**.
+1. Under **Cloud Workload Protection Platform (CWPP)**, find the **Containers** plan and set the toggle to **On**.
 
    :::image type="content" source="media/deploy-helm/enable-containers-plan.png" alt-text="Screenshot showing how to enable the Containers plan." lightbox="media/deploy-helm/enable-containers-plan.png":::
 
