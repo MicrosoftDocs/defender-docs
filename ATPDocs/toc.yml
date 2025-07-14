@@ -269,7 +269,7 @@ items:
            href: security-assessment-weak-cipher.md    
      - name: Cloud identities
        items:
-       - name: Assign multi-factor authentication for Okta privileged user accounts
+       - name: Assign multi-factor authentication to Okta privileged user accounts
          href: assign-multi-factor-authentication-okta-privileged-user-accounts.md
        - name: Change password for Okta privileged user accounts
          href: change-okta-password-privileged-user-accounts.md 
