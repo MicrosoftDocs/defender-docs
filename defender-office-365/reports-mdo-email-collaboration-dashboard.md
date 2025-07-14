@@ -38,7 +38,7 @@ The information on the **Overview** page is organized into the following areas:
 
 For the permissions required to view the dashboard and reports, see [What permissions are needed to view these reports?](reports-email-security.md#what-permissions-are-needed-to-view-these-reports).
 
-By default, the data on the page is shown for the last 30 days. But, you can show data for the last 60 days or the last 90 days by selecting the **Last 30 days** drop down at the top of the page.
+By default, the data on the page is shown for the last 30 days.
 
 :::image type="content" source="media/email-collab-overview.png" alt-text="Screenshot of the Email and collaboration overview report page in the Microsoft Defender portal." lightbox="media/email-collab-overview.png":::
 
@@ -56,13 +56,13 @@ The graph on the **Phish / Malware Efficacy** card visually represents the prote
 
 - **Pre-delivery**: Items detected before they reach the recipient's mailbox.
 - **Post-delivery**: Items removed after the item was delivered to the recipient's mailbox via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
-- **Uncaught**: Delivered items that ZAP identified but couldn't remove. For example:
+- **Uncaught**: Delivered items that ZAP identified but didn't remove due to them already being remediated. For example:
   - Admin deletions or remediations.
   - [Admin submissions](submissions-admin.md) to Microsoft identifying the message as malware or phishing.
   - User deletions.
   - Non-Microsoft security provider deletions.
 
-The percentage value is the number of messages in each category divided by the total number of malicious malware and phishing email during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+The percentage value is the number of messages in each category divided by the total number of malicious malware and phishing email during the review period selected.
 
 Hover over a category in the chart to see the number of messages in each category for the review period. Hover over the percentage to see the total number of messages
 
@@ -80,7 +80,7 @@ Hover over a category in the chart to see the number of messages in each categor
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2323912 --->
 
-The graph on the **Threat detections** card shows the number of messages detected by the following technologies during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days):
+The graph on the **Threat detections** card shows the number of messages detected by the following technologies during the review period selected.
 
 - **Malware**: The breakdown of detection technologies is available in the **Threat protection status** report under [View data by Email \> Malware and Chart breakdown by Detection Technology](reports-email-security.md#view-data-by-email--malware-and-chart-breakdown-by-detection-technology).
 
@@ -132,10 +132,8 @@ Hover over a category in the chart to see the number of **Onboarded** priority a
 The graph on the **Policy recommendations** card shows the number of users directly protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) policies as a percentage of the total number of users (the value 100% means everyone is protected). The numbers are taken from whether the following recommended actions in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) have the **Status** value `Completed`:
 
 - <u>Safe Links</u>:
-  - **Ensure Safe Links for Office applications is enabled**
   - **Create Safe Links policies for email messages**
 - <u>Safe Attachments</u>:
-  - **Turn on Safe Attachments in block mode**
   - **Ensure Safe Attachments policy is enabled**
 
 Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users protected by Safe Links or Safe Attachment policies as defined by the recommended actions in Microsoft Secure Score).
@@ -173,7 +171,7 @@ The **Tenant allow types** card shows a table with the types of allow entries in
   - [File hash](tenant-allow-block-list-files-configure.md#create-allow-entries-for-files)
   - [Sender](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses)
   - [IP allow](tenant-allow-block-list-ip-addresses-configure.md#create-allow-entries-for-ipv6-addresses)
-- **Messages allowed** column: The number of messages allowed for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+- **Messages allowed** column: The number of messages allowed for the review period selected.
 
 :::image type="content" source="media/email-collab-overview-risky-allows-tenant-allow-types.png" alt-text="Screenshot of the Tenant allow types card in the Risky allows section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-risky-allows-tenant-allow-types.png":::
 
@@ -184,7 +182,7 @@ The **Tenant allow types** card shows a table with the types of allow entries in
 The **Exchange transport rules** card shows the mail flow rules (also known as transport rules) that allowed messages that would otherwise be blocked:
 
 - **Rule ID**
-- **Messages allowed**: The number of messages allowed during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+- **Messages allowed**: The number of messages allowed during the review period selected.
 
 Select **Review rules** to go to the **Rules** page in the Exchange admin center (EAC) at <https://admin.cloud.microsoft/exchange#/transportrules>.
 
@@ -205,7 +203,7 @@ The graph on the **Email detections** shows Microsoft and non-Microsoft detectio
 - **Non-Microsoft post-delivery detections**
 - **Duplicate detections Duplicate post-delivery detections**
 
-Hover over a category in the chart to see the number of messages in each category for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+Hover over a category in the chart to see the number of messages in each category for the review period selected.
 
 :::image type="content" source="media/email-collab-overview-compare-solutions-email-detections.png" alt-text="Screenshot of the Email detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-email-detections.png":::
 
@@ -220,7 +218,7 @@ The graphs on the **Non-Microsoft detections** show the following information fo
   - **Phish**
   - **Spam**
 
-  Hover over a category in the chart to see the number of messages in each category for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+  Hover over a category in the chart to see the number of messages in each category for the review selected.
 
 - **Efficacy** graph: Shows the unique detections by the non-Microsoft service as a percentage of the total detections by Defender for Office 365.
 
@@ -232,7 +230,7 @@ The information in the **Insights** section is described in the following subsec
 
 ### Top trending attacks card
 
-The graph on the **Top trending attacks** card shows the most encountered phishing attack types by volume for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+The graph on the **Top trending attacks** card shows the most encountered phishing attack types by volume for the review period selected.
 
 Threat classification in Defender for Office 365 uses advanced technologies such as large language models (LLMs), small language models (SLMs), and machine learning (ML) models to automatically detect and classify email-based threats.
 
@@ -248,7 +246,7 @@ The **Emerging threats** card shows any notable campaigns observed by Microsoft 
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
 
-The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of missed messages is normalized per 1,000 active users.
+The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of missed phish and malware messages is normalized per 1,000 active users.
 
 :::image type="content" source="media/email-collab-overview-insights-m365-secure-email-gateway.png" alt-text="Screenshot of the Microsoft 365 Secure Email Gateway performance card in the Insights section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-insights-m365-secure-email-gateway.png":::
 
