@@ -91,7 +91,7 @@ In some cases, a vNext service release differs slightly at the administrative an
 
 Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/microsoft-365/compliance/detailed-properties-in-the-office-365-audit-log?view=o365-worldwide&preserve-view=true) and receives all audited events from all supported services. For a list of supported services, see [Microsoft 365 services that support auditing](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#microsoft-365-services-that-support-auditing).
 
-- Exchange administrator audit logging, is enabled by default in Microsoft 365. It logs an event in the Microsoft 365 audit log when an administrator (or a user with administrative privileges) makes a change in your Exchange Online organization. Changes made using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more information about admin audit logging in Exchange, see [Administrator audit logging](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log).
+- Exchange administrator audit logging is enabled by default in Microsoft 365. It logs an event in the Microsoft 365 audit log when an administrator (or a user with administrative privileges) makes a change in your Exchange Online organization. Changes made using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more information about admin audit logging in Exchange, see [Administrator audit logging](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log).
 
 - Events from **Exchange**, **Power BI**, and **Teams** will only appear after activities from those services are detected in the portal.
 
@@ -105,10 +105,10 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 
 - For Microsoft Entra sign-in activities, Defender for Cloud Apps only surfaces interactive sign-in activities and sign-in activities from legacy protocols such as ActiveSync. 
 
-> [!NOTE]
-> Microsoft Defender for Cloud Apps shows non-interactive sign-in events in certain scenarios, such as sign-in activities labeled `Call: OrgIdWsTrust2:process`.
+    > [!NOTE]
+    > Microsoft Defender for Cloud Apps shows non-interactive sign-in events in certain scenarios, such as sign-in activities labeled `Call: OrgIdWsTrust2:process`.
 
-Non-interactive sign-in activities can be viewed in the Microsoft Entra audit log.
+    Non-interactive sign-in activities can be viewed in the Microsoft Entra audit log.
 
 - If Office apps are enabled, groups that are part of Microsoft 365 are also imported to Defender for Cloud Apps from the specific Office apps. For example, if SharePoint is enabled, Microsoft 365 groups are imported as SharePoint groups.
 
@@ -127,7 +127,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 #### Prerequisites:
 
-- To enable file monitoring of Microsoft 365 files, you must use a relevant Microsoft Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
+- To enable file monitoring of Microsoft 365 files, you must use a relevant Microsoft Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
