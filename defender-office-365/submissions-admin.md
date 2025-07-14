@@ -846,6 +846,19 @@ In organizations with Microsoft Defender for Office 365 (add-on licenses or incl
   - **Search for similar messages in Explorer**: **Emails** tab only.
   - **Search for URL or file**: **Email attachments** or **URL** tabs only.
 
+## Dispute the result for submissions to Microsoft
+
+When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict. A _dispute_ is different from _resubmitting_ the item:
+
+- **Dispute**: The original verdict and history is retained.
+- **Resubmit**: When selecting :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit an item, the analysis and evaluation starts over.
+
+You can use the procedures in this section to dispute the following items:
+
+- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** is one of the following values:
+  - **Threats found**
+  - **No threats found**
+
 ## Admin options for user reported messages
 
 For email messages, admins can see what users are reporting on the **User reported** tab on the **Submissions** page if the following statements are true:
