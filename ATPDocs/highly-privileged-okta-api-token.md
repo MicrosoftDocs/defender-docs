@@ -1,6 +1,6 @@
 ---
 title: 'Security assessment: Highly privileged Okta API token'
-description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers limit the number of Super Admin accounts to the minimum required for their organization.
+description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers limit the use of highly privileged API tokens.
 author:      izauer-bit  # GitHub alias
 ms.author:   itaizauer
 ms.service: microsoft-defender-for-identity

@@ -278,7 +278,7 @@ items:
        - name: Highly privileged Okta API token
          href: highly-privileged-okta-api-token.md
        - name: Limit the number of Okta Super Admin accounts
-         href: limit-the-number-of-okta-super-admin-accounts.md
+         href: limit-number-okta-super-admin-accounts.md
        - name: Remove dormant Okta privileged accounts
          href: remove-dormant-okta-privileged-accounts.md
      - name: Identity security initiative (Preview)
