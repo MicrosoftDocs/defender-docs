@@ -14,6 +14,9 @@ Microsoft's "Local Administrator Password Solution" (LAPS) provides management o
 
 This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) and [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
+ [!NOTE]
+ For the changes being reflected using Windows LAPS, the password needs to be saved in on-premises Active Directory
+
 ## What risk does not implement LAPS pose to an organization?
 
 LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
