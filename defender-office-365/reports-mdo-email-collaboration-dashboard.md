@@ -66,7 +66,7 @@ The percentage value is the number of messages in each category divided by the t
 
 Hover over a category in the chart to see the number of messages in each category for the review period. Hover over the percentage to see the total number of messages
 
-:::image type="content" source="media/email-collab-overview-mdo-efficacy.png" alt-text="Screenshot of the Efficacy card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-efficacy.png":::
+:::image type="content" source="media/email-collab-overview-mdo-efficacy.png" alt-text="Screenshot of the Phish / Malware Efficacy card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-efficacy.png":::
 
 > [!TIP]
 >
