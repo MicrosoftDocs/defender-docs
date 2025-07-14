@@ -1,28 +1,28 @@
 ---
 title: DevOps environment posture management overview
 description: Learn how to discover security posture violations in DevOps environments 
-ms.date: 05/18/2025
+ms.date: 07/14/2025
 ms.topic: conceptual
 ---
 
 # Improve DevOps environment security posture
 
-Due to an increase in cyber attacks on source code management systems and continuous integration/continuous delivery pipelines, it's crucial to secure DevOps platforms against the diverse range of threats identified in the [DevOps Threat Matrix](https://www.microsoft.com/security/blog/2023/04/06/devops-threat-matrix/) is crucial. These cyber attacks can enable code injection, privilege escalation, and data exfiltration, potentially leading to extensive impact.
+With an increase of cyber attacks on source code management systems and continuous integration/continuous delivery pipelines, securing DevOps platforms against the diverse range of threats identified in the [DevOps Threat Matrix](https://www.microsoft.com/security/blog/2023/04/06/devops-threat-matrix/) is crucial. Such cyber attacks can enable code injection, privilege escalation, and data exfiltration, potentially leading to extensive impact.  
 
 DevOps posture management is a feature in Microsoft Defender for Cloud that:
 
 - Provides insights into the security posture of the entire software supply chain lifecycle.
 - Uses advanced scanners for in-depth assessments.
-- Covers various resources, including organizations, pipelines, and repositories.
+- Covers various resources, from organizations, pipelines, and repositories.  
 - Allows customers to reduce their attack surface by uncovering and acting on the provided recommendations.
 
 ## DevOps scanners
 
-DevOps posture management uses scanners to identify weaknesses in source code management and continuous integration/continuous delivery pipelines. It runs checks against security configurations and access controls to provide findings.
+To provide findings, DevOps posture management uses DevOps scanners to identify weaknesses in source code management and continuous integration/continuous delivery pipelines by running checks against the security configurations and access controls.
 
-Azure DevOps and GitHub scanners are used internally within Microsoft to identify risks associated with DevOps resources, reducing the attack surface and strengthening corporate DevOps systems.
+Azure DevOps and GitHub scanners are used internally within Microsoft to identify risks associated with DevOps resources, reducing attack surface and strengthening corporate DevOps systems.
 
-Once a DevOps environment is connected, Defender for Cloud autoconfigures these scanners to conduct recurring scans every 24 hours across multiple DevOps resources, including:
+Once a DevOps environment is connected, Defender for Cloud autoconfigures these scanners to conduct recurring scans every 24 hours across multiple DevOps resources, including:  
 
 - Builds
 - Secure Files
@@ -33,10 +33,10 @@ Once a DevOps environment is connected, Defender for Cloud autoconfigures these 
 
 ## DevOps threat matrix risk reduction
 
-DevOps posture management assists organizations in discovering and remediating harmful misconfigurations in the DevOps platform. This leads to a resilient, zero-trust DevOps environment, which is strengthened against a range of threats defined in the DevOps threat matrix. The primary posture management controls include:
+DevOps posture management assists organizations in discovering and remediating harmful misconfigurations in the DevOps platform. This leads to a resilient, zero-trust DevOps environment, which is strengthened against a range of threats defined in the DevOps threat matrix.  The primary posture management controls include:
 
 - **Scoped secret access**: Minimize the exposure of sensitive information and reduce the risk of unauthorized access, data leaks, and lateral movements by ensuring each pipeline only has access to the secrets essential to its function.
-- **Restriction of self-hosted runners and high permissions**: Prevent unauthorized executions and potential escalations by avoiding self-hosted runners and ensuring that pipeline permissions default to read-only.
+- **Restriction of self-hosted runners and high permissions**: prevent unauthorized executions and potential escalations by avoiding self-hosted runners and ensuring that pipeline permissions default to read-only.
 - **Enhanced branch protection**: Maintain the integrity of the code by enforcing branch protection rules and preventing malicious code injections.
 - **Optimized permissions and secure repositories**: Reduce the risk of unauthorized access, modifications by tracking minimum base permissions, and enablement of [secret push protection](https://docs.github.com/enterprise-cloud@latest/code-security/secret-scanning/push-protection-for-repositories-and-organizations) for repositories.
 
