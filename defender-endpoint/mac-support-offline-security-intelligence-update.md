@@ -1,5 +1,5 @@
 ---
-title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS
+title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 ms.subservice: macos
@@ -106,7 +106,10 @@ The mirror server can run any of the following operating systems:
 
 ## Configure the mirror server
 
-Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed. **Management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment**.
+Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
+
+> [!NOTE]
+> Management and ownership of the mirror server lies solely with the customer, as it resides in the customer's private environment.
 
 While management and ownership of the mirror server lies solely with the customer, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
 
