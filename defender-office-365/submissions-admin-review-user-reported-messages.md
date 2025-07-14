@@ -42,7 +42,7 @@ Admins can mark messages and notify users of review results only if the user [re
   - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
   - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
 
-[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
+  For more information, see [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
   So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
 
