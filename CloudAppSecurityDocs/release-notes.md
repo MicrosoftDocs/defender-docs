@@ -328,7 +328,7 @@ A new user experience dedicated to providing users the option to export from 'ac
 
 You can filter the results using time range and various other filters and even hide private activities.
 
-For more information, see [Export activities six months back](activity-filters-queries.md#export-activities-six-months-back-preview)
+For more information, see [Export activities six months back](activity-filters-queries.md#export-activities-six-months-back).
 
 ## July 2024
 ### Configure and embed a custom support URL in Block pages (Preview)
