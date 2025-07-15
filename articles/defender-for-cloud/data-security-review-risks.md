@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 11/12/2023
+ms.date: 07/15/2025
 ms.custom: template-how-to-pattern
 ---
 # Explore risks to sensitive data
@@ -45,7 +45,7 @@ Explore data risks and exposure in cloud security graph insights using a query t
 1. In Defender for Cloud, open **Cloud Security Explorer**.
 1. You can build your own query, or select  one of the sensitive data query templates > **Open query**, and modify it as needed. Here's an example:
 
-    :::image type="content" source="./media/data-security-review-risks/query.png" alt-text="Screenshot that shows an Insights data query.":::
+    :::image type="content" source="./media/data-security-review-risks/query.png" alt-text="Screenshot that shows an Insights data query." lightbox="media/data-security-review-risks/query.png":::
 
 ### Use query templates
 
@@ -56,13 +56,13 @@ As an alternative to creating your own query, you can use predefined query templ
 
 When you open a predefined query, it's populated automatically and can be tweaked as needed. For example, here are the prepopulated fields for "Internet exposed storage containers with sensitive data that allow public access".
 
-:::image type="content" source="./media/data-security-review-risks/query-template.png" alt-text="Screenshot that shows an Insights data query template.":::
+:::image type="content" source="./media/data-security-review-risks/query-template.png" alt-text="Screenshot that shows an Insights data query template." lightbox="media/data-security-review-risks/query-template.png":::
 
 ## Explore sensitive data security alerts
 
 When sensitive data discovery is enabled in the Defender for Storage plan, you can prioritize and focus on alerts the alerts that affect resources with sensitive data. [Learn more](defender-for-storage-data-sensitivity.md) about monitoring data security alerts in Defender for Storage.
 
-For PaaS databases and S3 Buckets, findings are reported to Azure Resource Graph (ARG) allowing you to filter and sort by sensitivity labels and sensitive info types in Defender for Cloud Inventory, Alert and Recommendation blades.
+For PaaS databases and S3 Buckets, findings are reported to Azure Resource Graph (ARG) allowing you to filter and sort by sensitivity labels and sensitive info types in Defender for Cloud Inventory, Alert, and Recommendation blades.
 
 ## Export findings
 
@@ -70,7 +70,7 @@ It's common for the security administrator, who reviews sensitive data findings 
 
 For that purpose, use the **Export** within the **Contains sensitive data** insight.
 
-:::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text="Screenshot of how to export insights.":::
+:::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text=":::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text="Screenshot of how to export insights.":::":::
 
 The CSV file produced includes:
 
@@ -80,7 +80,7 @@ The CSV file produced includes:
 - **Sensitive info types** – discovered info types per sample. If more than one info type was detected, a new row is added for each info type. This is to allow an easier filtering experience.
 
 > [!NOTE]
-> **Download CSV report** in the Cloud Security Explorer page will export all insights retrieved by the query in raw format (json).
+> **Download CSV report** in the Cloud Security Explorer page exports all insights retrieved by the query in raw format (json).
 
 ## Next steps
 

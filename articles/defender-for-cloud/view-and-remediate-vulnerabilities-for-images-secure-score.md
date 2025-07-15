@@ -4,7 +4,7 @@ description: Learn how to view and remediate vulnerabilities for images running 
 ms.service: defender-for-cloud
 ms.custom: build-2023
 ms.topic: how-to
-ms.date: 09/06/2023
+ms.date: 07/15/2025
 ---
 
 # View and remediate vulnerabilities for images running on Kubernetes clusters (secure score)
@@ -12,7 +12,7 @@ ms.date: 09/06/2023
 > [!NOTE]
 > This page describes the classic secure score approach to vulnerability management in Defender for Cloud. Customers using Defender CSPM should use the new risk-based approach: [View and remediate vulnerabilities for images running on your Kubernetes clusters (Risk based)](view-and-remediate-vulnerabilities-for-images.md).
 
-Defender for Cloud gives its customers the ability to prioritize the remediation of vulnerabilities in images that are currently being used within their environment using the [Running container images should have vulnerability findings resolved](https://portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/KubernetesRuntimeVisibilityRecommendationDetailsBlade/assessmentKey/41503391-efa5-47ee-9282-4eff6131462ce) recommendation.
+Defender for Cloud gives you the ability to prioritize the remediation of vulnerabilities in images that are currently being used within your environment using the [Running container images should have vulnerability findings resolved](https://portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/KubernetesRuntimeVisibilityRecommendationDetailsBlade/assessmentKey/41503391-efa5-47ee-9282-4eff6131462ce) recommendation.
 
 To provide findings for the recommendation, Defender for Cloud uses [agentless discovery for Kubernetes](defender-for-containers-introduction.md) or the [Defender sensor](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) to create a full inventory of your Kubernetes clusters and their workloads and correlates that inventory with the vulnerability reports created for your registry images. The recommendation shows your running containers with the vulnerabilities associated with the images that are used by each container and remediation steps.
 
@@ -32,7 +32,7 @@ Within each recommendation, resources are grouped into tabs:
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-secure-score/running-image-recommendation-line.png" alt-text="Screenshot showing the recommendation line for running container images should have vulnerability findings resolved." lightbox="media/view-and-remediate-vulnerabilities-for-images-secure-score/running-image-recommendation-line.png":::
 
-1. The recommendation details page opens showing the list of Kubernetes clusters ("affected resources") and categorizes them as healthy, unhealthy and not applicable, based on the images used by your workloads. Select the relevant cluster for which you want to remediate vulnerabilities.
+1. The recommendation details page opens showing the list of Kubernetes clusters ("affected resources") and categorizes them as healthy, unhealthy, and not applicable, based on the images used by your workloads. Select the relevant cluster for which you want to remediate vulnerabilities.
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-secure-score/running-select-cluster.png" alt-text="Screenshot showing the affected clusters for the recommendation." lightbox="media/view-and-remediate-vulnerabilities-for-images-secure-score/running-select-cluster.png":::
 

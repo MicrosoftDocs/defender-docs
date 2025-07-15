@@ -49,7 +49,7 @@ By enabling pull request annotations in GitHub, your developers gain the ability
 
 1. Select **msdevopssec.yml**, which was created in the [prerequisites](#prerequisites).
 
-    :::image type="content" source="media/tutorial-enable-pr-annotations/devopssec.png" alt-text="Screenshot that shows you where on the screen to select the msdevopssec.yml file." lightbox="media/tutorial-enable-pr-annotations/devopssec.png" lightbox="media/tutorial-enable-pr-annotations/devopssec.png":::
+    :::image type="content" source="media/tutorial-enable-pr-annotations/devopssec.png" alt-text="Screenshot that shows you where on the screen to select the msdevopssec.yml file." lightbox="media/tutorial-enable-pr-annotations/devopssec.png" :::
 
 1. Select **edit**.
 
