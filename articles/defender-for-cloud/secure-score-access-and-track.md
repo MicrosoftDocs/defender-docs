@@ -2,7 +2,7 @@
 title: Track your secure score
 description: Learn about the multiple ways to access and track your secure score in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 07/15/2025
 ---
 
 # Track secure score
@@ -14,7 +14,7 @@ You can find your overall secure score, and your score per subscription, through
 
 ## Get your secure score from the portal
 
-Defender for Cloud displays your score prominently in the portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you'll see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+Defender for Cloud displays your score prominently in the portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
 
 Your secure score is shown in the following locations in Defender for Cloud's portal pages.
 
@@ -64,7 +64,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
         | project subscriptionId, current, max, percentage = ((current / max)*100)
         ```
 
-    - This query returns the status of all the security controls. For each control, you'll get the number of unhealthy resources, the current score, and the maximum score.
+    - This query returns the status of all the security controls. For each control, you get the number of unhealthy resources, the current score, and the maximum score.
 
         ```kusto
         SecurityResources 
@@ -88,7 +88,7 @@ Defender for Cloud's workbooks page includes a ready-made report for visually tr
 If you're a Power BI user with a Pro account, you can use the **Secure Score Over Time** Power BI dashboard to track your secure score over time and investigate any changes.
 
 > [!TIP]
-> You can find this dashboard, as well as other tools for working programmatically with secure score, in the dedicated area of the Microsoft Defender for Cloud community on GitHub: <https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score>
+> You can find this dashboard, and other tools for working programmatically with secure score, in the dedicated area of the Microsoft Defender for Cloud community on GitHub: <https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score>
 
 The dashboard contains the following two reports to help you analyze your security status:
 

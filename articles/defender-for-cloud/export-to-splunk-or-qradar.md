@@ -4,7 +4,7 @@ description: Learn how to configure the required Azure resources in the Azure po
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 01/14/2024
+ms.date: 07/15/2025
 ---
 
 # Prepare Azure resources for exporting to Splunk and QRadar
@@ -25,9 +25,9 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
     1. In the namespace that you create, select **+ Event Hub**.
     1. Enter the details of the event hub, and select **Review + create**, and select **Create**.
 1. Create a shared access policy.
-    1. In the Event Hub menu, select the Event Hubs namespace you created.
-    1. In the Event Hub namespace menu, select **Event Hubs**.
-    1. Select the event hub that you just created.
+    1. In the Event Hubs menu, select the Event Hubs namespace you created.
+    1. In the Event Hubs namespace menu, select **Event Hubs**.
+    1. Select the event hub that you created.
     1. In the event hub menu, select **Shared access policies**.
     1. Select **Add**, enter a unique policy name, and select **Send**.
     1. Select **Create** to create the policy.
@@ -58,7 +58,7 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 1. Define the basic policy options:
     1. In Scope, select the **...** to select the scope to apply the policy to.
     1. Find the root management group (for tenant scope), management group, subscription, or resource group in the scope and select **Select**.
-        - To select a tenant root management group level you need to have permissions on tenant level.
+        - To select a tenant root management group level, you need to have permissions on tenant level.
     1. (Optional) In Exclusions you can define specific subscriptions to exclude from the export.
     1. Enter an assignment name.
     1. Make sure policy enforcement is enabled.

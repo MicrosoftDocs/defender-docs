@@ -2,7 +2,7 @@
 title: Grant and request tenant-wide permissions
 description: Learn how to manage tenant-wide permissions in Microsoft Defender for Cloud effectively to enhance your organization's security.
 ms.topic: how-to
-ms.date: 05/16/2024
+ms.date: 07/15/2025
 # customer intent: As a user, I want to learn how to manage tenant-wide permissions in Microsoft Defender for Cloud so that I can effectively manage my organization's security.
 ---
 
@@ -18,11 +18,11 @@ A user with the Microsoft Entra role of **Global Administrator** might have tena
 
 1. As a Global Administrator user without an assignment on the root management group of the tenant, open Defender for Cloud's **Overview** page and select the **tenant-wide visibility** link in the banner.
 
-    :::image type="content" source="media/management-groups-roles/enable-tenant-level-permissions-banner.png" alt-text="Enable tenant-level permissions in Microsoft Defender for Cloud.":::
+    :::image type="content" source="media/management-groups-roles/enable-tenant-level-permissions-banner.png" alt-text="Enable tenant-level permissions in Microsoft Defender for Cloud." lightbox="media/management-groups-roles/enable-tenant-level-permissions-banner.png":::
 
 1. Select the new Azure role to be assigned.
 
-    :::image type="content" source="media/management-groups-roles/enable-tenant-level-permissions-form.png" alt-text="Form for defining the tenant-level permissions to be assigned to your user.":::
+    :::image type="content" source="media/management-groups-roles/enable-tenant-level-permissions-form.png" alt-text="Form for defining the tenant-level permissions to be assigned to your user." lightbox="media/management-groups-roles/enable-tenant-level-permissions-form.png":::
 
     > [!TIP]
     > Generally, the Security Admin role is required to apply policies on the root level, while Security Reader will suffice to provide tenant-level visibility. For more information about the permissions granted by these roles, see the [Security Admin built-in role description](/azure/role-based-access-control/built-in-roles#security-admin) or the [Security Reader built-in role description](/azure/role-based-access-control/built-in-roles#security-reader).
@@ -47,7 +47,7 @@ For more information of the Microsoft Entra elevation process, see [Elevate acce
 
 ## Request tenant-wide permissions when yours are insufficient
 
-When you navigate to Defender for Cloud, you might see a banner that alerts you to the fact that your view is limited. If you see this banner, select it to send a request to the global administrator for your organization. In the request, you can include the role you'd like to be assigned and the global administrator will make a decision about which role to grant.
+When you navigate to Defender for Cloud, you might see a banner that alerts you to the fact that your view is limited. If you see this banner, select it to send a request to the global administrator for your organization. In the request, you can include the role you'd like to be assigned and the global administrator will decide which role to grant.
 
 It's the global administrator's decision whether to accept or reject these requests.
 
