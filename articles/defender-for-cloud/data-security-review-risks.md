@@ -70,7 +70,7 @@ It's common for the security administrator, who reviews sensitive data findings 
 
 For that purpose, use the **Export** within the **Contains sensitive data** insight.
 
-:::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text=":::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text="Screenshot of how to export insights.":::":::
+:::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text="Screenshot of how to export insights." lightbox="media/data-security-review-risks/export-findings.png":::
 
 The CSV file produced includes:
 
