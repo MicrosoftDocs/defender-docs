@@ -72,10 +72,12 @@ After securely receiving the tokens, the developer must configure an environment
 |GDN_MDC_CLI_CLIENT_SECRET|Client Secret generated above|
 |GDN_MDC_CLI_TENANT_ID|Azure AD Tenant ID|
 |GDN_PIPELINENAME|`bitbucket`, `jenkins`, `gcp`, `bamboo`, `circle`, `travis`, `teamcity`, `oci`, `aws`|
+|GDN_TRIVY_ACTION|`image`|
+|GDN_TRIVY_TARGET| Name of image being scanned|
 
 ### Update the CI/CD pipeline script
 
-Below is a minimal Bitbucket Pipeline example that downloads the latest cross‑platform build, initializes the project and runs Trivy:
+Below is a minimal Bitbucket Pipeline example that downloads the latest cross‑platform build, initializes the project and runs Trivy. Other examples of CI/CD pipelines can be found in this [GitHub Repository](https://github.com/microsoft/security-devops-samples/tree/main/ci-cd-integrations).
 
 ```yaml
 image: atlassian/default-image:3
