@@ -76,7 +76,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Nondefault columns: Email and Microsoft Entra ID risk level.  
+Nondefault columns: Email, Microsoft Entra ID risk level and Cloud ID. 
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
