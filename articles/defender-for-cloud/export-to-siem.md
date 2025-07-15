@@ -4,7 +4,7 @@ description: Learn how to stream your security alerts to Microsoft Sentinel, SIE
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 01/15/2024
+ms.date: 07/14/2025
 ---
 
 # Stream alerts to monitoring solutions

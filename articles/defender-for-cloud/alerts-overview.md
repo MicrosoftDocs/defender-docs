@@ -4,7 +4,7 @@ description: Learn how Microsoft Defender for Cloud generates security alerts an
 ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
-ms.date: 05/29/2023
+ms.date: 07/14/2025
 ms.custom: fasttrack-edit
 ---
 # Security alerts and incidents
@@ -32,7 +32,7 @@ Alerts have a severity level assigned to help prioritize how to attend to each a
 
 | Severity          | Recommended response                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **High**          | There is a high probability that your resource is compromised. You should look into it right away. Defender for Cloud has high confidence in both the malicious intent and in the findings used to issue the alert. For example, an alert that detects the execution of a known malicious tool such as Mimikatz, a common tool used for credential theft.                                                                                                           |
+| **High**          | There's a high probability that your resource is compromised. You should look into it right away. Defender for Cloud has high confidence in both the malicious intent and in the findings used to issue the alert. For example, an alert that detects the execution of a known malicious tool such as Mimikatz, a common tool used for credential theft.                                                                                                           |
 | **Medium**        | This is probably a suspicious activity might indicate that a resource is compromised. Defender for Cloud's confidence in the analytic or finding is medium and the confidence of the malicious intent is medium to high. These would usually be machine learning or anomaly based detections, for example a sign-in attempt from an unusual location.                                                                                                            |
 | **Low**           | This might be a benign positive or a blocked attack. Defender for Cloud isn't confident enough that the intent is malicious and the activity might be innocent. For example, log clear is an action that might happen when an attacker tries to hide their tracks, but in many cases is a routine operation performed by admins. Defender for Cloud doesn't usually tell you when attacks were blocked, unless it's an interesting case that we suggest you look into. |
 | **Informational** | An incident is typically made up of a number of alerts, some of which might appear on their own to be only informational, but in the context of the other alerts might be worthy of a closer look.                                                                                                                                                                                                                                                               |
@@ -93,7 +93,7 @@ Defender for Cloud employs advanced security analytics, which go far beyond sign
 
 ### Behavioral analytics
 
-Behavioral analytics is a technique that analyzes and compares data to a collection of known patterns. However, these patterns are not simple signatures. They are determined through complex machine learning algorithms that are applied to massive datasets. They are also determined through careful analysis of malicious behaviors by expert analysts. Microsoft Defender for Cloud can use behavioral analytics to identify compromised resources based on analysis of virtual machine logs, virtual network device logs, fabric logs, and other sources.
+Behavioral analytics is a technique that analyzes and compares data to a collection of known patterns. However, these patterns aren't simple signatures. They're determined through complex machine learning algorithms that are applied to massive datasets. They're also determined through careful analysis of malicious behaviors by expert analysts. Microsoft Defender for Cloud can use behavioral analytics to identify compromised resources based on analysis of virtual machine logs, virtual network device logs, fabric logs, and other sources.
 
 ### Anomaly detection
 
