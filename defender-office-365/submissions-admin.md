@@ -855,9 +855,10 @@ When you disagree with the verdict of an email or URL you submitted to Microsoft
 
 You can use the procedures in this section to dispute the following items:
 
-- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** is one of the following values:
-  - **Threats found**
-  - **No threats found**
+- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
+  - **Allowed due to user overrides**
+  - **Item was not found**
+  - **We did not receive the submission, please fix the problem and resubmit**
 
 ## Admin options for user reported messages
 
