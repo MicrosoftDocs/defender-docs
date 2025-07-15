@@ -45,7 +45,7 @@ By enabling pull request annotations in GitHub, your developers gain the ability
 
 1. Navigate to **`Your repository's home page`** > **.github/workflows**.
 
-    :::image type="content" source="media/tutorial-enable-pr-annotations/workflow-folder.png" alt-text="Screenshot that shows where to navigate to, to select the GitHub workflow folder." lightbox="media/tutorial-enable-pr-annotations/workflow-folder.png" lightbox="media/tutorial-enable-pr-annotations/workflow-folder.png":::
+    :::image type="content" source="media/tutorial-enable-pr-annotations/workflow-folder.png" alt-text="Screenshot that shows where to navigate to, to select the GitHub workflow folder." lightbox="media/tutorial-enable-pr-annotations/workflow-folder.png" :::
 
 1. Select **msdevopssec.yml**, which was created in the [prerequisites](#prerequisites).
 

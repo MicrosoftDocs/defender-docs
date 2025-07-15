@@ -2,12 +2,12 @@
 title: Offboarding Defender for Containers resources
 description: Learn how to offboard Microsoft Defender for Containers resources for the supported Cloud environments.
 ms.topic: how-to
-ms.date: 05/07/2024
+ms.date: 07/15/2025
 ---
 
 # Offboarding Microsoft Defender for Containers resources 
 
-When you enable Defender for Containers capabilities that use automatic provisioning, or use recommendations to manually deploy container capabilities on specific resources, Defender components and extensions are installed in your environment. To help you keep track of these components, we provide tables in the subsequent sections of this article. These tables show the Defender for Clouds feature and its installed Defender for Container components, extensions, and roles.
+When you enable Defender for Containers capabilities that use automatic provisioning, or use recommendations to manually deploy container capabilities on specific resources, Defender components, and extensions are installed in your environment. To help you keep track of these components, we provide tables in the subsequent sections of this article. These tables show the Defender for Clouds feature and its installed Defender for Container components, extensions, and roles.
 
 If you decide to stop using those capabilities, you might also want to remove such components from your environment. This article assists you in understanding the actions that can be taken to remove them.
 

@@ -32,7 +32,7 @@ You can enable continuous export as a trusted service so that you can send data 
 
 1. Select **Export as a trusted service**.
 
-    :::image type="content" source="media/continuous-export-event-hub-firewall/export-as-trusted.png" alt-text="Screenshot that shows where the checkbox is located to select export as trusted service.":::
+    :::image type="content" source="media/continuous-export-event-hub-firewall/export-as-trusted.png" alt-text="Screenshot that shows where the checkbox is located to select export as trusted service." lightbox="media/continuous-export-event-hub-firewall/export-as-trusted.png":::
 
 ## Add the relevant role assignment to the destination event hub.
 
