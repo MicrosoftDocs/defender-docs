@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 06/13/2025
+ms.date: 07/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -84,7 +84,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
 ### Report questionable email to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -142,7 +142,7 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
 ### Report questionable email attachments to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
@@ -194,7 +194,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
 
 ### Report questionable URLs to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **URLs** tab.
 
@@ -246,7 +246,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
 ### Report good email to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -313,7 +313,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 
 ### Report good email attachments to Microsoft
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
@@ -371,7 +371,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 For URLs reported as false positives, we allow subsequent messages that contain variations of the original URL. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message won't be blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **URLs** tab
 
@@ -436,7 +436,7 @@ The entries on the **Teams messages** tab are the result of submitting user repo
 
 ### View email admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, verify that the **Emails** tab is selected.
 
@@ -546,7 +546,7 @@ When you're finished in the details flyout, select **Close**.
 > [!TIP]
 > [Submission of Teams message to Microsoft](submissions-teams.md) is currently in Preview, isn't available in all organizations, and is subject to change.
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **Teams messages** tab.
 
@@ -635,7 +635,7 @@ When you're finished in the details flyout, select **Close**.
 
 ### View email attachment admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **Email attachments** tab.
 
@@ -725,7 +725,7 @@ When you're finished in the details flyout, select **Close**.
 
 ### View URL admin submissions to Microsoft
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **URLs** tab.
 
@@ -831,6 +831,45 @@ If an override or policy configuration was found, the result should be available
 > [!NOTE]
 > AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
+### Dispute the result for submissions to Microsoft
+
+When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict for eligible items. _Disputing_ the item is different from _resubmitting_ the item:
+
+- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items. The original verdict and history is retained.
+- **Resubmit**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit eligible items. The analysis starts over with no previous verdict or history.
+
+You can use the procedures in this section to dispute the following items:
+
+- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
+  - **Allowed due to user overrides**
+  - **Item was not found**
+  - **We did not receive the submission, please fix the problem and resubmit**
+
+1. On the **Submissions** page in the Defender portal, go to the **Emails** or **URLs** tabs:
+   - **Emails** tab: <https://security.microsoft.com/reportsubmission=email>
+   - **URLs** tab: <https://security.microsoft.com/reportsubmission?viewid=url>
+
+2. On the tab, do one of the following steps:
+   - Select one or more eligible items by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** action that appears.
+
+   image
+
+   - Select an eligible item by clicking anywhere in the row other than the check box next to the first column. In th details flyout that opens, select **Dispute submission result**.
+
+   image
+
+3. In the **Dispute details** flyout that opens, configure the following settings:
+   - **Tell us what did not go well**: Select one or more of the following values:
+     - **Result**
+     - **Reason**
+     - **Recommended steps**
+   - **Additional information (optional)**: Enter an explanation that you think might be helpful.
+   - **Upload as screenshot**: Select this option to upload a JPG or PNG image less than one MB.
+
+   When you're finished on the **Dispute details** flyout, select **Submit dispute**.
+
+   image
+
 ### Actions for admin submissions in Defender for Office 365
 
 In organizations with Microsoft Defender for Office 365 (add-on licenses or included in subscriptions like Microsoft 365 E5 or Microsoft 365 Business Premium), the following actions are available for admin submissions in the details flyout that opens after you select an entry from the list by clicking anywhere in the row other than the check box:
@@ -845,20 +884,6 @@ In organizations with Microsoft Defender for Office 365 (add-on licenses or incl
   - **View this message in Explorer**: **Emails** tab only.
   - **Search for similar messages in Explorer**: **Emails** tab only.
   - **Search for URL or file**: **Email attachments** or **URL** tabs only.
-
-## Dispute the result for submissions to Microsoft
-
-When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict. A _dispute_ is different from _resubmitting_ the item:
-
-- **Dispute**: The original verdict and history is retained.
-- **Resubmit**: When selecting :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit an item, the analysis and evaluation starts over.
-
-You can use the procedures in this section to dispute the following items:
-
-- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
-  - **Allowed due to user overrides**
-  - **Item was not found**
-  - **We did not receive the submission, please fix the problem and resubmit**
 
 ## Admin options for user reported messages
 
