@@ -43,7 +43,7 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 
 1. **Detection:** Microsoft Defender Experts for Hunting identifies the suspicious sign-in attempt and generates an alert.
 2. **Correlation:** The Open XDR platform correlates this alert with other data, such as unusual network traffic and failed sign-in attempts from the same IP address.
-3. **Investigation:** Security analysts use the Open XDR platform to investigate the incident, reviewing logs and other data to understand the scope of the threat.
+3. **Investigation:** Security analysts use the third-party to investigate the incident, reviewing logs and other data to understand the scope of the threat.
 4. **Response:** Automated response actions are triggered, including isolating the affected server and blocking the malicious IP address.
 
 ## Ingesting third-party network signals for enrichment
