@@ -67,15 +67,11 @@ To allow security results from the Defender for Cloud CLI to be passed to the De
 After securely receiving the tokens, the developer must configure an environment variable for the key. The environment variable is passed to the CLI through the shell script that the developer can receive from curl or manually copying the shell script into their repo.
 
 |Variable|Description|
-
-|||
+|----------|----------|
 |GDN_MDC_CLI_CLIENT_ID|Client ID generated above|
-
 |GDN_MDC_CLI_CLIENT_SECRET|Client Secret generated above|
-
 |GDN_MDC_CLI_TENANT_ID|Azure AD Tenant ID|
-
-|GDN_PIPELINENAME|bitbucket, jenkins, gcp, bamboo, circle, travis, teamcity, oci, aws|
+|GDN_PIPELINENAME|`bitbucket`, `jenkins`, `gcp`, `bamboo`, `circle`, `travis`, `teamcity`, `oci`, `aws`|
 
 ### Update the CI/CD pipeline script
 
