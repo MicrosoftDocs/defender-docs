@@ -466,6 +466,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Destination**
 - **Policy action**
 - **Phish simulation**
+- **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -474,6 +475,7 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
+- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -659,6 +661,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Object ID**
 - **Policy action**
 - **Submitted by**
+- - **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -667,6 +670,7 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
+- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -749,6 +753,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Object ID**
 - **Policy action**
 - **Submitted by**
+- **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -757,6 +762,7 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
+- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -835,28 +841,29 @@ If an override or policy configuration was found, the result should be available
 
 When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict for eligible items. _Disputing_ the item is different from _resubmitting_ the item:
 
-- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items. The original verdict and history is retained.
+- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items. The original verdict and history are retained.
 - **Resubmit**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit eligible items. The analysis starts over with no previous verdict or history.
 
 You can use the procedures in this section to dispute the following items:
 
-- Admin submitted **Emails** and **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
+- Admin submitted **Emails**, **Email attachments**, or **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
   - **Allowed due to user overrides**
   - **Item was not found**
   - **We did not receive the submission, please fix the problem and resubmit**
 
-1. On the **Submissions** page in the Defender portal, go to the **Emails** or **URLs** tabs:
-   - **Emails** tab: <https://security.microsoft.com/reportsubmission=email>
+1. On the **Submissions** page in the Defender portal, go to the **Emails**, **Email attachments**, or **URLs** tabs:
+   - **Emails** tab: <https://security.microsoft.com/reportsubmission?viewid=email>
    - **URLs** tab: <https://security.microsoft.com/reportsubmission?viewid=url>
+   - **Email attachments** tab: <https://security.microsoft.com/reportsubmission?viewid=emailAttachment>
 
 2. On the tab, do one of the following steps:
    - Select one or more eligible items by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** action that appears.
 
-   image
+     :::image type="content" source="media/submissions-dispute-from-main-tab.png" alt-text="Screenshot of an entry select on the URLs tab of the Submissions page with Dispute submission result emphasized." lightbox="media/submissions-dispute-from-main-tab.png":::
 
    - Select an eligible item by clicking anywhere in the row other than the check box next to the first column. In th details flyout that opens, select **Dispute submission result**.
 
-   image
+     :::image type="content" source="media/submissions-dispute-from-details.png" alt-text="Screenshot of the details flyout of an admin submissions entry where you can select Dispute submission result." lightbox="media/submissions-dispute-from-details.png":::
 
 3. In the **Dispute details** flyout that opens, configure the following settings:
    - **Tell us what did not go well**: Select one or more of the following values:
@@ -868,7 +875,15 @@ You can use the procedures in this section to dispute the following items:
 
    When you're finished on the **Dispute details** flyout, select **Submit dispute**.
 
-   image
+   :::image type="content" source="media/submissions-dispute-options-flyout.png" alt-text="Screenshot of the Dispute details flyout." lightbox="media/submissions-dispute-options-flyout.png":::
+
+When you select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** \> **Dispute status** on the **Emails**, **Email attachments**, or **URLs** tabs, entries are grouped into the following categories:
+
+- **Not disputed**
+- **Dispute submission**
+- **Disputed**
+
+When you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Is dispute** \> **Yes** or **No**.
 
 ### Actions for admin submissions in Defender for Office 365
 
