@@ -1,9 +1,8 @@
 ---
 title: How to consume and export scan results
 description: Learn how to consume and export Defender for SQL's scan results.
-
 ms.topic: how-to
-ms.date: 06/04/2023
+ms.date: 07/15/2025
 ---
 
 # How to consume and export scan results
@@ -104,13 +103,13 @@ This query is editable and can be customized to a specific resource, set of find
 
 ## Automate email notifications with LogicApps
 
-Azure Logic Apps is a low-code or no-code cloud-based service that provides you with a way to automate workflows and integrate data and services across different systems, both in the cloud and on-premises. You can use Logic App to automate the reports of your vulnerability assessment findings across all supported versions of SQL, to send a weekly vulnerability report summary for any servers that were scanned. You can customize Logic App to run on different schedules such as daily, weekly, monthly or more. You can also customize Logic App to report on different scopes such as per database, server, resource group or more.
+Azure Logic Apps is a low-code or no-code cloud-based service that provides you with a way to automate workflows and integrate data and services across different systems, both in the cloud and on-premises. You can use Logic App to automate the reports of your vulnerability assessment findings across all supported versions of SQL, to send a weekly vulnerability report summary for any servers that were scanned. You can customize Logic App to run on different schedules such as daily, weekly, monthly, or more. You can also customize Logic App to report on different scopes such as per database, server, resource group or more.
 
 You can use [these instructions](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workflow%20automation/Notify-SQLVulnerabilityReport), to learn how to use Logic Apps to automate email notifications using an example template.
 
 This example Logic App template automates a weekly email report that summarizes the vulnerability scan results for every database from a selected list of servers. After you deploy the template, you must authorize the Office 365 connector to generate a valid access token to authenticate your credentials.
 
-The recipients will then receive emails with the findings of the scan results.
+The recipients receive emails with the findings of the scan results.
 
 Sample email Azure SQL server:
 

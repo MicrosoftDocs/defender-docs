@@ -1,7 +1,7 @@
 ---
 title: Export alerts and recommendations with continuous export
 description: Learn about the benefits of continuous export in Microsoft Defender for Cloud. Stream security data to Azure Monitor workspace for analysis and visualization.
-ms.date: 03/25/2024
+ms.date: 07/15/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
@@ -32,7 +32,7 @@ You can use continuous export to export the following data types whenever they c
 - Regulatory compliance.
 - Attack paths
 
-Recommendation severity, security findings and controls are *sub* categories that belong to a *parent* category. For example:
+Recommendation severity, security findings, and controls are *sub* categories that belong to a *parent* category. For example:
 
 - The recommendations [System updates should be installed on your machines (powered by Update Center)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f) and [System updates should be installed on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4ab6e3c5-74dd-8b35-9ab9-f61b30875b27) each has one sub recommendation per outstanding system update.
 - The recommendation [Machines should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1195afff-c881-495e-9bc5-1486211ae03f) has a sub recommendation for every vulnerability that the vulnerability scanner identifies.
@@ -52,7 +52,7 @@ To export data to an event hub or Log Analytics workspace in a different tenant:
 
 - If you use business-to-business (B2B) guest user access in Microsoft Entra ID, ensure that the user accepts the invitation to access the tenant as a guest.
 
-- If you use a Log Analytics workspace, assign the user in the workspace tenant one of these roles: Owner, Contributor, Log Analytics Contributor, Sentinel Contributor, or Monitoring Contributor.
+- If you use a Log Analytics workspace, assign the user in the workspace tenant one of these roles: Owner, Contributor, Log Analytics Contributor, Microsoft Sentinel Contributor, or Monitoring Contributor.
 
 - Create and submit the request to the Azure REST API to configure the required resources. You must manage the bearer tokens in both the context of the local (workspace) tenant and the remote (continuous export) tenant.
 

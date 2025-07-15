@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 12/12/2023
+  ms.date: 07/15/2025
 title: Common questions about protecting containers
 summary: Get answers to common questions about protecting containers
 
@@ -42,7 +42,7 @@ sections:
       - question: |
           Can I delete the default workspaces created by Defender for Cloud? 
         answer: |
-          We don't recommend deleting the default workspace. Defender for Containers uses the default workspaces to collect security data from your clusters. Defender for Containers will be unable to collect data, and some security recommendations and alerts, will become unavailable if you delete the default workspace.
+          We don't recommend deleting the default workspace. Defender for Containers uses the default workspaces to collect security data from your clusters. Defender for Containers are unable to collect data, and some security recommendations and alerts, will become unavailable if you delete the default workspace.
 
       - question: |
           I deleted my default workspace, how can I get it back?
@@ -96,12 +96,12 @@ sections:
       - question: |
           Why is Defender for Cloud alerting me to vulnerabilities about an image that isn't in my registry?
         answer: |
-          Some images might reuse tags from an image that was already scanned. For example, you might reassign the tag “Latest” every time you add an image to a digest. In such cases, the 'old' image does still exist in the registry and might still be pulled by its digest. If the image has security findings and is pulled, it will expose security vulnerabilities.
+          Some images might reuse tags from an image that was already scanned. For example, you might reassign the tag “Latest” every time you add an image to a digest. In such cases, the 'old' image does still exist in the registry and might still be pulled by its digest. If the image has security findings and is pulled, it can expose security vulnerabilities.
 
       - question: |
           Does Defender for Containers scan images in Microsoft Container Registry?
         answer: |
-          Currently, Defender for Containers can scan images in Azure Container Registry (ACR), AWS Elastic Container Registry (ECR), Google Container Registry (GCR), Google Archive Registry (GAR) and supported external registries only.
+          Currently, Defender for Containers can scan images in Azure Container Registry (ACR), AWS Elastic Container Registry (ECR), Google Container Registry (GCR), Google Archive Registry (GAR), and supported external registries only.
           Microsoft Artifact Registry/Microsoft Container Registry, and Microsoft Azure Red Hat OpenShift (ARO) built-in container image registry aren't supported.
 
       - question: |
@@ -182,7 +182,7 @@ sections:
           How do I upgrade from the retired Trivy vulnerability assessment to the AWS vulnerability assessment powered by Microsoft Defender Vulnerability Management?
         answer: |
 
-          The following steps will remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-azure.md).
+          The following steps remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-azure.md).
 
 
           1. Open the relevant AWS connector.
