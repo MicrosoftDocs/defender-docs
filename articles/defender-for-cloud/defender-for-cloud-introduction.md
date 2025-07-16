@@ -10,9 +10,10 @@ ms.date: 05/13/2025
 
 Microsoft Defender for Cloud is a user-friendly cloud-native application protection platform (CNAPP). It includes security measures to protect cloud applications from cyber threats and vulnerabilities. Defender for Cloud provides insights into cloud environments and helps secure cloud resources by offering tools to protect cloud workloads.
 
-- A development security operations (DevSecOps) solution that unifies security management at the code level across multicloud and multi-pipeline environments
-- A cloud security posture management (CSPM) solution that identifies actions to prevent breaches
-- A cloud workload protection platform (CWPP) with protections for servers, containers, storage, databases, and other workloads
+- A development security operations (DevSecOps) solution that unifies security management at the code level across multicloud and multi-pipeline environments.
+- A [cloud security posture management (CSPM)](#cloud-security-posture-management-cspm) solution that identifies actions to prevent breaches.
+- A cloud native application protection platform (CNAPP) that provides a comprehensive view of your security posture across your cloud and on-premises resources.
+- A [cloud workload protection platform (CWPP)](#cloud-workload-protection-platform-cwpp) with protections for servers, containers, storage, databases, and other workloads.
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
@@ -47,6 +48,10 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 | [Cloud Security Explorer](concept-attack-path.md#what-is-cloud-security-explorer) | A map of your cloud environment that lets you build queries to find security risks. | [Build queries to find security risks](how-to-manage-cloud-security-explorer.md) | Defender CSPM                         |
 | [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM                         |
 | [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provide comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
+
+## Cloud native application protection platform (CNAPP)
+
+
 
 ## Cloud workload protection platform (CWPP)
 
