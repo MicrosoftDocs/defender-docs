@@ -34,7 +34,7 @@ The default email protections for cloud mailboxes are on by default via the defa
 
 - [Anti-malware protection](anti-malware-protection-about.md)
 - [Anti-spam protection](anti-spam-protection-about.md)
-- [Anti-phishing (spoofing) protection](anti-phishing-protection-about.md#default-anti-phishing-protection-in-microsoft-365)
+- [Anti-phishing (spoofing) protection](anti-phishing-protection-about.md#anti-phishing-protection-for-all-cloud-mailboxes)
 
 The default threat policies for these features apply to all recipients. You can't turn them off, but you can override them by turning on and configuring [preset security policies](preset-security-policies.md) or creating custom threat policies.
 

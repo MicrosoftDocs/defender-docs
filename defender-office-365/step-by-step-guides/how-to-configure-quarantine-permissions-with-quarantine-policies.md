@@ -60,8 +60,8 @@ When your security team has decided on which categories of items that users can 
 > For more detailed information on what you've learned so far, see:
 >
 > - [Configure spam filter policies](../anti-spam-policies-configure.md)
-> - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](anti-phishing-policies-eop-configure.md)
-> - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
+> - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](../anti-phishing-policies-eop-configure.md)
+> - [Configure anti-phishing policies in Microsoft Defender for Office 365](../anti-phishing-policies-mdo-configure.md)
 > - [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure.md)
 
 ## Next Steps

@@ -38,7 +38,7 @@ Welcome to **Phase 2: Setup** of your **[migration to Microsoft Defender for Off
 2. [Configure user reported message settings](#step-2-configure-user-reported-message-settings)
 3. [Maintain or create the SCL=-1 mail flow rule](#step-3-maintain-or-create-the-scl-1-mail-flow-rule)
 4. [Configure Enhanced Filtering for Connectors](#step-4-configure-enhanced-filtering-for-connectors)
-5. [Create pilot threat policies](#step-5-create-pilot-protection-policies)
+5. [Create pilot threat policies](#step-5-create-pilot-threat-policies)
 
 ## Step 1: Create distribution groups for pilot users
 

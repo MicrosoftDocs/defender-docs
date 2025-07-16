@@ -55,7 +55,7 @@ Another option that's easy to overlook: if a user complains about receiving bulk
 
 ## How to tune bulk email
 
-Admins can follow the [recommended bulk threshold values](recommended-settings-for-eop-and-office365.md#default-email-protections-in-microsoft-365) or choose a bulk threshold value that suits the needs of their organization.
+Admins can follow the [recommended bulk threshold values](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) or choose a bulk threshold value that suits the needs of their organization.
 
 ### Tune bulk email in Microsoft 365
 
