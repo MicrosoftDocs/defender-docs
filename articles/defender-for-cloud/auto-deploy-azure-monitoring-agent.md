@@ -13,6 +13,7 @@ ms.custom: template-how-to
 Microsoft Defender for Cloud uses the Azure Monitor Agent (AMA) to:
 
 - Protect databases in the Defender for SQL Servers on Machines plan.
+- Take advantage of the [free data ingestion](data-ingestion-benefit.md) benefit provided in Defender for Servers Plan 2.
 
 ## AMA in Defender for SQL Servers on Machines
 
