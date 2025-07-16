@@ -34,12 +34,12 @@ When admins or users submit items to Microsoft for analysis, we do the following
 - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
 - **Grader analysis**: Review done by human graders to confirm whether messages are malicious.
 
-[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
+For more information, see [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
 > [!NOTE]
 >
 > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit items to Microsoft for analysis, but the items are analyzed for email authentication and policy hits only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary).
-> - **Currently in Preview**, AI-powered Submissions Response capability introduces generative AI explanations for email submissions to Microsoft. These explanations aim to provide enterprise admins with clear, detailed, human-readable explanations for why messages were classified. Currently, this feature is scoped to email submissions only, and AI-generated explanations aren't used for the following types of submissions:
+> - AI-powered Submissions Response introduces generative AI explanations for email submissions to Microsoft. These explanations aim to provide enterprise admins with clear, detailed, human-readable explanations for why messages were classified. Currently, this feature is scoped to email submissions only, and AI-generated explanations aren't used for the following types of submissions:
 >   - Files
 >   - URLs
 >   - Microsoft Teams messages
