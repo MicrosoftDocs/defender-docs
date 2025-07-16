@@ -841,15 +841,21 @@ If an override or policy configuration was found, the result should be available
 
 When you disagree with the verdict of an email or URL you submitted to Microsoft, you can dispute the verdict for eligible items. _Disputing_ the item is different from _resubmitting_ the item:
 
-- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items. The original verdict and history are retained.
-- **Resubmit**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit eligible items. The analysis starts over with no previous verdict or history.
+- **Dispute**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** to dispute eligible items.
+  - The original verdict and history are retained.
+  - You can dispute an item only once.
+- **Resubmit**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** to resubmit eligible items.
+  - The analysis starts over with no previous verdict or history.
+  - You can resubmit an item multiple times.
 
 You can use the procedures in this section to dispute the following items:
 
-- Admin submitted **Emails**, **Email attachments**, or **URLs** where that **Status** value is **Completed** and **Result** isn't one of the following values:
+- Admin submitted items from the **Emails**, **Email attachments**, or **URLs** tabs where that **Status** value is **Completed** and **Result** isn't one of the following values:
   - **Allowed due to user overrides**
   - **Item was not found**
   - **We did not receive the submission, please fix the problem and resubmit**
+
+  To dispute items from the **User submitted** tab, you first need to [convert the user submission to an admin submission](#submit-user-reported-messages-to-microsoft-for-analysis).
 
 1. On the **Submissions** page in the Defender portal, go to the **Emails**, **Email attachments**, or **URLs** tabs:
    - **Emails** tab: <https://security.microsoft.com/reportsubmission?viewid=email>
@@ -877,13 +883,16 @@ You can use the procedures in this section to dispute the following items:
 
    :::image type="content" source="media/submissions-dispute-options-flyout.png" alt-text="Screenshot of the Dispute details flyout." lightbox="media/submissions-dispute-options-flyout.png":::
 
-When you select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** \> **Dispute status** on the **Emails**, **Email attachments**, or **URLs** tabs, entries are grouped into the following categories:
+On the **Emails**, **Email attachments**, or **URLs** tabs, the following controls are available for disputed items:
 
-- **Not disputed**
-- **Dispute submission**
-- **Disputed**
+- :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** \> **Dispute status** groups entries on the page into the following categories:
+  - **Not disputed**
+  - **Dispute submission**
+  - **Disputed**
 
-When you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Is dispute** \> **Yes** or **No**.
+- :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** \> **Is dispute** adds the **Is dispute** column to the entries on the page.
+
+- :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Is dispute** \> **Yes** or **No** filters filters the entries on the page by whether the item was disputed.
 
 ### Actions for admin submissions in Defender for Office 365
 
