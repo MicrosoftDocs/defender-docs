@@ -8,12 +8,13 @@ ms.date: 05/13/2025
 
 # What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a user-friendly cloud-native application protection platform (CNAPP). It includes security measures to protect cloud applications from cyber threats and vulnerabilities. Defender for Cloud provides insights into cloud environments and helps secure cloud resources by offering tools to protect cloud workloads.
+Microsoft Defender for Cloud is a user-friendly cloud-native application protection platform (CNAPP). It includes security measures to protect cloud applications from cyber threats and vulnerabilities. It provides insights into cloud environments and helps secure cloud resources by offering tools to protect cloud workloads.
 
-- A development security operations (DevSecOps) solution that unifies security management at the code level across multicloud and multi-pipeline environments.
-- A [cloud security posture management (CSPM)](#cloud-security-posture-management-cspm) solution that identifies actions to prevent breaches.
-- A cloud native application protection platform (CNAPP) that provides a comprehensive view of your security posture across your cloud and on-premises resources.
-- A [cloud workload protection platform (CWPP)](#cloud-workload-protection-platform-cwpp) with protections for servers, containers, storage, databases, and other workloads.
+
+- It's a development security operations (DevSecOps) solution that unifies security management at the code level across multicloud and multi-pipeline environments.
+- It's a [cloud security posture management (CSPM)](#cloud-security-posture-management-cspm) solution that identifies actions to prevent breaches.
+- It's a [cloud native application protection platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources.
+- It's a [cloud workload protection platform (CWPP)](#cloud-workload-protection-platform-cwpp) with protections for servers, containers, storage, databases, and other workloads.
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
@@ -22,7 +23,7 @@ Microsoft Defender for Cloud is a user-friendly cloud-native application protect
 
 ## Secure cloud applications
 
-Defender for Cloud helps you incorporate good security practices early in the software development process, or DevSecOps. You can protect your code management environments and code pipelines, and get insights into your development environment security posture from a single location. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
+Defender for Cloud helps you incorporate good security practices early in the software development process, or DevSecOps. You can protect your code management environments and code pipelines, and get insights into your development environment security posture from a single location. It enables security teams to manage DevOps security across multi-pipeline environments.
 
 Today's applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
 
@@ -53,7 +54,7 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
 
-Once the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, security data is collected from your multicloud and DevOps environments. The collected data is then analyzied and used to provide insights, recommendations, and actions to help you secure your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), [Defender for Containers](tutorial-enable-containers-azure.md) and more. 
+After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments.ted data and uses it to provide insights, recommendations, and actions to help you secure your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
 
 Defender for Cloud's available plans and their CNAPP benefits include: 
 
