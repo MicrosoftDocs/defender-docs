@@ -1,17 +1,15 @@
 ---
 title: 'Security assessment: Limit the number of Okta Super Admin accounts'
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers limit the number of Super Admin accounts to the minimum required for their organization.
-author:      izauer-bit  # GitHub alias
-ms.author:   itaizauer
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date: 07/14/2025 
-ms.reviewer: Itai Zauer
+ms.reviewer: Himanch
 ---
 
 # Security assessment: Limit the number of Okta Super Admin accounts
 
-This report lists Okta accounts with Super Administrator role, where the number of users assigned to this role is more than 5.
+This report lists Okta accounts with Super Administrator role, where the number of users assigned to this role is greater than 5.
 
 ## Why is having too many Super Admin accounts a security risk?
 
@@ -21,7 +19,7 @@ A high number of users with privileged roles increases the risk of misuse or una
 
 1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Limit the number of Okta Super Admin accounts" security assessment.
 1. Review the list of exposed entities to discover which of your Okta accounts have Super Admin role assigned.
-1. Reduce the number of users assigned to Super Administrator role to meet the recommended best practices and ensure better control.
+1. Limit Super Administrator access to the minimum number of users necessary to maintain control over privileged access.
 
 ## Next steps
 
