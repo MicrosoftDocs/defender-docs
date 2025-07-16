@@ -19,7 +19,7 @@ A high number of users with privileged roles increases the risk of misuse or una
 
 1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Limit the number of Okta Super Admin accounts" security assessment.
 1. Review the list of exposed entities to discover which of your Okta accounts have Super Admin role assigned.
-1. Limit Super Administrator access to the minimum number of users necessary to maintain control over privileged access.
+1. Limit Super Administrator access to the minimum number of users necessary to maintain control over highest level of privileged access.
 
 ## Next steps
 
