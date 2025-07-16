@@ -9,7 +9,7 @@ ms.date: 05/25/2025
 
 # Determine plan and agents requirements
 
-This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection (CWP) solution across multicloud resources with Microsoft Defender for Cloud.
+This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
 
 ## Goal
 
@@ -24,7 +24,7 @@ When protecting assets across cloud, you need to identify what plans to enable f
 There are data considerations around agents and extensions used by Defender for Cloud.
 
 - **CSPM:** CSPM functionality in Defender for Cloud is agentless. No agents are needed for CSPM to work.
-- **CWP:** Some workload protection functionality for Defender for Cloud requires the use of agents to collect data.
+- **CWPP:** Some workload protection functionality for Defender for Cloud requires the use of agents to collect data.
 
 ## Defender for Servers plan
 

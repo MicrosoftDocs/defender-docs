@@ -7,7 +7,7 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender
+        Azure cosmos db, db, Azure, defender, CWPP, CSPM
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -53,7 +53,7 @@
           displayName: strategy, adoption, ownership
           href: plan-multicloud-security-define-adoption-strategy.md
         - name: Determine plan and agents requirements
-          displayName: data, residency, cspm, cwp, plan
+          displayName: data, residency, cspm, cwpp, plan
           href: plan-multicloud-security-determine-data-residency-requirements.md
         - name: Determine compliance requirements
           displayName: compliance, standards

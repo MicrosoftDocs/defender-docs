@@ -99,7 +99,7 @@ Cloud Native Computing Foundation. Learn how to [build CNCF projects by using Az
 
 Cloud Security Posture Management. See [Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 
-### **CWPP**
+### **CWPPPP**
 
 Cloud Workload Protection Platform. See [CWPP](./overview-page.md).
 

@@ -9,7 +9,7 @@ ms.date: 04/28/2025
 
 # Determine multicloud dependencies
 
-This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection (CWP) solution across multicloud resources with Microsoft Defender for Cloud.
+This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
 
 ## Goal
 
