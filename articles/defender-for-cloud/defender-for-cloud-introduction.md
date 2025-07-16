@@ -6,9 +6,9 @@ ms.date: 05/13/2025
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---
 
-# Microsoft Defender for Cloud overview
+# What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) that includes security measures and practices designed to protect cloud-based applications from various cyber threats and vulnerabilities. Defender for Cloud includes:
+Microsoft Defender for Cloud is a user-friendly cloud-native application protection platform (CNAPP). It includes security measures to protect cloud applications from cyber threats and vulnerabilities. Defender for Cloud provides insights into cloud environments and helps secure cloud resources by offering tools to protect cloud workloads.
 
 - A development security operations (DevSecOps) solution that unifies security management at the code level across multicloud and multi-pipeline environments
 - A cloud security posture management (CSPM) solution that identifies actions to prevent breaches
@@ -17,11 +17,7 @@ Microsoft Defender for Cloud is a cloud-native application protection platform (
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
 > [!NOTE]
-> For Defender for Cloud pricing information, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
-
-The Microsoft 365 Defender portal helps security teams investigate attacks on cloud resources, devices, and identities. Microsoft 365 Defender provides an overview of attacks, including suspicious and malicious events in cloud environments. Microsoft 365 Defender achieves this by correlating all alerts and incidents, including cloud alerts and incidents.
-
-Learn more about the [integration between Microsoft Defender for Cloud and Microsoft Defender XDR](concept-integration-365.md).
+> For pricing information, check out [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 ## Secure cloud applications
 
