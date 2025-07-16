@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 07/16/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
