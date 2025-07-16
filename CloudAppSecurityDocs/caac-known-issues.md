@@ -133,7 +133,7 @@ Option 1: Automatic cleanup
    
 Option 2: Delete the cached policy file (Manual cleanup)
 1. Go to: C:\Users\<username>\AppData\Local\Microsoft\Edge\
-2. Delete the file: mda_store.txt
+2. Delete the file: mda_store.1.txt
 
 Option 3: Remove the work profile in Edge (Manual cleanup)
 1. Open Edge.
