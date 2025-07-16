@@ -71,7 +71,7 @@ After securely receiving the tokens, the developer must configure an environment
 |GDN_MDC_CLI_CLIENT_ID|Client ID generated above|
 |GDN_MDC_CLI_CLIENT_SECRET|Client Secret generated above|
 |GDN_MDC_CLI_TENANT_ID|Azure AD Tenant ID|
-|GDN_PIPELINENAME|`bitbucket`, `jenkins`, `gcp`, `bamboo`, `circle`, `travis`, `teamcity`, `oci`, `aws`|
+|GDN_PIPELINENAME|`bitbucket`, `jenkins`, `gcp`, `bamboo`, `circle`, `travis`, `teamcity`, `oci`, or `aws`|
 |GDN_TRIVY_ACTION|`image`|
 |GDN_TRIVY_TARGET| Name of image being scanned|
 
