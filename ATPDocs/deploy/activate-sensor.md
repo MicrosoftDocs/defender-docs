@@ -25,7 +25,7 @@ You can choose to activate eligible domain controllers either automatically, whe
 |---------|---------|
 |Activate new sensor |The domain controller is already onboarded to Defender for Endpoint. [Activate the sensor](#activate-the-defender-for-identity-sensor).|
 |Install classic sensor|[Deploy the classic Defender for Identity sensor](install-sensor.md) from the **Sensors page**.|
-|OS update is required     |This domain controller is running an unsupported operating system version for the new sensor. Update the server to Windows Server 2019 or later to use the new sensor. |
+|OS upgrade is required     |This domain controller is running an unsupported operating system version for the new sensor. Upgrade the OS version to the latest version. |
 
 <!--|Download onboarding package     |[Onboard the domain controller to Defender for Endpoint](#onboard-the-domain-controller).|-->
 
