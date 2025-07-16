@@ -119,27 +119,26 @@ When a session policy is enforced using Edge in-browser protection and the user 
 
 Example Scenario:
 
-A user was originally assigned a CA policy for the Salesforce application, along with an Defender for Cloud apps session policy that blocked file downloads. As a result, downloads were blocked when the user accessed Salesforce in Edge.
+A user was originally assigned a CA policy for Salesforce along with a Defender for Cloud Apps session policy to block file downloads. As a result, downloads were blocked when the user accessed Salesforce in Edge.
 
 Although the admin later removed the CA policy, the user still experiences the download block in Edge due to cached policy data.
 
 Mitigation Options:
 
 Option 1: Automatic cleanup
-1.	Reassign the user/app to the CA policy.
-2.	Remove the corresponding Defender for Cloud Apps session policy.
-3.	Have the user access the application using Edge, this will trigger the policy removal automatically.
-4.	Remove the CA policy again.
+1. Add the user/app back into the scope of the CA policy.
+2. Remove the corresponding Defender for Cloud Apps session policy.
+3. Wait for users to access the application using Edge. This will automatically trigger the policy removal.
+4. Remove the user/app from the scope of the CA policy.
    
-Option 2: Manual cleanup
-1.	Delete the cached policy file
-     - Go to: C:\Users\<username>\AppData\Local\Microsoft\Edge\
-     - Delete the file: mda_store.txt
+Option 2: Delete the cached policy file (Manual cleanup)
+1. Go to: C:\Users\<username>\AppData\Local\Microsoft\Edge\
+2. Delete the file: mda_store.1.txt
 
-2.	Remove the work profile in Edge
-    - Open Microsoft Edge.
-    - Navigate to Profile Settings.
-    - Delete the work profile associated with the outdated session policy.
+Option 3: Remove the work profile in Edge (Manual cleanup)
+1. Open Edge.
+2. Navigate to Profile Settings.
+3. Delete the work profile associated with the outdated session policy.
   
 These steps will force a policy refresh and resolve enforcement issues related to outdated session policies.
 
