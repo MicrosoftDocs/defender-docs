@@ -1046,6 +1046,8 @@
             href: respond-machine-alerts.md#restrict-app-execution
           - name: Isolate devices from the network
             href: respond-machine-alerts.md#isolate-devices-from-the-network
+          - name: Isolation exclusions
+            href: isolation-exclusions.md
           - name: Contain devices from the network
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network

@@ -33,6 +33,8 @@ You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linu
 
 To use another method, refer to the [See also](#see-also) section. 
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 ## Prerequisites and system requirements
 
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
@@ -191,7 +193,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 The following external package dependencies exist for the `mdatp` package:
 
 - The `mdatp RPM` package requires - `glibc >= 2.17`
-- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`,`uuid-runtime`
+- For DEBIAN the `mdatp` package requires `libc6 >= 2.23`
 - For Mariner the `mdatp` package requires `attr`,`diffutils`, `libacl`, `libattr`,`libselinux-utils`, `selinux-policy`, `policycoreutils`
 
 > [!NOTE]
@@ -203,6 +205,7 @@ The following external package dependencies exist for the `mdatp` package:
 > - The `mde-netfilter` package also has the following package dependencies:
     - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
     - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 ## Troubleshoot installation issues
 

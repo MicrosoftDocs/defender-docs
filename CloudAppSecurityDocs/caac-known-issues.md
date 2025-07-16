@@ -114,6 +114,34 @@ A user who starts a session in Edge with a profile other than his work profile, 
 
 If the URL points to a resource within the secured application, the user will be directed to the application's homepage in Edge.
 
+### Outdated session policy enforcement with Edge
+When a session policy is enforced using Edge in-browser protection and the user is later removed from the corresponding Conditional Access (CA) policy, the original session enforcement may still persist.
+
+Example Scenario:
+
+A user was originally assigned a CA policy for Salesforce along with a Defender for Cloud Apps session policy to block file downloads. As a result, downloads were blocked when the user accessed Salesforce in Edge.
+
+Although the admin later removed the CA policy, the user still experiences the download block in Edge due to cached policy data.
+
+Mitigation Options:
+
+Option 1: Automatic cleanup
+1. Add the user/app back into the scope of the CA policy.
+2. Remove the corresponding Defender for Cloud Apps session policy.
+3. Wait for users to access the application using Edge. This will automatically trigger the policy removal.
+4. Remove the user/app from the scope of the CA policy.
+   
+Option 2: Delete the cached policy file (Manual cleanup)
+1. Go to: C:\Users\<username>\AppData\Local\Microsoft\Edge\
+2. Delete the file: mda_store.txt
+
+Option 3: Remove the work profile in Edge (Manual cleanup)
+1. Open Edge.
+2. Navigate to Profile Settings.
+3. Delete the work profile associated with the outdated session policy.
+  
+These steps will force a policy refresh and resolve enforcement issues related to outdated session policies.
+
 ## Related content
 
 - [Conditional Access app control in Microsoft Defender for Cloud Apps](proxy-intro-aad.md)

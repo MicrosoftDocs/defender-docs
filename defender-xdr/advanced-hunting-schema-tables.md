@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 07/09/2025
 ---
 
 # Understand the advanced hunting schema
@@ -90,12 +90,14 @@ The following reference lists all the tables in the schema. Each table name link
 | **[DeviceTvmSoftwareInventory](advanced-hunting-devicetvmsoftwareinventory-table.md)** | Inventory of software installed on devices, including their version information and end-of-support status |
 | **[DeviceTvmSoftwareVulnerabilities](advanced-hunting-devicetvmsoftwarevulnerabilities-table.md)** | Software vulnerabilities found on devices and the list of available security updates that address each vulnerability |
 | **[DeviceTvmSoftwareVulnerabilitiesKB](advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md)** | Knowledge base of publicly disclosed vulnerabilities, including whether exploit code is publicly available |
+| **[DisruptionAndResponseEvents](advanced-hunting-disruptionandresponseevents-table.md)** (Preview)|  [Automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR|
 | **[EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md)** | Information about files attached to emails |
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
+| **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |

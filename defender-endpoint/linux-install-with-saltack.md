@@ -29,6 +29,8 @@ ms.date: 04/10/2025
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [See also](#see-also) section.)
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Prerequisites and system requirements
