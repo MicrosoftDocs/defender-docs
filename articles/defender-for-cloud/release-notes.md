@@ -31,7 +31,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| July 15, 2025 | Preview | [Four new Regulatory Compliance Standards](#four-new-regulatory-compliance-standards) |
 | July 3, 2025 | GA | [Scanning support for Chainguard container images and Wolfi](#scanning-support-for-chainguard-container-images-and-wolfi) |
+
+### Four new Regulatory Compliance Standards
+
+July 15, 2025
+
+Microsoft Defender for Cloud's **Regulatory Compliance** is expanding its support to include **four new frameworks** across **Azure**, **AWS**, and **GCP** environments:
+
+1. **Digital Operational Resilience Act (DORA)**
+2. **European Union Artificial Intelligence Act (EU AI Act)**
+3. **Korean Information Security Management System for Public Cloud (k-ISMS-P)**
+4. **Center for Internet Security (CIS) Microsoft Azure Foundations Benchmark v3.0**
+
+These frameworks are now available in **public preview** and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
+
+For more information see: [Regulatory compliance standards in Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
 
 ### Scanning support for Chainguard container images and Wolfi
 
