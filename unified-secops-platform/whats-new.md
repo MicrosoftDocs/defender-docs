@@ -6,7 +6,7 @@ ms.service: unified-secops-platform
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 07/16/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -22,8 +22,36 @@ This article lists recent features added for unified security operations in the 
 
 ## July 2025
 
+- [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
 - [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
+
+### For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal
+
+For this update, new Microsoft Sentinel customers are customers who are [onboarding the first workspace in their tenant to Microsoft Sentinel](/azure/sentinel/quickstart-onboard) after **July 1, 2025**.
+
+Starting on **July 1 2025**, such new customers who are also:
+
+- not Azure Lighthouse-delegated users and
+- who have the permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)
+
+Have their workspaces automatically onboarded to the Defender portal together with onboarding to Microsoft Sentinel. Users of such workspaces, who also aren't Azure Lighthouse-delegated users, see links in Microsoft Sentinel in the Azure portal that redirect them to the Defender portal.
+
+For example:
+
+:::image type="content" source="media/whats-new/redirect-no-defender.png" alt-text="Screenshot of a redirect link in the Azure portal.":::
+
+Such users use Microsoft Sentinel in the Defender portal only.
+
+New customers who don't have relevant permissions aren't automatically onboarded to the Defender portal, but they do still see redirection links in the Azure portal, together with prompts to have a user with relevant permissions manually onboard the workspace to the Defender portal.
+
+This change streamlines the onboarding process and ensures that new customers can immediately take advantage of unified security operations capabilities without the extra step of manually onboarding their workspaces.
+
+For more information, see:
+
+- [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard)
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Changes for new customers](https://aka.ms/changes-for-sentinel-customers-july-25)
 
 ### No limit on the number of workspaces you can onboard to the Defender portal
 
