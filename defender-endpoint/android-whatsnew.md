@@ -28,6 +28,18 @@ ms.date: 05/15/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+### Releases for Defender for Endpoint on Android
+
+#### July 2025
+
+|Build|1.0.7901.0101|
+| -------- | -------- |
+|Release Date|July 10, 2025|
+
+**What's New**
+
+UX Improvement for home page and tiles screens, for more details please visit this link - [Android UX Enhancement](/defender-endpoint/android-new-ux)
+
 #### Alerts for activities related to open wireless connection and certificates are now detected as events
 
 May 2025
