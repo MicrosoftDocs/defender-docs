@@ -10,7 +10,7 @@ ms.reviewer: rlitinsky
 
 ## What are Microsoft Defender for Identity security alerts?
 
-Microsoft Defender for Identity security alerts provide information about the suspicious activities detected by Defender for Identity sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+Microsoft Defender for Identity security alerts provide information about the suspicious activities detected by Defender for Identity, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
 > [!NOTE]
 > Defender for Identity isn't designed to serve as an auditing or logging solution that captures every single operation or activity on the servers where the sensor is installed. It only captures the data required for its detection and recommendation mechanisms.
