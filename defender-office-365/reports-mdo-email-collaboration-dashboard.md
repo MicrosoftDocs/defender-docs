@@ -18,7 +18,7 @@ ms.collection:
 description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
-ms.date: 07/14/2025
+ms.date: 07/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
