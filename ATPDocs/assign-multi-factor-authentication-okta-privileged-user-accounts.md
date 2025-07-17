@@ -1,5 +1,5 @@
 ---
-title: Security assessment: Assign multifactor authentication to Okta privileged user accounts
+title: 'Security assessment: Assign multifactor authentication to Okta privileged user accounts'
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers assign multifactor authentication (MFA) to Okta privileged user accounts.
 ms.service: microsoft-defender-for-identity
 ms.topic: article
