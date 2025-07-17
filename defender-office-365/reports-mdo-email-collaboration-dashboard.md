@@ -254,7 +254,7 @@ The graph on the **Microsoft 365 Secure Email Gateway performance** card compare
 Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Phish / Malware Efficacy** card](#phish--malware-efficacy-card).
 
 > [!NOTE]
-> The numbers might differ slightly due to the different refresh & expiry rates for advanced hunting vs. reporting data.
+> The numbers might differ slightly due to the different refresh and expiry rates for advanced hunting vs. reporting data.
 
 ```kusto
 let _startTime = ago(30d); 
