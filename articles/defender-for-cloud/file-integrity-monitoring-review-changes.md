@@ -4,7 +4,7 @@ description: Learn how to review machine changes with file integrity monitoring 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 07/14/2025
 ---
 
 # Review changes in file integrity monitoring
@@ -53,8 +53,8 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     ```kusto  
     MDCFileIntegrityMonitoringEvents  
     | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType in ('Registry', 'Files')  
-    | summarize count() by Computer, ConfigChangeType  
+    | where MonitoredEntityType in ('Registry', 'Files')  
+    | summarize count() by Computer, MonitoredEntityType  
     ```
 
 1. To view detailed information about registry changes:  
@@ -66,7 +66,7 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     ```kusto  
     MDCFileIntegrityMonitoringEvents  
     | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType == 'Registry'  
+    | where MonitoredEntityType == 'Registry'  
     | order by Computer, RegistryKey  
     ```
 
