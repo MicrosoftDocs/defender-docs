@@ -101,19 +101,55 @@ After saving, Defender for Cloud automatically begins deploying the necessary co
 
 ## Deploy the Defender sensor
 
-If the Defender sensor isn't automatically deployed, you can manually trigger deployment:
+The Defender sensor provides runtime threat detection for your AKS clusters. If it's not automatically deployed after enabling the plan, manually trigger deployment:
 
-1. Navigate to the Recommendations page.
+### Deploy to all AKS clusters
 
-1. Search for and select the "Azure Kubernetes Service clusters should have Defender profile enabled" recommendation.
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for and select "Azure Kubernetes Service clusters should have Defender profile enabled".
 
     :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
 
-1. Select all of the relevant affected resources.
+1. Select all AKS clusters that need the sensor.
 
 1. Select **Fix**.
 
     :::image type="content" source="media/tutorial-enable-containers-azure/affected-fix.png" alt-text="Screenshot of the recommendation with the affected resources selected that shows you how to select the fix button." lightbox="media/tutorial-enable-containers-azure/affected-fix.png":::
+
+1. Review the deployment configuration.
+
+1. Select **Fix X resources** to deploy.
+
+### Deploy to specific clusters
+
+1. Navigate to your AKS cluster.
+
+1. Under **Settings**, select **Defender**.
+
+1. Select **Enable Microsoft Defender for Containers**.
+
+1. Configure settings:
+   - Enable runtime protection
+   - Configure resource limits
+   - Set namespace exclusions
+
+1. Select **Save**.
+
+### Verify sensor deployment
+
+```bash
+# Check Defender profile
+az aks show -g <resource-group> -n <cluster-name> --query securityProfile.defender
+
+# Check pods
+kubectl get pods -n kube-system -l app=microsoft-defender
+
+# View DaemonSet
+kubectl get daemonset -n kube-system microsoft-defender-sensor
+```
+
+The sensor should be running on all nodes within 5-10 minutes.
 
 ## Verify component deployment
 

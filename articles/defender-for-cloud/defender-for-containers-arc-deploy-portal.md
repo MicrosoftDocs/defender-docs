@@ -51,9 +51,50 @@ If you're setting up Defender for Containers for the first time, see [Enable all
    - By distribution (OpenShift, Rancher, etc.)
 5. Select **Fix**.
 
-### Deploy Azure Policy extension
+### Deploy the Defender sensor
 
-For clusters missing policy enforcement:
+The Defender sensor is essential for runtime threat detection. Deploy it to all or specific clusters:
+
+#### Deploy to specific Arc-enabled clusters
+
+1. Go to **Recommendations**.
+2. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
+3. Select the recommendation.
+4. Filter and select specific clusters:
+   - By name
+   - By resource group
+   - By tags
+   - By distribution (OpenShift, Rancher, etc.)
+5. Select **Fix**.
+
+#### Deploy via Arc portal
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+2. Select **Extensions** under **Settings**.
+3. Select **+ Add**.
+4. Search for "Microsoft Defender".
+5. Configure:
+   - Log Analytics workspace
+   - Audit log path (distribution-specific)
+   - Registry credentials (if needed)
+6. Select **Create**.
+
+#### Verify sensor deployment
+
+```bash
+# Check pods
+kubectl get pods -n mdc
+
+# Check DaemonSet
+kubectl get daemonset -n mdc
+
+# View logs
+kubectl logs -n mdc -l app=microsoft-defender
+```
+
+### Deploy Azure Policy extension (Optional)
+
+For clusters requiring policy enforcement:
 
 1. Navigate to the Arc-enabled Kubernetes cluster.
 2. Select **Extensions** under **Settings**.

@@ -492,7 +492,7 @@ ConfigurationChange
 | order by TimeGenerated desc
 ```
 
-## Next steps
+## Related content
 
 - [Verify your configuration](defender-for-containers-gcp-verify.md)
 - [Remove Defender for Containers](defender-for-containers-gcp-remove.md)

@@ -208,7 +208,7 @@ If you created a dedicated workspace:
 
 ```azurecli
 # Delete workspace
-az monitor log-analytics workspace delete \
+az monitor.log-analytics.workspace delete \
     --workspace-name <workspace-name> \
     --resource-group <resource-group> \
     --yes
@@ -333,7 +333,8 @@ To re-enable Defender for Containers:
 2. Follow the deployment guide from the beginning
 3. Use new IAM role names if previous ones were recent
 
-## Next steps
+## Related content
 
 - [Deploy Defender for Containers](defender-for-containers-aws-enable-all-portal.md) - To re-enable protection
+- [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
 - [Defender for Containers overview](defender-for-containers-aws-overview.md) - Learn about capabilities

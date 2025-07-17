@@ -340,7 +340,8 @@ gcloud iam service-accounts keys delete KEY_ID \
     --iam-account=defender-for-containers@PROJECT_ID.iam.gserviceaccount.com
 ```
 
-## Next steps
+## Related content
 
 - [Deploy Defender for Containers](defender-for-containers-gcp-enable-all-portal.md) - To re-enable protection
+- [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
 - [Learn about GKE security best practices](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster)

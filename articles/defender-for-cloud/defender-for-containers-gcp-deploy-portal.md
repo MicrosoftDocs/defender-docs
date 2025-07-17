@@ -54,12 +54,49 @@ For clusters not yet connected:
 5. Select specific clusters to connect.
 6. Select **Fix** and run the provided script.
 
-### Deploy Defender sensor to specific clusters
+### Deploy the Defender sensor
+
+The Defender sensor provides runtime protection for your GKE clusters:
+
+#### Deploy to specific GKE clusters
 
 1. Go to **Recommendations**.
 2. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
 3. Select clusters missing the sensor.
 4. Select **Fix**.
+5. Configure deployment options:
+   - Log Analytics workspace
+   - Resource limits
+   - Monitoring scope
+6. Apply the deployment.
+
+#### Deploy via Arc portal
+
+1. Navigate to your Arc-connected GKE cluster.
+2. Select **Extensions** > **+ Add**.
+3. Select **Microsoft Defender for Containers**.
+4. Configure:
+   - Enable runtime protection
+   - Set resource allocation
+   - Configure exclusions
+5. Select **Create**.
+
+#### Verify sensor deployment
+
+```bash
+# Check pods
+kubectl get pods -n kube-system -l app=microsoft-defender
+
+# View DaemonSet
+kubectl get daemonset -n kube-system microsoft-defender-sensor
+
+# Check extension status
+az k8s-extension show \
+  --name microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name CLUSTER_NAME \
+  --resource-group RESOURCE_GROUP
+```
 
 ### Enable specific GCP features
 

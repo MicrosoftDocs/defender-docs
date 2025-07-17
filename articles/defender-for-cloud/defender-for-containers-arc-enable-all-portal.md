@@ -16,6 +16,7 @@ This article walks you through enabling all Microsoft Defender for Containers co
 - [Enable Defender plan](#enable-defender-for-containers-plan)
 - [Configure components](#configure-all-plan-components)
 - [Deploy extensions](#deploy-extensions-to-arc-enabled-clusters)
+- [Deploy Defender sensor](#deploy-the-defender-sensor)
 - [Configure workspace](#configure-log-analytics-workspace)
 - [Verify deployment](#verify-extension-deployment)
 - [Enable scanning](#enable-vulnerability-scanning)
@@ -27,7 +28,6 @@ This article walks you through enabling all Microsoft Defender for Containers co
 ## When to use this guide
 
 Use this guide if you're:
-
 - Setting up Defender for Containers on Arc-enabled clusters for the first time
 - Want comprehensive protection for all your on-premises or multi-cloud clusters
 - Need to secure multiple distributions (OpenShift, Rancher, Tanzu, etc.)
@@ -40,7 +40,6 @@ For selective deployment or troubleshooting existing deployments, see [Deploy sp
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additional Arc-specific requirements:
-
 - CNCF-certified Kubernetes cluster (on-premises or IaaS)
 - Cluster version 1.19 or later
 - Outbound HTTPS connectivity to Azure endpoints
@@ -137,6 +136,95 @@ If your Kubernetes cluster isn't already connected to Azure Arc:
 
 1. Repeat to install **Azure Policy for Kubernetes** extension if needed.
 
+## Deploy the Defender sensor
+
+After the extension is installed, deploy the Defender sensor to your Arc-enabled clusters:
+
+### Option 1: Deploy via recommendations
+
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
+
+1. Select the recommendation.
+
+1. Select your Arc-enabled clusters where the sensor needs to be deployed.
+
+1. Select **Fix**.
+
+1. Review the deployment configuration:
+   - Log Analytics workspace assignment
+   - Resource allocation settings
+   - Namespace configuration
+
+1. Select **Fix X resources** to deploy.
+
+### Option 2: Deploy via Arc cluster
+
+1. Navigate to your Arc-enabled Kubernetes cluster.
+
+1. Under **Settings**, select **Extensions**.
+
+1. Verify the **Microsoft Defender** extension shows as **Succeeded**.
+
+1. If the sensor pods aren't running, select the extension and choose **Manage**.
+
+1. Configure deployment settings:
+   - Enable runtime protection
+   - Set resource limits if needed
+   - Configure namespace exclusions
+
+1. Select **Apply**.
+
+### Verify sensor deployment
+
+After deployment, verify the sensor is running:
+
+```bash
+# Check sensor pods
+kubectl get pods -n kube-system -l app=microsoft-defender
+
+# Check DaemonSet status
+kubectl get daemonset -n kube-system microsoft-defender-sensor
+```
+
+All nodes should have a running sensor pod within 5-10 minutes.
+
+### Check sensor pods
+
+```bash
+# List all Defender pods
+kubectl get pods -n mdc -l app=microsoft-defender
+
+# Check pod logs for any errors
+kubectl logs -n mdc -l app=microsoft-defender --tail=50
+```
+
+### Troubleshoot sensor issues
+
+If the sensor isn't deploying correctly:
+
+1. **Check namespace exists**:
+   ```bash
+   kubectl get namespace mdc
+   ```
+
+1. **Verify RBAC permissions**:
+   ```bash
+   kubectl get clusterrole | grep defender
+   kubectl get clusterrolebinding | grep defender
+   ```
+
+1. **Check resource constraints**:
+   ```bash
+   kubectl describe daemonset -n mdc microsoft-defender-sensor
+   ```
+
+1. **Review events**:
+   ```bash
+   kubectl get events -n mdc --sort-by='.lastTimestamp'
+   ```
+
 ## Configure Log Analytics workspace
 
 During extension deployment:
@@ -166,7 +254,6 @@ For Arc-enabled clusters, configure registry scanning:
    - Ensure ACR is in the same subscription or connected
 
 1. For private registries:
-
    ```bash
    # Create registry credentials
    kubectl create secret docker-registry regcred \
@@ -243,17 +330,14 @@ You can exclude specific Arc-enabled clusters from automatic provisioning:
 ## Distribution-specific considerations
 
 ### OpenShift
-
 - Ensure Security Context Constraints (SCCs) are properly configured
 - Audit log path: `/var/log/openshift-apiserver/audit.log`
 
 ### Rancher
-
 - Configure appropriate namespaces exclusions
 - Consider Rancher-specific RBAC settings
 
 ### VMware Tanzu
-
 - Enable audit logging if not already configured
 - Ensure PSP/PSA policies allow Defender components
 
@@ -279,7 +363,6 @@ After setup, regularly:
 If extensions fail to install:
 
 1. Check cluster connectivity:
-
    ```bash
    kubectl get nodes
    az connectedk8s show -n <cluster-name> -g <resource-group>
@@ -288,7 +371,6 @@ If extensions fail to install:
 1. Verify outbound connectivity to required endpoints.
 
 1. Check extension status:
-
    ```bash
    az k8s-extension show --name microsoft.azuredefender.kubernetes \
        --cluster-name <cluster-name> \
@@ -297,7 +379,6 @@ If extensions fail to install:
    ```
 
 1. Review pod status:
-
    ```bash
    kubectl get pods -n mdc
    ```

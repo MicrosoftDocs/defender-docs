@@ -210,8 +210,8 @@ To re-enable Defender for Containers in the future:
 2. All security features will be restored
 3. Historical data (if not purged) will remain available
 
-## Next steps
+## Related content
 
-- [Enable Defender for Containers on Azure (AKS)](defender-for-containers-azure-enable-all-portal.md)
-- [Learn about Defender for Containers features](defender-for-containers-azure-overview.md)
-- [Explore alternative security solutions](https://azure.microsoft.com/products/category/security/)
+- [Learn more about AKS security](/azure/aks/security-concepts)
+- [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
+- [Re-deploy Defender for Containers](defender-for-containers-azure-enable-all-portal.md) - To restore protection in the future

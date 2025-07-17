@@ -168,20 +168,79 @@ SecurityEvent
 
 ### Generate a test alert
 
+Run this benign test to verify threat detection:
+
 ```bash
-# Run a benign test that triggers an alert
-kubectl run test-pod \
+# This command triggers a test alert
+kubectl run test-alert \
+    --image=nginx \
+    --rm \
+    -it \
+    --restart=Never \
+    -- /bin/bash -c "echo 'Testing Arc Defender' > /etc/hosts"
+```
+
+### Simulate security alerts from Microsoft Defender for Containers
+
+Test security detection on your Arc-enabled clusters:
+
+#### Test 1: Container escape attempt
+
+```bash
+kubectl run escape-test \
     --image=busybox \
     --rm -it \
     --restart=Never \
-    -- /bin/sh -c "echo 'Testing Arc Defender' > /etc/hosts"
+    --overrides='{"spec":{"hostNetwork":true}}' \
+    -- /bin/sh -c "ping kubernetes.default"
 ```
 
-### Verify alert generation
+Expected alert: "Container with host network access detected"
 
-1. Wait 5-10 minutes for processing.
-1. Navigate to **Microsoft Defender for Cloud** > **Security alerts**.
-1. Look for alerts related to your Arc-enabled cluster.
+#### Test 2: Suspicious binary execution
+
+```bash
+kubectl run binary-test \
+    --image=ubuntu \
+    --rm -it \
+    --restart=Never \
+    -- /bin/bash -c "apt-get update && apt-get install -y netcat"
+```
+
+Expected alert: "Suspicious tool installed in container"
+
+#### Test 3: Cluster admin binding
+
+```bash
+kubectl create clusterrolebinding test-admin \
+    --clusterrole=cluster-admin \
+    --serviceaccount=default:default
+
+# Clean up immediately
+kubectl delete clusterrolebinding test-admin
+```
+
+Expected alert: "Cluster admin role assigned"
+
+### Distribution-specific tests
+
+For **OpenShift**:
+```bash
+oc run scc-test --image=nginx --rm -it --restart=Never \
+    --overrides='{"spec":{"securityContext":{"runAsUser":0}}}'
+```
+
+For **Rancher**:
+```bash
+kubectl run rancher-test --image=busybox --rm -it --restart=Never \
+    -- /bin/sh -c "wget http://rancher-metadata/latest"
+```
+
+### View and investigate alerts
+
+1. Navigate to **Security alerts** in Defender for Cloud.
+1. Filter by your Arc-enabled clusters.
+1. Select an alert to see investigation details.
 
 ## Verify security insights
 
@@ -286,8 +345,7 @@ Typical resource consumption:
 1. Check that clusters aren't excluded by tags
 1. Verify RBAC permissions
 
-## Next steps
+## Related content
 
-- [Configure Defender for Containers settings](defender-for-containers-arc-configure.md)
-- [Deploy to additional clusters](defender-for-containers-arc-deploy.md)
+- [Configure advanced settings](defender-for-containers-arc-configure.md)
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)

@@ -342,7 +342,7 @@ Configure log forwarding to external SIEM:
 2. Configure diagnostic settings to stream
 3. Set up SIEM connector
 
-## Next steps
+## Related content
 
 - [Verify your configuration](defender-for-containers-azure-verify.md)
 - [Remove Defender for Containers](defender-for-containers-azure-remove.md)

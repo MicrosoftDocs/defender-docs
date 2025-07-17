@@ -214,6 +214,73 @@ kubectl get pods -n kube-system -l component=microsoft-defender
 3. Review policy compliance results
 4. Check for policy exemptions
 
+## Deploy the Defender sensor
+
+The Defender sensor is essential for runtime threat detection. Deploy it to all or specific clusters:
+
+### Deploy to all AKS clusters
+
+1. Navigate to **Recommendations**.
+
+1. Search for "Azure Kubernetes Service clusters should have Defender profile enabled".
+
+1. Select the recommendation.
+
+1. Select all affected clusters.
+
+1. Select **Fix** to enable the Defender profile.
+
+### Deploy to specific clusters
+
+1. Navigate to your AKS cluster.
+
+1. Under **Settings**, select **Defender**.
+
+1. Select **Enable Microsoft Defender for Containers**.
+
+1. Configure settings:
+   - Enable runtime protection
+   - Configure resource limits
+   - Set namespace exclusions
+
+1. Select **Save**.
+
+### Verify deployment
+
+```bash
+# Check Defender profile
+az aks show -g <resource-group> -n <cluster-name> --query securityProfile.defender
+
+# Check pods
+kubectl get pods -n kube-system -l app=microsoft-defender
+```
+
+## Deploy Azure Policy for Kubernetes
+
+If you need security recommendations and compliance:
+
+1. Ensure the Azure Policy Add-on is enabled for your AKS cluster.
+
+1. Navigate to **Recommendations** in Microsoft Defender for Cloud.
+
+1. Search for "Kubernetes clusters should have Azure Policy enabled".
+
+1. Select the recommendation.
+
+1. Select specific clusters or all clusters.
+
+1. Select **Fix** to apply the policy.
+
+### Verify policy deployment
+
+```bash
+# Check policy assignment
+az policy assignment list --scope /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>
+
+# Check compliance
+az policy state list --policy <policy-definition-name> --scope /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>
+```
+
 ## Next steps
 
 - [Verify deployment](defender-for-containers-azure-verify.md)

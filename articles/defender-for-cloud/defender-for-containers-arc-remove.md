@@ -266,8 +266,8 @@ oc delete scc defender-scc
 kubectl get crd -o name | grep -i defender | xargs kubectl delete
 ```
 
-## Next steps
+## Related content
 
 - [Learn more about Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)
-- [Explore alternative security solutions](https://azure.microsoft.com/products/category/security/)
+- [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
 - [Re-deploy Defender for Containers](defender-for-containers-arc-enable-all-portal.md)

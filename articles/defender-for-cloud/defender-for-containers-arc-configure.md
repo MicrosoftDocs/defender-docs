@@ -438,8 +438,7 @@ If configuration changes aren't taking effect:
    kubectl logs -n mdc deployment/microsoft-defender-controller | grep -i config
    ```
 
-## Next steps
+## Related content
 
 - [Verify your configuration](defender-for-containers-arc-verify.md)
-- [Deploy to additional clusters](defender-for-containers-arc-deploy.md)
 - [Remove Defender for Containers](defender-for-containers-arc-remove.md)

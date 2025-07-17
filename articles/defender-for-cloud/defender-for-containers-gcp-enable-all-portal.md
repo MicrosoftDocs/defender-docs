@@ -175,9 +175,13 @@ After creating the connector, connect your GKE clusters to Azure Arc:
    az connectedk8s connect --name CLUSTER_NAME --resource-group RG_NAME
    ```
 
-## Deploy Defender sensor to all GKE clusters
+## Deploy the Defender sensor
 
-1. Navigate to **Recommendations**.
+After connecting your GKE clusters to Azure Arc, deploy the Defender sensor for runtime protection:
+
+### Deploy to all GKE clusters
+
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
 
@@ -194,7 +198,42 @@ After creating the connector, connect your GKE clusters to Azure Arc:
 
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot showing the Fix button for deploying the Defender sensor.":::
 
-1. Download and run the generated remediation script.
+1. Configure sensor deployment:
+   - Log Analytics workspace
+   - Resource limits
+   - Namespace exclusions
+
+1. Download and run the generated remediation script if prompted.
+
+### Deploy to specific clusters
+
+1. Navigate to your Arc-enabled GKE cluster in Azure portal.
+
+1. Select **Extensions** > **+ Add**.
+
+1. Search for **Microsoft Defender for Containers**.
+
+1. Select and configure:
+   - Workspace settings
+   - Resource allocation
+   - Monitoring scope
+
+1. Select **Review + create** > **Create**.
+
+### Verify sensor deployment
+
+```bash
+# Check sensor status
+kubectl get pods -n kube-system -l app=microsoft-defender
+
+# View DaemonSet
+kubectl get daemonset -n kube-system microsoft-defender-sensor
+
+# Check logs
+kubectl logs -n kube-system -l app=microsoft-defender --tail=50
+```
+
+The sensor should be running on all nodes within 5-10 minutes.
 
 ## Configure container registry scanning
 

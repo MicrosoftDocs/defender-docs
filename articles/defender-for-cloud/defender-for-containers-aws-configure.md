@@ -391,7 +391,7 @@ az monitor activity-log alert create \
 4. **Monitor impact**: Watch for performance impact after changes
 5. **Backup settings**: Export configurations before major changes
 
-## Next steps
+## Related content
 
-- [Verify deployment](defender-for-containers-aws-verify.md) - Confirm configuration changes
-- [Remove Defender for Containers](defender-for-containers-aws-remove.md) - If you need to uninstall
+- [Verify your configuration](defender-for-containers-aws-verify.md)
+- [Remove Defender for Containers](defender-for-containers-aws-remove.md)

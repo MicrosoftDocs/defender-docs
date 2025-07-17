@@ -202,12 +202,70 @@ kubectl run test-alert \
 
 Check for the alert in Defender for Cloud within 5-10 minutes.
 
-### Verify runtime protection
+### Simulate security alerts from Microsoft Defender for Containers
+
+Test various security scenarios on your GKE clusters:
+
+#### Test 1: Cryptocurrency mining detection
 
 ```bash
-# Check if runtime protection is active
-kubectl exec -n kube-system -it $(kubectl get pods -n kube-system -l app=microsoft-defender -o jsonpath='{.items[0].metadata.name}') -- defender-sensor status
+kubectl run crypto-miner-test \
+    --image=busybox \
+    --rm -it \
+    --restart=Never \
+    -- /bin/sh -c "wget pool.minexmr.com -O /dev/null"
 ```
+
+Expected alert: "Digital currency mining behavior detected"
+
+#### Test 2: Kubernetes API reconnaissance
+
+```bash
+kubectl run api-recon \
+    --image=nicolaka/netshoot \
+    --rm -it \
+    --restart=Never \
+    -- /bin/bash -c "curl -k https://kubernetes.default"
+```
+
+Expected alert: "Kubernetes API reconnaissance detected"
+
+#### Test 3: Sensitive mount path
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sensitive-mount-test
+spec:
+  containers:
+  - name: test
+    image: nginx
+    volumeMounts:
+    - name: host
+      mountPath: /host
+  volumes:
+  - name: host
+    hostPath:
+      path: /
+  restartPolicy: Never
+EOF
+
+# Clean up
+kubectl delete pod sensitive-mount-test
+```
+
+Expected alert: "Sensitive host path mounted"
+
+### Verify alerts
+
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+1. Filter by **Resource type** = **Kubernetes service**.
+1. Look for alerts from your GKE clusters.
+
+> [!NOTE]
+> GKE-specific alerts may include Binary Authorization violations and Workload Identity issues.
 
 ## Verify security recommendations
 
@@ -349,7 +407,7 @@ If GKE clusters aren't showing:
    - Weekly security summaries
    - Compliance reports
 
-## Next steps
+## Related content
 
 - [Configure advanced settings](defender-for-containers-gcp-configure.md)
 - [Remove Defender for Containers](defender-for-containers-gcp-remove.md)
