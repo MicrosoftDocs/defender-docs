@@ -1,5 +1,5 @@
 ---
-title: Security assessment: Remove dormant Okta privileged accounts
+title: 'Security assessment: Remove dormant Okta privileged accounts'
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers remove dormant Okta privileged user accounts not accessed for over 60 days.
 author:      izauer-bit  # GitHub alias
 ms.author:   itaizauer
