@@ -484,7 +484,7 @@ To download the onboarding package from the Microsoft Defender portal:
 
 1. On the **Deployment method** drop-down, select **Mobile Device Management / Microsoft Intune**.
 
-   ![macos-download-onboarding-package](media/mac-install-with-intune/macos-download-onboarding-package.png)
+   ![Screenshot that shows steps for macos download onboarding package.](media/mac-install-with-intune/macos-download-onboarding-package.png)
    
    
    
