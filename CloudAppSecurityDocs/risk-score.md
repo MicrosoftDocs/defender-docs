@@ -165,7 +165,7 @@ The following table lists the cloud app catalog's supported categories:
 | **Accounting and finance**     | Cloud apps that provide financial services, such as insurance services, banking, stocks, and more. |
 | **Advertising**                | Cloud apps that provide advertising tools and advertising platforms. |
 | **AI – MCP Server**.           | Public cloud services that implement the Model Context Protocol (MCP) to coordinate interactions between AI agents and systems.|
-| **AI – Model Provider**.       | Platforms or APIs that deliver access to foundation models or large language models, enabling integration with advanced AI applications.|
+| **AI – Model Provider**.       | Cloud-based platforms or APIs that deliver access to foundation models or large language models, enabling integration with advanced AI applications.|
 | **Business intelligence**      | Cloud apps that help organizations to make data-driven business decisions and create data-based reports and dashboards.     |
 | **Business management**        | Cloud apps that provide business management solutions based on enterprise resource planning (ERP).           |
 | **CRM**                        | Cloud apps that provide customer relationship management tools, helping organizations to build stronger relationships with their customers, boost conversations and improve revenues.             |
