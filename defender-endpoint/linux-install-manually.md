@@ -42,6 +42,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
+- [Pre Install Setup for Custom Path Installation](#pre-install-setup-for-custom-path-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -256,6 +257,50 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf install mariner-repos-extras-preview
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
+
+## Pre Install Setup for Custom Path Installation
+
+These steps are applicable only if Defender is to be installed in a custom location.
+
+The custom installation path is denoted here as <custom_path>
+ 
+> [!NOTE]
+> Only absolute custom installation path is supported
+
+1. Create the required directories for setup
+    ```bash
+    sudo mkdir -p <custom_path>
+    sudo mkdir -p /etc/opt/microsoft/mdatp
+    ```
+
+2. Create the config json file `/etc/opt/microsoft/mdatp/mde_path.json`, specifying the custom installation path, in the mde config directory
+
+    File Content:
+    ```
+    {"path":"<custom_path>"}
+    ```
+
+    For example, if the custom installation path is to be set as `/custom/microsoft_mdatp`, `/etc/opt/microsoft/mdatp/mde_path.json` will be created with the following content:
+     ```
+     {"path":"/custom/microsoft_mdatp"}
+     ```
+3. Set required permissions
+   ```
+    chmod 755 <custom_path>
+    chmod 644 /etc/opt/microsoft/mdatp
+   ```
+
+4. Create a symlink to the installation location
+   ```
+    mkdir -p /opt/microsoft
+    mkdir -p <custom_path>/opt/microsoft/mdatp
+    ln -sf <custom_path>/opt/microsoft/mdatp /opt/microsoft/mdatp
+   ```
+   > [!NOTE]
+   > 
+   > If you choose to skip creation of symlink, you can rely on the installer package to create the symlink for you, provided you have -
+   > 1. 1GB space in /opt or
+   > 2. You have managed the disk space check issue at your end 
 
 ## Application installation
 
