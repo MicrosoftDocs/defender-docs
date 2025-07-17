@@ -83,8 +83,8 @@ The following OS versions are supported:
 |Windows 10, version 1903 (with [KB4586819](https://support.microsoft.com/help/4586819))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1903-end-of-servicing); upgrade now|
 |Windows 10, version 1809 (with [KB4586839](https://support.microsoft.com/help/4586839))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|
 |Windows 10, version 1803 (with [KB4598245](https://support.microsoft.com/help/4598245))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|![Yes](media/svg/check-yes.svg) <br/> [Deprecated](/lifecycle/announcements/windows-10-1803-1809-end-of-servicing); upgrade now|
-|Windows 10, version 1709|![No.](media/svg/check-no.svg) <br/> Not supported|![Yes](media/svg/check-yes.svg) With [KB4499147](https://support.microsoft.com/help/4499147)<br/>See note 1 following this table<br/>[Deprecated](/lifecycle/announcements/revised-end-of-service-windows-10-1709); upgrade now|![No](media/svg/check-no.svg) <br/> Not supported|
-|Windows 10, version 1703 and earlier|![No.](media/svg/check-no.svg) <br/> Not supported|![No](media/svg/check-no.svg) <br/> Not supported|![No](media/svg/check-no.svg) <br/> Not supported|
+|Windows 10, version 1709|![No.](media/svg/check-no.svg) <br/> Not supported|![Yes](media/svg/check-yes.svg) With [KB4499147](https://support.microsoft.com/help/4499147)<br/>See note 1 following this table<br/>[Deprecated](/lifecycle/announcements/revised-end-of-service-windows-10-1709); upgrade now|:::image type="icon" source="media/svg/check-no.svg":::<br/> Not supported|
+|Windows 10, version 1703 and earlier|![No.](media/svg/check-no.svg) <br/> Not supported|:::image type="icon" source="media/svg/check-no.svg"::: <br/> Not supported|:::image type="icon" source="media/svg/check-no.svg"::: <br/> Not supported|
 |Windows Server 2022 and later|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2019 (with [KB4586839](https://support.microsoft.com/help/4586839))<br/>See note 1 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Windows Server 2016 (Modern)<br/>See note 2 following this table|![Yes.](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
@@ -156,9 +156,9 @@ These are the known gaps:
 |Feature name|GCC|GCC High|DoD|
 |---|:---:|:---:|:---:|
 |Microsoft Secure Score|![Yes](media/svg/check-yes.svg)<br/>See note following this table|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Microsoft Threat Experts|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
-|Microsoft Defender for Endpoint Security Configuration Management|![No](media/svg/check-yes.svg)|![No](media/svg/check-yes.svg)|![No](media/svg/check-yes.svg)|
-|Microsoft Defender for IoT enterprise IoT security|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
+|Microsoft Threat Experts|:::image type="icon" source="media/svg/check-no.svg":::|:::image type="icon" source="media/svg/check-no.svg":::|:::image type="icon" source="media/svg/check-no.svg":::|
+|Microsoft Defender for Endpoint Security Configuration Management|:::image type="icon" source="media/svg/check-yes.svg":::|:::image type="icon" source="media/svg/check-yes.svg":::|:::image type="icon" source="media/svg/check-yes.svg":::|
+|Microsoft Defender for IoT enterprise IoT security|:::image type="icon" source="media/svg/check-no.svg":::|:::image type="icon" source="media/svg/check-no.svg":::|:::image type="icon" source="media/svg/check-no.svg":::|
 
 > [!NOTE]
 > While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
