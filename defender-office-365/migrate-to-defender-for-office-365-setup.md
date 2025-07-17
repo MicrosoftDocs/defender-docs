@@ -124,7 +124,7 @@ To confirm that Enhanced Filtering for Connectors is working, verify that incomi
 - `X-MS-Exchange-SkipListedInternetSender`
 - `X-MS-Exchange-ExternalOriginalInternetSender`
 
-<a name='#step-5-create-pilot-protection-policies'></a>
+<a name='step-5-create-pilot-protection-policies'></a>
 
 ## Step 5: Create pilot threat policies
 

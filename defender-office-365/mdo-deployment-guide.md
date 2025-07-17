@@ -88,7 +88,7 @@ If you're using the \*.onmicrosoft.com domain for email (also known as the Micro
 - **DKIM**: DKIM signing is already configured for outbound mail using the \*.onmicrosoft.com domain, but you can also [manually customize it](email-authentication-dkim-configure.md#use-the-defender-portal-to-customize-dkim-signing-of-outbound-messages-using-the-onmicrosoftcom-domain).
 - **DMARC**: You need to manually set up the DMARC record for the \*.onmicrosoft.com domain as described [here](email-authentication-dmarc-configure.md#use-the-microsoft-365-admin-center-to-add-dmarc-txt-records-for-onmicrosoftcom-domains-in-microsoft-365).
 
-<a name='#step-2-configure-protection-policies'></a>
+<a name='step-2-configure-protection-policies'></a>
 
 ## Step 2: Configure threat policies
 
@@ -147,7 +147,7 @@ The previous information and the threat policies involved are summarized in the 
 
 ⁶ The only customizable security settings in preset security policies are the entries and optional exceptions for user impersonation protection and domain impersonation protection in the Standard and Strict preset security policies in Defender for Office 365.
 
-<a name='#order-of-precedence-for-protection-policies'></a>
+<a name='order-of-precedence-for-protection-policies'></a>
 
 ### Order of precedence for threat policies
 
