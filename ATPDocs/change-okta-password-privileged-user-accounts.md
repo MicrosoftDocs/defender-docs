@@ -1,5 +1,5 @@
 ---
-title: Security assessment: Change password for Okta privileged User accounts
+title: 'Security assessment: Change password for Okta privileged User accounts'
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers change the password of Okta privileged user accounts with password last set over 180 days ago.
 ms.service: microsoft-defender-for-identity
 ms.topic: article
