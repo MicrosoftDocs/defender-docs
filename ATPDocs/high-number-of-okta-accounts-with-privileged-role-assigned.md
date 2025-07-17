@@ -1,5 +1,5 @@
 ---
-title: 'Security assessment: High number of Okta accounts with privileged role assigned'
+title: Security assessment: High number of Okta accounts with privileged role assigned
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers limit the number of Okta accounts with privileged roles assigned to the minimum required for their organization.
 ms.service: microsoft-defender-for-identity
 ms.topic: article
