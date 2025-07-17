@@ -54,7 +54,8 @@ For tracking, you can review the progress of the remediation tasks by subscripti
 1. Specify a rule name and scope in which to apply the rule.
 
     - Rules for management scope (Azure management groups, AWS master accounts, GCP organizations) are applied prior to the rules on a single scope.
-    - You can define exclusions within the scope as needed.
+    - > [!NOTE]
+      > Exclusions can't be created using the portal wizard. To define exclusions, use the API.
 
 1. Set a priority level.
 
@@ -128,7 +129,7 @@ The governance report lets you select subscriptions that have governance rules a
 
      :::image type="content" source="./media/governance-rules/governance-in-workbook.png" alt-text="Screenshot of governance status by rule and owner in the governance workbook." lightbox="media/governance-rules/governance-in-workbook.png":::
 
-From the governance report, you can drill down into recommendations by scope, display name, priority, remediation timeframe, owner type, owner details, grace period and cloud.
+From the governance report, you can drill down into recommendations by scope, display name, priority, remediation timeframe, owner type, owner details, grace period, and cloud.
 
 ## Next step
 
