@@ -212,6 +212,6 @@ To re-enable Defender for Containers in the future:
 
 ## Related content
 
-- [Learn more about AKS security](/azure/aks/security-concepts)
+- [Learn more about AKS security](/azure/aks/concepts-security)
 - [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
 - [Re-deploy Defender for Containers](defender-for-containers-azure-enable-all-portal.md) - To restore protection in the future

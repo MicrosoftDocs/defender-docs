@@ -12,17 +12,16 @@ This article walks you through enabling comprehensive Microsoft Defender for Con
 ## Article contents
 
 - [Prerequisites](#prerequisites)
-- [Prepare GCP project](#prepare-your-gcp-project)
 - [Create GCP connector](#create-gcp-connector)
-- [Configure connector](#configure-connector-details)
+- [Configure connector details](#configure-connector-details)
 - [Enable Defender features](#enable-all-defender-for-containers-features)
-- [Set up permissions](#set-up-gcp-permissions)
+- [Deploy workload identity](#deploy-workload-identity)
 - [Connect GKE clusters](#connect-gke-clusters-to-azure-arc)
-- [Deploy Defender sensor](#deploy-defender-sensor-to-all-gke-clusters)
-- [Configure scanning](#configure-container-registry-scanning)
+- [Deploy Defender sensor](#deploy-the-defender-sensor)
 - [Enable audit logging](#enable-comprehensive-audit-logging)
+- [Configure container registry scanning](#configure-container-registry-scanning)  
 - [Verify deployment](#verify-comprehensive-deployment)
-- [Monitor security](#monitor-ongoing-security)
+- [Monitor ongoing security](#monitor-ongoing-security)
 
 > [!NOTE]
 > This guide provides complete setup for new deployments. If you already have Defender for Containers enabled and need to fix or add components, see [Deploy specific components](defender-for-containers-gcp-deploy-portal.md).
@@ -292,7 +291,7 @@ The sensor should be running on all nodes within 5-10 minutes.
    done
    ```
 
-## Configure Workload Identity (recommended)
+## Deploy workload identity
 
 For production clusters, use Workload Identity:
 

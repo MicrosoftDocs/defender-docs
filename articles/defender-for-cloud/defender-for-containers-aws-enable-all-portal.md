@@ -29,6 +29,7 @@ This article walks you through enabling comprehensive Microsoft Defender for Con
 ## When to use this guide
 
 Use this guide if you're:
+
 - Setting up Defender for Containers on EKS for the first time
 - Want comprehensive protection for all your EKS clusters
 - Need vulnerability scanning for Amazon ECR
@@ -41,6 +42,7 @@ For selective deployment or troubleshooting existing deployments, see [Deploy sp
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 AWS-specific requirements:
+
 - AWS account with appropriate permissions
 - Active EKS clusters (version 1.19+)
 - Container images in Amazon ECR
@@ -72,7 +74,7 @@ AWS-specific requirements:
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-container-aws/containers-on.png" alt-text="Screenshot showing how to toggle on the Containers plan.":::
+    :::image type="content" source="media/tutorial-enable-containers-aws/aws-containers-enabled.png" alt-text="Screenshot of enabling Defender for Containers for an AWS connector." lightbox="media/tutorial-enable-containers-aws/aws-containers-enabled.png":::
 
 1. Select **Configure** to access the plan settings.
 
@@ -86,23 +88,20 @@ AWS-specific requirements:
 
 ## Set up AWS permissions
 
-1. Select **Download CloudFormation template**.
-
-    :::image type="content" source="media/tutorial-enable-container-aws/download-cloudformation.png" alt-text="Screenshot showing where to download the CloudFormation template." lightbox="media/tutorial-enable-container-aws/download-cloudformation.png":::
+1. Download the CloudFormation template from the portal.
 
 1. Deploy the CloudFormation stack in AWS:
    - Open AWS CloudFormation console
    - Create a new stack with the downloaded template
-   - Name it `MicrosoftDefenderForCloud`
    - Review and create the stack
 
-1. Wait for stack creation to complete.
-
-1. Copy the Role ARN from the stack outputs.
+1. After stack creation completes, copy the Role ARN from the stack outputs.
 
 1. Return to Azure portal and paste the Role ARN.
 
 1. Select **Next: Review and create**.
+
+1. Review your configuration and select **Create**.
 
 ## Connect EKS clusters to Azure Arc
 
@@ -110,61 +109,23 @@ After creating the connector:
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for the recommendation **EKS clusters should be connected to Azure Arc**.
+1. Look for recommendations about EKS clusters that need Arc connection.
 
-1. Select the recommendation.
+1. Follow the recommendation to connect your clusters.
 
-1. Select all your EKS clusters.
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-aks/fix-eks-clusters-not-connected-arc.png" alt-text="Screenshot showing how to select EKS clusters for Arc connection.":::
-
-1. Select **Fix** to generate connection scripts.
-
-1. Download and run the script on each cluster:
-
-   ```bash
-   # Example generated script
-   aws eks update-kubeconfig --name <cluster-name> --region <region>
-   az connectedk8s connect --name <cluster-name> --resource-group <resource-group>
-   ```
+1. Use the provided scripts to connect each cluster to Azure Arc.
 
 ## Deploy the Defender sensor
 
 After connecting your EKS clusters to Azure Arc, deploy the Defender sensor:
 
-### Deploy to all EKS clusters
-
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for "EKS clusters should have Microsoft Defender's extension for Azure Arc installed".
+1. Look for recommendations about installing the Defender extension on Arc-enabled clusters.
 
-1. Select the recommendation.
+1. Select the recommendation and follow the remediation steps.
 
-1. Select all your Arc-connected EKS clusters.
-
-1. Select **Fix**.
-
-1. Configure sensor deployment:
-   - Log Analytics workspace
-   - Resource limits
-   - Namespace exclusions
-
-1. Select **Fix X resources**.
-
-### Deploy to specific clusters
-
-1. Navigate to your Arc-enabled EKS cluster in Azure portal.
-
-1. Select **Extensions** > **+ Add**.
-
-1. Search for **Microsoft Defender for Containers**.
-
-1. Select and configure:
-   - Workspace settings
-   - Resource allocation
-   - Monitoring scope
-
-1. Select **Review + create** > **Create**.
+1. The sensor provides runtime threat detection for your clusters.
 
 ### Verify sensor deployment
 
@@ -174,9 +135,6 @@ kubectl get pods -n kube-system -l app=microsoft-defender
 
 # View DaemonSet
 kubectl get daemonset -n kube-system microsoft-defender-sensor
-
-# Check logs
-kubectl logs -n kube-system -l app=microsoft-defender --tail=50
 ```
 
 The sensor should be running on all nodes within 5-10 minutes.
