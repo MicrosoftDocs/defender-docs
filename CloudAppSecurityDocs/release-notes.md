@@ -22,6 +22,10 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## July 2025
 
+### App Governance available in 8 new regions
+
+App Governance is now also available in Brazil, Sweden, Norway, Switzerland, South Africa, South Korea, Arab Emirates and Asia Pacific. To turn on App Governance please refer this: [https://learn.microsoft.com/en-us/defender-cloud-apps/app-governance-get-started](/defender-cloud-apps/app-governance-get-started)
+
 ### Updated network requirements for GCC and Gov customers
 
 To support ongoing security enhancements and maintain service availability, Microsoft Defender for Cloud Apps now requires updated firewall configurations for customers in GCC and Gov environments.

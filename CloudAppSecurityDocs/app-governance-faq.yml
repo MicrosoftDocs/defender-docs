@@ -1,14 +1,14 @@
+---
 ### YamlMime:FAQ
-metadata:
-  title: Frequently asked questions about app governance
-  description: Get answers to your questions about app governance.
-  ms.date: 05/28/2023
+title: Frequently asked questions about app governance
+description: Get answers to your questions about app governance.
+ms.date: 07/17/2025
+---
 
 title: Frequently asked questions about app governance
 summary: |
-  Read this article to quickly get answers to your app governance questions. If you can't find answers or just want to learn more, join the free webinar sessions with the app governance team. 
+  Read this article to quickly get answers to your app governance questions. 
   
-  > [Sign up for the webinar](https://aka.ms/appgovernancemeet)
 sections:
   - name: Single section - ignored
     questions:
@@ -50,7 +50,7 @@ sections:
           For the list of supported roles, see [Get started with app governance](app-governance-get-started.md#roles).
       - question: Is app governance available in all regions?
         answer: |
-          App governance is currently not available in Brazil, South Korea, Switzerland, Norway, South Africa, and United Arab Emirates. To use app governance, your billing location must be in another country/region.
+          App governance is currently not available in Singapore, Poland, Italy, Qatar, Israel, Spain, Mexico and Taiwan. To use app governance, your billing location must be in another country/region.
 
       - question: Why is app governance empty or showing inaccurate data?
         answer: |
