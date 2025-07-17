@@ -254,7 +254,7 @@ The graph on the **Microsoft 365 Secure Email Gateway performance** card compare
 Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Phish / Malware Efficacy** card](#phish--malware-efficacy-card).
 
 > [!NOTE]
-> The numbers might differ slightly due to the different refresh rates for advanced hunting vs. reporting data.
+> The numbers might differ slightly due to the different refresh & expiry rates for advanced hunting vs. reporting data.
 
 ```kusto
 let _startTime = ago(30d); 
@@ -263,8 +263,8 @@ let PreDelivery = toscalar(
     EmailEvents 
     | where Timestamp between (_startTime .. _endTime) 
         and EmailDirection == "Inbound" 
-        and DeliveryLocation in ("Junk folder", "Quarantine")
         and (ThreatTypes contains "Phish" or ThreatTypes contains "Malware")
+    | where not(DeliveryAction == "Blocked" and DeliveryLocation in ("Dropped","Failed"))
     | extend MDO_detection = parse_json(DetectionMethods) 
     | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0])) 
     | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)") 
