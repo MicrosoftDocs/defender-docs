@@ -4,7 +4,7 @@ description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilitie
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 06/29/2025
+ms.date: 07/17/2025
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
 ---
 
@@ -31,7 +31,7 @@ When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Post
 |**GCP** | Agentless scanning is available on compute instances, instance groups (managed and unmanaged), with Google-managed encryption keys, and customer-managed encryption key (CMEK)|
 |**Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md) the Defender for Servers Plan 2, or the Defender for Containers plan, or the Defender Cloud Security Posture Management (CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.|
 |**Permissions** | [Review the permissions](concept-agentless-data-collection.md#permissions-used-by-agentless-scanning) used by Defender for Cloud for agentless scanning.|
-|**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM isn't scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> <br> Resource type: <br> - Databricks VM <br> <br> File systems: <br> - UFS (Unix File System) <br> - ReFS (Resilient File System) <br> - ZFS (ZFS Member) <br> <br> RAID and Block storage formats: <br> - OracleASM (Oracle Automatic Storage Management) <br> - DRBD (Distributed Replicated Block Device) <br> - Linux_Raid_Member <br> <br> Integrity mechanisms: <br> - DM_Verity_Hash <br> - Swap|
+|**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM isn't scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> - AKS Ephemeral OS Disks <br> <br> Resource type: <br> - Databricks VM <br> <br> File systems: <br> - UFS (Unix File System) <br> - ReFS (Resilient File System) <br> - ZFS (ZFS Member) <br> <br> RAID and Block storage formats: <br> - OracleASM (Oracle Automatic Storage Management) <br> - DRBD (Distributed Replicated Block Device) <br> - Linux_Raid_Member <br> <br> Integrity mechanisms: <br> - DM_Verity_Hash <br> - Swap|
 
 > [!NOTE]
 > AKS clusters running with Ephemeral OS disk enabled aren't supported by agentless machine scanning.
