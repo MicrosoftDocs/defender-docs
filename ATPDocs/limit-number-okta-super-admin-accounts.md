@@ -1,5 +1,5 @@
 ---
-title: Security assessment: Limit the number of Okta Super Admin accounts
+title: 'Security assessment: Limit the number of Okta Super Admin accounts'
 description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers limit the number of Super Admin accounts to the minimum required for their organization.
 ms.service: microsoft-defender-for-identity
 ms.topic: article
