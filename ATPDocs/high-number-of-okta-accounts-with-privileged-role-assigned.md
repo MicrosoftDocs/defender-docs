@@ -22,7 +22,7 @@ A high number of users with privileged roles increases the risk of misuse or una
 
 1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "High number of Okta accounts with privileged role assigned" security assessment.
 1. Review the list of exposed entities to discover which of your Okta accounts have privileged roles assigned.
-1. Reduce the number of users assigned to non–Super Administrator roles to the minimum necessary to ensure better control and align with least privilege best practices.
+1. Reduce the number of users assigned to administrator roles (other than Super-Admin) to the minimum necessary to ensure better control and align with least privilege best practices.
 
 ## Next steps
 
