@@ -22,11 +22,11 @@ ms.date: 08/01/2025
 
 # Enriching Defender Experts for XDR with third-party network signals
 
-Microsoft Defender Experts for XDR lets you incorporate third-party network signals from Palo Alto, Fortinet, and Zscaler **for enrichment only**. These network signals are ingested through Microsoft Sentinel. By enriching Defender incidents with these network signals, our security analysts not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, they could also provide you with a more holistic view of the threat in your environment. 
+Microsoft Defender Experts for XDR lets you incorporate third-party network signals from Palo Alto, Fortinet, and Zscaler **for enrichment**. These network signals are ingested through [Microsoft Sentinel](/azure/sentinel/overview). By enriching Defender incidents with these network signals, our security analysts not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, they could also provide you with a more holistic view of the threat in your environment. 
 
 This enrichment has the following benefits:
 
-- **Unified threat detection:** Correlate data from multiple security tools to identify complex threats.
+- **Unified threat detection:** Correlate data from multiple signal sources to identify complex threats.
 - **Enhanced investigation:** Gain deeper insights into threats with comprehensive data analysis.
 - **Faster response:** Automate and streamline response actions across different security platforms.
 
@@ -35,19 +35,23 @@ This enrichment has the following benefits:
 
 ## How Defender Experts analysts use third-party network data to monitor customer tenants
 
-The Defender Experts team employs a threat-centric methodology that monitors potential threats across the attack surface and critical assets in the customer’s environment. Our investigation and hunting begin with Microsoft Defender XDR and Microsoft Defender for Cloud incidents that alert on potential malicious activities spanning identities, email, collaboration tools, software as a service (SaaS), endpoints, servers/virtual machines in the cloud and on-premises, and data. We join these incidents with third-party network signals and Microsoft's unparalleled vast amount of global threat intelligence data to identify lateral movements, command-and-control activities, data exfiltration, and other adversary-in-the-middle attacks. These network signals allow us to view the end-to-end attack chain comprehensively, expedite investigation and hunting, and provide customers with richer threat summaries and response recommendations.
+The Defender Experts team employs a threat-centric methodology that monitors potential threats across the attack surface and critical assets in the customer’s environment. Our investigation and hunting begin with Microsoft Defender XDR and Microsoft Defender for Servers incidents that alert on potential malicious activities spanning identities, email, collaboration tools, software as a service (SaaS), endpoints, servers/virtual machines in the cloud and on-premises, and data. We join these incidents with third-party network signals and Microsoft's unparalleled vast amount of global threat intelligence data to identify lateral movements, command-and-control (C2) activities, data exfiltration, and other adversary-in-the-middle attacks. These network signals allow us to view the end-to-end attack chain comprehensively, expedite investigation and hunting, and provide customers with richer threat summaries and response recommendations.
 
 ## Example scenario
 
-**Scenario:** A suspicious sign-in attempt is detected on a critical server.
+**Scenario:** Multi-stage attack involving initial access and C2 on multiple endpoints
 
-1. **Detection:** Microsoft Defender Experts for Hunting identifies the suspicious sign-in attempt and generates an alert.
-2. **Correlation:** The Open XDR platform correlates this alert with other data, such as unusual network traffic and failed sign-in attempts from the same IP address.
-3. **Investigation:** Security analysts use the third-party to investigate the incident, reviewing logs and other data to understand the scope of the threat.
-4. **Response:** Automated response actions are triggered, including isolating the affected server and blocking the malicious IP address.
+1. **Detection:** A suspicious atypical travel alert is generated for user `User A` due to multiple sign-in attempts from geographically distant IP addresses and devices. 
+2. **Correlation:** Defender Experts correlates the alert with third-party network signals. Zscaler Internet Access (ZIA) proxy logs reveals unusual outbound traffic patterns and failed sign-in attempts from the same IP addresses, indicating possible credential misuse and reconnaissance behavior.
+3. **Investigation:** Security analysts trace most of the user's sign-in attempts to IP addresses from a single internet service provider (ISP) in the United States, and from a device that appears compliant under [Conditional Access policy](/entra/identity/conditional-access/overview). However, one attempt is traced from an IP address originating from an ISP in Germany, from a managed iOS device that bypassed the Conditional Access policy enforcement due to a misconfigured mobile device management profile. The said IP address is later observed performing unauthorized mailbox operations such as `MoveToDeletedItems`,` Move`, and `Update`. ZIA logs confirm repeated access to Microsoft 365 domains, followed by anomalous data transfer volumes. This combination of geographic anomalies, mailbox manipulation, and proxy log patterns confirm that a multi-stage attack is in progress.
+4. **Response:** Automated response actions are triggered, including revoking session tokens, isolating both devices, blocking the malicious IP addresses, and initiating a full credential reset for the affected user.
 
 ## Ingesting third-party network signals for enrichment
-To enable third-party network signals enrichment, you must have a Microsoft Sentinel instance that's onboarded to Microsoft Defender Microsoft. [Learn more about Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
+If you're a Microsoft Defender XDR customer, [reach out to your Service Delivery Manager](communicate-defender-experts-xdr.md#collaborating-with-your-service-delivery-manager) if you're interested in enabling the third-party network signal enrichment.
+
+### Prerequisites
+
+To enable third-party network signals enrichment, you must have a Microsoft Sentinel instance that's onboarded to Microsoft Defender. [Learn more about Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
 
 Your Sentinel instance must also have the following settings and configurations:
 
@@ -62,4 +66,5 @@ Your Sentinel instance must also have the following settings and configurations:
 
 ### See also
 
-- [Microsoft Defender Experts coverage for cloud workloads](cloud-coverage-defender-experts.md)
+- [Start using Defender Experts for XDR service](start-using-mdex-xdr.md)
+- [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)

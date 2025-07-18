@@ -363,8 +363,6 @@
             href: access-den-graph-api.md
           - name: Ask Defender Experts
             href: experts-on-demand.md
-          - name: Defender Experts for Hunting - Servers
-            href: cloud-coverage-defender-experts.md
         - name: Frequently asked questions
           href: faq-defender-experts-hunting.md    
         - name: Understand Defender Experts for Hunting reports
@@ -387,8 +385,6 @@
             href: communicate-defender-experts-xdr.md
           - name: Reports
             href: reports-xdr.md
-          - name: Defender Experts for Servers
-            href: cloud-coverage-defender-experts.md
           - name: Third-party enrichment
             href: third-party-enrichment-defender-experts.md
           - name: Defender Experts for Hunting

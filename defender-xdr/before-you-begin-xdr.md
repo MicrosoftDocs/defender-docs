@@ -3,10 +3,10 @@ title: Before you begin using the Microsoft Defender Experts for XDR service
 ms.reviewer:
 description: To enable us to get started with the defender experts managed service, we require the following licensing prerequisites
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 07/04/2025
+ms.date: 08/01/2025
 ---
 
 # Before you begin using Defender Experts for XDR
@@ -26,16 +26,27 @@ ms.date: 07/04/2025
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR service.
+This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR service and its add-on offering, Microsoft Defender Experts for Servers.
 
 ## Prerequisites and licensing
+
+**Microsoft Defender Experts for XDR**
 
 Defender Experts for XDR is a separate service from your existing Defender products. To enable us to get started with this managed service, we require the following licensing prerequisites:
 
 -	Microsoft Entra ID P1 must be licensed for all users and enabled (required for enabling secure service provider access).
 -	**At least one** Microsoft Defender product (Microsoft Defender for Endpoint, Microsoft Defender for Office 365 P2, Microsoft Defender for Identity, or Microsoft Defender for Cloud Apps) must be licensed and deployed in active mode.
 
+**Microsoft Defender Experts for Servers**
+
+Customers who wish to have Defender Experts coverage for Microsoft Defender for Cloud servers must have the following:
+
+-	Defender Experts for XDR service enrollment
+-	Defender for Servers Plan 1 or Plan 2 in Microsoft Defender for Cloud
+
 ### Product Eligibility
+
+**Microsoft Defender Experts for XDR**
 
 Defender Experts for XDR provides managed detection and response across any combination of the following Microsoft Defender products:
 -	Defender for Endpoint
@@ -48,7 +59,16 @@ To begin service operations, at least one of these products must be appropriatel
 The following product isn't covered by this service:
 -	Microsoft Defender for IoT
 
+**Microsoft Defender Experts for Servers**
+
+To enable the Defender Experts for Severs coverage, Defender for Servers Plan 1 or Plan 2 in Defender for Cloud must be enabled. Endpoint protection should also be turned on for both Windows and Linux devices that allow protection powered by Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud. 
+
+Depending on the coverage you're looking for, you can enable the Defender for Servers plan for an Microsoft Azure subscription, Amazon Web Services account, or Google Cloud Platform project.
+
 ### Product configuration and service coverage
+
+**Microsoft Defender Experts for XDR**
+
 Defender Experts for XDR provides managed detection and response across Microsoft Defender products that are licensed and properly deployed in your environment.
 While all Defender products (except Defender for IoT) can be included in the service, the depth of coverage might vary depending on how each product is configured. 
 -	**Products deployed in active mode are fully covered.** Defender Experts investigate and respond to incidents involved in these products on your behalf.
@@ -58,15 +78,12 @@ We recommend ensuring that at least one product, such as Defender for Endpoint o
 
 For maximum, native coverage, we recommend deploying the full Microsoft Defender XDR suite and enabling all eligible products in active mode.
 
-
-### Server coverage
-
-Defender Experts for XDR also covers servers—whether on premises or on a hyperscale cloud service provider—that have Defender for Endpoint deployed on them with a Microsoft Defender for Endpoint for Server license. For Defender Experts coverage, a server is considered as a user account for billing. The service doesn't cover Microsoft Defender for Cloud workloads.
-[Learn more about specific hardware and software requirements](/defender-endpoint/minimum-requirements).
+Defender Experts for XDR also covers servers—whether on premises or on a hyperscale cloud service provider—that have Defender for Endpoint deployed on them with a Microsoft Defender for Endpoint for Server license. For Defender Experts coverage, a server is considered as a user account for billing. 
+[Learn more about specific hardware and software requirements](/defender-endpoint/minimum-requirements)
 
 ### Ask Defender Experts
 
-[Ask Defender Experts](experts-on-demand.md) is intended to provide a better understanding of complex threats affecting your organization. It focuses on products included in Microsoft Defender XDR (Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, and Defender for Identity). [See sample questions you can ask Defender Experts](experts-on-demand.md#sample-questions-you-can-ask-from-defender-experts).
+[Ask Defender Experts](experts-on-demand.md) is intended to provide a better understanding of complex threats affecting your organization. It focuses on products included in Microsoft Defender Experts services. [See sample questions you can ask Defender Experts](experts-on-demand.md#sample-questions-you-can-ask-from-defender-experts).
 
 As part of the service's built-in [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md), customers are assigned 10 **Ask Defender Experts** credits, which you can use to submit questions, at the start of each calendar quarter. Unused credits from the current quarter roll up to the next one. You can use up to 20 credits only per quarter. All unused credits expire by the end of the calendar year or at the end of your subscription term, whichever comes first.
 
