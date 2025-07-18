@@ -26,10 +26,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2025
 
-**Expanded coverage in ITDR deployment health widget**
-
-The ITDR deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Entra Connect servers—making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
-
 **Time limit added to Recommended test mode**
 
 Recommended test mode now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already had Recommended test mode enabled, a 60-day expiration was automatically applied.
