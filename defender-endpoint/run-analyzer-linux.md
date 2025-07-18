@@ -485,24 +485,24 @@ The following script performs the first six steps of the [Running the Binary ver
 
    ```bash
    #! /usr/bin/bash 
-
+   
    echo "Starting Client Analyzer Script. Running As:"
    whoami
-
+   
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
-   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
-
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
-
+   
    echo "Unzipping SupportToolLinuxBinary.zip"
-   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
-
+   unzip -q /tmp/XMDEClientAnalyzerBinary/XMDEClientAnalyzer/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   
    echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
+   
    ```
-
+   
 #### Python client analyzer install script
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#running-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
