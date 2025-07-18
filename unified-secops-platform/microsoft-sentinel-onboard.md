@@ -24,12 +24,16 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 03/17/2025
+ms.date: 07/16/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
 
-Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. When you onboard Microsoft Sentinel to the Defender portal together Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
+Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. Using Microsoft Sentinel in the Defender portal together with Microsoft Defender XDR services, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. 
+
+This article is relevant for customers whose Microsoft Sentinel workspaces are not yet connected to the Defender portal. In many cases, customers onboarding to Microsoft Sentinel after **July 1, 2025** are automatically onboarded to the Defender portal.
+
+For more information, see:
 
 - [What are unified security operations?](overview-unified-security.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
