@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity dashboard
 description: This article describes how to work with the identity threat detection and response (ITDR) dashboard in Microsoft 365 Defender.
-ms.date: 18/07/2025
+ms.date: 07/18/2025
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
 ---
