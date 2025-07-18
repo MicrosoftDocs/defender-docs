@@ -50,7 +50,7 @@ Apart from the constantly updated research and intelligence tailored for the thr
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 
 > [!NOTE] 
-> Service delivery managers are included if your Defender Experts for XDR and server add-on service is licensed for 500 or more seats.
+> Service delivery managers are included if your Defender Experts for XDR and Defender Experts for Servers services are licensed for 500 or more seats and/or cloud workloads.
 
 [Read the Defender Experts for XDR ebook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-Experts-for-XDR-eBook-Final.pdf) and maximize the benefits of this product suite. 
 
