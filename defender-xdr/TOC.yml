@@ -307,6 +307,8 @@
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: GraphApiAuditEvents
+            href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
           - name: IdentityInfo
