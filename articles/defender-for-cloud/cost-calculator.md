@@ -253,7 +253,7 @@ The calculator provides an estimate based on the information available when the 
   
 ### What are the billable units?  
   
-The cost of plans is based on the units they protect. Each plan charges for a different unit type, which can be found on the [Microsoft Defender for Cloud Settings page](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/PolicyMenuBlade/~/pricingTier/subscriptionId/615f5f56-4ba9-45cf-b644-0c09d7d325c8).  
+The cost of plans is based on the units they protect. Each plan charges for a different unit type, which can be found on the [Microsoft Defender for Cloud Environment settings page](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings).  
   
 ### Can I adjust the estimates manually?  
   
@@ -273,7 +273,7 @@ Our support team is ready to assist you with any questions or concerns you might
   
 ### How can I try the cost calculator?  
   
-We invite you to try out the new cost calculator and experience its benefits firsthand. Access the tool and start defining the scope of your protection needs to get started. To use the Defender for Cloud Cost Calculator, go to [the Microsoft Defender for Cloud Settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/PolicyMenuBlade/~/pricingTier/subscriptionId/615f5f56-4ba9-45cf-b644-0c09d7d325c8) and select the **Cost Calculator** button in the upper section.  
+We invite you to try out the new cost calculator and experience its benefits firsthand. Access the tool and start defining the scope of your protection needs to get started. To use the Defender for Cloud Cost Calculator, go to [the Microsoft Defender for Cloud Environment settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings) and select the **Cost Calculator** button in the upper section.  
   
 ## Related content
 

@@ -113,6 +113,10 @@ The following standards are available in Defender for Cloud:
 |AWS Foundational Security Best Practices             |AWS|
 |CRI Profile          |AWS, GCP|
 |NIST SP 800-172|AWS, GCP|
+|Digital Operational Resilience Act (DORA) |Azure, AWS, GCP|
+|European Union Artificial Intelligence Act (EU AI Act)|Azure, AWS, GCP|
+|Korean Information Security Management System for Public Cloud (k-ISMS-P)|Azure, AWS, GCP|
+|(CIS) Microsoft Azure Foundations Benchmark v3.0|Azure|
 
 ## Related content
 
