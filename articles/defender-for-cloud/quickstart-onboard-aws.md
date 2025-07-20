@@ -135,11 +135,6 @@ Enable these other extensions on the Azure Arc-connected machines:
 
 - Microsoft Defender for Endpoint
 - A vulnerability assessment solution (TVM or Qualys)
-- The Log Analytics agent on Azure Arc-connected machines or the Azure Monitor agent
-
-Make sure the selected Log Analytics workspace has a security solution installed. The Log Analytics agent and the Azure Monitor agent are currently configured at the *subscription* level. All of your AWS accounts and GCP projects under the same subscription inherit the subscription settings for the Log Analytics agent and the Azure Monitor agent.
-
-[Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
 
 > [!NOTE]
 > As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
