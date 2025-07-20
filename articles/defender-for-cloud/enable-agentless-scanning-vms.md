@@ -4,7 +4,7 @@ description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilitie
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 07/17/2025
+ms.date: 07/20/2025
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
 ---
 
