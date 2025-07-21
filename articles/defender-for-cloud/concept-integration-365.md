@@ -3,6 +3,7 @@ title: Alerts and incidents in Microsoft Defender XDR for Microsoft Defender for
 description: Learn about the benefits of receiving Microsoft Defender for Cloud's alerts in Microsoft Defender XDR 
 ms.topic: concept-article
 ms.date: 03/25/2025
+ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand the benefits of integrating Microsoft Defender for Cloud alerts with Microsoft Defender XDR.
 ---
 
@@ -60,7 +61,7 @@ When the integration between Defender for Cloud and Microsoft Defender XDR is en
 
 > [!IMPORTANT]
 >
-> - In Defender for Cloud, only Defender for Cloud alerts is valid entities. References to Microsoft Defender XDR alerts within Defender for Cloud apply only to Microsoft Defender for Endpoint alerts on cloud resources.
+> - In Defender for Cloud, only Defender for Cloud alerts are valid entities. References to Microsoft Defender XDR alerts within Defender for Cloud apply only to Microsoft Defender for Endpoint alerts on cloud resources.
 > - Microsoft Defender for Endpoint alerts on cloud resources appear in both Defender for Cloud and Microsoft Defender XDR, but their statuses aren't synchronized between the two services.
 
 ## Advanced hunting in XDR
