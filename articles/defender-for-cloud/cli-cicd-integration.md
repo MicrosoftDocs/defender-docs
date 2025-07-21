@@ -17,7 +17,7 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you em
 > [! NOTE]
 > Currently only results from the Trivy container‑vulnerability scanner are uploaded to Microsoft Defender for Cloud. Scan results from every other scanner still run and appear in the build logs/SARIF files, but they are not sent to the Defender for Cloud backend.
 
-**Key capabilities**
+**## Key capabilities**
 
 - Container‑image vulnerability assessment with Trivy and automatic ingestion into Cloud Security Explorer.
 - In‑pipeline source‑code checks such as SAST, secret‑detection, dependency analysis and IaC scanning.
