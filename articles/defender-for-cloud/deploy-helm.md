@@ -22,7 +22,7 @@ If your Defender for Containers plan isn't already enabled, follow these steps:
 
 1. In the Azure portal, go to **Microsoft Defender for Cloud**, and select the subscription for the clusters where you want to install the Helm chart. In EKS and GKE, select the environment with those clusters (the security connector for the EKS or GKE account with the cluster).
 
-1. Under **Cloud Workload Protection (CWP)**, find the **Containers** plan and set the toggle to **On**.
+1. Under **Cloud Workload Protection Platform (CWPP)**, find the **Containers** plan and set the toggle to **On**.
 
    :::image type="content" source="media/deploy-helm/enable-containers-plan.png" alt-text="Screenshot showing how to enable the Containers plan." lightbox="media/deploy-helm/enable-containers-plan.png":::
 
@@ -141,6 +141,29 @@ helm list --namespace mdc
 
 The STATUS field should read **deployed**.
 
+## Security rules for gated deployment
+
+You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
+
+### Accessing security rules
+
+1. Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
+1. In the left navigation pane, select **Environment settings**.
+1. Click on the **Security rules** tile.
+
+### Configuring vulnerability assessment rules
+
+1. Within the Security rules page, navigate to **Vulnerability assessment** under the **Gated deployment** section.
+1. Create or edit your security rules as needed.
+
+> [!IMPORTANT]
+> For Helm installations:
+> 
+> - **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
+>  - **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
+> 
+> :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
+
 ## Existing recommendation to provision sensor
 
 > [!NOTE]
@@ -169,25 +192,6 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --reuse-values
 ```
 
-## Security rules for gated deployment
-
-You can define security rules to control what is allowed to be deployed into your Kubernetes clusters. These rules enable you to block or audit container images based on security criteria, such as images with too many vulnerabilities.
-
-Accessing security rules
-- Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
-- In the left navigation pane, select **Environment settings**.
-- Click on the **Security rules** tile.
-
-Configuring vulnerability assessment rules
-- Within the Security rules page, navigate to **Vulnerability assessment** under the **Gated deployment** section.
-- Create or edit your security rules as needed.
-
-> [!IMPORTANT]
-> For Helm installations
-> - **Subscription Support Warning**: When creating rules, your selected subscription may be marked as "not supported for Gated deployment." This occurs because you installed the Defender for Containers components using Helm rather than through the dashboard's automatic installation.
-> - **Skip Auto-Installation**: If prompted to enable gating in the third tab of the security rule edit window, make sure to press **Skip**. This option enables auto-installation, which conflicts with your existing Helm deployment.
->
-> :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window.":::
 
 ## Next steps
 

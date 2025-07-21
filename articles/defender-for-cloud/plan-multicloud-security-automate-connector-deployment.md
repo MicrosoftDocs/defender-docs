@@ -9,7 +9,7 @@ ms.date: 05/25/2025
 
 # Automate connector deployment
 
-This article is part of a series to guide you in designing a solution for cloud security posture management (CSPM) and cloud workload protection (CWP) across multicloud resources with Microsoft Defender for Cloud.
+This article is part of a series to guide you in designing a solution for cloud security posture management (CSPM) and cloud workload protection platform (CWPP) across multicloud resources with Microsoft Defender for Cloud.
 
 ## Goal
 
