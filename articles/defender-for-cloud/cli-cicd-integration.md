@@ -68,7 +68,7 @@ To allow security results from the Defender for Cloud CLI to be passed to the De
    
 ### Pipeline variables
 
-After securely receiving the tokens, the developer must configure an environment variable for the key. The environment variable is passed to the CLI through the shell script that the developer can receive from curl or manually copying the shell script into their repo.
+After securely receiving the tokens, configure an environment variable for the key. The environment variable is passed to the CLI through a shell script, which can be obtained using curl or by manually copying it into the repository.
 
 |Variable|Description|
 |----------|----------|
