@@ -35,8 +35,9 @@ ms.date: 06/27/2025
 | **What types of incidents can your experts investigate?** | Defender Experts for XDR covers incidents categorized as High or Medium severity in Windows, Linux, and macOS devices. Incidents categorized as Compliance, Data Loss Prevention (DLP), or Custom Detections and those affecting internet of things (IoT), iOS, or Android devices are outside the service's scope. |
 | **Can your experts help me improve my security posture?** | Yes, our experts provide necessary guidance regularly to improve your security posture.
 | **Can Defender Experts for XDR help with an active compromise or vulnerability?** | No, Defender Experts currently don't provide incident response services. Contact your Microsoft representative or fill out the [Experiencing a Cybersecurity Incident?](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRypQlJUvhTFIvfpiAfrpFQdUOTdRRFpDUFQ1TzNLVFZXV0VUOVlVN0szUiQlQCN0PWcu) form to engage Microsoft Incident Response for incident response assistance. |
-| **How can my organization participate in the Defender Experts for XDR service?** | Contact your Microsoft representative to express interest in Defender Experts for XDR.|
+| **How can my organization participate in the Defender Experts for XDR and Micrososft Defender Experts for Servers services?** | Contact your Microsoft representative to express interest in Defender Experts for XDR and Defender Experts for Servers services.|
 |**How is AI used in the Defender Experts service?**| AI is used to support the Defender Experts service by enhancing the speed, scale, and consistency of security operations. We use a combination of generative, agentic, and foundational AI to power workflows such as incident triage, investigation, and summarization by analyzing signals like telemetry and historical analyst actions. Defender Experts analysts review and validate these AI-generated insights to ensure quality and accuracy. AI helps scale expert capabilities, and human analysts remain central to the service, ensuring customers receive trusted outcomes.|
+
 
 ### See also
 

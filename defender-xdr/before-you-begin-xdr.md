@@ -91,13 +91,13 @@ As part of the service's built-in [Microsoft Defender Experts for Hunting](defen
 
 ## Access requirements
 
-Work with your Commercial Executive to transact the Defender Experts for XDR SKU.
+Work with your Commercial Executive to transact the Defender Experts for XDR and Defender Experts for Servers SKUs.
 
-Defender Experts for XDR requests for certain roles and permissions for you to fully access the service capabilities. [Learn more](dex-xdr-permissions.md).
+Defender Experts for XDR and Defender Experts for Servers request for certain roles and permissions for you to fully access the service capabilities. [Learn more](dex-xdr-permissions.md)
 
 ## Service availability and data protection
 
-Defender Experts for XDR is a managed extended detection and response service that proactively hunts for threats across endpoints, email, identity, and cloud apps. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Purchasing this service means you're granting permission to Microsoft experts to access the said data.
+Defender Experts for XDR and Defender Experts for Servers are managed extended detection and response services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. If you have the Defender Experts for Servers add-on service, they need to review [Microsoft Defender for Cloud alerts and incidents in Defender XDR](/azure/defender-for-cloud/concept-integration-365). Purchasing these services means you're granting permission to Microsoft experts to access the said data.
 
 The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/en-us/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 
@@ -109,9 +109,12 @@ Defender Experts for XDR operational data, such as case tickets and analyst note
 
 Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
+> [!NOTE]
+> Microsoft Defender for Cloud is integrated with Microsoft Defender XDR. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers add-on service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
+
 ### Security and compliance
 
-When you purchase and onboard to Defender Experts for XDR, you're granting permission to Microsoft experts to access your advanced hunting data.
+When you purchase and onboard to Defender Experts for XDR and Defender Experts for Servers, you're granting permission to Microsoft experts to access your advanced hunting data.
 
 ### Availability
 

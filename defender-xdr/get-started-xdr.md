@@ -3,10 +3,10 @@ title: Get started with Microsoft Defender Experts for XDR
 ms.reviewer:
 description: Defender Experts for XDR let you determine the individuals or groups within your organization that need to be notified if there's a critical incident
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 08/01/2025
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -26,11 +26,13 @@ ms.date: 04/10/2025
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-For onboarding instructions, check out this short video.
+This document applies for Microsoft Defender Experts for XDR and its add-on service, Microsoft Defedner Experts for Servers. 
+
+For onboarding instructions, check out this short video:
 
 > [!VIDEO https://www.youtube.com/embed/eLEXPZ1mUwQ]
 
-Once the Defender Experts for XDR team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
+Once the Defender Experts team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
 
 Select the link in the welcome email to directly launch the Defender Experts settings setup in the Microsoft Defender portal. You can also open this setup by going to **Settings** > **Defender Experts** and selecting **Get started**.
 
