@@ -171,7 +171,7 @@
              href: anti-spam-protection-faq.yml
            - name: Zero-hour auto purge (ZAP)
              href: zero-hour-auto-purge.md
-           - name: Configure Microsoft 365 to deliver spam to Junk Email folders in on-premises Exchange
+           - name: Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes
              href: /exchange/standalone-eop/configure-eop-spam-protection-hybrid
          - name: Anti-phishing for all cloud mailboxes and Defender for Office 365
            items:

@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/30/2025
+ms.date: 07/21/2025
 audience: ITPro
 ms.topic: overview
 ms.collection: 
@@ -28,9 +28,9 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The default email protections for cloud mailboxes protect your Microsoft 365 organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
+The default email protections in Microsoft 365 protect your organization from spam, malware, phishing and other email threats. These protections are included in all organizations with cloud mailboxes.
 
-The default email protections for cloud mailboxes are on by default via the default threat policies for:
+These protections are on by default via the default threat policies for:
 
 - [Anti-malware protection](anti-malware-protection-about.md)
 - [Anti-spam protection](anti-spam-protection-about.md)
@@ -41,6 +41,9 @@ The default threat policies for these features apply to all recipients. You can'
 You can customize the security settings in the default threat policies, create custom threat policies, or better yet, turn on and add all recipients to the Standard and/or Strict preset security policies. For complete information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 
 The rest of this article explains how the default email protections for cloud mailboxes work and the features they contain.
+
+> [!TIP]
+> The default email protections for cloud mailboxes are also available as a separate subscription to protect on-premises email environments (not just Microsoft Exchange). For more information, see [Exchange Online Protection for on-premises organizations](/exchange/standalone-eop/standalone-eop).
 
 ## How the default email protections for cloud mailboxes work
 
