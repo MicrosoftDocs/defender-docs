@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 06/27/2025
+ms.date: 08/01/2025
 ---
 
 # General information on Defender Experts for XDR service
@@ -42,4 +42,5 @@ ms.date: 06/27/2025
 ### See also
 
 [How Microsoft Defender Experts for XDR permissions work](dex-xdr-permissions.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

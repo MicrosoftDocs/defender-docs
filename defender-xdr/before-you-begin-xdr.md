@@ -63,7 +63,7 @@ The following product isn't covered by this service:
 
 To enable the Defender Experts for Severs coverage, Defender for Servers Plan 1 or Plan 2 in Defender for Cloud must be enabled. Endpoint protection should also be turned on for both Windows and Linux devices that allow protection powered by Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud. 
 
-Depending on the coverage you're looking for, you can enable the Defender for Servers plan for an Microsoft Azure subscription, Amazon Web Services account, or Google Cloud Platform project.
+Depending on the coverage you're looking for, you can enable the Defender for Servers plan for a Microsoft Azure subscription, Amazon Web Services account, or Google Cloud Platform project.
 
 ### Product configuration and service coverage
 

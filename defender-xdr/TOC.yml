@@ -366,7 +366,11 @@
           - name: Ask Defender Experts
             href: experts-on-demand.md
         - name: Frequently asked questions
-          href: faq-defender-experts-hunting.md    
+          items: 
+          - name: General information
+            href: faq-defender-experts-hunting.md
+          - name: Server and cloud workload coverage
+            href: faq-server-cloud-workload-coverage.md
         - name: Understand Defender Experts for Hunting reports
           href: defender-experts-report.md
       - name: Collaborate with Microsoft Defender Experts for XDR
@@ -401,6 +405,8 @@
             href: faq-incident-notifications-xdr.md
           - name: Managed response
             href: faq-managed-response.md
+          - name: Server and cloud workload coverage
+            href: faq-server-cloud-workload-coverage.md
         - name: Additional information on Defender Experts for XDR
           items:
           - name: Important considerations

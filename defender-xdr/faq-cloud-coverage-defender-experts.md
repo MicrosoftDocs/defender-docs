@@ -1,7 +1,7 @@
 ---
-title: FAQs related to Microsoft Defender Experts coverage for cloud workloads
+title: FAQs related to Microsoft Defender Experts server coverage for servers and cloud workloads
 ms.reviewer:
-description: Frequently asked questions related to server coverage in Microsoft Defender Experts
+description: Frequently asked questions related to server and cloud workload coverage in Microsoft Defender Experts
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -19,26 +19,25 @@ search.appverid: met150
 ms.date: 08/01/2025
 ---
 
-# Understanding Defender Experts coverage for cloud workloads
+# Understanding Defender Experts coverage for servers and cloud workloads
 
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-The following section lists down questions you or your SOC team might have regarding Micorosft Defender Experts coverage for cloud workloads.
+The following section lists down questions you or your SOC team might have regarding Microsoft Defender Experts coverage for servers and cloud workloads.
 
 | Questions | Answers |
 |---------|---------|
-|**What is Managed response?** | Microsoft Defender Experts for XDR offers **Managed response** where our experts manage the entire remediation process for incidents that require them. This process includes investigating the incident to identify the root cause, determining the required response actions, and taking those actions on your behalf.|
-|**What actions are in scope for Managed response?** | All actions found below are in scope for Managed response for any device and user that isn't excluded.<br><br>*For devices* *(Available now)*<ul><li>Isolate machine<br><li>Release machine from isolation<br><li>Stop and quarantine file<br><li>Restrict app execution<br><li>Remove app restriction</ul><br>*For users (Available now)*<ul><li>Disable user<br><li>Enable user</ul><br>*For users (Coming soon)*<ul><li>Revoke refresh token<br><li>Soft delete emails</ul> |
-|**Can I customize the extent of Managed response?** | You can configure the extent to which our experts do Managed response actions on your behalf by excluding certain devices and users (individually or by groups) either during onboarding or later by modifying your service's settings. [Read more about excluding device groups](get-started-xdr.md#exclude-devices-and-users-from-remediation) |
-|**What support do Defender Experts offer for excluded assets?** | If our experts determine that you need to perform response actions on excluded devices or users, we notify you through various customizable methods and direct you to your Microsoft Defender XDR portal. From your portal, you can then view a detailed summary of our investigation process and the required response actions in the portal and perform these required actions directly. Similar capabilities are also available through Defender APIs, in case you prefer using a security information and event management (SIEM), IT service management (ITSM), or any other third-party tool. |
-|**How am I going to be informed about the response actions?** | Response actions that our experts have completed on your behalf and any pending ones that you need to perform on your excluded assets are displayed in the **Managed response** panel in your Defender portal's **Incidents** page. <br><br>In addition, you'll also receive an email containing a link to the incident and instructions to view the Managed response in the portal. Moreover, if you have integration with Microsoft Sentinel or APIs, you'll also be notified within those tools by looking for Defender Experts statuses. For more information, see [FAQs related to Microsoft Defender Experts for XDR incident notifications](faq-incident-notifications-xdr.md).|
-|**Can I customize Managed response based on actions?** | No. If you have devices or users that are considered high-value or sensitive, you can add them to your exclusion list. Our experts will NOT take any action on them and will only provide guidance if they're impacted by an incident.|
+|**What does the server and cloud workload coverage add-on mean for the Microsoft Defender Experts service? Can I purchase this coverage only?** | The server and cloud coverage service, called **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting – Servers**, is only available as an add-on to existing [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers, respectively. To avail of this add-on, you need at least one Defender Experts for XDR or Defender Experts for Hunting license to enable coverage of all your servers in Microsoft Defender for Cloud.|
+|**Can I configure which servers the Defender Experts will cover?** | This add-on service covers **all** your servers in your tenant that have [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) protection enabled in Defender for Cloud. |
+|**Do the Defender Experts investigate all Defender for Servers alerts** | There are some Defender for Servers alerts that our analysts aren't able to investigate. Currently, DNS alerts are out of scope due to limited data available for investigation.  |
+|**I only have Microsoft Defender Endpoint. How can I get server coverage?** | If you have servers that have Defender for Endpoint deployed on them with a Microsoft Defender for Endpoint for Server license, you can get the server coverage through the Defender Experts for XDR service. The service doesn't cover Microsoft Defender for Cloud workloads. [Learn more](before-you-begin-xdr.md#product-configuration-and-service-coverage)<br><br>If you want coverage for servers in Defender for Cloud, you need to avail the Microsoft Defender Experts for Servers or Defender Experts for Hunting - Servers add-on. |
+
 
 ### See also
 
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [FAQs related to Microsoft Defender Experts for XDR incident notifications](faq-incident-notifications-xdr.md)
+- [General information on Defender Experts for XDR service](frequently-asked-questions.md)
+- [General information on Microsoft Defender Experts for Hunting service](faq-defender-experts-hunting.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
