@@ -102,7 +102,7 @@ pipelines:
 
 ## Review results in Cloud Security Explorer
 
-1. After running the pipeline successfully, navigate again to Microsoft Defender for Cloud.
+1. After the pipeline runs successfully, navigate to Microsoft Defender for Cloud.
 
 1. In the **Defender for Cloud** menu, select **Cloud Security Explorer**.
 
