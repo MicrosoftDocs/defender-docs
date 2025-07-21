@@ -53,7 +53,10 @@ To allow security results from the Defender for Cloud CLI to be passed to the De
 
       :::image type="content" source="media/cli-cicd/new-devops-ingestion.png" alt-text="Screenshot of new DevOps Ingestion option." lightbox="media/cli-cicd/new-devops-ingestion.png":::
    
-1. Provide a name, choose the tenant to store the secret, set an expiration date, and **enable** the token.
+1. Enter an application name. 
+   1. Choose the tenant to store the secret.
+   1. Set an expiration date, and **enable** the token.
+   1. Select **Save.**
 
    :::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of adding DevOps Ingestion integration." lightbox="media/cli-cicd/add-devops-ingestion.png":::
    
