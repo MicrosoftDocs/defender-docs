@@ -14,6 +14,7 @@ ms.date: 12/08/2024
 
 Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you embed security scanning directly in your continuous integration and continuous deployment (CI/CD) workflows. The CLI orchestrates several industry‑standard scanners and automatically correlates detected issues with resources monitored by Microsoft Defender for Cloud.
 
+> [! NOTE]
 > Currently only results from the Trivy container‑vulnerability scanner are uploaded to Microsoft Defender for Cloud. Scan results from every other scanner still run and appear in the build logs/SARIF files, but they are not sent to the Defender for Cloud backend.
 
 **Key capabilities**
