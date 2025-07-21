@@ -105,6 +105,7 @@ It's important to understand how user allows and blocks, organization allows and
 - After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.
 - If the same email address or domain exists in a user's Safe Senders list and Blocked Senders list, the Safe Senders list takes precedence.
 - If the same entity (email address, domain, spoofed sending infrastructure, file, or URL) exists in an allow entry and a block entry in the Tenant Allow/Block List, the block entry takes precedence.
+- For malware and high confidence phishing verdicts, you can't create allow entries directly in the Tenant Allow/Block List. Instead, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to submit the **[email](submissions-admin.md#report-good-email-to-microsoft)**, **[email attachment](submissions-admin.md#report-good-email-attachments-to-microsoft)** or **[URL](submissions-admin.md#report-good-urls-to-microsoft)** to Microsoft. After you select **I've confirmed it's clean**, you can then select **Allow this message**, **Allow this file** or **Allow this URL** to create an allow entry for the domains and email addresses, files or URLs.
 - If you use a file type in the [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies), allowing the same file in the Tenant Allow/Block list or Exchange mail flow rules (also known as transport rules) doesn't override the verdict.
 
 ### User allows and blocks

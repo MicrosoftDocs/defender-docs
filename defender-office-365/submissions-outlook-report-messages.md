@@ -74,7 +74,7 @@ In a supported version of Outlook, select one or more messages, select **Report*
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The following actions are also taken on the reported messages in the mailbox:
 
-- **Reported as junk**: The messages are moved to the Junk Email folder.
+- **Reported as junk**: The messages are moved to the Junk Email folder, and the sender is automatically added to the user's Blocked Senders list. 
 - **Reported as phishing**: The messages are deleted.
 
 ### Use the built-in Report button in Outlook to report messages that aren't junk
