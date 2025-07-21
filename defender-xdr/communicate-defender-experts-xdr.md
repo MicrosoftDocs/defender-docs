@@ -51,7 +51,8 @@ Once you turn on chat on Teams, a new team named **Defender Experts team** is cr
 
 **Important reminders when using the Teams chat:**
 
-- Our experts have access to messages in **Defender Experts team** through the Defender Experts Teams app so you don't have to explicitly them to this team. 
+- Our experts have access to messages in **Defender Experts team** through the Defender Experts Teams app so you don't have to explicitly add them to this team. 
+
 - Our experts only see replies to existing posts created by Defender Experts regarding a managed response. If you create a new post, our experts won't be able to see it.
 - While Defender Experts might have access to all messages in any channel in **Defender Experts team**, tag or mention our experts by typing *@Defender Experts* in your replies, so they're notified to join the chat conversation.
 - Don't attach any attachments (for example, files for analysis) in the chat. For security reasons, Defender Experts won't be able to view the attachments. Instead, send them to appropriate submissions channels or provide links where they can be found in Microsoft Defender XDR portal.
