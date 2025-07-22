@@ -149,7 +149,7 @@ Create installation YAML file. You can also download the file directly from [Git
 ```
 
 > [!NOTE]
-> The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help through the following command: `./mde_installer.sh --help`
+> The installer script also supports other parameters such as channel, realtime protection, version, custom path installation etc. To select from the list of available options, check help through the following command: `./mde_installer.sh --help`
 
 ### Apply the playbook
 
