@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.date: 06/25/2025
+ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to enable File Integrity Monitoring so that I can detect unauthorized changes to critical files.
 ---
 

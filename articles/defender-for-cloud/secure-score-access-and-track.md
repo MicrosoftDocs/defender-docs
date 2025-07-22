@@ -3,6 +3,7 @@ title: Track your secure score
 description: Learn about the multiple ways to access and track your secure score in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Track secure score

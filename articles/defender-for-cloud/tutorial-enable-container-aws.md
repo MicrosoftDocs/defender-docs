@@ -3,6 +3,7 @@ title: Protect your Amazon Web Service (AWS) accounts containers with Defender f
 description: Learn how to enable the Defender for Containers plan on your Amazon Web Service (AWS) accounts for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.date: 05/13/2025
+ms.custom: sfi-image-blocked
 ---
 
 # Protect your Amazon Web Service (AWS) containers with Defender for Containers

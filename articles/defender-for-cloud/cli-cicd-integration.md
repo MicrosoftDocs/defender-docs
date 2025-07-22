@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.date: 12/08/2024
+ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to integrate Defender for Cloud CLI with CI/CD pipelines so that I can run static analysis tools and scan images for vulnerabilities.
 ---
 
