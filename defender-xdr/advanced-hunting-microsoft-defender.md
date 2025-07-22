@@ -35,7 +35,7 @@ Querying from a single portal across different data sets makes hunting more effi
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 > [!NOTE]
-> After onboarding to the Microsoft Sentinel data lake, auxiliary log tables are no longer available in Microsoft Defender advanced hunting. Instead, you can access them through data lake exploration KQL queries in the Defender portal. For more information, see [KQL queries in the Microsoft Sentinel data lake](/sentinel/datalake/kql-queries).
+> After onboarding to the Microsoft Sentinel data lake, auxiliary log tables are no longer available in Microsoft Defender advanced hunting. Instead, you can access them through data lake exploration KQL queries in the Defender portal. For more information, see [KQL queries in the Microsoft Sentinel data lake](/azure/sentinel/datalake/kql-queries).
 
 ## How to access
 
