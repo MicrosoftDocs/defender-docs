@@ -9,9 +9,20 @@ ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to integrate Defender for Cloud CLI with CI/CD pipelines so that I can run static analysis tools and scan images for vulnerabilities.
 ---
 
-# Integrate Defender for Cloud CLI with CI/CD pipelines
+# Integrate Defender for Cloud CLI with CI/CD pipelines (Preview)
 
-Defender for Cloud Command Line Interface (CLI) is an application you can use in continuous integration and continuous deployment (CI/CD) pipelines. It runs static analysis tools and connects code to cloud services. You can use Defender for Cloud CLI in any build process to scan images for security vulnerabilities with built-in security scanners. It sends the scan results to the Defender for Cloud portal. The Cloud Security Explorer can then access the container image and its vulnerabilities.
+## Overview
+
+Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you embed security scanning directly in your continuous integration and continuous deployment (CI/CD) workflows. The CLI orchestrates several industry‑standard scanners and automatically correlates detected issues with resources monitored by Microsoft Defender for Cloud.
+> [!NOTE]
+> Currently only results from the Trivy container‑vulnerability scanner are uploaded to Microsoft Defender for Cloud. Scan results from every other scanner still run and appear in the build logs/SARIF files, but they are not sent to the Defender for Cloud backend.
+## Key capabilities
+
+- Container‑image vulnerability assessment with Trivy and automatic ingestion into Cloud Security Explorer.
+- In‑pipeline source‑code checks such as SAST, secret‑detection, dependency analysis and IaC scanning.
+- Unified, cross‑platform CLI that works with any CI runner (Azure Pipelines, GitHub Actions, Jenkins, Bitbucket, GitLab, CircleCI, Travis CI, AWS CodeBuild and more).
+- Standards‑based SARIF output that integrates with pull‑request annotations and quality gates.
+- Token‑based authentication scoped to a single Azure subscription for granular control.
 
 ## Prerequisites
 
@@ -27,43 +38,49 @@ Defender for Cloud Command Line Interface (CLI) is an application you can use in
 
 In the following sections, we explain how to retrieve the Client ID and Secrets, update the CI/CD pipeline script, and add environment variables to the CI/CD pipeline.
 
-## Retrieve the API Token
+### Retrieve the API Token
 
-To allow security data from the Defender for Cloud CLI to be passed to the Defender for Cloud backend, the security admin in Defender for Cloud must first generate an API key from Defender for Cloud for authentication.
+To allow security results from the Defender for Cloud CLI to be passed to the Defender for Cloud backend, the Security Admin in Microsoft Defender for Cloud must first generate an API key from Defender for Cloud for authentication.
 
-When tokens are generated, the security admin selects a subscription scope to be associated with the token. The data being "pushed" into Defender for Cloud from this token is scoped to the subscription the token is associated with. These API tokens are immutable and can only be generated/deleted.
+1. Sign in to the [Azure portal](https://portal.azure.com/)and open **Microsoft Defender for Cloud**.
 
-From there, the security admin must securely pass the token to developers to be added to the CI/CD pipeline.
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment Settings** > **Integrations**.
+1. Navigate to **Management ▸ Environment settings ▸ Integrations**.
 
       :::image type="content" source="media/cli-cicd/env-settings-integrations.png" alt-text="Screenshot of Integration Environment Settings in Defender for Cloud." lightbox="media/cli-cicd/env-settings-integrations.png":::
 
-1. Select **Add integration** and then select **DevOps Ingestion**.
+1. Select **+ Add integration ▸ DevOps Ingestion (Preview)**
 
       :::image type="content" source="media/cli-cicd/new-devops-ingestion.png" alt-text="Screenshot of new DevOps Ingestion option." lightbox="media/cli-cicd/new-devops-ingestion.png":::
+   
+1. Enter an application name. 
+   1. Choose the tenant to store the secret.
+   1. Set an expiration date, and **enable** the token.
+   1. Select **Save.**
 
-1. Enter a descriptive name for the token, the selected tenant store the token information. The client secret is generated when you enter a description for the secret and the expiration date.
+   :::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of adding DevOps Ingestion integration." lightbox="media/cli-cicd/add-devops-ingestion.png":::
+   
+   :::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of creating DevOps Ingestion and creation of tokens." lightbox="media/cli-cicd/devops-ingestion-created.png":::
+   
+1. After **Saving**, copy the **Client ID**, **Client Secret**, and **Tenant ID**. You won’t be able to retrieve them again.
 
-      :::image type="content" source="media/cli-cicd/add-devops-ingestion.png" alt-text="Screenshot of adding DevOps Ingestion integration." lightbox="media/cli-cicd/add-devops-ingestion.png":::
+   :::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of successful DevOps Ingestion created." lightbox="media/cli-cicd/devops-ingestion-created-success.png":::
+   
+### Pipeline variables
 
-1. Enable the token in the **Configuration** and create the tokens.
+After securely receiving the tokens, configure an environment variable for the key. The environment variable is passed to the CLI through a shell script, which can be obtained using curl or by manually copying it into the repository.
 
-      :::image type="content" source="media/cli-cicd/devops-ingestion-created.png" alt-text="Screenshot of creating DevOps Ingestion and creation of tokens." lightbox="media/cli-cicd/devops-ingestion-created.png":::
+|Variable|Description|
+|----------|----------|
+|GDN_MDC_CLI_CLIENT_ID|Client ID generated above|
+|GDN_MDC_CLI_CLIENT_SECRET|Client Secret generated above|
+|GDN_MDC_CLI_TENANT_ID|Azure AD Tenant ID|
+|GDN_PIPELINENAME|`bitbucket`, `jenkins`, `gcp`, `bamboo`, `circle`, `travis`, `teamcity`, `oci`, or `aws`|
+|GDN_TRIVY_ACTION|`image`|
+|GDN_TRIVY_TARGET| Name of image being scanned|
 
-1. Copy each token. They can't be edited or retrieved after you select **OK**.
+### Update the CI/CD pipeline script
 
-      :::image type="content" source="media/cli-cicd/devops-ingestion-created-success.png" alt-text="Screenshot of successful DevOps Ingestion created." lightbox="media/cli-cicd/devops-ingestion-created-success.png":::
-
-1. In the **Integrations** table, the new **Ingestion** is displayed.
-
-      :::image type="content" source="media/cli-cicd/devops-ingestion-table.png" alt-text="Screenshot of DevOps Integrations table with new ingestion." lightbox="media/cli-cicd/devops-ingestion-table.png":::
-
-## Update the CI/CD pipeline script
-
-Each CI/CD pipeline tool has different syntax. This code is an example of a Bitbucket pipeline:
+Below is a minimal Bitbucket Pipeline example that downloads the latest cross‑platform build, initializes the project and runs Trivy. Other examples of CI/CD pipelines can be found in this [GitHub Repository](https://github.com/microsoft/security-devops-samples/tree/main/ci-cd-integrations).
 
 ```yaml
 image: atlassian/default-image:3
@@ -72,31 +89,19 @@ pipelines:
   default:
     - parallel:
       - step:
-          name: 'MSDO trivy test'
+          name: 'Defender CLI Trivy Scan'
           script:
             - curl -L -o ./msdo_linux.zip https://www.nuget.org/api/v2/package/Microsoft.Security.DevOps.Cli.linux-x64/
             - unzip ./msdo_linux.zip
             - chmod +x tools/guardian
             - chmod +x tools/Microsoft.Guardian.Cli
-            - ls -lah .
             - tools/guardian init --force
             - tools/guardian run -t trivy --export-file ./ubuntu-test.sarif --publish-file-folder-path ./ubuntu-test.sarif            
 ```
 
-## Pipeline variables
-
-After securely receiving the tokens, the developer must configure an environment variable for the key. The environment variable is passed to the CLI through the shell script that the developer can receive from curl or manually copying the shell script into their repo.
-
-|Name|Value|
-|||
-|GDN_MDC_CLI_CLIENT_ID|&lt;Client id&gt;|
-|GDN_MDC_CLI_CLIENT_SECRET|&lt;Client Secret&gt;|
-|GDN_MDC_CLI_TENANT_ID|&lt;Tenant id&gt;|
-|GDN_PIPELINENAME|bitbucket, jenkins, gcp, bamboo, circle, travis, teamcity, oci, aws|
-
 ## Review results in Cloud Security Explorer
 
-1. After running the pipeline successfully, navigate again to Microsoft Defender for Cloud.
+1. After the pipeline runs successfully, navigate to Microsoft Defender for Cloud.
 
 1. In the **Defender for Cloud** menu, select **Cloud Security Explorer**.
 
@@ -135,4 +140,6 @@ After securely receiving the tokens, the developer must configure an environment
 ## Related content
 
 - [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline)
+
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
+
