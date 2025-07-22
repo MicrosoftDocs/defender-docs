@@ -43,12 +43,26 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### July-2025 Build: 101.25052.0005 | Release version: 30.125052.0005.0
+
+|Build:             |**101.25042.0003**    |
+|-------------------|----------------------|
+|Released:          |**July 22, 2025**     |
+|Published:         |**July 22, 2025**     |
+|Release version:   |**30.125052.0005.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- Scheduled scan support via cli and managed json (Preview).
+- Other stability improvements and bug fixes.
+
 ### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
 
 |Build:             |**101.25042.0003**    |
 |-------------------|----------------------|
-|Released:          |**June 30, 2025**      |
-|Published:         |**June 30, 2025**      |
+|Released:          |**June 30, 2025**     |
+|Published:         |**June 30, 2025**     |
 |Release version:   |**30.125042.0003.0**  |
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
