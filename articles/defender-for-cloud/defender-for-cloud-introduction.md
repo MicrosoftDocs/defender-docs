@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Cloud Overview
-description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud, a cloud-native application protection platform (CNAPP) that utlizes both cloud security posture management (CSPM), and Cloud workload protection platform (CWPP) to protects your Azure, AWS, GCP and on premises environments. 
+description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud, a cloud-native application protection platform (CNAPP) that utilizes both cloud security posture management (CSPM), and Cloud workload protection platform (CWPP) to protect your Azure, AWS, GCP and on premises environments. 
 ms.topic: overview
 ms.date: 07/22/2025
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
@@ -8,7 +8,7 @@ ms.date: 07/22/2025
 
 # What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud helps you secure multi-cloud and hybrid environments and integrates security into DevOps workflows. Defender for Cloud includes three core components:
+Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. Defender for Cloud includes three core components:
 
 - [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) manages code-level security across multicloud and multi-pipeline environments.
 
@@ -22,6 +22,28 @@ Defender for Cloud uses its broader Cloud-Native Application Protection Platform
 
 > [!NOTE]
 > For pricing information, check out [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
+## Cloud native application protection platform (CNAPP)
+
+:::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
+
+After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments.ted data and uses it to provide insights, recommendations, and actions to help you secure your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
+
+Defender for Cloud's available plans and their CNAPP benefits include: 
+
+| Defender for Cloud plan | CNAPP benefits | Relevant links |
+|--|--|--|
+| **Defender CSPM / Foundational CSPM** | Provides advanced security posture capabilities including agentless vulnerability scanning, data-aware security posture, the cloud security graph, and advanced threat hunting. | Check out the [differences between the CSPM plans](concept-cloud-security-posture-management.md#plan-availability). <br><br> [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md). |
+| **Defender for Servers** | Provides threat detection and advanced defenses for Windows and Linux machines that run in Azure, AWS, GCP, and on-premises environments. | [Plan your Defender for Servers deployment](plan-defender-for-servers.md) <br><br> [Deploy Defender for Servers](tutorial-enable-servers-plan.md) |
+| **Defender for Containers** | Provides environment hardening, vulnerability assessment, run time protection of Kubernetes nodes and clusters. | [Overview of Container security in Microsoft Defender for Containers](defender-for-containers-introduction.md) <br><br> [Defender for Containers architecture](defender-for-containers-architecture.md) <br><br> Protect your [Azure](tutorial-enable-containers-azure.md), [IaaS](tutorial-enable-containers-arc.md), [AWS](tutorial-enable-container-aws.md), and [GCP](tutorial-enable-container-gcp.md) containers with Defender for Containers |
+| **Defender for Resource Manager** | Detects unusual and potentially harmful activity by automatically monitoring the resource management operations. | [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md) <br><br> [Protect your resources with Defender for Resource Manager](tutorial-enable-resource-manager-plan.md) |
+| **Defender for Storage** | Protects against malware, storage specific threats, sensitive data leakage, and Shared Access Signature (SAS) token misuse. | [Overview of Microsoft Defender for Storage](defender-for-storage-introduction.md) <br><br> [Malware scanning](defender-for-storage-malware-scan.md) <br><br> [Detect threats to sensitive data](defender-for-storage-data-sensitivity.md) <br><br> [Deploy Microsoft Defender for Storage](tutorial-enable-storage-plan.md) |
+| **Defender for App Service** | Identifies attacks that target applications running over App Service. | [Overview of Defender for App Service to protect your Azure App Service web apps and APIs](defender-for-app-service-introduction.md) <br><br> [Protect your applications with Defender for App Service](tutorial-enable-app-service-plan.md) |
+| **Defender for Databases** |  Protects your entire database estate with attack detection and threat response for the various database types in Azure. | [Overview of Microsoft Defender for Azure SQL](defender-for-sql-introduction.md) <br><br>  [Protect your databases with Defender for Databases](tutorial-enable-databases-plan.md) <br><br> [What is Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md) <br><br> [Overview of Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) |
+| **Defender for Key Vault** | Detects unusual and potentially harmful attempts to access or exploit Key Vault accounts. | [Overview of Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md) <br><br> [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md) | 
+| **Defender for APIs**| Provides visibility into business critical APIs, improves API security posture, prioritization of vulnerability fixes, and quickly detect active real-time threats. | [About Microsoft Defender for APIs](defender-for-apis-introduction.md) <br><br> [Protect your APIs with Defender for APIs](defender-for-apis-deploy.md) |
+
+You can also check out the E-book ["From plan to deployment: Implementing a cloud-native application protection platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
 
 ## Development Security Operations (DevSecOps)
 
@@ -52,31 +74,9 @@ Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced
 | [Security governance](governance-rules.md)                   | Drive security improvements through your organization by assigning tasks to resource owners and tracking progress in aligning your security state with your security policy. | [Define governance rules](governance-rules.md)               | Defender CSPM                         |
 | [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/) | Provide comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP. | [Review your Permission Creep Index (PCI)](other-threat-protections.md#entra-permission-management-formerly-cloudknox) | Defender CSPM                         |
 
-## Cloud native application protection platform (CNAPP)
-
-:::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
-
-After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments.ted data and uses it to provide insights, recommendations, and actions to help you secure your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
-
-Defender for Cloud's available plans and their CNAPP benefits include: 
-
-| Defender for Cloud plan | CNAPP benefits | Relevant links |
-|--|--|--|
-| **Defender CSPM / Foundational CSPM** | Provides advanced security posture capabilities including agentless vulnerability scanning, data-aware security posture, the cloud security graph, and advanced threat hunting. | Check out the [differences between the CSPM plans](concept-cloud-security-posture-management.md#plan-availability). <br><br> [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md). |
-| **Defender for Servers** | Provides threat detection and advanced defenses for Windows and Linux machines that run in Azure, AWS, GCP, and on-premises environments. | [Plan your Defender for Servers deployment](plan-defender-for-servers.md) <br><br> [Deploy Defender for Servers](tutorial-enable-servers-plan.md) |
-| **Defender for Containers** | Provides environment hardening, vulnerability assessment, run time protection of Kubernetes nodes and clusters. | [Overview of Container security in Microsoft Defender for Containers](defender-for-containers-introduction.md) <br><br> [Defender for Containers architecture](defender-for-containers-architecture.md) <br><br> Protect your [Azure](tutorial-enable-containers-azure.md), [IaaS](tutorial-enable-containers-arc.md), [AWS](tutorial-enable-container-aws.md), and [GCP](tutorial-enable-container-gcp.md) containers with Defender for Containers |
-| **Defender for Resource Manager** | Detects unusual and potentially harmful activity by automatically monitoring the resource management operations. | [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md) <br><br> [Protect your resources with Defender for Resource Manager](tutorial-enable-resource-manager-plan.md) |
-| **Defender for Storage** | Protects against malware, storage specific threats, sensitive data leakage, and Shared Access Signature (SAS) token misuse. | [Overview of Microsoft Defender for Storage](defender-for-storage-introduction.md) <br><br> [Malware scanning](defender-for-storage-malware-scan.md) <br><br> [Detect threats to sensitive data](defender-for-storage-data-sensitivity.md) <br><br> [Deploy Microsoft Defender for Storage](tutorial-enable-storage-plan.md) |
-| **Defender for App Service** | Identifies attacks that target applications running over App Service. | [Overview of Defender for App Service to protect your Azure App Service web apps and APIs](defender-for-app-service-introduction.md) <br><br> [Protect your applications with Defender for App Service](tutorial-enable-app-service-plan.md) |
-| **Defender for Databases** |  Protects your entire database estate with attack detection and threat response for the various database types in Azure. | [Overview of Microsoft Defender for Azure SQL](defender-for-sql-introduction.md) <br><br>  [Protect your databases with Defender for Databases](tutorial-enable-databases-plan.md) <br><br> [What is Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md) <br><br> [Overview of Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) |
-| **Defender for Key Vault** | Detects unusual and potentially harmful attempts to access or exploit Key Vault accounts. | [Overview of Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md) <br><br> [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md) | 
-| **Defender for APIs**| Provides visibility into business critical APIs, improves API security posture, prioritization of vulnerability fixes, and quickly detect active real-time threats. | [About Microsoft Defender for APIs](defender-for-apis-introduction.md) <br><br> [Protect your APIs with Defender for APIs](defender-for-apis-deploy.md) |
-
-You can also check out the E-book ["From plan to deployment: Implementing a cloud-native application protection platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
-
 ## Cloud workload protection platform (CWPP)
 
-Proactive security principles require implementing security practices to protect your workloads from threats. Cloud workload protection platform (CWPP) provide workload-specific recommendations to guide you to the right security controls to protect your workloads.
+Proactive security principles require implementing security practices to protect your workloads from threats. Cloud workload protection platforms (CWPP) provide workload-specific recommendations to guide you to the right security controls to protect your workloads.
 
 When your environment is threatened, security alerts immediately indicate the nature and severity of the threat so you can plan your response. After identifying a threat in your environment, respond quickly to limit the risk to your resources.
 
