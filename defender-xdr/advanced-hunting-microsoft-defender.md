@@ -23,7 +23,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 02/10/2025
+ms.date: 07/22/2025
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
@@ -33,6 +33,9 @@ Advanced hunting allows you to view and query all the data sources available wit
 Querying from a single portal across different data sets makes hunting more efficient and removes the need for context-switching.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
+
+> [!NOTE]
+> After onboarding to the Microsoft Sentinel data lake, auxiliary log tables are no longer available in Microsoft Defender Advanced hunting. Instead, you can access them through data lake exploration KQL queries in the Defender portal. For more information, see [KQL queries in the Microsoft Sentinel data lake](/sentinel/datalake/kql-queries).
 
 ## How to access
 
