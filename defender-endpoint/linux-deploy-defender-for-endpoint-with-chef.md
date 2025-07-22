@@ -121,6 +121,10 @@ A cookbook can be created through any of the following methods:
        EOS
    end
    ```
+   - For installation at a custom location, provide the custom installation path - <custom_path>, as a parameter to the installer script
+     ```bash
+     #{mde_installer} --install --onboard #{onboarding_json} --install-path #{custom_path}
+     ```
 
 > [!NOTE]
 > The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help through the following command:
