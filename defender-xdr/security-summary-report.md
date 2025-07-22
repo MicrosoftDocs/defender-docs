@@ -70,5 +70,5 @@ To access and share the unified security summary, follow these steps:
 
 ## Related content
 
-- [Microsoft Defender Antivirus overview](/defender-endpoint/microsoft-defender-antivirus-window)
+- [Microsoft Defender Antivirus overview](/defender-endpoint/microsoft-defender-antivirus-windows)
 - [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
