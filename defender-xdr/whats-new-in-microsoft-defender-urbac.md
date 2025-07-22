@@ -19,11 +19,11 @@ ms.date: 07/06/2025
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
 
-## August 2025
+## July 2025
 
 ### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)
 
-Starting in August 2025, Microsoft Sentinel data lake permissions are provided through Microsoft Defender XDR unified RBAC. Support for unified RBAC is available in addition the support provided by global Microsoft Entra ID roles.
+Starting in July 2025, Microsoft Sentinel data lake permissions are provided through Microsoft Defender XDR unified RBAC. Support for unified RBAC is available in addition the support provided by global Microsoft Entra ID roles.
 
 For more information, see:
 
