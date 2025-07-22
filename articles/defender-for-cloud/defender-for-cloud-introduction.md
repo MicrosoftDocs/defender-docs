@@ -8,15 +8,15 @@ ms.date: 07/22/2025
 
 # What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a comprehensive [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud assists organizations to secure their multi-cloud and hybrid environments while seamlessly integrating security into DevOps workflows. Defender for Cloud unifies three foundational pillars: 
+Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud helps you secure multi-cloud and hybrid environments and integrates security into DevOps workflows. Defender for Cloud includes three core components:
 
-- [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) which unifies security management at the code level across multicloud and multi-pipeline environments.
+- [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) manages code-level security across multicloud and multi-pipeline environments.
 
-- [Cloud Security Posture Management (CSPM)](#cloud-security-posture-management-cspm) which continuously evaluates and strengthens the security posture of cloud resources.
+- [Cloud Security Posture Management (CSPM)](#cloud-security-posture-management-cspm) checks and improves the security posture of cloud resources.
 
-- [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) which defends workloads like virtual machines (VM), containers, storage, databases and serverless functions from threats.
+- [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) defends workloads such as virtual machines (VMs), containers, storage, databases, and serverless functions from threats.
 
-Defender for Cloud utilizes its broader CNAPP capabilities to bring protections together into a cohesive experience. By embedding security earlier in the development lifecycle, Defender for Cloud empowers DevOps teams to identify misconfigurations, enforce policies, and remediate risks proactively—enabling secure innovation at cloud speed.
+Defender for Cloud uses its broader Cloud-Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
@@ -25,9 +25,9 @@ Defender for Cloud utilizes its broader CNAPP capabilities to bring protections 
 
 ## Development Security Operations (DevSecOps)
 
-Defender for Cloud helps you incorporate good security practices early in the software development process, or DevSecOps. You can protect your code management environments and code pipelines, and get insights into your development environment security posture from a single location. It enables security teams to manage DevOps security across multi-pipeline environments.
+Defender for Cloud adds security to the start of development. It lets you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
 
-Today's applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
+Applications require security awareness at the code, infrastructure, and runtime levels to ensure that deployed applications are hardened against attacks.
 
 | Capability | What problem does it solve? | Get started | Defender plan |
 |--|--|--|--|
