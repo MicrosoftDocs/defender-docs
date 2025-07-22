@@ -51,6 +51,10 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
 - **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
+Additionally if installing MDE at a custom location
+- **Permissions**: rwxr-xr-x minimum permissions for the entire custom installation directory tree
+- **semanage**: For workloads with conflicting rules, SELinux equivalence rules might need to be set.
+
 > [!NOTE]
 > Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
 
