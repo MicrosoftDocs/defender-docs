@@ -24,7 +24,8 @@ ms.date: 08/01/2025
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsofot Defender Experts for Servers
 
 This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR service and its add-on offering, Microsoft Defender Experts for Servers.
 
@@ -61,7 +62,7 @@ The following product isn't covered by this service:
 
 **Microsoft Defender Experts for Servers**
 
-To enable the Defender Experts for Severs coverage, Defender for Servers Plan 1 or Plan 2 in Defender for Cloud must be enabled. Endpoint protection should also be turned on for both Windows and Linux devices that allow protection powered by Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud. 
+To enable the Defender Experts for Severs coverage, Defender for Servers Plan 1 or Plan 2 in Defender for Cloud must be enabled. [Endpoint protection](/azure/defender-for-cloud/integration-defender-for-endpoint) should also be turned on for Windows and Linux devices that allow protection powered by Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud. 
 
 Depending on the coverage you're looking for, you can enable the Defender for Servers plan for a Microsoft Azure subscription, Amazon Web Services account, or Google Cloud Platform project.
 
@@ -78,7 +79,7 @@ We recommend ensuring that at least one product, such as Defender for Endpoint o
 
 For maximum, native coverage, we recommend deploying the full Microsoft Defender XDR suite and enabling all eligible products in active mode.
 
-Defender Experts for XDR also covers servers—whether on premises or on a hyperscale cloud service provider—that have Defender for Endpoint deployed on them with a Microsoft Defender for Endpoint for Server license. For Defender Experts coverage, a server is considered as a user account for billing. 
+Defender Experts for XDR also covers servers that have Defender for Endpoint deployed on them with a **Microsoft Defender for Endpoint for Server** license. For Defender Experts coverage, a server is considered as a user account for billing. 
 [Learn more about specific hardware and software requirements](/defender-endpoint/minimum-requirements)
 
 ### Ask Defender Experts

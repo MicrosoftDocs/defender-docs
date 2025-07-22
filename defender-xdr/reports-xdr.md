@@ -3,10 +3,10 @@ title: Defender experts for XDR report
 ms.reviewer:
 description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,14 +17,15 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 08/01/2025
 ---
 
 # Get real-time visibility with Defender Experts for XDR reports
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsofot Defender Experts for Servers
 
 For Defender Experts for XDR reports instructions, check out this short video.
 

@@ -1,5 +1,5 @@
 ---
-title: FAQs related to Microsoft Defender Experts server coverage for servers and cloud workloads
+title: FAQs related to Microsoft Defender Experts coverage for servers and cloud workloads
 ms.reviewer:
 description: Frequently asked questions related to server and cloud workload coverage in Microsoft Defender Experts
 ms.service: defender-experts-for-xdr

@@ -24,9 +24,8 @@ ms.date: 08/01/2025
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-
-This document applies for Microsoft Defender Experts for XDR and its add-on service, Microsoft Defender Experts for Servers. 
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsofot Defender Experts for Servers
 
 For onboarding instructions, check out this short video:
 
