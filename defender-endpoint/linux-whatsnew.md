@@ -54,7 +54,7 @@ This article is updated frequently to let you know what's new in the latest rele
 |Signature version: |**1.427.370.0**       |
 
 What's new
-- Scheduled scan support via cli and managed json (Preview).
+- Bug fixes in machine identifiers for golden image scenarios.
 - Other stability improvements and bug fixes.
 
 ### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
