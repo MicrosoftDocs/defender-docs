@@ -8,7 +8,7 @@ ms.date: 07/22/2025
 
 # What is Microsoft Defender for Cloud?
 
-Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp) that provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. Defender for Cloud includes three core components:
+Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. Defender for Cloud provides a comprehensive view of your security posture across your cloud and on-premises resources. Defender for Cloud helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. Defender for Cloud includes three core components:
 
 - [Development Security Operations (DevSecOps)](#development-security-operations-devsecops) manages code-level security across multicloud and multi-pipeline environments.
 
@@ -16,18 +16,18 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 
 - [Cloud Workload Protection Platform (CWPP)](#cloud-workload-protection-platform-cwpp) defends workloads such as virtual machines (VMs), containers, storage, databases, and serverless functions from threats.
 
-Defender for Cloud uses its broader Cloud-Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
+Defender for Cloud uses its broader Cloud Native Application Protection Platform (CNAPP) capabilities to unify protections into one experience. Defender for Cloud embeds security early in the development lifecycle. It helps DevOps teams find misconfigurations, apply policies, and fix risks early.
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-for-cloud-pillars.png" alt-text="Diagram that shows the core functionality of Microsoft Defender for Cloud.":::
 
 > [!NOTE]
 > For pricing information, check out [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
-## Cloud native application protection platform (CNAPP)
+## Cloud Native Application Protection Platform (CNAPP)
 
 :::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
 
-After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments.ted data and uses it to provide insights, recommendations, and actions to help you secure your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
+After the [Defender for Cloud solution](connect-azure-subscription.md) is enabled on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to give insights, recommendations, and actions that help you protect your cloud workloads and resources. You can enable extra plans to get more advanced security features, such as [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md), [Defender for Databases](tutorial-enable-databases-plan.md), and [Defender for Containers](tutorial-enable-containers-azure.md).
 
 Defender for Cloud's available plans and their CNAPP benefits include: 
 
@@ -43,9 +43,9 @@ Defender for Cloud's available plans and their CNAPP benefits include:
 | **Defender for Key Vault** | Detects unusual and potentially harmful attempts to access or exploit Key Vault accounts. | [Overview of Microsoft Defender for Key Vault](defender-for-key-vault-introduction.md) <br><br> [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md) | 
 | **Defender for APIs**| Provides visibility into business critical APIs, improves API security posture, prioritization of vulnerability fixes, and quickly detect active real-time threats. | [About Microsoft Defender for APIs](defender-for-apis-introduction.md) <br><br> [Protect your APIs with Defender for APIs](defender-for-apis-deploy.md) |
 
-You can also check out the E-book ["From plan to deployment: Implementing a cloud-native application protection platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
+You can also check out the E-book ["From plan to deployment: Implementing a Cloud Native Application Protection Platform (CNAPP) strategy"](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Implementing-A-Cloud-Native-Application-Protection-Strategy-Ebook.pdf), to learn more about implementing CNAPP in Defender for Cloud.
 
-## Development Security Operations (DevSecOps)
+## Development security operations (DevSecOps)
 
 Defender for Cloud adds security to the start of development. It lets you secure code pipelines and environments, and monitor your security posture from one place. Defender for Cloud enables security teams to manage DevOps security across multi-pipeline environments.
 
