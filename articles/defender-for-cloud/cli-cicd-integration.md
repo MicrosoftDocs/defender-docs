@@ -10,7 +10,7 @@ ms.date: 12/08/2024
 
 # Integrate Defender for Cloud CLI with CI/CD pipelines (Preview)
 
-**## Overview**
+## Overview
 
 Microsoft Defender for Cloud Command‑Line Interface (Defender CLI) lets you embed security scanning directly in your continuous integration and continuous deployment (CI/CD) workflows. The CLI orchestrates several industry‑standard scanners and automatically correlates detected issues with resources monitored by Microsoft Defender for Cloud.
 
