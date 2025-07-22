@@ -2,7 +2,7 @@
 title: How to validate alerts
 description: Learn how to validate security alerts in Microsoft Defender for Cloud to ensure your system is properly configured and can effectively monitor threats.
 ms.topic: how-to
-ms.custom: linux-related-content
+ms.custom: linux-related-content, sfi-image-nochange
 ms.date: 06/27/2023
 ms.author: dacurwin
 author: dcurwin

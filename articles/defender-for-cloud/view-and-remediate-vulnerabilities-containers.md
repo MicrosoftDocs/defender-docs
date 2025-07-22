@@ -2,7 +2,7 @@
 title: Assess vulnerabilities for containers running on your Kubernetes clusters
 description: Learn how to view and remediate runtime threat findings for containers running on your Kubernetes clusters.
 ms.service: defender-for-cloud
-ms.custom: build-2023
+ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
 ms.date: 09/06/2023
 ---

@@ -6,7 +6,7 @@ ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 11/12/2023
-ms.custom: template-how-to-pattern
+ms.custom: template-how-to-pattern, sfi-image-nochange
 ---
 # Explore risks to sensitive data
 

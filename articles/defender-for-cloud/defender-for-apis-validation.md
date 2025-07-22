@@ -4,7 +4,7 @@ description: Validate your Microsoft Defender for APIs alerts and ensure the sec
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 08/13/2024
-ms.custom: references_regions
+ms.custom: references_regions, sfi-image-nochange
 #customer intent: As a user, I want to learn how to validate my Microsoft Defender for APIs alerts so that I can ensure the security of my APIs.
 ---
 

@@ -4,6 +4,7 @@ description: How to onboard Docker Hub container registries to Defender for Cont
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 09/25/2024
+ms.custom: sfi-image-nochange
 ---
 
 # How to onboard your Docker Hub container registries to Defender for Cloud Security Posture Management

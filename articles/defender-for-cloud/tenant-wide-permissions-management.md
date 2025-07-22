@@ -3,6 +3,7 @@ title: Grant and request tenant-wide permissions
 description: Learn how to manage tenant-wide permissions in Microsoft Defender for Cloud effectively to enhance your organization's security.
 ms.topic: how-to
 ms.date: 05/16/2024
+ms.custom: sfi-ga-nochange, sfi-image-nochange
 # customer intent: As a user, I want to learn how to manage tenant-wide permissions in Microsoft Defender for Cloud so that I can effectively manage my organization's security.
 ---
 
