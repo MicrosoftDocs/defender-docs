@@ -44,7 +44,7 @@ This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-p
 - If a recommendation is disabled, all of its subrecommendations are exempted.
 - In addition to working in the portal, you can create exemptions using the Azure Policy API. Learn more [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
-- When exempting at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on the management group. This is done the same way as granting user permissions.
+- When exempting at the management group level, ensure the *Microsoft Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on the management group. This is done the same way as granting user permissions.
 
 ## Define an exemption
 
