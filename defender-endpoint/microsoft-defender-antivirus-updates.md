@@ -111,7 +111,7 @@ Updates contain:
 
 - Added filtering to improve scan stability and prevent engine crashes
 - Additional performance improvements to prevent concurrent scans. This change ensures that if a quick or full scan is already running, no additional quick or full scan scans are initiated from `MpCmdRun` or Powershell (`Start-Scan`).
-- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to 3rd party SIEM. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
+- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to non-Microsoft SIEM solutions. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
 
 ### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
 
