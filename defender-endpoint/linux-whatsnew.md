@@ -54,7 +54,7 @@ This article is updated frequently to let you know what's new in the latest rele
 |Signature version: |**1.427.370.0**       |
 
 What's new
-- Bug fixes in machine identifiers for golden image scenarios.
+- Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified.
 - Other stability improvements and bug fixes.
 
 ### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
