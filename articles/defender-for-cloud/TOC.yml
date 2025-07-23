@@ -799,6 +799,7 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: defender for servers, p1, p2, plan 1, plan 2
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml

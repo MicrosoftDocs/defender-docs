@@ -75,4 +75,4 @@ Use these steps to remediate each of the affected images found either in a speci
 ## Next steps
 
 - Learn how to [view and remediate vulnerabilities for registry images](view-and-remediate-vulnerability-assessment-findings.md).
-- Learn more about the Defender for Cloud [Defender plans](defender-for-cloud-introduction.md#protect-cloud-workloads)
+- Learn more about the Defender for Cloud [Defender plans](defender-for-cloud-introduction.md#cloud-workload-protection-platform-cwpp)

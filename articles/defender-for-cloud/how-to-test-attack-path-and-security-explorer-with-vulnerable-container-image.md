@@ -205,4 +205,4 @@ The results are listed below the query.
 
 ## Next steps
 
-- Learn more about the Defender for Cloud [Defender plans](defender-for-cloud-introduction.md#protect-cloud-workloads).
+- Learn more about the Defender for Cloud [Defender plans](defender-for-cloud-introduction.md#cloud-workload-protection-platform-cwpp).

@@ -26,7 +26,7 @@ Incidents and alerts are now part of [Microsoft Defender XDR's public API](/micr
 
 - [Enable Defender for Cloud on your Azure subscription](connect-azure-subscription.md).
 
-- Access to Defender for Cloud alerts in the Microsoft Defender portal depends on which Defender for Cloud plans are enabled. Learn more about the different [Defender for Cloud plan protections](defender-for-cloud-introduction.md#protect-cloud-workloads).
+- Access to Defender for Cloud alerts in the Microsoft Defender portal depends on which Defender for Cloud plans are enabled. Learn more about the different [Defender for Cloud plan protections](defender-for-cloud-introduction.md#cloud-workload-protection-platform-cwpp).
 
 > [!NOTE]
 > Permissions to view Defender for Cloud alerts and correlations are automatic for the entire tenant. Viewing specific subscriptions isn't supported. Use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](/defender-xdr/incident-queue#filters).
