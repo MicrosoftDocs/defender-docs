@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud, a cloud-native application protection platform (CNAPP) that utilizes both cloud security posture management (CSPM), and Cloud workload protection platform (CWPP) to protect your Azure, AWS, GCP and on premises environments. 
 ms.topic: overview
-ms.date: 07/22/2025
+ms.date: 07/23/2025
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
 ---
 
@@ -34,7 +34,7 @@ Defender for Cloud's available plans and their CNAPP benefits include:
 | Defender for Cloud plan | CNAPP benefits | Relevant links |
 |--|--|--|
 | **Defender CSPM / Foundational CSPM** | Provides advanced security posture capabilities including agentless vulnerability scanning, data-aware security posture, the cloud security graph, and advanced threat hunting. | Check out the [differences between the CSPM plans](concept-cloud-security-posture-management.md#plan-availability). <br><br> [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md). |
-| **Defender for Servers** | Provides threat detection and advanced defenses for Windows and Linux machines that run in Azure, AWS, GCP, and on-premises environments. | [Plan your Defender for Servers deployment](plan-defender-for-servers.md) <br><br> [Deploy Defender for Servers](tutorial-enable-servers-plan.md) |
+| **Defender for Servers** | Provides threat detection and advanced defenses for Windows and Linux machines that run in Azure, AWS, GCP, and on-premises environments. | [Plan your Defender for Servers deployment](plan-defender-for-servers.md) <br><br> Check out the [differences between the Defender for Servers plans](defender-for-servers-overview.md#defender-for-servers-plans) <br><br> [Deploy Defender for Servers](tutorial-enable-servers-plan.md) |
 | **Defender for Containers** | Provides environment hardening, vulnerability assessment, run time protection of Kubernetes nodes and clusters. | [Overview of Container security in Microsoft Defender for Containers](defender-for-containers-introduction.md) <br><br> [Defender for Containers architecture](defender-for-containers-architecture.md) <br><br> Protect your [Azure](tutorial-enable-containers-azure.md), [IaaS](tutorial-enable-containers-arc.md), [AWS](tutorial-enable-container-aws.md), and [GCP](tutorial-enable-container-gcp.md) containers with Defender for Containers |
 | **Defender for Resource Manager** | Detects unusual and potentially harmful activity by automatically monitoring the resource management operations. | [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md) <br><br> [Protect your resources with Defender for Resource Manager](tutorial-enable-resource-manager-plan.md) |
 | **Defender for Storage** | Protects against malware, storage specific threats, sensitive data leakage, and Shared Access Signature (SAS) token misuse. | [Overview of Microsoft Defender for Storage](defender-for-storage-introduction.md) <br><br> [Malware scanning](defender-for-storage-malware-scan.md) <br><br> [Detect threats to sensitive data](defender-for-storage-data-sensitivity.md) <br><br> [Deploy Microsoft Defender for Storage](tutorial-enable-storage-plan.md) |
