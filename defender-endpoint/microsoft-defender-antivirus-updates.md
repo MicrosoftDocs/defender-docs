@@ -102,7 +102,7 @@ Updates contain:
 ### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
  
 - Security intelligence update version: **1.433.2.0**
-- Release date:  **July 24, 2025 (Engine) / July 24, 2025 (Platform)**
+- Release date:  **July 22, 2025 (Engine)** / **July 22, 2025 (Platform)**
 - Platform: **4.18.25060.7**
 - Engine: **1.1.25060.6**
 - Support phase: **Security and Critical Updates**
@@ -154,25 +154,6 @@ Updates contain:
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
 - Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
-
-### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
-
-- Security intelligence update version: **1.427.3.0**
-- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
-- Platform: **4.18.25030.2**
-- Engine: **1.1.25030.1**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
-- Performance improvement in on-access scans of files in network locations.
-- Fixed the Defender service description to match the latest installed version.
-- Improved Defender engine update logic when the update is included in a custom image.
-- Fix in health reporting where signature update data might have been incorrect.
-- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
-- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
-- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
 
 ### Previous version updates: Technical upgrade support only
 
