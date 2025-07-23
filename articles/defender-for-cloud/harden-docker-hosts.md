@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.date: 02/19/2025
+ms.custom: sfi-image-nochange
 ---
 # Review Docker host hardening recommendations
 

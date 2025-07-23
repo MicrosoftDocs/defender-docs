@@ -1,10 +1,10 @@
 ---
-
 title: Protect code repository secrets with Microsoft Defender for Cloud
 description: Learn how to protect code repository secrets with Defender for Cloud's secret detections.
 ms.service: defender-for-cloud
 ms.topic: overview
-ms.date:     11/04/2024
+ms.date: 11/04/2024
+ms.custom: sfi-ropc-nochange
 ---
 
 

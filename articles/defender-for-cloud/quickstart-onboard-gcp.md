@@ -3,6 +3,7 @@ title: Connect your GCP project
 description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
 ms.topic: install-set-up-deploy
 ms.date: 06/18/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Connect your GCP project to Microsoft Defender for Cloud

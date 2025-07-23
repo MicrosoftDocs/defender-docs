@@ -3,6 +3,7 @@ title: Remediate cloud deployment secrets security issues in Microsoft Defender 
 description: Learn how to remediate cloud deployment secrets security issues in Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 05/25/2025
+ms.custom: sfi-image-nochange
 ---
 
 

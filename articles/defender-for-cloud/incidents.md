@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
 ms.date: 05/19/2025
+ms.custom: sfi-image-nochange
 ---
 # Manage security incidents in Microsoft Defender for Cloud
 

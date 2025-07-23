@@ -6,6 +6,7 @@ ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
 ms.date: 05/13/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Protect your APIs with Defender for APIs

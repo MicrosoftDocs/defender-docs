@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.author: dacurwin
 author: dcurwin
 ms.date: 02/19/2025
+ms.custom: sfi-image-nochange
 ---
 # Protect network resources
 

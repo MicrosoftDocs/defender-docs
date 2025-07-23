@@ -3,6 +3,7 @@ title: Manage MCSB in Microsoft Defender for Cloud
 description: Learn how to manage the  MCSB standard in Microsoft Defender for Cloud
 ms.topic: how-to
 ms.date: 05/20/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage MCSB recommendations in Defender for Cloud

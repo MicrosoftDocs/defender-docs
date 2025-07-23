@@ -5,6 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
 ms.date: 01/14/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Prepare Azure resources for exporting to Splunk and QRadar

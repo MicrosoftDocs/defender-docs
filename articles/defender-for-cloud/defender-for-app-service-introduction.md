@@ -5,6 +5,7 @@ ms.date: 05/13/2025
 ms.topic: overview
 ms.author: dacurwin
 author: dcurwin
+ms.custom: sfi-image-nochange
 ---
 
 # Overview of Defender for App Service to protect your Azure App Service web apps and APIs
