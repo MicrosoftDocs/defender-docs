@@ -7,6 +7,7 @@ ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 07/15/2025
 ms.custom: template-how-to-pattern
+
 ---
 # Explore risks to sensitive data
 

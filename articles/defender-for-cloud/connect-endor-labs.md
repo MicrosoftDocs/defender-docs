@@ -6,6 +6,7 @@ ms.author: dacurwin
 ms.topic: how-to
 ms.date: 11/20/2024
 ai-usage: ai-assisted
+ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided by Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
 ---
 

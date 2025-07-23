@@ -3,6 +3,7 @@ title: How to consume and export scan results
 description: Learn how to consume and export Defender for SQL's scan results.
 ms.topic: how-to
 ms.date: 07/15/2025
+ms.custom: sfi-image-nochange
 ---
 
 # How to consume and export scan results

@@ -4,7 +4,7 @@ author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 06/04/2023
-
+ms.custom: sfi-image-blocked
 ---
 ## Enable the plan
 

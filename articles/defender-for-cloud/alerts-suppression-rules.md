@@ -5,6 +5,7 @@ ms.date: 07/14/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
+ms.custom: sfi-image-nochange
 ---
 # Suppress alerts from Microsoft Defender for Cloud
 

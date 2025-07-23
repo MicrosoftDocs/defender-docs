@@ -5,6 +5,7 @@ ms.date: 07/15/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
+ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my databases.
 ---
 

@@ -5,6 +5,7 @@ ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
 ms.date: 05/18/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Create interactive reports with Azure Monitor workbooks
