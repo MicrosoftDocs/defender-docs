@@ -34,7 +34,7 @@ Multiple security rules may affect the deployment of a container image. The cond
 
 ## Next steps
 - Learn how to enable your [Gated Deployment functionality](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/enable-gated-deployment.md).
-- Learn more about the Defender for Cloud [Defender plans](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/defender-for-cloud-introduction.md#protect-cloud-workloads).
+- Learn more about the Defender for Cloud [Defender plans](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/defender-for-cloud-introduction.md#cloud-workload-protection-platform-cwpp).
 - Check out [common questions](https://github.com/MicrosoftDocs/azure-security-docs/blob/main/articles/defender-for-cloud/faq-defender-for-containers.yml) about Defender for Containers.
 
 

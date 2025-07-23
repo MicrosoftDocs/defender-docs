@@ -5,6 +5,7 @@ ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
 ms.date: 05/18/2025
+ms.custom: sfi-image-nochange
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 

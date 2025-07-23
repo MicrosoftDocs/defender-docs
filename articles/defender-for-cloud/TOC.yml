@@ -7,7 +7,7 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender
+        Azure cosmos db, db, Azure, defender, CWPP, CSPM
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -57,7 +57,7 @@
           displayName: strategy, adoption, ownership
           href: plan-multicloud-security-define-adoption-strategy.md
         - name: Determine plan and agents requirements
-          displayName: data, residency, cspm, cwp, plan
+          displayName: data, residency, cspm, cwpp, plan
           href: plan-multicloud-security-determine-data-residency-requirements.md
         - name: Determine compliance requirements
           displayName: compliance, standards
@@ -103,7 +103,7 @@
           displayName: CSPM, cloud security posture management, enable
           href: tutorial-enable-cspm-plan.md
         - name: Deploy Defender for Servers
-          displayName: servers, server, enable
+          displayName: servers, server, enable, p1, p2, plan1, plan 2
           href: tutorial-enable-servers-plan.md 
         - name: Protect applications with Defender for App Service
           displayName: App, service, enable, app service
@@ -853,6 +853,7 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: defender for servers, p1, p2, plan 1, plan 2
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
@@ -864,6 +865,7 @@
         - name: Plan roles and permissions
           href: plan-defender-for-servers-roles.md
         - name: Choose a plan and deployment scope
+          displayName: plan, defender for servers, plan 1, plan 2, plans, scope, deployment, p1, p2
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md

@@ -6,6 +6,7 @@ ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/20/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Integrate partner integrations
