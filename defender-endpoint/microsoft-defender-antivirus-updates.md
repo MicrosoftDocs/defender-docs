@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/23/2025
+ms.date: 07/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -98,6 +98,20 @@ Updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
+
+### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
+ 
+- Security intelligence update version: **1.433.2.0**
+- Release date:  **July 24, 2025 (Engine) / July 24, 2025 (Platform)**
+- Platform: **4.18.25060.7**
+- Engine: **1.1.25060.6**
+- Support phase: **Security and Critical Updates**
+ 
+#### What's new
+
+- Added filtering to improve scan stability and prevent engine crashes
+- Additional performance improvements to prevent concurrent scans. This change ensures that if a quick or full scan is already running, no additional quick or full scan scans are initiated from `MpCmdRun` or Powershell (`Start-Scan`).
+- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to 3rd party SIEM. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
 
 ### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
 
