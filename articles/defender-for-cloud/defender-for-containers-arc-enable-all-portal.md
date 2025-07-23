@@ -30,7 +30,7 @@ This article walks you through enabling all Microsoft Defender for Containers co
 Use this guide if you're:
 - Setting up Defender for Containers on Arc-enabled clusters for the first time
 - Want comprehensive protection for all your on-premises or multi-cloud clusters
-- Need to secure multiple distributions (OpenShift, Rancher, Tanzu, etc.)
+- Need to secure multiple distributions (Rancher, Tanzu, etc.)
 - Looking for a guided, visual deployment experience
 
 For selective deployment or troubleshooting existing deployments, see [Deploy specific Defender for Containers components on Arc-enabled Kubernetes](defender-for-containers-arc-deploy-portal.md).
@@ -328,10 +328,6 @@ You can exclude specific Arc-enabled clusters from automatic provisioning:
    - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
 
 ## Distribution-specific considerations
-
-### OpenShift
-- Ensure Security Context Constraints (SCCs) are properly configured
-- Audit log path: `/var/log/openshift-apiserver/audit.log`
 
 ### Rancher
 - Configure appropriate namespaces exclusions

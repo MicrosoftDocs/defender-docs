@@ -23,7 +23,9 @@ Defender for Containers supports the following Kubernetes environments:
 Select the deployment guide that matches your Kubernetes environment:
 
 ### [Azure (AKS)](defender-for-containers-azure-overview.md)
+
 For Azure Kubernetes Service clusters, Defender for Containers provides:
+
 - Native integration with Azure services
 - Automatic deployment through Azure Policy
 - Registry scanning for Azure Container Registry
@@ -31,14 +33,18 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 - No cross-cloud connector required
 
 ### [Arc-enabled Kubernetes](defender-for-containers-arc-overview.md)
+
 For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
+
 - Hybrid cloud security management
 - Support for any CNCF-certified Kubernetes distribution
 - Centralized security through Azure
-- Works with OpenShift, Rancher, Tanzu, and more
+- Works with Rancher, Tanzu, and more
 
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
+
 For Amazon Elastic Kubernetes Service clusters:
+
 - Multi-cloud security management
 - AWS connector-based deployment
 - Integration with AWS security services
@@ -46,7 +52,9 @@ For Amazon Elastic Kubernetes Service clusters:
 - CloudFormation template deployment
 
 ### [GCP (GKE)](defender-for-containers-gcp-overview.md)
+
 For Google Kubernetes Engine clusters:
+
 - Multi-cloud security management
 - GCP connector-based deployment
 - Integration with GCP security services

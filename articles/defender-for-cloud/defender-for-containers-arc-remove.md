@@ -254,18 +254,6 @@ az resource delete \
     --ids "/subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Kubernetes/connectedClusters/<cluster>/providers/Microsoft.KubernetesConfiguration/extensions/microsoft.azuredefender.kubernetes"
 ```
 
-### Orphaned resources
-
-Distribution-specific cleanup:
-
-```bash
-# OpenShift
-oc delete scc defender-scc
-
-# Check for custom resources
-kubectl get crd -o name | grep -i defender | xargs kubectl delete
-```
-
 ## Related content
 
 - [Learn more about Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)

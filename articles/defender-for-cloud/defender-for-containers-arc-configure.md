@@ -21,7 +21,6 @@ Jump to the configuration you need:
 
 ### Distribution-specific
 
-- [OpenShift configuration](#openshift-specific-configuration)
 - [Rancher configuration](#rancher-specific-configuration)
 - [VMware Tanzu configuration](#configure-for-vmware-tanzu)
 
@@ -78,29 +77,6 @@ data:
 ```
 
 ## Configure for specific distributions
-
-### OpenShift-specific configuration
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-openshift
-  namespace: mdc
-data:
-  openshiftConfig: |
-    enableSCC: true
-    auditLogPath: /var/log/openshift-apiserver/audit.log
-    monitorOperators: true
-    excludeSystemNamespaces: true
-```
-
-Apply Security Context Constraints:
-
-```bash
-oc adm policy add-scc-to-user privileged system:serviceaccount:mdc:microsoft-defender
-oc adm policy add-scc-to-user hostaccess system:serviceaccount:mdc:microsoft-defender
-```
 
 ### Rancher-specific configuration
 

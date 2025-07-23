@@ -224,12 +224,6 @@ Expected alert: "Cluster admin role assigned"
 
 ### Distribution-specific tests
 
-For **OpenShift**:
-```bash
-oc run scc-test --image=nginx --rm -it --restart=Never \
-    --overrides='{"spec":{"securityContext":{"runAsUser":0}}}'
-```
-
 For **Rancher**:
 ```bash
 kubectl run rancher-test --image=busybox --rm -it --restart=Never \
@@ -280,16 +274,6 @@ kubectl logs -n mdc deployment/microsoft-defender-controller
 ```
 
 ## Distribution-specific verification
-
-### OpenShift
-
-```bash
-# Check SCC assignment
-oc get scc | grep defender
-
-# Verify audit log access
-kubectl exec -n mdc deployment/microsoft-defender-controller -- ls -la /var/log/openshift-apiserver/
-```
 
 ### Rancher
 

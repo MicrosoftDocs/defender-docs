@@ -44,7 +44,6 @@ Defender for Containers works with any CNCF-certified Kubernetes distribution co
 
 **Enterprise distributions**:
 
-- Red Hat OpenShift (3.11+)
 - VMware Tanzu Kubernetes Grid
 - SUSE Rancher Kubernetes Engine (RKE/RKE2)
 - Canonical Kubernetes

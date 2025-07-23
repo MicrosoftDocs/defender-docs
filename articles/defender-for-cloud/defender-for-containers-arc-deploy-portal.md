@@ -12,6 +12,7 @@ This article explains how to deploy specific Defender for Containers components 
 ## When to use this guide
 
 Use this guide if you:
+
 - Already have Defender for Containers enabled but some components are missing
 - Want to deploy to specific Arc-enabled clusters only
 - Need to troubleshoot failed component deployments
@@ -48,7 +49,7 @@ If you're setting up Defender for Containers for the first time, see [Enable all
    - By name
    - By resource group
    - By tags
-   - By distribution (OpenShift, Rancher, etc.)
+   - By distribution (Tanzu, Rancher, etc.)
 5. Select **Fix**.
 
 ### Deploy the Defender sensor
@@ -64,7 +65,7 @@ The Defender sensor is essential for runtime threat detection. Deploy it to all 
    - By name
    - By resource group
    - By tags
-   - By distribution (OpenShift, Rancher, etc.)
+   - By distribution (Tanzu, Rancher, etc.)
 5. Select **Fix**.
 
 #### Deploy via Arc portal
@@ -117,20 +118,6 @@ For specific configurations:
 
 ## Configure by cluster distribution
 
-### OpenShift clusters
-
-For OpenShift-specific configuration:
-
-1. When deploying the extension, set:
-   ```json
-   {
-     "auditLogPath": "/var/log/openshift-apiserver/audit.log",
-     "nodeSelector": {
-       "node-role.kubernetes.io/master": ""
-     }
-   }
-   ```
-
 ### Rancher clusters
 
 For Rancher RKE/RKE2:
@@ -154,6 +141,7 @@ For Tanzu clusters:
 Additional considerations:
 
 1. **Private registries**: Configure authentication
+
    ```bash
    kubectl create secret docker-registry regcred \
      --namespace mdc \
@@ -179,11 +167,12 @@ For edge computing scenarios:
 
 1. **By tags**:
    - Add tag `DefenderExclude: True` to Arc cluster
-   
+
 2. **By configuration**:
    - Don't deploy extension to specific clusters
-   
+
 3. **Namespace exclusion**:
+
    ```yaml
    apiVersion: v1
    kind: Namespace
@@ -218,6 +207,7 @@ data:
    - Verify "Microsoft Defender" shows as **Installed**
 
 2. Via Azure CLI:
+
    ```azurecli
    az k8s-extension show \
      --name microsoft.azuredefender.kubernetes \
@@ -244,6 +234,7 @@ kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://logi
 ### Extension installation fails
 
 1. **Check Arc connectivity**:
+
    ```bash
    az connectedk8s show \
      --name <cluster-name> \
@@ -258,6 +249,7 @@ kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://logi
 ### Extension unhealthy
 
 1. Check pod status:
+
    ```bash
    kubectl describe pods -n mdc
    ```
