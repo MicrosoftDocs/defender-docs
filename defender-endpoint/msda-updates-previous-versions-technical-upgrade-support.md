@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 06/23/2025
+ms.date: 07/23/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,26 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
+
+- Security intelligence update version: **1.427.3.0**
+- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
+- Platform: **4.18.25030.2**
+- Engine: **1.1.25030.1**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
+- Performance improvement in on-access scans of files in network locations.
+- Fixed the Defender service description to match the latest installed version.
+- Improved Defender engine update logic when the update is included in a custom image.
+- Fix in health reporting where signature update data might have been incorrect.
+- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
+- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
+- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
+
 
 ### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
 
