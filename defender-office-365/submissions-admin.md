@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 07/14/2025
+ms.date: 07/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -527,6 +527,12 @@ The next sections in the details flyout are related to email message submissions
     - **View Exchange mail flow rules (transport rules)**
     - **View this message in Explorer** (Threat Explorer or Real-time detections in Defender for Office 365 only)
     - **Search for similar messages in Explorer** (Threat Explorer or Real-time detections in Defender for Office 365 only)
+  - If you [disputed the verdict on the message](#dispute-the-result-for-submissions-to-microsoft), a box shows information about the dispute results:
+    - The date and email address of the admin who disputed the message.
+    - **View dispute details**: A read only copy of the **Dispute details** flyout that the admin filled out when they disputed the message.
+    - **View original submission**: The original details flyout of the email message submission.
+
+    :::image type="content" source="media/submissions-dispute-info-in-details-flyout.png" alt-text="Screenshot of the disputed results box for email messages." lightbox="media/submissions-dispute-info-in-details-flyout.png":::
 
 - **Submission details** section:
   - **Date submitted**
@@ -661,7 +667,6 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Object ID**
 - **Policy action**
 - **Submitted by**
-- - **Is dispute**: For more information, see [Dispute the result for submissions to Microsoft](#dispute-the-result-for-submissions-to-microsoft).
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
@@ -670,7 +675,6 @@ To group the entries, select :::image type="icon" source="media/m365-cc-sc-group
 - **Reason**
 - **Status**
 - **Result**
-- **Dispute status**
 - **Tags**
 
 To ungroup the entries, select **None**.
@@ -807,6 +811,12 @@ The remaining sections in the details flyout are related to URL submissions:
     - **Should not have been blocked**
   - **Recommended steps for email submissions**: Contains links to related actions. For example:
     - **Block URL/file in Tenant Allow/Block List**
+  - If you [disputed the verdict on the URL](#dispute-the-result-for-submissions-to-microsoft), a box shows information about the dispute results:
+    - The date and email address of the admin who disputed the message.
+    - **View dispute details**: A read only copy of the **Dispute details** flyout that the admin filled out when they disputed the message.
+    - **View original submission**: The original details flyout of the URL submission.
+
+    :::image type="content" source="media/submissions-dispute-info-in-details-flyout.png" alt-text="Screenshot of the disputed results box for URLs." lightbox="media/submissions-dispute-info-in-details-flyout.png":::
 
 - **Submission details** section:
   - **Date submitted**
@@ -848,19 +858,23 @@ When you disagree with the verdict of an email or URL you submitted to Microsoft
   - The analysis starts over with no previous verdict or history.
   - You can resubmit an item multiple times.
 
-You can use the procedures in this section to dispute the following items:
+You can use the procedures in this section to dispute admin submitted items that meet **all** of the following criteria:
 
-- Admin submitted items from the **Emails**, **Email attachments**, or **URLs** tabs where that **Status** value is **Completed** and **Result** isn't one of the following values:
-  - **Allowed due to user overrides**
-  - **Item was not found**
-  - **We did not receive the submission, please fix the problem and resubmit**
+- The item was submitted from the **Emails** or **URLs** tabs of the **Submissions** page.
+- The **Status** property value is **Completed**.
+- The **Result** property is one of the following values:
+  - **Threats found**
+  - **No threats found**
+  - **Spam**
+  - **Bulk**
+- The item wasn't previously disputed (filter by **Is dispute** \> **No**).
 
-  To dispute items from the **User submitted** tab, you first need to [convert the user submission to an admin submission](#submit-user-reported-messages-to-microsoft-for-analysis).
+  > [!TIP]
+  > To dispute items on the **User submitted** tab, you first need to [convert the user submission to an admin submission](#submit-user-reported-messages-to-microsoft-for-analysis).
 
-1. On the **Submissions** page in the Defender portal, go to the **Emails**, **Email attachments**, or **URLs** tabs:
+1. On the **Submissions** page in the Defender portal, go to the **Emails**,  or **URLs** tabs:
    - **Emails** tab: <https://security.microsoft.com/reportsubmission?viewid=email>
    - **URLs** tab: <https://security.microsoft.com/reportsubmission?viewid=url>
-   - **Email attachments** tab: <https://security.microsoft.com/reportsubmission?viewid=emailAttachment>
 
 2. On the tab, do one of the following steps:
    - Select one or more eligible items by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Dispute submission result** action that appears.
@@ -883,7 +897,13 @@ You can use the procedures in this section to dispute the following items:
 
    :::image type="content" source="media/submissions-dispute-options-flyout.png" alt-text="Screenshot of the Dispute details flyout." lightbox="media/submissions-dispute-options-flyout.png":::
 
-On the **Emails**, **Email attachments**, or **URLs** tabs, the following controls are available for disputed items:
+4. On the **Dispute submitted** flyout, select **Done**.
+
+   :::image type="content" source="media/submissions-dispute-submitted.png" alt-text="Screenshot of the Dispute submitted flyout." lightbox="media/submissions-dispute-submitted.png":::
+
+#### View disputed items
+
+On the **Emails** or **URLs** tabs of the **Submissions** page, the following controls are available for disputed items:
 
 - :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** \> **Dispute status** groups entries on the page into the following categories:
   - **Not disputed**
@@ -893,6 +913,8 @@ On the **Emails**, **Email attachments**, or **URLs** tabs, the following contro
 - :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** \> **Is dispute** adds the **Is dispute** column to the entries on the page.
 
 - :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Is dispute** \> **Yes** or **No** filters filters the entries on the page by whether the item was disputed.
+
+The details flyout for the [email message](#view-email-admin-submission-details) or [URL](#view-url-admin-submission-details) submission contains information and links about the disputed item.
 
 ### Actions for admin submissions in Defender for Office 365
 
