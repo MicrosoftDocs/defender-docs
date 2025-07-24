@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 04/15/2025
+ms.date: 07/24/2025
 audience: ITPro
 ms.topic: how-to
 
@@ -111,10 +111,10 @@ v=spf1 ip4:192.168.0.10 ip4:192.168.0.12 include:spf.protection.outlook.com -all
 
   - `~all` (soft fail): Sources not specified in the SPF TXT record _probably_ aren't authorized to send mail for the domain, so the messages should be accepted but marked. What actually happens to the message depends on the destination email system. For example, the message might be quarantined as spam, delivered to the Junk Email folder, or delivered to the Inbox with an identifier added to the Subject or message body.
 
-     Because we also recommend DKIM and DMARC for Microsoft 365 domains, the differences between `-all` (hard fail) and `~all` (soft fail) are effectively eliminated (DMARC treats either result as an SPF failure). DMARC uses SPF to confirm the domains in the MAIL FROM and From addresses align _and_ the message came from a valid source for the From domain.
+     > [!NOTE]
+     > DMARC treats `-all` (hard fail) and `~all` (soft fail) as SPF failures. But the DMARC policy is effectively ignored for SPF `~all` failures if the messages don't also contain DKIM signatures. We recommend `-all` so DMARC can act on messages that fail SPF if the messages also lack DKIM signatures.
 
-  > [!TIP]
-  > `?all` (neutral) is also available to suggest no specific action on messages from unidentified sources. This value is used for testing, and we don't recommend this value in production environments.
+  - `?all` (neutral): Suggests no specific action on messages from unidentified sources. This value is used for testing, and we don't recommend this value in production environments.
 
 Important points to remember:
 
