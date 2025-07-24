@@ -14,7 +14,7 @@ ms.collection:
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 07/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -61,6 +61,9 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 - The built-in **Report** button in Outlook on the web, Outlook for Mac, Outlook for iOS, Outlook for Android, and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
   - Shared mailboxes require Send As or Send On Behalf permission for the user.
   - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
+
+> [!NOTE]
+> If the above permissions are not granted, the report from these mailboxes won't be shown on the  [user reported page](submissions-admin.md#view-user-reported-messages-to-microsoft) and the mail will still be moved in order to protect security of the mailbox from phishing attacks.
 
 ### Use the built-in Report button in Outlook to report junk and phishing messages
 
