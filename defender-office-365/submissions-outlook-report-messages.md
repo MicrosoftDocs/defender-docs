@@ -62,8 +62,8 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
   - Shared mailboxes require Send As or Send On Behalf permission for the user.
   - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
 
-> [!NOTE]
-> If the above permissions are not granted, the report from these mailboxes won't be shown on the  [user reported page](submissions-admin.md#view-user-reported-messages-to-microsoft) and the mail will still be moved in order to protect security of the mailbox from phishing attacks.
+  > [!NOTE]
+  > If the previously described permissions aren't granted, reported messages aren't shown on the [User reported](submissions-admin.md#view-user-reported-messages-to-microsoft) tab. Reported messages are still quarantined to protect the mailbox from phishing attacks.
 
 ### Use the built-in Report button in Outlook to report junk and phishing messages
 
