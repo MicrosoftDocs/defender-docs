@@ -111,6 +111,9 @@ v=spf1 ip4:192.168.0.10 ip4:192.168.0.12 include:spf.protection.outlook.com -all
 
   - `~all` (soft fail): Sources not specified in the SPF TXT record _probably_ aren't authorized to send mail for the domain, so the messages should be accepted but marked. What actually happens to the message depends on the destination email system. For example, the message might be quarantined as spam, delivered to the Junk Email folder, or delivered to the Inbox with an identifier added to the Subject or message body.
 
+     > [!TIP]
+     > `~all` (soft fail) does not provide adequate protection for sender authentication in the event DKIM is not present on incoming messages. This means that DMARC policy is effectively ignored in the event that only SPF ~all (soft fail) and NO DKIM header is           present in the message header body. We recommend organizations move to configure SPF -all (hard fail) so that in the event incoming emails lack DKIM signatures, DMARC policy can still effectively take action on SPF failures.
+
      Because we also recommend DKIM and DMARC for Microsoft 365 domains, the differences between `-all` (hard fail) and `~all` (soft fail) are effectively eliminated (DMARC treats either result as an SPF failure). DMARC uses SPF to confirm the domains in the MAIL FROM and From addresses align _and_ the message came from a valid source for the From domain.
 
   > [!TIP]
