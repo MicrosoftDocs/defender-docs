@@ -19,6 +19,8 @@ In cases like these, be sure to cover files that are larger than 50 MB by using 
 
 In Microsoft Defender XDR, select **Settings** > **Conditional Access App Control** > **Default behavior** to manage settings for files that are larger than 50 MB.
 
+With Edge in-browser protection, in case the end user session is protected AND the policy is set to 'Always apply the selected action even if data cannot be scanned', any file larger than 50MB is blocked.
+
 ## Maximum file size for session policies based on content inspection
 
 When you apply a session policy to block file uploads or downloads based on content inspection, the inspection is performed only on files that are smaller than 30 MB and that have fewer than 1 million characters.
