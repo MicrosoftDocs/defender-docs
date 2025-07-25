@@ -39,6 +39,9 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## July 2025
+-Users can report external and intra-org [teams messages](submissions-teams.md) from chats, standard and private channels, meeting conversations in the organization to Microsoft or Admin specified reporting mailbox or both per the  [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+
 ## June 2025
 
 - Defender for Office 365 is now able to detect and classify mail bombing attacks. Mail bombing is a distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.
