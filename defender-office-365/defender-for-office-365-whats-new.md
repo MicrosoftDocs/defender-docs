@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 7/1/2025
+ms.date: 7/25/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -40,7 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 ## July 2025
--Users can report external and intra-org [teams messages](submissions-teams.md) from chats, standard and private channels, meeting conversations in the organization to Microsoft or Admin specified reporting mailbox or both per the  [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+
+- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard and private channels, meeting conversations to Microsoft, the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ## June 2025
 
