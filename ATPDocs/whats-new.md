@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
-**Suspected Brute Force attack (Kerberos, NTLM):** Improved detection logic now includes scenarios where accounts were locked during the attacks. As a result, the number of triggered alerts may increase.
+**Suspected Brute Force attack (Kerberos, NTLM):** Improved detection logic now includes scenarios where accounts were locked during the attacks. As a result, the number of triggered alerts might increase.
 
 ## July 2025
 
@@ -37,11 +37,11 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 ### New security posture assessments for unmonitored identity servers
 
-Microsoft Defender for Identity now includes three security posture assessments that detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
+Microsoft Defender for Identity three new security posture assessments detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
 
 Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
 
-For more details, see:
+For more information, see:
 
 [Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
 
@@ -152,7 +152,7 @@ For more information, see: [Investigate and protect Service Accounts | Microsoft
 
 ### Enhanced Identity Inventory
 
-The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The Identities page under *Assets* was updated to provide better visibility and management of identities across your environment.  
 The updated Identities Inventory page now includes the following tabs:
 
 - Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
