@@ -1,7 +1,6 @@
 ---
 title: Protect AI agents in real time |
 description: This article outlines the steps to protect AI agents in real time using Defender for Cloud Apps.
-ms.service: cloud-app-security
 ms.date: 07/27/2025
 ms.topic: how-to
 ---
@@ -45,7 +44,7 @@ The democratization of AI agent creation means that thousands of agents can be d
 - A user with a Power Platform Administrator role is required for configuring this integration from the power platform side.
 
 - You need to register a Microsoft Entra app, to use for authentication with the external monitoring provider. 
-  For more information, see [Register an application in Microsoft Entra ID](/identity-platform/quickstart-register-app).
+
 
 ## Turn on real time protection during agent runtime
 
@@ -59,10 +58,11 @@ To enable real-time protection for AI agents, follow these steps:
 3. **Verify that the Microsoft 365 App Connector is connected**: 
    - Ensure that the Microsoft 365 App Connector is connected and operational. If not, follow the instructions to set it up.
 4. **Turn on Real time protection during agent runtime**: 
-   - Get the App ID from your Power Platform administrator, enter it in the box, and select "Save". For more information on how the Entra ID or Power Platform administrators are expected to register the Azure Entra Application, see <link>.
+   - Get the App ID from your Power Platform administrator, 
+   - Enter the App ID
+   - Select "Save".
    - Copy the URL provided and share it with the Power Platform administrator.
 
 ## Next steps 
 
-- [Register an application in Microsoft Entra ID](/identity-platform/quickstart-register-app)
-- 
+- [Register an application in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
