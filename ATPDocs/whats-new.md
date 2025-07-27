@@ -23,6 +23,9 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## August 2025
+
+**Suspected Brute Force attack (Kerberos, NTLM):** Improved detection logic now includes scenarios where accounts were locked during the attacks. As a result, the number of triggered alerts may increase.
 
 ## July 2025
 
@@ -44,7 +47,7 @@ For more details, see:
 
 [Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
 
-[Security Assessment: Unmonitored Entra Connect servers](unmonitored-entra-connect-servers.md)
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](unmonitored-entra-connect-servers.md)
 
 
 
@@ -62,7 +65,7 @@ Scoping by Active Directory domains helps:
 
 - Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
 
-For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+For more information, see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 
 ### Okta integration is now available in Microsoft Defender for Identity
@@ -103,7 +106,7 @@ Defender for Identity now supports deploying its new sensor on Domain Controller
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
 
 
-### Local administrators collection (using SAM-R queries) feature will be disabled
+### Local administrators collection (using SAM-R queries) feature is disabled
 The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change occurs automatically by the specified date, and no administrative action is required.
 
 ### New Health Issue
