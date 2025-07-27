@@ -33,22 +33,22 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
 
 - You'll need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+- You must [enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - **AWS users only** - Connect your [AWS account](quickstart-onboard-aws.md).
 
 ## Respond to alerts in Defender for Cloud
 
-When Microsoft Defender for Cloud is enabled on your database, it detects anomalous activities and generates alerts. These alerts are available from multiple locations, including:
+When Defender for Cloud is enabled on your database, it detects anomalous activities and generates alerts. These alerts are available from multiple locations, including:
 
 - In the Azure portal:
-  - **Microsoft Defender for Cloud's security alerts page** - Shows alerts for all resources protected by Defender for Cloud in the subscriptions you've got permissions to view.
+  - **Defender for Cloud's security alerts page** - Shows alerts for all resources protected by Defender for Cloud in the subscriptions you've got permissions to view.
   - The resource's **Microsoft Defender for Cloud** page - Shows alerts and recommendations for one specific resource.
 
 - In the inbox of whoever in your organization has been [designated to receive email alerts](configure-email-notifications.md).  
 
 > [!TIP]
-> A live tile on [Microsoft Defender for Cloud's overview dashboard](overview-page.md) tracks the status of active threats to all your resources including databases. Select the security alerts tile to go to the Defender for Cloud security alerts page and get an overview of active threats detected on your databases.
+> A live tile on [Defender for Cloud's overview dashboard](overview-page.md) tracks the status of active threats to your resources including databases. Select the security alerts tile to navigate to the Defender for Cloud security alerts page and get an overview of active threats detected on your databases.
 >
 > For detailed steps and the recommended method to respond to security alerts, see [Respond to a security alert](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 
