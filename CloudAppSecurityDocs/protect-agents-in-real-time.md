@@ -65,4 +65,4 @@ To enable real-time protection for AI agents, follow these steps:
 
 ## Next steps 
 
-- [Register an application in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
+- [Register an application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app).
