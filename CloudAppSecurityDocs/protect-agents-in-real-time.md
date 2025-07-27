@@ -34,7 +34,6 @@ The democratization of AI agent creation means that thousands of agents can be d
 
 - Operate without visibility from security teams
 
-
 ## Prerequisites
 
 - Defender for Cloud Apps license (which is also included in the E5 security package) 
@@ -43,25 +42,23 @@ The democratization of AI agent creation means that thousands of agents can be d
 
 - A user with a Power Platform Administrator role is required for configuring this integration from the power platform side.
 
-- You need to register a Microsoft Entra app, to use for authentication with the external monitoring provider. 
+- You need to register a Microsoft Entra app, to use for authentication with the external monitoring provider.
 
 
-## Turn on real time protection during agent runtime
-
+## Turn on real time agent protection
 
 To enable real-time protection for AI agents, follow these steps:
 
-1. **Go to [Microsoft Defender portal](https://security.microsoft.com)**: 
-   - Navigate to System > Settings > Cloud Apps > Copilot Studio AI Agents.
-2. **Setup your Microsoft 365 connector**
-   - Select both "Microsoft Entra ID Management events" and "Microsoft 365 activities".
-3. **Verify that the Microsoft 365 App Connector is connected**: 
-   - Ensure that the Microsoft 365 App Connector is connected and operational. If not, follow the instructions to set it up.
-4. **Turn on Real time protection during agent runtime**: 
-   - Get the App ID from your Power Platform administrator, 
-   - Enter the App ID
-   - Select "Save".
-   - Copy the URL provided and share it with the Power Platform administrator.
+1. **Go to [Microsoft Defender portal](https://security.microsoft.com)**:
+1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
+1. **Setup your Microsoft 365 connector**
+    1. Select both "Microsoft Entra ID Management events" and "Microsoft 365 activities".
+1. **Verify that the Microsoft 365 App Connector is connected**.
+1. **Turn on Real time protection during agent runtime**:
+    1. Get the App ID from your Power Platform administrator.
+    1. Enter the App ID
+    1. Select **Save**.
+    1. Copy the URL provided and share it with the Power Platform administrator. This URL enables the admin to complete the setup within the Power Platform Admin Center (PPAC), ensuring that the Defender plugin is properly installed and activated across selected environments.
 
 ## Next steps 
 
