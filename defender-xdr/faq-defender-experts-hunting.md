@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 01/12/2025
+ms.date: 06/27/2025
 ---
 
 # General information on Microsoft Defender Experts for Hunting service
@@ -47,6 +47,7 @@ The following section lists down questions your security operations center (SOC)
 |**How is customer data protected?**| For more information about Microsoft's commitment in valuing and protecting your data, see [Data collection, usage, and retention](before-you-begin-defender-experts.md#data-collection-usage-and-retention). You can also visit the [Trust Center](https://www.microsoft.com/en-us/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > [**Microsoft Defender Experts**](https://aka.ms/trustcenter-defenderexperts).|
 |**Does the hunting service offer real-time threat remediation with boots on ground?**| No, the hunting service doesn't cover real-time threat remediation.<br><br>Despite this, Microsoft provides professional on-site service through our [Microsoft Incident Response team](https://www.microsoft.com/en-us/security/business/microsoft-incident-response?msockid=2c408e0b54cc68301f9a9b55554869f3). This service requires a separate contract. We prioritize customer needs and have a swift turnaround time. Contact your Customer Service Account Manager for further assistance.|
 |**Is there a graph API that can fetch Defender Experts Notifications content?**| Yes. For more information, see [Access incident notifications using Graph API](access-den-graph-api.md).|
+|**How is AI used in the Defender Experts service?**| AI is used to support the Defender Experts service by enhancing the speed, scale, and consistency of security operations. We use a combination of generative, agentic, and foundational AI to power workflows such as incident triage, investigation, and summarization by analyzing signals like telemetry and historical analyst actions. Defender Experts analysts review and validate these AI-generated insights to ensure quality and accuracy. AI helps scale expert capabilities, and human analysts remain central to the service, ensuring customers receive trusted outcomes.|
 
 ### See also
 - [Before you begin using Defender Experts for Hunting](before-you-begin-defender-experts.md)

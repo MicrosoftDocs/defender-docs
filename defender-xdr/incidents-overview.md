@@ -19,7 +19,7 @@ ms.topic: concept-article
 search.appverid:
   - MOE150
   - MET150
-ms.date: 06/25/2025
+ms.date: 07/27/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -55,7 +55,7 @@ Alerts in the Microsoft Defender portal come from many sources. These sources in
 
 For example, when Microsoft Sentinel is [onboarded](/unified-secops-platform/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
 
-- Microsoft Sentinel customers using the Defender portal also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation state actors, ransomware campaigns, and fraudulent operations.
+- Microsoft Sentinel customers using the Defender portal, and those who have the [Microsoft Sentinel Defender XDR data connector](/azure/sentinel/connect-microsoft-365-defender), also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation state actors, ransomware campaigns, and fraudulent operations.
 
 - Microsoft Defender XDR itself also creates alerts. Defender XDR's unique correlation capabilities provide another layer of data analysis and threat detection for all the non-Microsoft solutions in your digital estate. These detections produce Defender XDR alerts, in addition to the alerts already provided by Microsoft Sentinel's analytics rules.
 

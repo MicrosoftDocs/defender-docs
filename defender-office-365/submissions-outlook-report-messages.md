@@ -14,7 +14,7 @@ ms.collection:
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 07/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -62,6 +62,9 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
   - Shared mailboxes require Send As or Send On Behalf permission for the user.
   - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
 
+  > [!NOTE]
+  > If the previously described permissions aren't granted, reported messages aren't shown on the [User reported](submissions-admin.md#view-user-reported-messages-to-microsoft) tab. Reported messages are still quarantined to protect the mailbox from phishing attacks.
+
 ### Use the built-in Report button in Outlook to report junk and phishing messages
 
 - Users can report a message as junk from the Inbox or any email folder other than Junk Email folder.
@@ -74,7 +77,7 @@ In a supported version of Outlook, select one or more messages, select **Report*
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The following actions are also taken on the reported messages in the mailbox:
 
-- **Reported as junk**: The messages are moved to the Junk Email folder.
+- **Reported as junk**: The messages are moved to the Junk Email folder, and the sender is automatically added to the user's Blocked Senders list. 
 - **Reported as phishing**: The messages are deleted.
 
 ### Use the built-in Report button in Outlook to report messages that aren't junk

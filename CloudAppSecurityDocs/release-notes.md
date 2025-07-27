@@ -20,18 +20,46 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
->[!IMPORTANT]
-> **Take Immediate Action by April, 29 2025**, to ensure optimal service quality and prevent the interruption of some services. This change will only affect your organization if you're using a firewall allowlist that restricts outbound traffic based on IP addresses or Azure service tags. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively use as an additional Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’, that will be adjusted to reflect the above range by April 28, 2025.\
-> This update should be completed and the IP addresses or new Azure service tag added to your firewall's allowlist by April 29, 2025.
-> This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.\
-> Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
+## July 2025
+
+### App Governance available in 8 new regions
+
+App Governance is now also available in Brazil, Sweden, Norway, Switzerland, South Africa, South Korea, Arab Emirates and Asia Pacific. For more details, see [Turn on app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started).
+
+### Updated network requirements for GCC and Gov customers
+
+To support ongoing security enhancements and maintain service availability, Microsoft Defender for Cloud Apps now requires updated firewall configurations for customers in GCC and Gov environments.
+
+To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
+
+Allow outbound traffic on port 443 to the following IP ranges:
+  - `51.54.53.136/29`
+  - `51.54.114.160/29`
+  - `62.11.173.176/29`
+
+If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
+
+Add the following endpoint to your firewall allowlist on port 443:
+  - `discoveryresources-cdn-prod.cloudappsecurity.com`
+
+For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
 
 
 ## June 2025
 
+
+### “Behaviors” data type in Microsoft Defender for Cloud Apps - General Availability
+
+The **Behaviors** data type enhances overall threat detection accuracy by reducing alerts on generic anomalies and surfacing alerts only when observed patterns align with real security scenarios. You can now use **Behaviors** to conduct investigations in [Advanced Hunting](/defender-xdr/advanced-hunting-overview), build better [custom detections](/defender-xdr/custom-detection-rules) based on behavioral signals, and benefit from automatic inclusion of context-related behaviors into [incidents](/defender-xdr/incidents-overview). This provides clearer context and helps security operations teams to reduce alert fatigue, prioritize, and respond more efficiently.
+
+For more information, see:
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
+- [TechCommunity Blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/transform-the-way-you-investigate-by-using-behaviors--new-detections-in-xdr-star/3825154).
+
 ### New Dynamic Threat Detection model
 
 Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter and more responsive security coverage.
+
 For more information, see [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md).
 
 
@@ -70,6 +98,13 @@ For more information, see: [Find your cloud app and calculate risk scores](risk-
 
 ## April 2025
 
+
+### Firewall configuration update required by April 29, 2025
+
+**Take Immediate Action by April, 29 2025**, to ensure optimal service quality and prevent the interruption of some services. This change will only affect your organization if you're using a firewall allowlist that restricts outbound traffic based on IP addresses or Azure service tags. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively use as an additional Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’, that will be adjusted to reflect the above range by April 28, 2025.\
+- This update should be completed and the IP addresses or new Azure service tag added to your firewall's allowlist by April 29, 2025.
+-  This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.\
+- Learn more: [Network requirements](https://aka.ms/MDANetworkDocs).
 
 ### OAuth app information is now available in attack paths (Preview)
 
@@ -111,7 +146,7 @@ Defender for Cloud Apps customers can now configure Role-Based Access Control (R
 For more information, see:
 
 - [Configure admin access](/defender-cloud-apps/manage-admins)
-- [Investigate behaviors with advanced hunting (Preview)](/defender-cloud-apps/behaviors)
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
 
 ## February 2025
  
@@ -218,7 +253,7 @@ For more information, see [OAuth app permission related details on app governanc
 
 ### Granular data usage insights into EWS API access (Preview)
 
-Defender for Cloud Apps users who use app governance can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enable you to get deeper visibility into apps accessing emails using legacy EWS API.
+Defender for Cloud Apps users who use app governance can now get granular insights into data accessed by apps using legacy EWS API alongside Microsoft Graph. The enhanced coverage of data usage insights enables you to get deeper visibility into apps accessing emails using legacy EWS API.
 
 For more information, see [OAuth app data usage insights on app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
 
@@ -297,7 +332,7 @@ A new user experience dedicated to providing users the option to export from 'ac
 
 You can filter the results using time range and various other filters and even hide private activities.
 
-For more information, see [Export activities six months back](activity-filters-queries.md#export-activities-six-months-back-preview)
+For more information, see [Export activities six months back](activity-filters-queries.md#export-activities-six-months-back).
 
 ## July 2024
 ### Configure and embed a custom support URL in Block pages (Preview)
