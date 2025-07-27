@@ -141,6 +141,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "ATPDocs/credential-access-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/persistence-privilege-escalation-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/reconnaissance-discovery-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/lateral-movement-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/classic-activities-filtering-mcas.md",
       "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
       "redirect_document_id": false
