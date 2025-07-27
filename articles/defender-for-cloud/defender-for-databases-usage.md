@@ -1,7 +1,7 @@
 ---
 title: Respond to Defender open-source database alerts
 description: Configure Microsoft Defender for open-source relational databases to detect potential security threats.
-ms.date: 05/01/2024
+ms.date: 07/27/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
@@ -25,13 +25,13 @@ and for RDS instances on AWS (Preview):
 - MySQL
 - MariaDB
 
-To get alerts from the Microsoft Defender plan you'll first need to enable Defender for open-source relational databases on your [Azure](enable-defender-for-databases-azure.md) or [AWS](enable-defender-for-databases-aws.md) account.
+To get alerts, you need to [enable Defender for open-source relational databases on your Azure](enable-defender-for-databases-azure.md), or [enable Defender for open-source relational databases on your Amazon Web Services (AWS)](enable-defender-for-databases-aws.md) account.
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You'll need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
