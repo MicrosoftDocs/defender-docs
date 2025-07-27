@@ -40,22 +40,17 @@ Defender for Identity security alerts are divided into the following categories 
 
 Reconnaissance and discovery consist of techniques an adversary may use to gain knowledge about the system and internal network. These techniques help adversaries observe the environment and orient themselves before deciding how to act. They also allow adversaries to explore what they can control and what’s around their entry point to discover how it could benefit their current objective. Native operating system tools are often used toward this post-compromise information-gathering objective. In Microsoft Defender for Identity, these alerts usually involve internal account enumeration with different techniques.
 
+
+
+
+
 |Security alert|Severity|External ID|
+|------------|----------|----------|
 |<details><summary>Account enumeration reconnaissance</summary>
-**Previous name**: Reconnaissance using account enumeration<br>
-**Description**:<br>
-In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess in an attempt to guess user names in the domain.<br>
-**Kerberos**: Attacker makes Kerberos requests using these names to try to find a valid username in the domain. When a guess successfully determines a username, the attacker gets the **Preauthentication required** instead of **Security principal unknown** Kerberos error.<br>
-**NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.<br>
-In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS / AD CS servers.<br>
-**Learning period**:<br>
-None<br>
-**MITRE**:<br>-  **Primary MITRE tactic**: [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  <br>-  **MITRE attack technique**:  [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        <br>-  **MITRE attack sub-technique**:  [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        <br>
-**Suggested steps for prevention**:<br>
-1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
-</details>|Medium|2003|
+<br> **Previous name**: Reconnaissance using account enumeration<br>
+</details>|Medium|2023|
 |<details><summary>Account Enumeration reconnaissance (LDAP)</summary>
-**Description**:<br>
+<br>**Description**:<br>
 In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as Ldapnomnom in an attempt to guess user names in the domain.  <br>
 **LDAP**: Attacker makes LDAP Ping requests (cLDAP) using these names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker may receive a response indicating that the user exists in the domain.  <br>
 In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on LDAP search activities from sensors running on domain controller servers. <br>
@@ -67,13 +62,13 @@ None<br>
 - **MITRE attack technique**: [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)<br>
 - **MITRE attack sub-technique**: [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)<br>
 </details>|Medium|2437|
-|<details><summary>Network-mapping reconnaissance (DNS)</summary>
+|<details><summary>Network-mapping reconnaissance (DNS)</summary><br>
 **Previous name**: Reconnaissance using DNS<br>
 **Description**:<br>
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.<br>
 There are several query types in the DNS protocol. This Defender for Identity security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.<br>
 **Learning period**:<br>
-This alert has a learning period of eight days from the start of domain controller monitoring.<br>
+Eight days from the start of domain controller monitoring.<br>
 **MITRE**:<br>-  **Primary MITRE tactic**:  [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) <br>-  **MITRE attack technique**:    [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Network Service Scanning (T1046)](https://attack.mitre.org/techniques/T1046/), [Remote System Discovery (T1018)](https://attack.mitre.org/techniques/T1018/)     <br>-  **MITRE attack sub-technique**:   N/A       <br>
 **Suggested steps for prevention**:<br>
 It's important to preventing future attacks using AXFR queries by securing your internal DNS server.<br>
