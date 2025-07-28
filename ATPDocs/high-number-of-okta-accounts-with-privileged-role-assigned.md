@@ -14,6 +14,12 @@ This article describes the security risks associated with having a high number o
 > [!NOTE]
 > This report lists Okta accounts with administrator roles - excluding Super Administrator, where the number of accounts assigned to these roles is greater than 25.  
 
+## Prerequisites
+
+To use this security assessment, you must first connect your Okta instance in the Microsoft Defender portal.  
+For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+
+
 ## Why is a high number of Okta accounts with privileged roles considered a security risk?
 
 A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
