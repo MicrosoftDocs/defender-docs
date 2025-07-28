@@ -58,4 +58,4 @@ Consider using secure presets [Ensuring you always have the optimal security con
 
 You can also manage email authentication issues with spoof intelligence [Spoof intelligence insight](../anti-spoofing-spoof-intelligence.md).
 
-Learn more about email authentication [Email Authentication in Exchange Online Protection](../email-authentication-about.md).
+Learn more about email authentication [Email authentication](../email-authentication-about.md).
