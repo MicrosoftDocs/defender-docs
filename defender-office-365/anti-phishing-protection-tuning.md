@@ -79,7 +79,7 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
   - Verify your SPF record identifies _all_ sources of email for your domain (don't forget non-Microsoft services!).
 
-  - To ensure destination email systems can reject messages from unauthorized sources for your domain, use hard fail (`-all`) in the SPF record . You can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) to help identify senders using your domain so you can include all authorized non-Microsoft senders in your SPF record.
+  - To ensure destination email systems can reject messages from unauthorized sources for your domain, use hard fail (`-all`) in the SPF record. You can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) to help identify senders using your domain so you can include all authorized non-Microsoft senders in your SPF record.
 
   For configuration instructions, see:
 
