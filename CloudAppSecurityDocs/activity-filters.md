@@ -15,6 +15,7 @@ Microsoft Defender for Cloud Apps gives you visibility into all the activities f
 >
 > Microsoft Defender for Cloud Apps displays these activity names and types exactly as received and doesn't define or modify them. To understand the meaning of an activity, refer to the relevant third‑party API documentation.
 
+The action types for events and activities are determined by the source service, whether it is a first-party or third-party service. Microsoft Defender for Cloud Apps (MDA) supports a wide range of action types and is not restricted to specific ones.
 For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps, see [Search the audit log in the Microsoft Purview portal](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 
