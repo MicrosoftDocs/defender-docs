@@ -106,16 +106,6 @@ To sync content across tenant groups for the tenants you have permission for:
 
 Sync results show the number of synced tenants and content. Synced tenants indicate how many tenants had custom detection rules applied successfully. For example, if all rules are applied in 3 out of 3 tenants, the count is 3; if only 2 tenants succeed, the count is 2. Synced content represents the total custom detection rules synced across all target tenants.
 
-## View distributed endpoint policies (Defender for Endpoint customers only)
-
-View distributed endpoint policies in the **Endpoint security policies** page. Distributed policies view them in a hierarchical view, with the original policy serving as the parent. 
-
-:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
-
-The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
-
-For more information, see [Content distribution in multitenant management](mto-tenantgroups.md) and [Manage endpoint security policies in Defender for Endpoint](/defender-endpoint/manage-security-policies).
-
 ## Edit tenant groups
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups).
