@@ -28,7 +28,7 @@ An aggregated view of all security policies from all tenants is available throug
 
 To know more about endpoint security policy types, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies).
 
-Distributed policies appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy.
+As a Preview feature, distributed policies appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy.
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 

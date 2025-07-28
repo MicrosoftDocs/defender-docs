@@ -29,7 +29,7 @@ Distributing content in this manner, across tenants, enables you to organize ten
 Create tenant groups to distribute the following types of of content across multiple tenants:
 
 - Custom detection rules
-- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only
+- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only (Preview)
 
 ## Requirements
 
