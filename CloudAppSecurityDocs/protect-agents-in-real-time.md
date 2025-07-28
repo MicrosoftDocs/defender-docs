@@ -16,7 +16,7 @@ This article describes how to enable real-time agent protection in Microsoft Def
 
 ## Overview
 
-As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations are facing new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place.Copilot Studio agents can perform tasks such as summarizing emails or automating workflows using Microsoft 365 and other internal data sources . During runtime, attackers may attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
+As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations are facing new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Copilot Studio agents can perform tasks such as summarizing emails or automating workflows using Microsoft 365 and other internal data sources. During runtime, attackers attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
 Real-time agent protection in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and helps block suspicious behavior without disrupting the end-user experience.
 
@@ -69,6 +69,8 @@ For more details on how to set up the Microsoft 365 App Connector, see [Connect 
     1. Select **Save**.
     1. Copy the URL provided.
     1. Share the URL with the Power Platform administrator. 
+
+:::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on real time agent protection in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
 
 ## Finalize configuration in Power Platform
 
