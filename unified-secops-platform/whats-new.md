@@ -36,7 +36,7 @@ New enhancements for endpoint security policies in multitenant management provid
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
-For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
+For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-tenantgroups.md).
 
 ### For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal
 
