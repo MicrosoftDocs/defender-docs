@@ -62,6 +62,7 @@ The following security alerts help you identify and remediate **Reconnaissance a
 |---------------|---------|------------|
 |               |         |            |
 |               |         |            |
+
 ---
 
 ## Persistence and privilege escalation alerts
