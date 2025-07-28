@@ -2,19 +2,20 @@
 title: Content distribution using tenant groups in multitenant management
 description: Overview of content distribution through tenant groups in multitenant management in Microsoft Defender XDR.
 ms.service: unified-secops-platform
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
 - highpri
 - tier1
-ms.topic: how-to
-ms.date: 03/27/2025
+ms.topic: concept-article
+ms.date: 07/28/2025
 appliesto: 
-- ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Content distribution in multitenant management
@@ -22,6 +23,12 @@ appliesto:
 Content distribution helps you manage content at scale, across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 Distributing content in this manner, across tenants, enables you to organize tenants and content based on categories like business groups or location.
+
+Distributed policies now appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For more information, see [Content distribution in multitenant management](mto-tenantgroups.md).
+
+:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+
+The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
 
 > [!NOTE]
 > Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future. 
