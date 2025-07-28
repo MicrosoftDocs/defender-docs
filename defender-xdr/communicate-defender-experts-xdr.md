@@ -1,7 +1,7 @@
 ---
 title: Communicating with Microsoft Defender Experts
 ms.reviewer:
-description: Defender Experts for XDR has multiple channels to discuss incidents, managed response, and service support
+description: Defender Experts for XDR has multiple channels to discuss incidents, managed response, and service support.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -25,7 +25,7 @@ ms.date: 08/01/2025
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 Microsoft Defender Experts for XDR provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your service delivery managers (SDMs), if included in your service.
 

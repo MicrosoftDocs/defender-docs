@@ -24,7 +24,7 @@ ms.date: 08/01/2025
 
 **Applies to:**
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 Microsoft Defender Experts lets you incorporate third-party network signals from Palo Alto Networks, Fortinet, and Zscaler **for enrichment**. By enriching Microsoft Defender incidents with these network signals, our security analysts not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, they could also provide you with a more holistic view of the threat in your environment. 
 

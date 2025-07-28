@@ -25,7 +25,7 @@ ms.date: 08/01/2025
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 For managed detection and response instructions, check out this short video.
 

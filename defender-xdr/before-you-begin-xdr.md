@@ -25,7 +25,7 @@ ms.date: 08/01/2025
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR service and its add-on offering, Microsoft Defender Experts for Servers.
 

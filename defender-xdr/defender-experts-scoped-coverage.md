@@ -25,7 +25,7 @@ ms.date: 08/01/2025
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 Microsoft Defender Experts for XDR offers scoped coverage for customers who wish to have Defender Experts cover only a section of their organization (for example, specific geography, subsidiary, or function) that requires security operations center (SOC) support or where their security support is limited.
 

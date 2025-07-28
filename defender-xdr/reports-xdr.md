@@ -25,7 +25,7 @@ ms.date: 08/01/2025
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsofot Defender Experts for Servers
+- Microsoft Defender Experts for Servers
 
 For Defender Experts for XDR reports instructions, check out this short video.
 
@@ -45,7 +45,7 @@ The topmost section of the Defender Experts for XDR report provides the percenta
 - **Resolved** – The total number of investigated incidents that were closed.
 - **Resolved directly** – The number of investigated incidents that we were able to close directly on your behalf.
 - **Resolved with your help** – The number of investigated incidents that were resolved because of your action on one or more managed response tasks.
-- **Third-party enriched** - The number of incidents that were enriched with third-party network signals. This data is availiable when you're enrolled in the [third-party network enrichment](third-party-enrichment-defender-experts.md).
+- **Third-party enriched** - The number of incidents that were enriched with third-party network signals. This data is availably when you're enrolled in the [third-party network enrichment](third-party-enrichment-defender-experts.md).
 
 The **Average time to resolve incidents** section displays a bar chart of the average time, in minutes, our experts spent investigating and closing incidents in your environment and the average time you spent performing the required managed response actions.
 
