@@ -23,10 +23,10 @@ Identify your architecture and your requirements, and then use the table below t
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|---------|
 |Domain controller     | Windows Server 2019 or later with the [March 2024 Cumulative Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or later.<br> * **See Note**.|[Defender for Identity sensor v3.x (Preview)](prerequisites-sensor-version-3.md)<br> * **See Note**.        |
-|Domain controller      |Windows Server 2016 or earlier         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
-|[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)     |    NA     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  NA       |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|[Entra Connect](active-directory-federation-services.md)|  NA    |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
+|Domain controller      |Windows Server 2016 or later         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
+|[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)     |    Windows Server 2016 or later      |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
+|[Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
 > [!NOTE]
 > The Defender for Identity sensor version 3.x is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
