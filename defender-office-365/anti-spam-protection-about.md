@@ -45,7 +45,7 @@ Microsoft 365 uses the following spam filtering verdicts to classify messages:
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), high confidence phishing messages are always quarantined. Users can't release their own quarantined high confidence phishing messages, regardless of any available settings configured by admins.
 - **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
 
-For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection for clooud mailboxes](anti-spam-protection-faq.yml)
+For more information about anti-spam protection, see the [Frequently asked questions: Anti-spam protection for cloud mailboxes](anti-spam-protection-faq.yml)
 
 In the default anti-spam policy and in custom anti-spam policies, you can configure the actions to take based on these verdicts. In the Standard and Strict [preset security policies](preset-security-policies.md), the actions are already configured and unmodifiable as described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
