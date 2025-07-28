@@ -24,14 +24,12 @@ Content distribution helps you manage content at scale, across tenants in multit
 
 Distributing content in this manner, across tenants, enables you to organize tenants and content based on categories like business groups or location.
 
-Distributed policies now appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For more information, see [Content distribution in multitenant management](mto-tenantgroups.md).
+## Supported content for distribution
 
-:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+Create tenant groups to distribute the following types of of content across multiple tenants:
 
-The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
-
-> [!NOTE]
-> Multitenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future. 
+- Custom detection rules
+- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only
 
 ## Requirements
 
@@ -48,35 +46,35 @@ The following table lists the requirements for content distribution in multitena
 To create a new tenant group:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
-2. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
+1. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
 
     :::image type="content" source="media/mto-tenantgroups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/mto-tenantgroups/mto-add-tenants.png":::
 
-3. In the **Content selection** page, select the content to be distirbuted across all tenants in your tenant group, then select **Next**.
+1. In the **Content selection** page, select the content to be distributed across all tenants in your tenant group, then select **Next**.
     
     :::image type="content" source="media/mto-tenantgroups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/mto-tenantgroups/mto-add-content.png":::
 
 > [!NOTE]
 > The content type selection is currently limited to adding custom detection rules to a tenant group. 
 
-4. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
+1. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
     :::image type="content" source="media/mto-tenantgroups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="media/mto-tenantgroups/mto-add-custom.png":::
 
-5. In the **Select detection rules** page, filter the source tenant of the content, then select **Apply**. Choose the content you want to add to your tenant group from the list.
+1. In the **Select detection rules** page, filter the source tenant of the content, then select **Apply**. Choose the content you want to add to your tenant group from the list.
 
     :::image type="content" source="media/mto-tenantgroups/mto-select-content-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="media/mto-tenantgroups/mto-select-content.png":::
 
-6. In the **Device groups** page, select the devices or specific device groups that need to be in your tenant's scope.
+1. In the **Device groups** page, select the devices or specific device groups that need to be in your tenant's scope.
 
     :::image type="content" source="media/mto-tenantgroups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="media/mto-tenantgroups/mto-select-device.png":::
 
-7. Add a tenant group name and description about your tenant group in the Details page.
-8. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
+1. Add a tenant group name and description about your tenant group in the Details page.
+1. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
 
     :::image type="content" source="media/mto-tenantgroups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="media/mto-tenantgroups/mto-summary-tenantgroups.png":::
 
-9. Select **Submit** to finish your tenant group creation.
+1. Select **Submit** to finish your tenant group creation.
 
 > [!TIP]
 > If you choose to **Sync all authorized tenants**, all the tenants and scope within the tenants you have permission automatically syncs.
@@ -97,27 +95,37 @@ Check the sync results under the **Last sync result** column. If the result is *
 To sync content across tenant groups for the tenants you have permission for:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups).
-2. Select the checkbox next to the tenant group you want to sync, then select **Sync tenant group**.
-3. Select **Sync** on the prompt that appears.
-4. Once the sync is completed, you see one of the following statuses:
+1. Select the checkbox next to the tenant group you want to sync, then select **Sync tenant group**.
+1. Select **Sync** on the prompt that appears.
+1. Once the sync is completed, you see one of the following statuses:
    - Success
    - Partially successful
    - Failure
 
-5. If you experience a partial success or failure, select the value in the **Last sync result** column to investigate the cause.  
+1. If you experience a partial success or failure, select the value in the **Last sync result** column to investigate the cause.  
 
 Sync results show the number of synced tenants and content. Synced tenants indicate how many tenants had custom detection rules applied successfully. For example, if all rules are applied in 3 out of 3 tenants, the count is 3; if only 2 tenants succeed, the count is 2. Synced content represents the total custom detection rules synced across all target tenants.
+
+## View distributed endpoint policies (Defender for Endpoint customers only)
+
+View distributed endpoint policies in the **Endpoint security policies** page. Distributed policies view them in a hierarchical view, with the original policy serving as the parent. 
+
+:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+
+The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
+
+For more information, see [Content distribution in multitenant management](mto-tenantgroups.md) and [Manage endpoint security policies in Defender for Endpoint](/defender-endpoint/manage-security-policies).
 
 ## Edit tenant groups
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups).
-2. Select the checkboxes next to the tenant group you want to edit, then select **Edit tenant group**.
-3. Edit the tenant group name and description, then select **Save**.
+1. Select the checkboxes next to the tenant group you want to edit, then select **Edit tenant group**.
+1. Edit the tenant group name and description, then select **Save**.
 
 ## Remove tenant groups
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups).
-2. Select the checkboxes next to the tenant group you want to remove, then select **Remove tenant group**.
+1. Select the checkboxes next to the tenant group you want to remove, then select **Remove tenant group**.
 
 ## Troubleshooting
 
