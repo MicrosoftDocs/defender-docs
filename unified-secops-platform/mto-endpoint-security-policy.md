@@ -30,7 +30,7 @@ To know more about endpoint security policy types, see [Manage endpoint security
 
 Distributed policies now appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For more information, see [Content distribution in multitenant management](mto-tenantgroups.md).
 
-:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed-small.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+:::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
 The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the recipients of the policy.
 
