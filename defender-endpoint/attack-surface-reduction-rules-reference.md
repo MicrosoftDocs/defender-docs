@@ -406,8 +406,8 @@ This rule blocks executable files, such as .exe, .dll, or .scr, from launching. 
 
 > [!IMPORTANT]
 > You must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to use this rule.
-> The rule **Block executable files from running unless they meet a prevalence, age, or trusted list criterion** with GUID `01443614-cd74-433a-b99e-2ecdc07bfc25` is owned by Microsoft and isn't specified by admins. This rule uses cloud-delivered protection to update its trusted list regularly.
-> You can specify individual files or folders (using folder paths or fully qualified resource names) but you can't specify which rules or exclusions apply to.
+> This rule uses cloud-delivered protection to update its trusted list regularly.
+> You can specify individual files or folders by using folder paths or fully qualified resource names. It also supports the **ASROnlyPerRuleExclusions** setting.
 
 Intune name: `Executables that don't meet a prevalence, age, or trusted list criteria`
 
