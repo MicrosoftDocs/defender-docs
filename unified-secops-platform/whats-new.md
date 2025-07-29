@@ -22,7 +22,7 @@ This article lists recent features added for unified security operations in the 
 
 ## July 2025
 
-- [Endpoint security policy enhancements for multitenant management](#endpoint-security-policy-enhancements-for-multitenant-management-preview)
+- [Distribute Microsoft Defender for Endpoint security policies with multitenant management](#distribute-microsoft-defender-for-endpoint-security-policies-with-multitenant-management)
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
 - [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
@@ -31,10 +31,10 @@ This article lists recent features added for unified security operations in the 
 
 Microsoft Defender for Endpoint security policies can now be distributed across multiple tenants from the Defender multi-tenant portal. This capability empowers security teams to manage policies at scale, ensuring consistency and saving valuable time.
 
-New enhancements for endpoint security policies in multitenant management also provide a more streamlined experience for managing endpoint security policies across multiple tenants.
-
 - Endpoint security policies now display distributed policies in a hierarchical view, making it easier to identify parent policies and their distributed copies across tenants.
 - The original policy’s page now shows the overall distribution status and clearly lists recipient tenants and tenant groups.
+
+For example: 
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
