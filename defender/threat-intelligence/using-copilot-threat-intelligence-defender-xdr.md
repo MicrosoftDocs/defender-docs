@@ -17,6 +17,7 @@ ms.custom:
 - cx-mdti
 ms.topic: how-to
 ms.date: 04/17/2025
+ms.update-cycle: 180-days
 ---
 
 # Using Microsoft Security Copilot for threat intelligence

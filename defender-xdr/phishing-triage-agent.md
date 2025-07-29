@@ -19,6 +19,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.date: 04/28/2025
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2

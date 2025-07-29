@@ -19,6 +19,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 11/20/2024
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal

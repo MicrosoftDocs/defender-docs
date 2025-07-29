@@ -17,6 +17,7 @@ ms.custom:
 - cx-mdti
 ms.topic: article
 ms.date: 04/22/2025
+ms.update-cycle: 180-days
 ---
 
 # Microsoft Security Copilot in Microsoft Defender Threat Intelligence

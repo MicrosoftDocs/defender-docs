@@ -21,6 +21,7 @@ ms.custom:
 - cx-ah
 ms.topic: how-to
 ms.date: 10/17/2024
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
