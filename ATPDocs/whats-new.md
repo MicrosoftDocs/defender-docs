@@ -27,6 +27,8 @@ For updates about versions and features released six months ago or earlier, see 
 
 **Suspected Brute Force attack (Kerberos, NTLM):** Improved detection logic now includes scenarios where accounts were locked during the attacks. As a result, the number of triggered alerts might increase.
 
+**Sensor version 2.246** - Global deployment start on July 28, 2025.  This version includes improvements and bug fixes for the sensor. 
+
 ## July 2025
 
 ### Identity scoping is now available in Governance environments
