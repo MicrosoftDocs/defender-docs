@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 06/24/2025
+ms.date: 07/29/2025
 ---
 
 # File integrity monitoring
@@ -52,6 +52,10 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning.
 - Choose files that are frequently changed by applications or operating system (such as log files and text files) creates noise, making it difficult to identify an attack.
+- Monitor any file located in a folder `/folder/path/*`.
+
+> [!NOTE]
+> The maximum number of rules that can be applied is 500.
 
 ### Recommended items to monitor
 
