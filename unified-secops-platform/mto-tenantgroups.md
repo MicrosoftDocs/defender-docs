@@ -46,28 +46,20 @@ The following table lists the requirements for content distribution in multitena
 To create a new tenant group:
 
 1. Go to the [Tenant groups page](https://mto.security.microsoft.com/tenantgroups) in multitenant management in Microsoft Defender XDR.
-1. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
 
-    :::image type="content" source="media/mto-tenantgroups/mto-add-tenants-small.png" alt-text="Screenshot of the tenant group creation wizard." lightbox="media/mto-tenantgroups/mto-add-tenants.png":::
+1. Select **Create tenant group**. In the **Tenants** page, select **Add tenant** to see a list of available tenants that you can add to your tenant group. Choose the tenants you want to add to the tenant group, then select **Add**.
 
 1. In the **Content selection** page, select the content to be distributed across all tenants in your tenant group, then select **Next**.
     
-1. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
-
-    :::image type="content" source="media/mto-tenantgroups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="media/mto-tenantgroups/mto-add-custom.png":::
+1. In the **Custom detection rules** page, select **Add content** to add content to your tenant group.
 
 1. In the **Select detection rules** page, filter the source tenant of the content, then select **Apply**. Choose the content you want to add to your tenant group from the list.
 
-    :::image type="content" source="media/mto-tenantgroups/mto-select-content-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="media/mto-tenantgroups/mto-select-content.png":::
-
 1. In the **Device groups** page, select the devices or specific device groups that need to be in your tenant's scope.
 
-    :::image type="content" source="media/mto-tenantgroups/mto-select-device-small.png" alt-text="Screenshot of the device selection pane." lightbox="media/mto-tenantgroups/mto-select-device.png":::
-
 1. Add a tenant group name and description about your tenant group in the Details page.
-1. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
 
-    :::image type="content" source="media/mto-tenantgroups/mto-summary-tenantgroups-small.png" alt-text="Screenshot of summary of tenant groups with the checkbox highlighted." lightbox="media/mto-tenantgroups/mto-summary-tenantgroups.png":::
+1. Review the details of the tenant group you created in the **Summary** page. Leave the **Sync all authorized tenants** option checked if content needs to be synchronized now or uncheck it if the sync is planned for a later time.
 
 1. Select **Submit** to finish your tenant group creation.
 

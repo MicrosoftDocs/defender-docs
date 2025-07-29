@@ -29,14 +29,11 @@ This article lists recent features added for unified security operations in the 
 
 ### Distribute Microsoft Defender for Endpoint security policies with multitenant management
 
-Microsoft Defender for Endpoint security policies can now be distributed across multiple tenants from the Defender multi-tenant portal. This capability empowers security teams to manage policies at scale, ensuring consistency and saving valuable time.
-
-- Endpoint security policies now display distributed policies in a hierarchical view, making it easier to identify parent policies and their distributed copies across tenants.
-- The original policy’s page now shows the overall distribution status and clearly lists recipient tenants and tenant groups.
-
-For example: 
+Microsoft Defender for Endpoint security policies can now be distributed as content across multiple tenants using the Defender multitenant portal, empowering security teams to manage endpoint security policies at scale. Disributed policies are shown in the **Configuration management > Endpoint security policies** page in a hierarchical view so that you can identify parent policies and their distributed copies across tenants. 
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
+
+The original policy’s page also shows the overall distribution status and lists recipient tenants and tenant groups.
 
 For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-tenantgroups.md).
 
