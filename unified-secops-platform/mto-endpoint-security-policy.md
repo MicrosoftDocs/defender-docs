@@ -55,7 +55,7 @@ Edit or delete a security policy by selecting the policy in the Endpoint securit
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-edit-policy-small.png" alt-text="Screenshot of the editing pane for endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-edit-policy.png":::
 
-For more information, see [Create an endpoint security policy](//defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
+For more information, see [Create an endpoint security policy](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
 
 ## Verify endpoint security policy status
 
