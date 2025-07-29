@@ -30,7 +30,7 @@ appliesto:
 With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. Microsoft Defender for Office 365 already provides the following Teams protection features:
 
 - Time of click protection for URLs and files in Teams messages through [Safe Links for Microsoft Teams](safe-links-about.md#safe-links-settings-for-microsoft-teams) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
-- Allow/block [domains](tenant-allow-block-list-teams-domain-configure.md), [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using Tenant Allow Block Lists.
+- Allow/block [domains](tenant-allow-block-list-teams-domain-configure.md), [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using the Tenant Allow Block List.
 
 In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams protection with a set of capabilities that are designed to disrupt the attack chain:
 
