@@ -5,6 +5,7 @@ ms.date: 05/13/2025
 ms.topic: overview
 ms.author: dacurwin
 author: dcurwin
+ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for Open-Source Relational Databases so that I can make informed decisions about its usage.
 ---
 

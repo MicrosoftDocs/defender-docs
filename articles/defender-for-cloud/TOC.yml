@@ -99,7 +99,7 @@
           displayName: CSPM, cloud security posture management, enable
           href: tutorial-enable-cspm-plan.md
         - name: Deploy Defender for Servers
-          displayName: servers, server, enable
+          displayName: servers, server, enable, p1, p2, plan1, plan 2
           href: tutorial-enable-servers-plan.md 
         - name: Protect applications with Defender for App Service
           displayName: App, service, enable, app service
@@ -789,6 +789,7 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: defender for servers, p1, p2, plan 1, plan 2
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
@@ -800,6 +801,7 @@
         - name: Plan roles and permissions
           href: plan-defender-for-servers-roles.md
         - name: Choose a plan and deployment scope
+          displayName: plan, defender for servers, plan 1, plan 2, plans, scope, deployment, p1, p2
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md

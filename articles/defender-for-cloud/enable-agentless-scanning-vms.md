@@ -1,10 +1,12 @@
 ---
-title: Enable agentless scanning for VMs
-description: Run agentless scanning on VMs for vulnerabilities and threats in Microsoft Defender for Cloud.
+title: Enable agentless scanning for Virtual Machines
+description: Run agentless scanning on Virtual Machines (VMs) for vulnerabilities and threats in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/26/2025
+ms.date: 07/20/2025
+ms.custom: sfi-image-nochange
+
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
 ---
 
@@ -14,8 +16,8 @@ ms.date: 03/26/2025
 
 - Agentless scanning doesn't require installed agents or network connectivity, and it doesn't affect machine performance.
 - You can turn agentless machine scanning on or off, but you can't disable individual capabilities.
-- Scans only run on VMs that are running. If the VM is turned off during the scan, it won't be scanned.
-- The scan runs on a non-configurable schedule once every 24 hours.
+- Scans only run on VMs that are running. VMs that are off during a scan aren't scanned.
+- The scan runs on a nonconfigurable schedule once every 24 hours.
 
 When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Posture Management (CSPM) plan, agentless machine scanning is enabled by default. If needed, you can use the instructions in this article to enable agentless machine scanning manually.
 
@@ -25,13 +27,13 @@ When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Post
 |--- | ---|
 |**Plan** | To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.<br/><br/> When you enable agentless scanning on either plan, the setting is enabled for both plans.|
 |**Malware scanning** | Malware scanning is only available when Defender for Servers Plan 2 is enabled.<br/><br/> For malware scanning of Kubernetes node VMs, either Defender for Servers Plan 2 or the Defender for Containers plan is required.|
-|**Supported machines** | Agentless machine scanning is available for Azure VMs, AWS EC2 and GCP compute instances connected to Defender for Cloud.|
-|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>-  Maximum total disk size allowed: 4TB (the sum of all disks)<br/>- Maximum number of disks allowed: 6<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
-|**AWS** | Agentless scanning is available on EC2, Auto Scale instances, and disks that are unencrypted, encrypted (PMK), and encrypted (CMK). AMIs requiring third-party licensing (e.g., from AWS Marketplace) are not supported.|
+| **Supported machines** | You can scan Azure virtual machines (VMs), Amazon Web Services (AWS) Elastic Compute Cloud (EC2) instances, and Google Cloud Platform (GCP) compute instances without installing an agent, if they're connected to [Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/). |
+|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>-  Maximum total disk size allowed: 4 TB (the sum of all disks)<br/>- Maximum number of disks allowed: 6<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
+|**AWS** | Agentless scanning is available on EC2, Auto Scale instances, and disks that are unencrypted, encrypted (PMK), and encrypted (CMK).|
 |**GCP** | Agentless scanning is available on compute instances, instance groups (managed and unmanaged), with Google-managed encryption keys, and customer-managed encryption key (CMEK)|
 |**Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md) the Defender for Servers Plan 2, or the Defender for Containers plan, or the Defender Cloud Security Posture Management (CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.|
 |**Permissions** | [Review the permissions](concept-agentless-data-collection.md#permissions-used-by-agentless-scanning) used by Defender for Cloud for agentless scanning.|
-|**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM won't be scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> <br> Resource type: <br> - Databricks VM <br> <br> File systems: <br> - UFS (Unix File System) <br> - ReFS (Resilient File System) <br> - ZFS (ZFS Member) <br> <br> RAID and Block storage formats: <br> - OracleASM (Oracle Automatic Storage Management) <br> - DRBD (Distributed Replicated Block Device) <br> - Linux_Raid_Member <br> <br> Integrity mechanisms: <br> - DM_Verity_Hash <br> - Swap|
+|**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM isn't scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> - Azure Kubernetes Service (AKS) Ephemeral OS Disks <br> <br> Resource type: <br> - Databricks VM <br> <br> File systems: <br> - UFS (Unix File System) <br> - ReFS (Resilient File System) <br> - ZFS (ZFS Member) <br> <br> RAID and Block storage formats: <br> - OracleASM (Oracle Automatic Storage Management) <br> - DRBD (Distributed Replicated Block Device) <br> - Linux_Raid_Member <br> <br> Integrity mechanisms: <br> - DM_Verity_Hash <br> - Swap|
 
 ## Enable agentless scanning on Azure
 
@@ -49,9 +51,9 @@ When you turn on Defender for Servers Plan 2 or the Defender Cloud Security Post
 
 ## Enable for Azure VMs with CMK encrypted disks
 
-For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud additional permissions on Key Vaults used for CMK encryption for the VMs, to create a secure copy of the disks.
+For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud extra permissions on Key Vaults used for CMK encryption for the VMs, to create a secure copy of the disks.
 
-1. To manually assign the permissions on a Key Vault, do the following:
+1. To manually assign the permissions on a Key Vault:
 
     - **Key vaults with non-RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider" (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) these permissions: Key Get, Key Wrap, Key Unwrap.
     - **Key vaults using RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider” (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) the [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide?preserve-view=true&tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations) built-in role.

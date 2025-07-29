@@ -20,6 +20,7 @@ There are built-in Azure tools that are available that ensure you can view your 
 - **IBM's QRadar**
 - **Palo Alto Networks**
 - **ArcSight**
+- **Dynatrace**
 
 ## Stream alerts to Defender XDR with the Defender XDR API
 
@@ -138,7 +139,7 @@ Each SIEM platform has a tool to enable it to receive alerts from Azure Event Hu
 
 ## Stream alerts with continuous export
 
-To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhythm**, **Logz.io Cloud Observability Platform**, and other monitoring solutions, connect Defender for Cloud using continuous export and Azure Event Hubs.
+To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhythm**, **Logz.io Cloud Observability Platform**, **Dynatrace**, and other monitoring solutions, connect Defender for Cloud using continuous export and Azure Event Hubs.
 
 > [!NOTE]
 > To stream alerts at the tenant level, use this Azure policy and set the scope at the root management group. You'll need permissions for the root management group as explained in [Defender for Cloud permissions](permissions.md): [Deploy export to an event hub for Microsoft Defender for Cloud alerts and recommendations](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fcdfcce10-4578-4ecd-9703-530938e4abcb).
@@ -158,6 +159,7 @@ To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhyt
     | Syslog server | No | If you want to stream Azure Monitor data directly to a syslog server, you can use a [solution based on an Azure function](https://github.com/miguelangelopereira/azuremonitor2syslog/).|
     | LogRhythm | No| Instructions to set up LogRhythm to collect logs from an event hub are available [here](https://logrhythm.com/six-tips-for-securing-your-azure-cloud-environment/).|
     |Logz.io | Yes | For more information, see [Getting started with monitoring and logging using Logz.io for Java apps running on Azure](/azure/developer/java/fundamentals/java-get-started-with-logzio)|
+    |Dynatrace | No | For instructions to set up the integration in Dynatrace, read [Ingest Microsoft Defender for Cloud security events](https://dt-url.net/ft03w4b)
 
 1. (Optional) Stream the raw logs to the event hub and connect to your preferred solution. Learn more in [Monitoring data available](/azure/azure-monitor/essentials/stream-monitoring-data-event-hubs#monitoring-data-available).
 

@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 06/25/2025
+ms.date: 07/17/2025
 ---
 
 # What's new in Defender for Cloud features
