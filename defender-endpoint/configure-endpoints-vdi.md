@@ -104,8 +104,8 @@ The following steps guide you through onboarding VDI devices and highlight steps
    | Multiple entries for each device | 1. Select the **Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to the onboarding bash script `WindowsDefenderATPOnboardingScript.cmd`. |
 
    > [!NOTE]
-   > When using the 'Single entry for each device' method for onboarding non-persistent VDI devices to Microsoft Defender for Endpoint, ensure that the Onboard-NonPersistentMachine.ps1 script is executed only after the virtual machine has received its final hostname.<br>
-   > For example, if your VDI provisioning process involves multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the final machine name is assigned. Running the script too early may result in duplicate device entries or onboarding failures.
+   > When using the 'Single entry for each device' onboarding method for non-persistent VDI environments, ensure that the Onboard-NonPersistentMachine.ps1 script is executed only after the virtual machine has received its final hostname and completed its final reboot.<br>
+   > For example, if your VDI provisioning process includes multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the last reboot is complete and final machine name is assigned.<br> Running the script too early may result in duplicate device entries or inconsistent onboarding to Microsoft Defender for Endpoint.
 
 5. Test your solution by following these steps:
 
