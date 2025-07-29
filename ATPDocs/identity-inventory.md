@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: Identity inventory
-description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page, located under Assets in Defender XDR portal
+description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in Defender XDR portal.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -76,7 +76,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Nondefault columns: Email and Microsoft Entra ID risk level.  
+Nondefault columns: Email, Microsoft Entra ID risk level and Cloud ID. 
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -110,7 +110,7 @@ Sort option applies to Display name, Domain, and Created time columns.
 
 - **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-At the top of each device inventory tab, the following device counts are available:
+At the top of the page, the following identities counts are available:
 
 - __Total__: The total number of identities. 
 
@@ -120,7 +120,7 @@ At the top of each device inventory tab, the following device counts are availab
 
 - **Services:** The number of all service accounts both on-premises and cloud.
 
-You can use this information to help you prioritize devices for security posture improvements.
+You can use this information to help you prioritize identities for security posture improvements.
 
 ### Navigate to the Identity inventory page
 

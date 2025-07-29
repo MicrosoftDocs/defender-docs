@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/30/2025
+ms.date: 06/10/2025
 search.appverid: met150
 ---
 
@@ -406,8 +406,8 @@ This rule blocks executable files, such as .exe, .dll, or .scr, from launching. 
 
 > [!IMPORTANT]
 > You must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to use this rule.
-> The rule **Block executable files from running unless they meet a prevalence, age, or trusted list criterion** with GUID `01443614-cd74-433a-b99e-2ecdc07bfc25` is owned by Microsoft and isn't specified by admins. This rule uses cloud-delivered protection to update its trusted list regularly.
-> You can specify individual files or folders (using folder paths or fully qualified resource names) but you can't specify which rules or exclusions apply to.
+> This rule uses cloud-delivered protection to update its trusted list regularly.
+> You can specify individual files or folders by using folder paths or fully qualified resource names. It also supports the **ASROnlyPerRuleExclusions** setting.
 
 Intune name: `Executables that don't meet a prevalence, age, or trusted list criteria`
 
@@ -650,6 +650,9 @@ Intune name: `Block Webshell creation for Servers`
 GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 
 Dependencies: Microsoft Defender Antivirus
+
+> [!NOTE]
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
 
 ### Block Win32 API calls from Office macros
 

@@ -16,14 +16,14 @@ ms.collection:
   - m365initiative-m365-defender
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom:
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 08/07/2024
+ms.date: 03/28/2025
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
@@ -43,7 +43,7 @@ For editable functions, more options are available when you select the vertical 
 - **Edit details** – Opens the function side pane to allow you to edit details about the function (except folder names for Sentinel functions).
 - **Delete** – Deletes the function.
 
-### Use adx() operator for Azure Data Explorer queries (Preview)
+### Use adx() operator for Azure Data Explorer queries
 Use the `adx()` operator to query tables stored in Azure Data Explorer. Read [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview) for more details.
 
 This feature was previously only available in log analytics in Microsoft Sentinel. Users can now use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
@@ -65,9 +65,9 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 ### Use arg() operator for Azure Resource Graph queries
 The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like. 
 
-This feature was previously only available in log analytics in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works over Microsoft Sentinel data (that is, Defender XDR tables aren't supported). This allows users to use the operator in advanced hunting without needing to manually open a Microsoft Sentinel window. 
+This feature was previously only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). This allows users to make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
-Note that queries using the `arg()` operator return the first 1,000 records only. Read [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview) for more details.
+For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
 
 In the query editor, enter *arg("").* followed by the Azure Resource Graph table name. 
 
@@ -78,14 +78,12 @@ For example:
 You can also, for instance, filter a query that searches over Microsoft Sentinel data based on the results of an Azure Resource Graph query:
 
 ```Kusto
-arg("").Resources 
-| where type == "microsoft.compute/virtualmachines" and properties.hardwareProfile.vmSize startswith "Standard_D"
-| join (
-    Heartbeat
-    | where TimeGenerated > ago(1d)
-    | distinct Computer
-    )
-    on $left.name == $right.Computer
+arg("").Resources
+| where type=="microsoft.compute/virtualmachines" | extend name = tolower(name)
+| join ( 
+BehaviorAnalytics
+| where isnotempty(SourceDevice) and InvestigationPriority > 2 | extend SourceDevice = tolower(SourceDevice)
+) on $left.name == $right.SourceDevice
 ```
 
 

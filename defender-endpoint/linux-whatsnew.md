@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 06/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -43,23 +43,53 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
-### May-2025 Build: 101.25032.0008 | Release version: 30.125032.0008.0
+### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
 
-|Build:             |**101.25032.0008**    |
+|Build:             |**101.25052.0007**    |
 |-------------------|----------------------|
-|Released:          |**May 12, 2025**      |
-|Published:         |**May 13, 2025**      |
-|Release version:   |**30.125032.0008.0**  |
+|Released:          |**July 22, 2025**     |
+|Published:         |**July 22, 2025**     |
+|Release version:   |**30.125052.0007.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified.
+- Other stability improvements and bug fixes.
+
+### June-2025 Build: 101.25042.0003 | Release version: 30.125042.0003.0
+
+|Build:             |**101.25042.0003**    |
+|-------------------|----------------------|
+|Released:          |**June 30, 2025**     |
+|Published:         |**June 30, 2025**     |
+|Release version:   |**30.125042.0003.0**  |
+|Engine version:    |**1.1.25020.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- The Defender for Endpoint package rollout into production happens gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
+- Removed external dependency of uuid-runtime from the Defender for Endpoint package
+- Other stability improvements and bug fixes
+
+### May-2025 Build: 101.25032.0010 | Release version: 30.125032.0010.0
+
+|Build:             |**101.25032.0010**    |
+|-------------------|----------------------|
+|Released:          |**May 23, 2025**      |
+|Published:         |**May 23, 2025**      |
+|Release version:   |**30.125032.0010.0**  |
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
 What's new
 
 - Removed external dependency of MDE Netfilter and libpcre from MDE package
-
+  
 - Fix for Python script executing unverified binaries with root-level privileges to identify Java processes using outdated versions of log4j (CVE-2025-26684) has been addressed.
-
-- Updated Engine Version 1.1.25020.3000/Sigs Version 1.421.1866.0
+  
+- Added detection mechanism for CVE-2025-31324 affecting the "Visual Composer" component of the SAP NetWeaver application server.
+  
 
 ### April-2025 Build: 101.25022.0002 | Release version: 30.125022.0001.0
 

@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: deniseb 
 audience: ITPro
 ms.topic: how-to
-ms.date: 11/11/2024
+ms.date: 06/19/2025
 ms.collection: 
 - m365-security
 - tier2
@@ -23,6 +23,8 @@ f1.keywords: NOCSH
 Welcome to the Microsoft Defender for Endpoint Plan 2 trial user guide!
 
 This playbook is a simple guide to help you make the most of your free trial. Using the suggested steps in this article from the Microsoft Defender team, you learn how Defender for Endpoint can help you to prevent, detect, investigate, and respond to advanced threats.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## What is Defender for Endpoint?
 

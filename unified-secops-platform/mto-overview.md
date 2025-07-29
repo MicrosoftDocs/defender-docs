@@ -12,8 +12,8 @@ ms.collection:
 - highpri
 - tier1
 - usx-security
-ms.topic: conceptual
-ms.date: 01/27/2025
+ms.topic: overview
+ms.date: 07/16/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -35,7 +35,7 @@ If you have tenants with Microsoft Sentinel workspaces onboarded to the Defender
 - Proactively search for SIEM and XDR data across multiple tenants.
 - Manage cases across multiple tenants.
 
-You must onboard each workspace to the Defender portal for each of your tenants separately, as you would in a single-tenant scenario.
+Each workspace must be onboarded to the Defender portal for each of your tenants separately, as you would in a single-tenant scenario.
 
 For more information, see:
 

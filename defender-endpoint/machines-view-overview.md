@@ -11,9 +11,9 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 07/20/2025
 ---
 
 # Device inventory
@@ -46,7 +46,7 @@ There are several options you can choose from to customize the devices list view
 During the onboarding process, the **Devices list** is gradually populated with devices as they begin to report sensor data. Use this view to track your onboarded endpoints as they come online, or download the complete endpoint list as a CSV file for offline analysis.
 
 > [!NOTE]
-> If you export the devices list, it contains every device in your organization. It might take a significant amount of time to download, depending on how large your organization is. Exporting the list in CSV format displays the data in an unfiltered manner. The CSV file includes all devices in the organization, regardless of any filtering applied in the view itself.
+> If you export the devices list, it contains every device in your organization. It might take a significant amount of time to download, depending on how large your organization is.
 >
 > In addition, when you export the devices list, the antivirus status shows as `Not-Supported`. For antivirus status, use the recently released [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md) instead. This report allows you to export even more details.
 

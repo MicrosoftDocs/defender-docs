@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.date: 02/04/2025
 ms.subservice: onboard
 search.appverid: met150
@@ -20,8 +20,6 @@ search.appverid: met150
 # Onboard Windows devices using Group Policy 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-[!include[Prerelease information](../includes/prerelease.md)]
 
 **Applies to:**
 

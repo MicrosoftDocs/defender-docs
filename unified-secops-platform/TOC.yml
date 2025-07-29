@@ -104,6 +104,9 @@
               href: mto-advanced-hunting.md
             - name: Multitenant devices
               href: mto-tenant-devices.md
+            - name: Multitenant identities
+              href: multitenant-identities-inventory.md
+              displayName: MTO
             - name: Vulnerability management
               href: mto-dashboard.md
             - name: Manage tenants

@@ -4,7 +4,7 @@
 title: Troubleshooting Advanced Threat Analytics service startup
 description: Describes how you can troubleshoot ATA startup issues
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.service: advanced-threat-analytics
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 

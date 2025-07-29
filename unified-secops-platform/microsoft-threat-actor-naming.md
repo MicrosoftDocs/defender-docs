@@ -15,9 +15,9 @@ ms.collection:
 - tier2
 ms.custom:
 - cx-ti
-ms.topic: conceptual
+ms.topic: article
 search.appverid: met150
-ms.date: 6/2/2025
+ms.date: 7/10/2025
 ---
 
 # How Microsoft names threat actors
@@ -46,7 +46,6 @@ The following table shows how the family names map to the threat actors that we 
 
 |Threat actor category|Type|Family name|
 |:---|:---|:---|
-|Nation-state|China<br>Iran<br>Lebanon<br>North Korea<br>Russia<br>South Korea<br>Türkiye<br>Vietnam|Typhoon<br>Sandstorm<br>Rain<br>Sleet<br>Blizzard<br>Hail<br>Dust<br>Cyclone|
 |Nation-state|China<br>Germany<br>India<br>Iran<br>North Korea<br>Lebanon<br>Pakistan<br>Palestinian Authority<br>Russia<br>Singapore<br>South Korea<br>Spain<br>Syria<br>Türkiye<br>Ukraine<br>United States<br>Vietnam|Typhoon<br>Gale<br>Monsoon<br>Sandstorm<br>Sleet<br>Rain<br>Whirlwind<br>Lightning<br>Blizzard<br>Squall<br>Hail<br>Derecho<br>Haze<br>Dust<br>Frost<br>Tornado<br>Cyclone|
 |Financially motivated|Financially motivated|Tempest|
 |Private sector offensive actors|PSOAs|Tsunami|
@@ -75,13 +74,14 @@ The following table lists publicly disclosed threat actor names with their origi
 |Cinnamon Tempest|China, Financially motivated|DEV-0401, HighGround|
 |Circle Typhoon|China|DEV-0322, EMISSARY PANDA, APT6, APT27|
 |[Citrine Sleet](https://www.microsoft.com/en-us/security/blog/2024/08/30/north-korean-threat-actor-citrine-sleet-exploiting-chromium-zero-day/)|North Korea|Storm-0139, Storm-1222, LABYRINTH CHOLLIMA|
+|Copper Typhoon|China|Tonto Team, Earth Akhlut, Sharp-R|
 |Cotton Sandstorm|Iran|NEPTUNIUM, HAYWIRE KITTEN, Vice Leaker|
 |[CovertNetwork-1658](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)|Covert network|ORB07|
 |Crescent Typhoon|China|CESIUM|
 |Crimson Sandstorm|Iran|CURIUM, IMPERIAL KITTEN, Tortoise Shell, HOUSEBLEND, TA456|
 |Cuboid Sandstorm|Iran|DEV-0228, IMPERIAL KITTEN|
 |[Denim Tsunami](https://www.microsoft.com/en-us/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/)|Austria, Private sector offensive actor|DEV-0291|
-|[Diamond Sleet](https://www.microsoft.com/en-us/security/blog/tag/diamond-sleet-zinc/)|North Korea|ZINC, LABYRINTH CHOLLIMA, Black Artemis, Lazarus|
+|[Diamond Sleet](https://www.microsoft.com/en-us/security/blog/2023/11/22/diamond-sleet-supply-chain-compromise-distributes-a-modified-cyberlink-installer/)|North Korea|ZINC, LABYRINTH CHOLLIMA, Black Artemis, Lazarus|
 |Emerald Sleet|North Korea|THALLIUM, VELVET CHOLLIMA, RGB-D5, Black Banshee, Kimsuky, Greendinosa|
 |Fallow Squall|Singapore|PLATINUM, PARASITE, RUBYVINE, GINGERSNAP|
 |[Flax Typhoon](https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/)|China|Storm-0919, ETHEREAL PANDA|
@@ -90,11 +90,12 @@ The following table lists publicly disclosed threat actor names with their origi
 |Gingham Typhoon|China|GADOLINIUM, KRYPTONITE PANDA, TEMP.Periscope, Leviathan, JJDoor, APT40, Feverdream|
 |Granite Typhoon|China|GALLIUM, PHANTOM PANDA|
 |Gray Sandstorm|Iran|DEV-0343|
-|Hazel Sandstorm|Iran|EUROPIUM, HELIX KITTEN, COLBALT GYPSY, Crambus, OilRig, APT34|
-|Heart Typhoon|China|HELIUM, AURORA PANDA, APT17, Hidden Lynx, ATG3, Red Typhon, KAOS, TG-8153, SportsFans, DeputyDog, Tailgater|
+|Hazel Sandstorm|Iran|EUROPIUM, HELIX KITTEN, COBALT GYPSY, Crambus, OilRig, APT34|
+|Heart Typhoon|China|HELIUM, AURORA PANDA, APT17, Hidden Lynx, ATG3, Red Typhoon, KAOS, TG-8153, SportsFans, DeputyDog, Tailgater|
 |Hexagon Typhoon|China|HYDROGEN, NUMBERED PANDA, Calc Team, Red Anubis, APT12, DNS-Calc, HORDE|
 |Houndstooth Typhoon|China|HASSIUM, DRAGNET PANDA, isoon, deepclif|
 |Jade Sleet|North Korea|Storm-0954, LABYRINTH CHOLLIMA|
+|[Jasper Sleet](https://www.microsoft.com/en-us/security/blog/2025/06/30/jasper-sleet-north-korean-remote-it-workers-evolving-tactics-to-infiltrate-organizations/)|North Korea|Storm-0287|
 |Lace Tempest|Financially motivated|DEV-0950|
 |Lemon Sandstorm|Iran|RUBIDIUM, PIONEER KITTEN|
 |Leopard Typhoon|China|LEAD, WICKED PANDA, TG-2633, TG-3279, Mana, KAOS, Red Diablo, Winnti Group|

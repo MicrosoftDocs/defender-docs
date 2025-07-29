@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 04/10/2025
@@ -30,6 +30,8 @@ ms.date: 04/10/2025
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Ansible. To use another method, refer to the [See also](#see-also) section.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 A successful deployment requires the completion of all of the following tasks:
 

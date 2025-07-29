@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 04/17/2025
@@ -35,6 +35,8 @@ You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linu
 - Manually configure the repositories for more granular control over the deployment
 
 To use another method, refer to the [See also](#see-also) section.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Prerequisites
 

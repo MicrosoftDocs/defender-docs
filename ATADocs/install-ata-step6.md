@@ -4,7 +4,7 @@
 title: Install Advanced Threat Analytics - Step 6
 description: In this step of installing ATA, you configure data sources.
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: advanced-threat-analytics
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 
