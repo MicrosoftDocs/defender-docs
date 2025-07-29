@@ -39,7 +39,9 @@ For more information, see [Manage endpoint security policies in Microsoft Defend
 
 ## Create a new or edit an existing security policy
 
-Use the same procedure to create a new endpoint security policy in the multitenant management portal as you would in the single tenant portal. Differences include:
+Use the same procedure to create a new endpoint security policy in the multitenant management portal as you would in the single tenant portal. For more information, see [Create an endpoint security policy](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
+
+Differences include:
 
 - Before you start, select the tenant for which you want to create the policy. Each policy is created for a specific tenant, and you can only create policies for one tenant at a time.
 
@@ -49,13 +51,12 @@ Use the same procedure to create a new endpoint security policy in the multitena
 
 - To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://intune.microsoft.com/). Editing scope tags must be done in the single tenant portal as multitenant management is not yet supported in the Intune admin center.
 
-From the page, you can search for a specific policy by using the **Search** function. You can also **Filter** the policies according to tenant name, policy category, policy type, and targets. You can view, create, edit, or delete a security policy on a single tenant only through the page.
+Use the **Search** and **Filter** options to find a specific policy in the **Endpoint security policies** page. You can filter policies by tenant name, policy category, policy type, and targets.
 
 Edit or delete a security policy by selecting the policy in the Endpoint security policies page, then selecting **Edit** or  **Delete**. For example:
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-edit-policy-small.png" alt-text="Screenshot of the editing pane for endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-edit-policy.png":::
 
-For more information, see [Create an endpoint security policy](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
 
 ## Verify endpoint security policy status
 
