@@ -32,6 +32,9 @@ appliesto:
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
 
+> [!NOTE]
+> **Public Preview (Invite Only):** The Phishing Triage Agent is currently available as a public preview by invitation only. Access is limited and features may change before general availability.
+
 Phishing remains one of the most common ways attackers gain initial access. It also represents one of the highest-volume challenges security operations center (SOC) teams face, due to the large number of user-reported suspicious emails that must be investigated daily.
 
 To help security teams address phishing efficiently, Microsoft Security Copilot is introducing the Phishing Triage Agent in Microsoft Defender. This AI-powered virtual agent is designed to scale security teams' response in triaging and classifying user-submitted phishing incidents, allowing organizations to improve their efficiency by reducing manual effort and streamlining their phishing response.
