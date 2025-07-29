@@ -52,11 +52,6 @@ To create a new tenant group:
 
 1. In the **Content selection** page, select the content to be distributed across all tenants in your tenant group, then select **Next**.
     
-    :::image type="content" source="media/mto-tenantgroups/mto-add-content-small.png" alt-text="Screenshot of content selection wizard." lightbox="media/mto-tenantgroups/mto-add-content.png":::
-
-> [!NOTE]
-> The content type selection is currently limited to adding custom detection rules to a tenant group. 
-
 1. In the **Custom detection rules** page, select **Add content** to add specific detection rules to your tenant group.
 
     :::image type="content" source="media/mto-tenantgroups/mto-add-custom-small.png" alt-text="Screenshot of custom detection rules addition wizard." lightbox="media/mto-tenantgroups/mto-add-custom.png":::
