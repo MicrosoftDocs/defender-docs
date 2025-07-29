@@ -28,6 +28,7 @@ This article describes how to investigate API security findings, alerts, and sec
 
      :::image type="content" source="media/defender-for-apis-posture/view-resource.png" alt-text="Screenshot that shows API endpoint details." lightbox="media/defender-for-apis-posture/view-resource.png":::
 
+1. Select **View full details**.
 1. In the **Resource health** page, review the endpoint settings.
 1. In the **Recommendations** tab, review recommendation details and status.
 1. In the **Alerts** tab, review security alerts for the endpoint. Defender for Endpoint monitors API traffic to and from endpoints, to provide runtime protection against suspicious behavior and malicious attacks.

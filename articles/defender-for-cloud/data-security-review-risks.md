@@ -22,7 +22,7 @@ After you [discover resources with sensitive data](data-security-posture-enable.
 View predefined attack paths to discover data breach risks, and get remediation recommendations, as follows:
 
 1. In Defender for Cloud, open **Attack path analysis**.
-1. In **Risk Factors**, select **Sensitive data** to filter the data-related attack paths.
+1. Filter by **Risk Factors**, and select **Sensitive data** to filter the data-related attack paths.
 
     :::image type="content" source="./media/data-security-review-risks/attack-paths.png" alt-text="Screenshot that shows attack paths for data risk." lightbox="media/data-security-review-risks/attack-paths.png":::
 

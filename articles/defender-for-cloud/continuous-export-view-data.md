@@ -30,13 +30,13 @@ To view alerts and recommendations from Defender for Cloud in Azure Monitor, con
 
 1. Select **Alerts**.
 
-1. Select **New alert rule**.
+1. Select + **Create** > **Alert rule**.
 
     :::image type="content" source="media/continuous-export-view-data/azure-monitor-alerts.png" alt-text="Screenshot that shows the Azure Monitor alerts page." lightbox="media/continuous-export-view-data/azure-monitor-alerts.png":::
 
 1. Set up your new rule the same way you'd configure a [log alert rule in Azure Monitor](/azure/azure-monitor/alerts/alerts-unified-log):
 
-    - For **Resource**, select the Log Analytics workspace to which you exported security alerts and recommendations.
+    - For **Resource types**, select the Log Analytics workspace to which you exported security alerts and recommendations.
 
     - For **Condition**, select **Custom log search**. In the page that appears, configure the query, lookback period, and frequency period. In the search query, you can enter **SecurityAlert** or **SecurityRecommendation** to query the data types that Defender for Cloud continuously exports to as you enable the continuous export to Log Analytics feature.
 

@@ -22,7 +22,9 @@ Defender for Cloud presents the findings and related information as recommendati
 
 **To view vulnerabilities for a container, do the following:**  
 
-1. In Defender for Cloud, open the **Recommendations** page. If you're not on the new risk-based page, select **Recommendations by risk** on the top menu. If issues were found, you see the recommendation [Containers running in Azure should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0). Select the recommendation.
+1. In Defender for Cloud, open the **Recommendations** page. 
+1. If you're not on the new risk-based page, select **Recommendations by risk** on the top menu. If issues were found, you see the recommendation [Containers running in Azure should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0). 
+1. Select the recommendation.
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png" alt-text="Screenshot showing the recommendation line for running container images should have vulnerability findings resolved." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png":::
 
