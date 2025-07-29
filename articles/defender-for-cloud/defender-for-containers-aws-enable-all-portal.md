@@ -285,3 +285,4 @@ To disable Defender for Containers:
 - [Configure advanced settings for EKS](defender-for-containers-aws-configure.md)
 - [Verify deployment details](defender-for-containers-aws-verify.md)
 - [Deploy programmatically](defender-for-containers-aws-deploy.md)
+- [Deploy sensor using Helm for existing clusters](deploy-helm.md)

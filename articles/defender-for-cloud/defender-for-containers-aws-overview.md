@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Defender for Containers on AWS (EKS) - Overview
 
-Microsoft Defender for Containers extends Azure's cloud security capabilities to your Amazon Elastic Kubernetes Service (EKS) clusters, providing enterprise-grade security for containerized workloads running on AWS.
+Microsoft Defender for Containers extends Azure's cloud security capabilities to your Amazon Elastic Kubernetes Service (EKS) clusters. It provides enterprise-grade security for containerized workloads running on AWS.
 
 ## What is Defender for Containers?
 
@@ -22,13 +22,13 @@ The solution helps security and DevOps teams identify vulnerabilities before dep
 
 Defender for Containers integrates with AWS services through a secure connector that bridges your AWS account with Microsoft Defender for Cloud. Once connected, the solution:
 
-- Discovers all EKS clusters in your AWS account automatically
+- Automatically discovers all EKS clusters in your AWS account
 - Deploys lightweight security sensors to monitor runtime behavior
 - Connects to Amazon ECR to scan container images for vulnerabilities
 - Provides security recommendations based on AWS best practices
 - Generates alerts for suspicious activities specific to EKS environments
 
-This integration requires minimal configuration and works with existing AWS security tools, complementing services like AWS GuardDuty and AWS Security Hub.
+This integration requires minimal configuration and works with existing AWS security tools. It complements services like AWS GuardDuty and AWS Security Hub.
 
 ## Key capabilities
 
@@ -42,26 +42,27 @@ Defender for Containers provides comprehensive security coverage through three c
 
 ## Architecture overview
 
-The Defender for Containers architecture on AWS consists of several integrated components:
+The Defender for Containers architecture on AWS includes several integrated components:
 
-**AWS Connector**: Establishes the secure connection between your AWS account and Microsoft Defender for Cloud using IAM roles with minimal required permissions.
+- **AWS Connector**: Connects your AWS account to Microsoft Defender for Cloud by using IAM roles with minimal required permissions.
 
-**Defender Sensor**: Deployed as a DaemonSet on each EKS cluster, the sensor collects runtime telemetry and security events without impacting application performance.
+- **Defender Sensor**: Runs as a DaemonSet on each EKS cluster. It collects runtime telemetry and security events without affecting application performance.
 
-**Azure Arc for Kubernetes**: Enables Azure services on your EKS clusters by establishing a secure, outbound connection to Azure.
+- **Azure Arc for Kubernetes**: Enables Azure services on your EKS clusters by creating a secure, outbound connection to Azure.
 
-**Azure Policy Extension**: Evaluates cluster configurations and workload settings to generate security recommendations.
+- **Azure Policy Extension**: Checks cluster configurations and workload settings to generate security recommendations.
 
-These components work together to provide continuous security monitoring without requiring inbound connections to your clusters or storing sensitive data outside your control.
+These components work together to provide continuous security monitoring without needing inbound connections to your clusters or storing sensitive data outside your control.
 
 ## Deployment options
 
 Defender for Containers supports flexible deployment approaches to match your operational preferences:
 
-- **[Azure portal deployment](defender-for-containers-aws-enable-all-portal.md)** - Guided, visual experience ideal for initial setup and smaller environments
-- **[Infrastructure as Code](defender-for-containers-aws-deploy.md#deploy-using-infrastructure-as-code)** - CloudFormation, Terraform, or ARM templates for repeatable, automated deployments
-- **[Command-line tools](defender-for-containers-aws-deploy.md#using-azure-cli)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration
-- **[REST APIs](defender-for-containers-aws-deploy.md#using-rest-api)** - Custom integrations and programmatic management at scale
+- **[Azure portal deployment](defender-for-containers-aws-enable-all-portal.md)** - Guided, visual experience that's ideal for initial setup and smaller environments.
+- **[Infrastructure as Code](defender-for-containers-aws-deploy.md#deploy-using-infrastructure-as-code)** - CloudFormation, Terraform, or ARM templates for repeatable, automated deployments.
+- **[Command-line tools](defender-for-containers-aws-deploy.md#using-azure-cli)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration.
+- **[REST APIs](defender-for-containers-aws-deploy.md#using-rest-api)** - Custom integrations and programmatic management at scale.
+- **[Helm](deploy-helm.md)** - Kubernetes package manager for sensor deployment.
 
 Choose the approach that best fits your organization's deployment standards and automation requirements.
 
@@ -76,6 +77,7 @@ Before deploying Defender for Containers on EKS, ensure you meet these requireme
 
 > [!NOTE]
 > For detailed prerequisites and setup instructions, see the deployment guides:
+>
 > - [Enable via portal](defender-for-containers-aws-enable-all-portal.md#prerequisites)
 > - [Deploy programmatically](defender-for-containers-aws-deploy.md#prerequisites)
 

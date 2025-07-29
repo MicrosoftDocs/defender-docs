@@ -63,6 +63,7 @@ Defender for Containers supports flexible deployment approaches to match your op
 - **[Azure CLI and PowerShell](defender-for-containers-azure-deploy.md#enable-defender-for-containers)** - Script-based deployment for automation scenarios
 - **[Infrastructure as Code](defender-for-containers-azure-deploy.md#infrastructure-as-code-examples)** - Terraform, Bicep, or ARM templates for repeatable deployments
 - **[Azure Policy](defender-for-containers-azure-deploy.md#batch-deployment-script)** - At-scale deployment and compliance enforcement
+- **[Helm](deploy-helm.md)** - Kubernetes package manager deployment
 
 Choose the approach that best aligns with your organization's DevOps practices and governance requirements.
 

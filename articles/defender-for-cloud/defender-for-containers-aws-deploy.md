@@ -418,3 +418,4 @@ kubectl get pods -n azurepolicy
 - [Verify deployment](defender-for-containers-aws-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
 - [Remove Defender for Containers](defender-for-containers-aws-remove.md)
+- [Deploy sensor using Helm for more control](deploy-helm.md)

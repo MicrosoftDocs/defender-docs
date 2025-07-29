@@ -17,6 +17,7 @@ This article describes how to enable Microsoft Defender for Containers on Arc-en
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additionally:
+
 - Azure CLI with the k8s-extension extension
 - kubectl configured to access your cluster
 - Helm 3.0 or later (for Helm deployment)

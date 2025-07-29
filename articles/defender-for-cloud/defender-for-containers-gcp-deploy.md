@@ -17,6 +17,7 @@ This article describes how to enable Microsoft Defender for Containers on Google
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additionally for GCP:
+
 - gcloud CLI installed and configured
 - Appropriate GCP project permissions
 - Azure CLI installed for connector creation
@@ -321,3 +322,4 @@ gcloud container binauthz policy import binary-auth-policy.yaml
 - [Verify deployment](defender-for-containers-gcp-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
 - [Deploy via portal](defender-for-containers-gcp-deploy-portal.md)
+- [Deploy sensor using Helm for advanced scenarios](deploy-helm.md)

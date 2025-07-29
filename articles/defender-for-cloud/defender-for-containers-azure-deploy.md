@@ -14,9 +14,6 @@ This article describes how to enable Microsoft Defender for Containers on Azure 
 
 ## Prerequisites
 
-[!INCLUDE[defender-for-containers-prerequisites](includes/defender-for-containers-prerequisites.md)]
-
-Additionally:
 - Azure CLI or Azure PowerShell installed
 - Appropriate permissions to create and modify AKS clusters
 - Owner or Contributor role on the subscription
@@ -317,3 +314,4 @@ done <<< "$clusters"
 - [Verify deployment](defender-for-containers-azure-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Enable all components via portal](defender-for-containers-azure-enable-all-portal.md)
+- [Deploy using Helm for more flexibility](deploy-helm.md)

@@ -273,3 +273,4 @@ Now that you've enabled all Defender for Containers components:
 - [Configure advanced settings for Defender for Containers](defender-for-containers-azure-configure.md)
 - [Investigate and respond to runtime security alerts](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
 - [Review and remediate vulnerability findings](defender-for-containers-vulnerability-assessment-azure.md)
+- [Deploy using Helm for Kubernetes clusters](deploy-helm.md)

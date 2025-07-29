@@ -225,6 +225,7 @@ Expected alert: "Cluster admin role assigned"
 ### Distribution-specific tests
 
 For **Rancher**:
+
 ```bash
 kubectl run rancher-test --image=busybox --rm -it --restart=Never \
     -- /bin/sh -c "wget http://rancher-metadata/latest"

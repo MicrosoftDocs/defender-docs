@@ -12,6 +12,7 @@ This article explains how to deploy specific Defender for Containers components 
 ## When to use this guide
 
 Use this guide if you:
+
 - Already have Defender for Containers enabled but some components are missing
 - Want to deploy to specific clusters only
 - Need to troubleshoot failed component deployments
@@ -147,12 +148,14 @@ Configure which registries to scan:
 To exclude specific clusters:
 
 1. Add label to GKE cluster:
+
    ```bash
    gcloud container clusters update CLUSTER_NAME \
      --update-labels=defender-exclude=true
    ```
 
 2. Or use namespace exclusions:
+
    ```yaml
    apiVersion: v1
    kind: Namespace
@@ -212,6 +215,7 @@ az k8s-extension show \
 ### Component shows unhealthy
 
 1. Check GCP permissions:
+
    ```bash
    gcloud projects get-iam-policy PROJECT_ID \
      --flatten="bindings[].members" \
@@ -219,6 +223,7 @@ az k8s-extension show \
    ```
 
 2. Verify Workload Identity:
+
    ```bash
    kubectl get serviceaccount -n mdc defender-sensor -o yaml
    ```
@@ -240,3 +245,4 @@ az k8s-extension show \
 - [Verify deployment](defender-for-containers-gcp-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-gcp-configure.md)
 - [Enable all components](defender-for-containers-gcp-enable-all-portal.md) - For fresh installations
+- [Deploy sensor using Helm as an alternative](deploy-helm.md)

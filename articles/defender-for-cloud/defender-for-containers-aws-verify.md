@@ -349,6 +349,7 @@ kubectl get secrets --all-namespaces --dry-run=client 2>/dev/null || echo "Secre
 ```
 
 Expected alerts:
+
 - "Kubernetes cluster reconnaissance detected"
 - "Suspicious secret enumeration activity"
 
@@ -384,6 +385,7 @@ After running simulations:
 ### EKS-specific alert validation
 
 Check that alerts include:
+
 - EKS cluster ARN
 - AWS account ID
 - Region information
@@ -408,17 +410,20 @@ kubectl delete serviceaccount test-escalation 2>/dev/null || true
 If alerts don't appear:
 
 1. **Verify EKS audit logging**:
+
    ```bash
    aws eks describe-cluster --name <cluster-name> \
        --query 'cluster.logging.clusterLogging[?enabled==`true`].types[]'
    ```
 
 1. **Check Arc connectivity**:
+
    ```bash
    kubectl get pods -n azure-arc -l app.kubernetes.io/component=connect-agent
    ```
 
 1. **Review CloudWatch logs**:
+
    ```bash
    aws logs tail /aws/eks/<cluster-name>/cluster --follow
    ```
@@ -465,6 +470,7 @@ watch kubectl top pods -n kube-system -l app=microsoft-defender
 ### Expected resource consumption
 
 Typical resource usage per node:
+
 - **CPU**: < 100m (0.1 core)
 - **Memory**: < 200Mi
 - **Network**: Minimal, only for telemetry

@@ -28,6 +28,7 @@ This article walks you through enabling all Microsoft Defender for Containers co
 ## When to use this guide
 
 Use this guide if you're:
+
 - Setting up Defender for Containers on Arc-enabled clusters for the first time
 - Want comprehensive protection for all your on-premises or multi-cloud clusters
 - Need to secure multiple distributions (Rancher, Tanzu, etc.)
@@ -40,11 +41,11 @@ For selective deployment or troubleshooting existing deployments, see [Deploy sp
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 Additional Arc-specific requirements:
+
 - CNCF-certified Kubernetes cluster (on-premises or IaaS)
 - Cluster version 1.19 or later
 - Outbound HTTPS connectivity to Azure endpoints
 - Azure CLI installed locally or Azure Cloud Shell
-- Sufficient cluster resources for Arc and Defender components
 
 ## Connect your cluster to Azure Arc
 
@@ -205,22 +206,26 @@ kubectl logs -n mdc -l app=microsoft-defender --tail=50
 If the sensor isn't deploying correctly:
 
 1. **Check namespace exists**:
+
    ```bash
    kubectl get namespace mdc
    ```
 
 1. **Verify RBAC permissions**:
+
    ```bash
    kubectl get clusterrole | grep defender
    kubectl get clusterrolebinding | grep defender
    ```
 
 1. **Check resource constraints**:
+
    ```bash
    kubectl describe daemonset -n mdc microsoft-defender-sensor
    ```
 
 1. **Review events**:
+
    ```bash
    kubectl get events -n mdc --sort-by='.lastTimestamp'
    ```
@@ -254,6 +259,7 @@ For Arc-enabled clusters, configure registry scanning:
    - Ensure ACR is in the same subscription or connected
 
 1. For private registries:
+
    ```bash
    # Create registry credentials
    kubectl create secret docker-registry regcred \
@@ -330,10 +336,12 @@ You can exclude specific Arc-enabled clusters from automatic provisioning:
 ## Distribution-specific considerations
 
 ### Rancher
+
 - Configure appropriate namespaces exclusions
 - Consider Rancher-specific RBAC settings
 
 ### VMware Tanzu
+
 - Enable audit logging if not already configured
 - Ensure PSP/PSA policies allow Defender components
 
@@ -359,6 +367,7 @@ After setup, regularly:
 If extensions fail to install:
 
 1. Check cluster connectivity:
+
    ```bash
    kubectl get nodes
    az connectedk8s show -n <cluster-name> -g <resource-group>
@@ -367,6 +376,7 @@ If extensions fail to install:
 1. Verify outbound connectivity to required endpoints.
 
 1. Check extension status:
+
    ```bash
    az k8s-extension show --name microsoft.azuredefender.kubernetes \
        --cluster-name <cluster-name> \
@@ -375,6 +385,7 @@ If extensions fail to install:
    ```
 
 1. Review pod status:
+
    ```bash
    kubectl get pods -n mdc
    ```

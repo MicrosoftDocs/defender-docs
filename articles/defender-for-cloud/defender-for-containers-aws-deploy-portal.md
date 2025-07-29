@@ -304,3 +304,4 @@ KubeEvents
 - [Verify your deployment](defender-for-containers-aws-verify.md)
 - [Configure advanced settings](defender-for-containers-aws-configure.md)
 - [Enable all components](defender-for-containers-aws-enable-all-portal.md) - For comprehensive protection
+- [Deploy sensor using Helm instead of Arc extension](deploy-helm.md)

@@ -12,6 +12,7 @@ This article explains how to deploy specific Defender for Containers components 
 ## When to use this guide
 
 Use this guide if you:
+
 - Already have Defender for Containers enabled but some components are missing
 - Want to deploy to specific clusters only
 - Need to troubleshoot failed component deployments
@@ -153,12 +154,13 @@ To exclude specific clusters:
 
 1. **Using tags**:
    - Add tag `DefenderForContainersExclude: True` to the AKS cluster
-   
+
 2. **Using policy exemptions**:
    - Create policy exemption for specific clusters
    - Scope to resource or resource group
 
 3. **Disable monitoring**:
+
    ```azurecli
    az aks update \
      --name <cluster-name> \
@@ -199,6 +201,7 @@ kubectl get pods -n kube-system -l component=microsoft-defender
 ### Sensor unhealthy
 
 1. Check pod logs:
+
    ```bash
    kubectl logs -n kube-system -l component=microsoft-defender
    ```
@@ -286,3 +289,4 @@ az policy state list --policy <policy-definition-name> --scope /subscriptions/<s
 - [Verify deployment](defender-for-containers-azure-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Enable all components](defender-for-containers-azure-enable-all-portal.md) - For fresh installations
+- [Deploy using Helm instead of portal](deploy-helm.md)

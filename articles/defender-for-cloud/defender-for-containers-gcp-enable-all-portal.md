@@ -462,3 +462,4 @@ To disable Defender for Containers:
 - [Configure advanced settings](defender-for-containers-gcp-configure.md)
 - [Verify deployment details](defender-for-containers-gcp-verify.md)
 - [Deploy programmatically](defender-for-containers-gcp-deploy.md) - For automation scenarios
+- [Deploy sensor using Helm for GKE clusters](deploy-helm.md)

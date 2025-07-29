@@ -62,6 +62,7 @@ Defender for Containers on GCP supports flexible deployment approaches:
 - **[CLI and automation](defender-for-containers-gcp-deploy.md)** - gcloud and Azure CLI for programmatic deployment
 - **[Selective deployment](defender-for-containers-gcp-deploy-portal.md)** - Deploy to specific clusters or projects
 - **[Infrastructure as Code](defender-for-containers-gcp-deploy.md#infrastructure-as-code-examples)** - Terraform or ARM templates for repeatability
+- **[Helm](deploy-helm.md)** - Kubernetes-native package management
 
 Choose the deployment method that aligns with your GCP operational practices and security requirements.
 
