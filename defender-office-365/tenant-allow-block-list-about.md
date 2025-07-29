@@ -30,9 +30,9 @@ appliesto:
 > [!IMPORTANT]
 > To allow phishing URLs that are part of non-Microsoft attack simulation training, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
 
-You might occasionally disagree with the filtering verdict from Microsoft Defender for Office 365 for cloud email mailboxes or Microsoft Teams or Office apps. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative) or a URL might be blocked when it shouldn't have.
+You might occasionally disagree with the Microsoft filtering verdict for email messages, Microsoft Teams messages, or Office apps. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative), or a URL might be blocked when it shouldn't have.
 
-The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for Teams, Office, Email)from senders.
+The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for email, Teams, or Office apps).
 
 Entries for **Domains and email addresses** and **Spoofed senders** apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 
