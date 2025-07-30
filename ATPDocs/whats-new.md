@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
 
-### Detection update: Suspected Brute Force attack (Kerberos, NTLM):
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
 Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
 
