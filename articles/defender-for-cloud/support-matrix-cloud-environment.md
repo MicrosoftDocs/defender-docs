@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 05/06/2025
+ms.date: 07/30/2025
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -49,7 +49,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for Domain Name System (DNS)](defender-for-dns-introduction.md) | GA | GA | GA|
 |[Defender for Key Vault](defender-for-key-vault-introduction.md) | GA | NA | NA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | GA|
-|[Defender for Servers](plan-defender-for-servers.md)<br/>[Review detailed feature support](support-matrix-defender-for-servers.md). | GA | GA | GA|
+|[Defender for Servers](plan-defender-for-servers.md) Plan 1 (P1) and Plan 2 (P2) <br><br/>[Review detailed feature support](support-matrix-defender-for-servers.md) | GA | GA | GA|
 |[Defender for Storage](defender-for-storage-introduction.md) | GA | GA | NA|
 | **DEFENDER FOR STORAGE FEATURES** | | | |
 | Activity monitoring (security alerts) | GA | GA| NA|
