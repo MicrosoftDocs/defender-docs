@@ -12,7 +12,25 @@ ms.date: 11/18/2024
 
 # Prerequisites and support
 
-This article describes the requirements and prerequisites for using Microsoft Security Exposure Management.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft 365 Defender portal.
+
+## Portal access and setup
+
+Microsoft Security Exposure Management is integrated into the Microsoft 365 Defender portal at [security.microsoft.com](https://security.microsoft.com). There is no separate installation required - all Exposure Management features are accessible through the **Exposure Management** section in the unified portal.
+
+### Licensing requirements
+
+Microsoft Security Exposure Management features are available with the following license plans:
+- Microsoft 365 E5
+- Microsoft 365 E3 with certain add-ons
+- Microsoft Defender suite licenses
+- Other qualifying licenses as specified in the integration and licensing documentation
+
+### External data connectors (Preview)
+External data connectors are currently in public preview with separate consumption-based pricing. During the preview phase, use of data connectors is free. Once generally available, there will be consumption-based costs for each non-Microsoft data connector based on the number of assets retrieved from connected security tools.
+
+### Regional and tenant requirements
+All data is processed within the Microsoft 365 Defender portal infrastructure. Ensure your tenant meets the standard requirements for Defender portal access.
 
 ## Permissions
 

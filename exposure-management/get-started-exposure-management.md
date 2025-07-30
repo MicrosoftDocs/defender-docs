@@ -11,7 +11,24 @@ ms.date: 11/04/2024
 
 # Start using Microsoft Security Exposure Management
 
-This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard.
+This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the unified Microsoft 365 Defender portal.
+
+## Accessing Microsoft Security Exposure Management
+
+Microsoft Security Exposure Management is now fully integrated into the Microsoft 365 Defender portal at [security.microsoft.com](https://security.microsoft.com). All Exposure Management functions are accessible through the unified portal under the **Exposure Management** section in the navigation.
+
+### Prerequisites for access
+- Ensure you have appropriate licensing: MSEM features are available with Microsoft 365 E5, certain E3 with add-ons, or Defender suite licenses
+- Verify you have the required permissions: A dedicated Exposure Management role provides granular access, or you can use traditional roles like Security Admin or Global Admin
+- Enable any preview features if needed, such as external data connectors which are currently in public preview with separate consumption-based pricing
+
+### Navigation in the unified portal
+Navigate to **Exposure Management** in the Microsoft 365 Defender portal to access:
+- Overview dashboard
+- Attack surface management tools
+- Critical asset management
+- Exposure insights and recommendations
+- Data connectors configuration
 
 ## Reviewing security exposure state
 

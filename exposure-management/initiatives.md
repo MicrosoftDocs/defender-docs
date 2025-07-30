@@ -19,6 +19,7 @@ ms.date: 05/04/2025
 - Learn about [initiatives](exposure-insights-overview.md#security-initiatives) before you start.
 - [Review prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
 - Initiatives that are in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
+- Note that with the integration of Defender for Cloud in the Defender portal, some legacy elements have been updated - for example, threat-based initiatives from the initiative catalog may have been temporarily removed and could return in future releases.
 
 ## View initiatives page
 

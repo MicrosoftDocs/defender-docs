@@ -24,6 +24,42 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 >
 > `https://aka.ms/msem/rss`
 
+## October 2025
+
+### Microsoft Security Exposure Management M1 Integration
+
+This major milestone (M1) brings comprehensive cloud security integration and unified portal experience to Microsoft Security Exposure Management, significantly expanding the scope and capabilities of the platform.
+
+#### Integration of Cloud Security
+**Defender for Cloud integration** – Cloud security posture and recommendations are now part of Exposure Management, accessible in the unified Defender portal. This integration provides support for Azure, AWS, and GCP environments in a single, consolidated view, enabling comprehensive multi-cloud exposure management.
+
+#### Unified Recommendations Experience  
+**Consolidated recommendations catalog** – All recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one unified catalog view in the Defender portal. Recommendations are organized by attack surface tabs (Devices, Cloud, Identity, SaaS, Data) and categorized by issue type (misconfigurations vs vulnerabilities vs secrets), making it easier to focus on specific remediation workflows.
+
+#### Risk-Based Prioritization
+**Enhanced cloud recommendation scoring** – Introduction of risk-based scoring for cloud recommendations that takes into account asset value and other factors, providing more intelligent prioritization beyond traditional severity ratings to help focus on critical issues that matter most to your organization.
+
+#### Vulnerability Management Integration
+**Microsoft Defender Vulnerability Management merge** – Microsoft Defender Vulnerability Management now operates under Exposure Management, bringing device and server vulnerabilities together in the unified experience. This includes new separate views for Devices Vulnerabilities and Cloud Vulnerabilities, aligning with different remediation approaches.
+
+#### Secure Score Consolidation  
+**Unified Secure Score experience** – Microsoft Secure Score (for Microsoft 365) and a new Cloud Secure Score can now be viewed side-by-side in Exposure Management to track improvement across different domains. This provides a comprehensive view of organizational posture spanning traditional endpoints and cloud resources.
+
+#### Portal and Navigation Updates
+**Unified Portal experience** – All exposure management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section. There's no need to use separate Azure portals for viewing exposures, though some configuration tasks like policy edits may still require Azure portal access during this initial release.
+
+#### Hybrid Attack Paths
+**Cross-environment attack path analysis** – Attack paths now include hybrid scenarios that span on-premises and cloud contexts, enabling security teams to identify attack vectors that traverse between environments and understand the full scope of potential threats across their digital estate.
+
+#### External Data Connectors (Preview)
+**Public Preview of External Data Connectors** – Exposure Management now offers connectors for ServiceNow, Qualys, Tenable, and Rapid7 in preview, allowing ingestion of external security and asset data into the unified exposure graph. During preview, these connectors are free, with consumption-based pricing planned for general availability.
+
+#### Enhanced Critical Asset Management
+**Expanded critical asset scope** – Critical asset management now covers the unified inventory spanning endpoints, cloud resources, and external assets discovered through third-party integrations, enabling comprehensive critical asset protection across all domains.
+
+> [!NOTE]
+> This is an initial integration release. Some advanced configuration tasks may still require accessing Azure portals, and regulatory compliance features may be read-only in the Defender portal during this phase. Additional capabilities and full administrative functions will be added in subsequent releases.
+
 ## May 2025
 
 ### Enhanced External Attack Surface Management integration with Exposure Management
