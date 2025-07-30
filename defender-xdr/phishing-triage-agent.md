@@ -79,11 +79,13 @@ For more information, see [Activate workloads in Microsoft Defender XDR settings
 
 ### Configure user reported settings
 
-The Phishing Triage Agent requires specific settings for how users report potentially malicious messages in Microsoft Outlook. Follow the steps in [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
+Define how users report potentially malicious messages in Microsoft Outlook. 
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the the Outlook report button and reported message destinations configurations.":::
 
-If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox), and view your vendor’s options to integrate reported messages with Microsoft Defender XDR.
+For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
+
+If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s options to integrate reported messages with Microsoft Defender XDR.
 
 ### Add alert policy
 
