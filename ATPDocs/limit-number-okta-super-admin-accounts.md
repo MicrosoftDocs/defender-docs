@@ -11,6 +11,12 @@ ms.reviewer: Himanch
 
 This report lists Okta accounts with Super Administrator role, where the number of users assigned to this role is greater than 5.
 
+## Prerequisites
+
+To use this security assessment, you must first connect your Okta instance in the Microsoft Defender portal.  
+For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+
+
 ## Why is having too many Super Admin accounts a security risk?
 
 A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
