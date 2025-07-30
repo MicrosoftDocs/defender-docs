@@ -20,7 +20,7 @@ description: Integrate your organization's SIEM server with Microsoft Defender f
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -33,7 +33,7 @@ If your organization is using a security information and event management (SIEM)
 
 SIEM integration enables you to view information, such as malware or phish detected by Microsoft Defender for Office 365, in your SIEM server reports.
 
-- To see an example of SIEM integration with Microsoft Defender for Office 365, see [Microsoft Security Blog - Improve the Effectiveness of your SOC with Defender for Office 365 and the O365 Management API](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/improve-the-effectiveness-of-your-soc-with-office-365-atp-and-the-o365-managemen/1525185).
+- To see an example of SIEM integration with Microsoft Defender for Office 365, see [this blog post](https://techcommunity.microsoft.com/blog/microsoftsecurityandcompliance/improve-the-effectiveness-of-your-soc-with-office-365-atp-and-the-o365-managemen/1525185).
 - To learn more about the Office 365 Management APIs, see [Office 365 Management APIs overview](/office/office-365-management-api/office-365-management-apis-overview).
 
 ## How SIEM integration works
@@ -48,12 +48,12 @@ The SIEM server or other similar system polls the **audit.general** workload to 
 
 ### AuditLogRecordType
 
-The following table summarizes the values of **AuditLogRecordType** that are relevant for Microsoft Defender for Office 365 events:<br/><br/>
+The following table summarizes the values of **AuditLogRecordType** that are relevant for Microsoft Defender for Office 365 events:
 
 |Value|Member name|Description|
 |---|---|---|
-|28|ThreatIntelligence|Phishing and malware events from Exchange Online Protection and Microsoft Defender for Office 365.|
-|41|ThreatIntelligenceUrl|Safe Links time-of-block and block override events from Microsoft Defender for Office 365.|
+|28|ThreatIntelligence|Phishing and malware events from the default email protections for cloud mailboxes and from Microsoft Defender for Office 365.|
+|41|ThreatIntelligenceUrl|Safe Links time-of-click and block override events from Microsoft Defender for Office 365.|
 |47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint, OneDrive, and Microsoft Teams, from Microsoft Defender for Office 365.|
 |64|AirInvestigation|Automated investigation and response events, such as investigation details and relevant artifacts, from Microsoft Defender for Office 365 Plan 2.|
 
