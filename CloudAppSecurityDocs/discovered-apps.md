@@ -125,8 +125,8 @@ If you have system users, IP addresses, or devices that are noisy but uninterest
 
 
 >[!NOTE]
->All entity exclusions apply to newly received data only. Historical data of the excluded entities remains through the retention period (90 days).
->Entity exclusion is only supported for the Global report stream. Entities from Microsoft Defender for Endpoint and the Cloud App Security proxy stream are not supported for exclusion.
+> - All entity exclusions apply to newly received data only. Historical data of the excluded entities remains through the retention period (90 days).
+> - Entity exclusion is only supported for the Global report stream. Entities from Microsoft Defender for Endpoint and the Cloud App Security proxy stream are not supported for exclusion.
 
 ## Manage continuous reports
 
