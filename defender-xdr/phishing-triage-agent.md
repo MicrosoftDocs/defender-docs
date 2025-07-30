@@ -59,9 +59,9 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 |Components|Details|
 |:---|:---|
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
-|Microsoft Defender required features|- -	Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - *Monitor reported messages in Outlook* is configured. See [User reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
+|Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - *Monitor reported messages in Outlook* is configured. See [User reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 
-## Plugins 
+### Plugins 
 
 The Phishing Triage Agent automatically activates these Security Copilot plugins: 
 
@@ -71,7 +71,11 @@ The Phishing Triage Agent automatically activates these Security Copilot plugins
 
 ### Activate URBAC settings
 
-The Phishing Triage Agent requires access to various Microsoft Defender workloads to effectively analyze alerts with comprehensive context. Ensure that URBAC is enabled and all workloads are activated in the Microsoft Defender portal. To activate all workloads, follow the steps in [Activate workloads from the Permissions page](activate-defender-rbac.md).
+Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:
+
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Phishing Triage Agent.":::
+
+For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 ### Configure user reported settings
 
