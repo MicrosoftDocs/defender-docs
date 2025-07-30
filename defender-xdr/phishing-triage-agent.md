@@ -46,7 +46,7 @@ By filtering out false alarms, the agent frees analysts to focus on real threats
 
 Security Copilot brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is integrated into the Microsoft Defender portal to offer security teams advanced tools for investigating and responding to incidents, identifying threats, and protecting their organization using relevant threat intelligence.
 
-The Phishing Triage Agent is a Security Copilot agent in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
+The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
 
 - **Autonomous triage:** The Phishing Triage Agent leverages advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** It provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
@@ -60,7 +60,7 @@ The following are organizational requirements to run the Phishing Triage Agent i
 |:---|:---|
 | **Products** | - Active subscription to Security Copilot and provisioned capacity in Security Compute Units (SCU) to power Security Copilot workload. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information.<br>- Microsoft Defender for Office 365 Plan 2 deployed |
 | **Microsoft Defender required features** | - Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](activate-defender-rbac.md) for more information.<br>- *Monitor reported messages in Outlook* is configured. See [Configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information.<br>- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information. |
-| **Security Copilot plugins** | Turn on the following Microsoft plugins in Security Copilot:<br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
+| **Security Copilot plugins** | [Turn on the following Microsoft plugins](#turn-on-security-copilot-plugins) in Security Copilot:<br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 
 ### Activate URBAC settings
 
@@ -83,7 +83,7 @@ Specific Security Copilot plugins must be activated in the Security Copilot stan
 ## Set up the Phishing Triage Agent
 
 > [!NOTE]
-> Setting up of the Phishing Triage Agent is only available to users with the **Security Administrator** role. Ensure that all prerequisites are met before setting up the agent.
+> Setting up of the Phishing Triage Agent is only available to users with the **Security Administrator** role. Ensure that all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Create the agent’s identity and assign permissions
 
@@ -122,7 +122,7 @@ To assign the appropriate permissions to the agent, follow these steps:
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage":::
 
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
-2. Create a role with the required permissions or assign an existing role with these permissions to the agent.
+2. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 3. Assign the role to the agent.
 
 > [!TIP]
@@ -144,7 +144,7 @@ You can access the Phishing Triage Agent setup in two ways:
 
 Follow the steps in the setup wizard, which includes:
 
-1. Select the identity type to assign to the agent.
+1. Select the [identity](#identity) type to assign to the agent.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage":::
 
@@ -238,7 +238,7 @@ To provide feedback and teach the agent, follow these steps:
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify phishing alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
-5. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, as well as lessons added to the agent’s memory, can be later reviewed in the feedback management page.
+5. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, as well as lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
 
 The agent utilizes stored feedback to triage and classify similar alerts in the future. When a relevant alert that matches the feedback characteristics is received, the agent applies this feedback to determine its classification, incorporating it as supporting evidence in its decision-making process.
 
@@ -274,7 +274,7 @@ Here are examples of failures you might encounter when writing feedback to the a
 |:---|:---|
 | :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png"::: </br> Part of the feedback provided can’t be addressed as the agent currently doesn’t support this type of input and therefore could not be translated to a lesson at all. | Rewrite your feedback and ensure that it addresses descriptions of the email that it can support. Then select **Evaluate feedback** to try again. |
 | :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png"::: </br> The feedback contains input that the agent can support but it’s not relevant to the email at hand and therefore could not be translated into an actionable lesson to be saved in the memory. | Rewrite your feedback and ensure that it follows the best practices. Select **Evaluate feedback** to try again. |
-| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the feedback management page, search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the [feedback management page](#view-and-manage-feedback-to-the-agent). Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that is not conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
+| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the [feedback management page](#view-and-manage-feedback-to-the-agent) search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the feedback management page. Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that is not conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
 
 > [!NOTE]
 > You can choose not to resolve feedback failures. You can leave your feedback and select **Save** without checking the box for teaching the agent. The feedback won’t be saved to the agent’s memory and will only be documented on the feedback management page for your future tracking classification changes.
@@ -318,7 +318,7 @@ Feedback status can mean:
 | Status | Description |
 |:---|:---|
 | In use | The feedback was successfully converted into a lesson in the agent’s memory and is actively used to triage and classify similar incidents. |
-| Conflict | The feedback provided conflicted with previously provided feedback in a similar incident. Learn how you can resolve feedback failures. |
+| Conflict | The feedback provided conflicted with previously provided feedback in a similar incident. Learn how you can [resolve feedback failures](#resolve-feedback-failures). |
 | Not in use | The feedback was either not incorporated into the agent's memory or not marked by the user for teaching. Rejected lessons appear as "not in use" and are saved only for auditing, not for triaging and classifying incidents. For more details, click the details panel. |
 
 > [!TIP]
