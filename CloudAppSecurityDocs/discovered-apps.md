@@ -121,12 +121,12 @@ If you have system users, IP addresses, or devices that are noisy but uninterest
 
 1. Add a user alias, IP address, or device name. We recommend adding information about why the exclusion was made.
 
-    :::image type="content" source="media/exclude-user.png" alt-text="Screenshot that shows the option to exclude users from the the Cloud Discovery report." lightbox="media/exclude-user.png":::
+    :::image type="content" source="media/exclude-user.png" alt-text="Screenshot that shows the option to exclude users from the Cloud Discovery report." lightbox="media/exclude-user.png":::
 
 
 >[!NOTE]
 > - All entity exclusions apply to newly received data only. Historical data of the excluded entities remains through the retention period (90 days).
-> - Entity exclusion is only supported for the Global report stream. Entities from Microsoft Defender for Endpoint and the Cloud App Security proxy stream are not supported for exclusion.
+> - Entity exclusion is only supported for the Global report stream. Entities from Microsoft Defender for Endpoint and the Cloud App Security proxy stream aren't supported for exclusion.
 
 ## Manage continuous reports
 
@@ -147,7 +147,7 @@ Custom continuous reports provide you with more granularity when monitoring your
 1. Set the filters you want on the data. These filters can be **User groups**, **IP address tags**, or **IP address ranges**. For more information on working with IP address tags and IP address ranges, see [Organize the data according to your needs](ip-tags.md).
 
 
-    :::image type="content" source="media/create-custom-continuous-report.png" alt-text="Screenshot that shows how to create a continous report.":::
+    :::image type="content" source="media/create-custom-continuous-report.png" alt-text="Screenshot that shows how to create a continuous report.":::
 
 > [!NOTE]
 > All custom reports are limited to a maximum of 1 GB of uncompressed data. If there's more than 1 GB of data, the first 1 GB of data will be exported into the report.
