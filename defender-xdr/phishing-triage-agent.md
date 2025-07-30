@@ -116,26 +116,26 @@ The agent's specified user identity isn't compatible with PIM or TAP, as they do
 
 #### Permissions
 
-The agent’s identity must be granted the required permissions to access emails and to analyze their content. Since the agent is operationally aligned with the construct of an SOC analyst, it needs the ability to review user reported phishing emails for triage. The agent uses similar access models while ensuring parity around permissions.
-
-The Phishing Triage Agent role requires the following permissions:
+The agent’s identity needs these permissions to access emails, analyze their content, and manage alerts:
 
 - **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
 - **Security Copilot (read):** Used to access Security Copilot capabilities.
 - **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
 
+The required permissions under the **Security operations** permissions group:
+
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage":::
 
-To assign the appropriate permissions to the agent, follow these steps:
-
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage":::
+To assign the appropriate permissions to the agent:
 
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
-2. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
+2. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent. 
 3. Assign the role to the agent.
 
 > [!TIP]
-> Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
+> Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
+
+After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ### Begin the setup
 
