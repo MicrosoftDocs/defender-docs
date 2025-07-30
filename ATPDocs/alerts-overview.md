@@ -25,17 +25,19 @@ To learn more about how to understand the structure, and common components of al
 
 For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#classify-security-alerts).
 
-## Alert categories
+## Alerts categories
+ The alerts are divided into categories based on the phases seen in a typical cyber-attack kill chain. The categories differ slightly depending on whether the alert originates from using the classic Microsoft Defender for Identity alerting, or Microsoft Defender for XDR. The differences are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
- Depending on whether the alert originates from using the classic Microsoft Defender for Identity alerting, or Microsoft Defender for XDR, the alerts are divided into categories based on the phases seen in a typical cyber-attack kill chain.
+For example, there are categories for:
+- Reconnaissance and discovery alerts
+- Persistence and privilege escalation alerts
+- Credential access alerts
+- Lateral movement alerts
 
 For detailed information about each alert see:
 - [Microsoft Defender for Identity classic alerts](alerts-mdi-classic.md)
 - [Microsoft Defender for XDR alerts](alerts-xdr.md)
 
-
-> [!NOTE]
-> Contact support to disable security alerts.
 
 ## See Also
 - [View and manage security alerts](understanding-security-alerts.md)
