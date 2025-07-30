@@ -74,7 +74,7 @@ In the Tenant Allow/Block List, you can also directly create block entries for t
 
 - **[IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)**: If you manually create a block entry, all incoming email messages from that IP address are dropped at the edge of the service.
 
-- **[Teams domains]((tenant-allow-block-list-teams-domains-configure.md))**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
+- **[Teams domains](tenant-allow-block-list-teams-domains-configure.md)**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
 
 By default, the following types of block entries expire after 30 days, but you can set them to expire up 90 days or to never expire:
 
