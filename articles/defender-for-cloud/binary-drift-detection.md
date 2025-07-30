@@ -36,7 +36,8 @@ Create drift policies to define when alerts should be generated. Each policy is 
 
 To create and configure policies, follow these steps:
 
-1. In Microsoft Defender for Cloud, go to **Management** > **Environment settings**. Select **Containers drift policy**.
+1. In Microsoft Defender for Cloud, go to **Management** > **Environment settings**. 
+1. Select **Containers drift policy**.
 
     :::image type="content" source="media/binary-drift-detection/select-containers-drift-policy.png" alt-text="Screenshot of Select Containers drift policy in Environment settings." lightbox="media/binary-drift-detection/select-containers-drift-policy.png":::
 

@@ -2,7 +2,7 @@
 title: Threat intelligence report
 description: This page helps you to use Microsoft Defender for Cloud threat intelligence reports during an investigation to find more information about security alerts
 ms.topic: how-to
-ms.date: 05/30/2024
+ms.date: 07/30/2025
 ms.custom: sfi-image-nochange
 ---
 
