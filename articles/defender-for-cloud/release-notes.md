@@ -31,15 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| August 1, 2025 | GA | [General availability: Defender CSPM and Defender for Servers Plan 2 in government clouds](#general-availability-defender-cspm-and-defender-for-servers-plan2-in-government-clouds) |
+| August 1, 2025 | GA | [General availability: Defender CSPM and Defender for Servers Plan 2 in Azure Government](#general-availability-defender-cspm-and-defender-for-servers-plan2-in-azure-government) |
 
-### General availability: Defender CSPM and Defender for Servers Plan 2 in government clouds
+### General availability: Defender CSPM and Defender for Servers Plan 2 in Azure Government
 
 August 3rd, 2025
 
-Defender Cloud Security Posture Management (CSPM) is now generally available for government cloud customers. This expansion makes advanced cloud security posture management capabilities available to U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies. Defender for Servers Plan 2 (P2) is now included in GovCloud, offering the same capabilities available in Microsoft commercial cloud environments.
+[Defender Cloud Security Posture Management (CSPM)](/defender-for-cloud/tutorial-enable-cspm-plan) is generally available for government cloud customers. This expansion makes advanced cloud security posture management (CSPM) capabilities available to U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies to help improve compliance. 
 
-
+Additionally, [Defender for Servers Plan 2 (P2)](/defender-for-cloud/defender-for-servers-overview#defender-for-servers-plans) is now available in government cloud, offering the same capabilities available in Microsoft commercial cloud environments.
 
 ## July 2025
 
