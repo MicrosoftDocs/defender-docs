@@ -3,10 +3,10 @@ title: Overview of attack surface management in Microsoft Security Exposure Mana
 description: Learn about attack surface management in Microsoft Security Exposure Management. s
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 07/30/2025
 ---
 
 # Overview of attack surface management

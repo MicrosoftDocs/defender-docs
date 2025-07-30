@@ -3,10 +3,10 @@ title: Overview of exposure insights and secure score in Microsoft Security Expo
 description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/27/2025
+ms.date: 07/30/2025
 ---
 
 # Overview - Exposure insights
@@ -40,7 +40,7 @@ Security Exposure Management provides initiatives that currently include:
   - Threat actors and threat vectors.
   - Threat reports that have three or more recommendations.
 
-- **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
+- **Zero trust initiative**: Assess the risk associated with Zero Trust compliance. This initiative aligns with guidance provided by the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
 
 - **External attack surface management initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers insights into identified exposures on the selected vendor. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. 
 
@@ -64,7 +64,7 @@ You can prioritize which initiatives you want to see on the **Overview** dashboa
 
 ## Working with metrics
 
-On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
+On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
 
 - Review metrics properties, including:
   - **Metric name**: The name of the metric.
@@ -92,7 +92,7 @@ Grayed out metrics aren't considered for score calculation.
 > The versioning feature in Exposure Management provides proactive notifications to users about upcoming version updates, providing advanced visibility into the expected metric changes and their impact on related initiatives.
 > A dedicated side panel offers more details about the update, including the expected date of the change, release notes, and current and new metric values, as well as changes to the related initiatives' scores.
 > Users can share feedback about the update directly through the platform.
-> The information is dynamic and may vary depending on when it is accessed.
+> The information is dynamic and might vary depending on when it's accessed.
 
 ## Working with recommendations
 

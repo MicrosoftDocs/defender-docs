@@ -3,10 +3,10 @@ title: Review security recommendations in Microsoft Security Exposure Management
 description: Learn how to review security recommendations in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 07/30/2025
 ---
 
 # Review security recommendations
@@ -67,7 +67,7 @@ You can also review recommendations on the **Recommendations** tab in a specific
 
 1. To remediate a recommendation, select a specific recommendation and browse to the **Remediation steps** tab.
 
-2. Review the remediation steps and select **Manage** to follow the steps in the originating workload. The unified experience will direct you to the appropriate service:
+2. Review the remediation steps and select **Manage** to follow the steps in the originating workload. The unified experience directs you to the appropriate service:
    - Microsoft Defender for Cloud for cloud recommendations
    - Microsoft Defender Vulnerability Management for device vulnerabilities  
    - Microsoft Secure Score for Microsoft 365 recommendations

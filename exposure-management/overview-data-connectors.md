@@ -3,13 +3,13 @@ title: Overview of connecting data sources in Microsoft Security Exposure Manage
 description: Learn about connecting data sources in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/06/2024
+ms.date: 07/30/2025
 ---
 
-# Overview
+# Connecting data sources in Microsoft Security Exposure Management
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) consolidates security posture data from all your digital assets across endpoints, cloud environments, and external attack surfaces, enabling you to map your attack surface and focus your security efforts on areas at greatest risk. With the integration of Defender for Cloud in the Defender portal, data from Microsoft Security products like Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Cloud (including Azure, AWS, and GCP), Microsoft Entra ID, and others are automatically ingested and consolidated within Exposure Management in the unified portal. You can further enrich and extend this data by connecting to a range of external data sources through the new Exposure Management connectors.
 
