@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 06/06/2025
+ms.date: 07/30/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -79,7 +79,7 @@ Understand the following prerequisites before you create indicators for files:
 
 ## Create an indicator for files from the settings page
 
-1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
+1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
 2. Select the **File hashes** tab.
 
