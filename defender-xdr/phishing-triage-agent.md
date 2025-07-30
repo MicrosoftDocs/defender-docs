@@ -54,13 +54,20 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 
 ## Prerequisites
 
-The following are organizational requirements to run the Phishing Triage Agent in your environment:
+The following are organizational requirements to run Phishing Triage Agent in your environment:
 
-| Components | Details |
+|Components|Details|
 |:---|:---|
-| **Products** | - Active subscription to Security Copilot and provisioned capacity in Security Compute Units (SCU) to power Security Copilot workload. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information.<br>- Microsoft Defender for Office 365 Plan 2 deployed |
-| **Microsoft Defender required features** | - Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](activate-defender-rbac.md) for more information.<br>- *Monitor reported messages in Outlook* is configured. See [Configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information.<br>- The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information. |
-| **Security Copilot plugins** | [Turn on the following Microsoft plugins](#turn-on-security-copilot-plugins) in Security Copilot:<br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
+|Microsoft Defender required features|- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information </br> - *Monitor reported messages in Outlook* is configured. See [User reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
+
+## Plugins 
+
+The Phishing Triage Agent automatically activates these Security Copilot plugins: 
+
+- Microsoft Defender XDR
+- Microsoft Threat Intelligence 
+- Phishing Triage Agent
 
 ### Activate URBAC settings
 
