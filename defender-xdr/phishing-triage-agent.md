@@ -81,6 +81,8 @@ For more information, see [Activate workloads in Microsoft Defender XDR settings
 
 The Phishing Triage Agent requires specific settings for how users report potentially malicious messages in Microsoft Outlook. Follow the steps in [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the the Outlook report button and reported message destinations configurations.":::
+
 If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox), and view your vendor’s options to integrate reported messages with Microsoft Defender XDR.
 
 ### Add alert policy
@@ -103,9 +105,9 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 
 Currently, the Phishing Triage Agent supports the following identity types:
 
-- **Microsoft Entra user:** Create a user account in the Microsoft Entra admin center and assign it the Security Reader role in Entra. For more information, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+- **Microsoft Entra user:** Create a user account in the Microsoft Entra admin center. For more information, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
-When connecting the agent to an account, Microsoft recommends setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+When you connect the agent to an account, Microsoft recommends setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
 > [!TIP]
 > Microsoft recommends creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
