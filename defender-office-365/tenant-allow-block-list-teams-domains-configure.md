@@ -104,7 +104,7 @@ Back on the **Teams domains** tab, the entry is no longer listed. After a few mi
 
 ## Related articles
 
-- [Managing external access in Teams admin center](microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings#specify-trusted-microsoft-365-organizations)
+- [Managing external access in Teams admin center](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings#specify-trusted-microsoft-365-organizations)
 - [Report false positives and false negatives in Teams](submissions-teams.md)
 - [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
