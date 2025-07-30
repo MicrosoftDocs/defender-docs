@@ -102,9 +102,6 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 
 #### Identity
 
-> [!IMPORTANT]
-> Ensure that your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
-
 You currently need to assign the Phishing Triage Agent a user account. For information on creating a user account in the Microsoft Entra admin center, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
 When you connect the agent to an account, Microsoft recommends setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
@@ -160,6 +157,10 @@ Follow the steps in the setup wizard, which includes:
 2. Follow the prompts to sign in to the account you created for the agent.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.png" alt-text="Screenshot of the account assignment for Phishing Triage":::
+
+
+   1. Select the user account you created for the agent. See [Create the agent’s identity and assign permissions](#create-the-agents-identity-and-assign-permissions) for more information.
+   1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
    > [!NOTE]
    > After setup, you can change the agent's identity and role at any time. To do this, navigate to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
