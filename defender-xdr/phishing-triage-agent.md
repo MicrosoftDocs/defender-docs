@@ -59,7 +59,7 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 |Components|Details|
 |:---|:---|
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
-|Microsoft Defender required features|- Unified role-based access control (URBAC) must be enabled in your organization. See [Unified role-based access control (URBAC)](manage-rbac.md) for more information </br> - *Monitor reported messages in Outlook* is configured. See [User reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
+|Microsoft Defender required features|- -	Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - *Monitor reported messages in Outlook* is configured. See [User reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 
 ## Plugins 
 
@@ -82,10 +82,6 @@ If you’re using a third-party email reporting tool, review [Options for third-
 ### Add alert policy
 
 The Phishing Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
-
-### Turn on Security Copilot plugins
-
-Specific Security Copilot plugins must be activated in the Security Copilot standalone experience. To turn on Security Copilot plugins, follow the steps in [Turn plugins on or off](/copilot/security/plugin-overview#microsoft-plugins).
 
 ## Set up the Phishing Triage Agent
 
