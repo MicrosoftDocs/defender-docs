@@ -97,6 +97,10 @@ All actions, whether they're pending approval or were already taken, are tracked
 
 In addition to remediation actions that are taken automatically as a result of [automated investigations](m365d-autoir.md), the Action center also tracks actions your security team has taken to address detected threats, and actions that were taken as a result of threat protection features in Microsoft Defender XDR. For more information about automatic and manual remediation actions, see [Remediation actions](m365d-remediation-actions.md).
 
+In Action Center, response actions are displayed only after they are completed. For example, while a file is being collected, it will not appear under the Pending tab. The Pending tab is reserved for actions that require user attention.
+
+
+
 ## Viewing action source details
 
 The improved Action center includes an **Action source** column that tells you where each action came from. The following table describes possible **Action source** values:
