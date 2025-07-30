@@ -105,9 +105,7 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 > [!IMPORTANT]
 > Ensure that your conditional access policies for Security Copilot are in place, enabling the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
-Currently, the Phishing Triage Agent supports the following identity types:
-
-- **Microsoft Entra user:** Create a user account in the Microsoft Entra admin center. For more information, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+You currently need to assign the Phishing Triage Agent a Microsoft Entra user. For information on creating a user account in the Microsoft Entra admin center, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
 When you connect the agent to an account, Microsoft recommends setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
