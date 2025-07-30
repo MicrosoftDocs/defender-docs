@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
+### Sensor version 2.246
+
+This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
+
 **Suspected Brute Force attack (Kerberos, NTLM):** Improved detection logic now includes scenarios where accounts were locked during the attacks. As a result, the number of triggered alerts might increase.
 
 ## July 2025
