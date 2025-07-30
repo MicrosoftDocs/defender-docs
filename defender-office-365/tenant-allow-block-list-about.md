@@ -44,7 +44,7 @@ For usage and configuration instructions, see the following articles:
 - **Files**: [Allow or block files using the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - **URLs**: [Allow or block URLs using the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md).
 - **IP addresses**: [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
-- **Teams domains**: [Block domains in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domain-configure.md).
+- **Teams domains**: [Block domains in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 
 These articles contain procedures in the Microsoft Defender portal and in PowerShell.
 
@@ -74,7 +74,7 @@ In the Tenant Allow/Block List, you can also directly create block entries for t
 
 - **[IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)**: If you manually create a block entry, all incoming email messages from that IP address are dropped at the edge of the service.
 
--  **[Teams domains]((tenant-allow-block-list-teams-domain-configure.md))**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
+- **[Teams domains]((tenant-allow-block-list-teams-domains-configure.md))**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
 
 By default, the following types of block entries expire after 30 days, but you can set them to expire up 90 days or to never expire:
 
@@ -86,7 +86,7 @@ The following types of block entries never expire:
 
 - [Spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-spoofed-senders)
 - [IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)
-- [Teams domains](tenant-allow-block-list-teams-domain-configure.md).
+- [Teams domains](tenant-allow-block-list-teams-domains-configure.md).
 
 ## Allow entries in the Tenant Allow/Block List
 

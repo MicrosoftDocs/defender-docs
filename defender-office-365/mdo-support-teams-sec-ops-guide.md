@@ -59,7 +59,7 @@ SecOps team members can also use block entries in the Tenant Allow/Block List to
 SecOps team members can use threat hunting or information from external threat intelligence feeds to proactively respond to false negative Teams messages (bad messages allowed). They can use the information to proactively block threats. For example:
 
 - [Create URL block entries](tenant-allow-block-list-urls-configure.md#create-block-entries-for-urls) in the Tenant Allow/Block List in Defender for Office 365. Block entries apply at time of click for URLs in Teams.  
-- [Block domains in Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domain-configure.md).
+- [Block domains in Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 - Submit undetected URLs to Microsoft using [admin submission](submissions-admin.md#report-questionable-urls-to-microsoft).
 
 > [!TIP]
