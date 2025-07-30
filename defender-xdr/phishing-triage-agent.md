@@ -38,7 +38,7 @@ Phishing remains one of the most prevalent and persistent entry points for cyber
 
 To help security teams address this challenge, Microsoft Security Copilot introduces the Phishing Triage Agent in Microsoft Defender. This AI-powered virtual agent is designed to scale the triage and classification of user-reported phishing emails. By reducing repetitive investigation work and accelerating response, it helps security teams operate with greater speed and precision.
 
-The Phishing Triage Agent uses advanced LLM-based analysis to perform sophisticated tasks—such as understanding the content and intent of reported emails—to autonomously determine whether a submission is a genuine phishing attempt or a false alarm. Unlike traditional rule-based systems, it does not rely on predefined input or code. Instead, it applies dynamic reasoning to analyze and act on incoming reports at scale.
+The Phishing Triage Agent uses advanced LLM-based analysis to perform sophisticated tasks—such as understanding the content and intent of reported emails—to autonomously determine whether a submission is a genuine phishing attempt or a false alarm. Unlike traditional rule-based systems, it doesn't rely on predefined input or code. Instead, it applies dynamic reasoning to analyze and act on incoming reports at scale.
 
 By filtering out false alarms, the agent frees analysts to focus on real threats and high-impact investigations. This shift accelerates detection, sharpens response, and reinforces the organization’s overall security posture.
 
@@ -48,7 +48,7 @@ Security Copilot brings together the power of AI and human expertise to help sec
 
 The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
 
-- **Autonomous triage:** The Phishing Triage Agent leverages advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
+- **Autonomous triage:** The Phishing Triage Agent uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** It provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
 - **Continuous improvement:** It continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
@@ -81,7 +81,7 @@ For more information, see [Activate workloads in Microsoft Defender XDR settings
 
 Enable **Monitor reported messages in Outlook** and define how users report potentially malicious messages in Microsoft Outlook: 
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the the Outlook report button and reported message destinations configurations.":::
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations.":::
 
 For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
@@ -98,7 +98,7 @@ The Phishing Triage Agent addresses phishing incidents that include alerts with 
 
 ### Create the agent’s identity and assign permissions
 
-The Phishing Triage Agent operates under the identity you assign to it. Before setup, you’ll need to create this identity and ensure it has the appropriate permissions to perform triage actions.
+The Phishing Triage Agent operates under the identity you assign to it. Before setup, you need to create this identity and ensure it has the appropriate permissions to perform triage actions.
 
 #### Identity
 
@@ -191,9 +191,9 @@ The agent is designed to help security teams manage the overwhelming volume of s
 
 ### Agent trigger and flow
 
-Once fully set up and running, the Phishing Triage Agent is automatically triggered when a user reports a suspicious phishing email and an alert is created. The agent then autonomously analyzes the alert leveraging sophisticated AI tools and your organization’s context to determine whether the associated threat is malicious or just a false alarm.
+Once fully set up and running, the Phishing Triage Agent is automatically triggered when a user reports a suspicious phishing email and an alert is created. The agent then autonomously analyzes the alert using sophisticated AI tools and your organization’s context to determine whether the associated threat is malicious or just a false alarm.
 
-If the alert is determined to be a false alarm, the agent classifies it as a False Positive and resolves it accordingly. If the alert is deemed malicious, it is classified as a True Positive, and the status of the associated incident remains open and in progress for an analyst to investigate and take further action.
+If the alert is determined to be a false alarm, the agent classifies it as a False Positive and resolves it accordingly. If the alert is deemed malicious, it's classified as a True Positive, and the status of the associated incident remains open and in progress for an analyst to investigate and take further action.
 
 For every alert it processes, the agent provides a detailed explanation of its verdict—enhancing transparency and building analyst confidence in the corresponding incident.
 
@@ -238,7 +238,7 @@ To provide feedback and teach the agent, follow these steps:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card":::
 
-3. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent will not use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent’s memory.
+3. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent won't use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent’s memory.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane":::
 
@@ -248,7 +248,7 @@ To provide feedback and teach the agent, follow these steps:
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify phishing alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
-5. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, as well as lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
+5. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
 
 The agent utilizes stored feedback to triage and classify similar alerts in the future. When a relevant alert that matches the feedback characteristics is received, the agent applies this feedback to determine its classification, incorporating it as supporting evidence in its decision-making process.
 
@@ -272,7 +272,7 @@ Here are examples of how you can write your feedback to the agent.
 |  | Emails offering file sharing or document access should only come from our authorized provider (e.g., Dropbox.com). |  | Well-written feedback explicitly sets a trusted provider requirement. |
 | Feedback about the email body | Emails requesting credential verification should include a reference to the specific account or service. Any generic 'verify your account' request without details should be treated as phishing. | This email asks me to verify my account, so it must be phishing. | Well-written feedback defines when verification requests are legitimate, while the sample feedback assumes all similar emails are phishing without analyzing context. |
 | Feedback about a recipient and email body | This email was sent to multiple employees, and the body instructs recipients to download an 'important attachment' without describing its contents—legitimate internal emails always specify attachment details. | Mass emails with attachments are phishing. | Well-written feedback focuses on missing details that legitimate emails provide, while the sample feedback makes an overly broad generalization. |
-| Feedback about a recipient and a domain | New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients. | Contractor emails look different from usual, so they might be phishing. | Well-written feedback clearly defines the expected recipient format, while the sample feedback is vague and lacks clear identification. |
+| Feedback about a recipient and a domain | New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they're directed to the correct recipients. | Contractor emails look different from usual, so they might be phishing. | Well-written feedback clearly defines the expected recipient format, while the sample feedback is vague and lacks clear identification. |
 
 ### Resolve feedback failures
 
@@ -282,9 +282,9 @@ Here are examples of failures you might encounter when writing feedback to the a
 
 | Failure message | Recommended action |
 |:---|:---|
-| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png"::: </br> Part of the feedback provided can’t be addressed as the agent currently doesn’t support this type of input and therefore could not be translated to a lesson at all. | Rewrite your feedback and ensure that it addresses descriptions of the email that it can support. Then select **Evaluate feedback** to try again. |
-| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png"::: </br> The feedback contains input that the agent can support but it’s not relevant to the email at hand and therefore could not be translated into an actionable lesson to be saved in the memory. | Rewrite your feedback and ensure that it follows the best practices. Select **Evaluate feedback** to try again. |
-| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the [feedback management page](#view-and-manage-feedback-to-the-agent) search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the feedback management page. Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that is not conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
+| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-unsupported.png"::: </br> Part of the feedback provided can’t be addressed as the agent currently doesn’t support this type of input and therefore couldn't be translated to a lesson at all. | Rewrite your feedback and ensure that it addresses descriptions of the email that it can support. Then select **Evaluate feedback** to try again. |
+| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-irrelevant.png"::: </br> The feedback contains input that the agent can support but it’s not relevant to the email at hand and therefore couldn't be translated into an actionable lesson to be saved in the memory. | Rewrite your feedback and ensure that it follows the best practices. Select **Evaluate feedback** to try again. |
+| :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the [feedback management page](#view-and-manage-feedback-to-the-agent) search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the feedback management page. Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that isn't conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
 
 > [!NOTE]
 > You can choose not to resolve feedback failures. You can leave your feedback and select **Save** without checking the box for teaching the agent. The feedback won’t be saved to the agent’s memory and will only be documented on the feedback management page for your future tracking classification changes.
@@ -329,10 +329,10 @@ Feedback status can mean:
 |:---|:---|
 | In use | The feedback was successfully converted into a lesson in the agent’s memory and is actively used to triage and classify similar incidents. |
 | Conflict | The feedback provided conflicted with previously provided feedback in a similar incident. Learn how you can [resolve feedback failures](#resolve-feedback-failures). |
-| Not in use | The feedback was either not incorporated into the agent's memory or not marked by the user for teaching. Rejected lessons appear as "not in use" and are saved only for auditing, not for triaging and classifying incidents. For more details, click the details panel. |
+| Not in use | The feedback was either not incorporated into the agent's memory or not marked by the user for teaching. Rejected lessons appear as "not in use" and are saved only for auditing, not for triaging and classifying incidents. For more details, select the details panel. |
 
 > [!TIP]
-> Feedback can only be managed individually. Bulk management of multiple feedback entries is not currently supported.
+> Feedback can only be managed individually. Bulk management of multiple feedback entries isn't currently supported.
 
 To review the details of a specific feedback, select an entry from the feedback list. In the **Review feedback** pane, check the details of the feedback provided, the agent’s lesson, the classification changes, and other important details. You can use these details to decide whether to retain the feedback in the agent’s memory or reject it.
 
@@ -352,7 +352,7 @@ To reject specific feedback, open the Review feedback pane and select **Reject f
 > [!NOTE]
 > Changing the Phishing Triage Agent’s identity is only available to users with the **Security Administrator** role.
 
-The agent’s identity and role can be managed at any time by navigating to the **Identity and role** page under **Agents**. On this page, users can view the agent's current identity, access details about the last update, and select a new identity type for the agent if required. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
+The agent’s identity and role can be managed at any time by navigating to the **Identity and role** page under **Agents**. On this page, users can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
 
 ### Pause or resume the agent
 
@@ -387,7 +387,7 @@ The agent automatically runs when a user reports a potential phishing attempt, a
 
 ### Why is the Phishing Triage Agent important?
 
-Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports. Consequently, managing these incidents becomes a tedious and repetitive task for Security Operations Center (SOC) analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, who have a limited amount of time to dedicate to completing critical demands. By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
+Phishing remains one of the most common methods by which attackers gain initial access to systems. While security tools effectively block most threats, some still manage to slip through, overwhelming inboxes and leaving email users uncertain whether a suspicious email is a legitimate phishing attempt or harmless spam. This uncertainty often leads to an influx of user-submitted reports. Therefore, managing these incidents becomes a tedious and repetitive task for Security Operations Center (SOC) analysts. Each alert may require up to 30 minutes of manual triage, demanding significant effort to sift through a large volume of incidents in search of the genuine threat amidst all the noise. This effort overwhelms analysts, who have a limited amount of time to dedicate to completing critical demands. By alleviating the burden of reactive work, the Phishing Triage Agent empowers analysts to focus on proactive security measures, ultimately strengthening organizations’ overall security postures.
 
 ### Can the Phishing Triage Agent be trusted?
 
