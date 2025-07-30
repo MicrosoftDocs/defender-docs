@@ -129,8 +129,10 @@ The required permissions under the **Security operations** permissions group:
 To assign the appropriate permissions to the agent:
 
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
-2. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent. 
-3. Assign the role to the agent.
+1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
+1. Assign the role to the agent. Make sure to grant the agent access to all data sources.
+
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage":::
 
 > [!TIP]
 > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
@@ -138,8 +140,6 @@ To assign the appropriate permissions to the agent:
 After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ### Begin the setup
-
-Once all prerequisites are met, the agent's identity created, and permissions assigned, you can start the setup process.
 
 You can access the Phishing Triage Agent setup in two ways:
 
@@ -177,7 +177,7 @@ The card currently contains the following data:
 - **Incidents addressed:** Incidents containing user-reported phishing alerts that were classified by the agent as true phishing threats or false alarms.
 - **Incidents resolved:** Incidents that no longer require further handling, like false alarms.
 
-Metrics are calculated based on the agent’s activity, beginning either from its first recorded incident or from the last 30 days—whichever is more recent.
+Metrics are calculated based on the agent’s activity, beginning either from its first recorded incident or from the last 30 days - whichever is more recent.
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-queue-with-agent.png" alt-text="Screenshot of the incident queue with the Phishing Triage Agent active" lightbox="/defender/media/agents-in-defender/phishing-triage/incident-queue-with-agent.png":::
 
