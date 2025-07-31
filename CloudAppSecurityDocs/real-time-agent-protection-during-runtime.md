@@ -52,7 +52,6 @@ Before enabling real-time agent protection during runtime, make sure:
 > [!NOTE]
 > A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
 
-
 ## Turn on real-time agent protection during runtime
 
 Follow these steps to enable real-time agent protection during runtime in the Microsoft Defender portal:
@@ -63,14 +62,13 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
     1. **Microsoft Entra ID Management events** and **Microsoft 365 activities**. For more information, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
 1. Verify that the Microsoft 365 App Connector status shows **Connected**.
 
-> [!IMPORTANT]
-> If the Microsoft 365 connector isn’t connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't show in the Microsoft Defender portal.
+    > [!IMPORTANT]
+    > If the Microsoft 365 connector isn’t connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't show in the Microsoft Defender portal.
 
-1. **Turn on real-time protection during agent runtime**:
-    1. Enter the App ID provided by your Power Platform administrator.
-    1. Select **Save**.
-    1. Copy the URL provided.
-    1. Share the URL with the Power Platform administrator. 
+1. Enter the App ID provided by your Power Platform administrator.
+1. Select **Save**.
+1. Copy the URL provided.
+1. Share the URL with the Power Platform administrator. 
 
 :::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
 
