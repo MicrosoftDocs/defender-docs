@@ -433,7 +433,7 @@ items:
 - name: AI agents
   items:
   - name: Protect Copilot Studio agents in real time
-    href: protect-agents-in-real-time.md
+    href: real-time-agent-protection-during-runtime.md
 - name: View and manage applications
   items:
     - name: Assets
