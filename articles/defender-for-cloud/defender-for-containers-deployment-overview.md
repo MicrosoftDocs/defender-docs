@@ -14,9 +14,9 @@ Microsoft Defender for Containers provides advanced threat protection and securi
 Defender for Containers supports the following Kubernetes environments:
 
 - **Azure (AKS)** - Azure Kubernetes Service
-- **Arc-enabled Kubernetes** - On-premises and IaaS Kubernetes clusters
 - **AWS (EKS)** - Amazon Elastic Kubernetes Service
 - **GCP (GKE)** - Google Kubernetes Engine
+- **Arc-enabled Kubernetes** (Preview) - On-premises and IaaS Kubernetes clusters
 
 ## Choose your deployment path
 
@@ -78,7 +78,7 @@ For each environment, you can choose between:
 
 - **Portal deployment** - Guided experience through Azure portal
 - **Programmatic deployment** - Automation using CLI, API, or Infrastructure as Code
-
+- **Helm deployment** - For AKS, EKS, and GKE clusters
 
 > [!NOTE]
 > Feature availability varies by platform and deployment method. For detailed platform-specific capabilities, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).

@@ -99,8 +99,6 @@ Defender for Containers on Azure supports:
 - **Native ACR integration**: Automatic scanning without registry credentials
 - **Azure Policy enforcement**: Consistent security policies across all clusters
 - **Managed identity support**: Simplified authentication and authorization
-- **Azure Monitor integration**: Unified monitoring and alerting
-- **Cost optimization**: Pay only for protected vCores
 
 ## Pricing
 
