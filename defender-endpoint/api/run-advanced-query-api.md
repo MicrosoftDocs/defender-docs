@@ -106,11 +106,7 @@ POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
 
 ```json
 {
-    "Query":"DeviceProcessEvents
-|where InitiatingProcessFileName =~ 'powershell.exe'
-|where ProcessCommandLine contains 'appdata'
-|project Timestamp, FileName, InitiatingProcessFileName, DeviceId
-|limit 2"
+    "Query":"DeviceProcessEvents |where InitiatingProcessFileName =~ 'powershell.exe' |where ProcessCommandLine contains 'appdata' |project Timestamp, FileName, InitiatingProcessFileName, DeviceId |limit 2"
 }
 ```
 
