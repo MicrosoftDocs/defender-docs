@@ -30,9 +30,9 @@ Microsoft Defender for Endpoint security policies can now be distributed as cont
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
-The original policy’s page also shows the overall distribution status and lists recipient tenants and tenant groups.
+The original policy’s page also shows the overall distribution status and lists recipient tenants and distribution profiles. <!--this still reads tenant groups?-->
 
-For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-tenantgroups.md).
+For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-distribution-profiles.md).
 
 ### Tenant groups in multitenant management renamed to distribution profiles
 
