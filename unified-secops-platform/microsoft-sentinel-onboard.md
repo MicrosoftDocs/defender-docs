@@ -96,9 +96,9 @@ This procedure describes how to onboard a Microsoft Sentinel-enabled workspace t
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 
-1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel. In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. 
+1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel.
 
-  This step isn't needed for any subsequent workspaces you onboard to Defender.
+    In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. This step isn't needed for any subsequent workspaces you onboard to Defender.
   
 1. Select **Home** > **Connect a workspace**.
 
