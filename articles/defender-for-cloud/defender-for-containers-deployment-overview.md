@@ -32,15 +32,6 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 - Runtime protection and threat detection
 - No cross-cloud connector required
 
-### [Arc-enabled Kubernetes](defender-for-containers-arc-overview.md)
-
-For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
-
-- Hybrid cloud security management
-- Support for any CNCF-certified Kubernetes distribution
-- Centralized security through Azure
-- Works with Rancher, Tanzu, and more
-
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
 
 For Amazon Elastic Kubernetes Service clusters:
@@ -61,17 +52,14 @@ For Google Kubernetes Engine clusters, Defender for Containers provides:
 - GCR and Artifact Registry scanning
 - Support for GKE Autopilot
 
-## Common features across all environments
+### [Arc-enabled Kubernetes (Preview)](defender-for-containers-arc-overview.md)
 
-Defender for Containers provides the following key features across all supported environments:
+For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
 
-- **Vulnerability assessment** - Continuously scans container images for known vulnerabilities
-- **Runtime threat protection** - Real-time detection of threats and anomalous behavior in your Kubernetes clusters
-- **Security posture management** - Identifies misconfigurations and provides hardening recommendations
-- **Compliance assessment** - Evaluates clusters against industry standards like CIS Kubernetes Benchmark
-- **Network security** - Monitors and alerts on suspicious network activities
-- **File integrity monitoring** - Detects changes to critical system files
-- **Kubernetes audit log analysis** - Analyzes API server audit logs for security events
+- Hybrid cloud security management
+- Support for any CNCF-certified Kubernetes distribution
+- Centralized security through Azure
+- Works with Rancher, Tanzu, and more
 
 ## Prerequisites
 
@@ -82,6 +70,7 @@ Before deploying Defender for Containers, ensure you have:
 - Owner or Contributor role on the subscription
 - Kubernetes cluster version 1.19 or later (version support varies by provider)
 - Network connectivity to Azure services
+- Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
 
 ## Deployment options
 
@@ -90,40 +79,6 @@ For each environment, you can choose between:
 - **Portal deployment** - Guided experience through Azure portal
 - **Programmatic deployment** - Automation using CLI, API, or Infrastructure as Code
 
-## Key capabilities across all environments
-
-Defender for Containers provides comprehensive protection through three main pillars:
-
-### Vulnerability assessment
-
-- **Container registry scanning** - Continuously scans images in ACR, ECR, GAR, GCR, Docker Hub, and JFrog Artifactory
-- **Runtime vulnerability assessment** - Identifies vulnerabilities in running containers (registry-based and agentless)
-- **Operating system coverage** - Supports major Linux distributions and Windows Server
-- **Language-specific package detection** - Scans for vulnerabilities in Python, Node.js, .NET, Java, and more
-
-### Runtime protection
-
-- **Control plane detection** - Monitors Kubernetes audit logs for suspicious API activities.
-- **Workload detection** - Provides real-time threat detection for running containers.
-- **Binary drift detection** - Identifies unauthorized executables in containers.
-- **DNS detection** (Preview) - Monitors DNS activities for threats.
-- **Advanced hunting in XDR** (Preview) - Integrates with Microsoft XDR for investigation.
-- **Malware detection** - Scans for known malware (availability varies by platform).
-
-### Security posture management
-
-- **Agentless discovery** - Uses API-based discovery of clusters, configurations, and deployments.
-- **Control plane hardening** - Evaluates cluster configurations against security benchmarks.
-- **Workload hardening** - Provides Kubernetes workload protection recommendations.
-- **CIS Kubernetes Benchmark** - Assesses compliance against industry standards.
-- **Attack path analysis** - Identifies potential attack vectors in your environment.
-- **Enhanced risk hunting** - Enables proactive security investigation through Security Explorer.
-
-### Additional capabilities
-
-- **Gated deployment** (Preview) - Controls image deployment based on security policies.
-- **Comprehensive inventory** - Offers full visibility into containers, images, and configurations.
-- **Integration with cloud-native services** - Provides native support for each cloud provider's container services.
 
 > [!NOTE]
 > Feature availability varies by platform and deployment method. For detailed platform-specific capabilities, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).

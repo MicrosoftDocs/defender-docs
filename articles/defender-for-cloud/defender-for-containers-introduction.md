@@ -24,16 +24,6 @@ Defender for Containers assists you with four core domains of container security
 
 You can learn more by watching this video from the Defender for Cloud in the Field video series: [Microsoft Defender for Containers](episode-three.md).
 
-## Microsoft Defender for Containers plan availability
-
-| Aspect | Details |
-|--|--|
-| Release state: | General availability (GA)<br> Certain features are in preview. For a full list, see the [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md)|
-| Feature availability | Refer to the [Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) for additional information on feature release state and availability|
-| Pricing: | **Microsoft Defender for Containers** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). |
-| Required roles and permissions: | * To deploy the required components, see the [permissions for each of the components](monitoring-components.md#defender-for-containers-extensions)<br> * **Security admin** can dismiss alerts<br> * **Security reader** can view vulnerability assessment findings<br> See also [Roles for remediation](permissions.md#roles-used-to-automatically-configure-agents-and-extensions) and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles) |
-| Clouds: | View the [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) to see cloud availability.|
-
 ## Security posture management
 
 ### Agentless capabilities

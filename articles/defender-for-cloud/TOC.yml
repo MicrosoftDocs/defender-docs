@@ -167,7 +167,7 @@
                   href: defender-for-containers-gcp-configure.md
                 - name: Remove
                   href: defender-for-containers-gcp-remove.md
-            - name: Arc-enabled Kubernetes
+            - name: Arc-enabled Kubernetes (Preview)
               items:
                 - name: Overview
                   href: defender-for-containers-arc-overview.md
