@@ -63,6 +63,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |
+| **[CloudStorageAggregatedEvents](advanced-hunting-cloudstorageaggregatedevents-table.md)** (Preview)| Cloud storage activity and related events |
 | **[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)** (Preview)| Insights about potentially suspicious user behaviors that violate user-defined or default policies configured in the Microsoft Purview suite of solutions|
 | **[DataSecurityEvents](advanced-hunting-datasecurityevents-table.md)** (Preview)| Information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions |
 | **[DeviceBaselineComplianceAssessment](advanced-hunting-devicebaselinecomplianceassessment-table.md)** (Preview) | Baseline compliance assessment snapshot, which indicates the status of various security configurations related to baseline profiles on devices |
