@@ -30,7 +30,15 @@ appliesto:
 All Microsoft 365 organizations with cloud mailboxes include anti-spam protection. For more information, see [Anti-spam protection](anti-spam-protection-about.md).
 
 But, there are also specific anti-spam settings that admins can configure on individual mailboxes in Exchange Online:
+When a sender is added to the block list in the email junk configuration, any future emails from that sender will be classified as spam. The email header will include X-Forefront-Antispam-Report: SFV:BLK, indicating the sender is blocked.
 
+The action defined in the anti-spam policy for spam detection will then be applied:
+
+If the configured action is junk, the email will be delivered to the Junk Email folder.
+If the action is quarantine, the email will be quarantined.
+📌 Recommended Action by Microsoft: Set the spam action to junk.
+🔗 https://learn.microsoft.com/en-us/defender-office-365/recommended-settings-for-eop-and-office365
+using the default value of the spam action :
 - **Deliver messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is delivered to the Junk Email folder of the mailbox. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phishing, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
 
 - **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is moved to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App). Admins can configure the safelist collection on any user's mailbox.
