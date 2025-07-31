@@ -17,10 +17,12 @@ ms.custom:
 
 # Detect threats by using hunting livestream in Microsoft Sentinel
 
-Use hunting livestream to create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query. 
+Use hunting livestream to create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query.
 
-> [!NOTE]
-> This article is about **Hunting** in Microsoft Sentinel, which also exists in Defender. For **Advanced hunting** in Microsoft Defender, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+> [!IMPORTANT]
+> Microsoft Sentinel Livestream is scheduled for deprecation by the end of September when Livestream will be removed from the UI. For ongoing or future needs, consider using Logic Apps or summary tables to accomplish similar scenarios. Additional guidance and education will be provided to help you transition your workflows.
+
+This article is about **Hunting** in Microsoft Sentinel, which also exists in Defender. For **Advanced hunting** in Microsoft Defender, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
