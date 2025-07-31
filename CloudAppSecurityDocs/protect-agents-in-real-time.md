@@ -14,7 +14,7 @@ ms.service: defender-for-cloud-apps
 
 As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations face new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, trigger unintended tool executions, or exploit data sources to escalate privileges or exfiltrate data.
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and blocks suspicious behavior without disrupting the end-user experience.
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent acts. This evaluation occurs during runtime and blocks suspicious behavior without disrupting the end-user experience.
 
 If Microsoft Defender determines that a request is suspicious:
 
@@ -64,7 +64,7 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 1. Verify that the Microsoft 365 App Connector status shows **Connected**.
 
 > [!IMPORTANT]
-> If the Microsoft 365 connector isn’t connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't be available in the Microsoft Defender portal.
+> If the Microsoft 365 connector isn’t connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't show in the Microsoft Defender portal.
 
 1. **Turn on real-time protection during agent runtime**:
     1. Enter the App ID provided by your Power Platform administrator.
