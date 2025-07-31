@@ -23,7 +23,7 @@ This procedure describes how to get an initial, general picture of your cloud di
 
     For example:
 
-    :::image type="content" source="media/cloud-discovery-dashboard.png" alt-text="Screenshot of the Cloud discovery dashboard":::
+    :::image type="content" source="media/cloud-discovery-dashboard.png" alt-text="Screenshot of the Cloud discovery dashboard" lightbox="media/cloud-discovery-dashboard.png":::
 
     Supported apps include Windows and macOS apps, which are both listed under the **Defender - managed endpoints** stream.
 
@@ -57,7 +57,8 @@ For example, if you want to identify commonly used, risky cloud storage and coll
 
 1. Set the **Security risk factor** for **Data at rest encryption** equals **Not supported**. Then set **Risk score** equals 6 or lower.
 
-    ![Screenshot of sample discovered app filters.](media/discovered-app-filters.png)
+
+    :::image type="content" source="media/discovered-app-filters.png" alt-text="Screenshot of discovered app filters." lightbox="media/discovered-app-filters.png":::
 
 After the results are filtered, [unsanction and block](governance-discovery.md) them by using the bulk action checkbox to unsanction them all in one action. Once they're unsanctioned, use a blocking script to block them from being used in your environment.
 
@@ -66,9 +67,12 @@ You also might want to identify specific app instances that are in use by invest
 :::image type="content" source="media/discovered-apps/subdomains-image.png" alt-text="Subdomain filter.":::
 
 > [!NOTE]
-> Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
+> The feature of discovered subdomains will be deprecated by Sep 31st, 2025. Post this, no support for discovery subdomains will be provided.
+> 
+>  Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
 >
 > If Defender for Cloud Apps can't match the subdomain detected in the traffic logs with the data stored in the app catalog, the subdomain is tagged as **Other**.
+
 
 ## Discover resources and custom apps
 
@@ -83,11 +87,13 @@ For example, if a large amount of data is uploaded, discover what resource it's 
 
 1. In the Microsoft Defender portal, under **Cloud Apps**, select **Cloud discovery**. Then choose the  **Discovered resources** tab.
 
-    ![Screenshot of the discovered resources menu.](media/discovered-resources-menu.png)
+    :::image type="content" source="media/discovered-resources-menu.png" alt-text="Screenshot that shows the discovered resources menu." lightbox="media/discovered-resources-menu.png":::
 
 1. In the **Discovered resources** page, drill down into each resource to see what kinds of transactions occurred, who accessed it, and then drill down to investigate the users even further.
 
-   ![Screenshot of the Discovered resources tab.](media/discovery-resources.png)
+
+    :::image type="content" source="media/discovery-resources.png" alt-text="Screenshot that shows a list of discovered resources.":::
+
 
 1. For custom apps, select the options menu at the end of the row and then select **Add new custom app**. This opens the **Add this app** dialog, where you can name and identify the app so it can be included in the cloud discovery dashboard.
 
@@ -104,7 +110,7 @@ The best way to get an overview of Shadow IT use across your organization is by 
 1. Optionally, change the report name, and then select **Generate**.
    
 > [!NOTE]
-> The executive summary report is revamped to a 6-pager report with a goal to provide a clear, concise & actionable overview while preserving the depth and integrity of the original analysis.
+> The executive summary report is revamped to a six-pager report with a goal to provide a clear, concise & actionable overview while preserving the depth and integrity of the original analysis.
 
 ## Exclude entities
 
@@ -118,10 +124,12 @@ If you have system users, IP addresses, or devices that are noisy but uninterest
 
 1. Add a user alias, IP address, or device name. We recommend adding information about why the exclusion was made.
 
-    ![Screenshot of excluding a user.](media/exclude-user.png "exclude user")
+    :::image type="content" source="media/exclude-user.png" alt-text="Screenshot that shows the option to exclude users from the Cloud Discovery report." lightbox="media/exclude-user.png":::
+
 
 >[!NOTE]
->All entity exclusions apply to newly received data only. Historical data of the excluded entities remains through the retention period (90 days).
+> - All entity exclusions apply to newly received data only. Historical data of the excluded entities remains through the retention period (90 days).
+> - Entity exclusion is only supported for the Global report stream. Entities from Microsoft Defender for Endpoint and the Cloud App Security proxy stream aren't supported for exclusion.
 
 ## Manage continuous reports
 
@@ -141,10 +149,11 @@ Custom continuous reports provide you with more granularity when monitoring your
 
 1. Set the filters you want on the data. These filters can be **User groups**, **IP address tags**, or **IP address ranges**. For more information on working with IP address tags and IP address ranges, see [Organize the data according to your needs](ip-tags.md).
 
-    ![Screenshot of creating a custom continuous report.](media/create-custom-continuous-report.png)
+
+    :::image type="content" source="media/create-custom-continuous-report.png" alt-text="Screenshot that shows how to create a continuous report.":::
 
 > [!NOTE]
-> All custom reports are limited to a maximum of 1 GB of uncompressed data. If there is more than 1 GB of data, the first 1 GB of data will be exported into the report.
+> All custom reports are limited to a maximum of 1 GB of uncompressed data. If there's more than 1 GB of data, the first 1 GB of data will be exported into the report.
 
 ## Deleting cloud discovery data
 
@@ -166,10 +175,10 @@ We recommend deleting cloud discovery data in the following cases:
 
 1. Select the **Delete** button.
 
-    ![Screenshot of deleting cloud discovery data.](media/delete-data.png "delete data")
+    :::image type="content" source="media/delete-data.png" alt-text="Screenshot of deleting cloud discovery data." lightbox="media/delete-data.png":::
 
 > [!NOTE]
-> The deletion process takes a few minutes and is not immediate.
+> The deletion process takes a few minutes and isn't immediate.
 
 ## Next steps
 

@@ -26,8 +26,8 @@ The following table lists all overrides, a description of what that override mea
 
 | Override |Description|Notes|
 | -------- | -------- | -------- |
-| Third Party Filter  |We detected you're using a third party for your MX record and have an SCL-1 transport rule, overriding filtering and Secure by Default.||
-|Admin initiated time travel|Admin triggered investigation, which leads to zero-hour autopurge (ZAP) modifying the delivery location of messages.|[Learn more about ZAP.](../zero-hour-auto-purge.md)|
+| Third Party Filter  |We detected your MX record points to a non-Microsoft service and you have an SCL-1 transport rule, which overrides most Microsoft 365 filtering and Secure by Default.||
+|Admin initiated time travel|Admin triggered investigation, which leads to zero-hour auto purge (ZAP) modifying the delivery location of messages.|[Learn more about ZAP.](../zero-hour-auto-purge.md)|
 |Antimalware policy block by file type|The file extension for an attachment within the message matched a banned file type listed in the anti-malware policy for the recipient|You may wish to tweak the file extensions listed in the Common attachments filter section of the anti-malware policy. [Learn more](../anti-malware-policies-configure.md).|
 |Antispam policy settings|The message matched a custom option in the anti-spam policy for the recipient. For example: "SPF record: hard fail" or "Empty messages".|Check the "Mark as spam" options in the anti-spam policy for the affected recipient. [Learn more](../anti-spam-policies-configure.md).|
 |Connection policy|The message originated from an allowed / blocked IP within your connection filter policy.|Check the "Connection filter policy" within the anti-spam policies section of the security portal. [Learn more](../connection-filter-policies-configure.md).|

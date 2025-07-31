@@ -151,7 +151,7 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
 
 ### How do you know these procedures worked?
 
-- To verify that you've successfully turned on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, use either of the following steps:
+- To verify you successfully turned on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, use either of the following steps:
 
   - In the Microsoft Defender portal, go to **Policies & rules** \> **Threat Policies** \> **Policies** section \> **Safe Attachments**, select **Global settings**, and verify the value of the **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** setting.
 
@@ -163,7 +163,7 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
 
     For detailed syntax and parameter information, see [Get-AtpPolicyForO365](/powershell/module/exchange/get-atppolicyforo365).
 
-- To verify that you've successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to verify the property value:
+- To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to verify the property value:
 
   ```powershell
   Get-SPOTenant | Format-List DisallowInfectedFileDownload
@@ -171,7 +171,7 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
 
   For detailed syntax and parameter information, see [Get-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
 
-- To verify that you've successfully configured an alert policy for detected files, use either of the following methods:
+- To verify you successfully configured an alert policy for detected files, use either of the following methods:
   - In the Microsoft Defender portal at <https://security.microsoft.com/alertpolicies>, select the alert policy, and verify the settings.
   - In Security & Compliance PowerShell, replace \<AlertPolicyName\> with the name of the alert policy, run the following command, and verify the property values:
 
