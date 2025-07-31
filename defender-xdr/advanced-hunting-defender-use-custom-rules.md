@@ -70,7 +70,7 @@ This feature was previously only available in the Logs feature in Microsoft Sent
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
 
 >[!NOTE]
-> Analytic rules don't support the `arg()` operator.
+> The `arg()` operator isn't supported for analytics rules.
 
 In the query editor, enter *arg("").* followed by the Azure Resource Graph table name. 
 
