@@ -53,7 +53,7 @@ Here’s an example of the policy setting in the Microsoft Entra admin center.
 
 You see the following error when assigning content to deployment profiles:
 
-:::image type="content" source="media/mto-troubleshoot/tenant-perms-error-small.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
+:::image type="content" source="media/mto-troubleshoot/tenant-perms-error.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
 
 When a cross-cloud tenant is added to a deployment profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won't be available for content management, which causes the error. This is a recognized limitation of cross-cloud tenant management and is currently under review.
 
