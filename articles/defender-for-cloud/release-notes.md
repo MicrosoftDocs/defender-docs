@@ -35,7 +35,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud
 
-August 3rd, 2025
+August 3, 2025
 
 [Microsoft Defender Cloud Security Posture Management (CSPM)](/defender-for-cloud/tutorial-enable-cspm-plan) is generally available for government cloud customers. The service delivers cloud security posture management capabilities to U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies, and enhances cloud security and compliance.
 
@@ -62,7 +62,7 @@ Microsoft Defender for Cloud's **Regulatory Compliance** is expanding its suppor
 
 These frameworks are now available in **public preview** and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
 
-For more information see: [Regulatory compliance standards in Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
+For more information, see: [Regulatory compliance standards in Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
 
 ### Scanning support for Chainguard container images and Wolfi
 
@@ -92,7 +92,7 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 
 - Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
-For more information see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
+For more information, see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
 ### Optional index tags for storing malware scanning results (Preview)
 
@@ -294,7 +294,7 @@ The default cap value for on-upload malware scanning has been updated from 5,000
 
 When Defender for Storage Malware Scanning is enabled for these subscriptions, the default cap for on-upload malware scanning will be set to 10,000GB. This cap is adjustable to meet your specific needs.
 
-For more detailed information, please refer to the section on [Malware scanning - billing per GB, monthly capping, and configuration](defender-for-storage-introduction.md)
+For more detailed information, refer to the section on [Malware scanning - billing per GB, monthly capping, and configuration](defender-for-storage-introduction.md)
 
 ### General Availability of API Security Posture Management native integration within Defender CSPM Plan
 
