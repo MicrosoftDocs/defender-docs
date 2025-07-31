@@ -1,7 +1,7 @@
 ---
 title: Respond to Defender open-source database alerts
 description: Configure Microsoft Defender for open-source relational databases to detect potential security threats.
-ms.date: 05/01/2024
+ms.date: 07/31/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
@@ -17,7 +17,7 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 - [Azure Database for MySQL](/azure/mysql/)
 - [Azure Database for MariaDB](/azure/mariadb/)
 
-and for RDS instances on AWS (Preview):
+For Relational Database Service (RDS) instances on AWS (Preview):
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -25,7 +25,7 @@ and for RDS instances on AWS (Preview):
 - MySQL
 - MariaDB
 
-To get alerts from the Microsoft Defender plan you'll first need to enable Defender for open-source relational databases on your [Azure](enable-defender-for-databases-azure.md) or [AWS](enable-defender-for-databases-aws.md) account.
+To get alerts, you need to [enable Defender for open-source relational databases on your Azure](enable-defender-for-databases-azure.md), or [enable Defender for open-source relational databases on your Amazon Web Services (AWS)](enable-defender-for-databases-aws.md) account.
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
@@ -33,22 +33,22 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
 
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+- You must [enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - **AWS users only** - Connect your [AWS account](quickstart-onboard-aws.md).
 
 ## Respond to alerts in Defender for Cloud
 
-When Microsoft Defender for Cloud is enabled on your database, it detects anomalous activities and generates alerts. These alerts are available from multiple locations, including:
+When Defender for Cloud is enabled on your database, it detects anomalous activities and generates alerts. These alerts are available from multiple locations, including:
 
 - In the Azure portal:
-  - **Microsoft Defender for Cloud's security alerts page** - Shows alerts for all resources protected by Defender for Cloud in the subscriptions you've got permissions to view.
+  - **Defender for Cloud's security alerts page** - Shows alerts for all resources protected by Defender for Cloud in the subscriptions you've got permissions to view.
   - The resource's **Microsoft Defender for Cloud** page - Shows alerts and recommendations for one specific resource.
 
-- In the inbox of whoever in your organization has been [designated to receive email alerts](configure-email-notifications.md).  
+- The designated person in your organization [receives email alerts](configure-email-notifications.md) in their inbox.  
 
 > [!TIP]
-> A live tile on [Microsoft Defender for Cloud's overview dashboard](overview-page.md) tracks the status of active threats to all your resources including databases. Select the security alerts tile to go to the Defender for Cloud security alerts page and get an overview of active threats detected on your databases.
+> A live tile on [Defender for Cloud's overview dashboard](overview-page.md) tracks the status of active threats to your resources including databases. Select the security alerts tile to navigate to the Defender for Cloud security alerts page and get an overview of active threats detected on your databases.
 >
 > For detailed steps and the recommended method to respond to security alerts, see [Respond to a security alert](managing-and-responding-alerts.yml#respond-to-a-security-alert).
 
@@ -64,7 +64,7 @@ Defender for Cloud sends email notifications when it detects anomalous database 
 
     :::image type="content" source="media/defender-for-databases-usage/db-alerts-page.png" alt-text="Active threats on one or more subscriptions are shown in Microsoft Defender for Cloud." lightbox="media/defender-for-databases-usage/db-alerts-page.png":::
 
-1. For additional details and recommended actions for investigating the current threat and remediating future threats, select a specific alert.
+1. For extra details and recommended actions for investigating the current threat and remediating future threats, select a specific alert.
 
     :::image type="content" source="media/defender-for-databases-usage/specific-alert-details.png" alt-text="Screenshot that shows the details of a specific alert." lightbox="media/defender-for-databases-usage/specific-alert-details.png":::
 
