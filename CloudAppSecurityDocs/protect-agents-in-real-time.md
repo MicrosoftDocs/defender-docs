@@ -40,7 +40,7 @@ This continuous monitoring helps protect AI agents at runtime.
 
 ## Prerequisites
 
-Before enabling Real-time agent protection during runtime, make sure:
+Before enabling real-time agent protection during runtime, make sure:
 
 - You have a valid Microsoft Defender license (included in Microsoft 365 E5 Security).
 
@@ -54,9 +54,9 @@ Before enabling Real-time agent protection during runtime, make sure:
 > A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
 
 
-## Turn on Real-time agent protection during runtime
+## Turn on real-time agent protection during runtime
 
-Follow these steps to enable Real-time agent protection during runtime in the Microsoft Defender portal:
+Follow these steps to enable real-time agent protection during runtime in the Microsoft Defender portal:
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
@@ -67,7 +67,7 @@ Follow these steps to enable Real-time agent protection during runtime in the Mi
 > [!IMPORTANT]
 > If the Microsoft 365 connector isn’t connected, Real-time agent protection during runtime will still block suspicious activity on the AI agent. However, alerts and incidents won’t be visible in the Microsoft Defender portal for customer review.
 
-1. **Turn on Real-time protection during agent runtime**:
+1. **Turn on real-time protection during agent runtime**:
     1. Enter the App ID provided by your Power Platform administrator.
     1. Select **Save**.
     1. Copy the URL provided.
