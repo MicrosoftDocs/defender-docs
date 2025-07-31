@@ -39,7 +39,7 @@ August 3, 2025
 
 [Microsoft Defender Cloud Security Posture Management (CSPM)](/azure/defender-for-cloud/tutorial-enable-cspm-plan) is generally available for government cloud customers. The service delivers cloud security posture management capabilities to U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies, and enhances cloud security and compliance.
 
-Azure Government cloud includes all [Defender for Servers Plan 2 (P2)](/azure/defender-for-cloud/support-matrix-cloud-environment) capabilities to match Microsoft Commercial cloud services.
+All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
 Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
 
