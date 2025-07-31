@@ -9,10 +9,6 @@ ms.service: defender-for-cloud-apps
 
 # Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 
-This article provides an overview of the real-time protection during agent runtime capability in Microsoft Defender and explains how to enable it for Microsoft Copilot Studio AI agents.
-
-> [!NOTE]
-> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
 
 ## Overview
 
@@ -37,6 +33,9 @@ Microsoft Defender uses behavioral signals to identify and block:
 - Attempts to manipulate the agent's operational flow
 
 This continuous monitoring helps protect AI agents at runtime.
+
+> [!NOTE]
+> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
 
 ## Prerequisites
 
