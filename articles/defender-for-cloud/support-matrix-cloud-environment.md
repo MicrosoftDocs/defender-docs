@@ -67,7 +67,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Agentless containers vulnerability assessment |GA|GA|NA|
 | API security posture management (Preview) |Public Preview|NA|NA|
 |**DEFENDER FOR CLOUD PLANS** | | ||
-|[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | NA | NA|
+|[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA|
 |[Defender for AI Services](ai-threat-protection.md) | GA | NA | NA |
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
