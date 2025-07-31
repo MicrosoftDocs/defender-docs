@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 07/06/2025
 ms.author: monaberdugo
 author: mberdugo
+ms.reviewer: Ben Nick
 ms.collection: usx-security
 appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
