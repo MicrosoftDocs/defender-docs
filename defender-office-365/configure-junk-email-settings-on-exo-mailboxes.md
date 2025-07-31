@@ -16,7 +16,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 07/31/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -30,20 +30,14 @@ appliesto:
 All Microsoft 365 organizations with cloud mailboxes include anti-spam protection. For more information, see [Anti-spam protection](anti-spam-protection-about.md).
 
 But, there are also specific anti-spam settings that admins can configure on individual mailboxes in Exchange Online:
-When a sender is added to the block list in the email junk configuration, any future emails from that sender will be classified as spam. The email header will include X-Forefront-Antispam-Report: SFV:BLK, indicating the sender is blocked.
 
-The action defined in the anti-spam policy for spam detection will then be applied:
-
-If the configured action is junk, the email will be delivered to the Junk Email folder.
-If the action is quarantine, the email will be quarantined.
-📌 Recommended Action by Microsoft: Set the spam action to junk.
-🔗 https://learn.microsoft.com/en-us/defender-office-365/recommended-settings-for-eop-and-office365
-using the default value of the spam action :
 - **Deliver messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is delivered to the Junk Email folder of the mailbox. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phishing, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
 
-- **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is moved to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App). Admins can configure the safelist collection on any user's mailbox.
+- **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is delivered to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA). Admins can configure the safelist collection on any user's mailbox.
 
-Microsoft 365 is able to deliver messages to the Junk Email folder based on the spam filtering verdict action **Move message to Junk Email folder** and the Blocked Senders list in the mailbox, and prevent messages from being delivered to the Junk Email folder based on the Safe Senders list on the mailbox.
+Microsoft 365 adds the header `X-Forefront-Antispam-Report: SFV:BLK` to incoming messages from senders in a user's Blocked Senders list, and any future messages from that sender are classified as spam. The message is delivered to the user's Junk Email folder or to quarantine based on the action configured in the applicable anti-spam policy (our [recommended action](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) is **Move message to Junk Email folder**).
+
+If the sender is a user's Safe Senders list, the message is delivered to their Inbox.
 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
