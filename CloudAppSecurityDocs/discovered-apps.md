@@ -67,9 +67,12 @@ You also might want to identify specific app instances that are in use by invest
 :::image type="content" source="media/discovered-apps/subdomains-image.png" alt-text="Subdomain filter.":::
 
 > [!NOTE]
-> Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
+> The feature of discovered subdomains will be deprecated by Sep 31st, 2025. Post this, no support for discovery subdomains will be provided.
+> 
+>  Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
 >
 > If Defender for Cloud Apps can't match the subdomain detected in the traffic logs with the data stored in the app catalog, the subdomain is tagged as **Other**.
+
 
 ## Discover resources and custom apps
 
