@@ -41,6 +41,7 @@ August 3, 2025
 
 Azure Government cloud includes all [Defender for Servers Plan 2 (P2)](/azure/defender-for-cloud/support-matrix-cloud-environment) capabilities to match Microsoft Commercial cloud services.
 
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
 
 ## July 2025
 
