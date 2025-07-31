@@ -12,9 +12,9 @@ ms.service: defender-for-cloud-apps
 
 ## Overview
 
-As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations are facing new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
+As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations face new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and helps block suspicious behavior without disrupting the end-user experience.
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and block suspicious behavior without disrupting the end-user experience.
 
 If Microsoft Defender determines that a request is suspicious:
 
@@ -32,7 +32,7 @@ Microsoft Defender uses behavioral signals to identify and block:
 - Cross-prompt injection attempts (XPIA)
 - Attempts to manipulate the agent's operational flow
 
-This continuous monitoring helps protect AI agents at runtime.
+This capability adds a security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
 
 > [!NOTE]
 > Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
