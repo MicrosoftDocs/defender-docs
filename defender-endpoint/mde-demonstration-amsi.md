@@ -66,9 +66,9 @@ In this demonstration article, you have two engine choices to test AMSI:
 
    :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-vbscript-save-script.png" alt-text="Screenshot showing VBScript to save as AMSI_vbscript.vbs" lightbox="media/mde-demonstrations-amsi/test-amsi-vbscript-save-script.png":::
 
-2. On your Windows Device, open Command Prompt as an administrator.
+2. On your Windows Device, open Command Prompt as an administrator and navigate to the folder containing the vbscript.
 
-2. Type `wscript AMSI_vbscript.js`, and then press **Enter**.
+2. Type `wscript AMSI_vbscript.vbs`, and then press **Enter**.
 
    The result should be as follows:
 
