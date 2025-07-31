@@ -1,24 +1,24 @@
 ---
-title: Protect AI agents in real time
+title: Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 description: Learn how to enable and manage real-time runtime protection for Microsoft Copilot Studio AI agents using Microsoft Defender.
 ms.date: 07/27/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
+#customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions during runtime so that I can reduce security risks to my organization.
 ---
 
-# Protect AI agents in real time (Preview)
+# Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 
-
-This article describes how to enable real-time agent protection in Microsoft Defender for AI agents built using the Microsoft Copilot Studio custom engine.
+This article provides an overview of the real-time protection during agent runtime capability in Microsoft Defender and explains how to enable it for Microsoft Copilot Studio AI agents.
 
 > [!NOTE]
-> Real-time agent protection currently supports only agents created with the Copilot Studio custom engine.
+> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
 
 ## Overview
 
-As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations are facing new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Copilot Studio agents can perform tasks such as summarizing emails or automating workflows using Microsoft 365 and other internal data sources. During runtime, attackers attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
+As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations are facing new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
-Real-time agent protection in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and helps block suspicious behavior without disrupting the end-user experience.
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting every user message before the agent acts. This evaluation occurs during runtime and helps block suspicious behavior without disrupting the end-user experience.
 
 If Microsoft Defender determines that a request is suspicious:
 
@@ -40,37 +40,40 @@ This continuous monitoring helps protect AI agents at runtime.
 
 ## Prerequisites
 
-Before enabling real-time agent protection, make sure:
+Before enabling Real-time agent protection during runtime, make sure:
 
 - You have a valid Microsoft Defender license (included in Microsoft 365 E5 Security).
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
-- A Power Platform Administrator is available to configure the integration on the Power Platform side.
-
 - A Microsoft Entra ID application is registered for authentication.
 
 - You must get the App ID from your Power Platform administrator.
 
+> [!NOTE]
+> A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
 
-## Turn on real time agent protection
 
-Follow these steps to enable real-time agent protection in the Microsoft Defender portal:
+## Turn on Real-time agent protection during runtime
+
+Follow these steps to enable Real-time agent protection during runtime in the Microsoft Defender portal:
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
 1. Under **Microsoft 365 connector**, select:
-    1. **Microsoft Entra ID Management events**.
-    1. **Microsoft 365 activities**.
-For more details on how to set up the Microsoft 365 App Connector, see [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
+    1. **Microsoft Entra ID Management events** and **Microsoft 365 activities**. For more details, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
 1. Verify that the Microsoft 365 App Connector status shows **Connected**.
-1. **Turn on Real time protection during agent runtime**:
+
+> [!IMPORTANT]
+> If the Microsoft 365 connector isn’t connected, Real-time agent protection during runtime will still block suspicious activity on the AI agent. However, alerts and incidents won’t be visible in the Microsoft Defender portal for customer review.
+
+1. **Turn on Real-time protection during agent runtime**:
     1. Enter the App ID provided by your Power Platform administrator.
     1. Select **Save**.
     1. Copy the URL provided.
     1. Share the URL with the Power Platform administrator. 
 
-:::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on real time agent protection in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
+:::image type="content" source="media/protect-agents-real-time/turn-on-real-time-agent-protection.png" alt-text="Screenshot that shows how to turn on Real time agent protection during runtime in the Defender portal." lightbox="media/protect-agents-real-time/turn-on-real-time-agent-protection.png":::
 
 ## Finalize configuration in Power Platform
 
