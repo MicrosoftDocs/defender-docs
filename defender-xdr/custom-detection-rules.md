@@ -75,7 +75,7 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 
 To create a custom detection rule, the query must return the following columns:
-1. `Timestamp` - This column is used to set the timestamp for generated alerts. The `Timestamp` that is returned from the query should not have been manipulated in the query and should be returned exactly as it appears in the raw event.
+1. `Timestamp` - This column is used to set the timestamp for generated alerts. The `Timestamp` that is returned from the query shouldn't have been manipulated in the query and should be returned exactly as it appears in the raw event.
    
 3. A column or combination of columns that uniquely identify the event in Defender XDR tables:
       - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
@@ -109,7 +109,7 @@ There are various ways to ensure more complex queries return these columns. For 
 > [!IMPORTANT]
 > Avoid filtering custom detections using the `Timestamp` column. The data used for custom detections is prefiltered based on the detection frequency.
 
-The sample query below counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
+The following sample query counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
 
 ```kusto
 DeviceEvents
@@ -150,7 +150,7 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 > [!TIP]
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
-When you edit a rule, the changes are applied in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time. There might also be small delays in specific runs, whereby the configured frequency is not 100% accurate.
+When you edit a rule, the changes are applied in the next run time scheduled according to the frequency you set. The rule frequency is based on the event timestamp and not the ingestion time. There might also be small delays in specific runs, whereby the configured frequency isn't 100% accurate.
 
 
 ##### Continuous (NRT) frequency
@@ -166,7 +166,7 @@ Selecting **Migrate now** gives you a list of all compatible rules according to 
 
 :::image type="content" source="media/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-compatible-queries.png":::
 
-Once you click **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
+Once you select **Save**, the selected rules' frequency gets updated to Continuous (NRT) frequency.
 
 ###### Queries you can run continuously
 
@@ -206,25 +206,25 @@ Near real-time detections are supported for the following tables:
 > Only columns that are generally available can support **Continuous (NRT)** frequency.
 
 ###### Custom frequency for Microsoft Sentinel data (Preview)
-Microsoft Sentinel customers that are onboarded to Microsoft Defender have the option to select Custom frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
+Microsoft Sentinel customers that are onboarded to Microsoft Defender can select **Custom** frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
 
-When you select this frequency option, the **Run query every input** component is displayed, where you type the desired frequency for the rule and use a dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When selecting a frequency, the lookback period is determined automatically with the following logic: 
-1.	For detections set to run more frequently than once a day, the lookback is 4 times the frequency. For example, if the frequency is 20 minutes, the lookback will be 20*4 = 80 minutes.  
-2.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every 3 days, the lookback is 30 days  
+When you select this frequency option, the **Run query every input** component is displayed, where you type the desired frequency for the rule and use a dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically with the following logic: 
+1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback will be 20*4 = 80 minutes.  
+2.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days  
 
 > [!IMPORTANT]
 >When selecting a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
 >1.	You must have data available in Microsoft Sentinel
->2.	Defender XDR data we will not support scoping, since Microsoft Sentinel does not support scoping
+>2.	Defender XDR data we won't support scoping, since Microsoft Sentinel doesn't support scoping
 
 ### 3. Define alert enrichment details 
-You can enrich alerts by providing and defining additional details, allowing you to:
+You can enrich alerts by providing and defining more details, allowing you to:
 -	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
 -	[Choose impacted entities](#choose-impacted-entities)
 -	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
 
 #### Create a dynamic alert title and description (Preview)
-You can dynamically craft your alert’s title and description using the results of your query to make them accurate and indicative. This can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
+You can dynamically craft your alert’s title and description using the results of your query to make them accurate and indicative. This feature can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
 
 To dynamically configure the alert’s title or description, integrate them into the **Alert details** section by using the free text names of columns that are available in your query results and surrounding them with double curly brackets. 
 
@@ -243,12 +243,12 @@ You can select only one column for each entity type (mailbox, user, or device). 
 
 ##### Expanded entity mapping (Preview)
 
-You can link a wide range of entity types to your alerts. Linking more entities helps our correlation engine group alerts to the same incidents and to correlate incidents together.  If you are a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
+You can link a wide range of entity types to your alerts. Linking more entities helps our correlation engine group alerts to the same incidents and to correlate incidents together. If you're a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
 
 For Microsoft Defender XDR data, the entities are automatically selected. If the data is from Microsoft Sentinel, you need to select the entities manually. 
 
 >[!NOTE]
->Entities impact how alerts are grouped into incidents so make sure to carefully review the entities to ensure high incidents’ quality. Learn more about incidents correlation and alerts grouping 
+>Entities impact how alerts are grouped into incidents so make sure to carefully review the entities to ensure high incidents’ quality. Learn more about incidents correlation and alerts grouping. 
 
 There are two sections under the expanded **Entity mapping** section for which you can select entities: 
 -	**Impacted assets** – Impacted assets that appear in the selected events should be added here. The following types of assets can be added: 
@@ -259,7 +259,7 @@ There are two sections under the expanded **Entity mapping** section for which y
     - Azure resource 
     - Amazon Web Services resource 
     - Google Cloud Platform resource 
-- **Related evidence** – Non-assets that appear in the selected events can be added in this section. The supported entity types are: 
+- **Related evidence** – Nonassets that appear in the selected events can be added in this section. The supported entity types are: 
     - Process 
     - File 
     - Registry value 
