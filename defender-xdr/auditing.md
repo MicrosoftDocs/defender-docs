@@ -1,12 +1,12 @@
 ---
 title: How to search the audit logs for actions performed by Defender Experts
 ms.reviewer:
-description: As a tenant administrator, you can use Microsoft Purview to search the audit logs for the actions Microsoft Defender Experts did in your tenant to perform their investigations
+description: As a tenant administrator, you can use Microsoft Purview to search the audit logs for the actions Microsoft Defender Experts did in your tenant to perform their investigations.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,14 +17,15 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 01/14/2025
+ms.date: 08/01/2025
 ---
 
 # Auditing
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
 As a tenant administrator, you can use Microsoft Purview to search the audit logs for the times Microsoft Defender Experts signed into your tenant and the actions they did there to perform their investigations. You can also search the audit logs for the changes done by your tenant administrators to the Defender Experts settings.
 
