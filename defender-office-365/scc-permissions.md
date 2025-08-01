@@ -59,6 +59,7 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 
 |Role group|Description|Default roles assigned|
 |---|---|---|
+|**AI Administrators**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this group to assign read-only permissions to users for Data Security Posture Management for AI.|AI Administrator|
 |**Attack Simulator Administrators**|Don't use this role group. Use the [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) role in Microsoft Entra ID.|Attack Simulator Admin|
 |**Attack Simulator Payload Authors**|Don't use this role group. Use the [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author) role in Microsoft Entra ID.|Attack Simulator Payload Author|
 |**Audit Manager**|Manage Audit log settings and Search, View, and Export Audit logs.|Audit Logs <br/><br/> View-Only Audit Logs|
@@ -82,6 +83,9 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Data Estate Insights Readers**|Provides read-only access to all insights reports across platforms and providers.|Data Map Reader <br/><br/> Insights Reader|
 |**Data Governance**|Grants access to data governance roles within Microsoft Purview.|Data Governance Administrator|
 |**Data Investigator**|Perform searches on mailboxes, SharePoint sites, and OneDrive locations.|Communication <br/><br/> Compliance Search <br/><br/> Custodian <br/><br/> Data Investigation Management <br/><br/> Export <br/><br/> Preview <br/><br/> Review <br/><br/> RMS Decrypt <br/><br/> Search And Purge|
+|**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users in Data Security Posture Management for AI to view prompts and responses of interactions in AI apps.|Data Security AI Content Viewer |
+Data Security AI Viewers
+|**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users for Data Security Posture Management for AI.|Data Security AI Viewer |
 |**Data Security Investigations Administrators**|Administrators for Data Security Investigations that can create and manage all investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Admin <br/><br/> Export <br/><br/> Preview <br/><br/> Review |
 |**Data Security Investigations investigators**|Investigators for Data Security Investigations that can create and manage assigned investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Investigator <br/><br/> Export <br/><br/> Preview <br/><br/> Review |
 |**Data Security Investigations Reviewers**|Reviwers for Data Security Investigations that can create and manage all assigned investigations.|Data Security Investigations Reviewer <br/><br/> Export <br/><br/> Preview <br/><br/> Review |
@@ -140,6 +144,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |---|---|---|
 |**Admin Unit Extension Manager**||Compliance Administrator <br/><br/> Organization Management <br/><br/> Purview Administrators|
 |<sup>\*</sup>**Attack Simulator Admin**|Don't use this role. Use the [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) role in Microsoft Entra ID.|Attack Simulator Administrators|
+|**AI Administrator**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this role for read-only access to all pages in Data Security Posture Management for AI. This role does not have access to read prompts and responses of AI interactions.|AI Administrators|
 |**Attack Simulator Payload Author**||Don't use this role. Use the [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author) role in Microsoft Entra ID.|
 |**Data Map Reader**||Data Estate Insights Admins <br/><br/> Privacy Management <br/><br/> Privacy Management Administrators <br/><br/> Privacy Management Analysts <br/><br/> Privacy Management Contributors <br/><br/> Privacy Management Investigators <br/><br/> Privacy Management Viewers|
 |<sup>\*</sup>**Attack Simulator Payload Author**|Don't use this role in the portals. Use the corresponding role in Microsoft Entra ID.|Attack Simulator Payload Authors|
@@ -174,6 +179,8 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Administrators|
 |<sup>\*</sup>**Data Security Investigations Investigator**|Used to create and manage assigned investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Investigators|
 |<sup>\*</sup>**Data Security Investigations Reviewer**|Used to review assigned investigations in Data Security Investigations.|Data Security Investigations Reviewers|
+| **Data Security AI Content Viewer** | Role for read-only access to prompts and responses of AI interactions in Data Security Posture Management for AI.| Data Security AI Content Viewers |
+| **Data Security AI Viewer** | Role for read-only access to all pages in Data Security Posture Management for AI. This role does not have access to read prompts and responses of AI interactions.| Data Security AI Viewers |
 | **Data Security Viewer** | View access to Data Security Posture Management dashboard insights. Allows users to use Copilot for Security to view details.| Data Security Management |
 |**Device Management**|View and edit settings and reports for device management features.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator|
 |<sup>\*</sup>**Disposition Management**|Control permissions for accessing Manual Disposition in the Defender and compliance portals.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Records Management|
