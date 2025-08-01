@@ -85,7 +85,7 @@ For more information, read [Geographical availability and data residency in Micr
 
 **Can I opt in for the third-party network coverage without an existing Defender Experts license?**
 
-No, you must have an existing Defender Experts license to get third-party network coverage.
+No, you must have an existing Microsoft Defender XDR license to get third-party network coverage.
 
 **What type of third-party data should I choose to be ingested for network signal enrichment?**
 
