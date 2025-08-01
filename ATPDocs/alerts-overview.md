@@ -36,7 +36,7 @@ For example, there are categories for:
 
 For detailed information about each alert see:
 - [Microsoft Defender for Identity classic alerts](alerts-mdi-classic.md)
-- [Microsoft Defender for XDR alerts](alerts-xdr.md)
+- [Microsoft Defender for Identity XDR alerts](alerts-xdr.md)
 
 
 ## See Also
