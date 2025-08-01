@@ -144,6 +144,10 @@ items:
     items:
       - name: Alerts overview
         href: alerts-overview.md
+      - name: Defender for Identity classic alerts
+        href: alerts-mdi-classic.md
+      - name: Defender for Identity XDR alerts
+        href: alerts-xdr.md
       - name: View and manage security alerts
         href: understanding-security-alerts.md
       - name: Investigate security alerts
@@ -152,18 +156,6 @@ items:
         href: monitored-activities.md
       - name: Understanding Network Name Resolution (NNR)
         href: nnr-policy.md
-      - name: Alert categories
-        items:
-        - name: Reconnaissance and discovery alerts
-          href: reconnaissance-discovery-alerts.md
-        - name: Persistence and privilege escalation alerts
-          href: persistence-privilege-escalation-alerts.md
-        - name: Credential access alerts
-          href: credential-access-alerts.md
-        - name: Lateral movement alerts
-          href: lateral-movement-alerts.md
-        - name: Other alerts
-          href: other-alerts.md
   - name: Remediation
     items:
     - name: Remediation actions

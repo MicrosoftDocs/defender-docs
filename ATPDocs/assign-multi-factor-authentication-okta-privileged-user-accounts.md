@@ -12,6 +12,11 @@ ms.reviewer: Himanch
 
 This report lists any Okta privileged accounts that don't have any multifactor authentication (MFA) methods assigned. 
 
+## Prerequisites
+
+To use this security assessment, you must first connect your Okta instance in the Microsoft Defender portal.  
+For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+
 ## Why is a privileged account without MFA a security risk?
 
 All privileged accounts should have multifactor authentication (MFA) enabled to strengthen security. By ensuring that privileged accounts such as Super Admin or Org Admin roles are secured with MFA, organizations can significantly reduce the risk of unauthorized access from compromised credentials. This strategy helps prevent attackers from gaining elevated access, safeguarding sensitive resources and protecting critical administrative functions from abuse.
