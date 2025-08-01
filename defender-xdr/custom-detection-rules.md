@@ -22,14 +22,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 07/29/2025
+ms.date: 08/04/2025
 ---
 
 # Create custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 Custom detection rules are rules you can design and tweak using [advanced hunting](advanced-hunting-overview.md) queries. These rules let you proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -205,11 +205,93 @@ Near real-time detections are supported for the following tables:
 > [!NOTE]
 > Only columns that are generally available can support **Continuous (NRT)** frequency.
 
-### 3. Choose the impacted entities
+###### Custom frequency for Microsoft Sentinel data (Preview)
+Microsoft Sentinel customers that are onboarded to Microsoft Defender have the option to select Custom frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
+
+When you select this frequency option, the **Run query every input** component is displayed, where you type the desired frequency for the rule and use a dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When selecting a frequency, the lookback period is determined automatically with the following logic: 
+1.	For detections set to run more frequently than once a day, the lookback is 4 times the frequency. For example, if the frequency is 20 minutes, the lookback will be 20*4 = 80 minutes.  
+2.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every 3 days, the lookback is 30 days  
+
+> [!IMPORTANT]
+>When selecting a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
+>1.	You must have data available in Microsoft Sentinel
+>2.	Defender XDR data we will not support scoping, since Microsoft Sentinel does not support scoping
+
+### 3. Define alert enrichment details 
+You can enrich alerts by providing and defining additional details, allowing you to:
+-	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
+-	[Choose impacted entities](#choose-impacted-entities)
+-	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
+
+#### Create a dynamic alert title and description (Preview)
+You can dynamically craft your alert’s title and description using the results of your query to make them accurate and indicative. This can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
+
+To dynamically configure the alert’s title or description, integrate them into the **Alert details** section by using the free text names of columns that are available in your query results and surrounding them with double curly brackets. 
+
+For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
+
+>[!NOTE]
+>The number of columns you can reference in each field is limited to three.
+
+To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
+
+#### Choose impacted entities
 
 Identify the columns in your query results where you expect to find the main affected or impacted entity. For example, a query might return sender (`SenderFromAddress` or `SenderMailFromAddress`) and recipient (`RecipientEmailAddress`) addresses. Identifying which of these columns represent the main impacted entity helps the service aggregate relevant alerts, correlate incidents, and target response actions.
 
 You can select only one column for each entity type (mailbox, user, or device). Columns that aren't returned by your query can't be selected.
+
+##### Expanded entity mapping (Preview)
+
+You can link a wide range of entity types to your alerts. Linking more entities helps our correlation engine group alerts to the same incidents and to correlate incidents together.  If you are a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
+
+For Microsoft Defender XDR data, the entities are automatically selected. If the data is from Microsoft Sentinel, you need to select the entities manually. 
+
+>[!NOTE]
+>Entities impact how alerts are grouped into incidents so make sure to carefully review the entities to ensure high incidents’ quality. Learn more about incidents correlation and alerts grouping 
+
+There are two sections under the expanded **Entity mapping** section for which you can select entities: 
+-	**Impacted assets** – Impacted assets that appear in the selected events should be added here. The following types of assets can be added: 
+    - Account 
+    - Device 
+    - Mailbox 
+    - Cloud application 
+    - Azure resource 
+    - Amazon Web Services resource 
+    - Google Cloud Platform resource 
+- **Related evidence** – Non-assets that appear in the selected events can be added in this section. The supported entity types are: 
+    - Process 
+    - File 
+    - Registry value 
+    - IP 
+    - OAuth application 
+    - DNS 
+    - Security group 
+    - URL 
+    - Mail cluster 
+    - Mail message
+
+>[!NOTE] 
+>Currently, only assets can be mapped as impacted entities.
+
+After an entity type is selected, select an identifier type that exists in the selected query results so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant dropdown menu. Read the description displayed when hovering on each identifier to better understand it. 
+
+After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. This allows you to explore your query and results to make sure you choose the right column for the selected identifier.
+
+#### Add custom details (Preview)
+
+You can further enhance your SOC analysts’ productivity by showing important details in the alert side panel. You can surface events’ data in alerts that are constructed from those events. This gives your SOC analysts immediate event content visibility of their incidents, enabling them to triage, investigate, and draw conclusions faster. 
+
+In the **Custom details** section, add key-value pairs corresponding to the details you want to surface: 
+- In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
+- In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
+  
+The following screenshot shows how the custom details are surfaced in the alert side panel: 
+  
+>[!IMPORTANT]
+>Custom details have the following limitations: 
+>1.	Each rule is limited to up to 20 key/values pairs of custom details 
+>2.	The combined size limit for all custom details and their values in a single alert is 4 KB. If the custom details array exceeds this limit, the whole custom details array is dropped from the alert.  
 
 ### 4. Specify actions
 
