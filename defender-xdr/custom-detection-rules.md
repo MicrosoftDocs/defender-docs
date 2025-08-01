@@ -74,7 +74,7 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 #### Required columns in the query results
 
 
-To create a custom detection rule, the query must return the following columns:
+To create a custom detection rule using Defender XDR data, the query must return the following columns:
 1. `Timestamp` - This column is used to set the timestamp for generated alerts. The `Timestamp` that is returned from the query shouldn't have been manipulated in the query and should be returned exactly as it appears in the raw event.
    
 3. A column or combination of columns that uniquely identify the event in Defender XDR tables:
@@ -295,7 +295,7 @@ The following screenshot shows how the custom details are surfaced in the alert 
 
 ### 4. Specify actions
 
-Your custom detection rule can automatically take actions on devices, files, users, or emails that are returned by the query.
+If your custom detection rule uses Defender XDR data, it can automatically take actions on devices, files, users, or emails that are returned by the query.
 
 :::image type="content" source="/defender/media/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="/defender/media/ah-custom-actions.png":::
 
