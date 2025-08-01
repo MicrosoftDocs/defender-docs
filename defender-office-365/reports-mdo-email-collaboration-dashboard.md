@@ -33,7 +33,6 @@ The information on the **Overview** page is organized into the following areas:
 - [Defender for Office 365 summary](#defender-for-office-365-summary)
 - [Optimize section](#optimize-section)
 - [Risky allows section](#risky-allows-section)
-- [Compare solutions section](#compare-solutions-section)
 - [Insights section](#insights-section)
 
 For the permissions required to view the dashboard and reports, see [What permissions are needed to view these reports?](reports-email-security.md#what-permissions-are-needed-to-view-these-reports).
@@ -186,7 +185,6 @@ The **Exchange transport rules** card shows the mail flow rules (also known as t
 Select **Review rules** to go to the **Rules** page in the Exchange admin center (EAC) at <https://admin.cloud.microsoft/exchange#/transportrules>.
 
 :::image type="content" source="media/email-collab-overview-risky-allows-etrs.png" alt-text="Screenshot of the Exchange transport rules card in the Risky allows section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-risky-allows-etrs.png":::
-
 
 ## Insights section
 
