@@ -127,8 +127,6 @@ To assign the appropriate permissions to the agent:
    > [!TIP]
    > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
 
-1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
-
 After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ### Begin the setup
@@ -156,7 +154,9 @@ Follow the steps in the setup wizard, which includes:
    > [!NOTE]
    > After setup, you can change the agent's identity and role at any time. To do this, navigate to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
 
-1. Select **Deploy agent** to activate it.
+1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
+
+1. Select **Deploy agent** to activate the agent.
 1. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
 
 
