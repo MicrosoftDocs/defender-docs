@@ -156,7 +156,7 @@ Follow the steps in the setup wizard, which includes:
 
 2. Follow the prompts to sign in to the account you created for the agent.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.png" alt-text="Screenshot of the account assignment for Phishing Triage":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage":::
 
 
    1. Select the user account you created for the agent. See [Create the agent’s identity and assign permissions](#create-the-agents-identity-and-assign-permissions) for more information.
