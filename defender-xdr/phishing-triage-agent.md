@@ -102,9 +102,9 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 
 #### Identity
 
-You currently need to assign the Phishing Triage Agent a user account. For information on creating a user account in the Microsoft Entra admin center, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+You currently need to assign the Phishing Triage Agent an existing user account. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
-When you connect the agent to an account, Microsoft recommends setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
+When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
 > [!TIP]
 > Microsoft recommends creating and using a dedicated identity account with the minimum required permissions for the agent. When creating the account, assign a distinct display name like *Phishing Triage Agent* to easily identify it in the Microsoft Defender portal.
@@ -113,13 +113,13 @@ The agent's specified user identity isn't compatible with PIM or TAP, as they do
 
 #### Permissions
 
-The agent’s identity needs these permissions to access emails, analyze their content, and manage alerts:
+The user account you assign the agent needs these permissions to access emails, analyze their content, and manage alerts:
 
 - **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
 - **Security Copilot (read):** Used to access Security Copilot capabilities.
 - **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
 
-The required permissions under the **Security operations** permissions group:
+The required permissions are under the **Security operations** permissions group:
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage":::
 
@@ -144,7 +144,7 @@ You can access the Phishing Triage Agent setup in two ways:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup-incident.png":::
 
-- Alternatively, go to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview**, then select **Set up** to start the process.
+- Alternatively, go to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview > Set up** to start the process.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up":::   
 
@@ -163,7 +163,7 @@ Follow the steps in the setup wizard, which includes:
    1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
    > [!NOTE]
-   > After setup, you can change the agent's identity and role at any time. To do this, navigate to **Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
+   > After setup, you can change the agent's identity and role at any time. To do this, navigate to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
 
 3. Select **Deploy agent** to activate it.
 4. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
