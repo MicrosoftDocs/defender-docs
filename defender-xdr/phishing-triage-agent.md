@@ -127,6 +127,17 @@ To assign the appropriate permissions to the agent:
    > [!TIP]
    > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
 
+1. Assign the agent's identity contributor access to your Microsoft Security Copilot workspace.
+
+    1. Sign in to Security Copilot (https://securitycopilot.microsoft.com).
+    1. Select the home menu icon. 
+    1. Make sure you're in your default workspace.
+    1. Select **Role assignment > Add members**.
+    1. Start typing the name of agent identity in the **Add members** dialog box.
+    1. Select the identity.
+    1. Select **Contributor**.
+    1. Select **Add**.
+
 After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ### Begin the setup
