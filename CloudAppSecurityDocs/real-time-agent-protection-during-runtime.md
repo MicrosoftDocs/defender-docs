@@ -36,10 +36,10 @@ Before enabling real-time agent protection during runtime, make sure:
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
-- [A Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) is registered for authentication.
 
 > [!NOTE]
 > A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
+> [A Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) is registered for authentication.
 
 ## Turn on real-time agent protection during runtime
 
