@@ -70,7 +70,7 @@ For more information, see [Activate workloads in Microsoft Defender XDR settings
 
 ### Configure user reported settings
 
-Enable **Monitor reported messages in Outlook** and define how users report potentially malicious messages in Microsoft Outlook: 
+Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options: 
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations." lightbox="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png":::
 
