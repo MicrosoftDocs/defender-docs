@@ -23,9 +23,6 @@ If Microsoft Defender determines that a request is suspicious:
 - An alert is generated and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
 
 
-
-
-
 This capability adds an additional security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
 
 > [!NOTE]
@@ -39,7 +36,7 @@ Before enabling real-time agent protection during runtime, make sure:
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
-- A Microsoft Entra ID application is registered for authentication.
+- [A Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) is registered for authentication.
 
 > [!NOTE]
 > A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
@@ -70,6 +67,3 @@ The Power Platform administrator must use the provided URL to install and activa
 For more information, see: 
 
 
-## Next steps 
-
-- [Register an application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app).
