@@ -32,8 +32,6 @@ appliesto:
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
 
-**Applies to:** Microsoft Defender for Office 365 Plan 2, Microsoft Defender XDR
-
 Phishing remains one of the most prevalent and persistent entry points for cyberattacks, and a major operational burden for security operations center (SOC) teams. Every day, analysts are inundated with user-reported suspicious emails, each demanding careful investigation and triage. The sheer volume slows response, drains resources, and increases the risk of real threats slipping through the cracks.
 
 To help security teams address this challenge, Microsoft Security Copilot introduces the Phishing Triage Agent in Microsoft Defender. This AI-powered virtual agent is designed to scale the triage and classification of user-reported phishing emails. By reducing repetitive investigation work and accelerating response, it helps security teams operate with greater speed and precision.
@@ -49,8 +47,8 @@ Security Copilot brings together the power of AI and human expertise to help sec
 The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender created to enhance the efficiency of security operations teams by classifying and triaging user-submitted phishing incidents. Some of the agent’s highlights include:
 
 - **Autonomous triage:** The Phishing Triage Agent uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
-- **Transparent rationale:** It provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
-- **Continuous improvement:** It continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
+- **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
+- **Continuous improvement:** The agent learns and adapts its behavior based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
 ## Prerequisites
 
@@ -102,7 +100,7 @@ The Phishing Triage Agent operates under the identity you assign to it. Before s
 
 #### Identity
 
-You currently need to assign the Phishing Triage Agent an existing user account. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+The Phishing Triage Agent currently only operates with existing user accounts. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
 When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
 
