@@ -330,8 +330,6 @@ To review the details of a specific feedback, select an entry from the feedback 
 > [!NOTE]
 > Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png":::
-
 To reject specific feedback, open the Review feedback pane and select **Reject feedback**. When you do so, the agent records it as rejected and stops using it in future triage decisions.
 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/feedback-rejected.png" alt-text="Screenshot of rejected feedback" lightbox="/defender/media/agents-in-defender/phishing-triage/feedback-rejected.png":::
@@ -342,6 +340,8 @@ To reject specific feedback, open the Review feedback pane and select **Reject f
 > Changing the Phishing Triage Agent’s identity is only available to users with the **Security Administrator** role.
 
 The agent’s identity and role can be managed at any time by navigating to the **Identity and role** page under **Agents**. On this page, users can view the agent's current identity, access details about the last update, and select a new identity type for the agent if necessary. The process of changing an identity is similar to the initial setup of the agent’s identity and role.
+
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png":::
 
 ### Pause or resume the agent
 
