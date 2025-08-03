@@ -73,7 +73,7 @@ The Phishing Triage Agent automatically activates these Security Copilot plugins
 
 Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Phishing Triage Agent.":::
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Phishing Triage Agent." lightbox="/defender/media/agents-in-defender/phishing-triage/activate-defender-for-office-365-workloads.png":::
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
@@ -81,7 +81,7 @@ For more information, see [Activate workloads in Microsoft Defender XDR settings
 
 Enable **Monitor reported messages in Outlook** and define how users report potentially malicious messages in Microsoft Outlook: 
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations.":::
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations." lightbox="/defender/media/agents-in-defender/phishing-triage/configure-user-reported-settings.png":::
 
 For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
@@ -121,7 +121,7 @@ The user account you assign the agent needs these permissions to access emails, 
 
 The required permissions are under the **Security operations** permissions group:
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage":::
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions.png":::
 
 To assign the appropriate permissions to the agent:
 
@@ -129,7 +129,7 @@ To assign the appropriate permissions to the agent:
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 1. Assign the role to the agent. Make sure to grant the agent access to all data sources.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
 
 > [!TIP]
 > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
@@ -146,7 +146,7 @@ You can access the Phishing Triage Agent setup in two ways:
 
 - Alternatively, go to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview > Set up** to start the process.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up":::   
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
 
 Follow the steps in the setup wizard, which includes:
 
@@ -234,11 +234,11 @@ To provide feedback and teach the agent, follow these steps:
 1. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
 2. Review the agent’s classification and reasoning displayed in the card’s title and content. If the decision doesn’t align with your organization’s classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card" lightbox="/defender/media/agents-in-defender/phishing-triage/change-classification.png":::
 
 3. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent won't use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent’s memory.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane" lightbox="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png":::
 
 4. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn’t conflict with previous feedback.
 
@@ -339,7 +339,7 @@ To review the details of a specific feedback, select an entry from the feedback 
 > [!NOTE]
 > Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page":::
+:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png" alt-text="Screenshot of the Identity and role management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-identity-management.png":::
 
 To reject specific feedback, open the Review feedback pane and select **Reject feedback**. When you do so, the agent records it as rejected and stops using it in future triage decisions.
 
@@ -364,7 +364,7 @@ To pause or resume the agent:
 1. Navigate to the **Overview** page under **Agents** in Defender portal.
 2. Select **Pause** to temporarily stop the agent. Once paused, the button updates to **Resume**, which you can select when you’re ready to reactivate the agent’s activities.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png":::
 
 ### Remove the agent
 
