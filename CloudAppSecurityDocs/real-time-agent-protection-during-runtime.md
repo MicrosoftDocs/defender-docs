@@ -50,7 +50,8 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 1. Check the Microsoft 365 App Connector status:
    - **If the connector is already connected:** Continue to step 5.
    - **If the connector isn’t connected:**
-    1. Under **Microsoft 365 connector**, select: **Microsoft Entra ID Management events** and **Microsoft 365 activities**. For more information, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
+      - Under **Microsoft 365 connector**, select: **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
+      - For more information, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
 
     > [!IMPORTANT]
     > If the Microsoft 365 connector isn’t properly connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't show in the Microsoft Defender portal.
