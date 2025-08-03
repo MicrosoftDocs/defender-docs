@@ -48,7 +48,7 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 
 - **Autonomous triage:** The Phishing Triage Agent uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
-- **Continuous improvement:** The agent learns and adapts its behavior based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
+- **Learning based on feedback:** The agent continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
 ## Prerequisites
 
