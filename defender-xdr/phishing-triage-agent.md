@@ -149,11 +149,11 @@ Follow the steps in the setup wizard, which includes:
 
 1. Select the [identity](#identity) type to assign to the agent.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/select-identity.png":::
 
 1. Select the user account you created for the agent and follow the prompts.
 
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage":::
+   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG":::
 
    > [!NOTE]
    > After setup, you can change the agent's identity and role at any time. To do this, navigate to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
