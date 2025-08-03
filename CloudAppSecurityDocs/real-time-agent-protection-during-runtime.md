@@ -29,7 +29,7 @@ If Microsoft Defender determines that a request is suspicious:
 This capability adds an additional security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
 
 > [!NOTE]
-> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
+> Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom engine.
 
 ## Prerequisites
 
