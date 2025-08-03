@@ -168,8 +168,6 @@ Follow the steps in the setup wizard, which includes:
 3. Select **Deploy agent** to activate it.
 4. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
 
-> [!TIP]
-> If you encounter any issues during the setup process, refer to the [Troubleshoot agent issues](#troubleshoot-agent-issues) section for more information.
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. Your incident queue now contains the Phishing Triage Agent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
 
