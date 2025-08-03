@@ -58,14 +58,7 @@ The following are organizational requirements to run Phishing Triage Agent in yo
 |:---|:---|
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) for more information </br> - Microsoft Defender for Office 365 Plan 2 deployed|
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
-
-### Plugins 
-
-The Phishing Triage Agent automatically activates these Security Copilot plugins: 
-
-- Microsoft Defender XDR
-- Microsoft Threat Intelligence 
-- Phishing Triage Agent
+| Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 
 ### Activate URBAC settings
 
