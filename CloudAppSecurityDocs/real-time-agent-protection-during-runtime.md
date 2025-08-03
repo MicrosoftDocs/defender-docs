@@ -35,13 +35,11 @@ This capability adds an additional security layer on top of Microsoft Copilot St
 
 Before enabling real-time agent protection during runtime, make sure:
 
-- You have a valid Microsoft Defender license (included in Microsoft 365 E5 Security).
+- You have a valid Microsoft Defender for Cloud Apps license (included in Microsoft 365 E5 Security).
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
 - A Microsoft Entra ID application is registered for authentication.
-
-- You must get the App ID from your Power Platform administrator.
 
 > [!NOTE]
 > A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
