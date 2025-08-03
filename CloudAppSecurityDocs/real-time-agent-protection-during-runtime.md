@@ -23,11 +23,10 @@ If Microsoft Defender determines that a request is suspicious:
 - An alert is generated and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
 
 
-Microsoft Defender uses behavioral signals to identify and block attempts to manipulate the agents operational flow. 
 
 
 
-This capability adds a security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
+This capability adds an additional security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
 
 > [!NOTE]
 > Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio.
