@@ -106,8 +106,10 @@ The agent's specified user identity isn't compatible with PIM or TAP, as they do
 
 The user account you assign the agent needs these permissions to access emails, analyze their content, and manage alerts:
 
+- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
 - **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
 - **Security Copilot (read):** Used to access Security Copilot capabilities.
+- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
 - **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
 
 The required permissions are under the **Security operations** permissions group:
