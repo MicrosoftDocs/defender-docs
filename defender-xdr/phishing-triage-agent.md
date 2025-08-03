@@ -131,10 +131,14 @@ To assign the appropriate permissions to the agent:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
 
-> [!TIP]
-> Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
+   > [!TIP]
+   > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
+
+1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
+
+
 
 ### Begin the setup
 
@@ -154,19 +158,15 @@ Follow the steps in the setup wizard, which includes:
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/select-identity.png" alt-text="Screenshot of the identity picker for Phishing Triage":::
 
-2. Follow the prompts to sign in to the account you created for the agent.
+1. Select the user account you created for the agent and follow the prompts.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/setup-assign-user.PNG" alt-text="Screenshot of the account assignment for Phishing Triage":::
-
-
-   1. Select the user account you created for the agent. See [Create the agent’s identity and assign permissions](#create-the-agents-identity-and-assign-permissions) for more information.
-   1. Set conditional access policies for Security Copilot to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
    > [!NOTE]
    > After setup, you can change the agent's identity and role at any time. To do this, navigate to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Identity and role**.
 
-3. Select **Deploy agent** to activate it.
-4. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
+1. Select **Deploy agent** to activate it.
+1. Select **View incidents** to navigate back to the incidents queue or **Manage agent** to manage its settings.
 
 
 The Phishing Triage Agent is now set up and running in the background, ready to triage user-reported phishing incidents coming in. Your incident queue now contains the Phishing Triage Agent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
