@@ -14,23 +14,18 @@ ms.service: defender-for-cloud-apps
 
 As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations face new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent acts. This evaluation occurs during runtime and blocks suspicious behavior without disrupting the end-user experience.
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent acts. 
 
 If Microsoft Defender determines that a request is suspicious:
 
 - The tool invocation is blocked before it runs.
-- The agent stops processing.
 - The user is notified that their message was blocked.
 - An alert is generated and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
 
-If no issues are detected, the agent continues operating as intended.
 
-Microsoft Defender uses behavioral signals to identify and block:
+Microsoft Defender uses behavioral signals to identify and block attempts to manipulate the agents operational flow. 
 
-- Misuse of tools
-- Unexpected or unauthorized execution patterns
-- Cross-prompt injection attempts (XPIA)
-- Attempts to manipulate the agent's operational flow
+
 
 This capability adds a security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
 
