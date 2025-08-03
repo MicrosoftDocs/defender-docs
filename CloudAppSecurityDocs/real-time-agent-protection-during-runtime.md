@@ -47,9 +47,12 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
-1. Under **Microsoft 365 connector**, select:
-    1. **Microsoft Entra ID Management events** and **Microsoft 365 activities**. For more information, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
-1. Verify that the Microsoft 365 App Connector status shows **Connected**.
+1. Verify the Microsoft 365 App Connector status:
+    1. If the connector is already connected: Skip to step 5.
+    1. If the connector isn’t connected:
+    1. Under **Microsoft 365 connector**, select:
+        1. **Microsoft Entra ID Management events** and **Microsoft 365 activities**. For more information, see: [Connect Microsoft 365 apps to Microsoft Defender](/defender-cloud-apps/protect-office-365).
+1. Confirm that the connector status changes to **Connected** before continuing.
 
     > [!IMPORTANT]
     > If the Microsoft 365 connector isn’t properly connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't show in the Microsoft Defender portal.
