@@ -204,17 +204,15 @@ The Phishing Triage Agent is purpose-built to clearly explain *why* and *how* it
 To review the agent’s findings, follow these steps:
 
 1. Select an incident from the incident queue.
-2. On the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response Triage section. The task is marked as completed and assigned to the agent. The card presents the agent’s verdict based on its classification, highlighting key pieces of incriminating evidence that informed the decision.
+1. On the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response Triage section. The task is marked as completed and assigned to the agent. The card presents the agent’s verdict based on its classification, highlighting key pieces of incriminating evidence that informed the decision.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/incident-main.png" alt-text="Screenshot of the incident page with the Phishing Triage Agent card highlighted" lightbox="/defender/media/agents-in-defender/phishing-triage/incident-main.png":::
 
-3. You can select the **More actions** ellipsis to view more alert details, copy the agent’s classification details to the clipboard, or manage feedback.
+1. You can select the **More actions** ellipsis to view more alert details, copy the agent’s classification details to the clipboard, or manage feedback.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/more-actions-card.png" alt-text="Screenshot highlighting the more actions options within the Phishing Triage Agent card":::
 
-4. To view the steps the agent took prior to reaching its classification, select **View agent activity** in the Phishing Triage Agent card. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
-
-Alternatively, you can navigate to the **Activities** tab and search for the Agents. In the Activities tab, a graphical representation illustrates the agent’s step-by-step thought process during the triage. Each step is clearly documented, highlighting the task taken, how it was performed, and collected evidence. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
+1. To view the steps the agent took prior to reaching its classification, select **View agent activity** in the Phishing Triage Agent card. This provides complete transparency into the data analyzed and the logic behind the agent’s final classification.
 
 ## Teach the agent your organization’s context through feedback
 
@@ -223,21 +221,21 @@ The Phishing Triage Agent continuously improves its decision-making based on fee
 To provide feedback and teach the agent, follow these steps:
 
 1. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
-2. Review the agent’s classification and reasoning displayed in the card’s title and content. If the decision doesn’t align with your organization’s classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
+1. Review the agent’s classification and reasoning displayed in the card’s title and content. If the decision doesn’t align with your organization’s classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card" lightbox="/defender/media/agents-in-defender/phishing-triage/change-classification.png":::
 
-3. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent won't use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent’s memory.
+1. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent won't use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent’s memory.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane" lightbox="/defender/media/agents-in-defender/phishing-triage/manage-alert-why.png":::
 
-4. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn’t conflict with previous feedback.
+1. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn’t conflict with previous feedback.
 
    > [!NOTE]
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify phishing alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
-5. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
+1. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
 
 The agent utilizes stored feedback to triage and classify similar alerts in the future. When a relevant alert that matches the feedback characteristics is received, the agent applies this feedback to determine its classification, incorporating it as supporting evidence in its decision-making process.
 
@@ -246,10 +244,10 @@ The agent utilizes stored feedback to triage and classify similar alerts in the 
 Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine phishing threat or a false alarm. To ensure the agent effectively incorporates your feedback, Microsoft recommends following these best practices when providing input to the Phishing Triage Agent:
 
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the email currently under review. It must also align with the updated classification you’ve assigned.
-2. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
-3. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that is clear and actionable. Use decisive and clear identification terms.
-4. **Be consistent with previous feedback.** Ensure that new feedback aligns with what has been previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [Feedback](#view-and-manage-feedback-to-the-agent) management page.
-5. **Review the agent’s interpretation of your feedback.** After submitting it, always verify that the feedback is accurately translated into a lesson. Confirm that it reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses ensures these are applicable to the scenario.
+1. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
+1. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that is clear and actionable. Use decisive and clear identification terms.
+1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what has been previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [Feedback](#view-and-manage-feedback-to-the-agent) management page.
+1. **Review the agent’s interpretation of your feedback.** After submitting it, always verify that the feedback is accurately translated into a lesson. Confirm that it reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses ensures these are applicable to the scenario.
 
 Here are examples of how you can write your feedback to the agent.
 
@@ -292,7 +290,7 @@ You can manage the Phishing Triage Agent’s settings, review its activity, and 
 To view all previous runs by the agent:
 
 1. Navigate to the **Overview** page under **Agents** in the Defender portal.
-2. Select **View agent activity**. Once selected, the Security Copilot portal opens in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
+1. Select **View agent activity**. Once selected, the Security Copilot portal opens in a new tab. The tab opens to a table listing all the agent’s recent activities and details.
 
 ### View and manage feedback to the agent
 
@@ -353,7 +351,7 @@ Pausing the agent temporarily stops all triage activity, including any in-progre
 To pause or resume the agent:
 
 1. Navigate to the **Overview** page under **Agents** in Defender portal.
-2. Select **Pause** to temporarily stop the agent. Once paused, the button updates to **Resume**, which you can select when you’re ready to reactivate the agent’s activities.
+1. Select **Pause** to temporarily stop the agent. Once paused, the button updates to **Resume**, which you can select when you’re ready to reactivate the agent’s activities.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png" alt-text="Screenshot of the Agents Overview page highlighting the pause agent option" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-overview.png":::
 
