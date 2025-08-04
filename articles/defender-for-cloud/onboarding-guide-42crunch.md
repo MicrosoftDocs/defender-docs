@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for 42Crunch (preview)
 description: Learn how to use 42Crunch with Microsoft Defender.
-ms.date: 11/15/2023
+ms.date: 07/15/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -22,7 +22,7 @@ Because the quality of the API specification largely determines the scan coverag
 ## Enablement
 
 > [!NOTE]
-> The following steps walk through the process of setting up the free version of 42Crunch. See the [FAQ section](#faq) to learn about the differences between the free and paid versions of 42Crunch and how to purchase 42Crunch on the Azure Marketplace.
+> The following steps walk through the process of setting up the free version of 42Crunch. See the [FAQ section](#faq) to learn about the differences between the free and paid versions of 42Crunch and how to purchase 42Crunch on Azure Marketplace.
 
 Through relying on the 42Crunch [Audit](https://42crunch.com/api-security-audit) and [Scan](https://42crunch.com/api-conformance-scan/) services, developers can proactively test and harden APIs within their CI/CD pipelines through static and dynamic testing of APIs against the top OWASP API risks and OpenAPI specification best practices. The security scan results from 42Crunch are now available within Defender for Cloud, ensuring central security teams have visibility into the health of APIs within the Defender for Cloud recommendation experience, and can take governance steps natively available through Defender for Cloud recommendations.
 
@@ -59,7 +59,7 @@ To create a new default workflow:
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
-   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
 
@@ -77,7 +77,7 @@ You now verified that the Audit results are showing in GitHub Code Scanning. Nex
 
 #### Enable Defender for Cloud integration without GitHub Code Scanning
 
-If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from 42Crunch into Defender for Cloud, you can follow these steps. After adding in the 42Crunch workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+If you don't have GitHub Code Scanning for your environment and wish to integrate security scan results from 42Crunch into Defender for Cloud, you can follow these steps. After adding in the 42Crunch workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
 
 ```yml
 - name: save-sarif-report
@@ -198,7 +198,7 @@ For the full enterprise version of the 42Crunch platform, the following data is 
 
 42Crunch offers both a free limited version and paid enterprise version of the security Audit and Conformance scan.
 
-For the free version of 42Crunch, the 42Crunch CI/CD plugins work standalone, with no requirement to sign in to the 42Crunch platform. Audit and scanning results are then made available in Microsoft Defender for Cloud, as well as within the CI/CD platform. Audits and scans are limited to up to 25 executions per month each, per repo, with a maximum of three repositories.
+For the free version of 42Crunch, the 42Crunch CI/CD plugins work standalone, with no requirement to sign in to the 42Crunch platform. Audit and scanning results are then made available in Microsoft Defender for Cloud, and within the CI/CD platform. Audits and scans are limited to up to 25 executions per month each, per repo, with a maximum of three repositories.
 
 For the paid enterprise version of 42Crunch, Audits and scans are still executed locally in CI/CD but can sync with the 42Crunch platform service, where you can use several advanced features including customizable security quality gates, data dictionaries, and tagging. While the enterprise version is licensed for a certain number of APIs, there are no limits to the number of Audits and scans that can be run on a monthly basis.
 
@@ -206,7 +206,7 @@ For the paid enterprise version of 42Crunch, Audits and scans are still executed
 
 Yes, 42Crunch is [available for purchase on the Microsoft commercial marketplace here](https://azuremarketplace.microsoft.com/marketplace/apps/42crunch1580391915541.42crunch_developer_first_api_security_platform).
 
-Note that purchases of 42Crunch made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
+Purchases of 42Crunch made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
 
 ## Next steps
 

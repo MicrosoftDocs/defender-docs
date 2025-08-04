@@ -4,7 +4,7 @@ description: Learn how binary drift detection can help you detect unauthorized e
 ms.topic: how-to
 author: dcurwin
 ms.author: dacurwin
-ms.date: 06/17/2024
+ms.date: 07/15/2025
 #customer intent: As a user, I want to understand how binary drift detection can help me detect unauthorized external processes within containers.
 ---
 
@@ -26,9 +26,9 @@ Binary drift detection is integrated into the Defender for Containers plan and i
 
 The following components are part of binary drift detection:
 
-- an enhanced sensor capable of detecting binary drift
-- policy configuration options
-- a new binary drift alert
+- An enhanced sensor capable of detecting binary drift
+- Policy configuration options
+- A new binary drift alert
 
 ## Configure drift policies
 
@@ -36,11 +36,12 @@ Create drift policies to define when alerts should be generated. Each policy is 
 
 To create and configure policies, follow these steps:
 
-1. In Microsoft Defender for Cloud, go to **Environment settings**. Select **Containers drift policy**.
+1. In Microsoft Defender for Cloud, go to **Management** > **Environment settings**. 
+1. Select **Containers drift policy**.
 
     :::image type="content" source="media/binary-drift-detection/select-containers-drift-policy.png" alt-text="Screenshot of Select Containers drift policy in Environment settings." lightbox="media/binary-drift-detection/select-containers-drift-policy.png":::
 
-1. You receive two rules out of the box: the **Alert on Kube-System namespace** rule and the **Default binary drift** rule. The default rule is a special rule that applies to everything if no other rule before it is matched. You can only modify its action, either to **Drift detection alert** or return it to the default **Ignore drift detection**. The **Alert on Kube-System namespace** rule is an out-of-the-box suggestion and can be modified like any other rule.
+1. You receive two rules out of the box: the **Alert on Kube-System namespace** rule and the **Default binary drift** rule. The default rule is a special rule that applies to everything if no other rule before it's matched. You can only modify its action, either to **Drift detection alert** or return it to the default **Ignore drift detection**. The **Alert on Kube-System namespace** rule is an out-of-the-box suggestion and can be modified like any other rule.
 
     :::image type="content" source="media/binary-drift-detection/default-rule.png" alt-text="Screenshot of Default rule appears at the bottom of the list of rules." lightbox="media/binary-drift-detection/default-rule.png":::
 
@@ -80,7 +81,7 @@ The alert system is designed to notify you of any binary drifts, helping you mai
 
 ## Adjust policies as needed
 
-Based on the alerts you receive and your review of them, you might find it necessary to adjust your rules in the binary drift policy. This could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift policies with their rules effectively balance security needs with operational efficiency.
+Based on the alerts, you receive and your review of them, you might find it necessary to adjust your rules in the binary drift policy. This could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift policies with their rules effectively balance security needs with operational efficiency.
 
 The effectiveness of binary drift detection relies on your active engagement in configuring, monitoring, and adjusting policies to suit your environment's unique requirements.
 
