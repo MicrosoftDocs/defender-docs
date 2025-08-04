@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to block domains in Microsoft Teams using the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/29/2025
+ms.date: 08/04/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -25,6 +25,9 @@ appliesto:
 # Block domains in Microsoft Teams using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+> [!NOTE]
+> The feature described in this article is currently in Preview, isn't available in all organizations, and is subject to change.
 
 In all organizations with Microsoft Teams and cloud mailboxes, admins can create and manage block entries for domains in Microsoft Teams using the Tenant Allow/Block List. These blocked domain entries also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications> in the **Teams and Skype for Business users in external organizations** section:
 
