@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to block domains in Microsoft Teams using the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/29/2025
+ms.date: 08/04/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -25,6 +25,9 @@ appliesto:
 # Block domains in Microsoft Teams using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+> [!NOTE]
+> The feature described in this article is currently in Preview, isn't available in all organizations, and is subject to change.
 
 In all organizations with Microsoft Teams and cloud mailboxes, admins can create and manage block entries for domains in Microsoft Teams using the Tenant Allow/Block List. These blocked domain entries also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications> in the **Teams and Skype for Business users in external organizations** section:
 
@@ -46,6 +49,8 @@ This article describes how security admins can manage entries for blocked domain
     - **Block only specific external domains**
   - **Allow my security team to manage blocked domains** must be :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
+- The maximum number of domain block entries for Microsoft Teams is 4,000.
+
 - Block entries for domains in Teams never expire.
 
 - An entry should be active within 5 minutes.
@@ -65,15 +70,11 @@ This article describes how security admins can manage entries for blocked domain
 
 2. On the **Tenant Allow/Block Lists** page, select the **Teams domains** tab.
 
-3. On the **Teams domains** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
+3. On the **Teams domains** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
 
-4. In the **Block external domains in Teams** flyout that opens, configure the following settings:
+4. In the **Block external domains in Teams** flyout that opens, enter up to 20 domains separated by commas or line breaks, and then select **Add**.
 
-   - **Add domains**: Enter one domain per line, up to a maximum of 20.
-
-5. When you're finished in the **Block external domains in Teams** flyout, select **Add**.
-
-Back on the **Teams domains** tab, the entry is listed. After a few minutes, the blocked domain also appears on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
+Back on the **Teams domains** tab, the domain block entries are listed. After a few minutes, the blocked domains also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
 
 ## View block entries for domains in Teams in the Tenant Allow/Block List
 
