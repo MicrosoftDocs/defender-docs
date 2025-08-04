@@ -645,27 +645,6 @@
     - name: Review data security alerts
       href: review-data-security-alerts.md
 
-- name: Protect AI services
-  items:
-  - name: Overview data and AI security dashboard (Preview)
-    href: data-aware-security-dashboard-overview.md
-  - name: AI security posture
-    items:
-    - name: Overview
-      href: ai-security-posture.md
-    - name: Discover generative AI workloads
-      href: identify-ai-workload-model.md
-    - name: Explore risks to pre-deployment generative AI artifacts
-      href: explore-ai-risk.md
-  - name: AI threat protection
-    items:
-    - name: Overview
-      href: ai-threat-protection.md
-    - name: Enable threat protection for AI services
-      href: ai-onboarding.md
-    - name: Gain application and end-user context
-      href: gain-end-user-context-ai.md
-
 - name: Protect workloads
   items:
   - name: Settings & monitoring
@@ -679,6 +658,26 @@
     - name: Working with the Log Analytics agent
       displayName: log analytics, agent
       href: working-with-log-analytics-agent.md
+  - name: Defender for AI
+    items:
+    - name: Overview data and AI security dashboard (Preview)
+      href: data-aware-security-dashboard-overview.md
+    - name: AI security posture
+      items:
+      - name: Overview
+        href: ai-security-posture.md
+      - name: Discover generative AI workloads
+        href: identify-ai-workload-model.md
+      - name: Explore risks to pre-deployment generative AI artifacts
+        href: explore-ai-risk.md
+    - name: AI threat protection
+      items:
+      - name: Overview
+        href: ai-threat-protection.md
+      - name: Enable threat protection for AI services
+        href: ai-onboarding.md
+      - name: Gain application and end-user context
+        href: gain-end-user-context-ai.md
   - name: Defender for APIs
     items: 
     - name: About Defender for APIs
