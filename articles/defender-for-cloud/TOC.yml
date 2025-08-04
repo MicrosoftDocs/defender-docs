@@ -13,40 +13,6 @@
       displayName: changelog, news, release notes
       href: release-notes.md
 
-- name: Plan
-  items:
-    - name: Zero Trust and Defender for Cloud
-      displayName: zero trust, zero, trust
-      href: zero-trust.md
-    - name: Plan multicloud protection
-      items:
-        - name: Start planning multicloud protection
-          displayName: begin, get started,
-          href: plan-multicloud-security-get-started.md
-        - name: Determine business needs
-          displayName: needs, goals, business, requirements
-          href: plan-multicloud-security-determine-business-needs.md
-        - name: Define an adoption strategy
-          displayName: strategy, adoption, ownership
-          href: plan-multicloud-security-define-adoption-strategy.md
-        - name: Determine plan and agents requirements
-          displayName: data, residency, cspm, cwp, plan
-          href: plan-multicloud-security-determine-data-residency-requirements.md
-        - name: Determine compliance requirements
-          displayName: compliance, standards
-          href: plan-multicloud-security-determine-compliance-requirements.md
-        - name: Determine ownership requirements
-          displayName: ownership, team, alignment, best practices,
-          href: plan-multicloud-security-determine-ownership-requirements.md
-        - name: Determine access control requirements
-          displayName: access, control
-          href: plan-multicloud-security-determine-access-control-requirements.md
-        - name: Determine multicloud dependencies
-          displayName: dependencies, cspm, cwpp, agents, multicloud
-          href: plan-multicloud-security-determine-multicloud-dependencies.md
-        - name: Automate connector deployment
-          displayName: rest api
-          href: plan-multicloud-security-automate-connector-deployment.md
 - name: Deploy
   items:
     - name: Connect environments and enable all plans
@@ -1362,6 +1328,9 @@
           href: data-security.md
         - name: Manage user data
           href: privacy.md
+        - name: Zero Trust and Defender for Cloud
+          displayName: zero trust, zero, trust
+          href: zero-trust.md
         - name: Troubleshooting guide
           href: troubleshooting-guide.md
     - name: Azure updates blog
