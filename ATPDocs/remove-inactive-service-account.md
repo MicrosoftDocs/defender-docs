@@ -1,5 +1,5 @@
 ---
-title: Security Assessment: Remove inactive service account
+title: 'Security Assessment: Remove Inactive Service Account'
 description: Learn how to identify and address inactive Active Directory service accounts to mitigate security risks and improve your organization's security posture.
 ms.date: 08/04/2025
 ms.topic: how-to
