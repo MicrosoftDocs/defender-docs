@@ -1,5 +1,5 @@
 ---
-title: Security Copilot Phishing Triage Agent in Microsoft Defender
+title: Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
 description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
 f1.keywords:
@@ -25,7 +25,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Phishing Triage Agent in Microsoft Defender so that I can triage and classify user-submitted phishing incidents efficiently.
 ---
 
-# Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender
+# Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -391,7 +391,7 @@ Phishing remains one of the most common methods by which attackers gain initial 
 
 ### Can the Phishing Triage Agent be trusted?
 
-Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, the agent is assigned an identity and configured with the minimum required permissions for its operation, ensuring that it doesn’t have unnecessary permissions. Furthermore, all agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
+Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, the agent is assigned an identity and configured with the minimum required permissions for its operation, ensuring that it doesn’t have unnecessary permissions. All agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
 
 ### How does the agent differ from a standard SOAR solution?
 
