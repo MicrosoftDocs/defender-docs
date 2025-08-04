@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: dacurwin
 author: dcurwin
-ms.date: 10/29/2023
+ms.date: 07/14/2025
 ---
 
 # Exempt resources from recommendations
@@ -16,7 +16,7 @@ In such cases, you can create an exemption to:
 
 - **Exempt a resource** to ensure it isn't listed with the unhealthy resources in the future, and doesn't affect your secure score. The resource will be listed as not applicable and the reason will be shown as "exempted" with the specific justification you select.
 
-- **Exempt a subscription or management group** to ensure that the recommendation doesn't affect your secure score and won't be shown for the subscription or management group in the future. This relates to existing resources and any you create in the future. The recommendation will be marked with the specific justification you select for the scope that you selected.
+- **Exempt a subscription or management group** to ensure that the recommendation doesn't affect your secure score and won't be shown for the subscription or management group in the future. This relates to existing resources and any you create in the future. The recommendation is marked with the specific justification you select for the scope that you selected.
 
 For the scope you need, you can create an exemption rule to:
 
@@ -36,7 +36,7 @@ This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-p
 > [!NOTE]
 > The Defender for Cloud exemption relies on Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve resources compliance state on the Defender for Cloud portal. If the MCSB is missing, the portal will partially work and some resources might not appear.
 
-- Some recommendations included in Microsoft cloud security benchmark do not support exemptions, a list of those recommendations can be found [here](faq-general.yml)
+- Some recommendations included in Microsoft cloud security benchmark don't support exemptions, a list of those recommendations can be found [here](faq-general.yml)
 
 - Recommendations included in multiple policy initiatives must [all be exempted](faq-general.yml)
 
@@ -44,7 +44,7 @@ This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-p
 - If a recommendation is disabled, all of its subrecommendations are exempted.
 - In addition to working in the portal, you can create exemptions using the Azure Policy API. Learn more [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
-- When exempting at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on the management group. This is done the same way as granting user permissions.
+- When exempting at the management group level, ensure the *Microsoft Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on the management group. This is done the same way as granting user permissions.
 
 ## Define an exemption
 
@@ -54,7 +54,7 @@ To create an exemption rule:
 
 1. In **Take action**, select **Exempt**.
 
-    :::image type="content" source="media/exempt-resource/exempting-recommendation.png" alt-text="Create an exemption rule for a recommendation to be exempted from a subscription or management group.":::
+    :::image type="content" source="media/exempt-resource/exempting-recommendation.png" alt-text="Create an exemption rule for a recommendation to be exempted from a subscription or management group." lightbox="media/exempt-resource/exempting-recommendation.png":::
 
 1. In the **Exempt** pane:
     1. Select the scope for the exemption.
@@ -79,8 +79,8 @@ To create an exemption rule:
 After creating the exemption, it can take up to 24 hours to take effect. After it takes effect:
 
 - The recommendation or resources won't impact your secure score.
-- If you exempted specific resources, they'll be listed in the **Not applicable** tab of the recommendation details page.
-- If you exempted a recommendation, it will be hidden by default on Defender for Cloud's recommendations page. This is because the default options of the **Recommendation status** filter on that page are to exclude **Not applicable** recommendations. The same is true if you exempt all recommendations in a security control.
+- If you exempted specific resources, they're listed in the **Not applicable** tab of the recommendation details page.
+- If you exempted a recommendation, it's hidden by default on Defender for Cloud's recommendations page. This is because the default options of the **Recommendation status** filter on that page are to exclude **Not applicable** recommendations. The same is true if you exempt all recommendations in a security control.
 
 ## Next steps
 
