@@ -31,11 +31,11 @@ To tailor your security posture you can create exemptions for recommendations th
 
 1. Select, either a Management group, subscription or resource (per subscription).
 
-1. Select a category, 
+1. Select a category, <br>
 
     1. **Mitigated** 
      
-    Or 
+        Or, 
 
     1. **Waiver (risk accepted)**.
 
@@ -43,11 +43,11 @@ To tailor your security posture you can create exemptions for recommendations th
 
 1. Select **Next**.
 
-1. Select either:
+1. Select either: <br>
 
     1. **Selected recommendations** and the specific recommendations to exempt.
     
-    Or,
+        Or,
 
     1. **Recommendation category** and the  category to exempt.
 
