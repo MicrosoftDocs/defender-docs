@@ -9,11 +9,14 @@ ms.date: 08/04/2025
 
 # Create exemptions based on policies
 
-In Microsoft Defender for Cloud, creating policy-based exemptions to recommendations allows organizations to tailor their security posture by excluding specific resources or scenarios where a recommendation is not applicable, already mitigated through alternative controls, or where the risk is consciously accepted. This helps reduce alert fatigue, improves the accuracy of the secure score by removing irrelevant penalties, and ensures that security teams can focus on actionable and meaningful insights rather than generic or redundant alerts.
+
+Microsoft Defender for Cloud lets you create policy-based exemptions for security recommendations. Use these exemptions to exclude resources or scenarios where recommendations don't apply, you've already applied other controls, or you've accepted the risk.
+
+This approach reduces alert fatigue, improves secure score accuracy by removing irrelevant penalties, and helps security teams focus on meaningful insights instead of generic alerts.
 
 ## Create an exemption
 
-To tailor your security posture you can create exemptions for recommendations that are not applicable or already mitigated. 
+To tailor your security posture, you can create exemptions for recommendations that aren't applicable or already mitigated. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
