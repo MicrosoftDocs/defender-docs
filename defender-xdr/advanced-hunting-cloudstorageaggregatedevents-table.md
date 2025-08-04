@@ -1,6 +1,6 @@
 ---
 title: CloudStorageAggregatedEvents table in the advanced hunting schema
-description: Learn about the CloudStorageAggregatedEvents table in the advanced hunting schema, which contains contains information about storage activity and related events.
+description: Learn about the CloudStorageAggregatedEvents table in the advanced hunting schema, which contains information about storage activity and related events.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -31,7 +31,7 @@ ms.date: 08/04/2025
 The `CloudStorageAggregatedEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about storage activity and related events. Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 This advanced hunting table is populated by records from [Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-integration-365#advanced-hunting-in-xdr). If your organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t going to work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender XDR, read [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
 
@@ -81,29 +81,69 @@ For information on other tables in the advanced hunting schema, see the [advance
 | `AzureResourceId` | `string` | The Azure Resource ID of the storage account | 
 | `Location` | `string` | The location of the storage account (region) | 
 | `Timestamp` | `datetime` | Indicate the time when the record was generated | 
-| `ReportId` | `string` | Guid the identify the record in the specific table | 
-| `ActionType` | `string` | Type of action (aggragated logs) | 
+| `ReportId` | `string` | GUID to identify the record in the specific table | 
+| `ActionType` | `string` | Type of action (aggregated logs) | 
+| `AdditionalFields` | `dynamic` | Additional information about the event in JSON array format | 
 
 
 ## Sample queries
 
-To identify storage accounts accessed from suspicious IP addresses from the last week:
+To detect failed anonymous authentication attempts:
 
 ```kusto
-CloudStorageEvents
-| where DataAggregationEndTime >= ago(24h)
-| where IsKnownSuspiciousIp or IsTorExitNode
-| summarize TotalOperations = sum(Operations) by StorageAccount, CallerIpAddress, IsKnownSuspiciousIp, IsTorExitNode
-| project-away IsKnownSuspiciousIp, IsTorExitNode
+CloudStorageAggregatedEvents
+| where FailedOperationsCount > 0
+| where AuthenticationType == "Anonymous"
+| project StorageAccount, FailedOperationsCount, OperationNamesList, AdditionalFields
 ```
 
-To hunt for detecting failed anonymous authentication attempts: 
+To list unusual authentication methods used: 
 
 ```kusto
-CloudStorageEvents
-| where FailedOperations > 0
-| where AuthenticationType == "Anonymous"
-| project StorageAccount, FailedOperations, OperationNamesList, FirstEventTimestamp, LastEventTimestamp
+// Define a list of expected authentication types
+let ExpectedAuthTypes = dynamic(["AccountKey", "SAS", "Oauth"]);
+CloudStorageAggregatedEvents
+| where DataAggregationEndTime >= ago(7d)
+| where not(AuthenticationType in (ExpectedAuthTypes))
+| summarize TotalOperations = sum(OperationsCount) by StorageAccount, AuthenticationType
+```
+To find storage accounts with a high number of failed operations: 
+
+```kusto
+CloudStorageAggregatedEvents
+| where DataAggregationEndTime >= ago(7d)
+| summarize TotalFailedOperations = sum(FailedOperationsCount) by StorageAccount
+| where TotalFailedOperations > 100
+| order by TotalFailedOperations desc
+```
+
+To monitor anonymous successful operations: 
+
+```kusto
+CloudStorageAggregatedEvents
+| where DataAggregationEndTime >= ago(7d)
+| where AuthenticationType == "Anonymous" and SuccessfulOperationsCount > 0
+| project StorageAccount, SuccessfulOperationsCount, OperationNamesList, AdditionalFields
+```
+
+To detect access to sensitive containers or file shares:
+
+```kusto
+CloudStorageAggregatedEvents
+| where DataAggregationEndTime >= ago(7d)
+| where AuthenticationType == "Anonymous" and SuccessfulOperationsCount > 0
+| project StorageAccount, SuccessfulOperationsCount, OperationNamesList, AdditionalFields
+```
+
+To detect suspicious file uploads with known malicious hashes:
+
+```kusto
+CloudStorageAggregatedEvents
+| where DataAggregationEndTime >= ago(7d)
+| where isnotempty(Md5Hashes)
+| mv-expand HashReputation = Md5Hashes
+| extend HashDetails = parse_json(HashReputation)
+| project StorageAccount, AccountUpn, OperationNamesList, HashMd5 = HashDetails.md5Hash, ResourcePath = HashDetails.resourcePath, OperationType = HashDetails.operationType, ETag = HashDetails.etag
 ```
 
 ## Related topics
