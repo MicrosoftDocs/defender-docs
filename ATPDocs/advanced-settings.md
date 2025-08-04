@@ -66,7 +66,7 @@ When you're finished testing, toggle the Recommended test mode option back off t
 
 The following table describes the types of detections that support adjustments for threshold levels, including the effects of **Medium** and **Low** thresholds.
 
-Cells marked with N/A indicate that the threshold level isn't supported for the detection
+Cells marked with N/A indicate that the threshold level isn't supported for the detection.
 
 | Detection | Medium | Low |
 | --- | --- | --- |
