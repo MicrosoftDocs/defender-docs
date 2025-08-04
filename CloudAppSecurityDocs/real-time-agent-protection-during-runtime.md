@@ -14,6 +14,8 @@ ms.service: defender-for-cloud-apps
 
 As AI agents become increasingly accessible through low-code/no‑code (LCNC) platforms like Microsoft Copilot Studio, organizations face new types of security risks at scale. These platforms empower non‑technical users to build and deploy custom agents—often without centralized security review or controls in place. Attackers can attempt to manipulate these agents by injecting malicious prompts, triggering unintended tool executions, or exploiting data sources to escalate privileges or exfiltrate data.
 
+## Capabilities
+
 Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent acts. 
 
 If Microsoft Defender determines that a request is suspicious:
