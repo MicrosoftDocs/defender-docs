@@ -52,7 +52,7 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 1. Check the Microsoft 365 App Connector status:
    - **If the connector is already connected:** Continue to step 4.
    - **If the connector isn’t connected:**
-      - Under **Microsoft 365 connector**, select **Connect**.
+      - Under **Microsoft 365 connector**, select **Connect** or **Edit**.
       - Select **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
       - Select **Connect Microsoft 365**
 
@@ -68,7 +68,7 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 
 ## Finalize configuration in Power Platform
 
-The Power Platform administrator must use the provided URL to install and activate the Microsoft Defender plugin in the relevant environments.
-For more information, see: 
+The Power Platform administrator must use the provided URL to activate the integration with Microsoft Defender. Once the integration is complete you'll see a **Connected** status in the Microsoft Defender portal.
+For more information, see:
 
 
