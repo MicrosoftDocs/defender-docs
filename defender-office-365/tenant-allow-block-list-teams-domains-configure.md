@@ -46,6 +46,8 @@ This article describes how security admins can manage entries for blocked domain
     - **Block only specific external domains**
   - **Allow my security team to manage blocked domains** must be :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
+- The maximum number of domain block entries for Microsoft Teams is 4,000.
+
 - Block entries for domains in Teams never expire.
 
 - An entry should be active within 5 minutes.
@@ -65,15 +67,11 @@ This article describes how security admins can manage entries for blocked domain
 
 2. On the **Tenant Allow/Block Lists** page, select the **Teams domains** tab.
 
-3. On the **Teams domains** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
+3. On the **Teams domains** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
 
-4. In the **Block external domains in Teams** flyout that opens, configure the following settings:
+4. In the **Block external domains in Teams** flyout that opens, enter up to 20 domains separated by commas or line breaks, and then select **Add**.
 
-   - **Add domains**: Enter one domain per line, up to a maximum of 20.
-
-5. When you're finished in the **Block external domains in Teams** flyout, select **Add**.
-
-Back on the **Teams domains** tab, the entry is listed. After a few minutes, the blocked domain also appears on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
+Back on the **Teams domains** tab, the domain block entries are listed. After a few minutes, the blocked domains also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
 
 ## View block entries for domains in Teams in the Tenant Allow/Block List
 
