@@ -32,8 +32,17 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## August 2025
+- (GA) [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers**. [Learn more](faq-cloud-coverage-defender-experts.md)
+- (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment, which could allow our security analysts to not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, but also provide customers with a more holistic view of the threat in their environments.
+- (GA) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
+    - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
+    - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
+    - You can now view the details pane even for analytics rules.
+    - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
+- (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
+
 ## July 2025
-- (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000.
 
 - (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
