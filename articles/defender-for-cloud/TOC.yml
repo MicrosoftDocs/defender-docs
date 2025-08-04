@@ -7,7 +7,7 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender, CWPP, CSPM
+        Azure cosmos db, db, Azure, defender
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -15,30 +15,6 @@
     - name: What's new in recommendations, alerts, and incidents
       displayName: what's new, recommendations, alerts, incidents
       href: release-notes-recommendations-alerts.md
-    - name: Prepare for retirement of the Log Analytics agent
-      href: prepare-deprecation-log-analytics-mma-agent.md
-    - name: Common questions
-      items:
-        - name: Common questions about Defender for Cloud
-          displayName: defender for cloud, common questions, faq, frequently asked questions
-          href: faq-general.yml
-        - name: Common questions about permissions
-          displayName: permissions, common questions, faq, frequently asked questions
-          href: faq-permissions.yml
-        - name: Common questions about data collection, agents, agentless and workspaces
-          displayName: data collection, agents, workspaces, common questions, agentless,
-            faq, frequently asked questions
-          href: faq-data-collection-agents.yml
-        - name: Common questions about regulatory compliance
-          displayName: regulatory, compliance, regulatory compliance, common questions,
-            faq, frequently asked questions
-          href: faq-regulatory-compliance.yml
-        - name: Common questions about Defender for Containers
-          displayName: containers, common questions, faq, frequently asked questions
-          href: faq-defender-for-containers.yml
-        - name: Common questions about Copilot in Defender for Cloud
-          displayName: copilot, common questions, faq, frequently asked questions
-          href: faq-copilot.yml
 
 - name: Plan
   items:
@@ -57,7 +33,7 @@
           displayName: strategy, adoption, ownership
           href: plan-multicloud-security-define-adoption-strategy.md
         - name: Determine plan and agents requirements
-          displayName: data, residency, cspm, cwpp, plan
+          displayName: data, residency, cspm, cwp, plan
           href: plan-multicloud-security-determine-data-residency-requirements.md
         - name: Determine compliance requirements
           displayName: compliance, standards
@@ -103,7 +79,7 @@
           displayName: CSPM, cloud security posture management, enable
           href: tutorial-enable-cspm-plan.md
         - name: Deploy Defender for Servers
-          displayName: servers, server, enable, p1, p2, plan1, plan 2
+          displayName: servers, server, enable
           href: tutorial-enable-servers-plan.md 
         - name: Protect applications with Defender for App Service
           displayName: App, service, enable, app service
@@ -146,6 +122,33 @@
         - name: Protect resources that report to a Log Analytics workspace
           displayName: workSystem, namespace, enable, plans
           href: enable-plan-workspace.md
+    - name: Support & requirements
+      items:
+        - name: Common questions about Defender for Cloud
+          displayName: defender for cloud, common questions, faq, frequently asked questions
+          href: faq-general.yml
+        - name: Common questions about permissions
+          displayName: permissions, common questions, faq, frequently asked questions
+          href: faq-permissions.yml
+        - name: Common questions about data collection, agents, agentless and workspaces
+          displayName: data collection, agents, workspaces, common questions, agentless,
+            faq, frequently asked questions
+          href: faq-data-collection-agents.yml
+        - name: Common questions about regulatory compliance
+          displayName: regulatory, compliance, regulatory compliance, common questions,
+            faq, frequently asked questions
+          href: faq-regulatory-compliance.yml
+        - name: Common questions about Defender for Containers
+          displayName: containers, common questions, faq, frequently asked questions
+          href: faq-defender-for-containers.yml
+        - name: Common questions about Copilot in Defender for Cloud
+          displayName: copilot, common questions, faq, frequently asked questions
+          href: faq-copilot.yml
+        - name: Prepare for retirement of the Log Analytics agent
+          href: prepare-deprecation-log-analytics-mma-agent.md
+
+- name: Integrations
+  items:
     - name: Integrate partner integrations
       expanded: false
       items:
@@ -238,12 +241,6 @@
 
 - name: Tutorials
   items:
-    - name: Planning and operations guide
-      displayName: guide, planning, roles, policies, recommendations
-      href: defender-for-cloud-planning-and-operations-guide.md
-    - name: Protect VMs
-      displayName: manage, access, harden
-      href: tutorial-protect-resources.md
     - name: Investigate resource health
       displayName: health, resources, outstanding, security, issues,
       href: investigate-resource-health.md
@@ -260,9 +257,6 @@
     - name: Queries - Azure Resource Graph
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
-    - name: Cloud Security Explorer software queries
-      displayName: sample, query, cloud security explorer
-      href: cloud-security-explorer-software-vulnerabilities.md
 
 
 - name: Concepts
@@ -586,9 +580,6 @@
           displayName: security, posture, recommendation, governance, automated, rules,
             owners, status, progress
           href: governance-rules.md
-        - name: Automate remediation responses
-          displayName: workflow, triggers, logic app, automation, policies, breaking change
-          href: workflow-automation.yml
         - name: View recommendations and alerts in Windows Admin Center
           displayName: windows, admin, center
           href: windows-admin-center-integration.md
@@ -637,59 +628,6 @@
         - name: Automate onboarding using PowerShell
           displayName: automate, onboard, onboarding
           href: powershell-onboarding.md
-    - name: Alerts, incidents, and threat reports
-      items:
-        - name: Manage and respond to security alerts
-          displayName: security alerts, alerts
-          href: managing-and-responding-alerts.yml
-        - name: Create and manage alerts suppression rules
-          displayName: alert suppression, alert suppression, create, suppressions rules,
-            rules
-          href: alerts-suppression-rules.md
-        - name: Export alerts and recommendations
-          items:
-            - name: Stream alerts to monitoring solutions
-              displayName: continuous, SIEM, SOAR, Splunk, QRadar, ServiceNow, ArcSight,
-                Monitor, Graph, Sentinel,
-              href: export-to-siem.md
-            - name: Prepare Azure resources for exporting to Splunk and QRadar
-              displayName: azure, resources, Splunk, QRadar
-              href: export-to-splunk-or-qradar.md
-            - name: Continuous export
-              items:
-              - name: Setup continuous export in the Azure portal
-                displayName: continuous, log analytics, workspace, event hubs, azure
-                href: continuous-export.md
-              - name: Setup continuous export with REST API
-                displayName: continuous, setup, export
-                href: continuous-export-rest-api.md
-              - name: Setup continuous export with Azure policy
-                displayName: continuous, setup, export, policy
-                href: continuous-export-azure-policy.md
-              - name: Continuous export to an event hub behind a firewall
-                displayName: continuous, export, event hub, firewall
-                href: continuous-export-event-hub-firewall.md
-              - name: View exported data in Azure Monitor
-                displayName: continuous, view, exported, data, monitor
-                href: continuous-export-view-data.md
-            - name: Download a CSV report
-              displayName: CSV report, alerts
-              href: export-alerts-to-csv.md
-        - name: Alerts schemas
-          displayName: Alerts schemas
-          href: alerts-schemas.md
-        - name: Manage security incidents
-          displayName: security incidents
-          href: incidents.md
-        - name: Generate threat intelligence reports
-          displayName: threat intelligence reports
-          href: threat-intelligence-reports.md
-        - name: Validate alert configuration
-          displayName: test, simulate, alerts, alert, eicar, Kubernetes, Linux
-          href: alert-validation.md
-        - name: Automate responses to alerts
-          displayName: workflow, alerts, response
-          href: workflow-automation.yml
     - name: Resolve connector issues
       items:
       - name: Troubleshoot connectors guide
@@ -799,7 +737,6 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
-      displayName: defender for servers, p1, p2, plan 1, plan 2
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
@@ -811,7 +748,6 @@
         - name: Plan roles and permissions
           href: plan-defender-for-servers-roles.md
         - name: Choose a plan and deployment scope
-          displayName: plan, defender for servers, plan 1, plan 2, plans, scope, deployment, p1, p2
           href: plan-defender-for-servers-select-plan.md
         - name: Understand data collection
           href: plan-defender-for-servers-agents.md
@@ -936,6 +872,12 @@
         href: remediate-server-secrets.md 
       - name: Review changes in file integrity monitoring
         href: file-integrity-monitoring-review-changes.md
+      - name: Protect VMs
+        displayName: manage, access, harden
+        href: tutorial-protect-resources.md
+      - name: Cloud Security Explorer software queries
+        displayName: sample, query, cloud security explorer
+        href: cloud-security-explorer-software-vulnerabilities.md
   - name: Defender for Containers
     items:
       - name: Overview
@@ -1320,13 +1262,69 @@
       - name: Gain end-user context for AI alerts
         displayName: AI, Defender for AI, threat protection
         href: gain-end-user-context-ai.md
-- name: Reference
+
+- name: Investigate & Response
+  items:
+    - name: Manage and respond to security alerts
+      displayName: security alerts, alerts
+      href: managing-and-responding-alerts.yml
+    - name: Create and manage alerts suppression rules
+      displayName: alert suppression, alert suppression, create, suppressions rules,
+        rules
+      href: alerts-suppression-rules.md
+    - name: Export alerts and recommendations
+      items:
+        - name: Stream alerts to monitoring solutions
+          displayName: continuous, SIEM, SOAR, Splunk, QRadar, ServiceNow, ArcSight,
+            Monitor, Graph, Sentinel,
+          href: export-to-siem.md
+        - name: Prepare Azure resources for exporting to Splunk and QRadar
+          displayName: azure, resources, Splunk, QRadar
+          href: export-to-splunk-or-qradar.md
+        - name: Continuous export
+          items:
+          - name: Setup continuous export in the Azure portal
+            displayName: continuous, log analytics, workspace, event hubs, azure
+            href: continuous-export.md
+          - name: Setup continuous export with REST API
+            displayName: continuous, setup, export
+            href: continuous-export-rest-api.md
+          - name: Setup continuous export with Azure policy
+            displayName: continuous, setup, export, policy
+            href: continuous-export-azure-policy.md
+          - name: Continuous export to an event hub behind a firewall
+            displayName: continuous, export, event hub, firewall
+            href: continuous-export-event-hub-firewall.md
+          - name: View exported data in Azure Monitor
+            displayName: continuous, view, exported, data, monitor
+            href: continuous-export-view-data.md
+        - name: Download a CSV report
+          displayName: CSV report, alerts
+          href: export-alerts-to-csv.md
+    - name: Alerts schemas
+      displayName: Alerts schemas
+      href: alerts-schemas.md
+    - name: Manage security incidents
+      displayName: security incidents
+      href: incidents.md
+    - name: Generate threat intelligence reports
+      displayName: threat intelligence reports
+      href: threat-intelligence-reports.md
+    - name: Validate alert configuration
+      displayName: test, simulate, alerts, alert, eicar, Kubernetes, Linux
+      href: alert-validation.md
+    - name: Automate responses to alerts
+      displayName: workflow, alerts, response
+      href: workflow-automation.yml
+    - name: Queries - Azure Resource Graph
+      displayName: sample, query, queries, resource, graph
+      href: ./resource-graph-samples.md
+
+- name: References
   items:
     - name: Archived release notes (older than six months)
       displayName: changelog, news
       href: release-notes-archive.md
-    - name: How Microsoft secures customer data
-      href: data-security.md
     - name: REST APIs documentation
       href: /rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true
     - name: Security baseline
@@ -1334,24 +1332,34 @@
     - name: Azure Policy built-ins
       displayName: samples, policy
       href: policy-reference.md
+    - name: Pricing
+      items:
+        - name: Pricing
+          href: https://azure.microsoft.com/pricing/details/azure-defender/
+        - name: Defender for Cloud cost calculator
+          href: cost-calculator.md
+        - name: Chargeback process using Azure Cost Analysis
+          href: chargeback.md
+        - name: Optimize costs with prepurchase plan
+          href: prepurchase-plan.md
+    - name: Privacy
+      items:
+        - name: How Microsoft secures customer data
+          href: data-security.md
+        - name: Manage user data
+          href: privacy.md
+        - name: Troubleshooting guide
+          href: troubleshooting-guide.md
     - name: Azure updates blog
       href: https://azure.microsoft.com/updates/?product=security-center
     - name: Azure CLI
       href: /cli/azure/security
     - name: Azure PowerShell
       href: /powershell/module/az.security/
-- name: Resources
-  items:
     - name: Build skills with Microsoft Learn training
       href: /training/browse/?term=defender%20for%20cloud&terms=defender%20for%20cloud&expanded=microsoft-defender&products=defender-for-cloud
     - name: Defender for Cloud glossary of terms
       href: defender-for-cloud-glossary.md
-    - name: Defender for Cloud cost calculator
-      href: cost-calculator.md
-    - name: Chargeback process using Azure Cost Analysis
-      href: chargeback.md
-    - name: Optimize costs with prepurchase plan
-      href: prepurchase-plan.md
     - name: Microsoft Defender for Cloud in the field
       items:
         - name: New AWS connector
@@ -1484,8 +1492,14 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
-    - name: Manage user data
-      href: privacy.md
+    - name: Privacy
+      items:
+        - name: How Microsoft secures customer data
+          href: data-security.md
+        - name: Manage user data
+          href: privacy.md
+        - name: Troubleshooting guide
+          href: troubleshooting-guide.md
     - name: Microsoft Defender for IoT documentation
       href: /azure/defender-for-iot/
     - name: Azure security documentation
@@ -1494,8 +1508,6 @@
       href: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bg-p/MicrosoftDefenderCloudBlog
     - name: Microsoft Defender for Cloud on Stack Overflow
       href: https://stackoverflow.com/search?q=microsoft+defender+for+cloud
-    - name: Pricing
-      href: https://azure.microsoft.com/pricing/details/azure-defender/
     - name: Regional availability
       href: https://azure.microsoft.com/regions/services/
     - name: Troubleshooting guide
