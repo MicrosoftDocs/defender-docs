@@ -40,6 +40,8 @@ You can also get product updates and important notifications through the [messag
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
     - You can now view the details pane even for analytics rules.
     - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
+- (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
+
 ## July 2025
 - (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
