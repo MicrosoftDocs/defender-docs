@@ -235,16 +235,6 @@
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
 
-
-
-
-- name: Samples
-  items:
-    - name: Queries - Azure Resource Graph
-      displayName: sample, query, queries, resource, graph
-      href: ./resource-graph-samples.md
-
-
 - name: Concepts
   items:
     - name: Support and requirements
@@ -1249,7 +1239,7 @@
         displayName: AI, Defender for AI, threat protection
         href: gain-end-user-context-ai.md
 
-- name: Investigate & Response
+- name: Investigate & Respond
   items:
     - name: What's new in recommendations, alerts, and incidents
       displayName: what's new, recommendations, alerts, incidents
