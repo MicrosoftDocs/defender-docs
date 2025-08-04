@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 7/10/2025
+ms.date: 7/31/2025
 ---
 
 # How Microsoft names threat actors
@@ -100,7 +100,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Lemon Sandstorm|Iran|RUBIDIUM, PIONEER KITTEN|
 |Leopard Typhoon|China|LEAD, WICKED PANDA, TG-2633, TG-3279, Mana, KAOS, Red Diablo, Winnti Group|
 |Lilac Typhoon|China|DEV-0234|
-|Linen Typhoon|China|IODINE, EMISSARY PANDA, Red Phoenix, Hippo, Lucky Mouse, BOWSER, APT27, Wekby2, UNC215, TG-3390|
+|[Linen Typhoon](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China|IODINE, EMISSARY PANDA, Red Phoenix, Hippo, Lucky Mouse, BOWSER, APT27, Wekby2, UNC215, TG-3390|
 |Luna Tempest|Financially motivated||
 |Magenta Dust|Türkiye|PROMETHIUM, StrongPity, SmallPity|
 |Manatee Tempest|Russia|DEV-0243, INDRIK SPIDER|
@@ -118,6 +118,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Octo Tempest](https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/)|Financially motivated| SCATTERED SPIDER, 0ktapus|
 |Onyx Sleet|North Korea|PLUTONIUM, SILENT CHOLLIMA, StoneFly, Tdrop2 campaign, DarkSeoul, Black Chollima, Andariel, APT45|
 |Opal Sleet|North Korea|OSMIUM, VELVET CHOLLIMA, Planedown, Konni, APT43|
+|Patched Lightning||Storm-0113|
 |[Peach Sandstorm](https://www.microsoft.com/en-us/security/blog/2024/08/28/peach-sandstorm-deploys-new-custom-tickler-malware-in-long-running-intelligence-gathering-operations/)|Iran|HOLMIUM, REFINED KITTEN, APT33, Elfin|
 |Pearl Sleet|North Korea|LAWRENCIUM|
 |Periwinkle Tempest|Russia|DEV-0193, WIZARD SPIDER|
@@ -176,6 +177,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-2035](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/5bc57431-a7a9-49ad-944d-b93b7d35d0fc.pdf)|Iran, Influence operations||
 |[Storm-2077](https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/#storm-2077)|China|TAG-100|
 |[Storm-2372](https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/)|Group in development||
+|[Storm-2603](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China||
 |Strawberry Tempest|Financially motivated|DEV-0537, SLIPPY SPIDER, LAPSUS$|
 |Sunglow Blizzard||DEV-0665|
 |Swirl Typhoon|China|TELLURIUM, STALKER PANDA, Tick, Bronze Butler, REDBALDKNIGHT|
@@ -185,7 +187,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Twill Typhoon|China|TANTALUM, MUSTANG PANDA, BRONZE PRESIDENT, LuminousMoth|
 |[Vanilla Tempest](https://www.microsoft.com/en-us/security/blog/2022/10/25/dev-0832-vice-society-opportunistic-ransomware-campaigns-impacting-us-education-sector/)|Financially motivated|DEV-0832, VICE SPIDER, Vice Society |
 |Velvet Tempest|Financially motivated|DEV-0504, ALPHA SPIDER|
-|Violet Typhoon|China|ZIRCONIUM, JUDGMENT PANDA, Chameleon, APT31, WebFans|
+|[Violet Typhoon](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China|ZIRCONIUM, JUDGMENT PANDA, Chameleon, APT31, WebFans|
 |[Void Blizzard](https://www.microsoft.com/en-us/security/blog/2025/05/27/new-russia-affiliated-actor-void-blizzard-targets-critical-sectors-for-espionage/)|Russia|Laundry Bear|
 |Volga Flood|Russia, Influence operations|Storm-1841, Rybar|
 |[Volt Typhoon](https://www.microsoft.com/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques)|China|VANGUARD PANDA, BRONZE SILHOUETTE|

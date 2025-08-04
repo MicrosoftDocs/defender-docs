@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -21,14 +21,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/02/2025
+ms.date: 07/28/2025
 ---
 
 # Use the advanced hunting query resource report
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 ## Understand advanced hunting quotas and usage parameters
 
@@ -39,7 +39,7 @@ Refer to the following table to understand existing quotas and usage parameters.
 | Quota or parameter | Size | Refresh cycle | Description |
 |--|--|--|--|
 | Date range | 30 days for Defender XDR data unless streamed through Microsoft Sentinel  | Every query | Each query can look up Defender XDR data from up to the past 30 days, or longer if streamed through Microsoft Sentinel  |
-| Result set | 30,000 rows | Every query | Each query can return up to 30,000 records. |
+| Result set | 100,000 rows | Every query | Each query can return up to 100,000 records. |
 | Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error.
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
 

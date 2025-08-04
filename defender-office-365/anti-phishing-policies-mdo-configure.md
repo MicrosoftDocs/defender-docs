@@ -26,21 +26,21 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365, anti-phishing policies provide the following types of protection:
+In Microsoft 365 organizations with Microsoft Defender for Office 365 (included or in an add-on subscription), anti-phishing policies provide the following types of protection:
 
-- The same anti-spoofing protection that's available in Exchange Online Protection (EOP). For more information, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings).
+- The same anti-spoofing protection that's available in anti-phishing policies for all cloud mailboxes. For more information, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings).
 - Anti-impersonation protection from other types of phishing attacks. For more information, see [Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 The default anti-phishing policy automatically applies to all recipients. For greater granularity, you can also create custom anti-phishing policies that apply to specific users, groups, or domains in your organization.
 
 > [!TIP]
-> Instead of creating and managing custom anti-phishing policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure protection policies](mdo-deployment-guide.md#step-2-configure-protection-policies).
+> Instead of creating and managing custom anti-phishing policies, we typically recommend turning on and adding all users to the Standard and/or Strict preset security policies. For more information, see [Configure threat policies](mdo-deployment-guide.md#step-2-configure-threat-policies).
 >
 > To understand how threat protection works in Microsoft Defender for Office 365, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 
-You configure anti-phishing policies in the Microsoft Defender portal or in Exchange Online PowerShell.
+You configure anti-phishing policies in the Microsoft Defender portal or in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-For anti-phishing policy procedures in organizations without Defender for Office 365, see [Configure anti-phishing policies in EOP](anti-phishing-policies-eop-configure.md).
+For anti-phishing policy procedures in organizations without Defender for Office 365, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 ## What do you need to know before you begin?
 
@@ -58,7 +58,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- For our recommended settings for anti-phishing policies in Defender for Office 365, see [Anti-phishing policy in Defender for Office 365 settings](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
+- For our recommended settings for anti-phishing policies in Defender for Office 365, see [Anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
   > [!TIP]
   > Settings in the default or custom anti-phishing policies are ignored if a recipient is also included in the [Standard or Strict preset security policies](preset-security-policies.md). For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
@@ -129,7 +129,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
        - **Internal users**: Click in the **Add a valid email** box or start typing the user's email address. Select the email address in the **Suggested contacts** dropdown list that appears. The user's display name is added to the **Add a name** box (which you can change). When you're finished selecting the user, select **Add**.
 
-       - **External users**: Type the external user's full email address in the **Add a valid email** box, and then select the email address in the **Suggested contacts** dropdown list that appears. The email address is also added in the **Add a name** box (which you can change to a display name).
+       - **External users**: Type the guest's full email address in the **Add a valid email** box, and then select the email address in the **Suggested contacts** dropdown list that appears. The email address is also added in the **Add a name** box (which you can change to a display name).
 
        The users you added are listed on the **Add user** flyout by **Name** and **Email address**. To remove a user, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
 
@@ -153,9 +153,9 @@ For anti-phishing policy procedures in organizations without Defender for Office
        > [!NOTE]
        > You can specify a maximum of 350 users for user impersonation protection in each anti-phishing policy.
        >
-       > User impersonation protection does not work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt.
+       > User impersonation protection doesn't work if the sender and recipient previously communicated via email. If the sender and recipient never communicated via email, the message can be identified as an impersonation attempt.
        >
-       > You might get the error "The email address already exists" if you try to add a user to user impersonation protection when that email address is already specified for user impersonation protection in another anti-phishing policy. This error occurs only in the Defender portal. You won't get the error if you use the corresponding _TargetedUsersToProtect_ parameter in the **New-AntiPhishPolicy** or **Set-AntiPhishPolicy** cmdlets in Exchange Online PowerShell.
+       > If a user is already included in impersonation protection in an anti-phishing policy, you might get the following error if you try to add the user to impersonation protection in another anti-phishing policy: "The email address already exists." This error occurs only in the Defender portal. You don't get the error if you use the corresponding _TargetedUsersToProtect_ parameter in the **New-AntiPhishPolicy** or **Set-AntiPhishPolicy** cmdlets in Exchange Online PowerShell.
 
      - **Enable domains to protect**: This setting isn't selected by default. To turn on domain impersonation protection, select the check box, and then configure one or both of the following settings that appear. You identify the action for domain impersonation detections on the next page.
 
@@ -165,7 +165,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
        Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add domains**.
 
-       In the **Add custom domains** flyout that appears, click in the **Domain** box, enter a domain value, and then select the value that's displayed below the box. Repeat this step as many times as necessary.
+       In the **Add custom domains** flyout that appears, click in the **Domain** box, enter a domain value, and then select the value displayed below the box. Repeat this step as many times as necessary.
 
        The domains you added are listed on the **Add custom domains** flyout. To remove the domain, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
@@ -242,14 +242,14 @@ For anti-phishing policy procedures in organizations without Defender for Office
          > [!NOTE]
          > Trusted domain entries don't include subdomains of the specified domain. You need to add an entry for each subdomain.
 
-       When you're finished on the **Manage custom domains for impersonation protection** flyout, select **Done**to return to the **Phishing threshold & protection** page.
+       When you're finished on the **Manage custom domains for impersonation protection** flyout, select **Done** to return to the **Phishing threshold & protection** page.
 
      - **Enable mailbox intelligence**: This setting is selected by default, and we recommend that you leave it selected. To turn off mailbox intelligence, clear the check box.
 
      - **Enable intelligence for impersonation protection**: This setting is available only if **Enable mailbox intelligence** is selected. This setting allows mailbox intelligence to take action on messages that are identified as impersonation attempts. You specify the action to take for mailbox intelligence detections on the next page.
 
        > [!NOTE]
-       > Mailbox intelligence protection doesn't work if the sender and recipient have previously communicated via email. If the sender and recipient have never communicated via email, the message can be identified as an impersonation attempt by mailbox intelligence.
+       > Mailbox intelligence protection doesn't work if the sender and recipient previously communicated via email. If the sender and recipient never communicated via email, the message can be identified as an impersonation attempt by mailbox intelligence.
 
        To turn on mailbox intelligence protection, select the check box. You specify the action for mailbox intelligence detections on the next page.
 
@@ -301,12 +301,12 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
      - **Honor DMARC record policy when the message is detected as spoof**: This setting is selected by default, and allows you to control what happens to messages where the sender fails explicit [DMARC](email-authentication-dmarc-configure.md) checks and the DMARC policy is set to `p=quarantine` or `p=reject`:
        - **If the message is detected as spoof and DMARC Policy is set as p=quarantine**: Select one of the following actions:
-         - **Quarantine the message**: This is the default value.
+         - **Quarantine the message**: The default value.
          - **Move message to the recipients' Junk Email folders**
 
        - **If the message is detected as spoof and DMARC Policy is set as p=reject**: Select one of the following actions:
          - **Quarantine the message**
-         - **Reject the message**: This is the default value.
+         - **Reject the message**: The default value.
 
        For more information, see [Spoof protection and sender DMARC policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
 
@@ -321,7 +321,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
      - **Show user impersonation safety tip**: This setting is available only if you selected **Enable users to protect** on the previous page.
      - **Show domain impersonation safety tip**: This setting is available only if you selected **Enable domains to protect** on the previous page.
      - **Show user impersonation unusual characters safety tip** This setting is available only if you selected **Enable users to protect** or **Enable domains to protect** on the previous page.
-     - **Show (?) for unauthenticated senders for spoof**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds a question mark (?) to the sender's photo in the From box in Outlook if the message doesn't pass [Sender Policy Framework (SPF)](email-authentication-spf-configure.md) or [DomainKeys Identified Mail (DKIM)](email-authentication-dkim-configure.md) checks **and** the message doesn't pass [Domain-based Message Authentication, Reporting and Conformance (DMARC)](email-authentication-dmarc-configure.md) or [composite authentication](email-authentication-about.md#composite-authentication). This setting is selected by default.
+     - **Show (?) for unauthenticated senders for spoof**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds a question mark (?) to the sender's photo in the From box in Outlook if the message doesn't pass [Sender Policy Framework (SPF)](email-authentication-spf-configure.md) or [DomainKeys Identified Mail (DKIM)](email-authentication-dkim-configure.md) checks **and** the message doesn't pass [Domain-based Message Authentication, Reporting, and Conformance (DMARC)](email-authentication-dmarc-configure.md) or [composite authentication](email-authentication-about.md#composite-authentication). This setting is selected by default.
      - **Show "via" tag**: This setting is available only if you selected **Enable spoof intelligence** on the previous page. Adds tag named via (`chris@contoso.com via fabrikam.com`) to the From address if it's different from the domain in the DKIM signature or the **MAIL FROM** address. This setting is selected by default.
 
      To turn on a setting, select the check box. To turn it off, clear the check box.
@@ -415,10 +415,10 @@ On the **Anti-phishing** page, the **Status** value of the policy is now **On** 
 
 ### Use the Microsoft Defender portal to set the priority of custom anti-phishing policies
 
-Anti-phishing policies are processed in the order that they're displayed on the **Anti-phishing** page:
+Anti-phishing policies are processed in the order they're displayed on the **Anti-phishing** page:
 
-- The anti-phishing policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
-- The anti-phishing policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
+- The anti-phishing policy named **Strict Preset Security Policy** associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
+- The anti-phishing policy named **Standard Preset Security Policy** associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
 - Custom anti-phishing policies are applied next in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).
   - By default, a new policy is created with a priority that's lower than the lowest existing custom policy (the first is 0, the next is 1, etc.).
@@ -488,7 +488,7 @@ Creating an anti-phishing policy in PowerShell is a two-step process:
 
 To create an anti-phish policy, use this syntax:
 
-```PowerShell
+```powershell
 New-AntiPhishPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] <Additional Settings>
 ```
 
@@ -520,7 +520,7 @@ For detailed syntax and parameter information, see [New-AntiPhishPolicy](/powers
 
 To create an anti-phish rule, use this syntax:
 
-```PowerShell
+```powershell
 New-AntiPhishRule -Name "<RuleName>" -AntiPhishPolicy "<PolicyName>" <Recipient filters> [<Recipient filter exceptions>] [-Comments "<OptionalComments>"]
 ```
 
@@ -540,19 +540,19 @@ For detailed syntax and parameter information, see [New-AntiPhishRule](/powershe
 
 To view existing anti-phish policies, use the following syntax:
 
-```PowerShell
+```powershell
 Get-AntiPhishPolicy [-Identity "<PolicyIdentity>"] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all anti-phish policies along with the specified properties.
 
-```PowerShell
+```powershell
 Get-AntiPhishPolicy | Format-Table Name,IsDefault
 ```
 
 This example returns all the property values for the anti-phish policy named Executives.
 
-```PowerShell
+```powershell
 Get-AntiPhishPolicy -Identity "Executives"
 ```
 
@@ -562,29 +562,29 @@ For detailed syntax and parameter information, see [Get-AntiPhishPolicy](/powers
 
 To view existing anti-phish rules, use the following syntax:
 
-```PowerShell
+```powershell
 Get-AntiPhishRule [-Identity "<RuleIdentity>"] [-State <Enabled | Disabled] [| <Format-Table | Format-List> <Property1,Property2,...>]
 ```
 
 This example returns a summary list of all anti-phish rules along with the specified properties.
 
-```PowerShell
+```powershell
 Get-AntiPhishRule | Format-Table Name,Priority,State
 ```
 
 To filter the list by enabled or disabled rules, run the following commands:
 
-```PowerShell
+```powershell
 Get-AntiPhishRule -State Disabled | Format-Table Name,Priority
 ```
 
-```PowerShell
+```powershell
 Get-AntiPhishRule -State Enabled | Format-Table Name,Priority
 ```
 
 This example returns all the property values for the anti-phish rule named Contoso Executives.
 
-```PowerShell
+```powershell
 Get-AntiPhishRule -Identity "Contoso Executives"
 ```
 
@@ -600,7 +600,7 @@ Other than the following items, the same settings are available when you modify 
 
 To modify an anti-phish policy, use this syntax:
 
-```PowerShell
+```powershell
 Set-AntiPhishPolicy -Identity "<PolicyName>" <Settings>
 ```
 
@@ -613,11 +613,11 @@ For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powers
 
 The only setting that isn't available when you modify an anti-phish rule in PowerShell is the _Enabled_ parameter that allows you to create a disabled rule. To enable or disable existing anti-phish rules, see the next section.
 
-Otherwise, no additional settings are available when you modify an anti-phish rule in PowerShell. The same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create an anti-phish rule](#step-2-use-powershell-to-create-an-anti-phish-rule) section earlier in this article.
+Otherwise, no extra settings are available when you modify an anti-phish rule in PowerShell. The same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create an anti-phish rule](#step-2-use-powershell-to-create-an-anti-phish-rule) section earlier in this article.
 
 To modify an anti-phish rule, use this syntax:
 
-```PowerShell
+```powershell
 Set-AntiPhishRule -Identity "<RuleName>" <Settings>
 ```
 
@@ -625,23 +625,23 @@ For detailed syntax and parameter information, see [Set-AntiPhishRule](/powershe
 
 ### Use PowerShell to enable or disable anti-phish rules
 
-Enabling or disabling an anti-phish rule in PowerShell enables or disables the whole anti-phishing policy (the anti-phish rule and the assigned anti-phish policy). You can't enable or disable the default anti-phishing policy (it's always applied to all recipients).
+Enabling or disabling an anti-phish rule in PowerShell enables or disables the whole anti-phishing policy (the anti-phish rule and the assigned anti-phish policy). You can't enable or disable the default anti-phishing policy (always applied to all recipients).
 
 To enable or disable an anti-phish rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 <Enable-AntiPhishRule | Disable-AntiPhishRule> -Identity "<RuleName>"
 ```
 
 This example disables the anti-phish rule named Marketing Department.
 
-```PowerShell
+```powershell
 Disable-AntiPhishRule -Identity "Marketing Department"
 ```
 
 This example enables same rule.
 
-```PowerShell
+```powershell
 Enable-AntiPhishRule -Identity "Marketing Department"
 ```
 
@@ -649,17 +649,17 @@ For detailed syntax and parameter information, see [Enable-AntiPhishRule](/power
 
 ### Use PowerShell to set the priority of anti-phish rules
 
-The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, if you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2, the existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
+The highest priority value you can set on a rule is 0. The lowest value you can set depends on the number of rules. For example, if you have five rules, you can use the priority values 0 through 4. Changing the priority of an existing rule can have a cascading effect on other rules. For example, you have five custom rules (priorities 0 through 4), and you change the priority of a rule to 2. The existing rule with priority 2 is changed to priority 3, and the rule with priority 3 is changed to priority 4.
 
 To set the priority of an anti-phish rule in PowerShell, use the following syntax:
 
-```PowerShell
+```powershell
 Set-AntiPhishRule -Identity "<RuleName>" -Priority <Number>
 ```
 
-This example sets the priority of the rule named Marketing Department to 2. All existing rules that have a priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
+This example sets the priority of the rule named Marketing Department to 2. All existing rules with priority less than or equal to 2 are decreased by 1 (their priority numbers are increased by 1).
 
-```PowerShell
+```powershell
 Set-AntiPhishRule -Identity "Marketing Department" -Priority 2
 ```
 
@@ -674,13 +674,13 @@ When you use PowerShell to remove an anti-phish policy, the corresponding anti-p
 
 To remove an anti-phish policy in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-AntiPhishPolicy -Identity "<PolicyName>"
 ```
 
 This example removes the anti-phish policy named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-AntiPhishPolicy -Identity "Marketing Department"
 ```
 
@@ -692,13 +692,13 @@ When you use PowerShell to remove an anti-phish rule, the corresponding anti-phi
 
 To remove an anti-phish rule in PowerShell, use this syntax:
 
-```PowerShell
+```powershell
 Remove-AntiPhishRule -Identity "<PolicyName>"
 ```
 
 This example removes the anti-phish rule named Marketing Department.
 
-```PowerShell
+```powershell
 Remove-AntiPhishRule -Identity "Marketing Department"
 ```
 
@@ -706,16 +706,16 @@ For detailed syntax and parameter information, see [Remove-AntiPhishRule](/power
 
 ## How do you know these procedures worked?
 
-To verify that you've successfully configured anti-phishing policies in Defender for Office 365, do any of the following steps:
+To verify you successfully configured anti-phishing policies in Defender for Office 365, do any of the following steps:
 
-- On the **Anti-phishing** page in the Microsoft Defender portal at <https://security.microsoft.com/antiphishing>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking anywhere in the row other than the check box next to the name and viewing the details in the flyout that appears.
+- On the **Anti-phishing** page in the Microsoft Defender portal at <https://security.microsoft.com/antiphishing>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking anywhere in the row other than the check box next to the name to open the details flyout.
 
 - In Exchange Online PowerShell, replace \<Name\> with the name of the policy or rule, and run the following command and verify the settings:
 
-  ```PowerShell
+  ```powershell
   Get-AntiPhishPolicy -Identity "<Name>"
   ```
 
-  ```PowerShell
+  ```powershell
   Get-AntiPhishRule -Identity "<Name>"
   ```
