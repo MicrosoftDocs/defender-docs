@@ -130,13 +130,12 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 <a name='map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-365-defender-unified-rbac-permissions'></a>
 
-### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions
+### Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions (Preview)
 
 > [!IMPORTANT]
 > App Governance supports Microsoft Entra roles as described in [Roles in app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started#roles) and does not support the roles defined in the integration of Defender for Cloud Apps with unified RBAC.</br></br>
 > Once you activate the Defender for Cloud Apps integration with Microsoft Defender XDR Unified RBAC, the following roles, configured through [built-in scoped roles](/defender-cloud-apps/manage-admins#roles-and-permissions) in Defender for Cloud Apps, will no longer be supported: **App/instance admin**, **User group admin**, **Cloud Discovery global admin**, and **Cloud Discovery report admin**.
->
-> Currently available in commercial cloud environments only. App governance capabilities are currently unavailable in U.S. Government clouds - GCC, GCC High, and DoD.
+
 
 |Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
 |---|-----|
