@@ -31,10 +31,35 @@ To tailor your security posture you can create exemptions for recommendations th
 
 1. Select, either a Management group, subscription or resource (per subscription).
 
-1. Select a category, **Mitigated** or **Waiver (risk accepted)**.
+1. Select a category, 
+
+    1. **Mitigated** 
+     
+    Or 
+
+    1. **Waiver (risk accepted)**.
 
 1. (Optional) Select an expiry date.
 
 1. Select **Next**.
 
-1. 
+1. Select either:
+
+    1. **Selected recommendations** and the specific recommendations to exempt.
+    
+    Or,
+
+    1. **Recommendation category** and the  category to exempt.
+
+1. Select **Next**.
+
+1. Select **Create**.
+
+The exemption is created and applied to the selected resources or recommendations.
+
+If you want to view or manage existing exemptions, you can return to the **Exemptions** page in the Defender for Cloud menu and select the three dot button **...** next to the exemption you want to manage. From there, you can edit or delete the exemption as needed.
+
+## Next step
+
+> [!div class="nextstep"]
+> [Remediate recommendations](implement-security-recommendations.md)  
