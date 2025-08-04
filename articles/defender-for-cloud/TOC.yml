@@ -12,9 +12,6 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
-    - name: What's new in recommendations, alerts, and incidents
-      displayName: what's new, recommendations, alerts, incidents
-      href: release-notes-recommendations-alerts.md
 
 - name: Plan
   items:
@@ -239,17 +236,6 @@
                 href: copilot-security-in-defender-for-cloud.md
 
 
-- name: Tutorials
-  items:
-    - name: Investigate resource health
-      displayName: health, resources, outstanding, security, issues,
-      href: investigate-resource-health.md
-    - name: Configure email notifications for alerts and attack paths
-      displayName: email,e-mail, notifications
-      href: configure-email-notifications.md
-    - name: Create autoresponses to alerts using an ARM template or Bicep
-      displayName: Resource Manager, ARM, Template
-      href: quickstart-automation-alert.md
 
 
 - name: Samples
@@ -1265,6 +1251,9 @@
 
 - name: Investigate & Response
   items:
+    - name: What's new in recommendations, alerts, and incidents
+      displayName: what's new, recommendations, alerts, incidents
+      href: release-notes-recommendations-alerts.md
     - name: Manage and respond to security alerts
       displayName: security alerts, alerts
       href: managing-and-responding-alerts.yml
@@ -1316,6 +1305,15 @@
     - name: Automate responses to alerts
       displayName: workflow, alerts, response
       href: workflow-automation.yml
+    - name: Create autoresponses to alerts using an ARM template or Bicep
+      displayName: Resource Manager, ARM, Template
+      href: quickstart-automation-alert.md
+    - name: Configure email notifications for alerts and attack paths
+      displayName: email,e-mail, notifications
+      href: configure-email-notifications.md
+    - name: Investigate resource health
+      displayName: health, resources, outstanding, security, issues,
+      href: investigate-resource-health.md
     - name: Queries - Azure Resource Graph
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
