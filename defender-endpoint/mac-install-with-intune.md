@@ -488,6 +488,7 @@ To download the onboarding package from the Microsoft Defender portal:
 
 1. Select **Download onboarding package**. Save it as _GatewayWindowsDefenderATPOnboardingPackage.zip_ to the same directory.
 
+
 1. Extract the contents of the .zip file:
 
    ```bash
