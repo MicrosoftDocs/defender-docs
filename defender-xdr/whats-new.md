@@ -41,6 +41,8 @@ You can also get product updates and important notifications through the [messag
     - You can now view the details pane even for analytics rules.
     - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
 - (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
+- (Preview) The [`CloudStorageAggregatedEvents`](advanced-hunting-cloudstorageaggregatedevents-table.md) table in advanced hunting is now available for preview. This table contains information about storage activity and related events.
+- (Preview) Advanced hunting now lets you investigate Microsoft Defender for Cloud behaviors. For more information, see [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
 
 ## July 2025
 - (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
