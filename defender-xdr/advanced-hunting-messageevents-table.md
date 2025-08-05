@@ -66,6 +66,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `DeliveryAction` | `string` |Delivery action of the message: Delivered, Blocked|
 | `DeliveryLocation` | `string` |Location of the message at the time of delivery|
 | `ReportId` | `string` |Unique identifier for the event|
+| `SafetyTip` | `string` |Indicates if a safe tip has been added on the message|
 
 
 

@@ -54,6 +54,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `LatestDeliveryLocation` | `string` |Last known location of the message |
 | `ReportId` | `string` |Unique identifier for the event|
 | `IsExternalThread` | `boolean` |Indicates if there are external recipients in the thread (1) or none (0)|
+| `SafetyTip` | `string` |Indicates if a safe tip has been added on the message|
 
 
 
