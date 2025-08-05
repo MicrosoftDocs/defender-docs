@@ -509,10 +509,9 @@ The following external package dependencies exist for the `mdatp` package:
 > - RPM package needs: `mde-netfilter`, `pcre`
 > - DEBIAN package needs: `mde-netfilter`, `libpcre3`
 > - The `mde-netfilter` package also has the following package dependencies:
-```
-- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
-```> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
@@ -578,5 +577,3 @@ For manual uninstallation, execute the following command for your Linux distribu
    - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-
-[!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
