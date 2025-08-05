@@ -8,9 +8,23 @@ ms.topic: reference
 # Network requirements
 
 >[!IMPORTANT]
+> **Important notice for GCC and Gov customers**
 >
-> **Take Immediate Action by April, 21 2025**, to ensure optimal service quality and prevent the interruption of some services. Update your firewall rules to allow outbound traffic on port 443 for the following IP addresses: 13.107.228.0/24, 13.107.229.0/24, 13.107.219.0/24, 13.107.227.0/24, 150.171.97.0/24. Alternatively, if you currently allow outbound traffic based on Azure service tags, please add the new Azure service tag, ‘AzureFrontDoor.MicrosoftSecurity’ to your allowlist. This tag  will be adjusted to reflect the above range by April 21, 2025.
-> This change only affects commercial customers of Microsoft Defender for Cloud Apps. Customers connected to the Gov US1 or GCC datacenters won't be affected.
+> To prevent service disruption in Microsoft Defender for Cloud Apps, take immediate action by August 25, 2025.
+> Update your firewall configuration as follows:
+>
+> Allow outbound traffic on port 443 to the following IP ranges:
+>
+> - `51.54.53.136/29`
+> - `51.54.114.160/29`
+> - `62.11.173.176/29`
+>
+> If you use Azure service tags for outbound traffic, add the Azure Gov service tag `AzureFrontDoor.MicrosoftSecurity` tag to your firewall allowlist.
+>
+> Add the following endpoint to your firewall allowlist on port 443:
+> - `discoveryresources-cdn-prod.cloudappsecurity.com`
+>
+> For the full list of required IP addresses and DNS names, see [Portal access](network-requirements.md#portal-access).
 
 This article provides a list of ports and IP addresses you need to allow and allowlist to work with Microsoft Defender for Cloud Apps.
 
@@ -19,7 +33,7 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 | Service tag name    |    Defender for Cloud Apps services included   |
 |:---|:---|
 | MicrosoftCloudAppSecurity | Portal access, Access and session controls, SIEM agent connection, App connector, Mail server, Log collector. |
-| AzureFrontDoor.MicrosoftSecurity (available starting April 21 2025)  | Portal access, SIEM agent connection. |
+| AzureFrontDoor.MicrosoftSecurity (available starting April 28 2025)  | Portal access, SIEM agent connection. |
 
 The following tables list the current static IP ranges covered by the MicrosoftCloudAppSecurity service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
@@ -35,6 +49,8 @@ To see which data center you're connecting to, do the following steps:
 1. In the **About** screen, you can see the region and the data center.
 
     ![View your data center.](media/data-center.png)
+
+
    
 ## Portal access
 
@@ -53,23 +69,22 @@ To use Defender for Cloud Apps in the Microsoft Defender Portal:
     static2.sharepointonline.com
     *.blob.core.windows.net
     discoveryresources-cdn-prod.cloudappsecurity.com
-    discoveryresources-cdn-gov.cloudappsecurity.us    
     ```
 
 1. Allow the following items based on your data center:
 
-  |Data center|IP addresses|DNS name|
-  |----|----|----|
-  |US1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
-  |US2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
-  |US3|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
-  |EU1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
-  |EU2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
-  |Gov US1|13.72.19.4, 52.227.143.223|*.us1.portal.cloudappsecurity.us|
-  |GCC| 52.227.23.181, 52.227.180.126| *.us1.portal.cloudappsecuritygov.com |
+      |Data center|IP addresses|DNS name|
+      |----|----|----|
+      |US1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.64.26.88, 13.64.29.32, 13.80.125.22, 13.91.91.243, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 23.101.201.123, 20.228.186.154|\*.us.portal.cloudappsecurity.com|
+      |US2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 20.36.222.59, 20.36.222.60, 40.74.1.235, 40.74.6.204, 51.143.58.207, 52.137.89.147, 52.183.75.62, 52.184.165.82, 20.15.114.156, 172.202.90.196|\*.us2.portal.cloudappsecurity.com|
+      |US3|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|*.us3.portal.cloudappsecurity.com|
+      |EU1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|\*.eu.portal.cloudappsecurity.com|
+      |EU2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|*.eu2.portal.cloudappsecurity.com|
+      |Gov US1|13.72.19.4, 52.227.143.223, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|*.us1.portal.cloudappsecurity.us|
+      |GCC| 52.227.23.181, 52.227.180.126, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|*.us1.portal.cloudappsecuritygov.com|
 
-  > [!NOTE]
-  > For portal access, instead of a wildcard (\*), you can choose to open only your specific tenant URL. For example, based on the screenshot above you can open: `contoso.us.portal.cloudappsecurity.com`. To determine your tenant URL, see the earlier section [View your data center](#view-your-data-center), and look for **API URL**.
+      > [!NOTE]
+      > For portal access, instead of a wildcard (\*), you can choose to open only your specific tenant URL. For example, based on the screenshot above you can open: `contoso.us.portal.cloudappsecurity.com`. To determine your tenant URL, see the earlier section [View your data center](#view-your-data-center), and look for **API URL**.
 
 ## Access and session controls
 
@@ -151,8 +166,8 @@ To enable Defender for Cloud Apps to connect to your SIEM, add **outbound port 4
 |US3|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.90.218.196, 40.90.218.198, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.3.226.231, 4.255.218.227|
 |EU1|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.119.154.72, 51.143.58.207, 52.137.89.147, 52.157.238.58, 52.174.56.180, 52.183.75.62, 20.71.203.39, 137.116.224.49|
 |EU2|13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/24, 13.107.229.0/24,  150.171.97.0/24, 13.80.125.22, 40.74.1.235, 40.74.6.204, 40.81.156.154, 40.81.156.156, 51.143.58.207, 52.137.89.147, 52.183.75.62, 20.0.210.84, 20.90.9.64|
-|Gov US1|13.72.19.4, 52.227.143.223|
-|GCC| 52.227.23.181, 52.227.180.126|
+|Gov US1|13.72.19.4, 52.227.143.223, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29 |
+|GCC| 52.227.23.181, 52.227.180.126, 51.54.53.136/29, 51.54.114.160/29, 62.11.173.176/29|
 
 > [!NOTE]
 >

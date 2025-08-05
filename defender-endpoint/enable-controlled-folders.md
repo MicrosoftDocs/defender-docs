@@ -2,7 +2,7 @@
 title: Enable controlled folder access
 description: Learn how to protect your important files by enabling Controlled folder access
 ms.service: defender-endpoint
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: medium
 audience: ITPro
 author: emmwalshh
@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 05/06/2025
 ---
 
 # Enable controlled folder access
@@ -85,7 +85,7 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 1. After the policy is created, **Close**.
 
-For more information about Microsoft Configuration Manager and Controlled Folder Access, please visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 ## Group Policy
 

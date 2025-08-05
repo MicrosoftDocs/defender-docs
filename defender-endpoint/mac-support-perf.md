@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/16/2025
+ms.date: 06/20/2025
 ---
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -26,7 +26,7 @@ ms.date: 04/16/2025
 
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -154,6 +154,10 @@ To troubleshoot and mitigate performance issues, follow these steps:
 9. Configure Microsoft Defender for Endpoint on macOS with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection. 
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
+
+## Troubleshoot performance issues from Behavior Monitoring
+
+See the guide on our support page for [Behavior Monitoring](behavior-monitor-macos.md).
 
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 

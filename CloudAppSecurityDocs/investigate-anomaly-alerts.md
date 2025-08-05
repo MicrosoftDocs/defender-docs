@@ -11,6 +11,17 @@ ms.topic: how-to
 
 Microsoft Defender for Cloud Apps provides security detections and alerts for malicious activities. The purpose of this guide is to provide you with general and practical information on each alert, to help with your investigation and remediation tasks. Included in this guide is general information about the conditions for triggering alerts. However, it's important to note that since anomaly detections are nondeterministic by nature, they're only triggered when there's behavior that deviates from the norm. Finally, some alerts might be in preview, so regularly review the official documentation for updated alert status.
 
+> [!IMPORTANT]
+> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
+> 
+> - Activity from suspicious IP addresses
+> - Suspicious inbox manipulation rules
+> - Suspicious email deletion activity
+> - Activity from anonymous IP addresses
+> - Suspicious inbox forwarding
+>
+> You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
+
 ## MITRE ATT\&CK
 
 To explain and make it easier to map the relationship between Defender for Cloud Apps alerts and the familiar MITRE ATT\&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT\&CK tactic. This extra reference makes it easier to understand the suspected attacks technique potentially in use when a Defender for Cloud Apps alert is triggered.
@@ -51,6 +62,9 @@ You should use the following general guidelines when investigating any type of a
 This section describes alerts indicating that a malicious actor might be attempting to gain an initial foothold into your organization.
 
 ### Activity from anonymous IP address
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Activity from a TOR IP address** and **Anonymous proxy activity**.
 
 **Description**
 
@@ -100,6 +114,9 @@ Detecting anomalous locations requires an initial learning period of seven days 
 - Review which resource might have been compromised, such as potential data downloads.
 
 ### Activity from suspicious IP addresses
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Successful logon from a suspicious IP address**.
 
 Activity from an IP address that has been identified as risky by Microsoft Threat Intelligence or by your organization. These IP addresses were identified as being involved in malicious activities, such as performing password spray, botnet command and control (C&C), and might indicate a compromised account.
 
@@ -317,6 +334,9 @@ Activities in a single session indicating that, a user performed suspicious chan
 
 ### Suspicious email deletion activity (by user)
 
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email deletion activity**.
+
 Activities in a single session indicating that, a user performed suspicious email deletions. The deletion type was the "hard delete" type, which makes the email item deleted and not available in the user's mailbox. The deletion was made from a connection that includes uncommon preferences such as ISP, country/region, and user agent. This can indicate an attempted breach of your organization, such as attackers attempting to mask operations by deleting emails related to spam activities.
 
 **TP**, **B-TP**, or **FP**?
@@ -339,6 +359,10 @@ Activities in a single session indicating that, a user performed suspicious emai
     1. An increase in sent emails.
 
 ### Suspicious inbox manipulation rule
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 Activities indicating that an attacker gained access to a user's inbox and created a suspicious rule. Manipulation rules, such as deleting or moving messages, or folders, from a user's inbox might be an attempt to exfiltrate information from your organization. Similarly, they can indicate an attempt to manipulate information that a user sees or to use their inbox to distribute spam, phishing emails, or malware. Defender for Cloud Apps profiles your environment and triggers alerts when suspicious inbox manipulation rules are detected on a user's inbox. This might indicate that the user's account is compromised.
 
@@ -537,6 +561,9 @@ Establishing a new user's activity pattern requires an initial learning period o
 This section describes alerts indicating that a malicious actor might be attempting to steal data from your organization.
 
 ### Suspicious inbox forwarding
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email forwarding rule created by third-party app**.
 
 Activities indicating that an attacker gained access to a user's inbox and created a suspicious rule. Manipulation rules, such as forward all or specific emails to another email account might be an attempt to exfiltrate information from your organization. Defender for Cloud Apps profiles your environment and triggers alerts when suspicious inbox manipulation rules are detected on a user's inbox. This might indicate that the user's account is compromised.
 

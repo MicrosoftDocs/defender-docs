@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender XDR in the Defender portal 
+title: Microsoft Defender XDR in the Microsoft Defender Portal
 description: Learn about the services and features available with Microsoft Defender XDR in the Microsoft Defender portal.
 search.appverid: met150
 ms.service: unified-secops-platform
@@ -17,9 +17,9 @@ ms.topic: concept-article
 # customer intent: As a security operations center leader, I want to learn about the services and features available with Defender XDR to help me determine whether it meets my organization's requirements.
 ---
 
-# Microsoft Defender XDR in the Defender portal
+# Microsoft Defender XDR in the Microsoft Defender portal
 
-Microsoft Defender XDR in the Microsoft unified SecOps platform unifies and coordinates threat protection across a broad range of assets, including devices and endpoints, identities, email, Microsoft 365 services, and SaaS apps.
+Microsoft Defender XDR unifies and coordinates threat protection across a broad range of assets, including devices and endpoints, identities, email, Microsoft 365 services, and SaaS apps.
 
 Defender XDR consolidates threat signals and data across assets, so that you can monitor and manage security threats from a single location in the [Microsoft Defender portal](https://security.microsoft.com). 
 

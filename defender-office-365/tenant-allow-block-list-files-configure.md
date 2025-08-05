@@ -15,9 +15,9 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block files in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 03/03/2025
+ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -26,7 +26,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 This article describes how admins can manage entries for files in the Microsoft Defender portal and in Exchange Online PowerShell.
 
@@ -34,9 +34,9 @@ This article describes how admins can manage entries for files in the Microsoft 
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- You specify files by using the SHA256 hash value of the file. To find the SHA256 hash value of a file in Windows, run the following command in Powershell:
+- You specify files by using the SHA256 hash value of the file. To find the SHA256 hash value of a file in Windows, run the following command in PowerShell:
 
   ```powershell
   Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256
@@ -45,16 +45,27 @@ This article describes how admins can manage entries for files in the Microsoft 
   An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3a`. Perceptual hash (pHash) values aren't supported.
 
 - Entry limits for files:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 file entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 file entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 file entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 total file entries:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 total file entries:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 total file entries:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - You can enter a maximum of 64 characters in a file entry.
 
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Exchange Online permissions** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+    - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
+      - **Authorization and settings/Security settings/Detection tuning (manage)**
+    - *Read-only access to the Tenant Allow/Block List*: 
+      - **Authorization and settings/Security settings/Read-only**.
+      - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
@@ -73,7 +84,7 @@ This article describes how admins can manage entries for files in the Microsoft 
 
 ## Create allow entries for files
 
-You can't create allow entries for files directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+You can't create allow entries for files directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that the system would otherwise filter.
 
 Instead, you use the **Email attachments** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=emailAttachment>. When you submit a blocked file as **I've confirmed it's clean**, you can select **Allow this file** to add an allow entry for the file on the **Files** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email attachments to Microsoft](submissions-admin.md#report-good-email-attachments-to-microsoft).
 

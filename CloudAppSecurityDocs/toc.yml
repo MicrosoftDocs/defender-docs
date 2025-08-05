@@ -62,8 +62,6 @@ items:
       - name: Overview
         displayName: connect apps
         href: enable-instant-visibility-protection-and-governance-actions-for-your-apps.md
-      - name: Custom connectors with the open app connector platform
-        href: ./connector-platform.md
       - name: Asana
         href: protect-asana.md
       - name: Atlassian
@@ -137,6 +135,8 @@ items:
       href: cloud-discovery-custom-apps.md
     - name: Attest your app
       href: attest-your-app.md
+    - name: Submit an App Catalog update request
+      href: submit-app-catalog-update-request.md
     - name: Collect logs
       items:
       - name: Configure automatic log upload for continuous reports
@@ -317,6 +317,8 @@ items:
     - name: Governing connected apps
       href: governance-actions.md
       displayName: governance actions
+- name: Integrate with SIEM and API solutions
+  items:
     - name: Manage events with SIEM solutions
       items:
       - name: Integrate with Microsoft Sentinel
@@ -325,6 +327,8 @@ items:
         href: siem.md
       - name: Troubleshooting SIEM solutions
         href: troubleshooting-siem.md
+    - name: Migrate from SIEM agents to supported API solutions
+      href: migrate-to-supported-api-solutions.md
     - name: Customize alert automation with Power Automate
       items:
       - name: Customize alert automation with Power Automate
@@ -426,7 +430,7 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: Investigate and respond 
+- name: View and manage applications
   items:
     - name: Assets
       items:

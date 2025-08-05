@@ -3,6 +3,7 @@ title: Identify insecure AD CS certificate enrollment IIS endpoints (ESC8)| Micr
 description: This article provides an overview of Microsoft Defender for Identity's 'Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)' identity security posture assessment report.
 ms.date: 03/04/2024
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
