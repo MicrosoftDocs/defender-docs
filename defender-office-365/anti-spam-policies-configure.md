@@ -390,7 +390,7 @@ This example creates a spam filter policy named Contoso Executives with the foll
 New-HostedContentFilterPolicy -Name "Contoso Executives" -HighConfidenceSpamAction Quarantine -SpamAction Quarantine -BulkThreshold 6
 ```
 
-For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a spam filter policy, see [Use PowerShell to specify the quarantine policy in anti-spam policies](quarantine-policies.md#anti-spam-policies-in-powershell).
@@ -412,7 +412,7 @@ This example creates a new spam filter rule named Contoso Executives with these 
 New-HostedContentFilterRule -Name "Contoso Executives" -HostedContentFilterPolicy "Contoso Executives" -SentToMemberOf "Contoso Executives Group"
 ```
 
-For detailed syntax and parameter information, see [New-HostedContentFilterRule](/powershell/module/exchange/new-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [New-HostedContentFilterRule](/powershell/module/exchangepowershell/new-hostedcontentfilterrule).
 
 ### Use PowerShell to view spam filter policies
 
@@ -434,7 +434,7 @@ This example returns all the property values for the spam filter policy named Ex
 Get-HostedContentFilterPolicy -Identity "Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Get-HostedContentFilterPolicy](/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy).
 
 ### Use PowerShell to view spam filter rules
 
@@ -472,7 +472,7 @@ This example returns all the property values for the spam filter rule named Cont
 Get-HostedContentFilterRule -Identity "Contoso Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedContentFilterRule](/powershell/module/exchange/get-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Get-HostedContentFilterRule](/powershell/module/exchangepowershell/get-hostedcontentfilterrule).
 
 ### Use PowerShell to modify spam filter policies
 
@@ -487,7 +487,7 @@ To modify a spam filter policy, [connect to Exchange Online PowerShell](/powersh
 Set-HostedContentFilterPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a spam filter policy, see [Use PowerShell to specify the quarantine policy in anti-spam policies](quarantine-policies.md#anti-spam-policies-in-powershell).
@@ -510,7 +510,7 @@ This example renames the existing spam filter rule named `{Fabrikam Spam Filter}
 Set-HostedContentFilterRule -Identity "{Fabrikam Spam Filter}" -Name "Fabrikam Spam Filter"
 ```
 
-For detailed syntax and parameter information, see [Set-HostedContentFilterRule](/powershell/module/exchange/set-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Set-HostedContentFilterRule](/powershell/module/exchangepowershell/set-hostedcontentfilterrule).
 
 ### Use PowerShell to enable or disable spam filter rules
 
@@ -534,7 +534,7 @@ This example enables same rule.
 Enable-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-HostedContentFilterRule](/powershell/module/exchange/enable-hostedcontentfilterrule) and [Disable-HostedContentFilterRule](/powershell/module/exchange/disable-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Enable-HostedContentFilterRule](/powershell/module/exchangepowershell/enable-hostedcontentfilterrule) and [Disable-HostedContentFilterRule](/powershell/module/exchangepowershell/disable-hostedcontentfilterrule).
 
 ### Use PowerShell to set the priority of spam filter rules
 
@@ -573,7 +573,7 @@ This example removes the spam filter policy named Marketing Department.
 Remove-HostedContentFilterPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedContentFilterPolicy](/powershell/module/exchange/remove-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Remove-HostedContentFilterPolicy](/powershell/module/exchangepowershell/remove-hostedcontentfilterpolicy).
 
 ### Use PowerShell to remove spam filter rules
 
@@ -591,7 +591,7 @@ This example removes the spam filter rule named Marketing Department.
 Remove-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchange/remove-hostedcontentfilterrule).
+For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchangepowershell/remove-hostedcontentfilterrule).
 
 ## How do you know these procedures worked?
 

@@ -896,11 +896,11 @@ For more information, see [Approve or deny release requests from users](#approve
 
 The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets that you use to view and manage messages and files in quarantine are described in this section.
 
-- [Delete-QuarantineMessage](/powershell/module/exchange/delete-quarantinemessage)
-- [Export-QuarantineMessage](/powershell/module/exchange/export-quarantinemessage)
-- [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
-- [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
+- [Delete-QuarantineMessage](/powershell/module/exchangepowershell/delete-quarantinemessage)
+- [Export-QuarantineMessage](/powershell/module/exchangepowershell/export-quarantinemessage)
+- [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage)
+- [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
+- [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)
 
 ## For more information
 
