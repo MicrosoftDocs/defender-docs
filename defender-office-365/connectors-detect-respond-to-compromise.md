@@ -108,7 +108,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Search-UnifiedAuditLog -StartDate "<ExDateTime>" -EndDate "<ExDateTime>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector
 ```
 
-For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchangepowershell/search-unifiedauditlog).
 
 ### Step 2: Review and revert unauthorized change(s) in a connector
 

@@ -231,33 +231,33 @@ In PowerShell, preset security policies consist of the following elements:
 
 - **Individual threat policies**: For example, anti-malware policies, anti-spam policies, anti-phishing policies, Safe Links policies, and Safe Attachments policies. These policies are visible using the standard policy management cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
   - <u>Default email protections for cloud mailboxes</u>:
-    - **[Get-AntiPhishPolicy](/powershell/module/exchange/get-antiphishpolicy)**
-    - **[Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy)** (anti-spam policies)
-    - **[Get-MalwareFilterPolicy](/powershell/module/exchange/get-malwarefilterpolicy)**
+    - **[Get-AntiPhishPolicy](/powershell/module/exchangepowershell/get-antiphishpolicy)**
+    - **[Get-HostedContentFilterPolicy](/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy)** (anti-spam policies)
+    - **[Get-MalwareFilterPolicy](/powershell/module/exchangepowershell/get-malwarefilterpolicy)**
   - <u>Defender for Office 365 protection</u>:
-    - **[Get-SafeAttachmentPolicy](/powershell/module/exchange/get-safeattachmentpolicy)**
-    - **[Get-SafeLinksPolicy](/powershell/module/exchange/get-safelinkspolicy)**
+    - **[Get-SafeAttachmentPolicy](/powershell/module/exchangepowershell/get-safeattachmentpolicy)**
+    - **[Get-SafeLinksPolicy](/powershell/module/exchangepowershell/get-safelinkspolicy)**
 
   > [!WARNING]
   > Don't attempt to create, modify, or remove the individual threat policies associated with preset security policies. The only supported method for creating the individual threat policies for Standard or Strict preset security policies is to turn on the preset security policy in the Microsoft Defender portal for the first time.
 
 - **Rules**: Separate rules are used for the Standard preset security policy, the Strict preset security policy, and the Built-in protection preset security policy. The rules define the recipient conditions and exceptions for the policies (who the policies apply to). You manage these rules using the following cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
   - <u>Rules for default email protections for cloud mailboxes</u>:
-    - **[Disable-EOPProtectionPolicyRule](/powershell/module/exchange/disable-eopprotectionpolicyrule)**
-    - **[Enable-EOPProtectionPolicyRule](/powershell/module/exchange/enable-eopprotectionpolicyrule)**
-    - **[Get-EOPProtectionPolicyRule](/powershell/module/exchange/get-eopprotectionpolicyrule)**
-    - **[New-EOPProtectionPolicyRule](/powershell/module/exchange/new-eopprotectionpolicyrule)**
-    - **[Set-EOPProtectionPolicyRule](/powershell/module/exchange/set-eopprotectionpolicyrule)**
+    - **[Disable-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/disable-eopprotectionpolicyrule)**
+    - **[Enable-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/enable-eopprotectionpolicyrule)**
+    - **[Get-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/get-eopprotectionpolicyrule)**
+    - **[New-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/new-eopprotectionpolicyrule)**
+    - **[Set-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/set-eopprotectionpolicyrule)**
   - <u>Rules for Defender for Office 365 protections</u>:
-    - **[Disable-ATPProtectionPolicyRule](/powershell/module/exchange/disable-atpprotectionpolicyrule)**
-    - **[Enable-ATPProtectionPolicyRule](/powershell/module/exchange/enable-atpprotectionpolicyrule)**
-    - **[Get-ATPProtectionPolicyRule](/powershell/module/exchange/get-atpprotectionpolicyrule)**
-    - **[New-ATPProtectionPolicyRule](/powershell/module/exchange/new-atpprotectionpolicyrule)**
-    - **[Set-ATPProtectionPolicyRule](/powershell/module/exchange/set-atpprotectionpolicyrule)**
+    - **[Disable-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/disable-atpprotectionpolicyrule)**
+    - **[Enable-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/enable-atpprotectionpolicyrule)**
+    - **[Get-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/get-atpprotectionpolicyrule)**
+    - **[New-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/new-atpprotectionpolicyrule)**
+    - **[Set-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/set-atpprotectionpolicyrule)**
   - <u>The rule for the Build-in protection preset security policy</u>:
-    - **[Get-ATPBuiltInProtectionRule](/powershell/module/exchange/get-atpbuiltinprotectionrule)**
-    - **[New-ATPBuiltInProtectionRule](/powershell/module/exchange/new-atpbuiltinprotectionrule)**
-    - **[Set-ATPBuiltInProtectionRule](/powershell/module/exchange/set-atpbuiltinprotectionrule)**
+    - **[Get-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/get-atpbuiltinprotectionrule)**
+    - **[New-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/new-atpbuiltinprotectionrule)**
+    - **[Set-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/set-atpbuiltinprotectionrule)**
 
   For the Standard and Strict preset security policies, these rules are created the first time you turn on the preset security policy in the Microsoft Defender portal. If you never turned on the preset security policy, the associated rules don't exist. Turning off the preset security policy doesn't delete the associated rules.
 
@@ -469,7 +469,7 @@ For the Standard and Strict preset security policies, you can specify recipient 
   Set-ATPBuiltInProtectionRule -Identity "ATP Built-In Protection Rule" -ExceptIfRecipientDomainIs $null -ExceptIfSentTo $null -ExceptIfSentToMemberOf $null
   ```
 
-  For detailed syntax and parameter information, see [Set-ATPBuiltInProtectionRule](/powershell/module/exchange/set-atpbuiltinprotectionrule).
+  For detailed syntax and parameter information, see [Set-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/set-atpbuiltinprotectionrule).
 
 - **Standard or Strict preset security policies**
 
@@ -491,7 +491,7 @@ For the Standard and Strict preset security policies, you can specify recipient 
   Set-ATPProtectionPolicyRule -Identity "Strict Preset Security Policy" -ExceptIfSentTo "SecOps1","SecOps2"
   ```
 
-  For detailed syntax and parameter information, see [Set-EOPProtectionPolicyRule](/powershell/module/exchange/set-eopprotectionpolicyrule) and [Set-ATPProtectionPolicyRule](/powershell/module/exchange/Set-atpprotectionpolicyrule).
+  For detailed syntax and parameter information, see [Set-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/set-eopprotectionpolicyrule) and [Set-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/Set-atpprotectionpolicyrule).
 
 ## Appendix
 

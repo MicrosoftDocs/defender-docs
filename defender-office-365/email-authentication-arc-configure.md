@@ -112,7 +112,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To preserve existing values, be sure to include the ARC sealers that you want to keep along with the new ARC sealers that you want to add.
 
-  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchange/set-arcconfig).
+  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig).
 
 ## Validate a trusted ARC sealer
 

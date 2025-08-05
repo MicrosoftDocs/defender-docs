@@ -77,7 +77,7 @@ To turn on priority account protection, run the following command:
 Set-EmailTenantSettings -EnablePriorityAccountProtection $true
 ```
 
-For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchange/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchange/set-emailtenantsettings).
+For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchangepowershell/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchangepowershell/set-emailtenantsettings).
 
 ## Review differentiated protection from priority account protection
 
