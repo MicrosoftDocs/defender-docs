@@ -80,20 +80,11 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
 4. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
 
-   1. Default Path Installation
-      
-      The default installation location is `/`
-      ```bash
-      sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
-      ```
-   3. Custom Path Installation
-      
-      For installation at a custom location, provide the custom installation path - <custom_path>, as a parameter.
-      ```bash
-      sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path <custom_path>
-      ```
-      
-   These commands deploy the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
+   ```bash
+   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
+   ```
+
+   This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
@@ -136,12 +127,15 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
-   
+   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
+
+   For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
+
    > [!NOTE]
    >
       > 1. Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
       >
-      > 2. Installation path cannot be changed during upgrade. If MDE is installed in the default path, upgrading to a custom path is not supported. This will be considered as "migration", which is not supported. For migration, either from default to custom path or custom to default path, uninstall MDE.
+      > 2. The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
 
