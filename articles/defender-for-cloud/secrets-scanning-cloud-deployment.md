@@ -2,7 +2,7 @@
 title: Protect cloud deployment secrets with Microsoft Defender for Cloud
 description: Learn how to protect cloud deployment secrets with Defender for CSPM's agentless secrets scanning in Microsoft Defender for Cloud.
 ms.topic: overview
-ms.date: 04/16/2024
+ms.date: 07/15/2025
 ---
 
 
@@ -12,9 +12,9 @@ Microsoft Defender for Cloud provides agentless secrets scanning for cloud deplo
 
 ## What is cloud deployment?
 
-Cloud deployment refers to the process of deploying and managing resources on cloud providers such as Azure and AWS at scale, using tools such as Azure Resource Manager templates and AWS CloudFormation stack. In other words, a cloud deployment is an instance of an infrastructure-as-code (IaC) template.
+Cloud deployment refers to the process of deploying and managing resources on cloud providers such as Azure and AWS at scale, and using tools such as Azure Resource Manager templates and AWS CloudFormation stack. In other words, a cloud deployment is an instance of an infrastructure-as-code (IaC) template.
 
-Each cloud provide exposes an API query, and when querying APIs for cloud deployment resources, you typically retrieve deployment metadata such as deployment templates, parameters, output, and tags.
+Each cloud provider exposes an API query, and when querying APIs for cloud deployment resources, you typically retrieve deployment metadata such as deployment templates, parameters, output, and tags.
 
 ## Security from software development to runtime
 
@@ -28,7 +28,7 @@ Scanning for cloud deployment secrets adds an extra layer of security, addressin
   - Using attack path analysis with cloud deployment secrets scanning will automatically discover attack paths involving an Azure deployment that might lead to a sensitive data breach.  
 - **Resource discovery**: The impact of misconfigured deployment resources can be extensive, leading to the new resources being created on an expanding attack surface.
   - Detecting and securing secrets within resource control plane data can help prevent potential breaches.
-  - Addressing exposed secrets during resource creation can be particularly challenging.
+  - Addressing exposed secrets during resource creation can be challenging.
   - Cloud deployment secrets scanning helps to identify and mitigate these vulnerabilities at an early stage.
 
 Scanning helps you to quickly detect plaintext secrets in cloud deployments. If secrets are detected Defender for Cloud can assist your security team to prioritize action and remediate to minimize the risk of lateral movement.

@@ -4,7 +4,7 @@ description: Learn about CIEM in Microsoft Defender for Cloud and enhance the se
 ms.topic: concept-article
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/08/2024
+ms.date: 07/15/2025
 #customer intent: As a user, I want to understand how to manage permissions effectively so that I can enhance the security of my cloud infrastructure.
 ---
 
@@ -57,7 +57,7 @@ Reduce identity-related risk by receiving proactive guidance via recommendations
 
 ### Lateral movement detections
 
-Defender for Cloud correlates identity risks with attack path analysis, surfacing lateral movement opportunities that originate from overprivileged identities or misconfigurations. For example, an attacker could compromise a service principal with excessive rights to move laterally from a compromised resource to a sensitive database. This context allows security teams to prioritize high-impact identity issues that may otherwise go unnoticed.
+Defender for Cloud correlates identity risks with attack path analysis, surfacing lateral movement opportunities that originate from overprivileged identities or misconfigurations. For example, an attacker could compromise a service principal with excessive rights to move laterally from a compromised resource to a sensitive database. This context allows security teams to prioritize high-impact identity issues that might otherwise go unnoticed.
 
 ## How to view identity and permission risks
 

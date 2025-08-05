@@ -4,7 +4,7 @@ description: Learn about the architecture of Microsoft Defender for Containers f
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 01/10/2024
+ms.date: 07/15/2025
 # customer intent: As a developer, I want to understand the container security architecture of Microsoft Defender for Containers so that I can implement it effectively.
 ---
 
@@ -42,7 +42,7 @@ When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, t
 
 - **Defender sensor**: The DaemonSet that is deployed on each node, collects signals from hosts using [eBPF technology](https://ebpf.io/), and provides runtime protection. The sensor is registered with a Log Analytics workspace, and used as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. The Defender sensor is deployed as an AKS Security profile.
 > [!NOTE]
-> When the Defender sensor is configured on an AKS cluster, it triggers a reconciliation process. This happens as part of the Defender for Containers plan and is expected behaviour.
+> When the Defender sensor is configured on an AKS cluster, it triggers a reconciliation process. This happens as part of the Defender for Containers plan and is expected behavior.
 
 - **Azure Policy for Kubernetes**:  A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control making it possible to apply at-scale enforcements, and safeguards on your clusters in a centralized, consistent manner. The Azure Policy for Kubernetes pod is deployed as an AKS add-on. It's only installed on one node in the cluster. For more information, see [Protect your Kubernetes workloads](kubernetes-workload-protections.md) and [Understand Azure Policy for Kubernetes clusters](/azure/governance/policy/concepts/policy-for-kubernetes).
 
@@ -53,8 +53,8 @@ When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, t
 | Pod Name | Namespace | Kind | Short Description | Capabilities | Resource limits | Egress Required |
 |--|--|--|--|--|--|--|
 | microsoft-defender-collector-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | A set of containers that focus on collecting inventory and security events from the Kubernetes environment. | SYS_ADMIN, <br>SYS_RESOURCE, <br>SYS_PTRACE | memory: 296Mi<br> <br> cpu: 360m | No |
-| microsoft-defender-collector-misc-* | kube-system | [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) | A set of containers that focus on collecting inventory and security events from the Kubernetes environment that aren't bounded to a specific node. | N/A | memory: 64Mi <br> <br>cpu: 60m | No |
-| microsoft-defender-publisher-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | Publish the collected data to Microsoft Defender for Containers backend service where the data will be processed for and analyzed. | N/A | memory: 200Mi <br> <br> cpu: 60m | Https 443 <br> <br> Learn more about the [outbound access prerequisites](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers) |
+| microsoft-defender-collector-misc-* | kube-system | [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) | A set of containers that focus on collecting inventory and security events from the Kubernetes environment that aren't bounded to a specific node. | N/A | memory: 64Mi <br> <br>Cpu: 60m | No |
+| microsoft-defender-publisher-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | Publish the collected data to Microsoft Defender for Containers backend service where the data will be processed for and analyzed. | N/A | memory: 200Mi <br> <br> Cpu: 60m | Https 443 <br> <br> Learn more about the [outbound access prerequisites](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers) |
 
 \* Resource limits aren't configurable; Learn more about [Kubernetes resources limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes).
 
