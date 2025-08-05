@@ -55,7 +55,7 @@ To resolve this issue, take the following steps:
 > [!TIP]
 > If you are planning to keep Microsoft Defender Antivirus in passive mode for your Windows Servers, the `ForceDefenderPassiveMode` setting needs to be set **before** onboarding the device to Microsoft Defender for Endpoint.
 
-On Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, you must set Microsoft Defender Antivirus to passive mode manually. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key.
+On Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, or Windows Server 2012 R2, you must set Microsoft Defender Antivirus to passive mode manually. This action helps prevent problems caused by having multiple antivirus products installed on a server. You can set Microsoft Defender Antivirus to passive mode using a registry key.
 
 You can set Microsoft Defender Antivirus to passive mode by setting the following registry key:
 
@@ -87,9 +87,9 @@ If Microsoft Defender Antivirus is stuck in passive mode, set it to active mode 
 > [!IMPORTANT]
 > If you're still having trouble setting Microsoft Defender Antivirus to active mode after following this procedure, [contact support](/Microsoft-365/admin/get-help-support).
 
-## I am having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016
+## I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016
 
-If you are using a non-Microsoft antivirus/antimalware solution on Windows Server 2016, your existing solution might have required Microsoft Defender Antivirus to be disabled or uninstalled. You can use the [Malware Protection Command-Line Utility](command-line-arguments-microsoft-defender-antivirus.md) to re-enable Microsoft Defender Antivirus on Windows Server 2016.
+If you're using a non-Microsoft antivirus/antimalware solution on Windows Server 2016, your existing solution might have required Microsoft Defender Antivirus to be disabled or uninstalled. You can use the [Malware Protection Command-Line Utility](command-line-arguments-microsoft-defender-antivirus.md) to re-enable Microsoft Defender Antivirus on Windows Server 2016.
 
 1. As a local administrator on the server, open Command Prompt.
 

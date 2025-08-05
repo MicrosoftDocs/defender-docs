@@ -137,7 +137,7 @@ You can set attack surface reduction rules for devices that are running any of t
 - Windows 11 Pro, version 21H2 or later
 - Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
-- Windows Server 2025
+- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)

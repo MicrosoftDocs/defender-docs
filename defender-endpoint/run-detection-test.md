@@ -26,7 +26,7 @@ ms.subservice: onboard
 - Windows Server 2016
 - Windows Server 2019
 - Windows Server 2022
-- Windows Server 2025
+- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
@@ -51,7 +51,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
 > [!NOTE]
-> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
+> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

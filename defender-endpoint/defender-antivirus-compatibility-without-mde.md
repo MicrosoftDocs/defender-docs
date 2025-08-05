@@ -32,8 +32,8 @@ The following table summarizes what to expect:
 | -------- | -------- | -------- |
 |Windows 11 and Windows 10   |Microsoft Defender Antivirus|Active mode|
 |Windows 11 and Windows 10|A non-Microsoft antivirus solution|Disabled mode (happens automatically).|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|Microsoft Defender Antivirus|Active mode|
-|Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
+|Windows server 2025, Azure Stack HCI OC version 23H2 and later. Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|Microsoft Defender Antivirus|Active mode|
+|Windows server 2025, Azure Stack HCI OC version 23H2 and later. Windows Server 2022, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016|A non-Microsoft antivirus solution|Disabled (set manually; see the note that follows this table)|
 
 > [!NOTE]
 > Defender for Endpoint support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.

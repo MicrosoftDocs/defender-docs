@@ -71,7 +71,8 @@ Tamper protection doesn't prevent you from viewing your security settings. And, 
 Tamper protection is available for devices that are running one of the following versions of Windows:
 
 - Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
+- Windows server 2025, Azure Stack HCI OC version 23H2 and later. 
+- Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
 - Windows Server 2016 and Windows Server 2012 R2 (using the modern, unified solution)
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).

@@ -39,7 +39,7 @@ The following requirements must be met before turning on aggregated reporting:
 Aggregated reporting supports the following:
 
 - Client version: Windows version 2411 and later
-- Operating systems: Windows 11 22H2, Windows 11 Enterprise, Windows 10 20H2, 21H1, 21H2, Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server version 20H2
+- Operating systems: Windows 11 22H2, Windows 11 Enterprise, Windows 10 20H2, 21H1, 21H2, Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, or Windows Server version 20H2
 
 ## Turn on aggregated reporting
 

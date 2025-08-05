@@ -36,7 +36,7 @@ Microsoft Defender Antivirus is available on endpoints running the following ver
 
 - Windows 11
 - Windows 10 
-- Windows Server 2025
+- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803, or newer
@@ -64,8 +64,8 @@ The following table summarizes what to expect:
 |---|---|---|
 |Windows 10 <br/>Windows 11|Microsoft Defender Antivirus|Active mode|
 |Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> Note that in Windows 11, if SmartAppControl is enabled, you may observe that Microsoft Defender Antivirus goes into passive mode instead of remaining in disabled mode. However, this is not the same scenario as for devices onboarded to Microsoft Defender for Endpoint.|
-|Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
-|Windows Server 2025<br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
+|Windows Server 2025, Azure Stack HCI OC version 23H2 and later. <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
+|Windows Server 2025, Azure Stack HCI OC version 23H2 and later.<br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
 If the device is onboarded to Microsoft Defender for Endpoint, you can use Microsoft Defender Antivirus in passive mode as described later in this article.
 

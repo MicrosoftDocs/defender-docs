@@ -29,7 +29,7 @@ Test how Microsoft Defender SmartScreen helps you identify phishing and malware 
 Scenario requirements and setup
 
 - Client devices must be running Windows 11 or Windows 10
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 or Windows Server 2008 R2 SP1
+- Server devices must be running Windows server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1
 - Microsoft Edge browser required
 - For more information, see [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
 
