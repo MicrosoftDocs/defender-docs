@@ -47,7 +47,6 @@ Before deploying MDE to a custom path, ensure the following requirements are met
 ### Prerequisites
 - The custom installation directory and its entire tree must have at least `rwxr-xr-x` (755) permissions.
 - Ensure adequate disk space in the target location (minimum 2 GB, more for high-performance workloads).
-- The target file system must support standard Linux file operations and permissions.
 - If SELinux is enabled, the `semanage` tool must be installed to set the correct file context for the custom installation path.
 
 ### Supported Distributions and Feature Availability
@@ -60,8 +59,8 @@ Custom path installation is supported on all [supported Linux distributions](mde
 
 This section describes only the extra steps needed for custom path installation:
 
+- **Installer script**: At installation time, run the `mde_installer.sh` script with the `--install-path /your/custom/path` option to specify a custom location. For more details, see the [installer script deployment guide](linux-installer-script.md).
 - **Manual installation**: Perform the following additional setup steps before running the standard manual installation commands described in [linux-install-manually.md](linux-install-manually.md).
-- **Installer script**: Add the `--install-path /your/custom/path` parameter. See [installer script deployment guide](linux-installer-script.md).
 
 ### Manual Installation: Pre-Installation Setup
 
