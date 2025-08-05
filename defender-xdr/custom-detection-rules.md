@@ -146,6 +146,7 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 - **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
 - **Every hour** - Runs hourly, checking data from the past 4 hours.
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT), see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
+- **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel, see [Custom frequency for Microsoft Sentinel data (Preview)](#custom-frequency-for-microsoft-sentinel-data-preview).
 
 > [!TIP]
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
@@ -206,11 +207,14 @@ Near real-time detections are supported for the following tables:
 > Only columns that are generally available can support **Continuous (NRT)** frequency.
 
 ###### Custom frequency for Microsoft Sentinel data (Preview)
+
 Microsoft Sentinel customers that are onboarded to Microsoft Defender can select **Custom** frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
 
 When you select this frequency option, the **Run query every input** component is displayed, where you type the desired frequency for the rule and use a dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically with the following logic: 
 1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback will be 20*4 = 80 minutes.  
 2.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days  
+
+:::image type="content" source="/defender/media/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-frequency.png":::
 
 > [!IMPORTANT]
 >When selecting a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
@@ -220,7 +224,7 @@ When you select this frequency option, the **Run query every input** component i
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details, allowing you to:
 -	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
--	[Choose impacted entities](#choose-impacted-entities)
+-	[Link entities](#link-entities)
 -	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
 
 #### Create a dynamic alert title and description (Preview)
@@ -233,9 +237,11 @@ For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
 >[!NOTE]
 >The number of columns you can reference in each field is limited to three.
 
+:::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections setup guide." lightbox="/defender/media/ah-dynamic-alert.png":::
+
 To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
 
-#### Choose impacted entities
+#### Link entities
 
 Identify the columns in your query results where you expect to find the main affected or impacted entity. For example, a query might return sender (`SenderFromAddress` or `SenderMailFromAddress`) and recipient (`RecipientEmailAddress`) addresses. Identifying which of these columns represent the main impacted entity helps the service aggregate relevant alerts, correlate incidents, and target response actions.
 
@@ -274,6 +280,8 @@ There are two sections under the expanded **Entity mapping** section for which y
 >[!NOTE] 
 >Currently, only assets can be mapped as impacted entities.
 
+:::image type="content" source="/defender/media/ah-link-entities.png" alt-text="Screenshot that shows the entity mapping options in the Custom detections wizard." lightbox="/defender/media/ah-link-entities.png":::
+
 After an entity type is selected, select an identifier type that exists in the selected query results so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant dropdown menu. Read the description displayed when hovering on each identifier to better understand it. 
 
 After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. This allows you to explore your query and results to make sure you choose the right column for the selected identifier.
@@ -286,8 +294,12 @@ In the **Custom details** section, add key-value pairs corresponding to the de
 - In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
 - In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
   
+:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-details.png":::
+
 The following screenshot shows how the custom details are surfaced in the alert side panel: 
-  
+
+:::image type="content" source="/defender/media/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="/defender/media/ah-custom-details-panel.png":::
+
 >[!IMPORTANT]
 >Custom details have the following limitations: 
 >1.	Each rule is limited to up to 20 key/values pairs of custom details 
