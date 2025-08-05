@@ -1,7 +1,7 @@
 ---
 title: Investigate behaviors with advanced hunting | Microsoft Defender for Cloud Apps
 description: Learn how to investigate Microsoft Defender for Cloud App behaviors with Microsoft Defender XDR advanced hunting.
-ms.date: 09/07/2023
+ms.date: 08/05/2025
 ms.topic: how-to
 #CustomerIntent: As a Defender for Cloud Apps customer, I want to understand how behaviors work so that I can investigate more effectively.
 ---
@@ -10,9 +10,9 @@ ms.topic: how-to
 
 
 
-While some anomaly detections focus primarily on detecting problematic security scenarios, others can help identifying and investigating anomalous user behavior that doesn't necessarily indicate a compromise. In such cases, Microsoft Defender for Cloud Apps uses a separate data type, called *behaviors*.
+While some anomaly detections focus primarily on detecting problematic security scenarios, others can help identifying and investigating anomalous user behavior that doesn't necessarily indicate a compromise. In such cases, Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud use a separate data type, called *behaviors*.
 
-This article describes how to investigate Defender for Cloud Apps behaviors with Microsoft Defender XDR advanced hunting.
+This article describes how to investigate Defender for Cloud Apps and Defender for Cloud behaviors with Microsoft Defender XDR advanced hunting.
 
 Have feedback to share? Fill out our [feedback form](https://forms.office.com/r/x0mX5hBkGu)!
 
@@ -27,7 +27,7 @@ While behaviors might be related to security scenarios, they're not necessarily 
 
 ## Supported detections
 
-Behaviors currently support low-fidelity, Defender for Cloud Apps detections, that may not meet the standard for alerts but are still useful in providing context during an investigation. Currently supported detections include:
+Behaviors currently support low-fidelity, Defender for Cloud Apps and Defender for Cloud detections, that may not meet the standard for alerts but are still useful in providing context during an investigation. Currently supported detections include:
 
 |Alert name  |Policy name  |ActionType (Hunting)|
 |---------|---------|---------|
