@@ -99,7 +99,7 @@ There are two ways you can create the Saltstack state files:
    ```
   
 > [!NOTE]
-> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, etc. To select from the list of available options, check help through the following command:
+> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, custom path installation etc. To select from the list of available options, check help through the following command:
 >```./mde_installer.sh --help```
 
 ### Create Saltstack state files by manually configuring repositories
