@@ -29,7 +29,7 @@ For apps connected to Microsoft Entra ID, create app policies from provided temp
 
     For example:
 
-    :::image type="content" source="media/app-governance-app-policies-create/Microsoft-365-policies.png" alt-text="Screenshot of the Microsoft 365 tab.":::
+    :::image type="content" source="media/app-governance-app-policies-create/microsoft-365-policies.png" alt-text="Screenshot of the Microsoft 365 tab.":::
 
 1. Select the **Create New Policy** option, and then do one of the following steps:
 
