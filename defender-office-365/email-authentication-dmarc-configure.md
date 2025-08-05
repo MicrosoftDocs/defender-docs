@@ -2,9 +2,9 @@
 title: Use DMARC to validate email, setup steps
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.date: 05/07/2025

@@ -1,8 +1,8 @@
 ---
 title: Configure junk email settings on Exchange Online mailboxes
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium

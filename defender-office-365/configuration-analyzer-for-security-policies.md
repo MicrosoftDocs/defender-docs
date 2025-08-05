@@ -2,9 +2,9 @@
 title: Configuration analyzer for threat policies
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
