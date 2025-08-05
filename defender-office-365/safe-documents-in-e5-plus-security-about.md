@@ -96,7 +96,7 @@ This example enables Safe Documents for the entire organization, and prevents us
 Set-AtpPolicyForO365 -EnableSafeDocs $true -AllowSafeDocsOpen $false
 ```
 
-For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365).
+For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchangepowershell/set-atppolicyforo365).
 
 ### Configure individual access to Safe Documents
 
