@@ -5,7 +5,7 @@ ms.date: 08/04/2025
 ms.topic: how-to
 ---
 
-# Security Assessment: Remove inactive service account
+# Security Assessment: Remove Inactive Service Accounts
 
 This recommendation lists Active Directory service accounts that have been detected as inactive (stale) within the past 180 days. 
 
