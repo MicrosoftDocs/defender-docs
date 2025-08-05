@@ -34,7 +34,7 @@ ms.date: 05/12/2025
 This section covers some of the most frequently asked questions regarding privacy and data handling for Defender for Endpoint.
 
 > [!NOTE]
-> This article explains the data storage and privacy details related to Defender for Endpoint and Defender for Business. For more information related to Defender for Endpoint and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=827576), and also [Windows privacy FAQ](https://go.microsoft.com/fwlink/?linkid=827577).
+> This article explains the data storage and privacy details related to Defender for Endpoint and Defender for Business. For more information related to Defender for Endpoint and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=827576).
 
 ## What are we collecting?
 
