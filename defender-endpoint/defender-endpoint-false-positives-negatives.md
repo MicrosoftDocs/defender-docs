@@ -234,7 +234,7 @@ Before you create indicators for files, make sure the following requirements are
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
 - Antimalware client version is 4.18.1901.x or later
 - Client devices must be running Windows 11 or Windows 10, version 1703 or later
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016 / Windows Server 2012 R2 with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
+- Server devices must be running Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, or Windows Server 2016 / Windows Server 2012 R2 with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
 - The [Block or allow feature is turned on](advanced-features.md)
 
 #### Indicators for IP addresses, URLs, or domains
