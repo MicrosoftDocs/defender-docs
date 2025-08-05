@@ -42,6 +42,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
+- [Pre Install Setup for Custom Path Installation](#pre-install-setup-for-custom-path-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -256,6 +257,13 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf install mariner-repos-extras-preview
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
+
+## Pre Install Setup for Custom Path Installation
+
+These steps are applicable only if Defender is to be installed in a custom location.
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: Pre-installation setup](linux-custom-path-installation.md#manual-installation-pre-installation-setup).
+
+For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
 
 ## Application installation
 
@@ -501,9 +509,10 @@ The following external package dependencies exist for the `mdatp` package:
 > - RPM package needs: `mde-netfilter`, `pcre`
 > - DEBIAN package needs: `mde-netfilter`, `libpcre3`
 > - The `mde-netfilter` package also has the following package dependencies:
-    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
+```
+- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+```> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
