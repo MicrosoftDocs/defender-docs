@@ -109,6 +109,25 @@
           href: faq-copilot.yml
         - name: Prepare for retirement of the Log Analytics agent
           href: prepare-deprecation-log-analytics-mma-agent.md
+        - name: User roles and permissions
+          href: permissions.md
+        - name: Defender for Cloud support matrices
+          displayName: coverage, supported platforms, cloud services, roles, permissions
+          href: support-matrix-defender-for-cloud.md
+        - name: Defender for Cloud cloud support matrices
+          displayName: matrices, gov, government, 21via, net, support
+          href: support-matrix-cloud-environment.md
+        - name: Regional availability for Defender for Cloud plans
+          href: regional-availability.md
+        - name: Defender for Servers support matrices
+          displayName: coverage, machines, windows, linux, multicloud, supported features,
+            endpoint protections
+          href: support-matrix-defender-for-servers.md
+        - name: Support matrices for Containers
+          displayName: Containers, features availability, environment information
+          href: support-matrix-defender-for-containers.md
+        - name: Defender for Containers permissions for EKS and GKE
+          href: containers-permissions.md
 
 - name: Cloud Security Posture Management (CSPM)
   items:
@@ -229,27 +248,6 @@
 
 - name: Concepts
   items:
-    - name: Support and requirements
-      items:
-        - name: User roles and permissions
-          href: permissions.md
-        - name: Defender for Cloud support matrices
-          displayName: coverage, supported platforms, cloud services, roles, permissions
-          href: support-matrix-defender-for-cloud.md
-        - name: Defender for Cloud cloud support matrices
-          displayName: matrices, gov, government, 21via, net, support
-          href: support-matrix-cloud-environment.md
-        - name: Regional availability for Defender for Cloud plans
-          href: regional-availability.md
-        - name: Defender for Servers support matrices
-          displayName: coverage, machines, windows, linux, multicloud, supported features,
-            endpoint protections
-          href: support-matrix-defender-for-servers.md
-        - name: Support matrices for Containers
-          displayName: Containers, features availability, environment information
-          href: support-matrix-defender-for-containers.md
-        - name: Defender for Containers permissions for EKS and GKE
-          href: containers-permissions.md
     - name: Improve cloud security posture
       items:
       - name: Cloud Security Posture Management (CSPM)
