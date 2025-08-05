@@ -57,7 +57,7 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 
 ### Prerequisites
 
-* Isolation exclusion is available on Windows 11, Windows 10 version 1703 or later, Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and macOS.
+* Isolation exclusion is available on Windows 11, Windows 10 version 1703 or later, Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and macOS.
 * Isolation exclusion must be enabled. Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. To enable isolation exclusion, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to **Settings** > **Endpoints** > **Advanced features** and enable **Isolation Exclusion Rules** feature.
 
    :::image type="content" source="./media/isolation-exclusions/enable-exclusions.png" alt-text="Screenshot showing how to enable isolation exclusions." lightbox="./media/isolation-exclusions/enable-exclusions.png":::

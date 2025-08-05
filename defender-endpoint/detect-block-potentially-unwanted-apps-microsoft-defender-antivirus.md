@@ -36,7 +36,7 @@ ms.date: 06/10/2025
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
 
-- Windows Server 2025
+- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1803 or later

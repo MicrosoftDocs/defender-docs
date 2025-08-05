@@ -73,7 +73,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
   - **Windows Server 2022**
 
-  - **Windows Server 2025**
+  - **Windows Server 2025, Azure Stack HCI OC version 23H2 and later.**
 
 - **Enable live response from the advanced settings page**.
 

@@ -44,7 +44,7 @@ You can block additional malicious IPs/URLs by configuring "**Custom network ind
 
 - Windows 11
 - Windows 10, version 1709 or later
-- Windows Server 2025
+- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
