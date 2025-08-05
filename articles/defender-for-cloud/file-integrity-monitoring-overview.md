@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 07/29/2025
+ms.date: 08/05/2025
 ---
 
 # File integrity monitoring
