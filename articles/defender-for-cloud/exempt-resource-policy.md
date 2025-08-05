@@ -4,7 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 08/04/2025
+ms.date: 08/05/2025
 ---
 
 # Create exemptions based on policies
@@ -28,7 +28,9 @@ To tailor your security posture, you can create exemptions for recommendations t
 
 1. Select **+ Create**.
 
-1. Enter an Exemption name.
+1. Enter an Exemption name, and (Optinal) a description.
+
+    :::image type="content" source="media/exempt-resource-policy/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resource-policy/create-exemption.png":::
 
 1. Select a Cloud platform.
 
@@ -36,7 +38,7 @@ To tailor your security posture, you can create exemptions for recommendations t
 
 1. Select a category, <br>
 
-    1. **Mitigated** 
+    1. **Mitigated (resolved through a third-party service)** 
      
         Or, 
 
