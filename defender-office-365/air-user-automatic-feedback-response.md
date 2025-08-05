@@ -94,6 +94,6 @@ Whether the message was automatically or manually sent to Microsoft for review, 
 To learn more about submissions and investigations in Defender for Microsoft 365, see the following articles:
 
 - [Automated investigation and response in Microsoft Defender for Office 365](air-about.md)
-- [View the results of an automated investigation in Microsoft 365](air-view-investigation-results.md)
+- [View the results of an automated investigation in Microsoft Defender for 365](air-view-investigation-results.md)
 - [Admin review for reported messages](submissions-admin-review-user-reported-messages.md)
 - [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md)

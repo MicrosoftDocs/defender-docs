@@ -14,9 +14,9 @@ ms.collection:
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 07/24/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -27,9 +27,7 @@ appliesto:
 
 In Microsoft 365 organizations with mailboxes in Exchange Online, users can report phishing and suspicious email in Outlook. Users can report false positives (good email that was blocked or sent to their Junk Email folder) and false negatives (unwanted email or phishing that was delivered to their Inbox) from Outlook on all platforms using free tools from Microsoft.
 
-Microsoft provides the following tools for users to report good and bad messages:
-
--  The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all Outlook platforms, including shared and delegate mailboxes.
+Microsoft provides the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) on virtually all Outlook platforms for users to report good and bad messages.
 
 For more information about reporting messages to Microsoft, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -59,9 +57,7 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
   If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
 - The built-in **Report** button in Outlook on the web, Outlook for Mac, Outlook for iOS, Outlook for Android, and the new Outlook for Windows supports reporting messages from shared mailboxes or other mailboxes by a delegate.
-  - Shared mailboxes require Send As or Send On Behalf permission for the user.
-  - Other mailboxes require Send As or Send On Behalf permission _and_ Read and Manage permissions for the delegate.
-
+  
 ### Use the built-in Report button in Outlook to report junk and phishing messages
 
 - Users can report a message as junk from the Inbox or any email folder other than Junk Email folder.

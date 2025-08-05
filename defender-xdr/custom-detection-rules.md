@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/07/2025
+ms.date: 07/29/2025
 ---
 
 # Create custom detection rules
@@ -127,13 +127,13 @@ DeviceEvents
 With the query in the query editor, select **Create detection rule** and specify the following alert details:
 
 - **Detection name** - Name of the detection rule; should be unique
-- **Frequency** -Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
-- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
+- **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
+- **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
 - **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics
-- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work.
+- **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 
 

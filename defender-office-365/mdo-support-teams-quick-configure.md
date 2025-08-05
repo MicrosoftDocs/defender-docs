@@ -75,7 +75,7 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
    Repeat these steps on every custom Safe Links policy.
 
 > [!TIP]
-> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
+> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
 
 ## Step 3: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
