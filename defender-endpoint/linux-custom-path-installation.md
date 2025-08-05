@@ -116,14 +116,17 @@ Run the usual upgrade commands. Installation path stays unchanged.
 **Can I change the custom path during upgrade?**  
 No, installation path changes require a fresh install.
 
+## See also
 
-## See Also
+- [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
-- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
-- [Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux](linux-installer-script.md)
-- [Troubleshoot installation issues](linux-resources.md#log-installation-issues)
-- [Configure Defender for Endpoint on Linux](linux-preferences.md)
+- Other deployment methods:
+   - [Installer script based deployment](linux-installer-script.md) 
+   - [Ansible based deployment](linux-install-with-ansible.md)
+   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+   - [Puppet based deployment](linux-install-with-puppet.md)
+   - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
+[!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
