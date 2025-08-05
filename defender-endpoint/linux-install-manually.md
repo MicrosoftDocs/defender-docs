@@ -55,8 +55,6 @@ A successful deployment requires the completion of all of the following tasks:
 
 Before you begin, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
 
-For installation at a custom path, refer to [Prerequisites and system requirements for custom path installation](linux-custom-path-installation.md#prerequisites-and-system-requirements).
-
 > [!WARNING]
 > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
 
@@ -264,6 +262,8 @@ In order to preview new features and provide early feedback, it's recommended th
 
 These steps are applicable only if Defender is to be installed in a custom location.
 For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: Pre-installation setup](linux-custom-path-installation.md#manual-installation-pre-installation-setup).
+
+For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
 
 ## Application installation
 
