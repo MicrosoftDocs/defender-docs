@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 08/05/2025
 ---
 
 # FileProfile()
@@ -51,7 +51,7 @@ The `FileProfile()` function is an enrichment function in [advanced hunting](adv
 | `ThreatName` | `string` | Detection name for any malware or other threats found |
 | `Publisher` | `string` | Name of the organization that published the file |
 | `SoftwareName` | `string` | Name of the software product |
-| `ProfileAvailability` | `string` | Indicates the availability status of the profile data for the file: Available - profile was successfully queried and file data returned, Missing - profile was successfully queried but no file info was found, Error - error in querying the file info or maximum allotted time was exceeded before query could be completed, or an empty value - if file ID is invalid or the maximum number of files was reached<br><br>If this column is empty, the value of the `GlobalPrevalance` column would be `null`. |
+| `ProfileAvailability` | `string` | Indicates the availability status of the profile data for the file: Available - profile was successfully queried and file data returned, Missing - profile was successfully queried but no file info was found, Error - error in querying the file info or maximum allotted time was exceeded before query could be completed, or an empty value - if file ID is invalid or the maximum number of files was reached<br><br>If this column has an empty value or isn't visible, the value of the `GlobalPrevalance` column would be `null`. |
 
 
 
