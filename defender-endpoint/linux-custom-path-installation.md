@@ -38,7 +38,7 @@ Microsoft Defender for Endpoint (MDE) on Linux now supports installation to cust
 - Multi-tenant environments requiring isolation
 - Specialized storage configurations
 
-By default, MDE installs to the standard system path (`/opt/microsoft/mdatp`). With custom path installation, you can specify an alternative base directory while maintaining the same relative directory structure and functionality.
+By default, Microsoft Defender for Endpoint (MDE) installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup — MDE will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades will keep using your original custom path, and changing the installation path later is not supported. If you need to use a different path, you must uninstall MDE and reinstall it to the new location.
 
 ## Prerequisites and System Requirements
 
@@ -120,7 +120,7 @@ No, installation path changes require a fresh install.
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
-- Other deployment methods:
+- Deployment methods:
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
@@ -128,5 +128,6 @@ No, installation path changes require a fresh install.
    - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+   - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
