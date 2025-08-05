@@ -122,12 +122,12 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
    | Scenario | Command |
    |---|---|
+   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
    |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --min_req –-mdatp 101.24082.0004 ` |
    |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
-   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
 
    For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
 
@@ -287,6 +287,7 @@ To configure antivirus and EDR settings, see the following articles:
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md)
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
