@@ -58,3 +58,7 @@ To address this security assessment, follow these steps:
 
 > [!NOTE]
 > Assessments are updated in near real time. Scores and statuses are updated every 24 hours. The list of impacted entities is updated within a few minutes of you implementing the recommendations. The status might take time until it's marked as **Completed**.
+
+## Related articles
+
+- [Learn more about Microsoft Secure Score](/defender-xdr/microsoft-secure-score)
