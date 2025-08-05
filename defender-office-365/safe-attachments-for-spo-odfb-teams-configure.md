@@ -95,7 +95,7 @@ Set-SPOTenant -DisallowInfectedFileDownload $true
 - This setting affects both users and admins.
 - People can still delete malicious files.
 
-For detailed syntax and parameter information, see [Set-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
+For detailed syntax and parameter information, see [Set-SPOTenant](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant).
 
 ## Step 3 (Recommended) Use the Microsoft Defender portal to create an alert policy for detected files
 
@@ -169,7 +169,7 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
   Get-SPOTenant | Format-List DisallowInfectedFileDownload
   ```
 
-  For detailed syntax and parameter information, see [Get-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
+  For detailed syntax and parameter information, see [Get-SPOTenant](/powershell/module/microsoft.online.sharepoint.powershell/get-spotenant).
 
 - To verify you successfully configured an alert policy for detected files, use either of the following methods:
   - In the Microsoft Defender portal at <https://security.microsoft.com/alertpolicies>, select the alert policy, and verify the settings.
