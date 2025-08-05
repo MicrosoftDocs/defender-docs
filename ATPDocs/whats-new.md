@@ -36,6 +36,14 @@ Improved detection logic to include scenarios where accounts were locked during 
 
 ## July 2025
 
+**Expanded coverage in ITDR deployment health widget**
+
+The ITDR deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
+
+**Time limit added to Recommended test mode**
+
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already had Recommended test mode enabled, a 60-day expiration was automatically applied.
+
 ### Identity scoping is now available in Governance environments
 
 Scoping is now supported in government (GOV) environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
