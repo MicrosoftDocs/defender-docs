@@ -23,8 +23,50 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-## June 2025
+## August 2025
 
+### Sensor version 2.246
+
+This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
+
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
+
+Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
+
+
+## July 2025
+
+**Expanded coverage in ITDR deployment health widget**
+
+The ITDR deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
+
+**Time limit added to Recommended test mode**
+
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already had Recommended test mode enabled, a 60-day expiration was automatically applied.
+
+### Identity scoping is now available in Governance environments
+
+Scoping is now supported in government (GOV) environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessments for unmonitored identity servers
+
+Microsoft Defender for Identity three new security posture assessments detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
+
+Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
+
+For more information, see:
+
+[Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
+
+[Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
+
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](unmonitored-entra-connect-servers.md)
+
+
+
+## June 2025
 
 ### Scoped access by Active Directory domain now supported (Preview)
 
@@ -38,7 +80,7 @@ Scoping by Active Directory domains helps:
 
 - Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
 
-For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+For more information, see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 
 ### Okta integration is now available in Microsoft Defender for Identity
@@ -72,19 +114,19 @@ Bug Fixes:
 ## May 2025
 
 ###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-capabilities.md).
+Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-sensor.md).
 
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
 
 
-### Local administrators collection (using SAM-R queries) feature will be disabled
+### Local administrators collection (using SAM-R queries) feature is disabled
 The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change occurs automatically by the specified date, and no administrative action is required.
 
 ### New Health Issue
 
-New [health issue](health-alerts.md#network-configuration-mismatch-for-sensors-running-on-vmware) for cases where sensors running on VMware have network configuration mismatch.
+New [health issue](health-alerts.md) for cases where sensors running on VMware have network configuration mismatch.
 
 ## April 2025
 
@@ -125,7 +167,7 @@ For more information, see: [Investigate and protect Service Accounts | Microsoft
 
 ### Enhanced Identity Inventory
 
-The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The Identities page under *Assets* was updated to provide better visibility and management of identities across your environment.  
 The updated Identities Inventory page now includes the following tabs:
 
 - Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
@@ -261,7 +303,7 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 
 * New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
 * Enhanced accuracy for the **DC sync attack** detection.
-* New [health issue](health-alerts.md#sensor-failed-to-retrieve-microsoft-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
+* New [health issue](health-alerts.md) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
 * Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Microsoft Entra Connect servers.
 
 [Learn more about the new sensor](deploy/active-directory-federation-services.md)
@@ -329,7 +371,8 @@ This version includes improvements and bug fixes for cloud services and the Defe
 ### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
 
 To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
-With this data customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity
+
+With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
 Access Defender XDR portal -> Hunting -> Advanced Hunting.
 

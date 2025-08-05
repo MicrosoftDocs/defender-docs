@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/13/2025
+ms.date: 07/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -71,6 +71,7 @@ You can manage the distribution of updates through one of the following methods:
 - [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
 - [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
 - The usual methods you use to deploy Microsoft and Windows updates to endpoints in your network.
+- UNC Share
 
 For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
@@ -97,6 +98,20 @@ Updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
+
+### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
+ 
+- Security intelligence update version: **1.433.2.0**
+- Release date:  **July 22, 2025 (Engine)** / **July 22, 2025 (Platform)**
+- Platform: **4.18.25060.7**
+- Engine: **1.1.25060.6**
+- Support phase: **Security and Critical Updates**
+ 
+#### What's new
+
+- Added filtering to improve scan stability and prevent engine crashes
+- Additional performance improvements to prevent concurrent scans. This change ensures that if a quick or full scan is already running, no additional quick or full scan scans are initiated from `MpCmdRun` or Powershell (`Start-Scan`).
+- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to non-Microsoft SIEM solutions. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
 
 ### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
 
@@ -139,25 +154,6 @@ Updates contain:
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
 - Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
-
-### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
-
-- Security intelligence update version: **1.427.3.0**
-- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
-- Platform: **4.18.25030.2**
-- Engine: **1.1.25030.1**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
-- Performance improvement in on-access scans of files in network locations.
-- Fixed the Defender service description to match the latest installed version.
-- Improved Defender engine update logic when the update is included in a custom image.
-- Fix in health reporting where signature update data might have been incorrect.
-- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
-- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
-- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
 
 ### Previous version updates: Technical upgrade support only
 
@@ -247,26 +243,12 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
-### 1.417.472.0
+### 1.431.97.0
 
-- Defender package version: `1.417.472.0`
-- Security intelligence version: `1.417.472.0`
-- Engine version: `1.24080.9`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.415.295.0
-
-- Defender package version: `1.415.295.0`
-- Security intelligence version: `1.415.295.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.97.0`
+- Security intelligence version: `1.431.97.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.6`
 
 #### Fixes
 
@@ -276,12 +258,28 @@ After a new package version is released, support for the previous two versions i
 
 - None
 
-### 1.415.235.0
+### 1.431.54.0
 
-- Defender package version: `1.415.235.0`
-- Security intelligence version: `1.415.235.0`
-- Engine version: `1.24070.1`
-- Platform version: `4.18.24070.5`
+- Defender version: `1.431.54.0`
+- Security intelligence version: `1.431.54.0`
+- Platform version: `4.18.25050.5`
+- Engine version: `1.25050.2`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
+
+### 1.429.122.0
+
+- Defender version: `1.429.122.0`
+- Signature version: `1.429.122.0`
+- Platform version: `4.18.25040.2`
+- Engine version: `1.25040.1`
 
 #### Fixes
 

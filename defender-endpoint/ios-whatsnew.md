@@ -29,6 +29,18 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+## Releases for Defender for Endpoint on iOS
+
+### July-2025 
+
+| Build| 1.1.67040101|
+| -------- | -------- |
+| Release Date| July 8, 2025|
+
+**What's New**
+
+- UX Improvement, please visit the attached link for more details - [iOS UX Experience](/defender-endpoint/ios-new-ux)
+
 #### Alerts for activities related to open wireless connections are now detected as events
 
 **May 2025**

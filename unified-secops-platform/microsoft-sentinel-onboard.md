@@ -24,12 +24,16 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 03/17/2025
+ms.date: 07/16/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
 
-Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. When you onboard Microsoft Sentinel to the Defender portal together Microsoft Defender XDR, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
+Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. Using Microsoft Sentinel in the Defender portal together with Microsoft Defender XDR services, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. 
+
+This article is relevant for customers whose Microsoft Sentinel workspaces are not yet connected to the Defender portal. In many cases, customers onboarding to Microsoft Sentinel after **July 1, 2025** are automatically onboarded to the Defender portal.
+
+For more information, see:
 
 - [What are unified security operations?](overview-unified-security.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
@@ -88,24 +92,29 @@ If applicable, complete these prerequisites:
 
 ## Onboard Microsoft Sentinel
 
-To connect a Microsoft Sentinel workspace to the Defender portal, complete the following steps. If you're onboarding Microsoft Sentinel without Defender XDR, there's an extra step to trigger the connection with Microsoft Sentinel and Defender portal.
+This procedure describes how to onboard a Microsoft Sentinel-enabled workspace to the Defender portal.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
-1. To onboard Microsoft Sentinel without Defender XDR in the Defender portal: 
-   1. To trigger the connection with Microsoft Sentinel, select **Investigation & response** > **Incidents**.
-   1. Wait a few minutes for the connection to complete. 
-1. In the Defender portal, select **Overview**.
-1. Select **Connect a workspace**.
-1. Choose the workspaces you want to connect and select **Next**.
+
+1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel.
+
+    In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. This step isn't needed for any subsequent workspaces you onboard to Defender.
+  
+1. Select **Home** > **Connect a workspace**.
+
+1. Select the workspaces you want to connect and select **Next**.
+
 1. Select the **Primary workspace**.
+
 1. Read and understand the product changes associated with connecting your workspace. 
+
 1. Select **Connect**.
 
-After your workspace is connected, the banner on the **Overview** page shows that your environment is ready. The **Overview** page is updated with new sections that include metrics from Microsoft Sentinel like the number of data connectors and automation rules.
+After your workspace is connected, the banner on the **Home** page shows that your environment is ready. The **Home** page is updated with new sections that include metrics from Microsoft Sentinel, like the number of data connectors and automation rules.
 
 ## Explore Microsoft Sentinel features in the Defender portal
 
-After you connect your workspace to the Defender portal, **Microsoft Sentinel** is on the left-hand side navigation pane. If you have Defender XDR enabled, pages like  **Overview**, **Incidents**, and **Advanced Hunting** have unified data from the primary workspace for Microsoft Sentinel and Defender XDR. If you don't have Defender XDR enabled, these pages just include data from Microsoft Sentinel. For more information about the unified capabilities and differences between portals, see  [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
+After you connect your workspace to the Defender portal, **Microsoft Sentinel** is on the left-hand side navigation pane. If you have Defender XDR enabled, pages like  **Home**, **Incidents**, and **Advanced Hunting** have unified data from the primary workspace for Microsoft Sentinel and Defender XDR. If you don't have Defender XDR enabled, these pages just include data from Microsoft Sentinel. For more information about the unified capabilities and differences between portals, see  [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
 
 Many of the existing Microsoft Sentinel features are integrated into the Defender portal. For these features, notice that the experience between Microsoft Sentinel in the Azure portal and Defender portal are similar. Use the following articles to help you start working with Microsoft Sentinel in the Defender portal. When using these articles, keep in mind that your starting point in this context is the [Defender portal](https://security.microsoft.com/) instead of the Azure portal.
 
@@ -158,7 +167,7 @@ If you decide to offboard a workspace from the Defender portal, disconnect the w
 1. Provide a reason why you're disconnecting the workspace. 
 1. Confirm your selection.
 
-   When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the Overview page.
+   When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.
 
 If you want to connect to a different workspace, from the **Workspaces** page, select the workspace and **Connect a workspace**.
 
