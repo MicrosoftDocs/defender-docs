@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium

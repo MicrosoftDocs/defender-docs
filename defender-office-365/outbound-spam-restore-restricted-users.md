@@ -2,9 +2,9 @@
 title: Remove blocked users from the Restricted entities page
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 f1_keywords:

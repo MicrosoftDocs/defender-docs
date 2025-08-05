@@ -2,9 +2,9 @@
 title: Default email protections for cloud mailboxes
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 07/21/2025
 audience: ITPro
 ms.topic: overview

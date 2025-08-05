@@ -2,9 +2,9 @@
 title: Remove blocked connectors from the Restricted entities page in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium

@@ -2,9 +2,9 @@
 title: User tags in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 06/13/2025
 audience: ITPro
 ms.topic: how-to
