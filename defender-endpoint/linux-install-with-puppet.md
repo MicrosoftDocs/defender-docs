@@ -353,5 +353,6 @@ class remove_mdatp {
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
