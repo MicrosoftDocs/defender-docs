@@ -14,10 +14,10 @@ ms.collection:
   - highpri
   - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/15/2025
+ms.date: 06/19/2025
 ---
 
 # Prepare to deploy Microsoft Defender for Endpoint deployment
@@ -40,8 +40,9 @@ In this deployment scenario, you're guided through the steps on:
 - Tenant configuration
 - Network configuration
 
-> [!NOTE]
-> For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
+
+For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 

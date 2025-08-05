@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
 ms.date: 04/10/2025
@@ -31,6 +31,7 @@ ms.date: 04/10/2025
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, refer to the [See also](#see-also) section. 
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 

@@ -11,10 +11,10 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/02/2025
+ms.date: 06/27/2025
 ---
 
 # Onboard servers through Microsoft Defender for Endpoint's onboarding experience
@@ -172,7 +172,7 @@ The following points apply to Windows Server 2016 and Windows Server 2012 R2:
 
 - Not all attack surface reduction rules are applicable to all operating systems. See [Attack surface reduction rules](attack-surface-reduction-rules-reference.md).
 
-- Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that haven't yet been updated with new anti-malware platform or EDR sensor update packages.
+- Operating system upgrades are supported on Windows 10 and 11, and Windows Server 2019 or later. These versions include the necessary Defender for Endpoint components. For Windows Server 2016 and earlier, you must offboard from Defender for Endpoint and uninstall Defender for Endpoint before upgrading the OS.
 
 - To automatically deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires extra deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 

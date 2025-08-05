@@ -13,10 +13,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ROBOTS: noindex,nofollow
 ms.subservice: macos
-ms.date: 04/30/2024
+ms.date: 05/08/2025
 ---
 
 # New configuration profiles for macOS Big Sur and newer versions of macOS 

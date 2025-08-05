@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 09/30/2024
@@ -31,6 +31,8 @@ ms.date: 09/30/2024
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 In this step, you're ready to configure Microsoft Defender for Endpoint capabilities.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Configure capabilities
 

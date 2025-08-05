@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/04/2025
+ms.date: 06/10/2025
 search.appverid: met150
 ---
 
@@ -131,7 +131,7 @@ The following table lists the supported operating systems for rules that are cur
 | [Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| Y | Y | Y |
 | [Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y |
 | [Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| Y | Y | Y |
-| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange role only  | Y <br>Exchange role only |
+| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)| N | Y <br>Exchange role only|Y on Windows Server 2016  <br>     Exchange role only <br>N on Windows Server 2012 R2 |
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N  |  N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later | Y | Y |
 
@@ -253,8 +253,8 @@ For rules with the "Rule State" specified:
 
 > [!NOTE]
 > To protect your environment from vulnerable drivers, you should first implement these:
-> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
-> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and are not known to be vulnerable.
+> For Windows 10 or later, Windows Server 2016 or later using [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
+> For Windows 8.1 or older, Windows Server 2012 R2 or older, using [Microsoft AppLocker](/windows/security/application-security/application-control/app-control-for-business/applocker/understanding-applocker-allow-and-deny-actions-on-rules), you should block all drivers by default and only allow drivers that you deem necessary and aren't known to be vulnerable.
 > For Windows 11 or later, and Windows Server core 1809 or later, or Windows Server 2019 or later, you should also enable [Microsoft Windows vulnerable driver blocklist](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules), 
 > Then as another layer of defense, you should enable this attack surface reduction rule.
 
@@ -406,8 +406,8 @@ This rule blocks executable files, such as .exe, .dll, or .scr, from launching. 
 
 > [!IMPORTANT]
 > You must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to use this rule.
-> The rule **Block executable files from running unless they meet a prevalence, age, or trusted list criterion** with GUID `01443614-cd74-433a-b99e-2ecdc07bfc25` is owned by Microsoft and isn't specified by admins. This rule uses cloud-delivered protection to update its trusted list regularly.
-> You can specify individual files or folders (using folder paths or fully qualified resource names) but you can't specify which rules or exclusions apply to.
+> This rule uses cloud-delivered protection to update its trusted list regularly.
+> You can specify individual files or folders by using folder paths or fully qualified resource names. It also supports the **ASROnlyPerRuleExclusions** setting.
 
 Intune name: `Executables that don't meet a prevalence, age, or trusted list criteria`
 
@@ -544,7 +544,9 @@ This rule prevents malware from abusing WMI to attain persistence on a device.
 Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 
 > [!NOTE]
-> If `CcmExec.exe` (SCCM Agent) is detected on the device, the ASR rule is classified as "not applicable" in Defender for Endpoint settings in the Microsoft Defender portal. 
+> If you're utilizing Configuration Manager (CM, previously known as MEMCM or SCCM) with CcmExec.exe` (SCCM Agent), we recommend running it in audit mode for at least 60 days. 
+> Once you're prepared to switch to block mode, ensure you deploy the appropriate ASR rules, considering any necessary rule exclusions.
+
 
 Intune name: `Persistence through WMI event subscription`
 
@@ -580,6 +582,9 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode
+
+> [!NOTE]
+> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
 
 This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
 
@@ -619,6 +624,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools
 
+> [!NOTE]
+> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
+
 This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
 Intune Name: `Block use of copied or impersonated system tools`
@@ -648,6 +656,9 @@ Intune name: `Block Webshell creation for Servers`
 GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 
 Dependencies: Microsoft Defender Antivirus
+
+> [!NOTE]
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Exchange servers.
 
 ### Block Win32 API calls from Office macros
 

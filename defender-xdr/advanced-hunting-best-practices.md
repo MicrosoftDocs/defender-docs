@@ -21,7 +21,7 @@ ms.topic: best-practice
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 02/24/2025
+ms.date: 03/28/2025
 ---
 
 # Advanced hunting query best practices

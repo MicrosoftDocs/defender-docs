@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 02/04/2025
+ms.date: 06/11/2025
 ---
 
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
@@ -31,7 +31,7 @@ Before you onboard devices to Defender for Endpoint, make sure your network is c
 
 > [!NOTE]
 > - After May 8, 2024, you have the option to keep streamlined connectivity ([consolidated set of URLs](https://aka.ms/MDE-streamlined-urls)) as the default onboarding method, or downgrade to standard connectivity through (**Settings > Endpoints > Advanced Features**). For onboarding through Intune or Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded aren't reonboarded automatically. In such cases, create a new policy in Intune, where it's recommended to first assign the policy to a set of test devices to verify connectivity is successful, and then expand the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script, while newly onboarded devices automatically receive streamlined onboarding.
-> - The new *.endpoint.security.microsoft.com consolidated domain needs to be reachable for all devices, for current and future functionality, regardless whether you continue to use Standard connectivity.
+> - The new `*.endpoint.security.microsoft.com` consolidated domain needs to be reachable for all devices, for current and future functionality, regardless whether you continue to use Standard connectivity.
 > - New regions default to streamlined connectivity and can't downgrade to Standard. Read more at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server

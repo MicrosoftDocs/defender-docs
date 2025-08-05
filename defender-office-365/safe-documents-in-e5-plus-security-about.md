@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Safe Documents is a premium feature that uses the cloud back end of [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to scan opened Office documents in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) or [Application Guard for Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
+Safe Documents is a premium feature that uses the cloud back end of [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to scan opened Office documents in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) or [Application Guard for Office](app-guard-for-office-install.md).
 
 Users don't need Defender for Endpoint installed on their local devices to get Safe Documents protection. Users get Safe Documents protection if all of the following requirements are met:
 
@@ -121,7 +121,7 @@ To learn more, see [Onboard to the Microsoft Defender for Endpoint service](/def
 
 ### How do I know this procedure worked?
 
-To verify that you've enabled and configured Safe Documents, do any of the following steps:
+To verify you successfully enabled and configured Safe Documents, do any of the following steps:
 
 - In the Microsoft Defender portal, go to the **Safe Attachments** page at <https://security.microsoft.com/safeattachmentv2>, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**, and verify the **Turn on Safe Documents for Office clients** and **Allow people to click through Protected View even if Safe Documents identifies the file as malicious** settings.
 

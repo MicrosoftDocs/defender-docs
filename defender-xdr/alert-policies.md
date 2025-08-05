@@ -344,4 +344,12 @@ Here are some tasks you can perform to manage alerts.
   - The name (and link) of the corresponding alert policy.
   - The incident where the alert is aggregated.
 
-- [**Tune an alert**](investigate-alerts.md#tune-an-alert): You can set properties, conditions, and actions to hide or resolve an alert.
+- **[Tune an alert](investigate-alerts.md#tune-an-alert)**: You can set properties, conditions, and actions to hide or resolve an alert.
+- **Change the severity level for an alert policy**
+
+   1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) using credentials for an administrator account in your Microsoft 365 organization.
+   2. Navigate to **Email & Collaboration > Policies & rules** page, then select **Alerts policy**.
+   3. Select the policy you want to update from the list. In the **Actions** column, select the three dots then select **Edit**.
+   4. In the **Edit Policy** pane, select the dropdown menu to adjust the **Severity** level. If applicable, you can also modify the **Trigger settings** for the policy.
+   5. Select **Next** to proceed to rest of the steps.
+   6. Select **Submit** to apply the new changes to the policy, then select **Done** to finish editing.
