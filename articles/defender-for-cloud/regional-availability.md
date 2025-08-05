@@ -116,10 +116,10 @@ US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 ### Defender for Containers
 
 **Supported regions:**  
-Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia Southeast, Austria East, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, China East, China East 2, China East 3, China North, China North 3, East US, East US 2, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Israel Central, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Mexico Central, North Central US, North Europe, Norway East, Norway West, Poland Central, Qatarc, South Africa North, South Africa West, South Central US, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
+Asia East, Asia Southeast, Asia Northeast, Australia East, Australia Central 2, Australia Southeast, Austria East, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, China East, China East 2, China East 3, China North, China North 3, East US, East US 2, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Israel Central, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Mexico Central, North Central US, North Europe, Norway East, Norway West, Poland Central, Qatarc, South Africa North, South Africa West, South Central US, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
 
 **Unsupported regions:**  
-Australia East, Belgium Central, Central US (EU Access Program), Chile Central, China North 2, East US 2 (EU Access Program), EU SSLV, Indonesia Central, Israel North West, Malaysia South, New Zealand North, South East US, South East US 3, South US 2, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
+Belgium Central, Central US (EU Access Program), Chile Central, China North 2, East US 2 (EU Access Program), EU SSLV, Indonesia Central, Israel North West, Malaysia South, New Zealand North, South East US, South East US 3, South US 2, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 
 ### Defender CSPM
 
