@@ -2,9 +2,9 @@
 title: Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: article
 f1_keywords: 
