@@ -44,6 +44,7 @@ Detected matches are surfaced in **Secure Score** and the **Security Assessment 
 
 To address this security assessment, follow these steps:
 
+1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions ) for Remove discoverable passwords in Active Directory account attributes.
 1. Review the exposed entries in the security report. Identify any field content that includes:
 
     - Cleartext passwords

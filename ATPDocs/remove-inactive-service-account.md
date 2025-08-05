@@ -17,8 +17,8 @@ Unused service accounts can pose significant security risks to your organization
 
 To leverage this security assessment effectively, follow these steps:
 
-1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions for Remove inactive service account 
-1. Review the list of exposed entities to discover which of your service account is inactive. 
+1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions ) for Remove inactive service account.
+1. Review the list of exposed entities to discover which of your service account is inactive.
 
       :::image type="content" source="media/remove-inactive-service-account/remove-inactive-service-accounts.png" alt-text="Screenshot that shows the recommendation action to remove inactive service accounts." lightbox="media/remove-inactive-service-account/remove-inactive-service-accounts.png":::
 
