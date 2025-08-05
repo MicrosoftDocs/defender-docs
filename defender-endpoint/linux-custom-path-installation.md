@@ -45,8 +45,6 @@ By default, MDE installs to the standard system path (`/opt/microsoft/mdatp`). W
 Before deploying MDE to a custom path, ensure the following requirements are met:
 
 ### Prerequisites
-
-- All standard [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) must be satisfied.
 - The custom installation directory and its entire tree must have at least `rwxr-xr-x` (755) permissions.
 - Ensure adequate disk space in the target location (minimum 2 GB, more for high-performance workloads).
 - The target file system must support standard Linux file operations and permissions.
