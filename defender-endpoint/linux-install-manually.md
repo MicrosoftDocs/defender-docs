@@ -578,4 +578,4 @@ For manual uninstallation, execute the following command for your Linux distribu
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 
-  [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
