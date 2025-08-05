@@ -6,7 +6,7 @@ author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 04/16/2025
+ms.date: 06/27/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -34,12 +34,19 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
+- [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
+
+> [!TIP]
+> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
+
+To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
 
 ## Known issues
 
-- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
 
-- In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
+- In [macOS Sonoma 14.3.1](https://developer.apple.com/documentation/macos-release-notes/macos-14_3-release-notes), Apple made a change to the handling of Bluetooth devices that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
@@ -47,7 +54,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
    ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
   
-If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web).  This issue is fixed in macOS Sequoia 15.2.
+If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Sequoia support
 
@@ -55,14 +62,64 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 ## macOS Deprecation
 
-- Microsoft Defender for Endpoint no longer supports Big Sur (11).
-- macOS 12 (Monterey) won't be supported starting December 2024.
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
 
 ## Releases for Defender for Endpoint on macOS
 
-### Behavior Monitoring for macOS is now in public preview
+### Behavior Monitoring for macOS is now generally available
 
-Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
+
+### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
+
+| Build:             | **101.25062.0005**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.5.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.427.248.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jun-2025 (Build: 101.25052.0012  | Release version: 20.125052.12.0)
+
+| Build:             | **101.25052.0012**   |
+|--------------------|----------------------|
+| Release version:   | **20.125052.12.0**   |
+| Engine version:    | **1.1.25060.3000**   |
+| Signature version: | **1.431.226.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### May-2025 (Build: 101.25042.0009  | Release version: 20.125042.9.0)
+
+| Build:             | **101.25042.0009**   |
+|--------------------|----------------------|
+| Release version:   | **20.125042.9.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.429.521.0**      |
+
+##### What's new
+
+- `mdatp health --details edr` now includes AAD info
+- Bug and performance fixes
+
+### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
+
+| Build:             | **101.25032.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125032.6.0**    |
+| Engine version:    | **1.1.25020.3000**   |
+| Signature version: | **1.427.158.0**      |
+
+##### What's new
+
+- Hardware UUID is now displayed in the Security Portal
+- Bug and performance fixes
+- **(GA) Behavior Monitoring for macOS**: For information on Behavior Monitoring for Microsoft Defender for Endpoint on macOS, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
 

@@ -7,7 +7,7 @@ ms.author: ewalsh
 manager: deniseb
 ms.reviewer: shwetaj
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.custom: 

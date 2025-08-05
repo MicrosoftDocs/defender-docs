@@ -1,8 +1,9 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 09/02/2024
+ms.date: 05/08/2025
 ms.topic: troubleshooting
+ms.reviewer: rlitinsky
 ---
 
 # Troubleshooting Microsoft Defender for Identity known issues
@@ -17,13 +18,13 @@ This article describes how to troubleshoot known issues in Microsoft Defender fo
 
 ### Cause 1
 
-The domain controller hasn't been given rights to access the password of the gMSA account.
+The domain controller doesn't have rights to access the password of the gMSA account.
 
 **Resolution 1:**
 
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), Entra Connect, AD FS / AD CS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
+Verify that the domain controller has rights to access the password. You should have a Security Group in Active Directory that contains the domain controller, Microsoft Entra Connect, Active Directory Federation Services (AD FS) / Active Directory Certificate Services (AD CS) server and standalone sensors computer accounts included. If the Security group doesn't exist, we recommend that you create one.
 
-You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
+You can use the following command to check if a computer account or security group is added to the parameter. Replace *mdiSvc01* with the name you created.
 
 ```powershell
 Get-ADServiceAccount mdiSvc01 -Properties PrincipalsAllowedToRetrieveManagedPassword
@@ -33,7 +34,7 @@ The results should look like this:
 
 ![Powershell results.](media/troubleshooting-known-issues/gmsa-retrieve-password-results.png)
 
-In this example, we can see that a group named *mdiSvc01Group* has been added. If the domain controller or the security group hasn't been added, you can use the following commands to add it. Replace *mdiSvc01* with the name of gMSA, and replace *DC1* with the name of the domain controller, or *mdiSvc01Group* with the name of the security group.
+In this example, we can see that a group named *mdiSvc01Group* is added. If the domain controller or the security group hasn't been added, you can use the following commands to add it. Replace *mdiSvc01* with the name of gMSA, and replace *DC1* with the name of the domain controller, or *mdiSvc01Group* with the name of the security group.
 
 ```powershell
 # To set the specific domain controller only:
@@ -63,7 +64,7 @@ Get-ADServiceAccount mdiSvc01 -Properties PasswordLastSet, LastLogonDate
 
   **Resolution 2:**
 
-As an interim solution, a new gMSA can be created which will have correct date for the attribute. It’s advisable to open a support request with directory services to identify the root cause and explore options for a comprehensive resolution. 
+As an interim solution, a new gMSA can be created which has the correct date for the attribute. It’s advisable to open a support request with directory services to identify the root cause and explore options for a comprehensive resolution. 
 
 ## Sensor failure communication error
 
@@ -117,29 +118,14 @@ The issue can be caused when the trusted root certification authorities certific
 
 Run the following PowerShell cmdlet to verify that the required certificates are installed.
 
-In the following example, use the "DigiCert Baltimore Root" certificate for all customers. In addition, use the "DigiCert Global Root G2" certificate for commercial customers or use the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
+In the following example, the "DigiCert Global Root G2" certificate is for commercial customers and the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
 
 ```powershell
-# Certificate for all customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
-
 # Certificate for commercial customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
 
 # Certificate for US Government GCC High customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
-```
-
-Output for certificate for all customers:
-
-```Output
-Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
-Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
-Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
-FriendlyName : DigiCert Baltimore Root
-NotBefore    : 5/12/2000 11:46:00 AM
-NotAfter     : 5/12/2025 4:59:00 PM
-Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
 Output for certificate for commercial customers certificate:
@@ -168,9 +154,7 @@ Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.O
 
 If you don't see the expected output, use the following steps:
 
-1. Download the following certificates to the Server Core machine. For all customers, download the [Baltimore CyberTrust root](https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt) certificate.
-
-    In addition:
+1. Download the following certificates to the machine:
 
     - For commercial customers, download the [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) certificate
     - For US Government GCC High customers, download the [DigiCert Global Root CA](https://cacerts.digicert.com/DigiCertGlobalRootCA.crt) certificate
@@ -178,9 +162,6 @@ If you don't see the expected output, use the following steps:
 1. Run the following PowerShell cmdlet to install the certificate.
 
     ```powershell
-    # For all customers, install certificate
-    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
-
     # For commercial customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
 
@@ -212,13 +193,13 @@ Use the complete command to successfully install.
 
 When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
-## Multi Processor Group mode
+## Multiprocessor Group mode
 
-For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor isn't supported in a Multi Processor Group mode.
+For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor isn't supported in a Multiprocessor Group mode.
 
 Suggested possible workarounds:
 
-- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode.
+- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multiprocessor Group** mode.
 
 - If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
@@ -247,8 +228,8 @@ If LSO is enabled, use the following command to disable it:
 > [!NOTE]
 >
 > - Depending on your configuration, these actions might cause a brief loss of network connectivity.
-> - You may need to restart your machine for these changes to take effect.
-> - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO/TSO for your VMWare version.
+> - You might need to restart your machine for these changes to take effect.
+> - These steps might vary depending on your VMware version. Check VMware documentation for information about how to disable LSO/TSO for your VMware version.
 
 ## Sensor failed to retrieve group managed service account (gMSA) credentials
 
@@ -267,7 +248,7 @@ The sensor failed to retrieve the password of the gMSA account.
 
 ### Cause 1
 
-The domain controller hasn't been granted permission to retrieve the password of the gMSA account.
+The domain controller doesn't have permissions to retrieve the password of the gMSA account.
 
 **Resolution 1**:
 
@@ -422,8 +403,8 @@ Uninstall the certificate management client, install the Defender for Identity s
 
 >[!NOTE]
 >
-> The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
-> This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
+> The self-signed certificate is renewed every two years, and the autorenewal process might fail if the certificate management client prevents the self-signed certificate creation.
+> This causes the sensor to stop communicating with the backend, which requires a sensor reinstallation using the workaround mentioned above.
 
 ## Sensor installation fails due to network connectivity issues
 
@@ -503,7 +484,7 @@ If permissions need to be reconfigured, please follow the steps outlined in this
 
 ## Next steps
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

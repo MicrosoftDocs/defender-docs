@@ -4,12 +4,13 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: Identity inventory
-description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page, located under Assets in Defender XDR portal
+description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in Defender XDR portal.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     03/13/2025
+ms.reviewer: rlitinsky
 ---
 
 # Identity inventory
@@ -28,7 +29,7 @@ The Identities inventory page includes the following tabs:
 
 - **Identities**: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information.
 
-- **Cloud application accounts:** Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). Learn more about [Cloud application accounts from connected apps.](/defender-cloud-apps/accounts) 
+- **Cloud application accounts:** Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). Learn more about [Cloud application accounts from connected apps.](/defender-cloud-apps/accounts)
 
 There are several options you can choose from to customize the identities list view. On the top navigation you can:
 
@@ -36,7 +37,7 @@ There are several options you can choose from to customize the identities list v
 
 - Apply filters.
 
-- Search for an identity by name or full UPN, SID and Object ID. 
+- Search for an identity by name or full UPN, SID, and Object ID. 
 
 - Export the list to a CSV file.
 
@@ -49,7 +50,7 @@ There are several options you can choose from to customize the identities list v
 
 ### Identity details 
 
-The **Identities** list offers a consolidated view of identities across Active Directory and Entra ID. It highlights key details, including the following columns by default:
+The **Identities** list offers a consolidated view of identities across Active Directory and Microsoft Entra IDs. It highlights key details, including the following columns by default:
 
 - __Display name__ – The full name of the identity as shown in the directory.
 
@@ -57,15 +58,15 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Domain__ – The Active Directory domain to which the identity belongs.
 
-- __Object ID__ – A unique identifier for the identity in Entra ID.
+- __Object ID__ – A unique identifier for the identity in Microsoft Entra ID.
 
-- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from AD to Entra ID).
+- __Source__ – Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Entra ID).
 
 - __Type__ – Specifies if the identity is a user account or service account.
 
 - __UPN (User Principal Name)__ – The unique login name of the identity in an email-like format.
 
-- __Tags__ – Custom labels that help categorize or classify identities: Sensitive and Honeytoken.
+- __Tags__ – Custom labels that help categorize identities that are considered high value assets. For example, **Sensitive**, **Honeytoken** or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service.
 
 - __Created time__ – The timestamp when the identity was first created.
 
@@ -75,7 +76,7 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 - __Last updated__ – The timestamp of the most recent update to the identity's attributes in Active Directory.
 
-Non-default columns: Email and Entra ID risk level.  
+Nondefault columns: Email, Microsoft Entra ID risk level and Cloud ID. 
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -99,17 +100,17 @@ You can apply the following filters to limit the list of identities and get a mo
 
 - Account status
 
-Sort option applies to Display name, Domain and Created time columns.
+Sort option applies to Display name, Domain, and Created time columns.
 
 ### Identity inventory insights 
 
 - The __Classify critical assets__ card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
 
-- **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Entra ID security administrators and Global admin users.
+- **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
 
 - **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-At the top of each device inventory tab, the following device counts are available:
+At the top of the page, the following identities counts are available:
 
 - __Total__: The total number of identities. 
 
@@ -119,7 +120,7 @@ At the top of each device inventory tab, the following device counts are availab
 
 - **Services:** The number of all service accounts both on-premises and cloud.
 
-You can use this information to help you prioritize devices for security posture improvements.
+You can use this information to help you prioritize identities for security posture improvements.
 
 ### Navigate to the Identity inventory page
 

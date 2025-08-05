@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: linux
 search.appverid: met150
 ms.date: 03/31/2025
@@ -26,7 +26,7 @@ ms.date: 03/31/2025
 - Microsoft Defender for Servers Plan 1 or Plan 2
 
 > [!TIP]
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers in preview. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
+> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

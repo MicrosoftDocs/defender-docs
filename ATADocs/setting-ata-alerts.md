@@ -4,7 +4,7 @@
 title: Set Advanced Threat Analytics notifications
 description: Describes how to set ATA alerts so you are notified when suspicious activities are detected.
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 
