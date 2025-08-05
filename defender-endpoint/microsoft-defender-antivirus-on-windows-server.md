@@ -138,7 +138,7 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 > If you still need help, see the following troubleshooting items:
 > 
 > - [Microsoft Defender Antivirus seems to be stuck in passive mode](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
-> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](switch-to-mde-troubleshooting.md#i-am-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
+> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](switch-to-mde-troubleshooting.md#i'm-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
 
 ## See also
 
