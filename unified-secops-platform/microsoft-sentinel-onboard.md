@@ -167,7 +167,7 @@ If you decide to offboard a workspace from the Defender portal, disconnect the w
 1. Provide a reason why you're disconnecting the workspace. 
 1. Confirm your selection.
 
-   When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.
+   When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page. Additionally, the Microsoft Defender XDR connector in Microsoft Sentinel is disconnected from the workspace.
 
 If you want to connect to a different workspace, from the **Workspaces** page, select the workspace and **Connect a workspace**.
 
