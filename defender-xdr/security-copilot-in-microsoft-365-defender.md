@@ -14,14 +14,16 @@ ms.collection:
 - tier1
 - security-copilot
 - magic-ai-copilot 
-ms.topic: conceptual
+ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 03/10/2025
+ms.date: 04/28/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+#customer intent: As an IT admin, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
+#customer intent: As a security analyst, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
 # Microsoft Copilot in Microsoft Defender
@@ -49,7 +51,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
-Furthermore, Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
+Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
 
 ## Key features
 
@@ -59,9 +61,9 @@ Enable security teams to tackle attack investigations in a timely manner with ea
 
 #### Summarize incidents quickly
 
-Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page.
+Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on. 
 
-:::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-small.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+:::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
 #### Take action on incidents through guided responses
 

@@ -20,15 +20,11 @@ search.appverid: met150
 
 # User Experiences in Microsoft Defender for Endpoint on iOS
 
-As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming enhancements to the user interface and overall experience of our **Microsoft Defender for Endpoint** mobile app.
-
-These updates are designed to improve usability, streamline navigation, and ensure that app meets the evolving needs of our users.
+As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of our MDE mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users. This document outlines the planned updates for MDE Mobile users.
 
 ## Key changes
 
-We're pleased to introduce the Device Protection feature card for our enterprise users, which includes **Web Protection**, **Device Health**, and **Jail break** features that are designed to be more user-friendly and accessible.
-
-The updated cards also include **recommendation cards**, which prominently display any active alerts, keeping you informed. Features are now displayed as tiles to improve user experience and navigation efficiency.
+We are pleased to introduce the **Device Protection** feature card for our enterprise users which includes Web Protection, Device Health and Jail break feature that has been designed to be more user-friendly and accessible. The updated feature cards now include recommendation cards. The first recommendation card will prominently display any active alerts, ensuring you stay informed. Additionally, a list of features will now be presented in the form of tiles as a part of L2 screens enhancing ease of use and navigation.
 
 **The main changes involved are**:
 
@@ -36,6 +32,7 @@ The updated cards also include **recommendation cards**, which prominently displ
 - List the features inside one feature card
 - Detailed features experience
 - Recommendation cards for alerts
+- Onboarding screens
 
 ### Main Dashboard changes
 
@@ -72,3 +69,61 @@ The structure of the dashboard is updated to include a recommendation card that 
 2. **Device Health (iOS Update)**
 
     :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-device-health-rec-card.png":::
+
+### Onboarding Screens
+
+This sections details these changes:
+
+* VPN Permission flow while Onboarding
+
+* VPN Permission flow after Onboarding
+
+* TVM EUPI Screen
+
+### VPN Permission flow while Onboarding 
+
+This is the main VPN Permission screen that will appear to the enterprise's users as per our latest rollout of enhancements in the application. 
+
+:::row:::
+   :::column span="":::
+
+      #### Before
+
+      :::image type="content" source="media/ios-vpn-before.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS setup before the new update." lightbox="media/mde-ios-main-dash-new.png":::
+
+   :::column-end:::
+   :::column span="":::
+
+      #### Now
+
+      :::image type="content" source="media/ios-vpn-after.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS setup after the new update." lightbox="media/mde-ios-main-dash-new.png":::
+
+   :::column-end:::
+:::row-end:::
+
+### VPN Permission flow after Onboarding
+
+This screen is seen when the VPN configuration is deleted from user's device, and the VPN needs to be re-enabled.
+
+:::image type="content" source="media/ios-vpn-re-enable.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS re-enable screen." lightbox="media/mde-ios-list-new.png":::
+
+### TVM EUPI Screen
+
+We've enhanced the TVM EUPI screen as made it align with our current code flow.
+
+:::row:::
+   :::column span="":::
+
+      #### Before
+
+      :::image type="content" source="media/ios-tvm-before.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS TVM EUPI screen before the new update." lightbox="media/mde-ios-main-dash-new.png":::
+
+   :::column-end:::
+   :::column span="":::
+
+      #### Now
+
+      :::image type="content" source="media/ios-tvm-after.png" alt-text="Screenshot that shows the Microsoft Defender for Endpoint mobile iOS TVM EUPI after the new update." lightbox="media/mde-ios-main-dash-new.png":::
+
+   :::column-end:::
+:::row-end:::

@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 03/28/2025
+ms.date: 05/15/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -28,6 +28,26 @@ search.appverid: met150
 - [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+## Releases for Defender for Endpoint on iOS
+
+### July-2025 
+
+| Build| 1.1.67040101|
+| -------- | -------- |
+| Release Date| July 8, 2025|
+
+**What's New**
+
+- UX Improvement, please visit the attached link for more details - [iOS UX Experience](/defender-endpoint/ios-new-ux)
+
+#### Alerts for activities related to open wireless connections are now detected as events
+
+**May 2025**
+
+Starting May 19, 2025, when a user connects to an open wireless network on a mobile device, an alert is no longer generated on the Microsoft Defender portal. Instead, this activity is added as an event and viewable under the device timeline.
+
+For more information, see [Configure network protection](ios-configure-features.md#configure-network-protection).
 
 #### Improving Usability: Key updates to the Microsoft Defender app interface on iOS
 
@@ -152,7 +172,7 @@ Microsoft Defender for Endpoint on iOS now has specialized ability on supervised
 
 ## Microsoft Defender for Endpoint is now Microsoft Defender in the App store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [Microsoft Defender](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the app store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you'll have access to features for Microsoft Defender for Endpoint or to features for Microsoft Defender for individuals. For more information, see [Microsoft Defender](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview).
 
 ## Vulnerability Management
 

@@ -1,11 +1,29 @@
 ---
 title: Generic SIEM integration 
 description: This article provides information integrating your generic SIEM with Defender for Cloud Apps.
-ms.date: 04/13/2023
+ms.date: 05/14/2025
 ms.topic: how-to
 ---
 # Generic SIEM integration
 
+
+> [!IMPORTANT]
+> **Deprecation Notice: Microsoft Defender for Cloud Apps SIEM Agents**
+>
+> As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
+>
+>
+> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
+>
+> We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
+> These APIs enhance security monitoring and management and offer additional capabilities using data from multiple Microsoft Defender workloads.
+>
+> To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+>
+> - For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
+> - For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
+> - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
+> - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 
 You can integrate Microsoft Defender for Cloud Apps with your generic SIEM server to enable centralized monitoring of alerts and activities from connected apps. As new activities and events are supported by connected apps, visibility into them is then rolled out into Microsoft Defender for Cloud Apps. Integrating with a SIEM service allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures, and correlating between cloud-based and on-premises events. The Microsoft Defender for Cloud Apps SIEM agent runs on your server and pulls alerts and activities from Microsoft Defender for Cloud Apps and streams them into the SIEM server.
@@ -16,9 +34,6 @@ Additional integration solutions include:
 
 * **Microsoft Sentinel** - A scalable, cloud-native SIEM and SOAR for native integration. For information about integrating with Microsoft Sentinel, see [Microsoft Sentinel integration](siem-sentinel.md).
 * **Microsoft security graph API** - An intermediary service (or broker) that provides a single programmatic interface to connect multiple security providers. For more information, see [Security solution integrations using the Microsoft Graph Security API](/graph/security-integration#list-of-connectors-from-microsoft).
-
-> [!IMPORTANT]
-> If you are integrating Microsoft Defender for Identity in Defender for Cloud Apps and both services are configured to send alert notifications to a SIEM, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they will have different alert IDs. To avoid duplication and confusion, make sure to handle the scenario. For example, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.
 
 ## Generic SIEM integration architecture
 
@@ -72,12 +87,12 @@ Integrating with your SIEM is accomplished in three steps:
 
     ![Remote Syslog settings.](media/siem2.png)
 
-1. Select which data types you want to export to your SIEM server for **Alerts** and **Activities**. Use the slider to enable and disable them, by default, everything is selected. You can use the **Apply to** drop-down to set filters to send only specific alerts and activities to your SIEM server. Select **Edit and preview results** to check that the filter works as expected. Select **Next**.
+1. Select which data types you want to export to your SIEM server for **Alerts** and **Activities**. Use the slider to enable and disable them, by default, everything is selected. You can use the **Apply to** drop down to set filters to send only specific alerts and activities to your SIEM server. Select **Edit and preview results** to check that the filter works as expected. Select **Next**.
 
    ![Data types settings.](media/siem3.png)
 
 1. Copy the token and save it for later.
-    Select **Finish** and leave the Wizard. Go back to the SIEM page to see the SIEM agent you added in the table. It will show that it's **Created** until it's connected later.
+    Select **Finish** and leave the Wizard. Go back to the SIEM page to see the SIEM agent you added in the table. It shows that it's **Created** until it's connected later.
 
 > [!NOTE]
 > Any token you create is bound to the admin who created it. This means that if the admin user is removed from Defender for Cloud Apps, the token will no longer be valid. A generic SIEM token provides read-only permissions to the only required resources. No other permissions are granted a part of this token.
@@ -92,9 +107,9 @@ Integrating with your SIEM is accomplished in three steps:
 
 > [!NOTE]
 >
-> * The file name may differ depending on the version of the SIEM agent.
+> * The file name might differ depending on the version of the SIEM agent.
 > * Parameters in brackets [  ] are optional, and should be used only if relevant.
-> * It is recommended to run the JAR during server startup.
+> * We recommended running the JAR during server startup.
 >   * Windows: Run as a scheduled task and make sure that you configure the task to **Run whether the user is logged on or not** and that you uncheck the **Stop the task if it runs longer than** checkbox.
 >   * Linux: Add the run command with an **&** to the rc.local file. For example: `java -jar mcas-siemagent-0.87.20-signed.jar [--logsDirectory DIRNAME] [--proxy ADDRESS[:PORT]] --token TOKEN &`
 
@@ -163,7 +178,7 @@ The following text is an alerts logfile example:
 
 ### Step 3: Validate that the SIEM agent is working
 
-1. Make sure the status of the SIEM agent in the portal isn't **Connection error** or **Disconnected** and there are no agent notifications. It will show up as **Connection error** if the connection is down for more than two hours. The status shows as **Disconnected** if the connection is down for over 12 hours.
+1. Make sure the status of the SIEM agent in the portal isn't **Connection error** or **Disconnected** and there are no agent notifications. If the connection is down for more than two hours, the status is changed to **Connection error**.  If the connection is down for over 12 hours, the status is changed to **Disconnected**.
 
     ![SIEM disconnected.](media/siem-not-connected.png)
 

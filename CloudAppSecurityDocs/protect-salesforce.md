@@ -118,6 +118,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
       * **Manage Users**
       * **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
       * **Modify Metadata Through Metadata API Functions**
+      * **View Setup And Configuration**
 
       If these checkboxes aren't selected, you may need to contact Salesforce to add them to your account.
 

@@ -17,7 +17,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 4/26/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -42,7 +42,7 @@ Admins can mark messages and notify users of review results only if the user [re
   - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
   - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
 
-[Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551). 
+  For more information, see [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
   So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
 

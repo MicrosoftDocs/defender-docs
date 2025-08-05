@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 11/12/2024
+ms.date: 05/26/2025
 ---
 
 # Security Initiatives
@@ -49,11 +49,7 @@ IoT devices are often connected to endpoints, to one another or to the internet,
 
 The External Attack Surface Management (EASM) initiative in Microsoft Security Exposure Management uses Defender EASM to continuously discover and map your digital attack surface, providing an external view of your online infrastructure. This helps security and IT teams identify unknown assets, prioritize risks, eliminate threats, and extend control beyond the firewall.
 
-> [!NOTE]
->
-> This initiative provides high-level insights without a full connection to the MDEASM subscription and supports prebuilt footprints only.
-
-[Learn more here.](https://aka.ms/xspm/EasmLearnMore)
+[[Learn more here.]](external-attack-surface-management-initiative.md)
 
 ## Identity Security
 

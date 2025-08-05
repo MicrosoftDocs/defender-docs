@@ -1,7 +1,7 @@
 ---
 title: Get started | Microsoft Defender for Cloud Apps
 description: This quickstart outlines the process for getting Defender for Cloud Apps up and running so you have cloud app use, insight, and control.
-ms.date: 11/28/2024
+ms.date: 07/24/2025
 ms.topic: quickstart
 ---
 
@@ -29,6 +29,7 @@ Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID ap
 - Microsoft Defender for Cloud Apps - Customer Experience (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
 - Microsoft Defender for Cloud Apps - Information Protection (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
 - Microsoft Defender for Cloud Apps - MIP Server (ID: 0858ddce-8fca-4479-929b-4504feeed95e)
+- Microsoft Defender for Cloud Apps - Data Loss Prevention - SPO (ID: 71559765-2fa9-4207-b59f-a8bd85269d4a) 
 
 ## Access Defender for Cloud Apps
 
