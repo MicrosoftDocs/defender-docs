@@ -83,7 +83,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    ```bash
    sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
    ```
-   
+
    This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
@@ -116,6 +116,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    --https-proxy <URL>  set https proxy
    --ftp-proxy <URL>    set ftp proxy
    --mdatp              specific version of mde to be installed. will use the latest if not provided
+   -b|--install-path    specify the installation and configuration path for MDE. Default: /
    -h|--help            display help
    ```
 
@@ -126,9 +127,15 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
-   
+   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
+
+   For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
+
    > [!NOTE]
-   > Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+   >
+      > 1. Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+      >
+      > 2. The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
 
