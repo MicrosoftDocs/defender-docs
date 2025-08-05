@@ -30,7 +30,8 @@ The best practices discussed in this article include:
 Integrating Defender for Cloud Apps with Microsoft Defender for Endpoint gives you the ability to use cloud discovery beyond your corporate network or secure web gateways. With the combined user and device information, you can identify risky users or devices, see what apps they are using, and investigate further in the Defender for Endpoint portal.
 
 **Best practice**: Enable Shadow IT Discovery using Defender for Endpoint  
-**Detail**: Cloud discovery analyzes traffic logs collected by Defender for Endpoint and assesses identified apps against the cloud app catalog to provide compliance and security information. By configuring cloud discovery, you gain visibility into cloud use, Shadow IT, and continuous monitoring of the unsanctioned apps being used by your users.  
+**Detail**: Cloud discovery analyzes traffic logs collected by Defender for Endpoint, Firewall and Secure Web Gateways and assesses identified apps against the cloud app catalog to provide compliance and security information. By configuring cloud discovery, you gain visibility into cloud use, Shadow IT, and continuous monitoring of the unsanctioned apps being used by your users.
+
 **For more information**:
 
 * [Microsoft Defender for Endpoint integration with Defender for Cloud Apps](mde-integration.md)
@@ -40,7 +41,7 @@ Integrating Defender for Cloud Apps with Microsoft Defender for Endpoint gives y
 ---
 
 **Best practice**: Configure App Discovery policies to proactively identify risky, non-compliant, and trending apps  
-**Details**: App Discovery policies make it easier to track of the significant discovered applications in your organization to help you manage these applications efficiently. Create policies to receive alerts when detecting new apps that are identified as either risky, non-compliant, trending, or high-volume.  
+**Detail**: App Discovery policies make it easier to track of the significant discovered applications in your organization to help you manage these applications efficiently. Create policies to receive alerts when detecting new apps that are identified as either risky, non-compliant, trending, or high-volume.  
 **For more information**:
 
 * [Cloud discovery policies](cloud-discovery-policies.md)
@@ -53,13 +54,13 @@ Integrating Defender for Cloud Apps with Microsoft Defender for Endpoint gives y
 **Detail**: Many users casually grant OAuth permissions to third-party apps to access their account information and, in doing so, inadvertently also give access to their data in other cloud apps. Usually, IT has no visibility into these apps making it difficult to weigh the security risk of an app against the productivity benefit that it provides.
 
 Defender for Cloud Apps provides you with the ability to investigate and monitor the app permissions your users granted. You can use this information to identify a potentially suspicious app and, if you determine that it is risky, you can ban access to it.  
+
 **For more information**:
 
 * [Manage OAuth apps](manage-app-permissions.md)
 * [OAuth app policies](app-permission-policy.md)
 
 ---
-<br/><br/>
 
 ## Apply cloud governance policies
 
@@ -74,7 +75,8 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 ## Limit exposure of shared data and enforce collaboration policies
 
 **Best practice**: Connect Microsoft 365  
-**Detail**: Connecting Microsoft 365 to Defender for Cloud Apps gives you immediate visibility into your users' activities, files they are accessing, and provides governance actions for Microsoft 365, SharePoint, OneDrive, Teams, Power BI, Exchange, and Dynamics.  
+**Detail**: Connecting Microsoft 365 to Defender for Cloud Apps gives you immediate visibility into your users' activities, files they are accessing, and provides governance actions for Microsoft 365, SharePoint, OneDrive, Teams, Power BI, Exchange, and Dynamics. 
+
 **For more information**:
 
 * [Connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md)
@@ -92,7 +94,8 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 ---
 
 **Best practice**: Create policies to remove sharing with personal accounts  
-**Detail**: Connecting Microsoft 365 to Defender for Cloud Apps gives you immediate visibility into your users' activities, files they are accessing, and provides governance actions for Microsoft 365, SharePoint, OneDrive, Teams, Power BI, Exchange, and Dynamics.  
+**Detail**: Connecting Microsoft 365 to Defender for Cloud Apps gives you immediate visibility into your users' activities, files they are accessing, and provides governance actions for Microsoft 365, SharePoint, OneDrive, Teams, Power BI, Exchange, and Dynamics. 
+
 **For more information**:
 
 * [Governing connected apps](governance-actions.md)
@@ -102,7 +105,8 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 ## Discover, classify, label, and protect regulated and sensitive data stored in the cloud
 
 **Best practice**: Integrate with Microsoft Purview Information Protection  
-**Detail**: Integrating with Microsoft Purview Information Protection gives you the capability to automatically apply sensitivity labels and optionally add encryption protection. Once the integration is turned on, you can apply labels as a governance action, view files by classification, investigate files by classification level, and create granular policies to make sure classified files are being handled properly. If you do not turn on the integration, you cannot benefit from the ability to automatically scan, label, and encrypt files in the cloud.  
+**Detail**: Integrating with Microsoft Purview Information Protection gives you the capability to automatically apply sensitivity labels and optionally add encryption protection. Once the integration is turned on, you can apply labels as a governance action, view files by classification, investigate files by classification level, and create granular policies to make sure classified files are being handled properly. If you do not turn on the integration, you cannot benefit from the ability to automatically scan, label, and encrypt files in the cloud.
+
 **For more information**:
 
 * [Microsoft Purview Information Protection integration](azip-integration.md)
@@ -126,42 +130,28 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 
 ---
 
-**Best practice**: Review reports in the **Files** page  
-**Detail**: Once you've connected various SaaS apps using app connectors, Defender for Cloud Apps scans files stored by these apps. In addition, each time a file is modified it is scanned again. You can use the **Files** page to understand and investigate the types of data being stored in your cloud apps. To help you investigate, you can filter by domains, groups, users, creation date, extension, file name and type, file ID, sensitivity label, and more. Using these filters puts you in control of how you choose to investigate files to make sure none of your data is at risk. Once you have a better understanding of how your data is being used, you can create policies to scan for sensitive content in these files.  
-**For more information**:
-
-* [Connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md)
-* [File policies](data-protection-policies.md)
-* [Content inspection](content-inspection.md)
-
----
-<br/><br/>
-
-
 ## Enforce DLP and compliance policies for data stored in the cloud
 
 **Best practice**: Protect confidential data from being shared with external users  
-**Detail**: Create a file policy that detects when a user tries to share a file with the **Confidential** sensitivity label with someone external to your organization, and configure its governance action to remove external users. This policy ensures your confidential data doesn't leave your organization and external users cannot gain access to it.  
+**Detail**: Create a file policy that detects when a user tries to share a file with the **Confidential** sensitivity label with someone external to your organization, and configure its governance action to remove external users. This policy ensures your confidential data doesn't leave your organization and external users cannot gain access to it.
+
 **For more information**:
 
 * [Governing connected apps](governance-actions.md)
 
 ---
-<br/><br/>
-
 
 ## Block and protect download of sensitive data to unmanaged or risky devices
 
 **Best practice**: Manage and control access to high risk devices  
 **Detail**: Use conditional access app control to set controls on your SaaS apps. You can create session policies to monitor your high risk, low trust sessions. Similarly, you can create session policies to block and protect downloads by users trying to access sensitive data from unmanaged or risky devices. If you don't create session policies to monitor high-risk sessions, you'll lose the ability to block and protect downloads in the web client, as well as the ability to monitor low-trust session both in Microsoft and third-party apps.  
+
 **For more information**:
 
 * [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](proxy-intro-aad.md)
 * [Session policies](session-policy-aad.md)
 
 ---
-<br/><br/>
-
 
 ## Secure collaboration with external users by enforcing real-time session controls
 
@@ -173,8 +163,6 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 * [Session policies](session-policy-aad.md)
 
 ---
-<br/><br/>
-
 
 ## Detect cloud threats, compromised accounts, malicious insiders, and ransomware
 
@@ -187,9 +175,7 @@ Anomaly detection policies are triggered when there are unusual activities perfo
 
 * **Set IP Ranges**: Defender for Cloud Apps can identify known IP addresses once IP address ranges are set. With IP address ranges configured, you can tag, categorize, and customize the way logs and alerts are displayed and investigated. Adding IP address ranges helps to reduce false positive detections and improve the accuracy of alerts. If you choose not to add your IP addresses, you may see an increased number of possible false positives and alerts to investigate.
 
-* **Send Feedback for alerts**
-
-    When dismissing or resolving alerts, make sure to send feedback with the reason you dismissed the alert or how it's been resolved. This information assists Defender for Cloud Apps to improve our alerts and reduce false positives.
+* **Send Feedback for alerts**: When dismissing or resolving alerts, make sure to send feedback with the reason you dismissed the alert or how it's been resolved. This information assists Defender for Cloud Apps to improve our alerts and reduce false positives.
 
 **For more information**:
 
@@ -208,14 +194,13 @@ Anomaly detection policies are triggered when there are unusual activities perfo
 ---
 
 **Best practice**: Create OAuth app policies  
-**Detail**: Create an OAuth app policy to notify you when an OAuth app meets certain criteria. For example, you can choose to be notified when a specific app that requires a high permission level was accessed by more than 100 users.  
+**Detail**: Create an OAuth app policy to notify you when an OAuth app meets certain criteria. For example, you can choose to be notified when a specific app that requires a high permission level was accessed by more than 100 users.
+
 **For more information**:
 
 * [OAuth app policies](app-permission-policy.md)
 
 ---
-<br/><br/>
-
 
 ## Use the audit trail of activities for forensic investigations
 
@@ -224,19 +209,19 @@ Anomaly detection policies are triggered when there are unusual activities perfo
 
 You can investigate an alert by selecting it on the **Alerts** page and reviewing the audit trail of activities relating to that alert. The audit trail gives you visibility into activities of the same type, same user, same IP address and location, to provide you with the overall story of an alert. If an alert warrants further investigation, create a plan to resolve these alerts in your organization.
 
-When dismissing alerts, it's important to investigate and understand why they are of no importance or if they are false positives. If there is a high volume of such activities, you may also want to consider reviewing and tuning the policy triggering the alert.  
+When dismissing alerts, it's important to investigate and understand why they are of no importance or if they are false positives. If there is a high volume of such activities, you may also want to consider reviewing and tuning the policy triggering the alert.
+
 **For more information**:
 
 * [Activities](activity-filters.md)
 
 ---
-<br/><br/>
-
 
 ## Secure IaaS services and custom apps
 
 **Best practice**: Connect Azure, AWS and GCP  
 **Detail**: Connecting each of these cloud platforms to Defender for Cloud Apps helps you improve your threat detections capabilities. By monitoring administrative and sign-in activities for these services, you can detect and be notified about possible brute force attack, malicious use of a privileged user account, and other threats in your environment. For example, you can identify risks such as unusual deletions of VMs, or even impersonation activities in these apps.  
+
 **For more information**:
 
 - [Connect Azure to Microsoft Defender for Cloud Apps](protect-azure.md#connect-azure-to-microsoft-defender-for-cloud-apps)
