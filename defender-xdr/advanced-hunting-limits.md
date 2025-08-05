@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 07/28/2025
+ms.date: 08/04/2025
 ---
 
 # Use the advanced hunting query resource report
