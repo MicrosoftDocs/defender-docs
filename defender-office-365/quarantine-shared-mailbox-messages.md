@@ -1,8 +1,8 @@
 ---
 title: View and release quarantined messages from shared mailboxes
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.reviewer: 
 audience: ITPro
 ms.topic: how-to
