@@ -38,7 +38,7 @@ In all organizations with cloud mailboxes, Advanced Spam Filter (ASF) settings i
 >
 > ASF adds `X-CustomSpam:` X-header fields to messages _after_ the messages have been processed by Exchange mail flow rules (also known as transport rules), so you can't use mail flow rules to identify and act on messages that were filtered by ASF. You can use [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2) in mailboxes to affect the delivery of the message.
 
-The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy)).
+The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy)).
 
 For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 

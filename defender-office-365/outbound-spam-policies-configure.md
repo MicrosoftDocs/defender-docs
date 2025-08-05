@@ -310,7 +310,7 @@ This example creates a new outbound spam filter policy named Contoso Executives 
 New-HostedOutboundSpamFilterPolicy -Name "Contoso Executives" -RecipientLimitExternalPerHour 400 -RecipientLimitInternalPerHour 800 -RecipientLimitPerDay 800 -ActionWhenThresholdReached BlockUser
 ```
 
-For detailed syntax and parameter information, see [New-HostedOutboundSpamFilterPolicy](/powershell/module/exchange/new-hostedoutboundspamfilterpolicy).
+For detailed syntax and parameter information, see [New-HostedOutboundSpamFilterPolicy](/powershell/module/exchangepowershell/new-hostedoutboundspamfilterpolicy).
 
 #### Step 2: Use PowerShell to create an outbound spam filter rule
 
@@ -329,7 +329,7 @@ This example creates a new outbound spam filter rule named Contoso Executives wi
 New-HostedOutboundSpamFilterRule -Name "Contoso Executives" -HostedOutboundSpamFilterPolicy "Contoso Executives" -FromMemberOf "Contoso Executives Group"
 ```
 
-For detailed syntax and parameter information, see [New-HostedOutboundSpamFilterRule](/powershell/module/exchange/new-hostedoutboundspamfilterrule).
+For detailed syntax and parameter information, see [New-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/new-hostedoutboundspamfilterrule).
 
 ### Use PowerShell to view outbound spam filter policies
 
@@ -351,7 +351,7 @@ This example returns all the property values for the outbound spam filter policy
 Get-HostedOutboundSpamFilterPolicy -Identity "Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedOutboundSpamFilterPolicy](/powershell/module/exchange/get-hostedoutboundspamfilterpolicy).
+For detailed syntax and parameter information, see [Get-HostedOutboundSpamFilterPolicy](/powershell/module/exchangepowershell/get-hostedoutboundspamfilterpolicy).
 
 ### Use PowerShell to view outbound spam filter rules
 
@@ -389,7 +389,7 @@ This example returns all the property values for the outbound spam filter rule n
 Get-HostedOutboundSpamFilterRule -Identity "Contoso Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-HostedOutboundSpamFilterRule](/powershell/module/exchange/get-hostedoutboundspamfilterrule).
+For detailed syntax and parameter information, see [Get-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule).
 
 ### Use PowerShell to modify outbound spam filter policies
 
@@ -404,7 +404,7 @@ To modify an outbound spam filter policy, use this syntax:
 Set-HostedOutboundSpamFilterPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilterPolicy](/powershell/module/exchange/set-hostedoutboundspamfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilterPolicy](/powershell/module/exchangepowershell/set-hostedoutboundspamfilterpolicy).
 
 ### Use PowerShell to modify outbound spam filter rules
 
@@ -418,7 +418,7 @@ To modify an outbound spam filter rule, use this syntax:
 Set-HostedOutboundSpamFilterRule -Identity "<RuleName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilterRule](/powershell/module/exchange/set-hostedoutboundspamfilterrule).
+For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/set-hostedoutboundspamfilterrule).
 
 ### Use PowerShell to enable or disable outbound spam filter rules
 
@@ -442,7 +442,7 @@ This example enables same rule.
 Enable-HostedOutboundSpamFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-HostedOutboundSpamFilterRule](/powershell/module/exchange/enable-hostedoutboundspamfilterrule) and [Disable-HostedOutboundSpamFilterRule](/powershell/module/exchange/disable-hostedoutboundspamfilterrule).
+For detailed syntax and parameter information, see [Enable-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/enable-hostedoutboundspamfilterrule) and [Disable-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/disable-hostedoutboundspamfilterrule).
 
 ### Use PowerShell to set the priority of outbound spam filter rules
 
@@ -481,7 +481,7 @@ This example removes the outbound spam filter policy named Marketing Department.
 Remove-HostedOutboundSpamFilterPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterPolicy](/powershell/module/exchange/remove-hostedoutboundspamfilterpolicy).
+For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterPolicy](/powershell/module/exchangepowershell/remove-hostedoutboundspamfilterpolicy).
 
 ### Use PowerShell to remove outbound spam filter rules
 
@@ -499,7 +499,7 @@ This example removes the outbound spam filter rule named Marketing Department.
 Remove-HostedOutboundSpamFilterRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterRule](/powershell/module/exchange/remove-hostedoutboundspamfilterrule).
+For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/remove-hostedoutboundspamfilterrule).
 
 ## For more information
 

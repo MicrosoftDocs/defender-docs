@@ -57,7 +57,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
 - As of July 2022, users with primary SMTP addresses that are different from their user principal names (UPNs) should be able to access quarantined messages for the shared mailbox.
 
-- To manage quarantined messages for the shared mailbox in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), the user needs to use the [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet with shared mailbox email address for the value of the _RecipientAddress_ parameter to identify the messages. For example:
+- To manage quarantined messages for the shared mailbox in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), the user needs to use the [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage) cmdlet with shared mailbox email address for the value of the _RecipientAddress_ parameter to identify the messages. For example:
 
   ```powershell
   Get-QuarantineMessage -RecipientAddress officeparty@contoso.com
@@ -75,7 +75,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
   For detailed syntax and parameter information, see the following articles:
 
-  - [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-  - [Get-QuarantineMessageHeader](/powershell/module/exchange/get-quarantinemessageheader)
-  - [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage)
-  - [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
+  - [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage)
+  - [Get-QuarantineMessageHeader](/powershell/module/exchangepowershell/get-quarantinemessageheader)
+  - [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage)
+  - [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)

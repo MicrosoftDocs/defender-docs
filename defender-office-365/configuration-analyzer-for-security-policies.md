@@ -51,7 +51,7 @@ The Standard and Strict policy setting values used as baselines are described in
 The configuration analyzer also checks the following non-policy settings:
 
 - **DKIM**: Whether [SPF](email-authentication-spf-configure.md) and [DKIM](email-authentication-dkim-configure.md) records for the specified domain are detected in DNS.
-- **Outlook**: Whether native Outlook external sender identifiers are [enabled](/powershell/module/exchange/set-externalinoutlook) in the organization.
+- **Outlook**: Whether native Outlook external sender identifiers are [enabled](/powershell/module/exchangepowershell/set-externalinoutlook) in the organization.
 
 ## What do you need to know before you begin?
 

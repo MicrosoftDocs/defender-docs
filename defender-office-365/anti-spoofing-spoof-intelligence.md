@@ -199,7 +199,7 @@ To view the information in the spoof intelligence insight, run the following com
 Get-SpoofIntelligenceInsight
 ```
 
-For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchange/get-spoofintelligenceinsight).
+For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchangepowershell/get-spoofintelligenceinsight).
 
 ## Other ways to manage spoofing and phishing
 

@@ -266,15 +266,15 @@ PowerShell reporting cmdlets:
 
 |Report|Article|
 |---|---|
-|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
-|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|
-|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|
-|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
-|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
-|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
-|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchange/get-aggregatezapreport)|
-|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchange/get-detailzapreport)|
+|Top senders and recipients|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Top malware|[Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport)|
+|Threat protection status|[Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|
+|Safe Links|[Get-SafeLinksAggregateReport](/powershell/module/exchangepowershell/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchangepowershell/get-safelinksdetailreport)|
+|Compromised users|[Get-CompromisedUserAggregateReport](/powershell/module/exchangepowershell/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchangepowershell/get-compromiseduserdetailreport)|
+|Mail flow status|[Get-MailflowStatusReport](/powershell/module/exchangepowershell/get-mailflowstatusreport)|
+|Spoofed users|[Get-SpoofMailReport](/powershell/module/exchangepowershell/get-spoofmailreport)|
+|Post delivery activity summary|[Get-AggregateZapReport](/powershell/module/exchangepowershell/get-aggregatezapreport)|
+|Post delivery activity details|[Get-DetailZapReport](/powershell/module/exchangepowershell/get-detailzapreport)|
 
 ## What permissions are needed to view the Defender for Office 365 reports?
 

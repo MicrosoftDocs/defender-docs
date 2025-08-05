@@ -139,7 +139,7 @@ To view details about a specific user, replace \<emailaddress\> with their email
 Get-BlockedSenderAddress -SenderAddress <emailaddress> | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-BlockedSenderAddress](/powershell/module/exchange/get-blockedsenderaddress).
+For detailed syntax and parameter information, see [Get-BlockedSenderAddress](/powershell/module/exchangepowershell/get-blockedsenderaddress).
 
 To remove a user from the Restricted users list, replace \<emailaddress\> with their email address and run the following command:
 
@@ -147,7 +147,7 @@ To remove a user from the Restricted users list, replace \<emailaddress\> with t
 Remove-BlockedSenderAddress -SenderAddress <emailaddress>
 ```
 
-For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchange/remove-blockedsenderaddress).
+For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchangepowershell/remove-blockedsenderaddress).
 
 ## More information
 
