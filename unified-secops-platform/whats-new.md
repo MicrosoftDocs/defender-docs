@@ -26,7 +26,7 @@ This article lists recent features added for unified security operations in the 
 
 ### Viewing unified RBAC in multitenant management to GA
 
-Viewing unified role-based access control (RBAC) in the Microsoft Defender multitenant management portal is now generally available. This feature allows you to view and manage user permissions across multiple tenants, providing a comprehensive view of permissions and access for your tenants.
+Viewing unified role-based access control (RBAC) in the Microsoft Defender multitenant management portal is now generally available. This feature allows you to view a comprehensive view of permissions and access for your tenants.
 
 Creating and editing custom roles remains in preview. For more information, see [Manage unified role-based access control in multitenant management](mto-urbac.md).
 
