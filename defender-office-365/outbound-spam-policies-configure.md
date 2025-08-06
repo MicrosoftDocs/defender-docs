@@ -117,7 +117,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      For all actions, the senders specified in the **User restricted from sending email** alert policy (and in the now redundant **Notify these users and groups if a sender is blocked due to sending outbound spam** setting on this page) receive email notifications.
 
-     - **Restrict the user from sending mail until the following day**: This is the default value. Email notifications are sent, and the user is unable to send any more messages until the following day, based on UTC time.
+     - **Restrict the user from sending mail until the following day**: This value is the default. Email notifications are sent, and the user is unable to send any more messages until the following day, based on UTC time.
        - The alert policy named **User restricted from sending email** notifies admins (via email and on the **Incidents & alerts** \> **View alerts** page).
        - Any recipients specified in the **Notify specific people if a sender is blocked due to sending outbound spam** setting in the policy are also notified.
        - The user is unable to send any more messages until the following day, based on UTC time.
@@ -128,7 +128,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      Select one of the following actions from the **Automatic forwarding rules** dropdown list:
 
-     - **Automatic - System-controlled**: This is the default value. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+     - **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
      - **On - Forwarding is enabled**: Automatic external email forwarding isn't disabled by the policy.
      - **Off - Forwarding is disabled**: All automatic external email forwarding is disabled by the policy.
 

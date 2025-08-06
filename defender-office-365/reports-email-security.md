@@ -109,7 +109,7 @@ On the **Compromised users** page, the :::image type="icon" source="media/m365-c
 
 ## Mailflow status report
 
-The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Microsoft 365.
+The **Mailflow status report** is a smart report that shows information about incoming and outgoing email, spam detections, malware, email identified as "good", and information about email allowed or blocked on the edge. This report is the only report that contains edge protection information. The report shows how much email is blocked before entering the service for examination by Microsoft 365.
 
 > [!TIP]
 >

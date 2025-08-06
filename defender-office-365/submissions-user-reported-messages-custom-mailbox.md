@@ -125,7 +125,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   To create customized pop-up notifications in specific languages, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add customized message**. In the **Add customized message** flyout that opens, configure the following settings:
 
   - Select the tab for the notification pop-up to customize:
-    - **Report phishing** (this is the default selection)
+    - **Report phishing** (this selection is the default)
     - **Report junk**
     - **Report not junk**
     - **Phishing reported**
