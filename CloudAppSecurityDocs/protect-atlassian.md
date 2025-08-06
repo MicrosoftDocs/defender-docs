@@ -75,6 +75,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - The [Atlassian Access](https://www.atlassian.com/software/access#about-atlassian-access) plan is required.
 - You must be signed as an Organization admin to Atlassian.
 
+> [!NOTE]
+> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring does not extend to sub-organizations that may exist under the same Atlassian environment.
+
 ### Configure Atlassian
 
 1. Sign in to the Atlassian Admin portal with an admin account.
