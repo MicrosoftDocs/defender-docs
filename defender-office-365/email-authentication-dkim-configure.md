@@ -2,9 +2,9 @@
 title: How to use DKIM for email in your custom domain
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 06/19/2025
 audience: ITPro
 ms.topic: how-to
@@ -400,9 +400,9 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [New-DkimSigningConfig](/powershell/module/exchange/new-dkimsigningconfig)
-- [Set-DkimSigningConfig](/powershell/module/exchange/set-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [New-DkimSigningConfig](/powershell/module/exchangepowershell/new-dkimsigningconfig)
+- [Set-DkimSigningConfig](/powershell/module/exchangepowershell/set-dkimsigningconfig)
 
 ## Rotate DKIM keys
 
@@ -500,8 +500,8 @@ If you'd rather use PowerShell to rotate DKIM keys for a domain, connect to [Exc
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [Rotate-DkimSigningConfig](/powershell/module/exchangepowershell/rotate-dkimsigningconfig)
 
 ## Disable DKIM signing of outbound messages using a custom domain
 
