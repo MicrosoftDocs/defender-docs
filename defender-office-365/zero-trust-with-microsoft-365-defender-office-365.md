@@ -7,8 +7,9 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
+
 audience: ITPro
 ms.collection:
   - m365-security

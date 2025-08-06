@@ -3,9 +3,9 @@ metadata:
   title: Delegated administration FAQ
   f1.keywords:
     - NOCSH
-  ms.author: chrisda
   author: chrisda
-  manager: deniseb
+  ms.author: chrisd
+  manager: chrisda
   ms.date: 6/22/2023
   audience: ITPro
   ms.topic: faq

@@ -2,9 +2,9 @@
 title: Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ description: Admins can learn how to turn on Safe Attachments for SharePoint, On
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 4/26/2024
+ms.date: 08/05/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -76,7 +76,7 @@ If you'd rather use PowerShell to turn on Safe Attachments for SharePoint, OneDr
 Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 ```
 
-For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365).
+For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchangepowershell/set-atppolicyforo365).
 
 ## Step 2: (Recommended) Use SharePoint Online PowerShell to prevent users from downloading malicious files
 
@@ -142,12 +142,12 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 If you'd rather use PowerShell to create the same alert policy as described in the previous section, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
 ```powershell
-New-ActivityAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -Category ThreatManagement -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
+New-ProtectionAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -AggregationType None -Category ThreatManagement -ThreatType Activity -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
 ```
 
-**Note**: The default _Severity_ value is Low. To specify Medium or High, include the _Severity_ parameter and value in the command.
+The default _Severity_ value is Low. To specify Medium or High, include the _Severity_ parameter and value in the command.
 
-For detailed syntax and parameter information, see [New-ActivityAlert](/powershell/module/exchange/new-activityalert).
+For detailed syntax and parameter information, see [New-ProtectionAlert](/powershell/module/exchangepowershell/new-protectionalert).
 
 ### How do you know these procedures worked?
 
@@ -161,7 +161,7 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
     Get-AtpPolicyForO365 | Format-List EnableATPForSPOTeamsODB
     ```
 
-    For detailed syntax and parameter information, see [Get-AtpPolicyForO365](/powershell/module/exchange/get-atppolicyforo365).
+    For detailed syntax and parameter information, see [Get-AtpPolicyForO365](/powershell/module/exchangepowershell/get-atppolicyforo365).
 
 - To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to verify the property value:
 
@@ -176,9 +176,9 @@ For detailed syntax and parameter information, see [New-ActivityAlert](/powershe
   - In Security & Compliance PowerShell, replace \<AlertPolicyName\> with the name of the alert policy, run the following command, and verify the property values:
 
     ```powershell
-    Get-ActivityAlert -Identity "<AlertPolicyName>"
+    Get-ProtectionAlert -Identity "<AlertPolicyName>"
     ```
 
-    For detailed syntax and parameter information, see [Get-ActivityAlert](/powershell/module/exchange/get-activityalert).
+    For detailed syntax and parameter information, see [Get-ProtectionAlert](/powershell/module/exchangepowershell/get-protectionalert).
 
 - Use the [Threat protection status report](reports-email-security.md#threat-protection-status-report) to view information about detected files in SharePoint, OneDrive, and Microsoft Teams. Specifically, you can use the **View data by: Content \> Malware** view.

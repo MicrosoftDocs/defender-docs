@@ -2,9 +2,9 @@
 title: Remove blocked connectors from the Restricted entities page in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -127,7 +127,7 @@ To view details about a specific blocked connector, replace \<ConnectorID\> with
 Get-BlockedConnector -ConnectorId <ConnectorID> | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-BlockedConnector](/powershell/module/exchange/get-blockedconnector).
+For detailed syntax and parameter information, see [Get-BlockedConnector](/powershell/module/exchangepowershell/get-blockedconnector).
 
 To remove a connector from the Restricted entities list, replace \<ConnectorID\> with the GUID value of the connector, and then run the following command:
 
@@ -135,7 +135,7 @@ To remove a connector from the Restricted entities list, replace \<ConnectorID\>
 Remove-BlockedConnector -ConnectorId <ConnectorID>
 ```
 
-For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchange/remove-blockedconnector).
+For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchangepowershell/remove-blockedconnector).
 
 ## More information
 
