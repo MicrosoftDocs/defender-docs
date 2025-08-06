@@ -103,7 +103,7 @@ Now that your endpoints have been onboarded to Defender for Endpoint, your next 
 
 ### Set Microsoft Defender Antivirus on Windows Server to passive mode manually
 
-To set Microsoft Defender Antivirus to passive mode on Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server, version 1803 or newer, follow these steps:
+To set Microsoft Defender Antivirus to passive mode on Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, or Windows Server, version 1803 or newer, follow these steps:
 
 1. Open Registry Editor, and then navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 

@@ -45,7 +45,7 @@ Before you begin, you must meet the following requirements:
 
 - Microsoft Defender Antivirus (active mode)
 - Windows client devices must be running Windows 11 or Windows 10 version 1703 or newer
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+- Windows server devices must be running Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## Why run Microsoft Defender Antivirus in a sandbox?
 

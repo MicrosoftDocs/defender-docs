@@ -45,7 +45,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 This article assumes that you have experience with Windows Server Update Services (WSUS) and/or already have WSUS installed. If you aren't already familiar with WSUS, see the following articles for important configuration details:
 
-- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 - [Configure Windows Server Update Services (WSUS) in Analytics Platform System][/sql/analytics-platform-system/configure-windows-server-update-services-wsus.md] - Analytics Platform System
 
 ## Setting up the production environment
