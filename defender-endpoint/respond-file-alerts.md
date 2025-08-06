@@ -202,7 +202,7 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Client devices must be running Windows 11 or Windows 10, version 1703 or later
-> - Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016
+> - Server devices must be running Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, or Windows Server 2016
 
 ### Collect files
 
