@@ -27,6 +27,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## August 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| August 6, 2025 | GA | [AKS Security Dashboard](#AKS-Security-Dashboard) |
+
+### AKS Security Dashboard
+
+August 6, 2025
+
+The AKS Security Dashboard provides a centralized view of security posture and runtime threat protection for AKS cluster within the Azure Portal. It highlights software vulnerabilities, compliance gaps, and active threats, helping you prioritize remediation. Use this dashboard to monitor AKS workload protection, cluster configuration, and threat detection in real time.
+
+[Learn more](/azure/defender-for-cloud/cluster-security-dashboard) 
+
+
 ## July 2025
 
 |Date | Category | Update|
@@ -391,7 +406,6 @@ For information on how to enable FIM over Defender for Endpoint, see [File Integ
 
 > [!IMPORTANT]
 > The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
-
 
 ## Next steps
 
