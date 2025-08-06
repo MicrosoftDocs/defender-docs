@@ -20,6 +20,16 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
+## August 2025
+
+- [Viewing unified RBAC in multitenant management to GA](#viewing-unified-rbac-in-multitenant-management-to-ga)
+
+### Viewing unified RBAC in multitenant management to GA
+
+Viewing unified role-based access control (RBAC) in the Microsoft Defender multitenant management portal is now generally available. This feature allows you to view and manage user permissions across multiple tenants, providing a comprehensive view of permissions and access for your tenants.
+
+Creating and editing custom roles remains in preview. For more information, see [Manage unified role-based access control in multitenant management](mto-urbac.md).
+
 ## July 2025
 
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
