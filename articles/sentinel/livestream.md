@@ -2,10 +2,9 @@
 title: Detect threats by using hunting livestream in Microsoft Sentinel
 description: Detect threats in real time with hunting livestream in Microsoft Sentinel. Set up sessions, receive notifications, and take action fast.
 ms.topic: how-to
-ms.date: 08/06/2025
+ms.date: 07/06/2025
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: Ben Nick
 ms.collection: usx-security
 appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
@@ -20,12 +19,10 @@ ms.custom:
 
 # Detect threats by using hunting livestream in Microsoft Sentinel
 
-Use hunting livestream to create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query.
+Use hunting livestream to create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query. 
 
 > [!NOTE]
-> Microsoft Sentinel Livestream is scheduled for deprecation and will be removed from the UI as early as the end of September 2025. For ongoing or future needs, consider using [Logic Apps](./automation/logic-apps-playbooks.md) or [summary tables](./summary-rules.md) to accomplish similar scenarios.
-
-This article is about **Hunting** in Microsoft Sentinel, which also exists in Defender. For **Advanced hunting** in Microsoft Defender, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+> This article is about **Hunting** in Microsoft Sentinel, which also exists in Defender. For **Advanced hunting** in Microsoft Defender, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -43,27 +40,27 @@ You can create a livestream session from an existing hunting query, or create yo
     > [!div class="mx-imgBorder"]
     > ![create Livestream session from Microsoft Sentinel hunting query](./media/livestream/livestream-from-query.png)
 
-1. To create a livestream session from scratch: 
-
+1. To create a livestream session from scratch:
+  
     1. Select the **Livestream** tab.
     1. Select **+ New livestream**.
-
+  
 1. On the **Livestream** pane:
-
+  
     - If you started livestream from a query, review the query and make any changes you want to make.
     - If you started livestream from scratch, create your query.
 
     Livestream supports **cross-resource queries** of data in Azure Data Explorer. [**Learn more about cross-resource queries**](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy).
 
 1. Select **Play** from the command bar.
-
+  
     The status bar under the command bar indicates whether your livestream session is running or paused. In the following example, the session is running:
-
+  
     > [!div class="mx-imgBorder"]
     > ![create livestream session from Microsoft Sentinel hunting](./media/livestream/livestream-session.png)
 
 1. Select **Save** from the command bar.
-
+  
     Unless you select **Pause**, the session continues to run until you're signed out from the Azure portal.
 
 ## View your livestream sessions
@@ -75,10 +72,10 @@ Find your livestream sessions on the **Hunting** > **Livestream** tab.
 1. Select the **Livestream** tab.
 
 1. Select the livestream session you want to view or edit. For example:
-
+  
     > [!div class="mx-imgBorder"]
     > ![create livestream session from Microsoft Sentinel hunting query](./media/livestream/livestream-tab.png)
-
+  
     Your selected livestream session opens for you to play, pause, edit, and so on.
 
 ## Receive notifications when new events occur
