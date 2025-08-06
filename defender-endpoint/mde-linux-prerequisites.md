@@ -124,7 +124,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output. 
 > You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus).
 >
-> **The Linux FAPolicyD is an exception in this. It is supported with Linux Defender for Endpoint on RHEL & FEDORA platforms.**
+> **The Linux FAPolicyD is an exception in this. It is supported with Linux Defender for Endpoint on RHEL & FEDORA platforms as long as the "mdatp health" shows true.**
 ## Supported filesystems for real-time protection and quick, full, and custom scans 
 
 |Real-time protection and quick/full scans|Custom scans|
