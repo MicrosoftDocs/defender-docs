@@ -47,6 +47,16 @@ Security alerts are notifications from Defender for Cloud about suspicious activ
 
 Clicking on each alert, opens a panel with additional information about the detection that triggered the alert and additional possible actions to mitigate the issue.
 
+**Alerts Severity**  
+
+**High** There is a high probability that your resource is compromised. You should look into it right away. Defender for Cloud has high confidence in both the malicious intent and in the findings used to issue the alert. 
+
+**Medium** Probably a suspicious activity and might indicate that a resource is compromised. The confidence in the analytic or finding is medium, and the confidence of the malicious intent is medium to high. These would usually be machine learning or anomaly-based detections. 
+
+**Low** This might be a benign positive or a blocked attack. 
+
+**Informational** An incident is typically made up of several alerts, some of which might appear on their own to be only informational, but in the context of the other alerts might be worthy of a closer look.
+
 #### When investigating an alert:
 
 1. Review the alert description and recommended steps for response in the alert right panel.
@@ -61,18 +71,9 @@ Clicking on each alert, opens a panel with additional information about the dete
 
 1. Once an alert is mitigated, change the alert status, for future reference or filtering (requires security admin role).
 
-__Alerts Severity__  
-
-**High** There is a high probability that your resource is compromised. You should look into it right away. Defender for Cloud has high confidence in both the malicious intent and in the findings used to issue the alert.
-__Medium__ Probably a suspicious activity and might indicate that a resource is compromised. The confidence in the analytic or finding is medium, and the confidence of the malicious intent is medium to high. These would usually be machine learning or anomaly-based detections.
-__Low__ This might be a benign positive or a blocked attack.
-__Informational__ An incident is typically made up of several alerts, some of which might appear on their own to be only informational, but in the context of the other alerts might be worthy of a closer look.|
-
-![AlertsAug25](media/cluster-security-dashboard/alertsaug25.png)
-
 **Note:** Alerts from defender for cloud are also streamed directly to [Microsoft XDR](https://www.microsoft.com/en-us/security/business/solutions/extended-detection-response-xdr).
 
-__[Learn more](/azure/defender-for-cloud/alerts-overview)__ about security alerts in Defender for Cloud.
+**[Learn more](/azure/defender-for-cloud/alerts-overview)** about security alerts in Defender for Cloud.![AlertsAug25](media/cluster-security-dashboard/alertsaug25.png)
 
 ### Vulnerability Assessment Tab 
 
@@ -162,7 +163,7 @@ Defender for Cloud, containers protection (Defender for Containers) can be enabl
 
 Note: In the case where Defender for Containers is enabled on the subscription level, plan settings can only be changed on the subscription level.
 
-#### **Note**: By enabling other Defender for Cloud plans on top, defender can scan through your entire cloud assets and identify cross resources attack paths, identify risk more accurately and provide alerts and full visibility into cross resources security incidents. [Learn more.](/azure/defender-for-cloud/defender-for-cloud-introduction)
+**Note:** By enabling other Defender for Cloud plans on top, defender can scan through your entire cloud assets and identify cross resources attack paths, identify risk more accurately and provide alerts and full visibility into cross resources security incidents. [Learn more.](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 #### Plan configurations
 
