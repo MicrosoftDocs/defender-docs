@@ -35,8 +35,6 @@ Microsoft Defender for Endpoint (MDE) on Linux now supports installation to cust
 - Custom directory structures and organizational policies
 - Limited space on the root filesystem
 - Specific compliance requirements for application placement
-- Multi-tenant environments requiring isolation
-- Specialized storage configurations
 
 By default, Microsoft Defender for Endpoint (MDE) installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup — MDE will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades will keep using your original custom path, and changing the installation path later is not supported. If you need to use a different path, you must uninstall MDE and reinstall it to the new location.
 
@@ -51,16 +49,25 @@ Before deploying MDE to a custom path, ensure the following requirements are met
 
 ### Supported Distributions and Feature Availability
 
-Custom path installation is supported on all [supported Linux distributions](mde-linux-prerequisites.md#supported-linux-distributions) for both x64 and ARM64 architectures.
+- Custom path installation is supported on all [supported Linux distributions](mde-linux-prerequisites.md#supported-linux-distributions) for both x64 and ARM64 architectures.
 
-> **Note:** The custom installation path feature is available starting from version **101.25062.0003** of Microsoft Defender for Endpoint on Linux.
+- The custom installation path feature is available starting from version **101.25062.0003** of Microsoft Defender for Endpoint on Linux.
 
 ## Steps for Installing to a Custom Path
 
-This section describes only the extra steps needed for custom path installation:
+This section describes the additional steps required to deploy Microsoft Defender for Endpoint (MDE) to a custom installation path, using various supported methods.
 
-- **Installer script**: At installation time, run the `mde_installer.sh` script with the `--install-path /your/custom/path` option to specify a custom location. For more details, see the [installer script deployment guide](linux-installer-script.md).
-- **Manual installation**: Perform the following additional setup steps before running the standard manual installation commands described in [linux-install-manually.md](linux-install-manually.md).
+- **Installer script**:
+
+  The recommended method is to run the `mde_installer.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [installer script deployment guide](linux-installer-script.md).
+
+- **Third-party automation tools**:
+
+  Solutions such as Ansible, Chef, Puppet, and SaltStack can automate deployment by running the `mde_installer.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [installer script deployment guide](linux-installer-script.md).
+
+- **Manual installation**:
+
+  If you prefer manual setup, you must perform additional pre-installation steps to prepare your custom path before running the standard installation commands described in [linux-install-manually.md](linux-install-manually.md). See the next section for step-by-step instructions.
 
 ### Manual Installation: Pre-Installation Setup
 
