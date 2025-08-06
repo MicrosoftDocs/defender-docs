@@ -27,7 +27,9 @@ This article lists recent features added for unified security operations in the 
 
 ### Tenant groups in multitenant management renamed to distribution profiles
 
-In the multitenant portal, tenant groups are now renamed to **content distribution profiles**. Functionality remains the same, and content distribution profiles enable you to distribute security content, including custom detection rules and endpoint security policies, at scale across all of your tenants, based on categories like business groups or location. For example:
+In the multitenant portal, tenant groups are now renamed to **content distribution profiles**. 
+
+Functionality remains the same: Content distribution profiles enable you to distribute security content, including custom detection rules and endpoint security policies, at scale across all of your tenants, based on categories like business groups or location. For example:
 
 :::image type="content" source="media/whats-new/distribution-profiles.png" alt-text="Screenshot of the renamed Content distribution page.":::
 
@@ -35,11 +37,11 @@ For more information, see [Content distribution using distribution profiles in m
 
 ### Distribute Microsoft Defender for Endpoint security policies with multitenant management
 
-Microsoft Defender for Endpoint security policies can now be distributed as content across multiple tenants using the Defender multitenant portal, empowering security teams to manage endpoint security policies at scale. Distributed policies are shown in the **Configuration management > Endpoint security policies** page in a hierarchical view so that you can identify parent policies and their distributed copies across tenants. 
+Microsoft Defender for Endpoint security policies can now be distributed as content across multiple tenants using the Defender multitenant portal, empowering security teams to manage endpoint security policies at scale. Distributed policies are shown in the **Configuration management > Endpoint security policies** page in a hierarchical view so that you can identify parent policies and their distributed copies across tenants. Distribution profiles are listed in the **Tenant groups** column.
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of an expanded, distributed policy." lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
-The original policy’s page also shows the overall distribution status and lists recipient tenants and distribution profiles. Distribution profiles are listed in the **Tenant groups** column.
+The original policy’s page also shows the overall distribution status and lists recipient tenants and distribution profiles.
 
 For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md) and [Content distribution in multitenant management](mto-distribution-profiles.md).
 
