@@ -67,11 +67,11 @@ This section describes the additional steps required to deploy Microsoft Defende
 
 - **Manual installation**:
 
-  If you prefer manual setup, you must perform additional pre-installation steps to prepare your custom path before running the standard installation commands described in [linux-install-manually.md](linux-install-manually.md). See the next section for step-by-step instructions.
+  If you prefer manual setup, you must perform additional pre-installation steps to prepare your custom path. See the next section for step-by-step instructions.
 
 ### Manual Installation: Pre-Installation Setup
 
-If you need to manually install Microsoft Defender for Endpoint (MDE) to a custom (non-default) location, follow these additional steps before starting the standard installation process:
+In the [Manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional pre-installation setup to enable custom path installation. Follow the steps below as part of the [Pre Install Setup for Custom Path Installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
 
 1. **Set your custom path variable**:
 
