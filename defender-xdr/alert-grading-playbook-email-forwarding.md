@@ -228,7 +228,7 @@ You can also find suspicious forwarding rules using the Exchange admin center, b
 
 - InboxRule
 
-  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchange/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
+  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
 
 ### Additional investigation
 

@@ -3,9 +3,9 @@ title: Recommendations for Microsoft 365 security settings
 keywords: Office 365 security recommendations, Sender Policy Framework, Domain-based Message Reporting and Conformance, DomainKeys Identified Mail, steps, how does it work, security baselines, baselines for default protections, baselines for Defender for Office 365, set up Defender for Office 365, configure Defender for Office 365, security configuration
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -292,7 +292,7 @@ Although there's no default Safe Attachments policy, the **Built-in protection**
 
 To configure these settings, see [Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md) and [Safe Documents in Microsoft 365 E5](safe-documents-in-e5-plus-security-about.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365) cmdlet for these settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [Set-AtpPolicyForO365](/powershell/module/exchangepowershell/set-atppolicyforo365) cmdlet for these settings.
 
 |Security feature name|Default|Built-in protection|Comment|
 |---|:---:|:---:|---|
@@ -304,7 +304,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 To configure these settings, see [Set up Safe Attachments policies in Defender for Office 365](safe-attachments-policies-configure.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy) and [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safelinkspolicy) cmdlets for these settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeAttachmentPolicy](/powershell/module/exchangepowershell/new-safeattachmentpolicy) and [Set-SafeAttachmentPolicy](/powershell/module/exchangepowershell/set-safelinkspolicy) cmdlets for these settings.
 
 > [!NOTE]
 > As described earlier, although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments policies.
@@ -331,7 +331,7 @@ Although there's no default Safe Links policy, the **Built-in protection** prese
 
 To configure Safe Links policy settings, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy) and [Set-SafeLinksPolicy](/powershell/module/exchange/set-safelinkspolicy) cmdlets for Safe Links policy settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeLinksPolicy](/powershell/module/exchangepowershell/new-safelinkspolicy) and [Set-SafeLinksPolicy](/powershell/module/exchangepowershell/set-safelinkspolicy) cmdlets for Safe Links policy settings.
 
 > [!NOTE]
 > The **Default in custom** column refers to the default values in new Safe Links policies that you create. The remaining columns indicate (unless otherwise noted) the values that are configured in the corresponding preset security policies.
@@ -361,7 +361,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchangepowershell/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 
 > [!NOTE]
 > Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any custom threat policies, or the default threat policies. The **Standard** and **Strict** values indicate our **recommended** values.

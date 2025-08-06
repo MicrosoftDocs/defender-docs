@@ -2,9 +2,9 @@
 title: Allow or block email using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -141,7 +141,7 @@ This example adds an allow entry for the specified email addresses. Because we d
 New-TenantAllowBlockListItems -ListType Sender -Allow -Entries "test@gooddomain.com","test2@gooddomain.com"
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ### Create block entries for domains and email addresses
 
@@ -199,7 +199,7 @@ This example adds a block entry for the specified email address that expires on 
 New-TenantAllowBlockListItems -ListType Sender -Block -Entries "test@badattackerdomain.com","test2@anotherattackerdomain.com" -ExpirationDate 8/20/2022
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to view entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -256,7 +256,7 @@ This example filters the results for block entries for domains and email address
 Get-TenantAllowBlockListItems -ListType Sender -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to modify entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -305,7 +305,7 @@ This example changes the expiration date of the specified block entry for the se
 Set-TenantAllowBlockListItems -ListType Sender -Entries "julia@fabrikam.com" -ExpirationDate "9/1/2022"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ### Use the Microsoft Defender portal to remove entries for domains and email addresses from the Tenant Allow/Block List
 
@@ -340,7 +340,7 @@ This example removes the specified entry for domains and email addresses from th
 Remove-TenantAllowBlockListItems -ListType Sender -Entries "adatum.com"
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## Spoofed senders in the Tenant Allow/Block List
 
@@ -402,7 +402,7 @@ This example creates an allow entry for the sender bob@contoso.com from the sour
 New-TenantAllowBlockListSpoofItems -Identity Default -Action Allow -SendingInfrastructure contoso.com -SpoofedUser bob@contoso.com -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchange/new-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/new-tenantallowblocklistspoofitems).
 
 ### Create block entries for spoofed senders
 
@@ -443,7 +443,7 @@ This example creates a block entry for the sender laura@adatum.com from the sour
 New-TenantAllowBlockListSpoofItems -Identity Default -Action Block -SendingInfrastructure 172.17.17.17/24 -SpoofedUser laura@adatum.com -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchange/new-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/new-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to view entries for spoofed senders in the Tenant Allow/Block List
 
@@ -500,7 +500,7 @@ This example returns all blocked spoofed sender entries that are external.
 Get-TenantAllowBlockListSpoofItems -Action Block -SpoofType External
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListSpoofItems](/powershell/module/exchange/get-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/get-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to modify entries for spoofed senders in the Tenant Allow/Block List
 
@@ -528,7 +528,7 @@ This example changes the specified spoofed sender entry from an allow entry to a
 Set-TenantAllowBlockListItems -Identity Default -Ids 3429424b-781a-53c3-17f9-c0b5faa02847 -Action Block
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchange/set-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/set-tenantallowblocklistspoofitems).
 
 ### Use the Microsoft Defender portal to remove entries for spoofed senders from the Tenant Allow/Block List
 
@@ -557,7 +557,7 @@ Remove-TenantAllowBlockListSpoofItems -Identity domain.com\Default -Ids d86b3b4b
 
 This example removes the specified spoofed sender. You get the Ids parameter value from the Identity property in the output of Get-TenantAllowBlockListSpoofItems command.
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistspoofitems).
 
 ### Domain pair syntax for spoofed sender entries
 

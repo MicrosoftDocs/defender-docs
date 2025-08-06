@@ -2,9 +2,9 @@
 title: Threat hunting in Threat Explorer and Real-time detections
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.date: 05/19/2025

@@ -1,8 +1,8 @@
 ---
 title: Insights and reports Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365

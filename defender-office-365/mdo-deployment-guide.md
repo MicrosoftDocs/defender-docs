@@ -2,9 +2,9 @@
 title: Get started with Microsoft Defender for Office 365
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: get-started
 ms.localizationpriority: medium
