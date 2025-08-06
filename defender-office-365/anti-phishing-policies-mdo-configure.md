@@ -112,7 +112,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 5. On the **Phishing threshold & protection** page, configure the following settings:
 
    - **Phishing email threshold**: Use the slider to select one of the following values:
-     - **1 - Standard** (This is the default value.)
+     - **1 - Standard** (This value is the default.)
      - **2 - Aggressive**
      - **3 - More aggressive**
      - **4 - Most aggressive**

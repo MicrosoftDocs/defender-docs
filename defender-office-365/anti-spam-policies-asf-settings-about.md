@@ -52,7 +52,7 @@ For each ASF setting, the following options are available in anti-spam policies:
 - **On**: ASF adds the corresponding X-header field to the message:
   - For [Increase spam score settings](#increase-spam-score-settings), the message has a higher chance of being marked as**Spam**.
   - For [Mark as spam settings](#mark-as-spam-settings), the message is marked as **Spam** or **High confidence spam**.
-- **Off**: The ASF setting is disabled. This is the default value.
+- **Off**: The ASF setting is disabled. This value is the default.
 - **Test**: The ASF setting is in Test Mode. What happens to the message is determined by the **Test mode** (_TestModeAction_) value:
   - **None**: Message delivery is unaffected by the ASF detection. The message is still subject to other types of filtering and rules.
   - **Add default X-header text** (_AddXHeader_): The X-header value `X-CustomSpam: This message was filtered by the custom spam filter option` is added to the message. You can use this value in Inbox rules (not mail flow rules) to affect the delivery of the message.
