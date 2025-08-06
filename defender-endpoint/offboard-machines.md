@@ -33,7 +33,7 @@ ms.date: 03/17/2025
 **Platforms**
 
 - Windows client devices
-- Windows Server 2025
+- Windows Server 2025,Azure Stack HCI OC version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
