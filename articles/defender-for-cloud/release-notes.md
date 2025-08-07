@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| August 5, 2025 | Preview | [Four new Regulatory Compliance Standards](#four-new-regulatory-compliance-standards) |
+| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#Storage-aggregated-logs-in-XDR's-Advanced-Hunting-Preview) |
 
 ### Storage aggregated logs in XDR's Advanced Hunting (Preview)
 
