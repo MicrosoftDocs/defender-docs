@@ -50,7 +50,7 @@ To create a new distribution profile:
    |Tab  |Instructions  |
    |---------|---------|
    |**Details**     | Enter a name and optional description for your content distribution profile.        |
-   |**Assign tenants****     |    Select **Add tenant** to see a list of available tenants that you can add to your distribution profile, select the tenants you want to add, and then select **Add**.     |
+   |**Assign tenants**     |    Select **Add tenant** to see a list of available tenants that you can add to your distribution profile, select the tenants you want to add, and then select **Add**.     |
    |**Select content type**     | Content types are all selected by default. Verify that the selection matches the content you want to distribute in this distribution profile.      |
    |**Custom detection rules**     | Relevant only if you'd selected **Custom detection rules** in the **Select content type** page. <br><br>1. Select **Add content**.<br>2. In the **Select detection rules** side pane, select the rules that you want to add to the distribution profile, and then select **Add to distribution profile**.    |
    |**Endpoint security policies**     | Relevant only if you'd selected **Endpoint security policies** in the **Select content type page**. <br><br>1. Select **Add content**. <br>2. In the **Select security policies** side pane, select the policies that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
