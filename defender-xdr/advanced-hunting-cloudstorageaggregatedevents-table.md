@@ -28,7 +28,7 @@ ms.date: 08/05/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-The `CloudStorageAggregatedEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about storage activity and related events. Use this reference to construct queries that return information from this table.
+The `CloudStorageAggregatedEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about storage activity and related events. Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
