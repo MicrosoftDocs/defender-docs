@@ -27,6 +27,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## August 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| August 5, 2025 | Preview | [Four new Regulatory Compliance Standards](#four-new-regulatory-compliance-standards) |
+
+### Storage aggregated logs in XDR's Advanced Hunting (Preview)
+
+August 5, 2025
+
+The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation. 
+
+The logs are available at no additional cost as part of the new per-storage account plan in Defender for Storage. For more information, visit [CloudStorageAggregatedEvents (Preview)](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table). 
+
 ## July 2025
 
 |Date | Category | Update|
