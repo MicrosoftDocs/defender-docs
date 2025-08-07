@@ -51,6 +51,16 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 - **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
 - **Learning based on feedback:** The agent continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
 
+## Permissions required
+
+| Action                        | Required permission in Defender portal                                                                                           |
+|:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| Set up the agent              | **Security Administrator** under the **Security operations** permissions group                                                            |
+| View and manage agent settings and activity        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group                      |
+| Provide and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group |
+
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+
 ## Prerequisites
 
 The following are organizational requirements to run Phishing Triage Agent in your environment:
