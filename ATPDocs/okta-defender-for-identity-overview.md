@@ -53,6 +53,6 @@ Data from Okta is available in advanced hunting tables in Microsoft Defender XDR
 [IdentityInfo ](/defender-xdr/advanced-hunting-identityinfo-table)
 
 
-# Next steps 
+## Next steps  
 
 - [Connect Okta to Microsoft Defender for Identity](okta-integration.md)
