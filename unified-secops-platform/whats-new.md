@@ -31,7 +31,7 @@ In the multitenant portal, tenant groups are now renamed to **content distributi
 
 Functionality remains the same: Content distribution profiles enable you to distribute security content, including custom detection rules and endpoint security policies, at scale across all of your tenants, based on categories like business groups or location. For example:
 
-:::image type="content" source="media/whats-new/distribution-profiles.png" alt-text="Screenshot of the renamed Content distribution page.":::
+:::image type="content" source="media/whats-new/distribution-profiles.png" alt-text="Screenshot of the renamed Content distribution page." lightbox="media/whats-new/distribution-profiles.png":::
 
 For more information, see [Content distribution using distribution profiles in multitenant management](mto-distribution-profiles.md).
 
