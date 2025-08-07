@@ -168,7 +168,7 @@ You can access the Phishing Triage Agent setup in two ways:
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
 
    > [!NOTE]
-   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can still set up the agent from the incident queue if you have the **Security Administrator** role.
+   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't intiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
 
 Follow the steps in the setup wizard, which includes:
 
