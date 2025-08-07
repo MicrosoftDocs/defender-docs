@@ -1,14 +1,13 @@
 ---
 title: How Microsoft Defender for Identity helps protect your Okta accounts
-description: 
+description: Learn how Microsoft Defender for Identity helps protect your Okta accounts and what the integration enables.
 ms.date: 08/07/2025
 ms.topic: overview
 ms. reviewer: himanch
 # customer-intent: As a security administrator, I want to understand what happens when I connect Okta to Microsoft Defender for Identity, so that I can decide whether to enable the integration.
 ---
----
 
-## How Microsoft Defender for Identity helps protect your Okta accounts
+# How Microsoft Defender for Identity helps protect your Okta accounts
 
 Okta is a cloud-based identity and access management (IAM) platform that helps organizations control how users and administrators sign in and access enterprise applications. Because Okta manages high-value identities, including privileged accounts and API tokens, it’s a frequent target for misuse or attack. Many organizations use Okta alongside on-premises systems like Active Directory and cloud services like Microsoft Entra ID. This hybrid model can make it harder to monitor identity activity and detect threats consistently across platforms.
 
