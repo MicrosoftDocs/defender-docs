@@ -4,7 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 08/05/2025
+ms.date: 08/07/2025
 ---
 
 # Create exemptions based on policies
