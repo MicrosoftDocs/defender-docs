@@ -1,5 +1,5 @@
 ---
-title: Create exemptions based on policies
+title: Create policy based resource exemptions
 description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
@@ -7,10 +7,11 @@ author: Elazark
 ms.date: 08/07/2025
 ---
 
-# Create exemptions based on policies
+# Create policy based resource exemptions
 
 
-Microsoft Defender for Cloud lets you create policy-based exemptions for security recommendations. Use these exemptions to exclude resources or scenarios where recommendations don't apply, you've already applied other controls, or you've accepted the risk.
+Microsoft Defender for Cloud lets you create policy-based exemptions for security recommendations. Use these exemptions to exclude resources or scenarios. Recommendations don't apply if you applied other controls or accepted the risk.
+
 
 This approach reduces alert fatigue, improves secure score accuracy by removing irrelevant penalties, and helps security teams focus on meaningful insights instead of generic alerts.
 
@@ -28,7 +29,7 @@ To tailor your security posture, you can create exemptions for recommendations t
 
 1. Select **+ Create**.
 
-1. Enter an Exemption name, and (Optinal) a description.
+1. Enter an Exemption name, and (Optional) a description.
 
     :::image type="content" source="media/exempt-resource-policy/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resource-policy/create-exemption.png":::
 

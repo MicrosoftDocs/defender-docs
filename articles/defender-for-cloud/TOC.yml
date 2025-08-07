@@ -566,6 +566,9 @@
       - name: Exempt resources from recommendations
         displayName: disable, resource, exempt, recommendation
         href: exempt-resource.md
+      - name: Create policy based resource exemptions
+        displayName: policy, resource, exemptions, create, exempt
+        href: exempt-resource-policy.md
     - name: Investigate and remediate security posture
       items:
       - name: Investigate security recommendations
