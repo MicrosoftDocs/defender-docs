@@ -86,7 +86,7 @@ In the [Manual deployment steps](linux-install-manually.md#manual-deployment-ste
     ```bash
     sudo mkdir -p "${CUSTOM_PATH}"
     sudo mkdir -p /etc/opt/microsoft/mdatp
-    echo '{"install_path": "'${CUSTOM_PATH}'"}' | sudo tee /etc/opt/microsoft/mdatp/mde_path.json
+    echo '{"path": "'${CUSTOM_PATH}'"}' | sudo tee /etc/opt/microsoft/mdatp/mde_path.json
     ```
 
 3. **Set permissions**:
