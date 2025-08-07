@@ -4,7 +4,7 @@ description: Protect your workloads with Microsoft Defender for Cloud by learnin
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
-ms.date: 03/13/2024
+ms.date: 07/14/2025
 ---
 
 # How does Defender for Cloud collect data?
@@ -13,7 +13,7 @@ Defender for Cloud collects data from your Azure virtual machines (VMs), Virtual
 
 Data collection is required to provide visibility into missing updates, misconfigured OS security settings, endpoint protection status, and health and threat protection. Data collection is only needed for compute resources such as VMs, Virtual Machine Scale Sets, IaaS containers, and non-Azure computers.
 
-You can benefit from Microsoft Defender for Cloud even if you don’t provision agents. However, you'll have limited security and the capabilities listed aren't supported.  
+You can benefit from Microsoft Defender for Cloud even if you don’t provision agents. However, you have limited security and the capabilities listed aren't supported.  
 
 Data is collected using:
 

@@ -2,7 +2,7 @@
 title: Threat intelligence report
 description: This page helps you to use Microsoft Defender for Cloud threat intelligence reports during an investigation to find more information about security alerts
 ms.topic: how-to
-ms.date: 05/30/2024
+ms.date: 07/30/2025
 ms.custom: sfi-image-nochange
 ---
 
@@ -25,7 +25,7 @@ When Defender for Cloud identifies a threat, it triggers a [security alert](mana
 * Mitigation and remediation information
 
 > [!NOTE]
-> The amount of information in any particular report will vary; the level of detail is based on the malware’s activity and prevalence.
+> The amount of information in any particular report varies; the level of detail is based on the malware’s activity and prevalence.
 
 Defender for Cloud has three types of threat reports, which can vary according to the attack. The reports available are:
 
@@ -51,7 +51,7 @@ This type of information is useful during the incident response process. Such as
     You can optionally download the PDF report.
 
     >[!TIP]
-    > The amount of information available for each security alert will vary according to the type of alert.
+    > The amount of information available for each security alert varies according to the type of alert.
 
 ## Next steps
 

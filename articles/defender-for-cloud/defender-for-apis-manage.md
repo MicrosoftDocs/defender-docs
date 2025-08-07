@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
-ms.date: 12/03/2023
+ms.date: 07/15/2025
 ---
 
 # Manage your Defender for APIs deployment
@@ -30,11 +30,11 @@ You can use the cloud security explorer to run graph-based queries on the cloud 
 
 There are three types of APIs you can query:
 
-- **API Collections**: API collections enable software applications to communicate and exchange data. They are an essential component of modern software applications and microservice architectures. API collections include one or more API endpoints that represent a specific resource or operation provided by an organization. API collections provide functionality for specific types of applications or services. API collections are typically managed and configured by API management/gateway services.
+- **API Collections**: API collections enable software applications to communicate and exchange data. They're an essential component of modern software applications and microservice architectures. API collections include one or more API endpoints that represent a specific resource or operation provided by an organization. API collections provide functionality for specific types of applications or services. API collections are typically managed and configured by API management/gateway services.
 
 - **API Endpoints**: API endpoints represent a specific URL, function, or resource within an API collection. Each API endpoint provides a specific functionality that developers, applications, or other systems can access.
 
-- **API Management services**: API management services are platforms that provide tools and infrastructure for managing APIs, typically through a web-based interface. They often include features such as: API gateway, API portal, API analytics and API security.
+- **API Management services**: API management services are platforms that provide tools and infrastructure for managing APIs, typically through a web-based interface. They often include features such as: API gateway, API portal, API analytics, and API security.
 
 **To query APIs in the cloud security graph**:
 

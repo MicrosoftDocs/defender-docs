@@ -2,8 +2,8 @@
 title: How to validate alerts
 description: Learn how to validate security alerts in Microsoft Defender for Cloud to ensure your system is properly configured and can effectively monitor threats.
 ms.topic: how-to
-ms.custom: linux-related-content, sfi-image-nochange
-ms.date: 06/27/2023
+ms.custom: linux-related-content
+ms.date: 07/14/2025
 ms.author: dacurwin
 author: dcurwin
 ---
@@ -126,8 +126,8 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 
 **To simulate an app services EICAR alert:**
 
-1. Find the HTTP endpoint of the website either by going into the Azure portal blade for the App Services website or using the custom DNS entry associated with this website. (The default URL endpoint for the Azure App Services website has the suffix `https://XXXXXXX.azurewebsites.net`). The website should be an existing website and not one that was created prior to the alert simulation.
-1. Find the HTTP endpoint of the website either by going into the Azure portal blade for the App Services website or using the custom DNS entry associated with this website. (The default URL endpoint for the Azure App Services website has the suffix `https://XXXXXXX.azurewebsites.net`). The website should be an existing website and not one that was created prior to the alert simulation.
+1. Find the HTTP endpoint of the website either by going into the Azure portal blade for the App Services website or using the custom DNS entry associated with this website. (The default URL endpoint for the Azure App Services website has the suffix `https://XXXXXXX.azurewebsites.net`). The website should be an existing website and not one that was created before the alert simulation.
+1. Find the HTTP endpoint of the website by going into the Azure portal blade for the App Services website or using the custom DNS entry associated with this website. (The default URL endpoint for the Azure App Services website has the suffix `https://XXXXXXX.azurewebsites.net`). The website should be an existing website and not one that was created before the alert simulation.
 1. Browse to the website URL and add the following fixed suffix: `/This_Will_Generate_ASC_Alert`. The URL should look like this: `https://XXXXXXX.azurewebsites.net/This_Will_Generate_ASC_Alert`. It might take some time for the alert to generate (~1.5 hours).
 
 ## Validate Azure Key Vault Threat Detection
