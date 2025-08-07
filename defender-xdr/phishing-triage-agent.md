@@ -58,6 +58,7 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 | Set up, pause, remove or the agent              | **Security Administrator** in Microsoft Entra ID                                                            |
 | View and manage agent settings and activity        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
 | View and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal|
+|Reject feedback|**Security Administrator** in Microsoft Entra ID|
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
@@ -355,7 +356,7 @@ To review the details of a specific feedback, select an entry from the feedback 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/review-feedback-pane.png" alt-text="Screenshot of the Review feedback pane" lightbox="/defender/media/agents-in-defender/phishing-triage/review-feedback-pane.png":::
 
 > [!NOTE]
-> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
+> To reject feedback provided, you need the **Security Administrator** role in Microsoft Entra ID.
 
 To reject specific feedback, open the Review feedback pane and select **Reject feedback**. When you do so, the agent records it as rejected and stops using it in future triage decisions.
 
