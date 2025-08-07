@@ -96,7 +96,7 @@ Sync results show the number of synced tenants and content. Synced tenants indic
 
 For example, if all rules are applied in 3 out of 3 tenants, the count is **3**; if only 2 tenants succeed, the count is **2**. Synced content represents the total custom detection rules synced across all target tenants.
 
-## Troubleshooting
+## Troubleshooting and error handling
 
 Common reasons for a sync to fail include:
 
@@ -105,6 +105,8 @@ Common reasons for a sync to fail include:
 - User doesn't have permission for the target device scope.
 
 If the issue is with the target tenant, try creating an identical custom detection rule for further diagnosis. If the issue is with accessing the source data, try accessing the custom detection.
+
+A known issue exists with distribution profile errors. In some scenarios, such as when a user without the required permissions selects **See the assignment** on a policy error, an indefinate loading state might be shown without a clear error message. Users might also encounter generic or unclear error messages if Microsoft Entra is temporarily unavailable.
 
 ## Related content
 
