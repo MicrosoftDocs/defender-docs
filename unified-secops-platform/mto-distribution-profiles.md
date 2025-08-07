@@ -24,7 +24,7 @@ Content distribution in the Microsoft Defender multitenant portal helps you orga
 
 ## Supported content for distribution
 
-Create distribution profiles to distribute the following types of of content across multiple tenants:
+Create distribution profiles to distribute the following types of content across multiple tenants:
 
 - Custom detection rules
 - Endpoint security policies, supported for Microsoft Defender for Endpoint customers only (Preview)
@@ -67,7 +67,7 @@ If you chose to **Sync all authorized tenants**, all the tenants and scope withi
 
 Your newly created distribution profile appears in the distribution profiles page after creation.
 
-:::image type="content" source="media/mto-tenantgroups/distribution-profiles.png" alt-text="Screenshot of the Content distribution page with content distribution profiles created.":::
+:::image type="content" source="media/mto-tenantgroups/distribution-profiles.png" alt-text="Screenshot of the Content distribution page with content distribution profiles created." lightbox="media/mto-tenantgroups/distribution-profiles.png":::
 
 Select a distribution profile from the list to add or remove content, add, edit, or remove tenants, or sync the distribution profile. Use the toolbar options at the top of the page to edit, remove, or sync distribution profiles.
 
