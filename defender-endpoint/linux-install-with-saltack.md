@@ -154,7 +154,7 @@ In this step, you create a SaltState state file in your configuration repository
    ```console
    install_mdatp_package:
      pkg.installed:
-       - name: matp
+       - name: mdatp
        - required: add_ms_repo
    ```
 
