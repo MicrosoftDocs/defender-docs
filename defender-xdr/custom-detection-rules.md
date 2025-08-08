@@ -224,8 +224,8 @@ When you select this frequency option, the **Run query every input** component i
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details, allowing you to:
 -	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
--	[Link entities](#link-entities)
 -	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
+-	[Link entities](#link-entities)
 
 #### Create a dynamic alert title and description (Preview)
 You can dynamically craft your alert’s title and description using the results of your query to make them accurate and indicative. This feature can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
@@ -240,6 +240,25 @@ For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
 :::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections setup guide." lightbox="/defender/media/ah-dynamic-alert.png":::
 
 To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
+
+#### Add custom details (Preview)
+
+You can further enhance your SOC analysts’ productivity by showing important details in the alert side panel. You can surface events’ data in alerts that are constructed from those events. This gives your SOC analysts immediate event content visibility of their incidents, enabling them to triage, investigate, and draw conclusions faster. 
+
+In the **Custom details** section, add key-value pairs corresponding to the details you want to surface: 
+- In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
+- In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
+  
+:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-details.png":::
+
+The following screenshot shows how the custom details are surfaced in the alert side panel: 
+
+:::image type="content" source="/defender/media/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="/defender/media/ah-custom-details-panel.png":::
+
+>[!IMPORTANT]
+>Custom details have the following limitations: 
+>1.	Each rule is limited to up to 20 key/values pairs of custom details 
+>2.	The combined size limit for all custom details and their values in a single alert is 4 KB. If the custom details array exceeds this limit, the whole custom details array is dropped from the alert.  
 
 #### Link entities
 
@@ -286,24 +305,6 @@ After an entity type is selected, select an identifier type that exists in the s
 
 After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. This allows you to explore your query and results to make sure you choose the right column for the selected identifier.
 
-#### Add custom details (Preview)
-
-You can further enhance your SOC analysts’ productivity by showing important details in the alert side panel. You can surface events’ data in alerts that are constructed from those events. This gives your SOC analysts immediate event content visibility of their incidents, enabling them to triage, investigate, and draw conclusions faster. 
-
-In the **Custom details** section, add key-value pairs corresponding to the details you want to surface: 
-- In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
-- In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
-  
-:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-details.png":::
-
-The following screenshot shows how the custom details are surfaced in the alert side panel: 
-
-:::image type="content" source="/defender/media/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="/defender/media/ah-custom-details-panel.png":::
-
->[!IMPORTANT]
->Custom details have the following limitations: 
->1.	Each rule is limited to up to 20 key/values pairs of custom details 
->2.	The combined size limit for all custom details and their values in a single alert is 4 KB. If the custom details array exceeds this limit, the whole custom details array is dropped from the alert.  
 
 ### 4. Specify actions
 
