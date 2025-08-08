@@ -120,11 +120,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
-> Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system.
-> If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output. 
-> You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus).
+> Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
+> If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
 >
-> **The Linux FAPolicyD is an exception in this. It is supported with Linux Defender for Endpoint on RHEL & FEDORA platforms as long as the "mdatp health" shows true.**
+> You can still safely take advantage of Defender for Endpoint on Linux EDR functionality by setting antivirus enforcement level to passive. See Configure security settings in Microsoft Defender for Endpoint on Linux - Microsoft Defender for Endpoint | Microsoft Learn
+>
+> [Exception]
+> 
+> **The Linux FAPolicyD feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.**
 ## Supported filesystems for real-time protection and quick, full, and custom scans 
 
 |Real-time protection and quick/full scans|Custom scans|
