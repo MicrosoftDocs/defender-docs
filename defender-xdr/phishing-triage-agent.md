@@ -4,8 +4,8 @@ description: Learn about the Security Copilot Phishing Triage Agent, including r
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - MET150
-ms.date: 06/13/2025
+ms.date: 08/07/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
@@ -50,6 +50,17 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 - **Autonomous triage:** The Phishing Triage Agent uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** The agent provides a transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. Additionally, it presents a visual representation of its reasoning process.
 - **Learning based on feedback:** The agent continuously improves based on feedback provided by analysts. Over time, this feedback loop fine-tunes the agent’s behavior, aligning it more closely with organizational nuances and reducing the need for manual verification.
+
+## Permissions required
+
+| Action                        | Permission required                                                                                           |
+|:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| Set up, pause, remove or the agent              | **Security Administrator** in Microsoft Entra ID                                                            |
+| View and manage agent settings and activity        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
+| View and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal|
+|Reject feedback|**Security Administrator** in Microsoft Entra ID|
+
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Prerequisites
 
@@ -86,7 +97,7 @@ The Phishing Triage Agent addresses phishing incidents that include alerts with 
 ## Set up the Phishing Triage Agent
 
 > [!NOTE]
-> Setting up of the Phishing Triage Agent is only available to users with the **Security Administrator** role. Ensure that all [prerequisites](#prerequisites) are met before setting up the agent.
+> To set up the Phishing Triage Agent, you need the **Security Administrator** role in Microsoft Entra ID. Ensure that all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Create the agent’s identity and assign permissions
 
@@ -156,6 +167,9 @@ You can access the Phishing Triage Agent setup in two ways:
 - Alternatively, go to **System > Settings > Microsoft Defender XDR**. Under **Agents**, select **Overview > Set up** to start the process.
 
    :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-setup.png":::  
+
+   > [!NOTE]
+   > To view and manage setting in the Defender portal, you need **Security Copilot (read)** and **Security data basics (read)** permissions. If you don't have these permissions, you can't intiate setup from the **Settings** page, but you can still set up the agent from the incident queue if you have the **Security Administrator** role.
 
 Follow the steps in the setup wizard, which includes:
 
@@ -273,7 +287,7 @@ Here are examples of how you can write your feedback to the agent.
 | Feedback about the sender and email body | Emails offering file sharing or document access should only come from our authorized provider Contoso.com.                                                           | Emails offering file sharing or document access should only come from our authorized providers.              | Well-written feedback clearly states specific requirements (for example, sender domain), while vague references (for example “authorized providers”) do not contain actionable information.                              |
 | Feedback about email subject        | Any email that its subject contains a request for billing transaction is not allowed in our organization and is considered as phishing.                              | If the subject has a positive natural sentiment, it’s legitimate.                                             | Feedback that is descriptive and specific can be effectively validated, while subjective feedback may lead to unintended outcomes.                                                                         |
 | Feedback about the email body       | Emails requesting credential verification should include a reference to the specific account or service. Any generic 'verify your account' request without details should be treated as phishing. | This email should be treated as phishing.                                                                     | Feedback that includes detailed information is more likely to be clearly understood, while feedback lacking detail may be interpreted in various ways and could lead to unpredictable outcomes.             |
-| Feedback about a recipient and email body | This email was sent to multiple employees, and the body instructs recipients to download an 'important attachment' without describing its contents—legitimate emails always specify attachment details. | Mass internal emails with attachments are phishing.                                                           | Feedback that highlights specific missing details commonly found in legitimate emails is more effective. Feedback that contains broad generalizations (mass emails) or vague terms (such as “internal”) may lead to an excessive amount of true positives.  |
+| Feedback about a recipient and email body | This email was sent to multiple employees, and the body instructs recipients to download an 'important attachment' without describing its contents—legitimate emails always specify attachment details. | Mass internal emails with attachments are phishing.                                                           | Feedback that highlights specific missing details commonly found in legitimate emails is more effective. Feedback that contains broad generalizations (mass emails) or vague terms (such as “internal”) may lead to an excessive number of true positives.  |
 | Feedback about a recipient and a domain | New contractor onboarding emails should only be sent to email addresses starting with 'v-' to ensure they are directed to the correct recipients.                    | Contractor emails look different from usual, so they might be phishing.                                      | Well-written feedback clearly defines the expected recipient format, while feedback that is indecisive (“might be”) and lacks clear identification criteria (“looks different from usual” without specifying what is different), makes detection unreliable.                               |
 
 
@@ -297,7 +311,7 @@ Once the agent is taught and equipped with organizational knowledge, it begins t
 ## Manage the Phishing Triage Agent
 
 > [!NOTE]
-> Viewing and managing the Phishing Triage Agent settings is only available to users with the **Security Copilot (read)** and **Security data basics (read)** permissions.
+> To view and manage Phishing Triage Agent settings, you need **Security Copilot (read)** and **Security data basics (read)** permissions.
 
 You can manage the Phishing Triage Agent’s settings, review its activity, and review user interaction with the agent. To do so, select **Manage agent** in the card above the incident queue. Alternatively, you can navigate to **Settings > Microsoft Defender XDR > Agents**.
 
@@ -311,7 +325,7 @@ To view all previous runs by the agent:
 ### View and manage feedback to the agent
 
 > [!NOTE]
-> Managing feedback is only available to users with the **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** permissions.
+> To manage feedback, you need **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** permissions.
 
 The Phishing Triage Agent uses feedback to improve its performance over time. It stores applicable feedback in its memory as lessons. You can view and manage user-submitted feedback for the Phishing Triage Agent by navigating to the Feedback management page.
 
@@ -342,7 +356,7 @@ To review the details of a specific feedback, select an entry from the feedback 
 :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/review-feedback-pane.png" alt-text="Screenshot of the Review feedback pane" lightbox="/defender/media/agents-in-defender/phishing-triage/review-feedback-pane.png":::
 
 > [!NOTE]
-> Rejecting feedback provided to the agent is only available to users with the **Security Administrator** role.
+> To reject feedback provided, you need the **Security Administrator** role in Microsoft Entra ID.
 
 To reject specific feedback, open the Review feedback pane and select **Reject feedback**. When you do so, the agent records it as rejected and stops using it in future triage decisions.
 

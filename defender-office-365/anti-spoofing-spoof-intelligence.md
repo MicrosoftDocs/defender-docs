@@ -2,9 +2,9 @@
 title: Spoof intelligence insight
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -199,7 +199,7 @@ To view the information in the spoof intelligence insight, run the following com
 Get-SpoofIntelligenceInsight
 ```
 
-For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchange/get-spoofintelligenceinsight).
+For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchangepowershell/get-spoofintelligenceinsight).
 
 ## Other ways to manage spoofing and phishing
 
