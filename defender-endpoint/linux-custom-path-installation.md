@@ -30,13 +30,13 @@ ms.date: 08/05/2025
 
 ## Introduction
 
-Microsoft Defender for Endpoint (MDE) on Linux now supports installation to custom paths, allowing organizations to deploy the agent to non-standard locations based on their specific requirements. This feature is particularly useful for environments with:
+Microsoft Defender for Endpoint (MDE) on Linux now supports installation to custom paths, allowing organizations to deploy the agent to nonstandard locations based on their specific requirements. This feature is useful for environments with:
 
 - Custom directory structures and organizational policies
 - Limited space on the root filesystem
 - Specific compliance requirements for application placement
 
-By default, Microsoft Defender for Endpoint (MDE) installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup — MDE will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades will keep using your original custom path, and changing the installation path later is not supported. If you need to use a different path, you must uninstall MDE and reinstall it to the new location.
+By default, Microsoft Defender for Endpoint (MDE) installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup—MDE will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades keep using your original custom path, and changing the installation path later isn't supported. If you need to use a different path, you must uninstall MDE and reinstall it to the new location.
 
 ## Prerequisites and System Requirements
 
@@ -67,16 +67,16 @@ This section describes the additional steps required to deploy Microsoft Defende
 
 - **Manual installation**:
 
-  If you prefer manual setup, you must perform additional pre-installation steps to prepare your custom path. See the next section for step-by-step instructions.
+  If you prefer manual setup, you must perform additional preinstallation steps to prepare your custom path. See the next section for step-by-step instructions.
 
 ### Manual Installation: Pre-Installation Setup
 
-In the [Manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional pre-installation setup to enable custom path installation. Follow the steps below as part of the [Pre Install Setup for Custom Path Installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
+In the [Manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [Preinstall Setup for Custom Path Installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
 
 1. **Set your custom path variable**:
 
     > [!NOTE]
-    > The custom path must be an absolute path (e.g., `/your/custom/path`). Relative paths are not supported.
+    > The custom path must be an absolute path (for example, `/your/custom/path`). Relative paths aren't supported.
 
     ```bash
     export CUSTOM_PATH="/your/custom/path"
@@ -107,7 +107,7 @@ Then proceed with the standard installation steps for your distribution.
 Upgrades for MDE installed in a custom path work the same as standard installations—the installer automatically preserves your existing path and configuration.
 
 > [!IMPORTANT]
-> Changing the installation path during an upgrade is not supported. If you need to change the installation path, you must first uninstall MDE and then reinstall it to the new location.
+> Changing the installation path during an upgrade isn't supported. If you need to change the installation path, you must first uninstall MDE and then reinstall it to the new location.
 
 ## Frequently Asked Questions (FAQ)
 
