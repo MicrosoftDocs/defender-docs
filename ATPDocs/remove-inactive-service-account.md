@@ -1,11 +1,11 @@
 ---
-title: 'Security Assessment: Remove Inactive Service Account'
+title: 'Security Assessment: Remove Inactive Service Account (Preview) '
 description: Learn how to identify and address inactive Active Directory service accounts to mitigate security risks and improve your organization's security posture.
 ms.date: 08/04/2025
 ms.topic: how-to
 ---
 
-# Security Assessment: Remove Inactive Service Accounts
+# Security Assessment: Remove Inactive Service Accounts (Preview)
 
 This recommendation lists Active Directory service accounts detected as inactive (stale) within the past 180 days. 
 
