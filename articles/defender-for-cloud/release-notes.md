@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#Storage-aggregated-logs-in-XDR's-Advanced-Hunting-Preview) |
+| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
 
 ### Storage aggregated logs in XDR's Advanced Hunting (Preview)
 
