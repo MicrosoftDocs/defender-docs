@@ -30,21 +30,24 @@ ms.date: 08/11/2025
 
 ## Introduction
 
-Microsoft Defender for Endpoint (MDE) on Linux supports installation to custom paths, allowing organizations to deploy the agent to nonstandard locations based on their specific requirements. This feature is useful for environments with:
+Microsoft Defender for Endpoint (MDE) on Linux supports installation to custom paths, allowing organizations to deploy the agent to nonstandard locations based on their specific requirements. This feature is useful for environments that have:
 
 - Custom directory structures and organizational policies
 - Limited space on the root filesystem
 - Specific compliance requirements for application placement
 
-By default, Defender for Endpoint installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup—Defender for Endpoint will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades keep using your original custom path, and changing the installation path later isn't supported. If you need to use a different path, you must uninstall Defender for Endpoint and reinstall it to the new location.
+By default, Defender for Endpoint installs to the directory `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup. Defender for Endpoint then uses its same internal folder structure in your specified location. After installation, the chosen path remains fixed - upgrades will keep using your original custom path. Changing the installation path later isn't supported. If you need to use a different path, you have to uninstall Defender for Endpoint and then reinstall it to the new location.
 
 ## Prerequisites and system requirements
 
 Before deploying Defender for Endpoint to a custom path, be sure the following requirements are met:
 
 ### Prerequisites
+
 - The custom installation directory and its entire tree must have at least `rwxr-xr-x` (755) permissions.
-- Ensure adequate disk space in the target location (minimum 2 GB, more for high-performance workloads).
+
+- The target location must have adequate disk space (minimum 2 GB, more for high-performance workloads).
+
 - If SELinux is enabled, the `semanage` tool must be installed to set the correct file context for the custom installation path.
 
 ### Supported distributions and feature availability
@@ -67,11 +70,11 @@ This section describes the additional steps required to deploy Defender for Endp
 
 - **Manual installation**:
 
-  If you prefer manual setup, you must perform additional preinstallation steps to prepare your custom path. See the next section for step-by-step instructions.
+  If you prefer manual setup, you must perform additional preinstallation steps to prepare your custom path. See the [next section](#manual-installation-preinstallation-setup) for step-by-step instructions.
 
-### Manual installation: pre-installation setup
+### Manual installation: preinstallation setup
 
-In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [preinstall setup for custom path installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
+In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [preinstall setup for custom path installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
 
 1. **Set your custom path variable**:
 
@@ -82,21 +85,24 @@ In the [manual deployment steps](linux-install-manually.md#manual-deployment-ste
     export CUSTOM_PATH="/your/custom/path"
     ```
 
-2. **Create required directories and config file**:
+1. **Create required directories and config file**:
+
     ```bash
     sudo mkdir -p "${CUSTOM_PATH}"
     sudo mkdir -p /etc/opt/microsoft/mdatp
     echo '{"path": "'${CUSTOM_PATH}'"}' | sudo tee /etc/opt/microsoft/mdatp/mde_path.json
     ```
 
-3. **Set permissions**:
+1. **Set permissions**:
+
     ```bash
     sudo chmod 755 "${CUSTOM_PATH}"
     sudo chmod 644 /etc/opt/microsoft/mdatp/mde_path.json
     ```
 
-4. **Create symlink**:
-    ```bash
+1. **Create symlink**:
+ 
+   ```bash
     sudo ln -sf "${CUSTOM_PATH}/opt/microsoft/mdatp" /opt/microsoft/mdatp
     ```
 
@@ -104,7 +110,7 @@ Then proceed with the standard installation steps for your distribution.
 
 ## Upgrade and maintenance
 
-Upgrades for Defender for Endpoint installed in a custom path work the same as standard installations—the installer automatically preserves your existing path and configuration.
+Upgrades for Defender for Endpoint installed in a custom path work the same as standard installations - the installer automatically preserves your existing path and configuration.
 
 > [!IMPORTANT]
 > Changing the installation path during an upgrade isn't supported. If you need to change the installation path, you must first uninstall Defender for Endpoint and then reinstall it to the new location.
@@ -118,7 +124,7 @@ Yes, as long as it’s an absolute path with at least 755 permissions and enough
 No, you must uninstall and reinstall to use a different path.
 
 **How do I upgrade Defender for Endpoint in a custom path?**  
-Run the usual upgrade commands. Installation path stays unchanged.
+Run the usual upgrade commands. The installation path remains unchanged.
 
 **Can I change the custom path during upgrade?**  
 No, installation path changes require a fresh install.
