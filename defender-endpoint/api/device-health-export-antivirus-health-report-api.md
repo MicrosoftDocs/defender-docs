@@ -257,7 +257,7 @@ See: [1.4 Export device antivirus health details API properties \(via files\)](d
 Here's an example request:
 
 ```HTTP
-GET https://api-us.securitycenter.contoso.com/api/machines/InfoGatheringExport
+GET https://api-us.securitycenter.windows.com/api/machines/InfoGatheringExport
 ```
 
 #### 2.6.2 Response example
