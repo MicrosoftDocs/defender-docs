@@ -261,7 +261,7 @@ In order to preview new features and provide early feedback, it's recommended th
 ## Pre Install Setup for Custom Path Installation
 
 These steps are applicable only if Defender is to be installed in a custom location.
-For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: Pre-installation setup](linux-custom-path-installation.md#manual-installation-pre-installation-setup).
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: preinstallation setup](linux-custom-path-installation.md#manual-installation-preinstallation-setup).
 
 For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
 
