@@ -1,7 +1,8 @@
 ---
 title: Content distribution using distribution profiles in multitenant management
 description: Learn about content distribution across tenants in the Microsoft Defender multitenant portal.
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium

@@ -1,7 +1,8 @@
 ---
 title: Manage unified role-based access control in multitenant management
 description: Overview of how to manage the unified role-based access control multitenant management in the Microsoft Defender portal.
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium

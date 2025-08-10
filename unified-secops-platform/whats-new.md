@@ -2,7 +2,8 @@
 title: "What's new for Microsoft's unified security operations?"
 description: Lists the new features and functionality available for Microsoft unified security operations.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium

@@ -1,7 +1,8 @@
 ---
 title: Connect Microsoft Sentinel to the Microsoft Defender portal
 description: Learn how to connect your Microsoft Sentinel environment to the Defender portal to unify your security operations.
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 f1.keywords: 
   - NOCSH
 ms.author: bagol
