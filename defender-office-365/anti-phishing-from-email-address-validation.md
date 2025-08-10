@@ -2,9 +2,9 @@
 title: How Microsoft 365 validates the From address to prevent phishing
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium

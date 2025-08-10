@@ -2,9 +2,9 @@
 title: Complete Safe Links overview for Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 f1_keywords:
@@ -135,7 +135,7 @@ The settings in Safe Links policies that apply to email messages are described i
   - **Apply real-time URL scanning for suspicious links and links that point to files**: Turns on real-time scanning of links, including links in email messages that point to downloadable content. The recommended value is selected (on).
 
     - **Wait for URL scanning to complete before delivering the message**:
-      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This is the recommended value.
+      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This value is the recommended value.
       - Not selected (off): If URL scanning can't complete, deliver the message anyway.
 
   - **Do not rewrite URLs, do checks via SafeLinks API only**: If this setting is selected (on), no URL wrapping takes place but the URLs are scanned prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called via APIs at the time of URL click for an extra scan.

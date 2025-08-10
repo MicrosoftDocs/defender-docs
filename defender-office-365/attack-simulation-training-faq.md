@@ -2,9 +2,9 @@
 title: Attack simulation training deployment considerations and FAQ
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -72,7 +72,7 @@ It's possible that all users targeted by the simulation don't receive the simula
 - Guests.
 - Users that are no longer active in Microsoft Entra ID.
 
-You can use the [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to view and validate targeted group members.
+You can use the [Get-DistributionGroupMember](/powershell/module/exchangepowershell/get-distributiongroupmember) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to view and validate targeted group members.
 
 ### Trainings unexpectedly assigned or not assigned to users
 
