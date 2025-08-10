@@ -2,9 +2,9 @@
 title: Defender for Office 365 Overview dashboard
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium

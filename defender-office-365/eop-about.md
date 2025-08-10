@@ -2,9 +2,9 @@
 title: Default email protections for cloud mailboxes
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 07/21/2025
 audience: ITPro
 ms.topic: overview
@@ -76,7 +76,7 @@ For more information, see [Order and precedence of email protection](how-policie
 
 Microsoft 365 runs on a worldwide network of datacenters that are designed to provide the best availability. For example, if a datacenter becomes unavailable, email messages are automatically routed to another datacenter without any interruption in service. Servers in each datacenter accept messages on your behalf, providing a layer of separation between the servers that host your organization and the internet. Through this highly available network, Microsoft can ensure that email reaches your organization in a timely manner.
 
-Microsoft load balances between datacenters _withing the same region only_. If you're provisioned in one region, all of your messages are processed using the mail routing for that region.
+Microsoft load balances between datacenters _within the same region only_. If you're provisioned in one region, all of your messages are processed using the mail routing for that region.
 
 ### Microsoft 365 communications
 

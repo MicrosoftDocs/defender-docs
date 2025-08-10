@@ -2,9 +2,9 @@
 title: Services for external organizations sending mail to Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
