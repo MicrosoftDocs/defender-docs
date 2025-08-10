@@ -38,7 +38,7 @@ Microsoft Defender for Endpoint (MDE) on Linux supports installation to custom p
 
 By default, Defender for Endpoint installs to `/opt/microsoft/mdatp`. With custom path installation, you can choose a different base directory during the initial setup—Defender for Endpoint will use the same internal folder structure in your specified location. After installation, the chosen path remains fixed: upgrades keep using your original custom path, and changing the installation path later isn't supported. If you need to use a different path, you must uninstall Defender for Endpoint and reinstall it to the new location.
 
-## Prerequisites and System Requirements
+## Prerequisites and system requirements
 
 Before deploying Defender for Endpoint to a custom path, be sure the following requirements are met:
 
@@ -47,13 +47,13 @@ Before deploying Defender for Endpoint to a custom path, be sure the following r
 - Ensure adequate disk space in the target location (minimum 2 GB, more for high-performance workloads).
 - If SELinux is enabled, the `semanage` tool must be installed to set the correct file context for the custom installation path.
 
-### Supported Distributions and Feature Availability
+### Supported distributions and feature availability
 
 - Custom path installation is supported on all [supported Linux distributions](mde-linux-prerequisites.md#supported-linux-distributions) for both x64 and ARM64 architectures.
 
 - The custom installation path feature is available starting from version **101.25062.0003** of Defender for Endpoint on Linux.
 
-## Steps for Installing to a Custom Path
+## Steps for installing to a custom path
 
 This section describes the additional steps required to deploy Defender for Endpoint to a custom installation path, using various supported methods.
 
@@ -69,9 +69,9 @@ This section describes the additional steps required to deploy Defender for Endp
 
   If you prefer manual setup, you must perform additional preinstallation steps to prepare your custom path. See the next section for step-by-step instructions.
 
-### Manual Installation: Pre-Installation Setup
+### Manual installation: pre-installation setup
 
-In the [Manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [Preinstall Setup for Custom Path Installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
+In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you must complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [preinstall setup for custom path installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
 
 1. **Set your custom path variable**:
 
@@ -102,14 +102,14 @@ In the [Manual deployment steps](linux-install-manually.md#manual-deployment-ste
 
 Then proceed with the standard installation steps for your distribution.
 
-## Upgrade and Maintenance
+## Upgrade and maintenance
 
 Upgrades for Defender for Endpoint installed in a custom path work the same as standard installations—the installer automatically preserves your existing path and configuration.
 
 > [!IMPORTANT]
 > Changing the installation path during an upgrade isn't supported. If you need to change the installation path, you must first uninstall Defender for Endpoint and then reinstall it to the new location.
 
-## Frequently Asked Questions (FAQ)
+## Frequently asked questions
 
 **Can I install Defender for Endpoint to any directory?**  
 Yes, as long as it’s an absolute path with at least 755 permissions and enough space (minimum 2 GB).
@@ -123,7 +123,7 @@ Run the usual upgrade commands. Installation path stays unchanged.
 **Can I change the custom path during upgrade?**  
 No, installation path changes require a fresh install.
 
-## See also
+## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
