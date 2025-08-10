@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/08/2025
+ms.date: 08/11/2025
 ---
 
 # Enable deployment of Microsoft Defender for Endpoint to a custom installation path
