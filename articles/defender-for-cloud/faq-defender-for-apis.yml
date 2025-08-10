@@ -4,7 +4,7 @@ metadata:
   description: Frequently asked questions about Defender for APIs 
   ms.service: defender-for-cloud
   ms.topic: faq
-  ms.date: 05/18/2025
+  ms.date: 08/10/2025
 title: Common questions about Defender for APIs
 
 ## Common questions for Defender for APIs
@@ -29,6 +29,9 @@ sections:
 
       - question: Why can't I select multiple resources?
         answer: API Management service resources don't enable multi-selection with metrics. Let the API Management service team know this capability is important and upvote this request.
+
+      - question: Do I need to manually offboard APIs from Microsoft Defender for APIs before deleting them from API Management?
+        answer: No, manual offboarding is not required. Microsoft Defender for APIs automatically detects when an API is deleted from Azure API Management and handles the cleanup accordingly. There is no impact on your API Management environment, and you can safely delete APIs without taking any additional steps in Defender. This behavior is fully supported and aligns with Microsoft's recommended practices.
 
   - name: Questions related to region/geo 
     questions:
