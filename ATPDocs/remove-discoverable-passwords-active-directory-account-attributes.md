@@ -1,5 +1,5 @@
 ---
-title:  'Security Assessment: Remove Discoverable Passwords in Active Directory Account Attributes' (Preview)
+title:  'Security Assessment: Remove Discoverable Passwords in Active Directory Account Attributes (Preview)'
 description: Learn how to identify and address discoverable passwords in Active Directory account attributes to mitigate security risks and improve your organization's security posture.
 ms.date: 08/04/2025
 ms.topic: how-to
