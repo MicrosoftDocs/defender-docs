@@ -273,7 +273,7 @@ These new identity recommendations, as part of Microsoft Secure Score, are new s
 
 - [Unsafe permissions on the DnsAdmins group](/defender-for-identity/unsafe-permissions-dns-admins-group)
 
-- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and can't be delegated”](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
+- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and can't be delegated"](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
 
 - [Change password of krbtgt account](/defender-for-identity/change-password-krbtgt-account)
 
