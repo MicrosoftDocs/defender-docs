@@ -343,7 +343,7 @@ class remove_mdatp {
 }
 ```
 
-## See also
+## Related content
 
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 

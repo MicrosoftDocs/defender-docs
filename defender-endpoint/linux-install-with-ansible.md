@@ -221,7 +221,7 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
         msg: "MDE succesfully deployed"
 ```
 
-### How to uninstall Microsoft Defender for Endpoint on Linux Servers
+### How to uninstall Microsoft Defender for Endpoint on Linux servers
 
 First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/uninstall_mdatp.yml) which uses `mde_installer.sh`. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
 
@@ -466,7 +466,7 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on Linux on your device.
 
-## See also
+## Related content
 
 - Ansible documentation:
    - [Add or remove YUM repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html)
