@@ -203,4 +203,12 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
 
+## Enable streamlined connectivity for US government environments
 
+Devices in GCC, GCC High, and DoD environments can use streamlined connectivity to simplify endpoint configuration. This reduces the number of required service endpoints and supports improved performance and reliability.
+
+To enable this feature:
+
+1. Ensure your tenant is enrolled in a supported government cloud.
+1. Validate that required endpoints listed in the [connectivity settings](gov.md#required-connectivity-settings) are accessible.
+1. Use the onboarding script with the `-UseStreamlinedConnectivity` flag.
