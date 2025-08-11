@@ -130,7 +130,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
    - **Safe Attachments unknown malware response**: Select one of the following values:
      - **Off**
      - **Monitor**
-     - **Block**: This is the default value, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).
+     - **Block**: This value is the default, and is the value used in Standard and Strict [preset security policies](preset-security-policies.md).
      - **Dynamic Delivery (Preview messages)**
 
      These values are explained in [Safe Attachments policy settings](safe-attachments-about.md#safe-attachments-policy-settings).
