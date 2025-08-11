@@ -74,7 +74,7 @@ This section describes the additional steps required for deploying Defender for 
 
 ### Manual installation: preinstallation setup
 
-In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom location installation. Follow the steps below as part of the [preinstall setup for custom location installation](linux-install-manually.md#preinstall-setup-for-custom-path-installation).
+In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom location installation. Follow the steps below as part of the [preinstall setup for custom location installation](linux-install-manually.md#preinstall-setup-for-custom-location-installation).
 
 1. **Set your custom path variable**:
 
