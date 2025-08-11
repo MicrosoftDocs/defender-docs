@@ -11,9 +11,9 @@ ms.custom: sfi-image-nochange
 
 # Identify and remediate attack paths
 
-Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Instead of looking for preset attack paths, Defender for Cloud uses its algorithm to detect potential attack paths based on your multicloud security graph. Attack path analysis helps you focus on the most critical security issues that could lead to a breach.
+Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. With the refined attack path experience, Defender for Cloud focuses on real, externally-driven and exploitable threats rather than broad scenarios. The algorithm detects attack paths that begin outside your organization and progress to business-critical targets, helping you cut through the noise and act faster.
 
-You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
+You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of externally-initiated attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
 
 By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
@@ -22,6 +22,9 @@ By default attack paths are organized by risk level. The risk level is determine
 - You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md) and have [agentless scanning](enable-vulnerability-assessment-agentless.md) enabled.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
+
+> [!NOTE]
+> With the refined attack path experience, you may see an empty Attack Path page, as attack paths now focus on real, externally-driven and exploitable threats rather than broad scenarios. This helps reduce noise and prioritize imminent risks.
 
 **To view attack paths that are related to containers**:
 
