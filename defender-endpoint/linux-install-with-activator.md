@@ -28,67 +28,46 @@ This article introduces a new, efficient, and user-friendly onboarding experienc
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Prerequisites for Defender for Endpoint on
-Linux](https://learn.microsoft.com/en-us/defender-endpoint/mde-linux-prerequisites) for
-a description of prerequisites and system requirements. These checks are
-also performed by the activator script and give you a warning if any of
-the checks are not met.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. These checks are also performed by the activator script and give you a warning if any of the checks are not met.
 
 Additionally, the following requirements also need to be met:
 
-- Allow the connection to the URL -
-  **“msdefender.download.prss.microsoft.com”**
+- Allow the connection to the URL: `msdefender.download.prss.microsoft.com`
 
 - The endpoint should have either **wget** or **curl** installed.
 
-## Step-by-step Guide
+## Step-by-step guide
 
 1.  Download the simplified onboarding package from [Microsoft Defender
     portal](https://security.microsoft.com/) by following these steps.
 
-    1.  Go to **Settings** \> **Endpoints** \> **Device
-        management** \> **Onboarding.**
+    1. Go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
-    2.  In the first drop-down menu, select **Linux Server
-        (Preview)** as the operating system.
+    1. In the first drop-down menu, select **Linux Server(Preview)** as the operating system.
 
-    3.  Click the **“Download Package”** button under **Download and run
-        the activator**.
+    1. Click the **Download Package** button under **Download and run the activator**.
 
-*(Note: Since this package installs and onboards the agent, this is a
-tenant specific package and must not be used across tenants)*
+    > [!NOTE]
+    > Since this package installs and onboards the agent, it is a tenant specific package and must not be used across tenants.
 
-> <img src="./media/media/image1.png"
-> style="width:6.20057in;height:4.19481in" />
+    :::image type="content" source="./media/image1.png" alt-text="Screenshot":::
 
-2.  From a command prompt, extract the contents of the archive:
+1.  From a command prompt, extract the contents of the archive:
 
-| **Bash**                                      |
-|-----------------------------------------------|
-| unzip WindowsDefenderATPOnboardingPackage.zip |
+   ```bash
+   unzip WindowsDefenderATPOnboardingPackage.zip
+   ```
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr>
-<th><strong>Console</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Archive: WindowsDefenderATPOnboardingPackage.zip</p>
-<p>inflating: mde_linux_activator.sh</p></td>
-</tr>
-</tbody>
-</table>
+   ```console
+   Archive: WindowsDefenderATPOnboardingPackage.zip
+   inflating: mde_linux_activator.sh
+   ```
 
-3.  Grant executable permissions to the activator script.
-
-| **Bash**                        |
-|---------------------------------|
-| chmod +x mde_linux_activator.sh |
+1.  Grant executable permissions to the activator script.
+1. 
+    ```bash
+    chmod +x mde_linux_activator.sh
+    ```
 
 4.  Run the script using the below command to install and onboard MDE on
     your Linux Server.
@@ -356,6 +335,5 @@ screenshots, if possible.
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
