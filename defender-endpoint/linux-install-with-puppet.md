@@ -154,8 +154,7 @@ There are two ways to create a manifest file:
   }
   ```
 > [!NOTE]
-> The installer script also supports other parameters such as channel, realtime protection, version, custom path installation etc. To select from the list of available options, check help.
->`./mde_installer.sh --help`
+> The installer script also supports other parameters such as channel, realtime protection, version, custom path installation etc. To select from the list of available options, check help: `./mde_installer.sh --help`
 
 #### Create a manifest to deploy Defender for Endpoint by configuring repositories manually
 
