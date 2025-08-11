@@ -52,17 +52,6 @@ Defender for Cloud provides recommendations, security alerts, and vulnerability 
 
 ## Supported operating systems
 
-Defender for Cloud depends on the [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) or the [Log Analytics agent](/azure/azure-monitor/agents/log-analytics-agent). Make sure that your machines are running one of the supported operating systems as described on the following pages:
-
-- Azure Monitor Agent
-  - [Azure Monitor Agent for Windows supported operating systems](/azure/azure-monitor/agents/agents-overview#windows)
-  - [Azure Monitor Agent for Linux supported operating systems](/azure/azure-monitor/agents/agents-overview#linux)
-- Log Analytics agent
-  - [Log Analytics agent for Windows supported operating systems](/azure/azure-monitor/agents/agents-overview#windows)
-  - [Log Analytics agent for Linux supported operating systems](/azure/azure-monitor/agents/agents-overview#linux)
-
-Also ensure your Log Analytics agent is [properly configured to send data to Defender for Cloud](working-with-log-analytics-agent.md#manual-agent).
-
 To learn more about the specific Defender for Cloud features available on Windows and Linux, review:
 
 - [Defender for Servers support](support-matrix-defender-for-servers.md)

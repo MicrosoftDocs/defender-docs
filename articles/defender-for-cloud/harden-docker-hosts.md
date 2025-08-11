@@ -15,10 +15,6 @@ The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanag
 - When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.-
 When vulnerabilities are found, they're grouped inside a single recommendation.
 
-> [!NOTE]
-> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect host information for assessment.
-> The MMA is retired, and the Docker host hardening feature was deprecated in November 2024.
-
 ## Prerequisites
 
 - You need [Defender for Servers Plan 2](defender-for-servers-overview.md) to use this feature.
