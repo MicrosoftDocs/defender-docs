@@ -96,7 +96,7 @@ Grayed out metrics aren't considered for score calculation.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft Defender for Endpoint, Microsoft threat analytics, and other Microsoft workloads. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
+Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft Defender for Endpoint, Microsoft threat analytics, and other Microsoft workloads. With the integration of Defender for Cloud in the Defender portal, MIcrosoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
 
 ### Unified Recommendations Experience
 
@@ -111,7 +111,7 @@ Security Exposure Management ingests security recommendations from multiple sour
 - You can view recommendations from the **Recommendations** tab with new filtering options by attack surface tabs and issue types
 - Each recommendation provides remediation steps to fix detected compliance issues
 - Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics
-- Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities)
+- Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities, etc.)
 
 Security Exposure Management categorizes recommendations by compliance status, as follows:
 
