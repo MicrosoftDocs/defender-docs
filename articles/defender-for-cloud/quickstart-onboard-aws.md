@@ -89,9 +89,7 @@ Enable these other extensions on the Azure Arc-connected machines:
 
 - Microsoft Defender for Endpoint
 - A vulnerability assessment solution (TVM or Qualys)
-- The Log Analytics agent on Azure Arc-connected machines or the Azure Monitor agent
-
-Make sure the selected Log Analytics workspace has a security solution installed. The Log Analytics agent and the Azure Monitor agent are currently configured at the *subscription* level. All of your AWS accounts and Google Cloud Platform (GCP) projects under the same subscription inherit the subscription settings for the Log Analytics agent and the Azure Monitor agent.
+- The Defender for SQL extension. For more information, see [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md).
 
 [Learn more about monitoring components](monitoring-components.md) for Defender for Cloud.
 
