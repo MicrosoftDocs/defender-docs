@@ -268,7 +268,7 @@
               - name: Installer script based deployment
                 href: linux-installer-script.md
               - name: Enabling deployment to a custom location
-                href: linux-custom-path-installation.md
+                href: linux-custom-location-installation.md
               - name: Ansible based deployment
                 href: linux-install-with-ansible.md
               - name: Chef based deployment

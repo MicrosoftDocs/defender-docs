@@ -50,7 +50,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
 - **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
 - **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
-- For installation at a custom path, refer to [Prerequisites and system requirements for custom path installation](linux-custom-path-installation.md#prerequisites-and-system-requirements).
+- For installation at a custom path, refer to [Prerequisites and system requirements for custom path installation](linux-custom-location-installation.md#prerequisites-and-system-requirements).
 
 > [!NOTE]
 > Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
@@ -228,7 +228,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
-- [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)

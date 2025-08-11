@@ -42,7 +42,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
-- [Preinstall setup for custom path installation](#preinstall-setup-for-custom-path-installation)
+- [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -258,12 +258,12 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
 
-## Preinstall setup for custom path installation
+## Preinstall setup for custom location installation
 
 These steps are applicable only if Defender is to be installed in a custom location.
-For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: preinstallation setup](linux-custom-path-installation.md#manual-installation-preinstallation-setup).
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom location, see [Manual installation: preinstallation setup](linux-custom-location-installation.md#manual-installation-preinstallation-setup).
 
-For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md).
+For details on installing to a custom location, refer: [Enabling deployment of Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md).
 
 ## Application installation
 
@@ -577,6 +577,6 @@ For manual uninstallation, execute the following command for your Linux distribu
    - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-   - [Install Defender for Endpoint on Linux to a custom path](linux-custom-path-installation.md)
+   - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
