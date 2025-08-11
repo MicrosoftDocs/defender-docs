@@ -251,8 +251,6 @@ items:
            href: security-assessment-laps.md
          - name: Riskiest lateral movement paths
            href: security-assessment-riskiest-lmp.md
-         - name: Remove inactive service accounts
-           href: remove-inactive-service-account.md
          - name: Remove discoverable passwords in Active Directory account attributes
            href: remove-discoverable-passwords-active-directory-account-attributes.md
          - name: Unsecure Kerberos delegation assessment
