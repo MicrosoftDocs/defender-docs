@@ -25,6 +25,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
+
+# New security assessment: Remove inactive service accounts (Preview)
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your environment. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, helping you mitigate security risks associated with unused accounts.
+
+For more information see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+
 ### Sensor version 2.246
 
 This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
