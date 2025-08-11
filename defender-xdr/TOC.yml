@@ -239,6 +239,8 @@
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
+          - name: CloudStorageAggregatedEvents
+            href: advanced-hunting-cloudstorageaggregatedevents-table.md
           - name: DataSecurityBehaviors
             href: advanced-hunting-datasecuritybehaviors-table.md  
           - name: DataSecurityEvents
