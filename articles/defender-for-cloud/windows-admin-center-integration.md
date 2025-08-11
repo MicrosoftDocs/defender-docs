@@ -2,7 +2,7 @@
 title: How to protect Windows Admin Center servers
 description: This article explains how to integrate Microsoft Defender for Cloud with Windows Admin Center
 ms.topic: concept-article
-ms.date: 05/30/2024
+ms.date: 07/15/2025
 ---
 
 # Protect Windows Admin Center resources with Microsoft Defender for Cloud
@@ -15,7 +15,7 @@ When you've successfully onboarded a server from Windows Admin Center to Microso
 
 - View the security posture and retrieve other detailed information of your Windows Admin Center managed servers in Defender for Cloud within the Azure portal (or via an API).
 
-Through the combination of these two tools, Defender for Cloud becomes your single pane of glass to view all your security information, whatever the resource: protecting your Windows Admin Center managed on-premises servers, your VMs, and any other PaaS workloads.
+Through the combination of these two tools, Defender for Cloud becomes your single pane of glass to view all your security information, whatever the resource: protecting your Windows Admin Center managed on-premises servers, your virtual machines (VMs), and any other PaaS workloads.
 
 ## Onboard Windows Admin Center managed servers into Defender for Cloud
 
@@ -24,7 +24,7 @@ Through the combination of these two tools, Defender for Cloud becomes your sing
     ![Microsoft Defender for Cloud extension in Windows Admin Center.](./media/windows-admin-center-integration/onboarding-from-wac.png)
 
     > [!NOTE]
-    > If the server is already onboarded to Defender for Cloud, the set-up window will not appear.
+    > If the server is already onboarded to Defender for Cloud, the set-up window won't appear.
 
 1. Select **Sign in to Azure and set up**.
     ![Onboarding Windows Admin Center extension to Defender for Cloud.](./media/windows-admin-center-integration/onboarding-from-wac-welcome.png)
@@ -41,9 +41,10 @@ Through the combination of these two tools, Defender for Cloud becomes your sing
 
 ## View security recommendations and alerts in Windows Admin Center
 
-Once onboarded, you can view your alerts and recommendations directly in the Microsoft Defender for Cloud area of Windows Admin Center. Select a recommendation or an alert to view them in the Azure portal. There, you'll get additional information and learn how to remediate issues.
+Once onboarded, you can view your alerts and recommendations directly in the Microsoft Defender for Cloud area of Windows Admin Center. Select a recommendation or an alert to view them in the Azure portal. There, you get additional information and learn how to remediate issues.
 
-[![Defender for Cloud recommendations and alerts as seen in Windows Admin Center.](media/windows-admin-center-integration/asc-recommendations-and-alerts-in-wac.png)](media/windows-admin-center-integration/asc-recommendations-and-alerts-in-wac.png#lightbox)
+:::image type="content" source="media/windows-admin-center-integration/asc-recommendations-and-alerts-in-wac.png" alt-text="Screenshot that shows the Defender for Cloud recommendations and alerts as seen in Windows Admin Center." lightbox="media/windows-admin-center-integration/asc-recommendations-and-alerts-in-wac.png":::
+
 
 ## View security recommendations and alerts for Windows Admin Center managed servers in Defender for Cloud
 

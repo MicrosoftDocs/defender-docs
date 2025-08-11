@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for StackHawk (preview)
 description: Learn how to use StackHawk with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 05/02/2024
+ms.date: 07/15/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -36,13 +36,13 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ### For GitHub Actions CI/CD environments
 >
 > [!NOTE]
-> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
 1. To use the [StackHawk HawkScan Action](https://github.com/marketplace/actions/stackhawk-hawkscan-action), make sure you're logged into [GitHub](https://github.com/login), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From GitHub, you can use a GitHub repository with a defined GitHub Actions workflow process already in place, or create a new workflow. We scan this GitHub repository for API vulnerabilities as part of the GitHub Actions workflow.
 
    > [!NOTE]
-   > Ideally you should select to scan a GitHub repository that corresponds to a dynamic web API. This can be a REST, GraphQL or gRPC API. HawkScan works better with a discoverable API specification file like an [OpenAPI specification](https://docs.stackhawk.com/hawkscan/configuration/openapi-configuration.html), and with [authenticated scanning](https://docs.stackhawk.com/hawkscan/authenticated-scanning/). StackHawk provides [JavaSpringVulny](https://github.com/kaakaww/javaspringvulny/) as an example vulnerable API you can fork and try, if you don’t have your own vulnerable web API to scan.
+   > Ideally you should select to scan a GitHub repository that corresponds to a dynamic web API. This can be a REST, GraphQL, or gRPC API. HawkScan works better with a discoverable API specification file like an [OpenAPI specification](https://docs.stackhawk.com/hawkscan/configuration/openapi-configuration.html), and with [authenticated scanning](https://docs.stackhawk.com/hawkscan/authenticated-scanning/). StackHawk provides [JavaSpringVulny](https://github.com/kaakaww/javaspringvulny/) as an example vulnerable API you can fork and try, if you don’t have your own vulnerable web API to scan.
 
 1. From StackHawk, make sure you collected your API Key and have a StackHawk Application created, and the *stackhawk.yml* scan configuration checked into your GitHub repository.
 1. Go to [StackHawk HawkScan Action](https://github.com/marketplace/actions/stackhawk-hawkscan-action) to view the details of the StackHawk HawkScan Action for GitHub Actions CI/CD. From your repository */settings/secrets/actions* page, assign your StackHawk API Key to `HAWK_API_KEY`. Then to add it to your GitHub actions workflow, add the following step to your build:
@@ -79,7 +79,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 
 #### Enable Defender for Cloud integration without GitHub Code Scanning
 
-If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from StackHawk into Defender for Cloud, you can follow these steps. After adding in the StackHawk workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+If you don't have GitHub Code Scanning for your environment and wish to integrate security scan results from StackHawk into Defender for Cloud, you can follow these steps. After adding in the StackHawk workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
 
 ```yml
 - name: Upload SARIF file
@@ -112,7 +112,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 1. To use the [StackHawk HawkScan extension](https://marketplace.visualstudio.com/items?itemName=StackHawk.stackhawk-extensions), make sure you're logged into Azure Pipelines (`https://dev.azure.com/{yourorganization}`), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From Azure Pipelines, you can use a defined pipeline with a defined *azure-pipelines.yml* process already in place, or create a new workflow. We scan this Azure DevOps repository for API vulnerabilities as part of the *azure-pipelines.yml* workflow.
 
-   :::image type="content" source="media/onboarding-guide-stackhawk/hawkscan-tasks.png" alt-text="Screenshot of tasks to install and run HawkScan.":::
+   :::image type="content" source="media/onboarding-guide-stackhawk/hawkscan-tasks.png" alt-text="Screenshot of tasks to install and run HawkScan." lightbox="media/onboarding-guide-stackhawk/hawkscan-tasks.png":::
 
 1. Once the HawkScan extension is added to your Azure DevOps Organization, you can use the `HawkScanInstall` task and the `RunHawkScan` task to add HawkScan to your runner and kick off HawkScan as separate steps.
 
@@ -151,7 +151,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 1. Run the pipeline.
 1. To verify the results are being published correctly in Azure DevOps, validate that *stackhawk.sarif* is being uploaded to the Build Artifacts under the *CodeAnalysisLogs* folder.
 
-   :::image type="content" source="media/onboarding-guide-stackhawk/artifacts-upload.png" alt-text="Screenshot of stackhawk.sarif uploaded to Build Artifacts.":::
+   :::image type="content" source="media/onboarding-guide-stackhawk/artifacts-upload.png" alt-text="Screenshot of stackhawk.sarif uploaded to Build Artifacts." lightbox="media/onboarding-guide-stackhawk/artifacts-upload.png":::
 
 1. You completed the onboarding process. Next verify the results shown in Defender for Cloud.
 

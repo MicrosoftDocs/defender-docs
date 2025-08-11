@@ -4,15 +4,14 @@ description: Learn about the Defender for SQL Servers on Machines plan in Micros
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 02/28/2024
+ms.date: 07/15/2025
 ---
 
 # Overview - Defender for SQL Servers on Machines
 
 The Defender for SQL on Machines plan in Microsoft Defender for Cloud protects your IaaS SQL Servers hosted on VMs in Azure, multiclouds, and on-premises machines.
 
-- Learn about [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
--To use the plan, on-premises SQL servers must be onboarded to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview).
+-To use the plan, on-premises SQL servers must be onboarded to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) and [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
 - For multicloud SQL Server machines, [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) must be connected to Defender for cloud.
 
 Defender for SQL Servers on Machines identifies and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate threats to your databases.

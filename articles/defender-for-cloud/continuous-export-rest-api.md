@@ -4,7 +4,7 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/19/2024
+ms.date: 07/15/2025
 # customer intent: As a reader, I want to learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations using the REST API, so that I can integrate it into my own applications.
 ---
 
@@ -55,7 +55,7 @@ Here are some examples of options that you can use only in the API:
 - **Focused scope**: The API offers you a more granular level for the scope of your export configurations. When you define an export by using the API, you can define it at the resource group level. If you're using the **Continuous export** page in the Azure portal, you must define it at the subscription level.
 
     > [!TIP]
-    > These API-only options are not shown in the Azure portal. If you use them, a banner informs you that other configurations exist.
+    > These API-only options aren't shown in the Azure portal. If you use them, a banner informs you that other configurations exist.
 
 ## Next step
 

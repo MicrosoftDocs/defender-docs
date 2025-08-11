@@ -17,7 +17,11 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 - [Azure Database for MySQL](/azure/mysql/)
 - [Azure Database for MariaDB](/azure/mariadb/)
 
+
+And for RDS instances on AWS (Preview):
+
 For Relational Database Service (RDS) instances on AWS (Preview):
+
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -25,7 +29,9 @@ For Relational Database Service (RDS) instances on AWS (Preview):
 - MySQL
 - MariaDB
 
-To get alerts, you need to [enable Defender for open-source relational databases on your Azure](enable-defender-for-databases-azure.md), or [enable Defender for open-source relational databases on your Amazon Web Services (AWS)](enable-defender-for-databases-aws.md) account.
+
+To get alerts from the Microsoft Defender plan, you'll first need to enable Defender for open-source relational databases on your [Azure](enable-defender-for-databases-azure.md) or [AWS](enable-defender-for-databases-aws.md) account.
+
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
@@ -58,7 +64,7 @@ Defender for Cloud sends email notifications when it detects anomalous database 
 
 1. From the email, select the **View the full alert** link to launch the Azure portal and show the security alerts page, which provides an overview of active threats detected on the database.
 
-    :::image type="content" source="media/defender-for-databases-usage/suspected-brute-force-attack-notification-email.png" alt-text="Defender for Cloud's email notification about a suspected brute force attack.":::
+    :::image type="content" source="media/defender-for-databases-usage/suspected-brute-force-attack-notification-email.png" alt-text="Defender for Cloud's email notification about a suspected brute force attack." lightbox="media/defender-for-databases-usage/suspected-brute-force-attack-notification-email.png":::
 
     View active threats at the subscription level from within the Defender for Cloud portal pages:
 
