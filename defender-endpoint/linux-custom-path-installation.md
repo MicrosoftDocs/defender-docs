@@ -74,7 +74,7 @@ This section describes the additional steps required to deploy Defender for Endp
 
 ### Manual installation: preinstallation setup
 
-In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [preinstall setup for custom path installation](linux-install-manually.md#pre-install-setup-for-custom-path-installation).
+In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom path installation. Follow the steps below as part of the [preinstall setup for custom path installation](linux-install-manually.md#preinstall-setup-for-custom-path-installation).
 
 1. **Set your custom path variable**:
 
