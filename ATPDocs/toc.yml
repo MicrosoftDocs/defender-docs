@@ -250,7 +250,7 @@ items:
          - name: LAPS usage assessment
            href: security-assessment-laps.md
          - name: Remove inactive service accounts
-           href: remove-inactive-service-accounts.md
+           href: remove-inactive-service-account.md
          - name: Riskiest lateral movement paths
            href: security-assessment-riskiest-lmp.md
          - name: Unsecure Kerberos delegation assessment
