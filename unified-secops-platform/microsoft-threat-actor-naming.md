@@ -44,7 +44,7 @@ Threat actors within the same weather family are given an adjective to distingui
 
 The following table shows how the family names map to the threat actors that we track.
 
-|Threat actor category|Type|Family name|
+|Threat actor category|Origin/Type|Family name|
 |:---|:---|:---|
 |Nation-state|Australia<br>Canada<br>China<br>Germany<br>India<br>Iran<br>Israel<br>New Zealand<br>North Korea<br>Lebanon<br>Pakistan<br>Palestinian Authority<br>Russia<br>Singapore<br>South Korea<br>Spain<br>Syria<br>Türkiye<br>Ukraine<br>United Arab Emirates<br>United Kingdom<br>United States<br>Vietnam|Waterspout<br>Freeze<br>Typhoon<br>Gale<br>Monsoon<br>Sandstorm<br>Heatwave<br>Swell<br>Sleet<br>Rain<br>Whirlwind<br>Lightning<br>Blizzard<br>Squall<br>Hail<br>Derecho<br>Haze<br>Dust<br>Frost<br>Gust<br>Fog<br>Tornado<br>Cyclone|
 |Financially motivated|Financially motivated|Tempest|
