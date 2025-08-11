@@ -3,19 +3,23 @@ title: Overview of attack paths in Microsoft Security Exposure Management
 description: Learn how to mitigate security risks using attack paths in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 11/18/2024
+ms.date: 08/11/2025
 
 ---
 
 # Overview of attack paths
 
-Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths combine assets and techniques to show end-to-end paths that attackers can create to get from an entry point of an organization to [critical assets](critical-asset-management.md).
+Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths illustrate potential routes that adversaries could exploit to move laterally within your environment, starting from external exposure and progressing toward meaningful impact within your environment. They help security teams visualize and prioritize real-world risks across their attack surface, focusing on externally-driven, exploitable threats that adversaries could use to compromise your organization.
+
+Attack paths reflect real, externally driven and exploitable risks, helping you cut through the noise and act faster. The paths focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
 
 > [!NOTE]
 > The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path or if you haven't fully defined critical assets.
+> 
+> You may see an empty Attack Path page, as the experience focuses on imminent threats rather than exploratory scenarios. 
 
 ## Attack path dashboard
 
@@ -41,6 +45,17 @@ Here's how Exposure Management helps you to identify and resolve attack paths.
   - **Strategic Mitigation**: Choke point visibility enables you to focus mitigation efforts strategically, addressing multiple attack paths by securing these critical points.
   - **Protection**: Ensuring that choke points are secure protects your assets from threats.
 - **Blast radius**: Allows users to visually explore the highest-risk paths from a choke point. It provides a detailed visualization showing how the compromise of one asset could affect others, enabling security teams to assess the broader implications of an attack and prioritize mitigation strategies more effectively.
+
+## Cloud and on-premises attack path 
+
+### Cloud attack paths
+- **Focus**: Highlights only the most urgent, externally initiated, and exploitable threats, reducing noise and improving efficiency.
+- **External entry points**: Emphasizes attack routes that begin outside your organization and map adversary movement through cloud infrastructure.
+- **Actionable risks**: Shows real, exploitable vulnerabilities with sharper definition, while actionability remains the same for now, with future improvements planned.
+
+### On-premises attack paths
+- **End game asset termination**: Attack paths are now configured to terminate automatically when they reach any of the following asset types: Domain Admins, Enterprise Admins, Administrators, or Domain Controllers. These assets are classified as End Game meaning that if an attacker compromises any of them, they effectively gain full control over your domain.
+- **Greater Clarity**: This update improves consistency and clarity to the way attack path risks are visualized and prioritized for on-premises infrastructure, helping security teams focus on high-impact scenarios and reduce noise.
 
 ## Next steps
 
