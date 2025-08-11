@@ -32,6 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## September 2025
+- (Preview) The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table in advanced hunting is now available for preview. This table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account. 
+
 ## August 2025
 - (GA) [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers**. [Learn more](faq-cloud-coverage-defender-experts.md)
 - (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment, which could allow our security analysts to not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, but also provide customers with a more holistic view of the threat in their environments.
