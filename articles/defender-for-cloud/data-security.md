@@ -48,15 +48,13 @@ We adhere to the [Microsoft Online Services Data Protection Addendum](https://ww
 
 ### Data use
 
-Microsoft uses patterns and threat intelligence seen across multiple tenants to enhance our prevention and detection capabilities; we do so in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement). 
+Microsoft uses patterns and threat intelligence seen across multiple tenants to enhance our prevention and detection capabilities; we do so in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
 
-Microsoft Defender for Cloud does not use Customer Data to train AI models without user consent. As per the Microsoft Product Terms: Microsoft Defender for Cloud or Microsoft Generative AI Services do not use Customer Data to train any generative AI foundation model, unless pursuant to the Customer’s documented instructions.
+Microsoft Defender for Cloud does not use Customer Data to train AI models without user consent. As per the Microsoft Product Terms: Microsoft Defender for Cloud or Microsoft Generative AI Services do not use Customer Data to train any generative AI foundation model, unless pursuant to the Customer’s documented instructions.
 
 ## Manage data collection from machines
 
-When you enable Defender for Cloud in Azure, data collection is turned on for each of your Azure subscriptions. You can also enable data collection for your subscriptions in Defender for Cloud. When data collection is enabled, Defender for Cloud provisions the Log Analytics agent on all existing supported Azure virtual machines and any new ones that are created.
-
-The Log Analytics agent scans for various security-related configurations and events it into [Event Tracing for Windows](/windows/win32/etw/event-tracing-portal) (ETW) traces. In addition, the operating system raises event log events during the course of running the machine. Examples of such data are: operating system type and version, operating system logs (Windows event logs), running processes, machine name, IP addresses, logged in user, and tenant ID. The Log Analytics agent reads event log entries and ETW traces and copies them to your workspace(s) for analysis. The Log Analytics agent also enables process creation events and command line auditing.
+When you enable Defender for Cloud in Azure, data collection is turned on for each of your Azure subscriptions. You can also enable data collection for your subscriptions in Defender for Cloud. Defender for Servers uses Defender for Endpoint to collect data from your machines.
 
 If you aren't using Microsoft Defender for Cloud's enhanced security features, you can also disable data collection from virtual machines in the Security Policy. Data Collection is required for subscriptions that are protected by enhanced security features. VM disk snapshots and artifact collection will still be enabled even if data collection has been disabled.
 
@@ -100,7 +98,7 @@ Calculated data, such as attack paths, might be kept for an additional 14 days. 
 
 This information is collected in accordance with the privacy commitments described in our [Privacy Statement](https://privacy.microsoft.com/privacystatement).
 
-Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securely and retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
+Defender for Cloud AI threat protection plan includes storing of prompts and model responses of the protected subscriptions. The data is stored securelyand retained for purpose of pattern recognition and anomaly detections and stored for a duration of 30 days
 
 ## Defender for Cloud and Microsoft Defender 365 Defender integration
 
