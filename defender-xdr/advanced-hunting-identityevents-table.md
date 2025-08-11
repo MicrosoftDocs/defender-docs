@@ -54,8 +54,8 @@ For information on other tables in the advanced hunting schema, see the [advance
 | `ActionFailureReason` | `string` | Information explaining why the recorded action failed | 	 
 | `IPAddress` | `string` | IP address assigned to the device and used during related network communications |  	 
 | `UserAgent` | `string` | User agent information from the web browser or other client application | 	 
-| `TargetObjects` | `dynamic` | List of the target objects of this activity. Target object can be user, group, role, domain, application and more. | 	 
-| `Application` | `string` | The application source where this event was received from | 	 
+| `TargetObjects` | `dynamic` | List of the target objects of this activity. Target object can be user, group, role, domain, application, and more. | 	 
+| `Application` | `string` | The source application where this event was received from | 	 
 | `ApplicationInstanceId` | `string` | Domain of the source application | 	 
 | `ApplicationEventId` | `string` | Raw event ID provided by the source application | 	 
 | `ApplicationSessionId` | `string` | Raw session ID provided by the source application | 	 
