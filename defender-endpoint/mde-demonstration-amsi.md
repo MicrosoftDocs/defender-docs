@@ -49,8 +49,11 @@ In this demonstration article, you have two engine choices to test AMSI:
 
 1. Save the following PowerShell script as `AMSI_PoSh_script.ps1`:
 
-   :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-powershell-save-script.png" alt-text="Screenshot showing PowerShell script to save as AMSI_PoSh_script.ps1" lightbox="media/mde-demonstrations-amsi/test-amsi-powershell-save-script.png":::
-
+   ```powershell
+   $testString = "AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386"
+   Invoke-Expression $testString
+   ```
+   
 2. On your device, open PowerShell as an administrator.
 
 3. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press **Enter**.
@@ -64,17 +67,22 @@ In this demonstration article, you have two engine choices to test AMSI:
 
 1. Save the following VBScript as `AMSI_vbscript.vbs`:
 
-   :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-vbscript-save-script.png" alt-text="Screenshot showing VBScript to save as AMSI_vbscript.vbs" lightbox="media/mde-demonstrations-amsi/test-amsi-vbscript-save-script.png":::
-
+   ```vbscript
+   REM Save this sample AMSI vbscript as AMSI_vbscript.vbs
+   Dim result
+   result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
+   WScript.Echo result
+   ```
+   
 2. On your Windows Device, open Command Prompt as an administrator.
 
-2. Type `wscript AMSI_vbscript.js`, and then press **Enter**.
+1. Type `wscript AMSI_vbscript.vbs`, and then press **Enter**.
 
    The result should be as follows:
 
-   :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png" alt-text="Screenshot showing the AMSI test results. It should show that antivirus software blocked the script." lightbox="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png":::
+      :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png" alt-text="Screenshot showing the AMSI test results. It should show that antivirus software blocked the script." lightbox="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png":::
 
-   
+
 ### Verifying the test results
 
 In your protection history, you should be able to see the following information:
