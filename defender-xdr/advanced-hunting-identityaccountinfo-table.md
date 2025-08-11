@@ -26,7 +26,7 @@ ms.date: 09/01/2025
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `IdentityAccountInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about account information from various sources, including Microsoft Entra ID. This table also includes information and link to the identity that owns the account. Use this reference to construct queries that return information from this table.
 
@@ -66,12 +66,12 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `SourceProviderInstanceId` | `string` | The identifier of the source application or service of the account. For example, in Microsoft Entra ID, this is the organization Globally Unique Identifier (GUID). |
 | `SourceProviderInstanceDisplayName` | `string` | The display name of the source application or service of the account |
 | `AuthenticationMethod` | `string` | Authentication method used to allow the account user to sign into the account; possible values: Credentials, Federated, Hybrid |
-| `AuthenticationSourceAcccountId` | `string` | The identifer of the federating account, if the authentication method is Federated |
+| `AuthenticationSourceAcccountId` | `string` | The identifier of the federating account, if the authentication method is Federated |
 | `EnrolledMfas` | `dynamic` | Types of multifactor authentication methods configured for the account user and their status |
 | `LastPasswordChangeTime` | `datetime` | Date and time the account password was last changed |
 | `GroupMembership` | `dynamic` | Group identifiers assigned to the account |
 | `AssignedRoles` | `dynamic` | Role identifiers assigned to the account |
-| `EligibleRoles` | `dynamic` | Identifers for roles the account are eligible to use (for example, Microsoft Entra Privileged Identity Management roles) |
+| `EligibleRoles` | `dynamic` | Identifiers for roles the account are eligible to use (for example, Microsoft Entra Privileged Identity Management roles) |
 | `TenantMembershipType` | `string` | User type; possible values: Guest, Member |
 | `CreatedDateTime ` | `datetime` | Date and time when the user account was created |
 | `DeletedDateTime` | `datetime` | Date and time when the user account was deleted |
