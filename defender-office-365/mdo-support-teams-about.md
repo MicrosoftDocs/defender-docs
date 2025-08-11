@@ -2,9 +2,9 @@
 title: Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -100,7 +100,7 @@ Get-TeamsProtectionPolicy | Format-List Name,ZapEnabled,HighConfidencePhishQuara
 Get-TeamsProtectionPolicyRule | Format-List Name,TeamsProtectionPolicy,ExceptIfSentTo,ExceptIfSentToMemberOf,ExceptIfRecipientDomainIs
 ```
 
-For detailed syntax and parameter information, see [Get-TeamsProtectionPolicy](/powershell/module/exchange/get-teamsprotectionpolicy) and [Get-TeamsProtectionPolicyRule](/powershell/module/exchange/get-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [Get-TeamsProtectionPolicy](/powershell/module/exchangepowershell/get-teamsprotectionpolicy) and [Get-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/get-teamsprotectionpolicyrule).
 
 #### Use PowerShell to modify the Teams protection policy
 
@@ -116,7 +116,7 @@ This example enables ZAP for Teams and changes the quarantine policy that's used
 Set-TeamsProtectionPolicy -Identity "Teams Protection Policy" -ZapEnabled $true -HighConfidencePhishQuarantineTag AdminOnlyWithNotifications
 ```
 
-For detailed syntax and parameter information, see [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy).
+For detailed syntax and parameter information, see [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy).
 
 #### Use PowerShell to create the Teams protection policy rule
 
@@ -137,7 +137,7 @@ This example creates the Teams protection policy rule with members of the group 
 New-TeamsProtectionPolicyRule -Name "Teams Protection Policy Rule" -TeamsProtectionPolicy "Teams Protection Policy" -ExceptIfSentToMemberOf research@contoso.onmicrosoft.com
 ```
 
-For detailed syntax and parameter information, see [New-TeamsProtectionPolicyRule](/powershell/module/exchange/new-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [New-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/new-teamsprotectionpolicyrule).
 
 #### Use PowerShell to modify the Teams protection policy rule
 
@@ -149,7 +149,7 @@ Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" [-ExceptI
 
 **Notes**:
 
-- For information about the syntax for adding, removing, and replacing all values for the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, and _ExceptIfRecipientDomainIs_ parameters, see the parameter descriptions in [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule).
+- For information about the syntax for adding, removing, and replacing all values for the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, and _ExceptIfRecipientDomainIs_ parameters, see the parameter descriptions in [Set-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/set-teamsprotectionpolicyrule).
 - To empty the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, or _ExceptIfRecipientDomainIs_ parameters, use the value `$null`.
 
 This example modifies the existing Teams protection policy rule by excluding recipients in the domains research.contoso.com and research.contoso.net from ZAP for Teams protection.
@@ -158,7 +158,7 @@ This example modifies the existing Teams protection policy rule by excluding rec
 Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfRecipientDomainIs research.contoso.com,research.contoso.net
 ```
 
-For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/set-teamsprotectionpolicyrule).
 
 ## See also
 

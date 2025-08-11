@@ -2,9 +2,9 @@
 title: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: concept-article
 ms.localizationpriority: medium

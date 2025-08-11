@@ -2,9 +2,9 @@
 title: Get started with Microsoft Defender for Office 365
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: get-started
 ms.localizationpriority: medium
@@ -283,7 +283,7 @@ The important parts of user message reporting are:
 - Non-Microsoft reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
 
 - **Where do user reported messages go?**: You have the following options:
-  - To a designated reporting mailbox and to Microsoft (this is the default value).
+  - To a designated reporting mailbox and to Microsoft (this value is the default).
   - To a designated reporting mailbox only.
   - To Microsoft only.
 

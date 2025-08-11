@@ -3,10 +3,10 @@ title: Defender experts for XDR report
 ms.reviewer:
 description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,14 +17,15 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 08/01/2025
 ---
 
 # Get real-time visibility with Defender Experts for XDR reports
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
 For Defender Experts for XDR reports instructions, check out this short video.
 
@@ -44,6 +45,7 @@ The topmost section of the Defender Experts for XDR report provides the percenta
 - **Resolved** – The total number of investigated incidents that were closed.
 - **Resolved directly** – The number of investigated incidents that we were able to close directly on your behalf.
 - **Resolved with your help** – The number of investigated incidents that were resolved because of your action on one or more managed response tasks.
+- **Third-party enriched** - The number of incidents that were enriched with third-party network signals. This data is available when you're enrolled in the [third-party network enrichment](third-party-enrichment-defender-experts.md).
 
 The **Average time to resolve incidents** section displays a bar chart of the average time, in minutes, our experts spent investigating and closing incidents in your environment and the average time you spent performing the required managed response actions.
 
