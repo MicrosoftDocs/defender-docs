@@ -2,11 +2,11 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2025
+ms.date: 08/11/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -42,7 +42,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
-- [Pre Install Setup for Custom Path Installation](#pre-install-setup-for-custom-path-installation)
+- [Preinstall setup for custom path installation](#preinstall-setup-for-custom-path-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -258,7 +258,7 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
 
-## Pre Install Setup for Custom Path Installation
+## Preinstall setup for custom path installation
 
 These steps are applicable only if Defender is to be installed in a custom location.
 For detailed instructions on installing Microsoft Defender for Endpoint to a custom path, see [Manual installation: preinstallation setup](linux-custom-path-installation.md#manual-installation-preinstallation-setup).
@@ -565,7 +565,7 @@ For manual uninstallation, execute the following command for your Linux distribu
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
 
-## See also
+## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
