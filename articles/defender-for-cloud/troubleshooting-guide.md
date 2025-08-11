@@ -27,67 +27,6 @@ The first place to look for troubleshooting information is the [audit log](/azur
 
 The audit log contains all write operations (`PUT`, `POST`, `DELETE`) performed on your resources, but not read operations (`GET`).
 
-## Troubleshoot the Log Analytics agent
-
-Defender for Cloud uses the Log Analytics agent to [collect and store data](./monitoring-components.md#log-analytics-agent). The information in this article represents Defender for Cloud functionality after transition to the Log Analytics agent.
-
-The alert types are:
-
-- Virtual Machine Behavioral Analysis (VMBA)
-- Network analysis
-- Azure SQL Database and Azure Synapse Analytics analysis
-- Contextual information
-
-Depending on the alert type, you can gather the necessary information to investigate an alert by using the following resources:
-
-- Security logs in the virtual machine (VM) event viewer in Windows
-- The audit daemon (`auditd`) in Linux
-- The Azure activity logs and the enabled diagnostic logs on the attack resource
-
-You can share feedback for the alert description and relevance. Go to the alert, select the **Was This Useful** button, select the reason, and then enter a comment to explain the feedback. We consistently monitor this feedback channel to improve our alerts.
-
-### Check the Log Analytics agent processes and versions
-
-Just like Azure Monitor, Defender for Cloud uses the Log Analytics agent to collect security data from your Azure virtual machines. After you enable data collection and correctly install the agent in the target machine, the `HealthService.exe` process should be running.
-
-Open the services management console (*services.msc*) to make sure that the Log Analytics agent service is running.
-
-:::image type="content" source="./media/troubleshooting-guide/troubleshooting-guide-fig5.png" alt-text="Screenshot of the Log Analytics agent service in Task Manager." lightbox="media/troubleshooting-guide/troubleshooting-guide-fig5.png":::
-
-To see which version of the agent you have, open Task Manager. On the **Processes** tab, locate the Log Analytics agent service, right-click it, and then select **Properties**. On the **Details** tab, look for the file version.
-
-:::image type="content" source="./media/troubleshooting-guide/troubleshooting-guide-fig6.png" alt-text="Screenshot of details for the Log Analytics agent service." lightbox="media/troubleshooting-guide/troubleshooting-guide-fig6.png":::
-
-### Check installation scenarios for the Log Analytics agent
-
-There are two installation scenarios that can produce different results when you're installing the Log Analytics agent on your computer. The supported scenarios are:
-
-- **Agent installed automatically by Defender for Cloud**: You can view the alerts in Defender for Cloud and log search. You receive email notifications at the email address that you configured in the security policy for the subscription that the resource belongs to.
-
-- **Agent manually installed on a VM located in Azure**: In this scenario, if you're using agents downloaded and installed manually before February 2017, you can view the alerts in the Defender for Cloud portal only if you filter on the subscription that the *workspace* belongs to. If you filter on the subscription that the *resource* belongs to, you won't see any alerts. You receive email notifications at the email address that you configured in the security policy for the subscription that the workspace belongs to.
-
-  To avoid the filtering problem, be sure to download the latest version of the agent.
-
-<a name="mon-network-req"></a>
-
-### Monitor network connectivity problems for the agent
-
-For agents to connect to and register with Defender for Cloud, they must have access to the DNS addresses and network ports for Azure network resources. To enable this access, take these actions:
-
-- When you use proxy servers, make sure that the appropriate proxy server resources are configured correctly in the [agent settings](/azure/azure-monitor/agents/agent-windows).
-- Configure your network firewalls to permit access to Log Analytics.
-
-The Azure network resources are:
-
-| Agent resource | Port | Bypass HTTPS inspection |
-|---|---|---|
-| `*.ods.opinsights.azure.com` | 443 | Yes |
-| `*.oms.opinsights.azure.com` | 443 | Yes |
-| `*.blob.core.windows.net` | 443 | Yes |
-| `*.azure-automation.net` | 443 | Yes |
-
-If you're having trouble onboarding the Log Analytics agent, read [Troubleshoot Operations Management Suite onboarding issues](https://techcommunity.microsoft.com/t5/system-center-blog/operations-management-suite-onboarding-troubleshooting-steps/ba-p/349464).
-
 ## Troubleshoot improperly working antimalware protection
 
 The guest agent is the parent process of everything that the [Microsoft Antimalware](/azure/security/fundamentals/antimalware) extension does. When the guest agent process fails, the Microsoft Antimalware protection that runs as a child process of the guest agent might also fail.

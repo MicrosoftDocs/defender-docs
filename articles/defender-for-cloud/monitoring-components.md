@@ -19,7 +19,6 @@ Data is collected using:
 
 - [Azure Monitor Agent (AMA)](auto-deploy-azure-monitoring-agent.md)
 - [Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) (MDE)
-- [Log Analytics agent](working-with-log-analytics-agent.md)
 - **Security components**, such as the [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes)
 
 ## Why use Defender for Cloud to deploy monitoring components?
@@ -39,10 +38,9 @@ These plans use monitoring components to collect data:
   - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
   - [Microsoft Defender for Endpoint](integration-defender-for-endpoint.md)
   - Vulnerability assessment
-  - [Azure Monitor Agent](#azure-monitor-agent-ama) or [Log Analytics agent](#log-analytics-agent)
 - [Defender for SQL servers on machines](defender-for-sql-on-machines-vulnerability-assessment.md)
   - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
-  - [Azure Monitor Agent](#azure-monitor-agent-ama) or [Log Analytics agent](#log-analytics-agent)
+  - [Azure Monitor Agent](#azure-monitor-agent-ama)
   - Automatic SQL server discovery and registration
 - Defender for Containers
   - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
@@ -57,49 +55,6 @@ These plans use monitoring components to collect data:
 [!INCLUDE [azure-monitor-agent-availability](includes/azure-monitor-agent-availability.md)]
 
 Learn more about [using the Azure Monitor Agent with Defender for Cloud](auto-deploy-azure-monitoring-agent.md).
-
-### Log Analytics agent
-
-| Aspect | Azure virtual machines | Azure Arc-enabled machines |
-|---|:--|:--|
-| Release state: | Generally available (GA) | Generally available (GA) |
-| Relevant Defender plan: | [Foundational Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) for agent-based security recommendations<br>[Microsoft Defender for Servers](defender-for-servers-introduction.md)<br>[Microsoft Defender for SQL](defender-for-sql-introduction.md) | [Foundational Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) for agent-based security recommendations<br>[Microsoft Defender for Servers](defender-for-servers-introduction.md)<br>[Microsoft Defender for SQL](defender-for-sql-introduction.md) |
-| Required roles and permissions (subscription-level): |[Owner](/azure/role-based-access-control/built-in-roles)| [Owner](/azure/role-based-access-control/built-in-roles#owner) |
-| Supported destinations: | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines |
-| Policy-based: | :::image type="icon" source="./media/icons/no-icon.png"::: No | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes |
-| Clouds: | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |
-
-#### Supported operating systems for the Log Analytics agent
-
-Defender for Cloud depends on the [Log Analytics agent](/azure/azure-monitor/agents/log-analytics-agent). Ensure your machines are running one of the supported operating systems for this agent as described on the following pages:
-
-- [Log Analytics agent for Windows supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
-- [Log Analytics agent for Linux supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
-
-Also ensure your Log Analytics agent is [properly configured to send data to Defender for Cloud](working-with-log-analytics-agent.md#manual-agent).
-
-<a name="preexisting"></a>
-
-#### Deploy the Log Analytics agent in cases of a preexisting agent installation
-
-The following use cases explain how deployment of the Log Analytics agent works in cases when there's already an agent or extension installed.
-
-- **Log Analytics agent is installed on the machine, but not as an extension (Direct agent)** - If the Log Analytics agent is installed directly on the VM (not as an Azure extension), Defender for Cloud will install the Log Analytics agent extension and might upgrade the Log Analytics agent to the latest version. The installed agent continues to report to its already configured workspaces and to the workspace configured in Defender for Cloud. (Multi-homing is supported on Windows machines.)
-
-  If the Log Analytics is configured with a user workspace and not Defender for Cloud's default workspace, you need to install the "Security" or "SecurityCenterFree" solution on it for Defender for Cloud to start processing events from VMs and computers reporting to that workspace.
-
-  For Linux machines, Agent multi-homing isn't yet supported. If an existing agent installation is detected, the Log Analytics agent won't be deployed.
-
-  For existing machines on subscriptions onboarded to Defender for Cloud before 17 March 2019, when an existing agent will be detected, the Log Analytics agent extension won't be installed and the machine won't be affected. For these machines, see to the "Resolve monitoring agent health issues on your machines" recommendation to resolve the agent installation issues on these machines.
-  
-- **System Center Operations Manager agent is installed on the machine** - Defender for Cloud installs the Log Analytics agent extension side by side to the existing Operations Manager. The existing Operations Manager agent continues to report to the Operations Manager server normally. The Operations Manager agent and Log Analytics agent share common run-time libraries, which will be updated to the latest version during this process.
-
-- **A pre-existing VM extension is present**:
-  - When the Monitoring Agent is installed as an extension, the extension configuration allows reporting to only a single workspace. Defender for Cloud doesn't override existing connections to user workspaces. Defender for Cloud stores security data from the VM in the workspace already connected, if the "Security" or "SecurityCenterFree" solution was installed on it. Defender for Cloud might upgrade the extension version to the latest version in this process.
-  - To see to which workspace the existing extension is sending data to, run the *TestCloudConnection.exe* tool to validate connectivity with Microsoft Defender for Cloud, as described in [Verify Log Analytics agent connectivity](/services-hub/unified/health/assessments-troubleshooting#verify-log-analytics-agent-connectivity). Alternatively, you can open Log Analytics workspaces, select a workspace, select the VM, and look at the Log Analytics agent connection.
-  - If you have an environment where the Log Analytics agent is installed on client workstations and reporting to an existing Log Analytics workspace, review the list of [operating systems supported by Microsoft Defender for Cloud](security-center-os-coverage.md) to make sure your operating system is supported.
-
-Learn more about [working with the Log Analytics agent](working-with-log-analytics-agent.md).
 
 ### Microsoft Defender for Endpoint
 
@@ -156,7 +111,6 @@ Learn more about the [roles used to provision Defender for Containers extensions
 
 ## Troubleshooting
 
-- To identify monitoring agent network requirements, see [Troubleshooting monitoring agent network requirements](troubleshooting-guide.md#mon-network-req).
 - To identify manual onboarding issues, see [How to troubleshoot Operations Management Suite onboarding issues](https://techcommunity.microsoft.com/t5/system-center-blog/operations-management-suite-onboarding-troubleshooting-steps/ba-p/349464).
 
 ## Next steps

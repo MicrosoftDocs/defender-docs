@@ -33,15 +33,6 @@ Agents are used in the Defender for Servers plan as follows:
 - Non-Azure public clouds connect to Azure by leveraging the [Azure Arc](/azure/azure-arc/servers/overview) service.
 - The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) is installed on multicloud machines that onboard as Azure Arc machines. Defender for Cloud should be enabled in the subscription in which the Azure Arc machines are located.
 - Defender for Cloud leverages the Connected Machine agent to install extensions (such as Microsoft Defender for Endpoint) that are needed for [Defender for Servers](./defender-for-servers-introduction.md) functionality.
-- [Log analytics agent/Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/agents-overview) is needed for some [Defender for Service Plan 2](./defender-for-servers-introduction.md) functionality.
-  - The agents can be provisioned automatically by Defender for Cloud.
-  - When you enable auto-provisioning, you specify where to store collected data. Either in the default Log Analytics workspace created by Defender for Cloud, or in any other workspace in your subscription. [Learn more](enable-data-collection.md?tabs=autoprovision-feature).
-  - If you select to continuously export data, you can drill into and configure the types of events and alerts that are saved. [Learn more](./continuous-export.md?tabs=azure-portal).
-- Log Analytics workspace:
-  - You define the Log Analytics workspace you use at the subscription level. It can be either a default workspace, or a custom-created workspace.
-  - There are [several reasons](/azure/azure-monitor/logs/workspace-design) to select the default workspace rather than the custom workspace.
-  - The location of the default workspace depends on your Azure Arc machine region. [Learn more](faq-data-collection-agents.yml#where-is-the-default-log-analytics-workspace-created-).
-  - The location of the custom-created workspace is set by your organization. [Learn more](faq-data-collection-agents.yml#how-can-i-use-my-existing-log-analytics-workspace-) about using a custom workspace.
 
 ## Defender for Containers plan
 
