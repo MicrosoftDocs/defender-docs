@@ -1,5 +1,5 @@
 ---
-title: 'Security Assessment: Remove Inactive Service Account (Preview) '
+title: 'Security Assessment: Remove Inactive Service Account (Preview)'
 description: Learn how to identify and address inactive Active Directory service accounts to mitigate security risks and improve your organization's security posture.
 ms.date: 08/04/2025
 ms.topic: how-to
@@ -20,7 +20,7 @@ To use this security assessment effectively, follow these steps:
 1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions ) for Remove inactive service account.
 1. Review the list of exposed entities to discover which of your service account is inactive.
 
-      :::image type="content" source="media/remove-inactive-service-account/remove-inactive-service-accounts.png" alt-text="Screenshot that shows the recommendation action to remove inactive service accounts." lightbox="media/remove-inactive-service-account/remove-inactive-service-accounts.png":::
+    :::image type="content" source="media/okta-integration/remove-inactive-service-accounts.png" alt-text="Screenshot that shows the recommendation action to remove inactive service accounts." lightbox="media/okta-integration/remove-inactive-service-accounts.png":::
 
 1. Take appropriate actions on those entities by removing the service account. For example:
 
