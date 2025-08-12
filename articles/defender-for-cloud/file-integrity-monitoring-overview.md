@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: dcurwin
 ms.author: dacurwin
 ms.topic: conceptual
-ms.date: 08/05/2025
+ms.date: 08/12/2025
 ---
 
 # File integrity monitoring
@@ -80,6 +80,45 @@ When using file integrity monitoring with the Defender for Endpoint agent, we re
 | /usr/local/sbin   |                                  |                                                              |
 | /usr/sbin         |                                  |                                                              |
 | /opt/bin          |                                  |                                                              |
+
+## Custom rules
+
+You can create custom rules to monitor specific files or folders as long as they meet the following validation criteria:
+
+- A maximum of three asterisks `*` are allowed in the path.
+
+- Paths with three asterisks must not end with `/` or `\`.
+
+- Windows registry paths must start with `HKLM\` and follow standard registry naming rules.
+
+- Windows file paths must be valid and cannot include `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, or `|`.
+
+- Linux file paths must be absolute (start with `/`) and cannot include `< > : | "`.
+
+- Windows paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `*`, `?`, `:`, and must not contain `/`.
+
+- Linux paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `/`, `*`, or `:`.
+
+- Registry paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `:`, and must not contain `*`.
+
+- All paths must meet the system’s maximum path length and depth rules.
+
+### Rule definition validations
+
+- A rule name is required.
+
+- A rule name must contain only letters (a–z, A–Z), digits (0–9), and underscores (_), and can be up to 128 characters.
+
+- Rule name and rule ID must be unique.
+
+- Rule description is optional. If provided:
+
+    - Maximum length is 260 characters.
+    - Allowed characters: `letters`, `digits`, and `? ! ) ( . ,`.
+
+- At least one change type (from CMDR) must be selected.
+
+- Between 1 and 500 custom rules are supported per subscription.
 
 ## Next steps
 
