@@ -48,7 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## August 2025
 
-- (GA) **Streamline connectivity support for Government environments (GCC, GCC High, DoD)**: Defender for Endpoint now supports streamlined connectivity for US Government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For configuration details, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md) and [Required connectivity settings](gov.md#required-connectivity-settings).
+- (GA) **Streamline connectivity support for Government environments (GCC, GCC High, DoD)**: Defender for Endpoint now supports streamlined connectivity for US Government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For configuration details, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md#enable-streamlined-connectivity-for-us-government-environments) and [Required connectivity settings](gov.md#required-connectivity-settings).
 
 ## July 2025
 
