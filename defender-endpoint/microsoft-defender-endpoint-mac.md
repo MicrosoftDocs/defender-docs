@@ -90,7 +90,7 @@ After you've enabled the service, you might need to configure your network or fi
 Defender for Endpoint on Mac requires one of the following Microsoft Volume Licensing offers:
 
 - Microsoft 365 E5
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 A5
 - Windows 10 Enterprise E5
 - Microsoft 365 Business Premium

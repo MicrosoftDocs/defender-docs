@@ -134,7 +134,7 @@ When using Windows Enterprise multi-session, per our security best practices the
 - Windows Enterprise E3
 - Windows Enterprise E5
 - Microsoft 365 E3
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 E5
 
 Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md#licensing-requirements).

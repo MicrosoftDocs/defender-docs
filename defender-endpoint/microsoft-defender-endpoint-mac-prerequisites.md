@@ -82,7 +82,7 @@ You can also configure Defender for Endpoint on macOS locally
 Microsoft Defender for Endpoint on macOS requires one of the following Microsoft Volume Licensing offers:
 
 - Microsoft 365 E5
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 A5
 - Windows 10 Enterprise E5
 - Microsoft 365 Business Premium
