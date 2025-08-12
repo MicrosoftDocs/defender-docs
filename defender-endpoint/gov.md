@@ -122,7 +122,7 @@ The following OS versions are supported when using [Microsoft Defender for serve
 ## Required connectivity settings
 
 > [!NOTE]
-> You can use the streamlined connectivity feature to onboard new devices to Defender for Endpoint, using a reduced URL set or static IP ranges.
+> You can use the [streamlined connectivity feature](configure-device-connectivity.md#enable-streamlined-connectivity-for-us-government-environments) to onboard new devices to Defender for Endpoint, using a reduced URL set or static IP ranges.
 
 If a proxy or firewall is blocking all traffic by default and allowing only specific domains through, add the domains listed in the downloadable sheet to the allowed domains list.
 
