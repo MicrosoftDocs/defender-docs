@@ -22,7 +22,7 @@ ms.collection:
 
 [Microsoft Defender for Business](mdb-overview.md) and [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) are endpoint security subscriptions that your organization can use to protect devices, such as computers, tablets, and phones. 
 
-As your organization grows, you might be thinking about changing from Defender for Business to Defender for Endpoint. For example, if you have Defender for Business as part of a [Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview) subscription, and you add Microsoft 365 E5 Security to your subscription, you now have Defender for Endpoint Plan 2 capabilities while retaining the Defender for Business experience. 
+As your organization grows, you might be thinking about changing from Defender for Business to Defender for Endpoint. For example, if you have Defender for Business as part of a [Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview) subscription, and you add the Microsoft Defender Suite to your subscription, you now have Defender for Endpoint Plan 2 capabilities while retaining the Defender for Business experience. 
 
 This article describes how to view your current license state and, if needed, change your experience from Defender for Business to Defender for Endpoint.
 
