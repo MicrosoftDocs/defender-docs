@@ -35,7 +35,7 @@ Users don't need Defender for Endpoint installed on their local devices to get S
 - Licenses from a required licensing plan are assigned to the users. Safe Documents is controlled by the **Office 365 SafeDocs** (or **SAFEDOCS** or **bf6f5520-59e3-4f82-974b-7dbbc4fd27c7**) service plan (also known as a service). This service plan is available in the following licensing plans (also known as license plans, Microsoft 365 plans, or products):
   - Microsoft 365 A5 for Faculty
   - Microsoft 365 A5 for Students
-  - Microsoft 365 E5 Security
+  - Microsoft Defender Suite
 
   Safe Documents isn't included in Microsoft Defender for Office 365 licensing plans.
 
