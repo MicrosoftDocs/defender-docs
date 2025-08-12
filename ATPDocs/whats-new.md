@@ -25,9 +25,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
-### Sensor version 2.246
+### Microsoft Defender for Identity sensor version updates
 
-This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
+|Version number |Updates |
+|---------|---------|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
 
 ### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
