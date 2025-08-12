@@ -82,6 +82,9 @@ This article describes how admins can manage entries for email senders in the Mi
 
 ## Domains and email addresses in the Tenant Allow/Block List
 
+ > [!IMPORTANT]
+    > <sup>\*</sup> Both Allow and Block email address entries must use UTF-8 encoding. If an email address contains special characters and is not UTF-8 encoded, you may encounter an invalid error message.
+
 ### Create allow entries for domains and email addresses
 
 Unnecessary allow entries expose your organization to malicious email that the system would otherwise filter, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
