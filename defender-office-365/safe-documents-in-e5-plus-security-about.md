@@ -1,8 +1,8 @@
 ---
 title: Safe Documents in Microsoft Defender for Office 365
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
@@ -96,7 +96,7 @@ This example enables Safe Documents for the entire organization, and prevents us
 Set-AtpPolicyForO365 -EnableSafeDocs $true -AllowSafeDocsOpen $false
 ```
 
-For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365).
+For detailed syntax and parameter information, see [Set-AtpPolicyForO365](/powershell/module/exchangepowershell/set-atppolicyforo365).
 
 ### Configure individual access to Safe Documents
 
@@ -121,7 +121,7 @@ To learn more, see [Onboard to the Microsoft Defender for Endpoint service](/def
 
 ### How do I know this procedure worked?
 
-To verify that you've enabled and configured Safe Documents, do any of the following steps:
+To verify you successfully enabled and configured Safe Documents, do any of the following steps:
 
 - In the Microsoft Defender portal, go to the **Safe Attachments** page at <https://security.microsoft.com/safeattachmentv2>, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**, and verify the **Turn on Safe Documents for Office clients** and **Allow people to click through Protected View even if Safe Documents identifies the file as malicious** settings.
 

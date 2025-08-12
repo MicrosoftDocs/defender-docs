@@ -803,6 +803,8 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Defender for Endpoint passive mode
+        href: microsoft-defender-passive-mode.md
       - name: Microsoft Defender Antivirus and third-party antivirus solutions without
           Defender for Endpoint
         href: defender-antivirus-compatibility-without-mde.md
@@ -1166,7 +1168,7 @@
           - name: Microsoft Defender for Endpoint API license and terms
             href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: /defender-vulnerability-management/tvm-supported-os
+            href: /defender-endpoint/api/apis-intro
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context

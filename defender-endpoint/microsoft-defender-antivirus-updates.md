@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/23/2025
+ms.date: 07/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
@@ -99,6 +99,44 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+
+### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
+
+- Security intelligence update version: **1.435.11.0**
+- Release date:  **August 5, 2025 (Engine) / August 6, 2025 (Platform)**
+- Platform: **4.18.25070.5**
+- Engine: **1.1.25070.4**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Enhanced Passive Mode Scanning Behavior
+When Microsoft Defender is in Passive mode, an Antivirus scan will not occur after a signature update , unless specifically set in the policy setting DisableScanOnUpdate.
+
+- Improved Tamper Protection Handling
+Optimized the configuration process for Tamper Protection in multi-threaded environments to ensure more reliable behavior.
+
+- Digital Signature Verification Performance Boost
+Enhanced the efficiency of digital signature verification to improve overall system performance.
+
+- Refined ASR Rule Exclusion Processing
+Refined exclusion processing and resolved false positives for the Attack Surface Reduction (ASR) rule: Block Office applications from injecting code into other processes.
+
+
+### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
+ 
+- Security intelligence update version: **1.433.2.0**
+- Release date:  **July 22, 2025 (Engine)** / **July 22, 2025 (Platform)**
+- Platform: **4.18.25060.7**
+- Engine: **1.1.25060.6**
+- Support phase: **Security and Critical Updates**
+ 
+#### What's new
+
+- Added filtering to improve scan stability and prevent engine crashes
+- Additional performance improvements to prevent concurrent scans. This change ensures that if a quick or full scan is already running, no additional quick or full scan scans are initiated from `MpCmdRun` or Powershell (`Start-Scan`).
+- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to non-Microsoft SIEM solutions. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
+
 ### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
 
 - Security intelligence update version: **1.431.19.0**
@@ -140,25 +178,6 @@ Updates contain:
 - Improvement in health reporting for machines that are rebooted or hibernated.
 - Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
 - Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
-
-### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
-
-- Security intelligence update version: **1.427.3.0**
-- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
-- Platform: **4.18.25030.2**
-- Engine: **1.1.25030.1**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
-- Performance improvement in on-access scans of files in network locations.
-- Fixed the Defender service description to match the latest installed version.
-- Improved Defender engine update logic when the update is included in a custom image.
-- Fix in health reporting where signature update data might have been incorrect.
-- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
-- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
-- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
 
 ### Previous version updates: Technical upgrade support only
 

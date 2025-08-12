@@ -2,9 +2,9 @@
 title: How to use DKIM for email in your custom domain
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 06/19/2025
 audience: ITPro
 ms.topic: how-to
@@ -21,12 +21,12 @@ ms.custom:
 description: Learn how Microsoft 365 uses DomainKeys Identified Mail (DKIM) to sign outbound mail, and how to configure DKIM signing of outbound mail using custom domains.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Set up DKIM to sign mail from your Microsoft 365 domain
+# Set up DKIM to sign mail from your cloud domain
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -67,7 +67,7 @@ Before we get started, here's what you need to know about DKIM in Microsoft 365 
     - Each subdomain that you use to send email from Microsoft 365 requires its own DKIM configuration.
 
       > [!TIP]
-      > Email authentication protection for _undefined_ subdomains is covered by DMARC. Any subdomains (defined or not) inherit the DMARC settings of the parent domain (which can be overridden per subdomain). For more information, see [Set up DMARC to validate the From address domain for senders in Microsoft 365](email-authentication-dmarc-configure.md).
+      > Email authentication protection for _undefined_ subdomains is covered by DMARC. Any subdomains (defined or not) inherit the DMARC settings of the parent domain (which can be overridden per subdomain). For more information, see [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md).
 
   - **If you own registered but unused domains**: If you own registered domains that aren't used for email or anything at all (also known as _parked domains_), don't publish DKIM records for those domains. The lack of a DKIM record (hence, the lack of a public key in DNS to validate the message signature) prevents DKIM validation of forged domains.
 
@@ -234,7 +234,7 @@ Proceed if the domain satisfies these requirements.
 
 ### Use the Defender portal to customize DKIM signing of outbound messages using the \*.onmicrosoft.com domain
 
-As described earlier in this article, the initial \*.onmicrosoft.com domain is automatically configured to sign all outbound mail from your Microsoft 365 organization, and you should [configure custom domains to DKIM signing of outbound messages](#use-the-defender-portal-to-enable-dkim-signing-of-outbound-messages-using-a-custom-domain).
+As described earlier in this article, the initial \*.onmicrosoft.com domain is automatically configured to sign all outbound mail from your Microsoft 365 organization, and you should [configure custom domains to DKIM sign outbound messages](#use-the-defender-portal-to-enable-dkim-signing-of-outbound-messages-using-a-custom-domain).
 
 But, you can also use the procedures in this section to affect DKIM signing using the \*.onmicrosoft.com domain:
 
@@ -311,10 +311,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
         ```
 
         - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
           - Simple: Only changes in empty lines at the end of the message body are tolerated.
         - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
           - Simple: No changes to the header fields are tolerated.
         - The _KeySize_ parameter specifies the bit size of the public key in the DKIM record:
            - 1024 (default)
@@ -367,10 +367,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
      - Simple: Only changes in empty lines at the end of the message body are tolerated.
    - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
      - Simple: No changes to the header fields are tolerated.
 
    For example:
@@ -400,9 +400,9 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [New-DkimSigningConfig](/powershell/module/exchange/new-dkimsigningconfig)
-- [Set-DkimSigningConfig](/powershell/module/exchange/set-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [New-DkimSigningConfig](/powershell/module/exchangepowershell/new-dkimsigningconfig)
+- [Set-DkimSigningConfig](/powershell/module/exchangepowershell/set-dkimsigningconfig)
 
 ## Rotate DKIM keys
 
@@ -500,8 +500,8 @@ If you'd rather use PowerShell to rotate DKIM keys for a domain, connect to [Exc
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [Rotate-DkimSigningConfig](/powershell/module/exchangepowershell/rotate-dkimsigningconfig)
 
 ## Disable DKIM signing of outbound messages using a custom domain
 
@@ -642,8 +642,8 @@ In this example, the following steps are required:
 
 As described in [How SPF, DKIM, and DMARC work together to authenticate email message senders](email-authentication-about.md#how-spf-dkim-and-dmarc-work-together-to-authenticate-email-message-senders), DKIM alone isn't enough to prevent spoofing of your Microsoft 365 domain. You also need to configure SPF and DMARC for the best possible protection. For instructions, see:
 
-- [Set up SPF to help prevent spoofing](email-authentication-spf-configure.md)
-- [Use DMARC to validate email](email-authentication-dmarc-configure.md)
+- [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md)
+- [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
 

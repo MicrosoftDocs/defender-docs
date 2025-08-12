@@ -239,6 +239,8 @@
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
+          - name: CloudStorageAggregatedEvents
+            href: advanced-hunting-cloudstorageaggregatedevents-table.md
           - name: DataSecurityBehaviors
             href: advanced-hunting-datasecuritybehaviors-table.md  
           - name: DataSecurityEvents
@@ -311,6 +313,8 @@
             href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityEvents
+            href: advanced-hunting-identityevents-table.md
           - name: IdentityInfo
             href: advanced-hunting-identityinfo-table.md
           - name: IdentityLogonEvents
@@ -365,10 +369,14 @@
             href: access-den-graph-api.md
           - name: Ask Defender Experts
             href: experts-on-demand.md
+          - name: Understand Defender Experts for Hunting reports
+            href: defender-experts-report.md
         - name: Frequently asked questions
-          href: faq-defender-experts-hunting.md    
-        - name: Understand Defender Experts for Hunting reports
-          href: defender-experts-report.md
+          items: 
+          - name: General information
+            href: faq-defender-experts-hunting.md
+          - name: Server and cloud workload coverage
+            href: faq-cloud-coverage-defender-experts.md
       - name: Collaborate with Microsoft Defender Experts for XDR
         items:
         - name: Overview
@@ -383,10 +391,12 @@
             href: managed-detection-and-response-xdr.md
           - name: Scoped coverage
             href: defender-experts-scoped-coverage.md  
-          - name: Communicate with Defender Experts for XDR
+          - name: Communicate with Defender Experts
             href: communicate-defender-experts-xdr.md
           - name: Reports
             href: reports-xdr.md
+          - name: Third-party enrichment
+            href: third-party-enrichment-defender-experts.md
           - name: Defender Experts for Hunting
             href: defender-experts-for-hunting.md
           - name: Auditing
@@ -399,6 +409,8 @@
             href: faq-incident-notifications-xdr.md
           - name: Managed response
             href: faq-managed-response.md
+          - name: Server and cloud workload coverage
+            href: faq-cloud-coverage-defender-experts.md
         - name: Additional information on Defender Experts for XDR
           items:
           - name: Important considerations

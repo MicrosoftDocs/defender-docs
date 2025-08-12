@@ -144,6 +144,10 @@ items:
     items:
       - name: Alerts overview
         href: alerts-overview.md
+      - name: Defender for Identity classic alerts
+        href: alerts-mdi-classic.md
+      - name: Defender for Identity XDR alerts
+        href: alerts-xdr.md
       - name: View and manage security alerts
         href: understanding-security-alerts.md
       - name: Investigate security alerts
@@ -152,18 +156,6 @@ items:
         href: monitored-activities.md
       - name: Understanding Network Name Resolution (NNR)
         href: nnr-policy.md
-      - name: Alert categories
-        items:
-        - name: Reconnaissance and discovery alerts
-          href: reconnaissance-discovery-alerts.md
-        - name: Persistence and privilege escalation alerts
-          href: persistence-privilege-escalation-alerts.md
-        - name: Credential access alerts
-          href: credential-access-alerts.md
-        - name: Lateral movement alerts
-          href: lateral-movement-alerts.md
-        - name: Other alerts
-          href: other-alerts.md
   - name: Remediation
     items:
     - name: Remediation actions
@@ -259,6 +251,8 @@ items:
            href: security-assessment-laps.md
          - name: Riskiest lateral movement paths
            href: security-assessment-riskiest-lmp.md
+         - name: Remove discoverable passwords in Active Directory account attributes
+           href: remove-discoverable-passwords-active-directory-account-attributes.md
          - name: Unsecure Kerberos delegation assessment
            href: security-assessment-unconstrained-kerberos.md
          - name: Unsecure SID History attributes
@@ -266,7 +260,21 @@ items:
          - name: Unsecure account attributes
            href: security-assessment-unsecure-account-attributes.md
          - name: Weak cipher usage assessment
-           href: security-assessment-weak-cipher.md
+           href: security-assessment-weak-cipher.md    
+     - name: Cloud identities
+       items:
+       - name: Assign multi-factor authentication to Okta privileged user accounts
+         href: assign-multi-factor-authentication-okta-privileged-user-accounts.md
+       - name: Change password for Okta privileged user accounts
+         href: change-okta-password-privileged-user-accounts.md 
+       - name: High number of Okta accounts with privileged role assigned
+         href: high-number-of-okta-accounts-with-privileged-role-assigned.md
+       - name: Highly privileged Okta API token
+         href: highly-privileged-okta-api-token.md
+       - name: Limit the number of Okta Super Admin accounts
+         href: limit-number-okta-super-admin-accounts.md
+       - name: Remove dormant Okta privileged accounts
+         href: remove-dormant-okta-privileged-accounts.md
      - name: Identity security initiative (Preview)
        href: identity-security-initiative.md
 - name: Reference
