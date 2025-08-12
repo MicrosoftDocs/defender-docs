@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 08/13/2025
 ---
 
 # Enabling deployment of Microsoft Defender for Endpoint to a custom location
@@ -49,6 +49,8 @@ Before deploying Defender for Endpoint to a custom location, be sure the followi
 - The target location must have adequate disk space (minimum 2 GB, more for high-performance workloads).
 
 - If SELinux is enabled, the `semanage` tool must be installed to set the correct file context for the custom location.
+
+- For reasons of security and reliability, it's highly recommended to install to a location on a persistent, permanently-mounted local filesystem. Avoid using removable media, network mounts, or filesystems that could be unmounted during system operation, as this can cause Microsoft Defender for Endpoint service failures and create security risks.
 
 ### Supported distributions and feature availability
 
