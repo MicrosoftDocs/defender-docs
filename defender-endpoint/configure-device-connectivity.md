@@ -211,4 +211,4 @@ To enable streamlined connectivity for US government environments:
 
 1. Ensure your tenant is enrolled in a supported government cloud.
 1. Validate that required endpoints listed in the [connectivity settings](gov.md#required-connectivity-settings) are accessible.
-1. Use the onboarding script with the `-UseStreamlinedConnectivity` flag.
+1. Use the [onboarding script](configure-endpoints-script.md) with the `-UseStreamlinedConnectivity` flag.
