@@ -1,7 +1,7 @@
 ---
 title:  'Security Assessment: Remove Discoverable Passwords in Active Directory Account Attributes (Preview)'
 description: Learn how to identify and address discoverable passwords in Active Directory account attributes to mitigate security risks and improve your organization's security posture.
-ms.date: 08/04/2025
+ms.date: 08/12/2025
 ms.topic: how-to
 ---
 
@@ -10,7 +10,7 @@ ms.topic: how-to
 
 ## Why do discoverable passwords in Active Directory account attributes pose a risk?
 
-Certain free-text attributes are often overlooked during hardening but are readable by any authenticated user in the domain. When credentials or clues are mistakenly stored in these attributes, attackers can abuse them to move laterally across the environment or escalate privileges—often without triggering traditional alerts.
+Certain free-text attributes are often overlooked during hardening but are readable by any authenticated user in the domain. When credentials or clues are mistakenly stored in these attributes, attackers can abuse them to move laterally across the environment or escalate privileges.
 
 Attackers seek low-friction paths to expand access. Exposed passwords in these attributes represent an easy win because:
 
