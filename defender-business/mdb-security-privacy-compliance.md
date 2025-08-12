@@ -2,9 +2,9 @@
 title: Security, privacy, and compliance
 description: "Learn about security, privacy, and compliance in Defender for Business."
 search.appverid: MET150
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

@@ -23,8 +23,29 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## August 2025
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
+
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
+
+Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
+
 
 ## July 2025
+
+**Expanded coverage in ITDR deployment health widget**
+
+The ITDR deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
+
+**Time limit added to Recommended test mode**
+
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already had Recommended test mode enabled, a 60-day expiration was automatically applied.
 
 ### Identity scoping is now available in Governance environments
 
@@ -34,17 +55,17 @@ For more information, see [Configure scoped access for Microsoft Defender for Id
 
 ### New security posture assessments for unmonitored identity servers
 
-Microsoft Defender for Identity now includes three security posture assessments that detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
+Microsoft Defender for Identity three new security posture assessments detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
 
 Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
 
-For more details, see:
+For more information, see:
 
 [Security Assessment: Unmonitored ADCS servers](unmonitored-active-directory-certificate-services-server.md)
 
 [Security Assessment: Unmonitored ADFS servers](unmonitored-active-directory-federation-services-servers.md)
 
-[Security Assessment: Unmonitored Entra Connect servers](unmonitored-entra-connect-servers.md)
+[Security Assessment: Unmonitored Microsoft Entra Connect servers](unmonitored-entra-connect-servers.md)
 
 
 
@@ -62,7 +83,7 @@ Scoping by Active Directory domains helps:
 
 - Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
 
-For more information see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+For more information, see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
 
 ### Okta integration is now available in Microsoft Defender for Identity
@@ -103,7 +124,7 @@ Defender for Identity now supports deploying its new sensor on Domain Controller
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
 
 
-### Local administrators collection (using SAM-R queries) feature will be disabled
+### Local administrators collection (using SAM-R queries) feature is disabled
 The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change occurs automatically by the specified date, and no administrative action is required.
 
 ### New Health Issue
@@ -149,7 +170,7 @@ For more information, see: [Investigate and protect Service Accounts | Microsoft
 
 ### Enhanced Identity Inventory
 
-The Identities page under *Assets* has been updated to provide better visibility and management of identities across your environment.  
+The Identities page under *Assets* was updated to provide better visibility and management of identities across your environment.  
 The updated Identities Inventory page now includes the following tabs:
 
 - Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 

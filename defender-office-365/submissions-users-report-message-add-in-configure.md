@@ -2,9 +2,9 @@
 title: Transition from Report Message or the Report Phishing add-ins
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
@@ -20,7 +20,7 @@ ms.collection:
 description: Learn how to transition from the Report Message or the Report Phishing add-ins for all version of Outlook to the build in Report button all versions of Outlook.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -176,7 +176,7 @@ We recommend that you try the built-in **Report** button. If you're still facing
 
 ### Q: I can't scope the built-in Report button, which prevents me from rolling it out. What can I do?
 
-A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leavs a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the the built-in **Report** button smoothly without scoping ability. Instead, they scoped third-party add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
+A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leavs a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the the built-in **Report** button smoothly without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
 
 If you're looking to scope the functionality for experimentation, we recommend using a test environment.
 
@@ -188,9 +188,9 @@ A: Raise a design change request (DCR) via Microsoft support.
 
 A: No. Unfortunately, due to the previously stated reasons, the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. You can remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described.
 
-### Q: What is the recommendation for moving from the add-ins to a third-party reporting add-in?
+### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 
-A: After you, remove the add-in from the integrated apps from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the third-party add-in as per their instructions.
+A: After you, remove the add-in from the integrated apps from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in as per their instructions.
 
 On the [User reported settings page](submissions-user-reported-messages-custom-mailbox.md) in the Defender portal, you need to do the following steps:
 
@@ -200,7 +200,7 @@ On the [User reported settings page](submissions-user-reported-messages-custom-m
    - **Send reported messages to**: Select one of the following values:
      - **My reporting mailbox only**
      - **Microsoft and My reporting mailbox**
-   - **Add an Exchange Online mailbox to send reported messages to**: Specify an existing internal reporting mailbox to hold user reported messages from third-party
+   - **Add an Exchange Online mailbox to send reported messages to**: Specify an existing internal reporting mailbox to hold user reported messages from the non-Microsoft service.
 
 ### Q: I still have questions that aren't answered here. What can I do?
 

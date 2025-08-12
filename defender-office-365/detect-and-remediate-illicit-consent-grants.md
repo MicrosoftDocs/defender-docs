@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.collection:
@@ -158,7 +158,7 @@ After you identified the application with illicit permissions, you have several 
 
 - You can disable sign-in for the affected account, which disables access to data in the account by the app. This action isn't ideal for user productivity, but it can be a short-term remediation to quickly limit the results of the attack.
 
-- You can turn off integrated applications in your organization. This action is drastic. Although it prevents users from accidentally granting access to a malicious app, it also prevents all users from granting consent to any applications. We don't recommend this action because it severely impairs user productivity with third-party applications. You can turn off integrated apps by following the steps in [Turning Integrated Apps on or off](/microsoft-365/admin/misc/user-consent).
+- You can turn off integrated applications in your organization. This action is drastic. Although it prevents users from accidentally granting access to a malicious app, it also prevents all users from granting consent to any applications. We don't recommend this action because it severely impairs user productivity with non-Microsoft applications. You can turn off integrated apps by following the steps in [Turning Integrated Apps on or off](/microsoft-365/admin/misc/user-consent).
 
 ## See also
 

@@ -2,9 +2,9 @@
 title: Defender for Office 365 Overview dashboard
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ ms.collection:
 description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
-ms.date: 07/16/2025
+ms.date: 08/01/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -33,7 +33,6 @@ The information on the **Overview** page is organized into the following areas:
 - [Defender for Office 365 summary](#defender-for-office-365-summary)
 - [Optimize section](#optimize-section)
 - [Risky allows section](#risky-allows-section)
-- [Compare solutions section](#compare-solutions-section)
 - [Insights section](#insights-section)
 
 For the permissions required to view the dashboard and reports, see [What permissions are needed to view these reports?](reports-email-security.md#what-permissions-are-needed-to-view-these-reports).
@@ -139,7 +138,7 @@ Hover over a category in the chart to see the number of **Impacted users** (the 
 
 **Notes**:
 
-- The [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
+- The [Built-in protection](preset-security-policies.md) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
 - Users get a higher level of Safe Links and Safe Attachments protection from either of the following settings:
   - [Turn on the Standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users), and make sure the users are included in **Defender for Office 365 protection**.
   - Create custom [Safe Links policies](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment policies](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) with the users as members.
@@ -186,42 +185,6 @@ The **Exchange transport rules** card shows the mail flow rules (also known as t
 Select **Review rules** to go to the **Rules** page in the Exchange admin center (EAC) at <https://admin.cloud.microsoft/exchange#/transportrules>.
 
 :::image type="content" source="media/email-collab-overview-risky-allows-etrs.png" alt-text="Screenshot of the Exchange transport rules card in the Risky allows section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-risky-allows-etrs.png":::
-
-## Compare solutions section
-
-The information in the **Compare solutions** section is described in the following subsections.
-
-### Email detections card
-
-<!--- https://go.microsoft.com/fwlink/?linkid=2323918--->
-
-The graph on the **Email detections** shows Microsoft and non-Microsoft detections as part of [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
-
-- **Defender mail flow detections**
-- **Defender post-delivery detections**
-- **Non-Microsoft post-delivery detections**
-- **Duplicate detections Duplicate post-delivery detections**
-
-Hover over a category in the chart to see the number of messages in each category for the review period selected.
-
-:::image type="content" source="media/email-collab-overview-compare-solutions-email-detections.png" alt-text="Screenshot of the Email detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-email-detections.png":::
-
-### Non-Microsoft detections card
-
-<!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
-
-The graphs on the **Non-Microsoft detections** show the following information for non-Microsoft detections as part of  [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
-
-- **Post delivery detections** graph:
-  - **Malware**
-  - **Phish**
-  - **Spam**
-
-  Hover over a category in the chart to see the number of messages in each category for the review selected.
-
-- **Efficacy** graph: Shows the unique detections by the non-Microsoft service as a percentage of the total detections by Defender for Office 365.
-
-:::image type="content" source="media/email-collab-overview-compare-solutions-non-microsoft.png" alt-text="Screenshot of the Non-Microsoft detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-non-microsoft.png":::
 
 ## Insights section
 
