@@ -1,7 +1,7 @@
 ---
 title: Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 description: Learn how to enable and manage real-time runtime protection for Microsoft Copilot Studio AI agents using Microsoft Defender.
-ms.date: 07/27/2025
+ms.date: 08/12/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 #customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions during runtime so that I can reduce security risks to my organization.
@@ -16,16 +16,16 @@ As AI agents become increasingly accessible through low-code/no‑code (LCNC) pl
 
 ## Capabilities
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent acts. 
+Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting user messages before the agent runs any actions. 
 
-If Microsoft Defender determines that a request is suspicious:
+If Microsoft Defender determines that a prompt is suspicious:
 
 - The tool invocation is blocked before it runs.
-- The user is notified that their message was blocked.
-- An alert is generated and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
+- The user gets notified that their message was blocked.
+- An informative alert is created and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
 
 
-This capability adds an additional security layer on top of Microsoft Copilot Studio, helping ensure AI agents operate within organizational policies and remain resilient against evolving threats.
+This capability adds another security layer on top of Microsoft Copilot Studio, helping ensure AI agents remain resilient against evolving threats.
 
 > [!NOTE]
 > Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom engine.
@@ -43,9 +43,9 @@ Before enabling real-time agent protection during runtime, make sure:
 > - A Power Platform Administrator is required to complete the integration on the Power Platform side after initial configuration in Microsoft Defender.
 > - [A Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) must be registered for authentication.
 
-## Turn on real-time agent protection during runtime
+## Turn on real-time protection during agent runtime
 
-Follow these steps to enable real-time agent protection during runtime in the Microsoft Defender portal:
+Follow these steps to enable real-time protection during agent runtime in the Microsoft Defender portal:
 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
@@ -68,7 +68,7 @@ Follow these steps to enable real-time agent protection during runtime in the Mi
 
 ## Finalize configuration in Power Platform
 
-The Power Platform administrator must use the provided URL to activate the integration with Microsoft Defender. Once the integration is complete you'll see a **Connected** status in the Microsoft Defender portal.
+The Power Platform administrator must use the provided URL to activate the integration with Microsoft Defender. Once the integration is complete, you see a **Connected** status in the Microsoft Defender portal.
 For more information, see:
 
 
