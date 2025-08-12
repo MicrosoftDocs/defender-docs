@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 08/12/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -82,8 +82,8 @@ This article describes how admins can manage entries for email senders in the Mi
 
 ## Domains and email addresses in the Tenant Allow/Block List
 
- > [!IMPORTANT]
-    > <sup>\*</sup> Both Allow and Block email address entries must use UTF-8 encoding. If an email address contains special characters and is not UTF-8 encoded, you may encounter an invalid error message.
+> [!NOTE]
+> Allow entries and block entries for email addresses must use UTF-8 encoding. If an email address contains special characters and isn't UTF-8 encoded, you might encounter an error.
 
 ### Create allow entries for domains and email addresses
 
