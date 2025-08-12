@@ -2,9 +2,9 @@
 title: Configure and review priority account protection in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 07/07/2025
 audience: ITPro
 ms.topic: how-to
@@ -77,7 +77,7 @@ To turn on priority account protection, run the following command:
 Set-EmailTenantSettings -EnablePriorityAccountProtection $true
 ```
 
-For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchange/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchange/set-emailtenantsettings).
+For detailed syntax and parameter information, see [Get-EmailTenantSettings](/powershell/module/exchangepowershell/get-emailtenantsettings) and [Set-EmailTenantSettings](/powershell/module/exchangepowershell/set-emailtenantsettings).
 
 ## Review differentiated protection from priority account protection
 

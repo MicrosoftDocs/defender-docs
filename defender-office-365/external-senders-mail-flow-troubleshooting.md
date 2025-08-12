@@ -2,9 +2,9 @@
 title: Troubleshooting mail sent to Microsoft 365
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: troubleshooting
 ms.localizationpriority: medium

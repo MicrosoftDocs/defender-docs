@@ -2,9 +2,9 @@
 title: Security Operations Guide for Teams protection
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Teams protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/22/2025
+ms.date: 07/28/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -59,7 +59,7 @@ SecOps team members can also use block entries in the Tenant Allow/Block List to
 SecOps team members can use threat hunting or information from external threat intelligence feeds to proactively respond to false negative Teams messages (bad messages allowed). They can use the information to proactively block threats. For example:
 
 - [Create URL block entries](tenant-allow-block-list-urls-configure.md#create-block-entries-for-urls) in the Tenant Allow/Block List in Defender for Office 365. Block entries apply at time of click for URLs in Teams.  
-- [Block domains in Teams using the Teams admin center](/microsoftteams/trusted-organizations-external-meetings-chat#specify-trusted-microsoft-365-organizations).
+- [Block domains in Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 - Submit undetected URLs to Microsoft using [admin submission](submissions-admin.md#report-questionable-urls-to-microsoft).
 
 > [!TIP]
