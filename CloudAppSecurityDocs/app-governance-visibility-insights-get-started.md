@@ -1,7 +1,8 @@
 ---
 title: Get started with app governance visibility and insights | Microsoft Defender for Cloud Apps
-ms.date: 05/28/2023
+ms.date: 08/12/2025
 ms.topic: how-to
+ms.reviewr: Shruti Agarwal
 description: Get started with app governance visibility and insights in Microsoft Defender XDR for Microsoft Defender for Cloud Apps.
 ---
 
@@ -13,7 +14,7 @@ Your sign-in account must have one of the [required app governance administrator
 
 For example:
 
-:::image type="content" source="media/app-governance-visibility-insights-get-started/overview.png" alt-text="Screenshot of the App governance overview page in Microsoft Defender XDR.":::
+:::image type="content" source="media/app-governance-visibility-insights-get-started/overview.png" alt-text="Screenshot of the App governance overview page in Microsoft Defender XDR." lightbox="media/app-governance-visibility-insights-get-started/overview.png":::
 
 ## What’s available on the Overview tab
 
@@ -57,29 +58,27 @@ One of the primary value points for app governance is the ability to quickly vie
       
     Use one of the following nondefault filters to further customize the apps listed:
 
-- **Last modified**
+    - **Last modified**
       
-   - **Added on**
+       - **Added on**
       
-   - **Certification**
+       - **Certification**
       
-   - **Users**
+       - **Users**
       
-   - **Services accessed**
+       - **Services accessed**
       
-   - **Data usage**
+       - **Data usage**
       
-   - **Sensitivity labels accessed**
+       - **Sensitivity labels accessed**
    
      > [!TIP]
      > Save the query to save the currently selected filters for use again in the future.
      
 1. Select the name of an app to view more details. For example:
 
-   ![Screenshot of an app details pane showing an app summary.](media/app-governance-visibility-insights-get-started/app-governance-app-list-view.png)
-   
-   
-   
+    :::image type="content" source="media/app-governance-visibility-insights-get-started/app-governance-app-list-view.png" alt-text="Screenshot of the app details pan showing an app summary." lightbox="media/app-governance-visibility-insights-get-started/app-governance-app-list-view.png":::
+
 The details pane lists the app usage over the past 30 days, the users who have consented to the app, and the permissions assigned to the app. 
 
 For example, an administrator might review the activity and permissions of an app that is generating alerts and make a decision to disable the app using the **Disable App** button towards the bottom of the app details pane.

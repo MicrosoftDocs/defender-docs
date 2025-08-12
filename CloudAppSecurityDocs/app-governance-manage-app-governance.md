@@ -1,6 +1,7 @@
 ---
 title: App governance in Microsoft Defender for Cloud Apps and Microsoft Defender XDR
-ms.date: 05/23/2025
+ms.date: 08/12/2025
+ms.reviewer: anandd512
 ms.topic: concept-article
 description: Implement Microsoft app governance capabilities over Microsoft Defender for Cloud Apps and Microsoft Defender XDR to govern your apps.
 ---

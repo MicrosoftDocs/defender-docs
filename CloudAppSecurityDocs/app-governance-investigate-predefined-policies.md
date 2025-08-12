@@ -1,7 +1,8 @@
 ---
 title: Investigate predefined app governance policy alerts | Microsoft Defender for Cloud Apps 
-ms.date: 05/28/2023
+ms.date: 08/12/2025
 ms.topic: how-to
+ms.reviewer: Shruti Agarwal
 description: Learn how to investigate predefined app policy alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ---
 
@@ -43,7 +44,7 @@ This section provides information on each predefined policy alert, along with st
 ### Increase in data usage by an overprivileged or highly privileged app
 
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -64,7 +65,7 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
 ### Unusual activity from an app with priority account consent
 
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -182,7 +183,7 @@ An app made a large number of Graph API calls to create Exchange inbox rules. Th
 
 Review all activities performed by the app, scopes granted to the app and user activity associated with the app.
 
-- **TP**: Apply this recommended action if you have confirmed that the creation of inbox rules and other activities are highly irregular or potentially malicious.
+- **TP**: Apply this recommended action if you have confirmed that the creation of inbox rules and other activities is highly irregular or potentially malicious.
 
   **Recommended action**: Temporarily disable the app, reset the password, and then re-enable the app.
 
@@ -229,7 +230,7 @@ Review all activities performed by the app, scopes granted to the app and user a
 ### Access to sensitive data
 
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy we have disabled this policy. This policy will remain visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
