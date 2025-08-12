@@ -50,7 +50,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 **Microsoft Defender for Endpoint on macOS**
 
-- (Preview) **Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS** : This feature enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server instead of directly from the Microsoft cloud. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+- (Preview) **Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS**: This feature enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server instead of directly from the Microsoft cloud. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
 
 - ## July 2025
 
