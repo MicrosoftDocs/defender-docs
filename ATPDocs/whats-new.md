@@ -25,15 +25,20 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
+
 ## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
 
 For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
 
-### Sensor version 2.246
 
-This version includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
 
 ### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
