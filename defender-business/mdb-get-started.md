@@ -4,9 +4,9 @@ description: Your security center in Defender for Business is the Microsoft Defe
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: Admin
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 07/03/2024

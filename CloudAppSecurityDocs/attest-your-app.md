@@ -1,11 +1,10 @@
 ---
 title: Attest your apps 
 description: This article provides instructions for attesting your apps in Defender for Cloud Apps.
-ms.date: 01/29/2023
-ms.topic: conceptual
+ms.date: 06/30/2025
+ms.topic: article
 ---
 # Attest your apps
-
 
 
 Microsoft Defender for Cloud Apps enables you to attest your app, so that you make sure that the compliance and security details we use to rate your app in our cloud app catalog are up to date.
@@ -107,4 +106,3 @@ Follow the service attributes described below to successfully complete the submi
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]

@@ -7,13 +7,13 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/17/2025
+ms.date: 05/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's new in Microsoft Defender for Endpoint
@@ -45,6 +45,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+
+## July 2025
+
+- (GA) [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available on Windows Server 2019 or later.  Helps with the stability and performance of Microsoft Defender Antivirus.
 
 ## April 2025
 

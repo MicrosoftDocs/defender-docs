@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: 
 - MET150
@@ -349,7 +349,7 @@ On the investigation details page, the **Entities** tab shows details about the 
 
 The **Entities** tab is organized by a view selection pane (a summary view and a view for each entity type) and a corresponding details table for that view:
 
-- **Evidence summary** view: This is the default view.
+- **Evidence summary** view: This view is the default.
 
   You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
@@ -643,7 +643,7 @@ Clicking anywhere in a row other than the check box next to the first column or 
 
 ## View details about an alert related to an investigation
 
-Certain kinds of alerts trigger automated investigation in Microsoft 365. To learn more, see [Threat management alert policies](/purview/alert-policies#threat-management-alert-policies).
+Certain kinds of alerts trigger automated investigation in Microsoft 365. To learn more, see [Threat management alert policies](/defender-xdr/alert-policies#threat-management-alert-policies).
 
 1. In the Microsoft 365 Defender portal a <https://security.microsoft.com>, go to **Actions & submissions** \> **Action center**. Or, to go directly to the **Action center** page, use <https://security.microsoft.com/action-center/>.
 1. On the **Action center** page, use the **Pending** or **History** tabs to find the action.

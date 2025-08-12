@@ -4,10 +4,10 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 9/7/2023
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
   - tier2
   - m365-security
@@ -18,7 +18,7 @@ description: Learn how to recognize and remediate the Outlook rules and custom f
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -194,7 +194,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name" | Format-List
     ```
 
-  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchange/get-inboxrule).
+  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule).
 
 - **Remove Inbox rules from a mailbox**:
 
@@ -210,7 +210,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com | Remove-InboxRule
     ```
 
-  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchange/remove-inboxrule).
+  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchangepowershell/remove-inboxrule).
 
 - **Turn off an Inbox rule for further investigation**:
 
@@ -218,7 +218,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
   Disable-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name"
   ```
 
-  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchange/disable-inboxrule).
+  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchangepowershell/disable-inboxrule).
 
 ## How to minimize future attacks
 

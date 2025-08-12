@@ -16,6 +16,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "ATPDocs/deploy/quick-installation-guide.md",
+      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/deploy/prerequisites.md",
+      "redirect_url": "deploy/prerequisites-sensor-version-2",
+      "redirect_document_id": false
+    },
+        {
+      "source_path": "ATPDocs/deploy/activate-capabilities.md",
+      "redirect_url": "deploy/activate-sensor",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/configure-event-collection.md",
       "redirect_url": "deploy/configure-event-collection",
       "redirect_document_id": false
@@ -123,6 +138,31 @@
     {
       "source_path": "ATPDocs/playbook-domain-dominance.md",
       "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/credential-access-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/persistence-privilege-escalation-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/reconnaissance-discovery-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/lateral-movement-alerts.md",
+      "redirect_url": "alerts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/other-alerts.md",
+      "redirect_url": "alerts-overview",
       "redirect_document_id": false
     },
     {
@@ -1039,6 +1079,11 @@
       "source_path": "ATPDocs/security-assessment-legacy-protocols.md",
       "redirect_url": "/defender-for-identity/security-assessment",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "ATPDocs/manage-security-alerts.md",
+      "redirect_url": "/defender-for-identity/understanding-security-alerts",
+      "redirect_document_id": false
+    },  
   ]
 }

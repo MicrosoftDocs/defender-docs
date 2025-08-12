@@ -4,10 +4,10 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 2/20/2024
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: high
 search.appverid:
   - MET150

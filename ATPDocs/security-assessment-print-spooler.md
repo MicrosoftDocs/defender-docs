@@ -3,6 +3,7 @@ title: Print spooler assessment
 description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
 ms.date: 12/20/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Domain controllers with the print spooler service available

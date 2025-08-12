@@ -2,8 +2,8 @@
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: ewalsh
+author: emmwalshh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - highpri
 - tier1
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.custom: migrationguides
 ms.date: 02/12/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
