@@ -3,12 +3,12 @@ title: What's new in Microsoft Defender for Endpoint
 description: See what features are generally available (GA) in the latest release of Microsoft Defender for Endpoint, and security features in Windows 10 and Windows Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/19/2025
-manager: deniseb
+ms.date: 08/13/2025
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -46,7 +46,13 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
 
-## July 2025
+## August 2025
+
+**Microsoft Defender for Endpoint on macOS**
+
+- (Preview) **Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS** : This feature enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server instead of directly from the Microsoft cloud. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+
+- ## July 2025
 
 - (GA) [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available on Windows Server 2019 or later.  Helps with the stability and performance of Microsoft Defender Antivirus.
 
