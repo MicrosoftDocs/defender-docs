@@ -9,7 +9,7 @@ ms.date: 08/12/2025
 
 # File integrity monitoring
 
-The file integrity monitoring feature in Microsoft Defender for Cloud's [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md), scans and analyzes operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack. 
+The file integrity monitoring feature in Microsoft Defender for Cloud's [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md), scans operating system files, Windows registries, application software, and Linux system files. It analyzes these files for changes that might indicate an attack.
 
 File integrity monitoring helps you to:
 
@@ -51,7 +51,7 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning.
-- Choose files that are frequently changed by applications or operating system (such as log files and text files) creates noise, making it difficult to identify an attack.
+- Select files that applications or the operating system frequently change (such as log files and text files) creates noise and makes it hard to identify an attack.
 - Monitor any file located in a folder `/folder/path/*`.
 
 > [!NOTE]
@@ -85,23 +85,23 @@ When using file integrity monitoring with the Defender for Endpoint agent, we re
 
 You can create custom rules to monitor specific files or folders as long as they meet the following validation criteria:
 
-- A maximum of three asterisks `*` are allowed in the path.
+- A maximum of three asterisks `*` are allowed in the path (maximum depth).
 
 - Paths with three asterisks must not end with `/` or `\`.
 
 - Windows registry paths must start with `HKLM\` and follow standard registry naming rules.
 
-- Windows file paths must be valid and cannot include `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, or `|`.
+- Windows file paths must be valid and can't include `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, or `|`.
 
-- Linux file paths must be absolute (start with `/`) and cannot include `< > : | "`.
+- Linux file paths must be absolute (start with `/`) and can't include `< > : | "`.
 
-- Windows paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `*`, `?`, `:`, and must not contain `/`.
+- Windows paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `*`, `?`, `:`, and must not contain `/`.
 
-- Linux paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `/`, `*`, or `:`.
+- Linux paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `/`, `*`, or `:`.
 
-- Registry paths may only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `:`, and must not contain `*`.
+- Registry paths can only contain: `letters`, `numbers`, `spaces`, `_`, `.`, `\`, `:`, and must not contain `*`.
 
-- All paths must meet the system’s maximum path length and depth rules.
+- All paths must meet the system’s maximum path length (260 characters) and maximum depth (three asterisks) rules.
 
 ### Rule definition validations
 
@@ -116,7 +116,7 @@ You can create custom rules to monitor specific files or folders as long as they
     - Maximum length is 260 characters.
     - Allowed characters: `letters`, `digits`, and `? ! ) ( . ,`.
 
-- At least one change type (from CMDR) must be selected.
+- At least one change type (from change management and documentation rRequest (CMDR)) must be selected.
 
 - Between 1 and 500 custom rules are supported per subscription.
 
