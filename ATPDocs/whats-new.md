@@ -25,6 +25,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
+
+## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+
+The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
+
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
+
+
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
@@ -41,11 +49,11 @@ Improved detection logic to include scenarios where accounts were locked during 
 
 **Expanded coverage in ITDR deployment health widget**
 
-The ITDR deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
+The Identity Threat Detection and Response (ITDR) deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Microsoft Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
 
 **Time limit added to Recommended test mode**
 
-Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already had Recommended test mode enabled, a 60-day expiration was automatically applied.
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already have Recommended test mode enabled, a 60-day expiration is automatically applied.
 
 ### Identity scoping is now available in Governance environments
 
@@ -173,7 +181,7 @@ For more information, see: [Investigate and protect Service Accounts | Microsoft
 The Identities page under *Assets* was updated to provide better visibility and management of identities across your environment.  
 The updated Identities Inventory page now includes the following tabs:
 
-- Identities: A consolidated view of identities across Active Directory, Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
+- Identities: A consolidated view of identities across Active Directory, Microsoft Entra ID. This Identities tab highlights key details, including identity types, and user's information. 
 
 - Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps). 
 
@@ -270,7 +278,7 @@ These new identity recommendations, as part of Microsoft Secure Score, are new s
 
 - [Unsafe permissions on the DnsAdmins group](/defender-for-identity/unsafe-permissions-dns-admins-group)
 
-- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated”](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
+- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and can't be delegated"](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
 
 - [Change password of krbtgt account](/defender-for-identity/change-password-krbtgt-account)
 
@@ -287,18 +295,18 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 **New Microsoft Entra Connect Identity posture recommendations:**
 
 * **Rotate password for Microsoft Entra Connect connector account**
-   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, click [here](rotate-password-microsoft-entra-connect.md).
+   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment, we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, select [Rotate password for Microsoft Entra Connect connector account](rotate-password-microsoft-entra-connect.md).
 * **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
-   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, click [here](remove-replication-permissions-microsoft-entra-connect.md)
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](remove-replication-permissions-microsoft-entra-connect.md)
 * **Change password for Microsoft Entra seamless SSO account configuration**
-   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](change-password-microsoft-entra-seamless-single-sign-on.md).    
 
 **New Microsoft Entra Connect detections:**
 
 * **Suspicious Interactive Logon to the Microsoft Entra Connect Server**
-   * Direct logins to Microsoft Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Microsoft Entra Connect servers, helping you identify and respond to these potential threats faster. It's specifically applicable when the Microsoft Entra Connect server is a standalone server and not operating as a Domain Controller.
+   * Direct logins to Microsoft Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Microsoft Entra Connect servers, helping you identify and respond to these potential threats faster. It's applicable when the Microsoft Entra Connect server is a standalone server and not operating as a Domain Controller.
 * **User Password Reset by Microsoft Entra Connect Account**
-   *  The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert is triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
+   *  The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and detects any usage of those permissions that were identified as malicious and non-legitimate. This alert is triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
 *  **Suspicious writeback by Microsoft Entra Connect on a sensitive user**
    * While Microsoft Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
 
@@ -337,7 +345,7 @@ Six New detections are new in public preview:
 * **Suspicious SPN was added to a user**
     * A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization
 * **Suspicious creation of ESXi group**
-    * A suspicious VMWare ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
+    * A suspicious VMware ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
 * **Suspicious ADFS authentication**
     * A domain-joined account signed in using Active Directory Federation Services (ADFS) from a suspicious IP address. An attacker might have stolen a user's credentials and is using it to move laterally in the organization.
 
@@ -373,13 +381,13 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
 
-To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
+To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we added a new activity within Advanced Hunting that monitors Kerberos AS authentication.
 
 With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
 
 Access Defender XDR portal -> Hunting -> Advanced Hunting.
 
-Now, you can copy our recommended query as provided below, and click on “Create detection rule”. Be aware that our provided query also tracks failed logon attempts, which may generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
+Now, you can copy our recommended query as provided below, and select on “Create detection rule”. Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
 
 ```
@@ -435,7 +443,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### New security posture assessment for insecure AD CS IIS endpoint configuration
 
-Defender for Identity has added the new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation in Microsoft Secure Score.
+Defender for Identity added the new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation in Microsoft Secure Score.
 
 Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv). Insecure configurations of the CES or Certsrv IIS endpoints might create vulnerabilities to relay attacks (ESC8).
 
@@ -459,7 +467,7 @@ The Defender for Identity **Advanced Settings** page is now renamed to **Adjust 
 
 Changes include:
 
-- We've removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
+- We removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
@@ -471,14 +479,14 @@ The following table lists the mapping between the previous **Sensitivity level**
 |**Medium**      |  **Medium**       |
 |**High**      |  **Low**       |
 
-If you had specific values defined on the **Advanced Settings** page, we've transferred them to the new **Adjust alert thresholds** page as follows:
+If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
 
 |Advanced settings page configuration  |New Adjust alert thresholds page configuration  |
 |---------|---------|
 |**Remove learning period** toggled on     |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings remain the same.       |
 |**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.   |
 
-Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
+Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period already completed.
 
 For more information, see [Adjust alert thresholds](advanced-settings.md).
 
@@ -683,12 +691,12 @@ Defender for Identity now provides the following enhancements for the learning p
 
    To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
-If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+If you previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
 
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert under the **Remove learning period** options as configurable for sensitivity settings. This alert was removed from the list and is replaced by the *Security principal reconnaissance (LDAP)* alert. This user interface bug was fixed in November 2023.
+> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert under the **Remove learning period** options as configurable for sensitivity settings. This alert was removed from the list and replaced with the *Security principal reconnaissance (LDAP)* alert. This user interface bug was fixed in November 2023.
 >
 
 ### Defender for Identity release 2.215
@@ -760,7 +768,6 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 - [What is Microsoft Defender for Identity?](what-is.md)
 - [Frequently asked questions](technical-faq.yml)
-
 - [Defender for Identity prerequisites](prerequisites.md)
 - [Defender for Identity capacity planning](capacity-planning.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
