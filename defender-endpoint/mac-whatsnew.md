@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: orspodek
 ms.localizationpriority: medium
-ms.date: 06/27/2025
+ms.date: 08/13/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -65,6 +65,10 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 - Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
 
 ## Releases for Defender for Endpoint on macOS
+
+### Offline update of security intelligence on macOS endpoints is now in public preview
+
+This feature enables organizations to configure offline update of security intelligence (antivirus definitions/signatures) on macOS endpoints using a local mirror server instead of getting updates directly from the Microsoft cloud. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
 
 ### Behavior Monitoring for macOS is now generally available
 
