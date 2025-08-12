@@ -131,7 +131,8 @@ The following downloadable spreadsheet lists the services and their associated U
 
 | Spreadsheet of domains list  | Description  |
 |---------|---------|
-| Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
+| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD | *.endpoint.security.microsoft.com |
+| Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
