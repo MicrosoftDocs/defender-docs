@@ -1,8 +1,8 @@
 ---
 title: Quarantine policies
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
@@ -177,7 +177,7 @@ For custom permissions, use the previous table to get the binary value that corr
 > [!TIP]
 > Use the equivalent **decimal** value for _EndUserQuarantinePermissionsValue_. Don't use the raw binary value.
 
-For detailed syntax and parameter information, see [New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
+For detailed syntax and parameter information, see [New-QuarantinePolicy](/powershell/module/exchangepowershell/new-quarantinepolicy).
 
 ## Step 2: Assign a quarantine policy to supported features
 
@@ -268,7 +268,7 @@ This example creates a new spam filter policy named Research Department with the
 New-HostedContentFilterPolicy -Name "Research Department" -SpamAction Quarantine -SpamQuarantineTag AdminOnlyAccessPolicy -HighConfidenceSpamAction Quarantine -HighConfidenceSpamQuarantineTag AdminOnlyAccessPolicy -PhishSpamAction Quarantine -PhishQuarantineTag AdminOnlyAccessPolicy -BulkSpamAction Quarantine -BulkQuarantineTag AdminOnlyAccessPolicy
 ```
 
-For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy).
 
 This example modifies the existing spam filter policy named Human Resources. The action for the spam quarantine verdict is set to Quarantine, and the custom quarantine policy named ContosoNoAccess is assigned.
 
@@ -276,7 +276,7 @@ This example modifies the existing spam filter policy named Human Resources. The
 Set-HostedContentFilterPolicy -Identity "Human Resources" -SpamAction Quarantine -SpamQuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy).
 
 ### Anti-phishing policies
 
@@ -341,7 +341,7 @@ This example creates a new anti-phish policy named Research Department with the 
 New-AntiPhishPolicy -Name "Research Department" -AuthenticationFailAction Quarantine -SpoofQuarantineTag NoAccess -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -MailboxIntelligenceQuarantineTag NoAccess -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
 ```
 
-For detailed syntax and parameter information, see [New-AntiPhishPolicy](/powershell/module/exchange/new-antiphishpolicy).
+For detailed syntax and parameter information, see [New-AntiPhishPolicy](/powershell/module/exchangepowershell/new-antiphishpolicy).
 
 This example modifies the existing anti-phish policy named Human Resources. The action for messages detected by user impersonation and domain impersonation is set to Quarantine, and the custom quarantine policy named ContosoNoAccess is assigned.
 
@@ -349,7 +349,7 @@ This example modifies the existing anti-phish policy named Human Resources. The 
 Set-AntiPhishPolicy -Identity "Human Resources" -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag ContosoNoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powershell/module/exchange/set-antiphishpolicy).
+For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powershell/module/exchangepowershell/set-antiphishpolicy).
 
 ### Anti-malware policies
 
@@ -395,7 +395,7 @@ This example creates a malware filter policy named Research Department that uses
 New-MalwareFilterPolicy -Name "Research Department" -QuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
+For detailed syntax and parameter information, see [New-MalwareFilterPolicy](/powershell/module/exchangepowershell/new-malwarefilterpolicy).
 
 This example modifies the existing malware filter policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions to the quarantined messages.
 
@@ -403,7 +403,7 @@ This example modifies the existing malware filter policy named Human Resources t
 Set-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
+For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/powershell/module/exchangepowershell/set-malwarefilterpolicy).
 
 ### Safe Attachments policies in Defender for Office 365
 
@@ -449,7 +449,7 @@ This example creates a safe attachment policy named Research Department that blo
 New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block -QuarantineTag NoAccess
 ```
 
-For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy).
+For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchangepowershell/new-safeattachmentpolicy).
 
 This example modifies the existing safe attachment policy named Human Resources to use the custom quarantine policy named ContosoNoAccess that assigns **No access** permissions.
 
@@ -457,7 +457,7 @@ This example modifies the existing safe attachment policy named Human Resources 
 Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag ContosoNoAccess
 ```
 
-For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safeattachmentpolicy).
+For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchangepowershell/set-safeattachmentpolicy).
 
 ## Configure global quarantine notification settings in the Microsoft Defender portal
 
@@ -557,7 +557,7 @@ This example configures the following settings:
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('Default','Spanish') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','Para obtener más información, comuníquese con la mesa de ayuda.') -ESNCustomSubject ('You have quarantined messages','Tienes mensajes en cuarentena') -MultiLanguageSenderName ('Contoso administrator','Administradora de contoso') -EndUserSpamNotificationCustomFromAddress michelle@contoso.onmicrosoft.com
 ```
 
-For detailed syntax and parameter information, see [Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
+For detailed syntax and parameter information, see [Set-QuarantinePolicy](/powershell/module/exchangepowershell/set-quarantinepolicy).
 
 ## View quarantine policies in the Microsoft Defender portal
 
@@ -591,7 +591,7 @@ If you'd rather use PowerShell to view quarantine policies, do any of the follow
   Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
   ```
 
-For detailed syntax and parameter information, see [Get-QuarantinePolicy](/powershell/module/exchange/get-quarantinepolicy).
+For detailed syntax and parameter information, see [Get-QuarantinePolicy](/powershell/module/exchangepowershell/get-quarantinepolicy).
 
 ## Modify quarantine policies in the Microsoft Defender portal
 
@@ -616,7 +616,7 @@ Set-QuarantinePolicy -Identity "<QuarantinePolicyName>" [Settings]
 
 The available settings are the same as described for creating quarantine policies earlier in this article.
 
-For detailed syntax and parameter information, see [Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
+For detailed syntax and parameter information, see [Set-QuarantinePolicy](/powershell/module/exchangepowershell/set-quarantinepolicy).
 
 ## Remove quarantine policies in the Microsoft Defender portal
 
@@ -647,7 +647,7 @@ If you'd rather use PowerShell to remove a custom quarantine policy, replace \<Q
 Remove-QuarantinePolicy -Identity "<QuarantinePolicyName>"
 ```
 
-For detailed syntax and parameter information, see [Remove-QuarantinePolicy](/powershell/module/exchange/remove-quarantinepolicy).
+For detailed syntax and parameter information, see [Remove-QuarantinePolicy](/powershell/module/exchangepowershell/remove-quarantinepolicy).
 
 ## System alerts for quarantine release requests
 
