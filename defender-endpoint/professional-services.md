@@ -22,7 +22,7 @@ ms.date: 08/12/2025
 
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
-- Microsoft Defender for Vulnerability Management
+- Microsoft Defender Vulnerability Management
 - Microsoft Defender for Office 365
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
