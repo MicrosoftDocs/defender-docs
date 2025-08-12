@@ -121,6 +121,9 @@ The following OS versions are supported when using [Microsoft Defender for serve
 
 ## Required connectivity settings
 
+> [!NOTE]
+> You can use the streamlined connectivity feature to onboard new devices to Defender for Endpoint, using a reduced URL set or static IP ranges.
+
 If a proxy or firewall is blocking all traffic by default and allowing only specific domains through, add the domains listed in the downloadable sheet to the allowed domains list.
 
 The following downloadable spreadsheet lists the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
