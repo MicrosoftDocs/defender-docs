@@ -100,6 +100,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
 | **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |
+| **[IdentityEvents](advanced-hunting-identityevents-table.md)** (Preview) | Information about identity events obtained from other cloud identity service providers |
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)** | Queries for Active Directory objects, such as users, groups, devices, and domains |
