@@ -171,9 +171,11 @@ No, installation location changes require a fresh install.
 
 ### 2. Verify the symlink to the custom location
 
-Run: `ls -ltr /opt/microsoft/mdatp`
+Run: `ls -ltr /opt/microsoft/mdatp`. The output should show `/opt/microsoft/mdatp` as a symlink to your custom location. For example:
 
-Output should show `/opt/microsoft/mdatp` as a symlink to your custom location: `lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp`
+```
+lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp
+```
 
 ## Related content
 
