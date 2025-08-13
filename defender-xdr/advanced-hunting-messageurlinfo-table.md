@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 08/11/2025
+ms.date: 08/13/2025
 ---
 
 # MessageUrlInfo
