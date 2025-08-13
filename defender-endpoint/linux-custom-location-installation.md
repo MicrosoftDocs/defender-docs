@@ -137,12 +137,11 @@ No, installation location changes require a fresh install.
 
 - **Check running processes:**
 
-   Run: `ps aux | grep wdavdaemon`
-    
+   Run: `ps aux | grep wdavdaemon`. The output should contain wdavdaemon process paths for microsoft_mdatp. For example:
+
    ```
    root 747798 0.3 1.5 1037180 154336 ? Ssl 12:26 0:21 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon
    root      747844  0.0  0.8 945692 79676 ?        Sl   12:26   0:04 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon edr 16 15 --log_level info
-   root      747932  0.0  0.2 255028 21472 ?        Sl   12:26   0:01 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/telemetryd_v2 24 /var/log/microsoft/mdatp
    ```
 
 - **Check service status:**
@@ -159,7 +158,7 @@ No, installation location changes require a fresh install.
                    ‣ 747798 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon
     ```
 
-- **Check custom installation path in `mde_path.json`:**
+- **Check the custom installation path in the *mde_path.json* file:**
 
    - Primary: `/etc/opt/microsoft/mdatp/mde_path.json`
       - Example: `{"path": "/var/tmp/TestInstall/microsoft_mdatp"}`
