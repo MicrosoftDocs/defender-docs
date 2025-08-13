@@ -37,10 +37,37 @@ In the support table, **NA** indicates that the feature isn't available.
 | **DEFENDER Cloud Security Posture Management (CSPM) FEATURES** | | | |
 | [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
-| [AI security posture management](ai-security-posture.md) | GA | NA | NA |
+| [AI security posture management](ai-security-posture.md) | GA | GA | NA |
 | [Active user](active-user.md) | Public preview | NA | NA |
+| Security recommendations |GA|GA|NA|
+| Asset inventory |GA|GA|NA|
+| Secure score |GA|GA|NA|
+| Workbooks |GA|GA|NA|
+| Continues Export |GA|GA|NA|
+| Workflow automation |GA|GA|NA|
+| Quick Fix |GA|GA|NA|
+| Agentless VM vulnerability scanning |GA|GA|NA|
+| Agentless VM secrets scanning |GA|GA|NA|
+| Attack path analysis |GA|GA|NA|
+| Risk prioritization |GA|GA|NA|
+| Security Explorer |GA|GA|NA|
+| Code-to-cloud mapping for containers |GA|NA|NA|
+| Code-to-cloud mapping for IaC |GA|NA|NA|
+| PR annotations |GA|NA|NA|
+| Internet exposure analysis |GA|GA|NA|
+| External attack surface management |GA|NA|NA|
+| CIEM |GA|NA|NA|
+| Regulatory compliance |GA|GA|NA|
+| ServiceNow Integration |GA|NA|NA|
+| Critical assets protection |GA|GA|NA|
+| Governance |GA|GA|NA|
+| Sensitive data scanning (DSPM) |GA|GA|NA|
+| Agentless scanning for Kubernetes |GA|GA|NA|
+| Custom Recommendations (Preview) |Public Preview|NA|NA|
+| Agentless containers vulnerability assessment |GA|GA|NA|
+| API security posture management (Preview) |Public Preview|NA|NA|
 |**DEFENDER FOR CLOUD PLANS** | | ||
-|[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | NA | NA|
+|[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA|
 |[Defender for AI Services](ai-threat-protection.md) | GA | NA | NA |
 |[Defender for APIs](defender-for-apis-introduction.md) | GA | NA | NA|
 |[Defender for App Service](defender-for-app-service-introduction.md) | GA | NA | GA |
