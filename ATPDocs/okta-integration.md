@@ -163,7 +163,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
     :::image type="content" source="media/okta-integration/review-okta-details.png" alt-text="Screenshot that shows the Okta connector details." lightbox="media/okta-integration/review-okta-details.png":::
 1. Verify that your Okta environment appears in the table as enabled.
 
-    :::image type="content" source="media/okta-integration/okta-connected-successfully.png" alt-text="Screenshot that shows the Okta single sign-on connector was successfully connected.":::
+    :::image type="content" source="media/okta-integration/okta-connected.png" alt-text="Screenshot that shows the Okta single sign-on connector was successfully connected.":::
 
 
 > [!NOTE]
