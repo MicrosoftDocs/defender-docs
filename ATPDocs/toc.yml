@@ -251,6 +251,8 @@ items:
            href: security-assessment-laps.md
          - name: Riskiest lateral movement paths
            href: security-assessment-riskiest-lmp.md
+         - name: Remove discoverable passwords in Active Directory account attributes
+           href: remove-discoverable-passwords-active-directory-account-attributes.md
          - name: Unsecure Kerberos delegation assessment
            href: security-assessment-unconstrained-kerberos.md
          - name: Unsecure SID History attributes
