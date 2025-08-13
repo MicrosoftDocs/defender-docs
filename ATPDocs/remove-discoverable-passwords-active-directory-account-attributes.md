@@ -31,7 +31,7 @@ Removing exposed credentials from these attributes reduces the risk of identity 
 Microsoft Defender for Identity detects potential credential exposure in Active Directory by analyzing commonly used free-text attributes. This includes looking for common password formats, hints,  `'description'`, `'info'`, and `'adminComment'` fields, and other contextual clues that might suggest the presence of credential misuse. 
 This recommendation leverages GenAI-powered analysis of Active directory attributes to detect:
 
-- Plaintext passwords or variations. For example, '`Password=Summer2024!'`
+- Plaintext passwords or variations. For example, '`Password=Summer2025!'`
 
 - Credential patterns, reset hints, or sensitive account information. 
 
