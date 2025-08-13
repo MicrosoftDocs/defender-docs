@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 08/04/2025
+ms.date: 08/13/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -36,6 +36,17 @@ While you can construct your [advanced hunting](advanced-hunting-overview.md) qu
 - Export tables and charts
 - Drill down to detailed entity information
 - Tweak your queries directly from the results
+
+
+## Automatic timeline rendering
+
+By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
+
+::::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
+
+You can select whether or not the timeline is displayed by default in the **Page preferences** settings.
+
+::::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences.png":::
 
 ## View query results as a table or chart
 
@@ -135,13 +146,14 @@ This opens a dropdown showing the possible filters you can use further. Select o
 
 :::image type="content" source="/defender/media/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="/defender/media/add-filter4.png":::
 
-Confirm that you have added the filters that you wanted by checking the Filters section. 
+Confirm that you have added the filters that you wanted by checking the Filters section.
 
 :::image type="content" source="/defender/media/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="/defender/media/add-filter5.png":::
 
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
+
 - Expand a result by selecting the dropdown arrow at the left of each result
 - Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability
 - Open the side pane to see a record's details (concurrent with expanded rows)
