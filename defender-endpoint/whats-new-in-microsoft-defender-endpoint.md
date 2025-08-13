@@ -49,6 +49,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## July 2025
 
 - (GA) [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available on Windows Server 2019 or later.  Helps with the stability and performance of Microsoft Defender Antivirus.
+- Support for Azure Stack HCI OS is rolling out across commercial and government clouds.
 
 ## April 2025
 
