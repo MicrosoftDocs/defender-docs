@@ -1,21 +1,19 @@
 ---
-title: Create policy based resource exemptions
+title: Exempt resources at scale
 description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 08/07/2025
+ms.date: 08/13/2025
 ---
 
-# Create policy based resource exemptions
+# Exempt resources at scale
 
+Defender for Cloud presents a list of affected resources to be investigated through recommendations. Occasionally, a resource might appear that doesn't need to be included, or a recommendation appears in a scope where it's not relevant.
 
-Microsoft Defender for Cloud lets you create policy-based exemptions for security recommendations. Use these exemptions to exclude resources or scenarios. Recommendations don't apply if you applied other controls or accepted the risk.
+For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, exemptions can be created at scale. Exclude a resource to prevent it from being listed as unhealthy or affecting the secure score. The system marks it as "not applicable" and shows the selected justification. Exclude a subscription or management group to prevent the recommendation from affecting the secure score or appearing again. Create an exemption rule for the required scope to mark a recommendation or resource as "mitigated" or "risk accepted" across one or more subscriptions or entire management groups.
 
-
-This approach reduces alert fatigue, improves secure score accuracy by removing irrelevant penalties, and helps security teams focus on meaningful insights instead of generic alerts.
-
-## Create an exemption
+## Create exemptions at scale
 
 To tailor your security posture, you can create exemptions for recommendations that aren't applicable or already mitigated. 
 
@@ -25,13 +23,13 @@ To tailor your security posture, you can create exemptions for recommendations t
 
 1. Navigate to **Environment settings** > **Exemptions**.
 
-    :::image type="content" source="media/exempt-resource-policy/exemptions.png" alt-text="Screenshot that shows where the exemptions button is located on the environment settings screen." lightbox="media/exempt-resource-policy/exemptions.png":::
+    :::image type="content" source="media/exempt-resources-at-scale/exemptions.png" alt-text="Screenshot that shows where the exemptions button is located on the environment settings screen." lightbox="media/exempt-resources-at-scale/exemptions.png":::
 
 1. Select **+ Create**.
 
 1. Enter an Exemption name, and (Optional) a description.
 
-    :::image type="content" source="media/exempt-resource-policy/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resource-policy/create-exemption.png":::
+    :::image type="content" source="media/exempt-resources-at-scale/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resources-at-scale/create-exemption.png":::
 
 1. Select a Cloud platform.
 
