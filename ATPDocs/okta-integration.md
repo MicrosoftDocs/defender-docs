@@ -147,7 +147,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
 
     :::image type="content" source="media/okta-integration/select-okta-single-sign-on.png" alt-text="Screenshot that shows the connector option for Okta single sign-on." lightbox="media/okta-integration/select-okta-single-sign-on.png":::
 1. Enter a name for your connector.
-1. Enter your Okta domain (for example, acme.okta.com).
+1. Enter your Okta domain (for example, my.project.okta.com).
 1. Paste the API token you copied from your Okta account.
 1. Select **Next**.
 
