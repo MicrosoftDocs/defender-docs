@@ -313,6 +313,8 @@
             href: advanced-hunting-graphapiauditevents-table.md            
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityEvents
+            href: advanced-hunting-identityevents-table.md
           - name: IdentityInfo
             href: advanced-hunting-identityinfo-table.md
           - name: IdentityLogonEvents
