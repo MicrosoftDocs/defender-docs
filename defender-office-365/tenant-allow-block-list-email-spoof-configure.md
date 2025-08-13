@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/12/2025
+ms.date: 08/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -83,17 +83,13 @@ This article describes how admins can manage entries for email senders in the Mi
 ## Domains and email addresses in the Tenant Allow/Block List
 
 > [!NOTE]
-> If an email address contains special characters (such as spaces, quotes, or symbols), these characters must be URL-encoded using their UTF-8 hexadecimal representation. Failure to encode special characters may result in invalid errors when adding entries.
+> Entries for email addresses with special characters (for example, spaces, quotes, or symbols) must use UTF-8 hexadecimal encoding for the special characters. Otherwise, you might receive errors when you try to add the entries.
 >
-> Example: To block the email address "bad+ attacker"@badattackerdomain.com, encode the special characters as follows:
+> For example, to block the email address `"bad+ attacker"@fourthcoffee.com`, encode the address as `%22bad%2B%20attacker%22@fourthcoffee.com`:
 >
-> %22bad%2B%20attacker%22@badattackerdomain.com
-> 
-> %22 represents the double quote (")
-> 
-> %2B represents the plus +
-> 
-> %20 represents the space ( )
+> - `%22` represents the double quotation marks (").
+> - `%2B` represents the plus sign (+).
+> - `%20` represents the space ( ).
 
 ### Create allow entries for domains and email addresses
 
