@@ -11,7 +11,14 @@ ms.date: 08/13/2025
 
 Defender for Cloud presents a list of affected resources to be investigated through recommendations. Occasionally, a resource might appear that doesn't need to be included, or a recommendation appears in a scope where it's not relevant.
 
-For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, exemptions can be created at scale. Exclude a resource to prevent it from being listed as unhealthy or affecting the secure score. The system marks it as "not applicable" and shows the selected justification. Exclude a subscription or management group to prevent the recommendation from affecting the secure score or appearing again. Create an exemption rule for the required scope to mark a recommendation or resource as "mitigated" or "risk accepted" across one or more subscriptions or entire management groups.
+For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, exemptions can be created at scale to:
+
+- Prevent a resource from being listed as unhealthy or affecting the secure score by excluding it. Defender for Cloud marks it as "not applicable" and displays the selected justification.
+
+- Prevent a recommendation from affecting the secure score or appearing again by excluding a subscription or management group.
+
+- Prevent a recommendation or resource from being listed as unhealthy. Apply the rule to the required scope and mark the item as "mitigated" or "risk accepted".
+
 
 ## Create exemptions at scale
 
