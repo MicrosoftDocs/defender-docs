@@ -83,7 +83,17 @@ This article describes how admins can manage entries for email senders in the Mi
 ## Domains and email addresses in the Tenant Allow/Block List
 
 > [!NOTE]
-> Allow entries and block entries for email addresses must use UTF-8 encoding. If an email address contains special characters and isn't UTF-8 encoded, you might encounter an error.
+> If an email address contains special characters (such as spaces, quotes, or symbols), these characters must be URL-encoded using their UTF-8 hexadecimal representation. Failure to encode special characters may result in invalid errors when adding entries.
+>
+> Example: To block the email address "bad+ attacker"@badattackerdomain.com, encode the special characters as follows:
+>
+> %22bad%2B%20attacker%22@badattackerdomain.com
+> 
+> %22 represents the double quote (")
+> 
+> %2B represents the plus +
+> 
+> %20 represents the space ( )
 
 ### Create allow entries for domains and email addresses
 
