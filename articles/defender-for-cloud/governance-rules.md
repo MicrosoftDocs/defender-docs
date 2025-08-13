@@ -22,7 +22,8 @@ You can define rules that assign an owner and a due date for addressing recommen
 For tracking, you can review the progress of the remediation tasks by subscription, recommendation, or owner so you can follow up with tasks that need more attention.
 
 - Governance rules can identify resources that require remediation according to specific recommendations or severities.
-- The rule assigns an owner and due date to ensure the recommendations are handled. Many governance rules can apply to the same recommendations, so the rule with lower priority value is the one that assigns the owner and due date.
+- The rule assigns an owner and due date to ensure the recommendations are handled. Many governance rules can apply to the same recommendations, so the rule with highest priority is the one that assigns the owner and due date.
+
 - The due date set for the recommendation to be remediated is based on a timeframe of 7, 14, 30, or 90 days from when the recommendation is found by the rule.
 - For example, if the rule identifies the resource on March 1 and the remediation timeframe is 14 days, March 15 is the due date.
 - You can apply a grace period so that the resources given a due date don't affect your secure score.
@@ -31,7 +32,7 @@ For tracking, you can review the progress of the remediation tasks by subscripti
 - The owner is shown as unspecified when the owner wasn't found on the resource, the associated resource group, or the associated subscription based on the specified tag.
 - By default, email notifications are sent to the resource owners weekly to provide a list of the on time and overdue tasks.
 - If an email for the owner's manager is found in the organizational Microsoft Entra ID, the owner's manager receives a weekly email showing any overdue recommendations by default.
-- Conflicting rules are applied in priority order. For example, rules on a management scope (Azure management groups, AWS accounts and GCP organizations), take effect before rules on scopes (for example, Azure subscriptions, AWS accounts, or GCP projects).
+- Conflicting rules are applied in scope order. For example, rules on a management scope (Azure management groups, AWS accounts and GCP organizations), take effect before rules on scopes (for example, Azure subscriptions, AWS accounts, or GCP projects).
 
 ## Before you begin
 
