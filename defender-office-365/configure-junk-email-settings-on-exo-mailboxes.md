@@ -1,8 +1,8 @@
 ---
 title: Configure junk email settings on Exchange Online mailboxes
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -102,7 +102,7 @@ The following example removes the domain contoso.com from the Blocked Senders li
 $All = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited; $All | foreach {Set-MailboxJunkEmailConfiguration $_.Name -BlockedSendersAndDomains @{Remove="contoso.com"}}
 ```
 
-For detailed syntax and parameter information, see [Set-MailboxJunkEmailConfiguration](/powershell/module/exchange/set-mailboxjunkemailconfiguration).
+For detailed syntax and parameter information, see [Set-MailboxJunkEmailConfiguration](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).
 
 > [!NOTE]
 > The Outlook Junk Email Filter has more safelist collection settings (for example, **Automatically add people I email to the Safe Senders list**). For more information, see [Use Junk Email Filters to control which messages you see](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077).

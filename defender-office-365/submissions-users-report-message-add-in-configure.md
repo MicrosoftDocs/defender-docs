@@ -2,9 +2,9 @@
 title: Transition from Report Message or the Report Phishing add-ins
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to

@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams in Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
