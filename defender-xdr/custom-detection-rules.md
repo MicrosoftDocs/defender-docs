@@ -89,6 +89,7 @@ To create a custom detection rule, the query must return the following columns:
       - `RecipientEmailAddress`
       - `SenderFromAddress` (envelope sender or Return-Path address)
       - `SenderMailFromAddress` (sender address displayed by email client)
+      - `SenderObjectId`
       - `RecipientObjectId`
       - `AccountObjectId`
       - `AccountSid`
