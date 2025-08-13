@@ -148,93 +148,67 @@ Portal</a>)</em></p></td>
 
 ## Verify Deployment Status
 
-1.  In the [Microsoft Defender portal](https://security.microsoft.com/),
-    open the device inventory. It might take 5-20 minutes for the device
-    to show up in the portal.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2.  Run an antivirus detection test to verify that the device is
-    properly onboarded and reporting to the service. Perform the
-    following steps on the newly onboarded device:
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-    1.  Ensure that real-time protection is enabled (denoted by a result
-        of true from running the following command):
+   1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
-| **Bash**                                          |
-|---------------------------------------------------|
-| mdatp health --field real_time_protection_enabled |
+      ```bash
+      mdatp health --field real_time_protection_enabled
+      ```
 
-If it isn't enabled, execute the following command:
+      If it isn't enabled, execute the following command:
 
-| **Bash**                                          |
-|---------------------------------------------------|
-| mdatp config real-time-protection --value enabled |
+      ```bash
+      mdatp config real-time-protection --value enabled
+      ```
+   1. Open a Terminal window and execute the following command to run a detection test:
 
-2.  Open a Terminal window and execute the following command to run a
-    detection test:
+      ```bash
+      curl -o /tmp/eicar.com.txt
+      https://secure.eicar.org/eicar.com.txt
+      ```
 
-| **Bash**                                                          |
-|-------------------------------------------------------------------|
-| curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt |
+   1. You can run more detection tests on zip files using either of the following commands:
 
-3.  You can run more detection tests on zip files using either of the
-    following commands:
+      ```bash
+      curl -o /tmp/eicar_com.zip
+      https://secure.eicar.org/eicar_com.zip
+      curl -o /tmp/eicarcom2.zip
+      https://secure.eicar.org/eicarcom2.zip
+      ```
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr>
-<th><strong>Bash</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>curl -o /tmp/eicar_com.zip
-https://secure.eicar.org/eicar_com.zip</p>
-<p>curl -o /tmp/eicarcom2.zip
-https://secure.eicar.org/eicarcom2.zip</p></td>
-</tr>
-</tbody>
-</table>
+   1. The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
 
-4.  The files should be quarantined by Defender for Endpoint on Linux.
-    Use the following command to list all the detected threats:
+      ```bash
+      mdatp threat list
+      ```
 
-| **Bash**          |
-|-------------------|
-| mdatp threat list |
+1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-3.  Run an EDR detection test and simulate a detection to verify that
-    the device is properly onboarded and reporting to the service.
-    Perform the following steps on the newly onboarded device:
+   1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
 
-    1.  Download and extract the [script
-        file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux
-        server.
+   1. Grant executable permissions to the script:
 
-    2.  Grant executable permissions to the script:
+      ```bash
+      chmod +x mde_linux_edr_diy.sh
+      ```
 
-| **Bash**                      |
-|-------------------------------|
-| chmod +x mde_linux_edr_diy.sh |
+   1. Run the following command:
 
-3.  Run the following command:
+      ```bash
+      ./mde_linux_edr_diy.sh
+      ```
 
-| **Bash**               |
-|------------------------|
-| ./mde_linux_edr_diy.sh |
+   1. After a few minutes, a detection should be raised in the MicrosoftDefender XDR.
 
-4.  After a few minutes, a detection should be raised in the Microsoft
-    Defender XDR.
-
-5.  Check the alert details, machine timeline, and perform your typical
-    investigation steps.
+   1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## How to switch between channels
 
 Defender for Endpoint on Linux can be deployed from one of the following
-channels (denoted as \[channel\]): 
+channels (denoted as [channel]):
 
 - insiders-fast
 
@@ -242,89 +216,60 @@ channels (denoted as \[channel\]): 
 
 - prod
 
-Each of these channels corresponds to a Linux software repository. The
-instructions in this document describe configuring your device to use
-one of these repositories.
+Each of these channels corresponds to a Linux software repository. The instructions in this document describe configuring your device to use one of these repositories.
 
-The choice of the channel determines the type and frequency of updates
-that are offered to your device. Devices in insiders-fast are the first
-ones to receive updates and new features, followed later
-by insiders-slow and lastly by prod.
+The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in insiders-fast are the first to receive updates and new features, followed later by insiders-slow and lastly by prod.
 
-To preview new features and provide early feedback, it's recommended
-that you configure some devices in your enterprise to use
-either insiders-fast or insiders-slow.
+To preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either insiders-fast or insiders-slow.
 
-For example, to change channel from Insiders-Fast to Production, do the
-followings:
+For example, to change channel from insiders-fast to production, do the following:
 
-1.  Remove the Insiders-Fast channel version of Defender for Endpoint on
-    Linux.
+1. Remove the insiders-fast channel version of Defender for Endpoint on Linux.
 
-| **Bash**                                                       |
-|----------------------------------------------------------------|
-| sudo ./mde_linux_activator.sh --remove --channel insiders-fast |
+   ```bash
+   sudo ./mde_linux_activator.sh --remove --channel insiders-fast
+   ```
 
-2.  Delete the Defender for Endpoint on Linux Insiders-Fast repo.
+1. Delete the Defender for Endpoint on the Linux insiders-fast repo.
 
-| **Bash**                                                      |
-|---------------------------------------------------------------|
-| sudo ./mde_linux_activator.sh --clean --channel insiders-fast |
+   ```bash
+   sudo ./mde_linux_activator.sh --clean --channel insiders-fast
+   ```
 
-3.  Microsoft Defender for Endpoint on Linux using the Production
-    channel.
+1. Microsoft Defender for Endpoint on Linux using the production channel.
 
-| **Bash**                                                      |
-|---------------------------------------------------------------|
-| sudo ./mde_linux_activator.sh --clean --channel insiders-fast |
+   ```bash
+   sudo ./mde_linux_activator.sh --install --channel insiders-fast
+   ```
 
 ## Check Connectivity Issues
 
 If you are experiencing any connectivity issues, run this command to
 perform a connectivity test:
 
-| **Bash**                                          |
-|---------------------------------------------------|
-| sudo ./mde_linux_activator.sh --connectivity-test |
+```bash
+sudo ./mde_linux_activator.sh --connectivity-test
+```
 
 This test may take some time to run as it will perform checks for every
 URL needed by mdatp and find any issues if present. If the issue
-persists please refer to the troubleshooting guide.
+persists, refer to the troubleshooting guide.
 
-## Troubleshooting Installation Issues
+## Troubleshooting installation issues
 
-If you experience any installation issues, for self-troubleshooting,
-follow these steps:
+If you experience any installation issues, try following these steps:
 
-1.  For information on how to find the log that's generated
-    automatically when an installation error occurs, see [Log
-    installation
-    issues](https://learn.microsoft.com/en-us/defender-endpoint/linux-resources#log-installation-issues).
+1.  For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
 
-2.  For information about common installation issues, see [Installation
-    issues](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
 
-3.  If health of the device is false, see [Defender for Endpoint agent
-    health
-    issues](https://learn.microsoft.com/en-us/defender-endpoint/health-status).
+1. If health of the device is false, see [Defender for Endpoint agent health issues](./health-status.md).
 
-4.  For product performance issues, see [Troubleshoot performance
-    issues](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
 
-5.  For proxy and connectivity issues, see [Troubleshoot cloud
-    connectivity
-    issues](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
 
-## Contact Us
-
-In case of any bugs or support requests, please drop a mail to
-<onboardmdelinux@microsoft.com>.
-
-Kindly provide detailed description of the issue along with supporting
-screenshots, if possible.
-
-
-## See also
+## Related content
 
 - [SALT Project documentation](https://docs.saltproject.io/en/latest/topics/about_salt_project.html)
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
@@ -335,5 +280,4 @@ screenshots, if possible.
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+- [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
