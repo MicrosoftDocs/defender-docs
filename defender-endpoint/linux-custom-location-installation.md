@@ -147,7 +147,8 @@ No, installation location changes require a fresh install.
 
 - **Check service status:**
 
-   - Run: `systemctl status mdatp`
+   Run: `systemctl status mdatp`
+   
    ```
    ● mdatp.service - Microsoft Defender
            Loaded: loaded (/lib/systemd/system/mdatp.service; enabled; vendor preset: enabled)
@@ -162,19 +163,18 @@ No, installation location changes require a fresh install.
 
    - Primary: `/etc/opt/microsoft/mdatp/mde_path.json`
       - Example: `{"path": "/var/tmp/TestInstall/microsoft_mdatp"}`
-      - If missing or malformed, MDE fallbacks to the secondary file.
+      - If missing or malformed, Microsoft Defender for Endpoint fallbacks to the secondary file.
    - Secondary: `<custom_installation_path>/opt/microsoft/mdatp/conf/mde_path.json`
       - Should match the primary config.
       - This file is created at installation time.
       - Inconsistencies may indicate installation corruption.
    - Ensure the path is absolute.
----
 
 ### 2. Verify the symlink to the custom location
 
-- Run: `ls -ltr /opt/microsoft/mdatp`
-- Output should show `/opt/microsoft/mdatp` as a symlink to your custom location: `lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp`
----
+Run: `ls -ltr /opt/microsoft/mdatp`
+
+Output should show `/opt/microsoft/mdatp` as a symlink to your custom location: `lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp`
 
 ## Related content
 
