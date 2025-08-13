@@ -161,6 +161,8 @@ When you switch the primary workspace for Microsoft Sentinel, the Defender XDR c
 
 If you decide to offboard a workspace from the Defender portal, disconnect the workspace from the settings for Microsoft Sentinel.
 
+If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) configured, offboarding the workspace from the Defender portal will also disconnect the Microsoft Defender XDR connector.
+
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
 1. On the **Workspaces** page, select the connected workspace and **Disconnect workspace**.
@@ -178,3 +180,6 @@ If you want to connect to a different workspace, from the **Workspaces** page, s
 - [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption)
 - [Investigate incidents in Microsoft Defender portal](/defender-xdr/investigate-incidents)
 - [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal)
+
+
+When a workspace that has the Microsoft XDR connector configured onboards to the unified experience and then disconnects the workspace, the Microsoft XDR connector in Sentinel will be set to a disconnected state.
