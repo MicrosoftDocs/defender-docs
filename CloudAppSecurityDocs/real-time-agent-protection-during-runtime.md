@@ -78,4 +78,6 @@ Follow these steps to enable real-time protection during agent runtime in the Mi
 The Power Platform administrator must use the provided URL to activate the integration with Microsoft Defender. Once the integration is complete, you see a **Connected** status in the Microsoft Defender portal.
 For more information, see:
 
+## Related articles
 
+- [Quickstart: Create and deploy an agent](/microsoft-copilot-studio/fundamentals-get-started)
