@@ -151,7 +151,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
 1. Paste the API token you copied from your Okta account.
 1. Select **Next**.
 
-    :::image type="content" source="media/okta-integration/connect-new-okta-single-signon-connector.png" alt-text="Screenshot that shows where to add the connector name, domain, and API key.":::
+    :::image type="content" source="media/okta-integration/connect-new-okta-single-sign-on-connector.png" alt-text="Screenshot that shows where to add the connector name, domain, and API key.":::
 
 1. **Select products > Microsoft Defender for Identity**
 1. Select **Next**
@@ -163,7 +163,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
     :::image type="content" source="media/okta-integration/review-okta-details.png" alt-text="Screenshot that shows the Okta connector details." lightbox="media/okta-integration/review-okta-details.png":::
 1. Verify that your Okta environment appears in the table as enabled.
 
-    :::image type="content" source="media/okta-integration/Okta-connected-successfully.png" alt-text="Screenshot that shows the Okta Single Sign-on connector was successfully connected.":::
+    :::image type="content" source="media/okta-integration/okta-connected-successfully.png" alt-text="Screenshot that shows the Okta single sign-on connector was successfully connected.":::
 
 
 > [!NOTE]
