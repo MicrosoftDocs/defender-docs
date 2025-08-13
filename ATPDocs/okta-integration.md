@@ -91,9 +91,11 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 ### Create a custom Okta role
 
-To support ongoing API access, you need the Read-Only Administrator role and the custom Defender for Identity role.
+> [!NOTE]
+> To support ongoing API access, you must assign both the **Read-Only Administrator role** and the **custom Microsoft Defender for Identity role.** These roles are mandatory to successfully configure the Okta connector. Configuration fails if either role is missing.
 
-After you assign both roles, you can remove the Super Admin role. This approach ensures that only relevant permissions are assigned to your Okta account at all times.
+
+After you assign both roles, you can remove the **Super Admin role**. This approach ensures that only relevant permissions are assigned to your Okta account at all times.
 
 1. Navigate to **Security > Administrator**.
 1. Select the **Roles** tab.
@@ -134,23 +136,38 @@ To complete the configuration in Okta, assign the custom role and resource set t
 
 1. When you're done, remove the Super Admin role from the account.
 
-### Connect Okta to Defender for Identity
+### Connect Okta to Microsoft Defender for Identity
 
-1.  Navigate to the Microsoft Defender Portal.
-1. Select **Settings** > **Identities** > **Okta integration**
+1. Navigate to the Microsoft Defender Portal.
+1. Select **System** > **Data management** > **Data connectors** > **Catalog**
 
-    :::image type="content" source="media/okta-integration/select-settings-okta-integration.png" alt-text="Screenshot showing the Microsoft Defender for Identity settings page with the Okta Integration option highlighted.":::
+    :::image type="content" source="media/okta-integration/system-data-connector-catalog.png" alt-text="Screenshot showing where to find the Okta connector in the Defender portal." lightbox="media/okta-integration/system-data-connector-catalog.png":::
 
-1. Select **+Connect Okta instance**.
+1. Select **Okta Single Sign-On** > **Connect a connector**.
+
+    :::image type="content" source="media/okta-integration/select-okta-single-sign-on.png" alt-text="Screenshot that shows the connector option for Okta single sign-on." lightbox="media/okta-integration/select-okta-single-sign-on.png":::
+1. Enter a name for your connector.
 1. Enter your Okta domain (for example, acme.okta.com).
 1. Paste the API token you copied from your Okta account.
-1. Select **Save**.
+1. Select **Next**.
 
-    :::image type="content" source="media/okta-integration/connect-okta-instance.png" alt-text="Screenshot that shows how to connect your Okta instance.":::
+    :::image type="content" source="media/okta-integration/connect-new-okta-single-signon-connector.png" alt-text="Screenshot that shows where to add the connector name, domain, and API key.":::
 
+1. **Select products > Microsoft Defender for Identity**
+1. Select **Next**
+
+    :::image type="content" source="media/okta-integration/select-product-defender-for-identity.png" alt-text="Screenshot that shows the product page for connecting Okta to Microsoft Defender for Identity." lightbox="media/okta-integration/select-product-defender-for-identity.png":::
+
+1. Review Okta details, and select **Connect**.
+
+    :::image type="content" source="media/okta-integration/review-okta-details.png" alt-text="Screenshot that shows the Okta connector details." lightbox="media/okta-integration/review-okta-details.png":::
 1. Verify that your Okta environment appears in the table as enabled.
 
-    :::image type="content" source="media/okta-integration/new-okta-domain.png" alt-text="Screenshot that shows the Okta environment was added and is enabled.":::
+    :::image type="content" source="media/okta-integration/Okta-connected-successfully.png" alt-text="Screenshot that shows the Okta Single Sign-on connector was successfully connected.":::
+
+
+> [!NOTE]
+> Connecting the Okta connector can take up to 15 minutes.
 
 ## Related articles
 
