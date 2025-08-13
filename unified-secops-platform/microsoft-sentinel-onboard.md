@@ -181,5 +181,3 @@ If you want to connect to a different workspace, from the **Workspaces** page, s
 - [Investigate incidents in Microsoft Defender portal](/defender-xdr/investigate-incidents)
 - [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal)
 
-
-When a workspace that has the Microsoft XDR connector configured onboards to the unified experience and then disconnects the workspace, the Microsoft XDR connector in Sentinel will be set to a disconnected state.
