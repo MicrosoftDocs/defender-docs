@@ -131,6 +131,51 @@ Run the usual upgrade commands. The installation location remains unchanged.
 **Can I change the custom location during upgrade?**  
 No, installation location changes require a fresh install.
 
+## Troubleshooting
+
+### 1. Verify the installation location
+
+- **Check running processes:**
+
+   Run: `ps aux | grep wdavdaemon`
+    
+   ```
+   root 747798 0.3 1.5 1037180 154336 ? Ssl 12:26 0:21 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon
+   root      747844  0.0  0.8 945692 79676 ?        Sl   12:26   0:04 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon edr 16 15 --log_level info
+   root      747932  0.0  0.2 255028 21472 ?        Sl   12:26   0:01 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/telemetryd_v2 24 /var/log/microsoft/mdatp
+   ```
+
+- **Check service status:**
+
+   - Run: `systemctl status mdatp`
+   ```
+   ● mdatp.service - Microsoft Defender
+           Loaded: loaded (/lib/systemd/system/mdatp.service; enabled; vendor preset: enabled)
+           Active: active (running) since ...
+           Main PID: 747798 (wdavdaemon)
+           ...
+           CGroup: /system.slice/mdatp.service
+                   ‣ 747798 /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp/sbin/wdavdaemon
+    ```
+
+- **Check custom installation path in `mde_path.json`:**
+
+   - Primary: `/etc/opt/microsoft/mdatp/mde_path.json`
+      - Example: `{"path": "/var/tmp/TestInstall/microsoft_mdatp"}`
+      - If missing or malformed, MDE fallbacks to the secondary file.
+   - Secondary: `<custom_installation_path>/opt/microsoft/mdatp/conf/mde_path.json`
+      - Should match the primary config.
+      - This file is created at installation time.
+      - Inconsistencies may indicate installation corruption.
+   - Ensure the path is absolute.
+---
+
+### 2. Verify the symlink to the custom location
+
+- Run: `ls -ltr /opt/microsoft/mdatp`
+- Output should show `/opt/microsoft/mdatp` as a symlink to your custom location: `lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsoft_mdatp/opt/microsoft/mdatp`
+---
+
 ## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
