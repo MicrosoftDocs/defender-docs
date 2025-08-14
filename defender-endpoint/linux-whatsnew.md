@@ -55,7 +55,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 What's new
 - MDE Installer now supports custom path installations.
-- mdatp threat quarantine add command now requires super user permissions.
+- `mdatp threat quarantine add` command now requires super user permissions.
 - Definition path now can be updated without needing to stop MDE.
 - Facpolicyd is now supported along side MDE Linux for RHEL & Fedora based distributions. 
 - Other stability improvements and bug fixes.
