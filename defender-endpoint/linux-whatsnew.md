@@ -43,6 +43,23 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
+
+|Build:             |**101.25052.0007**    |
+|-------------------|----------------------|
+|Released:          |**August 08, 2025**   |
+|Published:         |**August 08, 2025**   |
+|Release version:   |**30.125062.0003.0**  |
+|Engine version:    |**1.1.25060.4000**    |
+|Signature version: |**1.427.370.0**       |
+
+What's new
+- MDE Installer now supports custom path installations.
+- mdatp threat quarantine add command now requires super user permissions.
+- Definition path now can be updated without needing to stop MDE.
+- Facpolicyd is now supported along side MDE Linux for RHEL & Fedora based distributions. 
+- Other stability improvements and bug fixes.
+
 ### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
 
 |Build:             |**101.25052.0007**    |
