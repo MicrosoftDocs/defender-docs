@@ -49,7 +49,7 @@ Additionally, the following requirements also need to be met:
         > [!NOTE]
         > Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
-    :::image type="content" source="./media/activator-download-package.png" alt-text="Screenshot of Device management onboarding page, showing activator download package":::
+    :::image type="content" source="./media/linux-install-with-activator/activator-download-package.png" alt-text="Screenshot of Device management onboarding page, showing activator download package":::
 
 1. From a command prompt, extract the contents of the archive:
 
@@ -82,7 +82,7 @@ Additionally, the following requirements also need to be met:
     ./mde_linux_activator.sh --help
     ```
 
-    :::image type="content" source="./media/activator-help.png" alt-text="Screenshot showing the activator help options":::
+    :::image type="content" source="./media/linux-install-with-activator/activator-help.png" alt-text="Screenshot showing the activator help options":::
 
     | **Scenario**                                   | **Command**                                                                                                                                                                                                                       |
     |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
