@@ -402,7 +402,7 @@ The following actions are available at the top of the Email summary panel for Th
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
 - ZAP moved the message to quarantine.
 
-³ **Download email** for quarantined email is available with password protection. Alternatively you can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+³ **Download email** for quarantined messages is available with password protection. You can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
 
 ⁴ **Go hunt** is available only in Threat Explorer. It isn't available in Real-time detections.
 
