@@ -38,8 +38,7 @@ Additionally, the following requirements also need to be met:
 
 ## Step-by-step guide
 
-1.  Download the simplified onboarding package from [Microsoft Defender
-    portal](https://security.microsoft.com/) by following these steps.
+1. Download the simplified onboarding package from [Microsoft Defender portal](https://security.microsoft.com/) by following these steps.
 
     1. Go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
@@ -47,104 +46,54 @@ Additionally, the following requirements also need to be met:
 
     1. Click the **Download Package** button under **Download and run the activator**.
 
-    > [!NOTE]
-    > Since this package installs and onboards the agent, it is a tenant specific package and must not be used across tenants.
+        > [!NOTE]
+        > Since this package installs and onboards the agent, it is a tenant specific package and must not be used across tenants.
 
     :::image type="content" source="./media/image1.png" alt-text="Screenshot":::
 
-1.  From a command prompt, extract the contents of the archive:
+1. From a command prompt, extract the contents of the archive:
 
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
+    ```bash
+    unzip WindowsDefenderATPOnboardingPackage.zip
+    ```
 
-   ```console
-   Archive: WindowsDefenderATPOnboardingPackage.zip
-   inflating: mde_linux_activator.sh
-   ```
+    ```console
+    Archive: WindowsDefenderATPOnboardingPackage.zip
+    inflating: mde_linux_activator.sh
+    ```
 
-1.  Grant executable permissions to the activator script.
-1. 
+1. Grant executable permissions to the activator script.
+
     ```bash
     chmod +x mde_linux_activator.sh
     ```
 
-4.  Run the script using the below command to install and onboard MDE on
-    your Linux Server.
+1. Run the script using the below command to install and onboard MDE on your Linux Server.
 
-> This command will install the latest agent version from the production
-> channel and onboard the device. It might take 5-20 minutes for the
-> device to show up in the [Device
-> Inventory](https://security.microsoft.com/machines?category=all-devices).
+    This command will install the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
-| **Bash**                         |
-|----------------------------------|
-| sudo bash mde_linux_activator.sh |
+    ```bash
+    sudo bash mde_linux_activator.sh
+    ```
 
-5.  Further you can modify/control onboarding by passing parameters
-    based on your requirements. Check help for all the available
-    options:
+5. You can further modify/control onboarding by passing parameters based on your requirements. Check help for all the available options:
 
-| **Bash**                          |
-|-----------------------------------|
-| ❯ ./mde_linux_activator.sh --help |
+    ```bash
+    ./mde_linux_activator.sh --help
+    ```
 
-<img src="./media/media/image2.png"
-style="width:6.5in;height:3.36667in" />
+    <img src="./media/media/image2.png" style="width:6.5in;height:3.36667in" />
 
-<table>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 84%" />
-</colgroup>
-<thead>
-<tr>
-<th><strong>Scenario</strong></th>
-<th><strong>Command</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Install using proxy</td>
-<td>sudo ./mde_linux_activator.sh –-http-proxy
-&lt;http://username:password@proxy_host:proxy_port&gt;</td>
-</tr>
-<tr>
-<td>Install a specific agent version</td>
-<td>sudo ./mde_linux_activator.sh –-mdatp 101.25042.0003 --channel
-prod</td>
-</tr>
-<tr>
-<td>Upgrade to the latest agent version</td>
-<td>sudo ./mde_linux_activator.sh --upgrade</td>
-</tr>
-<tr>
-<td>Upgrade to a specific agent version</td>
-<td>sudo ./mde_linux_activator.sh --upgrade --mdatp 101.24082.0004</td>
-</tr>
-<tr>
-<td>Downgrade to a specific agent version</td>
-<td>sudo ./mde_linux_activator.sh --downgrade –-mdatp
-101.24082.0004</td>
-</tr>
-<tr>
-<td>Uninstall agent</td>
-<td>sudo ./mde_linux_activator.sh --remove</td>
-</tr>
-<tr>
-<td>Only onboard in case agent is already installed</td>
-<td>sudo ./mde_linux_activator.sh --only-onboard</td>
-</tr>
-<tr>
-<td>Offboard the agent</td>
-<td><p>sudo ./mde_linux_activator.sh --offboard
-MicrosoftDefenderATPOffboardingLinuxServer.py</p>
-<p><em>(Note: The latest offboarding file can be downloaded from the <a
-href="https://security.microsoft.com/">Microsoft Defender
-Portal</a>)</em></p></td>
-</tr>
-</tbody>
-</table>
+    | **Scenario**                                   | **Command**                                                                                                                                                                                                                       |
+    |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Install using proxy                            | `sudo ./mde_linux_activator.sh --http-proxy <http://username:password@proxy_host:proxy_port>`                                                                                                                                     |
+    | Install a specific agent version               | `sudo ./mde_linux_activator.sh --mdatp 101.25042.0003 --channel prod`                                                                                                                                                             |
+    | Upgrade to the latest agent version            | `sudo ./mde_linux_activator.sh --upgrade`                                                                                                                                                                                         |
+    | Upgrade to a specific agent version            | `sudo ./mde_linux_activator.sh --upgrade --mdatp 101.24082.0004`                                                                                                                                                                 |
+    | Downgrade to a specific agent version          | `sudo ./mde_linux_activator.sh --downgrade --mdatp 101.24082.0004`                                                                                                                                                               |
+    | Uninstall agent                               | `sudo ./mde_linux_activator.sh --remove`                                                                                                                                                                                          |
+    | Only onboard in case agent is already installed | `sudo ./mde_linux_activator.sh --only-onboard`                                                                                                                                                                                    |
+    | Offboard the agent                             | `sudo ./mde_linux_activator.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the [Microsoft Defender Portal](https://security.microsoft.com/))*           |
 
 ## Verify Deployment Status
 
