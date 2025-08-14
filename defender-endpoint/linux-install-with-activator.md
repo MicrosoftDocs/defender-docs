@@ -28,7 +28,7 @@ This article introduces a new, efficient, and user-friendly onboarding experienc
 
 ## Prerequisites and system requirements
 
-Before you get started, see [Prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. These checks are also performed by the activator script and give you a warning if any of the checks are not met.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. These checks are also performed by the activator script and give you a warning if any of the checks aren't met.
 
 Additionally, the following requirements also need to be met:
 
@@ -44,10 +44,10 @@ Additionally, the following requirements also need to be met:
 
     1. In the first drop-down menu, select **Linux Server(Preview)** as the operating system.
 
-    1. Click the **Download Package** button under **Download and run the activator**.
+    1. Select the **Download Package** button under **Download and run the activator**.
 
         > [!NOTE]
-        > Since this package installs and onboards the agent, it is a tenant specific package and must not be used across tenants.
+        > Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
     :::image type="content" source="./media/image1.png" alt-text="Screenshot":::
 
@@ -68,9 +68,9 @@ Additionally, the following requirements also need to be met:
     chmod +x mde_linux_activator.sh
     ```
 
-1. Run the script using the below command to install and onboard MDE on your Linux Server.
+1. Run the script using the following command to install and onboard Microsoft Defender for Endpoint on your Linux Server.
 
-    This command will install the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
+    This command installs the latest agent version from the production channel and onboard the device. It might take 5-20 minutes for the device to show up in the [Device Inventory](https://security.microsoft.com/machines?category=all-devices).
 
     ```bash
     sudo bash mde_linux_activator.sh
@@ -150,7 +150,7 @@ Additionally, the following requirements also need to be met:
       ./mde_linux_edr_diy.sh
       ```
 
-   1. After a few minutes, a detection should be raised in the MicrosoftDefender XDR.
+   1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
 
    1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
@@ -193,14 +193,14 @@ For example, to change channel from insiders-fast to production, do the followin
 
 ## Check Connectivity Issues
 
-If you are experiencing any connectivity issues, run this command to
+If you're experiencing any connectivity issues, run this command to
 perform a connectivity test:
 
 ```bash
 sudo ./mde_linux_activator.sh --connectivity-test
 ```
 
-This test may take some time to run as it will perform checks for every
+This test might take some time to run as it performs checks for every
 URL needed by mdatp and find any issues if present. If the issue
 persists, refer to the troubleshooting guide.
 
