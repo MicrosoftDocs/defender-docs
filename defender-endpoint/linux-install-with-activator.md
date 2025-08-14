@@ -46,10 +46,10 @@ Additionally, the following requirements also need to be met:
 
     1. Select the **Download Package** button under **Download and run the activator**.
 
-        > [!NOTE]
-        > Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
+    > [!NOTE]
+    > Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
-    :::image type="content" source="./media/linux-install-with-activator/activator-download-package.png" alt-text="Screenshot of Device management onboarding page, showing activator download package":::
+    :::image type="content" source="./media/linux-install-with-activator/activator-download-package.png" alt-text="Screenshot of Device management onboarding page, showing activator download package" lightbox="./media/linux-install-with-activator/activator-download-package.png":::
 
 1. From a command prompt, extract the contents of the archive:
 
