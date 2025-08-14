@@ -77,7 +77,7 @@ The following screenshot shows the results of a query that returns 1,000 email e
 
 The following screenshot shows the results grouped by last email action with a separate line for each action.
 
-:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped.png":::
+:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped-zoom.png":::
 
 ---
 
