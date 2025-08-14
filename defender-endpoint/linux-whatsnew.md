@@ -45,7 +45,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
 
-|Build:             |**101.25052.0007**    |
+|Build:             |**101.25062.0003**    |
 |-------------------|----------------------|
 |Released:          |**August 08, 2025**   |
 |Published:         |**August 08, 2025**   |
