@@ -191,8 +191,6 @@ You can also explore the results in-line with the following features:
 - Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability
 - Open the side pane to see a record's details (concurrent with expanded rows)
 
-
-
 :::image type="content" source="/defender/media/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="/defender/media/advanced-hunting-query-results-expand.png":::
 
 You can also right-click on any result value in a row so that you can use it to add more filters to the existing query or copy the value for use in further investigation. 
