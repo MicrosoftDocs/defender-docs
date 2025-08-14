@@ -28,7 +28,7 @@ ms.date: 04/30/2025
 ## Scenario requirements and setup
 
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
-- Windows server devices must be running Windows Server 2025, Azure Stack HCI OC version 23H2 and later, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2 SP1.
+- Windows server devices must be running Windows Server 2016 and later, Windows Server 2012 R2, Windows Server 2008 R2 SP1, or Azure Stack HCI OS version 23H2 and later.
 - Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
 - Devices must be onboarded to Defender for Endpoint
 

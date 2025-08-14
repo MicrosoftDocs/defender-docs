@@ -37,9 +37,10 @@ Controlled folder access helps you protect valuable data from malicious apps and
 
 - Windows 11
 - Windows 10
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
+- Azure Stack HCI OS version 23H2 and later
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.

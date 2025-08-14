@@ -58,7 +58,7 @@ sections:
       - question: |
           What is the difference between active and passive mode?
         answer: |
-          For endpoints running Windows 10, Windows 11, Windows Server, version 1803 or later, Windows Server 2019, Windows Server 2022, or Windows server 2025, Azure Stack HCI OC version 23H2 and later, when Microsoft Defender Antivirus is in active mode, it's used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus isn't the primary antivirus product. In this case, threats aren't remediated by Microsoft Defender Antivirus in real time.
+          For endpoints running Windows 10, Windows 11, Windows Server version 1803 or later, Windows Server 2019 and later, or Azure Stack HCI OS version 23H2 and later, when Microsoft Defender Antivirus is in active mode, it's used as the primary antivirus on the device. When running in passive mode, Microsoft Defender Antivirus isn't the primary antivirus product. In this case, threats aren't remediated by Microsoft Defender Antivirus in real time.
 
           > [!NOTE]
           > Microsoft Defender Antivirus can run in passive mode only when the device is onboarded to Microsoft Defender for Endpoint.

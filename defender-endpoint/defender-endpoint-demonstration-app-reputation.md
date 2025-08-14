@@ -33,12 +33,13 @@ Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing
 - The following versions of Windows are supported:
    - Windows 11
    - Windows 10
-   - Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+   - Windows Server 2025
    - Windows Server 2022
    - Windows Server 2019
    - Windows Server 2016
    - Windows Server 2012 R2
    - Windows Server 2008 R2 
+   - Azure Stack HCI OS version 23H2 and later.
 - Microsoft Edge or Internet Explorer browser required. 
 
 ## Scenario Demos

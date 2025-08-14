@@ -137,11 +137,12 @@ You can set attack surface reduction rules for devices that are running any of t
 - Windows 11 Pro, version 21H2 or later
 - Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+- Windows Server 2025
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh801901(v=ws.11))
+- Azure Stack HCI OS version 23H2 and later.
 
   > [!NOTE]
   > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.

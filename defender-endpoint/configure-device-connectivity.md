@@ -80,12 +80,13 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 - Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
 - Windows 11
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
+- Azure Stack HCI OS version 23H2 and later.
 
 > [!IMPORTANT]
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 

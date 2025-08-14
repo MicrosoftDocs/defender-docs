@@ -23,10 +23,8 @@ ms.subservice: onboard
 
 **Applies to:**
 - Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+- Windows Server 2016 and later
+- Azure Stack HCI OS version 23H2 and later.
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 

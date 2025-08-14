@@ -53,9 +53,10 @@ Currently, AIR only supports the following OS versions:
 - Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
 - Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
 - Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
+- Azure Stack HCI OS version 23H2 and later.
 
 ## Permissions
 

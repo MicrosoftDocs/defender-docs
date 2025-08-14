@@ -60,9 +60,8 @@ Onboarded devices running the following versions of Windows can perform device d
 
 - Windows 11
 - Windows 10, version 1809 or later
-- Windows Server 2025, Azure Stack HCI OC version 23H2 and later.
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
+- Azure Stack HCI OS version 23H2 and later
 
 ## What happens if my onboarded devices is connected to my home network, or to public access point?
 
@@ -70,7 +69,7 @@ The discovery engine distinguishes between network events that are received in t
 
 ## What protocols are you capturing and analyzing?
 
-By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2025, Azure Stack HCI OC version 23H2 and later are capturing and analyzing the following protocols:
+By default, all onboarded devices running on Windows 10 version 1809 or later, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2025, Azure Stack HCI OS version 23H2 and later. are capturing and analyzing the following protocols:
 
 - `ARP`
 - `CDP`

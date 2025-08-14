@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows server 2025, Azure Stack HCI OC version 23H2 and later.
+description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows server 2025Azure Stack HCI OS version 23H2 and later.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
@@ -29,12 +29,10 @@ ms.collection:
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
-- Windows server 2025, Azure Stack HCI OC version 23H2 and later.
-- Windows Server 2022
-- Windows Server 2019
+- Windows server 2016 and later
 - Windows Server, version 1803 or later
-- Windows Server 2016
 - Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Azure Stack HCI OS version 23H2 and later
 
 ## Overview
 
@@ -90,7 +88,7 @@ To view verify the state of all services using Command Prompt, run the following
 
 To get your regular security intelligence updates, the Windows Update service must be running. If you use an update management service, like Windows Server Update Services (WSUS), make sure Microsoft Defender Antivirus Security intelligence updates are approved for the computers you manage.
 
-By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows server 2025, Azure Stack HCI OC version 23H2 and later. You can change this configuration by using one of the following methods:
+By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Azure Stack HCI OS version 23H2 and later. You can change this configuration by using one of the following methods:
 
 | Method | Description |
 |---|---|
