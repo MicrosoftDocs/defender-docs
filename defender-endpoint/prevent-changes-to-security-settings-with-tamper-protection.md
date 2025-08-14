@@ -74,7 +74,7 @@ Tamper protection is available for devices that are running one of the following
 - Windows Server 2016 and later
 - Windows Server, version 1803 or later
 - Windows Server 2012 R2 (using the modern, unified solution)
-- Azure Stack HCI OS version 23H2 and later
+- Azure Stack HCI OS, version 23H2 and later.
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
 

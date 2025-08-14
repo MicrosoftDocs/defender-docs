@@ -56,7 +56,7 @@ Currently, AIR only supports the following OS versions:
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Azure Stack HCI OS version 23H2 and later.
+- Azure Stack HCI OS, version 23H2 and later
 
 ## Permissions
 

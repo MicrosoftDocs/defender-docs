@@ -42,7 +42,7 @@ Microsoft Defender Antivirus is available in the following editions/versions of 
 - Windows 11
 - Windows 10
 - Windows 8.1
-- Azure Stack HCI OS version 23H2 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
 

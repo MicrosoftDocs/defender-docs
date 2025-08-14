@@ -28,12 +28,9 @@ ms.subservice: onboard
 - Virtual desktop infrastructure (VDI) devices
 - Windows 11
 - Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016 and later
 - Windows Server 2012 R2
-- Azure Stack HCI OS version 23H2 and later.
+- Azure Stack HCI OS, version 23H2 and later
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)

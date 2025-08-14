@@ -340,7 +340,7 @@ The steps in this article provide guidance for the following scenario:
 > User Logon after OOBE is no longer required for SENSE service to start on the following or more recent Windows versions: 
 > - Windows 10, version 1809 or newer
 > - Windows Server 2019 and later
-> - Azure Stack HCI OS version 23H2 and later
+> - Azure Stack HCI OS, version 23H2 and later
 
 ## Troubleshoot onboarding with Microsoft Endpoint Configuration Manager
 

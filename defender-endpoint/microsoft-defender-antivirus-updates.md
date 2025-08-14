@@ -260,7 +260,7 @@ To avoid a gap in protection, keep your OS installation images up to date with t
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
 - Windows Server 2016 and later
 - Windows Server 2012 R2
-- Azure Stack HCI OS version 23H2 and later
+- Azure Stack HCI OS, version 23H2 and later
 - WIM and VHD(x) files 
 
 Updates are released for x86, x64, and Arm64 Windows architecture.

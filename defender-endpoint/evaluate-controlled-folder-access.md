@@ -34,7 +34,7 @@ ms.date: 08/14/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019 and later, Azure Stack HCI OS version 23H2 and later and client devices running Windows 10 or Windows 11.
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019 and later, Azure Stack HCI OS, version 23H2 and later and client devices running Windows 10 or Windows 11.
 
 It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 
