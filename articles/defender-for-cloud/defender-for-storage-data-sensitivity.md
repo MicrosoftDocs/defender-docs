@@ -29,7 +29,7 @@ Azure Data Lake Storage Gen2
 
 Premium block blobs
 
-It is also available for Azure Files, but currently only for customers who have Defender CSPM enabled:
+It is also available for Azure Files (over REST API and SMB), but currently only for customers who have Defender CSPM enabled:
 
 - Files
 
