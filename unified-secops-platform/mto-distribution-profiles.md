@@ -106,7 +106,7 @@ Common reasons for a sync to fail include:
 
 If the issue is with the target tenant, try creating an identical custom detection rule for further diagnosis. If the issue is with accessing the source data, try accessing the custom detection.
 
-A known issue exists with distribution profile errors. In some scenarios, such as when a user without the required permissions selects **See the assignment** on a policy error, an indefinite loading state might be shown without a clear error message. Users might also encounter generic or unclear error messages if Microsoft Entra is temporarily unavailable.
+A known issue exists with distribution profile errors. In some scenarios, such as when a user without the required permissions selects **See the assignment** on a policy error, an indefinite loading state might be shown without a clear error message. Users might also encounter generic or unclear error messages if Microsoft Entra is temporarily unavailable. In such cases, close the error message and verify your permissions and Microsoft Entra availability.
 
 ## Related content
 
