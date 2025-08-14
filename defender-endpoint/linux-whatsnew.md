@@ -50,8 +50,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Released:          |**August 08, 2025**   |
 |Published:         |**August 08, 2025**   |
 |Release version:   |**30.125062.0003.0**  |
-|Engine version:    |**1.1.25060.4000**    |
-|Signature version: |**1.427.370.0**       |
+|Engine version:    |**1.1.25040.4000**    |
+|Signature version: |**1.429.442.0**       |
 
 What's new
 - MDE Installer now supports custom path installations.
