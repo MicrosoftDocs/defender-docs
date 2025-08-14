@@ -37,16 +37,49 @@ While you can construct your [advanced hunting](advanced-hunting-overview.md) qu
 - Drill down to detailed entity information
 - Tweak your queries directly from the results
 
-
 ## Automatic timeline rendering
 
 By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
-::::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
+:::image type="content" source="/defender/media/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="/defender/media/advanced-hunting-query-results-timeline.png":::
 
 You can select whether or not the timeline is displayed by default in the **Page preferences** settings.
 
-::::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences.png":::
+:::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences.png":::
+
+The timeline automatically adjusts its resolution based on the range of results. You can click any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
+
+The timeline only appears if there are more than 40 events in your results and there's `Timestamp` or `timeGenerated` column.
+
+### [Unfiltered timeline](#tab/unfiltered)
+
+The following screenshot shows the results of a query that returns 1,000 email events. The timeline is unfiltered, so it displays the full range of results with a timestamp for each day. Select a day or range of days to filter the results for that time period.
+
+:::image type="content" source="/defender/media/advanced-hunting-unfiltered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with all the results unfiltered." lightbox="/defender/media/advanced-hunting-unfiltered-results.png":::
+
+### [Filtered timeline](#tab/filtered)
+
+The following screenshot shows the zoomed in results of a query filtered to a specific date.
+
+:::image type="content" source="/defender/media/advanced-hunting-filtered-results.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results filtered to a specific date." lightbox="/defender/media/advanced-hunting-filtered-results.png":::
+
+---
+
+You can group the results in the timeline by any column that has at least two but less than 50 unique values.
+
+### [Ungrouped timeline](#tab/ungrouped)
+
+The following screenshot shows the results of a query that returns 1,000 email events. The timeline is ungrouped, so it displays all the results in a single line.
+
+:::image type="content" source="/defender/media/advanced-hunting-ungrouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results all together in one line." lightbox="/defender/media/advanced-hunting-ungrouped.png":::
+
+### [Grouped timeline](#tab/grouped)
+
+The following screenshot shows the results grouped by last email action with a separate line for each action.
+
+:::image type="content" source="/defender/media/advanced-hunting-grouped.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results grouped by last email action." lightbox="/defender/media/advanced-hunting-grouped.png":::
+
+---
 
 ## View query results as a table or chart
 
