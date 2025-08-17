@@ -38,20 +38,15 @@ Before enabling real-time agent protection during runtime, make sure:
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
-## Onboarding roles and responsibilities
 
-A Power Platform administrator must complete onboarding steps on their side before real-time protection during agent runtime for Microsoft Copilot Studio AI agents can be enabled. The process also requires coordination with other administrators:
-
-
-1. **Microsoft Entra Administrator:**  
-    1. Create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) 
-    1. Configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
-1. **Security Administrator:**  
-    1. In the Microsoft Defender portal settings, enter the Application ID from Step 1a.
-1. **Power Platform Administrator:**  
-    1. In the Power Platform settings page, enter both:
-       - The Application ID from step 1a.
-       - The URL from the Microsoft Defender portal. For more information, see: [link].
+> [!NOTE]
+> A Power Platform administrator must complete onboarding steps on their side before real-time protection during agent runtime for Microsoft Copilot Studio AI agents can be enabled. The process also requires coordination with other administrators: 
+>
+> **Microsoft Entra Administrator** is responsible for creating [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configuring a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
+>
+> **Security administrator** is responsible for entering the Application ID in the Microsoft Defender portal settings.
+>
+> **Power Platform Administrator** is responsible for entering the Application ID and URL in the Power Platform settings page. For more details see: [link].
 
 
 ## Turn on real-time protection during agent runtime
