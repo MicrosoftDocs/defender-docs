@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ---
 # Regional availability for Microsoft Defender for Cloud plans
 
-[!INCLUDE [21Vianet](./includes/vianet-retirement.md)]
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article gives an overview of where you can use Microsoft Defender for Cloud plans across Azure, AWS, and GCP. Check which Defender for Cloud services are available in your preferred region.
 

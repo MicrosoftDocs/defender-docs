@@ -13,7 +13,7 @@ ms.custom: references_regions
 > [!CAUTION]
 > This article references CentOS, a Linux distribution that is End Of Service as of June 30, 2024. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
-[!INCLUDE [21Vianet](./includes/vianet-retirement.md)]
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article summarizes support information for Container capabilities in Microsoft Defender for Cloud.
 

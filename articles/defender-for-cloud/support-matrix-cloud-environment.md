@@ -9,7 +9,7 @@ ms.date: 08/03/2025
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
 
-[!INCLUDE [21Vianet](./includes/vianet-retirement.md)]
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article indicates which Defender for Cloud features are supported in Azure commercial and government clouds.
 
