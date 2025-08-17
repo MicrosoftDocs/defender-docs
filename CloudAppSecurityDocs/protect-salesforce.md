@@ -55,7 +55,7 @@ You can use the following built-in policy templates to detect and notify you abo
 
 | Type | Name |
 | ---- | ---- |
-| Built-in anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel)<br />[Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)<br />[Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)<br />[Unusual administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual impersonated activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user) |
+| Built-in anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel)<br />[Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)<br />[Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)<br />[Unusual administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user) (Temporarily not supported due to limitation in Salesforce API)<br />[Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual impersonated activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user) |
 | Activity policy template | Logon from a risky IP address<br />Mass download by a single user|
 | File policy template | Detect a file shared with an unauthorized domain<br />Detect a file shared with personal email addresses|
 
@@ -102,15 +102,15 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
     * Sign in to your Salesforce account and go to the **Setup Home** page.
 
-    * Under **Administration** -> **Users**, go to the **Profiles** page.
-
-        ![Salesforce manage users profiles.](media/salesforce-profiles.png)
-
+   * Under **Administration** -> **Users**, go to the **Profiles** page.
+   
+       ![Salesforce manage users profiles.](media/salesforce-profiles.png)
+     
     * Create a new profile by selecting **New Profile**.
-    * Choose the profile you just created to deploy Defender for Cloud Apps and select **Edit**. This profile will be used for the Defender for Cloud Apps service account to set up the App connector.
-
-         ![Salesforce edit profile.](media/salesforce-edit-profile.png)
-
+   * Choose the profile you just created to deploy Defender for Cloud Apps and select **Edit**. This profile will be used for the Defender for Cloud Apps service account to set up the App connector.
+   
+        ![Salesforce edit profile.](media/salesforce-edit-profile.png)
+     
     * Make sure you have the following checkboxes enabled:
       * **API Enabled**
       * **View All Data**
@@ -125,20 +125,20 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 1. If your organization has **Salesforce CRM Content** enabled, make sure that the current administrative account has it enabled as well.
     1. Go to the Salesforce **Setup Home** page.
 
-    1. Under **Administration** -> **Users**, go to the **Users** page.
-
-        ![Salesforce menu users.](media/salesforce-menu-users.png)
-
+   1. Under **Administration** -> **Users**, go to the **Users** page.
+   
+       ![Salesforce menu users.](media/salesforce-menu-users.png)
+      
     1. Select the current administrative user to your dedicated Defender for Cloud Apps user.
 
-    1. Make sure that the **Salesforce CRM Content User** check box is selected.
-
-        ![Salesforce crm content user.](media/salesforce-crm-content-user.png)
-
-    1. Go to **Setup Home** -> **Security** -> **Session Settings**. Under **Session Settings**, make sure that  **Lock sessions to the IP address from which they originated** check box is **not** selected.
-
-        ![Salesforce session settings.](media/salesforce-setup-session-settings.png)
-
+   1. Make sure that the **Salesforce CRM Content User** check box is selected.
+   
+       ![Salesforce crm content user.](media/salesforce-crm-content-user.png)
+      
+   1. Go to **Setup Home** -> **Security** -> **Session Settings**. Under **Session Settings**, make sure that  **Lock sessions to the IP address from which they originated** check box is **not** selected.
+   
+       ![Salesforce session settings.](media/salesforce-setup-session-settings.png)
+      
     1. Select **Save**.
 
    1. Go to **Apps** -> **Feature Settings** -> **Salesforce Files** ->  **Content Deliveries and Public Links**.
@@ -156,7 +156,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 1. In the **App connectors** page, select **+Connect an app** followed by **Salesforce**.
 
     ![Connect Salesforce.](media/connect-salesforce.png)
-
+   
 1. In the next window, give the connection a name and select **Next**.
 
 1. In the **Follow the link** page, select **Connect Salesforce**.
@@ -164,7 +164,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 1. This opens the Salesforce sign in page. Enter your credentials to allow Defender for Cloud Apps access to your team's Salesforce app.
 
     ![Salesforce sign-in.](media/salesforce-logon.png)
-
+   
 1. Salesforce will ask you if you want to allow Defender for Cloud Apps access to your team information and activity log and perform any activity as any team member. To continue, select **Allow**.
 
 1. At this point, you'll receive a success or failure notice for the deployment. Defender for Cloud Apps is now authorized in Salesforce.com.
