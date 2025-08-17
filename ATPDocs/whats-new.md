@@ -28,9 +28,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### New security assessment: Remove inactive service accounts (Preview)
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your environment. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, helping you mitigate security risks associated with unused accounts.
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
 
-For more information see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
 
 
 ## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)

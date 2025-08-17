@@ -1,8 +1,9 @@
 ---
 title: 'Security Assessment: Remove Inactive Service Account (Preview)'
 description: Learn how to identify and address inactive Active Directory service accounts to mitigate security risks and improve your organization's security posture.
-ms.date: 08/04/2025
+ms.date: 08/17/2025
 ms.topic: how-to
+#customer intent: As a security administrator, I want to improve security posture in my organization by removing inactive service accounts
 ---
 
 # Security Assessment: Remove Inactive Service Accounts (Preview)
@@ -11,7 +12,14 @@ This recommendation lists Active Directory service accounts detected as inactive
 
 ## Why do inactive service accounts pose a risk?
 
-Unused service accounts can pose significant security risks to your organization, as some of these accounts can possess elevated privileges, which, if accessed by an attacker, could result in substantial damage. Therefore, it's imperative to identify and address any unused or orphaned service accounts.
+Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Dormant service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
+
+This exposure creates several risks:
+
+- Unauthorized access to sensitive applications and data.
+
+- Lateral movement across the network without detection.
+
 
 ## How do I use this security assessment to improve my organizational security posture? 
 
