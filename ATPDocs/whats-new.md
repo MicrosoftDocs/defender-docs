@@ -25,6 +25,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
+### Microsoft Entra ID risk level near-real-time (NRT) visibility in Defender for Identity (Preview)
+
+Microsoft Entra ID Risk Level extends identity visibility in Identity Inventory assets page, the Identity page, and the Identity Info Table in Advanced Hunting to include the Entra ID risk score. It lets SOC analysts correlate risky users and sensitive and high-privileged users, and create custom detections based on current or historical user risk to enhance investigation context.
+
+Previously, Microsoft Defender for Identity tenants received Entra ID Risk Level attributes in the Identity Info Table through UEBA. With this update, these attributes will now be synchronized in near real time via Defender for Identity.
+
+For UEBA tenants without a Microsoft Defender for Identity license, the Entra ID Risk Level sync to the Identity Info table remains unchanged.
+
 
 ## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
 

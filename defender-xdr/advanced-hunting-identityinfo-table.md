@@ -102,10 +102,14 @@ If you're using the Microsoft Defender portal but haven't onboarded a Microsoft 
 - `DeletedDateTime`
 - `EmployeeId`
 - `OtherMailAddresses`
+- `Tags`
+
+The following columns are available in near real time for tenants with Microsoft Defender for Identity:
+
 - `RiskLevel`
 - `RiskLevelDetails`
 - `State`
-- `Tags`
+
 
 For more information about UEBA, read [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, read [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
 
