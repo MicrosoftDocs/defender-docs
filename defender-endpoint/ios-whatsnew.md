@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 05/15/2025
+ms.date: 08/12/2025
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -125,7 +125,7 @@ Defender for Endpoint is ending support for iOS/iPadOS 15 on January 31, 2025. M
 
 **How does this affect you or your users?**
 
-New users won't be able to install the Microsoft Defender app on devices running iOS/iPadOS 15 and earlier versions. Similarly, existing users won't be to upgrade to the latest version of the app.
+New users won't be able to install the Microsoft Defender app on devices running iOS/iPadOS 15 and earlier versions. Similarly, existing users will be able to upgrade till April-Mid Release version (1.1.64030101) of the app and not beyond it. 
 
 To check which devices support iOS 16 or iPadOS 16 (if applicable), see the following Apple documentation:
 

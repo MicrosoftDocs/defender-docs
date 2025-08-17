@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 08/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -81,6 +81,15 @@ This article describes how admins can manage entries for email senders in the Mi
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Domains and email addresses in the Tenant Allow/Block List
+
+> [!NOTE]
+> Entries for email addresses with special characters (for example, spaces, quotes, or symbols) must use UTF-8 hexadecimal URL encoding for the special characters. Otherwise, you might receive errors when you try to add the entries.
+>
+> For example, to block the email address `"bad+ attacker"@fourthcoffee.com`, use the value `%22bad%2B%20attacker%22@fourthcoffee.com`:
+>
+> - `%22` represents the double quotation marks (").
+> - `%2B` represents the plus sign (+).
+> - `%20` represents the space ( ).
 
 ### Create allow entries for domains and email addresses
 
