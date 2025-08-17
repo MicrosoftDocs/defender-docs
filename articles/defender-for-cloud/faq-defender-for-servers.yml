@@ -91,9 +91,9 @@ sections:
           - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md).
 
       - question: |
-          Does disabling Defender for Servers Plan 2 automatically remove it from my workspace?
+          Does disabling Defender for Servers Plan 2 automatically remove the service from my workspace?
         answer: |
-          Disabling Defender for Servers Plan 2 doesn't automatically remove the service from your workspace. If Plan 2 was previously enabled on a workspace, you must manually remove the workspace configuration to fully disable the feature and stop data collection.
+          Disabling Defender for Servers Plan 2 doesn't automatically remove the service from your workspace.  If you've enabled Plan 2 on a workspace, you need to manually remove the workspace configuration to stop data collection and fully turn off the feature.
   
   - name: Defender for Endpoint integration
     questions:
