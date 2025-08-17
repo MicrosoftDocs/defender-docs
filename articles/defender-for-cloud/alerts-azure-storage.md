@@ -221,7 +221,7 @@ Storage.Files_ApplicationAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
-**Severity**: High/Medium
+**Severity**: Medium
 
 ### **Unusual data exploration in a storage account**
 
@@ -234,7 +234,7 @@ Storage.Files_DataExplorationAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
 
-**Severity**: High/Medium
+**Severity**: Medium
 
 ### **Unusual deletion in a storage account**
 
@@ -247,7 +247,7 @@ Storage.Files_DeletionAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Exfiltration
 
-**Severity**: High/Medium
+**Severity**: Medium
 
 ### **Unusual unauthenticated public access to a sensitive blob container**
 
