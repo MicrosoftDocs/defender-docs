@@ -33,8 +33,7 @@ This capability adds another security layer on top of Microsoft Copilot Studio, 
 
 ## Before you begin
 
-The process requires coordination with other administrators.
-Make sure these onboarding steps have been completed before you enable real time protection during agent runtime for Microsoft Copilot Studio AI agents:
+The onboarding process for Real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
 
 - The **Microsoft Entra Administrator** must create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
 
