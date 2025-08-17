@@ -7,7 +7,7 @@ ms.topic: overview
 
 # Overview of Defender for Cloud protection of Kubernetes nodes
 
-In addition to protecting the Kubernetes cluster control plane and workloads, Defender for Cloud also extends security and compliance over the Kubernetes nodes in the customer's multicloud Kubernetes services.
+In addition to protecting the Kubernetes cluster control plane and workloads, Defender for Cloud also extends security and compliance over the Kubernetes nodes in the customer's Azure Kubernetes Service (AKS).
 
 ## Protection for Kubernetes nodes
 
