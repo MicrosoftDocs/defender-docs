@@ -30,6 +30,18 @@ This capability adds another security layer on top of Microsoft Copilot Studio, 
 > [!NOTE]
 > Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom engine.
 
+
+## Before you begin
+
+The process requires coordination with other administrators.
+Make sure these onboarding steps have been completed before you enable real time protection during agent runtime for Microsoft Copilot Studio AI agents:
+
+- The **Microsoft Entra Administrator** must create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
+
+- The **Security administrator** must enter the Application ID in the Microsoft Defender portal settings.
+
+- The **Power Platform Administrator** must enter the Application ID and URL in the Power Platform settings page. For more information see: [link].
+
 ## Prerequisites
 
 Before enabling real-time agent protection during runtime, make sure:
@@ -37,17 +49,6 @@ Before enabling real-time agent protection during runtime, make sure:
 - You have a valid Microsoft Defender for Cloud Apps license (included in Microsoft 365 E5 Security).
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
-
-
-> [!NOTE]
-> A Power Platform administrator must complete onboarding steps on their side before real-time protection during agent runtime for Microsoft Copilot Studio AI agents can be enabled. The process also requires coordination with other administrators: 
->
-> **Microsoft Entra Administrator** is responsible for creating [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configuring a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
->
-> **Security administrator** is responsible for entering the Application ID in the Microsoft Defender portal settings.
->
-> **Power Platform Administrator** is responsible for entering the Application ID and URL in the Power Platform settings page. For more details see: [link].
-
 
 ## Turn on real-time protection during agent runtime
 
