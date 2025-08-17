@@ -5,7 +5,7 @@ ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
 ms.author: painbar
-author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
