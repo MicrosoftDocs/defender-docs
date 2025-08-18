@@ -204,7 +204,7 @@ By default, a timeline appears above the advanced hunting results that displays 
 
 You can select whether or not the timeline is displayed by default in the **Page preferences** settings.
 
-:::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences.png":::
+:::image type="content" source="/defender/media/advanced-hunting-page-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="/defender/media/advanced-hunting-page-preferences-zoom.png":::
 
 The timeline automatically adjusts its resolution based on the range of results. You can click any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
 
