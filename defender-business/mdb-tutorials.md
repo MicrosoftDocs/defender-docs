@@ -4,7 +4,7 @@ description: Get an overview of learning resources to help you get started with 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: Admin
 ms.topic: concept-article
 ms.service: defender-business

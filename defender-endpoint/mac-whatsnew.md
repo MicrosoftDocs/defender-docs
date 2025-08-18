@@ -70,12 +70,24 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
+
+| Build:             | **101.25062.0005**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.5.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.427.248.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
 ### Jun-2025 (Build: 101.25052.0012  | Release version: 20.125052.12.0)
 
-| Build:             | **101.25052.0012**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125052.12.0** |
-| Engine version:    | **1.1.25060.3000**       |
+| Build:             | **101.25052.0012**   |
+|--------------------|----------------------|
+| Release version:   | **20.125052.12.0**   |
+| Engine version:    | **1.1.25060.3000**   |
 | Signature version: | **1.431.226.0**      |
 
 ##### What's new
@@ -84,10 +96,10 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### May-2025 (Build: 101.25042.0009  | Release version: 20.125042.9.0)
 
-| Build:             | **101.25042.0009**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125042.9.0** |
-| Engine version:    | **1.1.25040.3000**       |
+| Build:             | **101.25042.0009**   |
+|--------------------|----------------------|
+| Release version:   | **20.125042.9.0**    |
+| Engine version:    | **1.1.25040.3000**   |
 | Signature version: | **1.429.521.0**      |
 
 ##### What's new
@@ -97,10 +109,10 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
 
-| Build:             | **101.25032.0006**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125032.6.0** |
-| Engine version:    | **1.1.25020.3000**       |
+| Build:             | **101.25032.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125032.6.0**    |
+| Engine version:    | **1.1.25020.3000**   |
 | Signature version: | **1.427.158.0**      |
 
 ##### What's new
