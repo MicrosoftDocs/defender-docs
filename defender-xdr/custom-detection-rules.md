@@ -89,6 +89,7 @@ To create a custom detection rule using Defender XDR data, the query must return
       - `RecipientEmailAddress`
       - `SenderFromAddress` (envelope sender or Return-Path address)
       - `SenderMailFromAddress` (sender address displayed by email client)
+      - `SenderObjectId`
       - `RecipientObjectId`
       - `AccountObjectId`
       - `AccountSid`
