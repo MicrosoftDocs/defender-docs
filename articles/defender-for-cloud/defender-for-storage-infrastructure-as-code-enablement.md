@@ -57,6 +57,8 @@ Learn more about the `azurerm_security_center_subscription_pricing` resource by 
 To enable and configure Microsoft Defender for Storage at the subscription level using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to subscription](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription), and add the following to your Bicep template:
 
 ```terraform
+targetScope = 'subscription'
+
 resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
   name: 'StorageAccounts'
   properties: {
