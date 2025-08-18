@@ -1,8 +1,9 @@
 ---
 title: Secure apps with app governance hygiene features | Microsoft Defender for Cloud Apps
-ms.date: 05/23/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 description: Learn how to secure apps with app hygiene features
+ms.reviewer: anandd512
 ---
 
 
