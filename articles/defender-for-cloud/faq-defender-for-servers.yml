@@ -95,7 +95,7 @@ sections:
         answer: |
           Disabling the Defender for Servers Plan 2 on your subscription doesn't automatically disable the plan on your workspace.  If Defender for Servers Plan 2 is enabled on a workspace, you need to manually disable it in the workspace settings to stop data collection and turn off the feature.
           
-          Learn how to [disable the Defender for Servers plan](tutorial-enable-servers-plan#disable-defender-for-servers-on-a-subscription).
+          Learn how to [disable the Defender for Servers plan](tutorial-enable-servers-plan.md#disable-defender-for-servers-on-a-subscription).
   
   - name: Defender for Endpoint integration
     questions:
