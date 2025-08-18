@@ -85,7 +85,7 @@ In the unified portal, in addition to viewing the schema column names and descri
 
 ## Known issues
 
-- The `IdentityInfo table` from [Microsoft Sentinel](/azure/sentinel/ueba-reference#identityinfo-table) isn't available, as the `IdentityInfo` table remains as is in Defender XDR. Microsoft Sentinel features like analytics rules that query this table aren't impacted as they're querying the Log Analytics workspace directly.
+- The `IdentityInfo table` from [Microsoft Sentinel](/azure/sentinel/ueba-reference#identityinfo-table) isn't available, as there is a new [unified IdentityInfo table](/defender-xdr/advanced-hunting-identityinfo-table) that streamlines the table in Microsoft Sentinel's Log Analytics and in Microsoft Defender XDR Advanced Hunting. Microsoft Sentinel features like analytics rules that query this table need to be updated according to the new schema.
 - The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While SecurityAlert isn't available in the schema tab, you can still use it in queries using the advanced hunting editor. This provision is made so as not to break existing queries from Microsoft Sentinel that use this table. 
 - Guided hunting mode and take actions capabilities are supported for Defender XDR data only.
 - Custom detections have the following limitations:
