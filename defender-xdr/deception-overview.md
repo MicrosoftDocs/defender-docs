@@ -28,7 +28,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!WARNING]
-> The deception capability of Microsoft Defender for Endpoint will be retired from public preview starting on August 18, 2025 and ending October 31, 2025. Customers are urged to explore [automatic attack disruption and exposure management](./automatic-attack-disruption.md) instead. For more detail, see [Give link to admin center notification](./automatic-attack-disruption.md).
+> The deception capability of Microsoft Defender for Endpoint will be retired from public preview starting on August 18, 2025 and ending October 31, 2025.
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased products/services that might be substantially modified before commercially release. Microsoft makes no warranties, express or implied, with respect to the information provided here.
