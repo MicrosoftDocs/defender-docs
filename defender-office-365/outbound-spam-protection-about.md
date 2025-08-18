@@ -2,9 +2,9 @@
 title: Outbound spam protection
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium

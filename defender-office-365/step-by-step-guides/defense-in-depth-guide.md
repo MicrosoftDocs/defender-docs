@@ -4,10 +4,10 @@ description: Step-by-step configuration guidance on how to get security value fr
 ms.service: defender-office-365
 f1.keywords:
   - NOCSH
-ms.author: benharri
 author: MSFTBen
+ms.author: benharri
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates

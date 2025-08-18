@@ -2,9 +2,9 @@
 title: Safe Attachments
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -84,7 +84,7 @@ This section describes the settings in Safe Attachments policies:
   |---|---|---|
   |**Off**|Attachments aren't scanned for threats by Safe Attachments (for example, malware, ransomware, and phishing). Messages are still scanned for malware by [Anti-malware protection](anti-malware-protection-about.md).|Turn scanning off for selected recipients. <br/><br/> Prevent unnecessary delays in routing internal mail. <br/><br/> **This option is not recommended for most users. You should only use this option to turn off Safe Attachments scanning for recipients who only receive messages from trusted senders. ZAP doesn't quarantine messages if Safe Attachments is turned off and a threat signal isn't received. For details, see [Zero-hour auto purge](zero-hour-auto-purge.md)**|
   |**Monitor**|Delivers messages with attachments and then tracks what happens with detected threats. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|See where detected messages go in your organization.|
-  |**Block**|Prevents messages with detected attachments from being delivered. <br/><br/> Messages are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> Automatically blocks future instances of the messages and attachments. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|Protects your organization from repeated attacks using the same attachments. <br/><br/> This is the default value, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).|
+  |**Block**|Prevents messages with detected attachments from being delivered. <br/><br/> Messages are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> Automatically blocks future instances of the messages and attachments. <br/><br/> Delivery of safe messages might be delayed due to Safe Attachments scanning.|Protects your organization from repeated attacks using the same attachments. <br/><br/> This value is the default, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).|
   |**Dynamic Delivery**|Delivers messages immediately, but replaces attachments with placeholders until Safe Attachments scanning is complete. <br/><br/> Messages that contain malicious attachments are quarantined. By default, only admins (not users) can review, release, or delete the messages.¹ <br/><br/> For details, see the [Dynamic Delivery in Safe Attachments policies](#dynamic-delivery-in-safe-attachments-policies) section later in this article.|Avoid message delays while protecting recipients from malicious files.|
 
   ¹ Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy). Users can't release their own messages quarantined as malware or phishing by Safe Attachments, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.

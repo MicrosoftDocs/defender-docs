@@ -2,9 +2,9 @@
 title: Find and release quarantined messages as a user
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Consumer/IW
 ms.topic: how-to
 ms.localizationpriority: high

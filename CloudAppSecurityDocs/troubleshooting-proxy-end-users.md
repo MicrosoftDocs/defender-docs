@@ -192,7 +192,7 @@ To allow the preview, an Exchange administrator should perform the following ste
 
 1. Connect to the module. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-mfa-and-modern-authentication).
 
-1. After you connected to the Exchange Online PowerShell, use the [Set-OwaMailboxPolicy](/powershell/module/exchange/set-owamailboxpolicy) cmdlet to update the parameters in the policy:
+1. After you connected to the Exchange Online PowerShell, use the [Set-OwaMailboxPolicy](/powershell/module/exchangepowershell/set-owamailboxpolicy) cmdlet to update the parameters in the policy:
 
     ```powershell
     Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -DirectFileAccessOnPrivateComputersEnabled $false -DirectFileAccessOnPublicComputersEnabled $false

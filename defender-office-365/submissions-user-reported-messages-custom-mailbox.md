@@ -2,9 +2,9 @@
 title: User reported settings
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -125,7 +125,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   To create customized pop-up notifications in specific languages, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add customized message**. In the **Add customized message** flyout that opens, configure the following settings:
 
   - Select the tab for the notification pop-up to customize:
-    - **Report phishing** (this is the default selection)
+    - **Report phishing** (this selection is the default)
     - **Report junk**
     - **Report not junk**
     - **Phishing reported**
@@ -363,7 +363,7 @@ Likewise, the report submission rule doesn't exist if either of the following st
 
 So, it's possible that the **Get-ReportSubmissionPolicy** and **Get-ReportSubmissionRule** cmdlets return nothing.
 
-For detailed syntax and parameter information, see [Get-ReportSubmissionPolicy](/powershell/module/exchange/get-reportsubmissionpolicy) and [Get-ReportSubmissionRule](/powershell/module/exchange/get-reportsubmissionrule).
+For detailed syntax and parameter information, see [Get-ReportSubmissionPolicy](/powershell/module/exchangepowershell/get-reportsubmissionpolicy) and [Get-ReportSubmissionRule](/powershell/module/exchangepowershell/get-reportsubmissionrule).
 
 ### Use PowerShell to create the report submission policy and the report submission rule
 
@@ -371,7 +371,7 @@ If the **Get-ReportSubmissionPolicy** and **Get-ReportSubmissionRule** cmdlets r
 
 Always create the report submission policy first, because you specify the report submission policy in the report submission rule.
 
-For detailed syntax and parameter information, see [New-ReportSubmissionPolicy](/powershell/module/exchange/new-reportsubmissionpolicy) and [New-ReportSubmissionRule](/powershell/module/exchange/new-reportsubmissionrule).
+For detailed syntax and parameter information, see [New-ReportSubmissionPolicy](/powershell/module/exchangepowershell/new-reportsubmissionpolicy) and [New-ReportSubmissionRule](/powershell/module/exchangepowershell/new-reportsubmissionrule).
 
 #### Use PowerShell to configure reporting in Outlook with report messages to Microsoft and the reporting mailbox
 
@@ -438,7 +438,7 @@ Other settings:
       [-MultiLanguagePostSubmitMessageButtonLinkForJunk "Language1 After Not Junk Info Button URL","Language2 After Not Junk Info Button URL",..."Language7 After Not Junk Info Button URL"]
       ```
 
-      - For valid language codes, see [New-ReportSubmissionPolicy](/powershell/module/exchange/new-reportsubmissionpolicy#-multilanguagesetting).
+      - For valid language codes, see [New-ReportSubmissionPolicy](/powershell/module/exchangepowershell/new-reportsubmissionpolicy#-multilanguagesetting).
       - The order that you enter the language codes doesn't matter, but you must use the same order for the corresponding _MultiLanguagePre\*_ and _MultiLanguagePost\*_ parameter values.
       - A text value for each language is required in the _MultiLanguage\*SubmitMessageTitleFor\*_ and _MultiLanguage\*SubmitMessageFor\*_ parameters (for example, _MultiLanguagePreSubmitMessageTitleForPhishing_ and _MultiLanguagePreSubmitMessageForPhishing_). The corresponding _MultiLanguage\*SubmitMessageButtonTextFor\*_ and _MultiLanguage\*SubmitMessageButtonLinkFor\*_ are optional, but you must use them both together.
       - For the number of language codes that you specify, you need to provide the same number of blank values for **all** of the _MultiLanguage\*SubmitMessage\*_ parameters that you aren't using. For example, if you're using three languages, but you aren't using the _MultiLanguagePostSubmitMessageButtonTextForJunk_ and _MultiLanguagePostSubmitMessageButtonLinkForJunk_ parameters, you need to use the value `"","",""` for those parameters. You might need to add these blank values for up to 18 of the _MultiLanguage\*SubmitMessage\*_ parameters.
@@ -594,7 +594,7 @@ The same settings are available when you modify the report submission policy in 
 
 When you modify the existing settings in the report submission policy, you might need to undo or nullify other settings that might or might not be configured. And, you might need to create or delete the report submission rule to allow or prevent message reporting to a reporting mailbox.
 
-For detailed syntax and parameter information, see [Set-ReportSubmissionPolicy](/powershell/module/exchange/set-reportsubmissionpolicy).
+For detailed syntax and parameter information, see [Set-ReportSubmissionPolicy](/powershell/module/exchangepowershell/set-reportsubmissionpolicy).
 
 The following examples show how to change the user reporting experience without concern for the existing settings or values:
 
@@ -700,15 +700,15 @@ Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo newemaila
 > - _ThirdPartyReportAddresses_
 > - _ReportJunkAddresses_, _ReportNotJunkAddresses_, and _ReportPhishAddresses_
 
-For detailed syntax and parameter information, see [Set-ReportSubmissionRule](/powershell/module/exchange/set-reportsubmissionrule).
+For detailed syntax and parameter information, see [Set-ReportSubmissionRule](/powershell/module/exchangepowershell/set-reportsubmissionrule).
 
-To temporarily disable sending email messages to the reporting mailbox without deleting the report submission rule, use [Disable-ReportSubmissionRule](/powershell/module/exchange/disable-reportsubmissionrule). For example:
+To temporarily disable sending email messages to the reporting mailbox without deleting the report submission rule, use [Disable-ReportSubmissionRule](/powershell/module/exchangepowershell/disable-reportsubmissionrule). For example:
 
 ```powershell
 Get-ReportSubmissionRule | Disable-ReportSubmissionRule -Confirm:$false
 ```
 
-To enable the report submission rule, use [Enable-ReportSubmissionRule](/powershell/module/exchange/enable-reportsubmissionrule). For example:
+To enable the report submission rule, use [Enable-ReportSubmissionRule](/powershell/module/exchangepowershell/enable-reportsubmissionrule). For example:
 
 ```powershell
 Get-ReportSubmissionRule | Disable-ReportSubmissionRule -Confirm:$false
@@ -736,4 +736,4 @@ To remove both the report submission policy and report submission rule in the sa
 Remove-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy; Get-ReportSubmissionRule | Remove-ReportSubmissionRule -Confirm:$false
 ```
 
-For detailed syntax and parameter information, see [Remove-ReportSubmissionPolicy](/powershell/module/exchange/remove-reportsubmissionpolicy) and [Remove-ReportSubmissionRule](/powershell/module/exchange/remove-reportsubmissionrule).
+For detailed syntax and parameter information, see [Remove-ReportSubmissionPolicy](/powershell/module/exchangepowershell/remove-reportsubmissionpolicy) and [Remove-ReportSubmissionRule](/powershell/module/exchangepowershell/remove-reportsubmissionrule).

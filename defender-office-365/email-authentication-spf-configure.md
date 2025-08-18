@@ -2,9 +2,9 @@
 title: Set up SPF identify valid email sources for your Microsoft 365 domain
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 07/24/2025
 audience: ITPro
 ms.topic: how-to

@@ -2,9 +2,9 @@
 title: Respond to a compromised connector in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -108,7 +108,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Search-UnifiedAuditLog -StartDate "<ExDateTime>" -EndDate "<ExDateTime>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector
 ```
 
-For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchangepowershell/search-unifiedauditlog).
 
 ### Step 2: Review and revert unauthorized change(s) in a connector
 

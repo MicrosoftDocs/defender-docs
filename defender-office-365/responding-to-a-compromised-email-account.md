@@ -5,9 +5,9 @@ f1.keywords:
   - Hijacked account
   - Hacked account
   - Compromised account
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.collection:

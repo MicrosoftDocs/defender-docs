@@ -4,10 +4,10 @@ description: Examples and walk-through of using Explorer to determine the impact
 ms.service: defender-office-365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: MSFTBen
+ms.author: chrisda
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates

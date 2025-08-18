@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 9/7/2023
 audience: ITPro
 ms.topic: how-to
@@ -194,7 +194,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name" | Format-List
     ```
 
-  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchange/get-inboxrule).
+  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule).
 
 - **Remove Inbox rules from a mailbox**:
 
@@ -210,7 +210,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com | Remove-InboxRule
     ```
 
-  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchange/remove-inboxrule).
+  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchangepowershell/remove-inboxrule).
 
 - **Turn off an Inbox rule for further investigation**:
 
@@ -218,7 +218,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
   Disable-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name"
   ```
 
-  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchange/disable-inboxrule).
+  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchangepowershell/disable-inboxrule).
 
 ## How to minimize future attacks
 

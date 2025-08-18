@@ -2,9 +2,9 @@
 title: Configure the default connection filter policy
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -142,7 +142,7 @@ This example adds and removes the specified IP addresses and address ranges from
 Set-HostedConnectionFilterPolicy -Identity Default -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
 ```
 
-For detailed syntax and parameter information, see [Set-HostedConnectionFilterPolicy](/powershell/module/exchange/set-hostedconnectionfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedConnectionFilterPolicy](/powershell/module/exchangepowershell/set-hostedconnectionfilterpolicy).
 
 ## How do you know these procedures worked?
 

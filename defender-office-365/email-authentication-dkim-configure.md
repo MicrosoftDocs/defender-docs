@@ -2,9 +2,9 @@
 title: How to use DKIM for email in your custom domain
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 06/19/2025
 audience: ITPro
 ms.topic: how-to
@@ -311,10 +311,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
         ```
 
         - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
           - Simple: Only changes in empty lines at the end of the message body are tolerated.
         - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
           - Simple: No changes to the header fields are tolerated.
         - The _KeySize_ parameter specifies the bit size of the public key in the DKIM record:
            - 1024 (default)
@@ -367,10 +367,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
      - Simple: Only changes in empty lines at the end of the message body are tolerated.
    - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
      - Simple: No changes to the header fields are tolerated.
 
    For example:
@@ -400,9 +400,9 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [New-DkimSigningConfig](/powershell/module/exchange/new-dkimsigningconfig)
-- [Set-DkimSigningConfig](/powershell/module/exchange/set-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [New-DkimSigningConfig](/powershell/module/exchangepowershell/new-dkimsigningconfig)
+- [Set-DkimSigningConfig](/powershell/module/exchangepowershell/set-dkimsigningconfig)
 
 ## Rotate DKIM keys
 
@@ -500,8 +500,8 @@ If you'd rather use PowerShell to rotate DKIM keys for a domain, connect to [Exc
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig)
-- [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
+- [Get-DkimSigningConfig](/powershell/module/exchangepowershell/get-dkimsigningconfig)
+- [Rotate-DkimSigningConfig](/powershell/module/exchangepowershell/rotate-dkimsigningconfig)
 
 ## Disable DKIM signing of outbound messages using a custom domain
 
