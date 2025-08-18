@@ -40,7 +40,7 @@ We’re excited to announce a new Graph-based API for initiating and managing re
 
 This capability is currently in preview and available in API Beta version.
 
-For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta).
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
 
 ### Identity scoping is now generally available (GA)
 
