@@ -70,6 +70,7 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
         isEnabled: 'True'
         additionalExtensionProperties: {
           CapGBPerMonthPerStorageAccount: '10000'
+          BlobScanResultsOptions
         }
       }
       {
