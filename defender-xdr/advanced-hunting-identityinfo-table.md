@@ -103,11 +103,6 @@ If you're using the Microsoft Defender portal but haven't onboarded a Microsoft 
 - `EmployeeId`
 - `OtherMailAddresses`
 - `Tags`
-
-The following columns are available in near real time for tenants with Microsoft Defender for Identity:
-
-- `RiskLevel`
-- `RiskLevelDetails`
 - `State`
 
 
