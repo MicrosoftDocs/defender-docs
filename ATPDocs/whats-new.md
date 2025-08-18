@@ -26,6 +26,14 @@ For updates about versions and features released six months ago or earlier, see 
 ## August 2025
 
 
+## New Graph-based API for Response Actions (Preview) 
+
+We’re excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
+
+This capability is currently in preview and available in API Beta version.
+
+For more information, see Managing response actions through Graph API.
+
 ## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
