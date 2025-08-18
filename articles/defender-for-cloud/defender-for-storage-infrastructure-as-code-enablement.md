@@ -71,7 +71,7 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
         isEnabled: 'True'
         additionalExtensionProperties: {
           CapGBPerMonthPerStorageAccount: '10000'
-          BlobScanResultsOptions
+          BlobScanResultsOptions: 'BlobIndexTags'
         }
       }
       {
@@ -115,7 +115,7 @@ To enable and configure Microsoft Defender for Storage at the subscription level
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
                     "CapGBPerMonthPerStorageAccount": "10000",
-                    "BlobScanResultsOptions"
+                    "BlobScanResultsOptions": "BlobIndexTags"
                 }
             },
             {
@@ -270,6 +270,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
             "onUpload": {
                 "isEnabled": true,
                 "capGBPerMonth": 10000
+                "blobScanResultsOptions": BlobIndexTags
             }
         },
         "sensitiveDataDiscovery": {
