@@ -3,6 +3,7 @@ title: Import user groups from connected apps
 description: This article provides instructions for importing your user groups from connected apps into Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Naama-Goldbart 
 ---
 
 # Import user groups from connected apps

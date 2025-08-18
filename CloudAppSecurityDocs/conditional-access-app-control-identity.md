@@ -3,6 +3,7 @@ title: Identity-managed devices with Conditional Access app control | Microsoft 
 description: This article provides information about how to configure access and session policies for Conditional Access app control to check for identity-managed devices.
 ms.date: 12/24/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Identity-managed devices with Conditional Access app control

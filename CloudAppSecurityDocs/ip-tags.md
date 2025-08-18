@@ -3,6 +3,7 @@ title: Work with IP ranges and tags
 description: This article provides instructions for working with IP tags and IP categories.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Work with IP ranges and tags

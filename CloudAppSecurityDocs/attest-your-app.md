@@ -3,6 +3,7 @@ title: Attest your apps
 description: This article provides instructions for attesting your apps in Defender for Cloud Apps.
 ms.date: 06/30/2025
 ms.topic: article
+ms.reviewer: Mravela 
 ---
 # Attest your apps
 

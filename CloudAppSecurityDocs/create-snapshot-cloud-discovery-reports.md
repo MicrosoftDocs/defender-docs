@@ -3,6 +3,7 @@ title: Create snapshot cloud discovery reports
 description: This article provides information about how to upload logs manually to create a snapshot report of your cloud discovery apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Create snapshot cloud discovery reports
 

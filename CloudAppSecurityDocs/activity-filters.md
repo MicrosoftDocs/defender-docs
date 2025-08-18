@@ -3,6 +3,7 @@ title: Investigate activities
 description: This article provides a list of activities, filters, and match parameters that can be applied to activity policies.
 ms.date: 06/24/2025
 ms.topic: how-to
+ms.reviewer: gayasalomon
 ---
 
 # Investigate activities

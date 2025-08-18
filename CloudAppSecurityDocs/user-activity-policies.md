@@ -3,6 +3,7 @@ title: Create activity policies | Microsoft Defender for Cloud Apps
 description: This article provides instructions for creating and working with activity policies.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Ronen-Refaeli
 ---
 
 # Create Microsoft Defender for Cloud Apps activity policies
