@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: This article provides an overview of the supported features and plans for Defender for Cloud in Azure commercial cloud and government clouds.
 ms.topic: limits-and-quotas
-ms.date: 08/03/2025
+ms.date: 08/14/2025
 ---
 
 # Defender for Cloud support matrices for Azure commercial/other clouds
@@ -44,7 +44,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Security recommendations |GA|GA|NA|
 | Asset inventory |GA|GA|NA|
 | Secure score |GA|GA|NA|
-| Workbooks |GA|GA|NA|
+| [Workbooks](custom-dashboards-azure-workbooks.md) |GA|GA|GA|
 | Continues Export |GA|GA|NA|
 | Workflow automation |GA|GA|NA|
 | Quick Fix |GA|GA|NA|
