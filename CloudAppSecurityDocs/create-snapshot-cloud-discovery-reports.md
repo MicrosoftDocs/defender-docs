@@ -35,7 +35,7 @@ To create a snapshot report:
     ![Verify your log format.](media/cloud-discovery-snapshot-verify.png)
 
     > [!NOTE]
-    > The FTP sample format is supported in snapshots and automated upload while syslog is supported in automated upload only. Downloading a sample log will download a sample FTP log.
+    > The FTP sample format is supported in snapshots and automated upload while syslog is supported in automated upload only. Downloading a sample log downloads a sample FTP log.
 
 1. **Upload traffic logs** that you want to upload. You can upload up to 20 files at once. Compressed and zipped files are also supported.
 
