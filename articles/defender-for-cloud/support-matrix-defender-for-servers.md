@@ -5,10 +5,12 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 08/03/2025
+ms.date: 08/18/2025
 ---
 
 # Defender for Servers support
+
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 This article summarizes support information for the Defender for Servers plan in Microsoft Defender for Cloud.
 

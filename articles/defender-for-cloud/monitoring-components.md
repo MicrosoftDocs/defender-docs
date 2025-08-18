@@ -4,10 +4,12 @@ description: Protect your workloads with Microsoft Defender for Cloud by learnin
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
-ms.date: 07/14/2025
+ms.date: 08/18/2025
 ---
 
 # How does Defender for Cloud collect data?
+
+[!INCLUDE [21Vianet](./includes/21vianet-retirement.md)]
 
 Defender for Cloud collects data from your Azure virtual machines (VMs), Virtual Machine Scale Sets, IaaS containers, and non-Azure (including on-premises) machines to monitor for security vulnerabilities and threats. Some Defender plans require monitoring components to collect data from your workloads.
 
