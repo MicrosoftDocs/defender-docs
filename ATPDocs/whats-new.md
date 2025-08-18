@@ -25,13 +25,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2025
 
-### Microsoft Entra ID risk level near-real-time (NRT) visibility in Defender for Identity (Preview)
+### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
 
-Microsoft Entra ID Risk Level extends identity visibility on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting. It now includes the Entra ID risk score, making it easier to correlate risky users with sensitive or highly privileged users. SOC analysts can create custom detections based on current or historical user risk to enrich investigation context.
+Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
 
-Previously, Microsoft Defender for Identity tenants received Entra ID Risk Level attributes in the IdentityInfo table through UEBA. With this update, these attributes are now synchronized in near real time via Defender for Identity.
+Previously, Defender for Identity tenants received Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
 
-For UEBA tenants without a Microsoft Defender for Identity license, synchronization of the Entra ID Risk Level to the IdentityInfo table remains unchanged.
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
 
 
 ## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
