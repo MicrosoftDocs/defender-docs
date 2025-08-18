@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 08/18/2025
 ---
 
 # Advanced hunting API
@@ -105,13 +105,11 @@ POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
 ```
 
 ```json
+
 {
-    "Query":"DeviceProcessEvents
-|where InitiatingProcessFileName =~ 'powershell.exe'
-|where ProcessCommandLine contains 'appdata'
-|project Timestamp, FileName, InitiatingProcessFileName, DeviceId
-|limit 2"
+    "Query":"DeviceProcessEvents |where InitiatingProcessFileName =~ 'powershell.exe' |where ProcessCommandLine contains 'appdata'|project Timestamp, FileName, InitiatingProcessFileName, DeviceId|limit 2"
 }
+
 ```
 
 ### Response example
