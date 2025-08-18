@@ -26,7 +26,21 @@ For updates about versions and features released six months ago or earlier, see 
 ## August 2025
 
 
-## New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+### New Graph based API for response actions (preview) 
+
+We’re excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
+
+This capability is currently in preview and available in API Beta version.
+
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta).
+
+### Identity scoping is now generally available (GA)
+
+Identity scoping is now generally available across all environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
 
 The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
 
@@ -47,11 +61,11 @@ Improved detection logic to include scenarios where accounts were locked during 
 
 ## July 2025
 
-**Expanded coverage in ITDR deployment health widget**
+### Expanded coverage in ITDR deployment health widget
 
 The Identity Threat Detection and Response (ITDR) deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Microsoft Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
 
-**Time limit added to Recommended test mode**
+### Time limit added to Recommended test mode
 
 Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already have Recommended test mode enabled, a 60-day expiration is automatically applied.
 
