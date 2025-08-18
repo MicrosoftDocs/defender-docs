@@ -8,7 +8,6 @@ ms.topic: how-to
 # How to investigate anomaly detection alerts
 
 
-
 Microsoft Defender for Cloud Apps provides security detections and alerts for malicious activities. The purpose of this guide is to provide you with general and practical information on each alert, to help with your investigation and remediation tasks. Included in this guide is general information about the conditions for triggering alerts. However, it's important to note that since anomaly detections are nondeterministic by nature, they're only triggered when there's behavior that deviates from the norm. Finally, some alerts might be in preview, so regularly review the official documentation for updated alert status.
 
 > [!IMPORTANT]
