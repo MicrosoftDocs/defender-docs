@@ -29,6 +29,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
     name = "OnUploadMalwareScanning"
     additional_extension_properties = {
       CapGBPerMonthPerStorageAccount = "10000"
+      BlobScanResultsOptions = "BlobIndexTags"
     }
   }
  
@@ -57,6 +58,8 @@ Learn more about the `azurerm_security_center_subscription_pricing` resource by 
 To enable and configure Microsoft Defender for Storage at the subscription level using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to subscription](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription), and add the following to your Bicep template:
 
 ```terraform
+targetScope = 'subscription'
+
 resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
   name: 'StorageAccounts'
   properties: {
@@ -68,6 +71,7 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
         isEnabled: 'True'
         additionalExtensionProperties: {
           CapGBPerMonthPerStorageAccount: '10000'
+          BlobScanResultsOptions: 'BlobIndexTags'
         }
       }
       {
@@ -110,7 +114,8 @@ To enable and configure Microsoft Defender for Storage at the subscription level
                 "name": "OnUploadMalwareScanning",
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
-                    "CapGBPerMonthPerStorageAccount": "10000"
+                    "CapGBPerMonthPerStorageAccount": "10000",
+                    "BlobScanResultsOptions": "BlobIndexTags"
                 }
             },
             {
@@ -157,6 +162,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
         onUpload = {
           isEnabled     = true
           capGBPerMonth = 10000
+          blobScanResultsOptions = BlobIndexTags
         }
       }
       sensitiveDataDiscovery = {
@@ -219,6 +225,7 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
       onUpload: {
         isEnabled: true
         capGBPerMonth: 10000
+        blobScanResultsOptions: BlobIndexTags
       }
     }
     sensitiveDataDiscovery: {
@@ -262,7 +269,8 @@ To enable and configure Microsoft Defender for Storage at the storage account le
         "malwareScanning": {
             "onUpload": {
                 "isEnabled": true,
-                "capGBPerMonth": 10000
+                "capGBPerMonth": 10000,
+                "blobScanResultsOptions": BlobIndexTags
             }
         },
         "sensitiveDataDiscovery": {
