@@ -1,11 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "microsoft-365/security/defender/advanced-hunting-IdentityEvents-table.md",
-      "redirect_url": "/defender-xdr/advanced-hunting-identityevents-table",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud-apps.md",
       "redirect_url": "/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps",
       "redirect_document_id": false
