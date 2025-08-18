@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 06/13/2025
+ms.date: 08/18/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -139,9 +139,11 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 6. Select **Done**.
 
 After a few moments, the block entry is available on the **Domains & addresses** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=Sender>.
-> [!NOTE]
-> Admin submissions for on-premises mailboxes are only supported for messages that are less than 7 days old. Additionally, uploading email files for admin submissions is not currently supported for on-premises mailboxes.
 
+> [!NOTE]
+> Admin submissions for on-premises mailboxes are supported only for messages less than 7 days old.
+>
+> Currently, admin submissions by uploading files from on-premises mailboxes isn't supported.
 
 ### Report questionable email attachments to Microsoft
 
