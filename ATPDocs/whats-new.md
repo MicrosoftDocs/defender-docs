@@ -26,13 +26,19 @@ For updates about versions and features released six months ago or earlier, see 
 ## August 2025
 
 
+### New security assessment: Remove inactive service accounts (Preview)
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
+
+For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+
 ### New Graph based API for response actions (preview) 
 
 We’re excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
 
 This capability is currently in preview and available in API Beta version.
 
-For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta).
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
 
 ### Identity scoping is now generally available (GA)
 
