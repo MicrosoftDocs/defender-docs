@@ -139,6 +139,9 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 6. Select **Done**.
 
 After a few moments, the block entry is available on the **Domains & addresses** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=Sender>.
+> [!NOTE]
+> Admin submissions for on-premises mailboxes are only supported for messages that are less than 7 days old. Additionally, uploading email files for admin submissions is not currently supported for on-premises mailboxes.
+
 
 ### Report questionable email attachments to Microsoft
 
