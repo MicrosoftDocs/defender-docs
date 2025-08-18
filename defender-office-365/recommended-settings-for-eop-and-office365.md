@@ -3,9 +3,9 @@ title: Recommendations for Microsoft 365 security settings
 keywords: Office 365 security recommendations, Sender Policy Framework, Domain-based Message Reporting and Conformance, DomainKeys Identified Mail, steps, how does it work, security baselines, baselines for default protections, baselines for Defender for Office 365, set up Defender for Office 365, configure Defender for Office 365, security configuration
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.collection:
   - tier1
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ms.service: defender-office-365
-ms.date: 07/10/2025
+ms.date: 08/09/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -292,7 +292,7 @@ Although there's no default Safe Attachments policy, the **Built-in protection**
 
 To configure these settings, see [Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md) and [Safe Documents in Microsoft 365 E5](safe-documents-in-e5-plus-security-about.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365) cmdlet for these settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [Set-AtpPolicyForO365](/powershell/module/exchangepowershell/set-atppolicyforo365) cmdlet for these settings.
 
 |Security feature name|Default|Built-in protection|Comment|
 |---|:---:|:---:|---|
@@ -304,7 +304,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 To configure these settings, see [Set up Safe Attachments policies in Defender for Office 365](safe-attachments-policies-configure.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy) and [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safelinkspolicy) cmdlets for these settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeAttachmentPolicy](/powershell/module/exchangepowershell/new-safeattachmentpolicy) and [Set-SafeAttachmentPolicy](/powershell/module/exchangepowershell/set-safelinkspolicy) cmdlets for these settings.
 
 > [!NOTE]
 > As described earlier, although there's no default Safe Attachments policy, the **Built-in protection** preset security policy provides Safe Attachments protection to all recipients who aren't defined in the Standard preset security policy, the Strict preset security policy, or in custom Safe Attachments policies.
@@ -331,20 +331,20 @@ Although there's no default Safe Links policy, the **Built-in protection** prese
 
 To configure Safe Links policy settings, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy) and [Set-SafeLinksPolicy](/powershell/module/exchange/set-safelinkspolicy) cmdlets for Safe Links policy settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-SafeLinksPolicy](/powershell/module/exchangepowershell/new-safelinkspolicy) and [Set-SafeLinksPolicy](/powershell/module/exchangepowershell/set-safelinkspolicy) cmdlets for Safe Links policy settings.
 
 > [!NOTE]
-> The **Default in custom** column refers to the default values in new Safe Links policies that you create. The remaining columns indicate (unless otherwise noted) the values that are configured in the corresponding preset security policies.
+> The **Default in custom** column refers to the default values in new Safe Links policies you create. The remaining columns indicate the values configured in the corresponding preset security policies.
 
 |Security feature name|Default in custom|Built-in protection|Standard|Strict|Comment|
 |---|:---:|:---:|:---:|:---:|---|
 |**URL & click protection settings**||||||
 |**Email**|||||The settings in this section affect URL rewriting and time of click protection in email messages.|
 |**On: Safe Links checks a list of known, malicious links when users click links in email. URLs are rewritten by default.** (_EnableSafeLinksForEmail_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
-|**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|Selected (`$true`)|Not selected (`$false`)|Selected (`$true`)|Selected (`$true`)||
+|**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Apply real-time URL scanning for suspicious links and links that point to files** (_ScanUrls_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Wait for URL scanning to complete before delivering the message** (_DeliverMessageAfterScan_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
-|**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new Safe Links policies that you create in the Defender portal, this setting is selected by default. In new Safe Links policies that you create in PowerShell, the default value of the _DisableURLRewrite_ parameter is `$false`.|
+|**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new policies created in the Defender portal, this setting is selected by default. In new policies created in PowerShell, the default value is `$false`.|
 |**Do not rewrite the following URLs in email** (_DoNotRewriteUrls_)|Blank|Blank|Blank|Blank|We have no specific recommendation for this setting. <br/><br/> **Note**: Safe Links doesn't scan or wrap entries in the "Don't rewrite the following URLs" list during mail flow. Report the URL as **I've confirmed it's clean** and then select **Allow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).|
 |**Teams**|||||The setting in this section affects time of click protection in Microsoft Teams.|
 |**On: Safe Links checks a list of known, malicious links when users click links in Microsoft Teams. URLs are not rewritten.** (_EnableSafeLinksForTeams_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
@@ -352,7 +352,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 |**On: Safe Links checks a list of known, malicious links when users click links in Microsoft Office apps. URLs are not rewritten.** (_EnableSafeLinksForOffice_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Use Safe Links in supported Office 365 desktop and mobile (iOS and Android) apps. For more information, see [Safe Links settings for Office apps](safe-links-about.md#safe-links-settings-for-office-apps).|
 |**Click protection settings**||||||
 |**Track user clicks** (_TrackClicks_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
-|**Let users click through to the original URL** (_AllowClickThrough_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new Safe Links policies that you create in the Defender portal, this setting is selected by default. In new Safe Links policies that you create in PowerShell, the default value of the _AllowClickThrough_ parameter is `$false`.|
+|**Let users click through to the original URL** (_AllowClickThrough_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new policies created in the Defender portal, this setting is selected by default. In new policies created in PowerShell, the default value is `$false`.|
 |**Display the organization branding on notification and warning pages** (_EnableOrganizationBranding_)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|We have no specific recommendation for this setting. <br/><br/> Before you turn on this setting, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.|
 |**Notification**||||||
 |**How would you like to notify your users?** (_CustomNotificationText_ and _UseTranslatedNotificationText_)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|**Use the default notification text** (Blank and `$false`)|We have no specific recommendation for this setting. <br/><br/> You can select **Use custom notification text** (`-CustomNotificationText "<Custom text>"`) to enter and use customized notification text. If you specify custom text, you can also select **Use Microsoft Translator for automatic localization** (`-UseTranslatedNotificationText $true`) to automatically translate the text into the user's language.|
@@ -361,7 +361,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchange/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchangepowershell/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 
 > [!NOTE]
 > Microsoft Teams protection isn't part of the Standard or Strict preset security policies, any custom threat policies, or the default threat policies. The **Standard** and **Strict** values indicate our **recommended** values.

@@ -160,6 +160,7 @@ These are the known gaps:
 |Microsoft Defender for Endpoint Security Configuration Management|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|
 |Microsoft Defender for IoT enterprise IoT security|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|
 
+
 > [!NOTE]
 > While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
 

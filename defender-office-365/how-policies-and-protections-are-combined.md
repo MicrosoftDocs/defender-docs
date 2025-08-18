@@ -3,9 +3,9 @@ title: Order and precedence of email protection
 keywords: security, malware, Microsoft 365, M365, security center, Microsoft Defender portal, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: reference
 ms.localizationpriority: medium

@@ -2,9 +2,9 @@
 title: Allow or block URLs using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -140,7 +140,7 @@ This example adds an allow entry for the URL abc.contoso.com and all email addre
 New-TenantAllowBlockListItems -ListType Url -Allow -Entries abc.contoso.com
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Create block entries for URLs
 
@@ -191,7 +191,7 @@ This example adds a block entry for the URL contoso.com and all subdomains (for 
 New-TenantAllowBlockListItems -ListType Url -Block -Entries *contoso.com
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to view entries for URLs in the Tenant Allow/Block List
 
@@ -248,7 +248,7 @@ This example filters the results by blocked URLs.
 Get-TenantAllowBlockListItems -ListType Url -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to modify entries for URLs in the Tenant Allow/Block List
 
@@ -297,7 +297,7 @@ This example changes the expiration date of the block entry for the specified UR
 Set-TenantAllowBlockListItems -ListType Url -Entries "~contoso.com" -ExpirationDate "9/1/2022"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to remove entries for URLs from the Tenant Allow/Block List
 
@@ -334,7 +334,7 @@ This example removes the block entry for the specified URL from the Tenant Allow
 Remove-TenantAllowBlockListItems -ListType Url -Entries "*cohovineyard.com
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## URL syntax for the Tenant Allow/Block List
 

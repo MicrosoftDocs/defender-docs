@@ -2,9 +2,9 @@
 title: Set up Safe Attachments policies in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -130,7 +130,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
    - **Safe Attachments unknown malware response**: Select one of the following values:
      - **Off**
      - **Monitor**
-     - **Block**: This is the default value, and the recommended value in Standard and Strict [preset security policies](preset-security-policies.md).
+     - **Block**: This value is the default, and is the value used in Standard and Strict [preset security policies](preset-security-policies.md).
      - **Dynamic Delivery (Preview messages)**
 
      These values are explained in [Safe Attachments policy settings](safe-attachments-about.md#safe-attachments-policy-settings).
@@ -319,7 +319,7 @@ This example creates a safe attachment policy named Contoso All with the followi
 New-SafeAttachmentPolicy -Name "Contoso All" -Enable $true
 ```
 
-For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy).
+For detailed syntax and parameter information, see [New-SafeAttachmentPolicy](/powershell/module/exchangepowershell/new-safeattachmentpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a safe attachment policy, see [Use PowerShell to specify the quarantine policy in Safe Attachments policies](quarantine-policies.md#safe-attachments-policies-in-powershell).
@@ -343,7 +343,7 @@ This example creates a safe attachment rule named Contoso All with the following
 New-SafeAttachmentRule -Name "Contoso All" -SafeAttachmentPolicy "Contoso All" -RecipientDomainIs contoso.com
 ```
 
-For detailed syntax and parameter information, see [New-SafeAttachmentRule](/powershell/module/exchange/new-safeattachmentrule).
+For detailed syntax and parameter information, see [New-SafeAttachmentRule](/powershell/module/exchangepowershell/new-safeattachmentrule).
 
 ### Use PowerShell to view safe attachment policies
 
@@ -365,7 +365,7 @@ This example returns detailed information for the safe attachment policy named C
 Get-SafeAttachmentPolicy -Identity "Contoso Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-SafeAttachmentPolicy](/powershell/module/exchange/get-safeattachmentpolicy).
+For detailed syntax and parameter information, see [Get-SafeAttachmentPolicy](/powershell/module/exchangepowershell/get-safeattachmentpolicy).
 
 ### Use PowerShell to view safe attachment rules
 
@@ -397,7 +397,7 @@ This example returns detailed information for the safe attachment rule named Con
 Get-SafeAttachmentRule -Identity "Contoso Executives" | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-SafeAttachmentRule](/powershell/module/exchange/get-safeattachmentrule).
+For detailed syntax and parameter information, see [Get-SafeAttachmentRule](/powershell/module/exchangepowershell/get-safeattachmentrule).
 
 ### Use PowerShell to modify safe attachment policies
 
@@ -411,7 +411,7 @@ To modify a safe attachment policy, use this syntax:
 Set-SafeAttachmentPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safeattachmentpolicy).
+For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/powershell/module/exchangepowershell/set-safeattachmentpolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in a safe attachment policy, see [Use PowerShell to specify the quarantine policy in Safe Attachments policies](quarantine-policies.md#safe-attachments-policies-in-powershell).
@@ -428,7 +428,7 @@ To modify a safe attachment rule, use this syntax:
 Set-SafeAttachmentRule -Identity "<RuleName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-SafeAttachmentRule](/powershell/module/exchange/set-safeattachmentrule).
+For detailed syntax and parameter information, see [Set-SafeAttachmentRule](/powershell/module/exchangepowershell/set-safeattachmentrule).
 
 ### Use PowerShell to enable or disable safe attachment rules
 
@@ -452,7 +452,7 @@ This example enables same rule.
 Enable-SafeAttachmentRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-SafeAttachmentRule](/powershell/module/exchange/enable-safeattachmentrule) and [Disable-SafeAttachmentRule](/powershell/module/exchange/disable-safeattachmentrule).
+For detailed syntax and parameter information, see [Enable-SafeAttachmentRule](/powershell/module/exchangepowershell/enable-safeattachmentrule) and [Disable-SafeAttachmentRule](/powershell/module/exchangepowershell/disable-safeattachmentrule).
 
 ### Use PowerShell to set the priority of safe attachment rules
 
@@ -472,7 +472,7 @@ Set-SafeAttachmentRule -Identity "Marketing Department" -Priority 2
 
 **Note**: To set the priority of a new rule when you create it, use the _Priority_ parameter on the **New-SafeAttachmentRule** cmdlet instead.
 
-For detailed syntax and parameter information, see [Set-SafeAttachmentRule](/powershell/module/exchange/set-safeattachmentrule).
+For detailed syntax and parameter information, see [Set-SafeAttachmentRule](/powershell/module/exchangepowershell/set-safeattachmentrule).
 
 ### Use PowerShell to remove safe attachment policies
 
@@ -490,7 +490,7 @@ This example removes the safe attachment policy named Marketing Department.
 Remove-SafeAttachmentPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-SafeAttachmentPolicy](/powershell/module/exchange/remove-safeattachmentpolicy).
+For detailed syntax and parameter information, see [Remove-SafeAttachmentPolicy](/powershell/module/exchangepowershell/remove-safeattachmentpolicy).
 
 ### Use PowerShell to remove safe attachment rules
 
@@ -508,7 +508,7 @@ This example removes the safe attachment rule named Marketing Department.
 Remove-SafeAttachmentRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-SafeAttachmentRule](/powershell/module/exchange/remove-safeattachmentrule).
+For detailed syntax and parameter information, see [Remove-SafeAttachmentRule](/powershell/module/exchangepowershell/remove-safeattachmentrule).
 
 ## How do you know these procedures worked?
 

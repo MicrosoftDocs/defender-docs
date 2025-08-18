@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 07/07/2025
 ms.reviewer: gigarrub
 audience: ITPro
@@ -134,7 +134,7 @@ The last stage takes place after mail or file delivery, acting on mail that is i
 
 ## The filtering stack diagram
 
-The final diagram (as with all parts of the diagram composing it) *is subject to change as the product grows and develops*. Bookmark this page and use the **feedback** option you'll find at the bottom if you need to ask after updates. For your records, this is the stack with all the phases in order:
+The final diagram (as with all parts of the diagram composing it) _is subject to change as the product grows and develops_. Bookmark this page and use the **feedback** option at the bottom of the page if you need to ask after updates. For your records, the following diagram shows the stack with all the phases in order:
 
 :::image type="content" source="media/mdo-filtering-stack/mdo-filter-stack-phase5.PNG" alt-text="All the phases of filtering in Defender for Office 365 in order, from 1 to 4" lightbox="media/mdo-filtering-stack/mdo-filter-stack-phase5.PNG":::
 

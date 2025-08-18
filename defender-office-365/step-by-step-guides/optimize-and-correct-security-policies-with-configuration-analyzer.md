@@ -4,8 +4,8 @@ description: The steps to optimize and correct threat policies with configuratio
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates

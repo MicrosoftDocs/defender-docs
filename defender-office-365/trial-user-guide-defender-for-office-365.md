@@ -2,9 +2,9 @@
 title: Microsoft Defender for Office 365 trial user guide
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: article
 ms.collection: 

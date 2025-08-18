@@ -2,9 +2,9 @@
 title: Privacy in Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.date: 05/08/2025
 audience: ITPro
 ms.topic: concept-article

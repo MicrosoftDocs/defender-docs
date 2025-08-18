@@ -2,9 +2,9 @@
 title: Anti-phishing protection
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
