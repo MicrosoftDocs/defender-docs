@@ -2,7 +2,8 @@
 title: Microsoft Defender portal overview
 description: Learn about the Microsoft services and features available in the Microsoft Defender portal.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
