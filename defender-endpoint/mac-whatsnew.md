@@ -6,7 +6,7 @@ author: paulinbar
 ms.author: painbar
 manager: orspodek
 ms.localizationpriority: medium
-ms.date: 08/13/2025
+ms.date: 08/20/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -66,9 +66,9 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 ## Releases for Defender for Endpoint on macOS
 
-### Offline update of security intelligence on macOS endpoints is now in public preview
+### Offline updates for security intelligence updates on macOS is now in public preview
 
-This feature enables organizations to configure offline update of security intelligence (antivirus definitions/signatures) on macOS endpoints using a local mirror server instead of getting updates directly from the Microsoft cloud. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+This feature enables organizations to configure offline updates for security intelligence updates (also referred to as definition updates or signatures) on macOS using a local mirror server. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
 
 ### Behavior Monitoring for macOS is now generally available
 
