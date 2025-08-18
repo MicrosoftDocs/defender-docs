@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 ms.topic: how-to
-ms.date: 08/19/2024
+ms.date: 08/19/2025
 search.appverid: met150
 ms.custom: 
 - partner-contribution
