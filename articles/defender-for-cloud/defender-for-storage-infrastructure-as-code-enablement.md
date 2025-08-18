@@ -269,7 +269,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
         "malwareScanning": {
             "onUpload": {
                 "isEnabled": true,
-                "capGBPerMonth": 10000
+                "capGBPerMonth": 10000,
                 "blobScanResultsOptions": BlobIndexTags
             }
         },
