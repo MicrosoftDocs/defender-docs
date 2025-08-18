@@ -29,6 +29,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
     name = "OnUploadMalwareScanning"
     additional_extension_properties = {
       CapGBPerMonthPerStorageAccount = "10000"
+      BlobScanResultsOptions 
     }
   }
  
@@ -113,7 +114,8 @@ To enable and configure Microsoft Defender for Storage at the subscription level
                 "name": "OnUploadMalwareScanning",
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
-                    "CapGBPerMonthPerStorageAccount": "10000"
+                    "CapGBPerMonthPerStorageAccount": "10000",
+                    "BlobScanResultsOptions"
                 }
             },
             {
@@ -160,6 +162,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
         onUpload = {
           isEnabled     = true
           capGBPerMonth = 10000
+          blobScanResultsOptions = BlobIndexTags
         }
       }
       sensitiveDataDiscovery = {
@@ -222,6 +225,7 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
       onUpload: {
         isEnabled: true
         capGBPerMonth: 10000
+        blobScanResultsOptions: BlobIndexTags
       }
     }
     sensitiveDataDiscovery: {
