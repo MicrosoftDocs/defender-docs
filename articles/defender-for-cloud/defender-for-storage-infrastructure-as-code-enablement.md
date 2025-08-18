@@ -29,7 +29,7 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
     name = "OnUploadMalwareScanning"
     additional_extension_properties = {
       CapGBPerMonthPerStorageAccount = "10000"
-      BlobScanResultsOptions 
+      BlobScanResultsOptions = "BlobIndexTags"
     }
   }
  
