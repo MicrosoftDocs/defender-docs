@@ -93,7 +93,7 @@ sections:
       - question: |
           Does disabling Defender for Servers Plan 2 automatically remove the plan from my workspace?
         answer: |
-          Disabling Defender for Servers Plan 2 doesn't automatically remove the service from your workspace.  If you've enabled Plan 2 on a workspace, you need to manually remove the workspace configuration to stop data collection and fully turn off the feature.
+          Disabling the Defender for Servers Plan 2 on your subscription doesn't automatically disable the plan on your workspace. If Defender for Servers Plan 2 is enabled on a workspace, you need to manually disable it in the workspace settings to stop data collection and turn off the feature.
           
           Learn how to [disable the Defender for Servers plan](tutorial-enable-servers-plan.md#disable-defender-for-servers-on-a-subscription).
   
