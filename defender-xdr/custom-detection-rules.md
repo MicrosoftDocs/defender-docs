@@ -69,7 +69,7 @@ To manage required permissions, a Global Administrator can:
 In the Microsoft Defender portal, go to **Advanced hunting** and select an existing query or create a new query. When using a new query, run the query to identify errors and understand possible results.
 
 > [!IMPORTANT]
-> To prevent the service from returning too many alerts, each rule is limited to generating only 100 alerts whenever it runs. Before creating a rule, tweak your query to avoid alerting for normal, day-to-day activity.
+> To prevent the service from returning too many alerts, each rule is limited to generating only 150 alerts whenever it runs. Before creating a rule, tweak your query to avoid alerting for normal, day-to-day activity.
 
 #### Required columns in the query results
 
@@ -127,13 +127,13 @@ DeviceEvents
 
 With the query in the query editor, select **Create detection rule** and specify the following alert details:
 
-- **Detection name** - Name of the detection rule; should be unique
+- **Detection name** - Name of the detection rule; should be unique.
 - **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency)
 - **Alert title** - Title displayed with alerts triggered by the rule; should be unique and in plaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
 - **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
-- **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics
+- **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes so HTML, Markdown, and other code won't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
 
@@ -161,7 +161,7 @@ Setting a custom detection to run in Continuous (NRT) frequency allows you to in
 
 From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
 
-:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
+:::image type="content" source="media/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-migrate-now.png":::
 
 
 Selecting **Migrate now** gives you a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
@@ -238,7 +238,7 @@ For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
 >[!NOTE]
 >The number of columns you can reference in each field is limited to three.
 
-:::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections setup guide." lightbox="/defender/media/ah-dynamic-alert.png":::
+:::image type="content" source="/defender/media/ah-dynamic-alert.png" alt-text="Screenshot that shows the dynamic alert title and description fields in the Custom detections wizard." lightbox="/defender/media/ah-dynamic-alert.png":::
 
 To help you decide on the exact column names you want to reference, you can select **Explore query and results**, which opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
 
@@ -250,7 +250,7 @@ In the **Custom details** section, add key-value pairs corresponding to the de
 - In the **Key** field, enter a name of your choosing that will appear as the field name in alerts. 
 - In the **Parameter** field, choose the event parameter you wish to surface in the alerts from the dropdown list. This list will be populated by values corresponding to the columns names that your KQL query outputs. 
   
-:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections setup guide." lightbox="/defender/media/ah-custom-details.png":::
+:::image type="content" source="/defender/media/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections wizard." lightbox="/defender/media/ah-custom-details.png":::
 
 The following screenshot shows how the custom details are surfaced in the alert side panel: 
 
@@ -373,7 +373,9 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 >
 > You maintain control over the broadness or specificity of your custom detections so any false alerts generated by custom detections might indicate a need to modify certain parameters of the rules.
 
+#### How custom detections handle duplicate alerts
 
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. For example, if a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, only one alert is created for both of these events. If the detection recognizes that the events are identical, it logs only one of the events on the created alert and then takes care of the duplicates, which could occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 

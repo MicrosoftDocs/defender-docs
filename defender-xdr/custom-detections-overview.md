@@ -39,8 +39,6 @@ Custom detections provide:
 - Alerts for rule-based detections built from advanced hunting queries
 - Automatic response actions
 
-Custom detections also help reduce alert noise and fatigue by grouping and deduplicating events into a single alert, helping you focus on incidents that matter. For example, if a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, only one alert is created for both of these events. If the detection recognizes that the events are identical, it logs only one of the events on the created alert and then takes care of the duplicates, which could occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
-
 Optimizing your queries in custom detection rules is important in avoiding time-outs and ensuring efficiency. There are several resources available that provide guidance on optimizing your queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
 
 ## See also
