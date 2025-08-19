@@ -3,6 +3,7 @@ title: View discovered apps on the Cloud discovery dashboard | Microsoft Defende
 description: This article describes the process for identifying and remediating risky cloud discovery apps in Defender for Cloud Apps.
 ms.date: 06/02/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # View discovered apps with the Cloud discovery dashboard
