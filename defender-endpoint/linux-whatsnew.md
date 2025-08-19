@@ -60,6 +60,12 @@ What's new
 - Facpolicyd is now supported along side MDE Linux for RHEL & Fedora based distributions. 
 - Other stability improvements and bug fixes.
 
+- Defender for Endpoint on Linux now supports installation to a custom location (preview). Read [here[(https://learn.microsoft.com/en-gb/defender-endpoint/linux-custom-location-installation) for more details. Support for this feature will be added to the installer script within a couple of days.
+- The mdatp threat quarantine add command now requires superuser (root) privileges.
+- Custom definition path can now be updated without stopping MDE. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
+- Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, MDE can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
+- Other stability enhancements and bug fixes.
+
 ### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
 
 |Build:             |**101.25052.0007**    |
