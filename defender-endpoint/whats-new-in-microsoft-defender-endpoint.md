@@ -8,7 +8,7 @@ author: limwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
 ms.date: 08/19/2025
-manager: ornats
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
