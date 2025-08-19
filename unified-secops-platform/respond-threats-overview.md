@@ -2,7 +2,8 @@
 title: Threat Response in the Defender Portal
 description: Learn about the features that help respond to threats in the Microsoft Defender portal, ensuring comprehensive protection.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
