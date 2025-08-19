@@ -50,7 +50,7 @@ See [what's new in Microsoft Defender for Endpoint on other operating systems an
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
-|Aggregated reporting in Microsoft Defender for Endpoint|GA|Aggregated reporting is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).|
+|[Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md)|GA|Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.|
 
 ## January 2025
 
