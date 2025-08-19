@@ -3,12 +3,12 @@ title: Connect Okta to Microsoft Defender for Identity (Preview)
 description: Learn how to connect your Okta app to Defender for Identity using the API connector.
 ms.date: 08/07/2025
 ms.topic: how-to
-ms. reviewer: izauer-bit 
+ms. reviewer: Himanch
 ---
 
 # Connect Okta to Microsoft Defender for Identity (Preview)
 
-This page explains how to connect Microsoft Defender for Identity to your Okta account using the Unified Connectors experience. This connection provides visibility into Okta activity and enables shared data collection across Microsoft security products. The Unified Connectors experience allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. This reduces API usage, avoids duplicate data collection, and simplifies connector management. For more details, see [Unified connectors](/azure/sentinel/unified-connector?branch=pr-en-us-302665#unified-collector-service).
+This page explains how to connect Microsoft Defender for Identity to your Okta account using the Unified Connectors experience. This connection provides visibility into Okta activity and enables shared data collection across Microsoft security products. The Unified Connectors experience allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. This reduces API usage, avoids duplicate data collection, and simplifies connector management. For more information, see [Unified connectors](/azure/sentinel/unified-connector?branch=pr-en-us-302665#unified-collector-service).
 
 ## Prerequisites
 
@@ -24,9 +24,9 @@ Your Okta environment must have one of the following licenses:
 > - The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 > - If your Okta environment is already integrated with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-okta), connecting it to Microsoft Defender for Identity can cause duplicate Okta data, such as user activity, to appear in the Defender portal.
 
-## Required Entra roles
+## Required Microsoft Entra roles
 
-To successfully set up the Okta connector, ensure that your account has one of the following Entra roles assigned:
+To successfully set up the Okta connector, ensure that your account has one of the following Microsoft Entra roles assigned:
 
 - Security Operator
 - Security Admin
