@@ -60,7 +60,7 @@ You can choose from several options for managing your next-generation protection
 
 4. Select an individual policy to edit it.
 
-   For help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
+   For help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/intune/intune-service/protect/endpoint-security).
 
 ---
 
