@@ -30,20 +30,7 @@ ms.topic: whats-new
 
 The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. Learn more about [preview features](/defender-xdr/preview).
 
-## What's new in Defender for Endpoint on other operating systems and services
-
-|Platform/service  |Link  |
-|------------------|------|
-|Windows           |[What's new in Defender for Endpoint on Windows](windows-whatsnew.md)|
-|macOS             |[What's new in Defender for Endpoint on macOS](mac-whatsnew.md)|
-|Linux             |[What's new in Defender for Endpoint on Linux](linux-whatsnew.md)|
-|Android           |[What's new in Defender for Endpoint on Android](android-whatsnew.md)|
-|iOS               |[What's new in Defender for Endpoint on iOS](ios-whatsnew.md)|
-|Microsoft Defender XDR |[What's new in Microsoft Defender XDR](/defender-xdr/whats-new)|
-|Microsoft Defender for Office 365 |[What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)|
-|Microsoft Defender for Identity |[What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)|
-|Microsoft Defender for Cloud Apps |[What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)|
-|Microsoft Defender Vulnerability Management |[What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)|
+See [what's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services).
 
 ## July 2025
 
@@ -86,3 +73,18 @@ Two new ASR rules are now generally available:
 ## August 2024
 
 - **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+
+## What's new in Defender for Endpoint on other operating systems and services
+
+|Platform/service  |Link  |
+|------------------|------|
+|Windows           |[What's new in Defender for Endpoint on Windows](windows-whatsnew.md)|
+|macOS             |[What's new in Defender for Endpoint on macOS](mac-whatsnew.md)|
+|Linux             |[What's new in Defender for Endpoint on Linux](linux-whatsnew.md)|
+|Android           |[What's new in Defender for Endpoint on Android](android-whatsnew.md)|
+|iOS               |[What's new in Defender for Endpoint on iOS](ios-whatsnew.md)|
+|Microsoft Defender XDR |[What's new in Microsoft Defender XDR](/defender-xdr/whats-new)|
+|Microsoft Defender for Office 365 |[What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)|
+|Microsoft Defender for Identity |[What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)|
+|Microsoft Defender for Cloud Apps |[What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)|
+|Microsoft Defender Vulnerability Management |[What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)|
