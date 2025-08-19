@@ -78,6 +78,11 @@ This section describes the additional steps required for deploying Defender for 
 
 In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom location installation. Follow the steps below as part of the [preinstall setup for custom location installation](linux-install-manually.md#preinstall-setup-for-custom-location-installation).
 
+> [!IMPORTANT]
+> Strongly recommend choosing a new, dedicated (empty) directory for the custom install path.
+> 
+> During uninstall/cleanup, the process attempts to recursively remove that directory and all its contents. Do not use a shared or existing directory containing other data you need to retain.
+
 1. **Set your custom path variable**:
 
     > [!NOTE]
