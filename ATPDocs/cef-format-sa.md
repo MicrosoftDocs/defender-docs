@@ -2,7 +2,8 @@
 title: SIEM log reference
 description: Provides samples of logs sent from Microsoft Defender for Identity to your SIEM.
 ms.date: 09/22/2024
-ms.topic: conceptual
+ms.topic: article
+ms.reviewer: rlitinsky
 ---
 
 # Microsoft Defender for Identity SIEM log reference
@@ -39,14 +40,14 @@ The cs2 field identifies if the alert is new or updated.
 The cs3 field identifies the fully qualified domain name of the source computer name.
 
 > [!NOTE]
-> If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+> If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alerts](alerts-overview.md).
 
 ## Sample logs
 
 The log examples comply with RFC 5424, but Defender for Identity also supports RFC 3164.
 
 >[!NOTE]
->The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+>The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alerts](alerts-overview.md).
 
 Priorities:
 
@@ -196,7 +197,7 @@ Priorities:
 
 ## See Also
 
-- [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
+- [Security alerts](alerts-overview.md).
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum](https://aka.ms/MDIcommunity)

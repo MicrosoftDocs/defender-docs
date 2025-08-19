@@ -18,16 +18,14 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 07/30/2024
+ms.date: 04/18/2025
+appliesto:
+ - Microsoft Defender XDR
 ---
 
 # Microsoft Defender XDR incidents API and the incidents resource type
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview?view=graph-rest-1.0&preserve-view=true).

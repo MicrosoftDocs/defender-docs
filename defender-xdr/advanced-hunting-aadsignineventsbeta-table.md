@@ -17,15 +17,16 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 04/03/2024
+ms.date: 03/28/2025
 ---
 
 # AADSignInEventsBeta
 
-**Applies to:**
 
-- Microsoft Defender XDR
 
 > [!IMPORTANT]
 > The `AADSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. All sign-in schema information will eventually move to the `IdentityLogonEvents` table.
@@ -45,7 +46,7 @@ Use this reference to construct queries that return information from the table. 
 |`ApplicationId`|`string`|Unique identifier for the application|
 |`LogonType`|`string`|Type of logon session, specifically interactive, remote interactive (RDP), network, batch, and service|
 |`ErrorCode`|`int`|Contains the error code if a sign-in error occurs. To find a description of a specific error code, visit <https://aka.ms/AADsigninsErrorCodes>.|
-|`CorrelationId`|`string`|Unique identifier of the sign-in event|
+|`CorrelationId`|`string`|Identifier of the sign-in event|
 |`SessionId`|`string`|Unique number assigned to a user by a website's server for the duration of the visit or session|
 |`AccountDisplayName`|`string`|Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user.|
 |`AccountObjectId`|`string`|Unique identifier for the account in Microsoft Entra ID|

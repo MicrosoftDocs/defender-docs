@@ -51,6 +51,7 @@ After the import is complete, select your group from the **User groups** page to
 > - There may be a short delay until imported user groups are available in filters.
 > - Only activities performed after importing a user group will be tagged as having been performed by a member of the user group.
 > - After the initial sync, groups are usually updated every hour. However, due to various factors there could be times where this might take several hours.
+> - Usernames must contain only standard alphanumeric characters (a–z, A–Z, 0–9). Usernames with special characters such as ~ or # aren't supported.
 
 For more information on using the User group filters, see [Activities](activity-filters.md).
 

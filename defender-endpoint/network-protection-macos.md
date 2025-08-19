@@ -3,11 +3,11 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 11/10/2024
+ms.date: 04/08/2025
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
-ms.reviewer: 
+author: emmwalshh
+ms.author: ewalsh
+ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr
 ms.subservice: macos
@@ -48,7 +48,9 @@ Network protection helps reduce the attack surface of your devices from Internet
 - exploits
 - other malicious content on the Internet
 
-Network protection expands the scope of Microsoft Defender XDR [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
+Network protection expands the scope of Microsoft Defender [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources across all major browsers. Blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
+
+In non-Microsoft Edge processes, Network Protection determines the fully qualified domain name for each HTTPS connection by examining the content of the TLS handshake that occurs after a TCP/IP handshake. This requires that the HTTPS connection use TCP/IP (not UDP/QUIC) and that the ClientHello message not be encrypted. To disable QUIC and Encrypted Client Hello in Google Chrome, see [QuicAllowed](https://chromeenterprise.google/policies/#QuicAllowed) and [EncryptedClientHelloEnabled](https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled). For Mozilla Firefox, see [Disable EncryptedClientHello](https://mozilla.github.io/policy-templates/#disableencryptedclienthello) and [network.http.http3.enable](https://support.mozilla.org/ml/questions/1408003#answer-1571474).
 
 ## Availability
 
@@ -69,7 +71,7 @@ To roll out Network Protection for macOS, we recommend the following actions:
 
    - Block website categories scoped to device groups through policies created in the Microsoft Defender portal.
    
-   - Policies are applied to browsers, including Chromium Microsoft Edge for macOS. 
+   - Policies are applied to browsers, including Microsoft Edge for macOS. 
 
 - Advanced Hunting - Network Events are reflected in the Machine Timeline, and queryable in Advanced Hunting to aid security investigations.
 
@@ -87,17 +89,15 @@ To roll out Network Protection for macOS, we recommend the following actions:
 
 ### Known issues
 
-- Block/Warn UX isn't customizable and might require other look and feel changes. (Customer feedback is being collected to drive further design improvements)
-
 - There's a known application incompatibility issue with VMware's "Per-App Tunnel" feature. (This incompatibility might result in an inability to block traffic that goes through the "Per-App Tunnel.")
 
 - There's a known application incompatibility issue with Blue Coat Proxy. (This incompatibility might result in network layer crashes in unrelated applications when both Blue Coat Proxy and Network Protection are enabled.)
 
 ### Important notes
 
-- We don't recommend controlling network protection from System Preferences by using the **Disconnect** button. Instead, use the mdatp command-line tool or JamF/Intune to control network protection for macOS.
+- We don't recommend controlling network protection from System Preferences. Instead, use the mdatp command-line tool or JamF/Intune to control network protection for macOS.
 
-- To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Microsoft Defender Browser Protection extension which provides Smartscreen capabilities) that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
+- To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Smartscreen) that is enabled regardless of the state of Network Protection.
 
 ## Deployment instructions
 
@@ -111,7 +111,7 @@ Install the most recent product version through Microsoft AutoUpdate. To open Mi
 open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app
 ```
 
-Configure the product with your organization information using the instructions in our public documentation.
+Configure the product with your organization information using the instructions in our documentation.
 
 Network protection is disabled by default, but it can be configured to run in one of the following modes (also called enforcement levels):
 
@@ -299,7 +299,7 @@ The following scenarios are supported.
 
 ### Web threat protection
 
-Web threat protection is part of web protection in Microsoft Defender XDR for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers, such as Brave, Chrome, Firefox, Safari, Opera, web threat protection stops web threats without a web proxy. For more information about browser support, see [Prerequisites](#prerequisites)  Web threat protection can protect devices while they're on premises or away. Web threat protection stops access to the following types of sites:
+Web threat protection is part of web protection in Microsoft Defender XDR for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers (such as Brave, Chrome, Firefox, Safari, Opera), web threat protection stops web threats without requiring a web proxy. For more information about browser support, see [Prerequisites](#prerequisites)  Web threat protection can protect devices while they're on-premises or away. Web threat protection stops access to the following types of sites:
 
 - phishing sites
 - malware vectors
@@ -327,9 +327,11 @@ For more information, see: [Create indicators for IPs and URLs/domains](indicato
 
 Web content filtering is part of the [Web protection](web-protection-overview.md) capabilities in Microsoft Defender for Endpoint and Microsoft Defender for Business. Web content filtering enables your organization to track and regulate access to websites based on their content categories. Many of these websites (even if they're not malicious) might be problematic because of compliance regulations, bandwidth usage, or other concerns.
 
-Configure policies across your device groups to block certain categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access the URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users see a block notification if an element on the page they're viewing is making calls to a blocked resource.
+Configure policies across your device groups to block certain categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access the URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users will see a block notification if an element on the page they're viewing is making calls to a blocked resource.
 
-Web content filtering is available on the major web browsers, with blocks performed by Network Protection (Brave, Chrome, Firefox, Safari, and Opera). For more information about browser support, see [Prerequisites](#prerequisites).
+Web content filtering supports major web browsers (Brave, Chrome, Firefox, Safari, and Opera) with blocking enforced by Network Protection. 
+
+For more information about browser support, see [Prerequisites](#prerequisites).
 
 :::image type="content" source="media/network-protection-wcf-add-policy.png" alt-text="Shows network protection web content filtering add policy." lightbox="media/network-protection-wcf-add-policy.png":::
 
@@ -337,15 +339,15 @@ For more information about reporting, see [Web content filtering](web-content-fi
 
 ### Microsoft Defender for Cloud Apps
 
-The Microsoft Defender for Cloud Apps / Cloud App Catalog identifies apps you would want end users to be warned upon accessing with Microsoft Defender XDR for Endpoint, and mark them as _Monitored_. The domains listed under monitored apps would be later synced to Microsoft Defender XDR for Endpoint:
+The Microsoft Defender for Cloud Apps / Cloud App Catalog identifies apps you want end users to be warned upon accessing, and mark them as _Monitored_. The domains listed under monitored apps are later synced to Microsoft Defender XDR for Endpoint:
 
 :::image type="content" source="media/network-protection-macos-mcas-monitored-apps.png" alt-text="Shows network protection monitored apps.":::
 
-Within 10-15 minutes, these domains are listed in Microsoft Defender XDR under Indicators > URLs/Domains with Action=Warn. Within the enforcement SLA (see details at the end of this article), end users are getting warn messages when attempting to access these domains:
+Within 10-15 minutes, these domains are listed in Microsoft Defender XDR under Indicators > URLs/Domains with Action=Warn. Within the enforcement SLA (see details at the end of this article), end users receive warn messages when attempting to access these domains:
 
 :::image type="content" source="media/network-protection-macos-indicators-urls-domains-warn.png" alt-text="Shows network protection indicators for urls or domains warning.":::
 
-When the end user is attempting to access monitored domains, they're warned by Defender for Endpoint. The user gets a plain block experience accompanied by the following toast message, which is displayed by the operating system including the name of the blocked application (e.g Blogger.com)
+When a end user attempts to access monitored domains, they're warned by Defender for Endpoint. The user gets a plain block experience accompanied by the following toast message, which is displayed by the operating system including the name of the blocked application (e.g Blogger.com)
 
   :::image type="content" source="media/network-protection-macos-content-blocked.png" alt-text="Shows end-user network protection content blocked toast notification.":::
 
@@ -372,16 +374,14 @@ For many organizations, it's important to take the cloud controls provided by Mi
 
 - the specific incident
 - why it has happened
-- what is the thinking behind this decision
-- how encountering block sites can be mitigated
+- the rationale behind this decision
+- how encountering blocked sites can be mitigated
 
 Upon facing an unexpected behavior, users' confusion might be reduced by providing them as much information as possible, not only to explain about what has happened but to also educate them to be more aware the next time they choose a cloud app to complete their job. For example, this information can include:
 
 - Organization security and compliance policies and guidelines for internet and cloud use
 - Approved/recommended cloud apps for use
 - Restricted/blocked cloud apps for use
-
-For this page, we recommend that your organization uses a basic SharePoint site.
 
 ### Important things to know
 
@@ -391,10 +391,10 @@ For this page, we recommend that your organization uses a basic SharePoint site.
 
 3. Full URLs are currently not supported and aren't sent from Microsoft Defender for Cloud Apps to Microsoft Defender for Endpoint. If any full URLs are listed under Microsoft Defender for Cloud Apps as monitored apps, users aren't warned when they attempt to access a site. (For example, `google.com/drive` isn't supported, while `drive.google.com` is supported.)
 
-4. Network protection doesn't support the use of QUIC on browsers. Administrators need to ensure that QUIC is disabled when testing to ensure sites are blocked correctly. 
+4. Administrators need to ensure that Encrypted Client Hello and QUIC are disabled when testing to ensure sites are blocked correctly. See instructions above.
 
 > [!TIP]
-> No end-user notifications are appearing on third party browsers? Check your toast message settings.
+> No end-user notifications are appearing on third party browsers? Ensure you've allowed notifications from Microsoft Defender in **System Settings** > **Notifications**.
 
 ## See also
 

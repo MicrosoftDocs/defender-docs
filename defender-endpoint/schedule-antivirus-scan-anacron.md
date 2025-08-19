@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 03/24/2025
+ms.date: 05/15/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -141,7 +141,7 @@ Use the following steps to schedule scans:
    #!/bin/sh
    set -e
    echo $(date) "Time Scan Begins" >>/logs/mdav_avacron_full_scan.log
-   /bin/mdatp scan full >> /logs/mdav_avacron_full_scan.log
+   /usr/bin/mdatp scan full >> /logs/mdav_avacron_full_scan.log
    echo $(date) "Time Scan Finished" >>/logs/mdav_avacron_full_scan.log
    exit    0
    ~

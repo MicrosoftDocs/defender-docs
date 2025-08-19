@@ -169,3 +169,4 @@ See [Configure and validate exclusions for Microsoft Defender for Endpoint on ma
 
 - [Add exclusions to network protection](/defender-endpoint/troubleshoot-np#add-exclusions)
 - [Important points about exclusions](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#important-points-about-exclusions)
+- [Isolation exclusions](/defender-endpoint/isolation-exclusions)

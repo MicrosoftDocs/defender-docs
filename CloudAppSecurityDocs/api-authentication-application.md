@@ -28,37 +28,43 @@ This article explains how to create a Microsoft Entra application, get an access
 1. To enable your app to access Defender for Cloud Apps and assign it **'Read all alerts'** permission, on your application page, select **API Permissions** > **Add permission** > **APIs my organization uses** >, type **Microsoft Cloud App Security**, and then select **Microsoft Cloud App Security**.
 
    > [!NOTE]
-   > *Microsoft Cloud App Security* does not appear in the original list. Start writing its name in the text box to see it appear. Make sure to type this name, even though the product is now called Defender for Cloud Apps.
+   > *Microsoft Cloud App Security* doesn't appear in the original list. Start writing its name in the text box to see it appear. Make sure to type this name, even though the product is now called Defender for Cloud Apps.
 
-   ![Screenshot of adding permission.](media/add-permission.png)
 
-   - Select **Application permissions** > **Investigation.Read**, and then select **Add permissions**.
+   :::image type="content" source="media/api-authentication-application/add-app-permissions.png" alt-text="Screenshot showing how to configure API permissions for your application." lightbox="media/api-authentication-application/add-app-permissions.png":::
 
-        :::image type="content" source="media/application-permissions.png" alt-text="Screenshot of adding app permission." lightbox="media/application-permissions.png":::
 
-     You need to select the relevant permissions. **Investigation.Read** is only an example. For other permission scopes, see [Supported permission scopes](#supported-permission-scopes)
+1. Select **Application permissions** > **Investigation.Read**, and then select **Add permissions**. 
 
-     - To determine which permission you need, look at the **Permissions** section in the API you're interested to call.
+    :::image type="content" source="media/api-authentication-application/request-permissions.png" alt-text="Screenshot that shows which API permissions to request for your application." lightbox="media/api-authentication-application/request-permissions.png":::
+
+1. You need to select the relevant permissions. **Investigation.Read** is only an example. For other permission scopes, see [Supported permission scopes](#supported-permission-scopes)
+
+1. To determine which permission you need, look at the **Permissions** section in the API you're interested to call.
 
 1. Select **Grant admin consent**.
 
      > [!NOTE]
      > Every time you add a permission, you must select **Grant admin consent** for the new permission to take effect.
 
-    ![Screenshot of granting admin permissions.](media/grant-consent.png)
 
-1. To add a secret to the application, select **Certificates & secrets**, select **New client secret**, add a description to the secret, and then select **Add**.
+    :::image type="content" source="media/api-authentication-application/grant-consent.png" alt-text="Screenshot that shows the option to grant admin consent." lightbox="media/api-authentication-application/grant-consent.png":::
+ 
+
+1. To add a secret to the application, select **Certificates & secrets**, select **New client secret**. Add a description to the secret, and then select **Add**.
 
     > [!NOTE]
     > After you select **Add**, select **copy the generated secret value**. You won't be able to retrieve this value after you leave.
 
-    ![Screenshot of creating an app key.](media/webapp-create-key2.png)
+    :::image type="content" source="media/api-authentication-application/webapp-create-key2.png" alt-text="Screenshot that shows how to create an app key." lightbox="media/api-authentication-application/webapp-create-key2.png":::
+
 
 1. Write down your application ID and your tenant ID. On your application page, go to **Overview** and copy the **Application (client) ID** and the **Directory (tenant) ID**.
 
-   ![Screenshot of the created app ID.](media/app-and-tenant-ids.png)
+    :::image type="content" source="media/api-authentication-application/app-and-tenant-ids.png" alt-text="Screenshot that shows the created app ID." lightbox="media/api-authentication-application/app-and-tenant-ids.png":::
 
-1. **For Microsoft Defender for Cloud Apps Partners only**. Set your app to be multitenanted (available in all tenants after consent). This is **required** for third-party apps (for example, if you create an app that is intended to run in multiple customers' tenant). This is **not required** if you create a service that you want to run in your tenant only (for example, if you create an application for your own usage that will only interact with your own data). To set your app to be multitenanted:
+
+1. **For Microsoft Defender for Cloud Apps Partners only**. Set your app to be multitenant (available in all tenants after consent). This is **required** for third-party apps (for example, if you create an app that is intended to run in multiple customers' tenant). This is **not required** if you create a service that you want to run in your tenant only (for example, if you create an application for your own usage that will only interact with your own data). To set your app to be multitenant:
 
     - Go to **Authentication**, and add `https://portal.azure.com` as the **Redirect URI**.
 
@@ -161,25 +167,26 @@ See [Microsoft Authentication Library (MSAL) for Python](https://github.com/Azur
 1. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to access Defender for Cloud Apps.
 1. Run the following command:
 
-```curl
-curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=05a65629-4c1b-48c1-a78b-804c4abdd4af/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
-```
+   ```curl
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=05a65629-4c1b-48c1-a78b-804c4abdd4af/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   ```
 
-You get an answer in the following form:
+   You get an answer in the following form:
 
-```output
-{"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-```
+   ```output
+   {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
+   ```
 
 ## Validate the token
 
 Ensure that you got the correct token:
 
 1. Copy and paste the token you got in the previous step into [JWT](https://jwt.ms) in order to decode it.
-1. Validate that you get a 'roles' claim with the desired permissions
+1. Validate that you get a 'roles' claim with the desired permissions.
 1. In the following image, you can see a decoded token acquired from an app with permissions to all Microsoft Defender for Cloud Apps roles:
 
-![Screenshot of token validation.](media/webapp-decoded-token.png)
+   :::image type="content" source="media/api-authentication-application/webapp-decoded-token.png" alt-text="Screenshot that shows the decoded token.":::
+
 
 ## Use the token to access Microsoft Defender for Cloud Apps API
 
@@ -187,19 +194,19 @@ Ensure that you got the correct token:
 1. Set the authorization header in the http request you send to "Bearer {token}" (Bearer is the authorization scheme).
 1. The expiration time of the token is one hour. You can send more than one request with the same token.
 
-The following is an example of sending a request to get a list of alerts **using C#**:
+   The following is an example of sending a request to get a list of alerts **using C#**:
 
-```C#
-    var httpClient = new HttpClient();
-
-    var request = new HttpRequestMessage(HttpMethod.Get, "https://portal.cloudappsecurity.com/cas/api/v1/alerts/");
-
-    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-    var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
-
-    // Do something useful with the response
-```
+   ```C#
+       var httpClient = new HttpClient();
+   
+       var request = new HttpRequestMessage(HttpMethod.Get, "https://portal.cloudappsecurity.com/cas/api/v1/alerts/");
+   
+       request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+   
+       var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
+   
+       // Do something useful with the response
+   ```
 
 ## See also
 

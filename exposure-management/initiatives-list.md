@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 11/12/2024
+ms.date: 05/26/2025
 ---
 
 # Security Initiatives
@@ -24,6 +24,10 @@ The CIS Microsoft 365 Foundations Benchmark (v3.0.0) is a set of security assess
 ## Cloud Security [Preview]
 
 This initiative aims to reflect the status around cloud security coverage, ROI, health, configuration, and performance. It consists of measurements across multiple domains and disciplines to provide security managers with a high-level view into how posture is enforced in cloud ops.
+
+> [!NOTE]
+>
+> The current Cloud initiative will be deprecated soon. A new Cloud initiative will be available soon. Please use it for updates and support.
 
 ## Critical Asset Protection
 
@@ -43,13 +47,9 @@ IoT devices are often connected to endpoints, to one another or to the internet,
 
 ## External Attack Surface Protection
 
-The External Attack Surface Initiative in Microsoft Security Exposure Management uses Defender EASM to continuously discover and map your digital attack surface, providing an external view of your online infrastructure. This helps security and IT teams identify unknown assets, prioritize risks, eliminate threats, and extend control beyond the firewall.
+The External Attack Surface Management (EASM) initiative in Microsoft Security Exposure Management uses Defender EASM to continuously discover and map your digital attack surface, providing an external view of your online infrastructure. This helps security and IT teams identify unknown assets, prioritize risks, eliminate threats, and extend control beyond the firewall.
 
-> [!NOTE]
->
-> This initiative provides high-level insights without a full connection to the MDEASM subscription and supports pre-built footprints only.
-
-[Learn more here.](https://aka.ms/xspm/EasmLearnMore)
+[[Learn more here.]](external-attack-surface-management-initiative.md)
 
 ## Identity Security
 
@@ -74,6 +74,9 @@ This initiative focuses on displaying the current state of SaaS (software as a s
 ## Vulnerability Assessment
 
 This initiative serves as a central hub for security managers to continuously assess and analyze vulnerabilities and misconfigurations across the organization's digital landscape. In the Vulnerability Assessment initiative users can actively identify, prioritize, track, and delegate vulnerabilities with in the IT infrastructure and the cloud. Users gain real-time visibility into the security posture of their organization, enabling data-driven decision-making for resource investment and placement. This collaborative environment ensures a holistic approach to vulnerability management, empowering stakeholders to proactively strengthen their security defenses, reduce the attack surface, and enhance overall resilience against evolving cyber threats.
+
+> [!NOTE]
+> The Vulnerability Assessment initiative will be deprecated soon, as it is now part of the new Cloud initiative. Use the new Cloud initiative for updates and support.
 
 ## Zero Trust (Foundational)
 

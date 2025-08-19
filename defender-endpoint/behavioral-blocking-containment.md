@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: emmwalshh
 ms.reviewer: shwetaj
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/29/2025
+ms.date: 04/25/2025
 ---
 
 # Behavioral blocking and containment

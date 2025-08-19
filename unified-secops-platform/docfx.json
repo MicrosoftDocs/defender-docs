@@ -46,8 +46,8 @@
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
-      "titleSuffix": "Microsoft's unified security operations platform",
-      "searchScope": ["Microsoft's unified security operations platform"],
+      "titleSuffix": "Unified security operations",
+      "searchScope": ["Unified security operations"],
       "contributors_to_exclude": [
         "dstrome",
         "shdyas",

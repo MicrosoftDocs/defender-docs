@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - security-copilot
   - magic-ai-copilot
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid:
   - MOE150
   - MET150
@@ -58,6 +58,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - The entity or asset where the attack started.
 - A summary of timelines of how the attack unfolded.
 - The assets involved in the attack.
+- Suggested prompts, which provide insights into the specific assets involved in the incident.
 - Indicators of compromise (IoCs).
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
 
@@ -65,18 +66,22 @@ To summarize an incident, perform the following steps:
 
 1. Open an incident page. Copilot automatically creates an incident summary upon opening the page. You can stop the summary creation by selecting **Cancel** or restart creation by selecting **Regenerate**.
 
-2. The incident summary card loads on the Copilot pane. Review the generated summary on the card.
+1. The incident summary card loads on the Copilot pane. Review the generated summary on the card.
  
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-small.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
    > [!TIP]
    > You can navigate to a file, IP, or URL page from the Copilot results pane by clicking on the evidence in the results.
 
-3. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
+1. Review the summary and use the information to guide your investigation and response to the incident.
+
+1. Select **See prompts** to get more insights about the specific assets involved in the incident, such as device summaries, identity summaries, and related threat intelligence. 
+
+   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts.png" lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts-large.png" alt-text="Screenshot that shows the Copilot suggested prompts on the incident summary card.":::
+
+1. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
    :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
-
-4. Review the summary and use the information to guide your investigation and response to the incident.
 
 ## Sample incident summary prompt
 

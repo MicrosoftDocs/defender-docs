@@ -5,8 +5,8 @@ author: denisebmsft
 ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
-ms.topic: conceptual
-ms.date: 01/23/2025
+ms.topic: article
+ms.date: 04/09/2025
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.custom:
 **Applies to**:
 
 - [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 - Microsoft Defender Antivirus
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint Plan 2.
@@ -84,7 +84,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 **Q:** Can I use Microsoft Defender Antivirus in passive mode without onboarding to Microsoft Defender for Endpoint?
 
-**A:** No. Passive mode is a functionality in Microsoft Defender for Endpoint Plan 2.
+**A:** No. Passive mode is a functionality in Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2 and Microsoft Defender for Business.
 
 **Q:** Can I use [EDR in block mode](edr-in-block-mode.md) without onboarding to Microsoft Defender for Endpoint?
 

@@ -3,12 +3,8 @@
 
 title: ATA event ID reference | Microsoft Docs 
 description: Provides a list of ATA events IDs and their descriptions. 
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: article
 ms.service: advanced-threat-analytics
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 

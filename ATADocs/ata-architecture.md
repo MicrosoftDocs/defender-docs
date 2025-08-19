@@ -3,12 +3,8 @@
 
 title: Advanced Threat Analytics architecture
 description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: article
 ms.service: advanced-threat-analytics
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 

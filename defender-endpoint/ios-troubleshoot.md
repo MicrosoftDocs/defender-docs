@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ios
-ms.topic: conceptual
+ms.topic: faq
 ms.subservice: ios
 search.appverid: met150
 ms.date: 01/22/2025

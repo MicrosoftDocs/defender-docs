@@ -1,9 +1,10 @@
 ---
 title: Adjust alert thresholds | Microsoft Defender for Identity
 description: Learn how to configure the number of Microsoft Defender for Identity alerts triggered of specific alert types by adjusting alert thresholds.
-ms.date: 02/11/2024
+ms.date: 08/03/2025
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to reduce the number of false positives by adjusting thresholds for specific alerts.
+ms.reviewer: rlitinsky
 ---
 
 # Adjust alert thresholds
@@ -14,7 +15,7 @@ Some Defender for Identity alerts rely on *learning periods* to build a profile 
 
 Use the **Adjust alert thresholds** page to customize the threshold level for specific alerts to influence their alert volume. For example, if you're running comprehensive testing, you might want to lower alert thresholds to trigger as many alerts as possible.
 
-Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
+Alerts are triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
 
 > [!NOTE]
 > The **Adjust alert thresholds** page was previously named **Advanced settings**. For details about this transition and how any previous settings were retained, see our [What's New announcement](whats-new.md#enhanced-user-experience-for-adjusting-alert-thresholds-preview).
@@ -45,24 +46,27 @@ For example, if you have NAT or VPN, we recommend that you consider any changes 
     When you select **Medium** or **Low**, details are bolded in the **Information** column to help you understand how the change affects the alert behavior.
 
 1. Select **Apply changes** to save changes.
+1. Select **Revert to default** and then **Apply changes** to reset all alerts to the default threshold (**High**). Reverting to default is irreversible and any changes made to your threshold levels are lost.
 
-Select **Revert to default** and then **Apply changes** to reset all alerts to the default threshold (**High**). Reverting to default is irreversible and any changes made to your threshold levels are lost.
-
-## Switch to test mode
+## Switch to Recommended test mode
 
 The **Recommended test mode** option is designed to help you understand all Defender for Identity alerts, including some related to legitimate traffic and activities so that you can thoroughly evaluate Defender for Identity as efficiently as possible.
 
 If you recently deployed Defender for Identity and want to test it, select the **Recommended test mode** option to switch all alert thresholds to **Low** and increase the number of alerts triggered. 
 
-Threshold levels are read-only when the **Recommended test mode** option is selected. When you're finished testing, toggle the **Recommended test mode** option back off to return to your previous settings.
+Threshold levels are read-only when the **Recommended test mode** option is selected.
 
-Select **Apply changes** to save changes.
+> [!NOTE] 
+> Test mode is time-limited to a maximum of 60 days.
+> When turning on Recommended test mode, you must specify an end time. The selected end time is displayed next to the toggle for as long as test mode is enabled.
+
+When you're finished testing, toggle the Recommended test mode option back off to return to your previous settings. Select **Apply changes** to save changes.
 
 ## Supported detections for threshold configurations
 
 The following table describes the types of detections that support adjustments for threshold levels, including the effects of **Medium** and **Low** thresholds.
 
-Cells marked with N/A indicate that the threshold level is not supported for the detection
+Cells marked with N/A indicate that the threshold level isn't supported for the detection.
 
 | Detection | Medium | Low |
 | --- | --- | --- |

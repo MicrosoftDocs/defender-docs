@@ -3,15 +3,16 @@ title: Plan capacity for deployment | Microsoft Defender for Identity
 description: Plan your deployment and decide how many Microsoft Defender for Identity servers are needed to support your network.
 ms.date: 01/25/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Plan capacity for Microsoft Defender for Identity deployment
 
 This article describes how to use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor.
 
-While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
 
-The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS / AD CS / Entra Connect servers, as the performance impact on these servers is extremely minimal to not existent.
+The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against servers that are only AD FS, AD CS, or Entra Connect (unless those servers also function as a domain controller), as the performance impact on these servers is extremely minimal to not existent.
 
 > [!TIP]
 > By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
@@ -21,7 +22,7 @@ The sizing tool measures the capacity needed for domain controllers only. There 
 
 - Download the [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>).
 - Review the [Defender for Identity architecture](../architecture.md) article.
-- Review the [Defender for Identity prerequisites](prerequisites.md) article.
+- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article.
 
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 
@@ -118,6 +119,10 @@ Various tools can help you discover the average packet/second counter for your d
 
 > [!NOTE]
 > By default, Defender for Identity supports up to 350 sensors. If you want to install more sensors, contact Defender for Identity support.
+
+> [!IMPORTANT]
+> If your domain controller runs low on available memory, a corresponding health issue will appear in the Defender for Identity portal to alert you of this condition. Learn more about [health issues](../health-alerts.md).
+
 
 ## Next step
 

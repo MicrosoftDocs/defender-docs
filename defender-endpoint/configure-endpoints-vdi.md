@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.date: 03/11/2025
 ms.subservice: onboard
 ---
@@ -43,7 +43,7 @@ Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets e
 Like any other system in an IT environment, VDI devices should have an endpoint detection and response (EDR) and antivirus solution to protect against advanced threats and attacks.
 
 > [!NOTE]
-> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-windows-client.md).
+> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
 
 ## Onboarding non-persistent virtual desktop infrastructure (VDI) devices
 
@@ -70,7 +70,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 ### Onboarding steps
 
 > [!NOTE]
-> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first using the instructions in [Onboard Windows servers](/defender-endpoint/configure-server-endpoints#functionality-in-the-modern-unified-solution) for this feature to work.
+> Windows Server 2016 and Windows Server 2012 R2 must be prepared by applying the installation package first. See [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md).
 
 1. Open the VDI configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
@@ -102,6 +102,10 @@ The following steps guide you through onboarding VDI devices and highlight steps
    |---|---|
    | Single entry for each device | 1. Select the **PowerShell Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to onboarding PowerShell script `Onboard-NonPersistentMachine.ps1`. There's no need to specify the other file, as it's triggered automatically. |
    | Multiple entries for each device | 1. Select the **Scripts** tab, then select **Add** (Windows Explorer opens directly in the path where you copied the onboarding script earlier). <br/>2. Navigate to the onboarding bash script `WindowsDefenderATPOnboardingScript.cmd`. |
+
+   > [!NOTE]
+   > When using the 'Single entry for each device' onboarding method for non-persistent VDI environments, ensure that the Onboard-NonPersistentMachine.ps1 script is executed only after the virtual machine has received its final hostname and completed its final reboot.<br>
+   > For example, if your VDI provisioning process includes multiple reboots or configuration stages after the VM is cloned from a master image, delay the script execution until the last reboot is complete and final machine name is assigned.<br> Running the script too early may result in duplicate device entries or inconsistent onboarding to Microsoft Defender for Endpoint.
 
 5. Test your solution by following these steps:
 
@@ -146,7 +150,7 @@ The following registry is relevant only when the aim is to achieve a single entr
 
    ```
 
-2. Follow the [server onboarding process](configure-server-endpoints.md). 
+2. Follow the [server onboarding process](onboard-server.md). 
 
 ## Updating virtual desktop infrastructure (VDI) images (persistent or non-persistent)
 

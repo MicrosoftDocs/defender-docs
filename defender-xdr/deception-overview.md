@@ -4,10 +4,10 @@ description: Detect human-operated attacks with lateral movement in the early st
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,7 +16,7 @@ ms.topic: concept-article
 search.appverid: 
 - MOE150
 - MET150
-ms.date: 08/14/2024
+ms.date: 08/18/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
@@ -26,6 +26,9 @@ appliesto:
 # Manage the deception capability in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+> [!WARNING]
+> The deception capability of Microsoft Defender for Endpoint will be retired from public preview starting on August 18, 2025 and ending October 31, 2025.
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased products/services that might be substantially modified before commercially release. Microsoft makes no warranties, express or implied, with respect to the information provided here.

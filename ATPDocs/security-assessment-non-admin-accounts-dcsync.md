@@ -3,6 +3,7 @@ title: Remove non-admin accounts with DCSync permissions | Microsoft Defender fo
 description: Learn about Microsoft Defender for Identity's `Remove non-admin accounts with DCSync permissions` security assessment in Microsoft Secure Score.
 ms.date: 06/08/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Remove non-admin accounts with DCSync permissions

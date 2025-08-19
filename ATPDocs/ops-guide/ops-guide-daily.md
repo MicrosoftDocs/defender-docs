@@ -3,6 +3,7 @@ title: Daily operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily basis.
 ms.date: 01/29/2024
 ms.topic: how-to
+ms.reviewer: martin77s
 ---
 
 # Daily operational guide - Microsoft Defender for Identity
@@ -51,35 +52,6 @@ For more information, see [Work with Defender for Identity's ITDR dashboard (Pre
 
 1. When the incident is remediated, resolve it to resolve all linked and related active alerts and set a classification.
 
-## Investigate users with a high investigation score
-
-**Where**: In Microsoft Defender XDR and in Microsoft Entra.
-
-In Microsoft Defender XDR:
-
-1. Check the **Users at risk** widget on the **Home** page or the  **Entra ID users at risk** on the **Identities > Dashboard** page.
-
-1. If you have users listed at *High risk*:
-
-    - Select **View all users** to review high risk identities in Microsoft Entra.
-    - Go to the **Identities** page and sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
-
-    The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
-
-Find more identity-related information on:
-
-- Individual alert or incident details pages
-- Device details pages
-- Advanced hunting queries
-- The Action center page
-
-**Persona**: SOC analysts
-
-For more information, see:
-
-- [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users)
-- [Investigate assets](../investigate-assets.md)
-- [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md)
 
 ## Configure tuning rules for benign true positives / false positive alerts
 

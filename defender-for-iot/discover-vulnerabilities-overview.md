@@ -6,7 +6,7 @@ author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 06/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Overview of vulnerability management

@@ -19,6 +19,10 @@ On the Exposure Management > **Overview** dashboard, you can review the overall 
 
 Use the dashboard as a starting point for a snapshot of organizational posture and exposure, and drill down to details as needed.
 
+You can filter the list of affected devices based on their scope, ensuring that data presentation is aligned with your specific needs. The filter selection persists even when switching between Exposure Management experiences, allowing you to maintain you preferred view and focus on specific devices without reapplying filters.
+
+Initiative scores will reflect the selected scope, whether defined by the admin or adjusted by the end user, ensuring users see accurate and relevant scores based on their access scope.
+
 :::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
 
 ## Connecting your external security and asset management products

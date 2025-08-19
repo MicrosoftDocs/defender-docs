@@ -1,6 +1,6 @@
 ---
-title: Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on Mac
-description: Install Microsoft Defender for Endpoint on Mac on other management solutions.
+title: Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS 
+description: Install Microsoft Defender for Endpoint on macOS on other management solutions.
 ms.service: defender-endpoint
 ms.reviewer: joshbregman
 author: emmwalshh
@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 04/16/2025
 ---
 
 # Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS

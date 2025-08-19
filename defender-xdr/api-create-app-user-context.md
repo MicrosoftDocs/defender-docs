@@ -18,16 +18,14 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 08/29/2024
+ms.date: 04/15/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Create an app to access Microsoft Defender XDR APIs on behalf of a user
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.

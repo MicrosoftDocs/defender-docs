@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 07/08/2024
+ms.date: 04/28/2025
 ms.collection:
 - m365-security
 - tier2
@@ -18,6 +18,7 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 f1.keywords: CSH
+#customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
 # Configure automated investigation and response capabilities in Microsoft Defender XDR
@@ -55,16 +56,16 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 1. Go to the Microsoft Defender portal at <https://security.microsoft.com> and sign in.
 
-2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
+2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
 3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
 
-   - [How threats are remediated](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations#how-threats-are-remediated)
-   - [Create and manage device groups](/windows/security/threat-protection/microsoft-defender-atp/machine-groups)
+   - [How threats are remediated](/defender-endpoint/automated-investigations#how-threats-are-remediated)
+   - [Create and manage device groups](/defender-endpoint/machine-groups)
 
 ## Review your security and alert policies in Office 365
 
-Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365](/defender-office-365/mdo-about) features are configured correctly.
+Microsoft provides built-in [alert policies](alert-policies.md) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365](/defender-office-365/mdo-about) features are configured correctly.
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 
@@ -72,7 +73,7 @@ Security settings in Exchange Online Protection (EOP) and Defender for Office 36
 
 If you're using custom policies, use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare your policy settings to the Standard and Strict preset security policy settings. For a detailed listing of all policy settings, see the tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365).
 
-You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](/purview/alert-policies#threat-management-alert-policies).
+You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](alert-policies.md#threat-management-alert-policies).
 
 ## Need to make changes to automated investigation settings?
 

@@ -12,14 +12,14 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.date: 02/16/2021
+ms.date: 04/28/2025
 ---
 
 # Assess your security posture with Microsoft Secure Score

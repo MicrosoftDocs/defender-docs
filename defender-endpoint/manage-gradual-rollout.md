@@ -13,7 +13,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 10/07/2024

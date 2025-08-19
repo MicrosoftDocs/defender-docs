@@ -6,6 +6,7 @@ ms.author:   Liorshapira # Microsoft alias
 # ms.prod:   microsoft-defender-for-identity
 ms.topic:    article
 ms.date:     03/16/2025
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account

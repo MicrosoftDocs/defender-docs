@@ -124,6 +124,36 @@
       "source_path": "defender-endpoint/non-windows.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-endpoints-non-windows.md",
+      "redirect_url": "/defender-endpoint/onboarding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-server-endpoints.md",
+      "redirect_url": "/defender-endpoint/onboard-windows-server-2012r2-2016",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/onboard-windows-client.md",
+      "redirect_url": "/defender-endpoint/onboard-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/onboard-windows-server.md",
+      "redirect_url": "/defender-endpoint/onboard-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/onboard-windows-server-2012r2-2016.md",
+      "redirect_url": "/defender-endpoint/onboard-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/mde-linux-arm.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-linux",
+      "redirect_document_id": false
     } 
   ]
 }

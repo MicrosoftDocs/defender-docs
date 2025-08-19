@@ -3,18 +3,16 @@ title: Configure SAM-R to enable lateral movement path detection | Microsoft Def
 description: Learn how to configure Microsoft Defender for Identity to make remote calls to SAM-R.
 ms.date: 01/25/2024
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity
 
-Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
+> [!IMPORTANT]
+> As of mid-May 2025, Microsoft Defender for Identity no longer collects local administrators group members from endpoints using SAM-R queries. This data is used to build potential lateral movement path maps, which are no longer being updated. The change was applied automatically—no administrative action or configuration changes were required.
+>
 
-> [!NOTE]
-> This feature can potentially be exploited by an adversary to obtain the Net-NTLM hash of the DSA account due to a Windows limitation in the SAM-R calls that allows downgrading from Kerberos to NTLM.
-> The new Defender for Identity sensor (version 3.x) is not affected by this issue as it uses different detection methods.
-> 
-> It is recommended to use a [low privileged DSA account](directory-service-accounts.md#grant-required-dsa-permissions). You can also [contact support](../support.md) to open a case and request to completely disable the [Lateral Movement Paths](../security-assessment-riskiest-lmp.md) data collection capability.
-> Please note that this will result in reduced data available for the [attack path feature in Exposure Management](/security-exposure-management/review-attack-paths).
+Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
 
 This article describes the configuration changes required to allow the Defender for Identity Directory Services Account (DSA) to perform the SAM-R queries.
 

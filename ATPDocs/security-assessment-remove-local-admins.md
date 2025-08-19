@@ -3,6 +3,7 @@ title: Remove local admins on identity assets | Microsoft Defender for Identity
 description: Learn about Microsoft Defender for Identity's `Remove local admins on identity assets` security assessment in Microsoft Secure Score.
 ms.date: 06/08/2023
 ms.topic: how-to
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Remove local admins on identity assets

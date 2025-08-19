@@ -10,6 +10,7 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     10/05/2024
+ms.reviewer: LiorShapiraa
 ---
 
 # Security Assessment: Change Domain Controller computer account old password
@@ -31,7 +32,7 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
       
 1. Reset Incorrect Values:   
      - Reset any incorrect values to their default settings.   
-     - Check Group Policy Objects (GPOs) to ensure they do not override these settings. 
+     - Check Group Policy Objects (GPOs) to ensure they don't override these settings. 
   
 1. If these values are correct, check if the NETLOGON service is started with sc.exe query netlogon. 
 

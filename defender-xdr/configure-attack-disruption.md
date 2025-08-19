@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 02/16/2025
+ms.date: 05/15/2025
 ms.collection:
 - m365-security
 - tier2
@@ -45,6 +45,8 @@ The following are prerequisites for configuring automatic attack disruption in M
 The Minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell command: 
 
 > Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\' -Name "InstallLocation"
+> or
+> Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status' -Name "MsSenseDllVersion"
 
 #### Automation setting for your organizations devices
 
@@ -58,9 +60,6 @@ Review the configured automation level for your device group policies, whether a
 
 You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi automation** level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. Note that this setting is not highly recommended and should only be done for a limited number of devices.
 
-#### Device discovery configuration
-
-Device discovery settings must be activated to "Standard Discovery" at a minimum. Learn how to configure device discovery in [Set up device discovery](/defender-endpoint/configure-device-discovery).
 
 > [!NOTE]
 > Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.

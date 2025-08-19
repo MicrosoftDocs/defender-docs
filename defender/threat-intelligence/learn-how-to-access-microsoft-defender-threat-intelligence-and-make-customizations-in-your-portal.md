@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: quickstart
-ms.date: 01/15/2025
+ms.date: 05/16/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -58,14 +58,13 @@ The **Featured threat intelligence articles** widget in the Defender portal home
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-featured-articles-widget.png" alt-text="Screenshot of Featured threat intelligence articles widget in the Defender portal home page." lightbox="/defender/threat-intelligence/media/mdti-featured-articles-widget.png":::
 
-### Article digest 
+### Article digest
 
 In the **Intel explorer** page, a banner message notifies you of the number of new Defender TI articles that were published since you last accessed the Defender portal. Select **Show me** to open a flyout panel that lists the articles you might have missed, then select any of the listed articles to open it:
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-article-digest-01.png" alt-text="Screenshot of the Intel explorer article digest banner message notification and flyout panel." lightbox="/defender/threat-intelligence/media/mdti-article-digest-01.png":::
 
 Select the **Clear** button in the flyout panel or close the banner message to clear the article digest:
-
 
 :::image type="content" source="/defender/threat-intelligence/media/mdti-article-digest-02.png" alt-text="Screenshot of the Intel explorer article digest flyout panel with the Clear button highlighted." lightbox="/defender/threat-intelligence/media/mdti-article-digest-02.png":::
 

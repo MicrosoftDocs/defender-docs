@@ -10,6 +10,7 @@ ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     10/05/2024
+ms.reviewer: LiorShapiraa
 ---
 
 # Security assessment: Change password of built-in domain Administrator account
@@ -28,9 +29,9 @@ Regularly updating the built-in Administrator account's password is essential du
 
 1. Take appropriate action on those accounts by resetting their password.  
 
-For example:
+   For example:
 
-![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-of-report.png)
+   ![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-of-report.png)
 
 ## Next steps
 

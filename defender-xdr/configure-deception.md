@@ -4,10 +4,10 @@ description: Learn how to create, edit, and delete deception rules in the Micros
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,7 +16,7 @@ ms.topic: how-to
 search.appverid: 
 - MOE150
 - MET150
-ms.date: 01/12/2024
+ms.date: 08/18/2025
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn how to configure the deception capability so that I can protect my organization from high-impact attacks that use human-operated lateral movement.
@@ -25,6 +25,9 @@ appliesto:
 # Configure the deception capability in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+> [!WARNING]
+> The deception capability of Microsoft Defender for Endpoint will be retired from public preview starting on August 18, 2025 and ending October 31, 2025.
 
 > [!NOTE]
 > The built-in [deception](deception-overview.md) capability in Microsoft Defender XDR covers all Windows clients onboarded to Microsoft Defender for Endpoint. Learn how to onboard clients to Defender for Endpoint in [Onboard to Microsoft Defender for Endpoint](/defender-endpoint/onboarding).

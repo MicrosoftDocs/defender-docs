@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/10/2025
 ---
 

@@ -1,28 +1,29 @@
 ---
-title: Plan your deployment | Microsoft Defender
-description: Plan to deploy Microsoft's unified security operations platform with the Microsoft Defender portal, Microsoft Sentinel, and other Microsoft Defender services.
+title: Planning Guidance for Unified Security Operations in the Microsoft Defender Portal
+description: Plan to deploy unified security operations in the Microsoft Defender portal, including Microsoft Sentinel and other Microsoft Defender services.
 author: batamig
 ms.author: bagol
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
-ms.date: 02/09/2025
+ms.date: 07/16/2025
 ms.collection:
 - usx-security
 - zerotrust-solution
 - msftsolution-secops
 
 
-#customer intent: As a security administrator, I want to plan my unified security operations platform deployment so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
+#customer intent: As a security administrator, I want to plan my unified security operations deployment so that I can access Microsoft Sentinel services together with other Microsoft Defender services in the Microsoft Defender portal.
 
 ---
 
-# Microsoft's unified security operations platform planning overview
+# Planning guidance for unified security operations in the Microsoft Defender portal
 
-This article outlines activities to plan a deployment of Microsoft's security products to Microsoft's unified security operations platform for end-to-end security operations (SecOps). Unify your SecOps on Microsoft's platform to help you reduce risk, prevent attacks, detect and disrupt cyberthreats in real time, and respond faster with AI-enhanced security capabilities, all from the [Microsoft Defender portal](https://security.microsoft.com).
+This article describes how to plan your deployment for unified security operations in the Microsoft Defender portal. Unify security operations to help you reduce risk, prevent attacks, detect and disrupt cyberthreats in real time, and respond faster with AI-enhanced security capabilities, all from the [Microsoft Defender portal](https://security.microsoft.com).
 
 ## Plan your deployment
 
-Microsoft's unified SecOps platform combines services like Microsoft Defender XDR, Microsoft Sentinel, Microsoft Security Exposure Management, and Microsoft Security Copilot in the Microsoft Defender portal.
+The Defender portal combines services like Microsoft Defender XDR, Microsoft Sentinel, Microsoft Security Exposure Management, and Microsoft Security Copilot for unified security operations.
 
 The first step in planning your deployment is to select the services you want to use.
 
@@ -41,7 +42,7 @@ Microsoft Defender XDR services include:
 | [**Microsoft Defender Vulnerability Management**](/defender-vulnerability-management/defender-vulnerability-management) | Identifies assets and software inventory, and assesses device posture to find security vulnerabilities. |
 | [**Microsoft Defender for Cloud Apps**](/defender-cloud-apps/what-is-defender-for-cloud-apps) | Protects and controls access to SaaS cloud apps. |
 
-Other services supported in the Microsoft Defender portal as part of Microsoft's unified SecOps platform, but not licensed with Microsoft Defender XDR, include:
+Other services supported in the Microsoft Defender portal, but not licensed with Microsoft Defender XDR, include:
 
 | Service | Description |
 | ------- | ----------- |
@@ -54,16 +55,16 @@ Other services supported in the Microsoft Defender portal as part of Microsoft's
 
 ## Review service prerequisites
 
-Before you deploy Microsoft's unified security operations platform, review the prerequisites for each service you plan to use. The following table lists the services and links for more information:
+Before you deploy Microsoft Defender services for unified security operations, review the prerequisites for each service you plan to use. The following table lists the services and links for more information:
 
 | Security service         | Prerequisites                  |
 | ------------------------ | ------------------------------ |
-| **Required for unified SecOps**       |      |
+| **Required for unified security operations**       |      |
 | Microsoft Defender XDR | [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites) |
 | Microsoft Sentinel                                       | [Prerequisites to deploy Microsoft Sentinel](/azure/sentinel/prerequisites)  |
 | **Optional Microsoft Defender XDR services**              |                                                 |
 | Microsoft Defender for Office | [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites) |
-| Microsoft Defender for Identity                          | [Microsoft Defender for Identity prerequisites](/defender-for-identity/deploy/prerequisites)  |
+| Microsoft Defender for Identity                          | Microsoft Defender for Identity prerequisites:<br>[Sensor v2.x](/defender-for-identity/deploy/prerequisites-sensor-version-2) / [Sensor v3.x (Preview)](/defender-for-identity/deploy/prerequisites-sensor-version-3)  |
 | Microsoft Defender for Endpoint                          | [Set up Microsoft Defender for Endpoint deployment](/defender-endpoint/production-deployment)   |
 | Enterprise monitoring with Microsoft Defender for IoT    | [Prerequisites for Defender for IoT in the Defender portal](/defender-for-iot/prerequisites)   |
 | Microsoft Defender Vulnerability Management              | [Prerequisites & Permissions for Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)   |
@@ -78,11 +79,11 @@ Before you deploy Microsoft's unified security operations platform, review the p
 
 ## Review data security and privacy practices
 
-Before you deploy Microsoft's unified security operations platform, make sure that you understand the data security and privacy practices for each service you plan to use. The following table lists the services and links for more information. Note that several services use the data security and retention practices for Microsoft Defender XDR instead of have separate practices of their own.
+Before you deploy Microsoft Defender services for unified security operations, make sure that you understand the data security and privacy practices for each service you plan to use. The following table lists the services and links for more information. Note that several services use the data security and retention practices for Microsoft Defender XDR instead of have separate practices of their own.
 
 | Security service         | Data security and privacy |
 | ------------------------ |--------------------------------------- |
-| **Required for unified SecOps**       | |
+| **Required for unified security operations**       | |
 | Microsoft Defender XDR | [Data security and retention in Microsoft Defender XDR](/defender-xdr/data-privacy) |
 | Microsoft Sentinel | [Geographical availability and data residency in Microsoft Sentinel](/azure/sentinel/geographical-availability-data-residency) |
 | **Optional Microsoft Defender XDR services** | |
@@ -102,7 +103,7 @@ Before you deploy Microsoft's unified security operations platform, make sure th
 
 ## Plan your Log Analytics workspace architecture
 
-To use Microsoft's unified SecOps platform, you need a Log Analytics workspace enabled for Microsoft Sentinel. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. Microsoft's unified SecOps platform supports only a single workspace.
+To get started with unified security operations using Microsoft Sentinel in the Defender portal, you first need a Log Analytics workspace enabled for Microsoft Sentinel. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements.
 
 Design the Log Analytics workspace you want to enable for Microsoft Sentinel. Consider parameters such as any compliance requirements you have for data collection and storage and how to control access to Microsoft Sentinel data.
 
@@ -113,7 +114,7 @@ For more information, see:
 
 ## Plan Microsoft Sentinel costs and data sources
 
-Microsoft's unified SecOps platform ingests data from first-party Microsoft services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud. We recommend expanding your coverage to other data sources in your environment by adding Microsoft Sentinel data connectors.
+The Defender portal can natively ingest data from first-party Microsoft services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud. We recommend expanding your coverage to other data sources in your environment by adding Microsoft Sentinel data connectors.
 
 ### Determine your data sources
 
@@ -161,7 +162,7 @@ Microsoft security portals include:
 
 | Portal name | Description | Link |
 |---|---|---|
-| **Microsoft Defender portal** | Monitor and respond to threat activity and strengthen security posture across your identities, email, data, endpoints, and apps with Microsoft Defender XDR](../defender-xdr/microsoft-365-defender.md) | [security.microsoft.com](https://security.microsoft.com/)  <br/><br/>The Microsoft Defender portal is where you view and manage alerts, incidents, settings, and more. |
+| **Microsoft Defender portal** | Monitor and respond to threat activity and strengthen security posture across your identities, email, data, endpoints, and apps with [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender) | [security.microsoft.com](https://security.microsoft.com/)  <br/><br/>The Microsoft Defender portal is where you view and manage alerts, incidents, settings, and more. |
 | **Defender for Cloud portal** | Use [Microsoft Defender for Cloud](/azure/security-center/security-center-intro) to strengthen the security posture of your data centers and your hybrid workloads in the cloud | [portal.azure.com/#blade/Microsoft_Azure_Security](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0) |
 | **Microsoft Security Intelligence portal** | Get security intelligence updates for Microsoft Defender for Endpoint, submit samples, and explore the threat encyclopedia | [microsoft.com/wdsi](https://microsoft.com/wdsi) |
 
@@ -178,16 +179,23 @@ The following table describes portals for other workloads that can impact your s
 
 ## Plan roles and permissions
 
-Use Microsoft Entra role based access control (RBAC) to create and assign roles within your security operations team to grant appropriate access to services included in Microsoft's unified SecOps platform.
+The Microsoft Defender portal unifies the following role-based access control (RBAC) models for unified security operations:
 
-The Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across several security solutions. For more information, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+- [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview), used for delegating access to Defender access, like device groups
+- [Azure RBAC](/azure/role-based-access-control/), used by Microsoft Sentinel to delegate permissions
+- [Defender unified RBAC](/defender-xdr/manage-rbac), used to delegate permissions across Defender solutions
+
+While permissions granted through Azure RBAC for Microsoft Sentinel are federated during runtime with Defender's unified RBAC, Azure RBAC and Defender RBAC are still managed separately.
+
+Defender's unified RBAC isn't required for your workspace to be onboarded to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
+
+[!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
 For the following services, use the different roles available, or create custom roles, to give you fine-grained control over what users can see and do. For more information, see:
 
-
 | Security service         | Link to role requirements                  |
 | ------------------------ | ------------------------------------------- |
-| **Required for unified SecOps**                                                   |                           |
+| **Required for unified security operations**                                                   |                           |
 | Microsoft Defender XDR  | [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](/defender-xdr/m365d-permissions)               |
 | Microsoft Sentinel                                       | [Roles and permissions in Microsoft Sentinel](/azure/sentinel/roles)            |
 | **Optional Microsoft Defender XDR services**                |  |
@@ -201,9 +209,18 @@ For the following services, use the different roles available, or create custom 
 | Microsoft Defender for Cloud      | [User roles and permissions](/azure/defender-for-cloud/permissions) |
 | Microsoft Purview Insider Risk Management | [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management) |
 
+For more information, see:
+
+- [Plan roles and permissions for Microsoft Sentinel](/azure/sentinel/roles)
+- [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+- [Microsoft Sentinel roles](/azure/role-based-access-control/built-in-roles#security)
+- [Onboarding prerequisites](microsoft-sentinel-onboard.md#prerequisites)
+- [Managing unified RBAC in Microsoft Defender](https://aka.ms/defender_RBAC) (video demo)
+
+
 ## Plan Zero Trust activities
 
-Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security model](zero-trust.md), which includes the following principles:
+Unified security operations in the Defender portal is part of [Microsoft's Zero Trust security model](zero-trust.md), which includes the following principles:
 
 |Security principle |Description|
 |---|---|
@@ -213,7 +230,7 @@ Microsoft's unified SecOps platform is part of [Microsoft's Zero Trust security 
 
 Zero Trust security is designed to protect modern digital environments by leveraging network segmentation, preventing lateral movement, providing least-privileged access, and using advanced analytics to detect and respond to threats.
 
-For more information about implementing Zero Trust principles in Microsoft's unified SecOps platform, see Zero Trust content for the following services:
+For more information about implementing Zero Trust principles in the Defender portal, see Zero Trust content for the following services:
 
 - [Microsoft Defender XDR](/defender-xdr/zero-trust-with-microsoft-365-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json)
 - [Microsoft Sentinel](/security/operations/siem-xdr-overview?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json)
@@ -233,4 +250,4 @@ For more information, see the [Zero Trust Guidance Center](/security/zero-trust/
 
 ## Next step
 
-[Deploy Microsoft's unified security operations platform](overview-deploy.md)
+[Deploy for unified security operations](overview-deploy.md)

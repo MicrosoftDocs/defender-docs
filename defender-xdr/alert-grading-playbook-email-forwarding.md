@@ -17,7 +17,7 @@ ms.topic: how-to
 search.appverid:
   - MOE150
   - met150
-ms.date: 04/03/2024
+ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR
 #customer intent: As a SOC analyst, I want to know how to review and classify alerts about suspicious email forwarding activity so that I can take the necessary actions to remediate the attack and protect my network.
@@ -228,7 +228,7 @@ You can also find suspicious forwarding rules using the Exchange admin center, b
 
 - InboxRule
 
-  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchange/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
+  Inbox rules are configured with the e-mail client. You can use the [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule) PowerShell cmdlet to list the inbox rules created by users.
 
 ### Additional investigation
 

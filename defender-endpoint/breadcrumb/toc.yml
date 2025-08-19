@@ -6,8 +6,8 @@
       tocHref: /defender-endpoint/
       topicHref: /defender-endpoint/index
     - name: 'Microsoft Defender for Endpoint'
-      tocHref: /mem/intune/protect/
-      topicHref: /mem/intune/protect/
+      tocHref: /intune/intune-service/protect/
+      topicHref: /intune/intune-service/protect/
     - name: 'Microsoft Defender for Endpoint'
       tocHref: /defender-xdr/
       topicHref: /defender-xdr/pilot-deploy-defender-endpoint

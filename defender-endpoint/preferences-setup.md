@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - essentials-manage
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 03/26/2025

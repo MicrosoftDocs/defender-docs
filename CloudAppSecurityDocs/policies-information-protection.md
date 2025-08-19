@@ -2,7 +2,7 @@
 title: Commonly used information protection policies | Microsoft Defender for Cloud Apps
 description: This article outlines the steps to configure many information protection policies in Defender for Cloud Apps.
 ms.date: 05/15/2024
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Commonly used Microsoft Defender for Cloud Apps information protection policies
 

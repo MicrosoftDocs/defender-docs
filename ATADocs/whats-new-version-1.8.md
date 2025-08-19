@@ -3,12 +3,8 @@
 
 title: What's new in ATA version 1.8
 description: Lists what was new in ATA version 1.8 along with known issues
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: whats-new
 ms.service: advanced-threat-analytics
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 

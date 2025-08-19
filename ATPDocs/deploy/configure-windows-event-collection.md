@@ -1,8 +1,9 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: This article describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 01/16/2024
+ms.date: 06/04/2025
 ms.topic: how-to
+ms.reviewer: rlitinsky
 ---
 
 # Configure audit policies for Windows event logs
@@ -58,13 +59,13 @@ Use the following procedures to configure auditing on the domain controllers tha
 
 This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity via the UI.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
 
 To configure your Advanced Audit Policy settings:
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
-1. Expand **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
+1. Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
 
     ![Screenshot of the pane for editing the default policy for domain controllers.](../media/advanced-audit-policy-check-step-1.png)
 
@@ -101,11 +102,11 @@ To configure your Advanced Audit Policy settings:
 
 1. After you apply the policy via GPO, conform that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
 
-To test your audit policies from the command line, run the following command:
+    To test your audit policies from the command line, run the following command:
 
-```cmd
-auditpol.exe /get /category:*
-```
+    ```cmd
+    auditpol.exe /get /category:*
+    ```
 
 For more information, see the [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
 
@@ -113,7 +114,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
 
 To configure your settings, run:
 
@@ -166,7 +167,7 @@ This section describes the extra configuration steps that you need for auditing 
 > - Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
 > - When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data.
 
-**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md#ntlm-auditing-is-not-enabled)
+**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md)
 
 To configure NTLM auditing:
 
@@ -191,7 +192,7 @@ To collect events for object changes, such as for event 4662, you must also conf
 > [!IMPORTANT]
 > Review and audit your policies (via the [UI](#configure-advanced-audit-policy-settings-from-the-ui) or [PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)) before you enable event collection, to ensure that the domain controllers are properly configured to record the necessary events. If this auditing is configured properly, it should have a minimal effect on server performance.
 
-**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md)
 
 To configure domain object auditing:
 
@@ -234,18 +235,20 @@ To configure domain object auditing:
 
         Now, all relevant changes to directory services appear as 4662 events when they're triggered.
 
-1. Repeat the steps in this procedure, but for **Applies to**, select the following object types:
+1. Repeat the steps in this procedure, but for **Applies to**, select the following object types <sup>1</sup>
    - **Descendant Group Objects**
    - **Descendant Computer Objects**
    - **Descendant msDS-GroupManagedServiceAccount Objects**
    - **Descendant msDS-ManagedServiceAccount Objects**
+   - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>2</sup>
 
 > [!NOTE]
-> Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
+> 1. Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
+> 2. The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 ## Configure auditing on AD FS
 
-**Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
+**Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md)
 
 To configure auditing on Active Directory Federation Services (AD FS):
 
@@ -286,7 +289,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.
 
-      :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
+        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) by using one of the following methods:
 
@@ -330,8 +333,7 @@ To configure auditing on Microsoft Entra Connect servers:
 >[!NOTE]
 > The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
 
-**Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
-
+**Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md)
 1. Open the ADSI Edit tool. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
 
 1. On the **Action** menu, select **Connect to**.

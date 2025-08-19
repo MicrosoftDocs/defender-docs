@@ -18,7 +18,7 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: concept-article
+ms.topic: how-to
 #customer intent: To learn how to investigate and respond to attacks using Microsoft Defender XDR.
 appliesto:
    - Microsoft Defender XDR

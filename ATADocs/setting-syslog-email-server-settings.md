@@ -3,12 +3,8 @@
 
 title: Setting email notification settings in Advanced Threat Analytics
 description: Describes how to have ATA notify you (by email or by ATA event forwarding) when it detects suspicious activities 
-keywords:
-author: batamig
-ms.author: bagol
-manager: raynew
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: advanced-threat-analytics
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 
@@ -70,7 +66,7 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
     ![ATA configuration settings icon.](media/ATA-config-icon.png)
 
-1. Under Notifications section, Select **Syslog server** and enter the following information:
+1. Under Notifications section, select **Syslog server** and enter the following information:
 
    |Field|Description|
    |---------|---------------|

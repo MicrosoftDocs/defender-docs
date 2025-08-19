@@ -1,8 +1,9 @@
 ---
-title: "What is Microsoft's unified security operations platform?"
-description: Provides an overview of features and functionality in the Microsoft's unified security operations platform
+title: "What Are Unified Security Operations in the Microsoft Defender Portal?"
+description: Provides an overview of features and functionality in the Microsoft Defender portal for unified security operations.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
@@ -14,20 +15,26 @@ ms.collection:
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security operations center leader, I want to learn about the services and features available with Microsoft's unified security operations platform to help me determine whether it meets my organization's requirements.
+# customer intent: As a security operations center leader, I want to learn about the services and features available in the Microsoft Defender portal for unified security operations to help me determine whether it meets my organization's requirements.
 ---
 
-# What is Microsoft's unified security operations platform?
+# What are unified security operations in the Microsoft Defender portal?
 
-Microsoft's unified security operations platform provides a single platform for end-to-end security operations (SecOps). It integrates security information and event management (SIEM), security orchestration, automation, and response (SOAR), extended detection and response (XDR), posture and exposure management, cloud security, threat intelligence, and generative AI solutions.
+The Microsoft Defender portal provides unified security operations that integrate solutions for:
 
-To cover all those capabilities, Microsoft's unified SecOps platform combines services like [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), [Microsoft Sentinel](/azure/sentinel/overview), [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) in the Microsoft Defender portal. Integrate more Microsoft Defender services to add security and provide integrated protection against sophisticated attacks. The Defender portal provides a single location to monitor, detect, investigate, remediate, and respond against pre- and post-breach cybersecurity risks and threats.
+- Security information and event management (SIEM)
+- Security orchestration, automation, and response (SOAR)
+- Extended detection and response (XDR)
+- Posture and exposure management
+- Cloud security, threat intelligence, and generative AI
 
-:::image type="content" source="media/overview-unified-security/defender-portal-home.png" lightbox="media/overview-unified-security/defender-portal-home.png" alt-text="Screenshot of the home page of Microsoft's unified SecOps platform in the Defender portal.":::
+To cover all those capabilities, the Defender portal combines services like [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), [Microsoft Sentinel](/azure/sentinel/overview), [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) in the Microsoft Defender portal. Integrate more Microsoft Defender services to add security and provide integrated protection against sophisticated attacks. The Defender portal provides a single location to monitor, detect, investigate, remediate, and respond against pre- and post-breach cybersecurity risks and threats.
+
+:::image type="content" source="media/overview-unified-security/defender-portal-home.png" lightbox="media/overview-unified-security/defender-portal-home.png" alt-text="Screenshot of the home page of the Defender portal with unified security operations.":::
 
 ## Protect assets
 
-Protect a wide range of assets by integrating Defender XDR, Microsoft Sentinel, and other Defender services in Microsoft's unified SecOps platform.
+Protect a wide range of assets by integrating Defender XDR, Microsoft Sentinel, and other Defender services in the Defender portal.
 
 Microsoft Defender XDR services include the following asset protection capabilities:
 
@@ -56,13 +63,13 @@ The Defender portal provides a single, centralized view of organizational securi
 
 Free up analyst time as unified security dashboards enable analysts to cross organization silos, prioritize the most critical threats, and hunt effectively for attempted breaches.
 
-The following image shows the unified incident queue in Microsoft's unified SecOps platform, with incidents from multiple service sources.
+The following image shows the unified incident queue in the Defender portal, with incidents from multiple service sources.
 
 :::image type="content" source="media/overview-unified-security/unified-incidents.png" alt-text="Screenshot of the unified incident queue that shows incidents with multiple service sources." lightbox="media/overview-unified-security/unified-incidents.png":::
 
 ## Reduce security risk and prevent attacks
 
-Consistently reduce security risk and prevent cybersecurity attacks as a part of your organizational risk management framework. Microsoft's unified SecOps platform offers comprehensive exposure management and cloud protection capabilities. With [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction):
+Consistently reduce security risk and prevent cybersecurity attacks as a part of your organizational risk management framework. The Defender portal offers comprehensive exposure management and cloud protection capabilities with [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management), and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), as follows:
 
 - Continuously discover organizational assets and assess their security posture.  
 - Protect cloud workloads from code to runtime.
@@ -70,7 +77,7 @@ Consistently reduce security risk and prevent cybersecurity attacks as a part of
 - Investigate and query to get insights into security posture.
 - Prioritize asset remediation, with the focus on critical resources, to reduce security gaps and attack surfaces.
 
-The following image shows the overview page for exposure management in Microsoft's unified SecOps platform.
+The following image shows the overview page for exposure management in the Defender portal:
 
 :::image type="content" source="media/overview-unified-security/exposure-management-overview.png" alt-text="Screenshot of the overview page in the exposure management of the Defender portal." lightbox="media/overview-unified-security/exposure-management-overview.png":::
 
@@ -78,7 +85,7 @@ The following image shows the overview page for exposure management in Microsoft
 
 Standard cybersecurity metrics focus on the time to detect (TTD) and time to respond (TTR). Time to detect (TTD) measures how long it takes security teams to discover an incident. Time to respond (TTR) measures the amount of time it takes to respond after a threat is detected. The shorter the TTD and TTR, the more effective your detection, and response strategy is.
 
-Microsoft's unified SecOps platform correlates millions of signals from Defender products, Microsoft Sentinel, Microsoft security research, and threat intelligence to identify attacks in progress. It initiates automatic attack disruption to automatically contain attacks, limiting lateral movement early and reducing attack impact. Automatic attack disruption helps to reduce costs associated with loss of productivity, provide control to the SecOps team control to investigate and remediate compromised assets.
+The Microsoft Defender portal correlates millions of signals from Defender products, Microsoft Sentinel, Microsoft security research, and threat intelligence to identify attacks in progress. It initiates automatic attack disruption to automatically contain attacks, limiting lateral movement early and reducing attack impact. Automatic attack disruption helps to reduce costs associated with loss of productivity, provide control to the SecOps team control to investigate and remediate compromised assets.
 
 Automatic attack disruption responds to threats by containing devices and containing or disabling users to mitigate attacks. 
 
@@ -106,6 +113,6 @@ For more information, see [Microsoft Copilot in Microsoft Defender](/defender-xd
 
 ## Related content
 
-- Blog post: [AI-powered, unified SecOps](https://www.microsoft.com/security/business/solutions/ai-powered-unified-secops-platform)
-- [Microsoft's unified security operations platform planning overview](overview-plan.md)
-- [Deploy Microsoft's unified security operations platform](overview-deploy.md)
+- Blog post: [AI-powered, unified security operations](https://www.microsoft.com/security/business/solutions/ai-powered-unified-secops-platform)
+- [Planning guidance for unified security operations in the Microsoft Defender portal](overview-plan.md)
+- [Deploy for unified security operations](overview-deploy.md)

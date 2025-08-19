@@ -121,7 +121,7 @@ For more information, see the [User-Account-Control attribute](/windows/win32/ad
 
 Released May 29, 2023
 
-- New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
+- New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -129,7 +129,7 @@ Released May 29, 2023
 
 Released May 15, 2023
 
-- New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required).
+- New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
 - The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
 
@@ -151,7 +151,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 
 Released April 23, 2023
 
-- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
 - New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -163,7 +163,7 @@ Released March 27, 2023
 
 - We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, certain legacy systems might use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. We're also reviewing the LDAP honeytoken alert over the coming weeks, but remains functional for now.
 
-- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
+- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
 - We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
@@ -232,9 +232,9 @@ Released January 22, 2023
 
 Released January 10, 2023
 
-- New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
 
-- New health alert for verifying that the sensor’s power settings are configured for optimal performance, as described in the [health alerts page](health-alerts.md#power-mode-is-not-configured-for-optimal-processor-performance).
+- New health alert for verifying that the sensor’s power settings are configured for optimal performance, as described in the [health alerts page](health-alerts.md).
 
 - We've added [MITRE ATT&CK](https://attack.mitre.org/) information to the IdentityLogonEvents, IdentityDirectoryEvents and IdentityQueryEvents tables in Microsoft Defender XDR Advanced Hunting.  In the **AdditionalFields** column, you can find details about the Attack Techniques and the Tactic (Category) associated with some of our logical activities.
 
@@ -256,7 +256,7 @@ Released December 7, 2022
 
 Released November 10, 2022
 
-- New health alert for verifying that Directory Services Advanced Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required).
+- New health alert for verifying that Directory Services Advanced Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
 
 - Some of the changes introduced in [Defender for Identity release 2.191](#defender-for-identity-release-2191) regarding honeytoken alerts were not enabled properly. Those issues have been resolved now.
 
@@ -282,7 +282,7 @@ To learn more about this attack, read [this blog post](https://techcommunity.mic
 
 Released October 23, 2022
 
-- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-is-not-enabled).
+- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -334,7 +334,7 @@ Released August 10, 2022
 
 - Health alerts will now show the sensor's fully qualified domain name (FQDN) instead of the NetBIOS name.
 
-- New health alerts are available for capturing component type and configuration, as described in the [health alerts page](health-alerts.md#sensor-has-issues-with-packet-capturing-component).
+- New health alerts are available for capturing component type and configuration, as described in the [health alerts page](health-alerts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -904,7 +904,7 @@ We are expanding our sensitivity definition for on-premises accounts to include 
 
 Released June 14, 2020
 
-- **Feature enhancement: Additional activity details available in the unified SecOps experience**  
+- **Feature enhancement: Additional activity details available**  
 We've extended the device information we send to Defender for Cloud Apps including device names, IP addresses, account UPNs and used port. For more information about our integration with Defender for Cloud Apps, see [Using Azure ATP with Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.

@@ -77,7 +77,7 @@ Press **Insert**, and then add the following entries:
 ```bash
 CRON_TZ=America/Los_Angeles
 
-0 2 * * sat /bin/mdatp scan quick > ~/mdatp_cron_job.log
+0 2 * * sat /usr/bin/mdatp scan quick > ~/mdatp_cron_job.log
 ```
 
 > [!NOTE]
