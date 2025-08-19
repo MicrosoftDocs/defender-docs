@@ -14,6 +14,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.topic: whats-new
+#Customer.intent: As a security administrator or IT professional, stay up to date with the latest features, improvements, and changes in Microsoft Defender for Endpoint and related security products, so that you can ensure your organization benefits from new capabilities, stays protected against emerging threats, and takes advantage of enhancements as soon as they become available.
 ---
 
 # What's new in Microsoft Defender for Endpoint
