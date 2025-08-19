@@ -34,6 +34,12 @@ Previously, Defender for Identity tenants received Entra ID risk level in the Id
 For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
 
 
+### New security assessment: Remove inactive service accounts (Preview)
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
+
+For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+
 ### New Graph based API for response actions (preview) 
 
 We’re excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
