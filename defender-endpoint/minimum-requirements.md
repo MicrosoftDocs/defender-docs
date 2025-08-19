@@ -70,11 +70,9 @@ Devices on your network must be running one of the operating systems listed in t
 - [Windows Enterprise multi-session](/azure/virtual-desktop/windows-multisession-faq)
 
 - Windows Server
-  - Windows Server 2012 R2
+  - Windows Server 2012 R2 and later (including Core installation type)
   - Windows Server 2016
-  - Windows Server Semi-Annual Channel, version 1803 and above
-    
-  - Windows Server 2019 and later (including Core installation type)
+  - Windows Server Semi-Annual Channel, version 1803 and later
     
 - [Windows 365](/windows-365/) Cloud PCs and supported [Azure (Windows) Virtual Desktop](/azure/virtual-desktop/) machines running one of the previously listed operating systems/versions
 

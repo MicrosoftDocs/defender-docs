@@ -27,9 +27,7 @@ ms.date: 01/15/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 **Windows Server**
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019 and later
+- Windows Server 2012 R2 and later
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.

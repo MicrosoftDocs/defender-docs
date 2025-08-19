@@ -258,8 +258,7 @@ For Windows 10 release information, see the [Windows lifecycle fact sheet](https
 To avoid a gap in protection, keep your OS installation images up to date with the latest antivirus and anti-malware updates. Updates are available for:
 
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
-- Windows Server 2016 and later
-- Windows Server 2012 R2
+- Windows Server 2012 R2 and later
 - Azure Stack HCI OS, version 23H2 and later
 - WIM and VHD(x) files 
 

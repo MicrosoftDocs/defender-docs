@@ -28,8 +28,7 @@ ms.subservice: onboard
 - Virtual desktop infrastructure (VDI) devices
 - Windows 11
 - Windows 10
-- Windows Server 2016 and later
-- Windows Server 2012 R2
+- Windows Server 2012 R2 and later
 - Azure Stack HCI OS, version 23H2 and later
 
 
