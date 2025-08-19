@@ -46,11 +46,25 @@ For a full list of supported alerts, see: [Defender for Identity XDR alerts](/de
 
 ### Use advanced hunting to investigate Okta activity
 
-Advanced hunting lets you investigate identity activity across different services including Okta, Active Directory, and Microsoft Entra ID. The IdentityInfo table includes account metadata such as privilege level, group membership, and identity source.
+Advanced hunting lets you investigate identity activity across different services including Okta, Active Directory, and Microsoft Entra ID. The **IdentityInfo** table includes account metadata such as privilege level, group membership, and identity source. The **IdentityEvents** table includes events related to those identities, such as sign-ins, authentication attempts, and identity-related alerts across supported identity providers.
 
-To explore the full schema and build your own queries, see [IdentityInfo ](/defender-xdr/advanced-hunting-identityinfo-table) and [IdentityEvents(Preview)](/defender-xdr/advanced-hunting-identityevents-table?branch=pr-en-us-4691).
+To explore the full schema and build your own queries, see: 
+-  [IdentityInfo ](/defender-xdr/advanced-hunting-identityinfo-table)
+-  [IdentityEvents(Preview)](/defender-xdr/advanced-hunting-identityevents-table).
 
-## Next steps  
+### Remediation Actions 
+
+When Microsoft Defender for Identity identifies an identity as at risk, you can take the following remediation actions directly from the Defender portal to update the user's status in Okta.
+
+- Revoke all user's sessions
+
+- Deactivate user in Okta
+
+- Set user risk in Okta
+
+For more information, see: [Remediation actions in Microsoft Defender for Identity](remediation-actions.md#roles-and-permissions)
+
+## Next steps
 
 - [Connect Okta to Microsoft Defender for Identity](okta-integration.md)
 
