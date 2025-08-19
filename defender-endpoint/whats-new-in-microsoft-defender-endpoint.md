@@ -28,23 +28,22 @@ ms.topic: whats-new
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. For more information on preview features, see [Preview features](/defender-xdr/preview).
+The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. Learn more about [preview features](/defender-xdr/preview).
 
-For more information on Microsoft Defender for Endpoint on specific operating systems:
+## What's new in Defender for Endpoint on other operating systems and services
 
-- [What's new in Defender for Endpoint on Windows](windows-whatsnew.md)
-- [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
-- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
-- [What's new in Defender for Endpoint on Android](android-whatsnew.md)
-- [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
-
-For more information on what's new with other Microsoft Defender security products, see:
-
-- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
-- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
-- [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
-- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
+|Platform/service  |Link  |
+|------------------|------|
+|Windows           |[What's new in Defender for Endpoint on Windows](windows-whatsnew.md)|
+|macOS             |[What's new in Defender for Endpoint on macOS](mac-whatsnew.md)|
+|Linux             |[What's new in Defender for Endpoint on Linux](linux-whatsnew.md)|
+|Android           |[What's new in Defender for Endpoint on Android](android-whatsnew.md)|
+|iOS               |[What's new in Defender for Endpoint on iOS](ios-whatsnew.md)|
+|Microsoft Defender XDR |[What's new in Microsoft Defender XDR](/defender-xdr/whats-new)|
+|Microsoft Defender for Office 365 |[What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)|
+|Microsoft Defender for Identity |[What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)|
+|Microsoft Defender for Cloud Apps |[What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)|
+|Microsoft Defender Vulnerability Management |[What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)|
 
 ## July 2025
 
