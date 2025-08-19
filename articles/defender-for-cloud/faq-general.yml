@@ -161,6 +161,8 @@ sections:
           - SQL servers should have a Microsoft Entra administrator provisioned
           - Usage of host networking and ports should be restricted
           - Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers
+          - Unused API endpoints should be disabled and removed from Function Apps (Preview)
+          - Unused API endpoints should be disabled and removed from Logic Apps (Preview)
 
       - question: |
           Are there any limitations to Defender for Cloud's identity and access protections?
