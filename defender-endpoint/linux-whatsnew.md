@@ -54,12 +54,6 @@ This article is updated frequently to let you know what's new in the latest rele
 |Signature version: |**1.429.442.0**       |
 
 What's new
-- MDE Installer now supports custom path installations.
-- `mdatp threat quarantine add` command now requires super user permissions.
-- Definition path now can be updated without needing to stop MDE.
-- Facpolicyd is now supported along side MDE Linux for RHEL & Fedora based distributions. 
-- Other stability improvements and bug fixes.
-
 - Defender for Endpoint on Linux now supports installation to a custom location (preview). Read [here[(https://learn.microsoft.com/en-gb/defender-endpoint/linux-custom-location-installation) for more details. Support for this feature will be added to the installer script within a couple of days.
 - The mdatp threat quarantine add command now requires superuser (root) privileges.
 - Custom definition path can now be updated without stopping MDE. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
