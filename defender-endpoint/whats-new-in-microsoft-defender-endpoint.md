@@ -34,17 +34,17 @@ See [what's new in Microsoft Defender for Endpoint on other operating systems an
 
 ## July 2025
 
-|Feature  |Preview/GA  |Description  |Platform  |
-|---------|------------|-------------|------------------|
-|[Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview)     |GA         |- Microsoft Defender Core service, now in GA, helps with the stability and performance of Microsoft Defender Antivirus.<br>- Support for Azure Stack HCI OS is rolling out across commercial and government clouds.| - Windows Server 2019 or later<br>- Azure Stack HCI OS |
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|[Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview)     |GA         |- Microsoft Defender Core service, now in GA, helps with the stability and performance of Microsoft Defender Antivirus.<br>- Support for Azure Stack HCI OS is rolling out across commercial and government clouds.|
 
 ## April 2025
 
-|Feature  |Preview/GA  |Description  |Platform  |
-|---------|------------|-------------|------------------|
-|[Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) |Preview     |Containing IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint is now in preview. Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. | - Windows 10, version 1809 and later<br>- Windows Server, version 1809 and later<br>- Azure Stack HCI OS |
-|Attack Surface Reduction (ASR) Rules |GA         |- (GA) Two new ASR rules are now generally available:<br>  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference): This rule prevents the execution of commands to restart machines in Safe Mode.<br>  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. | - Windows 10, version 1809 and later<br>- Windows Server, version 1809 and later<br>- Azure Stack HCI OS |
-|ARM64-based Linux server support |GA  |- (GA) Defender for Endpoint supports ARM64-based Linux servers across various Linux distributions, including Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers. For more information, see the following articles:<br>  - [Tech Community Blog: Defender for Endpoint extends support to ARM-based Linux servers](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/defender-for-endpoint-extends-support-to-arm-based-linux-servers/4364066)<br>  - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) | - Linux |
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|[Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) |Preview     |Containing an IP address prevents attackers from spreading attacks to other non-compromised devices. |
+|Attack Surface Reduction (ASR) Rules |GA         |Two new ASR rules are now generally available:<br>  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference): Prevents the execution of commands to restart machines in Safe Mode.<br>  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference): Blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. |
+|ARM64-based Linux server support |GA  |- ARM64-based Linux servers are now supported across various Linux distributions, including Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux.<br>- All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers. <br><br>For more information, see:<br>  - [Tech Community Blog: Defender for Endpoint extends support to ARM-based Linux servers](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/defender-for-endpoint-extends-support-to-arm-based-linux-servers/4364066)<br>  - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) |
 
 ## February 2025
 
