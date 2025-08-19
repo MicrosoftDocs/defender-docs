@@ -191,6 +191,8 @@
     ".openpublishing.redirection.defender-cloud-apps.json",
     ".openpublishing.redirection.defender-endpoint.json",
     ".openpublishing.redirection.defender-office-365.json",
-    ".openpublishing.redirection.defender-xdr.json"
+    ".openpublishing.redirection.defender-xdr.json",
+    ".openpublishing.redirection.unified-secops.json"
+
   ]
 }

@@ -104,7 +104,7 @@ For more information about user reported message settings in the Defender portal
 
 What happens to a user reported Teams message depends on the settings in the **Reported message destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
 
-- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: For Microsoft 365 organizations created after March 1 2023, this is the default value. The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
+- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: For Microsoft 365 organizations created after March 1 2023, this value is the default. The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
 - **Send the reported messages to** \> **Microsoft only**
 - **Send the reported messages to** \> **My reporting mailbox only**
 

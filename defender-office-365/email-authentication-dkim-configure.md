@@ -311,10 +311,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
         ```
 
         - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+          - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
           - Simple: Only changes in empty lines at the end of the message body are tolerated.
         - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+          - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
           - Simple: No changes to the header fields are tolerated.
         - The _KeySize_ parameter specifies the bit size of the public key in the DKIM record:
            - 1024 (default)
@@ -367,10 +367,10 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
-     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+     - Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
      - Simple: Only changes in empty lines at the end of the message body are tolerated.
    - The _HeaderCanonicalization_ parameter specifies the sensitivity level to changes in the message header:
-     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This is the default value.
+     - Relaxed: Common modifications to the message header are tolerated. For example, header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields. This value is the default.
      - Simple: No changes to the header fields are tolerated.
 
    For example:

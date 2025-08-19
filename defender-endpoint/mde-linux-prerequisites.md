@@ -3,10 +3,10 @@ title: Prerequisites for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes the requirements needed to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -50,6 +50,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
 - **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
 - **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
+- For installation at a custom path, refer to [Prerequisites and system requirements for custom location installation](linux-custom-location-installation.md#prerequisites-and-system-requirements).
 
 > [!NOTE]
 > Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
@@ -209,7 +210,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-If you experience any installation issues, self-troubleshooting resources are available. See the links in the [See also](#see-also) section.
+If you experience any installation issues, self-troubleshooting resources are available. See the links in the [Related content section](#related-content).
 
 ## Next steps
 
@@ -217,7 +218,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
-## See also
+## Related content
 
 - [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
 - [Linux Resources](linux-resources.md)
@@ -225,6 +226,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 > [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
