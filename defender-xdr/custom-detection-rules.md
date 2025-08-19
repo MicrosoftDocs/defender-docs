@@ -375,7 +375,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 #### How custom detections handle duplicate alerts
 
-An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. For example, if a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, only one alert is created for both of these events. If the detection recognizes that the events are identical, it logs only one of the events on the created alert and then takes care of the duplicates, which could occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, only one alert is created for both of these events. If the detection recognizes that the events are identical, it logs only one of the events on the created alert and then takes care of the duplicates, which could occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 
