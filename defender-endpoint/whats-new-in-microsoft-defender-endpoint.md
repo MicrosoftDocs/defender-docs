@@ -28,9 +28,12 @@ ms.topic: whats-new
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint. Learn more about [preview features](/defender-xdr/preview).
+This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release. 
 
-See [what's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services).
+Learn more:
+
+- [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
+- [Preview features](/defender-xdr/preview).
 
 ## July 2025
 
