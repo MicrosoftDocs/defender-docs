@@ -2,9 +2,9 @@
 title: Impersonation insight
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium

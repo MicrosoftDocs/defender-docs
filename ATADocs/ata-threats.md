@@ -4,7 +4,7 @@
 title: What threats does Advanced Threat Analytics detect?
 description: Lists the threats that Advanced Threat Analytics detects 
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: advanced-threat-analytics
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 

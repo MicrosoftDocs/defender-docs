@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.custom: AIR
 search.appverid: met150
 ---

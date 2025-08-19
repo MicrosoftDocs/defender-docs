@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: asr
 search.appverid: met150
 ms.date: 09/21/2024

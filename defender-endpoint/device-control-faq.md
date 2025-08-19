@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: faq
 ms.date: 03/10/2025
 ms.reviewer: tewchen, joshbregman
 search.appverid: met150

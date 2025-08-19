@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
 ms.date: 05/01/2025

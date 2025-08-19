@@ -2,7 +2,8 @@
 title: How Microsoft identifies malware and potentially unwanted applications
 ms.reviewer: andanut, elahehsamani
 description: Learn how Microsoft reviews software for privacy violations and other negative behavior, to determine if it's malware or a potentially unwanted application.
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.localizationpriority: medium
 ms.author: dansimp
 author: dansimp
@@ -11,7 +12,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/13/2025
 search.appverid: met150
 ---

@@ -2,9 +2,9 @@
 title: User reported message settings in Teams
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure whether users can report malicious message in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 03/31/2025
+ms.date: 07/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -28,7 +28,7 @@ appliesto:
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. Admins can also get visibility into the Teams messages that users are reporting.
 
-Users can report messages in Teams from chats, standard channels, and meeting conversations. Users can only report messages as malicious.
+Users can report messages in Teams from chats, standard and private channels, and meeting conversations. Users can only report messages as malicious.
 
 > [!NOTE]
 > User reporting of messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
@@ -50,7 +50,7 @@ To view or configure this setting, you need to be a member of the **Global Admin
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-1. In the Teams admin center at <https://admin.teams.microsoft.com>, go to **Messaging policies**. Or, to go directly to the **Messaging policies** page, use <https://admin.teams.microsoft.com/policies/messaging>.
+1. In the Teams admin center at <https://admin.teams.microsoft.com>, go to **Settings & policies** and than **Messaging**. Or, to go directly to the **Messaging policies** page, use <https://admin.teams.microsoft.com/one-policy/settings/messaging>.
 
 2. On the **Messaging policies** page, verify that the **Manage policies** tab is selected, and do either of the following actions to edit the appropriate policy (the **Global (Org-wide) default** policy or a custom policy):
    - Select the link in the **Name** column.
@@ -82,7 +82,7 @@ For more information about user reported message settings in the Defender portal
 
 ## How users report messages in Teams
 
-1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select **... More options** \> **More actions** \> **Report this message**.
+1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select **... More options** \> **Report this message**.
 
    :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the Select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
 
@@ -99,13 +99,12 @@ For more information about user reported message settings in the Defender portal
    > - The reported message remains visible to the user in the Teams client.
    > - Users can report the same message multiple times.
    > - The message sender isn't notified that messages were reported.
-   > - Microsoft also sends an email message notification to the user who reported the message from `submissions@messaging.microsoft.com` with the subject, "You have successfully reported a Teams message as a security risk." If Teams integration is turned on in the Defender portal, admins can customize some elements of the notification message in the **Email notifications** section on **User reported settings** page as described in [Customize the messages used to notify users](submissions-admin-review-user-reported-messages.md#customize-the-messages-used-to-notify-users).
-
+   
 ## What happens after a user reports a message from Teams?
 
 What happens to a user reported Teams message depends on the settings in the **Reported message destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
 
-- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: For Microsoft 365 organizations created after March 1 2023, this is the default value. The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
+- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: For Microsoft 365 organizations created after March 1 2023, this value is the default. The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
 - **Send the reported messages to** \> **Microsoft only**
 - **Send the reported messages to** \> **My reporting mailbox only**
 

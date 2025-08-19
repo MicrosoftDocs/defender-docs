@@ -3,28 +3,29 @@ title: Managed detection and response
 ms.reviewer:
 description: Defender Experts for XDR provides actionable managed response to your security operations center (SOC) teams.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-manage
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 10/31/2024
+ms.date: 08/01/2025
 ---
 
 # Managed detection and response
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
 For managed detection and response instructions, check out this short video.
 

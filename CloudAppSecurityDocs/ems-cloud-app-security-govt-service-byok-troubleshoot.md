@@ -2,7 +2,7 @@
 title: Troubleshooting data encryption with your own key
 description: This article provides a list of problems that can prevent Defender for Cloud Apps from accessing your Azure Key Vault key used to encrypt collected data at rest.
 ms.date: 01/29/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ---
 
 

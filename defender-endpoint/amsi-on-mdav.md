@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: deniseb
 ms.reviewer: yongrhee
 ms.date: 12/05/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.custom: 

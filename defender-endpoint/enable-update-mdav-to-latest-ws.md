@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ---

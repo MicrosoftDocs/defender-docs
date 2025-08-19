@@ -4,7 +4,7 @@ description: See how network protection works by testing common scenarios that i
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: yongrhee

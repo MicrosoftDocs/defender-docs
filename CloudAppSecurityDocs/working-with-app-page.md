@@ -2,7 +2,7 @@
 title: Working with the app page
 description: This article describes how the app page works in Defender for Cloud Apps.
 ms.date: 05/15/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Working with the app page
 

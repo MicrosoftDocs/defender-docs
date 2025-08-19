@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom: admindeeplinkDEFENDER
-ms.topic: concept-article
+ms.topic: how-to
 ms.date: 04/25/2025
 appliesto:
 - Microsoft Defender XDR

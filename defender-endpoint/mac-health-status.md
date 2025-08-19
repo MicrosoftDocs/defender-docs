@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.topic: troubleshooting-general
-ms.date: 04/16/2025
+ms.date: 06/06/2025
 ms.collection: 
 - m365-security
 - tier3
@@ -77,6 +77,8 @@ mdatp health --details system_extensions
 mdatp health --details edr
 
 mdatp health --details definitions
+
+mdatp health --details features
 
 mdatp health --details help
 

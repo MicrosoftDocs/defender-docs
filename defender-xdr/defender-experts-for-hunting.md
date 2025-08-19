@@ -3,21 +3,21 @@ title: What is Microsoft Defender Experts for Hunting offering
 ms.reviewer:
 description: Microsoft  Defender Experts for Hunting is a proactive threat hunting service that goes beyond the endpoint to hunt across endpoints
 ms.service: defender-experts-for-hunting
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-overview
-ms.topic: conceptual
+ms.topic: overview
 search.appverid: met150
 ms.custom: 
 - cx-ti
 - cx-ean
-ms.date: 10/30/2024
+ms.date: 08/01/2025
 ---
 
 # Microsoft Defender Experts for Hunting
@@ -29,12 +29,17 @@ ms.date: 10/30/2024
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for Hunting is sold separately from other Microsoft Defender XDR products. If you're a Microsoft Defender XDR customer and are interested in purchasing Defender Experts for Hunting, complete a [customer interest form](https://aka.ms/DEX4HuntingCustomerInterestForm).
+> Microsoft Defender Experts for Hunting is sold separately from other Microsoft Defender XDR products. If you're a Microsoft Defender XDR customer and are interested in purchasing Microsoft Defender Experts for Hunting - XDR and the Microsoft Defender Experts for Hunting - Servers add-on, complete this [customer interest form](https://aka.ms/DEX4HuntingCustomerInterestForm).
 
 > [!NOTE]
 > Any incident response services offered by Defender Experts will be offered under the Defender Experts Service Terms.
 
-Microsoft Defender Experts for Hunting was created for customers who have a robust security operations center but want Microsoft to help them proactively hunt threats using Microsoft Defender data. Defender Experts for Hunting is a proactive threat hunting service that goes beyond the endpoint to hunt across endpoints, Office 365, cloud applications, and identity. Our experts will investigate anything they find, then hand off the contextual alert information along with remediation instructions, so you can quickly respond.
+Microsoft Defender Experts for Hunting was created for customers who have a robust security operations center but want Microsoft to help them proactively hunt threats using Microsoft Defender data:
+
+- **Microsoft Defender Experts for Hunting - XDR** is a proactive threat hunting service that goes beyond the endpoint to hunt across endpoints, Microsoft 365, cloud applications, and identity
+- **Microsoft Defender Experts for Hunting - Servers** is an add-on to Defender Experts for Hunting - XDR, providing proactive threat hunting for hybrid and multicloud servers
+
+Our experts will investigate anything they find, then hand off the contextual alert information along with remediation instructions, so you can quickly respond.
 
 The following capabilities included in this managed threat hunting service could also help with your daily SecOps work:
 

@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 author: emmwalshh
 ms.author: ewalsh
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb

@@ -2,7 +2,8 @@
 title: Threat hunting features across the Microsoft Defender portal
 description: Learn about threat hunting features across the Microsoft Defender portal
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: austinmc
 author: austinmccollum
 ms.localizationpriority: medium
@@ -12,7 +13,7 @@ ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 
 # customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in the Microsoft Defender portal so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---

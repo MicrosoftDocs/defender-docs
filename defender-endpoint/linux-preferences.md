@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
 ---
@@ -43,6 +43,8 @@ Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protec
 | 6. Configure Offline Security Intelligence Update (as appropriate) | Offline Security Intelligence Update enables you to configure security intelligence updates for Linux servers that have limited or no exposure to the internet. You can set up a local hosting server ("mirror server") that can connect to the Microsoft cloud to download the signatures. Other Linux endpoints can pull the updates from your mirror server at a predefined interval. <br/><br/>See [Configure offline security intelligence update for Microsoft Defender for Endpoint on Linux](linux-support-offline-security-intelligence-update.md). |
 | 7. Deploy updates. | Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. <br/><br/>See [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md). |
 | 8. Configure network protection (preview) | Network protection helps prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. <br/><br/>See [Network protection for Linux](network-protection-linux.md). |
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Options for configuring security settings
 

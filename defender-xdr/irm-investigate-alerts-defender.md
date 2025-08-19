@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
@@ -181,7 +181,7 @@ To access insider risk data in advanced hunting, users must have the following M
 
 ## Integrate insider risk management data with Microsoft Graph security API
 
-Use the [Microsoft Graph security API](/graph/api/resources/security-api-overview) to integrate insider risk management alerts, insights, and indicators with other SIEM tools like like Microsoft Sentinel, ServiceNow, or Splunk. You can also use the security API to integrate insider risk management data to data lakes, ticketing systems, and the like.
+Use the [Microsoft Graph security API](/graph/api/resources/security-api-overview) to integrate insider risk management alerts, insights, and indicators with other SIEM tools like Microsoft Sentinel, ServiceNow, or Splunk. You can also use the security API to integrate insider risk management data to data lakes, ticketing systems, and the like.
 
 To learn how to set up the Microsoft Graph API, see [Use the Microsoft Graph API](/graph/use-the-api).
 

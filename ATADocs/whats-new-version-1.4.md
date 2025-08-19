@@ -4,7 +4,7 @@
 title: What's new in Advanced Threat Analytics version 1.4
 description: Lists what was new in ATA version 1.4 along with known issues
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: whats-new
 ms.service: advanced-threat-analytics
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 

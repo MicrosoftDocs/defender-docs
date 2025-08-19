@@ -4,8 +4,8 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/20/2025
-ms.topic: conceptual
+ms.date: 06/16/2025
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: 
@@ -63,7 +63,7 @@ The following table summarizes what to expect:
 |Windows version|Primary antivirus/antimalware solution|Microsoft Defender Antivirus state|
 |---|---|---|
 |Windows 10 <br/>Windows 11|Microsoft Defender Antivirus|Active mode|
-|Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> In Windows 11, if SmartAppControl is enabled, Microsoft Defender Antivirus goes into passive mode.|
+|Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> Note that in Windows 11, if SmartAppControl is enabled, you may observe that Microsoft Defender Antivirus goes into passive mode instead of remaining in disabled mode. However, this is not the same scenario as for devices onboarded to Microsoft Defender for Endpoint.|
 |Windows Server 2025 <br/>Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
 |Windows Server 2025<br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
@@ -221,7 +221,7 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 > [!IMPORTANT]
 > Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
 > - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, Microsoft Defender Antivirus remains disabled.
-> - To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
+> - To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 
 > [!Note]
 > The modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.

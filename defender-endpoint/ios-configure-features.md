@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ios
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ios
 search.appverid: met150
 ms.date: 05/19/2025
@@ -384,6 +384,8 @@ Once the client versions are deployed to target iOS devices, processing starts. 
 
 > [!NOTE]
 > If you're using SSL inspection solution within your iOS device, add the domain names `securitycenter.windows.com` (in commercial environments) and `securitycenter.windows.us` (in GCC environments) for threat and vulnerability management features to work.
+> 
+> The TVM Privacy permission approval screen will only appear for Unsupervised and Non-Zero touch enabled devices. Even For Non-Zero touch enabled devices approval is __not required only on supervised devices__ where the `issupervised` key is configured
 
 ## Disable sign out
 

@@ -7,7 +7,7 @@ ms.author: ewalsh
 ms.reviewer: yongrhee
 manager: deniseb
 ms.date: 04/29/2025
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: high

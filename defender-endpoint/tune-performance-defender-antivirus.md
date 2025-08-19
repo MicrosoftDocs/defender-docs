@@ -11,7 +11,7 @@ manager: deniseb
 ms.collection: 
 - m365-security
 - mde-ngp
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ---

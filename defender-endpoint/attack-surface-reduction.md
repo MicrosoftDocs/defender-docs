@@ -10,7 +10,7 @@ ms.author: ewalsh
 ms.reviewer: sugamar
 manager: deniseb
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2

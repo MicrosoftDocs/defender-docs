@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
@@ -29,19 +29,16 @@ ms.date: 04/16/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring.
+This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
 
-> [!IMPORTANT]
-> The exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
-
-You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on macOS scans.
-
-Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on macOS.
+You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on macOS scans. Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on macOS.
 
 To narrow down which process and/or path and/or extension you need to exclude, use [real-time-protection-statistics](mac-support-perf.md).
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on macOS. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Supported exclusion types
 

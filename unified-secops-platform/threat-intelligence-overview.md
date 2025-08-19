@@ -3,7 +3,8 @@ title: Uncover adversaries with threat intelligence across the Defender portal
 ms.reviewer: 
 description: Learn about threat intelligence features across the Microsoft Defender portal.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
@@ -15,7 +16,7 @@ ms.collection:
 - usx-security
 ms.custom:
 - cx-ti
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 01/24/2025
 # customer intent: As a security operations center business decision maker, I want to learn about threat intelligence tools available in the Microsoft Defender portal to help me understand emerging threats affecting organizations like me and how to manage actionable intelligence.
 ---

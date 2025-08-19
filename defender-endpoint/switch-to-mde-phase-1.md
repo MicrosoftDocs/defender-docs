@@ -37,11 +37,13 @@ search.appverid: met150
 
 This migration phase includes the following steps:
 
-1. [Get and deploy updates across your organization's devices](#step-1-get-and-deploy-updates-across-your-organizations-devices).
-2. [Get Microsoft Defender for Endpoint Plan 1 or Plan 2](#step-2-get-microsoft-defender-for-endpoint-plan-1-or-plan-2).
-3. [Grant access to the Microsoft Defender portal](#step-3-grant-access-to-the-microsoft-365-defender-portal).
-4. [Review more information about device proxy and internet connectivity settings](#step-4-view-information-about-device-proxy-and-internet-connectivity-settings).
-5. [Capture performance baseline data from the endpoint](#step-5-capture-performance-baseline-data-from-the-endpoint) 
+1. Get and deploy updates across your organization's devices.
+2. Get Microsoft Defender for Endpoint Plan 1 or Plan 2.
+3. Grant access to the Microsoft Defender portal.
+4. Review more information about device proxy and internet connectivity settings.
+5. Capture performance baseline data from the endpoint. 
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Step 1: Get and deploy updates across your organization's devices
 
@@ -109,7 +111,7 @@ To enable communication between your devices and Defender for Endpoint, you migh
 |---|---|---|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information)<br/>Windows Server 2025<br/> [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) <br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019) <br/>  [Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803) <br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)\*<br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* |[Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac-prerequisites.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|
-|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|Linux  (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|[Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-that-devices-can-connect-to-defender-for-endpoint-cloud-services)|
+|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|Linux  (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|[Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information)<br/>Windows Server 2025 (beginning in February 2025 and rolling out over the next several weeks)<br/>[Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) <br/>[Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)  <br/>[Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803)  <br/>[Windows Server 2016](/windows/release-health/status-windows-10-1607-and-windows-server-2016)\* <br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* |[Configure machine proxy and internet connectivity settings](configure-proxy-internet.md)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md) |[Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) <br/>[Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/>[Windows 7 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)|[Configure proxy and internet connectivity settings](onboard-downlevel.md#configure-proxy-and-internet-connectivity-settings)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|

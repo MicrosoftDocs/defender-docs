@@ -3,9 +3,10 @@ title: Planning Guidance for Unified Security Operations in the Microsoft Defend
 description: Plan to deploy unified security operations in the Microsoft Defender portal, including Microsoft Sentinel and other Microsoft Defender services.
 author: batamig
 ms.author: bagol
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
-ms.date: 02/09/2025
+ms.date: 07/16/2025
 ms.collection:
 - usx-security
 - zerotrust-solution
@@ -63,7 +64,7 @@ Before you deploy Microsoft Defender services for unified security operations, r
 | Microsoft Sentinel                                       | [Prerequisites to deploy Microsoft Sentinel](/azure/sentinel/prerequisites)  |
 | **Optional Microsoft Defender XDR services**              |                                                 |
 | Microsoft Defender for Office | [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites) |
-| Microsoft Defender for Identity                          | [Microsoft Defender for Identity prerequisites](/defender-for-identity/deploy/prerequisites)  |
+| Microsoft Defender for Identity                          | Microsoft Defender for Identity prerequisites:<br>[Sensor v2.x](/defender-for-identity/deploy/prerequisites-sensor-version-2) / [Sensor v3.x (Preview)](/defender-for-identity/deploy/prerequisites-sensor-version-3)  |
 | Microsoft Defender for Endpoint                          | [Set up Microsoft Defender for Endpoint deployment](/defender-endpoint/production-deployment)   |
 | Enterprise monitoring with Microsoft Defender for IoT    | [Prerequisites for Defender for IoT in the Defender portal](/defender-for-iot/prerequisites)   |
 | Microsoft Defender Vulnerability Management              | [Prerequisites & Permissions for Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)   |
@@ -102,7 +103,7 @@ Before you deploy Microsoft Defender services for unified security operations, m
 
 ## Plan your Log Analytics workspace architecture
 
-To onboard Microsoft Sentinel to the Defender portal, you first need a Log Analytics workspace enabled for Microsoft Sentinel. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. 
+To get started with unified security operations using Microsoft Sentinel in the Defender portal, you first need a Log Analytics workspace enabled for Microsoft Sentinel. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements.
 
 Design the Log Analytics workspace you want to enable for Microsoft Sentinel. Consider parameters such as any compliance requirements you have for data collection and storage and how to control access to Microsoft Sentinel data.
 
@@ -186,7 +187,7 @@ The Microsoft Defender portal unifies the following role-based access control (R
 
 While permissions granted through Azure RBAC for Microsoft Sentinel are federated during runtime with Defender's unified RBAC, Azure RBAC and Defender RBAC are still managed separately.
 
-Defender's unified RBAC isn't required to onboard your workspace to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
+Defender's unified RBAC isn't required for your workspace to be onboarded to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
 
 [!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 

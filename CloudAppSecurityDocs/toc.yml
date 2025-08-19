@@ -135,6 +135,8 @@ items:
       href: cloud-discovery-custom-apps.md
     - name: Attest your app
       href: attest-your-app.md
+    - name: Submit an App Catalog update request
+      href: submit-app-catalog-update-request.md
     - name: Collect logs
       items:
       - name: Configure automatic log upload for continuous reports

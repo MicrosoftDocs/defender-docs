@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.appverid: 
   - MOE150
   - MET150

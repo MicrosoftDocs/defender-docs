@@ -8,9 +8,9 @@ ms.topic: how-to
 
 
 
-As a major productivity suite providing cloud file storage, collaboration, BI, and CRM tools, Microsoft 365 enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Microsoft 365 might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
+Microsoft 365 is a productivity suite that provides tools for cloud file storage, collaboration, business intelligence (BI), and customer relationship management (CRM). It helps users share their documents within your organization and with external partners in a streamlined and efficient way. Using Microsoft 365 might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents might occur due to malicious actor, or by an unaware employee. Microsoft 365 also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
 
-Connecting Microsoft 365 to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, information protection detections (such as detecting external information sharing), enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
+Connecting Microsoft 365 to Defender for Cloud Apps gives you improved insights into your users' activities. It helps detect threats using machine learning based anomaly detections and information protection detections, such as detecting external information sharing. It also applies automated remediation controls and detects threats from enabled third-party apps in your organization.
 
 Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/microsoft-365/compliance/detailed-properties-in-the-office-365-audit-log?view=o365-worldwide&preserve-view=true) and provides protection for all supported services. For a list of supported services, see [Microsoft 365 services that support auditing](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#microsoft-365-services-that-support-auditing).
 
@@ -19,15 +19,15 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 
 ## File scanning updates for Microsoft 365
 
-To enhance file scanning efficiency and accuracy within Microsoft 365 environments, Defender for Cloud Apps has updated the file scanning process for Microsoft 365. Unless you activate information protection policies, Defender for Cloud Apps won't scan or store organizational files.
+To enhance file scanning efficiency and accuracy within Microsoft 365 environments, Defender for Cloud Apps updated the file scanning process for Microsoft 365. Unless you activate information protection policies, Defender for Cloud Apps doesn't scan or store organizational files.
 
 When you actively use information protection policies, organizational files might have significant scanning durations due to high volumes of file scanning activities.
 
-Defender for Cloud Apps has added new file scanning improvements for SharePoint and OneDrive:
+Defender for Cloud Apps added new file scanning improvements for SharePoint and OneDrive:
 
 - Faster near-real-time scanning speed for files in SharePoint and OneDrive.  
 
-- Better identification for a file's access level in SharePoint: file access level in SharePoint will be marked by default as **Internal**, and not as **Private** (since every file in SharePoint is accessible by the site owner, and not only by the file owner).
+- Better identification for a file's access level in SharePoint: the file access level in SharePoint is marked by default as **Internal**, and not as **Private** (since every file in SharePoint is accessible by the site owner, and not only by the file owner).
 
     >[!NOTE]
     >This change could affect your file policies (if a file policy is looking for **Internal** or **Private** files in SharePoint).
@@ -91,7 +91,7 @@ In some cases, a vNext service release differs slightly at the administrative an
 
 Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/microsoft-365/compliance/detailed-properties-in-the-office-365-audit-log?view=o365-worldwide&preserve-view=true) and receives all audited events from all supported services. For a list of supported services, see [Microsoft 365 services that support auditing](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#microsoft-365-services-that-support-auditing).
 
-- Exchange administrator audit logging, which is enabled by default in Microsoft 365, logs an event in the Microsoft 365 audit log when an administrator (or a user who has been assigned administrative privileges) makes a change in your Exchange Online organization. Changes made using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more detailed information about admin audit logging in Exchange, see [Administrator audit logging](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log).
+- Exchange administrator audit logging is enabled by default in Microsoft 365. It logs an event in the Microsoft 365 audit log when an administrator (or a user with administrative privileges) makes a change in your Exchange Online organization. Changes made using the Exchange admin center or by running a cmdlet in Windows PowerShell are logged in the Exchange admin audit log. For more information about admin audit logging in Exchange, see [Administrator audit logging](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log).
 
 - Events from **Exchange**, **Power BI**, and **Teams** will only appear after activities from those services are detected in the portal.
 
@@ -103,9 +103,14 @@ Defender for Cloud Apps integrates directly with [Microsoft 365's audit logs](/m
 
 - If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment the settings in the on-premises environment override the Microsoft Entra settings and use of the **Suspend user** governance action is reverted.
 
-- For Microsoft Entra sign-in activities, Defender for Cloud Apps only surfaces interactive sign-in activities and sign-in activities from legacy protocols such as ActiveSync. Non-interactive sign-in activities may be viewed in the Microsoft Entra audit log.
+- For Microsoft Entra sign-in activities, Defender for Cloud Apps only surfaces interactive sign-in activities and sign-in activities from legacy protocols such as ActiveSync. 
 
-- If Office apps are enabled, groups that are part of Microsoft 365 are also imported to Defender for Cloud Apps from the specific Office apps, for example, if SharePoint is enabled, Microsoft 365 groups are imported as SharePoint groups as well.
+    > [!NOTE]
+    > Microsoft Defender for Cloud Apps shows non-interactive sign-in events in certain scenarios, such as sign-in activities labeled `Call: OrgIdWsTrust2:process`.
+
+    Non-interactive sign-in activities can be viewed in the Microsoft Entra audit log.
+
+- If Office apps are enabled, groups that are part of Microsoft 365 are also imported to Defender for Cloud Apps from the specific Office apps. For example, if SharePoint is enabled, Microsoft 365 groups are imported as SharePoint groups.
 
 ### Quarantine support
 
@@ -122,11 +127,11 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 #### Prerequisites:
 
-- To enable file monitoring of Microsoft 365 files, you must use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
+- To enable file monitoring of Microsoft 365 files, you must use a relevant Microsoft Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 - You must have at least one assigned Microsoft 365 license to connect Microsoft 365 to Defender for Cloud Apps.
 
-- To enable monitoring of Microsoft 365 activities in Defender for Cloud Apps, you are required to enable auditing in [Microsoft Purview](/purview/audit-log-enable-disable).
+- To enable monitoring of Microsoft 365 activities in Defender for Cloud Apps, you're required to enable auditing in [Microsoft Purview](/purview/audit-log-enable-disable).
 
 - Exchange Mailbox audit logging must be turned on for each user mailbox before user activity in Exchange Online is logged, see [Exchange Mailbox activities](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c).
 
@@ -157,7 +162,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
 
     > [!NOTE]
-    > After connecting Microsoft 365, you will see data from a week back including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that weren't pulling APIs prior to connection, you see events from the moment you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that had been off by default.
+    > After connecting Microsoft 365, you see data from the past week, including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that aren't pulling APIs before connection, you see events starting from when you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that are off by default.
 
     If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

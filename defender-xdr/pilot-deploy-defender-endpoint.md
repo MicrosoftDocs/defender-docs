@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 05/15/2024
+ms.date: 06/19/2025
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -18,7 +18,7 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: concept-article
+ms.topic: install-set-up-deploy
 appliesto:
   - Microsoft Defender XDR
 #customer intent: To learn how to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
@@ -31,6 +31,8 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Endpoint in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
 Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
+
+[!INCLUDE [side-by-side-scenarios](../defender-endpoint/includes/side-by-side-scenarios.md)]
 
 ## End-to-end deployment for Microsoft Defender XDR
 

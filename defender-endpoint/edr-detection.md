@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 04/30/2025

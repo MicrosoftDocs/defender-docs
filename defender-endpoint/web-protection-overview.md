@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: partner-contribution
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
 ---
 

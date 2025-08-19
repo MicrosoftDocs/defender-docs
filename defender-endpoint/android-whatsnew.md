@@ -28,6 +28,18 @@ ms.date: 05/15/2025
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
+### Releases for Defender for Endpoint on Android
+
+#### July 2025
+
+|Build|1.0.7901.0101|
+| -------- | -------- |
+|Release Date|July 10, 2025|
+
+**What's New**
+
+UX Improvement for home page and tiles screens, for more details please visit this link - [Android UX Enhancement](/defender-endpoint/android-new-ux)
+
 #### Alerts for activities related to open wireless connection and certificates are now detected as events
 
 May 2025
@@ -210,7 +222,7 @@ If you encounter any issues, [submit in-app feedback](android-support-signin.md#
 
 ## The Microsoft Defender for Endpoint app is now Microsoft Defender in the Play store
 
-Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint is now available as **Microsoft Defender** in the play store. With this update, the app is available as preview for **Consumers in the US region**. Based on how you log into the app with your work or personal account, you have access to features for Microsoft Defender for Endpoint or for Microsoft Defender for individuals. For more information, see [this blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview).
 
 ## Vulnerability management
 

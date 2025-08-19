@@ -35,12 +35,14 @@ search.appverid: met150
 
 **Welcome to Phase 3 of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This migration phase includes the following steps:
 
-1. [Onboard devices to Defender for Endpoint](#step-1-onboard-devices-to-microsoft-defender-for-endpoint).
-2. [Run a detection test](#step-2-run-a-detection-test).
-3. [Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints](#step-3-confirm-that-microsoft-defender-antivirus-is-in-passive-mode-on-your-endpoints).
-4. [Get updates for Microsoft Defender Antivirus](#step-4-get-updates-for-microsoft-defender-antivirus).
-5. [Uninstall your non-Microsoft solution](#step-5-uninstall-your-non-microsoft-solution).
-6. [Make sure Defender for Endpoint is working correctly](#step-6-make-sure-defender-for-endpoint-is-working-correctly).
+1. Onboard devices to Defender for Endpoint.
+2. Run a detection test.
+3. Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints.
+4. Get updates for Microsoft Defender Antivirus.
+5. Uninstall your non-Microsoft solution.
+6. Make sure Defender for Endpoint is working correctly.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Step 1: Onboard devices to Microsoft Defender for Endpoint
 

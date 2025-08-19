@@ -4,7 +4,7 @@
 title: Advanced Threat Analytics update to 1.9.3 migration guide
 description: Procedure to update ATA to version 1.9.3
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.service: advanced-threat-analytics
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 

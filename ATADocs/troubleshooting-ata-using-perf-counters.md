@@ -4,7 +4,7 @@
 title: Troubleshooting Advanced Threat Analytics with performance counters
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.service: advanced-threat-analytics
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 

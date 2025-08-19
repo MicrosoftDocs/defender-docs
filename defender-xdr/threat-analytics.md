@@ -14,7 +14,7 @@ ms.collection:
 - m365-security 
 - m365initiative-m365-defender 
 - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-ta
@@ -201,7 +201,7 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 ## Set up custom detections and link them to Threat analytics reports
 
-You can set up [custom detection rules](custom-detections-overview.md) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
+You can set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
 
 :::image type="content" source="/defender/media/threat-analytics/ta-custom-detection.png" alt-text="Screenshot of custom detection setup page with Threat analytics option highlighted." lightbox="/defender/media/threat-analytics/ta-custom-detection.png":::
 

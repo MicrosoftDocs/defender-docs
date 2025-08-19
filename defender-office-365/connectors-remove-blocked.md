@@ -2,9 +2,9 @@
 title: Remove blocked connectors from the Restricted entities page in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 6/14/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, several things happen if an [inbound connector](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) is detected as potentially compromised:
+In all organizations with cloud mailboxes, several things happen if an [inbound connector](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) is detected as potentially compromised:
 
 - The connector is prevented from sending or relaying email.
 - The connector is added to the **Restricted entities** page in the Microsoft Defender portal.
@@ -127,7 +127,7 @@ To view details about a specific blocked connector, replace \<ConnectorID\> with
 Get-BlockedConnector -ConnectorId <ConnectorID> | Format-List
 ```
 
-For detailed syntax and parameter information, see [Get-BlockedConnector](/powershell/module/exchange/get-blockedconnector).
+For detailed syntax and parameter information, see [Get-BlockedConnector](/powershell/module/exchangepowershell/get-blockedconnector).
 
 To remove a connector from the Restricted entities list, replace \<ConnectorID\> with the GUID value of the connector, and then run the following command:
 
@@ -135,7 +135,7 @@ To remove a connector from the Restricted entities list, replace \<ConnectorID\>
 Remove-BlockedConnector -ConnectorId <ConnectorID>
 ```
 
-For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchange/remove-blockedconnector).
+For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchangepowershell/remove-blockedconnector).
 
 ## More information
 

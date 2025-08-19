@@ -15,10 +15,10 @@ ms.collection:
   - tier1
   - essentials-get-started
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: get-started
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/25/2024
+ms.date: 06/19/2025
 ---
 
 # Get started with your Microsoft Defender for Endpoint deployment
@@ -47,8 +47,7 @@ The steps to deploy Defender for Endpoint are:
 4. [Step 4 - Onboard devices](onboarding.md): Assess and onboard your devices to Defender for Endpoint.
 5. [Step 5 - Configure capabilities](onboard-configure.md): You're now ready to configure Defender for Endpoint security capabilities to protect your devices.
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Requirements
 
@@ -57,6 +56,9 @@ Here's a list of prerequisites required to deploy Defender for Endpoint:
 - You're a Security Administrator
 - Your environment meets the [minimum requirements](minimum-requirements.md)
 - You have a full inventory of your environment. The following table provides a starting point to gather information and ensure that stakeholders understand your environment. The inventory helps identify potential dependencies and/or changes required in technologies or processes.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 |What|Description|
 |---|---|

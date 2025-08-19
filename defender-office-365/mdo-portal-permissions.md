@@ -2,9 +2,9 @@
 title: Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 ms.audience: Admin
 ms.topic: how-to
 audience: Admin
@@ -21,7 +21,7 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 02/20/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -86,7 +86,7 @@ For more information, see [Assign Microsoft Entra roles to users](/entra/identit
 |**Compliance Administrator**|Help your organization stay compliant with any regulatory requirements, manage eDiscovery cases, and maintain data governance policies across Microsoft 365 locations, identities, and apps. For more information, see [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator).|
 |**Security Operator**|View, investigate, and respond to active threats to your Microsoft 365 users, devices, and content. For more information, see [Security Operator](/entra/identity/role-based-access-control/permissions-reference#security-operator).|
 |**Security Reader**|View and investigate active threats to your Microsoft 365 users, devices, and content, but (unlike the Security operator) they don't have permissions to respond by taking action. For more information, see [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader).|
-|**Security Administrator**|Control your organization's overall security by managing security policies, reviewing security analytics and reports across Microsoft 365 products, and staying up-to-speed on the threat landscape. For more information, see [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator).|
+|**Security Administrator**|Control your organization's overall security by managing threat policies, reviewing security analytics and reports across Microsoft 365 products, and staying up-to-speed on the threat landscape. For more information, see [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator).|
 |**Global Reader**|The read-only version of the **Global administrator** role. View all settings and administrative information across Microsoft 365. For more information, see [Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader).|
 |**Attack Simulation Administrator**|Create and manage all aspects of [attack simulation](attack-simulation-training-simulations.md) creation, launch/scheduling of a simulation, and the review of simulation results. For more information, see [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator).|
 |**Attack Payload Author**|Create attack payloads but not actually launch or schedule them. For more information, see [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author).|

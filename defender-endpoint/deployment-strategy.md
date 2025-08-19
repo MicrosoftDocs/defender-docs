@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 04/17/2025
@@ -31,6 +31,8 @@ If you're already completed the steps to [prepare your environment for Defender 
 We understand that every enterprise environment is unique, so we've provided several options to give you the flexibility in choosing how to deploy the service. Deciding how to onboard endpoints to the Defender for Endpoint service comes down to two important steps:
 
 :::image type="content" source="/defender/media/defender-endpoint/onboarding-architecture-2.png" alt-text="The deployment flow":::
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Step 1: Identify your architecture
 

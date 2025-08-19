@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 03/27/2024
 search.appverid: met150
 appliesto:

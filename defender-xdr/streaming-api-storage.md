@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 06/21/2024
 ---
 

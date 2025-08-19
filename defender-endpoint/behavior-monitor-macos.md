@@ -6,7 +6,7 @@ ms.author: ewalsh
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 05/15/2025
+ms.date: 06/27/2025
 ms.subservice: ngp
 audience: ITPro
 ms.collection:
@@ -28,12 +28,9 @@ f1.keywords: NOCSH
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
+- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 - Microsoft Defender Antivirus
 - Supported [versions of macOS](/defender-endpoint/microsoft-defender-endpoint-mac)
-
-> [!IMPORTANT]
-> Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Overview of behavior monitoring
 
@@ -42,14 +39,14 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 ## Prerequisites
 
 - The device must be onboarded to Microsoft Defender for Endpoint.
-- [Preview features](/defender-endpoint/preview) must be enabled in the [Microsoft Defender portal](https://security.microsoft.com).
-- The device must be in the [Beta channel](/defender-endpoint/mac-updates) (formerly `InsiderFast`). 
-- The minimum Microsoft Defender for Endpoint version number must be Beta (Insiders-Fast): [101.24042.0002](/defender-endpoint/mac-whatsnew#may-2024-build-101240420008---release-version-2012404280) or newer. The version number refers to the `app_version` (also known as **Platform update**).
+- For the best experience, Microsoft Defender should be up-to-date with the latest version.
+- The minimum Microsoft Defender for Endpoint version number must be [101.25032.0006](/defender-endpoint/mac-whatsnew#apr-2025-build-101250320006---release-version-2012503260) or newer. The version number refers to the `app_version` (also known as **Platform update**).
 - Real-time protection (RTP) must be enabled.
 - [Cloud-delivered protection](/defender-endpoint/mac-preferences) must be enabled.
-- The device must be explicitly enrolled in the preview program.
 
 ## Deployment instructions for behavior monitoring
+
+Behavior Monitoring will soon be on by default. You can confirm your device’s enrollment status by checking the output of ***mdatp health --details features*** in your terminal. If not already enabled, you must configure it.
 
 To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS, you must change the behavior monitoring policy using one of the following methods:
 
@@ -61,7 +58,7 @@ The following sections describe each of these methods in detail.
 
 ### Intune deployment
 
-1. Copy the following XML to create a _.plist_ file and save it as **BehaviorMonitoring_for_MDE_on_macOS.mobileconfig**
+1. Copy the following XML to create a _.plist_ file and save it as `BehaviorMonitoring_for_MDE_on_macOS.mobileconfig`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -131,7 +128,7 @@ The following sections describe each of these methods in detail.
 
 5. Go to the plist file you saved earlier and save it as `com.microsoft.wdav.xml`.
 
-6. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+6. Specify `com.microsoft.wdav` as the **custom configuration profile name**.
 
 7. Open the configuration profile and upload the `com.microsoft.wdav.xml` file and select **OK**.
 
@@ -139,7 +136,7 @@ The following sections describe each of these methods in detail.
 
 #### JamF deployment
 
-1. Copy the following XML to create a _.plist_ file and save it as **Save as BehaviorMonitoring_for_MDE_on_macOS.plist**
+1. Copy the following XML to create a _.plist_ file and save it as `Save as BehaviorMonitoring_for_MDE_on_macOS.plist`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -161,8 +158,11 @@ The following sections describe each of these methods in detail.
    ```
 
 2. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**,
+
 3. Select **Upload File** (_.plist_ file).
-4. Set preference domain to *com.microsoft.wdav*
+
+4. Set preference domain to `com.microsoft.wdav`.
+
 5. Upload the plist file saved earlier.
 
 For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences).
@@ -183,6 +183,16 @@ sudo mdatp config behavior-monitoring --value disabled
 
 For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
 
+### Verifying behavior monitoring is enabled
+
+To verify behavior monitoring is enabled, open Terminal, copy and run the following command:
+
+```bash
+mdatp health --details features
+```
+
+When behavior monitoring is enabled, the result displays the value of `behavior_monitoring` as enabled.
+
 ### To test behavior monitoring (prevention/block) detection
 
 See [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
@@ -192,9 +202,7 @@ See [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
 The existing Microsoft Defender for Endpoint on macOS command line interface can be used to review behavior monitoring details and artifacts.
 
 ```bash
-
 sudo mdatp threat list
-
 ```
 
 ### Frequently asked questions (FAQ)
@@ -224,7 +232,7 @@ sudo mdatp exclusion process add --path <path to process with lots of events>
 ```
 
 > [!IMPORTANT]
-> Please verify the reliability of the processes being excluded. Excluding these processes will prevent all events from being sent to behavior monitoring and from undergoing content scanning. However, EDR will continue to receive events from these processes. It is important to note that this mitigation is unlikely to reduce CPU usage of the `wdavdaemon` or `wdavdaemon_enterprise` processes, but may affect `wdavdaemon_unprivileged`. If the other two processes are also experiencing high CPU usage, behavior monitoring may not be the sole cause, and contacting Microsoft support is recommended.
+> Verify the reliability of the processes being excluded. Excluding these processes will prevent all events from being sent to behavior monitoring and from undergoing content scanning. However, EDR will continue to receive events from these processes. It is important to note that this mitigation is unlikely to reduce CPU usage of the `wdavdaemon` or `wdavdaemon_enterprise` processes, but may affect `wdavdaemon_unprivileged`. If the other two processes are also experiencing high CPU usage, behavior monitoring may not be the sole cause, and contacting Microsoft support is recommended.
 
 Once done, disable behavior monitoring statistics:
 
@@ -232,7 +240,7 @@ Once done, disable behavior monitoring statistics:
 sudo mdatp config behavior-monitoring-statistics --value disabled
 ```
 
-If the issue persists, download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer), and then contact Microsoft support.
+If the issue persists, especially after a reboot, download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer), and then contact Microsoft support.
 
 ## Network real-time inspection for macOS
 
@@ -269,29 +277,21 @@ NRI should have a low impact on network performance. Instead of holding the conn
 2. Enable behavior monitoring if it's not already enabled:
 
    ```Bash
-
-   sudo mdatp config behavior-monitoring --value enabled
-   
+   sudo mdatp config behavior-monitoring --value enabled   
    ```
  
-3. Enable network protection in block mode:
+1. Enable network protection in block mode:
 
    ```Bash
-
    sudo mdatp config network-protection enforcement-level --value block
-   
    ```
-
+   
 1. Enable network real-time inspection (NRI):
 
-      ```Bash
-   
+   ```Bash
    sudo mdatp network-protection remote-settings-override set --value "{\"enableNriMpengineMetadata\" : true}"
-   
-   
    ```
    
    > [!NOTE]
    > While this feature is in preview, and because the setting is set by using command line, network real-time inspection (NRI) doesn't persist following reboots. You must re-enable it.
-   
    

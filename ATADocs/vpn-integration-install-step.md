@@ -4,7 +4,7 @@
 title: Install Advanced Threat Analytics - Step 7
 description: In this step of installing ATA, you integrate your VPN.
 ms.date: 01/10/2023
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: advanced-threat-analytics
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 

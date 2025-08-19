@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 search.appverid: met150
 ms.date: 03/31/2025
 ---
@@ -52,7 +52,7 @@ Key benefits include:
 - To start and configure the update process, you can update the managed configuration json file on your Linux devices.
 - You can view the status of updates in the mdatp CLI.
 
-:::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
+:::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
 Fig. 1: Process flow diagram on the mirror server for downloading the security intelligence updates
 

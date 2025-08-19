@@ -5,7 +5,7 @@ author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium

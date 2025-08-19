@@ -2,7 +2,7 @@
 title: Common threat protection policies | Microsoft Defender for Cloud Apps
 description: This topic outlines the steps to configure many threat protection policies in Defender for Cloud Apps.
 ms.date: 05/15/2024
-ms.topic: conceptual
+ms.topic: how-to
 ---
 # Common Defender for Cloud Apps threat protection policies
 

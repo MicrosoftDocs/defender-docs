@@ -3,19 +3,19 @@ title: Deploy Microsoft Defender for Endpoint on Linux with Puppet
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Puppet.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/10/2025
+ms.date: 08/11/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
@@ -29,8 +29,9 @@ ms.date: 04/10/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, refer to the [See also](#see-also) section. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, refer to the [Related content section](#related-content).
 
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
@@ -153,8 +154,7 @@ There are two ways to create a manifest file:
   }
   ```
 > [!NOTE]
-> The installer script also supports other parameters such as channel, realtime protection, version, etc. To select from the list of available options, check help.
->`./mde_installer.sh --help`
+> The installer script also supports other parameters such as channel, realtime protection, version, custom location installation etc. To select from the list of available options, check help: `./mde_installer.sh --help`
 
 #### Create a manifest to deploy Defender for Endpoint by configuring repositories manually
 
@@ -342,7 +342,7 @@ class remove_mdatp {
 }
 ```
 
-## See also
+## Related content
 
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
@@ -352,5 +352,6 @@ class remove_mdatp {
 - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

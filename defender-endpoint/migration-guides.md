@@ -5,7 +5,7 @@ author: emmwalshh
 ms.author: ewalsh
 manager: deniseb
 audience: ITPro
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.collection: 
@@ -34,6 +34,7 @@ If you're considering moving to Defender for Endpoint, we have guidance to help.
 
 |Scenario|Guidance|
 |---|---|
+| You're using a non-Microsoft endpoint protection solution, and you want to try Defender for Endpoint alongside your existing solution. | [Microsoft Defender for Endpoint alongside other security solutions](mde-side-by-side.md) |
 |You don't have an endpoint protection solution in place yet, and you want to know more about Defender for Endpoint. You want to see how Defender for Endpoint works before rolling it out in your environment.|[Microsoft Defender for Endpoint evaluation lab](evaluate-microsoft-defender-antivirus.md)|
 |You're just getting started with your deployment but are unsure which guidance to use and need a wizard-driven approach to help you make the right deployment decisions.|[Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365?)|
 |You already have Defender for Endpoint, and you want some help getting everything set up and configured.|[Microsoft Defender for Endpoint deployment guide](mde-planning-guide.md)|

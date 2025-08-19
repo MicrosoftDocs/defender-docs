@@ -3,7 +3,7 @@ title: Evaluate Microsoft Defender Antivirus using PowerShell.
 description: Businesses of all sizes can use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus in Windows using PowerShell.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 author: emmwalshh
 ms.author: ewalsh
 ms.custom: nextgen
@@ -48,7 +48,7 @@ This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/modul
 
 To use these cmdlets, open PowerShell as an administrator, run a command, and then press **Enter**.
 
-You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference).
+You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference), or by installing the [DefenderEval](https://www.powershellgallery.com/packages/DefenderEval/) module from the PowerShell Gallery and then using the `Get-DefenderEvaluationReport` command.
 
 Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md).
 
