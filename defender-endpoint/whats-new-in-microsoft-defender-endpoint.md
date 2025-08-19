@@ -48,24 +48,27 @@ See [what's new in Microsoft Defender for Endpoint on other operating systems an
 
 ## February 2025
 
-- (GA) **Aggregated reporting in Microsoft Defender for Endpoint** is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|Aggregated reporting in Microsoft Defender for Endpoint|GA|Aggregated reporting is now generally available. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).|
 
 ## January 2025
 
-- (Preview) **Aggregated reporting in Microsoft Defender for Endpoint**: Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties. This feature is available for Microsoft Defender for Endpoint Plan 2. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|Aggregated reporting in Microsoft Defender for Endpoint|Preview|Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties. This feature is available for Microsoft Defender for Endpoint Plan 2. For more information, see [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md).|
 
 ## November-December 2024
 
-- [Five new demonstration scenarios](defender-endpoint-demonstrations.md) were added:
-   - [AMSI demos](mde-demonstration-amsi.md)
-   - [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)
-   - [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)
-   - [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)
-   - [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|Five new demonstration scenarios|GA|Five new demonstration scenarios were added:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)|
 
 ## August 2024
 
-- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users are able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|Network Protection feature enabled by default on Android|GA|Network Protection is now enabled by default in Microsoft Defender for Endpoint on Android. Users see a network protection card in the app, along with App Protection and Web Protection. Location permission is required to complete setup. Admins can change the default value via Intune App Configuration policies. This feature was already enabled by default on iOS. For more information,
 
 ## What's new in Defender for Endpoint on other operating systems and services
 
