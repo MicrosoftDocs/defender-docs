@@ -4,7 +4,7 @@ description: Protect your workloads with Microsoft Defender for Cloud by learnin
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
-ms.date: 08/18/2025
+ms.date: 08/19/2025
 ---
 
 # How does Defender for Cloud collect data?
