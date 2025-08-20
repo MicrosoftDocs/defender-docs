@@ -112,6 +112,8 @@ The following illustration shows the streamlined connectivity process and the co
 
 :::image type="content" source="media/streamlined-connectivity-process.png" alt-text="Illustration of  streamlined connectivity process":::
 
+For US government devices, see [Onboarding devices using streamlined connectivity for US government environments](configure-device-connectivity-gov.md).
+
 ### Stage 1. Configure your network environment for cloud connectivity 
 
 Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
