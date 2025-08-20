@@ -48,12 +48,6 @@ Learn more:
 |---------|------------|-------------|
 |[Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md)|GA|Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.|
 
-## January 2025
-
-|Feature  |Preview/GA  |Description  |
-|---------|------------|-------------|
-|[Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md)|Preview|Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.|
-
 ## November-December 2024
 
 |Feature  |Preview/GA  |Description  |
