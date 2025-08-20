@@ -132,6 +132,8 @@
           items:
             - name: Onboarding devices using streamlined method
               href: configure-device-connectivity.md
+            - name: Onboarding government devices using streamlined method
+              href: configure-device-connectivity-gov.md
             - name: Migrating devices to streamlined method
               href: migrate-devices-streamlined.md
 
