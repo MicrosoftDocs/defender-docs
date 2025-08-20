@@ -31,16 +31,6 @@ This capability adds another security layer on top of Microsoft Copilot Studio, 
 > Real-time protection during agent runtime currently supports only AI agents created with Microsoft Copilot Studio custom engine.
 
 
-## Before you begin
-
-The onboarding process for real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
-
-- The **Microsoft Entra Administrator** must create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
-
-- The **Security administrator** must enter the Application ID in the Microsoft Defender portal settings.
-
-- The **Power Platform Administrator** must enter the Application ID and URL in the Power Platform settings page. For more information see: [link].
-
 ## Prerequisites
 
 Before enabling real-time agent protection during runtime, make sure:
@@ -48,6 +38,15 @@ Before enabling real-time agent protection during runtime, make sure:
 - You have a valid Microsoft Defender for Cloud Apps license (included in Microsoft 365 E5 Security).
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
+
+[!NOTE]
+> The onboarding process for real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
+
+- The **Microsoft Entra Administrator** must create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
+
+- The **Security administrator** must enter the Application ID in the Microsoft Defender portal settings.
+
+- The **Power Platform Administrator** must enter the Application ID and URL in the Power Platform settings page. For more information see: [link].
 
 ## Turn on real-time protection during agent runtime
 
