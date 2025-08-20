@@ -52,7 +52,7 @@ To explore the full schema and build your own queries, see:
 -  [IdentityInfo ](/defender-xdr/advanced-hunting-identityinfo-table)
 -  [IdentityEvents(Preview)](/defender-xdr/advanced-hunting-identityevents-table).
 
-### Remediation Actions 
+### Take remediation actions 
 
 When Microsoft Defender for Identity identifies an identity as at risk, you can take the following remediation actions directly from the Defender portal to update the user's status in Okta.
 
