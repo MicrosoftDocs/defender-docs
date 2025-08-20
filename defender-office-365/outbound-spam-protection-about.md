@@ -73,6 +73,6 @@ Use the following resources outside of Microsoft 365 to send bulk email:
 
 ## Related content
 
-* [Troubleshoot email delivery issues with error codes (NDR)](https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
-* [External sender delivery troubleshooting](defender-office-365/external-senders-mail-flow-troubleshooting.md)
-* [Common non-delivery report (NDR) codes explanation](https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)
+- [Troubleshoot email delivery issues with error codes (NDR)](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
+- [External sender delivery troubleshooting](external-senders-mail-flow-troubleshooting.md)
+- [Common non-delivery report (NDR) codes explanation](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)
