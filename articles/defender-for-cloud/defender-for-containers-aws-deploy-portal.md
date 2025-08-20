@@ -15,7 +15,7 @@ Use this guide when you need to:
 
 - Deploy Defender to specific EKS clusters only (not all clusters)
 - Fix components that failed during initial deployment
-- Add components that were initially skipped
+- Add components that you initially skipped
 - Troubleshoot existing deployments
 - Deploy using a selective, controlled approach
 
@@ -35,7 +35,7 @@ The Defender sensor provides runtime protection for your EKS clusters:
 
 ### Deploy to specific EKS clusters
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for "EKS clusters should have Microsoft Defender's extension for Azure Arc installed".
 
@@ -54,7 +54,7 @@ The Defender sensor provides runtime protection for your EKS clusters:
 
 ### Deploy via Arc portal
 
-1. Navigate to your Arc-connected EKS cluster.
+1. Go to your Arc-connected EKS cluster.
 
 1. Select **Extensions** > **+ Add**.
 
@@ -83,7 +83,7 @@ If you have clusters with missing or failed components:
 
 ### Check component status
 
-1. Navigate to **Inventory** > **Containers**.
+1. Go to **Inventory** > **Containers**.
 
 1. Filter by **Environment** = **AWS**.
 
@@ -119,7 +119,7 @@ For clusters showing as "Not connected to Arc":
 
 ### Fix sensor deployment issues
 
-If the sensor failed to deploy:
+If the sensor fails to deploy, try the following solutions:
 
 1. **Check for namespace issues**:
 
@@ -150,7 +150,7 @@ If the sensor failed to deploy:
 
 ### Enable scanning for selected repositories
 
-1. Navigate to your AWS connector settings.
+1. Go to your AWS connector settings.
 
 1. Select **Configure** next to Containers.
 
@@ -179,9 +179,9 @@ If the sensor failed to deploy:
 
 ## Deploy Azure Policy extension selectively
 
-To deploy Azure Policy to specific clusters only:
+To deploy Azure Policy to specific clusters, use the following steps:
 
-1. Navigate to the Arc-enabled EKS cluster.
+1. Go to the Arc-enabled EKS cluster.
 
 1. Select **Extensions** > **+ Add**.
 
@@ -269,7 +269,7 @@ aws eks describe-cluster \
 
 ### Set up alerts for deployment failures
 
-1. Create CloudWatch alarm for failed deployments:
+1. Create a CloudWatch alarm for failed deployments:
 
    ```bash
    aws cloudwatch put-metric-alarm \
@@ -293,11 +293,11 @@ KubeEvents
 
 ## Best practices for selective deployment
 
-1. **Start with non-production**: Test on dev/test clusters first
-1. **Deploy incrementally**: Add one component at a time
-1. **Monitor each step**: Verify each component before proceeding
-1. **Document exclusions**: Track why certain clusters are excluded
-1. **Regular reviews**: Periodically review partial deployments
+1. **Start with non-production**: Test on dev/test clusters first.
+1. **Deploy incrementally**: Add one component at a time.
+1. **Monitor each step**: Verify each component before proceeding.
+1. **Document exclusions**: Track why certain clusters are excluded.
+1. **Regular reviews**: Periodically review partial deployments.
 
 ## Next steps
 

@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on GCP (GKE)
 
-After enabling Defender for Containers, use this guide to verify all components are functioning correctly on your GKE clusters.
+After you enable Defender for Containers, use this article to verify all components are functioning correctly on your GKE clusters.
 
 ## Validation checklist
 
@@ -29,12 +29,12 @@ Complete these verification steps in order:
 
 ### Using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your GCP connector.
-1. Verify the following:
-   - Connection status shows as **Connected**
-   - Last sync time is recent (within 15 minutes)
-   - Containers plan shows as **On**
+1. Verify the following values:
+   - Connection status shows as **Connected**.
+   - Last sync time is recent (within 15 minutes).
+   - Containers plan shows as **On**.
 
 ### Using Azure CLI
 
@@ -119,9 +119,9 @@ kubectl describe validatingwebhookconfiguration microsoft-defender-webhook
 
 ### Check cluster inventory
 
-1. In Azure portal, navigate to **Microsoft Defender for Cloud** > **Inventory**.
-1. Filter by **Resource type** = **Kubernetes service**.
-1. Verify your GKE clusters appear in the list.
+1. In Azure portal, go to **Microsoft Defender for Cloud** > **Inventory**.
+1. Set the filter for **Resource type** to **Kubernetes service**.
+1. Make sure your GKE clusters show up in the list.
 
 ### Query security data
 
@@ -180,7 +180,7 @@ gcloud artifacts docker images list-vulnerabilities IMAGE_URI
 
 ### Check scanning results in Azure
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 1. Look for "Container registry images should have vulnerability findings resolved".
 1. Select the recommendation to view detailed findings.
 
@@ -261,16 +261,16 @@ Expected alert: "Sensitive host path mounted"
 ### Verify alerts
 
 1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
-1. Filter by **Resource type** = **Kubernetes service**.
+1. Set the filter for **Resource type** to **Kubernetes service**.
 1. Look for alerts from your GKE clusters.
 
 > [!NOTE]
-> GKE-specific alerts may include Binary Authorization violations and Workload Identity issues.
+> GKE-specific alerts might include Binary Authorization violations and Workload Identity issues.
 
 ## Verify security recommendations
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Filter by **Resource type** = **Kubernetes service**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Set the filter for **Resource type** to **Kubernetes service**.
 1. Look for GKE-specific recommendations:
    - "GKE clusters should use Workload Identity"
    - "Binary Authorization should be enabled on GKE clusters"
@@ -317,8 +317,8 @@ watch kubectl top pods -n kube-system -l app=microsoft-defender
 
 Typical resource usage per node:
 
-- **CPU**: < 100m (0.1 core)
-- **Memory**: < 200Mi
+- **CPU**: Less than 100m (0.1 core)
+- **Memory**: Less than 200Mi
 - **Network**: Minimal, only for telemetry
 
 ## GCP-specific verification
@@ -364,7 +364,7 @@ gcloud container binauthz attestors list
 
 ### No security alerts
 
-If you're not seeing security alerts:
+If you don't see security alerts:
 
 1. Ensure audit logging is enabled on GKE clusters
 1. Verify Defender sensor pods are running
@@ -375,25 +375,25 @@ If you're not seeing security alerts:
 
 For missing vulnerability scans:
 
-1. Verify registry permissions are configured
-1. Check that images have been pushed recently
-1. Ensure vulnerability scanning is enabled in Artifact Registry
-1. Wait up to 4 hours for initial scans
+1. Verify registry permissions are configured.
+1. Check that you recently pushed images.
+1. Ensure you enabled vulnerability scanning in Artifact Registry.
+1. Wait up to four hours for initial scans.
 
 ### Clusters not appearing
 
 If GKE clusters aren't showing:
 
-1. Verify K8S API access is enabled in connector
-1. Check service account has `container.viewer` role
-1. Ensure clusters are in the connected GCP project
-1. Wait 15-30 minutes for discovery
+1. Verify K8S API access is enabled in connector.
+1. Check service account has `container.viewer` role.
+1. Ensure clusters are in the connected GCP project.
+1. Wait 15-30 minutes for discovery.
 
 ## Monitor deployment health
 
 ### Set up monitoring alerts
 
-1. Navigate to **Microsoft Defender for Cloud** > **Alerts**.
+1. Go to **Microsoft Defender for Cloud** > **Alerts**.
 1. Configure alert rules for:
    - Defender sensor failures
    - Arc connectivity issues

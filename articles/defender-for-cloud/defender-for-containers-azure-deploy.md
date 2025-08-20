@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Deploy Defender for Containers on Azure (AKS) programmatically
 
-This article describes how to enable Microsoft Defender for Containers on Azure Kubernetes Service (AKS) clusters using programmatic methods.
+This article describes how to enable Microsoft Defender for Containers on Azure Kubernetes Service (AKS) clusters by using programmatic methods.
 
 > [!TIP]
 > For Azure portal deployment instructions, see [Deploy Defender for Containers on Azure (AKS) using Azure portal](defender-for-containers-azure-deploy-portal.md).

@@ -132,13 +132,7 @@ Defender for Containers supports various GKE deployment models:
 
 ## Pricing
 
-Defender for Containers uses a consumption-based pricing model:
-
-- **Core protection**: Charged per vCore hour for protected GKE nodes
-- **Container image scanning**: Charged per image scanned in registries
-- **No additional charges** for recommendations, alerts, or Arc connectivity
-
-GCP egress charges may apply for data sent to Azure. For current pricing, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+For current pricing, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ## Next steps
 

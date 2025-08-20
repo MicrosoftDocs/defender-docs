@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on AWS (EKS)
 
-After enabling Defender for Containers, use this guide to verify all components are functioning correctly on your EKS clusters.
+After you enable Defender for Containers, use this guide to verify all components are functioning correctly on your EKS clusters.
 
 ## Validation checklist
 
@@ -27,16 +27,16 @@ Complete these verification steps in order:
 
 ## Verify connector status
 
-### Using Azure portal
+### Check connector in Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your AWS connector.
-1. Verify the following:
+1. Verify the following values:
    - Connection status shows as **Connected**
    - Last sync time is recent (within 15 minutes)
    - Containers plan shows as **On**
 
-### Using Azure CLI
+### Check connector using Azure CLI
 
 ```azurecli
 # Check connector status
@@ -107,13 +107,13 @@ kubectl get pods -n kube-system -l app=microsoft-defender -o wide
 
 ## Verify container image scanning
 
-### Check ECR integration
+### Check ECR integration in portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Inventory**.
+1. Go to **Microsoft Defender for Cloud** > **Inventory**.
 1. Filter by **Resource type** = **Container registries**.
 1. Verify your ECR registries appear with scanning enabled.
 
-### Using AWS CLI
+### Check ECR integration using AWS CLI
 
 ```bash
 # List ECR repositories
@@ -128,7 +128,7 @@ aws ecr describe-repositories \
 
 ### View scan results
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 1. Select "Container registry images should have vulnerability findings resolved".
 1. Review vulnerability findings for your ECR images.
 
@@ -172,7 +172,7 @@ kubectl run test-alert \
     -- /bin/bash -c "echo 'This is a test alert for Defender for Containers' > /etc/passwd"
 ```
 
-### Simulate security alerts from Microsoft Defender for Containers
+### Run sample security scenarios
 
 Test different alert scenarios on your EKS clusters:
 
@@ -225,17 +225,17 @@ Expected alert: "Exposed Kubernetes dashboard detected"
 
 ### View alerts in Defender for Cloud
 
-1. Navigate to **Security alerts**.
+1. Go to **Security alerts**.
 1. Filter by your EKS clusters.
-1. Alerts appear within 5-10 minutes.
+1. See alerts within 5-10 minutes.
 
 > [!NOTE]
-> Some alerts only trigger with actual malicious behavior and won't appear from benign tests.
+> Some alerts only trigger with actual malicious behavior and don't appear from benign tests.
 
 ## Verify security recommendations
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Filter by **Resource type** = **Kubernetes service**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Set the filter **Resource type** to **Kubernetes service**.
 1. Look for EKS-specific recommendations:
    - "EKS clusters should have control plane audit logging enabled"
    - "EKS clusters should use IRSA for pod authentication"
@@ -243,24 +243,20 @@ Expected alert: "Exposed Kubernetes dashboard detected"
 
 ## Simulate security alerts from Microsoft Defender for Containers
 
-To validate that your Defender for Containers deployment is working correctly on EKS, you can simulate various security alerts. These simulations trigger real alerts without causing actual harm to your clusters.
+To check that your Defender for Containers deployment works correctly on EKS, simulate different security alerts. These simulations trigger real alerts without causing any harm to your clusters.
 
 ### Prerequisites for alert simulation
 
-- Defender sensor must be deployed and running on EKS clusters
-- Runtime protection must be enabled
-- Clusters must be connected to Azure Arc
-- Allow 5-10 minutes for alerts to appear after simulation
+- Defender sensor is deployed and running on EKS clusters
+- Runtime protection is enabled
+- Clusters are connected to Azure Arc
+- Wait 5-10 minutes for alerts to appear after simulation
 
 ### Basic EKS alert simulations
 
-#### Simulate unauthorized file access
+#### Test unauthorized file access
 
 ```bash
-# Connect to your EKS cluster
-aws eks update-kubeconfig --name <cluster-name> --region <region>
-
-# Run simulation
 kubectl run eks-file-alert \
     --image=amazonlinux:2 \
     --rm \
@@ -271,7 +267,7 @@ kubectl run eks-file-alert \
 
 Expected alert: "Sensitive file access detected"
 
-#### Simulate suspicious AWS API calls
+#### Test suspicious AWS API calls
 
 ```bash
 kubectl run eks-api-alert \
@@ -287,7 +283,7 @@ Expected alert: "Suspicious AWS API activity from container"
 
 ### Advanced EKS-specific simulations
 
-#### Simulate IRSA bypass attempt
+#### Test IRSA bypass attempt
 
 ```bash
 kubectl apply -f - <<EOF
@@ -315,7 +311,7 @@ kubectl delete pod irsa-bypass-simulation
 
 Expected alert: "Potential IRSA bypass detected"
 
-#### Simulate EKS privilege escalation
+#### Test EKS privilege escalation
 
 ```bash
 # Create a test service account
@@ -333,7 +329,7 @@ kubectl delete serviceaccount test-escalation -n default
 
 Expected alert: "Kubernetes privilege escalation attempt"
 
-### EKS cluster reconnaissance simulation
+### Test EKS cluster reconnaissance
 
 ```bash
 # Simulate cluster discovery
@@ -353,7 +349,7 @@ Expected alerts:
 - "Kubernetes cluster reconnaissance detected"
 - "Suspicious secret enumeration activity"
 
-### Simulate container escape on EKS
+### Test container escape on EKS
 
 ```bash
 kubectl run eks-escape-test \
@@ -371,7 +367,7 @@ Expected alert: "Container escape attempt on EKS"
 
 After running simulations:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Security alerts**
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**
 1. Filter by:
    - **Resource type**: Kubernetes service
    - **Environment**: AWS
@@ -389,7 +385,7 @@ Check that alerts include:
 - EKS cluster ARN
 - AWS account ID
 - Region information
-- Relevant AWS service context (IAM, EC2, etc.)
+- Relevant AWS service context (IAM, EC2, and other services)
 
 ### Clean up test resources
 
@@ -407,7 +403,7 @@ kubectl delete serviceaccount test-escalation 2>/dev/null || true
 
 ### Troubleshooting EKS alert generation
 
-If alerts don't appear:
+If alerts don't appear, try the following steps:
 
 1. **Verify EKS audit logging**:
 
@@ -469,46 +465,46 @@ watch kubectl top pods -n kube-system -l app=microsoft-defender
 
 ### Expected resource consumption
 
-Typical resource usage per node:
+Typical resource usage per node includes:
 
-- **CPU**: < 100m (0.1 core)
-- **Memory**: < 200Mi
+- **CPU**: Less than 100m (0.1 core)
+- **Memory**: Less than 200Mi
 - **Network**: Minimal, only for telemetry
 
 ## Common verification issues
 
 ### Connector shows disconnected
 
-1. Verify CloudFormation stack completed successfully
-1. Check IAM role has correct trust policy
-1. Ensure role ARN was correctly entered in Azure
+1. Verify CloudFormation stack completed successfully.
+1. Check IAM role has correct trust policy.
+1. Ensure you correctly entered the role ARN in Azure.
 
 ### No security alerts
 
-If you're not seeing security alerts:
+If you don't see security alerts:
 
-1. Ensure audit logging is enabled on EKS clusters
-1. Verify Defender sensor pods are running
-1. Check that runtime protection is enabled in connector settings
-1. Wait 5-10 minutes after generating test events
+1. Ensure audit logging is enabled on EKS clusters.
+1. Verify Defender sensor pods are running.
+1. Check that runtime protection is enabled in connector settings.
+1. Wait 5-10 minutes after generating test events.
 
 ### Missing vulnerability scans
 
 For missing ECR scans:
 
-1. Verify ECR permissions in IAM role
-1. Check that images have been pushed recently
-1. Ensure vulnerability assessment is enabled in connector
-1. Wait up to 4 hours for initial scans
+1. Verify ECR permissions in IAM role.
+1. Check that images are pushed recently.
+1. Ensure vulnerability assessment is enabled in connector.
+1. Wait up to 4 hours for initial scans.
 
 ### Clusters not appearing
 
 If EKS clusters aren't showing:
 
-1. Verify clusters are tagged correctly (no exclusion tags)
-1. Check IAM role has eks:ListClusters permission
-1. Ensure clusters are in the same AWS account
-1. Wait 15-30 minutes for discovery
+1. Verify clusters are tagged correctly (no exclusion tags).
+1. Check IAM role has `eks:ListClusters` permission.
+1. Ensure clusters are in the same AWS account.
+1. Wait 15-30 minutes for discovery.
 
 ## Monitor deployment health
 

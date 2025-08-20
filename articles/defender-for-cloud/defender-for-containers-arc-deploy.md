@@ -1,5 +1,5 @@
 ---
-title: Deploy Defender for Containers on Arc-enabled Kubernetes programmatically
+title: Deploy Defender for Containers on Arc-Enabled Kubernetes Programmatically
 description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using CLI, API, or Infrastructure as Code.
 ms.topic: how-to
 ms.date: 06/04/2025
@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Deploy Defender for Containers on Arc-enabled Kubernetes programmatically
 
-This article describes how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using programmatic methods.
+This article describes how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters by using programmatic methods.
 
 > [!TIP]
 > For Azure portal deployment instructions, see [Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal](defender-for-containers-arc-deploy-portal.md).
@@ -16,10 +16,10 @@ This article describes how to enable Microsoft Defender for Containers on Arc-en
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Additionally:
+Additionally, you need:
 
-- Azure CLI with the k8s-extension extension
-- kubectl configured to access your cluster
+- Azure CLI with the `k8s-extension` extension
+- `kubectl` configured to access your cluster
 - Helm 3.0 or later (for Helm deployment)
 
 ## Connect your cluster to Azure Arc
@@ -41,7 +41,7 @@ az connectedk8s connect \
 
 ## Enable Defender for Containers
 
-### Using Azure CLI
+### [Azure CLI - Enable Plan](#tab/azure-cli-enable)
 
 ```azurecli
 # Enable Defender for Containers on subscription
@@ -55,7 +55,7 @@ az security auto-provisioning-setting update \
     --auto-provision On
 ```
 
-### Using REST API
+### [REST API - Enable Plan](#tab/rest-api-enable)
 
 ```bash
 # Enable via REST API
@@ -70,12 +70,14 @@ curl -X PUT \
   }'
 ```
 
-## Deploy the Defender extension
+---
 
-### Using Azure CLI
+## Deploy the Defender sensor
+
+### [Azure CLI - Deploy Sensor](#tab/azure-cli-deploy)
 
 ```azurecli
-# Deploy Defender extension
+# Deploy Defender sensor
 az k8s-extension create \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
@@ -87,7 +89,7 @@ az k8s-extension create \
         auditLogPath="/var/log/kube-apiserver/audit.log"
 ```
 
-### Using Helm
+### [Helm - Deploy Sensor](#tab/helm-deploy)
 
 ```bash
 # Add Azure Arc Helm repository
@@ -97,7 +99,7 @@ helm repo update
 # Create namespace
 kubectl create namespace mdc
 
-# Install Defender extension
+# Install Defender sensor
 helm install azure-defender azure-arc/azure-defender \
     --namespace mdc \
     --set systemDefaultRegistry=<registry-url> \
@@ -106,13 +108,13 @@ helm install azure-defender azure-arc/azure-defender \
     --set global.clusterName=<cluster-name>
 ```
 
-### Using GitOps
+### [GitOps - Deploy Sensor](#tab/gitops-deploy)
 
 ```yaml
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: defender-extension
+  name: defender-sensor
   namespace: flux-system
 spec:
   interval: 10m
@@ -127,6 +129,8 @@ spec:
       workspace_id: "${WORKSPACE_ID}"
 ```
 
+---
+
 ## Configure registry authentication (on-premises)
 
 For clusters with private registries:
@@ -139,7 +143,7 @@ kubectl create secret docker-registry regcred \
     --docker-username=<username> \
     --docker-password=<password>
 
-# Update extension with registry credentials
+# Update sensor with registry credentials
 az k8s-extension update \
     --name microsoft.azuredefender.kubernetes \
     --cluster-type connectedClusters \
@@ -208,7 +212,7 @@ spec:
 
 ## Infrastructure as Code examples
 
-### Terraform
+### [Terraform - IaC](#tab/terraform-iac)
 
 ```hcl
 resource "azurerm_security_center_subscription_pricing" "containers" {
@@ -228,7 +232,7 @@ resource "azurerm_arc_kubernetes_cluster_extension" "defender" {
 }
 ```
 
-### ARM Template
+### [ARM Template - IaC](#tab/arm-template-iac)
 
 ```json
 {
@@ -250,7 +254,7 @@ resource "azurerm_arc_kubernetes_cluster_extension" "defender" {
 }
 ```
 
-### Batch deployment script
+### [Batch Script - IaC](#tab/batch-script-iac)
 
 Deploy to multiple Arc clusters:
 
@@ -261,9 +265,9 @@ Deploy to multiple Arc clusters:
 # Get all Arc clusters
 clusters=$(az connectedk8s list --query "[].{name:name, rg:resourceGroup}" -o tsv)
 
-# Deploy extension to each cluster
+# Deploy sensor to each cluster
 while IFS=$'\t' read -r name rg; do
-    echo "Deploying Defender to cluster: $name"
+    echo "Deploying Defender sensor to cluster: $name"
     az k8s-extension create \
         --name microsoft.azuredefender.kubernetes \
         --cluster-type connectedClusters \
@@ -273,6 +277,8 @@ while IFS=$'\t' read -r name rg; do
         --no-wait
 done <<< "$clusters"
 ```
+
+---
 
 ## Next steps
 

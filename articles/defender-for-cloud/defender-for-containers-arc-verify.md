@@ -1,5 +1,5 @@
 ---
-title: Verify Defender for Containers deployment on Arc-enabled Kubernetes
+title: Verify Defender for Containers Deployment on Arc-Enabled Kubernetes
 description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on Arc-enabled Kubernetes
 
-After enabling Defender for Containers, use this guide to verify all components are functioning correctly on your Arc-enabled clusters.
+After you enable Defender for Containers, use this article to verify all components are functioning correctly on your Arc-enabled clusters.
 
 ## Validation checklist
 
@@ -112,7 +112,7 @@ kubectl describe daemonset -n mdc microsoft-defender-sensor | grep -A 5 Resource
 
 ## Verify Azure Policy extension
 
-If Azure Policy for Kubernetes is deployed:
+If you deployed Azure Policy for Kubernetes:
 
 ```bash
 # Check Azure Policy pods
@@ -233,7 +233,7 @@ kubectl run rancher-test --image=busybox --rm -it --restart=Never \
 
 ### View and investigate alerts
 
-1. Navigate to **Security alerts** in Defender for Cloud.
+1. Go to **Security alerts** in Defender for Cloud.
 1. Filter by your Arc-enabled clusters.
 1. Select an alert to see investigation details.
 
@@ -241,14 +241,14 @@ kubectl run rancher-test --image=busybox --rm -it --restart=Never \
 
 ### Check recommendations
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Filter by **Resource type** = **Kubernetes services (Azure Arc)**.
-1. Verify recommendations are appearing for your clusters.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Set the filter for **Resource type** to **Kubernetes services (Azure Arc)**.
+1. Make sure recommendations appear for your clusters.
 
 ### Review inventory
 
 1. Go to **Inventory** > **Containers**.
-1. Filter by **Environment** = **Azure Arc**.
+1. Set the filter for **Environment** to **Azure Arc**.
 1. Confirm your clusters are listed with security status.
 
 ## Check component logs
@@ -303,9 +303,9 @@ kubectl top pods -n azure-arc
 
 Typical resource consumption:
 
-- Arc agents: < 200Mi memory, < 100m CPU per node
-- Defender sensor: < 300Mi memory, < 150m CPU per node
-- Policy agent: < 100Mi memory, < 50m CPU
+- Arc agents: less than 200 Mi memory, less than 100m CPU per node
+- Defender sensor: less than 300 Mi memory, less than 150m CPU per node
+- Policy agent: less than 100 Mi memory, less than 50m CPU
 
 ## Common verification issues
 
@@ -325,10 +325,10 @@ Typical resource consumption:
 
 ### Missing recommendations
 
-1. Ensure Azure Policy extension is installed
-1. Wait 24 hours for initial assessment
-1. Check that clusters aren't excluded by tags
-1. Verify RBAC permissions
+1. Ensure the Azure Policy extension is installed.
+1. Wait 24 hours for the initial assessment.
+1. Check that clusters aren't excluded by tags.
+1. Verify RBAC permissions.
 
 ## Related content
 

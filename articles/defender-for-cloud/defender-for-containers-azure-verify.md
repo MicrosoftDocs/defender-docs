@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Verify Defender for Containers deployment on Azure (AKS)
 
-After enabling Defender for Containers, use this guide to verify all components are functioning correctly.
+After you enable Defender for Containers, use this guide to verify all components are functioning correctly.
 
 ## Validation checklist
 
@@ -29,7 +29,7 @@ Complete these verification steps in order:
 
 ### Using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your subscription.
 1. Verify that **Containers** shows as **On**.
 1. Select **Settings** next to Containers and verify all extensions are enabled.
@@ -92,7 +92,7 @@ az aks show \
 
 ### Check Log Analytics connection
 
-1. In the Azure portal, navigate to your AKS cluster.
+1. In the Azure portal, go to your AKS cluster.
 1. Select **Logs** under **Monitoring**.
 1. Run this query to verify data flow:
 
@@ -117,12 +117,12 @@ SecurityEvent
 
 ### For Azure Container Registry
 
-1. Navigate to your Azure Container Registry.
+1. Go to your Azure Container Registry.
 1. Select **Security** > **Defender for Cloud**.
-1. Verify that vulnerability scanning is enabled.
+1. Make sure vulnerability scanning is enabled.
 1. Check recent scan results for your images.
 
-### Using Azure CLI
+### Using Azure CLI for image scanning
 
 ```azurecli
 # List vulnerability assessments
@@ -163,7 +163,7 @@ kubectl run suspicious-process \
     -- /bin/sh -c "cat /etc/shadow"
 ```
 
-This generates: "Attempt to access sensitive files detected"
+This alert type generates: "Attempt to access sensitive files detected"
 
 #### Test 2: Container escape attempt
 
@@ -176,7 +176,7 @@ kubectl run escape-test \
     -- /bin/bash -c "ps aux"
 ```
 
-This generates: "Container running with high privileges detected"
+This alert type generates: "Container running with high privileges detected"
 
 #### Test 3: Crypto mining behavior
 
@@ -188,13 +188,13 @@ kubectl run crypto-test \
     -- /bin/sh -c "echo 'stratum+tcp://pool.example.com' > /tmp/test"
 ```
 
-This generates: "Digital currency mining behavior detected"
+This alert type generates: "Digital currency mining behavior detected"
 
 ### Verify alerts
 
-1. Navigate to **Microsoft Defender for Cloud** > **Security alerts**.
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
-1. Filter by:
+1. Set the filter to:
    - Resource type: Kubernetes service
    - Time: Last 24 hours
    - Severity: All
@@ -206,29 +206,29 @@ This generates: "Digital currency mining behavior detected"
    - Investigation path
 
 > [!NOTE]
-> Test alerts may take 5-10 minutes to appear. Some alerts only trigger in production scenarios with real malicious behavior.
+> Test alerts can take 5-10 minutes to appear. Some alerts only trigger in production scenarios with real malicious behavior.
 
 ## Verify recommendations
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
-1. Filter by **Resource type** = **Kubernetes services**.
-1. Verify you see recommendations for your AKS clusters.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Set the filter for **Resource type** to **Kubernetes services**.
+1. Check that you see recommendations for your AKS clusters.
 
-## Simulate security alerts from Microsoft Defender for Containers
+## Advanced security alert simulations
 
-To validate that your Defender for Containers deployment is working correctly, you can simulate various security alerts. These simulations trigger real alerts without causing actual harm to your clusters.
+To validate that your Defender for Containers deployment is working correctly, simulate various security alerts. These simulations trigger real alerts without causing actual harm to your clusters.
 
 ### Prerequisites for alert simulation
 
-- Defender sensor must be deployed and running
-- Runtime protection must be enabled
-- Allow 5-10 minutes for alerts to appear after simulation
+- Defender sensor is deployed and running
+- Runtime protection is enabled
+- Wait 5-10 minutes for alerts to appear after simulation
 
 ### Basic alert simulations
 
 #### Simulate file modification alert
 
-This simulates unauthorized modification of sensitive files:
+Simulate unauthorized modification of sensitive files:
 
 ```bash
 # Connect to your cluster
@@ -315,21 +315,22 @@ kubectl create clusterrolebinding test-admin-binding \
     --dry-run=client -o yaml
 ```
 
-Expected alerts: 
+Expected alerts:
+
 - "Kubernetes reconnaissance activity detected"
 - "Privilege escalation attempt detected"
 
-### Verify alert generation
+### Verify simulated alert generation
 
-After running simulations:
+After running simulations, verify that simulated alerts appear:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Security alerts**
-1. Filter by:
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+1. Set the filter to:
    - **Resource type**: Kubernetes service
    - **Time range**: Last hour
    - **Severity**: All
 
-1. Verify alerts appear with:
+1. Check that the alerts show:
    - Correct resource identification
    - Accurate timestamp
    - Appropriate severity level
@@ -337,12 +338,12 @@ After running simulations:
 
 ### Alert response best practices
 
-When alerts are generated:
+When alerts are generated, follow these best practices:
 
-1. **Don't dismiss immediately**: Review the alert details
-1. **Check affected resources**: Verify the cluster and namespace
-1. **Review remediation steps**: Follow the provided guidance
-1. **Document false positives**: If simulation alerts persist
+1. **Don't dismiss immediately**: Review the alert details.
+1. **Check affected resources**: Verify the cluster and namespace.
+1. **Review remediation steps**: Follow the provided guidance.
+1. **Document false positives**: If simulation alerts persist.
 
 ### Clean up test resources
 
@@ -362,6 +363,7 @@ kubectl delete clusterrolebinding test-admin-binding 2>/dev/null || true
 If alerts don't appear:
 
 1. **Verify sensor is running**:
+
    ```bash
    kubectl get pods -n kube-system -l app=microsoft-defender
    ```
@@ -371,6 +373,7 @@ If alerts don't appear:
    - Verify Defender DaemonSet is enabled
 
 1. **Review sensor logs**:
+
    ```bash
    kubectl logs -n kube-system -l app=microsoft-defender | grep -i alert
    ```
@@ -381,7 +384,7 @@ If alerts don't appear:
 
 ### Sensor pods not running
 
-If sensor pods are not running:
+If sensor pods aren't running:
 
 ```bash
 # Check pod events
@@ -393,36 +396,37 @@ kubectl top pods -n kube-system
 ```
 
 Common causes:
+
 - **Insufficient resources**: Increase node size or add nodes
 - **Network policies**: Ensure egress to Azure endpoints is allowed
 - **RBAC issues**: Verify cluster has proper permissions
 
 ### No security alerts
 
-If you're not seeing security alerts:
+If you don't see security alerts:
 
-1. Ensure diagnostic logs are enabled
-1. Verify Log Analytics workspace connection
-1. Check that runtime protection is enabled in Defender settings
-1. Wait 5-10 minutes after generating test events
+1. Make sure you enabled diagnostic logs.
+1. Check the Log Analytics workspace connection.
+1. Verify you enabled runtime protection in Defender settings.
+1. Wait 5-10 minutes after generating test events.
 
 ### Missing recommendations
 
 If recommendations are missing:
 
-1. Verify Azure Policy add-on is enabled
-1. Wait up to 24 hours for initial assessment
-1. Check that agentless discovery is enabled
-1. Ensure clusters aren't excluded via tags
+1. Check that you enabled the Azure Policy add-on.
+1. Wait up to 24 hours for the initial assessment.
+1. Verify you enabled agentless discovery.
+1. Make sure you didn't exclude clusters through tags.
 
 ### No vulnerability scan results
 
 For missing vulnerability scans:
 
-1. Verify ACR integration is configured
-1. Check that images have been pushed recently
-1. Ensure vulnerability assessment is enabled
-1. Wait up to 4 hours for initial scans
+1. Check that you configured ACR integration.
+1. Verify you recently pushed images.
+1. Make sure you enabled vulnerability assessment.
+1. Wait up to 4 hours for the initial scans.
 
 ## Performance validation
 
@@ -438,9 +442,10 @@ watch kubectl top pods -n kube-system -l app=microsoft-defender
 
 ### Verify minimal impact
 
-Defender sensors should use:
-- CPU: < 100m per node (typical)
-- Memory: < 200Mi per node (typical)
+Defender sensors use the following resources:
+
+- CPU: Less than 100m per node (typical)
+- Memory: Less than 200Mi per node (typical)
 
 ## Related content
 

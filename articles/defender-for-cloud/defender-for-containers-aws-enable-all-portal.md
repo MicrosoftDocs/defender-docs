@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Enable all Defender for Containers components on AWS (EKS) via portal
 
-This article walks you through enabling comprehensive Microsoft Defender for Containers protection for your Amazon EKS clusters. You'll set up vulnerability scanning, runtime protection, and compliance monitoring across your AWS environment.
+This article shows you how to enable comprehensive Microsoft Defender for Containers protection for your Amazon EKS clusters. You set up vulnerability scanning, runtime protection, and compliance monitoring across your AWS environment.
 
 ## Article contents
 
@@ -28,11 +28,11 @@ This article walks you through enabling comprehensive Microsoft Defender for Con
 
 ## When to use this guide
 
-Use this guide if you're:
+Use this guide if you are:
 
 - Setting up Defender for Containers on EKS for the first time
-- Want comprehensive protection for all your EKS clusters
-- Need vulnerability scanning for Amazon ECR
+- Wanting comprehensive protection for all your EKS clusters
+- Needing vulnerability scanning for Amazon ECR
 - Looking for a guided, visual deployment experience
 
 For selective deployment or troubleshooting existing deployments, see [Deploy specific Defender for Containers components on AWS (EKS)](defender-for-containers-aws-deploy-portal.md).
@@ -53,7 +53,7 @@ AWS-specific requirements:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud**.
+1. Go to **Microsoft Defender for Cloud**.
 
 1. Select **Environment settings** from the left menu.
 
@@ -63,7 +63,7 @@ AWS-specific requirements:
 
 ## Configure connector details
 
-1. In the **Account details** section, provide:
+1. In the **Account details** section, enter:
    - **Account alias**: A descriptive name for your AWS account
    - **AWS account ID**: Your 12-digit AWS account identifier
    - **Resource group**: Select or create a resource group
@@ -107,7 +107,7 @@ AWS-specific requirements:
 
 After creating the connector:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Look for recommendations about EKS clusters that need Arc connection.
 
@@ -119,7 +119,7 @@ After creating the connector:
 
 After connecting your EKS clusters to Azure Arc, deploy the Defender sensor:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Look for recommendations about installing the Defender extension on Arc-enabled clusters.
 
@@ -137,11 +137,11 @@ kubectl get pods -n kube-system -l app=microsoft-defender
 kubectl get daemonset -n kube-system microsoft-defender-sensor
 ```
 
-The sensor should be running on all nodes within 5-10 minutes.
+The sensor runs on all nodes within 5-10 minutes.
 
 ## Configure ECR vulnerability scanning
 
-1. Navigate to your AWS connector settings.
+1. Go to your AWS connector settings.
 
 1. Select **Configure** next to the Containers plan.
 
@@ -151,7 +151,7 @@ The sensor should be running on all nodes within 5-10 minutes.
 
 ### View scan results
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Select "Container registry images should have vulnerability findings resolved".
 
@@ -172,7 +172,7 @@ aws eks update-cluster-config \
 
 ### Check connector health
 
-1. Navigate to **Environment settings**.
+1. Go to **Environment settings**.
 
 1. Select your AWS connector.
 
@@ -183,18 +183,18 @@ aws eks update-cluster-config \
 
 ### View discovered resources
 
-1. Navigate to **Inventory**.
+1. Go to **Inventory**.
 
 1. Filter by **Environment** = **AWS**.
 
-1. Verify you see:
+1. Make sure you see:
    - All EKS clusters
    - ECR registries
    - Container images
 
 ### Check security coverage
 
-1. Navigate to **Workload protections** > **Containers**.
+1. Go to **Workload protections** > **Containers**.
 
 1. The dashboard shows:
    - EKS clusters with protection status
@@ -219,27 +219,27 @@ Check for the alert in Defender for Cloud within 5-10 minutes.
 
 ### Security dashboard
 
-1. Navigate to **Workload protections** > **Containers**.
+1. Go to **Workload protections** > **Containers**.
 
 1. Monitor key metrics:
-   - **Vulnerability trends**: Track ECR image vulnerabilities
-   - **Alert patterns**: Identify security issues
-   - **Compliance scores**: Monitor CIS benchmark adherence
-   - **Coverage gaps**: Find unprotected clusters
+   - **Vulnerability trends**: Track ECR image vulnerabilities.
+   - **Alert patterns**: Identify security issues.
+   - **Compliance scores**: Monitor CIS benchmark adherence.
+   - **Coverage gaps**: Find unprotected clusters.
 
 ### Configure notifications
 
-1. Navigate to **Environment settings**.
+1. Go to **Environment settings**.
 
 1. Select **Email notifications**.
 
 1. Configure:
-   - Recipients for high-severity alerts
-   - Weekly security summaries
+   - Recipients for high-severity alerts.
+   - Weekly security summaries.
 
 ### Review recommendations
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Filter by **Resource type** = **Kubernetes service**.
 
@@ -268,12 +268,12 @@ If components fail to deploy:
 
 ## Clean up resources
 
-To disable Defender for Containers:
+To disable Defender for Containers, follow these steps:
 
-1. Navigate to your AWS connector.
+1. Go to your AWS connector.
 
-1. Either:
-   - Toggle **Containers** to **Off**
+1. Choose either:
+   - Turn **Containers** **Off**
    - Delete the entire connector
 
 1. Remove AWS resources:

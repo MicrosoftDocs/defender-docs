@@ -81,32 +81,7 @@ Before deploying Defender for Containers on EKS, ensure you meet these requireme
 > - [Enable via portal](defender-for-containers-aws-enable-all-portal.md#prerequisites)
 > - [Deploy programmatically](defender-for-containers-aws-deploy.md#prerequisites)
 
-## Coverage and limitations
-
-### Supported scenarios
-
-Defender for Containers works with:
-
-- EKS clusters in all AWS commercial regions
-- Both EC2 and Fargate node types (with feature variations)
-- Managed and self-managed node groups
-- Private EKS clusters with appropriate network configuration
-- Multi-account AWS organizations through multiple connectors
-
-### Current limitations
-
-- Fargate-only clusters have limited runtime protection capabilities due to DaemonSet requirements
-- Some advanced threat detection features require specific EKS configurations
-- Network policies or security groups must allow outbound HTTPS to Azure endpoints
-- Real-time response actions are not available for cross-cloud scenarios
-
 ## Pricing
-
-Defender for Containers uses consumption-based pricing:
-
-- **Core protection**: Charged per vCore hour for monitored clusters
-- **Container image scanning**: Charged per image scanned in ECR
-- **No additional charges** for security recommendations or alert investigations
 
 For detailed pricing information and cost optimization strategies, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 

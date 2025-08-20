@@ -1,5 +1,5 @@
 ---
-title: Remove Defender for Containers from Arc-enabled Kubernetes
+title: Remove Defender for Containers From Arc-Enabled Kubernetes
 description: Learn how to disable and remove Microsoft Defender for Containers from your Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
@@ -10,11 +10,11 @@ ms.date: 06/04/2025
 This article explains how to disable and remove Defender for Containers from your Arc-enabled Kubernetes clusters.
 
 > [!IMPORTANT]
-> Removing Defender for Containers eliminates security protection for your clusters. Ensure you have alternative security measures in place before proceeding.
+> Removing Defender for Containers eliminates security protection for your clusters. Make sure you have alternative security measures in place before you remove Defender for Containers.
 
-## Remove order
+## Removal order
 
-To properly remove Defender for Containers from Arc-enabled clusters:
+To properly remove Defender for Containers from Arc-enabled clusters, follow these steps:
 
 1. Remove Defender extension from clusters
 1. Remove Azure Policy extension (if present)
@@ -39,7 +39,7 @@ az k8s-extension delete \
 
 ### Using Azure portal
 
-1. Navigate to your Arc-enabled Kubernetes cluster.
+1. Go to your Arc-enabled Kubernetes cluster.
 1. Select **Extensions** under **Settings**.
 1. Select the **Microsoft Defender** extension.
 1. Select **Uninstall**.
@@ -47,7 +47,7 @@ az k8s-extension delete \
 
 ## Remove Azure Policy extension
 
-If Azure Policy for Kubernetes was deployed:
+If you deployed Azure Policy for Kubernetes:
 
 ```azurecli
 # Delete Azure Policy extension
@@ -97,14 +97,14 @@ az policy assignment delete \
 
 ## Disable Defender plan (optional)
 
-### For specific clusters only
+### For specific clusters
 
-To exclude specific clusters while keeping Defender enabled:
+To keep Defender enabled but exclude specific clusters:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your subscription.
 1. Select **Settings** next to Containers.
-1. Configure exclusions for specific Arc clusters.
+1. Set up exclusions for specific Arc clusters.
 
 ### For entire subscription
 
@@ -118,9 +118,9 @@ az security pricing create \
 ## Clean up Arc resources (optional)
 
 > [!WARNING]
-> This will disconnect your cluster from Azure Arc entirely, removing all Arc functionality.
+> This action disconnects your cluster from Azure Arc entirely and removes all Arc functionality.
 
-If you also want to remove Arc connectivity:
+To remove Arc connectivity:
 
 ```azurecli
 # Disconnect cluster from Arc
@@ -179,7 +179,7 @@ az security alert update \
 
 ### Data retention
 
-Security data remains in your Log Analytics workspace according to retention settings:
+Security data stays in your Log Analytics workspace according to retention settings:
 
 ```kusto
 // Query to find Defender data
@@ -206,7 +206,7 @@ az monitor diagnostic-settings delete \
 
 ### Security monitoring gaps
 
-After removing Defender for Containers, your Arc-enabled clusters lose several critical security capabilities. Runtime threat detection stops immediately, leaving clusters vulnerable to active attacks and suspicious behavior. Container vulnerability scanning ceases, meaning new security flaws in your images won't be identified. Security recommendations based on CIS Kubernetes Benchmark and other standards will no longer update. Compliance reporting capabilities are lost, which may impact audit requirements. The unified security view across your hybrid infrastructure disappears, making it harder to maintain consistent security posture.
+When you remove Defender for Containers, your Arc-enabled clusters lose several critical security capabilities. Runtime threat detection stops right away, leaving clusters vulnerable to active attacks and suspicious behavior. Container vulnerability scanning stops, so new security flaws in your images aren't identified. Security recommendations based on CIS Kubernetes Benchmark and other standards no longer update. Compliance reporting capabilities are lost, which might affect audit requirements. The unified security view across your hybrid infrastructure disappears, making it harder to maintain consistent security posture.
 
 ### Alternative security solutions
 
@@ -214,15 +214,15 @@ Consider implementing alternative security measures for your Arc-enabled cluster
 
 ### Maintaining Arc connectivity
 
-If you removed only Defender but kept Arc connectivity, you retain several management capabilities. Azure Policy can still enforce configurations, Azure Monitor can collect metrics and logs, and you can deploy other Arc-enabled services. Consider using Azure Policy for basic security controls and Azure Monitor for security-relevant log collection as interim measures.
+If you remove only Defender but keep Arc connectivity, you keep several management capabilities. Azure Policy can still enforce configurations, Azure Monitor can collect metrics and logs, and you can deploy other Arc-enabled services. Consider using Azure Policy for basic security controls and Azure Monitor for security-relevant log collection as interim measures.
 
 ### Data and compliance considerations
 
-Historical security data remains accessible in your Log Analytics workspace for the configured retention period (default 30 days, maximum 730 days). Security alerts persist in Microsoft Defender for Cloud for 90 days. Exported data in SIEM systems or backup storage follows those systems' retention policies. Document the removal date and reason for compliance audits, as there will be a gap in security monitoring that auditors may question.
+Historical security data stays accessible in your Log Analytics workspace for the configured retention period (default 30 days, maximum 730 days). Security alerts persist in Microsoft Defender for Cloud for 90 days. Exported data in SIEM systems or backup storage follows those systems' retention policies. Document the removal date and reason for compliance audits, as there's a gap in security monitoring that auditors might question.
 
 ## Re-enable Defender for Containers
 
-To restore protection in the future:
+To restore protection, use the following steps:
 
 ```azurecli
 # Re-enable Defender plan

@@ -1,5 +1,5 @@
 ---
-title: Deploy Defender for Containers components on AWS (EKS) programmatically
+title: Deploy Defender for Containers Components on AWS (EKS) Programmatically
 description: Learn how to deploy Microsoft Defender for Containers components on Amazon EKS clusters using CLI, REST API, and automation tools.
 ms.topic: how-to
 ms.date: 06/04/2025
@@ -7,24 +7,31 @@ ms.date: 06/04/2025
 
 # Deploy Defender for Containers components on AWS (EKS) programmatically
 
-This article explains how to deploy Defender for Containers components on your Amazon EKS clusters using command-line tools, APIs, and automation methods.
+This article explains how to deploy Defender for Containers components on your Amazon EKS clusters by using command-line tools, APIs, and automation methods.
 
 ## Article contents
 
 Jump to the deployment method you need:
 
 - [Enable Defender plan](#enable-defender-for-containers-plan)
-  - [Azure CLI](#using-azure-cli)
-  - [REST API](#using-rest-api)
+  - Azure CLI
+  - REST API
 - [Create AWS connector](#create-aws-connector)
-  - [Azure CLI](#using-azure-cli-1)
-  - [CloudFormation](#using-cloudformation)
+  - Azure CLI
+  - CloudFormation
 - [Deploy Arc and extensions](#deploy-arc-and-defender-extensions)
-  - [Single cluster](#connect-eks-to-azure-arc)
-  - [Multiple clusters](#batch-deployment-using-scripts)
+  - [Connect EKS to Azure Arc](#connect-eks-to-azure-arc)
+  - [Deploy Defender sensor](#deploy-defender-sensor)
+  - [Deploy Azure Policy extension](#deploy-azure-policy-extension)
+- [Configure agentless features](#configure-agentless-features)
+  - REST API
+  - Azure CLI
+- [Batch deployment](#batch-deployment-with-scripts)
+  - PowerShell
+  - Bash
 - [Infrastructure as Code](#deploy-using-infrastructure-as-code)
-  - [Terraform](#terraform-example)
-  - [ARM Templates](#deploy-using-arm-templates)
+  - ARM Template
+  - Terraform
 
 > [!TIP]
 > For a guided portal experience, see [Enable all components via portal](defender-for-containers-aws-enable-all-portal.md).
@@ -42,7 +49,7 @@ Required tools:
 
 ## Enable Defender for Containers plan
 
-### Using Azure CLI
+### [Azure CLI](#tab/azure-cli)
 
 ```azurecli
 # Set variables
@@ -62,7 +69,7 @@ az security pricing update \
     --subplan "DefenderForContainersGke,DefenderForContainersEks"
 ```
 
-### Using REST API
+### [REST API](#tab/rest-api)
 
 ```bash
 # Enable the plan
@@ -78,9 +85,11 @@ curl -X PUT \
   }'
 ```
 
+---
+
 ## Create AWS connector
 
-### Using Azure CLI
+### [Azure CLI](#tab/azure-cli-connector)
 
 ```azurecli
 # Create resource group
@@ -91,7 +100,7 @@ az security aws-connector create \
     --connector-name "my-aws-connector" \
     --resource-group "DefenderForContainers-RG" \
     --aws-account-id "<aws-account-id>" \
-    --offerings '[
+    --offerings '{
       {
         "offeringType": "DefenderForContainersEks",
         "kubernetesService": {
@@ -104,12 +113,12 @@ az security aws-connector create \
           "cloudRoleArn": "arn:aws:iam::{accountId}:role/DefenderForCloud-ContainerVulnerabilityAssessment"
         }
       }
-    ]'
+    }'
 ```
 
-### Using CloudFormation
+### [CloudFormation](#tab/cloudformation)
 
-Create IAM roles using CloudFormation:
+Create IAM roles with CloudFormation:
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -166,9 +175,13 @@ aws cloudformation create-stack \
   --capabilities CAPABILITY_NAMED_IAM
 ```
 
+---
+
 ## Deploy Arc and Defender extensions
 
 ### Connect EKS to Azure Arc
+
+### [Azure CLI](#tab/azure-cli-arc)
 
 ```bash
 # Set variables
@@ -189,22 +202,7 @@ az connectedk8s show \
     --resource-group $RESOURCE_GROUP
 ```
 
-### Deploy Defender sensor using CLI
-
-```bash
-# Install Defender extension
-az k8s-extension create \
-    --name microsoft-defender \
-    --extension-type microsoft.azuredefender.kubernetes \
-    --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP \
-    --configuration-settings \
-        "logAnalyticsWorkspaceResourceID=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}" \
-        "auditLogPath=/var/log/kube-apiserver/audit.log"
-```
-
-### Deploy using Helm
+### [Helm](#tab/helm-arc)
 
 ```bash
 # Add Defender Helm repository
@@ -220,7 +218,47 @@ helm install defender-sensor mdc/azuredefender \
     --set azure.workspaceKey=<workspace-key>
 ```
 
+---
+
+### Deploy Defender sensor
+
+### [Azure CLI](#tab/azure-cli-sensor)
+
+```bash
+# Install Defender extension
+az k8s-extension create \
+    --name microsoft-defender \
+    --extension-type microsoft.azuredefender.kubernetes \
+    --cluster-type connectedClusters \
+    --cluster-name $CLUSTER_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --configuration-settings \
+        "logAnalyticsWorkspaceResourceID=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}" \
+        "auditLogPath=/var/log/kube-apiserver/audit.log"
+```
+
+### [REST API](#tab/rest-api-sensor)
+
+```bash
+curl -X PUT \
+  "https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Kubernetes/connectedClusters/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/microsoft-defender?api-version=2022-11-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "extensionType": "microsoft.azuredefender.kubernetes",
+      "configurationSettings": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
+      }
+    }
+  }'
+```
+
+---
+
 ## Deploy Azure Policy extension
+
+### [Azure CLI](#tab/azure-cli-policy)
 
 ```bash
 # Install Azure Policy extension
@@ -232,9 +270,23 @@ az k8s-extension create \
     --resource-group $RESOURCE_GROUP
 ```
 
+### [Helm](#tab/helm-policy)
+
+```bash
+# Install Azure Policy using Helm
+helm repo add azure-policy https://raw.githubusercontent.com/Azure/azure-policy/master/extensions/policy-addon-kubernetes/helm-charts
+helm repo update
+
+helm install azure-policy-addon azure-policy/azure-policy-addon-arc-clusters \
+    --namespace kube-system \
+    --set azurepolicy.env.resourceid="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Kubernetes/connectedClusters/{clusterName}"
+```
+
+---
+
 ## Configure agentless features
 
-### Enable agentless discovery using REST API
+### [REST API](#tab/rest-api-agentless)
 
 ```bash
 curl -X PATCH \
@@ -253,9 +305,28 @@ curl -X PATCH \
   }'
 ```
 
-## Batch deployment using scripts
+### [Azure CLI](#tab/azure-cli-agentless)
 
-### PowerShell script for multiple clusters
+```azurecli
+# Update connector with agentless settings
+az security aws-connector update \
+    --connector-name "my-aws-connector" \
+    --resource-group "DefenderForContainers-RG" \
+    --offerings '{
+      {
+        "offeringType": "DefenderForContainersEks",
+        "kubernetesService": {
+          "enabled": true
+        }
+      }
+    }'
+```
+
+---
+
+## Batch deployment with scripts
+
+### [PowerShell](#tab/powershell-batch)
 
 ```powershell
 # Deploy to multiple EKS clusters
@@ -282,7 +353,7 @@ foreach ($cluster in $clusters) {
 }
 ```
 
-### Bash script for automated deployment
+### [Bash](#tab/bash-batch)
 
 ```bash
 #!/bin/bash
@@ -323,7 +394,11 @@ deploy_defender "prod-eks-cluster" "us-east-1"
 deploy_defender "dev-eks-cluster" "us-west-2"
 ```
 
-## Deploy using ARM templates
+---
+
+## Deploy using Infrastructure as Code
+
+### [ARM Template](#tab/arm-template)
 
 ```json
 {
@@ -362,9 +437,7 @@ az deployment group create \
     --parameters clusterName=my-eks-cluster location=eastus
 ```
 
-## Deploy using Infrastructure as Code
-
-### Terraform example
+### [Terraform](#tab/terraform)
 
 ```hcl
 # Configure Defender for Containers
@@ -394,9 +467,11 @@ resource "azurerm_security_center_aws_connector" "example" {
 }
 ```
 
+---
+
 ## Verify deployment
 
-After deployment, verify components are running:
+After deployment, verify that the components are running:
 
 ```bash
 # Check Arc connection

@@ -135,12 +135,6 @@ Multi-cluster environments require consistent policy enforcement and compliance 
 
 ## Pricing
 
-Defender for Containers on Arc follows a consumption-based pricing model:
-
-- **Core protection**: Charged per vCore hour for protected nodes
-- **Vulnerability scanning**: Charged per image scanned
-- **No additional charges** for Arc connectivity or policy enforcement
-
 For current pricing details, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ## Next steps

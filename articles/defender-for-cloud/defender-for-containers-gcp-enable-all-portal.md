@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Enable all Defender for Containers components on GCP (GKE) via portal
 
-This article walks you through enabling comprehensive Microsoft Defender for Containers protection for your Google Kubernetes Engine (GKE) clusters. You'll set up vulnerability scanning, runtime protection, and compliance monitoring across your GCP environment.
+This article shows you how to enable comprehensive Microsoft Defender for Containers protection for your Google Kubernetes Engine (GKE) clusters. You set up vulnerability scanning, runtime protection, and compliance monitoring across your GCP environment.
 
 ## Article contents
 
@@ -28,12 +28,12 @@ This article walks you through enabling comprehensive Microsoft Defender for Con
 
 ## When to use this guide
 
-Use this guide if you're:
+Use this guide if you want to:
 
-- Setting up Defender for Containers on GKE for the first time
-- Want comprehensive protection for all your GKE clusters
-- Need vulnerability scanning for GCR and Artifact Registry
-- Looking for a guided, visual deployment experience
+- Set up Defender for Containers on GKE for the first time
+- Get comprehensive protection for all your GKE clusters
+- Get vulnerability scanning for GCR and Artifact Registry
+- Get a guided, visual deployment experience
 
 For selective deployment or troubleshooting existing deployments, see [Deploy specific Defender for Containers components on GCP (GKE)](defender-for-containers-gcp-deploy-portal.md).
 
@@ -51,7 +51,7 @@ GCP-specific requirements:
 
 ## Prepare your GCP project
 
-Before creating the connector, ensure required APIs are enabled:
+Before creating the connector, make sure you enable the required APIs:
 
 ```bash
 # Enable required APIs
@@ -66,7 +66,7 @@ gcloud services enable logging.googleapis.com
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud**.
+1. Go to **Microsoft Defender for Cloud**.
 
 1. Select **Environment settings** from the left menu.
 
@@ -74,8 +74,8 @@ gcloud services enable logging.googleapis.com
 
 ## Configure connector details
 
-1. In the **Basics** tab, provide:
-   - **Connector name**: A descriptive name (e.g., "Production-GCP")
+1. In the **Basics** tab, enter:
+   - **Connector name**: A descriptive name (for example, "Production-GCP")
    - **Subscription**: Your Azure subscription for billing
    - **Resource group**: Create or select a resource group
    - **Location**: Your preferred Azure region
@@ -113,7 +113,7 @@ gcloud services enable logging.googleapis.com
 
 1. Select **GCP Cloud Shell** to open Cloud Shell.
 
-1. Paste and run the script. It will:
+1. Paste and run the script. It:
 
    ```bash
    # Example of what the script does:
@@ -131,13 +131,13 @@ gcloud services enable logging.googleapis.com
        --iam-account=microsoft-defender-containers@PROJECT_ID.iam.gserviceaccount.com
    ```
 
-1. Download the generated `defender-key.json` file.
+1. Downloads the generated `defender-key.json` file.
 
-1. Return to Azure portal and select **Upload key file**.
+1. Returns to Azure portal and select **Upload key file**.
 
-1. Browse and select the downloaded JSON key.
+1. Browses and selects the downloaded JSON key.
 
-1. Select **Next: Review and create**.
+1. Selects **Next: Review and create**.
 
 ## Create the connector
 
@@ -154,7 +154,7 @@ gcloud services enable logging.googleapis.com
 
 After creating the connector, connect your GKE clusters to Azure Arc:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for the recommendation **GKE clusters should be connected to Azure Arc**.
 
@@ -180,7 +180,7 @@ After connecting your GKE clusters to Azure Arc, deploy the Defender sensor for 
 
 ### Deploy to all GKE clusters
 
-1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for "GKE clusters should have Microsoft Defender's extension for Azure Arc installed".
 
@@ -197,7 +197,7 @@ After connecting your GKE clusters to Azure Arc, deploy the Defender sensor for 
 
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot showing the Fix button for deploying the Defender sensor.":::
 
-1. Configure sensor deployment:
+1. Configure sensor deployment settings:
    - Log Analytics workspace
    - Resource limits
    - Namespace exclusions
@@ -206,13 +206,13 @@ After connecting your GKE clusters to Azure Arc, deploy the Defender sensor for 
 
 ### Deploy to specific clusters
 
-1. Navigate to your Arc-enabled GKE cluster in Azure portal.
+1. Go to your Arc-enabled GKE cluster in the Azure portal.
 
 1. Select **Extensions** > **+ Add**.
 
 1. Search for **Microsoft Defender for Containers**.
 
-1. Select and configure:
+1. Select it and configure:
    - Workspace settings
    - Resource allocation
    - Monitoring scope
@@ -232,19 +232,19 @@ kubectl get daemonset -n kube-system microsoft-defender-sensor
 kubectl logs -n kube-system -l app=microsoft-defender --tail=50
 ```
 
-The sensor should be running on all nodes within 5-10 minutes.
+The sensor runs on all nodes within 5-10 minutes.
 
 ## Configure container registry scanning
 
 ### For Google Container Registry (GCR)
 
-1. Navigate to your GCP connector settings.
+1. Go to your GCP connector settings.
 
 1. Select **Container registries**.
 
-1. Verify GCR integration is enabled.
+1. Verify that GCR integration is enabled.
 
-1. Images pushed to GCR are automatically scanned.
+1. Images you push to GCR are automatically scanned.
 
 ### For Artifact Registry
 
@@ -270,7 +270,7 @@ The sensor should be running on all nodes within 5-10 minutes.
 
 ## Enable comprehensive audit logging
 
-1. Navigate to each GKE cluster in GCP Console.
+1. Go to each GKE cluster in GCP Console.
 
 1. Select **Edit** cluster.
 
@@ -318,7 +318,7 @@ For production clusters, use Workload Identity:
 
 ### Check connector health
 
-1. Navigate to **Environment settings**.
+1. Go to **Environment settings**.
 
 1. Select your GCP connector.
 
@@ -331,7 +331,7 @@ For production clusters, use Workload Identity:
 
 ### View discovered resources
 
-1. Navigate to **Inventory**.
+1. Go to **Inventory**.
 
 1. Filter by **Environment** = **GCP**.
 
@@ -342,9 +342,9 @@ For production clusters, use Workload Identity:
 
 ### Check security coverage
 
-1. Navigate to **Workload protections** > **Containers**.
+1. Go to **Workload protections** > **Containers**.
 
-1. The dashboard shows:
+1. Review the dashboard that shows:
    - GKE clusters with protection status
    - Vulnerable images by severity
    - Recent security alerts
@@ -370,28 +370,28 @@ For production clusters, use Workload Identity:
 
 ### Security dashboard
 
-1. Navigate to **Workload protections** > **Containers**.
+1. Go to **Workload protections** > **Containers**.
 
 1. Monitor:
-   - **Vulnerability trends**: Track image vulnerabilities over time
-   - **Alert patterns**: Identify recurring security issues
-   - **Compliance scores**: Monitor CIS GKE Benchmark compliance
-   - **Coverage gaps**: Identify unprotected clusters
+   - **Vulnerability trends**: Track image vulnerabilities over time.
+   - **Alert patterns**: Identify recurring security issues.
+   - **Compliance scores**: Monitor CIS GKE Benchmark compliance.
+   - **Coverage gaps**: Identify unprotected clusters.
 
 ### Configure notifications
 
-1. Navigate to **Environment settings**.
+1. Go to **Environment settings**.
 
 1. Select **Email notifications**.
 
 1. Configure:
-   - Recipients for security alerts
-   - Alert severity thresholds
-   - Weekly summary reports
+   - Recipients for security alerts.
+   - Alert severity thresholds.
+   - Weekly summary reports.
 
 ### Review recommendations
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Filter by **Resource type** = **Kubernetes service**.
 
@@ -436,20 +436,20 @@ For production clusters, use Workload Identity:
 
 If components fail to deploy:
 
-1. **Check Arc connection**: Ensure clusters show as Connected
-1. **Verify permissions**: Confirm service account has all required roles
-1. **Review quotas**: Check GCP quotas for compute and API usage
-1. **Network connectivity**: Verify outbound HTTPS to Azure endpoints
+1. **Check Arc connection**: Ensure clusters show as Connected.
+1. **Verify permissions**: Confirm service account has all required roles.
+1. **Review quotas**: Check GCP quotas for compute and API usage.
+1. **Network connectivity**: Verify outbound HTTPS to Azure endpoints.
 
 ## Clean up resources
 
 To disable Defender for Containers:
 
-1. Navigate to your GCP connector.
+1. Go to your GCP connector.
 
-1. Either:
-   - Toggle **Containers** to **Off**
-   - Delete the entire connector
+1. Choose either:
+   - Toggle **Containers** to **Off**.
+   - Delete the entire connector.
 
 1. Remove GCP resources:
 

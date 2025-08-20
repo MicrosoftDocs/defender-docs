@@ -1,5 +1,5 @@
 ---
-title: Defender for Containers deployment overview
+title: Defender for Containers Deployment Overview
 description: Learn about the different deployment options for enabling Microsoft Defender for Containers across various Kubernetes environments.
 ms.topic: overview
 ms.date: 06/04/2025
@@ -34,9 +34,9 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
 
-For Amazon Elastic Kubernetes Service clusters:
+For Amazon Elastic Kubernetes Service clusters, Defender for Containers provides:
 
-- Multicloud security management
+- Centralized security management in Defender for Cloud
 - AWS connector-based deployment
 - Integration with AWS security services
 - ECR vulnerability scanning
@@ -46,7 +46,7 @@ For Amazon Elastic Kubernetes Service clusters:
 
 For Google Kubernetes Engine clusters, Defender for Containers provides:
 
-- Multicloud security management
+- Centralized security management in Defender for Cloud
 - GCP connector-based deployment
 - Integration with GCP security services
 - GCR and Artifact Registry scanning
@@ -54,7 +54,7 @@ For Google Kubernetes Engine clusters, Defender for Containers provides:
 
 ### [Arc-enabled Kubernetes (Preview)](defender-for-containers-arc-overview.md)
 
-For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
+For on-premises and IaaS Kubernetes clusters connected through Azure Arc, Defender for Containers provides:
 
 - Hybrid cloud security management
 - Support for any CNCF-certified Kubernetes distribution
@@ -63,14 +63,16 @@ For on-premises and IaaS Kubernetes clusters connected through Azure Arc:
 
 ## Prerequisites
 
-Before deploying Defender for Containers, ensure you have:
+Before deploying Defender for Containers, make sure you have:
 
 - An active Azure subscription
-- Microsoft Defender for Cloud enabled on your subscription
 - Owner or Contributor role on the subscription
-- Kubernetes cluster version 1.19 or later (version support varies by provider)
+- Kubernetes cluster version 1.19 or later
 - Network connectivity to Azure services
-- Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
+- For sensor-based capabilities: Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
+
+> [!NOTE]
+> Agentless capabilities don't require cluster resources or sensor deployment. For more information about agentless vs. sensor-based features, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
 
 ## Deployment options
 

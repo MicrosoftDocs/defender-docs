@@ -10,29 +10,29 @@ ms.date: 06/04/2025
 This article explains how to disable and remove Defender for Containers from your AKS environment.
 
 > [!IMPORTANT]
-> Disabling Defender for Containers removes security protection from your AKS clusters. Ensure you have alternative security measures in place before proceeding.
+> Disabling Defender for Containers removes security protection from your AKS clusters. Make sure you have alternative security measures in place before you proceed.
 
-## Remove order
+## Removal order
 
 To properly remove Defender for Containers, follow this order:
 
 1. Remove Defender components from clusters
-2. Disable Azure Policy add-on
-3. Remove diagnostic settings
-4. Clean up Azure policies
-5. Disable Defender plan
-6. Clean up remaining resources
+1. Disable Azure Policy add-on
+1. Remove diagnostic settings
+1. Clean up Azure policies
+1. Disable Defender plan
+1. Clean up remaining resources
 
 ## Disable Defender for Containers plan
 
-### Using Azure portal
+### Disable using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Select the subscription containing your AKS clusters.
-3. In the Defender plans page, toggle **Containers** to **Off**.
-4. Select **Save**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select the subscription that contains your AKS clusters.
+1. In the Defender plans page, toggle **Containers** to **Off**.
+1. Select **Save**.
 
-### Using Azure CLI
+### Disable using Azure CLI
 
 ```azurecli
 # Disable Defender for Containers
@@ -41,7 +41,7 @@ az security pricing create \
     --tier 'Free'
 ```
 
-### Using PowerShell
+### Disable using PowerShell
 
 ```powershell
 # Disable Defender for Containers
@@ -81,14 +81,14 @@ az aks disable-addons \
 
 ## Remove diagnostic settings
 
-### Using Azure portal
+### Remove diagnostic settings via Azure portal
 
 1. Navigate to your AKS cluster.
-2. Select **Diagnostic settings** under **Monitoring**.
-3. Select the diagnostic setting created for Defender.
-4. Select **Delete**.
+1. Select **Diagnostic settings** under **Monitoring**.
+1. Select the diagnostic setting created for Defender.
+1. Select **Delete**.
 
-### Using Azure CLI
+### Remove diagnostic settings via Azure CLI
 
 ```azurecli
 # List diagnostic settings
@@ -129,11 +129,11 @@ az policy set-definition delete \
 
 ### For Azure Container Registry
 
-1. Navigate to your Azure Container Registry.
-2. Select **Security** > **Defender for Cloud**.
-3. Disable vulnerability scanning.
+1. Go to your Azure Container Registry.
+1. Select **Security** > **Defender for Cloud**.
+1. Disable vulnerability scanning.
 
-Or using Azure CLI:
+Or use Azure CLI:
 
 ```azurecli
 # Disable vulnerability scanning
@@ -160,7 +160,7 @@ az security alert update \
 
 ### Clear recommendations
 
-Recommendations will automatically clear after the next assessment cycle (typically 12-24 hours).
+Recommendations automatically clear after the next assessment cycle (typically 12-24 hours).
 
 ## Verify removal
 
@@ -188,17 +188,17 @@ az security pricing show --name 'Containers'
 
 ### Security monitoring gaps
 
-After removing Defender for Containers, your security posture changes significantly. Runtime threat detection ceases immediately, leaving your AKS clusters without real-time protection against active threats. Container image vulnerability scanning in ACR stops, meaning new vulnerabilities in your container images won't be identified. Security recommendations based on Kubernetes best practices will no longer be updated, potentially leaving configuration weaknesses unaddressed. Additionally, compliance reporting for standards like CIS Kubernetes Benchmark stops, which may impact your ability to demonstrate adherence to regulatory requirements.
+When you remove Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your AKS clusters without real-time protection against active threats. Container image vulnerability scanning in ACR stops, so new vulnerabilities in your container images go undetected. Security recommendations based on Kubernetes best practices no longer update, which might leave configuration weaknesses unaddressed. Additionally, compliance reporting for standards like CIS Kubernetes Benchmark stops, which might affect your ability to demonstrate adherence to regulatory requirements.
 
 ### Alternative security solutions
 
-Consider implementing alternative security measures to maintain protection for your AKS clusters. Native Azure services like Azure Policy can help enforce some security controls, while Azure Monitor can provide basic observability. Open source solutions such as Falco offer runtime security monitoring, while Open Policy Agent (OPA) can help enforce security policies. For vulnerability scanning, consider tools like Trivy or Clair. Commercial container security platforms from vendors like Aqua Security, Sysdig, or Prisma Cloud provide comprehensive alternatives. Evaluate these options based on your security requirements, budget, and operational preferences.
+To maintain protection for your AKS clusters, consider implementing alternative security measures. Native Azure services like Azure Policy can help enforce some security controls, while Azure Monitor can provide basic observability. Open source solutions such as Falco offer runtime security monitoring, while Open Policy Agent (OPA) can help enforce security policies. For vulnerability scanning, consider tools like Trivy or Clair. Commercial container security platforms from vendors like Aqua Security, Sysdig, or Prisma Cloud provide comprehensive alternatives. Evaluate these options based on your security requirements, budget, and operational preferences.
 
-### Data retention
+### Data retention policies
 
-Understanding data retention is important for compliance and forensic purposes. Security alerts generated by Defender for Containers remain accessible in Microsoft Defender for Cloud for 90 days after removal, allowing time for investigation or compliance audits. Log Analytics workspace data follows your configured retention settings, which can range from 30 to 730 days. Security recommendations are cleared from the portal within 24 hours of removal but may be retained in exported reports or SIEM systems. Historical vulnerability scan results remain in your Azure Container Registry for 90 days unless manually purged.
+Understanding data retention is important for compliance and forensic purposes. Security alerts generated by Defender for Containers remain accessible in Microsoft Defender for Cloud for 90 days after removal, giving you time for investigation or compliance audits. Log Analytics workspace data follows your configured retention settings, which can range from 30 to 730 days. Security recommendations clear from the portal within 24 hours of removal but might be retained in exported reports or SIEM systems. Historical vulnerability scan results remain in your Azure Container Registry for 90 days unless you manually purge them.
 
-### Re-enabling considerations
+### Future re-enablement planning
 
 If you decide to re-enable Defender for Containers in the future, the process is straightforward. All components can be redeployed following the standard deployment guides, and protection will resume from that point forward. Historical data (if not purged) remains accessible according to retention policies. However, there will be a gap in security coverage for the period when Defender was disabled, which should be considered in any security audit or incident investigation.
 
@@ -214,4 +214,4 @@ To re-enable Defender for Containers in the future:
 
 - [Learn more about AKS security](/azure/aks/concepts-security)
 - [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
-- [Re-deploy Defender for Containers](defender-for-containers-azure-enable-all-portal.md) - To restore protection in the future
+- [Re-deploy Defender for Containers](defender-for-containers-azure-enable-all-portal.md) - To restore protection

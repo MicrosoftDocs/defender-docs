@@ -54,7 +54,7 @@ data:
     - istio-system
 ```
 
-Apply and restart the sensor:
+Apply the configuration and restart the sensor:
 
 ```bash
 kubectl apply -f defender-config.yaml

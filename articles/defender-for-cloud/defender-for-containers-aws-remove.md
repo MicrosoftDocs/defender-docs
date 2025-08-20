@@ -9,22 +9,22 @@ ms.date: 06/04/2025
 
 This article explains how to remove Defender for Containers from your EKS clusters and AWS environment. Follow these steps when you need to completely uninstall the service or troubleshoot deployment issues.
 
-## Remove order
+## Removal order
 
 To properly remove Defender for Containers, follow this order:
 
 1. Remove Kubernetes extensions from clusters
-2. Disconnect clusters from Azure Arc
-3. Remove AWS IAM roles and policies
-4. Disable Defender plan in Azure
-5. Delete AWS connector (optional - only if not using other Defender plans)
+1. Disconnect clusters from Azure Arc
+1. Remove AWS IAM roles and policies
+1. Disable Defender plan in Azure
+1. Delete AWS connector (optional - only if not using other Defender plans)
 
 > [!IMPORTANT]
-> If you're using the AWS connector for other Defender plans (like Defender for Servers), skip step 5. The connector can be shared across multiple Defender plans.
+> If you use the AWS connector for other Defender plans (like Defender for Servers), skip step 5. You can share the connector across multiple Defender plans.
 
 ## Remove extensions from EKS clusters
 
-### Remove using Azure CLI
+### Remove extensions using Azure CLI
 
 ```azurecli
 # Set variables
@@ -48,7 +48,7 @@ az k8s-extension delete \
     --yes
 ```
 
-### Remove using kubectl
+### Remove extensions using kubectl
 
 If Azure CLI removal fails, manually remove components:
 
@@ -78,7 +78,7 @@ kubectl delete mutatingwebhookconfigurations azure-policy-mutating-webhook-confi
 
 ## Disconnect clusters from Azure Arc
 
-### Using Azure CLI
+### Disconnect using Azure CLI
 
 ```azurecli
 # Disconnect cluster from Arc
@@ -88,7 +88,7 @@ az connectedk8s delete \
     --yes
 ```
 
-### Using kubectl
+### Remove Arc agents using kubectl
 
 If Azure CLI fails, manually remove Arc agents:
 
@@ -108,7 +108,7 @@ kubectl get crd -o name | grep -i arc | xargs kubectl delete
 
 ### Delete IAM roles
 
-Remove IAM roles created for Defender:
+Remove IAM roles that you created for Defender:
 
 ```bash
 # List Defender-related roles
@@ -151,9 +151,9 @@ aws eks untag-resource \
 
 ## Disable Defender plan
 
-### Using Azure portal
+### Disable using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select your subscription.
 
@@ -161,7 +161,7 @@ aws eks untag-resource \
 
 1. Select **Save**.
 
-### Using Azure CLI
+### Disable using Azure CLI
 
 ```azurecli
 # Disable Containers plan
@@ -173,9 +173,9 @@ az security pricing create \
 
 ## Delete AWS connector
 
-### Using Azure portal
+### Delete connector using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Find your AWS connector.
 
@@ -185,7 +185,7 @@ az security pricing create \
 
 1. Confirm deletion.
 
-### Using Azure CLI
+### Delete connector using Azure CLI
 
 ```azurecli
 # Delete AWS connector
@@ -315,23 +315,23 @@ kubectl delete mutatingwebhookconfigurations --all
 
 ### Security monitoring gaps
 
-After removing Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your clusters without real-time protection against active threats. Container image vulnerability scanning ceases, meaning new vulnerabilities in your ECR repositories won't be identified. Security recommendations will no longer be updated, potentially leaving configuration weaknesses unaddressed. Additionally, compliance reporting stops, which may impact your ability to demonstrate adherence to regulatory requirements.
+When you remove Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your clusters without real-time protection against active threats. Container image vulnerability scanning ceases, so new vulnerabilities in your ECR repositories aren't identified. Security recommendations stop updating, which might leave configuration weaknesses unaddressed. Additionally, compliance reporting stops, which might affect your ability to demonstrate adherence to regulatory requirements.
 
 ### Alternative security solutions
 
-Consider implementing alternative security measures to maintain protection for your EKS clusters. AWS GuardDuty for EKS provides native threat detection capabilities within the AWS ecosystem. Open source solutions like Falco offer runtime security monitoring, while Open Policy Agent (OPA) can help enforce security policies. Commercial container security platforms from vendors like Aqua Security, Sysdig, or Prisma Cloud provide comprehensive alternatives. Evaluate these options based on your security requirements, budget, and operational preferences.
+To maintain protection for your EKS clusters, consider implementing alternative security measures. AWS GuardDuty for EKS provides native threat detection capabilities within the AWS ecosystem. Open source solutions like Falco offer runtime security monitoring, while Open Policy Agent (OPA) can help enforce security policies. Commercial container security platforms from vendors like Aqua Security, Sysdig, or Prisma Cloud provide comprehensive alternatives. Evaluate these options based on your security requirements, budget, and operational preferences.
 
 ### Data retention
 
-Understanding data retention is important for compliance and forensic purposes. Security alerts generated by Defender for Containers remain accessible in Azure for 90 days after removal, allowing time for investigation or compliance audits. Log Analytics workspace data follows your configured retention settings, which can range from 30 to 730 days. Security recommendations are cleared from the portal within 24 hours of removal but may be retained in exported reports or SIEM systems.
+Understanding data retention is important for compliance and forensic purposes. Security alerts generated by Defender for Containers remain accessible in Azure for 90 days after removal, allowing time for investigation or compliance audits. Log Analytics workspace data follows your configured retention settings, which can range from 30 to 730 days. Security recommendations clear from the portal within 24 hours of removal but might be retained in exported reports or SIEM systems.
 
 ## Re-enabling Defender
 
 To re-enable Defender for Containers:
 
 1. Wait at least 30 minutes after complete removal
-2. Follow the deployment guide from the beginning
-3. Use new IAM role names if previous ones were recent
+1. Follow the deployment guide from the beginning
+1. Use new IAM role names if previous ones were recent
 
 ## Related content
 

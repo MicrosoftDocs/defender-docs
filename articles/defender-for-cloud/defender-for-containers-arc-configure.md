@@ -394,9 +394,9 @@ ConfigurationChange
 
 ## Troubleshooting configuration
 
-If configuration changes aren't taking effect:
+If configuration changes don't take effect, try the following steps:
 
-1. Verify ConfigMap is applied:
+1. Verify you applied the ConfigMap:
 
    ```bash
    kubectl get configmap -n mdc microsoft-defender-config -o yaml

@@ -10,11 +10,11 @@ ms.date: 06/04/2025
 This article explains how to disable and remove Defender for Containers from your GCP GKE environment.
 
 > [!IMPORTANT]
-> Removing Defender for Containers eliminates security protection for your GKE clusters. Ensure you have alternative security measures in place before proceeding.
+> Removing Defender for Containers eliminates security protection for your GKE clusters. Make sure you have alternative security measures in place before you proceed.
 
-## Remove order
+## Removal order
 
-To properly remove Defender for Containers from GKE:
+To properly remove Defender for Containers from GKE, complete the following steps:
 
 1. Remove Defender sensor from clusters
 1. Disconnect clusters from Azure Arc
@@ -23,11 +23,11 @@ To properly remove Defender for Containers from GKE:
 1. Clean up remaining resources
 1. Verify removal
 
-## Disable Defender for Containers plan
+## Disable Defender for Containers
 
 ### Using Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your GCP connector.
 1. Select **Settings**.
 1. Toggle **Containers** to **Off**.
@@ -146,7 +146,7 @@ gcloud container clusters update CLUSTER_NAME \
 
 ### Remove Binary Authorization policies
 
-If Binary Authorization was configured:
+If you configured Binary Authorization:
 
 ```bash
 # List attestors
@@ -187,7 +187,7 @@ az policy assignment delete --name <assignment-name>
 
 ### Clean up resource group (optional)
 
-If the resource group was created solely for the GCP connector:
+If you created the resource group only for the GCP connector:
 
 ```azurecli
 # Delete resource group
@@ -232,7 +232,7 @@ gcloud container binauthz attestors list | grep defender
 
 ### Check Azure portal
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Verify the GCP connector is removed or shows Containers as disabled.
 1. Check that no GKE-related recommendations appear.
 1. Verify no GKE clusters in **Inventory**.
@@ -271,7 +271,7 @@ gcloud logging delete "resource.type=k8s_cluster AND resource.labels.cluster_nam
 
 ### Security monitoring gaps
 
-After removing Defender for Containers from your GKE environment, several security capabilities are lost. Runtime threat detection ceases immediately, leaving your clusters vulnerable to active attacks that would have been detected. Container image vulnerability scanning stops for images in GCR and Artifact Registry, meaning new vulnerabilities won't be identified. Security recommendations based on CIS GKE Benchmark and Google's best practices will no longer be generated. Compliance reporting capabilities are eliminated, which may impact your ability to demonstrate adherence to regulatory requirements. The unified view of security posture across your multi-cloud environment is lost.
+When you remove Defender for Containers from your GKE environment, you lose several security capabilities. Runtime threat detection stops right away, leaving your clusters vulnerable to active attacks that would have been detected. Container image vulnerability scanning stops for images in GCR and Artifact Registry, so new vulnerabilities go unnoticed. Security recommendations based on CIS GKE Benchmark and Google's best practices no longer appear. Compliance reporting capabilities disappear, which might affect your ability to show adherence to regulatory requirements. The unified view of security posture across your multi-cloud environment is lost.
 
 ### Alternative security solutions
 
@@ -279,15 +279,15 @@ Consider implementing alternative security measures for your GKE clusters. Googl
 
 ### Maintaining security visibility
 
-Without Defender for Containers, maintain security visibility through alternative means. Enable GKE audit logging and export to Cloud Logging for security analysis. Use Google Cloud Security Command Center for basic security insights. Implement Workload Identity for secure pod authentication. Configure Binary Authorization to control deployments. Set up alerts in Cloud Monitoring for security-relevant events. These native GCP features provide basic security controls while you evaluate comprehensive alternatives.
+Without Defender for Containers, use alternative methods to maintain security visibility. Enable GKE audit logging and export logs to Cloud Logging for security analysis. Use Google Cloud Security Command Center for basic security insights. Implement Workload Identity for secure pod authentication. Configure Binary Authorization to control deployments. Set up alerts in Cloud Monitoring for security-relevant events. These native GCP features provide basic security controls while you evaluate comprehensive alternatives.
 
 ### Compliance and audit considerations
 
-Document the removal date and reason for compliance records. Existing security alerts and vulnerability scan results remain in Microsoft Defender for Cloud for 90 days. Historical data in Log Analytics follows your configured retention policy. Export any required compliance reports before removal. Note that there will be a gap in security monitoring coverage that auditors may question. Consider implementing compensating controls to maintain compliance with relevant standards.
+Document the removal date and reason for compliance records. Existing security alerts and vulnerability scan results remain in Microsoft Defender for Cloud for 90 days. Historical data in Log Analytics follows your configured retention policy. Export any required compliance reports before removal. Note that a gap in security monitoring coverage exists that auditors might question. Consider implementing compensating controls to maintain compliance with relevant standards.
 
 ## Restore vulnerability scanning to GCP defaults
 
-If you want to continue using GCP's native vulnerability scanning:
+To continue using GCP's native vulnerability scanning:
 
 ```bash
 # Re-enable GCP vulnerability scanning
@@ -311,7 +311,7 @@ To re-enable Defender for Containers in the future:
 1. Reconnect clusters to Azure Arc
 1. Redeploy the Defender sensor
 
-All security features will be restored, though historical data during the disabled period will be missing.
+All security features are restored, though historical data during the disabled period is missing.
 
 ## Troubleshooting removal
 

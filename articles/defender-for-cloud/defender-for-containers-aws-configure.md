@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Configure Defender for Containers on AWS
 
-After deploying Defender for Containers on your EKS clusters, you can configure various settings to customize the security coverage according to your needs.
+After deploying Defender for Containers on your EKS clusters, configure various settings to customize the security coverage to meet your needs.
 
 ## Configuration areas
 
@@ -15,7 +15,7 @@ Jump to the configuration you need:
 
 ### Core settings
 
-- [Enable/disable plan components](#configure-plan-components)
+- [Enable or disable plan components](#configure-plan-components)
 - [Custom Log Analytics workspace](#configure-custom-log-analytics-workspace)
 - [Data collection settings](#configure-data-collection-settings)
 
@@ -39,13 +39,13 @@ Jump to the configuration you need:
 
 You can enable or disable specific Defender for Containers components:
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select your AWS connector.
 
 1. Select **Settings** for the Containers plan.
 
-1. Toggle components on or off:
+1. Turn components on or off:
    - **Agentless discovery for Kubernetes**
    - **Agentless container vulnerability assessment**
    - **Defender DaemonSet**
@@ -61,14 +61,14 @@ By default, Defender for Containers uses an automatically created workspace. To 
 
 ### Using Azure portal
 
-1. Navigate to **Azure Policy**.
+1. Go to **Azure Policy**.
 
 1. Search for "Configure Arc-enabled Kubernetes clusters to use Defender's sensor with custom workspace".
 
 1. Select **Assign**.
 
-1. Configure the assignment:
-   - **Scope**: Select your subscription or resource group
+1. Set up the assignment:
+   - **Scope**: Choose your subscription or resource group
    - **Parameters**: Enter your custom workspace resource ID
    - **Remediation**: Create a remediation task
 
@@ -108,13 +108,13 @@ az k8s-extension update \
 
 ### Adjust collection frequency
 
-Modify the data collection interval for performance optimization:
+Change the data collection interval to optimize performance:
 
 ```bash
 kubectl edit configmap -n mdc azuredefender-config
 ```
 
-Add or modify:
+Add or change values:
 
 ```yaml
 data:
@@ -124,13 +124,13 @@ data:
 
 ### Configure audit log collection
 
-For comprehensive security monitoring, ensure audit logs are properly configured:
+To monitor security thoroughly, make sure audit logs are correctly set up:
 
-1. In AWS Console, navigate to your EKS cluster.
+1. In AWS Console, go to your EKS cluster.
 
 1. Select the **Logging** tab.
 
-1. Enable these log types:
+1. Turn on these log types:
    - **API server**: API requests and responses
    - **Audit**: Detailed audit trail
    - **Authenticator**: Authentication decisions
@@ -150,14 +150,14 @@ kubectl annotate namespace <namespace-name> \
 
 ### ECR scanning settings
 
-1. Navigate to your AWS connector in **Environment settings**.
+1. Go to your AWS connector in **Environment settings**.
 
 1. Select **Container registries** configuration.
 
-1. Configure scanning options:
-   - **Scan frequency**: How often to rescan images
-   - **Scan on push**: Enable/disable immediate scanning
-   - **Vulnerability threshold**: Set severity levels
+1. Set up the scanning options:
+   - **Scan frequency**: Choose how often to rescan images.
+   - **Scan on push**: Turn immediate scanning on or off.
+   - **Vulnerability threshold**: Set the severity levels.
 
 ### Configure scanning exclusions
 
@@ -174,18 +174,18 @@ aws ecr put-image-scanning-configuration \
 
 ### Customize alert rules
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select **Email notifications**.
 
-1. Configure:
-   - Email recipients for different alert severities
-   - Alert aggregation settings
-   - Notification frequency
+1. Set up:
+   - Email recipients for different alert severities.
+   - Alert aggregation settings.
+   - Notification frequency.
 
 ### Create custom alert rules
 
-Using Azure Monitor:
+Use Azure Monitor:
 
 ```azurecli
 # Create custom alert for suspicious pod creation
@@ -202,7 +202,7 @@ az monitor activity-log alert create \
 
 To suppress specific alerts:
 
-1. Navigate to **Security alerts**.
+1. Go to **Security alerts**.
 
 1. Select an alert type to suppress.
 
@@ -217,7 +217,7 @@ To suppress specific alerts:
 
 ### Enable regulatory standards
 
-1. Navigate to **Regulatory compliance**.
+1. Go to **Regulatory compliance**.
 
 1. Select **Manage compliance policies**.
 
@@ -284,7 +284,7 @@ For clusters without direct internet access:
    - Azure Monitor
    - Azure Arc services
 
-2. Configure Defender to use private endpoints:
+1. Configure Defender to use private endpoints:
 
 ```bash
 kubectl edit configmap -n mdc azuredefender-config
@@ -322,13 +322,13 @@ resources:
 
 ### Configure data retention
 
-1. Navigate to your Log Analytics workspace.
+1. Go to your Log Analytics workspace.
 
 1. Select **Usage and estimated costs**.
 
 1. Select **Data retention**.
 
-1. Set retention period (default is 30 days, can extend to 730 days).
+1. Set the retention period (default is 30 days, can extend to 730 days).
 
 ## Integration settings
 
@@ -336,7 +336,7 @@ resources:
 
 Export security alerts to your SIEM:
 
-1. Navigate to **Continuous export**.
+1. Go to **Continuous export**.
 
 1. Configure export to:
    - Event Hub (for real-time streaming)
@@ -385,11 +385,11 @@ az monitor activity-log alert create \
 
 ## Best practices
 
-1. **Regular reviews**: Review configuration monthly
-2. **Test changes**: Test configuration changes in non-production first
-3. **Document settings**: Maintain documentation of custom configurations
-4. **Monitor impact**: Watch for performance impact after changes
-5. **Backup settings**: Export configurations before major changes
+1. **Regular reviews**: Review configuration monthly.
+1. **Test changes**: Test configuration changes in non-production first.
+1. **Document settings**: Maintain documentation of custom configurations.
+1. **Monitor impact**: Watch for performance impact after changes.
+1. **Backup settings**: Export configurations before major changes.
 
 ## Related content
 

@@ -5,15 +5,15 @@ ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Deploy specific Defender for Containers components on Arc-enabled Kubernetes via portal
+# Deploy specific Defender for Containers components on Arc-enabled Kubernetes clusters via the portal
 
-This article explains how to deploy specific Defender for Containers components on your Arc-enabled Kubernetes clusters when you already have the plan enabled but need to add or fix individual components.
+This article explains how to deploy specific Defender for Containers components on your Arc-enabled Kubernetes clusters when you already enabled the plan but need to add or fix individual components.
 
 ## When to use this guide
 
 Use this guide if you:
 
-- Already have Defender for Containers enabled but some components are missing
+- Already enabled Defender for Containers but some components are missing
 - Want to deploy to specific Arc-enabled clusters only
 - Need to troubleshoot failed component deployments
 - Have different security requirements for different clusters
@@ -30,10 +30,10 @@ If you're setting up Defender for Containers for the first time, see [Enable all
 
 ## Check component status
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Select your subscription.
-3. Under **Defender plans**, verify **Containers** shows as **On**.
-4. Check Arc clusters:
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select your subscription.
+1. Under **Defender plans**, verify **Containers** shows as **On**.
+1. Check Arc clusters:
    - Go to **Inventory** > **Containers**
    - Filter by **Environment: Azure Arc**
    - Review protection status for each cluster
@@ -43,14 +43,14 @@ If you're setting up Defender for Containers for the first time, see [Enable all
 ### Deploy Defender extension to specific clusters
 
 1. Go to **Recommendations**.
-2. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
-3. Select the recommendation.
-4. Filter and select specific clusters:
+1. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
+1. Select the recommendation.
+1. Filter and select specific clusters:
    - By name
    - By resource group
    - By tags
    - By distribution (Tanzu, Rancher, etc.)
-5. Select **Fix**.
+1. Select **Fix**.
 
 ### Deploy the Defender sensor
 
@@ -59,26 +59,26 @@ The Defender sensor is essential for runtime threat detection. Deploy it to all 
 #### Deploy to specific Arc-enabled clusters
 
 1. Go to **Recommendations**.
-2. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
-3. Select the recommendation.
-4. Filter and select specific clusters:
+1. Search for "Arc-enabled Kubernetes clusters should have Microsoft Defender's extension installed".
+1. Select the recommendation.
+1. Filter and select specific clusters:
    - By name
    - By resource group
    - By tags
    - By distribution (Tanzu, Rancher, etc.)
-5. Select **Fix**.
+1. Select **Fix**.
 
 #### Deploy via Arc portal
 
 1. Navigate to your Arc-enabled Kubernetes cluster.
-2. Select **Extensions** under **Settings**.
-3. Select **+ Add**.
-4. Search for "Microsoft Defender".
-5. Configure:
+1. Select **Extensions** under **Settings**.
+1. Select **+ Add**.
+1. Search for "Microsoft Defender".
+1. Configure:
    - Log Analytics workspace
    - Audit log path (distribution-specific)
    - Registry credentials (if needed)
-6. Select **Create**.
+1. Select **Create**.
 
 #### Verify sensor deployment
 
@@ -95,34 +95,34 @@ kubectl logs -n mdc -l app=microsoft-defender
 
 ### Deploy Azure Policy extension (Optional)
 
-For clusters requiring policy enforcement:
+For clusters requiring policy enforcement, use the following steps:
 
-1. Navigate to the Arc-enabled Kubernetes cluster.
-2. Select **Extensions** under **Settings**.
-3. Select **+ Add**.
-4. Search for "Azure Policy".
-5. Configure and install.
+1. Go to the Arc-enabled Kubernetes cluster.
+1. Select **Extensions** under **Settings**.
+1. Select **+ Add**.
+1. Search for "Azure Policy".
+1. Configure and install the extension.
 
 ### Manual extension deployment
 
-For specific configurations:
+For specific configurations, use the following steps:
 
-1. Navigate to your Arc-enabled cluster.
-2. Select **Extensions** > **+ Add**.
-3. Select **Microsoft Defender**.
-4. Configure:
+1. Go to your Arc-enabled cluster.
+1. Select **Extensions** > **+ Add**.
+1. Select **Microsoft Defender**.
+1. Configure the settings:
    - Log Analytics workspace
    - Audit log path (distribution-specific)
    - Registry credentials (if needed)
-5. Select **Create**.
+1. Select **Create**.
 
 ## Configure by cluster distribution
 
 ### Rancher clusters
 
-For Rancher RKE/RKE2:
+For Rancher RKE and RKE2 clusters:
 
-1. Configure audit log path:
+1. Configure the audit log path:
    - RKE: `/var/log/kubernetes/audit.log`
    - RKE2: `/var/log/kube-audit/audit.log`
 
@@ -130,17 +130,17 @@ For Rancher RKE/RKE2:
 
 For Tanzu clusters:
 
-1. Ensure audit logging is enabled
-2. Set appropriate PSP/PSA policies
-3. Configure network policies if required
+1. Ensure audit logging is enabled.
+1. Set appropriate PSP or PSA policies.
+1. Configure network policies if required.
 
 ## Deploy by environment type
 
 ### On-premises clusters
 
-Additional considerations:
+Consider the following items:
 
-1. **Private registries**: Configure authentication
+1. **Private registries**: Configure authentication.
 
    ```bash
    kubectl create secret docker-registry regcred \
@@ -150,8 +150,8 @@ Additional considerations:
      --docker-password=<password>
    ```
 
-2. **Proxy configuration**: If using proxy
-3. **Air-gapped**: Use local image repository
+1. **Proxy configuration**: If using proxy.
+1. **Air-gapped**: Use local image repository.
 
 ### Edge locations
 
@@ -202,11 +202,11 @@ data:
 ### Check extension status
 
 1. In Azure portal:
-   - Navigate to Arc-enabled cluster
+   - Go to Arc-enabled cluster
    - Select **Extensions**
    - Verify "Microsoft Defender" shows as **Installed**
 
-2. Via Azure CLI:
+1. With Azure CLI:
 
    ```azurecli
    az k8s-extension show \
@@ -241,7 +241,7 @@ kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://logi
      --resource-group <resource-group>
    ```
 
-2. **Review prerequisites**:
+1. **Review prerequisites**:
    - Supported Kubernetes version
    - Arc agents healthy
    - Network connectivity
@@ -254,7 +254,7 @@ kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://logi
    kubectl describe pods -n mdc
    ```
 
-2. Common issues:
+1. Common issues:
    - **ImagePullBackOff**: Registry access issues
    - **CrashLoopBackOff**: Configuration problems
    - **Pending**: Resource constraints
@@ -262,9 +262,9 @@ kubectl exec -n mdc deploy/microsoft-defender-publisher -- wget -O- https://logi
 ### No security alerts
 
 1. Verify audit logs are accessible
-2. Check log path configuration
-3. Ensure proper RBAC permissions
-4. Test with sample alert
+1. Check log path configuration
+1. Ensure proper RBAC permissions
+1. Test with sample alert
 
 ## Advanced configuration
 
@@ -282,12 +282,12 @@ resources:
 
 ### Multi-cluster deployment
 
-For deploying to multiple clusters:
+To deploy to multiple clusters, use the following approaches:
 
-1. Use Azure Policy for at-scale deployment
-2. Create custom initiatives
-3. Use tags for targeting
-4. Automate with scripts
+1. Use Azure Policy for at-scale deployment.
+1. Create custom initiatives.
+1. Use tags for targeting.
+1. Automate with scripts.
 
 ## Next steps
 

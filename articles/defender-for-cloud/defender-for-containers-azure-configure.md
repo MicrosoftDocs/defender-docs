@@ -62,17 +62,17 @@ kubectl apply -f defender-config.yaml
 
 Configure detection sensitivity through Azure Policy:
 
-1. Navigate to **Azure Policy** > **Definitions**.
-2. Search for "Configure Defender for Containers".
-3. Create an assignment with your preferred settings.
+1. Go to **Azure Policy** > **Definitions**.
+1. Search for "Configure Defender for Containers".
+1. Create an assignment with your preferred settings.
 
 ## Configure vulnerability scanning
 
 ### Set scanning frequency for ACR
 
-1. Navigate to your Azure Container Registry.
-2. Select **Security** > **Defender for Cloud**.
-3. Configure scanning settings:
+1. Go to your Azure Container Registry.
+1. Select **Security** > **Defender for Cloud**.
+1. Configure scanning settings:
    - **Scan on push**: Enabled (recommended)
    - **Recurring scans**: Weekly (default) or Daily
 
@@ -105,10 +105,10 @@ Configure which vulnerabilities trigger alerts:
 
 ### Enable custom Azure Policy initiatives
 
-1. Navigate to **Azure Policy** > **Definitions**.
-2. Create a new initiative definition.
-3. Add Kubernetes policies relevant to your security requirements.
-4. Assign the initiative to your AKS clusters.
+1. Go to **Azure Policy** > **Definitions**.
+1. Create a new initiative definition.
+1. Add Kubernetes policies that match your security requirements.
+1. Assign the initiative to your AKS clusters.
 
 ### Configure admission control
 
@@ -139,10 +139,10 @@ metadata:
 
 ### Set up email notifications
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Select your subscription.
-3. Select **Email notifications**.
-4. Configure:
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select your subscription.
+1. Select **Email notifications**.
+1. Set up:
    - Email recipients
    - Alert severity levels
    - Notification frequency
@@ -171,9 +171,9 @@ ContainerLog
 
 ### Adjust log retention
 
-1. Navigate to your Log Analytics workspace.
-2. Select **Usage and estimated costs**.
-3. Configure retention period (default: 30 days).
+1. Go to your Log Analytics workspace.
+1. Select **Usage and estimated costs**.
+1. Set the retention period (default: 30 days).
 
 ### Configure diagnostic settings
 
@@ -245,17 +245,17 @@ data:
 
 ### Set up adaptive application controls
 
-1. Navigate to **Microsoft Defender for Cloud** > **Workload protections**.
-2. Select **Adaptive application controls**.
-3. Configure allowed applications per cluster.
+1. Go to **Microsoft Defender for Cloud** > **Workload protections**.
+1. Select **Adaptive application controls**.
+1. Configure allowed applications per cluster.
 
 ## Configure compliance scanning
 
 ### Enable CIS benchmark scanning
 
-1. Navigate to **Microsoft Defender for Cloud** > **Regulatory compliance**.
-2. Add the **CIS Kubernetes Benchmark** standard.
-3. Configure assessment frequency.
+1. Go to **Microsoft Defender for Cloud** > **Regulatory compliance**.
+1. Add the **CIS Kubernetes Benchmark** standard.
+1. Set the assessment frequency.
 
 ### Customize compliance policies
 
@@ -316,12 +316,12 @@ spec:
 
 ### Optimize for large clusters
 
-For clusters with > 100 nodes:
+For clusters with more than 100 nodes:
 
 1. Increase Defender sensor resources
-2. Configure pod priority classes
-3. Use node selectors for dedicated security nodes
-4. Implement resource quotas
+1. Configure pod priority classes
+1. Use node selectors for dedicated security nodes
+1. Implement resource quotas
 
 ## Integration settings
 
@@ -339,8 +339,8 @@ az security setting update \
 Configure log forwarding to external SIEM:
 
 1. Create Event Hub for streaming
-2. Configure diagnostic settings to stream
-3. Set up SIEM connector
+1. Configure diagnostic settings to stream
+1. Set up SIEM connector
 
 ## Related content
 

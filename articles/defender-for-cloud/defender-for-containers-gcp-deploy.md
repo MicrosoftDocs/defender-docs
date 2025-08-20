@@ -7,7 +7,7 @@ ms.date: 06/04/2025
 
 # Deploy Defender for Containers on GCP (GKE) programmatically
 
-This article describes how to enable Microsoft Defender for Containers on Google Kubernetes Engine (GKE) clusters using programmatic methods.
+This article describes how to enable Microsoft Defender for Containers on Google Kubernetes Engine (GKE) clusters by using programmatic methods.
 
 > [!TIP]
 > For Azure portal deployment instructions, see [Deploy Defender for Containers on GCP (GKE) using Azure portal](defender-for-containers-gcp-deploy-portal.md).
@@ -24,7 +24,7 @@ Additionally for GCP:
 
 ## Create a GCP connector
 
-### Using Azure CLI
+# [Azure CLI](#tab/azure-cli)
 
 ```azurecli
 # Create resource group for connector
@@ -45,7 +45,7 @@ az security connector create \
     }]"
 ```
 
-### Using REST API
+# [REST API](#tab/rest-api)
 
 ```bash
 curl -X PUT \
@@ -64,6 +64,8 @@ curl -X PUT \
     }
   }'
 ```
+
+---
 
 ## Configure GCP permissions
 
@@ -124,7 +126,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 
 ## Enable Defender for Containers
 
-### Using Azure CLI
+# [Azure CLI](#tab/azure-cli-enable)
 
 ```azurecli
 # Enable Defender plan
@@ -151,6 +153,24 @@ az security connector update \
         'policyAgentAutoProvisioningFlag': true
     }]"
 ```
+
+# [REST API](#tab/rest-api-enable)
+
+```bash
+# Enable Defender plan
+curl -X PUT \
+  "https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "pricingTier": "Standard",
+      "subPlan": "DefenderForContainersGke"
+    }
+  }'
+```
+
+---
 
 ## Connect GKE clusters to Azure Arc
 
@@ -197,7 +217,7 @@ done <<< "$clusters"
 
 ## Deploy the Defender sensor
 
-### Manual deployment
+# [Manual deployment](#tab/manual)
 
 ```bash
 # Download deployment YAML
@@ -211,7 +231,7 @@ sed -i 's/WORKSPACE_KEY/<your-workspace-key>/g' defender-sensor-gke.yaml
 kubectl apply -f defender-sensor-gke.yaml
 ```
 
-### Using Helm
+# [Helm](#tab/helm)
 
 ```bash
 # Add Defender Helm repository
@@ -228,9 +248,11 @@ helm install microsoft-defender-sensor defender/microsoft-defender-sensor \
     --set gke.enabled=true
 ```
 
+---
+
 ## Infrastructure as Code examples
 
-### Terraform
+# [Terraform](#tab/terraform)
 
 ```hcl
 # Configure Defender for Containers on GCP
@@ -258,7 +280,7 @@ resource "azurerm_security_center_connector" "gcp" {
 }
 ```
 
-### ARM Template
+# [ARM Template](#tab/arm-template)
 
 ```json
 {
@@ -293,6 +315,8 @@ resource "azurerm_security_center_connector" "gcp" {
   ]
 }
 ```
+
+---
 
 ## Configure GKE Binary Authorization
 

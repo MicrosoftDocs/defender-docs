@@ -7,13 +7,13 @@ ms.date: 06/04/2025
 
 # Deploy specific Defender for Containers components on Azure (AKS) via portal
 
-This article explains how to deploy specific Defender for Containers components on your AKS clusters when you already have the plan enabled but need to add or fix individual components.
+This article explains how to deploy specific Defender for Containers components on your AKS clusters when you already enabled the plan but need to add or fix individual components.
 
 ## When to use this guide
 
 Use this guide if you:
 
-- Already have Defender for Containers enabled but some components are missing
+- Already enabled Defender for Containers but some components are missing
 - Want to deploy to specific clusters only
 - Need to troubleshoot failed component deployments
 - Want to configure custom settings for specific clusters
@@ -29,11 +29,11 @@ If you're setting up Defender for Containers for the first time, see [Enable all
 
 ## Check component status
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
-2. Select your subscription.
-3. Select **Defender plans**.
-4. Next to **Containers**, select **Settings**.
-5. Review component status:
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select your subscription.
+1. Select **Defender plans**.
+1. Next to **Containers**, select **Settings**.
+1. Review component status:
    - ✅ Enabled and deployed
    - ⚠️ Enabled but not deployed to all clusters
    - ❌ Disabled or failed
@@ -45,32 +45,32 @@ If you're setting up Defender for Containers for the first time, see [Enable all
 If the Defender sensor is missing from some clusters:
 
 1. Go to **Recommendations**.
-2. Search for "Azure Kubernetes Service clusters should have Defender profile enabled".
-3. Select the recommendation.
-4. Select specific clusters that need the sensor.
-5. Select **Fix**.
+1. Search for "Azure Kubernetes Service clusters should have Defender profile enabled".
+1. Select the recommendation.
+1. Select specific clusters that need the sensor.
+1. Select **Fix**.
 
 ### Enable Azure Policy Add-on
 
 To deploy Azure Policy to specific clusters:
 
-1. Navigate to the AKS cluster in Azure portal.
-2. Select **Policies** under **Settings**.
-3. Select **Enable Azure Policy**.
-4. Configure policy settings:
-   - Enforcement mode: Enforce/Audit
+1. Go to the AKS cluster in the Azure portal.
+1. Select **Policies** under **Settings**.
+1. Select **Enable Azure Policy**.
+1. Configure the policy settings:
+   - Enforcement mode: Enforce or Audit
    - Policy initiatives to assign
 
 ### Configure vulnerability assessment
 
 For specific registries:
 
-1. Navigate to **Environment settings** > Subscription > **Containers**.
-2. Ensure **Container registries vulnerability assessment** is On.
-3. To configure specific registries:
-   - Navigate to your container registry
+1. Go to **Environment settings** > Subscription > **Containers**.
+1. Make sure **Container registries vulnerability assessment** is On.
+1. To configure specific registries:
+   - Go to your container registry
    - Select **Security** > **Defender for Cloud**
-   - Configure scan settings
+   - Configure the scan settings
 
 ## Configure component settings
 
@@ -78,21 +78,21 @@ For specific registries:
 
 To use a custom workspace for specific clusters:
 
-1. Navigate to the AKS cluster.
-2. Select **Monitoring** > **Diagnostic settings**.
-3. Add or edit diagnostic setting.
-4. Select your custom Log Analytics workspace.
-5. Enable required log categories:
-   - kube-audit-admin
-   - guard
+1. Go to the AKS cluster.
+1. Select **Monitoring** > **Diagnostic settings**.
+1. Add or edit a diagnostic setting.
+1. Select your custom Log Analytics workspace.
+1. Enable the required log categories:
+   - `kube-audit-admin`
+   - `guard`
 
 ### Configure auto-provisioning
 
 To control which clusters get components:
 
-1. Navigate to **Environment settings** > **Auto provisioning**.
-2. For **Container sensor**, select **Edit configuration**.
-3. Configure:
+1. Go to **Environment settings** > **Auto provisioning**.
+1. For **Container sensor**, select **Edit configuration**.
+1. Configure:
    - Inclusion tags: `Environment:Production`
    - Exclusion tags: `DefenderExclude:True`
 
@@ -102,9 +102,9 @@ To control which clusters get components:
 
 Deploy to clusters in specific resource groups:
 
-1. Use Azure Policy to target resource groups
-2. Create custom initiatives scoped to resource groups
-3. Apply Defender components via policy
+1. Use Azure Policy to target resource groups.
+1. Create custom initiatives scoped to resource groups.
+1. Apply Defender components via policy.
 
 ### By tags
 
@@ -144,22 +144,22 @@ Deploy based on cluster tags:
 
 Deploy to clusters in specific regions:
 
-1. Filter recommendations by location
-2. Use Azure Policy with location conditions
-3. Apply fixes selectively by region
+1. Filter recommendations by location.
+1. Use Azure Policy with location conditions.
+1. Apply fixes selectively by region.
 
 ## Exclude clusters from protection
 
-To exclude specific clusters:
+To exclude specific clusters, use one of the following methods:
 
 1. **Using tags**:
-   - Add tag `DefenderForContainersExclude: True` to the AKS cluster
+   - Add the tag `DefenderForContainersExclude: True` to the AKS cluster.
 
-2. **Using policy exemptions**:
-   - Create policy exemption for specific clusters
-   - Scope to resource or resource group
+1. **Using policy exemptions**:
+   - Create a policy exemption for specific clusters.
+   - Set the scope to a resource or resource group.
 
-3. **Disable monitoring**:
+1. **Disable monitoring**:
 
    ```azurecli
    az aks update \
@@ -172,9 +172,9 @@ To exclude specific clusters:
 
 ### Portal verification
 
-1. Check **Inventory** > **Containers** for protected clusters
-2. Review **Recommendations** - should show "Healthy"
-3. Check **Security alerts** for activity
+1. Check **Inventory** > **Containers** for protected clusters.
+1. Review **Recommendations** - it should show "Healthy".
+1. Check **Security alerts** for activity.
 
 ### Cluster verification
 
@@ -193,29 +193,29 @@ kubectl get pods -n kube-system -l component=microsoft-defender
 
 ### Component deployment fails
 
-1. **Check AKS version**: Ensure cluster is supported version
-2. **Review permissions**: Verify managed identity has required roles
-3. **Check quotas**: Ensure sufficient resources in cluster
-4. **Network policies**: Verify egress to required endpoints
+1. **Check AKS version**: Ensure the cluster uses a supported version.
+1. **Review permissions**: Verify the managed identity has the required roles.
+1. **Check quotas**: Ensure sufficient resources in the cluster.
+1. **Network policies**: Verify egress to required endpoints.
 
 ### Sensor unhealthy
 
-1. Check pod logs:
+1. Check pod logs.
 
    ```bash
    kubectl logs -n kube-system -l component=microsoft-defender
    ```
 
-2. Verify connectivity:
-   - *.ods.opinsights.azure.com
-   - *.oms.opinsights.azure.com
+1. Verify connectivity to:
+   - `*.ods.opinsights.azure.com`
+   - `*.oms.opinsights.azure.com`
 
 ### Policy not applying
 
-1. Check Policy Add-on status
-2. Verify policy assignments
-3. Review policy compliance results
-4. Check for policy exemptions
+1. Check Policy Add-on status.
+1. Verify policy assignments.
+1. Review policy compliance results.
+1. Check for policy exemptions.
 
 ## Deploy the Defender sensor
 
@@ -223,7 +223,7 @@ The Defender sensor is essential for runtime threat detection. Deploy it to all 
 
 ### Deploy to all AKS clusters
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Search for "Azure Kubernetes Service clusters should have Defender profile enabled".
 
@@ -233,9 +233,9 @@ The Defender sensor is essential for runtime threat detection. Deploy it to all 
 
 1. Select **Fix** to enable the Defender profile.
 
-### Deploy to specific clusters
+### Deploy sensor to specific clusters
 
-1. Navigate to your AKS cluster.
+1. Go to your AKS cluster.
 
 1. Under **Settings**, select **Defender**.
 
@@ -248,7 +248,7 @@ The Defender sensor is essential for runtime threat detection. Deploy it to all 
 
 1. Select **Save**.
 
-### Verify deployment
+### Verify sensor deployment
 
 ```bash
 # Check Defender profile
@@ -260,11 +260,11 @@ kubectl get pods -n kube-system -l app=microsoft-defender
 
 ## Deploy Azure Policy for Kubernetes
 
-If you need security recommendations and compliance:
+If you need security recommendations and compliance information, follow these steps:
 
-1. Ensure the Azure Policy Add-on is enabled for your AKS cluster.
+1. Make sure the Azure Policy Add-on is enabled for your AKS cluster.
 
-1. Navigate to **Recommendations** in Microsoft Defender for Cloud.
+1. Go to **Recommendations** in Microsoft Defender for Cloud.
 
 1. Search for "Kubernetes clusters should have Azure Policy enabled".
 
@@ -286,7 +286,7 @@ az policy state list --policy <policy-definition-name> --scope /subscriptions/<s
 
 ## Next steps
 
-- [Verify deployment](defender-for-containers-azure-verify.md)
+- [Verify complete deployment](defender-for-containers-azure-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-azure-configure.md)
 - [Enable all components](defender-for-containers-azure-enable-all-portal.md) - For fresh installations
 - [Deploy using Helm instead of portal](deploy-helm.md)
