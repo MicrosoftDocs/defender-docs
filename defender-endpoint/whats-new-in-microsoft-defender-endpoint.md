@@ -7,7 +7,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 08/20/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -34,7 +34,13 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
 - [Preview features](/defender-xdr/preview)
 
-## July 2025
+## August 2025
+
+**Microsoft Defender for Endpoint on macOS**
+
+- (Preview) **Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS**: This feature enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+
+- ## July 2025
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
