@@ -1,7 +1,8 @@
 ---
 title: Endpoint security policies in multitenant management
 description: Learn how to manage endpoint security policies for Defender XDR multi-tenant management in the Microsoft Defender portal.
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
@@ -74,6 +75,6 @@ Endpoint security policies that are distributed across tenants with the multiten
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
-The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Tenant Groups** sections indicate the distribution profile recipients of the policy. For more information, see [Content distribution in multitenant management](mto-distribution-profiles.md).
+The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Distribution profiles** columns indicate the distribution profile recipients of the policy. For more information, see [Content distribution in multitenant management](mto-distribution-profiles.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

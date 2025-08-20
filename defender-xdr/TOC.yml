@@ -239,6 +239,8 @@
             href: advanced-hunting-cloudauditevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
+          - name: CloudStorageAggregatedEvents
+            href: advanced-hunting-cloudstorageaggregatedevents-table.md
           - name: DataSecurityBehaviors
             href: advanced-hunting-datasecuritybehaviors-table.md  
           - name: DataSecurityEvents
@@ -313,6 +315,8 @@
             href: advanced-hunting-identityaccountinfo-table.md
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityEvents
+            href: advanced-hunting-identityevents-table.md
           - name: IdentityInfo
             href: advanced-hunting-identityinfo-table.md
           - name: IdentityLogonEvents
@@ -437,6 +441,8 @@
           href: advanced-hunting-security-copilot.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
+        - name: Responsible AI FAQs
+          href: responsible-ai-copilot-defender.md        
         - name: Security Copilot agents in Microsoft Defender
           items:
           - name: Overview
