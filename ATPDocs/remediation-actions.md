@@ -39,7 +39,7 @@ The following Defender for Identity actions can be performed on Identities:
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |Disable user                 | This temporarily prevents a user from signing in. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network. | Active Directory, Entra ID and Okta
 |Enable User              | Enable a user to sign in. | Active Directory, Entra ID and Okta
-|Revoke All Users' sessions       | Revoke a user's active sessions| Entra ID and Okta
+|Revoke All Users' sessions       | Revoke a user's active sessions. | Entra ID and Okta
 | Reset user password| This prompts the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts| Active Directory
 |Deactivate User in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
 | Set User Risk to High/Medium/Low |Set one user risk scoring to one of the defined levels. This action will only be available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
