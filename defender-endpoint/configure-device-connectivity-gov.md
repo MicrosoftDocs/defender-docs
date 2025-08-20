@@ -1,9 +1,9 @@
 ---
-title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
-description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
-author: emmwalshh
-ms.author: ewalsh 
-manager: deniseb 
+title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint government customers 
+description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint as a government customer.         
+author: limwainstein
+ms.author: lwainstein
+manager: orspodek 
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 06/27/2025
+ms.date: 08/20/2025
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
