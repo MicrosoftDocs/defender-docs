@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 08/05/2025
+ms.date: 08/13/2025
 ---
 
 # Understand the advanced hunting schema
@@ -104,9 +104,9 @@ The following reference lists all the tables in the schema. Each table name link
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |
 | **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)** | Authentication events on Active Directory and Microsoft online services |
 | **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)** | Queries for Active Directory objects, such as users, groups, devices, and domains |
-| **[MessageEvents](advanced-hunting-messageevents-table.md)** (Preview) | Messages sent and received within your organization at the time of delivery |
-| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)** (Preview) | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
-| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** (Preview) | URLs sent through Microsoft Teams messages in your organization |
+| **[MessageEvents](advanced-hunting-messageevents-table.md)** | Messages sent and received within your organization at the time of delivery |
+| **[MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md)**  | Security events that occurred after the delivery of a Microsoft Teams message in your organization |
+| **[MessageUrlInfo](advanced-hunting-messageurlinfo-table.md)** | URLs sent through Microsoft Teams messages in your organization |
 | **[OAuthAppInfo](advanced-hunting-oauthappinfo-table.md)** (Preview) | Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability |
 | **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** | Safe Links clicks from email messages, Teams, and Office 365 apps |
 
@@ -117,4 +117,5 @@ The following reference lists all the tables in the schema. Each table name link
 - [Use shared queries](advanced-hunting-shared-queries.md)
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
