@@ -2,7 +2,7 @@
 title: Improve regulatory compliance in Microsoft Defender for Cloud
 description: Learn how to improve regulatory compliance in Microsoft Defender for Cloud.
 ms.topic: tutorial
-ms.date: 02/11/2024
+ms.date: 07/15/2025
 ---
 
 # Improve regulatory compliance
@@ -68,7 +68,7 @@ You can use information in the dashboard to investigate issues that might affect
     For more information about how to apply recommendations, see [Implementing security recommendations in Microsoft Defender for Cloud](review-security-recommendations.md).
 
     > [!NOTE]
-    > Assessments run approximately every 12 hours, so you will see the impact on your compliance data only after the next run of the relevant assessment.
+    > Assessments run approximately every 12 hours, so you'll see the impact on your compliance data only after the next run of the relevant assessment.
 
 ## Remediate an automated assessment
 
@@ -132,7 +132,7 @@ The regulatory compliance has automated and manual assessments that might need t
 
  When you download one of these certification reports, you're shown the following privacy notice:
 
- _By downloading this file, you are giving consent to Microsoft to store the current user and the selected subscriptions at the time of download. This data is used in order to notify you in case of changes or updates to the downloaded audit report. This data is used by Microsoft and the audit firms that produce the certification/reports only when notification is required._
+ _By downloading this file, you're giving consent to Microsoft to store the current user and the selected subscriptions at the time of download. This data is used in order to notify you if there are changes or updates to the downloaded audit report. This data is used by Microsoft and the audit firms that produce the certification/reports only when notification is required._
 
 ## Continuously export compliance status
 

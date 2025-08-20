@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 02/20/2025
+ms.date: 08/03/2025
 ---
 
 # Defender for Servers support
@@ -42,19 +42,19 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 | **Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<br/>**21Vianet** |
 |--- | --- | --- | --- |
-| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA | NA |
+| [Microsoft Defender for Endpoint integration](./integration-defender-for-endpoint.md) | GA | GA | GA |
 | [Compliance standards](./regulatory-compliance-dashboard.md)<br/>Compliance standards might differ depending on the cloud type.| GA | GA | GA |
 | [Machine OS misconfiguration](apply-security-baseline.md) | GA | GA | GA |
-| [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | NA | NA |
-| [VM vulnerability scanning - Microsoft Defender for Endpoint sensor](deploy-vulnerability-assessment-defender-vulnerability-management.md) | GA | NA | NA |
+| [VM vulnerability scanning-agentless](concept-agentless-data-collection.md) | GA | GA | GA |
+| [VM vulnerability scanning - Microsoft Defender for Endpoint sensor](deploy-vulnerability-assessment-defender-vulnerability-management.md) | GA | GA | GA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
 | [Docker host hardening](./harden-docker-hosts.md)  | GA | GA | GA |
-| [Agentless secret scanning](secrets-scanning.md) | GA | NA | NA |
-| [Agentless malware scanning](agentless-malware-scanning.md) | GA | NA | NA |
-| [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | NA | NA |
+| [Agentless secret scanning](secrets-scanning.md) | GA | GA | GA |
+| [Agentless malware scanning](agentless-malware-scanning.md) | GA | GA | GA |
+| [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | GA | GA |
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
-| [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | NA | NA |
+| [Kubernetes node protection](kubernetes-nodes-overview.md) | GA | GA | GA |
 
 ## Windows machine support
 

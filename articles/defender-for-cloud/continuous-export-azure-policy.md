@@ -4,7 +4,7 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 07/15/2025
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations with Azure Policy so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ---
 
@@ -49,13 +49,13 @@ To implement these policies:
 
 1. Select **Assign**.
 
-    :::image type="content" source="./media/continuous-export-azure-policy/export-policy-assign.png" alt-text="Screenshot that shows assigning the Azure Policy.":::
+    :::image type="content" source="./media/continuous-export-azure-policy/export-policy-assign.png" alt-text="Screenshot that shows assigning the Azure Policy." lightbox="media/continuous-export-azure-policy/export-policy-assign.png":::
 
 1. Select each tab and set the parameters to meet your requirements:
 
     1. On the **Basics** tab, set the scope for the policy. To use centralized management, assign the policy to the management group that contains the subscriptions that use the continuous export configuration.
 
-    1. On the **Parameters** tab, set the resource group name, location and Event Hub details.
+    1. On the **Parameters** tab, set the resource group name, location, and Event Hubs details.
 
     1. Optionally, to apply this assignment to existing subscriptions, select the **Remediation** tab, and then select the option to create a remediation task.
 

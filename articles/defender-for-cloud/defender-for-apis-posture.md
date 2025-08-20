@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
-ms.date: 11/02/2023
+ms.date: 07/15/2025
 ---
 # Investigate API findings, recommendations, and alerts
 
@@ -28,6 +28,7 @@ This article describes how to investigate API security findings, alerts, and sec
 
      :::image type="content" source="media/defender-for-apis-posture/view-resource.png" alt-text="Screenshot that shows API endpoint details." lightbox="media/defender-for-apis-posture/view-resource.png":::
 
+1. Select **View full details**.
 1. In the **Resource health** page, review the endpoint settings.
 1. In the **Recommendations** tab, review recommendation details and status.
 1. In the **Alerts** tab, review security alerts for the endpoint. Defender for Endpoint monitors API traffic to and from endpoints, to provide runtime protection against suspicious behavior and malicious attacks.
@@ -58,7 +59,7 @@ To see the alert process in action, you can simulate an action that triggers a D
 
 In Defender CSPM, [Cloud Security Graph](concept-attack-path.md) collects data to provide a map of assets and connections across organization, to expose security risks, vulnerabilities, and possible lateral movement paths.
 
-When the Defender CSPM plan is enabled together with Defender for APIs, you can use Cloud Security Explorer to identify, review and analyze API security risks across your organization.
+When the Defender CSPM plan is enabled together with Defender for APIs, you can use Cloud Security Explorer to identify, review, and analyze API security risks across your organization.
 
 1. In the Defender for Cloud portal, select **Cloud Security Explorer**.
 1. In **What would you like to search?** select the **APIs** category.

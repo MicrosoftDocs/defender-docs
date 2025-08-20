@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Defender for SQL on Machines configuration
-description: Troubleshoot configuration issues for SQL Servers on Machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
+description: Troubleshoot configuration issues for SQL Servers on Machines
 ms.date: 04/22/2025
 ms.topic: how-to
 ms.custom: references_regions
@@ -23,35 +23,34 @@ Defender for SQL Server on Machines automatically creates the following resource
 | System Managed Identity (created only if a user-defined managed identity doesn't exist) | Virtual machine/Arc-enabled server hosting the SQL server instance |
 | Defender for SQL extension | The extension is installed on each virtual machine/Arc-enabled server hosting the SQL server instance |
 
-
 When you enable Defender for SQL Server on a subscription or specified SQL Server, it performs the following actions to protect each SQL Server instance:
+
 - Creates a system-managed identity if there's no user-managed identity in the subscription.
 - Installs the Defender for SQL extension on the virtual machine/Arc-enabled server hosting the SQL Server.
 - Impersonates the Windows user running the SQL Server service (default sysadmin role) to access the SQL Server instance.
-
 
 ## Step 2: Ensure that you fulfilled the prerequisites
 
 - **Subscription permissions**: To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions.
 
-- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16). 
+- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16).
 
-- **Supported Resources**: 
-    - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
-    - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+- **Supported Resources**:
+  - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
+  - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 **Communication**: Allow outbound HTTPS traffic over Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
   
 - **Extensions**: Ensure these extensions aren't blocked in your environment. Learn more about [restricting extensions installation on Windows VMs](/azure/virtual-machines/extensions/extensions-rmpolicy-howto-ps).
-    - **Defender for SQL (IaaS and Arc)**
-        - Publisher: Microsoft.Azure.AzureDefenderForSQL
-        - Type: AdvancedThreatProtection.Windows
-    - **SQL IaaS Extension (IaaS)**
-        - Publisher: Microsoft.SqlServer.Management
-        - Type: SqlIaaSAgent
-    - **SQL IaaS Extension (Arc)**
-        - Publisher: Microsoft.AzureData
-        - Type: WindowsAgent.SqlServer
+  - **Defender for SQL (IaaS and Arc)**
+    - Publisher: Microsoft.Azure.AzureDefenderForSQL
+    - Type: AdvancedThreatProtection.Windows
+  - **SQL IaaS Extension (IaaS)**
+    - Publisher: Microsoft.SqlServer.Management
+    - Type: SqlIaaSAgent
+  - **SQL IaaS Extension (Arc)**
+    - Publisher: Microsoft.AzureData
+    - Type: WindowsAgent.SqlServer
 
 - **Supported SQL Server versions** - SQL Server 2012 R2 (11.x) and later versions.
 

@@ -2,7 +2,7 @@
 title: Onboard a management group
 description: Learn how to use a supplied Azure Policy definition to enable Microsoft Defender for Cloud for all the subscriptions in a management group.
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 07/15/2025
 ---
 
 # Enable Defender for Cloud on all subscriptions in a management group
@@ -27,14 +27,14 @@ az provider register --namespace Microsoft.Security --management-group-id …
 
 1. Select **Assign** and ensure you set the scope to the MG level.
 
-    :::image type="content" source="./media/get-started/assign-policy.png" alt-text="Screenshot showing how to assign the definition Enable Defender for Cloud on your subscription.":::
+    :::image type="content" source="./media/get-started/assign-policy.png" alt-text="Screenshot showing how to assign the definition Enable Defender for Cloud on your subscription." lightbox="media/get-started/assign-policy.png":::
 
     > [!TIP]
     > Other than the scope, there are no required parameters.
 
 1. Select **Remediation**, and select **Create a remediation task** to ensure all existing subscriptions that don't have Defender for Cloud enabled will get onboarded.
 
-    :::image type="content" source="./media/get-started/remediation-task.png" alt-text="Screenshot that shows how to create a remediation task for the Azure Policy definition Enable Defender for Cloud on your subscription.":::
+    :::image type="content" source="./media/get-started/remediation-task.png" alt-text="Screenshot that shows how to create a remediation task for the Azure Policy definition Enable Defender for Cloud on your subscription." lightbox="media/get-started/remediation-task.png":::
 
 1. Select **Review + create**.
 

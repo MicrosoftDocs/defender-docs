@@ -1,14 +1,14 @@
 ---
 title: Map container images from code to cloud
 description: Learn how to map your container images from code to cloud.
-ms.date: 11/03/2023
+ms.date: 07/15/2025
 ms.topic: how-to
 ms.custom: ignite-2023
 ---
 
 # Map container images from code to cloud
 
-When a vulnerability is identified in a container image stored in a container registry or running in a Kubernetes cluster, it can be difficult for a security practitioner to trace back to the CI/CD pipeline that first built the container image and identify a developer remediation owner. With DevOps security capabilities in Microsoft Defender Cloud Security Posture Management (CSPM), you can map your cloud-native applications from code to cloud to easily kick off developer remediation workflows and reduce the time to remediation of vulnerabilities in your container images.
+When a vulnerability is identified in a container image, whether it’s stored in a container registry or running in a Kubernetes cluster, security practitioners might struggle to trace it back to the CI/CD pipeline that originally built it. Without that context, it's difficult to identify the developer responsible for fixing the issue. Microsoft Defender Cloud Security Posture Management (CSPM) includes DevOps security capabilities that let you map your cloud-native applications from code to cloud. As a result, you can easily kick off developer remediation workflows and reduce the time it takes to remediate vulnerabilities in your container images.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ When a vulnerability is identified in a container image stored in a container re
 
   - [Microsoft Security DevOps (MSDO) Extension](azure-devops-extension.yml) must be installed on the Azure DevOps organization. 
     
-  - Ensure that the Microsoft Defender for DevOps Extension is shared and installed in all connected Azure DevOps organizations. For newly onboarded connectors, this will be done automatically. This extension automatically injects tasks into all Azure Pipelines to collect data for container mapping. 
+  - Ensure that the Microsoft Defender for DevOps Extension is shared and installed in all connected Azure DevOps organizations. For newly onboarded connectors, this is done automatically. This extension automatically injects tasks into all Azure Pipelines to collect data for container mapping. 
     
   - Must use [YAML Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started) as Classic Pipelines are no longer supported. 
     
@@ -52,7 +52,7 @@ The following is an example of an advanced query that utilizes container image m
   :::image type="content" source="media/container-image-mapping/advanced-mapping-query.png" alt-text="Screenshot that shows basic container mapping results." lightbox="media/container-image-mapping/advanced-mapping-query.png":::
 
 > [!NOTE]
-> If your Azure DevOps organization had the Azure DevOps connector created prior to November 15, 2023, please navigate to **Organization settings** > **Extensions > Shared** and install the container image mapping decorator. If you do not see the extension shared with your organization, fill out the following [form](https://aka.ms/ContainerImageMappingForm).
+> If your Azure DevOps organization had the Azure DevOps connector created prior to November 15, 2023, navigate to **Organization settings** > **Extensions > Shared** and install the container image mapping decorator. If you don't see the extension shared with your organization, fill out the following [form](https://aka.ms/ContainerImageMappingForm).
 
 ## Map your container image from GitHub workflows to the container registry
 

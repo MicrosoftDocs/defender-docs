@@ -2,7 +2,7 @@
 title: Review workload protection in Microsoft Defender for Cloud
 description: Review workload protection in the Workload protections dashboard in Microsoft Defender for Cloud
 ms.topic: how-to
-ms.date: 01/09/2023
+ms.date: 07/15/2025
 ---
 
 # Review workload protection

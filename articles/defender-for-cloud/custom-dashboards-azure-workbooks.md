@@ -4,7 +4,7 @@ description: Learn how to create rich, interactive reports for your Microsoft De
 ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
-ms.date: 05/18/2025
+ms.date: 08/14/2025
 ms.custom: sfi-image-nochange
 ---
 
@@ -23,8 +23,6 @@ For pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/
 ## Prerequisites
 
 **Required roles and permissions**: To save a workbook, you must have at least [Workbook Contributor](/azure/role-based-access-control/built-in-roles#workbook-contributor) permissions for the relevant resource group.
-
-**Cloud availability**: :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds :::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)
 
 <a name="workbooks-gallery-in-microsoft-defender-for-cloud"></a>
 

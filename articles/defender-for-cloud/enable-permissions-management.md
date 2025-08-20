@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable CIEM for better access control and security in your cloud infrastructure.
 ms.topic: how-to
-ms.date: 06/09/2024
+ms.date: 07/15/2025
 #customer intent: As a cloud administrator, I want to learn how to enable permissions (CIEM) in order to effectively manage user access and entitlements in my cloud infrastructure.
 ---
 

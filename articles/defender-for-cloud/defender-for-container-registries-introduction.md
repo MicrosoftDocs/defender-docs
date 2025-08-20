@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for container registries - the benefits and features
 description: Learn about the benefits and features of Microsoft Defender for container registries.
-ms.date: 12/06/2023
+ms.date: 07/15/2025
 ms.topic: overview
 author: dcurwin
 ms.author: dacurwin
@@ -9,7 +9,7 @@ ms.author: dacurwin
 # Introduction to Microsoft Defender for container registries (deprecated)
 
 > [!IMPORTANT]
-> We have started a public preview of Azure Vulnerability Assessment powered by MDVM. For more information see [Vulnerability assessments for Azure with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md).
+> We started a public preview of Azure Vulnerability Assessment powered by MDVM. For more information, see [Vulnerability assessments for Azure with Microsoft Defender Vulnerability Management](agentless-vulnerability-assessment-azure.md).
 
 Azure Container Registry (ACR) is a managed, private Docker registry service that stores and manages your container images for Azure deployments in a central registry. It's based on the open-source Docker Registry 2.0.
 
@@ -42,7 +42,7 @@ Defender for Cloud identifies Azure Resource Manager based ACR registries in you
 
 **Microsoft Defender for container registries** includes a vulnerability scanner to scan the images in your Azure Resource Manager-based Azure Container Registry registries and provide deeper visibility into your images' vulnerabilities.
 
-When issues are found, you'll get notified in the workload protection dashboard. For every vulnerability, Defender for Cloud provides actionable recommendations, along with a severity classification, and guidance for how to remediate the issue. [Learn more](recommendations-reference-container.md) about container recommendations.
+When issues are found, you get notified in the workload protection dashboard. For every vulnerability, Defender for Cloud provides actionable recommendations, along with a severity classification, and guidance for how to remediate the issue. [Learn more](recommendations-reference-container.md) about container recommendations.
 
 Defender for Cloud filters and classifies findings from the scanner. When an image is healthy, Defender for Cloud marks it as such. Defender for Cloud generates security recommendations only for images that have issues to be resolved. Defender for Cloud provides details of each reported vulnerability and a severity classification. Additionally, it gives guidance for how to remediate the specific vulnerabilities found on each image.
 
@@ -66,7 +66,8 @@ The scan completes typically within 2 minutes, but it might take up to 40 minute
 
 Below is a high-level diagram of the components and benefits of protecting your registries with Defender for Cloud.
 
-![Microsoft Defender for Cloud and Azure Container Registry (ACR) high-level overview.](./media/azure-container-registry-integration/aks-acr-integration-detailed.png)
+:::image type="content" source="media/azure-container-registry-integration/aks-acr-integration-detailed.png" alt-text="Microsoft Defender for Cloud and Azure Container Registry (ACR) high-level overview" lightbox="media/azure-container-registry-integration/aks-acr-integration-detailed.png":::
+
 
 ## FAQ - Azure Container Registry image scanning
 

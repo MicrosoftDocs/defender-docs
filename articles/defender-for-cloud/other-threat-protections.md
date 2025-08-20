@@ -2,7 +2,7 @@
 title: Other threat protections
 description: Learn about the threat protections available from Microsoft Defender for Cloud.
 ms.topic: overview
-ms.date: 05/22/2023
+ms.date: 07/15/2025
 ---
 
 # Other threat protections in Microsoft Defender for Cloud
@@ -34,7 +34,7 @@ For a list of the Azure network layer alerts, see the [Reference table of alerts
 ### Display Azure WAF alerts in Defender for Cloud
 
 > [!IMPORTANT]
-> This feature will be retired on September 25, 2024. For Sentinel customers, you can configure the Azure Web Application Firewall [connector](/azure/web-application-firewall/waf-sentinel).
+> This feature will be retired on September 25, 2024. For Microsoft Sentinel customers, you can configure the Azure Web Application Firewall [connector](/azure/web-application-firewall/waf-sentinel).
 
 Azure Application Gateway offers a web application firewall (WAF) that provides centralized protection of your web applications from common exploits and vulnerabilities.
 

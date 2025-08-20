@@ -1,7 +1,7 @@
 ---
 title: Suppressing false positives or other unwanted security alerts
 description: This article explains how to use Microsoft Defender for Cloud's suppression rules to hide unwanted security alerts, such as false positives.
-ms.date: 03/11/2024
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
@@ -62,11 +62,11 @@ You can also select the **Suppression rules** button in the Security Alerts page
 :::image type="content" source="media/alerts-suppression-rules/create-new-suppression-rule.png" alt-text="Screenshot of the Create suppression rule button in the Suppression rules page.":::
 
 > [!NOTE]
-> For some alerts, suppression rules are not applicable for certain entities. If the rule is not available, a message will display at the end of the **Create a suppression rule** process.
+> For some alerts, suppression rules aren't applicable for certain entities. If the rule isn't available, a message displays at the end of the **Create a suppression rule** process.
 
 ## Edit a suppression rule
 
-To edit a rule you've created from the suppression rules page:
+To edit a rule, you've created from the suppression rules page:
 
 1. From Defender for Cloud's security alerts page, select **Suppression rules** at the top of the page.
 

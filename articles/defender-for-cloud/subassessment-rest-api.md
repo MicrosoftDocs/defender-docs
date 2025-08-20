@@ -3,7 +3,7 @@ title: Container vulnerability assessments powered by Microsoft Defender Vulnera
 description: Learn about container vulnerability assessments powered by Microsoft Defender Vulnerability Management subassessments 
 author: dcurwin
 ms.author: dacurwin
-ms.date: 09/18/2023
+ms.date: 07/15/2025
 ms.topic: how-to
 ---
 

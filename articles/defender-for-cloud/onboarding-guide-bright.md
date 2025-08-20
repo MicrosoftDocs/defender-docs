@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for Bright Security (preview)
 description: Learn how to use Bright Security with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 05/02/2024
+ms.date: 07/15/2025
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -25,7 +25,7 @@ Bright API security validation is based on three main phases:
 
 ## Enablement
 
-Bright’s solutions can be purchased via the Azure Marketplace by following [this link](https://azuremarketplace.microsoft.com/marketplace/apps/brightsec.bright-dast?tab=Overview).
+Bright’s solutions can be purchased via Azure Marketplace by following [this link](https://azuremarketplace.microsoft.com/marketplace/apps/brightsec.bright-dast?tab=Overview).
 
 ## Connect your DevOps environments to Microsoft Defender for Cloud
 
@@ -40,7 +40,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ### For GitHub environments
 
 > [!NOTE]
-> For additional details on how to configure Bright Security for GitHub Actions along with links to sample GitHub Action workflows, see [GitHub Actions](https://docs.brightsec.com/docs/github-actions). This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you do not have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+> For more information on how to configure Bright Security for GitHub Actions along with links to sample GitHub Action workflows, see [GitHub Actions](https://docs.brightsec.com/docs/github-actions). This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
 Install the Bright Security plugin within your CI/CD pipeline by completing the following step:
 
@@ -62,7 +62,7 @@ You now verified that the Bright Security (Neuralegion GitHub workflow) security
 
 #### Enable Defender for Cloud integration without GitHub Code Scanning
 
-If you do not have GitHub Code Scanning for your environment and wish to integrate security scan results from Bright Security into Defender for Cloud, you can follow these steps. After adding in the Bright Security workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+If you don't have GitHub Code Scanning for your environment and wish to integrate security scan results from Bright Security into Defender for Cloud, you can follow these steps. After adding in the Bright Security workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
 
 ```yml
       - name: Download SARIF file
@@ -100,7 +100,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 ### For Azure DevOps environments
 
 > [!NOTE]
-> For additional details on how to configure Bright Security forAzure DevOps along with links to sample Azure DevOps workflows, see [Azure Pipelines](https://docs.brightsec.com/docs/azure-pipelines).
+> For more information on how to configure Bright Security for Azure DevOps along with links to sample Azure DevOps workflows, see [Azure Pipelines](https://docs.brightsec.com/docs/azure-pipelines).
 
 1. Install the [NexPloit DevOps Integration](https://marketplace.visualstudio.com/items?itemName=Neuralegion.nexploit) on your Azure DevOps organization.
 1. Create a new Pipeline within your Azure DevOps project. For a tutorial for creating your first pipeline, see [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline).
@@ -108,7 +108,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 1. Run the pipeline.
 1. To verify the results are being published correctly in Azure DevOps, validate that *NeuraLegion_ScanReport.SARIF* is being uploaded to the Build Artifacts under the *CodeAnalysisLogs* folder.
 
-    :::image type="content" source="media/onboarding-guide-bright/artifacts-uploaded.png" alt-text="Screenshot of NeuraLegion_ScanReport.SARIF uploaded to Build Artifacts.":::
+    :::image type="content" source="media/onboarding-guide-bright/artifacts-uploaded.png" alt-text="Screenshot of NeuraLegion_ScanReport.SARIF uploaded to Build Artifacts." lightbox="media/onboarding-guide-bright/artifacts-uploaded.png":::
 
 1. You completed the onboarding process. Next verify the results show in Defender for Cloud.
 

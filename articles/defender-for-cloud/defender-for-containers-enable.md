@@ -66,28 +66,6 @@ You can also learn more by watching these videos from the *Defender for Cloud in
 [!INCLUDE [Enable plan for GKE](./includes/defender-for-containers-enable-plan-gke.md)]
 ::: zone-end
 
-## Simulate security alerts from Microsoft Defender for Containers
-
-A full list of supported alerts is available in the [reference table of all Defender for Cloud security alerts](alerts-containers.md).
-
-To simulate a security alert:
-
-1. Run the following command from the cluster:
-
-    ```console
-    kubectl get pods --namespace=asc-alerttest-662jfi039n
-    ```
-
-    The expected response is `No resource found`.
-
-    Within 30 minutes, Defender for Cloud detects this activity and triggers a security alert.
-
-    > [!NOTE]
-    > Azure Arc isn't a prerequisite for simulating agentless alerts for Defender for Containers.
-
-1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Security alerts** and look for the alert on the relevant resource.
-
-    :::image type="content" source="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png" alt-text="Screenshot of a sample alert from Microsoft Defender for Containers." lightbox="media/defender-for-kubernetes-azure-arc/sample-kubernetes-security-alert.png":::
 
 ::: zone pivot="defender-for-container-arc,defender-for-container-eks,defender-for-container-gke"
 [!INCLUDE [Remove the sensor](./includes/defender-for-containers-remove-extension.md)]
