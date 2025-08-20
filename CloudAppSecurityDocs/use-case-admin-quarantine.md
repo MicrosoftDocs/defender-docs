@@ -24,7 +24,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
 > 
 > - For a list of apps that support admin quarantine, see the list of [governance actions](governance-actions.md). 
 > - Files labeled by Defender for Cloud Apps can't be quarantined.
-> - Defender for Cloud Apps admin quarantine actions are limited to 100 actions per day.
+> - Defender for Cloud Apps admin quarantine actions is limited to 100 actions per day.
 > - Sharepoint sites that are renamed either directly or as part of domain rename can't be used as a folder location for admin quarantine.
 
 
@@ -44,7 +44,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
 
     1. The user can only access the tombstone file. In the file, they can read the custom guidelines provided by IT and the correlation ID to give IT to release the file.
 
-1. When you receive the alert that a file has been quarantined, go to **Policies** -> **Policy Management**. Then select the **Information Protection** tab.  In the row with your file policy, choose the three dots at the end of the line, and select **View all matches**. This brings you the report of matches, where you can see the matching and quarantined files:
+1. When you receive the alert that a file has been quarantined, go to **Policies** -> **Policy Management**. Then select the **Information Protection** tab. In the row with your file policy, choose the three dots at the end of the line, and select **View all matches**. This brings you the report of matches, where you can see the matching and quarantined files:
 
    :::image type="content" alt-text="Quarantined files." source="media/quarantine-alerts.png" lightbox="media/quarantine-alerts.png":::
 
@@ -53,7 +53,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
     1. Inspect the file in the quarantined folder on SharePoint online.
     1. You can also look at the audit logs to deep dive into the file properties.
     1. If you find the file is against corporate policy, run the organization's Incident Response (IR) process.
-    1. If you find that the file is harmless, you can restore the file from quarantine. At that point the original file is released, meaning it's copied back to the original location, the tombstone is deleted, and the user can access the file.
+    1. If you find that the file is harmless, you can restore the file from quarantine. At that point the original file is released, and copied back to the original location. The tombstone is deleted, and the user can access the file.
 
        :::image type="content" alt-text="quarantine restore." source="media/quarantine-restore.png":::
 
@@ -71,7 +71,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
 1. Set file policies that detect breaches. Examples of these types of policies include:
 
    - A metadata only policy such as a sensitivity label in SharePoint Online
-   - A native DLP policy such as a policy that searches for credit card numbers
+   - A native data loss prevention (DLP) policy such as a policy that searches for credit card numbers
    - An ICAP third-party policy such as a policy that looks for Vontu
 
 1. Set a quarantine location:
@@ -85,7 +85,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
       :::image type="content" alt-text="quarantine settings." source="media/quarantine-settings.png" lightbox="media/quarantine-settings.png":::
 
       > [!NOTE]
-      > Defender for Cloud Apps will create a quarantine folder on the selected site.
+      > Defender for Cloud Apps creates a quarantine folder on the selected site.
 
    1. For Box, the quarantine folder location and user message can't be customized. The folder location is the drive of the admin who connected Box to Defender for Cloud Apps and the user message is: This file was quarantined to your administrator's drive because it might violate your company's security and compliance policies. Contact your IT administrator for help.
 
