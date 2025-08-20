@@ -64,7 +64,7 @@ The following steps describe the Security Administrator’s required actions to 
     > [!IMPORTANT]
     > If the Microsoft 365 connector isn’t properly connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent. Alerts and incidents related to these actions won't show in the Microsoft Defender portal.
 
-1. Enter the App ID provided by your Power Platform administrator.
+1. Enter the App ID provided by your Power Platform administrator. The Application (client) ID, uniquely identifies your application and is used in your application's code as part of validating the security tokens it receives from the Microsoft identity platform.
 1. Select **Save**.
 1. Copy the URL provided.
 1. Share the URL with the Power Platform administrator. 
