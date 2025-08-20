@@ -39,14 +39,10 @@ Before enabling real-time agent protection during runtime, make sure:
 
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
-[!NOTE]
+
+> [! NOTE]
 > The onboarding process for real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
 
-- The **Microsoft Entra Administrator** must create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
-
-- The **Security administrator** must enter the Application ID in the Microsoft Defender portal settings.
-
-- The **Power Platform Administrator** must enter the Application ID and URL in the Power Platform settings page. For more information see: [link].
 
 ## Turn on real-time protection during agent runtime
 
@@ -55,7 +51,7 @@ The following steps describe the Security Administrator’s required actions to 
 1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**:
 1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
 1. Check the Microsoft 365 App Connector status:
-   - **If the connector is already connected:** Continue to step 4.
+   - **If the connector is already connected:** Continue to step 5.
    - **If the connector isn’t connected:**
       - Under **Microsoft 365 connector**, select **Connect** or **Edit**.
       - Select **Microsoft Entra ID Management events** and **Microsoft 365 activities**. 
@@ -64,6 +60,11 @@ The following steps describe the Security Administrator’s required actions to 
     > [!IMPORTANT]
     > If the Microsoft 365 connector isn’t properly connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent. Alerts and incidents related to these actions won't show in the Microsoft Defender portal.
 
+1. Make sure to collaborate with the following administrators:
+
+   - The **Microsoft Entra Administrator** needs to create [a Microsoft Entra ID application](/entra/identity-platform/quickstart-register-app) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [link].
+
+   - The **Power Platform Administrator** needs to  enter the Application ID and URL in the Power Platform settings page. For more information see: [link].
 1. Enter the App ID provided by your Power Platform administrator. The Application (client) ID, uniquely identifies your application and is used in your application's code as part of validating the security tokens it receives from the Microsoft identity platform.
 1. Select **Save**.
 1. Copy the URL provided.
