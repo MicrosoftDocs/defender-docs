@@ -30,7 +30,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
 
 1. When a file matches a policy, the **Admin quarantine** option is available for the file.
 
-1. Set an automated quarantine action in the policy:
+1. Set an automated quarantine action in the policy.
 
      :::image type="content" alt-text="quarantine automatically." source="media/quarantine-automated.png" lightbox="media/quarantine-automated.png":::
 
