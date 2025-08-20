@@ -78,10 +78,10 @@ Follow the service attributes described below to successfully complete the submi
 | FERPA | Compliance | Boolean | True, False, N/A | Does this app comply with FERPA, a federal law that protects the privacy of student education records? |
 | GAPP | Compliance | Boolean | True, False| Does this app comply with GAPP, a collection of commonly followed rules that address privacy risks in an organization? |
 | HITRUST CSF | Compliance | Boolean | True, False, N/A | Does this app comply with HITRUST CSF, a set of controls that harmonizes the requirements of information security regulations and standards? |
-| Jericho Forum Commandments | Compliance | Boolean | True, False | Does this app follow Jericho Forum Commandments, a set if principles to be observed when architecting systems for secure operation in de-perimeterized environments? |
+| Jericho Forum Commandments | Compliance | Boolean | True, False | Does this app follow Jericho Forum Commandments, a set of principles to be observed when architecting systems for secure operation in de-perimeterized environments? |
 | ISO 27002 | Compliance | Boolean | True, False| Does this app comply with ISO 27002, which establishes common guidelines for organizational information security standards and information security management practices? |
 | FFIEC | Compliance | Boolean | True, False, N/A | Does this app comply with the Federal Financial Institutions Examination Council's guidance on the risk management controls necessary to authenticate services in an Internet banking environment? |
-| Data ownership | Legal | Boolean | True, False , N/A | Does this app fully preserve the user's ownership of uploaded data? |
+| Data ownership | Legal | Boolean | True, False, N/A | Does this app fully preserve the user's ownership of uploaded data? |
 | DMCA | Legal | Boolean | True, False, N/A | Does this app comply with the Digital Millennium Copyright Act (DMCA), which criminalizes any attempt to unlawfully access copyrighted material? |
 | Data retention policy | Legal | String | Deleted immediately, Within 2 weeks, Within 1 month, Within 3 months, Within more than 3 months, Retained| What is the app's policy for user data retention after account termination? |
 | GDPR readiness statement | Legal | URL | Free text | A link to your website, when relevant, relating how this provider plans to handle GDPR compliance. |
