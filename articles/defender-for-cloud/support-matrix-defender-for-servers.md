@@ -62,7 +62,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 The following table shows feature support for Windows machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2025, 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
@@ -87,7 +87,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 
 The following table shows feature support for Linux machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#footnote1)</sup> | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ <br> ([supported versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](./azure-defender.md) | ✔</br> Supported versions | ✔ | Yes |
