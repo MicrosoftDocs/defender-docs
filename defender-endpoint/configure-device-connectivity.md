@@ -29,7 +29,9 @@ ms.date: 06/27/2025
 
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
-To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
+For US government devices, see [Onboarding devices using streamlined connectivity for US government environments](configure-device-connectivity-gov.md).
+
+To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
 The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` consolidates connectivity to the following core Defender for Endpoint services:
 
