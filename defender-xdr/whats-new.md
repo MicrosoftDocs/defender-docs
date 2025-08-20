@@ -33,6 +33,8 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## August 2025
+
+- (Preview) In advanced hunting, you can now enrich your [custom detection rules](custom-detection-rules.md) by creating dynamic alert titles and descriptions, select more impacted entities, and add custom details to display in the alert side panel. Microsoft Sentinel customers that are onboarded to Microsoft Defender also now have the option to customize the alert frequency when the rule is based only on data that is ingested to Sentinel.
 - (Preview) The following advanced hunting schema tables are now available for preview:
    - The [`CloudStorageAggregatedEvents`](advanced-hunting-cloudstorageaggregatedevents-table.md) table contains information about storage activity and related events
    - The [`IdentityEvents`](advanced-hunting-identityevents-table.md) table contains information about identity events obtained from other cloud identity service providers
