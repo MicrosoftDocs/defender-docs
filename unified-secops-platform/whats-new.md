@@ -30,7 +30,7 @@ This article lists recent features added for unified security operations in the 
 
 ### Edit workbooks directly in the Microsoft Defender portal
 
-Now you can create and edit Microsoft Sentinel workbooks directly in the Microsoft Defender portal, without needing to open a new tab in the Azure portal. This enhancement streamlines your workflow and allows you to manage your workbooks more efficiently.
+Now you can create and edit Microsoft Sentinel workbooks directly in the Microsoft Defender portal. This enhancement streamlines your workflow and allows you to manage your workbooks more efficiently.
 
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
 
