@@ -7,7 +7,7 @@ ms.subservice: unified-security-operations
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-ms.date: 07/31/2025
+ms.date: 08/20/2025
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -23,9 +23,18 @@ This article lists recent features added for unified security operations in the 
 
 ## August 2025
 
+
 - [Viewing unified RBAC in multitenant management to GA](#viewing-unified-rbac-in-multitenant-management-to-ga)
 - [Tenant groups in multitenant management renamed to distribution profiles](#tenant-groups-in-multitenant-management-renamed-to-distribution-profiles)
 - [Distribute Microsoft Defender for Endpoint security policies with multitenant management](#distribute-microsoft-defender-for-endpoint-security-policies-with-multitenant-management)
+
+### Edit workbooks directly in the Microsoft Defender portal
+
+Now you can create and edit Microsoft Sentinel workbooks directly in the Microsoft Defender portal, without needing to open a new tab in the Azure portal. This enhancement streamlines your workflow and allows you to manage your workbooks more efficiently.
+
+Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and help you visualize and monitor the data ingested to Microsoft Sentinel. Workbooks add tables and charts with analytics for your logs and queries to the tools already available.
+
+Workbooks are available in the Defender portal under **Microsoft Sentinel > Threat management > Workbooks**. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data).
 
 ### Viewing unified RBAC in multitenant management to GA
 
