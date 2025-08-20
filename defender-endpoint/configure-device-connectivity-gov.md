@@ -17,7 +17,7 @@ audience: ITPro
 ms.date: 08/20/2025
 ---
 
-# Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
+# Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint government cloud customers
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -27,7 +27,7 @@ ms.date: 08/20/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
+The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method for government customers, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
 To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
@@ -103,104 +103,6 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 |     Windows 10 1709*    |     < end of   service >     |
 |     Windows Server   2022    |     KB5011497   (March 8, 2022)    |
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
-
-## Streamlined connectivity process
-
-The following illustration shows the streamlined connectivity process and the corresponding stages:
-
-:::image type="content" source="media/streamlined-connectivity-process.png" alt-text="Illustration of  streamlined connectivity process":::
-
-### Stage 1. Configure your network environment for cloud connectivity 
-
-Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
-
-Defender for Endpoint service URLs consolidated under simplified domain should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
-
-Streamlined connectivity allows you to use the following option to configure cloud connectivity:
-
-- [Option 1: Use the simplified domain](#option-1-configure-connectivity-using-the-simplified-domain)
-- [Option 2: Use static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges)
- 
-#### Option 1: Configure connectivity using the simplified domain
-
-Configure your environment to allow connections to the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
-
-You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
-
-#### Option 2: Configure connectivity using static IP ranges 
-
-With streamlined connectivity, IP-based solutions can be used as an alternative to URLs. These IPs cover the following services:
-
-- MAPS
-- Malware Sample Submission Storage
-- Auto-IR Sample Storage
-- Defender for Endpoint Command and Control
-
-> [!IMPORTANT]
-> The EDR Cyber data service (OneDsCollector) *must* be configured separately if you are using the IP method (this service is only consolidated on a URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
-
-In order to stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Endpoint services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
-
-| Service tag name    |    Defender for Endpoint services included   |
-|:---|:---|
-| `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
-| `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
-
-The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
-
-|Geo|IP Ranges|
-|------|-------|
-|US|`20.15.141.0/24` <br/> `20.242.181.0/24` <br/>`20.10.127.0/24`<br/>`13.83.125.0/24`|
-|EU|`4.208.13.0/24` <br/>`20.8.195.0/24`|
-|UK|`20.26.63.224/28` <br/>`20.254.173.48/28`|
-|AU|`68.218.120.64/28` <br/>`20.211.228.80/28`|
-
-> [!IMPORTANT]
-> In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md).  
-
-### Stage 2. Configure your devices to connect to Defender for Endpoint service
-
-Configure devices to communicate through your connectivity infrastructure. Ensure devices meet prerequisites and have updated sensor and Microsoft Defender Antivirus versions.  For more information, see [Configure device proxy and Internet connection settings ](configure-proxy-internet.md).
-
-### Stage 3. Verify client connectivity pre-onboarding
-
-For more information, see [Verify client connectivity](verify-connectivity.md).
-
-The following pre-onboarding checks can be run on both Windows and Xplat MDE Client analyzer: [Download the Microsoft Defender for Endpoint client analyzer](overview-client-analyzer.md).
-
-To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
-
-- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within the MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
-
-- Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
-
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip]{https://aka.ms/MDEClientAnalyzerPreview}.
- 
-
-> [!NOTE]
-> For devices not yet onboarded to Defender for Endpoint, client analyzer will test against standard set of URLs. To test the streamlined approach, you will need to run with the switches listed earlier in this article. 
-
-### Stage 4. Apply the new onboarding package required for streamlined connectivity
-
-Once you configure your network to communicate with the full list of services, you can begin onboarding devices using the streamlined method. 
-
-Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and have updated sensor and Microsoft Defender Antivirus versions. 
-
-
-1. To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
-
-2. Select the applicable operating system and choose "Streamlined" from the Connectivity type dropdown menu.
-
-3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
-
-   - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
-   - [Onboard client devices running Windows or macOS](onboard-client.md)
-   - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
-   - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
-
-4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
-
-For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
 
 ## Enable streamlined connectivity for US government environments
 
