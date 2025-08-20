@@ -1,8 +1,9 @@
 ---
 title: Protect files with admin quarantine
 description: This tutorial describes the scenario for using admin quarantine to control data breaches.
-ms.date: 02/16/2023
+ms.date: 08/20/2025
 ms.topic: tutorial
+ms.reviewer: drormikdash
 ---
 
 # Tutorial: Protect files with admin quarantine
@@ -29,13 +30,7 @@ In this tutorial, you'll learn how to use Microsoft Defender for Cloud Apps to d
 
 1. When a file matches a policy, the **Admin quarantine** option is available for the file.
 
-1. Do one of the following actions to quarantine the file:
-
-   - Manually apply the **Admin quarantine** action:
-
-     :::image type="content" alt-text="quarantine action." source="media/quarantine-action.png" lightbox="media/quarantine-action.png":::
-
-   - Set it as an automated quarantine action in the policy:
+1. Set an automated quarantine action in the policy:
 
      :::image type="content" alt-text="quarantine automatically." source="media/quarantine-automated.png" lightbox="media/quarantine-automated.png":::
 
