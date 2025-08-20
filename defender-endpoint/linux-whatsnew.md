@@ -6,7 +6,7 @@ ms.author: ewalsh
 author: emmwalshh
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 06/30/2025
+ms.date: 08/19/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -42,6 +42,23 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 ## Releases for Defender for Endpoint on Linux
+
+### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
+
+|Build:             |**101.25062.0003**    |
+|-------------------|----------------------|
+|Released:          |**August 08, 2025**   |
+|Published:         |**August 08, 2025**   |
+|Release version:   |**30.125062.0003.0**  |
+|Engine version:    |**1.1.25040.4000**    |
+|Signature version: |**1.429.442.0**       |
+
+What's new
+- Defender for Endpoint on Linux now supports installation to a custom location (preview). For more information, see [Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)](/defender-endpoint/linux-custom-location-installation). Support for this feature is being added to the installer script.
+- The `mdatp threat quarantine add` command now requires superuser (root) privileges.
+- Custom definition path can now be updated without stopping Defender for ENdpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
+- Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, MDE can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
+- Other stability enhancements and bug fixes.
 
 ### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
 

@@ -3,7 +3,8 @@ title: Microsoft Defender Portal Service Support for US Government Customers
 description: Learn about support in the Microsoft Defender portal for US Government clouds.
 author: batamig
 ms.author: bagol
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article #Don't change.
 ms.date: 06/22/2025
 ms.collection:
