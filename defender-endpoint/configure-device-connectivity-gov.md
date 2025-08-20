@@ -17,7 +17,7 @@ audience: ITPro
 ms.date: 08/20/2025
 ---
 
-# Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint government cloud customers
+# Onboarding devices using streamlined connectivity for Microsoft Defender Endpoint US government environments
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -27,7 +27,9 @@ ms.date: 08/20/2025
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method for government customers, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
+Microsoft Defender for Endpoint devices in GCC, GCC High, and DoD environments can use streamlined connectivity to simplify endpoint configuration. This reduces the number of required service endpoints and supports improved performance and reliability.
+
+This article describes the streamlined device connectivity method for US government environments, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
 To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
@@ -105,8 +107,6 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
 
 ## Enable streamlined connectivity for US government environments
-
-Devices in GCC, GCC High, and DoD environments can use streamlined connectivity to simplify endpoint configuration. This reduces the number of required service endpoints and supports improved performance and reliability.
 
 To enable streamlined connectivity for US government environments:
 
