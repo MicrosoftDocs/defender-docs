@@ -49,6 +49,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AccountUpn` | `string` | User principal name (UPN) of the account |
 | `EmailAddress` | `string` | SMTP address of the account |
 | `CriticalityLevel` | `int` | The criticality score of the account |
+| `DefenderRiskLevel` | `int` | The risk level of the account as calculated by Microsoft Defender |
+| `DefenderRiskUpdateTime` | `datetime` | Date and time Microsoft Defender last updated the risk level of the account |
 | `Type` | `string` | Type of identity; possible values: User, ServiceAccount |
 | `GivenName` | `string` | Given name or first name of the account user |
 | `Surname` | `string` | Surname, family name, or last name of the account user |
