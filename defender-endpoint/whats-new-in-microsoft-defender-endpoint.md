@@ -23,6 +23,12 @@ ms.topic: whats-new
 
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
+**Applies to:**
+
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
+
 Learn more:
 
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
