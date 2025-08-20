@@ -21,20 +21,12 @@ ms.topic: whats-new
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release, so that you can ensure your organization benefits from new capabilities, stays protected against emerging threats, and takes advantage of enhancements as soon as they become available.
+This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
 Learn more:
 
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
-- [Preview features](/defender-xdr/preview).
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+- [Preview features](/defender-xdr/preview)
 
 ## July 2025
 
