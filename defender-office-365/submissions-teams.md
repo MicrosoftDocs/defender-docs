@@ -112,8 +112,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
 
 **Notes**:
 
-
-- For shared channel user report, the report goes to the tenant who is the owner of that channel (created that channel). 
+- For shared channel user reports, the report goes to the organization that owns/created the channel. 
 - If you select **Send the reported messages to** \> **My reporting mailbox only**, reported messages don't go to Microsoft for analysis unless an admin manually submits the message from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. Reporting messages to Microsoft is an important part of training the service to help improve the accuracy of filtering (reduce false positives and false negatives). That's why we use **Send the reported messages to** \> **Microsoft and my reporting mailbox** as the default.
 - Regardless of the **Send the reported messages to** setting, the following actions occur when a user reports a Teams message:
   - Metadata from the reported Teams message (for example, senders, recipients, reported by, and message details) is available on the **User reported** tab on the **Submissions** page.
