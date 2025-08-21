@@ -60,13 +60,15 @@ Microsoft maintains a list of solution providers who are authorized to sell offe
 
 Defender for Business provides advanced security protection for your company's devices. For more information, see [What is Microsoft Defender for Business?](mdb-overview.md)?
 
-1. Go to the **Microsoft Defender for Business**  page <https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business>, and select an option to try or buy Defender for Business. Fill in the requested information.
+1. Go to the **Microsoft Defender for Business**  page <https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business>, and select an option to try or buy Defender for Business.
 
-   If you're starting a trial, look for your acceptance email, which contains your promo code and a link to sign in. And be sure to see the [Trial user guide for Defender for Business](trial-playbook-defender-business.md).
+   If you start a trial, look for the acceptance email that contains your promo code and a link to sign in. And be sure to see the [Trial user guide for Defender for Business](trial-playbook-defender-business.md).
 
-2. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and either sign in using your existing work or school account, or follow the prompts to create a new account.
+2. Go to the Microsoft Defender portal at <https://security.microsoft.com> and either sign in using your existing work or school account, or follow the prompts to create a new account.
 
-3. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation bar, go to **Assets** > **Devices**. This action initiates the provisioning of Defender for Business for your organization. You know this process started when you see the following message:
+3. In the Microsoft Defender portal, go to **Assets** \> **Devices**. Or, to go directly to the **Devices** page, use xxxx.
+
+   This action initiates the provisioning of Defender for Business for your organization. You know this process started when you see the following message:
 
    > Hang on! We're preparing new spaces for your data and connecting them.
 
