@@ -23,7 +23,7 @@ appliesto:
 
 # Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 
 
-Even if you aren't using Microsoft Defender for Office 365 Plan 1 or Plan 2 for email protection, you can still use it for Microsoft Teams protection.
+Even if you aren't using Microsoft Defender for Office 365 for email protection, you can still use it for Microsoft Teams protection.
 
 This article contains the quick steps to turn on and configure Defender for Office 365 protection for Microsoft Teams.
 
@@ -77,7 +77,7 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!TIP]
 > Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
 
-## Step 3: Verify Zero-hour auto purge (ZAP) for Microsoft Teams (only available to Defender for Office 365 Plan 2)
+## Step 3: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
@@ -90,7 +90,7 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 > [!TIP]
 > When ZAP for Microsoft Teams is turned on, you can use **Exclude these participants** on the **Microsoft Teams protection** page to exclude users from Teams protection. For more information, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
-## Step 4: Configure user reported settings for Microsoft Teams (only available to Defender for Office 365 Plan 2)
+## Step 4: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
