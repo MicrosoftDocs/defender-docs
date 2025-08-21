@@ -169,7 +169,8 @@ Use this table to learn about the permissions assigned by default for each workl
 |Billing admin|not applicable|not applicable|
 
 > [!NOTE]
-> By activating the Microsoft Defender XDR Unified RBAC model, users with Security Reader and Global Reader roles can access Defender for Endpoint data.
+> By activating the Microsoft Defender XDR Unified RBAC model, users with the Security Reader and Global Reader roles are granted read-only access to resources from workloads integrated into the model.
+> However, accessing Microsoft Defender for Endpoint device data requires additional configuration before Security Reader permissions take effect. For details, see the [Before you begin section](/defender-endpoint/rbac).
 
 ## Next steps
 
