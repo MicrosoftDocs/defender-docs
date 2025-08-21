@@ -24,7 +24,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Real time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 
-Microsoft Defender for Cloud Apps now offers real-time protection during runtime for AI agents built with custom Copilot Studio AI agents. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in Defender XDR.
+Microsoft Defender for Cloud Apps now offers real-time protection during runtime for AI agents built with custom Copilot Studio AI engine. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
 For more information, see: [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md)
 
@@ -32,7 +32,7 @@ For more information, see: [Real-time protection during agent runtime for Micros
 
 ### App Governance available in 8 new regions
 
-App Governance is now also available in Brazil, Sweden, Norway, Switzerland, South Africa, South Korea, Arab Emirates and Asia Pacific. For more details, see [Turn on app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started).
+App Governance is now also available in Brazil, Sweden, Norway, Switzerland, South Africa, South Korea, Arab Emirates, and Asia Pacific. For more information, see [Turn on app governance for Microsoft Defender for Cloud Apps](/defender-cloud-apps/app-governance-get-started).
 
 ### Updated network requirements for GCC and Gov customers
 
@@ -66,7 +66,7 @@ For more information, see:
 
 ### New Dynamic Threat Detection model
 
-Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter and more responsive security coverage.
+Microsoft Defender for Cloud Apps new dynamic threat detection model continuously adapts to the ever-changing SaaS apps threat landscape. This approach ensures your organization remains protected with up-to-date detection logic without the need for manual policy updates or reconfiguration. Several legacy anomaly detection policies have already been seamlessly transitioned to this adaptive model, delivering smarter, and more responsive security coverage.
 
 For more information, see [Create Defender for Cloud Apps anomaly detection policies](anomaly-detection-policy.md).
 
@@ -76,7 +76,7 @@ For more information, see [Create Defender for Cloud Apps anomaly detection poli
 
 ### Revamped Cloud Discovery Executive Summary report
 
-The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more details, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report).
+The Cloud Discovery Executive Summary report has been updated with a modernized design and streamlined format. The new version reduces the report from 26 pages to 6 pages, focusing on the most relevant and actionable insights while improving readability and usability. For more information, see [How to generate a Cloud Discovery executive report](discovered-apps.md#generate-a-cloud-discovery-executive-report).
 
 ### New Applications inventory page now available in Defender XDR
 
@@ -95,7 +95,7 @@ To ensure continuity and access to data currently available through Microsoft De
 - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-For detailed guidance see: [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md)
+For detailed guidance, see: [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md)
 
 
 ### New and improved Cloud App Catalog page
@@ -236,7 +236,7 @@ For more information, see:
 
 ### SaaS Security initiative in Exposure Management
 
-[Microsoft Security Exposure Management](/security-exposure-management/) offers a focused, metric-driven way of tracking exposure in specific security areas using security [initiatives](/security-exposure-management/initiatives). The "SaaS security initiative" provides a centralized location for all best practices related to SaaS security, categorized into 12 measurable metrics. These metrics are designed to assist in effectively managing and prioritizing the large number of security recommendations.
+[Microsoft Security Exposure Management](/security-exposure-management/) offers a focused, metric-driven way of tracking exposure in specific security areas using security [initiatives](/security-exposure-management/initiatives). The "SaaS security initiative" provides a centralized location for all best practices related to SaaS security, categorized into 12 measurable metrics. These metrics are designed to help effectively managing and prioritizing the large number of security recommendations.
 This capability is General Availability (Worldwide) - Note Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, and DoD
 
 For more information, see [SaaS security initiative](saas-security-initiative.md).
@@ -429,7 +429,7 @@ For more information, see [Advanced Hunting "CloudAppEvents" Data schema](/micro
 
 Defender for Cloud Apps now supports SaaS security posture management (SSPM) across multiple instances of the same app. For example, if you have multiple instances of Okta, you can configure Secure Score recommendations for each instance individually. Each instance shows up as a separate item on the **App Connectors** page. For example:
 
-:::image type="content" source="media/security-saas-choose-secure-score-main-instance.png" alt-text="Screenshot of the Turn on Secure Score recommendations option." lightbox="media/classic-security-saas-choose-secure-score-main-instance.png":::
+:::image type="content" source="media/security-saas-choose-secure-score-main-instance.png" alt-text="Screenshot of the Turn-on Secure Score recommendations option." lightbox="media/classic-security-saas-choose-secure-score-main-instance.png":::
 
 For more information, see [SaaS security posture management (SSPM)](security-saas.md).
 
@@ -582,7 +582,7 @@ For more information, see [App governance in Microsoft Defender for Cloud Apps](
 
 Defender for Cloud Apps now supports SaaS security posture management (SSPM) across multiple instances of the same app. For example, if you have multiple instances of AWS, you can configure Secure Score recommendations for each instance individually. Each instance shows up as a separate item on the **App Connectors** page. For example:
 
-:::image type="content" source="media/security-saas-choose-secure-score-main-instance.png" alt-text="Screenshot of the Turn on Secure Score recommendations option." lightbox="media/classic-security-saas-choose-secure-score-main-instance.png":::
+:::image type="content" source="media/security-saas-choose-secure-score-main-instance.png" alt-text="Screenshot of the Turn-on Secure Score recommendations option." lightbox="media/classic-security-saas-choose-secure-score-main-instance.png":::
 
 For more information, see [SaaS security posture management (SSPM)](security-saas.md).
 
