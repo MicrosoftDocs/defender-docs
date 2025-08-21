@@ -40,7 +40,7 @@ Before enabling real-time agent protection during runtime, make sure:
 - You have Security Administrator privileges in the Microsoft Defender portal.
 
 
-> [! NOTE]
+> [!NOTE]
 > The onboarding process for real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
 
 
