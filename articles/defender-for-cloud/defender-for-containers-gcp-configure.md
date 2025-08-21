@@ -244,7 +244,7 @@ gcloud container binauthz attestors public-keys add \
 
 ```yaml
 # binary-auth-policy.yaml
-admissionWhitelistPatterns:
+admissionAllowlistPatterns:
 - namePattern: gcr.io/PROJECT_ID/approved/*
 defaultAdmissionRule:
   requireAttestationsBy:

@@ -328,7 +328,7 @@ gcloud container binauthz attestors create defender-attestor \
 
 # Create policy
 cat > binary-auth-policy.yaml <<EOF
-admissionWhitelistPatterns:
+admissionAllowlistPatterns:
 - namePattern: gcr.io/$PROJECT_ID/*
 defaultAdmissionRule:
   evaluationMode: REQUIRE_ATTESTATION
