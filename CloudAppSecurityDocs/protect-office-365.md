@@ -162,7 +162,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
 
     > [!NOTE]
-    > After connecting Microsoft 365, you see data from the past week, including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that aren't pulling APIs before connection, you see events starting from when you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that are off by default.
+    > - After connecting Microsoft 365, you see data from the past week, including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that aren't pulling APIs before connection, you see events starting from when you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that are off by default.
+    > - Files and folders that are publicly shared (shared with ‘anyone’) in SharePoint or OneDrive may incorrectly show up as private.
 
     If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
