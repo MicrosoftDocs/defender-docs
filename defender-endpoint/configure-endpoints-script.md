@@ -40,6 +40,9 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
+> [!NOTE]
+> If the Endpoints section isn't visible, try accessing other Defender features (such as Incidents or Hunting) or wait a few minutes for the environment to initialize. Also ensure you have the required roles (like Security Administrator) and appropriate licensing.
+
    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
    2. Select Windows 10 or Windows 11 as the operating system.
