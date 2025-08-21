@@ -60,8 +60,8 @@ Defender for Containers supports flexible deployment approaches to match your op
 
 - **[Azure portal deployment](defender-for-containers-aws-enable-all-portal.md)** - Guided, visual experience that's ideal for initial setup and smaller environments.
 - **[Infrastructure as Code](defender-for-containers-aws-deploy.md#deploy-using-infrastructure-as-code)** - CloudFormation, Terraform, or ARM templates for repeatable, automated deployments.
-- **[Command-line tools](defender-for-containers-aws-deploy.md#tab/azure-cli)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration.
-- **[REST APIs](defender-for-containers-aws-deploy.md#tab/rest-api)** - Custom integrations and programmatic management at scale.
+- **[Command-line tools](defender-for-containers-aws-deploy.md)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration.
+- **[REST APIs](defender-for-containers-aws-deploy.md)** - Custom integrations and programmatic management at scale.
 - **[Helm](deploy-helm.md)** - Kubernetes package manager for sensor deployment.
 
 Choose the approach that best fits your organization's deployment standards and automation requirements.

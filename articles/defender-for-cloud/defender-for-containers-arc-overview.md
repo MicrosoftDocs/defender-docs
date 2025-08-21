@@ -84,9 +84,9 @@ These components work together to provide comprehensive security while respectin
 Defender for Containers on Arc supports multiple deployment approaches to accommodate different operational requirements:
 
 - **[Azure portal deployment](defender-for-containers-arc-enable-all-portal.md)** - Visual, guided experience for initial setup and small-scale deployments
-- **[Azure CLI and scripts](defender-for-containers-arc-deploy.md#tab/azure-cli-enable)** - Command-line deployment for automation and repeatability
+- **[Azure CLI and scripts](defender-for-containers-arc-deploy.md#enable-defender-for-containers)** - Command-line deployment for automation and repeatability
 - **[Infrastructure as Code](defender-for-containers-arc-deploy.md#infrastructure-as-code-examples)** - Terraform, ARM templates, or GitOps for enterprise deployments
-- **[Helm charts](defender-for-containers-arc-deploy.md#tab/helm-deploy)** - Native Kubernetes deployment method for teams familiar with Helm
+- **[Helm charts](defender-for-containers-arc-deploy.md#deploy-the-defender-sensor)** - Native Kubernetes deployment method for teams familiar with Helm
 - **[Air-gapped deployment](defender-for-containers-arc-deploy.md#deploy-to-air-gapped-environments)** - Offline installation for disconnected environments
 
 Choose the deployment method that aligns with your security requirements, network constraints, and operational practices.
