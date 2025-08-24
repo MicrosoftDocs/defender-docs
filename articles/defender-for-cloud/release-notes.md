@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-| September 1, 2025 | Feature | [General availability of Defender for Storage in Azure Government cloud](#attack-path-now-includes-entra-oauth-application-compromise)|
+| September 1, 2025 | GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-entra-oauth-application-compromise)|
 
 ### Attack Path now includes Entra OAuth application compromise
 
