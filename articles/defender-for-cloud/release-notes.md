@@ -27,6 +27,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2025
+
+### Attack Path now includes Entra OAuth application compromise
+
+September 1, 2025
+
+Attack Path shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This update helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
+
+Learn more about [how to manage Attack Path](https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path).
+
 ## August 2025
 
 |Date | Category | Update|
