@@ -47,6 +47,11 @@ By default, the Microsoft Antimalware user interface is disabled. But you can [e
 
 If you experience problems with loading the workload protection dashboard, make sure that the user who first enabled Defender for Cloud on the subscription and the user who wants to turn on data collection have the *Owner* or *Contributor* role on the subscription. If so, users with the *Reader* role on the subscription can see the dashboard, alerts, recommendations, and policy.
 
+> [!NOTE]
+> A lock might prevent deletion and cause an error in the Azure Activity log. 
+> - To check for locks, go to [Manage locks to prevent resources from being deleted or changed](/azure/azure-resource-manager/management/lock-resources).  
+> - To review relevant events, open the [Azure Activity log](/azure/azure-monitor/essentials/activity-log) and look for error messages that indicate a lock is present.
+
 ## Troubleshoot connector problems for the Azure DevOps organization
 
 If you can't onboard your Azure DevOps organization, try the following troubleshooting tips:
