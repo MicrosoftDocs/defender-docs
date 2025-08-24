@@ -39,7 +39,7 @@ September 1, 2025
 
 Attack Path shows how attackers use compromised Entra OAuth applications to move across environments and reach critical resources. This update helps security teams identify over-privileged identities and vulnerable OAuth applications to improve visibility and speed up remediation.
 
-Learn more about [how to manage Attack Path](https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path).
+Learn more about [how to manage Attack Path](/azure/defender-for-cloud/how-to-manage-attack-path).
 
 ## August 2025
 
