@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -349,7 +349,7 @@ On the investigation details page, the **Entities** tab shows details about the 
 
 The **Entities** tab is organized by a view selection pane (a summary view and a view for each entity type) and a corresponding details table for that view:
 
-- **Evidence summary** view: This is the default view.
+- **Evidence summary** view: This view is the default.
 
   You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 

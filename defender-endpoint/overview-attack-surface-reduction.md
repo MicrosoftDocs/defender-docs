@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 06/04/2024
+ms.date: 07/30/2025
 search.appverid: met150
 ---
 
@@ -37,8 +37,6 @@ search.appverid: met150
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Attack surfaces are all the places where your organization is vulnerable to cyberthreats and attacks. Defender for Endpoint includes several capabilities to help reduce your attack surfaces. Watch the following video to learn more about attack surface reduction.
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=06675c1f-cd4d-4c79-96f5-f695aee327e5]
 
 ## Configure attack surface reduction capabilities
 

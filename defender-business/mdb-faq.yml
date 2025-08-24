@@ -5,7 +5,7 @@ metadata:
   search.appverid: MET150
   author: chrisda
   ms.author: chrisda
-  manager: deniseb
+  manager: orspodek
   audience: Admin
   ms.topic: faq
   ms.service: defender-business
@@ -90,7 +90,7 @@ sections:
 
           |OS|Method|Notes|
           |---|---|---|
-          |Windows|[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
+          |Windows|[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
           |Mac|Jamf or Intune|You can use Jamf or Intune to set up device control on Mac. See [Device Control for macOS](/defender-endpoint/mac-device-control-overview).|
 
       - question: How do I run custom reports with Defender for Business?
@@ -122,7 +122,7 @@ sections:
           For more information, see the following articles:
 
           - [Set up, review, and edit your security policies and settings in Microsoft Defender for Business](/defender-business/mdb-configure-security-settings)
-          - [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy)
+          - [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy)
 
       - question: If I'm already using Microsoft 365 Business Premium, why do I need Defender for Business?
         answer: |

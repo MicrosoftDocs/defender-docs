@@ -1,8 +1,8 @@
 ---
 title: Simulate a phishing attack with Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -303,12 +303,12 @@ Use the following options on the page to assign trainings as part of the simulat
 
 - **Preferences** section: In **Select training content preference**, choose one of the following options in the dropdown list:
 
-  - **Microsoft training experience (Recommended)**: This is the default value. This value has the following associated options to configure on the page:
+  - **Microsoft training experience (Recommended)**: This value is the default. This value has the following associated options to configure on the page:
     - Select one of the following values:
-      - **Assign training for me (Recommended)**: This is the default value. We assign training based on a user's previous simulation and training results.
+      - **Assign training for me (Recommended)**: This value is the default. We assign training based on a user's previous simulation and training results.
       - **Select training courses and modules myself**: If you select this value, the next step in the wizard is **Training assignment** where you find and select trainings. The steps are described in the [Training assignment](#training-assignment) subsection.
     - **Due date** section: In **Select a training due date**, choose one of the following values:
-      - **30 days after simulation ends** (this is the default value)
+      - **30 days after simulation ends** (this value is the default)
       - **15 days after simulation ends**
       - **7 days after simulation ends**
 
@@ -318,7 +318,7 @@ Use the following options on the page to assign trainings as part of the simulat
     - **Custom training description**
     - **Custom training duration (in minutes)**: The default value is 0, which means there's no specified duration for the training.
     - **Due date** section: In **Select a training due date**, choose one of the following values:
-      - **30 days after simulation ends** (this is the default value)
+      - **30 days after simulation ends** (this value is the default)
       - **15 days after simulation ends**
       - **7 days after simulation ends**
 
@@ -427,7 +427,7 @@ On the **Select end user notification** page, select from the following notifica
 - **Do not deliver notifications**: No other configuration options are available on the page. Users don't receive **Training assignment notifications**, **Training reminder notifications** or **Positive reinforcement notifications** from the simulation. Select **Proceed** in the warning dialog.
 
 - **Microsoft default notification (recommended)**: The notifications that users receive are shown on the page:
-  - **Microsoft default positive reinforcement notification** (for the **How-to Guide** [social engineering technique](#select-a-social-engineering-technique), this is the only available notification)
+  - **Microsoft default positive reinforcement notification** (for the **How-to Guide** [social engineering technique](#select-a-social-engineering-technique), this notification is the only available notification)
   - **Microsoft default training assignment notification**
   - **Microsoft default training reminder notification**
 

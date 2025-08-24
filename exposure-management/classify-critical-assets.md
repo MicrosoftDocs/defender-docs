@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 06/09/2025
+ms.date: 07/23/2025
 ---
 
 # Review and classify critical assets
@@ -90,6 +90,9 @@ Create a custom classification as follows:
 
 1. After setting the criteria, select **Next**.
 1. On the following pages, preview the affected assets, and assign the criticality level.
+
+> [!NOTE]
+> In the Microsoft Defender portal, when creating a new custom Critical Asset classification, the query builder only supports Active Directory (AD) groups for identity-based rules. Currently, Microsoft Entra ID groups are not supported.
 
 ## Set critical asset levels
 
