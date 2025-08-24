@@ -42,7 +42,7 @@ GCP-specific requirements:
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-account-environment-settings.png" alt-text="Screenshot showing how to connect a GCP project to Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-gcp/add-gcp-account-environment-settings.png":::
+    :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png" alt-text="Screenshot showing how to connect a GCP project to Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png":::
 
 ## Configure connector details
 
@@ -57,7 +57,7 @@ GCP-specific requirements:
 
 1. In the **Select plans** page, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/gcp-containers-enabled.png" alt-text="Screenshot of enabling Defender for Containers for a GCP connector." lightbox="media/tutorial-enable-containers-gcp/gcp-containers-enabled.png":::
+    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot of enabling Defender for Containers for a GCP connector." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
 
 1. Select **Configure** to access the plan settings.
 
