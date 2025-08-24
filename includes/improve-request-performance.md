@@ -13,7 +13,7 @@ ms.topic: article
 ---
 
 > [!TIP]
-> For better performance, use a server closer to your geo location:
+> For better performance, use a server closer to your geolocation:
 >
 > - us.api.security.microsoft.com
 > - eu.api.security.microsoft.com
