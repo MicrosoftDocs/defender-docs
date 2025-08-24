@@ -2,9 +2,9 @@
 title: Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -16,14 +16,14 @@ ms.collection:
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 04/15/2025
+ms.date: 08/21/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
-# Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2
+# Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 
 
-Even if you aren't using Microsoft Defender for Office 365 Plan 2 for email protection, you can still use it for Microsoft Teams protection.
+Even if you aren't using Microsoft Defender for Office 365 for email protection, you can still use it for Microsoft Teams protection.
 
 This article contains the quick steps to turn on and configure Defender for Office 365 protection for Microsoft Teams.
 
@@ -75,9 +75,9 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
    Repeat these steps on every custom Safe Links policy.
 
 > [!TIP]
-> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
+> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
 
-## Step 3: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
+## Step 3: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
@@ -90,7 +90,7 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 > [!TIP]
 > When ZAP for Microsoft Teams is turned on, you can use **Exclude these participants** on the **Microsoft Teams protection** page to exclude users from Teams protection. For more information, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
-## Step 4: Configure user reported settings for Microsoft Teams
+## Step 4: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 

@@ -11,6 +11,12 @@ ms.reviewer: Himanch
 
 This article describes the security risks associated with highly privileged Okta API tokens and provides recommendations for mitigating these risks.
 
+## Prerequisites
+
+To use this security assessment, you must first connect your Okta instance in the Microsoft Defender portal.  
+For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+
+
 ## Why is a highly privileged Okta API token a security risk?
 
 Okta’s API tokens inherit the permissions of the user who creates them. If a user with sensitive permissions generates an API token, it carries those permissions. Any API token created by a Super Admin has the same level of access as the Super Admin account. This can expose sensitive data and functionality to unauthorized users. If the token is stolen, it can grant the attacker access equivalent to the original user.

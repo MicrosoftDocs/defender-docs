@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams in Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -20,7 +20,7 @@ appliesto:
 # Microsoft Teams in Attack simulation training
 
 > [!IMPORTANT]
-> Microsoft Teams' Attack simulation training is currently in Private Preview. The information in this article is subject to change.
+> Microsoft Teams' Attack simulation training is currently in Private Preview and the intake for this preview is now closed. The information in this article is subject to change.
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can now use Attack simulation training to deliver simulated phishing messages in Microsoft Teams. For more information about attack simulation training, see [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md).
 

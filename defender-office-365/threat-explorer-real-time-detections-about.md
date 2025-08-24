@@ -2,9 +2,9 @@
 title: About Threat Explorer and Real-time detections in Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: orspodek
 audience: ITPro
 ms.topic: concept-article
 ms.date: 06/19/2025
@@ -54,7 +54,7 @@ The rest of this article explains the views and features that are available in T
 >
 > - [Threat hunting in Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-threat-hunting.md)
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ## Permissions and licensing for Threat Explorer and Real-time detections
 
@@ -396,7 +396,7 @@ The following actions are available at the top of the Email summary panel for Th
 - Add the users to the **Data Investigator** or **eDiscovery Manager** role groups.
 - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in Microsoft 365 mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
