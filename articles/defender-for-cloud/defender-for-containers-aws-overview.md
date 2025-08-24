@@ -58,10 +58,10 @@ These components work together to provide continuous security monitoring without
 
 Defender for Containers supports flexible deployment approaches to match your operational preferences:
 
-- **[Azure portal deployment](defender-for-containers-aws-enable-all-portal.md)** - Guided, visual experience that's ideal for initial setup and smaller environments.
-- **[Infrastructure as Code](defender-for-containers-aws-deploy.md#deploy-using-infrastructure-as-code)** - CloudFormation, Terraform, or ARM templates for repeatable, automated deployments.
-- **[Command-line tools](defender-for-containers-aws-deploy.md)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration.
-- **[REST APIs](defender-for-containers-aws-deploy.md)** - Custom integrations and programmatic management at scale.
+- **[Azure portal deployment](defender-for-containers-aws-enable-portal.md)** - Guided, visual experience that's ideal for initial setup and smaller environments.
+- **[Infrastructure as Code](defender-for-containers-aws-enable-programmatically.md#deploy-using-infrastructure-as-code)** - CloudFormation, Terraform, or ARM templates for repeatable, automated deployments.
+- **[Command-line tools](defender-for-containers-aws-enable-programmatically.md)** - Azure CLI and AWS CLI for scripting and CI/CD pipeline integration.
+- **[REST APIs](defender-for-containers-aws-enable-programmatically.md)** - Custom integrations and programmatic management at scale.
 - **[Helm](deploy-helm.md)** - Kubernetes package manager for sensor deployment.
 
 Choose the approach that best fits your organization's deployment standards and automation requirements.
@@ -78,8 +78,8 @@ Before deploying Defender for Containers on EKS, ensure you meet these requireme
 > [!NOTE]
 > For detailed prerequisites and setup instructions, see the deployment guides:
 >
-> - [Enable via portal](defender-for-containers-aws-enable-all-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-aws-deploy.md#prerequisites)
+> - [Enable via portal](defender-for-containers-aws-enable-portal.md#prerequisites)
+> - [Deploy programmatically](defender-for-containers-aws-enable-programmatically.md#prerequisites)
 
 ## Pricing
 
@@ -89,6 +89,5 @@ For detailed pricing information and cost optimization strategies, see [Microsof
 
 Ready to secure your EKS clusters? Choose your deployment approach:
 
-- [Enable all components via portal](defender-for-containers-aws-enable-all-portal.md) - Recommended for initial setup with step-by-step guidance
-- [Deploy specific components via portal](defender-for-containers-aws-deploy-portal.md) - For selective deployment or troubleshooting
-- [Deploy programmatically](defender-for-containers-aws-deploy.md) - For automation and infrastructure as code scenarios
+- [Enable all components via portal](defender-for-containers-aws-enable-portal.md) - Recommended for initial setup with step-by-step guidance
+- [Deploy programmatically](defender-for-containers-aws-enable-programmatically.md) - For automation and infrastructure as code scenarios

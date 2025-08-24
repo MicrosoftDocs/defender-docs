@@ -119,12 +119,10 @@
               items:
                 - name: Overview
                   href: defender-for-containers-azure-overview.md
-                - name: Enable all components via portal
-                  href: defender-for-containers-azure-enable-all-portal.md
-                - name: Deploy components via portal
-                  href: defender-for-containers-azure-deploy-portal.md
-                - name: Deploy components programmatically
-                  href: defender-for-containers-azure-deploy.md
+                - name: Enable via portal
+                  href: defender-for-containers-azure-enable-portal.md
+                - name: Enable programmatically
+                  href: defender-for-containers-azure-enable-programmatically.md
                 - name: Verify deployment
                   href: defender-for-containers-azure-verify.md
                 - name: Configure
@@ -135,12 +133,10 @@
               items:
                 - name: Overview
                   href: defender-for-containers-aws-overview.md
-                - name: Enable all components via portal
-                  href: defender-for-containers-aws-enable-all-portal.md
-                - name: Deploy components via portal
-                  href: defender-for-containers-aws-deploy-portal.md
-                - name: Deploy components programmatically
-                  href: defender-for-containers-aws-deploy.md
+                - name: Enable via portal
+                  href: defender-for-containers-aws-enable-portal.md
+                - name: Enable programmatically
+                  href: defender-for-containers-aws-enable-programmatically.md
                 - name: Verify deployment
                   href: defender-for-containers-aws-verify.md
                 - name: Configure
@@ -151,12 +147,10 @@
               items:
                 - name: Overview
                   href: defender-for-containers-gcp-overview.md
-                - name: Enable all components via portal
-                  href: defender-for-containers-gcp-enable-all-portal.md
-                - name: Deploy components via portal
-                  href: defender-for-containers-gcp-deploy-portal.md
-                - name: Deploy components programmatically
-                  href: defender-for-containers-gcp-deploy.md
+                - name: Enable via portal
+                  href: defender-for-containers-gcp-enable-portal.md
+                - name: Enable programmatically
+                  href: defender-for-containers-gcp-enable-programmatically.md
                 - name: Verify deployment
                   href: defender-for-containers-gcp-verify.md
                 - name: Configure
@@ -167,19 +161,17 @@
               items:
                 - name: Overview
                   href: defender-for-containers-arc-overview.md
-                - name: Enable all components via portal
-                  href: defender-for-containers-arc-enable-all-portal.md
-                - name: Deploy components via portal
-                  href: defender-for-containers-arc-deploy-portal.md
-                - name: Deploy components programmatically
-                  href: defender-for-containers-arc-deploy.md
+                - name: Enable via portal
+                  href: defender-for-containers-arc-enable-portal.md
+                - name: Enable programmatically
+                  href: defender-for-containers-arc-enable-programmatically.md
                 - name: Verify deployment
                   href: defender-for-containers-arc-verify.md
                 - name: Configure
                   href: defender-for-containers-arc-configure.md
                 - name: Remove
                   href: defender-for-containers-arc-remove.md
-            - name: Deploy with Helm
+            - name: Configure sensor deployed with Helm
               href: deploy-helm.md
             - name: Defender for Containers resources and offboarding
               displayName: defender, containers, offboard, resources

@@ -83,11 +83,11 @@ These components work together to provide comprehensive security while respectin
 
 Defender for Containers on Arc supports multiple deployment approaches to accommodate different operational requirements:
 
-- **[Azure portal deployment](defender-for-containers-arc-enable-all-portal.md)** - Visual, guided experience for initial setup and small-scale deployments
-- **[Azure CLI and scripts](defender-for-containers-arc-deploy.md#enable-defender-for-containers)** - Command-line deployment for automation and repeatability
-- **[Infrastructure as Code](defender-for-containers-arc-deploy.md#infrastructure-as-code-examples)** - Terraform, ARM templates, or GitOps for enterprise deployments
-- **[Helm charts](defender-for-containers-arc-deploy.md#deploy-the-defender-sensor)** - Native Kubernetes deployment method for teams familiar with Helm
-- **[Air-gapped deployment](defender-for-containers-arc-deploy.md#deploy-to-air-gapped-environments)** - Offline installation for disconnected environments
+- **[Azure portal deployment](defender-for-containers-arc-enable-portal.md)** - Visual, guided experience for initial setup and small-scale deployments
+- **[Azure CLI and scripts](defender-for-containers-arc-enable-programmatically.md#enable-defender-for-containers)** - Command-line deployment for automation and repeatability
+- **[Infrastructure as Code](defender-for-containers-arc-enable-programmatically.md#infrastructure-as-code-examples)** - Terraform, ARM templates, or GitOps for enterprise deployments
+- **[Helm charts](defender-for-containers-arc-enable-programmatically.md#deploy-the-defender-sensor)** - Native Kubernetes deployment method for teams familiar with Helm
+- **[Air-gapped deployment](defender-for-containers-arc-enable-programmatically.md#deploy-to-air-gapped-environments)** - Offline installation for disconnected environments
 
 Choose the deployment method that aligns with your security requirements, network constraints, and operational practices.
 
@@ -104,8 +104,8 @@ Before deploying Defender for Containers on Arc-enabled Kubernetes:
 > [!NOTE]
 > For detailed prerequisites including network requirements and supported configurations, see:
 >
-> - [Enable all components via portal](defender-for-containers-arc-enable-all-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-arc-deploy.md#prerequisites)
+> - [Enable all components via portal](defender-for-containers-arc-enable-portal.md#prerequisites)
+> - [Deploy programmatically](defender-for-containers-arc-enable-programmatically.md#prerequisites)
 
 ## Key scenarios
 
@@ -141,7 +141,6 @@ For current pricing details, see [Microsoft Defender for Cloud pricing](https://
 
 Ready to secure your Arc-enabled Kubernetes clusters? Choose your path:
 
-- [Enable all components via portal](defender-for-containers-arc-enable-all-portal.md) - Recommended for initial setup
-- [Deploy specific components](defender-for-containers-arc-deploy-portal.md) - For selective deployment
-- [Deploy programmatically](defender-for-containers-arc-deploy.md) - For automation and scale
+- [Enable all components via portal](defender-for-containers-arc-enable-portal.md) - Recommended for initial setup
+- [Deploy programmatically](defender-for-containers-arc-enable-programmatically.md) - For automation and scale
 - [Verify deployment](defender-for-containers-arc-verify.md) - Ensure components are working correctly

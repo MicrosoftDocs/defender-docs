@@ -74,16 +74,23 @@ Before deploying Defender for Containers, make sure you have:
 > [!NOTE]
 > Agentless capabilities don't require cluster resources or sensor deployment. For more information about agentless vs. sensor-based features, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
 
-## Deployment options
+## Enablement and deployment options
 
-For each environment, you can choose between:
+Defender for Containers involves two main steps:
 
-- **Portal deployment** - Guided experience through Azure portal
-- **Programmatic deployment** - Automation using CLI, API, or Infrastructure as Code
-- **Helm deployment** - For AKS, EKS, and GKE clusters
+- **Enabling the plan** - You can enable the plan through:
+
+- Azure portal
+- Programmatically (CLI, API, or Infrastructure as Code)
+
+- **Deploying the sensor** - You can deploy the sensor through:
+
+- Azure portal
+- Programmatically (CLI, API, or Infrastructure as Code)
+- Helm charts
 
 > [!NOTE]
-> Feature availability varies by platform and deployment method. For detailed platform-specific capabilities, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
+> Some capabilities work immediately after enabling the plan without sensor deployment. See the [support matrix](support-matrix-defender-for-containers.md) for details on which features require the sensor.
 
 ## Next steps
 

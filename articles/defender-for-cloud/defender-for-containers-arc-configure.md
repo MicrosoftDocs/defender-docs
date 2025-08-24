@@ -7,11 +7,16 @@ ms.date: 06/04/2025
 
 # Configure Defender for Containers on Arc-enabled Kubernetes
 
-This article explains how to configure advanced settings for Defender for Containers on your Arc-enabled Kubernetes clusters.
+This article explains how to configure advanced settings for Defender for Containers on your Arc-enabled Kubernetes clusters. It includes how to add or remove components after the initial deployment.
 
 ## Configuration areas
 
 Jump to the configuration you need:
+
+### Component management
+
+- [Add or remove components](#add-or-remove-components)
+- [Configure component exclusions](#configure-component-exclusions)
 
 ### Core settings
 
@@ -30,8 +35,79 @@ Jump to the configuration you need:
 - [Resource optimization](#configure-resource-optimization)
 - [Multi-cluster policies](#configure-multi-cluster-policies)
 
-> [!TIP]
-> Start with [runtime protection](#configure-runtime-protection) and [distribution-specific](#configure-for-specific-distributions) settings for your environment.
+## Add or remove components
+
+### Check component deployment status
+
+To see which components are currently deployed:
+
+1. Go to **Inventory** and filter by Arc-enabled Kubernetes resources.
+1. Check each cluster for:
+   - Arc connectivity status
+   - Defender extension status
+   - Policy extension status
+
+### Deploy missing components
+
+If you deployed specific components initially and want to add others:
+
+#### Add Defender sensor to existing deployment
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
+1. Select the clusters missing the sensor.
+1. Select **Fix** to deploy.
+
+#### Add Azure Policy extension
+
+1. Go to your Arc-enabled Kubernetes cluster.
+1. Under **Settings**, select **Extensions**.
+1. Select **+ Add**.
+1. Search for and add **Azure Policy for Kubernetes**.
+
+### Remove specific components
+
+To remove components while keeping others:
+
+1. Go to your Arc-enabled Kubernetes cluster.
+1. Under **Settings**, select **Extensions**.
+1. Select the extension to remove (Microsoft Defender or Azure Policy).
+1. Select **Uninstall**.
+
+## Configure component exclusions
+
+### Exclude clusters from automatic provisioning
+
+To prevent automatic component deployment on specific Arc-enabled clusters:
+
+1. Go to your Arc-enabled Kubernetes cluster.
+1. Under **Overview**, select **Tags**.
+1. Add tags to control deployment:
+   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+
+### Configure namespace exclusions
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microsoft-defender-config
+  namespace: mdc
+data:
+  excludedNamespaces: |
+    - kube-system
+    - kube-public
+    - azure-arc
+    - mdc
+```
+
+Apply the configuration:
+
+```bash
+kubectl apply -f defender-config.yaml
+kubectl rollout restart deployment/microsoft-defender-controller -n mdc
+```
 
 ## Configure runtime protection
 
@@ -76,37 +152,92 @@ data:
       - defender: exclude
 ```
 
+### Configure for on-premises clusters
+
+For on-premises Arc-enabled clusters:
+
+1. **Configure private registries**:
+
+   ```bash
+   kubectl create secret docker-registry regcred \
+     --namespace mdc \
+     --docker-server=<registry> \
+     --docker-username=<username> \
+     --docker-password=<password>
+   ```
+
+1. **Set proxy configuration** (if required):
+
+   ```bash
+   az k8s-extension update \
+       --name microsoft.azuredefender.kubernetes \
+       --cluster-type connectedClusters \
+       --cluster-name <cluster-name> \
+       --resource-group <resource-group> \
+       --configuration-settings \
+           httpProxy="http://proxy.company.com:3128" \
+           httpsProxy="http://proxy.company.com:3128" \
+           noProxy="10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+   ```
+
 ## Configure for specific distributions
 
 ### Rancher-specific configuration
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-rancher
-  namespace: mdc
-data:
-  rancherConfig: |
-    monitorCattleSystem: false
-    excludeRancherNamespaces: true
-    customAuditPath: /var/log/rancher/audit.log
-```
+For Rancher RKE and RKE2 clusters:
+
+1. Configure the audit log path:
+   - RKE: `/var/log/kubernetes/audit.log`
+   - RKE2: `/var/log/kube-audit/audit.log`
+
+1. Apply Rancher-specific configuration:
+
+   ```yaml
+   apiVersion: v1
+   kind: ConfigMap
+   metadata:
+     name: microsoft-defender-rancher
+     namespace: mdc
+   data:
+     rancherConfig: |
+       monitorCattleSystem: false
+       excludeRancherNamespaces: true
+       customAuditPath: /var/log/rancher/audit.log
+   ```
+
+1. Update the extension with the correct audit path:
+
+   ```bash
+   az k8s-extension update \
+       --name microsoft.azuredefender.kubernetes \
+       --cluster-type connectedClusters \
+       --cluster-name <cluster-name> \
+       --resource-group <resource-group> \
+       --configuration-settings \
+           auditLogPath="/var/log/kube-audit/audit.log"  # For RKE2
+   ```
 
 ### Configure for VMware Tanzu
 
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: microsoft-defender-tanzu
-  namespace: mdc
-data:
-  tanzuConfig: |
-    enablePSP: true
-    monitorSystemNamespaces: false
-    customLogPath: /var/log/kubernetes/audit.log
-```
+For Tanzu clusters:
+
+1. Ensure audit logging is enabled.
+1. Set appropriate PSP or PSA policies.
+1. Configure network policies if required.
+1. Apply Tanzu-specific configuration:
+
+   ```yaml
+   apiVersion: v1
+   kind: ConfigMap
+   metadata:
+     name: microsoft-defender-tanzu
+     namespace: mdc
+   data:
+     tanzuConfig: |
+       enablePSP: true
+       monitorSystemNamespaces: false
+       customLogPath: /var/log/kubernetes/audit.log
+   ```
 
 ## Configure vulnerability scanning
 
@@ -396,19 +527,19 @@ ConfigurationChange
 
 If configuration changes don't take effect, try the following steps:
 
-1. Verify you applied the ConfigMap:
+1. Verify you applied the ConfigMap.
 
    ```bash
    kubectl get configmap -n mdc microsoft-defender-config -o yaml
    ```
 
-1. Restart Defender components:
+1. Restart Defender components.
 
    ```bash
    kubectl rollout restart deployment -n mdc
    ```
 
-1. Check logs for configuration errors:
+1. Check logs for configuration errors.
 
    ```bash
    kubectl logs -n mdc deployment/microsoft-defender-controller | grep -i config

@@ -85,6 +85,16 @@ kubectl get daemonset -n mdc
 # microsoft-defender-sensor   5         5         5       5            5
 ```
 
+### Verify extension deployment
+
+1. In your Arc-enabled cluster, go to **Extensions**.
+
+1. Verify both extensions show as **Succeeded**:
+   - Microsoft Defender for Containers
+   - Azure Policy for Kubernetes (if deployed)
+
+1. Select each extension to view configuration details.
+
 ## Verify sensor deployment
 
 ### Check sensor health
@@ -108,6 +118,30 @@ kubectl top pods -n mdc
 
 # View resource requests and limits
 kubectl describe daemonset -n mdc microsoft-defender-sensor | grep -A 5 Resources
+```
+
+### Verify sensor deployment
+
+After deployment, verify the sensor is running:
+
+```bash
+# Check sensor pods
+kubectl get pods -n kube-system -l app=microsoft-defender
+
+# Check DaemonSet status
+kubectl get daemonset -n kube-system microsoft-defender-sensor
+```
+
+All nodes should have a running sensor pod within 5-10 minutes.
+
+### Check sensor pods
+
+```bash
+# List all Defender pods
+kubectl get pods -n mdc -l app=microsoft-defender
+
+# Check pod logs for any errors
+kubectl logs -n mdc -l app=microsoft-defender --tail=50
 ```
 
 ## Verify Azure Policy extension
@@ -180,6 +214,17 @@ kubectl run test-alert \
     -- /bin/bash -c "echo 'Testing Arc Defender' > /etc/hosts"
 ```
 
+### Test the deployment
+
+Generate a test security alert:
+
+```bash
+# Run this command in your cluster to trigger a benign test alert
+kubectl run test-alert --image=nginx --rm -it --restart=Never -- bash -c "echo 'test' > /etc/passwd"
+```
+
+Check for the alert in Defender for Cloud within 5-10 minutes.
+
 ### Simulate security alerts from Microsoft Defender for Containers
 
 Test security detection on your Arc-enabled clusters:
@@ -250,6 +295,27 @@ kubectl run rancher-test --image=busybox --rm -it --restart=Never \
 1. Go to **Inventory** > **Containers**.
 1. Set the filter for **Environment** to **Azure Arc**.
 1. Confirm your clusters are listed with security status.
+
+### View security insights
+
+After deployment completes:
+
+1. **Inventory**: See all your Arc-enabled clusters and their security status.
+
+1. **Recommendations**: View Arc-specific security recommendations:
+   - Kubernetes API servers should be accessible only through private endpoints
+   - Kubernetes clusters should use RBAC
+   - Container images should come from trusted registries
+
+1. **Security alerts**: Monitor runtime threats and suspicious activities.
+
+### Monitor deployment progress
+
+1. Go to **Microsoft Defender for Cloud** > **Workload protections**.
+
+1. Select **Containers**.
+
+1. Wait 15-30 minutes for your Arc-enabled clusters to appear.
 
 ## Check component logs
 

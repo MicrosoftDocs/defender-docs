@@ -57,11 +57,8 @@ These components work together seamlessly, requiring no inbound connections to y
 
 Defender for Containers supports flexible deployment approaches to match your operational preferences:
 
-- **[Azure portal deployment](defender-for-containers-azure-enable-all-portal.md)** - Guided, visual experience ideal for initial setup and management
-- **[Azure CLI and PowerShell](defender-for-containers-azure-deploy.md#enable-defender-for-containers)** - Script-based deployment for automation scenarios
-- **[Infrastructure as Code](defender-for-containers-azure-deploy.md#infrastructure-as-code-examples)** - Terraform, Bicep, or ARM templates for repeatable deployments
-- **[Azure Policy](defender-for-containers-azure-deploy.md#batch-deployment-script)** - At-scale deployment and compliance enforcement
-- **[Helm](deploy-helm.md)** - Kubernetes package manager deployment
+- **[Azure portal deployment](defender-for-containers-azure-enable-portal.md)** - Guided, visual experience ideal for initial setup and management
+- **[Azure programmatic deployment](defender-for-containers-azure-enable-programmatically.md)** - Script-based deployment for automation scenarios
 
 Choose the approach that best aligns with your organization's DevOps practices and governance requirements.
 
@@ -75,8 +72,8 @@ Before deploying Defender for Containers on AKS, ensure you meet these requireme
 > [!NOTE]
 > For detailed prerequisites and setup instructions, see:
 >
-> - [Enable all components via portal](defender-for-containers-azure-enable-all-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-azure-deploy.md#prerequisites)
+> - [Enable all components via portal](defender-for-containers-azure-enable-portal.md#prerequisites)
+> - [Deploy programmatically](defender-for-containers-azure-enable-programmatically.md#prerequisites)
 
 ## Pricing
 
@@ -86,7 +83,6 @@ For current pricing and cost estimation, see [Microsoft Defender for Cloud prici
 
 Ready to secure your AKS clusters? Choose your deployment path:
 
-- [Enable all components via portal](defender-for-containers-azure-enable-all-portal.md) - Recommended for comprehensive protection
-- [Deploy specific components via portal](defender-for-containers-azure-deploy-portal.md) - For selective deployment or troubleshooting
-- [Deploy programmatically](defender-for-containers-azure-deploy.md) - For automation and DevOps scenarios
+- [Enable all components via portal](defender-for-containers-azure-enable-portal.md) - Recommended for comprehensive protection
+- [Deploy programmatically](defender-for-containers-azure-enable-programmatically.md) - For automation and DevOps scenarios
 - [Verify deployment](defender-for-containers-azure-verify.md) - Ensure all components are functioning correctly

@@ -1,37 +1,23 @@
 ---
-title: Enable all Defender for Containers components on AKS via portal
-description: Learn how to enable all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters through the Azure portal.
+title: Enable Defender for Containers on AKS via portal
+description: Learn how to enable Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
 ms.date: 06/04/2025
 ---
 
-# Enable all Defender for Containers components on AKS via portal
+# Enable Defender for Containers on AKS via portal
 
-This article shows you how to enable all Microsoft Defender for Containers components on your Azure Kubernetes Service (AKS) clusters by using the Azure portal. This comprehensive approach ensures you get full protection, including vulnerability scanning, runtime threat detection, and security posture management.
-
-## Article contents
-
-- [Prerequisites](#prerequisites)
-- [Enable Defender plan](#enable-defender-for-containers-plan)
-- [Configure components](#configure-plan-components)
-- [Monitor deployment](#monitor-deployment-progress)
-- [Deploy Defender sensor](#deploy-the-defender-sensor)
-- [Verify deployment](#verify-component-deployment)
-- [Enable diagnostics](#enable-diagnostic-logs-recommended)
-- [Advanced configuration](#configure-custom-workspace-optional)
-
-> [!NOTE]
-> This guide covers the complete setup process for new deployments. If you already enabled Defender for Containers and need to fix or add components, see [Deploy specific components](defender-for-containers-azure-deploy-portal.md).
+This article shows you how to enable Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters through the Azure portal. You can choose to enable all security features at once for comprehensive protection, or selectively deploy specific components based on your requirements.
 
 ## When to use this guide
 
-Use this guide if you're:
+Use this guide if you want to:
 
-- Setting up Defender for Containers on Azure for the first time
-- Want to enable all security features at once
-- Need comprehensive protection for all your AKS clusters
-
-If you already enabled Defender for Containers and need to deploy specific components, see [Deploy specific Defender for Containers components on Azure (AKS)](defender-for-containers-azure-deploy-portal.md).
+- Set up Defender for Containers on Azure for the first time
+- Enable all security features for comprehensive protection
+- Selectively deploy specific components
+- Fix or add missing components to an existing deployment
+- Exclude certain clusters from protection
 
 ## Prerequisites
 
@@ -121,6 +107,9 @@ The Defender sensor provides runtime threat detection for your AKS clusters. If 
 
 1. Select **Fix X resources** to deploy.
 
+> [!NOTE]
+> You can also deploy the Defender sensor using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy the Defender sensor using Helm](defender-for-containers-azure-enable-programmatically.md#deploy-the-defender-sensor).
+
 ### Deploy to specific clusters
 
 1. Go to your AKS cluster.
@@ -136,58 +125,37 @@ The Defender sensor provides runtime threat detection for your AKS clusters. If 
 
 1. Select **Save**.
 
-### Verify sensor deployment
+## Deploy specific components (optional)
 
-```bash
-# Check Defender profile
-az aks show -g <resource-group> -n <cluster-name> --query securityProfile.defender
+If you need to deploy only specific components instead of all components:
 
-# Check pods
-kubectl get pods -n kube-system -l app=microsoft-defender
+### Deploy Azure Policy for Kubernetes only
 
-# View DaemonSet
-kubectl get daemonset -n kube-system microsoft-defender-sensor
-```
-
-The sensor runs on all nodes within 5-10 minutes.
-
-## Verify component deployment
-
-### Check Defender sensor deployment
+To enable only the Azure Policy add-on for security recommendations without runtime protection:
 
 1. Go to your AKS cluster in the Azure portal.
 
-1. Under **Settings**, select **Extensions + applications**.
+1. Under **Settings**, select **Policies**.
 
-1. Verify that the **microsoft-defender** extension is installed and shows as **Succeeded**.
+1. Select **Enable Azure Policy**.
 
-### Check Azure Policy deployment
+1. Wait for the policy add-on to install (typically 5-10 minutes).
 
-1. In your AKS cluster, under **Settings**, select **Policies**.
+### Enable vulnerability scanning only
 
-1. Verify that Azure Policy is enabled for the cluster.
+To enable only vulnerability scanning without runtime protection:
 
-### Verify vulnerability scanning
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Go to **Microsoft Defender for Cloud** > **Inventory**.
+1. Select your subscription.
 
-1. Filter by **Resource type** = **Container registries**.
+1. In the Containers plan row, select **Settings**.
 
-1. Select a container registry to view vulnerability findings.
+1. Enable only **Agentless container vulnerability assessment**.
 
-## View security insights
+1. Disable other components.
 
-After the deployment completes (typically within 30 minutes), you can start viewing security insights:
-
-1. Go to **Microsoft Defender for Cloud** > **Workload protections**.
-
-1. Select **Containers** to view the security dashboard.
-
-1. From here, you can:
-   - View vulnerable container images
-   - See runtime security alerts
-   - Review cluster hardening recommendations
-   - Track compliance with security standards
+1. Select **Continue** and then **Save**.
 
 ## Enable diagnostic logs (recommended)
 
@@ -268,9 +236,9 @@ This process stops new security assessments and removes the Defender components 
 
 ## Next steps
 
-After enabling all Defender for Containers components, you can:
-
+- [Verify deployment](defender-for-containers-azure-verify.md)
 - [Configure advanced settings for Defender for Containers](defender-for-containers-azure-configure.md)
 - [Investigate and respond to runtime security alerts](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters)
 - [Review and remediate vulnerability findings](defender-for-containers-vulnerability-assessment-azure.md)
-- [Deploy using Helm for Kubernetes clusters](deploy-helm.md)
+- [Deploy using programmatic methods](defender-for-containers-azure-enable-programmatically.md)
+- [Configure sensor deployed with Helm](deploy-helm.md)

@@ -34,7 +34,7 @@ Jump to the deployment method you need:
   - Terraform
 
 > [!TIP]
-> For a guided portal experience, see [Enable all components via portal](defender-for-containers-aws-enable-all-portal.md).
+> For a guided portal experience, see [Enable all components via portal](defender-for-containers-aws-enable-portal.md).
 
 ## Prerequisites
 
@@ -202,20 +202,17 @@ az connectedk8s show \
     --resource-group $RESOURCE_GROUP
 ```
 
-### [Helm](#tab/helm-arc)
+### [Script](#tab/script-arc)
 
 ```bash
-# Add Defender Helm repository
-helm repo add mdc https://azuredefender.azurecr.io/helm/v1/repo
-helm repo update
-
-# Install Defender sensor
-helm install defender-sensor mdc/azuredefender \
-    --namespace mdc \
-    --create-namespace \
-    --set cluster.name=$CLUSTER_NAME \
-    --set azure.workspaceId=<workspace-id> \
-    --set azure.workspaceKey=<workspace-key>
+# Connect multiple clusters
+for cluster in cluster1 cluster2 cluster3; do
+    aws eks update-kubeconfig --name $cluster
+    az connectedk8s connect \
+        --name $cluster \
+        --resource-group $RESOURCE_GROUP \
+        --location $REGION
+done
 ```
 
 ---
@@ -254,9 +251,73 @@ curl -X PUT \
   }'
 ```
 
+### [Helm](#tab/helm-sensor)
+
+#### Option 1: Using the installation script
+
+The following script installs the Defender for Containers sensor and removes any existing deployment if one exists:
+
+[install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678)
+
+Set your kubeconfig context to the target cluster, and run the script with the command:
+
+```bash
+install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
+```
+
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. ARC_CLUSTER_RESOURCE_ID is an optional parameter for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm.
+
+For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
+
+- Set up a security connector for your AWS account
+
+  > [!NOTE]
+  > To install the Helm chart on an EKS cluster, make sure the cluster account is connected to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md).
+
+- Get its Azure resource ID
+
+  > [!NOTE]
+  > To install the Helm chart on an EKS cluster, you need the security connector resource ID for the account your cluster belongs to. Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get this value.
+  >
+  >For example:
+  >
+  >```azurecli
+  >az resource show \
+  >  --name <connector-name> \
+  >  --resource-group <resource-group-name> \
+  >  --resource-type "Microsoft.Security/securityConnectors" \
+  >  --subscription <subscription-id> \
+  >  --query id -o tsv
+  >```
+  >
+  >In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
+
+Use `public` for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version. For `<DISTRIBUTION>`, use `eks`.
+
+> [!NOTE]
+> This script might create a Log Analytics workspace in your Azure account.
+
+#### Option 2: Using standard Helm commands
+
+```bash
+# Add Defender Helm repository
+helm repo add mdc https://azuredefender.azurecr.io/helm/v1/repo
+helm repo update
+
+# Install Defender sensor
+helm install defender-sensor mdc/azuredefender \
+    --namespace mdc \
+    --create-namespace \
+    --set cluster.name=$CLUSTER_NAME \
+    --set azure.workspaceId=<workspace-id> \
+    --set azure.workspaceKey=<workspace-key>
+```
+
+After deploying the Defender sensor with Helm, you can configure additional settings and manage your deployment. For more information, see [Configure Defender for Containers sensor deployed with Helm](deploy-helm.md).
+
 ---
 
-## Deploy Azure Policy extension
+### Deploy Azure Policy extension
 
 ### [Azure CLI](#tab/azure-cli-policy)
 
@@ -468,25 +529,6 @@ resource "azurerm_security_center_aws_connector" "example" {
 ```
 
 ---
-
-## Verify deployment
-
-After deployment, verify that the components are running:
-
-```bash
-# Check Arc connection
-az connectedk8s list --resource-group $RESOURCE_GROUP
-
-# Check extensions
-az k8s-extension list \
-    --cluster-type connectedClusters \
-    --cluster-name $CLUSTER_NAME \
-    --resource-group $RESOURCE_GROUP
-
-# Check pods
-kubectl get pods -n mdc
-kubectl get pods -n azurepolicy
-```
 
 ## Next steps
 

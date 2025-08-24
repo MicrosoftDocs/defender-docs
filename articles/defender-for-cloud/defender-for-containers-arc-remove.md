@@ -258,4 +258,4 @@ az resource delete \
 
 - [Learn more about Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview)
 - [Offboard Microsoft Defender for Containers](defender-for-containers-offboard.md)
-- [Re-deploy Defender for Containers](defender-for-containers-arc-enable-all-portal.md)
+- [Re-deploy Defender for Containers](defender-for-containers-arc-enable-portal.md)

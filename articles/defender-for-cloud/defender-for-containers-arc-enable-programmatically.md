@@ -10,7 +10,7 @@ ms.date: 06/04/2025
 This article describes how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters by using programmatic methods.
 
 > [!TIP]
-> For Azure portal deployment instructions, see [Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal](defender-for-containers-arc-deploy-portal.md).
+> For Azure portal deployment instructions, see [Deploy Defender for Containers on Arc-enabled Kubernetes using Azure portal](defender-for-containers-arc-enable-portal.md).
 
 ## Prerequisites
 
@@ -284,4 +284,4 @@ done <<< "$clusters"
 
 - [Verify deployment](defender-for-containers-arc-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-arc-configure.md)
-- [Deploy via portal](defender-for-containers-arc-deploy-portal.md)
+- [Deploy via portal](defender-for-containers-arc-enable-portal.md)

@@ -58,11 +58,8 @@ These components work together to provide end-to-end security while respecting G
 
 Defender for Containers on GCP supports flexible deployment approaches:
 
-- **[Azure portal deployment](defender-for-containers-gcp-enable-all-portal.md)** - Guided experience with automated setup scripts
-- **[CLI and automation](defender-for-containers-gcp-deploy.md)** - gcloud and Azure CLI for programmatic deployment
-- **[Selective deployment](defender-for-containers-gcp-deploy-portal.md)** - Deploy to specific clusters or projects
-- **[Infrastructure as Code](defender-for-containers-gcp-deploy.md#infrastructure-as-code-examples)** - Terraform or ARM templates for repeatability
-- **[Helm](deploy-helm.md)** - Kubernetes-native package management
+- **[Azure portal deployment](defender-for-containers-gcp-enable-portal.md)** - Guided experience with automated setup scripts
+- **[Programmatic deployment](defender-for-containers-gcp-enable-programmatically.md)** - Script-based deployment for automation scenarios
 
 Choose the deployment method that aligns with your GCP operational practices and security requirements.
 
@@ -79,8 +76,8 @@ Before deploying Defender for Containers on GKE:
 > [!NOTE]
 > For detailed prerequisites and network requirements, see:
 >
-> - [Enable all components via portal](defender-for-containers-gcp-enable-all-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-gcp-deploy.md#prerequisites)
+> - [Enable all components via portal](defender-for-containers-gcp-enable-portal.md#prerequisites)
+> - [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md#prerequisites)
 
 ## GCP-specific features
 
@@ -138,7 +135,6 @@ For current pricing, see [Microsoft Defender for Cloud pricing](https://azure.mi
 
 Ready to secure your GKE clusters? Choose your deployment path:
 
-- [Enable all components via portal](defender-for-containers-gcp-enable-all-portal.md) - Recommended for initial setup
-- [Deploy specific components](defender-for-containers-gcp-deploy-portal.md) - For selective deployment
-- [Deploy programmatically](defender-for-containers-gcp-deploy.md) - For automation and scale
+- [Enable all components via portal](defender-for-containers-gcp-enable-portal.md) - Recommended for initial setup
+- [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md) - For automation and scale
 - [Verify deployment](defender-for-containers-gcp-verify.md) - Ensure components are working correctly
