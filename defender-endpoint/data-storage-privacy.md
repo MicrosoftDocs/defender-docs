@@ -54,11 +54,11 @@ Microsoft doesn't use your data for advertising.
 
 ## Data location
 
-Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, India, or the United Arab Emirates (UAE). Customer data collected by the service might be stored in: (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, India, or the United Arab Emirates (UAE). Customer data collected by the service might be stored in: (a) the geolocation of the tenant as identified during provisioning or, (b) the geolocation as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
-(a) the geo-location of the tenant as identified during provisioning; or
+(a) the geolocation of the tenant as identified during provisioning; or
 
-(b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data.
+(b) the geolocation as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data.
 
 ## Data Retention
 
