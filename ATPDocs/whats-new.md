@@ -31,6 +31,14 @@ Microsoft Defender for Identity supports the [Unified connectors](/azure/sentine
 
 For more information see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
 
+### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
+
+Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
+
+Previously, Defender for Identity tenants received Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
+
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
+
 
 ### New security assessment: Remove inactive service accounts (Preview)
 
