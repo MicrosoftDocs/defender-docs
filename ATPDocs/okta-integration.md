@@ -29,7 +29,7 @@ Your Okta environment must have one of the following licenses:
 The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 
 
-## Microsoft Entra roles
+### Microsoft Entra roles
 
 To successfully set up the Okta connector, ensure that your account has one of the following Microsoft Entra roles assigned:
 
