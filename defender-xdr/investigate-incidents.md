@@ -103,6 +103,56 @@ If the incident or related alerts were the result of an analytics rule you've se
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
+### Blast radius analysis
+
+The blast radius analysis is an advanced visualization integrated into incident investigation experience. It generates an interactive graph showing possible propagation paths from the selected node to pre-defined critical targets scoped to the user’s permissions. Blast radius analysis provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it is integrated into the incident graph, blast radius analysis helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage.
+
+The following table summarizes the blast radius analysis use cases for different user roles:
+
+|User role| Use case|
+|---|---|
+|Security analyst| Use the blast radius analysis while investigating an incident, to immediately visualize the compromised component at the center of the graph and paths leading to the potentially impacted targets. The graph enables a clear understanding the incident scope at a glance. Based on the target in scope the analyst understands the incident can rapidly escalate and can trigger actions for disruption and isolation and containment for remediation on the nodes on the path to the target.|
+|IT administrators and SOC engineers| Use the blast radius analysis to prioritize the most critical vulnerabilities to attend to immediately. By examining multiple nodes indicated with vulnerabilities on the map, the engineer can proactively allocate the required resources based on the blast radius reach to critical targets in the organization. The engineer can clearly communicate what was protected and what was impacted. The engineer can plan and prioritize additional defenses and network segmentations required to reduce further impact of future potential attacks.|
+|Incident response team| Quickly determine the scope of incident, with a dynamic visual incident map enabling them to take targeted action on the systems indicated on the graph.|
+|CISO or a security leaders| Use the blast radius feature to indicate current status, set goals and metrics indicators and use this to report and audit for compliance reasons. The feature can be used to track progress of defending actions and protection measures investments.|
+
+#### Generate a blast radius graph
+After selecting an incident from the list in the **Incidents** page, a graph view is displayed showing the entities and assets involved in the incident.
+
+Select a node to open the context menu, then select **View blast radius**. 
+
+:::image type="content" source="/defender/media/investigate-incidents/blast-radius.png" lightbox="/defender/media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
+
+A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius** above the graph to the right. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target. 
+
+:::image type="content" source="/defender/media/investigate-incidents/blast-radius-graph.png" lightbox="/defender/media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
+
+Select **View blast radius list** to see a list of target assets. 
+Select a target asset from the list to view its details and potential attack paths.
+
+:::image type="content" source="/defender/media/investigate-incidents/blast-radius-list.png" lightbox="/defender/media/investigate-incidents/blast-radius-list.png" alt-text="Screenshot showing the blast radius list." :::
+
+Hide the blast radius graph and return to the original incident graph by selecting the node and choosing **Hide blast radius**.
+
+#### Limitations
+
+The following limitations apply to blast radius analysis:
+
+- **Path length limitations (scope of analysis):** Blast radius graph length calculations are bounded up to 7 hops from the source node. The blast radius is an approximation of the full attack reach. The maximum number of hops depends on the environment:
+    - 7 hops for cloud
+    - 5 hops for on-premises
+    - 3 hops for hybrid
+
+- **Data freshness:** Latencies may exist between a change in the organization's environment and the reflection of that change in the blast radius graph. During this time, the model might be incomplete.
+- **Possible paths:** The blast radius graph shows possible paths, it doesn't guarantee that an attacker would take every path shown.
+- **Known attack vectors:** The graph relies on known attack vectors. If attackers find a new lateral movement or new technique that has yet to be modeled, it won't be shown in the blast radius graph.
+- **Environmental data:** Attack paths and blast radius features are calculated based on the organization’s available environment data. The graph increases in value as more data is available for its calculation. If no further workloads are enabled, or critical assets are not fully defined, attack path and blast radius graphs won't fully represent your environmental risks.
+- **User scopes:** The graph displayed is based on the allowed scopes for the viewing user. Only nodes and edges that are scoped for the user based on the defined RBAC and scoping settings are visible on the graph. Paths containing out of scope nodes or edges are not visible. A notification indicates scoping was enabled on the graph view, resulting in partial data display.
+- **Island nodes:** Non-connected nodes may appear on the graph due to changes that may occur between the time the data is collected and the calculation of the blast radius.
+ 
+ 
+
+
 ### Attack paths
 
 > [!NOTE]
