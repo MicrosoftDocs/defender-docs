@@ -3,6 +3,7 @@ title: Protect your GitHub Enterprise environment | Microsoft Defender for Cloud
 description: Learn how about connecting your GitHub Enterprise app to Defender for Cloud Apps using the API connector.
 ms.date: 04/27/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your GitHub Enterprise environment
 

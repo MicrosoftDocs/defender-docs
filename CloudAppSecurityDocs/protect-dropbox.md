@@ -3,6 +3,7 @@ title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Dropbox app to Defender for Cloud Apps using the API connector.
 ms.date: 12/26/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Dropbox environment
 

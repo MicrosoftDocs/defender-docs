@@ -2,7 +2,7 @@
 title: Get started with app governance visibility and insights | Microsoft Defender for Cloud Apps
 ms.date: 08/12/2025
 ms.topic: how-to
-ms.reviewr: Shruti Agarwal
+ms.reviewr: shragar
 description: Get started with app governance visibility and insights in Microsoft Defender XDR for Microsoft Defender for Cloud Apps.
 ---
 

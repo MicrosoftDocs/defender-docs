@@ -2,7 +2,7 @@
 title: Create app governance policies | Microsoft Defender for Cloud Apps
 ms.date: 08/12/2025
 ms.topic: how-to
-ms.reviewer: Shruti Agarwal
+ms.reviewer: shragar
 description: Learn how to create app policies on app governance.
 ---
 

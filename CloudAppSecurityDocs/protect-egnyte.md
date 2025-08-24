@@ -3,6 +3,7 @@ title: Protect your Egnyte environment (Preview) | Microsoft Defender for Cloud 
 description: Learn how about connecting your Egnyte app to Defender for Cloud Apps using the API connector.
 ms.date: 12/12/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Egnyte environment
 

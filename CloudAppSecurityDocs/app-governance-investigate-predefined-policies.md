@@ -2,7 +2,7 @@
 title: Investigate predefined app governance policy alerts | Microsoft Defender for Cloud Apps 
 ms.date: 08/12/2025
 ms.topic: how-to
-ms.reviewer: Shruti Agarwal
+ms.reviewer: shragar
 description: Learn how to investigate predefined app policy alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ---
 
