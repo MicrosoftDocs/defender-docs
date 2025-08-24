@@ -50,7 +50,7 @@ If you experience problems with loading the workload protection dashboard, make 
 > [!NOTE]
 > A lock might prevent deletion and cause an error in the Azure Activity log. 
 > - To check for locks, go to [Manage locks to prevent resources from being deleted or changed](/azure/azure-resource-manager/management/lock-resources).  
-> - To review relevant events, open the [Azure Activity log](/azure/azure-monitor/essentials/activity-log) and look for error messages that indicate a lock is present.
+> - To find relevant events, open the [Azure Activity log](/azure/azure-monitor/essentials/activity-log) and check for error messages about resource locks.
 
 ## Troubleshoot connector problems for the Azure DevOps organization
 
