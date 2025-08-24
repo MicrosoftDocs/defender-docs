@@ -17,6 +17,8 @@ This page explains how to connect Microsoft Defender for Identity to your Okta a
 
 Before connecting your Okta account to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
+### Okta licenses
+
 Your Okta environment must have one of the following licenses:
 
 - Developer
