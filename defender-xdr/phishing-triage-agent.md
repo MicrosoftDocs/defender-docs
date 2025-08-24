@@ -7,7 +7,6 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -55,10 +54,11 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 
 | Action                        | Permission required                                                                                           |
 |:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| Set up, pause, remove or the agent              | **Security Administrator** in Microsoft Entra ID                                                            |
-| View and manage agent settings and activity        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
+| Set up, pause, or remove the agent, and manage agent identity              | **Security Administrator** in Microsoft Entra ID                                                            |
+| View and manage agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
 | View and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal|
 |Reject feedback|**Security Administrator** in Microsoft Entra ID|
+| View agent results |**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
