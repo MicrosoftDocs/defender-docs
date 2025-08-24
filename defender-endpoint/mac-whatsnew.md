@@ -74,6 +74,18 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Aug-2025 (Build: 101.25062.0006  | Release version: 20.125062.6.0)
+
+| Build:             | **101.25062.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.6.0**    |
+| Engine version:    | **1.1.25070.3000**   |
+| Signature version: | **1.435.357.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
 ### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
 
 | Build:             | **101.25062.0005**   |
