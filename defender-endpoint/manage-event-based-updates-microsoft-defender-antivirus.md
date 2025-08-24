@@ -96,7 +96,7 @@ You can use Microsoft Defender for Endpoint Security Settings Management, Micros
 Use the following cmdlets:
 
 ```PowerShell
-Set-MpPreference -CheckForSignaturesBeforeRunningScan
+Set-MpPreference -CheckForSignaturesBeforeRunningScan 1
 ```
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
