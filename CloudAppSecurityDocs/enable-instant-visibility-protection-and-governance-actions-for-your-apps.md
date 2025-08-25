@@ -1,8 +1,9 @@
 ---
 title: Connect apps to get visibility and control 
 description: This article describes the process for connecting apps with API connectors to apps in your organization's cloud.
-ms.date: 05/06/2024
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 
 # Connect apps to get visibility and control with Microsoft Defender for Cloud Apps

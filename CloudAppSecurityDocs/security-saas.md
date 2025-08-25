@@ -3,6 +3,7 @@ title: Turn on and manage SaaS security posture management (SSPM) - Microsoft De
 description: Learn how to get security configuration recommendations in Defender for Cloud Apps for your organization's SaaS applications.
 ms.date: 01/18/2024
 ms.topic: how-to
+ms.reviewer: iidogGedanken
 ---
 
 # Turn on and manage SaaS security posture (SSPM)

@@ -3,6 +3,7 @@ title: Advanced log collector management | Microsoft Defender for Cloud Apps
 description: This article provides information about advanced management tasks for Defender for Cloud Apps cloud discovery log collectors.
 ms.date: 03/18/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Advanced log collector management
 

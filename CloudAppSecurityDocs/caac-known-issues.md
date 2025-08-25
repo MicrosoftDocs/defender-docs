@@ -3,6 +3,7 @@ title: Conditional Access app control known limitations | Microsoft Defender for
 description: Learn about known limitations for working with Conditional Access app control in Microsoft Defender for Cloud Apps.
 ms.date: 01/23/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Known limitations in Conditional Access app control 

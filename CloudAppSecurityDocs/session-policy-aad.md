@@ -3,6 +3,7 @@ title: Create session policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps session policies with Conditional Access app control to gain visibility into user session activities and block downloads.
 ms.date: 05/15/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Create Microsoft Defender for Cloud Apps session policies
