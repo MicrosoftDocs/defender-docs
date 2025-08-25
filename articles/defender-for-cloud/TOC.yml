@@ -431,6 +431,9 @@
       - name: Exempt resources from recommendations
         displayName: disable, resource, exempt, recommendation
         href: exempt-resource.md
+      - name: Exempt resources at scale
+        displayName: policy, resource, exemptions, create, exempt, at scale, resources
+        href: exempt-resources-at-scale.md
     - name: Investigate and remediate security posture
       items:
       - name: Investigate security recommendations
@@ -451,9 +454,6 @@
           displayName: security, posture, recommendation, governance, automated, rules,
             owners, status, progress
           href: governance-rules.md
-        - name: View recommendations and alerts in Windows Admin Center
-          displayName: windows, admin, center
-          href: windows-admin-center-integration.md
       - name: Improve regulatory compliance
         href: regulatory-compliance-dashboard.md
       - name: Investigate with security explorer and attack path
@@ -571,9 +571,6 @@
     - name: Deploy the Azure Monitor agent
       displayName: AMA, Azure monitor agent
       href: auto-deploy-azure-monitoring-agent.md
-    - name: Working with the Log Analytics agent
-      displayName: log analytics, agent
-      href: working-with-log-analytics-agent.md
   - name: Defender for APIs
     items: 
     - name: About Defender for APIs
@@ -875,12 +872,6 @@
         - name: Troubleshoot SQL machine protection configuration
           displayName: Troubleshoot guide, SQL, servers, machines
           href: troubleshoot-sql-machines-guide.md
-        - name: Identify SQL Servers protected by MMA
-          displayName: SQL, SQL servers, defender, machines, MMA, Microsoft Monitor Agent
-          href: identify-sql-servers-protected-by-mma.md
-        - name: Enable Defender for SQL servers on machines at scale
-          displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-          href: enable-defender-sql-at-scale.md
         - name: Disable Defender for SQL Servers on Machines
           displayName: SQL, SQL servers, defender, machines, disable
           href: disable-sql-on-machines.md
@@ -889,6 +880,9 @@
           - name: Enable Defender for SQL Servers on Machines government
             displayName: hybrid, arc, Azure Defender
             href: defender-for-sql-usage-gov.md
+          - name: Enable Defender for SQL servers on machines at scale
+            displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+            href: enable-defender-sql-at-scale.md
           - name: Verify SQL machine protection government
             displayName: SQL, SQL servers, defender, machines
             href: verify-machine-protection-gov.md

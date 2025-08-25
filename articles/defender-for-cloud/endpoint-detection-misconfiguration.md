@@ -44,8 +44,6 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
     - `EDR configuration issues should be resolved on virtual machines`
     - `EDR configuration issues should be resolved on EC2s`
     - `EDR configuration issues should be resolved on GCP virtual machines`
-    -
-    -
 
     :::image type="content" source="media/endpoint-detection-response/configurable-solutions.png" alt-text="Screenshot that shows the recommendations that configure your endpoint detection and solution and remediate misconfigurations." lightbox="media/endpoint-detection-response/configurable-solutions.png":::
 
