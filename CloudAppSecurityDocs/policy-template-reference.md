@@ -3,6 +3,7 @@ title: Microsoft Defender for Cloud Apps policy templates
 description: This article provides information on policy templates included in Microsoft Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Ronen-Refaeli
 ---
 
 # Defender for Cloud Apps policy templates

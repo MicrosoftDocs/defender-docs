@@ -3,6 +3,7 @@ title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Dropbox app to Defender for Cloud Apps using the API connector.
 ms.date: 12/26/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Dropbox environment
 
@@ -96,7 +97,7 @@ Because Dropbox enables access to files from shared links without signing in, De
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
-After connecting DropBox, you'll receive events for seven days prior to connection.
+   After connecting DropBox, you'll receive events for seven days prior to connection.
 
 > [!NOTE]
 > Any Dropbox events for adding a file are displayed in Defender for Cloud Apps as Upload file to align to all other apps connected to Defender for Cloud Apps.
