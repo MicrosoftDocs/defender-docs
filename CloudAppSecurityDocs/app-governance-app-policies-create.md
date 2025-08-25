@@ -39,7 +39,7 @@ For apps connected to Microsoft Entra ID, create app policies from provided temp
 
     For example:
 
-    :::image type="content" source="media/app-governance/app-governance-create-policy.png" alt-text="Screenshot of a Choose a policy template page." lightbox="media/app-governance/app-governance-create-policy.png":::
+    :::image type="content" source="media/app-governance/app-governance-create-policy.png" alt-text="Screenshot showing the "Choose a policy template" interface." lightbox="media/app-governance/app-governance-create-policy.png":::
 
 ## App policy templates
 
