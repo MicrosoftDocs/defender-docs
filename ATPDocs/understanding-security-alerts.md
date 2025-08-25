@@ -47,7 +47,7 @@ You can apply the following filters to get a more focused view of the alerts.
 
 |Alert |Description  |
 |---------|---------|
-|**Severity**    |   Alert severity is based on several factors, including how much access the attacker might have, the potential impact if the attack succeeds, and the likelihood that the alert is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md#map-security-alerts-to-unique-external-id-and-mitre-attck-matrix-tactics)     |
+|**Severity**    |   Alert severity is based on several factors, including how much access the attacker might have, the potential impact if the attack succeeds, and the likelihood that the alert is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md)     |
 |**Status**    | You can choose to filter the list of alerts based on their Status. For example, you can filter to show only alerts that are **New**, **In Progress**, or **Resolved**.        |
 |**Detection sources**    |  You can filter the alerts based on the following Detection sources:   **Microsoft Defender for Identity** or **Microsoft Defender XDR**     |
 |**Tags**    | You can filter the alerts based on Tags assigned to alerts. |
@@ -67,7 +67,7 @@ The alerts page provides context into the alert, by combining attack signals and
 
 > [!NOTE]
 > Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. 
-> While the alert views show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+> While the alert views show different information, all alerts are based on Defender for Identity collected data. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
 

@@ -25,13 +25,6 @@ Anomalies are detected by scanning user activity. The risk is evaluated by looki
 
 Based on the policy results, security alerts are triggered. Defender for Cloud Apps looks at every user session on your cloud and alerts you when something happens that is different from the baseline of your organization or from the user's regular activity.
 
-In addition to native Defender for Cloud Apps alerts, you'll also get the following detection alerts based on information received from Microsoft Entra ID Protection:
-
-* Leaked credentials: Triggered when a user's valid credentials have been leaked. For more information, see [Microsoft Entra ID's Leaked credentials detection](/azure/active-directory/identity-protection/concept-identity-protection-risks#user-risk).
-* Risky sign-in: Combines a number of Microsoft Entra ID Protection sign-in detections into a single detection. For more information, see [Microsoft Entra ID's Sign-in risk detections](/azure/active-directory/identity-protection/concept-identity-protection-risks#sign-in-risk).
-
-These policies appear on the Defender for Cloud Apps policies page and can be enabled or disabled.
-
 > [!IMPORTANT]
 > Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
 > 

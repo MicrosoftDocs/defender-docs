@@ -536,9 +536,9 @@ Apply the latest patches to all of your machines, and check all security updates
 
 1. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-1. Data in the control of some ransom software can sometimes be decrypted. Decryption is only possible if the user hasn't restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+1. Data in the control of some ransom software can sometimes be decrypted. Decryption is only possible if the user hasn't restarted or turned off the computer. For more information, see [WannaCrypt ransomware worm targets out-of-date systems](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/)
 
->[!NOTE]
+> [!NOTE]
 > To disable a suspicious activity alert, contact support.
 
 ## See also

@@ -1,7 +1,7 @@
 ---
 title: Investigate assets
 description: This article explains how to investigate suspicious users, computers, and devices with Microsoft Defender for Identity.
-ms.date: 01/17/2024
+ms.date: 07/01/2025
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
 ---
@@ -46,8 +46,7 @@ Find identity information in the following Microsoft Defender XDR areas:
 
 For example, the following image shows the details on an identity details page:
 
-![Screenshot of a specific user's page in the Microsoft Defender portal.](media/investigate-assets/image.png)
-
+:::image type="content" source="media/investigate-assets/investigate-assets.png" alt-text="Screenshot that shows a specific user's page in the Microsoft Defender portal." lightbox="media/investigate-assets/investigate-assets.png":::
 
 
 ### Identity details
@@ -57,7 +56,7 @@ When you investigate a specific identity, you'll see the following details on an
 
 |Identity details page area  |Description  |
 |---------|---------|
-|[Overview tab](/microsoft-365/security/defender/investigate-users#overview)       | General identity data, such as the Microsoft Entra identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  <br><br>Use the **Overview** tab to also view graphs for incidents and alerts, the investigation priority score, an organizational tree, entity tags, and a scored activity timeline.       |
+|[Overview tab](/microsoft-365/security/defender/investigate-users#overview)       | General identity data, such as the Microsoft Entra identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  <br><br>Use the **Overview** tab to also view graphs for incidents and alerts, and an organizational tree, entity tags.       |
 |[Incidents and alerts](/microsoft-365/security/defender/investigate-users#incidents-and-alerts)     | Lists active incidents and alerts involving the user from the last 180 days, including details like alert severity and the time the alert was generated. |
 |[Observed in organization](/microsoft-365/security/defender/investigate-users#observed-in-organization)     |   Includes the following sub-areas: <br>- **Devices**: The devices that the identity signed in to, including most and least used in the last 180 days. <br>- **Locations**: The identity's observed locations over the last 30 days. <br>- **Groups**: All observed on-premises groups for the identity. <br> - **Lateral movement paths** - all profiled lateral movement paths from the on-premises environment. |
 |[Identity timeline](/microsoft-365/security/defender/investigate-users#timeline)     | The timeline represents activities and alerts observed from a user's identity from the last 180 days, unifying identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint. <br><br>Use the timeline to focus on activities a user performed or were performed on them in specific timeframes. Select the default **30 days** to change the time range to another built-in value, or to a custom range.       |

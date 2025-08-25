@@ -2,11 +2,11 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2025
+ms.date: 08/11/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -28,7 +28,7 @@ ms.date: 05/01/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [See also](#see-also) section. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -42,6 +42,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
+- [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -256,6 +257,13 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf install mariner-repos-extras-preview
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
+
+## Preinstall setup for custom location installation
+
+These steps are applicable only if Defender is to be installed in a custom location.
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom location, see [Manual installation: preinstallation setup](linux-custom-location-installation.md#manual-installation-preinstallation-setup).
+
+For details on installing to a custom location, refer: [Enabling deployment of Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md).
 
 ## Application installation
 
@@ -488,7 +496,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 The following external package dependencies exist for the `mdatp` package:
 
 - The mdatp RPM package requires `glibc >= 2.17`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`
 - For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`
 
 > [!NOTE]
@@ -503,6 +511,7 @@ The following external package dependencies exist for the `mdatp` package:
 > - The `mde-netfilter` package also has the following package dependencies:
     - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
     - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
@@ -556,7 +565,7 @@ For manual uninstallation, execute the following command for your Linux distribu
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
 
-## See also
+## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
@@ -568,5 +577,6 @@ For manual uninstallation, execute the following command for your Linux distribu
    - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+   - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -21,8 +21,6 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[!include[Prerelease information](../includes/prerelease.md)]
-
 **Applies to:**
 
 - Group Policy

@@ -163,7 +163,7 @@ For example:
 ![Filter after selecting investigate 6 months back.](media/filter-six-months-back.png)
 
 
-### Export activities six months back (Preview)
+### Export activities six months back
 
 
 You can export all activities from the past six months by clicking the Export button in the top-left corner  of the Activity log page.

@@ -87,3 +87,4 @@ When an alert is correlated with an incident, a message is written to the incide
 ## See also
 
 - [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md)
+- [Merge incidents manually in the Microsoft Defender portal](merge-incidents-manually.md)

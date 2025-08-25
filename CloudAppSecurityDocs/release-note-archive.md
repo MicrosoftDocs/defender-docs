@@ -1533,7 +1533,7 @@ Suspicious inbox manipulation rules: This policy profiles your environment and t
 Cloud App Security now gives you the ability to define app permission policies more granularly, based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the administrators group.
 
 - **Conditional Access App Control now integrates with your on-premises apps via Azure Active Directory Application Proxy**  
-  - The [Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy) provides single sign-on and secure remote access for your web apps hosted on-premises.
+  - The [Azure AD Application Proxy](/entra/identity/app-proxy/) provides single sign-on and secure remote access for your web apps hosted on-premises.
   - These on-premises web apps can now be routed to Microsoft Cloud App Security via Azure AD Conditional Access to provide real-time monitoring and controls, via [access](access-policy-aad.md) and [session](session-policy-aad.md) policies.
 
 ### Cloud App Security release 133, 134, 135

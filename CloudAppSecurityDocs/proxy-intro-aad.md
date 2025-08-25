@@ -6,9 +6,8 @@ ms.topic: concept-article
 ---
 # Conditional Access app control in Microsoft Defender for Cloud Apps
 
-In today's workplace, it's not enough to know what happened in your cloud environment after the fact. You need to stop breaches and leaks in real time. You also need to prevent employees from intentionally or accidentally putting your data and organization at risk.
-
-You want to support users in your organization while they use the best cloud apps available and bring their own devices to work. However, you also need tools to protect your organization from data leaks and theft in real time. Microsoft Defender for Cloud Apps integrates with any identity provider (IdP) to deliver this protection with [access](access-policy-aad.md) and [session](session-policy-aad.md) policies.
+In today’s workplace, it’s not enough to understand what happened in your cloud environment after the fact, you need to stop breaches and data leaks as they happen. That includes preventing employees from intentionally or accidentally putting your data and organization at risk.
+Microsoft Defender for Cloud Apps helps you strike the right balance: enabling productivity with the best cloud apps while protecting your data in real time. It delivers deep visibility and control over **browser-based sessions** through integration with any identity provider (IdP), using powerful [access](access-policy-aad.md) and [session](session-policy-aad.md) policies.
 
 For example:
 
@@ -25,6 +24,8 @@ For example:
 Microsoft Edge users benefit from [direct, in-browser protection](in-browser-protection.md). A lock :::image type="icon" source="media/in-browser-protection/lock.png" border="false"::: icon on the browser's address bar indicates this protection.
 
 Users of other browsers are redirected via reverse proxy to Defender for Cloud Apps. Those browsers display an `*.mcas.ms` suffix in the link's URL. For example, if the app URL is `myapp.com`, the app URL is updated to `myapp.com.mcas.ms`.
+
+To prevent bypassing this protection, admins should configure access policies to block native client access and allow only browser-based sessions.
 
 This article describes Conditional Access app control in Defender for Cloud Apps through [Microsoft Entra Conditional Access](/entra/identity/conditional-access/overview) policies.
 
