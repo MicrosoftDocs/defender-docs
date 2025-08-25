@@ -110,7 +110,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 1. Run the following command to download the Windows Docker installer PowerShell script file: 
 
     ```powershell
-    Invoke-WebRequest https://adaprodconsole.blob.core.windows.net/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1)
+   Invoke-WebRequest https://discoveryresources-cdn-prod.cloudappsecurity.com/prod-1/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1) 
     ```
 
     To validate that the installer is signed by Microsoft, see [Validate installer signature](#optional---validate-installer-signature).

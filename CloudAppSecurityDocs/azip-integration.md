@@ -3,6 +3,7 @@ title: Integrate with Microsoft Purview
 description: This article provides information about how to use sensitivity labels from Microsoft Purview in Defender for Cloud Apps for added control of your organization's cloud app use.
 ms.date: 10/26/2023
 ms.topic: how-to
+ms.reviewer: MayaAbelson
 ---
 # Integrate with Microsoft Purview for information protection
 

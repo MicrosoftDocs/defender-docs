@@ -1,8 +1,9 @@
 ---
 title: Get started with app governance in Microsoft Defender for Cloud Apps in Microsoft Defender XDR.
-ms.date: 05/23/2025
+ms.date: 08/18/2025
 ms.topic: quickstart
 description: Step-by-step guide to help you quickly get started with app governance in Microsoft Defender for Cloud Apps and Microsoft Defender XDR.
+ms.reviewer: shragar
 ---
 
 # Get started with app governance in Defender for Cloud Apps
