@@ -994,7 +994,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!IMPORTANT]
 > We're working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
-> We continue supporting the old syntax in parallel with the new syntax and provides more communications around the deprecation plan for the old syntax in the upcoming months.
+> We continue supporting the old syntax in parallel with the new syntax and provide more communications around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & Product improvements
 
