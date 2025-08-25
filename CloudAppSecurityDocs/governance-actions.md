@@ -109,7 +109,8 @@ These actions are restricted to users with specific administrative roles. If the
 - **Governance actions in apps** - Granular actions can be enforced per app, specific actions vary depending on app terminology.
 
 - **Suspend user** – Suspend the user from the application.
-      > [!NOTE]
+
+    > [!NOTE]
     > If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment the settings in the on-premises environment will override the Microsoft Entra settings and this governance action will be reverted.
 
   - **Require user to sign in again** – Signs the user out and requires them to sign in again.
