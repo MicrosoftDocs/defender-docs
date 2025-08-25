@@ -128,6 +128,42 @@
           href: support-matrix-defender-for-containers.md
         - name: Defender for Containers permissions for EKS and GKE
           href: containers-permissions.md
+    - name: Deployment management and troubleshooting
+      items:
+        - name: Assign access to workload owners
+          displayName: assign access, aws, gcp, connector, permissions, identity, security
+          href: assign-access-to-workload.md
+        - name: Grant and request tenant-wide permissions
+          displayName: Azure Active Directory (AD), AAD
+          href: tenant-wide-permissions-management.md
+        - name: Enable Defender for Cloud for a management group
+          displayName: management group
+          href: onboard-management-group.md
+        - name: Set up cross-tenant management
+          displayName: cross tenant, cross-tenant
+          href: cross-tenant-management.md
+        - name: Automate onboarding using PowerShell
+          displayName: automate, onboard, onboarding
+          href: powershell-onboarding.md
+        - name: Troubleshoot connectors guide
+          displayName: troubleshoot, connectors, guide 
+          href: troubleshoot-connectors.md
+        - name: Amazon Web Services (AWS) connector troubleshooting
+          items:
+          - name: Connect a Sentinel connected AWS account
+            displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, Sentinel
+            href: sentinel-connected-aws.md
+        - name: Google Cloud Platform (GCP) connector troubleshooting
+          items:
+          - name: Resolve Domain Restricted Sharing policy
+            displayName: connector, GCP, domain, restricted, sharing, policy
+            href: resolve-gcp-sharing-policy.md
+          - name: Resolve agentless scanning error
+            displayName: connector, GCP, disc, scanning, error
+            href: resolve-disk-scanning-error.md
+          - name: Resolve VPC Service Controls restriction issues
+            displayName: connector, GCP, VPC, service, controls, restriction, issues
+            href: resolve-vpc-service-controls-issues.md
 
 - name: Cloud Security Posture Management (CSPM)
   items:
@@ -225,6 +261,120 @@
             - name: Add Defender for Cloud data to Power BI
               displayName: CSPM, cloud security, posture, management, Power BI
               href: add-data-power-bi.md
+    - name: Cloud security posture how-to guides
+      items:
+        - name: Review cloud security posture
+          displayName: overview, compliance, inventory
+          href: overview-page.md
+        - name: Review workload protection
+          displayName: workloads, dashboard, protections
+          href: workload-protections-dashboard.md
+        - name: Track secure score
+          displayName: secure score, rest api, resource graph
+          href: secure-score-access-and-track.md
+        - name: Enable cloud infrastructure entitlement management (CIEM)
+          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
+          href: enable-permissions-management.md
+    - name: API security posture how-to guides
+      items:
+        - name: Enable API security posture with Defender CSPM
+          href: enable-api-security-posture.md
+    - name: AI security posture how-to guides
+      items:
+        - name: Discover generative AI workloads
+          displayName: AI, workloads, models, applications, apps, AI BOM
+          href: identify-ai-workload-model.md
+        - name: Explore risks to pre-deployment generative AI artifacts
+          displayName: AI, risks, generative, applications, apps
+          href: explore-ai-risk.md
+    - name: Data security posture how-to guides
+      items:
+        - name: Enable data security posture management
+          href: data-security-posture-enable.md
+        - name: Explore risks to sensitive data
+          href: data-security-review-risks.md
+        - name: Customize sensitivity settings
+          href: data-sensitivity-settings.md
+    - name: Container security posture how-to guides
+      items:
+        - name: Onboard agentless containers for CSPM
+          href: how-to-enable-agentless-containers.md
+        - name: Attack path analysis and enhanced risk-hunting for containers
+          displayName: attack paths, paths, security explorer, test
+          href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
+        - name: Configure a Docker Hub external container registry
+          href: defender-for-containers-enable-external-registry-for-docker-hub.md
+    - name: Secrets security posture how-to guides
+      items: 
+      - name: Remediate issues with VM secrets
+        href: remediate-server-secrets.md
+      - name: Remediate cloud deployment secrets
+        href: remediate-cloud-deployment-secrets.md
+    - name: Manage security standards and recommendations
+      items:
+      - name: Choose compliance standards 
+        href: update-regulatory-compliance-packages.yml
+      - name: Create custom standards/recommendations
+        href: create-custom-recommendations.md
+      - name: Manage MCSB recommendations
+        href: manage-mcsb.md
+      - name: Exempt resources from recommendations
+        displayName: disable, resource, exempt, recommendation
+        href: exempt-resource.md
+      - name: Exempt resources at scale
+        displayName: policy, resource, exemptions, create, exempt, at scale, resources
+        href: exempt-resources-at-scale.md
+    - name: Investigate and remediate security posture
+      items:
+      - name: Investigate security recommendations
+        items:
+        - name: Review security recommendations
+          displayName: security, recommendations, owner, azure, resource, graph, azure
+            resource graph, csv report
+          href: review-security-recommendations.md
+        - name: Review resources exempted from recommendations
+          href: review-exemptions.md
+        - name: Assign a recommendation to an active user
+          displayName: assign, recommendation, user, owner
+          href: active-user.md
+        - name: Remediate recommendations
+          displayName: remediation, steps, recommendations, fix, actions, activity log
+          href: implement-security-recommendations.md
+        - name: Drive remediation with governance rules
+          displayName: security, posture, recommendation, governance, automated, rules,
+            owners, status, progress
+          href: governance-rules.md
+      - name: Improve regulatory compliance
+        href: regulatory-compliance-dashboard.md
+      - name: Investigate with security explorer and attack path
+        items:
+        - name: Identify and remediate attack paths
+          displayName: attack paths, paths, investigate, easm,
+          href: how-to-manage-attack-path.md
+        - name: Retrieve attack path data with API
+          displayName: attack paths, paths, investigate, easm, rest api
+          href: attack-path-api.md
+        - name: Build queries with cloud security explorer
+          displayName: queries, security explorer, explorer, templates, query
+          href: how-to-manage-cloud-security-explorer.md
+        - name: Detect internet exposed IP addresses
+          displayName: exposed, ip, addresses, easm
+          href: detect-exposed-ip-addresses.md
+    - name: Built-in security protections
+      items:
+        - name: Use Purview to protect sensitive data
+          displayName: sensitivity, data, purview, inventory, information protection
+          href: information-protection.md
+        - name: Mitigate risks on specific resources in the asset inventory
+          displayName: asset, inventory, resources
+          href: asset-inventory.md
+        - name: Protect network resources
+          displayName: map, network map
+          href: protect-network-resources.md
+        - name: Other threat protections
+          displayName: network layer, display recommendations, stream, security, alerts,
+            DDoS, Entra
+          href: other-threat-protections.md
     - name: Common questions about CSPM
       displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
       href: faq-cspm.yml
@@ -319,179 +469,20 @@
               - name: Overview Microsoft Copilot for Security integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
+              - name: Summarize recommendations with Microsoft Security Copilot
+                displayName: copilot, security, recommendations, summarize
+                href: summarize-with-copilot.md
+              - name: Remediate recommendations with Microsoft Security Copilot
+                displayName: copilot, security, recommendations, remediate
+                href: remediate-with-copilot.md
+              - name: Delegate recommendations with Microsoft Security Copilot
+                displayName: copilot, security, recommendations, delegate
+                href: delegate-with-copilot.md
+              - name: Remediate code with Microsoft Security Copilot
+                displayName: copilot, security, recommendations, code, remediate, iac, infrastructure as code
+                href: remediate-code-with-copilot.md
 
 
-- name: How-to guides
-  items:
-    - name: Build interactive reports with Azure Monitor workbooks
-      displayName: workbooks, Secure Score Over Time, Vulnerability Assessment Findings
-      href: custom-dashboards-azure-workbooks.md
-    - name: Assign access to workload owners
-      displayName: assign access, aws, gcp, connector, permissions, identity, security
-      href: assign-access-to-workload.md
-    - name: Cloud security posture
-      items:
-        - name: Review cloud security posture
-          displayName: overview, compliance, inventory
-          href: overview-page.md
-        - name: Review workload protection
-          displayName: workloads, dashboard, protections
-          href: workload-protections-dashboard.md
-        - name: Track secure score
-          displayName: secure score, rest api, resource graph
-          href: secure-score-access-and-track.md
-        - name: Enable cloud infrastructure entitlement management (CIEM)
-          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-          href: enable-permissions-management.md
-    - name: API security posture
-      items:
-        - name: Enable API security posture with Defender CSPM
-          href: enable-api-security-posture.md
-    - name: AI security posture
-      items:
-        - name: Discover generative AI workloads
-          displayName: AI, workloads, models, applications, apps, AI BOM
-          href: identify-ai-workload-model.md
-        - name: Explore risks to pre-deployment generative AI artifacts
-          displayName: AI, risks, generative, applications, apps
-          href: explore-ai-risk.md
-    - name: Data security posture management
-      items:
-        - name: Enable data security posture management
-          href: data-security-posture-enable.md
-        - name: Explore risks to sensitive data
-          href: data-security-review-risks.md
-        - name: Customize sensitivity settings
-          href: data-sensitivity-settings.md
-    - name: Container security posture
-      items:
-        - name: Onboard agentless containers for CSPM
-          href: how-to-enable-agentless-containers.md
-        - name: Attack path analysis and enhanced risk-hunting for containers
-          displayName: attack paths, paths, security explorer, test
-          href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
-        - name: Configure a Docker Hub external container registry
-          href: defender-for-containers-enable-external-registry-for-docker-hub.md
-    - name: Secrets security posture
-      items: 
-      - name: Remediate issues with VM secrets
-        href: remediate-server-secrets.md
-      - name: Remediate cloud deployment secrets
-        href: remediate-cloud-deployment-secrets.md
-    - name: Improve security posture with Microsoft Security Copilot
-      items:
-        - name: Summarize recommendations with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, summarize
-          href: summarize-with-copilot.md
-        - name: Remediate recommendations with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, remediate
-          href: remediate-with-copilot.md
-        - name: Delegate recommendations with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, delegate
-          href: delegate-with-copilot.md
-        - name: Remediate code with Microsoft Security Copilot
-          displayName: copilot, security, recommendations, code, remediate, iac, infrastructure as code
-          href: remediate-code-with-copilot.md
-    - name: Manage security standards and recommendations
-      items:
-      - name: Choose compliance standards 
-        href: update-regulatory-compliance-packages.yml
-      - name: Create custom standards/recommendations
-        href: create-custom-recommendations.md
-      - name: Manage MCSB recommendations
-        href: manage-mcsb.md
-      - name: Exempt resources from recommendations
-        displayName: disable, resource, exempt, recommendation
-        href: exempt-resource.md
-      - name: Exempt resources at scale
-        displayName: policy, resource, exemptions, create, exempt, at scale, resources
-        href: exempt-resources-at-scale.md
-    - name: Investigate and remediate security posture
-      items:
-      - name: Investigate security recommendations
-        items:
-        - name: Review security recommendations
-          displayName: security, recommendations, owner, azure, resource, graph, azure
-            resource graph, csv report
-          href: review-security-recommendations.md
-        - name: Review resources exempted from recommendations
-          href: review-exemptions.md
-        - name: Assign a recommendation to an active user
-          displayName: assign, recommendation, user, owner
-          href: active-user.md
-        - name: Remediate recommendations
-          displayName: remediation, steps, recommendations, fix, actions, activity log
-          href: implement-security-recommendations.md
-        - name: Drive remediation with governance rules
-          displayName: security, posture, recommendation, governance, automated, rules,
-            owners, status, progress
-          href: governance-rules.md
-      - name: Improve regulatory compliance
-        href: regulatory-compliance-dashboard.md
-      - name: Investigate with security explorer and attack path
-        items:
-        - name: Identify and remediate attack paths
-          displayName: attack paths, paths, investigate, easm,
-          href: how-to-manage-attack-path.md
-        - name: Retrieve attack path data with API
-          displayName: attack paths, paths, investigate, easm, rest api
-          href: attack-path-api.md
-        - name: Build queries with cloud security explorer
-          displayName: queries, security explorer, explorer, templates, query
-          href: how-to-manage-cloud-security-explorer.md
-        - name: Detect internet exposed IP addresses
-          displayName: exposed, ip, addresses, easm
-          href: detect-exposed-ip-addresses.md
-    - name: Built-in security protections
-      items:
-        - name: Use Purview to protect sensitive data
-          displayName: sensitivity, data, purview, inventory, information protection
-          href: information-protection.md
-        - name: Mitigate risks on specific resources in the asset inventory
-          displayName: asset, inventory, resources
-          href: asset-inventory.md
-        - name: Protect network resources
-          displayName: map, network map
-          href: protect-network-resources.md
-        - name: Other threat protections
-          displayName: network layer, display recommendations, stream, security, alerts,
-            DDoS, Entra
-          href: other-threat-protections.md
-    - name: Manage security by subscriptions, users, and permissions
-      items:
-        - name: Grant and request tenant-wide permissions
-          displayName: Azure Active Directory (AD), AAD
-          href: tenant-wide-permissions-management.md
-        - name: Enable Defender for Cloud for a management group
-          displayName: management group
-          href: onboard-management-group.md
-        - name: Set up cross-tenant management
-          displayName: cross tenant, cross-tenant
-          href: cross-tenant-management.md
-        - name: Automate onboarding using PowerShell
-          displayName: automate, onboard, onboarding
-          href: powershell-onboarding.md
-    - name: Resolve connector issues
-      items:
-      - name: Troubleshoot connectors guide
-        displayName: troubleshoot, connectors, guide 
-        href: troubleshoot-connectors.md
-      - name: Amazon Web Services (AWS) connector
-        items:
-        - name: Connect a Sentinel connected AWS account
-          displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, Sentinel
-          href: sentinel-connected-aws.md
-      - name: Google Cloud Platform (GCP) connector
-        items:
-        - name: Resolve Domain Restricted Sharing policy
-          displayName: connector, GCP, domain, restricted, sharing, policy
-          href: resolve-gcp-sharing-policy.md
-        - name: Resolve agentless scanning error
-          displayName: connector, GCP, disc, scanning, error
-          href: resolve-disk-scanning-error.md
-        - name: Resolve VPC Service Controls restriction issues
-          displayName: connector, GCP, VPC, service, controls, restriction, issues
-          href: resolve-vpc-service-controls-issues.md
         
 - name: Protect data
   items:
