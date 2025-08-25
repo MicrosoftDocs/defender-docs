@@ -13,6 +13,10 @@ Okta is a cloud-based identity and access management (IAM) platform that helps o
 
 When you connect Okta to Microsoft Defender for Identity, you can extend your identity threat detection and investigation capabilities to include Okta-managed users. Defender for Identity ingests user and activity data from Okta and correlates it with identity data from Active Directory and Microsoft Entra ID. This integration gives you a centralized view of user activity, posture risks, and suspicious behavior across your identity infrastructure, and you can take the necessary remediation actions.
 
+
+> [!NOTE]
+> The **Identity details** page in the Microsoft Defender portal shows the **Okta user risk score** only if the **Identity Threat Protection with Okta AI** feature is enabled. For more information, see [Risk scoring (Okta Identity Engine)](https://help.okta.com/oie/en-us/content/topics/security/security_risk_scoring.htm).
+
 ## What you can do after connecting Okta
 
 With Okta connected, Defender for Identity provides the following capabilities:

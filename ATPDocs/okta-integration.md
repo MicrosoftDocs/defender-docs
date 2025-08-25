@@ -181,9 +181,7 @@ To complete the configuration in Okta, assign the custom role and resource set t
 
 
 > [!NOTE]
-> - Connecting the Okta connector can take up to 15 minutes.
->
-> - The **Identity details** page in the Microsoft Defender portal shows user risk scores only if the **Identity Threat Protection with Okta AI** feature is enabled. For more information, see [Risk scoring (Okta Identity Engine)](https://help.okta.com/oie/en-us/content/topics/security/security_risk_scoring.htm).
+> Connecting the Okta connector can take up to 15 minutes.
 
 ## Related articles
 
