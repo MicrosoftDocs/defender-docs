@@ -320,34 +320,6 @@
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
 
-- name: Concepts
-  items:
-    - name: Improve data security posture
-      items:
-        - name: About data security posture management
-          href: concept-data-security-posture.md
-        - name: Support and prerequisites
-          href: concept-data-security-posture-prepare.md
-        - name: Supported sensitive data information types
-          href: sensitive-info-types.md
-        - name: Data and AI security dashboard (Preview)
-          href: data-aware-security-dashboard-overview.md
-    - name: Improve container security posture
-      items:
-        - name: Agentless container posture in Defender CSPM
-          href: concept-agentless-containers.md
-    - name: Improve API security posture
-      items:
-        - name: Overview
-          href: api-security-posture-overview.md
-    - name: Improve AI security posture
-      items:
-      - name: AI security posture management
-        displayName: AI, security, posture, management
-        href: ai-security-posture.md
-    - name: Microsoft Security Copilot in Defender for Cloud
-      displayName: copilot, security, recommendations
-      href: copilot-security-in-defender-for-cloud.md
 
 - name: How-to guides
   items:
