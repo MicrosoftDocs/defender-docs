@@ -155,9 +155,9 @@ Here's an example of a process for creating a new policy, testing it, and then m
 3. If the behavior isn't expected, edit the policy apps, conditions, and action settings as needed and go back to step 2.
 4. If the behavior is expected, edit the policy and change its status to **Active**.
 
-For example, the following flow chart shows the steps involved:
+    For example, the following flow chart shows the steps involved:
 
-:::image type="content" source="media/app-governance/mapg-create-new-policy-process.png" alt-text="Diagram of the create app policy workflow." lightbox="media/app-governance/mapg-create-new-policy-process.png" border="false":::
+    :::image type="content" source="media/app-governance/mapg-create-new-policy-process.png" alt-text="Screenshot illustrating the steps involved in the create app policy workflow." lightbox="media/app-governance/mapg-create-new-policy-process.png" border="false":::
 
 ## Create a new policy for OAuth apps connected to Salesforce and Google Workspace
 
