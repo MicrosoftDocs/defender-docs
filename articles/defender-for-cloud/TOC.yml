@@ -134,6 +134,12 @@
     - name: Cloud Security Posture Management (CSPM) – Overview
       displayName: CSPM, cloud security posture management, overview
       href: concept-cloud-security-posture-management.md
+    - name: Security policies
+      displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
+      href: security-policy-concept.md
+    - name: Risk prioritization
+      displayName: risk, prioritization, security, posture, management, prioritization
+      href: risk-prioritization.md
     - name: Review cloud security posture
       displayName: overview, compliance, inventory
       href: overview-page.md
@@ -143,6 +149,11 @@
     - name: Track secure score
       displayName: secure score, rest api, resource graph
       href: secure-score-access-and-track.md
+    - name: Regulatory compliance standards
+      href: concept-regulatory-compliance-standards.md
+    - name: Microsoft Cloud Security Benchmark (MCSB)
+      displayName: mcsb, azure, security, benchmark 
+      href: concept-regulatory-compliance.md
     - name: Investigating risks with security explorer/attack paths
       displayName: cloud security graph, attack path analysis, cloud security explorer, attack, path, graph, security, explorer
       href: concept-attack-path.md
@@ -154,6 +165,69 @@
     - name: Review the asset inventory
       displayName: asset, inventory, resources
       href: asset-inventory.md
+    - name: Cloud infrastructure entitlement management (CIEM)
+      displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
+      href: permissions-management.md
+    - name: Agentless machine scanning
+      href: concept-agentless-data-collection.md
+    - name: Internet exposure analysis
+      displayName: internet, exposure, analysis
+      href: internet-exposure-analysis.md
+    - name: Data and AI security dashboard
+      href: data-aware-security-dashboard-overview.md
+    - name: Data security posture management
+      items:
+        - name: About data security posture management
+          href: concept-data-security-posture.md
+        - name: Support and prerequisites
+          href: concept-data-security-posture-prepare.md
+        - name: Supported sensitive data information types
+          href: sensitive-info-types.md
+    - name: Container security posture management
+      items:
+        - name: Agentless container posture in Defender CSPM
+          href: concept-agentless-containers.md
+    - name: API security posture management
+      items:
+        - name: Overview
+          href: api-security-posture-overview.md
+    - name: Secrets protection
+      items:
+        - name: Overview
+          href: secrets-scanning.md
+        - name: Protecting VM secrets
+          href: secrets-scanning-servers.md
+        - name: Protecting cloud deployment secrets
+          href: secrets-scanning-cloud-deployment.md
+        - name: Protecting code repository secrets
+          href: secrets-scanning-code.md
+    - name: Integrations
+      items:
+        - name: ServiceNow
+          items:
+          - name: Overview ServiceNow integration
+            displayName: CSPM, cloud security, posture, management, ServiceNow
+            href: integration-servicenow.md
+          - name: Connect ServiceNow to Defender for Cloud
+            displayName: CSPM, cloud security, posture, management, ServiceNow
+            href: connect-servicenow.md
+          - name: Create a ticket in Defender for Cloud 
+            displayName: CSPM, cloud security, posture, management, ServiceNow
+            href: create-ticket-servicenow.md
+          - name: Create automatic tickets with governance rules
+            displayName: CSPM, cloud security, posture, management, ServiceNow
+            href: create-governance-rule-servicenow.md
+        - name: Power BI
+          items:
+            - name: Overview Power BI integration
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: integration-power-bi.md
+            - name: Add Defender for Cloud data to Power BI
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: add-data-power-bi.md
+    - name: Common questions about CSPM
+      displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
+      href: faq-cspm.yml
 
 - name: Integrations
   items:
@@ -248,79 +322,6 @@
 
 - name: Concepts
   items:
-    - name: Improve cloud security posture
-      items:
-      - name: Cloud Security Posture Management (CSPM)
-        displayName: CSPM, cloud security, posture, management
-        href: concept-cloud-security-posture-management.md
-      - name: Security policies
-        displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
-        href: security-policy-concept.md
-      - name: Risk prioritization
-        displayName: risk, prioritization, security, posture, management, prioritization
-        href: risk-prioritization.md
-      - name: Secure score
-        displayName: security, posture, secure, score, calculate, control, improve, 
-        href: secure-score-security-controls.md
-      - name: Regulatory compliance standards
-        href: concept-regulatory-compliance-standards.md
-      - name: Microsoft Cloud Security Benchmark (MCSB)
-        displayName: mcsb, azure, security, benchmark 
-        href: concept-regulatory-compliance.md
-      - name: Investigating risks with security explorer/attack paths
-        displayName: cloud security graph, attack path analysis, cloud security explorer, attack, path, graph, security, explorer
-        href: concept-attack-path.md
-      - name: External attack surface management in Defender for Cloud
-        displayName: EASM, attack surface management, integration
-        href: concept-easm.md
-      - name: Critical assets protection
-        href: critical-assets-protection.md
-      - name: Cloud infrastructure entitlement management (CIEM)
-        displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-        href: permissions-management.md
-      - name: Agentless machine scanning
-        href: concept-agentless-data-collection.md
-      - name: Internet exposure analysis
-        displayName: internet, exposure, analysis
-        href: internet-exposure-analysis.md
-      - name: Secrets protection
-        items:
-        - name: Overview
-          href: secrets-scanning.md
-        - name: Protecting VM secrets
-          href: secrets-scanning-servers.md
-        - name: Protecting cloud deployment secrets
-          href: secrets-scanning-cloud-deployment.md
-          
-        - name: Protecting code repository secrets
-          href: secrets-scanning-code.md
-      - name: Integrations
-        items:  
-        - name: ServiceNow
-          items:
-          - name: Overview ServiceNow integration
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: integration-servicenow.md
-          - name: Connect ServiceNow to Defender for Cloud
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: connect-servicenow.md
-          - name: Create a ticket in Defender for Cloud 
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: create-ticket-servicenow.md
-          - name: Create automatic tickets with governance rules
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: create-governance-rule-servicenow.md
-        - name: Power BI
-          items:
-          - name: Overview Power BI integration
-            displayName: CSPM, cloud security, posture, management, Power BI
-            href: integration-power-bi.md
-          - name: Add Defender for Cloud data to Power BI
-            displayName: CSPM, cloud security, posture, management, Power BI
-            href: add-data-power-bi.md
-      - name: Common questions 
-        displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
-        href: faq-cspm.yml
     - name: Improve data security posture
       items:
         - name: About data security posture management
