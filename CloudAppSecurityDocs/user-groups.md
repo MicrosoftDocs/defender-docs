@@ -43,7 +43,7 @@ When you connect apps using API connectors, Microsoft Defender for Cloud Apps en
 
 1. Select **Import**.
 
-After the import is complete, select your group from the **User groups** page to view a list of all group members. Select any group member to drill down further for more details, including the apps used and a summary of the account activities. Imported groups can also be selected as filters when investigating in the **Activity log** and when creating policies. Group members are automatically synchronized for imported groups, just as they are for Active Directory Connect.
+   After the import is complete, select your group from the **User groups** page to view a list of all group members. Select any group member to drill down further for more details, including the apps used and a summary of the account activities. Imported groups can also be selected as filters when investigating in the **Activity log** and when creating policies. Group members are automatically synchronized for imported groups, just as they are for Active Directory Connect.
 
 > [!NOTE]
 >
