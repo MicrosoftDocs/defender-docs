@@ -26,17 +26,27 @@ Your Okta environment must have one of the following licenses:
 - Enterprise
 
 
+> [!NOTE]
+> The **Identity details** page in the Microsoft Defender portal shows user risk scores only if the **Identity Threat Protection with Okta AI** feature is enabled. For more information, see [Risk scoring (Okta Identity Engine)](https://help.okta.com/oie/en-us/content/topics/security/security_risk_scoring.htm).
+
+
+
 ### Okta roles 
 
 The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 
 
-### Microsoft Entra roles
+### Microsoft Entra and Defender XDR role-based access options
+To configure the Okta connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
 
-To successfully set up the Okta connector, ensure that your account has one of the following Microsoft Entra roles assigned:
+- **Microsoft Entra roles:**
 
-- Security Operator
-- Security Admin
+    - Security Operator
+    - Security Admin
+
+- **Defender XDR Unified RBAC permission:**
+
+    - Core security settings (manage)
 
 ### Connect Okta to Microsoft Defender for Identity
 
