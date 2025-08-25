@@ -315,7 +315,7 @@ The following procedures describe how to export the log collector image, using L
 1. On a Linux computer that has access to the Docker Hub, run the following command to install Docker and download the log collector image.
 
     ```bash
-    curl -o /tmp/MCASInstallDocker.sh https://adaprodconsole.blob.core.windows.net/public-files/MCASInstallDocker.sh && chmod +x /tmp/MCASInstallDocker.sh; /tmp/MCASInstallDocker.sh
+    curl -o /tmp/MCASInstallDocker.sh https://discoveryresources-cdn-prod.cloudappsecurity.com/prod-1/public-files/MCASInstallDocker.sh && chmod +x /tmp/MCASInstallDocker.sh; /tmp/MCASInstallDocker.sh 
     ```
 
 1. Export the log collector image. Run:
