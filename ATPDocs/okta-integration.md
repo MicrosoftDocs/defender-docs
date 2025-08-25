@@ -25,12 +25,6 @@ Your Okta environment must have one of the following licenses:
 
 - Enterprise
 
-
-> [!NOTE]
-> The **Identity details** page in the Microsoft Defender portal shows user risk scores only if the **Identity Threat Protection with Okta AI** feature is enabled. For more information, see [Risk scoring (Okta Identity Engine)](https://help.okta.com/oie/en-us/content/topics/security/security_risk_scoring.htm).
-
-
-
 ### Okta roles 
 
 The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
@@ -187,7 +181,9 @@ To complete the configuration in Okta, assign the custom role and resource set t
 
 
 > [!NOTE]
-> Connecting the Okta connector can take up to 15 minutes.
+> - Connecting the Okta connector can take up to 15 minutes.
+>
+> - The **Identity details** page in the Microsoft Defender portal shows user risk scores only if the **Identity Threat Protection with Okta AI** feature is enabled. For more information, see [Risk scoring (Okta Identity Engine)](https://help.okta.com/oie/en-us/content/topics/security/security_risk_scoring.htm).
 
 ## Related articles
 
