@@ -1,8 +1,9 @@
 ---
 title: Protect your Box environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Box app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 # How Defender for Cloud Apps helps protect your Box environment
 
@@ -47,7 +48,7 @@ In addition to monitoring for potential threats, you can apply and automate the 
 
 | Type | Action |
 | ---- | ---- |
-| Data governance | - Change shared link access level on folders<br />- Put folders in admin quarantine<br />- Put folders in user quarantine<br />- Remove a collaborator from folders<br />- Remove direct shared links on folders<br />- Remove external collaborators on folders<br />- Send DLP violation digest to file owners<br />- Send violation digest to last file editor<br />- Set expiration date to a folder shared link<br /> - Trash folder |
+| Data governance | - Change shared link access level on folders<br />- Put folders in admin quarantine<br />- Put folders in user quarantine<br />- Remove a collaborator from folders<br />- Remove direct shared links on folders<br/> - Send policy-match digest to file owners<br />- Send violation digest to last file editor<br />- Set expiration date to a folder shared link<br /> - Trash folder |
 | User governance | - Suspend user<br />- Notify user on alert (via Microsoft Entra ID)<br />- Require user to sign in again (via Microsoft Entra ID)<br />- Suspend user (via Microsoft Entra ID) |
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).

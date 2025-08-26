@@ -8,7 +8,7 @@ author: emmwalshh
 ms.author: ewalsh
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 05/08/2025
+ms.date: 06/27/2025
 manager: deniseb
 ms.custom: nextgen
 ms.collection: 
@@ -33,6 +33,7 @@ Always-on protection consists of real-time protection, behavior monitoring, and 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep always-on protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+> If a file that contains a threat is placed in an Azure file share, it's not remediated when placed. A user has to open the file for it to be detected by real-time protection.
 
 ## Manage antivirus settings with Microsoft Intune
 

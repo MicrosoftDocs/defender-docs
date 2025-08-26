@@ -3,6 +3,7 @@ title: Protect your Mural environment | Microsoft Defender for Cloud Apps
 description: This article provides information about the benefits of connecting your Mural app to Defender for Cloud Apps using the API connector for visibility and control over use.
 ms.date: 05/06/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Protect your Mural environment (Preview)

@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+manager: orspodek
 ms.localizationpriority: medium
-ms.date: 06/13/2025
+ms.date: 08/20/2025
 audience: ITPro
 ms.collection:
 - m365-security
@@ -62,21 +62,60 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 ## macOS Deprecation
 
-- Microsoft Defender for Endpoint no longer supports Big Sur (11).
-- macOS 12 (Monterey) won't be supported starting December 2024.
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
 
 ## Releases for Defender for Endpoint on macOS
 
-### Behavior Monitoring for macOS is now in public preview
+### Offline updates for security intelligence updates on macOS is now in public preview
 
-Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+This feature enables organizations to configure offline updates for security intelligence updates (also referred to as definition updates or signatures) on macOS using a local mirror server. For more information, see [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS (preview)](./mac-support-offline-security-intelligence-update.md).
+
+### Behavior Monitoring for macOS is now generally available
+
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
+
+### Aug-2025 (Build: 101.25062.0006  | Release version: 20.125062.6.0)
+
+| Build:             | **101.25062.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.6.0**    |
+| Engine version:    | **1.1.25070.3000**   |
+| Signature version: | **1.435.357.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
+
+| Build:             | **101.25062.0005**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.5.0**    |
+| Engine version:    | **1.1.25040.3000**   |
+| Signature version: | **1.427.248.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jun-2025 (Build: 101.25052.0012  | Release version: 20.125052.12.0)
+
+| Build:             | **101.25052.0012**   |
+|--------------------|----------------------|
+| Release version:   | **20.125052.12.0**   |
+| Engine version:    | **1.1.25060.3000**   |
+| Signature version: | **1.431.226.0**      |
+
+##### What's new
+
+- Bug and performance fixes
 
 ### May-2025 (Build: 101.25042.0009  | Release version: 20.125042.9.0)
 
-| Build:             | **101.25042.0009**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125042.9.0** |
-| Engine version:    | **1.1.25040.3000**       |
+| Build:             | **101.25042.0009**   |
+|--------------------|----------------------|
+| Release version:   | **20.125042.9.0**    |
+| Engine version:    | **1.1.25040.3000**   |
 | Signature version: | **1.429.521.0**      |
 
 ##### What's new
@@ -86,16 +125,17 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
 
-| Build:             | **101.25032.0006**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125032.6.0** |
-| Engine version:    | **1.1.25020.3000**       |
+| Build:             | **101.25032.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125032.6.0**    |
+| Engine version:    | **1.1.25020.3000**   |
 | Signature version: | **1.427.158.0**      |
 
 ##### What's new
 
 - Hardware UUID is now displayed in the Security Portal
 - Bug and performance fixes
+- **(GA) Behavior Monitoring for macOS**: For information on Behavior Monitoring for Microsoft Defender for Endpoint on macOS, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
 ### Mar-2025 (Build: 101.25022.0003  | Release version: 20.125022.3.0)
 
@@ -954,7 +994,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!IMPORTANT]
 > We're working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
-> We continue supporting the old syntax in parallel with the new syntax and provides more communications around the deprecation plan for the old syntax in the upcoming months.
+> We continue supporting the old syntax in parallel with the new syntax and provide more communications around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & Product improvements
 

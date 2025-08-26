@@ -210,6 +210,8 @@
                 href: mac-pua.md
               - name: Protect macOS security settings using tamper protection
                 href: tamperprotection-macos.md
+              - name: Configure offline security intelligence updates on Mac
+                href: mac-support-offline-security-intelligence-update.md
               - name: Device control
                 items:
                 - name: Device control overview on Mac
@@ -267,6 +269,8 @@
               items:
               - name: Installer script based deployment
                 href: linux-installer-script.md
+              - name: Enabling deployment to a custom location
+                href: linux-custom-location-installation.md
               - name: Ansible based deployment
                 href: linux-install-with-ansible.md
               - name: Chef based deployment
@@ -803,6 +807,8 @@
         href: microsoft-defender-endpoint-antivirus-performance-mode.md
       - name: Compatibility with other security products
         href: microsoft-defender-antivirus-compatibility.md
+      - name: Defender for Endpoint passive mode
+        href: microsoft-defender-passive-mode.md
       - name: Microsoft Defender Antivirus and third-party antivirus solutions without
           Defender for Endpoint
         href: defender-antivirus-compatibility-without-mde.md
@@ -1166,7 +1172,7 @@
           - name: Microsoft Defender for Endpoint API license and terms
             href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: /defender-vulnerability-management/tvm-supported-os
+            href: /defender-endpoint/api/apis-intro
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context

@@ -3,10 +3,10 @@ title: Prerequisites for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes the requirements needed to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 08/19/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -50,6 +50,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - **CPU**: One CPU core minimum. For high-performance workloads, more cores are recommended.
 - **Disk Space**: 2 GB minimum. For high-performance workloads, more disk space might be needed.
 - **Memory**: 1 GB of RAM minimum. For high-performance workloads, more memory might be needed.
+- For installation at a custom path, refer to [Prerequisites and system requirements for custom location installation](linux-custom-location-installation.md#prerequisites-and-system-requirements).
 
 > [!NOTE]
 > Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
@@ -71,13 +72,10 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
 
 - Red Hat Enterprise Linux 7.2 and higher 
-
 - Red Hat Enterprise Linux 8.x 
 - Red Hat Enterprise Linux 9.x 
 - CentOS 7.2 and higher, excluding CentOS Stream 
-
 - CentOS 8.x
-
 - Ubuntu 16.04 LTS 
 - Ubuntu 18.04 LTS 
 - Ubuntu 20.04 LTS 
@@ -87,12 +85,11 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - SUSE Linux Enterprise Server 12.x 
 - SUSE Linux Enterprise Server 15.x 
 - Oracle Linux 7.2 and higher 
-
 - Oracle Linux 8.x 
 - Oracle Linux 9.x 
 - Amazon Linux 2 
 - Amazon Linux 2023 
-- Fedora 33-38 
+- Fedora 33-42
 - Rocky 8.7 and higher 
 - Rocky 9.2 and higher 
 - Alma 8.4 and higher 
@@ -117,13 +114,14 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > The workstation and desktop versions of these distributions are unsupported
 > Distributions and versions that aren't explicitly listed are unsupported (even if they're derived from the officially supported distributions).
 > After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that which are listed in this section are provided for technical upgrade support only.
-> Currently, Rocky and Alma distributions aren't supported in Microsoft Defender Vulnerability Management. However, Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions.
-> The minimal requirement for the kernel version is `3.10.0-327` or later.
+> Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 
 > [!WARNING]
-> Running Defender for Endpoint on Linux with other fanotify-based security solutions isn't supported. It can lead to unpredictable results, including hanging the operating system.
-> If there are any other applications on the system that use fanotify in blocking mode, applications are listed in the conflicting_applications field of the mdatp health command output. 
-> The Linux FAPolicyD feature uses fanotify in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to passive mode. See [Enforcement level for Microsoft Defender Antivirus](/defender-endpoint/linux-preferences#enforcement-level-for-microsoft-defender-antivirus). 
+> Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
+> If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
+> You can still safely take advantage of Defender for Endpoint on Linux EDR functionality by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+>
+> **EXCEPTION: The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.**
 
 ## Supported filesystems for real-time protection and quick, full, and custom scans 
 
@@ -150,7 +148,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > NFS v3 mount points to be scanned thoroughly and are required to set the `no_root_squash` export option on these mount points.
 > Without this option, scanning NFS v3 can potentially fail due to lack of permissions. 
 
-## Verify that devices can connect to Defender for Endpoint cloud services
+## Verify if devices can connect to Defender for Endpoint cloud services
 
 1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
 
@@ -178,7 +176,7 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
 
 - The mdatp RPM package requires `glibc >= 2.17`.
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`.
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 > [!NOTE]
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
@@ -186,12 +184,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> For version older than `101.25032.0000`:
-> - RPM package needs: `mde-netfilter`, `pcre`
-> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
-> - The `mde-netfilter` package also has the following package dependencies:
-    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> 
+> For versions older than `101.25032.0000`, the following requirements apply:
+> - RPM package needs: `mde-netfilter` and `pcre`
+> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
+>
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
+> The `mde-netfilter` package also has the following package dependencies:
+> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
+> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
 
 ## Installation instructions 
 
@@ -209,7 +210,7 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 > [!IMPORTANT]
 > Installing Microsoft Defender for Endpoint in any location other than the default install path isn't supported. On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
-If you experience any installation issues, self-troubleshooting resources are available. See the links in the [See also](#see-also) section.
+If you experience any installation issues, self-troubleshooting resources are available. See the links in the [Related content section](#related-content).
 
 ## Next steps
 
@@ -217,7 +218,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
-## See also
+## Related content
 
 - [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
 - [Linux Resources](linux-resources.md)
@@ -225,6 +226,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
- > [!TIP]
+> [!TIP]
 > Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)

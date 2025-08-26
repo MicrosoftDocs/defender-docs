@@ -68,8 +68,6 @@ sections:
           
           - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components and provides remediation paths to reduce the attack surface.
           
-          - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
-          
           - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Microsoft Entra ID Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
           
           - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. 
@@ -150,7 +148,7 @@ sections:
 
       - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
         answer: |
-          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID will also benefit of security value provided by Microsoft Entra ID (based on license level) and of Investigation Priority Scoring.
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID benefit from the security value provided by Microsoft Entra ID based on license level. For more detailse see: [Identity inventory](/defender-for-identity/identity-inventory).
 
   - name: WinPcap and Npcap drivers
     questions: 
@@ -171,7 +169,7 @@ sections:
         answer: Yes. It is required to manually remove the Sensor to remove the WinPcap drivers. The reinstallation using the latest package will install the Npcap drivers.
 
       - question: How can I check whether my current installation of Defender for Identity uses Npcap or WinPcap?
-        answer: You can see that 'Npcap OEM' is installed through the Add/Remove programs (appwiz.cpl), and if there was an open [health issue](health-alerts.md#sensor-has-issues-with-packet-capturing-component) for this, it will be automatically closed.
+        answer: You can see that 'Npcap OEM' is installed through the Add/Remove programs (appwiz.cpl), and if there was an open [health issue](health-alerts.md) for this, it will be automatically closed.
 
       - question: I have more than five domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
@@ -299,7 +297,6 @@ sections:
 
 additionalContent: |
   ## Related content
-  - [Defender for Identity prerequisites](deploy/prerequisites.md)
   - [Defender for Identity capacity planning](deploy/capacity-planning.md)
   - [Configure event collection](deploy/configure-event-collection.md)
   - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

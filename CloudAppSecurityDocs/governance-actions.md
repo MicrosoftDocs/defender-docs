@@ -3,6 +3,7 @@ title: Governing connected apps
 description: This article lists and describes all the governance actions that can be taken in Defender for Cloud Apps and the log messages that track them.
 ms.date: 02/16/2023
 ms.topic: how-to
+ms.reviewer: Ronen-Refaeli
 ---
 
 # Governing connected apps
@@ -83,16 +84,18 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint)
 
+These actions are restricted to users with specific administrative roles. If the options described are not visible or accessible, please confirm with your system administrator that your account has one of the following roles assigned:
+- Security Operator
+ - Security administrator
+ - Global administrator
+ - Cloud app security administrator
+   
 :::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions." lightbox="media/governance-actions/governance-actions-dropbox-google-workspace.png":::
 
 > [!NOTE]
-> In SharePoint and OneDrive, Defender for Cloud Apps supports user quarantine only for files in Shared Documents libraries (SharePoint Online) and files in the Documents library (OneDrive for Business).
-> 
-> Microsoft Defender for Microsoft 365 customers can control detected malware files in SharePoint and OneDrive via the [Microsoft Defender XDR **Quarantine** page](https://security.microsoft.com/quarantine?viewid=Files). For example, supported activities include recovering files, deleting files, and downloading files in password-protected ZIP files. These activities are limited to files that were not already quarantined by Microsoft Defender for Cloud Apps.
-> In SharePoint, Defender for Cloud Apps supports quarantine tasks only for files with Shared Documents in path in English.
-> 
+> In SharePoint and OneDrive, Defender for Cloud Apps supports user quarantine only for files in Shared Documents libraries and only for files with Shared Documents in path in English (SharePoint Online) and files in the Documents library (OneDrive for Business). In addition, you must [enable the service principal](/graph/api/serviceprincipal-get?view=graph-rest-1.0&tabs=http) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
+>  Microsoft Defender for Microsoft 365 customers can control detected malware files in SharePoint and OneDrive via the [Microsoft Defender XDR ](https://security.microsoft.com/quarantine?viewid=Files)**[Quarantine](https://security.microsoft.com/quarantine?viewid=Files)**[ page](https://security.microsoft.com/quarantine?viewid=Files). For example, supported activities include recovering files, deleting files, and downloading files in password-protected ZIP files. These activities are limited to files that were not already quarantined by Microsoft Defender for Cloud Apps.
 > Actions will only show for connected apps.
-> 
 
 ## Activity governance actions
 
@@ -107,6 +110,7 @@ The following governance actions can be taken for connected apps either on a spe
 - **Governance actions in apps** - Granular actions can be enforced per app, specific actions vary depending on app terminology.
 
 - **Suspend user** – Suspend the user from the application.
+
     > [!NOTE]
     > If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment the settings in the on-premises environment will override the Microsoft Entra settings and this governance action will be reverted.
 

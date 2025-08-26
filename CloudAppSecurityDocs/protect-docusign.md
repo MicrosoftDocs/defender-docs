@@ -1,8 +1,9 @@
 ---
 title: Protect your DocuSign environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your DocuSign app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 
 # How Defender for Cloud Apps helps protect your DocuSign environment
@@ -47,7 +48,6 @@ For more information, see:
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
 | Built-in  anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses) <br> [Activity from infrequent countries/regions](anomaly-detection-policy.md#activity-from-infrequent-country) <br> [Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses) <br> [Impossible travel](anomaly-detection-policy.md#impossible-travel) <br> [Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP) <br> [Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)  |
-
 | Activity  policy                   | Build a customized policy by the DocuSign audit log           |
 
 For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy).

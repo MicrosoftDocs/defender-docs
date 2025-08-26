@@ -3,6 +3,7 @@ title: Create session policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps session policies with Conditional Access app control to gain visibility into user session activities and block downloads.
 ms.date: 05/15/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Create Microsoft Defender for Cloud Apps session policies
@@ -173,8 +174,8 @@ To export Cloud discovery logs from the cloud discovery dashboard:
 
 1. Above the table, select the export button. For example:
 
-    ![Screenshot of the export button.](media/export-button.png)
-   
+    :::image type="content" source="media/activity-filters/export-button.png" alt-text="Screenshot that shows the export button.":::
+
    
 1. Select the range of the report and select **Export**. This process may take some time.
 

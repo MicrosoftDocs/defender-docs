@@ -3,6 +3,7 @@ title: Discovery capability differences for Defender for Cloud Apps and Cloud Ap
 description: This article describes the differences between discovery capabilities in Defender for Cloud Apps and Cloud App Discovery (part of Microsoft Entra ID).
 ms.date: 02/15/2023
 ms.topic: overview
+ms.reviewer: Mravela 
 ---
 
 # Compare discovery capabilities for Defender for Cloud Apps and Cloud App Discovery?

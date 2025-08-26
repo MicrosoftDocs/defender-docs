@@ -3,6 +3,7 @@ title: Cloud app discovery overview | Microsoft Defender for Cloud Apps
 description: This article describes Microsoft Defender for Cloud Apps support for cloud app discovery.
 ms.date: 12/20/2023
 ms.topic: concept-article
+ms.reviewer: Mravela 
 ---
 
 # Cloud app discovery overview

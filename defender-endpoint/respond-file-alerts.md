@@ -90,7 +90,8 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
    - **Search box** - select **File** from the drop-down menu and enter the file name
 
    > [!NOTE]
-   > The stop and quarantine file action is limited to a maximum of 1000 devices. To stop a file on a larger number of devices, see [Add indicator to block or allow file](#add-indicator-to-block-or-allow-a-file).
+   > The stop and quarantine file action is limited to a maximum of 1000 devices. To stop a file on a larger number of devices, see [Add indicator to block or allow file](#add-indicator-to-block-or-allow-a-file).<br>
+   >  The Stop and quarantine action has a maximum timeout period of 3 days. If the targeted device remains offline for longer than this period after the action is initiated, the action will not be delivered to that device.<br> To ensure the file remains blocked beyond the timeout or after the action completes, it's recommended to create an indicator to block the file explicitly.
 
 2. Go to the top bar and select **Stop and Quarantine File**.
 
@@ -201,7 +202,7 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Client devices must be running Windows 11 or Windows 10, version 1703 or later
-> - Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, or Windows Server 2016
+> - Server devices must be running Windows Server 2016 and later or Azure Stack HCI OS, version 23H2 and later
 
 ### Collect files
 

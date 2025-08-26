@@ -3,6 +3,7 @@ title: Import user groups from connected apps
 description: This article provides instructions for importing your user groups from connected apps into Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Naama-Goldbart 
 ---
 
 # Import user groups from connected apps
@@ -42,7 +43,7 @@ When you connect apps using API connectors, Microsoft Defender for Cloud Apps en
 
 1. Select **Import**.
 
-After the import is complete, select your group from the **User groups** page to view a list of all group members. Select any group member to drill down further for more details, including the apps used and a summary of the account activities. Imported groups can also be selected as filters when investigating in the **Activity log** and when creating policies. Group members are automatically synchronized for imported groups, just as they are for Active Directory Connect.
+   After the import is complete, select your group from the **User groups** page to view a list of all group members. Select any group member to drill down further for more details, including the apps used and a summary of the account activities. Imported groups can also be selected as filters when investigating in the **Activity log** and when creating policies. Group members are automatically synchronized for imported groups, just as they are for Active Directory Connect.
 
 > [!NOTE]
 >
@@ -51,6 +52,7 @@ After the import is complete, select your group from the **User groups** page to
 > - There may be a short delay until imported user groups are available in filters.
 > - Only activities performed after importing a user group will be tagged as having been performed by a member of the user group.
 > - After the initial sync, groups are usually updated every hour. However, due to various factors there could be times where this might take several hours.
+> - Usernames must contain only standard alphanumeric characters (a–z, A–Z, 0–9). Usernames with special characters such as ~ or # aren't supported.
 
 For more information on using the User group filters, see [Activities](activity-filters.md).
 

@@ -406,8 +406,8 @@ This rule blocks executable files, such as .exe, .dll, or .scr, from launching. 
 
 > [!IMPORTANT]
 > You must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) to use this rule.
-> The rule **Block executable files from running unless they meet a prevalence, age, or trusted list criterion** with GUID `01443614-cd74-433a-b99e-2ecdc07bfc25` is owned by Microsoft and isn't specified by admins. This rule uses cloud-delivered protection to update its trusted list regularly.
-> You can specify individual files or folders (using folder paths or fully qualified resource names) but you can't specify which rules or exclusions apply to.
+> This rule uses cloud-delivered protection to update its trusted list regularly.
+> You can specify individual files or folders by using folder paths or fully qualified resource names. It also supports the **ASROnlyPerRuleExclusions** setting.
 
 Intune name: `Executables that don't meet a prevalence, age, or trusted list criteria`
 
@@ -583,6 +583,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode
 
+> [!NOTE]
+> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
+
 This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
 
 Intune Name: ` Block rebooting machine in Safe Mode`
@@ -621,6 +624,9 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block use of copied or impersonated system tools
 
+> [!NOTE]
+> This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
+
 This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools. Some malicious programs might try to copy or impersonate Windows system tools to avoid detection or gain privileges. Allowing such executable files can lead to potential attacks. This rule prevents propagation and execution of such duplicates and impostors of the system tools on Windows machines. 
 
 Intune Name: `Block use of copied or impersonated system tools`
@@ -652,7 +658,7 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Exchange servers.
 
 ### Block Win32 API calls from Office macros
 
