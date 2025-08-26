@@ -87,6 +87,7 @@
           href: enable-plan-workspace.md
     - name: Support & requirements
       items:
+        # FAQs
         - name: Common questions about Defender for Cloud
           displayName: defender for cloud, common questions, faq, frequently asked questions
           href: faq-general.yml
@@ -94,12 +95,10 @@
           displayName: permissions, common questions, faq, frequently asked questions
           href: faq-permissions.yml
         - name: Common questions about data collection, agents, agentless and workspaces
-          displayName: data collection, agents, workspaces, common questions, agentless,
-            faq, frequently asked questions
+          displayName: data collection, agents, workspaces, common questions, agentless, faq, frequently asked questions
           href: faq-data-collection-agents.yml
         - name: Common questions about regulatory compliance
-          displayName: regulatory, compliance, regulatory compliance, common questions,
-            faq, frequently asked questions
+          displayName: regulatory, compliance, regulatory compliance, common questions, faq, frequently asked questions
           href: faq-regulatory-compliance.yml
         - name: Common questions about Defender for Containers
           displayName: containers, common questions, faq, frequently asked questions
@@ -107,27 +106,34 @@
         - name: Common questions about Copilot in Defender for Cloud
           displayName: copilot, common questions, faq, frequently asked questions
           href: faq-copilot.yml
-        - name: Prepare for retirement of the Log Analytics agent
-          href: prepare-deprecation-log-analytics-mma-agent.md
+
+        # Permissions and roles
         - name: User roles and permissions
           href: permissions.md
+        - name: Defender for Containers permissions for EKS and GKE
+          href: containers-permissions.md
+
+        # Support matrices
         - name: Defender for Cloud support matrices
           displayName: coverage, supported platforms, cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
         - name: Defender for Cloud cloud support matrices
           displayName: matrices, gov, government, 21via, net, support
           href: support-matrix-cloud-environment.md
-        - name: Regional availability for Defender for Cloud plans
-          href: regional-availability.md
         - name: Defender for Servers support matrices
-          displayName: coverage, machines, windows, linux, multicloud, supported features,
-            endpoint protections
+          displayName: coverage, machines, windows, linux, multicloud, supported features, endpoint protections
           href: support-matrix-defender-for-servers.md
         - name: Support matrices for Containers
           displayName: Containers, features availability, environment information
           href: support-matrix-defender-for-containers.md
-        - name: Defender for Containers permissions for EKS and GKE
-          href: containers-permissions.md
+
+        # Regional availability
+        - name: Regional availability for Defender for Cloud plans
+          href: regional-availability.md
+
+        # Other resources
+        - name: Prepare for retirement of the Log Analytics agent
+          href: prepare-deprecation-log-analytics-mma-agent.md
     - name: Deployment management and troubleshooting
       items:
         - name: Assign access to workload owners
