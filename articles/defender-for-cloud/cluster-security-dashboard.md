@@ -11,7 +11,7 @@ CustomerIntent: As the person responsible for the security of a cluster, I want 
 
 The AKS security dashboard gives visibility and automated remediation for security issues. It lets platform engineering teams secure their Kubernetes environment more easily and effectively.
 
-The AKS portal consolidates security and operational data into one place, giving engineers a unified view of their Kubernetes environment. This view helps detect and fix security issues efficiently, with minimal workflow disruption. It lowers the risk of missed security issues and speeds up remediation.
+Consolidating security and operational data within the AKS portal gives engineers a unified view of their Kubernetes environment. This view helps detect and fix security issues efficiently, with minimal workflow disruption. It lowers the risk of missed security issues and speeds up remediation.
 
 The AKS Security Dashboard lets you:
 
@@ -42,7 +42,7 @@ The top findings bar shows the security status of the cluster. For each findings
 
 ### Security alerts tab
 
-Security alerts are notifications from Defender for Cloud about suspicious activity or potential threats in your environment. The service prioritizes the alerts by risk.
+Security alerts are notifications from Defender for Cloud about suspicious activity or active potential threats in your environment. The service prioritizes the alerts by risk.
 
 When you select an alert, you open a panel that provides more information about the detection that triggered the alert. The panel also suggests actions you can take to resolve the issue.
 
@@ -129,7 +129,7 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 1. Configure the required compliance standard you need to adhere to. You configure the standard at the subscription level. Follow the link for configuration from the compliance tab or the dashboard settings.
 
-1. Once you select the correct standards, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
+1. Once the relevant standards are selected, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
 
 1. The compliance tab grid shows only recommendations for controls the cluster or its components aren't complying with.
 
