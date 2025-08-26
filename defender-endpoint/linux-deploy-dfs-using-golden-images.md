@@ -34,17 +34,25 @@ This guide walks you through:
 
 - Ensuring unique identifiers for each VM instance.
 
-- Specific steps for cloud and on-premises environments
+- Specific steps for cloud and on-premises environments.
 
-## Step-by-Step: Installing MDE on a Golden Image
+By following this guide, you can confidently deploy Microsoft Defender for Endpoint on Linux using golden images across cloud and on-premises environments. This ensures:
 
-1. Prepare the Base VM
+- Unique and consistent device identifiers.
+
+- Reliable telemetry.
+
+- Smooth device correlation in the security portal.
+
+## Step-by-step: Installing Microsoft Defender for Endpoint on a golden image
+
+1. Prepare the case VM
 
    - Install your preferred Linux distribution.
 
    - Apply all necessary system updates.
 
-   - Install required dependencies for MDE.
+   - Install required dependencies for Microsoft Defender for Endpoint.
 
 1. Install Microsoft Defender for Endpoint
 
@@ -74,55 +82,49 @@ This guide walks you through:
    mdatp health
    ```
 
-## Preparing the Golden Image for Cloning
+## Preparing the golden image for cloning
 
-Before snapshotting the VM, follow these steps to ensure each clone will have a unique machine identity:
+Before snapshotting the virtual machine, follow these steps to ensure that each clone will have a unique machine identity:
 
-**On-Premises VMs**
+### On-premises virtual machines
 
-**A. Inject a New SMBIOS UUID**
+1. Inject a New SMBIOS UUID
 
-- **KVM/libvirt**: Omit the \<uuid\> element in domain XML or set a fresh UUID using:
+   - **KVM/libvirt**: Omit the \<uuid\> element in domain XML or set a fresh UUID using: uuidgen
 
-- uuidgen
+   - **VMware/Hyper-V**: Enable platform settings to generate a new BIOS GUID during clone or conversion.
 
-- **VMware/Hyper-V**: Enable platform settings to generate a new BIOS GUID during clone or conversion.
+1. Regenerate OS Machine ID
 
-**B. Regenerate OS Machine ID**
+   Run the following commands:
 
-Run the following commands:
+   ```
+   rm -f /etc/machine-id /var/lib/dbus/machine-id
+   systemd-machine-id-setup
+   dbus-uuidgen \--ensure=/var/lib/dbus/machine-id
+   ```
 
-rm -f /etc/machine-id /var/lib/dbus/machine-id
+1. Validate Metadata Post-Clone
 
-systemd-machine-id-setup
+   After cloning, verify:
 
-dbus-uuidgen \--ensure=/var/lib/dbus/machine-id
+   - CloudMetadata
 
-**C. Validate Metadata Post-Clone**
+   - dmidecode
 
-After cloning, verify:
-
-- CloudMetadata
-
-- dmidecode
-
-- sysfs values
+   - sysfs values
 
 - Hardware GUID
 
 If mismatched, update the MachineInfo and save all values back to the MDE state file.
 
-**Cloud VMs**
+### Cloud virtual machines
 
-Cloud platforms (e.g., Azure, AWS, GCP) automatically inject unique metadata and identifiers via their instance metadata services (IMDS). No manual steps are required.
+Cloud platforms (e.g., Azure, AWS, GCP) automatically inject unique metadata and identifiers via their instance metadata services (IMDS). No manual steps are required. Microsoft Defender for Endpoint automatically detects and uses these values to generate unique machine IDs.
 
-MDE will automatically detect and use these values to generate unique machine IDs.
+## Hostname Management
 
-**Hostname Management**
-
-- Hostnames are now stored persistently during installation.
-
-- If you wish to change the hostname, **restart the service** to ensure consistent identifier updates.
+Hostnames are stored persistently during installation. If you wish to change the hostname, **restart the service** to ensure consistent identifier updates.
 
 **Summary**
 
