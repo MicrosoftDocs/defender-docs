@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Activate the Defender for Identity sensor v3.x on a domain controller (Preview)
+# Activate the Defender for Identity sensor v3.x on a domain controller
 
 For complete protection of your on-premises deployment, we recommend activating the Defender for Identity sensor on all applicable servers. This article describes onboarding for new domain controllers running Windows Server 2019 or later. For domain controllers running older operating systems, we recommend [deploying the classic Defender for Identity sensor](install-sensor.md).
 
@@ -40,11 +40,11 @@ The process for activating the sensor depends on your configuration.
 1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
    [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/activate.png)](media/activate-capabilities/activate.png#lightbox)
-
+   
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
 
     [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/successfully-activated.png)](media/activate-capabilities/successfully-activated.png#lightbox)
-
+   
 <!--## Onboard the domain controller 
 
 If the domain controller has not been onboarded to Defender for Endpoint for Servers, follow these steps to activate the sensor.
