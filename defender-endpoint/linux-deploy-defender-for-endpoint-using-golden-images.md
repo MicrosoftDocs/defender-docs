@@ -32,7 +32,7 @@ This guide walks you through:
 
 - Preparing the image for cloning.
 
-- Ensuring unique identifiers for each VM instance.
+- Ensuring unique identifiers for each virtual machine instance.
 
 - Specific steps for cloud and on-premises environments.
 
@@ -120,7 +120,7 @@ If mismatched, update the MachineInfo and save all values back to the MDE state 
 
 ### Cloud virtual machines
 
-Cloud platforms (e.g., Azure, AWS, GCP) automatically inject unique metadata and identifiers via their instance metadata services (IMDS). No manual steps are required. Microsoft Defender for Endpoint automatically detects and uses these values to generate unique machine IDs.
+Cloud platforms (for example, Azure, AWS, GCP) automatically inject unique metadata and identifiers via their instance metadata services (IMDS). No manual steps are required. Microsoft Defender for Endpoint automatically detects and uses these values to generate unique machine IDs.
 
 ## Hostname Management
 
