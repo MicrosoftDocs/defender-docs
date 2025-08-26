@@ -2,7 +2,8 @@
 title: SaaS Security Initiative
 description: Learn how to use the SaaS Security Initiative in Microsoft Defender XDR.
 ms.topic: how-to
-ms.date: 10/31/2024
+ms.date: 05/15/2025
+ms.reviewer: iidogGedanken
 ---
 
 # SaaS Security Initiative 
