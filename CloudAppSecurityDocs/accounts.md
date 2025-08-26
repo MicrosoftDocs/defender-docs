@@ -3,6 +3,7 @@ title: Investigate accounts from connected apps | Microsoft Defender for Cloud A
 description: This article provides information about reviewing accounts from your connected apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: gayasalomon
 ---
 # Cloud Application Accounts
 

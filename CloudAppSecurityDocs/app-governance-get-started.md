@@ -1,7 +1,8 @@
 ---
 title: Turn on app governance in Microsoft Defender for Cloud Apps
-ms.date: 05/23/2025
+ms.date: 08/12/2025
 ms.topic: how-to
+ms.reviewer: anandd512
 description: Get started with app governance capabilities to govern your apps in  Microsoft Defender for Cloud Apps.
 ---
 

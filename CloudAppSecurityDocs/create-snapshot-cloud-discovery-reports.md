@@ -3,6 +3,7 @@ title: Create snapshot cloud discovery reports
 description: This article provides information about how to upload logs manually to create a snapshot report of your cloud discovery apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Create snapshot cloud discovery reports
 
@@ -34,7 +35,7 @@ To create a snapshot report:
     ![Verify your log format.](media/cloud-discovery-snapshot-verify.png)
 
     > [!NOTE]
-    > The FTP sample format is supported in snapshots and automated upload while syslog is supported in automated upload only. Downloading a sample log will download a sample FTP log.
+    > The FTP sample format is supported in snapshots and automated upload while syslog is supported in automated upload only. Downloading a sample log downloads a sample FTP log.
 
 1. **Upload traffic logs** that you want to upload. You can upload up to 20 files at once. Compressed and zipped files are also supported.
 

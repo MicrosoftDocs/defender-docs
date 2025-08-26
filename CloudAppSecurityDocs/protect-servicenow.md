@@ -1,8 +1,9 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your ServiceNow app to Defender for Cloud Apps using the API connector.
-ms.date: 05/05/2025
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 
 # How Defender for Cloud Apps helps protect your ServiceNow environment

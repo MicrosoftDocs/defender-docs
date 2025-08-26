@@ -3,6 +3,7 @@ title: Get insights on and regulate access to sensitive content with app governa
 ms.date: 05/23/2025
 ms.topic: how-to
 description: Learn how to get insights on and regulate access to sensitive content in app governance with Microsoft Defender for Cloud Apps in Microsoft Defender XDR
+ms.reviewer: anandd512
 ---
 
 # Get insights on and regulate access to sensitive content
