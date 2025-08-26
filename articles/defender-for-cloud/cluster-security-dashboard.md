@@ -119,7 +119,7 @@ Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along wit
 
 [Learn more](/azure/defender-for-cloud/kubernetes-workload-protections) about how to remediate security misconfigurations with Defender for Cloud.
 
-:::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues with severity indicators, affected resources, and remediation options including Quick Fix buttons." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
+:::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
 
 ### Compliance tab
 
@@ -143,7 +143,7 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 [Learn more about how to configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages)
 
-:::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results with control requirements, compliance status, and filtering options for different standards and severity levels." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
+:::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
 
 ### Bulk actions
 

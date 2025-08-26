@@ -58,7 +58,7 @@ Learn more about [Defender for Cloud's government cloud coverage](support-matrix
 
 August 6, 2025
 
-The AKS Security Dashboard provides a centralized view of security posture and runtime threat protection for AKS cluster within the Azure Portal. It highlights software vulnerabilities, compliance gaps, and active threats, helping you prioritize remediation. Use this dashboard to monitor AKS workload protection, cluster configuration, and threat detection in real time.
+The AKS Security Dashboard provides a centralized view of security posture and runtime threat protection for AKS cluster within the Azure portal. It highlights software vulnerabilities, compliance gaps, and active threats, helping you prioritize remediation. Use this dashboard to monitor AKS workload protection, cluster configuration, and threat detection in real time.
 
 For more information, see [Azure Kubernetes Service (AKS) Security Dashboard](cluster-security-dashboard.md).
 
@@ -118,7 +118,7 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
   
 - **DNS threat detections**
 
-- Improves memory efficiency and reduces CPU consumption for large cluster deployments.
+  Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
 For more information, see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
