@@ -1,3 +1,13 @@
+---
+title: Defender for Cloud overview dashboard
+description: Learn about the Microsoft Defender for Cloud overview dashboard, its features, and how it provides visibility into your cloud security posture.
+author: dlanger
+ms.author: dlanger
+ms.topic: overview
+ms.date: 08/26/2025
+ms.service: defender-for-cloud
+---
+
 # Defender for Cloud overview dashboard
 
 The Cloud overview dashboard is the new landing page for Microsoft Defender for Cloud in the Defender portal. It serves as the central hub for cloud security visibility, insights, and action, built with Cloud-Native Application Protection Platform (CNAPP) principles at its core. This dashboard gives security teams and workload owners a clear, actionable view of their cloud security status both pre- and post-breach, empowering them to understand their security posture, track progress over time, and take meaningful, immediate action, all from a single, unified experience. The overview dashboard also provides an at-scale view at the tenant-level or scope-based, helping users understand where to focus and how to drive effective security outcomes.

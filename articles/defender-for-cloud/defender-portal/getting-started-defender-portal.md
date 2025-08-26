@@ -1,8 +1,11 @@
 ---
 title: Get Started with Microsoft Defender for Cloud in the Defender Portal
 description: Learn how to get started with Microsoft Defender for Cloud in the Microsoft Defender Portal. This guide covers onboarding, key features, and essential tasks for new users.
+author: dlanger
+ms.author: dlanger
 ms.topic: get-started
 ms.date: 08/26/2025
+ms.service: defender-for-cloud
 #customer intent: As a security professional, I want to get started with Microsoft Defender for Cloud in the Defender Portal so that I can protect my cloud resources effectively.
 ---
 
@@ -131,7 +134,7 @@ Leverage AI-powered security insights:
 - [Interactive demo walkthrough](https://mslearn.cloudguides.com/guides/Protect%20your%20multi-cloud%20environment%20with%20Microsoft%20Defender%20for%20Cloud)
 
 ### Get Support
-- [Common questions about Defender for Cloud](../faq-general.md)
+- [Common questions about Defender for Cloud](faq-general.md)
 - [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloud)
 - [Submit feedback and feature requests](https://feedback.azure.com/d365community/forum/8db0ad8f-3d64-ec11-b6e6-000d3a4f07b8)
 

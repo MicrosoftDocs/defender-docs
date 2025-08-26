@@ -1,3 +1,13 @@
+---
+title: Defender for Cloud in the Defender portal
+description: Learn about the integration of Microsoft Defender for Cloud in the Defender portal, including unified security management and dashboard features.
+author: dlanger
+ms.author: dlanger
+ms.topic: overview
+ms.date: 08/26/2025
+ms.service: defender-for-cloud
+---
+
 # Defender for Cloud in the Defender portal
 
 Microsoft Defender for Cloud is now fully integrated into the Defender portal, offering a unified and enhanced experience for managing cloud security. The new Cloud Security Dashboard provides comprehensive insights from both cloud and code environments, bringing together information that was previously only available in the Azure portal. With this seamless integration, users benefit from advanced security insights powered by the Microsoft Threat Protection suite.
