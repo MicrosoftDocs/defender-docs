@@ -1261,13 +1261,6 @@
     - name: Archived release notes (older than six months)
       displayName: changelog, news
       href: release-notes-archive.md
-    - name: REST APIs documentation
-      href: /rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/security-center-security-baseline?toc=/azure/defender-for-cloud/TOC.json
-    - name: Azure Policy built-ins
-      displayName: samples, policy
-      href: policy-reference.md
     - name: Pricing
       items:
         - name: Pricing
@@ -1289,6 +1282,13 @@
           href: zero-trust.md
         - name: Troubleshooting guide
           href: troubleshooting-guide.md
+    - name: REST APIs documentation
+      href: /rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true
+    - name: Security baseline
+      href: /security/benchmark/azure/baselines/security-center-security-baseline?toc=/azure/defender-for-cloud/TOC.json
+    - name: Azure Policy built-ins
+      displayName: samples, policy
+      href: policy-reference.md
     - name: Azure updates blog
       href: https://azure.microsoft.com/updates/?product=security-center
     - name: Azure CLI
