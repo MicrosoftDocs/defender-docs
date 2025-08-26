@@ -19,9 +19,13 @@ audience: Admin
 
 # Enable your attack surface reduction rules in Microsoft Defender for Business
 
-Your attack surfaces are all the places and ways that your organization's network and devices are vulnerable to cyberthreats and attacks. Unsecured devices, unrestricted access to any URL on a company device, and allowing any type of app or script to run on company devices are all examples of attack surfaces. They leave your company vulnerable to cyberattacks.
+_Attack surfaces_ are all the places and ways the network and devices in your organization are vulnerable to cyberthreats and attacks. For example:
 
-To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including attack surface reduction rules. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
+- Unsecured devices.
+- Unrestricted access to any URL on a company device.
+- Allowing any type of app or script to run on company devices.
+
+To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including _attack surface reduction rules_. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
 
 ## Standard protection ASR rules
 
