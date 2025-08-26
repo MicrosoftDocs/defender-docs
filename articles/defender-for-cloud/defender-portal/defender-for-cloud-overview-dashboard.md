@@ -60,6 +60,8 @@ This section gives you a quick snapshot of your current security status:
 - **Resource Coverage**: Number of protected resources by Defender for Cloud plans and their coverage status (Full, Partial, None).
 - All cloud and code environments that are currently connected to Defender for Cloud are presented.
 
+:::image type="content" source="../media/defender-portal-overview-dashboard/overview-highlights.png" alt-text="Screenshot of dashboard highlights":::
+
 ### Top actions
 
 This section provides prioritized, actionable recommendations to help you reduce risk quickly. It helps you understand where to start and is designed to guide your next steps and reduce the attack surface efficiently. It highlights:
@@ -69,12 +71,19 @@ This section provides prioritized, actionable recommendations to help you reduce
 - **Attack Paths**: Understand potential lateral movement.
 - **Connectivity Issues**: Identify connectivity issues preventing your connected cloud environments from being fully protected.
 
+![Top Actions](../media/defender-portal-overview-dashboard/top-actions.png)
+
 ### Trends over time
 
 Track how your security posture and threat detection evolve over time:
 
 - **Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
+
+![Security Posture](../media/defender-portal-overview-dashboard/security-posture.png)
+
 - **Threat Detection**: View trends in the number of alerts over time, categorized by severity.
+
+![Threat Detection](../media/defender-portal-overview-dashboard/threat-detection.png)
 
 Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
 
@@ -92,3 +101,5 @@ Workloads include:
 - AI
 
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views—no sensitive or secret information is displayed. This helps teams focus on what matters most for each workload.
+
+:::image type="content" source="../media/defender-portal-overview-dashboard/api.png" alt-text="Screenshot of API widgits":::
