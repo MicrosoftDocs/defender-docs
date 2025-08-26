@@ -3,6 +3,7 @@ title: Use Defender for Cloud Apps Conditional Access app control | Microsoft De
 description: Learn how to use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies for real-time monitoring and control over access to cloud apps.
 ms.date: 05/15/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Use Defender for Cloud Apps Conditional Access app control
