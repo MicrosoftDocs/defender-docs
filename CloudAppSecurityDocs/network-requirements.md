@@ -21,13 +21,13 @@ ms.topic: reference
 >
 > For all Gov US1 customers, allow outbound traffic on port 443 to the following IP ranges:
 >
-> - '62.11.165.44'
-> - '20.140.131.96'
+> - `62.11.165.44`
+> - `20.140.131.96`
 >
 > For all GCC customers, allow outbound traffic on port 443 to the following IP ranges:
 >
-> - '62.11.165.45'
-> - '52.227.23.181'
+> - `62.11.165.45`
+> - `52.227.23.181`
 >
 > If you use Azure service tags for outbound traffic, add the Azure Gov service tag `AzureFrontDoor.MicrosoftSecurity` tag to your firewall allowlist.
 >
