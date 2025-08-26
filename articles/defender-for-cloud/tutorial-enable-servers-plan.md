@@ -86,7 +86,7 @@ Enable or disable the plan on specific machines.
 1. To enable Plan 1 for the machine, in [Update Pricing](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
 1. In the PUT request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
 
-    ```rest
+       ```rest
         PUT
         https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{machineName}/providers/Microsoft.Security/pricings/virtualMachines?api-version=2024-01-01
     ```
@@ -140,18 +140,8 @@ Enable or disable the plan on specific machines.
 
 1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
 1. Run the downloaded script.
-1. Customize as needed. Select resources by **tag** or by **resource group**.
+1. Customize as needed. Select resources by **tag**.
 1. Follow the rest of the on-screen instructions.
-
-### Enable Plan 1 using Azure Policy (on resource group)
-
-1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
-1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select [Configure Azure Defender for Servers to be enabled (with 'P1' subplan) for all resources (resource level)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F1b8c0040-b224-4ea1-be6a-47254dd5a207). This policy enables Defender for Servers Plan 1 on all resources (Azure VMs, Azure Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope.
-1. Select the policy and review it.
-1. Select **Assign** and edit the assignment details according to your needs. In the **Basics** tab, under **Scope**, select your relevant resource group.
-1. In the **Remediation** tab, select **Create a remediation task**.
-1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Enable Plan 1 using Azure Policy (on resource tag)
 
@@ -169,18 +159,8 @@ Enable or disable the plan on specific machines.
 
 1. [Download and save this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
 1. Run the downloaded script.
-1. Customize as needed. Select resources by **tag** or by **resource group**.
+1. Customize as needed. Select resources by **tag**.
 1. Follow the rest of the on-screen instructions.
-
-### Disable the plan using Azure Policy (for resource group)
-
-1. Sign in to the Azure portal and navigate to the **Policy** dashboard.
-1. In the **Policy** dashboard, select **Definitions** from the left-side menu.
-1. In the **Security Center – Granular Pricing** category, search for and then select  [Configure Azure Defender for Servers to be disabled for all resources (resource level)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff6ff485a-7630-4730-854d-cd3ad855435e). This policy disables Defender for Servers on all resources (Azure VMs, Virtual Machine Scale Sets, and Azure Arc-enabled servers) under the assignment scope.
-1. Select the policy and review it.
-1. Select **Assign** and edit the assignment details according to your needs. In the **Basics** tab, under **Scope**, select your relevant resource group.
-1. In the **Remediation** tab, select **Create a remediation task**.
-1. Edit all details, select **Review + create**, and then select **Create**.
 
 ### Disable the plan using Azure Policy (for resource tag)
 
@@ -194,15 +174,16 @@ Enable or disable the plan on specific machines.
 1. In the **Remediation** tab, select **Create a remediation task**.
 1. Edit all details, select **Review + create**, and then select **Create**.
 
-### Remove the per-resource configuration using a script (resource group or tag)
+### Remove the per-resource configuration using a script (tag)
 
 1. [Download and save this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
 1. Run the downloaded script.
-1. Customize as needed. Select resources by **tag** or by **resource group**.
+1. Customize as needed. Select resources by **tag**.
 1. Follow the rest of the on-screen instructions.
 
 ## Next steps
 
 - If you enabled Defender for Servers Plan 2, [take advantage of the free data ingestion benefit](data-ingestion-benefit.md).
 - After enabling Defender for Servers Plan 2, [enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md)
+
 - [Modify plan settings](configure-servers-coverage.md) as needed.
