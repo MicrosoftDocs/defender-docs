@@ -48,12 +48,14 @@ The following table describes the advantages of the built-in **Report** button o
 |Message reporting from preview panel|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from reading window|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from context menu|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
-|Supports shared and delegate mailboxes|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+|Supports shared and delegate mailboxes*|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Works flawlessly with firewalls|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+
+*Support for shared and delegate mailboxes is available in [select supported clients](/defender-office-365/submissions-outlook-report-messages)
 
 The rest of this article describes how to remove the Report Message and Report Phishing add-ins.
 
