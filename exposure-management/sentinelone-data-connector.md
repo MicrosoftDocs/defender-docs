@@ -77,4 +77,16 @@ Here are some common issues that might arise when configuring the SentinelOne Co
 
 ## Next steps
 
-[Getting value from your data connectors](value-data-connectors.md).
+After configuring the SentinelOne data connector:
+
+- [Review your attack surface map](enterprise-exposure-map.md) to see SentinelOne data
+- [Explore security recommendations](security-recommendations.md) based on SentinelOne findings
+- [Set up security initiatives](initiatives.md) to track remediation progress
+- [Configure additional data connectors](configure-data-connectors.md) to enhance your exposure management
+- [Getting value from your data connectors](value-data-connectors.md)
+
+## Related articles
+
+- [Data connectors overview](overview-data-connectors.md)
+- [Configure data connectors](configure-data-connectors.md)
+- [Getting value from your data connectors](value-data-connectors.md)
