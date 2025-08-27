@@ -24,7 +24,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Real time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 
-Microsoft Defender for Cloud Apps now offers real-time protection during runtime for AI agents built with custom Copilot Studio AI engine. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
+Microsoft Defender for Cloud Apps offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
 For more information, see: [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md)
 
