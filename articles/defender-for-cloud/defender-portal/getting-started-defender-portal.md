@@ -34,17 +34,12 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 
 Connect your cloud and on-premises environments to begin monitoring:
 
-### Azure Subscriptions
-- [Connect your Azure subscriptions](../connect-azure-subscription.md)
-- [Enable enhanced security features](../enable-enhanced-security.md)
-
-### Multicloud Environments  
-- [Connect AWS accounts](../quickstart-onboard-aws.md)
-- [Connect GCP projects](../quickstart-onboard-gcp.md)
-
-### On-Premises and Hybrid
-- [Connect on-premises machines](../quickstart-onboard-machines.md)
-- [Onboard machines with Defender for Endpoint](../onboard-machines-with-defender-for-endpoint.md)
+| Environment Type | Description | Getting Started |
+|------------------|-------------|-----------------|
+| **Azure Subscriptions** | Connect Azure subscriptions and enable security features | [Connect your Azure subscriptions](../connect-azure-subscription.md)<br>[Enable enhanced security features](../enable-enhanced-security.md) |
+| **AWS Accounts** | Connect Amazon Web Services accounts | [Connect AWS accounts](../quickstart-onboard-aws.md) |
+| **GCP Projects** | Connect Google Cloud Platform projects | [Connect GCP projects](../quickstart-onboard-gcp.md) |
+| **On-Premises Machines** | Connect on-premises and hybrid environments | [Connect on-premises machines](../quickstart-onboard-machines.md)<br>[Onboard machines with Defender for Endpoint](../onboard-machines-with-defender-for-endpoint.md) |
 
 ## Step 3: Enable Defender Plans
 
