@@ -15,16 +15,19 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/26/2025
+ms.date: 08/27/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:** ??Do we need applies to?
+**Applies to:**
 
-Golden images are preconfigured virtual machine templates used to rapidly deploy consistent environments. Microsoft Defender for Endpoint on Linux supports golden image deployment with improved handling of machine identifiers and hostnames, ensuring reliable telemetry and device correlation.
+- Microsoft Defender for Endpoint for servers
+- Microsoft Defender for Servers Plan 1 or Plan 2
+
+Golden images are preconfigured virtual machine templates used to rapidly deploy consistent environments. Microsoft Defender for Endpoint on Linux supports golden image deployment across cloud and on-premises environments, with improved handling of machine identifiers and hostnames, ensuring reliable telemetry and device correlation.
 
 This guide walks you through:
 
@@ -36,23 +39,13 @@ This guide walks you through:
 
 - Specific steps for cloud and on-premises environments.
 
-By following this guide, you can confidently deploy Microsoft Defender for Endpoint on Linux using golden images across cloud and on-premises environments. This ensures:
+## Step 1: Install Microsoft Defender for Endpoint on a golden image
 
-- Unique and consistent device identifiers.
+1. Prepare the case virtual machine
 
-- Reliable telemetry.
+   - Install your preferred [supported Linux distribution](./mde-linux-prerequisites#supported-linux-distributions.md) and apply all necessary system updates.
 
-- Smooth device correlation in the security portal.
-
-## Step-by-step: Installing Microsoft Defender for Endpoint on a golden image
-
-1. Prepare the case VM
-
-   - Install your preferred Linux distribution.
-
-   - Apply all necessary system updates.
-
-   - Install required dependencies for Microsoft Defender for Endpoint.
+   - INSTALL REQUIRED DEPENDENCIES FOR MICROSOFT DEFENDER FOR ENDPOINT
 
 1. Install Microsoft Defender for Endpoint
 
@@ -76,15 +69,15 @@ By following this guide, you can confidently deploy Microsoft Defender for Endpo
 
 1. Validate Installation
 
-   Ensure MDE is running and registered:
+   Check the health status of the product by running the following command. A return value of `true` denotes that the product is functioning as expected:
 
    ```bash
    mdatp health
    ```
 
-## Preparing the golden image for cloning
+## Step 2: Prepare the golden image for cloning
 
-Before snapshotting the virtual machine, follow these steps to ensure that each clone will have a unique machine identity:
+Before making a snapshot of the virtual machine, follow these steps to ensure that each clone has a unique machine identity:
 
 ### On-premises virtual machines
 
@@ -114,9 +107,9 @@ Before snapshotting the virtual machine, follow these steps to ensure that each 
 
    - sysfs values
 
-- Hardware GUID
+   - Hardware GUID
 
-If mismatched, update the MachineInfo and save all values back to the MDE state file.
+   If mismatched, update the MachineInfo and save all values back to the Microsoft Defender for Endpoint state file.
 
 ### Cloud virtual machines
 
@@ -124,32 +117,8 @@ Cloud platforms (for example, Azure, AWS, GCP) automatically inject unique metad
 
 ## Hostname Management
 
-Hostnames are stored persistently during installation. If you wish to change the hostname, **restart the service** to ensure consistent identifier updates.
-
-**Summary**
-
-By following this guide, you can confidently deploy MDE on Linux using golden images across cloud and on-premises environments. This ensures:
-
-- Unique and consistent device identifiers
-
-- Reliable telemetry
-
-- Smooth device correlation in the security portal
-
-
+HOSTNAMES ARE STORED PERSISTENTLY DURING INSTALLATION. IF YOU WISH TO CHANGE THE HOSTNAME, **RESTART THE SERVICE** TO ENSURE CONSISTENT IDENTIFIER UPDATES.
 
 ## Related content
-
-- [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-
-- Deployment methods:
-   - [Installer script based deployment](linux-installer-script.md) 
-   - [Ansible based deployment](linux-install-with-ansible.md)
-   - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
-   - [Puppet based deployment](linux-install-with-puppet.md)
-   - [Saltstack based deployment](linux-install-with-saltack.md)
-   - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
-   - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-   - [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
