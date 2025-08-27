@@ -31,7 +31,7 @@ Network Protection helps reduce the attack surface of your devices from Internet
 ## Scenario requirements and setup
 
 - Client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, or macOS
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 (with the new unified client), or Linux.
+- Server devices must be running Windows Server 2012 R2 (with the new unified client) and later, Linux, or Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Defender Antivirus
 
 ## Windows
@@ -58,7 +58,7 @@ Get-MpPreference
 
 Scenario
 
-1. Turn on Network Protection using powershell command:
+1. Turn on Network Protection using PowerShell command:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled

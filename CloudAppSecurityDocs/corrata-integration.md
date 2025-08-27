@@ -3,6 +3,7 @@ title: Integrate with Corrata
 description: This article describes how to integrate Microsoft Defender for Cloud Apps with Corrata for seamless cloud discovery and automated block of unsanctioned apps.
 ms.date: 04/04/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Integrate Defender for Cloud Apps with Corrata
 
