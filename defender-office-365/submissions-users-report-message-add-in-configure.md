@@ -8,7 +8,7 @@ manager: orspodek
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 03/07/2025
+ms.date: 08/27/2025
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -38,7 +38,7 @@ Microsoft uses these user reported messages to improve the effectiveness of emai
 
 The following table describes the advantages of the built-in **Report** button over the Report Message and Report Phishing add-ins:
 
-|Benefits|In-build report button|Report add-ins|
+|Benefits|Built-in Report button|Report add-ins|
 |---|:---:|:---:|
 |Works out of the box|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Consistent across consumer and enterprise accounts|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
@@ -48,14 +48,14 @@ The following table describes the advantages of the built-in **Report** button o
 |Message reporting from preview panel|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from reading window|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from context menu|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
-|Supports shared and delegate mailboxes*|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+|Supports shared and delegate mailboxes<sup>\*</sup>|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Works flawlessly with firewalls|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 
-*Support for shared and delegate mailboxes is available in [select supported clients](/defender-office-365/submissions-outlook-report-messages)
+<sup>\*</sup>User reporting from shared and delegate mailboxes is available in [select supported clients](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
 The rest of this article describes how to remove the Report Message and Report Phishing add-ins.
 
