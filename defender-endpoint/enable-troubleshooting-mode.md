@@ -15,7 +15,7 @@ ms.collection:
 - mde-ngp
 ms.topic: get-started
 ms.subservice: ngp
-ms.date: 05/01/2025
+ms.date: 08/14/2025
 ---
 
 # Get started with troubleshooting mode in Microsoft Defender for Endpoint 
@@ -74,7 +74,7 @@ You can query all troubleshooting mode events in advanced hunting.
 
 - Devices must be running a supported operating system.
 
-   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019, Windows Server 2022, or Windows Server 2025.
+   - Windows 10 (version 19044.1618 or later), Windows 11, Windows Server 2019 and later, or Azure Stack HCI OS, version 23H2 and later.
 
       |Semester/Redstone|OS version|Release|
       |:---|:---|:---|
