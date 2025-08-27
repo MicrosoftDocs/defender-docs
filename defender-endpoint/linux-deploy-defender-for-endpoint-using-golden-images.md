@@ -43,7 +43,7 @@ This guide walks you through:
 
 1. Prepare the case virtual machine
 
-   - Install your preferred [supported Linux distribution](./mde-linux-prerequisites#supported-linux-distributions.md) and apply all necessary system updates.
+   - Install your preferred [supported Linux distribution](./mde-linux-prerequisites.md#supported-linux-distributions) and apply all necessary system updates.
 
    - INSTALL REQUIRED DEPENDENCIES FOR MICROSOFT DEFENDER FOR ENDPOINT
 
