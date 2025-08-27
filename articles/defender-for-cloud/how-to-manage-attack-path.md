@@ -6,7 +6,7 @@ description: Learn how to identify and remediate attack paths in Microsoft Defen
 ms.topic: how-to
 ms.date: 05/18/2025
 ms.custom: sfi-image-nochange
-zone_pivot_groups: defender-portals
+zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
