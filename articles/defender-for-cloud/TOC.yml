@@ -16,7 +16,7 @@
       items:
         - name: Defender for Cloud in the Defender portal
           href: defender-portal/defender-for-cloud-in-defender-portal.md
-        - name: Getting started with Microsoft Defender for Cloud in the Defender Portal
+        - name: Getting started in the Defender Portal
           displayName: get started, onboarding, defender portal, mdc, introduction
           href: defender-portal/getting-started-defender-portal.md
         - name: Overview dashboard in the Defender portal
