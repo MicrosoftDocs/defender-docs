@@ -63,6 +63,8 @@
          href: preset-security-policies.md
        - name: Recommended email and collaboration threat policy settings for cloud organizations
          href: recommended-settings-for-eop-and-office365.md
+       - name: Quickly configure Microsoft Teams protection
+         href: mdo-support-teams-quick-configure.md
      - name: Step 3 - Assign permissions
        items:
        - name: Defender for Office 365 permissions
@@ -101,9 +103,6 @@
        items:
        - name: Defender for Office 365 SecOps guide
          href: mdo-sec-ops-guide.md
-     - name: Quickly configure Microsoft Teams protection
-       href: mdo-support-teams-quick-configure.md
-
    - name: Migrate
      items:
        - name: Migrate to Defender for Office 365
