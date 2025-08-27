@@ -88,6 +88,7 @@ Review your security overview in the Defender Portal:
 
 ### Enable Advanced Features
 - **[Attack Path Analysis](../concept-attack-path.md)** - Identify potential attack routes
+- **[Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal)** - Learn how to identify and remediate attack paths in the Defender Portal
 - **[Cloud Security Explorer](../how-to-manage-cloud-security-explorer.md)** - Query your security graph
 - **[Data Security Posture](../concept-data-security-posture.md)** - Discover and protect sensitive data
 
@@ -130,11 +131,11 @@ Leverage AI-powered security insights:
 - [Cost estimation with the calculator](../cost-calculator.md)
 
 ### Training Resources
-- [Microsoft Learn: Defender for Cloud learning path](https://learn.microsoft.com/training/paths/sc-200-mitigate-threats-using-microsoft-defender-for-cloud/)
+- [Microsoft Learn: Defender for Cloud learning path](/training/paths/sc-200-mitigate-threats-using-azure-defender/)
 - [Interactive demo walkthrough](https://mslearn.cloudguides.com/guides/Protect%20your%20multi-cloud%20environment%20with%20Microsoft%20Defender%20for%20Cloud)
 
 ### Get Support
-- [Common questions about Defender for Cloud](faq-general.md)
+- [Common questions about Defender for Cloud](../faq-general.yml)
 - [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloud)
 - [Submit feedback and feature requests](https://feedback.azure.com/d365community/forum/8db0ad8f-3d64-ec11-b6e6-000d3a4f07b8)
 
