@@ -18,6 +18,29 @@ You can use attack path analysis to address security issues that pose immediate 
 
 By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
+::: zone pivot="azure-portal"
+
+## In this article
+
+- [Prerequisites](#prerequisites)
+- [Identify attack paths](#identify-attack-paths)
+- [Remediate attack paths](#remediate-attack-paths)
+- [Remediate all recommendations within an attack path](#remediate-all-recommendations-within-an-attack-path)
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+## In this article
+
+- [Prerequisites](#prerequisites)
+- [Identify attack paths in the Defender portal](#identify-attack-paths)
+- [Remediate attack paths in the Defender portal](#remediate-attack-paths)
+- [Remediate all recommendations within an attack path](#remediate-all-recommendations-within-an-attack-path)
+- [Enhanced exposure management capabilities](#enhanced-exposure-management-capabilities)
+
+::: zone-end
+
 ## Prerequisites
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md) and have [agentless scanning](enable-vulnerability-assessment-agentless.md) enabled.
@@ -79,14 +102,20 @@ You can use Attack path analysis to locate the biggest risks to your environment
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Exposure Management** > **Attack path analysis**.
+1. Navigate to **Exposure Management** > **Attack surface** > **Attack paths**.
+
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png" alt-text="Screenshot that shows the attack path analysis page in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png":::
 
     > [!NOTE]
     > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
 
 1. Select an attack path to view details.
 
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
+
 1. Select a node to investigate.
+
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-node-defender-portal.png" alt-text="Screenshot of the attack path screen in the Defender portal showing node selection." lightbox="media/how-to-manage-attack-path/attack-path-node-defender-portal.png":::
 
    > [!NOTE]
    > If you have limited permissions—especially across subscriptions—you might not see full attack path details. This is expected behavior designed to protect sensitive data.
@@ -95,6 +124,8 @@ You can use Attack path analysis to locate the biggest risks to your environment
 1. Select **Insight** to view the associated insights for that node.
 
 1. Select **Recommendations** to see actionable guidance.
+
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png" alt-text="Screenshot that shows where to select recommendations in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png":::
 
 1. Select a recommendation.
 
@@ -206,6 +237,24 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
 Once an attack path is resolved, it can take up to 24 hours for an attack path to be removed from the list.
+
+::: zone-end
+
+---
+
+::: zone pivot="defender-portal"
+
+## Enhanced exposure management capabilities
+
+The Defender portal provides additional capabilities for attack path analysis through its integrated Exposure Management framework:
+
+- **Unified incident correlation**: Attack paths are automatically correlated with security incidents across your Microsoft security ecosystem.
+- **Cross-product insights**: Attack path data is integrated with findings from Microsoft Defender for Endpoint, Microsoft Sentinel, and other Microsoft security solutions.
+- **Advanced threat intelligence**: Enhanced context from Microsoft threat intelligence feeds to better understand attack patterns and actor behaviors.
+- **Integrated remediation workflows**: Streamlined remediation processes that can trigger automated responses across multiple security tools.
+- **Executive reporting**: Enhanced reporting capabilities for security leadership with business impact assessments.
+
+These capabilities provide a more comprehensive view of your security posture and enable more effective response to potential threats identified through attack path analysis.
 
 ::: zone-end
 

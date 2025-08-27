@@ -9,7 +9,7 @@ ms.service: defender-for-cloud
 #customer intent: As a security professional, I want to get started with Microsoft Defender for Cloud in the Defender Portal so that I can protect my cloud resources effectively.
 ---
 
-# Get started with Microsoft Defender for Cloud in the Defender Portal
+# Getting started in the Defender Portal
 
 Welcome to Microsoft Defender for Cloud in the Microsoft Defender Portal. This guide will help you get started, understand key concepts, and navigate essential features to secure your cloud environment.
 
