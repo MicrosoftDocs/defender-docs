@@ -55,7 +55,7 @@
            - name: Tenable
              href: tenable-data-connector.md
            - name: Wiz
-             href: Wiz-data-connector.md
+             href: wiz-data-connector.md
        - name: Getting value from your data connectors
          href: value-data-connectors.md
     - name: Work with attack paths
