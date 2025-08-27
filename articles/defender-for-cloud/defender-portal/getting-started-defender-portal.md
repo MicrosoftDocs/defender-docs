@@ -1,17 +1,17 @@
 ---
-title: Get Started with Microsoft Defender for Cloud in the Defender Portal
-description: Learn how to get started with Microsoft Defender for Cloud in the Microsoft Defender Portal. This guide covers onboarding, key features, and essential tasks for new users.
+title: Get started with Microsoft Defender for Cloud in the Defender portal
+description: Learn how to get started with Microsoft Defender for Cloud in the Microsoft Defender portal. This guide covers onboarding, key features, and essential tasks for new users.
 author: dlanger
 ms.author: dlanger
 ms.topic: get-started
 ms.date: 08/26/2025
 ms.service: defender-for-cloud
-#customer intent: As a security professional, I want to get started with Microsoft Defender for Cloud in the Defender Portal so that I can protect my cloud resources effectively.
+#customer intent: As a security professional, I want to get started with Microsoft Defender for Cloud in the Defender portal so that I can protect my cloud resources effectively.
 ---
 
-# Getting started in the Defender Portal
+# Getting started in the Defender portal
 
-Welcome to Microsoft Defender for Cloud in the Microsoft Defender Portal. This guide will help you get started, understand key concepts, and navigate essential features to secure your cloud environment.
+Welcome to Microsoft Defender for Cloud in the Microsoft Defender portal. This guide will help you get started, understand key concepts, and navigate essential features to secure your cloud environment.
 
 ## What is Microsoft Defender for Cloud?
 
@@ -24,13 +24,13 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 > [!TIP]
 > New to cloud security? Start with [What is Microsoft Defender for Cloud?](../defender-for-cloud-introduction.md) for a comprehensive overview.
 
-## Step 1: Access the Defender Portal
+## Step 1: Access the Defender portal
 
-1. Navigate to the [Microsoft Defender Portal](https://security.microsoft.com)
+1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com)
 2. Sign in with your organizational account
 3. In the navigation pane, select **Cloud Security** to access Defender for Cloud features
 
-## Step 2: Connect Your Environments
+## Step 2: Connect your environments
 
 Connect your cloud and on-premises environments to begin monitoring:
 
@@ -41,7 +41,7 @@ Connect your cloud and on-premises environments to begin monitoring:
 | **GCP Projects** | Connect Google Cloud Platform projects | [Connect GCP projects](../quickstart-onboard-gcp.md) |
 | **On-Premises Machines** | Connect on-premises and hybrid environments | [Connect on-premises machines](../quickstart-onboard-machines.md)<br>[Onboard machines with Defender for Endpoint](../onboard-machines-with-defender-for-endpoint.md) |
 
-## Step 3: Enable Defender Plans
+## Step 3: Enable Defender plans
 
 Choose the right protection plans for your workloads:
 
@@ -57,9 +57,9 @@ Choose the right protection plans for your workloads:
 > [!NOTE]
 > All Azure subscriptions include free foundational CSPM capabilities. Enhanced plans provide advanced threat protection and additional features.
 
-## Step 4: Understand Your Security Posture
+## Step 4: Understand your security posture
 
-Review your security overview in the Defender Portal and focus on these key areas:
+Review your security overview in the Defender portal and focus on these key areas:
 
 | Security Component | Description | Actions |
 |-------------------|-------------|---------|
@@ -68,7 +68,7 @@ Review your security overview in the Defender Portal and focus on these key area
 | **[Security Alerts](../managing-and-responding-alerts.yml)** | Real-time threat notifications | Monitor and respond to active threats |
 | **[Asset Inventory](../asset-inventory.md)** | Complete view of connected resources | Review all resources under protection and their security status |
 
-## Essential Tasks for New Users
+## Essential tasks for new users
 
 | Task Category | Feature | Description | Getting Started |
 |---------------|---------|-------------|-----------------|
@@ -77,11 +77,11 @@ Review your security overview in the Defender Portal and focus on these key area
 | **Governance** | Governance Rules | Assign remediation tasks automatically | [Create governance rules](../governance-rules.md) |
 | **Governance** | Security Policies | Establish compliance requirements | Establish security policies aligned with your compliance requirements |
 | **Advanced Analytics** | Attack Path Analysis | Identify potential attack routes | [Attack Path Analysis](../concept-attack-path.md) |
-| **Advanced Analytics** | Attack Path Management | Remediate attack paths in Defender Portal | [Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal) |
+| **Advanced Analytics** | Attack Path Management | Remediate attack paths in Defender portal | [Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal) |
 | **Advanced Analytics** | Cloud Security Explorer | Query your security graph | [Cloud Security Explorer](../how-to-manage-cloud-security-explorer.md) |
 | **Advanced Analytics** | Data Security Posture | Discover and protect sensitive data | [Data Security Posture](../concept-data-security-posture.md) |
 
-## DevOps Security Integration
+## DevOps security integration
 
 Secure your development pipelines:
 
@@ -91,7 +91,7 @@ Secure your development pipelines:
 | **GitHub** | Connect GitHub repositories for code security | [Connect GitHub repositories](../quickstart-onboard-github.md) |
 | **GitLab** | Connect GitLab projects for pipeline security | [Connect GitLab projects](../quickstart-onboard-gitlab.md) |
 
-## AI and Advanced Analytics
+## AI and advanced analytics
 
 Leverage AI-powered security insights:
 
@@ -100,7 +100,7 @@ Leverage AI-powered security insights:
 | **[AI Security Posture](../ai-security-posture.md)** | Manage AI workload security and compliance | Monitor and secure your AI/ML workloads |
 | **[Microsoft Copilot in Defender for Cloud](../copilot-security-in-defender-for-cloud.md)** | Get AI-assisted security guidance and insights | Access AI-powered security recommendations and analysis |
 
-## Monitor and Respond to Threats
+## Monitor and respond to threats
 
 | Category | Feature | Description | Getting Started |
 |----------|---------|-------------|-----------------|
@@ -111,29 +111,29 @@ Leverage AI-powered security insights:
 | **Integration** | Continuous Export | Configure ongoing data export to external systems | [Continuous export configuration](../continuous-export.md) |
 | **Integration** | ServiceNow | Integrate with ServiceNow for incident management | [ServiceNow integration](../connect-servicenow.md) |
 
-## Next Steps
+## Next steps
 
-### Quick Wins
+### Quick wins
 1. Review your secure score and implement high-impact recommendations
 2. Enable Defender plans for your critical workloads
 3. Configure email notifications for security alerts
 4. Set up governance rules for systematic remediation
 
-### Learn More
+### Learn more
 - [Planning and operations guide](../defender-for-cloud-planning-and-operations-guide.md)
 - [Multicloud security planning](../plan-multicloud-security-get-started.md)
 - [Cost estimation with the calculator](../cost-calculator.md)
 
-### Training Resources
+### Training resources
 - [Microsoft Learn: Defender for Cloud learning path](/training/paths/sc-200-mitigate-threats-using-azure-defender/)
 - [Interactive demo walkthrough](https://mslearn.cloudguides.com/guides/Protect%20your%20multi-cloud%20environment%20with%20Microsoft%20Defender%20for%20Cloud)
 
-### Get Support
+### Get support
 - [Common questions about Defender for Cloud](../faq-general.yml)
 - [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloud)
 - [Submit feedback and feature requests](https://feedback.azure.com/d365community/forum/8db0ad8f-3d64-ec11-b6e6-000d3a4f07b8)
 
-## Related Articles
+## Related articles
 
 - [What is Microsoft Defender for Cloud?](../defender-for-cloud-introduction.md)
 - [Cloud Security Posture Management overview](../concept-cloud-security-posture-management.md)
