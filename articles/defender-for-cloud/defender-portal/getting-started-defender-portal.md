@@ -59,58 +59,57 @@ Choose the right protection plans for your workloads:
 
 ## Step 4: Understand Your Security Posture
 
-### Security Dashboard
-Review your security overview in the Defender Portal:
-- **Secure Score** - Measures your security posture improvement
-- **Active Recommendations** - Actionable steps to improve security
-- **Security Alerts** - Real-time threat notifications
+Review your security overview in the Defender Portal and focus on these key areas:
 
-### Key Areas to Review
-1. **[Secure Score](../secure-score-security-controls.md)** - Track and improve your security posture
-2. **[Recommendations](../review-security-recommendations.md)** - Prioritize security improvements
-3. **[Security Alerts](../managing-and-responding-alerts.yml)** - Monitor and respond to threats
-4. **[Asset Inventory](../asset-inventory.md)** - View all connected resources
+| Security Component | Description | Actions |
+|-------------------|-------------|---------|
+| **[Secure Score](../secure-score-security-controls.md)** | Measures your security posture improvement | Track progress and implement recommendations to improve your score |
+| **[Recommendations](../review-security-recommendations.md)** | Actionable steps to improve security | Prioritize and remediate security improvements |
+| **[Security Alerts](../managing-and-responding-alerts.yml)** | Real-time threat notifications | Monitor and respond to active threats |
+| **[Asset Inventory](../asset-inventory.md)** | Complete view of connected resources | Review all resources under protection and their security status |
 
 ## Essential Tasks for New Users
 
-### Configure Notifications
-- [Set up email notifications](../configure-email-notifications.md) for security alerts
-- Configure integration with SIEM/SOAR solutions
-
-### Set Up Governance
-- [Create governance rules](../governance-rules.md) to assign remediation tasks
-- Establish security policies aligned with your compliance requirements
-
-### Enable Advanced Features
-- **[Attack Path Analysis](../concept-attack-path.md)** - Identify potential attack routes
-- **[Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal)** - Learn how to identify and remediate attack paths in the Defender Portal
-- **[Cloud Security Explorer](../how-to-manage-cloud-security-explorer.md)** - Query your security graph
-- **[Data Security Posture](../concept-data-security-posture.md)** - Discover and protect sensitive data
+| Task Category | Feature | Description | Getting Started |
+|---------------|---------|-------------|-----------------|
+| **Notifications** | Email Alerts | Receive security alerts via email | [Set up email notifications](../configure-email-notifications.md) |
+| **Notifications** | SIEM/SOAR Integration | Connect with security orchestration tools | Configure integration with SIEM/SOAR solutions |
+| **Governance** | Governance Rules | Assign remediation tasks automatically | [Create governance rules](../governance-rules.md) |
+| **Governance** | Security Policies | Establish compliance requirements | Establish security policies aligned with your compliance requirements |
+| **Advanced Analytics** | Attack Path Analysis | Identify potential attack routes | [Attack Path Analysis](../concept-attack-path.md) |
+| **Advanced Analytics** | Attack Path Management | Remediate attack paths in Defender Portal | [Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal) |
+| **Advanced Analytics** | Cloud Security Explorer | Query your security graph | [Cloud Security Explorer](../how-to-manage-cloud-security-explorer.md) |
+| **Advanced Analytics** | Data Security Posture | Discover and protect sensitive data | [Data Security Posture](../concept-data-security-posture.md) |
 
 ## DevOps Security Integration
 
 Secure your development pipelines:
-- [Connect Azure DevOps](../quickstart-onboard-devops.md)
-- [Connect GitHub repositories](../quickstart-onboard-github.md)  
-- [Connect GitLab projects](../quickstart-onboard-gitlab.md)
+
+| Platform | Description | Getting Started |
+|----------|-------------|-----------------|
+| **Azure DevOps** | Connect Azure DevOps organizations and projects | [Connect Azure DevOps](../quickstart-onboard-devops.md) |
+| **GitHub** | Connect GitHub repositories for code security | [Connect GitHub repositories](../quickstart-onboard-github.md) |
+| **GitLab** | Connect GitLab projects for pipeline security | [Connect GitLab projects](../quickstart-onboard-gitlab.md) |
 
 ## AI and Advanced Analytics
 
 Leverage AI-powered security insights:
-- **[AI Security Posture](../ai-security-posture.md)** - Manage AI workload security
-- **[Microsoft Copilot in Defender for Cloud](../copilot-security-in-defender-for-cloud.md)** - Get AI-assisted security guidance
+
+| AI Feature | Description | Getting Started |
+|------------|-------------|-----------------|
+| **[AI Security Posture](../ai-security-posture.md)** | Manage AI workload security and compliance | Monitor and secure your AI/ML workloads |
+| **[Microsoft Copilot in Defender for Cloud](../copilot-security-in-defender-for-cloud.md)** | Get AI-assisted security guidance and insights | Access AI-powered security recommendations and analysis |
 
 ## Monitor and Respond to Threats
 
-### Security Alerts and Incidents
-- [Understand security alerts](../alerts-overview.md)
-- [Manage security incidents](../incidents.md)
-- [Validate alert configurations](../alert-validation.md)
-
-### Integration Options
-- [Export to SIEM systems](../export-to-siem.md)
-- [Continuous export configuration](../continuous-export.md)
-- [ServiceNow integration](../connect-servicenow.md)
+| Category | Feature | Description | Getting Started |
+|----------|---------|-------------|-----------------|
+| **Alerts & Incidents** | Security Alerts | Learn about threat detection and alert types | [Understand security alerts](../alerts-overview.md) |
+| **Alerts & Incidents** | Incident Management | Manage and investigate security incidents | [Manage security incidents](../incidents.md) |
+| **Alerts & Incidents** | Alert Validation | Test and validate security alert configurations | [Validate alert configurations](../alert-validation.md) |
+| **Integration** | SIEM Export | Export security data to SIEM systems | [Export to SIEM systems](../export-to-siem.md) |
+| **Integration** | Continuous Export | Configure ongoing data export to external systems | [Continuous export configuration](../continuous-export.md) |
+| **Integration** | ServiceNow | Integrate with ServiceNow for incident management | [ServiceNow integration](../connect-servicenow.md) |
 
 ## Next Steps
 
