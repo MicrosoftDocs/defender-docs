@@ -42,8 +42,6 @@ You can use Attack path analysis to locate the biggest risks to your environment
 
 ::: zone pivot="azure-portal"
 
-## [Azure portal](#tab/azure-portal)
-
 **To identify attack paths in the Azure portal**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -77,8 +75,6 @@ You can use Attack path analysis to locate the biggest risks to your environment
 
 ::: zone pivot="defender-portal"
 
-## [Defender portal](#tab/defender-portal)
-
 **To identify attack paths in the Defender portal**:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
@@ -106,26 +102,6 @@ You can use Attack path analysis to locate the biggest risks to your environment
 
 ::: zone-end
 
-## Differences between Azure portal and Defender portal
-
-The attack path analysis feature is available in both the Azure portal and the Microsoft Defender portal, with some key differences:
-
-| Feature | Azure portal | Defender portal |
-|---------|--------------|-----------------|
-| **Location** | Microsoft Defender for Cloud > Attack path analysis | Exposure Management > Attack path analysis |
-| **Integration** | Focused on cloud security posture management | Integrated with broader Microsoft security ecosystem |
-| **Correlation** | Limited to cloud security events | Cross-service correlation with endpoint, identity, and email security |
-| **Investigation** | Cloud-focused investigation capabilities | Enhanced investigation with unified incident management |
-| **Hunting** | Basic search and filtering | Advanced hunting with KQL across multiple security signals |
-| **Notifications** | Cloud security alerts | Unified notifications across all Microsoft security solutions |
-| **Incident management** | Standalone cloud security incidents | Correlated incidents across the entire security stack |
-
-### When to use each portal
-
-- **Use the Azure portal** when you're primarily focused on cloud security posture management and want to work within the Azure ecosystem for cloud resource management.
-
-- **Use the Defender portal** when you need comprehensive security operations that span across cloud, endpoint, identity, and email security, or when you want to correlate cloud attack paths with broader security incidents.
-
 ---
 
 ## Remediate attack paths
@@ -133,8 +109,6 @@ The attack path analysis feature is available in both the Azure portal and the M
 Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
 
 ::: zone pivot="azure-portal"
-
-## [Azure portal](#tab/azure-portal)
 
 **To remediate an attack path in the Azure portal**:
 
@@ -155,8 +129,6 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 ::: zone-end
 
 ::: zone pivot="defender-portal"
-
-## [Defender portal](#tab/defender-portal)
 
 **To remediate an attack path in the Defender portal**:
 
@@ -190,8 +162,6 @@ The remediation path contains two types of recommendation:
 
 ::: zone pivot="azure-portal"
 
-## [Azure portal](#tab/azure-portal)
-
 **To resolve all recommendations in the Azure portal**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -215,8 +185,6 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 ::: zone-end
 
 ::: zone pivot="defender-portal"
-
-## [Defender portal](#tab/defender-portal)
 
 **To resolve all recommendations in the Defender portal**:
 
