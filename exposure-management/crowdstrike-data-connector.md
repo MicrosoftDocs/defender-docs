@@ -126,7 +126,6 @@ After configuring the CrowdStrike data connector:
 - [Review your attack surface map](enterprise-exposure-map.md) to see CrowdStrike data
 - [Explore security recommendations](security-recommendations.md) based on CrowdStrike findings
 - [Set up security initiatives](initiatives.md) to track remediation progress
-- [Configure additional data connectors](configure-data-connectors.md) to enhance your exposure management
 
 ## Related articles
 

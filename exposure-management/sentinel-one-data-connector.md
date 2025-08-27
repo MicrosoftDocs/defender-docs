@@ -82,8 +82,6 @@ After configuring the SentinelOne data connector:
 - [Review your attack surface map](enterprise-exposure-map.md) to see SentinelOne data
 - [Explore security recommendations](security-recommendations.md) based on SentinelOne findings
 - [Set up security initiatives](initiatives.md) to track remediation progress
-- [Configure additional data connectors](configure-data-connectors.md) to enhance your exposure management
-- [Getting value from your data connectors](value-data-connectors.md)
 
 ## Related articles
 
