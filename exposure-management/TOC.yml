@@ -52,6 +52,8 @@
              href: qualys-data-connector.md
            - name: Rapid7
              href: rapid7-data-connector.md
+           - name: SentinelOne
+             href: sentinelone-data-connector.md
            - name: Tenable
              href: tenable-data-connector.md
            - name: Wiz
