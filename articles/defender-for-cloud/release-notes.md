@@ -31,10 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| August 27, 2025 | GA | [General availability of Optional index tags for storing malware scanning results](#general-availability-of-defender-for-storage-optional-index-tags-for-storing-malware-scanning-results) |
 | August 12, 2025 | GA | [General availability of Defender for Storage in Azure Government cloud](#general-availability-of-defender-for-storage-in-azure-government-cloud) |
 | August 11, 2025 | GA | [General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud](#general-availability-of-defender-cspm-and-defender-for-servers-plan-2-in-azure-government-cloud) |
 | August 6, 2025 | GA | [AKS Security Dashboard](#aks-security-dashboard) |
 | August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
+
+
+### General availability of Defender for Storage Optional index tags for storing malware scanning results
+
+August 27, 2025
+
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### General availability of Defender for Storage in Azure Government cloud
 
