@@ -3,6 +3,7 @@ title: Protect your Atlassian environment | Microsoft Defender for Cloud Apps
 description: Learn about connecting your Atlassian environment to Microsoft Defender for Cloud Apps.
 ms.date: 12/12/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Atlassian environment
 
@@ -67,13 +68,16 @@ For more information, see:
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Atlassian products using the App Connector APIs. This connection gives you visibility into and control over your organization's Atlassian use.
 
->[!NOTE]
->The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
+> [!NOTE]
+> The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
 
 ### Prerequisites
 
 - The [Atlassian Access](https://www.atlassian.com/software/access#about-atlassian-access) plan is required.
 - You must be signed as an Organization admin to Atlassian.
+
+> [!NOTE]
+> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring does not extend to sub-organizations that may exist under the same Atlassian environment.
 
 ### Configure Atlassian
 

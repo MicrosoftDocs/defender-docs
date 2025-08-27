@@ -11,6 +11,12 @@ ms.reviewer: Himanch
 
 This article describes the security risks associated with dormant Okta privileged accounts and provides recommendations for mitigating these risks.
 
+## Prerequisites
+
+To use this security assessment, you must first connect your Okta instance in the Microsoft Defender portal.  
+For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+
+
 ## Why is a dormant privileged account a security risk?
 
 Dormant privileged accounts represent a significant security risk, as they can become targets for unauthorized access or misuse without detection. Deactivating or removing unused privileged accounts ensures that only active, monitored users have access to critical administrative capabilities.

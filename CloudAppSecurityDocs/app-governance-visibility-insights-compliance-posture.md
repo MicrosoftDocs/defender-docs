@@ -1,8 +1,9 @@
 ---
 title: Determine your app compliance posture with app governance | Microsoft Defender for Cloud Apps
-ms.date: 05/23/2025
+ms.date: 08/18/2025
 ms.topic: concept-article
 description: Determine your app compliance posture with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
+ms.reviewer: shragar
 ---
 
 # Determine your app compliance posture
@@ -19,7 +20,7 @@ The **Overview** page shows the following details:
 For example:
 
 > [!div class="mx-imgBorder"]
-> ![Relative number of detected and policy-based incidents.](incidents-summary1.png)
+> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)
 > 
 > [!div class="mx-imgBorder"]
 > ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)

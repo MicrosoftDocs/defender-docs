@@ -3,6 +3,7 @@ title: Discover and manage Shadow IT
 description: This tutorial describes the process to discover and manage Shadow IT in Microsoft Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: tutorial
+ms.reviewer: Mravela
 ---
 # Tutorial: Discover and manage shadow IT
 
@@ -21,7 +22,7 @@ In this tutorial, you'll learn how to use cloud discovery to discover which apps
 > - [Control sanctioned apps](#phase-5-control-sanctioned-apps)
 
 >[!TIP]
-> By default, Defender for Cloud Apps cannot discover apps that aren't in the catalog. 
+> By default, Defender for Cloud Apps can't discover apps that aren't in the catalog. 
 > 
 > To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check our roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity) or [create a custom app](cloud-discovery-custom-apps.md).
 
@@ -41,7 +42,7 @@ Use this process to roll out Shadow IT cloud discovery in your organization.
 
     - Integrate Defender for Cloud Apps with your proxy. Defender for Cloud Apps natively integrates with some third-party proxies, including [Zscaler](zscaler-integration.md).
 
-    Because policies are different across user groups, regions and business groups, you might want to create a dedicated Shadow IT report for each of these units. For more information, see [Create custom continuous reports](discovery-docker-windows.md#optional---create-custom-continuous-reports).
+    Because policies are different across user groups, regions, and business groups, you might want to create a dedicated Shadow IT report for each of these units. For more information, see [Create custom continuous reports](discovery-docker-windows.md#optional---create-custom-continuous-reports).
 
     Now that cloud discovery is running on your network, look at the continuous reports that are generated and look at the [cloud discovery dashboard](working-with-cloud-discovery-data.md) to get a full picture of what apps are being used in your organization. It's a good idea to look at them by category, because you'll often find that non-sanctioned apps are being used for legitimate work-related purposes that weren't addressed by a sanctioned app.
 

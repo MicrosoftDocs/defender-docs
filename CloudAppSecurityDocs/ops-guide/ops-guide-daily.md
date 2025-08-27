@@ -155,7 +155,7 @@ For more information, see:
 **Where**: In the Microsoft Defender XDR Portal, select:
 
 - **Incidents & alerts**
-- **Cloud apps > App governance > Azure AD**
+- **Cloud apps > App governance > Microsoft 365**
 
 We recommend that you check your list of OAuth-enabled apps daily, together with relevant app metadata and usage data. Select an app to view deeper insights and information.
 

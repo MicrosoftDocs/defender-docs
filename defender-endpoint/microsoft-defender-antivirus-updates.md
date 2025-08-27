@@ -99,6 +99,30 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+
+### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
+
+- Security intelligence update version: **1.435.11.0**
+- Release date:  **August 5, 2025 (Engine) / August 6, 2025 (Platform)**
+- Platform: **4.18.25070.5**
+- Engine: **1.1.25070.4**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Enhanced Passive Mode Scanning Behavior
+When Microsoft Defender is in Passive mode, an Antivirus scan will not occur after a signature update , unless specifically set in the policy setting DisableScanOnUpdate.
+
+- Improved Tamper Protection Handling
+Optimized the configuration process for Tamper Protection in multi-threaded environments to ensure more reliable behavior.
+
+- Digital Signature Verification Performance Boost
+Enhanced the efficiency of digital signature verification to improve overall system performance.
+
+- Refined ASR Rule Exclusion Processing
+Refined exclusion processing and resolved false positives for the Attack Surface Reduction (ASR) rule: Block Office applications from injecting code into other processes.
+
+
 ### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
  
 - Security intelligence update version: **1.433.2.0**
@@ -234,7 +258,8 @@ For Windows 10 release information, see the [Windows lifecycle fact sheet](https
 To avoid a gap in protection, keep your OS installation images up to date with the latest antivirus and anti-malware updates. Updates are available for:
 
 - Windows 10 and 11 (Enterprise, Pro, and Home editions)
-- Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
+- Windows Server 2012 R2 and later
+- Azure Stack HCI OS, version 23H2 and later
 - WIM and VHD(x) files 
 
 Updates are released for x86, x64, and Arm64 Windows architecture.

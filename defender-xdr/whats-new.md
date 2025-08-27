@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/09/2025
+ms.date: 08/01/2025
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -32,8 +32,26 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## August 2025
+
+- (Preview) In advanced hunting, you can now enrich your [custom detection rules](custom-detection-rules.md) by creating dynamic alert titles and descriptions, select more impacted entities, and add custom details to display in the alert side panel. Microsoft Sentinel customers that are onboarded to Microsoft Defender also now have the option to customize the alert frequency when the rule is based only on data that is ingested to Sentinel.
+- (Preview) The following advanced hunting schema tables are now available for preview:
+   - The [`CloudStorageAggregatedEvents`](advanced-hunting-cloudstorageaggregatedevents-table.md) table contains information about storage activity and related events
+   - The [`IdentityEvents`](advanced-hunting-identityevents-table.md) table contains information about identity events obtained from other cloud identity service providers
+- (Preview) Advanced hunting now lets you investigate Microsoft Defender for Cloud behaviors. For more information, see [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
+- (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
+- (GA) [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers**. [Learn more](faq-cloud-coverage-defender-experts.md)
+- (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment, which could allow our security analysts to not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, but also provide customers with a more holistic view of the threat in their environments.
+- (GA) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
+    - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
+    - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
+    - You can now view the details pane even for analytics rules.
+    - You can now perform the following actions on analytics rules: Turn on/off, Delete, Edit.
+ - (GA) The **Sensitivity label** filter is now available in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. This filter lets you filter incidents and alerts based on the sensitivity label assigned to the affected resources. For more information, see [Filters in the incident queue](incident-queue.md#filters-) and [Investigate alerts](investigate-alerts.md).
+
+
 ## July 2025
-- (Preview) The [GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
+- (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
 - (Preview) The [`DisruptionAndResponseEvents`](advanced-hunting-disruptionandresponseevents-table.md) table, now available in advanced hunting, contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. Increase your visibility and awareness of active, complex attacks disrupted by attack disruption to understand the attacks' scope, context, impact, and actions taken.
 
@@ -41,8 +59,8 @@ You can also get product updates and important notifications through the [messag
 - (Preview) Microsoft Copilot now provides suggested prompts as part of incident summaries in the Microsoft Defender portal. Suggested prompts help you get more insights into the specific assets involved in an incident. For more information, see [Summarize incidents with Microsoft Copilot in Microsoft Defender](security-copilot-m365d-incident-summary.md).   
 - (GA) In [advanced hunting](advanced-hunting-defender-use-custom-rules.md#use-adx-operator-for-azure-data-explorer-queries), Microsoft Defender portal users can now use the `adx()` operator to query tables stored in Azure Data Explorer. You no longer need to go to log analytics in Microsoft Sentinel to use this operator if you're already in Microsoft Defender.
 
-
 ## May 2025
+
 - (Preview) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 

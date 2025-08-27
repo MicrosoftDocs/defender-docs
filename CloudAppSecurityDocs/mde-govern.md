@@ -3,6 +3,7 @@ title: Govern discovered apps using Microsoft Defender for Endpoint
 description: This article describes how to govern Microsoft Defender for Endpoint discovered apps.
 ms.date: 07/22/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Govern discovered apps using Microsoft Defender for Endpoint
