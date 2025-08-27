@@ -8,7 +8,7 @@ ms.topic: how-to
 
 # In-browser protection with Microsoft Edge for Business (Preview)
 
-Defender for Cloud Apps users who use Microsoft Edge for Business and are subject to session policies are protected directly from within the browser. In-browser protection reduces the need for proxies, improving both security and productivity.
+Defender for Cloud Apps users who use Microsoft Edge for Business and are subject to session policies or Purview Data Loss Prevention policies for Cloud Apps in Edge are protected directly from within the browser. In-browser protection reduces the need for proxies, improving both security and productivity.
 
 Protected users experience a smooth experience with their cloud apps, without latency or app compatibility issues, and with a higher level of security protection.
 
@@ -28,13 +28,14 @@ To use in-browser protection, users must also have the following environmental r
 |**Identity platform**|Microsoft Entra ID|
 |**Microsoft Edge for Business versions**|The last two stable versions. For example, if the newest Microsoft Edge is 126, in-browser protection works for v126 and v125. <br> For more information, see [Microsoft Edge releases](/deployedge/microsoft-edge-release-schedule#microsoft-edge-releases).|
 |**Supported session policies**|<ul><li>Block\Monitor of file download (all files\\*sensitive files)</li><li>Block\Monitor file upload (all files\\*sensitive files)</li><li>Block\Monitor copy\cut\paste</li><li>Block\Monitor print</li><li>Block\Monitor malware upload</li><li>Block\Monitor malware download</li></ul> <br> Users that are served by multiple policies, including at least one policy that's *not* supported by Microsoft Edge for Business, their sessions are always served by the reverse proxy. <br><br> Policies defined in the Microsoft Entra ID portal are also always served by reverse proxy.<br> *Sensitive files identified by built-in DLP scanning are not supported for Edge in-browser protection|
+|**Supported Purview DLP policies**|Please see: [Activities you can monitor and take action on in the browser](purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on) <br> Purview policies are always served by in-browser protection.|
 
 All other scenarios are served automatically with the standard reverse proxy technology, including user sessions from browsers that don't support in-browser protection, or for policies not supported by in-browser protection.
 
 For instance, these scenarios are served by the reverse proxy:
 
 - Google Chrome users.
-- Microsoft Edge users who are scoped to a protect file download policy.
+- Microsoft Edge users who are scoped to protect file download session policy.
 - Microsoft Edge users on Android devices.
 - Users in apps that use the OKTA authentication method.
 - Microsoft Edge users in InPrivate mode.
@@ -52,7 +53,7 @@ Also, the `.mcas.ms` suffix doesn't appear in the browser address bar with in-br
 
 ### Work profile enforcement for in-browser protection
 
-To access a work resource in *contoso.com* with in-browser protection, users must sign in with their `username@contoso.com` profile. If users try to access the work resource from outside the work profile, they're prompted to switch to the work profile or create one if it doesn't exist. Users can also choose to continue with their current profile, in which case they're served by the [reverse proxy architecture](proxy-intro-aad.md).
+To access a work resource in *contoso.com* with in-browser protection, users must sign in with their `username@contoso.com` profile. If users try to access the work resource from outside the work profile, they're prompted to switch to the work profile or create one if it doesn't exist. If access from Edge work profile isn't enforced, users can also choose to continue with their current profile, in which case they're served by the [reverse proxy architecture](proxy-intro-aad.md).
 
 If the user decides to create a new work profile, they're prompted with the **Allow my organization to manage my device** option. In such cases, users don't need to select this option to create the work profile or benefit from in-browser protection.
 
@@ -60,12 +61,12 @@ For more information, see [Microsoft Edge for Business](/deployedge/microsoft-ed
 
 ## Configure in-browser protection settings
 
-In-browser protection with Microsoft Edge for Business is turned on by default. Admins can turn the integration off and on, and can configure a prompt for non-Microsoft Edge users to switch to Microsoft Edge for enhanced performance and security.
+In-browser protection with Microsoft Edge for Business is configurable. Admins can turn the integration off and on, and can configure a prompt for non-Microsoft Edge users to switch to Microsoft Edge for enhanced performance and security. 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Cloud apps** \> **Conditional Access App Control** section \> **Edge for Business protection**. Or, to go directly to the **Edge for Business protection** page, use <https://security.microsoft.com/cloudapps/settings?tabid=edgeIntegration>.
 
 2. On the **Edge for Business protection** page, configure the following settings as needed:
-   - **Turn on Edge for Business browser protection**: The default value is **On**, but you can toggle the setting to **Off**.
+   - **Turn on Edge for Business browser protection**: As needed, you can toggle the setting to **Off**.
    - **Notify users in non-Edge browsers to use Microsoft Edge for Business for better performance and security**: If you select the check box, select one of the following values that appear:
      - **Use default message** (default)
      - **Customize message**: Enter the custom text in the box that appears.
@@ -74,17 +75,16 @@ In-browser protection with Microsoft Edge for Business is turned on by default. 
 
    When you're finished on the **Edge for Business protection** page, select **Save**.
 
-## Working with Microsoft Purview and Endpoint data loss prevention
+## Working with Microsoft Purview Endpoint data loss prevention
+Endpoint DLP policies are prioritized and applied if the same context and action are configured for the Endpoint policy and either a Defender for Cloud Apps session policy or a [Purview DLP policy for cloud apps](/purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on).
 
-If the same exact context and action are configured for both Defender for Cloud Apps policies and a Microsoft Purview Endpoint data loss prevention policy (DLP), the Endpoint DLP policy is applied.
+For example, you have an Endpoint DLP policy that blocks a file upload to Salesforce, and you also have a Defender for Cloud Apps session policy that monitors file uploads to Salesforce. In this scenario, the Endpoint DLP policy is applied.
 
-For example, you have an Endpoint DLP policy that blocks a file upload to Salesforce, and you also have a Defender for Cloud Apps policy that monitors file uploads to Salesforce. In this scenario, the Endpoint DLP policy is applied.
-
-For more information, see [Learn about data loss prevention](/purview/dlp-learn-about-dlp).
+For more information, see [Learn about Endpoint data loss prevention](/purview/endpoint-dlp-learn-about).
 
 ## Enforce Microsoft Edge browser protection when accessing business apps
 
-Administrators who understand the power of Microsoft Edge browser protection can require users to use Microsoft Edge when accessing corporate resources. A primary reason is security, since the barrier to circumventing session controls using Microsoft Edge is much higher than with reverse proxy technology.
+Administrators who understand the power of Microsoft Edge browser protection can require users to use Microsoft Edge when accessing corporate resources. A primary reason is security, since the barrier to circumventing session controls using Microsoft Edge is much higher than with reverse proxy technology. For Purview DLP policies, these settings are required to be on and enforcing access only from Edge for business application when using policies that [help prevent users from sharing sensitive info with Cloud Apps in Edge for Business](/purview/dlp-create-policy-prevent-cloud-sharing-from-edge-biz).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Cloud apps** \> **Conditional Access App Control** section \> **Edge for Business protection**. Or, to go directly to the **Edge for Business protection** page, use <https://security.microsoft.com/cloudapps/settings?tabid=edgeIntegration>.
 
