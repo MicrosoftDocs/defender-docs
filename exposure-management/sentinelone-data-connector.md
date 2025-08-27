@@ -9,7 +9,7 @@ ms.service: exposure-management
 ms.date: 08/27/2025
 ---
 
-# What is the SentinelOne data connector?
+# SentinelOne data connector
 
 The SentinelOne data connector allows you to integrate SentinelOne data with Microsoft Security Exposure Management. To integrate with SentinelOne, you need to provide an authentication endpoint API URL and a valid API Token Key generated using the SentinelOne portal.
 
