@@ -38,7 +38,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
 
 
-### General availability of Optional index tags for storing malware scanning results
+### General availability of Defender for Storage Optional index tags for storing malware scanning results
 
 August 27, 2025
 
