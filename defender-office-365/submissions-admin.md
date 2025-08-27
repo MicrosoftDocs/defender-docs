@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 08/18/2025
+ms.date: 08/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -897,6 +897,9 @@ You can use the procedures in this section to dispute admin submitted items that
      - **Recommended steps**
    - **Additional information (optional)**: Enter an explanation that you think might be helpful.
    - **Upload as screenshot**: Select this option to upload a JPG or PNG image less than one MB.
+
+   > [!IMPORTANT]
+   > If you don't select **Reason**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Selecting or not selecting other values doesn't affect whether the item is submitted to Microsoft.
 
    When you're finished on the **Dispute details** flyout, select **Submit dispute**.
 
