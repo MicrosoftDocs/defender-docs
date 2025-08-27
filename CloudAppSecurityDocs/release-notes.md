@@ -20,13 +20,15 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
-## August 2025 
+
+## September 2025 
 
 ### Real time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
 
-Microsoft Defender for Cloud Apps offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
+Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
 For more information, see: [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md)
+
 
 ## July 2025
 
