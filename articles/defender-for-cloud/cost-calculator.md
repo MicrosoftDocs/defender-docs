@@ -185,7 +185,7 @@ This permission set ensures the script can discover resources and fetch the rele
 
 ##### GCP
 
-The following overview describes the permissions your GCP user or service account needs to run this script successfully. In short, the script needs to list and describe resources (VM instances, Cloud SQL, GKE clusters, and GCS buckets) in your chosen project.
+The following overview describes the permissions your GCP user or service account needs to run this script successfully. You can use the script to discover resources in a single project or across multiple projects, depending on your selection. To estimate costs for multiple projects, make sure your account has the required permissions in each project you want to include. The script lists and describes resources such as VM instances, Cloud SQL databases, GKE clusters, and GCS buckets in all selected projects.
 
 ###### Recommended built-in role: Project Viewer
 
