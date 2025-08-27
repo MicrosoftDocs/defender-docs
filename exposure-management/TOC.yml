@@ -48,6 +48,8 @@
              href: ServiceNow-data-connector.md
        - name: Vulnerability Management data connectors
          items:
+           - name: CrowdStrike Falcon
+             href: crowdstrike-data-connector.md
            - name: Qualys
              href: qualys-data-connector.md
            - name: Rapid7
