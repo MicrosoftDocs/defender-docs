@@ -899,7 +899,7 @@ You can use the procedures in this section to dispute admin submitted items that
    - **Upload as screenshot**: Select this option to upload a JPG or PNG image less than one MB.
 
    > [!IMPORTANT]
-   > If you don't select **Reason**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Selecting or not selecting other values doesn't affect whether the item is submitted to Microsoft.
+   > If you don't select **Reason**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Values other than **Reason** are taken as feedback.
 
    When you're finished on the **Dispute details** flyout, select **Submit dispute**.
 
