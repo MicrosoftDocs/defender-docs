@@ -63,7 +63,7 @@ Review your security overview in the Defender Portal and focus on these key area
 
 | Security Component | Description | Actions |
 |-------------------|-------------|---------|
-| **[Secure Score](../secure-score-security-controls.md)** | Measures your security posture improvement | Track progress and implement recommendations to improve your score |
+| **[Secure Score](../secure-score-access-and-track.md)** | Measures your security posture improvement | Track progress and implement recommendations to improve your score |
 | **[Recommendations](../review-security-recommendations.md)** | Actionable steps to improve security | Prioritize and remediate security improvements |
 | **[Security Alerts](../managing-and-responding-alerts.yml)** | Real-time threat notifications | Monitor and respond to active threats |
 | **[Asset Inventory](../asset-inventory.md)** | Complete view of connected resources | Review all resources under protection and their security status |
