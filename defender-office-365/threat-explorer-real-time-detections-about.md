@@ -82,6 +82,8 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
 > End-user spam notifications and system generated messages aren't available in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
 >
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
+>
+> For moderated mailboxes or moderated distribution list(DL), emails delivered to the moderated mailbox or moderated DL are visible in Explorer. But the actions of moderator (such as approve, reject etc.) and messages released by moderator to users in DL are not logged and they are not shown in Explorer.
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
 
