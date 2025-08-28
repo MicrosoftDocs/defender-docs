@@ -3,6 +3,7 @@ title: Protect your Asana environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Asana app to Defender for Cloud Apps using the API connector.
 ms.date: 12/05/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # How Defender for Cloud Apps helps protect your Asana environment

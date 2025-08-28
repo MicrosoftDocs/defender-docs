@@ -3,6 +3,7 @@ title: Cloud discovery data anonymization
 description: This article provides information about how to protect user privacy by anonymizing the usernames in your cloud discovery data.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Cloud discovery data anonymization
 

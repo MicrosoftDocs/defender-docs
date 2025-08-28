@@ -3,6 +3,7 @@ title: Troubleshooting SIEM integration
 description: This article provides a list of possible issues when connecting your SIEM to Defender for Cloud Apps and provides resolutions for each.
 ms.date: 01/29/2023
 ms.topic: troubleshooting-general
+ms.reviewer: Naama-Goldbart
 ---
 
 # Troubleshooting SIEM integration
@@ -41,13 +42,13 @@ Use the following steps to validate your configuration:
 
 1. Connect to your SIEM and check that new data is received from the new SIEM agent that you configured.
 
-> [!NOTE]
-> The agent will only send activities in the timeframe of the issue on which you were alerted.
+   > [!NOTE]
+   > The agent will only send activities in the timeframe of the issue on which you were alerted.
 
 1. If data isn't received by your SIEM, then on the new SIEM agent device, try listening to the port that you configured to forward activities to see if data is being sent from the agent to the SIEM. For example, run `netcat -l <port>` where `<port>` is the previously configured port number.
 
-> [!NOTE]
-> If you're using `ncat`, make sure you specify the ipv4 flag `-4`.
+   > [!NOTE]
+   > If you're using `ncat`, make sure you specify the ipv4 flag `-4`.
 
 1. If data is being sent by the agent but not received by your SIEM, check the SIEM agent log. If you can see "connection refused" messages, make sure that your SIEM agent is configured to use TLS 1.2 or newer.
 
