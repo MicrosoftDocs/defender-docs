@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/27/2025
+ms.date: 08/28/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images (preview)
@@ -44,8 +44,6 @@ This guide walks you through:
 1. Prepare the case virtual machine
 
    - Install your preferred [supported Linux distribution](./mde-linux-prerequisites.md#supported-linux-distributions) and apply all necessary system updates.
-
-   - INSTALL REQUIRED DEPENDENCIES FOR MICROSOFT DEFENDER FOR ENDPOINT
 
 1. Install Microsoft Defender for Endpoint
 
@@ -79,37 +77,15 @@ This guide walks you through:
 
 Before making a snapshot of the virtual machine, follow these steps to ensure that each clone has a unique machine identity:
 
-### On-premises virtual machines
+### On-premises machines
 
-1. Inject a New SMBIOS UUID
+Follow these steps for the respective virtualization platforms:
 
-   - **KVM/libvirt**: Omit the \<uuid\> element in domain XML or set a fresh UUID using: uuidgen
+- **KVM/libvirt**: Omit the \<uuid\> element in domain XML or set a fresh UUID using: uuidgen
 
-   - **VMware/Hyper-V**: Enable platform settings to generate a new BIOS GUID during clone or conversion.
+- **VMware/Hyper-V**: Enable platform settings to generate a new BIOS GUID during clone or conversion.
 
-1. Regenerate OS Machine ID
-
-   Run the following commands:
-
-   ```
-   rm -f /etc/machine-id /var/lib/dbus/machine-id
-   systemd-machine-id-setup
-   dbus-uuidgen \--ensure=/var/lib/dbus/machine-id
-   ```
-
-1. Validate Metadata Post-Clone
-
-   After cloning, verify:
-
-   - CloudMetadata
-
-   - dmidecode
-
-   - sysfs values
-
-   - Hardware GUID
-
-   If mismatched, update the MachineInfo and save all values back to the Microsoft Defender for Endpoint state file.
+Ensure that the machines are configured to have a unique hardware UUID.
 
 ### Cloud virtual machines
 
@@ -117,7 +93,7 @@ Cloud platforms (for example, Azure, AWS, GCP) automatically inject unique metad
 
 ## Hostname Management
 
-HOSTNAMES ARE STORED PERSISTENTLY DURING INSTALLATION. IF YOU WISH TO CHANGE THE HOSTNAME, **RESTART THE SERVICE** TO ENSURE CONSISTENT IDENTIFIER UPDATES.
+Hostname changes require a restart, as they are consistent while service is running.
 
 ## Related content
 
