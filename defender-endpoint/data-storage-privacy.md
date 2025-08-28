@@ -16,7 +16,7 @@ ms.collection:
 - essentials-compliance
 ms.topic: concept-article
 search.appverid: met150
-ms.date: 08/24/2025
+ms.date: 08/28/2025
 ---
 
 # Microsoft Defender for Endpoint data storage and privacy
@@ -60,13 +60,19 @@ Defender for Endpoint operates in the Microsoft Azure data centers in the Europe
 
 (b) the geolocation as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data.
 
-## Data Retention
+## Data retention
 
 Data from Microsoft Defender for Endpoint is retained for 180 days, visible across the portal. 
 
 Your data is kept and is available to you while the license is under grace period or suspended mode. At the end of this period, that data will be erased from Microsoft's systems to make it unrecoverable, no later than 180 days from contract termination or expiration.
 
 In the advanced hunting investigation experience, it's accessible via a query for 30 days.
+
+## Data recovery
+
+The Microsoft Defender for Endpoint (MDE) service incorporates a regional disaster recovery strategy aligned with Microsoft's broader [resiliency framework](/microsoft-365/compliance/offering-resiliency?view=o365-worldwide). In the event of a service disruption, all MDE components are designed to fail over to a paired region within the same geographic boundary, thereby maintaining data residency requirements.
+
+However, due to current service limitations in the United Arab Emirates, MDE components that depend on Azure Synapse workloads are supported with zonal resiliency only. At this time,  for the workloads, there is no cross-region business continuity and disaster recovery (BCDR) capability available. This is a temporary limitation. Additional information will be updated once available.  For more information on Synapse’s disaster recovery capabilities, please refer to the official documentation.
 
 ## Data sharing for Microsoft Defender for Endpoint
 
