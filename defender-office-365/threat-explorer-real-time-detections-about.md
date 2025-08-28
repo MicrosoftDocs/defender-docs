@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: orspodek
 audience: ITPro
 ms.topic: concept-article
-ms.date: 06/19/2025
+ms.date: 08/28/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -83,7 +83,7 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
 >
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
 >
-> For moderated mailboxes or moderated distribution list(DL), emails delivered to the moderated mailbox or moderated DL are visible in Explorer. But the actions of moderator (such as approve, reject etc.) and messages released by moderator to users in DL are not logged and they are not shown in Explorer.
+> Email delivered to moderated mailboxes or moderated distribution groups is visible in Threat Explorer. But moderator actions (for example, approve or reject messages) and messages released by a moderator to members of a distribution group aren't logged and aren't shown in Threat Explorer.
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
 
