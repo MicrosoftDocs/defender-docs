@@ -30,7 +30,7 @@ jobs:
         with:
           function: "FindOrphanedArticles"
           docfx_directory: "."
-          target_directory: "docs"
+          target_directory: "ATADocs,ATPDocs,CloudAppSecurityDocs,defender-business,defender-endpoint,defender-for-cloud,defender-for-iot,defender-office-365,defender-vulnerability-management,defender-xdr,defender,exposure-management,includes,media,unified-secops-platform"
           url_base_path: "/dotnet"
 
       # Create the PR for the work done by the "clean repo" tool
