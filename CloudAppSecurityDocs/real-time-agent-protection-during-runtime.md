@@ -4,6 +4,7 @@ description: Learn how to enable and manage real-time runtime protection for Mic
 ms.date: 08/12/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
+ms.reviewer: gayasalomon
 #customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions during runtime so that I can reduce security risks to my organization.
 ---
 
