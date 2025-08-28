@@ -93,7 +93,7 @@ Cloud platforms (for example, Azure, AWS, GCP) automatically inject unique metad
 
 ## Hostname Management
 
-Hostname changes require a restart, as they are consistent while service is running.
+Hostname changes require a restart, as they're consistent while service is running.
 
 ## Related content
 
