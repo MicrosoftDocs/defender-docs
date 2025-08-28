@@ -1,4 +1,5 @@
-name: "clean repo - articles"
+
+name: "clean repo - ATADocs"
 
 on:
   schedule:
@@ -19,14 +20,40 @@ jobs:
 
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
-      # Call clean repo
-      - name: Clean repo
-        id: clean-repo-step
+      # Find orphaned articles
+      - name: Clean repo - orphaned articles
         uses: dotnet/docs-tools/cleanrepo@main
         with:
           function: "FindOrphanedArticles"
-          docfx_directory: "."
-          target_directory: "defender"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned images
+      - name: Clean repo - orphaned images
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedImages"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned includes
+      - name: Clean repo - orphaned includes
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedIncludes"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned snippets
+      - name: Clean repo - orphaned snippets
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedSnippets"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
           url_base_path: "/dotnet"
 
       # Create the PR for the work done by the "clean repo" tool
