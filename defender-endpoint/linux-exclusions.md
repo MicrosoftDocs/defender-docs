@@ -70,7 +70,7 @@ The following table shows the exclusion types supported by Defender for Endpoint
 |File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`|
 |File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`|
 |Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`|
-|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>*For antivirus exclusions exclusion can be added using either a full path or file name but for global exclusions please only use full and trusted process launch path.*|`/bin/cat`<br/>`cat`<br/>`c?t`|
+|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>A*ntivirus exclusions can be added using either a full path or file name but for global exclusions please only use full and trusted process launch path.*|`/bin/cat`<br/>`cat`<br/>`c?t`|
 
 > [!IMPORTANT]
 > The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`. When implementing global process exclusions, exclude only what is necessary to ensure system reliability and security. Verify that the process is known and trusted, specify the complete path to the process location, and confirm that the process will consistently launch from the same trusted full path.
