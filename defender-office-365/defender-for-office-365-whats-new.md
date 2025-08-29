@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: orspodek
 ms.localizationpriority: medium
-ms.date: 7/25/2025
+ms.date: 08/28/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## Aug 2025
+
+- SecOps can now dispute Microsoft's verdict on previously submitted email or URLs when they believe the result is incorrect. Disputing an item links back to the original submission and triggers a reevaluation with full context and audit history. [Learn more](submissions-admin.md).
 
 ## July 2025
 
