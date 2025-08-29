@@ -3,6 +3,7 @@ title: Use cloud discovery anomaly detection policies
 description: Explore how to work with cloud discovery anomaly detection policies in Microsoft Defender for Cloud Apps, including choosing policy settings and filters.
 ms.date: 08/12/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 
 #customer intent: As a developer, I want to use cloud discovery anomaly detection policies in Microsoft Defender for Cloud Apps, so I can receive security alerts based on policy settings and filters.
 ---

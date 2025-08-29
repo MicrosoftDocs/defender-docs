@@ -27,9 +27,7 @@ ms.date: 01/15/2025
 - [Microsoft Defender XDR](/defender-xdr)
 
 **Windows Server**
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019 and later
+- Windows Server 2012 R2 and later
 
 You might need to troubleshoot the Microsoft Defender for Endpoint onboarding process if you encounter issues.
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
@@ -339,9 +337,8 @@ The steps in this article provide guidance for the following scenario:
 > [!NOTE]
 > User Logon after OOBE is no longer required for SENSE service to start on the following or more recent Windows versions: 
 > - Windows 10, version 1809 or newer
-> - Windows Server 2025
-> - Windows Server 2022
-> - Windows Server 2019 
+> - Windows Server 2019 and later
+> - Azure Stack HCI OS, version 23H2 and later
 
 ## Troubleshoot onboarding with Microsoft Endpoint Configuration Manager
 

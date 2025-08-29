@@ -51,6 +51,7 @@ You can set attack surface reduction rules for devices that are running any of t
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
 - Windows Server 2025
+- Azure Stack HCI OS, version 23H2 and later
 
 To use the entire feature-set of attack surface reduction rules, you need:
 
