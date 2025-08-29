@@ -4,7 +4,7 @@ description: Security policies are applied to devices through device groups in D
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business
@@ -32,7 +32,7 @@ In Defender for Business, policies are applied to devices through certain collec
 
 ## What is a device group?
 
-A device group is a collection of devices that are grouped together because of certain specified criteria, such as operating system version. Devices that meet the criteria are included in that device group, unless you exclude them. In Defender for Business, policies are applied to devices by using device groups.
+A _device group_ is a collection of devices that are grouped together because of certain specified criteria, such as operating system version. Devices that meet the criteria are included in that device group, unless you exclude them. In Defender for Business, policies are applied to devices by using device groups.
 
 Defender for Business includes default device groups that you can use. The default device groups include all the devices that are onboarded to Defender for Business. For example, there's a default device group for Windows devices. Whenever you onboard Windows devices, they're added to the default device group automatically.
 

@@ -4,7 +4,7 @@ description: Find out how to get Microsoft Defender for Business, endpoint prote
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -58,13 +58,13 @@ Microsoft maintains a list of solution providers who are authorized to sell offe
 
 ## [Get Defender for Business (standalone)](#tab/getmdb)
 
-Defender for Business provides advanced security protection for your company's devices. For more information, see [What is Microsoft Defender for Business?](mdb-overview.md)?
+Defender for Business provides advanced security protection for devices in eligible Microsoft 365, Office 365, and non-Microsoft organizations. For more information, see [What is Microsoft Defender for Business?](mdb-overview.md)?
 
-1. Go to the **Microsoft Defender for Business**  page <https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business>, and select an option to try or buy Defender for Business.
+1. Go to the **Microsoft Defender for Business** page at <https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business>, and select an option to try or buy Defender for Business.
 
    If you start a trial, look for the acceptance email that contains your promo code and a link to sign in. And be sure to see the [Trial user guide for Defender for Business](trial-playbook-defender-business.md).
 
-2. Go to the Microsoft Defender portal at <https://security.microsoft.com> and either sign in using your existing work or school account, or follow the prompts to create a new account.
+2. Go to the Microsoft Defender portal at <https://security.microsoft.com> and sign in using your existing work or school account, or follow the prompts to create a new account.
 
 3. In the Microsoft Defender portal, go to **Assets** \> **Devices**. Or, to go directly to the **Devices** page, use xxxx.
 
@@ -75,24 +75,28 @@ Defender for Business provides advanced security protection for your company's d
    It might take a few hours for your organization to finish provisioning before you can onboard devices or complete the setup and configuration process.
 
 > [!NOTE]
-> If you have Microsoft 365 Business Premium and you haven't set it up yet, see [Microsoft 365 Business Premium – productivity and cybersecurity for small business](/Microsoft-365/business-premium/m365bp-overview). This guidance walks you through how to set up and configure all of your productivity and security capabilities, including Defender for Business.
+> If you have Microsoft 365 Business Premium and you haven't set it up yet, see [What is Microsoft Defender for Business?](/Microsoft-365/business-premium/m365bp-overview). This guidance walks you through how to set up and configure all of your productivity and security capabilities, including Defender for Business.
 
 ## [Get Microsoft 365 Business Premium](#tab/getpremium)
 
-Microsoft 365 Business Premium includes Defender for Business, Microsoft Defender for Office 365 Plan 1, and Microsoft 365 Apps (formerly referred to as Office apps). For more information, see [Productivity and security for small and medium-sized businesses](/Microsoft-365/business-premium/why-choose-microsoft-365-business-premium).
+Microsoft 365 Business Premium includes Defender for Business, Microsoft Defender for Office 365 Plan 1, and Microsoft 365 Apps (formerly known as Office apps). For more information, see [Productivity and security for small and medium-sized businesses](/Microsoft-365/business-premium/why-choose-microsoft-365-business-premium).
 
-1. Visit the [Microsoft 365 Business Premium product page](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
+1. Go to one of the following locations:
+   - The [Microsoft 365 Business Premium product page](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
+   - **Microsoft 365 Business Premium** on the [Microsoft 365 Products site](https://www.aka.ms/office365signup).
 
-2. Choose to try or buy your subscription. See [Try or buy a Microsoft 365 for business subscription](/microsoft-365/commerce/try-or-buy-microsoft-365). On the [Microsoft 365 Products site](https://www.aka.ms/office365signup), choose **Microsoft 365 Business Premium**.
+2. Choose to try or buy Microsoft 365 Business. For more information, see [Try or buy a Microsoft 365 for business subscription](/microsoft-365/commerce/try-or-buy-microsoft-365).
 
 3. After you sign up for Microsoft 365 Business Premium, you receive an email with a link to sign in and get started. Proceed to [Set up Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365-business-premium-setup).
 
-4. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), where you view and manage security settings and devices for your organization. In the navigation bar, go to **Assets** > **Devices**. This action initiates the provisioning of Defender for Business for your organization.
+4. In the Microsoft Defender portal, go to **Assets** \> **Devices**. Or, to go directly to the **Devices** page, use xxxx.
 
-5. To set up your security capabilities, follow the guidance in [Boost your security protection](/Microsoft-365/business-premium/m365bp-security-overview).
+   This action initiates the provisioning of Defender for Business for your organization.
+
+5. To set up your security capabilities, follow the guidance in [Configure your security protection in Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-security-overview).
 
 > [!IMPORTANT]
-> Be sure to complete all the steps described in [Microsoft 365 Business Premium – productivity and cybersecurity for small business](/Microsoft-365/business-premium/m365bp-overview).
+> Be sure to complete all the steps described in [What is Microsoft Defender for Business?](/Microsoft-365/business-premium/m365bp-overview).
 
 ---
 
@@ -100,34 +104,35 @@ Microsoft 365 Business Premium includes Defender for Business, Microsoft Defende
 
 Microsoft Defender for Business servers is an add-on to Defender for Business that enables you to secure server operating systems with the same protection as client devices.
 
-1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com), and sign in.
-
-2. In the navigation pane, choose **Billing** > **Purchase services**.
-
-3. In the list of results, select the **Details** box for **Microsoft Defender for Business servers**.
-
-4. Review the information, and complete the purchase process. You need one Microsoft Defender for Business servers license for each instance of Windows Server or Linux, and you don't assign that license to users or devices.
-
-> [!IMPORTANT]
+> [!TIP]
 >
-> - To add on Microsoft Defender for Business servers, you need at least one paid license for [Defender for Business](mdb-overview.md) (standalone) or [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview).
-> - There's a limit of 60 Microsoft Defender for Business servers licenses per subscription to Microsoft 365 Business Premium or Defender for Business.
-> - If preferred, you could use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) instead to onboard your servers.
+> - To add Microsoft Defender for Business servers licenses, you need at least one paid license of [Defender for Business](mdb-overview.md) (standalone) or [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview).
+> - You can add a maximum of 60 Microsoft Defender for Business servers licenses per subscription to Microsoft 365 Business Premium or Defender for Business.
+> - Instead of Microsoft Defender for Business servers, you can use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers).
+
+1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, go to **Billing** \> **Purchase services**. Or, to go directly to the **Purchase services** page, use <https://admin.microsoft.com/Adminportal/Home#/catalog>.
+
+2. On the **Purchase services** page, find and select **Microsoft Defender for Business servers**.
+   - You need one Microsoft Defender for Business servers license for each instance of Windows Server or Linux.
+   - You don't assign the license to users or devices.
+
+3. Review the information, and complete the purchase process.
 
 ## Portals you use for setup and management
 
-When you use Defender for Business, you work with two main portals:
+When you use Defender for Business, you work with the following portals:
 
-- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))
-- The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
+- The Microsoft 365 admin center at <https://admin.microsoft.com>.
+- The Microsoft Defender portal at <https://security.microsoft.com>.
+- The Microsoft Intune admin center at <https://intune.microsoft.com>.
 
-If your subscription also includes Microsoft Intune, you use the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) as well. The following table summarizes these portals and how you use them.
+The following table summarizes these portals and how you use them.
 
-|Portal|Description|
+|Portal|Tasks|
 |---|---|
-|The [Microsoft 365 admin center](https://admin.microsoft.com/)|Use the Microsoft 365 admin center to activate your trial and sign in for the first time. You can also use the Microsoft 365 admin center to: <br/>- Add or remove users.<br/>- Assign user licenses.<br/>- View your products and services.<br/>- Complete setup tasks for your Microsoft 365 subscription.<br/><br/>To learn more, see [Overview of the Microsoft 365 admin center](/Microsoft-365/admin/admin-overview/admin-center-overview).|
-|The [Microsoft Defender portal](https://security.microsoft.com)|Use the Microsoft Defender portal to set up and configure Defender for Business, and to monitor your devices and threat detections. You use the Microsoft Defender portal to: <br/>- View your devices and device protection policies.<br/>- View detected threats and take action.<br/>- View security recommendations and manage your security settings.<br/><br/>To learn more, see [Get started using the Microsoft Defender portal](mdb-get-started.md).|
-|The [Intune admin center](https://intune.microsoft.com/)|Use the Intune admin center to set up multifactor authentication (MFA), onboard iOS and Android devices, and configure certain capabilities, such as [attack surface reduction rules](mdb-asr.md).<br/><br/>To learn more about Intune, see [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).|
+|Microsoft 365 admin center|<ul><li>Activate your trial and sign in for the first time.</li><li>Assign user licenses.</li><li>View your products and services.</li><li>Complete setup tasks for your Microsoft 365 subscription.</li></ul> <br/> For more information, see [Overview of the Microsoft 365 admin center](/Microsoft-365/admin/admin-overview/admin-center-overview).|
+|Defender portal|<ul><li>Set up and configure Defender for Business.</li><li>Monitor your devices and threat detections</li><li>View your devices and device protection policies.</li><li>View detected threats and take action.</li><li>View security recommendations and manage your security settings.</li></ul> <br/> For more information, see [Get started using the Microsoft Defender portal](mdb-get-started.md).|
+|Intune admin center|<ul><li>Onboard iOS and Android devices.</li><li>Configure certain capabilities, such as [attack surface reduction rules](mdb-asr.md).</li></ul> <br/> For more information about Intune, see [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).|
 
 ## Next step
 
