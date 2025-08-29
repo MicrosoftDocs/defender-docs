@@ -44,7 +44,9 @@ Admins can mark messages and notify users of review results only if the user [re
 
   For more information, see [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
-  So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
+  Unless you disagree with the original verdict, submitting a user reported message that was already sent to Microsoft isn't useful.
+
+  If user reported messages are sent only to the reporting mailbox, admins should submit these messages to Microsoft.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/manage** or **Authorization and settings/System settings/Read-only**.
