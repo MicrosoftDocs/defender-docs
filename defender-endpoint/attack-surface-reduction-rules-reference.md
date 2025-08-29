@@ -5,17 +5,17 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: sugamar, yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.topic: reference
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.date: 06/10/2025
+ms.date: 08/28/2025
 search.appverid: met150
 ---
 
@@ -190,21 +190,21 @@ For rules with the "Rule State" specified:
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes) | Block  | Y   | Y  |
 |[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes) |   | N | Y |
 |[Block credential stealing from the Windows local security authority subsystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) |   | N | N |
-|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) |   | Y  | Y  |
+|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
 |[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) |   | N | Y |
-|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts) |  Audit or Block | Y (in block mode) <br/>N (in audit mode) | Y (in block mode)  |
+|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts) |   | Y | Y (in block mode)  |
 |[Block JavaScript or VBScript from launching downloaded executable content](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Block | Y   | Y  |
 |[Block Office applications from creating executable content](#block-office-applications-from-creating-executable-content) |   | N | Y |
 |[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | Y |
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
-|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
+|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  | Y | Y (in block mode) |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
-|[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
+|[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
 |[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
-|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
+|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |
 
 ## ASR rule to GUID matrix
 
