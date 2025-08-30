@@ -33,7 +33,7 @@ With the increased use of collaboration tools like Microsoft Teams, the possibil
 All licenses of Microsoft Teams in Microsoft 365 include the following built-in protections:
 
 - [Built-in virus protection in SharePoint, SharePoint Embedded, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
-- **Near real-time URL protection in Teams messages**: Known, malicious URLs in Teams message are delivered with a warning message. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning message. The warning message applies to internal and external messages for all verdicts (not just malware or high confidence phishing).
+- **Near real-time URL protection in Teams messages**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and teams for all URL verdicts (not just malware or high confidence phishing).
 
   :::image type="content" source="media/teams-message-url-warning.png" alt-text="Screenshot showing a Microsoft Teams message with a URL warning." lightbox="media/teams-message-url-warning.png":::
 
