@@ -74,22 +74,24 @@ You can also:
 
 1. Select **Edit**.
 
-    While you can't change the name of the policy once created, but you can change the description and policy severity as needed. When you're done, select **Next**.
+    While you can't change the name of the policy once created, you can change the description and policy severity as needed. When you're done, select **Next**.
 
 1. Choose whether you want to continue with the existing policy settings or customize them. Select **No, I'll customize the policy** to make changes, and then select **Next**.
 
-1. Choose whether this policy applies to all apps, specific apps, or all apps except the apps you select. Select **Choose apps** to select which apps to apply the policy to, and then select **Next**.
+1. Choose whether this policy applies to all apps, specific apps, or all apps except the apps you select. 
+
+1. Select **Choose apps** to select which apps to apply the policy to, and then select **Next**.
 
 1. Choose whether to modify the existing conditions of the policy. 
 
     - If you choose to modify the conditions, select **Edit or modify existing conditions for the policy** and choose which policy conditions to apply. 
     - Otherwise, select **Use existing conditions of the policy**. 
   
-    When you're done, select **Next**.
+1. When you're done, select **Next**.
 
 1. Choose whether to disable the app if it triggers the policy conditions and then select **Next**.
 
-1. Set the policy status to **Active**, or **Inactive**, as needed, and then select **Next**.
+1. Set the policy status to **Active**, or **Disabled**, as needed, and then select **Next**.
 
 1. Review your setting choices for the policy and if everything is the way you want it, select **Submit**.
 
