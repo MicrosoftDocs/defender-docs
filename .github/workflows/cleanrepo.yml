@@ -1,0 +1,66 @@
+
+name: "clean repo - ATADocs"
+
+on:
+  schedule:
+    - cron: "0 1 1 * *" # Runs at 01:00, on day 1 of the month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  clean-repo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      # Find orphaned articles
+      - name: Clean repo - orphaned articles
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedArticles"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned images
+      - name: Clean repo - orphaned images
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedImages"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned includes
+      - name: Clean repo - orphaned includes
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedIncludes"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Find orphaned snippets
+      - name: Clean repo - orphaned snippets
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedSnippets"
+          docfx_directory: "ATADocs"
+          target_directory: "ATADocs"
+          url_base_path: "/dotnet"
+
+      # Create the PR for the work done by the "clean repo" tool
+      - name: create-pull-request
+        uses: dotnet/actions-create-pull-request@v4
+        with:
+          branch: cleanrepo-orphaned-articles
+          title: "Monthly chores: Delete orphaned articles"
+          commit-message: "Bot 🤖 generated CleanRepo tool run"
+          body: "Find and delete orphaned articles. Contributes to #..."
