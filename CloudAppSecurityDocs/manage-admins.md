@@ -3,6 +3,7 @@ title: Configure admin access | Microsoft Defender for Cloud APps
 description: This article provides instructions for setting access to Defender for Cloud Apps for your admins.
 ms.date: 12/21/2023
 ms.topic: how-to
+ms.reviewer: Naama-Goldbart 
 ---
 # Configure admin access
 

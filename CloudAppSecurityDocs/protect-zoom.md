@@ -3,6 +3,7 @@ title: Connect Zoom | Microsoft Defender for Cloud Apps
 description: This article provides information about how to connect your Zoom environment  to Defender for Cloud Apps using the API connector for visibility and control over use.
 ms.date: 03/04/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Connect Zoom to Microsoft Defender for Cloud Apps (Preview)

@@ -3,6 +3,7 @@ title: Manage app governance alerts
 ms.date: 05/23/2025
 ms.topic: how-to
 description: Remediate app threats.
+ms.reviewer: shragar
 ---
 
 # Manage app governance alerts

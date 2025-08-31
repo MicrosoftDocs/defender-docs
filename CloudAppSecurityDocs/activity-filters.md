@@ -3,6 +3,7 @@ title: Investigate activities
 description: This article provides a list of activities, filters, and match parameters that can be applied to activity policies.
 ms.date: 06/24/2025
 ms.topic: how-to
+ms.reviewer: gayasalomon
 ---
 
 # Investigate activities
@@ -15,7 +16,7 @@ Microsoft Defender for Cloud Apps gives you visibility into all the activities f
 >
 > Microsoft Defender for Cloud Apps displays these activity names and types exactly as received and doesn't define or modify them. To understand the meaning of an activity, refer to the relevant third‑party API documentation.
 
-The action types for events and activities are determined by the source service, whether it is a first-party or third-party service. Microsoft Defender for Cloud Apps (MDA) supports a wide range of action types and is not restricted to specific ones.
+The action types for events and activities are determined by the source service, whether it's a first-party or third-party service. Microsoft Defender for Cloud Apps (MDA) supports a wide range of action types and isn't restricted to specific ones.
 For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps, see [Search the audit log in the Microsoft Purview portal](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 
@@ -93,7 +94,7 @@ Selecting it opens the Activity drawer **User** tab provides the following insig
     - **ISPs**: The number of ISPs the user connected from in the past 30 days.
     - **IP addresses**: The number of IP addresses the user connected from in the past 30 days.
 
-:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png":::
+:::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities, and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png":::
 
 
 #### IP address insights
@@ -122,7 +123,7 @@ To view IP address insights:
         - Set as a VPN IP address and add to allowlist
         - Set as a Risky IP and add to blocklist
 
-:::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows Ip address activities over the last 30 days." lightbox="media/activity-filters/ip-address-insights.png":::
+:::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows IP address activities over the last 30 days." lightbox="media/activity-filters/ip-address-insights.png":::
 
 
 > [!NOTE]

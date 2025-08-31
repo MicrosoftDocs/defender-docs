@@ -3,6 +3,7 @@ title: Onboard non-Microsoft IdP catalog apps for Conditional Access app control
 description: Learn how to deploy Conditional Access app control with Microsoft Defender for Cloud Apps, for catalog apps with a non-Microsoft IdP.
 ms.date: 05/15/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Onboard non-Microsoft IdP catalog apps for Conditional Access app control
