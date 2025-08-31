@@ -19,7 +19,9 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 - **Released:** August, 2025
 - **What's included:**
-  - Better memory efficiency and reduces CPU consumption
+
+  - Better memory efficiency and reduction of CPU consumption
+    
   - Bug fixes and security enhancements
 
 
