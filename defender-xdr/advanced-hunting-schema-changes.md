@@ -37,6 +37,9 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
 
+## September 2025
+
+In the `AADSignInEventsBeta` table, the `AadDeviceId` column is being replaced with a new column, called `EntraIdDeviceId`, to align with current product branding. The legacy `AadDeviceId` column will remain in the schema for 30 days to allow time for updating in your queries. After this period of 30 days, `AadDeviceId` will be removed from the schema.
 
 
 ## May 2025
