@@ -22,9 +22,7 @@ You might need to manage your app policies as follows to keep up-to-date with yo
 
 Here's an example of a process for managing an existing policy for Microsoft Entra apps:
 
-1. Edit the policy:
-
-    - Change the settings of the policy.
+1. Edit the settings of the policy.
 
 1. Check for expected behavior, such as alerts generated.
 1. If the behavior isn't expected, go back to step 1.
