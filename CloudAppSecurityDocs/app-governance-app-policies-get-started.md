@@ -24,7 +24,7 @@ To see your list of current app policies, go to the **Microsoft Defender XDR > A
 
 For example:
 
-:::image type="content" source="media/app-governance-app-policies-get-started/app-governance-app-policies.png" alt-text="Screenshot that shows the app governance app polcies":::
+:::image type="content" source="media/app-governance-app-policies-get-started/app-governance-app-policies.png" alt-text="Screenshot that shows the app governance app polcies" lightbox="media/app-governance-app-policies-get-started/app-governance-app-policies.png":::
 
 > [!NOTE]
 > Built-in threat detection policies aren't listed on the **Policies** tab. For more information, see [Investigate threat detection alerts](app-governance-anomaly-detection-alerts.md).
@@ -89,7 +89,7 @@ You can also:
 
 1. Choose whether to disable the app if it triggers the policy conditions and then select **Next**.
 
-1. Set the policy status to **Audit** mode, **Active**, or **Inactive**, as needed, and then select **Next**.
+1. Set the policy status to **Active**, or **Inactive**, as needed, and then select **Next**.
 
 1. Review your setting choices for the policy and if everything is the way you want it, select **Submit**.
 
