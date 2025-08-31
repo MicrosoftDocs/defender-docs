@@ -21,23 +21,24 @@ Microsoft Defender for Cloud provides a cloud infrastructure entitlement managem
 
 ## Before you start
 
-You need to [enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
+1. Make sure you have the right roles and permissions for each cloud environment to enable the Permissions Management (CIEM) extension in Defender CSPM:
 
-You need the following Azure roles and permissions for each cloud environment to enable the **Permissions Management (CIEM)** extension in Defender CSPM:
+   **AWS and GCP:**
 
-**AWS and GCP:**
+   - [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+   - [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) at the tenant level.  
 
-- [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
-- [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) at the tenant level.  
+   **Azure:**
 
-**Azure:**
+   - [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+   - [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) at the subscription level.  
+ 
+1. Onboard your AWS or GCP environment to Defender for Cloud:  
 
-- [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
-- [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) at the subscription level.  
+   - **AWS only:** [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).  
+   - **GCP only:** [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).  
 
-**AWS only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
-
-**GCP only**: [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).
+1. [Enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
 
 ## Enable CIEM for Azure
 
