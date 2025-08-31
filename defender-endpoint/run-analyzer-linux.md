@@ -36,6 +36,25 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 
 ## Running the binary version of the client analyzer
 
+### Run ClientAnalyzer binary shipped MDE:
+> [!NOTE]
+> Starting with the Defender for Endpoint version `101.25062.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/conf/client_analyzer/binary`
+
+To run this client analyzer follow the steps:
+1. Go to directory `/opt/microsoft/mdatp/conf/client_analyzer/binary`:
+
+    ```bash
+    cd /opt/microsoft/mdatp/conf/client_analyzer/binary
+    ```
+2. Run the tool as _root_ to generate diagnostic package:
+
+   ```bash
+   sudo ./MDESupportTool -d
+   ```
+### Download and run ClientAnalyzer binary
+
+Follow the below steps if you are using Defender for Endpoint older than `101.25062.0000`
+
 1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the Linux machine that you're to investigating. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
@@ -85,6 +104,29 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 
 > [!WARNING]
 > Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, we recommend that you install the packages into a user PIP environment.
+
+### Run ClientAnalyzer python version shipped MDE
+> [!NOTE]
+> Starting with the Defender for Endpoint version `101.25062.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/conf/client_analyzer/python`
+
+To run this client analyzer follow the steps:
+1. Go to directory `/opt/microsoft/mdatp/conf/client_analyzer/python`:
+
+    ```bash
+    cd /opt/microsoft/mdatp/conf/client_analyzer/python
+    ```
+2. Run as a root user to install required dependencies.
+
+    ```bash
+    sudo ./mde_support_tool.sh
+    ```
+3. To collect the diagnostic package and generate the result archive file, run again as root.
+
+    ```bash
+    sudo ./mde_support_tool.sh -d
+    ```
+
+### Download and run ClientAnalyzer python version
 
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on the Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
@@ -485,24 +527,24 @@ The following script performs the first six steps of the [Running the Binary ver
 
    ```bash
    #! /usr/bin/bash 
-
+   
    echo "Starting Client Analyzer Script. Running As:"
    whoami
-
+   
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
-   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
-
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
-
+   
    echo "Unzipping SupportToolLinuxBinary.zip"
-   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
-
+   unzip -q /tmp/XMDEClientAnalyzerBinary/XMDEClientAnalyzer/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   
    echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
+   
    ```
-
+   
 #### Python client analyzer install script
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#running-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
