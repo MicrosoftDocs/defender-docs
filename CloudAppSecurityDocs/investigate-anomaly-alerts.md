@@ -3,6 +3,7 @@ title: How to investigate anomaly detection alerts | Microsoft Defender for Clou
 description: This article explains how to investigate the Defender for Cloud Apps anomaly detection alerts issued when attacks are detected against your organization.
 ms.date: 05/19/2024
 ms.topic: how-to
+ms.reviewer: gayasalomon
 ---
 
 # How to investigate anomaly detection alerts

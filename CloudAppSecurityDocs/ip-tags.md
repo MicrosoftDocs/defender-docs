@@ -3,6 +3,7 @@ title: Work with IP ranges and tags
 description: This article provides instructions for working with IP tags and IP categories.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Work with IP ranges and tags
@@ -17,7 +18,7 @@ Defender for Cloud Apps comes preconfigured with built-in IP ranges for popular 
 >
 > - To use these built-in tags as part of a search, refer to their ID in the Defender for Cloud Apps API documentation.
 > - You can add IP ranges in bulk by creating a script using the [IP address ranges API](api-data-enrichment.md).
-> - You cannot add IP ranges with overlapping IP addresses.
+> - You can't add IP ranges with overlapping IP addresses.
 > - To view the API documentation, go to [API documentation](api-introduction.md).
 
 Built-in IP address tags and custom IP tags are considered hierarchically. Custom IP tags take precedence over built-in IP tags. For instance, if an IP address is tagged as **Risky** based on threat intelligence but there's a custom IP tag that identifies it as **Corporate**, the custom category and tags take precedence.
@@ -46,7 +47,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
     To include the IP range in a category, select a category from the drop-down menu.
 
-1. To **Tag** the activities from these IP addresses enter a tag. Entering a word into the box creates the tag. After you already have a configured tag, you can easily add it to additional IP ranges by choosing it from the list. You can add more than one IP tag for each range. IP tags can be used when building policies.  Along with IP tags you configure, Defender for Cloud Apps has built-in tags that aren't configurable. You can see the list of tags under the [IP tags filter](activity-filters.md#ip-address-insights).
+1. To **Tag** the activities from these IP addresses enter a tag. Entering a word into the box creates the tag. After you already have a configured tag, you can easily add it to additional IP ranges by choosing it from the list. You can add more than one IP tag for each range. IP tags can be used when building policies. Along with IP tags you configure, Defender for Cloud Apps has built-in tags that aren't configurable. You can see the list of tags under the [IP tags filter](activity-filters.md#ip-address-insights).
 
     > [!NOTE]
     > 

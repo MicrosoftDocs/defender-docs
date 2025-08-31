@@ -74,6 +74,34 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
+
+| Build:             | **101.25072.0011**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125072.11.0** |
+| Engine version:    | **1.1.25060.3000**       |
+| Signature version: | **1.429.309.0**      |
+
+##### What's new
+
+- Enhanced malware detection timing and archive scanning improvements
+- Improved diagnostic capabilities and error reporting
+- Performance and diagnostic improvements for endpoint Data Loss Prevention (DLP)
+
+- Bug fixes
+
+### Aug-2025 (Build: 101.25062.0006  | Release version: 20.125062.6.0)
+
+| Build:             | **101.25062.0006**   |
+|--------------------|----------------------|
+| Release version:   | **20.125062.6.0**    |
+| Engine version:    | **1.1.25070.3000**   |
+| Signature version: | **1.435.357.0**      |
+
+##### What's new
+
+- Bug and performance fixes
+
 ### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
 
 | Build:             | **101.25062.0005**   |
@@ -982,7 +1010,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!IMPORTANT]
 > We're working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
-> We continue supporting the old syntax in parallel with the new syntax and provides more communications around the deprecation plan for the old syntax in the upcoming months.
+> We continue supporting the old syntax in parallel with the new syntax and provide more communications around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & Product improvements
 
