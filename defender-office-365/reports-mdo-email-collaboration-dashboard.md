@@ -4,7 +4,7 @@ f1.keywords:
   - CSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium

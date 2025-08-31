@@ -39,7 +39,6 @@ Previously, Defender for Identity tenants received Entra ID risk level in the Id
 
 For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
 
-
 ### New security assessment: Remove inactive service accounts (Preview)
 
 Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
@@ -66,13 +65,12 @@ The new security posture assessment highlights unsecured Active Directory attrib
 
 For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
 
-
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
 |---------|---------|
 |2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
@@ -157,10 +155,6 @@ Bug Fixes:
 
 
 ## May 2025
-
-###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-sensor.md).
-
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
