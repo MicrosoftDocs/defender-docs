@@ -86,7 +86,7 @@ Enable or disable the plan on specific machines.
 1. To enable Plan 1 for the machine, in [Update Pricing](/rest/api/defenderforcloud-composite/pricings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#update-pricing-on-resource-(example-for-virtualmachines-plan)), create a PUT request with the endpoint.
 1. In the PUT request, replace the subscriptionId, resourceGroupName, and machineName in the endpoint URL with your own settings.
 
-       ```rest
+    ```rest
         PUT
         https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{machineName}/providers/Microsoft.Security/pricings/virtualMachines?api-version=2024-01-01
     ```
