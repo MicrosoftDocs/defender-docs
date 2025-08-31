@@ -62,6 +62,9 @@ The Overview, Alerts, and Observed in organization are different tabs that displ
 > [!NOTE]
 > For Linux devices, information about logged in users is not displayed.
 
+> [!NOTE]
+> Microsoft Defender for Business does not include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data will not be available unless MDI sensors are installed. To ensure visibility into logon events, customers must deploy MDI sensors.
+
 ### Overview
 
 The **Overview** tab shows the incidents details and a list of the devices that the user has logged on to. You can expand these to see details of the log-on events for each device.
