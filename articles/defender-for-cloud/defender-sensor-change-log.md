@@ -15,7 +15,17 @@ For more information about deploying the sensor in Defender for Containers, see 
 
 ## Sensor versions available per release
 
-### Sensor v0.9.17 Preview
+### Sensor v0.8.30 (relevant to all AKS versions <= 1.33)
+
+- **Released:** August, 2025
+- **What's included:**
+
+  - Better memory efficiency and reduction of CPU consumption
+    
+  - Bug fixes and security enhancements
+
+
+### Sensor v0.9.17 Preview (relevant to deploying via Helm)
 
 - **Released:** June 17, 2025
 - **What's included:**
