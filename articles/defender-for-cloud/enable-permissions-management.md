@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable CIEM for better access control and security in your cloud infrastructure.
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 07/31/2025
 #customer intent: As a cloud administrator, I want to learn how to enable permissions (CIEM) in order to effectively manage user access and entitlements in my cloud infrastructure.
 ---
 
@@ -21,15 +21,23 @@ Microsoft Defender for Cloud provides a cloud infrastructure entitlement managem
 
 ## Before you start
 
-- You must [enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
+You must [enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
 
-- You must have the following Azure roles and permissions, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
-  - **AWS and GCP**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) for your tenant.
-  - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) for the subscription.
+You must have the following Azure roles and permissions, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
 
-- **AWS Only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
+**AWS and GCP:**
 
-- **GCP only**: [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).
+- [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+- [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) at the tenant level.  
+
+**Azure:**
+
+- [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+- [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) at the subscription level.  
+
+**AWS Only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
+
+**GCP only**: [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).
 
 ## Enable CIEM for Azure
 
