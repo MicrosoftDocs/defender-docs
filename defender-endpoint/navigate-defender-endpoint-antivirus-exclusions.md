@@ -161,7 +161,7 @@ For more information, see [Automatic server role exclusions](configure-server-ex
 
 Examples include:
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb` 
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb` 
 - `%allusersprofile%\NTUser.pol`
 - Windows Update files
 - Windows Security files 

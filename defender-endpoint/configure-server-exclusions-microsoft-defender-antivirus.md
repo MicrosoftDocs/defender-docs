@@ -260,7 +260,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 
 ### Windows Update files or Automatic Update files
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
 - `%windir%\SoftwareDistribution\Datastore\*\edb\*.log`
 - `%windir%\SoftwareDistribution\Datastore\*\Edb\*.jrs`
