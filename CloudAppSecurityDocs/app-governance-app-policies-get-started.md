@@ -1,6 +1,6 @@
 ---
 title: Get started with app governance policies | Microsoft Defender for Cloud Apps
-ms.date: 09/31/2025
+ms.date: 08/31/2025
 ms.topic: how-to
 description: Get started learning about app governance policies with Microsoft Defender for Cloud Apps in Microsoft Defender XDR
 ms.reviewer: shragar456
