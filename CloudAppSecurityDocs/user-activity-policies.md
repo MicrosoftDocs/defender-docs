@@ -51,6 +51,13 @@ To create a new activity policy, follow this procedure:
 1. Under **Create filters for the policy**, select when a policy violation will be triggered. Choose to trigger when a **Single activity** matches the filters or only when a specified number of **Repeated activities** are detected.
     - If you choose **Repeated activity**, you can set **In a single app**. This setting triggers a policy match only when the repeated activities occur in the same app. For example, five downloads in 30 minutes from Box trigger a policy match.
 
+In the **Alerts** section, configure any of the following actions as needed:
+
+    - **Create an alert for each matching event with the policy's severity**
+    - **Send an alert as email**
+    - **Daily alert limit per policy**. Note that governance actions are not impacted by the daily alert limit.
+    - **Send alerts to Power Automate**
+
 1. Configure the **Actions** that should be taken when a match is found.
 
 Take a look at these examples:
