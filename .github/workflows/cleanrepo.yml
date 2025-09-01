@@ -1,4 +1,4 @@
-name: "Clean Repo - All Folders"
+name: "Clean Repo"
 
 on:
   workflow_dispatch:
