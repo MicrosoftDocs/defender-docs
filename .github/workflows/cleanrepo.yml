@@ -23,11 +23,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Install Clean Repo CLI
+        run: npm install -g @microsoft/clean-repo
+
       - name: Create and switch to new branch
         id: create_branch
         run: |
           BRANCH_NAME="cleanrepo-ATADocs-$(date +'%Y%m%d-%H%M')"
-          git checkout -b $BRANCH_NAME
+          git checkout -b "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Run Clean Repo on ATADocs folders
@@ -103,6 +106,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Install Clean Repo CLI
+        run: npm install -g @microsoft/clean-repo
+
       - name: Sanitize folder name
         id: sanitize
         run: |
@@ -114,40 +120,24 @@ jobs:
         id: create_branch
         run: |
           BRANCH_NAME="cleanrepo-${{ steps.sanitize.outputs.clean_name }}-$(date +'%Y%m%d-%H%M')"
-          git checkout -b $BRANCH_NAME
+          git checkout -b "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Clean orphaned articles
-        uses: dotnet/docs-tools/cleanrepo@main
-        with:
-          function: "FindOrphanedArticles"
-          docfx_directory: "${{ matrix.folder }}"
-          target_directory: "${{ matrix.folder }}"
-          url_base_path: "/dotnet"
+        run: |
+          cleanrepo --function FindOrphanedArticles --docfx_directory="${{ matrix.folder }}" --target_directory="${{ matrix.folder }}" --url_base_path="/dotnet"
 
       - name: Clean orphaned images
-        uses: dotnet/docs-tools/cleanrepo@main
-        with:
-          function: "FindOrphanedImages"
-          docfx_directory: "${{ matrix.folder }}"
-          target_directory: "${{ matrix.folder }}"
-          url_base_path: "/dotnet"
+        run: |
+          cleanrepo --function FindOrphanedImages --docfx_directory="${{ matrix.folder }}" --target_directory="${{ matrix.folder }}" --url_base_path="/dotnet"
 
       - name: Clean orphaned includes
-        uses: dotnet/docs-tools/cleanrepo@main
-        with:
-          function: "FindOrphanedIncludes"
-          docfx_directory: "${{ matrix.folder }}"
-          target_directory: "${{ matrix.folder }}"
-          url_base_path: "/dotnet"
+        run: |
+          cleanrepo --function FindOrphanedIncludes --docfx_directory="${{ matrix.folder }}" --target_directory="${{ matrix.folder }}" --url_base_path="/dotnet"
 
       - name: Clean orphaned snippets
-        uses: dotnet/docs-tools/cleanrepo@main
-        with:
-          function: "FindOrphanedSnippets"
-          docfx_directory: "${{ matrix.folder }}"
-          target_directory: "${{ matrix.folder }}"
-          url_base_path: "/dotnet"
+        run: |
+          cleanrepo --function FindOrphanedSnippets --docfx_directory="${{ matrix.folder }}" --target_directory="${{ matrix.folder }}" --url_base_path="/dotnet"
 
       - name: Push changes to new branch
         run: |
