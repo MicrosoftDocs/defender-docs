@@ -80,7 +80,7 @@ Here are some common issues that might arise when configuring the Tenable Connec
 After configuring the Tenable data connector:
 
 - [Review your attack surface map](enterprise-exposure-map.md) to see Tenable data
-- [Explore security recommendations](security-recommendations.md) based on Tenable findings
+- [Explore security recommendations](security-recommendations.md)
 - [Set up security initiatives](initiatives.md) to track remediation progress
 
 ## Related articles

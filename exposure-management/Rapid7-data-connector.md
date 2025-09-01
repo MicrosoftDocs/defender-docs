@@ -57,7 +57,7 @@ Here are some common issues that might arise when configuring the Rapid7 Connect
 After configuring the Rapid7 data connector:
 
 - [Review your attack surface map](enterprise-exposure-map.md) to see Rapid7 data
-- [Explore security recommendations](security-recommendations.md) based on Rapid7 findings
+- [Explore security recommendations](security-recommendations.md)
 - [Set up security initiatives](initiatives.md) to track remediation progress
 
 ## Related articles

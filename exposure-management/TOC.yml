@@ -46,16 +46,18 @@
          items:
            - name: ServiceNow
              href: ServiceNow-data-connector.md
-       - name: Vulnerability Management data connectors
+       - name: Endpoint protection data connectors
          items:
            - name: CrowdStrike Falcon
              href: crowdstrike-data-connector.md
+           - name: SentinelOne
+             href: sentinel-one-data-connector.md
+       - name: Vulnerability Management data connectors
+         items:
            - name: Qualys
              href: qualys-data-connector.md
            - name: Rapid7
              href: rapid7-data-connector.md
-           - name: SentinelOne
-             href: sentinel-one-data-connector.md
            - name: Tenable
              href: tenable-data-connector.md
            - name: Wiz

@@ -58,7 +58,7 @@ Only devices that were active in the last 90 days are retrieved, based on the la
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
 | **Assets/devices**      | - Endpoint information<br>- Operating system details<br>- Network interfaces<br>- Agent status<br>- Device classification<br>- SentinelOne criticality data |
-| **Security findings**   | SentinelOne retrieves threat detection findings, malware detections, and security events on the assets that it ingests. |
+| **Security findings**   | SentinelOne retrieves CVE findings on the assets that it ingests. |
 | **Configuration data**  | - Agent configurations<br>- Policy assignments<br>- Compliance status<br>- Protection status |
 
 ## Troubleshooting the SentinelOne data connector
@@ -80,7 +80,7 @@ Here are some common issues that might arise when configuring the SentinelOne Co
 After configuring the SentinelOne data connector:
 
 - [Review your attack surface map](enterprise-exposure-map.md) to see SentinelOne data
-- [Explore security recommendations](security-recommendations.md) based on SentinelOne findings
+- [Explore security recommendations](security-recommendations.md)
 - [Set up security initiatives](initiatives.md) to track remediation progress
 
 ## Related articles
