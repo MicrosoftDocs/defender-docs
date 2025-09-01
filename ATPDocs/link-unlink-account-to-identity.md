@@ -24,8 +24,7 @@ Manual linking helps organizations:
 
 ## Prerequisites
 
-- You must have write permissions in Microsoft Defender for Identity.
-- You must have  URBAC roles: GlobalAdmin, SecurityData_Manage
+- You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage)
 
 ## How to Manually Link or Unlink Accounts to an Identity
 
