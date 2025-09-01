@@ -52,13 +52,29 @@ In this demonstration article, you have two engine choices to test AMSI:
    ```powershell
    $testString = "AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386"
    Invoke-Expression $testString
-   ```
+   ```powershell
    
 2. On your device, open PowerShell as an administrator.
 
 3. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press **Enter**.
 
    The result should be as follows:
+
+# Attempt to execute the AMSI Test Sample
+
+    ```powershell
+    Invoke-Expression : At line:1 char:1
+    + AMSI Test Sample: 7e72c3ce-861b-4339-8740-8ac1484c1386
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    This script contains malicious content and has been blocked by your antivirus software.
+
+    At C:\Users\Admin\Desktop\AMSI_PoSh_script.ps1:3 char:1
+    + Invoke-Expression $testString
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + FullyQualifiedErrorId : ScriptContainedMaliciousContent,Microsoft.PowerShell.Commands.InvokeExpressionCommand
+   ```
+
 
    :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-powershell-results.png" alt-text="Screenshot showing the results of the AMSI test sample. It should show a threat was detected." lightbox="media/mde-demonstrations-amsi/test-amsi-powershell-results.png":::
 
