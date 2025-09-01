@@ -21,7 +21,7 @@
           href: defender-portal/getting-started-defender-portal.md
         - name: Complete overview - four-column guide
           displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
-          href: defender-portal-four-column-overview.md
+          href: defender-portal/defender-portal-four-column-overview.md
         - name: Overview dashboard in the Defender portal
           href: defender-portal/defender-for-cloud-overview-dashboard.md
 
