@@ -60,10 +60,10 @@ The **User details** pane on left provides information about the user, such as r
 The Overview, Alerts, and Observed in organization are different tabs that display various attributes about the user account.
 
 > [!NOTE]
-> For Linux devices, information about logged in users is not displayed.
+> For Linux devices, information about logged in users isn't displayed.
 
 > [!NOTE]
-> Microsoft Defender for Business does not include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data will not be available unless MDI sensors are installed. To ensure visibility into logon events, customers must deploy MDI sensors.
+> Microsoft Defender for Business doesn't include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data won't be available unless MDI sensors are installed. To ensure visibility into logon events, customers must deploy MDI sensors.
 
 ### Overview
 
