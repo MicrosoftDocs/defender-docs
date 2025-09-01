@@ -31,6 +31,16 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## Releases for Defender for Endpoint on iOS
 
+#### August 2025
+
+| Build| 1.1.68140102|
+| -------- | -------- |
+| Release Date| August 19, 2025|
+
+**What's New**
+
+- Performance improvements and bug fixes
+
 ### July-2025 
 
 | Build| 1.1.67040101|
