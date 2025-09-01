@@ -23,6 +23,18 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2025
+
+### New Feature Release: Accounts Tab + Manual Account Link/Unlink
+
+The Accounts tab on the Identity Page gives you a unified view of all accounts linked to a single identity across your environment. It brings together account information from multiple sources, helping you understand how an identity appears in different systems.
+
+You can now also manually link or unlink accounts to an identity. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
+
+This update helps you better understand identity footprints and manage account relationships with greater clarity.
+
+For more information, see: [Link/Unlink an account to an identity](link-unlink-account-to-identity.md).
+
 ## August 2025
 
 ### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)

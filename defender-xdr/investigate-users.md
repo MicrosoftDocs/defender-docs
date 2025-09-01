@@ -124,7 +124,23 @@ To see a full page view of an incident or alert, select its title.
 
 - **Groups**: this section shows all observed on-premises groups for the user entity, as reported by Microsoft Defender for Identity.
 
+- **Accounts**: this section shows all observed accounts for the user entity, as reported by Microsoft Defender for Identity.
+
 - **Lateral movement paths**: this section shows all profiled lateral movement paths from the on-premises environment, as detected by Defender for Identity.
+
+The **Accounts** tab  displays all accounts linked to a specific identity across connected systems. It provides a centralized view of an identity’s footprint by consolidating both manual and automatic correlations into a single table. You can view when last the identity was linked, who it was linked by, the linkage type and the linkage comment. 
+
+- Linkage type: shows how the account was linked to the identity (manual, StrongIDs, API or rule), helping validate the accuracy of the connection. 
+
+- Date of last linkage: is the most recent date an account was linked to the identity, showing the latest correlation activity. (just manual?) 
+
+- Linked by: Who created the link (StrongIDs, userid, rule name). 
+
+- Linkage comment: description add by the user that explain why the user choose to link the accounts to this identity. (limit to 25). 
+
+- Primary account: is the main account selected by default-based on our or the customer’s provider priority. It’s used as the default data source for identity details shown to the user, like job title and department.  
+
+[INSERT UI SCREENSHOT]
 
 > [!NOTE]
 > Groups and lateral movement paths are available when a Microsoft Defender for Identity license is available.

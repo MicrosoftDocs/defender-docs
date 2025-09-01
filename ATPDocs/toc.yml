@@ -93,6 +93,8 @@ items:
       href: okta-integration.md
 - name: Manage
   items:
+  - name: Link/Unlink accounts to identities
+    href: link-unlink-account-to-identity.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
