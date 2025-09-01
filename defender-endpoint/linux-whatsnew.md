@@ -55,7 +55,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Signature version: |**1.431.4.0**|
 
 What's new
-- Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Defender via a golden image](https://learn.microsoft.com/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
+- Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Microsoft Defender via Golden image](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
+
 - Other stability enhancements and bug fixes
 
 ### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
