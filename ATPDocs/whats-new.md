@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
-## Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
 
 Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
 
