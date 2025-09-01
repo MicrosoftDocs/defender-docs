@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/28/2025
+ms.date: 009/01/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images (preview)
@@ -93,7 +93,7 @@ Cloud platforms (for example, Azure, AWS, GCP) automatically inject unique metad
 
 ## Hostname Management
 
-Hostname changes require a restart, as they're consistent while service is running.
+If the hostname of a Linux server is changed after successful deployment of Defender, then you must restart the `mdatp` service to ensure the new hostname is correctly recognized by product.
 
 ## Related content
 
