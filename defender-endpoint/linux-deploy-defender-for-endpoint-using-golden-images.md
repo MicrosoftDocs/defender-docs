@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 009/01/2025
+ms.date: 09/01/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images
