@@ -28,10 +28,12 @@ jobs:
         id: create_branch
         run: |
           BRANCH_NAME="cleanrepo-all-$(date +'%Y%m%d-%H%M')"
+          git checkout main || git checkout -b main
+          git pull origin main
           git checkout -b "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
-      - name: Clean orphaned content in all folders
+      - name: Run Clean Repo on all folders
         uses: actions/github-script@v6
         with:
           script: |
@@ -55,31 +57,50 @@ jobs:
               "defender-vulnerability-management"
             ];
 
-            const functions = [
-              "FindOrphanedArticles",
-              "FindOrphanedImages",
-              "FindOrphanedIncludes",
-              "FindOrphanedSnippets"
-            ];
-
             for (const folder of folders) {
-              for (const func of functions) {
-                await exec.exec('git', ['restore', '--source=HEAD', '--staged', '--worktree', folder]);
-                await exec.exec('git', ['clean', '-fd', folder]);
-                await exec.exec('git', ['pull']);
-                await exec.exec('git', ['checkout', '${{ steps.create_branch.outputs.branch_name }}']);
+              core.info(`Cleaning folder: ${folder}`);
 
-                await exec.exec('gh', [
-                  'run', 'dotnet/docs-tools/cleanrepo@main',
-                  '--function', func,
-                  '--docfx_directory', folder,
-                  '--target_directory', folder,
-                  '--url_base_path', '/dotnet'
-                ]);
-              }
+              await exec.exec('git', ['add', folder]);
+
+              await exec.exec('git', ['commit', '-m', `Clean Repo: ${folder}`]);
+
+              await exec.exec('git', ['push', 'origin', process.env.BRANCH_NAME]);
+
+              await exec.exec('gh', [
+                'workflow', 'run',
+                'dotnet/docs-tools/cleanrepo@main',
+                '--function', 'FindOrphanedArticles',
+                '--docfx_directory', folder,
+                '--target_directory', folder,
+                '--url_base_path', '/dotnet'
+              ]);
+              await exec.exec('gh', [
+                'workflow', 'run',
+                'dotnet/docs-tools/cleanrepo@main',
+                '--function', 'FindOrphanedImages',
+                '--docfx_directory', folder,
+                '--target_directory', folder,
+                '--url_base_path', '/dotnet'
+              ]);
+              await exec.exec('gh', [
+                'workflow', 'run',
+                'dotnet/docs-tools/cleanrepo@main',
+                '--function', 'FindOrphanedIncludes',
+                '--docfx_directory', folder,
+                '--target_directory', folder,
+                '--url_base_path', '/dotnet'
+              ]);
+              await exec.exec('gh', [
+                'workflow', 'run',
+                'dotnet/docs-tools/cleanrepo@main',
+                '--function', 'FindOrphanedSnippets',
+                '--docfx_directory', folder,
+                '--target_directory', folder,
+                '--url_base_path', '/dotnet'
+              ]);
             }
 
-      - name: Commit and push changes
+      - name: Commit and push all changes
         run: |
           git add .
           git commit -m "Clean Repo: Automated cleanup across all folders"
