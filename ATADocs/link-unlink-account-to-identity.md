@@ -26,7 +26,7 @@ Manual linking helps organizations:
 
 ## Prerequisites
 - You must have write permissions in Microsoft Defender for Identity.
-- You must have  URBAC roles : GlobalAdmin, SecurityData_Manage
+- You must have  URBAC roles: GlobalAdmin, SecurityData_Manage
 
 ## How to Manually Link or Unlink Accounts to an Identity
 
@@ -54,11 +54,11 @@ Follow these steps to manually link accounts to a selected identity.
 
 ### Step 3: Enter justification
 
-1. In the justification box, enter a short explanation of why you are linking these accounts.
+1. In the justification box, enter a short explanation of why you're linking these accounts.
 1. Your justification must:
 - Be between 1 and 50 characters
 - Use only letters, numbers, spaces, @, and _
-- If your input includes invalid characters or exceeds the limit, an error message will appear.
+- If your input includes invalid characters or exceeds the limit, an error message appears.
 1. Select Next.
 
 ### Step 4: Review and finish
@@ -66,7 +66,7 @@ Follow these steps to manually link accounts to a selected identity.
 1. Review the selected accounts and your justification.
 1. Confirm that the accounts listed are correct.
 1. Select Link accounts to complete the action.
-1. The account list will refresh automatically.
+1. The account list refreshes automatically.
 
 
 ## Unlink accounts from an identity
@@ -79,10 +79,10 @@ Follow these steps to manually unlink accounts from a selected identity.
 1. Select Unlink account.
 1. A confirmation dialog appears with the identity name.
 1. Review the message and select Unlink accounts to confirm.
-1. The account list will refresh automatically.
+1. The account list refreshes automatically.
 
 
 ## What to expect after linking or unlinking
-- The selected accounts will be linked or unlinked immediately.
+- The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
 - All actions are recorded in the unified audit system, including the justification and the user who performed the action.
