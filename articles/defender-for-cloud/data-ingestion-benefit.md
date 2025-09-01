@@ -4,7 +4,7 @@ description: Learn how to take advantage of the data ingestion benefit in Micros
 ms.topic: how-to
 ms.author: elkrieger
 author: elazark
-ms.date: 04/08/2025
+ms.date: 09/01/2025
 ai-usage: ai-assisted
 ---
 
@@ -52,9 +52,9 @@ Security Events are free, up to **500 MB per server per day**, but only when the
    - *Log name*: `Security`  
    - *Stream*: **`Microsoft-SecurityEvent`**  
    > [!IMPORTANT]
-   > When you create a DCR through the portal, the only available stream is `Microsoft-Event`, which routes events to the Event table. This table isn't covered by the Defender for Servers ingestion benefit.  
+   > When you create a DCR in the portal, the only available stream is `Microsoft-Event`. This stream routes events to the Event table, which isn't covered by the Defender for Servers ingestion benefit.
    >  
-   > To ensure Security Events go into the SecurityEvent table (covered by the 500 MB/day allowance), you must define the stream as `Microsoft-SecurityEvent` by editing the DCR JSON or using ARM, Bicep, or Azure Policy.  
+   > To send Security Events to the SecurityEvent table (covered by the 500 MB/day allowance), define the stream as `Microsoft-SecurityEvent` in the DCR JSON or use ARM, Bicep, or Azure Policy.  
    - *(Optional)* filter with XPath, for example:
 
      ```xpath
