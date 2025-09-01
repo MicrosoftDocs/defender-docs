@@ -87,7 +87,7 @@ jobs:
     strategy:
       matrix:
         folder:
-          - ATPNDocs
+          - ATPDocs
           - defender
           - defender-xdr
           - defender-for-iot
