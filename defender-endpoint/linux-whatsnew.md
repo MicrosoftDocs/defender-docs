@@ -43,6 +43,20 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### August-2025 Build: 101.25072.0003 | Release version: 30.125072.0003.0
+
+|Build:             |**101.25072.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 02, 2025**|
+|Published:         |**September 02, 2025**|
+|Release version:   |**30.125072.0003.0**  |
+|Engine version:    |**1.1.25040.4000**    |
+|Signature version: |**1.429.442.0**       |
+
+What's new
+- Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Defender via a golden image](https://learn.microsoft.com/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
+- Other stability enhancements and bug fixes
+
 ### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
 
 |Build:             |**101.25062.0003**    |
