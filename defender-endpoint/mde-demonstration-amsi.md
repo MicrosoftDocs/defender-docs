@@ -74,10 +74,6 @@ In this demonstration article, you have two engine choices to test AMSI:
    + FullyQualifiedErrorId : ScriptContainedMaliciousContent,Microsoft.PowerShell.Commands.InvokeExpressionCommand
 ```
 
-
-   :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-powershell-results.png" alt-text="Screenshot showing the results of the AMSI test sample. It should show a threat was detected." lightbox="media/mde-demonstrations-amsi/test-amsi-powershell-results.png":::
-
-   
 ### Testing AMSI with VBScript
 
 1. Save the following VBScript as `AMSI_vbscript.vbs`:
@@ -89,11 +85,27 @@ In this demonstration article, you have two engine choices to test AMSI:
    WScript.Echo result
    ```
    
-2. On your Windows Device, open Command Prompt as an administrator.
+1. On your Windows Device, open Command Prompt as an administrator.
 
 1. Type `wscript AMSI_vbscript.vbs`, and then press **Enter**.
 
    The result should be as follows:
+
+    ```vbscript
+    Windows Script Host
+
+    Script: C:\Users\Admin\Desktop\AMSI_vbscript.vbs
+
+    Line: 3
+
+    Char: 1
+
+    Error: This script contains malicious content and has been blocked by your antivirus software.: 'eval'
+
+    Code: 800A802D
+
+    Source: Microsoft VBScript runtime error
+   ```
 
       :::image type="content" source="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png" alt-text="Screenshot showing the AMSI test results. It should show that antivirus software blocked the script." lightbox="media/mde-demonstrations-amsi/test-amsi-vbscript-results.png":::
 
