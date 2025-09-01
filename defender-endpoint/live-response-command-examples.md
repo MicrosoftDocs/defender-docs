@@ -93,16 +93,16 @@ fileinfo C:\Windows\notepad.exe
 findfile test.txt
 ```
 
-## `getfile`
+## `get`
 
 ```console
 # Download a file from a machine
-getfile c:\Users\user\Desktop\work.txt
+get c:\Users\user\Desktop\work.txt
 ```
 
 ```console
 # Download a file from a machine, automatically run prerequisite commands
-getfile c:\Users\user\Desktop\work.txt -auto
+get c:\Users\user\Desktop\work.txt -auto
 ```
 
 > [!NOTE]
