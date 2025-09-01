@@ -96,7 +96,8 @@ To create a new file policy, follow this procedure:
 
 1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately.  We recommended narrowing down the filters using multiple search fields to get the files that you want to work with, . The narrower the filters, the better. You can use the **Edit and preview results** button next to the filters.
 
-     :::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot showing how to preview results for file policy filters. lightbox="media/file-policy-edit-and-preview-results.png":::
+:::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
+
 
 
 1. To view file policy matches, files that are suspected to violate the policy, go to **Policies** -> **Policy management**. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**.  This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
