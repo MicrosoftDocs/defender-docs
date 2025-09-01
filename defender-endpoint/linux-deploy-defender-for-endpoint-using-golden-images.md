@@ -77,11 +77,11 @@ After you've successfully deployed Defender on the golden image, there is no nee
 
 ## Step 2: Prepare the golden image for cloning
 
-Before making a snapshot of the virtual machine, follow these steps to ensure that each virtual machine clone will have a unique machine identity:
+Before making a snapshot of the virtual machine, follow these steps to ensure that each virtual machine clone gets a unique hardward UUID:
 
 ### On-premises machines
 
-For on-premises virtual machines, make sure that the golden image generated from it is configured such that when it is cloned, each virtual machine clone will have a unique hardware UUID.
+For on-premises virtual machines, make sure that the golden image generated from it is configured in such a way that when it is cloned, each virtual machine clone will have a unique hardware UUID.
 
 If you are using **KVM/libvirt** or **VMware/Hyper-V** as the virtualization platform, it is recommended to use the following instructions:
 
