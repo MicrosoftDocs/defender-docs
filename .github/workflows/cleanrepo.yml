@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  clean-repo:
+  clean-defender:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,52 +35,37 @@ jobs:
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
 
-      - name: Run Clean Repo on defender folders
-        uses: actions/github-script@v6
+      - name: Clean orphaned articles
+        uses: dotnet/docs-tools/cleanrepo@main
         with:
-          script: |
-            const folders = [
-              "defender",
-              "defender-xdr",
-              "defender-for-iot",
-              "defender-business",
-              "defender-endpoint",
-              "defender-for-cloud",
-              "defender-office-365",
-              "defender-vulnerability-management"
-            ];
+          function: "FindOrphanedArticles"
+          docfx_directory: "."
+          target_directory: "."
+          url_base_path: "/dotnet"
 
-            for (const folder of folders) {
-              core.info(`Cleaning folder: ${folder}`);
-              await exec.exec('npx', [
-                'dotnet/docs-tools/cleanrepo@main',
-                '--function', 'FindOrphanedArticles',
-                '--docfx_directory', folder,
-                '--target_directory', folder,
-                '--url_base_path', '/dotnet'
-              ]);
-              await exec.exec('npx', [
-                'dotnet/docs-tools/cleanrepo@main',
-                '--function', 'FindOrphanedImages',
-                '--docfx_directory', folder,
-                '--target_directory', folder,
-                '--url_base_path', '/dotnet'
-              ]);
-              await exec.exec('npx', [
-                'dotnet/docs-tools/cleanrepo@main',
-                '--function', 'FindOrphanedIncludes',
-                '--docfx_directory', folder,
-                '--target_directory', folder,
-                '--url_base_path', '/dotnet'
-              ]);
-              await exec.exec('npx', [
-                'dotnet/docs-tools/cleanrepo@main',
-                '--function', 'FindOrphanedSnippets',
-                '--docfx_directory', folder,
-                '--target_directory', folder,
-                '--url_base_path', '/dotnet'
-              ]);
-            }
+      - name: Clean orphaned images
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedImages"
+          docfx_directory: "."
+          target_directory: "."
+          url_base_path: "/dotnet"
+
+      - name: Clean orphaned includes
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedIncludes"
+          docfx_directory: "."
+          target_directory: "."
+          url_base_path: "/dotnet"
+
+      - name: Clean orphaned snippets
+        uses: dotnet/docs-tools/cleanrepo@main
+        with:
+          function: "FindOrphanedSnippets"
+          docfx_directory: "."
+          target_directory: "."
+          url_base_path: "/dotnet"
 
       - name: Commit and push changes
         run: |
