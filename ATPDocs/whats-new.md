@@ -33,7 +33,7 @@ You can now also manually link or unlink accounts to an identity. This gives you
 
 This update helps you better understand identity footprints and manage account relationships with greater clarity.
 
-For more information, see: [Link/Unlink an account to an identity](link-unlink-account-to-identity.md).
+For more information, see: [Link or Unlink an Account to an Identity](../ATADocs/link-unlink-account-to-identity.md)
 
 ## August 2025
 

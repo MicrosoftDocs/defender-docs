@@ -3,17 +3,16 @@ title: Link/Unlink an account to an identity
 description: This article explains how to link or unlink an account to an identity in Microsoft Defender for Identity.
 ms.date: 09/01/2025
 ms.topic: how-to
+ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity’s footprint across the organization and validate accounts correlated are correct. 
-description: Learn how to link or unlink an account to an identity in Microsoft Defender for Identity.
 ---
 
 # Link or Unlink an Account to an Identity
 
 ## Overview
-In complex enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, such as personal, privileged, legacy, or cloud-based accounts. This fragmentation makes it difficult to maintain a unified view of identity across the organization.
 
-The Manual Link or Unlink Accounts feature in Microsoft Defender for Identity helps you correlate accounts to identities manually. This improves visibility, strengthens protection, and supports traceability across systems.
+In complex enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, such as personal, privileged, legacy, or cloud-based accounts. This fragmentation makes it difficult to maintain a unified view of identity across the organization. The Manual Link or Unlink Accounts feature in Microsoft Defender for Identity helps you correlate accounts to identities.
 
 ## Why use manual linking
 
@@ -22,9 +21,9 @@ Manual linking helps organizations:
 - Correlate identity components across different systems
 - Improve protection by creating a complete identity context
 - Support investigations and response actions with unified identity views
-- Maintain traceability through required justification and audit logging
 
 ## Prerequisites
+
 - You must have write permissions in Microsoft Defender for Identity.
 - You must have  URBAC roles: GlobalAdmin, SecurityData_Manage
 
@@ -35,8 +34,8 @@ Follow these steps to manually link accounts to a selected identity.
 ### Step 1: Open the identity view
 
 1. Go to Identity Inventory.
-1. Select the identity you want to manage.
 1. Open the Accounts tab.
+1. Select the identity you want to manage.
 1. Select Link account.
 
 
