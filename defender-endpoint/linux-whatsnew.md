@@ -49,9 +49,10 @@ This article is updated frequently to let you know what's new in the latest rele
 |-------------------|----------------------|
 |Released:          |**September 02, 2025**|
 |Published:         |**September 02, 2025**|
+|Expiry:            |**May 06, 2026**      |
 |Release version:   |**30.125072.0003.0**  |
-|Engine version:    |**1.1.25040.4000**    |
-|Signature version: |**1.429.442.0**       |
+|Engine version:    |**1.1.25070.4000**    |
+|Signature version: |**1.435.242.0**       |
 
 What's new
 - Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Defender via a golden image](https://learn.microsoft.com/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
