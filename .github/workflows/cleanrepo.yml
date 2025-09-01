@@ -2,7 +2,7 @@ name: "Clean Repo"
 
 on:
   schedule:
-    - cron: "0 1 1 * *"  # Runs monthly on the 1st at 01:00
+    - cron: "0 1 1 * *"
   workflow_dispatch:
 
 permissions:
@@ -38,7 +38,6 @@ jobs:
           git checkout -b $BRANCH_NAME
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
-      # Run Clean Repo on ATADocs and subfolders
       - name: Run Clean Repo on ATADocs folders
         run: |
           folders=(
@@ -50,10 +49,10 @@ jobs:
           )
           for folder in "${folders[@]}"; do
             echo "Cleaning $folder"
-            gh workflow run dotnet/docs-tools/cleanrepo@main -f function=FindOrphanedArticles -f docfx_directory="$folder" -f target_directory="$folder" -f url_base_path="/dotnet"
-            gh workflow run dotnet/docs-tools/cleanrepo@main -f function=FindOrphanedImages -f docfx_directory="$folder" -f target_directory="$folder" -f url_base_path="/dotnet"
-            gh workflow run dotnet/docs-tools/cleanrepo@main -f function=FindOrphanedIncludes -f docfx_directory="$folder" -f target_directory="$folder" -f url_base_path="/dotnet"
-            gh workflow run dotnet/docs-tools/cleanrepo@main -f function=FindOrphanedSnippets -f docfx_directory="$folder" -f target_directory="$folder" -f url_base_path="/dotnet"
+            cleanrepo --function FindOrphanedArticles --docfx_directory="$folder" --target_directory="$folder" --url_base_path="/dotnet"
+            cleanrepo --function FindOrphanedImages --docfx_directory="$folder" --target_directory="$folder" --url_base_path="/dotnet"
+            cleanrepo --function FindOrphanedIncludes --docfx_directory="$folder" --target_directory="$folder" --url_base_path="/dotnet"
+            cleanrepo --function FindOrphanedSnippets --docfx_directory="$folder" --target_directory="$folder" --url_base_path="/dotnet"
           done
 
       - name: Push changes to new branch
@@ -120,10 +119,17 @@ jobs:
           git rebase upstream/main
           git push origin main --force-with-lease
 
+      - name: Sanitize folder name
+        id: sanitize
+        run: |
+          CLEAN_NAME="${{ matrix.folder }}"
+          CLEAN_NAME="${CLEAN_NAME//\//-}"
+          echo "clean_name=$CLEAN_NAME" >> $GITHUB_OUTPUT
+
       - name: Create and switch to new branch
         id: create_branch
         run: |
-          BRANCH_NAME="cleanrepo-${{ matrix.folder }}-$(date +'%Y%m%d-%H%M')"
+          BRANCH_NAME="cleanrepo-${{ steps.sanitize.outputs.clean_name }}-$(date +'%Y%m%d-%H%M')"
           git checkout -b $BRANCH_NAME
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
