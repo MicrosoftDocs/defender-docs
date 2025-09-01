@@ -5,11 +5,10 @@ ms.date: 09/01/2025
 ms.topic: how-to
 ms.reviewer: Almog Omrad
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity’s footprint across the organization and validate accounts correlated are correct. 
+description: Learn how to link or unlink an account to an identity in Microsoft Defender for Identity.
 ---
 
-# Link/Unlink an account to an identity
-
-This article explains how to link or unlink an account to an identity in Microsoft Defender for Identity.
+# Link or Unlink an Account to an Identity
 
 ## Overview
 In complex enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, such as personal, privileged, legacy, or cloud-based accounts. This fragmentation makes it difficult to maintain a unified view of identity across the organization.
