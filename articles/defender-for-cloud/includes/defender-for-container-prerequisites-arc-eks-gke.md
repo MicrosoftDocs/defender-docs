@@ -8,7 +8,9 @@ author: dcurwin
 
 ## Network requirements
 
-Validate that the following endpoints for public cloud deployments are configured for outbound access. Configuring them for outbound access helps ensure that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events.
+The Defender sensor must connect to Microsoft Defender for Cloud to send security data and events. Configure the following endpoints for outbound access based on your cloud environment:
+
+### Required endpoints
 
 | Azure domain  | Azure Government domain  | Azure operated by 21Vianet domain | Port |
 | -------------------------- | -------------------------- | -------------------------- |---- |
@@ -16,4 +18,6 @@ Validate that the following endpoints for public cloud deployments are configure
 | *.oms.opinsights.azure.com | *.oms.opinsights.azure.us | *.oms.opinsights.azure.cn | 443 |
 | login.microsoftonline.com  | login.microsoftonline.us | login.chinacloudapi.cn  | 443  |
 
-You also need to validate the [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/network-requirements).
+### Other requirements
+
+Arc-enabled Kubernetes clusters have their own network requirements. For the complete list of endpoints needed for Arc connectivity, see [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/network-requirements).

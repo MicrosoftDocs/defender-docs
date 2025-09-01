@@ -141,6 +141,13 @@ az policy set-definition delete \
     --name <initiative-name>
 ```
 
+## Remove managed identities
+
+Defender for Containers creates managed identities in Azure Active Directory for various operations. These identities should be reviewed and removed if they're no longer needed after disabling the service.
+
+> [!WARNING]
+> Before removing any managed identity, verify that it's not being used by other services or applications.
+
 ## Remove vulnerability scanning configuration
 
 ### For Azure Container Registry

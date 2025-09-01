@@ -8,12 +8,29 @@ author: dcurwin
 
 ## Network requirements
 
-Validate that the following endpoints are configured for outbound access so that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events.
+The Defender sensor must connect to Microsoft Defender for Cloud to send security data and events. Make sure that the required endpoints are configured for outbound access.
 
-The Defender sensor must connect to the configured Azure Monitor Log Analytics workspace. By default, AKS clusters have unrestricted outbound (egress) internet access. If event egress from the cluster requires the use of an Azure Monitor Private Link Scope (AMPLS), you must:
+### Connection requirements
 
-- Define the cluster with Container insights and a Log Analytics workspace.
-- Define the cluster's Log Analytics workspace as a resource in the AMPLS.
-- Create in the AMPLS a virtual network private endpoint between the virtual network of the cluster and the Log Analytics resource. The virtual network private endpoint integrates with a private DNS zone.
+The Defender sensor needs connectivity to:
 
-For instructions, refer to [Create an Azure Monitor Private Link Scope](/azure/azure-monitor/logs/private-link-configure#create-an-azure-monitor-private-link-scope).
+- Microsoft Defender for Cloud (for sending security data and events)
+- The configured Azure Monitor Log Analytics workspace
+
+By default, AKS clusters have unrestricted outbound (egress) internet access.
+
+For clusters with restricted egress, you must allow specific FQDNs for Microsoft Defender for Containers to function properly. See [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers) in the AKS outbound network documentation for the required endpoints.
+
+### Private link configuration
+
+If event egress from the cluster requires the use of an Azure Monitor Private Link Scope (AMPLS), you must:
+
+1. Define the cluster with Container insights and a Log Analytics workspace
+1. Define the cluster's Log Analytics workspace as a resource in the AMPLS
+1. Create a virtual network private endpoint in the AMPLS between:
+   - The virtual network of the cluster
+   - The Log Analytics resource
+
+   The virtual network private endpoint integrates with a private DNS zone.
+
+For instructions, see [Create an Azure Monitor Private Link Scope](/azure/azure-monitor/logs/private-link-configure#create-an-azure-monitor-private-link-scope).

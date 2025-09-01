@@ -28,19 +28,20 @@ For Azure Kubernetes Service clusters, Defender for Containers provides:
 
 - Native integration with Azure services
 - Automatic deployment across all clusters in a subscription
-- Registry scanning for Azure Container Registry
-- Runtime protection and threat detection
 - No cross-cloud connector required
+- Vulnerability assessment (VA) features, including registry scanning for Azure Container Registry
+- Security posture management features, including containers software supply chain protection
+- Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
 
 ### [AWS (EKS)](defender-for-containers-aws-overview.md)
 
 For Amazon Elastic Kubernetes Service clusters, Defender for Containers provides:
 
 - Centralized security management in Defender for Cloud
-- AWS connector-based deployment
-- Integration with AWS security services
-- ECR vulnerability scanning
-- CloudFormation template deployment
+- AWS connector-based deployment, including CloudFormation template support
+- Vulnerability assessment (VA) features, including registry scanning for Elastic Container Registry (ECR)
+- Security posture management features
+- Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
 
 ### [GCP (GKE)](defender-for-containers-gcp-overview.md)
 
@@ -48,18 +49,18 @@ For Google Kubernetes Engine clusters, Defender for Containers provides:
 
 - Centralized security management in Defender for Cloud
 - GCP connector-based deployment
-- Integration with GCP security services
-- GCR and Artifact Registry scanning
-- Support for GKE Autopilot
+- GKE Autopilot support
+- Vulnerability assessment (VA) features, including registry scanning for Google Container Registry (GCR) and Google Artifact Registry (GAR)
+- Security posture management features
+- Runtime protection features, including detection investigation and response, integrated into Microsoft XDR
 
 ### [Arc-enabled Kubernetes (Preview)](defender-for-containers-arc-overview.md)
 
 For on-premises and IaaS Kubernetes clusters connected through Azure Arc, Defender for Containers provides:
 
 - Hybrid cloud security management
-- Support for any CNCF-certified Kubernetes distribution
 - Centralized security through Azure
-- Works with Rancher, Tanzu, and more
+- Works with CNCF-certified Kubernetes distributions
 
 ## Prerequisites
 
@@ -72,25 +73,23 @@ Before deploying Defender for Containers, make sure you have:
 - For sensor-based capabilities: Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
 
 > [!NOTE]
-> Agentless capabilities don't require cluster resources or sensor deployment. For more information about agentless vs. sensor-based features, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
+> Agentless capabilities don't require cluster resources or sensor deployment. For a detailed list of supported features, along with their availability and characteristics, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md). The support matrix indicates whether each feature is agentless or sensor-based under the **Enablement method** column.
 
 ## Enablement and deployment options
 
 Defender for Containers involves two main steps:
 
-- **Enabling the plan** - You can enable the plan through:
+1. **Enabling the plan** - You can enable the plan through:
 
-- Azure portal
-- Programmatically (CLI, API, or Infrastructure as Code)
+    - Azure portal
+    - Programmatically (Azure CLI, REST API, PowerShell)
 
-- **Deploying the sensor** - You can deploy the sensor through:
+1. **Deploying the sensor**
 
-- Azure portal
-- Programmatically (CLI, API, or Infrastructure as Code)
-- Helm charts
-
-> [!NOTE]
-> Some capabilities work immediately after enabling the plan without sensor deployment. See the [support matrix](support-matrix-defender-for-containers.md) for details on which features require the sensor.
+    - AKS built-in addon - You can deploy through:
+        - Azure portal
+        - Programmatically (Azure CLI, REST API, IaC templates)
+    - Helm chart deployment
 
 ## Next steps
 

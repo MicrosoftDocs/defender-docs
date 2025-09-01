@@ -7,32 +7,7 @@ ms.date: 06/04/2025
 
 # Deploy Defender for Containers on Azure (AKS) programmatically
 
-This article provides methods to programmatically deploy Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters.
-
-## Article contents
-
-Jump to the deployment method you need:
-
-- [Enable Defender plan](#enable-defender-for-containers-plan)
-  - Azure CLI
-  - REST API
-  - PowerShell
-- [Deploy Defender sensor](#deploy-the-defender-sensor)
-  - AKS built-in method
-  - Helm deployment
-- [Deploy Azure Policy add-on](#deploy-azure-policy-add-on)
-  - Azure CLI
-  - REST API
-- [Configure components](#configure-specific-components)
-  - Enable/disable specific features
-  - Custom workspace configuration
-- [Batch deployment](#batch-deployment-with-scripts)
-  - PowerShell script
-  - Bash script
-- [Infrastructure as Code](#deploy-using-infrastructure-as-code)
-  - ARM template
-  - Bicep
-  - Terraform
+This article describes methods to programmatically deploy Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters.
 
 > [!TIP]
 > For a guided portal experience, see [Enable Defender for Containers via portal](defender-for-containers-azure-enable-portal.md).
@@ -117,7 +92,29 @@ Set-AzSecurityWorkspaceSetting `
 
 ## Deploy the Defender sensor
 
-### [AKS built-in method](#tab/aks-builtin)
+> [!NOTE]
+> When you enable the Defender for Containers plan, the Defender sensor is typically deployed automatically. Use the following methods for manual deployment only if the sensor isn't automatically deployed after plan enablement.
+
+### Choose your deployment method
+
+**AKS built-in addon:**
+- Automatically provisioned and updated by Azure
+- Managed through AKS security profile
+- Simplest deployment option
+- Updates handled automatically with AKS cluster updates
+
+**Helm chart deployment:**
+- Provides flexible deployment options for DevOps and infrastructure-as-code scenarios
+- Allows integration into CI/CD pipelines
+- Gives you control over sensor updates and versioning
+- Supports both preview and GA versions
+- Requires manual updates but offers more customization
+
+### 1. AKS built-in addon
+
+You can deploy the sensor through:
+
+#### [Azure CLI](#tab/aks-cli)
 
 ```azurecli
 # Deploy to specific cluster
@@ -134,9 +131,143 @@ az aks update \
     --defender-config logAnalyticsWorkspaceResourceId=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
 ```
 
-### [Helm deployment](#tab/helm)
+#### [REST API](#tab/aks-rest)
 
-#### Option 1: Using the installation script
+```bash
+# Set variables
+SUBSCRIPTION_ID="<subscription-id>"
+RG="<resource-group>"
+CLUSTER="<cluster-name>"
+TOKEN="<bearer-token>"
+WORKSPACE_ID="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
+
+# Enable Defender sensor via REST API
+curl -X PATCH \
+  "https://management.azure.com/subscriptions/${SUBSCRIPTION_ID}/resourceGroups/${RG}/providers/Microsoft.ContainerService/managedClusters/${CLUSTER}?api-version=2023-01-01" \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "securityProfile": {
+        "defender": {
+          "logAnalyticsWorkspaceResourceId": "'${WORKSPACE_ID}'",
+          "securityMonitoring": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  }'
+```
+
+#### [Infrastructure as Code (IaC)](#tab/aks-iac)
+
+##### ARM template
+
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "workspaceResourceId": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ContainerService/managedClusters",
+      "apiVersion": "2023-01-01",
+      "name": "[parameters('clusterName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityProfile": {
+          "defender": {
+            "logAnalyticsWorkspaceResourceId": "[parameters('workspaceResourceId')]",
+            "securityMonitoring": {
+              "enabled": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+Deploy the template:
+
+```azurecli
+az deployment group create \
+    --resource-group myResourceGroup \
+    --template-file defender-aks.json \
+    --parameters clusterName=myAKSCluster location=eastus workspaceResourceId=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+```
+
+##### Bicep
+
+```bicep
+param clusterName string
+param location string = resourceGroup().location
+param workspaceResourceId string
+
+resource aksCluster 'Microsoft.ContainerService/managedClusters@2023-01-01' = {
+  name: clusterName
+  location: location
+  properties: {
+    securityProfile: {
+      defender: {
+        logAnalyticsWorkspaceResourceId: workspaceResourceId
+        securityMonitoring: {
+          enabled: true
+        }
+      }
+    }
+  }
+}
+
+output clusterId string = aksCluster.id
+```
+
+##### Terraform
+
+```hcl
+resource "azurerm_kubernetes_cluster" "main" {
+  name                = var.cluster_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  dns_prefix          = var.dns_prefix
+
+  default_node_pool {
+    name       = "default"
+    node_count = 3
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  microsoft_defender {
+    log_analytics_workspace_id = azurerm_log_analytics_workspace.main.id
+  }
+}
+```
+
+---
+
+### 2. Helm chart deployment
+
+Unlike other options that are autoprovisioned and updated automatically, Helm lets you flexibly deploy the Defender sensor. This approach is especially useful in DevOps and infrastructure-as-code scenarios. With Helm, you can integrate deployment into CI/CD pipelines and control all sensor updates. You can also choose to receive preview and GA versions.
+
+You can deploy the sensor by using:
+
+#### [Installation script](#tab/helm-script)
 
 Download and use the installation script:
 
@@ -155,7 +286,7 @@ chmod +x install_defender_sensor.sh
     --location <location>
 ```
 
-#### Option 2: Manual Helm installation
+#### [Manual Helm installation](#tab/helm-manual)
 
 ```bash
 # Add the Microsoft Defender Helm repository
@@ -175,7 +306,7 @@ helm install microsoft-defender mdc/azuredefender \
     --set azure.workspaceKey=<workspace-key>
 ```
 
-#### Option 3: Helm with custom values
+#### [Helm with custom values](#tab/helm-custom)
 
 Create a `values.yaml` file:
 
@@ -210,6 +341,52 @@ helm install microsoft-defender mdc/azuredefender \
     --namespace mdc \
     --create-namespace \
     -f values.yaml
+```
+
+---
+
+### Batch deployment of Defender sensor to multiple clusters
+
+Use these scripts when you need to deploy the Defender sensor to multiple AKS clusters at once, such as during initial rollout or when onboarding multiple clusters to Defender for Containers.
+
+#### [PowerShell](#tab/powershell-batch)
+
+```powershell
+# Deploy Defender sensor to all AKS clusters in subscription
+$clusters = Get-AzAksCluster
+
+foreach ($cluster in $clusters) {
+    Write-Host "Enabling Defender sensor for cluster: $($cluster.Name)"
+    
+    # Enable Defender sensor
+    az aks update `
+        --resource-group $cluster.ResourceGroupName `
+        --name $cluster.Name `
+        --enable-defender
+}
+```
+
+#### [Bash](#tab/bash-batch)
+
+```bash
+#!/bin/bash
+# deploy-defender-sensor-batch.sh
+# Deploys Defender sensor to multiple AKS clusters
+
+# Get all AKS clusters
+clusters=$(az aks list --query "[].{name:name, resourceGroup:resourceGroup}" -o tsv)
+
+# Deploy Defender sensor to each cluster
+while IFS=$'\t' read -r name rg; do
+    echo "Enabling Defender sensor for cluster: $name"
+    
+    # Enable Defender sensor
+    az aks update \
+        --resource-group "$rg" \
+        --name "$name" \
+        --enable-defender
+        
+done <<< "$clusters"
 ```
 
 ---
@@ -271,25 +448,6 @@ az security pricing update \
       "name": "AgentlessDiscoveryForKubernetes",
       "isEnabled": "False"
     }'
-```
-
-### Configure custom Log Analytics workspace
-
-```azurecli
-# Set custom workspace for Defender
-az security workspace-setting create \
-    --name 'default' \
-    --target-workspace '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}'
-```
-
-### Exclude specific clusters with tags
-
-```azurecli
-# Add exclusion tag to AKS cluster
-az aks update \
-    --resource-group myResourceGroup \
-    --name myAKSCluster \
-    --tags "ms_defender_container_exclude_sensors=true"
 ```
 
 ## Batch deployment with scripts
@@ -380,11 +538,6 @@ done <<< "$clusters"
               "enabled": true
             }
           }
-        },
-        "addonProfiles": {
-          "azurepolicy": {
-            "enabled": true
-          }
         }
       }
     }
@@ -420,11 +573,6 @@ resource aksCluster 'Microsoft.ContainerService/managedClusters@2023-01-01' = {
         }
       }
     }
-    addonProfiles: {
-      azurepolicy: {
-        enabled: true
-      }
-    }
   }
 }
 
@@ -434,14 +582,6 @@ output clusterId string = aksCluster.id
 ### [Terraform](#tab/terraform)
 
 ```hcl
-# Enable Defender for Containers
-resource "azurerm_security_center_subscription_pricing" "containers" {
-  tier          = "Standard"
-  resource_type = "Containers"
-  subplan       = "DefenderForContainersAks"
-}
-
-# Configure AKS with Defender
 resource "azurerm_kubernetes_cluster" "main" {
   name                = var.cluster_name
   location            = var.location
@@ -461,8 +601,6 @@ resource "azurerm_kubernetes_cluster" "main" {
   microsoft_defender {
     log_analytics_workspace_id = azurerm_log_analytics_workspace.main.id
   }
-
-  azure_policy_enabled = true
 }
 ```
 

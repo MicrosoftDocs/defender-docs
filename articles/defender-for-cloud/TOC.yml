@@ -173,9 +173,6 @@
                   href: defender-for-containers-arc-remove.md
             - name: Configure sensor deployed with Helm
               href: deploy-helm.md
-            - name: Defender for Containers resources and offboarding
-              displayName: defender, containers, offboard, resources
-              href: defender-for-containers-offboard.md
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md

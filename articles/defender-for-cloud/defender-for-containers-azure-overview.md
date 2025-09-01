@@ -23,13 +23,13 @@ The solution helps security and platform teams prevent vulnerabilities from reac
 Defender for Containers leverages native Azure integrations to provide security without complexity. Once you enable it on your subscription, the solution:
 
 - Automatically discovers all AKS clusters and container registries in your Azure subscriptions
-- Deploys lightweight security sensors by using Azure Policy for consistent coverage
+- Deploys a lightweight security sensor, natively integrated in AKS Resource Provider (RP), used for runtime threat protection and AKS deployment gating
 - Scans container images in Azure Container Registry (ACR) for vulnerabilities
 - Monitors runtime behavior by using Azure-native telemetry
-- Provides security recommendations aligned with Azure best practices
-- Generates alerts that integrate with Microsoft XDR, Azure Security Center, and Microsoft Sentinel
+- Provides security recommendations aligned with Azure security and industry best practices
+- Generates alerts that integrate with Microsoft XDR and Microsoft Sentinel
 
-This deep integration means you get comprehensive security without managing additional infrastructure, complex network configurations, or separate security tools.
+This deep integration means you get comprehensive security without managing extra infrastructure, complex network configurations, or separate security tools.
 
 ## Key capabilities
 
@@ -44,14 +44,17 @@ Defender for Containers provides security across three critical areas:
 
 ## Architecture overview
 
-Defender for Containers on AKS uses lightweight, Azure-managed components with outbound-only connectivity (no inbound access required).
+For detailed architecture information, see [Container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
+
+Defender for Containers on AKS uses lightweight, Azure-managed components with outbound-only connectivity (no inbound access required):
 
 - **Defender sensor (DaemonSet):** Runs on AKS nodes, collects runtime telemetry (Kubernetes events, process, network) and sends it securely to Defender for Cloud.
 - **Azure Policy:** Deploys and updates the sensor at scale and enforces configuration baselines. Optional admission control can gate deployments.
 - **ACR integration:** Push-triggered and periodic image scanning for Azure Container Registry. Optional pipeline and CLI scanning before images reach ACR.
-- **Defender for Cloud:** Correlates signals to produce recommendations and alerts. Supports Continuous Export to Microsoft Sentinel, Event Hubs, or Log Analytics.
+- **Agentless discovery:** Provides visibility into your Kubernetes clusters without requiring any agents, using Azure native capabilities to discover and assess cluster configurations.
+- **Microsoft XDR integration:** Seamlessly integrates with Microsoft's extended detection and response platform for unified security operations and incident response.
 
-These components work together seamlessly, requiring no inbound connections to your clusters and leveraging Azure's native security infrastructure.
+These components work together seamlessly, requiring no inbound connections to your clusters and leveraging Azure's native security infrastructure. Defender for Cloud supports Continuous Export to Microsoft Sentinel, Event Hubs, or Log Analytics for extended monitoring and analysis.
 
 ## Deployment options
 

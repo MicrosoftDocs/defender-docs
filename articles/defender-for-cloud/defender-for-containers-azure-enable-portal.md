@@ -35,37 +35,35 @@ First, enable the Defender for Containers plan on your subscription:
 
 1. Select the subscription where your AKS clusters are located.
 
-1. On the Defender plans page, find the **Containers** row and toggle the Status to **On**.
+1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
     :::image type="content" source="media/tutorial-enable-containers-azure/containers-enabled-aks.png" alt-text="Screenshot of the Defender plans page that shows where to toggle the containers plan switch to on is located." lightbox="media/tutorial-enable-containers-azure/containers-enabled-aks.png":::
 
 ## Configure plan components
 
-After enabling the plan, configure which components to enable:
+After you enable the plan, review and configure the components. By default, all components are enabled when you turn on the Defender for Containers plan.
 
 1. Select **Settings** in the Containers plan row.
 
-1. In the Settings page, you see all available components.
+1. In **Settings**, you see all available components.
 
-1. Turn on all components:
-   - **Agentless discovery for Kubernetes** - Provides visibility into your Kubernetes clusters
-   - **Agentless container vulnerability assessment** - Scans container images for vulnerabilities
-   - **Defender DaemonSet** - Provides runtime threat detection
-   - **Azure Policy for Kubernetes** - Enables security recommendations and compliance
+1. Review the components that are enabled by default:
+   - **Agentless scanning for machines** - Scans your machines for installed software, vulnerabilities, and secret scanning without relying on agents or impacting machine performance
+   - **Defender sensor** - Deployed on each worker node, collects security related data, required for runtime threat protection
+   - **Azure Policy** - Deployed as an agent on your Kubernetes cluster. Provides Kubernetes data plane hardening
+   - **Kubernetes API access** - Required for agentless container posture, runtime vulnerability assessment and response actions
+   - **Registry access** - Enables agentless vulnerability assessment for registry images
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows turning on Defender for Containers components." lightbox="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png" alt-text="Screenshot that shows Defender for Containers components enabled by default." lightbox="media/defender-for-containers-enable-plan-aks/containers-settings-aks.png":::
+
+1. You can:
+   - Keep all components enabled (recommended for comprehensive protection)
+   - Disable specific components you don't need
+   - Re-enable components if you previously disabled them
 
 1. Select **Continue**.
 
-## Review and save settings
-
 1. Review the monitoring coverage page to see what resources are protected.
-
-1. Review the components that you enable:
-   - Container vulnerability assessments
-   - Kubernetes runtime protection
-   - Discovery of unprotected clusters
-   - Security posture management
 
 1. Select **Continue**.
 
@@ -73,7 +71,7 @@ After enabling the plan, configure which components to enable:
 
 ## Monitor deployment progress
 
-After saving, Defender for Cloud automatically begins deploying the necessary components to your AKS clusters:
+After saving, Defender for Cloud automatically begins deploying the selected components to your AKS clusters:
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
@@ -112,16 +110,18 @@ The Defender sensor provides runtime threat detection for your AKS clusters. If 
 
 ### Deploy to specific clusters
 
-1. Go to your AKS cluster.
+To deploy the Defender sensor to specific AKS clusters:
 
-1. Under **Settings**, select **Defender**.
+1. Go to your AKS cluster in the Azure portal.
 
-1. Select **Enable Microsoft Defender for Containers**.
+1. In the left menu under the cluster name, select **Microsoft Defender for Cloud**.
 
-1. Configure the settings:
-   - Enable runtime protection
-   - Configure resource limits
-   - Set namespace exclusions
+1. On the Microsoft Defender for Cloud page for your cluster, locate the **Defender sensor** row and toggle it to **On**.
+
+1. Configure any additional settings as needed:
+   - Resource limits
+   - Namespace exclusions
+   - Custom workspace
 
 1. Select **Save**.
 
@@ -222,17 +222,7 @@ After setup, regularly:
 
 ## Clean up resources
 
-If you want to disable Defender for Containers, follow these steps:
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select your subscription.
-
-1. Turn the **Containers** plan **Off**.
-
-1. Select **Save**.
-
-This process stops new security assessments and removes the Defender components from your clusters.
+To disable Defender for Containers and remove all deployed components from your AKS clusters, see [Remove Defender for Containers from Azure (AKS)](defender-for-containers-azure-remove.md).
 
 ## Next steps
 
