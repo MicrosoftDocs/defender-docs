@@ -107,8 +107,8 @@ Granting your user or service principal the **Reader** role (or any higher-privi
 
 The AWS script supports two discovery flows:
 
-1. **Single account discovery** - Discovers resources within a single AWS account
-1. **Organization discovery** - Discovers resources across all member accounts in an AWS Organization
+- **Single account discovery** - Discovers resources within a single AWS account
+- **Organization discovery** - Discovers resources across all member accounts in an AWS Organization
 
 ###### Single account discovery
 
@@ -151,10 +151,11 @@ Additionally, if you need to list other resources not shown in the script or if 
 
 For organization-wide discovery, you need:
 
-1. **In the management account**: Permission to list all accounts in the organization
-   - `organizations:ListAccounts`
+- **In the management account**: Permission to list all accounts in the organization
 
-1. **In all member accounts**: A role with the same permissions as described for single account discovery (ReadOnlyAccess or the custom permissions listed above)
+  - `organizations:ListAccounts`
+
+- **In all member accounts**: A role with the same permissions as described for single account discovery (ReadOnlyAccess or the custom permissions listed above)
 
 **Setting up organization discovery**:
 
