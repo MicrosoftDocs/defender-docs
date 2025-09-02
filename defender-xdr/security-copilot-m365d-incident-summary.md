@@ -61,7 +61,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - Suggested prompts, which provide insights into the specific assets involved in the incident.
 - Indicators of compromise (IoCs).
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
-- Suggested prompts, which guide you to focus on the most relevant next steps, gain deeper insight, and simplify investigations.
+- Suggested Security Copilot prompts, which guide you to focus on the most relevant next steps, gain deeper insight, and simplify investigations.
 
 To summarize an incident, perform the following steps:
 
