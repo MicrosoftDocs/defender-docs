@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 09/01/2025
+ms.date: 09/02/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images
@@ -73,15 +73,16 @@ This guide walks you through:
    mdatp health
    ```
 
-After you've successfully deployed Defender on the golden image, there is no need to deploy it separately on each virtual machine clone.
+> [!NOTE]
+> Once Defender is successfully deployed on the golden image, there's no requirement to install and onboard it individually on each cloned machine.
 
 ## Step 2: Prepare the golden image for cloning
 
-Before making a snapshot of the virtual machine, follow these steps to ensure that each virtual machine clone gets a unique hardware UUID:
+Before making a snapshot of the virtual machine, ensure that each virtual machine clone gets a unique hardware UUID, as described in the following sections.
 
 ### On-premises machines
 
-For on-premises virtual machines, make sure that the golden image generated from it is configured in such a way that when it is cloned, each virtual machine clone will have a unique hardware UUID.
+For on-premises machines, make sure to configure the golden image so that each clone gets a unique hardware UUID.
 
 If you're using **KVM/libvirt** or **VMware/Hyper-V** as the virtualization platform, it's recommended to use the following instructions:
 
