@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
-### New Feature Release: Accounts Tab + Manual Account Link/Unlink
+### New Feature Release: Accounts Tab + Manual Account Link/Unlink 
 
 The Accounts tab on the Identity Page gives you a unified view of all accounts linked to a single identity across your environment. It brings together account information from multiple sources, helping you understand how an identity appears in different systems.
 
@@ -34,6 +34,13 @@ You can now also manually link or unlink accounts to an identity. This gives you
 This update helps you better understand identity footprints and manage account relationships with greater clarity.
 
 For more information, see: [Link or Unlink an Account to an Identity](../ATPDocs/link-unlink-account-to-identity.md)
+
+### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
 
 ## August 2025
 
