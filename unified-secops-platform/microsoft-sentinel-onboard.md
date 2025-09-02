@@ -131,13 +131,9 @@ Find Microsoft Sentinel settings in the Defender portal under **System** > **Set
 You can only have one primary workspace connected to the Defender portal at a time. But you can change the primary workspace.
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **System** > **Settings** > **Microsoft Sentinel** > **Workspaces**.
-
 1. Select the name of the workspace that you want to make primary.
-
 1. Select **Set as primary**.
-
 1. Read and understand the product changes associated with changing the primary workspace.
-
 1. Select **Confirm and proceed**.
 
 When you switch the primary workspace for Microsoft Sentinel, the Defender XDR connector is connected to the new primary and disconnected from the former one automatically. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
@@ -149,13 +145,9 @@ If you decide to offboard a workspace from the Defender portal, disconnect the w
 If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) configured, offboarding the workspace from the Defender portal will also disconnect the Microsoft Defender XDR connector.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
-
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
-
 1. On the **Workspaces** page, select the connected workspace and **Disconnect workspace**.
-
 1. Provide a reason why you're disconnecting the workspace.
-
 1. Confirm your selection.
 
    When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.
