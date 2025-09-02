@@ -31,8 +31,6 @@
       items:
         - name: User roles and permissions
           href: permissions.md
-        - name: Defender for Containers permissions for EKS and GKE
-          href: containers-permissions.md
         - name: Defender for Cloud support matrices
           displayName: coverage, supported platforms, cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
@@ -45,6 +43,8 @@
         - name: Support matrices for Containers
           displayName: Containers, features availability, environment information
           href: support-matrix-defender-for-containers.md
+        - name: Defender for Containers permissions for EKS and GKE
+          href: containers-permissions.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
         - name: Prepare for retirement of the Log Analytics agent
@@ -178,7 +178,7 @@
 
 - name: Cloud Security Posture Management (CSPM)
   items:
-    - name: Cloud Security Posture Management (CSPM) – Overview
+    - name: Overview Cloud Security Posture Management (CSPM)
       displayName: CSPM, cloud security posture management, overview
       href: concept-cloud-security-posture-management.md
     - name: Security policies
@@ -220,8 +220,6 @@
     - name: Internet exposure analysis
       displayName: internet, exposure, analysis
       href: internet-exposure-analysis.md
-    - name: Data and AI security dashboard
-      href: data-aware-security-dashboard-overview.md
     - name: Data security posture management
       items:
         - name: About data security posture management
@@ -230,10 +228,22 @@
           href: concept-data-security-posture-prepare.md
         - name: Supported sensitive data information types
           href: sensitive-info-types.md
+        - name: Discover sensitive data
+          href: discover-sensitive-data.md
+        - name: Review data security alerts
+          href: review-data-security-alerts.md
     - name: Container security posture management
       items:
         - name: Agentless container posture in Defender CSPM
           href: concept-agentless-containers.md
+    - name: AI security posture management
+      items:
+      - name: Overview
+        href: ai-security-posture.md
+      - name: Discover generative AI workloads
+        href: identify-ai-workload-model.md
+      - name: Explore risks to pre-deployment generative AI artifacts
+        href: explore-ai-risk.md
     - name: API security posture management
       items:
         - name: Overview
@@ -492,48 +502,6 @@
               - name: Remediate code with Microsoft Security Copilot
                 displayName: copilot, security, recommendations, code, remediate, iac, infrastructure as code
                 href: remediate-code-with-copilot.md
-
-
-        
-- name: Protect data
-  items:
-  - name: Overview data and AI security dashboard
-    href: data-aware-security-dashboard-overview.md
-  - name: Data security posture
-    items:
-    - name: Overview
-      href: concept-data-security-posture.md
-    - name: Support and prerequisites
-      href: concept-data-security-posture-prepare.md
-    - name: Supported sensitive data information
-      href: sensitive-info-types.md
-    - name: Discover sensitive data
-      href: discover-sensitive-data.md
-  - name: Data security threat protection
-    items:
-    - name: Review data security alerts
-      href: review-data-security-alerts.md
-
-- name: Protect AI services
-  items:
-  - name: Overview data and AI security dashboard (Preview)
-    href: data-aware-security-dashboard-overview.md
-  - name: AI security posture
-    items:
-    - name: Overview
-      href: ai-security-posture.md
-    - name: Discover generative AI workloads
-      href: identify-ai-workload-model.md
-    - name: Explore risks to pre-deployment generative AI artifacts
-      href: explore-ai-risk.md
-  - name: AI threat protection
-    items:
-    - name: Overview
-      href: ai-threat-protection.md
-    - name: Enable threat protection for AI services
-      href: ai-onboarding.md
-    - name: Gain application and end-user context
-      href: gain-end-user-context-ai.md
 
 - name: Protect workloads
   items:
@@ -1098,7 +1066,7 @@
       - name: Enable threat protection for AI services
         displayName: AI, Defender for AI
         href: ai-onboarding.md
-      - name: Gain end-user context for AI alerts
+      - name: Gain application and end-user context for AI alerts
         displayName: AI, Defender for AI, threat protection
         href: gain-end-user-context-ai.md
 
@@ -1184,6 +1152,8 @@
               href: incidents-reference.md
         - name: Manage security incidents
           href: incidents.md
+    - name: Data and AI security dashboard
+      href: data-aware-security-dashboard-overview.md
     - name: Manage and respond to security alerts
       href: managing-and-responding-alerts.yml
     - name: Create and manage alert suppression rules
