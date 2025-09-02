@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Defender XDR applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) to summarize incidents, delivering impactful information and insights to simplify investigation tasks. Attack investigation is a crucial step for incident response teams to successfully defend an organization against further damage from a cyber threat. Investigations can often be time-consuming as it involves numerous steps. Incident response teams need to understand how the attack happened: sort through numerous alerts, identify which assets and entities are involved, and assess the scope and impact of an attack.
+Microsoft Defender XDR applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) to summarize incidents, delivering impactful information and insights to simplify investigation tasks. Attack investigation is a crucial step for incident response teams to successfully defend an organization against further damage from a cyber threat. Investigations can often be time-consuming as they involve numerous steps. Incident response teams need to understand how the attack happened: sort through numerous alerts, identify which assets and entities are involved, and assess the scope and impact of an attack.
 
 This guide outlines what to expect and how to access the summarizing capability of Copilot in Defender, including information on providing feedback.
 
@@ -61,6 +61,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - Suggested prompts, which provide insights into the specific assets involved in the incident.
 - Indicators of compromise (IoCs).
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
+- Suggested prompts, which guide you to focus on the most relevant next steps, gain deeper insight, and simplify investigations.
 
 To summarize an incident, perform the following steps:
 
