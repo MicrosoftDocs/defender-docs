@@ -30,57 +30,44 @@ Manual linking helps organizations:
 
 Follow these steps to manually link accounts to a selected identity.
 
-### Step 1: Open the identity view
-
 1. Go to Identity Inventory.
+1. Select the Observed in organization tab
 1. Open the Accounts tab.
-1. Select the identity you want to manage.
-1. Select Link account.
-
-
-### Step 2: Select accounts
-
-1. You can search by:
-   - Display name
-   - User principal name (UPN)
-   - Security identifier (SID)
-   - Source provider account ID
-1. Review the results table. If no results appear, try a different search term.
 1. Select one or more accounts from the table. You must select at least one account to continue.
-1. Select Next.
-
-
-### Step 3: Enter justification
-
-1. In the justification box, enter a short explanation of why you're linking these accounts.
+1. You can search by:
+    - Display name
+    - User principal name (UPN)
+    - Security identifier (SID)
+    - Source provider account
+1. Select Next
+1. Enter a short justification comment explaining why you are linking these accounts.
 1. Your justification must:
-- Be between 1 and 50 characters
-- Use only letters, numbers, spaces, @, and _
-- If your input includes invalid characters or exceeds the limit, an error message appears.
+    - Be between 1 and 50 characters
+    - Use only letters, numbers, spaces, @, and _
+    - If your input includes invalid characters or exceeds the limit, an error message will appear.
 1. Select Next.
-
-### Step 4: Review and finish
-
 1. Review the selected accounts and your justification.
 1. Confirm that the accounts listed are correct.
-1. Select Link accounts to complete the action.
-1. The account list refreshes automatically.
-
+1. The account list will refresh automatically.
 
 ## Unlink accounts from an identity
 Follow these steps to manually unlink accounts from a selected identity.
 
-1. Go to Identity Inventory.
-1. Select the identity you want to manage.
+1. Go to **Identity Inventory > Observed in organization**
 1. Open the Accounts tab.
 1. Select one or more account groups.
-1. Select Unlink account.
+1. Select **Unlink account**.
 1. A confirmation dialog appears with the identity name.
-1. Review the message and select Unlink accounts to confirm.
-1. The account list refreshes automatically.
+1. Review the message and select **Unlink accounts** to confirm.
 
 
 ## What to expect after linking or unlinking
+
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
 - All actions are recorded in the unified audit system, including the justification and the user who performed the action.
+
+## See also
+
+- [Investigate users](/microsoft-365/security/defender/investigate-users)
+- [Investigate assets](/defender-for-identity/investigate-assets)
