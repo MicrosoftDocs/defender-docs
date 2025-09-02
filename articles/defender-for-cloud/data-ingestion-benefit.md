@@ -50,7 +50,10 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 2. **Add data source**  
    - *Type*: **Windows event logs**  
    - *Log name*: `Security`  
-   - *Stream*: The Azure portal UI only supports the `Microsoft-Event` stream, which sends logs to the Event table. To send logs to the SecurityEvent table (covered by the Defender for Servers 500 MB/day ingestion benefit), define the stream as `Microsoft-SecurityEvent` using a custom DCR JSON, ARM template, Bicep file, or Azure Policy.
+   - *Stream*: Enter either:
+        - `Microsoft-Event` - The Azure portal UI supports `Microsoft-Event` only. This stream option sends logs to the Event table. 
+        or,
+        - `Microsoft-SecurityEvent` - This option sends logs to the SecurityEvent table, which is included in the Defender for Servers 500 MB ingestion benefit. This stream option also defines the stream as using a custom DCR JSON, ARM template, Bicep file, or Azure Policy.
    - *(Optional)* filter with XPath, for example:
 
      ```xpath
