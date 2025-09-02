@@ -56,10 +56,14 @@ jobs:
           url_base_path: "/dotnet"
 
       # Create the PR for the work done by the "clean repo" tool
+      - name: Set timestamp
+        id: vars
+        run: echo "timestamp=$(date +'%Y%m%d-%H%M')" >> $GITHUB_ENV
+      
       - name: create-pull-request
         uses: dotnet/actions-create-pull-request@v4
         with:
-          branch: cleanrepo-orphaned-articles-01
-          title: "Clean Repo: Delete orphaned content"
-          commit-message: "Bot 🤖 generated CleanRepo tool run"
-          body: "Find and delete orphaned articles. Contributes to #..."
+          branch: cleanrepo-atadocs-${{ env.timestamp }}
+          title: "Clean Repo ATADocs: Delete orphaned content ${{ env.timestamp }}"
+          commit-message: "Bot 🤖 generated CleanRepo tool run ${{ env.timestamp }}"
+          body: "Find and delete orphaned articles, includes, images, and snippets. Contributes to #..."
