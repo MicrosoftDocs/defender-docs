@@ -30,6 +30,16 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ### Releases for Defender for Endpoint on Android
 
+#### August 2025
+
+| Build|1.0.8018.0103|
+| -------- | -------- |
+| Release Date| August 19, 2025 |
+
+**What's New**
+
+- Performance improvements and bug fixes
+
 #### July 2025
 
 |Build|1.0.7901.0101|

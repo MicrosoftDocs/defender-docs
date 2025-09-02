@@ -2,11 +2,11 @@
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 07/01/2025
-manager: deniseb
+ms.date: 09/01/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -330,7 +330,7 @@ You're be able to stop containing a device at any time.
 Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
 
 > [!NOTE]
-> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 2012 R2, Windows 2016, and Windows Server 2019+ devices.
+> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows 2012 R2, and Windows 2016 devices.
 
 Containing an IP address associated with undiscovered devices or devices not onboarded to Defender for Endpoint is done automatically through [automatic attack disruption](/defender-xdr/automatic-attack-disruption). The Contain IP policy automatically blocks a malicious IP address when Defender for Endpoint detects the IP address to be associated with an undiscovered device or a device not onboarded.
 
