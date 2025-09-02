@@ -50,7 +50,7 @@ When you investigate a specific user entity, you see the following tabs on its e
 - [Timeline](#timeline) tab
 - [Sentinel events](#sentinel-events) tab
 
-The user page shows the Microsoft Entra organization as well as groups, helping you understand the groups and permissions associated with a user.
+The user page shows the Microsoft Entra organization and groups, helping you understand the groups and permissions associated with a user.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 ## Overview
@@ -86,12 +86,12 @@ Microsoft Defender for Identity pulls tags out of Active Directory to give you a
 |-----|-------------|
 | **New** | Indicates that the entity was created less than 30 days ago. |
 | **Deleted** | Indicates that the entity was permanently deleted from Active Directory. |
-| **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object is not currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
+| **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object isn't currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
 | **Enabled** | Indicates that the entity is currently enabled in Active Directory, indicating that the entity is currently in use, and can be used to sign in or perform actions in the domain.  |
-| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is essentially treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access may also be affected, depending on how they are configured. |
+| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is essentially treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access may also be affected, depending on how they're configured. |
 | **Honeytoken** |   Indicates that the entity is manually tagged as a honeytoken. |
 | **Locked** |  Indicates that the entity supplied the wrong password too many times, and is now locked. |
-| **Partial** | Indicates that the user, device, or group is not in synch with the domain, and is partially resolved via a global catalog. In this case, some attributes aren't available. |
+| **Partial** | Indicates that the user, device, or group isn't in synch with the domain, and is partially resolved via a global catalog. In this case, some attributes aren't available. |
 | **Unresolved** |  Indicates that the device doesn't resolve to a valid identity in the Active Directory forest. No directory information is available. |
 | **Sensitive** |  Indicates that the entity is considered as sensitive. |
 
@@ -128,17 +128,19 @@ To see a full page view of an incident or alert, select its title.
 
 - **Lateral movement paths**: this section shows all profiled lateral movement paths from the on-premises environment, as detected by Defender for Identity.
 
-The **Accounts** tab  displays all accounts linked to a specific identity across connected systems. It provides a centralized view of an identity’s footprint by consolidating both manual and automatic correlations into a single table. You can view when last the identity was linked, who it was linked by, the linkage type and the linkage comment. 
+The **Accounts** tab displays all accounts linked to a specific identity across connected systems. It consolidates manual and automatic correlations into a single table, giving you a centralized view of the identity’s footprint.
 
-- Linkage type: shows how the account was linked to the identity (manual, StrongIDs, API or rule), helping validate the accuracy of the connection. 
+The table shows the following fields:
 
-- Date of last linkage: is the most recent date an account was linked to the identity, showing the latest correlation activity. (just manual?) 
+- Linkage type: shows how the account was linked to the identity (manual, StrongIDs, API, or rule). 
 
-- Linked by: Who created the link (StrongIDs, userid, rule name). 
+- Date of last linkage: records the most recent date an account was linked to the identity.
 
-- Linkage comment: description add by the user that explain why the user choose to link the accounts to this identity. (limit to 25). 
+- Linked by: identifies who created the link (StrongIDs, user ID, or rule name).
 
-- Primary account: is the main account selected by default-based on our or the customer’s provider priority. It’s used as the default data source for identity details shown to the user, like job title and department.  
+- Linkage comment: provides a short description that explains why the accounts were linked. The comment is limited to 25 characters.
+
+- Primary account: indicates whether the system designates this account as the primary one for the identity.
 
 [INSERT UI SCREENSHOT]
 
@@ -166,7 +168,7 @@ For example:
 
 - **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that is relevant for the specific user.
 
-- **Export button:** You can export the timeline to a CSV file. Export is limited to the first 5000 records and contains the data as it displays in the UI (same filters and columns).
+- **Export button:** You can export the timeline to a CSV file. Export is limited to the first 5,000 records and contains the data as it displays in the UI (same filters and columns).
 
 - **Customized columns:** You can choose which columns to expose in the timeline by selecting the **Customize columns** button. For example:
 
@@ -202,7 +204,7 @@ For example:
 :::image type="content" source="/defender/media/investigate-users/user-incident-timeline.png" alt-text="Screenshot of the Timeline tab." lightbox="/defender/media/investigate-users/user-incident-timeline.png":::
 
 > [!NOTE]
-> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone will apply to all date and time information shown in the Identity timeline.
+> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
 >
 > To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
 

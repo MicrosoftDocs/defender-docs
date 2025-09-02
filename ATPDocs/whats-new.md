@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/29/2024
+ms.date: 09/02/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ms.reviewer: AbbyMSFT
@@ -25,13 +25,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
-### New Feature Release: Accounts Tab + Manual Account Link/Unlink 
+### Accounts tab and manual account linking is now available
 
-The Accounts tab on the Identity Page gives you a unified view of all accounts linked to a single identity across your environment. It brings together account information from multiple sources, helping you understand how an identity appears in different systems.
+The Accounts tab shows all accounts linked to a single identity across your environment. By consolidating these details, the Accounts tab helps you understand how an identity appears in different systems and streamlines investigations by providing a unified view of all associated accounts.
 
-You can now also manually link or unlink accounts to an identity. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
-
-This update helps you better understand identity footprints and manage account relationships with greater clarity.
+You can manually link or unlink accounts to an identity directly from the Accounts tab in the identity details page. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
 
 For more information, see: [Link or Unlink an Account to an Identity](../ATPDocs/link-unlink-account-to-identity.md)
 
