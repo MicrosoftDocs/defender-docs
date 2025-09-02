@@ -58,7 +58,7 @@ jobs:
       # Create the PR for the work done by the "clean repo" tool
       - name: Set timestamp
         id: vars
-        run: echo "timestamp=$(date +'%Y%m%d-%H%M')" >> $GITHUB_ENV
+        run: echo "timestamp=$(TZ=Asia/Jerusalem date +'%Y%m%d-%H%M')" >> $GITHUB_ENV
       
       - name: create-pull-request
         uses: dotnet/actions-create-pull-request@v4
