@@ -99,7 +99,7 @@ This procedure describes how to onboard a Microsoft Sentinel-enabled workspace t
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
   
-1. Select **Home** > **System** > **Settings** > **Microsoft Sentinel** > **Connect a workspace**.
+1. Select **System** > **Settings** > **Microsoft Sentinel** > **Connect a workspace**.
 
 1. Select the workspaces you want to connect and select **Next**.
 
