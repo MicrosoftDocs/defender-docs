@@ -25,7 +25,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 07/16/2025
+ms.date: 09/02/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -98,12 +98,8 @@ If applicable, complete these prerequisites:
 This procedure describes how to onboard a Microsoft Sentinel-enabled workspace to the Defender portal.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
-
-1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel.
-
-    In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. This step isn't needed for any subsequent workspaces you onboard to Defender.
   
-1. Select **Home** > **Connect a workspace**.
+1. Select **Home** > **System** > **Settings** > **Microsoft Sentinel** > **Connect a workspace**.
 
 1. Select the workspaces you want to connect and select **Next**.
 
