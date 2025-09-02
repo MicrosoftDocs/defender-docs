@@ -1,11 +1,11 @@
 ---
 title: Protect your Workday environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Workday app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 # How Defender for Cloud Apps helps protect your Workday environment
-
 
 
 As a major HCM solution, Workday holds some of the most sensitive information in your organization such as employees' personal data, contracts, vendor details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security unaware insiders from exfiltrating the sensitive information.

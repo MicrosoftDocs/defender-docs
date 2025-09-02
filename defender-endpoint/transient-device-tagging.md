@@ -12,8 +12,6 @@ ms.date: 03/11/2024
 
 Microsoft Defender for Endpoint provides transient device tagging to identify transient devices.
 
-Transient device tagging is currently in preview.
-
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Addressing challenges
