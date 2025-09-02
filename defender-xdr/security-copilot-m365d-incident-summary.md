@@ -63,7 +63,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
 - Suggested Security Copilot prompts, which guide you to focus on the most relevant next steps, gain deeper insight, and simplify investigations.
 
-To summarize an incident, perform the following steps:
+To summarize an incident:
 
 1. Open an incident page. Copilot automatically creates an incident summary upon opening the page. You can stop the summary creation by selecting **Cancel** or restart creation by selecting **Regenerate**.
 
