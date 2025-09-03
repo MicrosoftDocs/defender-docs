@@ -82,6 +82,11 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!NOTE]
 > Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
 
+You need to be assigned permissions before you can do the following procedure. Specifically, you need to be a member of the **Teams Administrator** or **Global Administrator**<sup>\*</sup> roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
+
 For more information about near real-time warning messages on known bad links in Microsoft Teams messages, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 1. In the Microsoft Teams admin center, go to the **Message settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
