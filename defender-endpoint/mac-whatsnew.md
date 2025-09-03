@@ -2,9 +2,9 @@
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: paulinbar
-ms.author: painbar
-manager: orspodek
+author: lwainstein
+ms.author: lwainstein
+manager: bagol
 ms.localizationpriority: medium
 ms.date: 08/20/2025
 audience: ITPro
