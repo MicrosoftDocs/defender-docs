@@ -65,4 +65,4 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## Next steps
 
-[Get started with Microsoft Defender for Endpoint](get-started-with-microsoft-defender-endpoint.md)
+[Get started with your Microsoft Defender for Endpoint deployment](mde-planning-guide.md)
