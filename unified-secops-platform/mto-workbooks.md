@@ -59,8 +59,8 @@ Use the workbook to get insights across your tenants, including health status, t
 
     :::image type="content" source="./media/mto-workbooks/situational-awareness-card.png" alt-text="Screenshot of Situational Awareness button.":::
 
-1. Use the tenant selector in the top-right corner to choose which tenants to include. ​
-Optionally, select **Edit selection** to select specific workspaces in that tenant. ​
+1. To choose which tenants to include, use the tenant selector in the top-right corner. ​ 
+Optionally, select **Edit selection** to select specific workspaces. ​
 Ensure your home tenant is included in the scope and has threat intelligence data in the selected workspace, and select **Apply**.
 
     :::image type="content" source="./media/mto-workbooks/tenant-scope.png" alt-text="Screenshot of tenant selector.":::
