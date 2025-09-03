@@ -26,6 +26,9 @@
       href: defender-portal/defender-portal-four-column-overview.md
     - name: Overview dashboard in the Defender portal
       href: defender-portal/defender-for-cloud-overview-dashboard.md
+    - name: Azure portal vs Defender portal feature comparison
+      displayName: comparison, features, azure portal, defender portal, capabilities, differences
+      href: azure-portal-vs-defender-portal-comparison.md
 
 - name: Deploy
   items:
@@ -206,6 +209,12 @@
     - name: Investigating risks with security explorer/attack paths
       displayName: cloud security graph, attack path analysis, cloud security explorer, attack, path, graph, security, explorer
       href: concept-attack-path.md
+    - name: Cloud Infrastructure Overview Dashboard
+      displayName: dashboard, overview, cloud infrastructure, multi-cloud, visibility
+      href: cloud-infrastructure-dashboard.md
+    - name: Cloud Scopes and Unified RBAC
+      displayName: cloud scopes, unified RBAC, permissions, access control, multi-cloud
+      href: cloud-scopes-unified-rbac.md
     - name: External attack surface management in Defender for Cloud
       displayName: EASM, attack surface management, integration
       href: concept-easm.md
