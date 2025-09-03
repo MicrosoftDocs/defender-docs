@@ -8,7 +8,7 @@ ms.topic: how-to
 
 # Security Assessment: Remove Inactive Service Accounts (Preview)
 
-This recommendation lists Active Directory service accounts detected as inactive (stale) within the past 180 days. 
+This recommendation lists Active Directory service accounts detected as inactive (stale) within the past 90 days. 
 
 ## Why do inactive service accounts pose a risk?
 
