@@ -61,12 +61,12 @@ For more information, see [Microsoft Edge for Business](/deployedge/microsoft-ed
 
 ## Configure in-browser protection settings
 
-In-browser protection with Microsoft Edge for Business is configurable. Admins can turn the integration off and on, and can configure a prompt for non-Microsoft Edge users to switch to Microsoft Edge for enhanced performance and security. 
+In-browser protection with Microsoft Edge for Business is turned on by default, with **Do not enforce** selected. You can turn the integration off and on, change settings to enforce use of Microsoft Edge for Business, and configure a prompt for non-Microsoft Edge users to switch to Microsoft Edge for enhanced performance and security. 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Cloud apps** \> **Conditional Access App Control** section \> **Edge for Business protection**. Or, to go directly to the **Edge for Business protection** page, use <https://security.microsoft.com/cloudapps/settings?tabid=edgeIntegration>.
 
 2. On the **Edge for Business protection** page, configure the following settings as needed:
-   - **Turn on Edge for Business browser protection**: As needed, you can toggle the setting to **Off**.
+   - **Turn on Edge for Business browser protection**: The default value for this is **On**, but you can toggle the setting to **Off**.
    - **Notify users in non-Edge browsers to use Microsoft Edge for Business for better performance and security**: If you select the check box, select one of the following values that appear:
      - **Use default message** (default)
      - **Customize message**: Enter the custom text in the box that appears.
@@ -84,7 +84,7 @@ For more information, see [Learn about Endpoint data loss prevention](/purview/e
 
 ## Enforce Microsoft Edge browser protection when accessing business apps
 
-Administrators who understand the power of Microsoft Edge browser protection can require users to use Microsoft Edge when accessing corporate resources. A primary reason is security, since the barrier to circumventing session controls using Microsoft Edge is much higher than with reverse proxy technology. For Purview DLP policies, these settings are required to be on and enforcing access only from Edge for business application when using policies that [help prevent users from sharing sensitive info with Cloud Apps in Edge for Business](/purview/dlp-create-policy-prevent-cloud-sharing-from-edge-biz).
+Administrators who understand the power of Microsoft Edge browser protection can require users to use Microsoft Edge when accessing corporate resources. A primary reason is security, since the barrier to circumventing session controls using Microsoft Edge is much higher than with reverse proxy technology. For Purview DLP policies, these settings are required to be on and enforcing access only from Microsoft Edge for business application when using policies that [help prevent users from sharing sensitive info with Cloud Apps in Edge for Business](/purview/dlp-create-policy-prevent-cloud-sharing-from-edge-biz).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Cloud apps** \> **Conditional Access App Control** section \> **Edge for Business protection**. Or, to go directly to the **Edge for Business protection** page, use <https://security.microsoft.com/cloudapps/settings?tabid=edgeIntegration>.
 
