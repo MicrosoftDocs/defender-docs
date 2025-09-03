@@ -30,6 +30,36 @@ This article describes features available in Microsoft Defender for Endpoint acr
 | **Windows** | Preview | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
 | **Windows** | GA | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
 
+## May 2025
+
+|Platform  |Preview/GA  |Release |Updates  |
+|---------|------------|---------|---------|
+|**Windows** |GA |10.8797.25857.1000 | |
+
+### Windows release 10.8797.25857.1000 updates
+
+#### Data Loss Prevention (DLP)
+
+- On-Demand Scan: Improved the functionality, performance, and reliability of the Cold Data Scan feature. This enhancement enables deeper, more consistent scanning of archived or infrequently accessed data, helping organizations uncover potential data risks hidden in long-term storage. 
+- General Stability and Performance Improvements: Additional under-the-hood optimizations to improve overall system performance, reliability, and stability.
+
+#### Identity 
+
+- Entity sync enrichment: Expanded the capabilities of the SenseIdentity client to enhance Active Directory (AD) entity synchronization. This update introduces support for syncing new entity types including Group Policy Objects, Authentication Silos, and Domain Controller computer accounts for all Domain Controllers within trusted domains. Additionally, the update enriches existing synced entities (Domain, Account, and Group) with a broader set of attributes, enabling more comprehensive visibility and detection capabilities. 
+
+#### Threat protection
+
+- User contaminant improvements 
+
+#### Network Detection and Response (NDR) 
+
+- Improved data telemetry providing better visibility and insights 
+
+#### SOC experience 
+
+- Improved Data Completeness and Detection: Enhancements have been made to improve the completeness of data collected and reduce the time it takes to detect potential data loss incidents. These improvements enable faster and more accurate identification of data exfiltration attempts across monitored endpoints. 
+- Improved Handling for Offline Network Environments: Refined the handling of scenarios where devices operate in offline or restricted network environments. Specifically addresses cases where result uploads to blob storage fail due to offline Certificate Revocation List (CRL) checks, ensuring better reliability and continuity in data collection.
+
 ## April 2025
 
 |Platform  |Preview/GA  |Updates  |
