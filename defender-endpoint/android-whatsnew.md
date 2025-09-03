@@ -2,10 +2,10 @@
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:
