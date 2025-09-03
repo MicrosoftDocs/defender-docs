@@ -21,13 +21,13 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 |Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|
-| **macOS** | Preview | [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md): Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
+| **macOS** | Preview | You can now [configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md). This configuration option enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
 
 ## July 2025
 
 |Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|
-| **Windows** | Preview | Added support for Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
+| **Windows** | Preview | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
 | **Windows** | GA | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
 
 ## April 2025
@@ -48,13 +48,13 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 |Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|
-| **Windows** | GA | New demonstration scenarios:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation) |
+| **Windows** | GA | You can now use these new demonstration scenarios:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation) |
 
 ## August 2024
 
 |Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|
-| **Android** | GA | [Network protection](/defender-endpoint/android-configure#network-protection) feature enabled by default on Android: Users now see a network protection card in the Android app, along with App Protection and Web Protection. |
+| **Android** | GA | [Network protection](/defender-endpoint/android-configure#network-protection) is now enabled by default on Android. Users now see a network protection card in the Android app, along with App Protection and Web Protection. |
 
 ## July 2024
 
