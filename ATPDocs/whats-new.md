@@ -23,6 +23,15 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2025
+
+### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
+
 ## August 2025
 
 ### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
