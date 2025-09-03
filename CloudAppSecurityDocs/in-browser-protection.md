@@ -55,7 +55,7 @@ Also, the `.mcas.ms` suffix doesn't appear in the browser address bar with in-br
 
 To access a work resource in *contoso.com* with in-browser protection, you must sign in with your `username@contoso.com` profile. If you try to access the work resource from outside the work profile, you will be prompted to switch to the work profile or create one if it doesn't exist. If access from the Microsoft Edge work profile isn't enforced, you can also choose to continue with your current profile, in which case you're served by the [reverse proxy architecture](proxy-intro-aad.md).
 
-If the user decides to create a new work profile, they're prompted with the **Allow my organization to manage my device** option. In such cases, users don't need to select this option to create the work profile or benefit from in-browser protection.
+If you decide to create a new work profile, you'll see a prompt with the **Allow my organization to manage my device** option. In such cases, you don't need to select this option to create the work profile or benefit from in-browser protection.
 
 For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [How to add new profiles to Microsoft Edge](https://www.microsoft.com/edge/learning-center/how-to-add-new-profiles).
 
