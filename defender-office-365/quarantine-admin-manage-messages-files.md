@@ -64,7 +64,7 @@ Watch this short video to learn how to manage quarantined messages as an admin.
     - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
   
       > [!IMPORTANT]
-      > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+      > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
