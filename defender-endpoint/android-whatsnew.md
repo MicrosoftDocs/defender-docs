@@ -2,10 +2,10 @@
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:
@@ -29,6 +29,16 @@ ms.date: 05/15/2025
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ### Releases for Defender for Endpoint on Android
+
+#### August 2025
+
+| Build|1.0.8018.0103|
+| -------- | -------- |
+| Release Date| August 19, 2025 |
+
+**What's New**
+
+- Performance improvements and bug fixes
 
 #### July 2025
 
