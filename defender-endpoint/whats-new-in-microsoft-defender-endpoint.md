@@ -5,7 +5,6 @@ ms.topic: whats-new
 ms.service: defender-endpoint
 author: lwainstein
 ms.author: lwainstein
-author: limwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
 ms.date: 09/03/2025
