@@ -77,7 +77,20 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!TIP]
 > Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
 
-## Step 3: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
+## Step 3: Verify warnings for unsafe links are shown in Microsoft Teams messages
+
+> [!NOTE]
+> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
+
+For more information about near real-time warning messages on known bad links in Microsoft Teams messages, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
+
+1. In the Microsoft Teams admin center, go to the **Message settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
+
+2. On the **Message settings** page, go to the **Messaging safety** section and verify the **Scan messages for unsafe links** toggle is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+:::image type="content" source="media/teams-message-url-warning-on-off.png" alt-text="Screenshot of the Scan messages for unsafe links toggle in the Microsoft Teams admin center." lightbox="media/teams-message-url-warning-on-off.png":::
+
+## Step 4: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
@@ -90,7 +103,7 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 > [!TIP]
 > When ZAP for Microsoft Teams is turned on, you can use **Exclude these participants** on the **Microsoft Teams protection** page to exclude users from Teams protection. For more information, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
-## Step 4: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
+## Step 5: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
