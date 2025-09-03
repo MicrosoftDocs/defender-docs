@@ -12,18 +12,20 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
+
+- name: Experience in Defender portal
+  expanded: true
+  items:
     - name: Defender for Cloud in the Defender portal
-      items:
-        - name: Defender for Cloud in the Defender portal
-          href: defender-portal/defender-for-cloud-in-defender-portal.md
-        - name: Getting started in the Defender Portal
-          displayName: get started, onboarding, defender portal, mdc, introduction
-          href: defender-portal/getting-started-defender-portal.md
-        - name: Complete overview - four-column guide
-          displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
-          href: defender-portal/defender-portal-four-column-overview.md
-        - name: Overview dashboard in the Defender portal
-          href: defender-portal/defender-for-cloud-overview-dashboard.md
+      href: defender-portal/defender-for-cloud-in-defender-portal.md
+    - name: Getting started in the Defender Portal
+      displayName: get started, onboarding, defender portal, mdc, introduction
+      href: defender-portal/getting-started-defender-portal.md
+    - name: Complete overview - four-column guide
+      displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
+      href: defender-portal/defender-portal-four-column-overview.md
+    - name: Overview dashboard in the Defender portal
+      href: defender-portal/defender-for-cloud-overview-dashboard.md
 
 - name: Deploy
   items:
