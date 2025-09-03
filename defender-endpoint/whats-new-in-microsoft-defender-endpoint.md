@@ -25,18 +25,27 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## July 2025
 
-|Platform  |Preview/GA  |Updates  |
-|---------|------------|---------|
-| **Windows** | Preview | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
-| **Windows** | GA | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
+|Platform  |Preview/GA  |Release|Updates  |
+|---------|------------|---------|---------|
+| **Windows** | Preview |Non-release specific | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
+| **Windows** | GA |Non-release specific | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
+| **Windows** (see [specific platforms and KBs](microsoft-defender-endpoint-releases.md#july-2025)) | GA |10.8760.27617.1006 |See [updates for this release](#release-108760276171006-updates). |
+
+### Release 10.8760.27617.1006 updates
+
+DLP:
+
+- Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
+- Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
+- OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
 ## May 2025
 
 |Platform  |Preview/GA  |Release |Updates  |
 |---------|------------|---------|---------|
-|**Windows** |GA |10.8797.25857.1000 | |
+|**Windows** (see [specific platforms and KBs](microsoft-defender-endpoint-releases.md#may-2025)) |GA |10.8797.25857.1000 |See [updates for this release](#release-108797258571000-updates). |
 
-### Windows release 10.8797.25857.1000 updates
+### Release 10.8797.25857.1000 updates
 
 #### Data Loss Prevention (DLP)
 
