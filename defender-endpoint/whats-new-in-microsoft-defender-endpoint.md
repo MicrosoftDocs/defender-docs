@@ -49,3 +49,7 @@ This article describes features available in Microsoft Defender for Endpoint acr
 |Platform  |Updates  |
 |---------|---------|
 | **Windows** | - New demonstration scenarios:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation) |
+
+## Next steps
+
+[Get started with Microsoft Defender for Endpoint](get-started-with-microsoft-defender-endpoint.md)
