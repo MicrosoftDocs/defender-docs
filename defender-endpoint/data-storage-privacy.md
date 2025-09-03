@@ -70,7 +70,7 @@ In the advanced hunting investigation experience, it's accessible via a query fo
 
 ## Data recovery
 
-The Microsoft Defender for Endpoint (MDE) service incorporates a regional disaster recovery strategy aligned with Microsoft's broader resiliency framework. For more information, see [Resiliency and continuity - Microsoft Service Assurance | Microsoft Learn](/microsoft-365/compliance/resiliency-and-continuity). In the event of a service disruption, all MDE components are designed to fail over to a paired region within the same geographic boundary, thereby maintaining data residency requirements.
+The Microsoft Defender for Endpoint (MDE) service incorporates a regional disaster recovery strategy aligned with Microsoft's broader resiliency framework. For more information, see [Resiliency and continuity - Microsoft Service Assurance | Microsoft Learn](/compliance/assurance/assurance-resiliency-and-continuity). In the event of a service disruption, all MDE components are designed to fail over to a paired region within the same geographic boundary, thereby maintaining data residency requirements.
 
 However, due to current service limitations in the United Arab Emirates, MDE components that depend on Azure Synapse workloads are supported with zonal resiliency only. At this time, for the workloads, there is no cross-region business continuity and disaster recovery (BCDR) capability available. For more information on Synapse’s disaster recovery capabilities, refer to the official documentation.
 
