@@ -19,20 +19,20 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## August 2025
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **macOS** | - [Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md): Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
 
 ## July 2025
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **Windows** | - Azure Stack HCI OS support (version 23H2 and later): Added support for Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
 | **Windows** | - [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview): Now generally available, helps with the stability and performance of Microsoft Defender Antivirus. |
 
 ## April 2025
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **Windows** | - [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices): Containing an IP address prevents attackers from spreading attacks to other noncompromised devices. |
 | **Windows** | - Attack Surface Reduction (ASR) Rules: Two new ASR rules are now generally available:<br>  - [Block rebooting machine in Safe Mode](/defender-endpoint/attack-surface-reduction-rules-reference)<br>  - [Block use of copied or impersonated system tools](/defender-endpoint/attack-surface-reduction-rules-reference) |
@@ -40,19 +40,19 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## February 2025
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **Windows** | - [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md): Aggregated reporting is now generally available. |
 
 ## November-December 2024
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **Windows** | - New demonstration scenarios:<br>- [AMSI demos](mde-demonstration-amsi.md)<br>- [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)<br>- [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)<br>- [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection)<br>- [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation) |
 
 ## August 2024
 
-|Service area  |Updates  |
+|Platform  |Updates  |
 |---------|---------|
 | **Android** | - [Network protection](/defender-endpoint/android-configure#network-protection) feature enabled by default on Android: Users now see a network protection card in the Android app, along with App Protection and Web Protection. |
 
