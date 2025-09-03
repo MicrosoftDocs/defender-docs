@@ -1,3 +1,4 @@
+---
 title: What's new in Microsoft Defender for Endpoint
 description: This article describes new features available in Microsoft Defender for Endpoint, including both Windows and cross-platform updates.
 ms.topic: whats-new
@@ -9,7 +10,6 @@ ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
 ms.date: 09/03/2025
 ---
-
 
 # What's new in Microsoft Defender for Endpoint?
 
