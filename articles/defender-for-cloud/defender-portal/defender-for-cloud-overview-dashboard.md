@@ -4,11 +4,11 @@ description: Learn about the Microsoft Defender for Cloud overview dashboard, it
 author: dlanger
 ms.author: dlanger
 ms.topic: overview
-ms.date: 08/26/2025
+ms.date: 09/03/2025
 ms.service: defender-for-cloud
 ---
 
-# Defender for Cloud overview dashboard
+# What is the Defender for Cloud overview dashboard?
 
 The Cloud overview dashboard is the new landing page for Microsoft Defender for Cloud in the Defender portal. It serves as the central hub for cloud security visibility, insights, and action, built with Cloud-Native Application Protection Platform (CNAPP) principles at its core. This dashboard gives security teams and workload owners a clear, actionable view of their cloud security status both pre- and post-breach, empowering them to understand their security posture, track progress over time, and take meaningful, immediate action, all from a single, unified experience. The overview dashboard also provides an at-scale view at the tenant-level or scope-based, helping users understand where to focus and how to drive effective security outcomes.
 
@@ -113,3 +113,29 @@ Workloads include:
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views—no sensitive or secret information is displayed. This helps teams focus on what matters most for each workload.
 
 :::image type="content" source="../media/defender-portal-dashboard/api.png" alt-text="Screenshot of API widgits":::
+
+## NextGen Portal enhancements
+
+The Defender portal includes enhanced experiences that complement the overview dashboard with deeper insights and advanced capabilities:
+
+### Enhanced infrastructure visibility
+- **[Cloud Infrastructure Dashboard](../cloud-infrastructure-dashboard.md)**: Comprehensive cloud security visibility with unified insights across Azure, AWS, and GCP environments.
+- **[Asset Management](../asset-inventory.md?pivots=defender-portal)**: Enhanced asset inventory with workload-specific tabs and advanced filtering capabilities.
+
+### Advanced threat analysis
+- **[Attack Path Analysis](../concept-attack-path.md?pivots=defender-portal)**: Visualize potential attack routes with choke point identification and cross-solution correlation.
+- **[Vulnerability Management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)**: Risk-based vulnerability prioritization with enhanced insights and filtering.
+
+### Granular access control
+- **[Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md)**: Advanced permissions management with business-aligned resource scoping across cloud environments.
+- **[Enhanced Notifications](../configure-email-notifications.md?pivots=defender-portal)**: Cloud scopes-integrated email alerts with granular control based on organizational structure.
+
+These experiences work together to provide a comprehensive view of your cloud security posture while enabling precise, role-based access to relevant data and capabilities.
+
+## Next steps
+
+- Explore the [Cloud Infrastructure Dashboard](../cloud-infrastructure-dashboard.md) for unified multi-cloud visibility
+- Configure [Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md) for granular access control
+- Review [Attack Path Analysis](../concept-attack-path.md?pivots=defender-portal) to understand potential threat vectors
+- Set up [Enhanced Asset Management](../asset-inventory.md?pivots=defender-portal) with workload-specific insights
+- Get started with [Defender for Cloud in the Defender portal](defender-for-cloud-in-defender-portal.md)

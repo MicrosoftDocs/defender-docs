@@ -4,11 +4,11 @@ description: Learn about the integration of Microsoft Defender for Cloud in the 
 author: dlanger
 ms.author: dlanger
 ms.topic: overview
-ms.date: 08/26/2025
+ms.date: 09/03/2025
 ms.service: defender-for-cloud
 ---
 
-# Defender for Cloud in the Defender portal
+# What is Defender for Cloud in the Defender portal?
 
 Microsoft Defender for Cloud is now fully integrated into the Defender portal, offering a unified and enhanced experience for managing cloud security. The new Cloud Security Dashboard provides comprehensive insights from both cloud and code environments, bringing together information that was previously only available in the Azure portal. With this seamless integration, users benefit from advanced security insights powered by the Microsoft Threat Protection suite.
 
@@ -26,6 +26,44 @@ Cloud security insights are now included as part of Exposure Management, providi
 - **Advanced hunting tools** for in-depth investigation of cloud threats and incidents.
 - **Cloud Infrastructure Inventory** for full visibility into your multi-cloud and multi-pipeline estates, delivering resource-level insights across your environment.
 - **Unified RBAC and Cloud Scoping** to streamline permission management, allowing you to efficiently manage access and assign roles within the Defender portal.
+
+## NextGen Portal features
+
+The enhanced Defender portal experience introduces several advanced capabilities:
+
+### Cloud Infrastructure Overview Dashboard
+Access comprehensive cloud security insights through the [Cloud Infrastructure Overview Dashboard](../cloud-infrastructure-dashboard.md), which provides:
+- Unified visibility across Azure, AWS, and GCP environments
+- Security posture trends and threat protection alerts
+- Workload-specific insights with enhanced filtering capabilities
+- Integration with Exposure Management for risk-based prioritization
+
+### Cloud Scopes and Unified RBAC
+Manage granular access control with [Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md):
+- Organize cloud resources by business value or operational structure
+- Set specific access permissions for each group
+- Apply persistent filtering across dashboards and experiences
+- Streamline permission management across multi-cloud environments
+
+### Enhanced Asset Management
+The [Assets → Cloud Infrastructure](../asset-inventory.md?pivots=defender-portal) experience provides:
+- Workload-specific views (VMs, Data, Containers, AI, API, DevOps, Identity, Serverless)
+- Contextual health data and device actions integration
+- Risk factor analysis and scoping filters
+- Seamless integration with Exposure Management workflows
+
+### Advanced Attack Path Analysis
+Enhanced [attack path capabilities](../concept-attack-path.md?pivots=defender-portal) include:
+- Choke points identification for focused mitigation efforts
+- Advanced filtering by risk level, asset type, and remediation status
+- Historical tracking and cross-solution correlation
+- Integration with Microsoft Defender XDR incident workflows
+
+### Comprehensive Vulnerability Management
+Access vulnerability insights through [enhanced vulnerability management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal):
+- Centralized vulnerability dashboard (Vulnerability Management → Overview → Cloud tab)
+- Risk-based prioritization and enhanced filtering
+- Integration with cloud asset inventory and attack path analysis
 
 ## Core capabilities
 
@@ -72,8 +110,10 @@ Defender for Cloud is deeply integrated with Microsoft Defender XDR, providing:
 
 ## Next steps
 
-- Learn more about the Defender for Cloud dashboard
-- Review cloud security posture
-- Track secure score
-- Investigate attack paths
-- Build queries with cloud security explorer
+- [Explore the Cloud Infrastructure Overview Dashboard](../cloud-infrastructure-dashboard.md)
+- [Configure Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md)
+- [Review cloud infrastructure assets](../asset-inventory.md?pivots=defender-portal)
+- [Investigate attack paths in the Defender portal](../concept-attack-path.md?pivots=defender-portal)
+- [Set up vulnerability management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)
+- [Configure enhanced email notifications](../configure-email-notifications.md?pivots=defender-portal)
+- [Get started with the Defender portal experience](getting-started-defender-portal.md)

@@ -4,7 +4,7 @@ description: Learn how to get started with Microsoft Defender for Cloud in the M
 author: dlanger
 ms.author: dlanger
 ms.topic: get-started
-ms.date: 08/26/2025
+ms.date: 09/03/2025
 ms.service: defender-for-cloud
 #customer intent: As a security professional, I want to get started with Microsoft Defender for Cloud in the Defender portal so that I can protect my cloud resources effectively.
 ---
@@ -66,18 +66,21 @@ Review your security overview in the Defender portal and focus on these key area
 | **[Secure Score](../secure-score-access-and-track.md)** | Measures your security posture improvement | Track progress and implement recommendations to improve your score |
 | **[Recommendations](../review-security-recommendations.md)** | Actionable steps to improve security | Prioritize and remediate security improvements |
 | **[Security Alerts](../managing-and-responding-alerts.yml)** | Real-time threat notifications | Monitor and respond to active threats |
-| **[Asset Inventory](../asset-inventory.md)** | Complete view of connected resources | Review all resources under protection and their security status |
+| **[Cloud Infrastructure Dashboard](../cloud-infrastructure-dashboard.md)** | Unified dashboard for cloud security visibility | Access centralized view of security posture, threats, and coverage across Azure, AWS, and GCP |
+| **[Asset Inventory](../asset-inventory.md?pivots=defender-portal)** | Complete view of connected resources with workload-specific insights | Review all resources under protection and their security status with enhanced filtering |
 
 ## Essential tasks for new users
 
 | Task Category | Feature | Description | Getting Started |
 |---------------|---------|-------------|-----------------|
-| **Notifications** | Email Alerts | Receive security alerts via email | [Set up email notifications](../configure-email-notifications.md) |
+| **Notifications** | Email Alerts | Receive security alerts via email with cloud scopes integration | [Set up email notifications](../configure-email-notifications.md?pivots=defender-portal) |
 | **Notifications** | SIEM/SOAR Integration | Connect with security orchestration tools | Configure integration with SIEM/SOAR solutions |
 | **Governance** | Governance Rules | Assign remediation tasks automatically | [Create governance rules](../governance-rules.md) |
 | **Governance** | Security Policies | Establish compliance requirements | Establish security policies aligned with your compliance requirements |
-| **Advanced Analytics** | Attack Path Analysis | Identify potential attack routes | [Attack Path Analysis](../concept-attack-path.md) |
+| **Advanced Analytics** | Attack Path Analysis | Identify potential attack routes with choke point detection | [Attack Path Analysis](../concept-attack-path.md?pivots=defender-portal) |
 | **Advanced Analytics** | Attack Path Management | Remediate attack paths in Defender portal | [Manage Attack Paths](../how-to-manage-attack-path.md?pivots=defender-portal) |
+| **Advanced Analytics** | Vulnerability Management | Enhanced vulnerability insights with risk prioritization | [Vulnerability Management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal) |
+| **Advanced Analytics** | Cloud Scopes & RBAC | Granular access control and resource scoping | [Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md) |
 | **Advanced Analytics** | Cloud Security Explorer | Query your security graph | [Cloud Security Explorer](../how-to-manage-cloud-security-explorer.md) |
 | **Advanced Analytics** | Data Security Posture | Discover and protect sensitive data | [Data Security Posture](../concept-data-security-posture.md) |
 
