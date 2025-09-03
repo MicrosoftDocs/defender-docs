@@ -125,11 +125,15 @@ Detected: Virus: Win32/MpTest!amsi
 Status: Cleaned
 
 This threat or app was cleaned or quarantined before it became active on your device.
+
 Details: This program is dangerous and replicates by infecting other files.
 
 Affected items:
+
 amsi: \Device\HarddiskVolume3\Windows\System32\WindowsPowershell\v1.0\powershell.exe
+
 or
+
 amsi: C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
 and/or you might see:
@@ -141,6 +145,7 @@ Detected: Virus: Win32/MpTest!amsi
 Status: Cleaned
 
 This threat or app was cleaned or quarantined before it became active on your device.
+
 Details: This program is dangerous and replicates by infecting other files
 ```
 
@@ -195,19 +200,30 @@ Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
 
    You might see the following results:
 
-```powershell
-CategoryID     : 42
-DidThreatExecute : True
-IsActive       : True
-Resources      :
-RollupStatus   : 97
-SchemaVersion  : 1.0.0.0
-SeverityID     : 5
-ThreatID       : 2147694217
-ThreatName     : Virus:Win32/MpTest!amsi
-TypeID         : 0
-PSComputerName :
-```
+    ```powershell
+    CategoryID     : 42
+
+    DidThreatExecute : True
+
+    IsActive       : True
+
+    Resources      :
+
+    RollupStatus   : 97
+
+    SchemaVersion  : 1.0.0.0
+
+    SeverityID     : 5
+
+    ThreatID       : 2147694217
+
+    ThreatName     : Virus:Win32/MpTest!amsi
+
+    TypeID         : 0
+
+    PSComputerName :
+    ```
+
 
 ## See also
 
