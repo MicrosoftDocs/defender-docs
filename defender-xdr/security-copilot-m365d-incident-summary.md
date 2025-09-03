@@ -58,7 +58,6 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - The entity or asset where the attack started.
 - A summary of timelines of how the attack unfolded.
 - The assets involved in the attack.
-- Suggested prompts, which provide insights into the specific assets involved in the incident.
 - Indicators of compromise (IoCs).
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
 - Suggested Security Copilot prompts, which guide you to focus on the most relevant next steps, gain deeper insights, and simplify investigations.
