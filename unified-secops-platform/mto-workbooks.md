@@ -61,11 +61,9 @@ Use the workbook to get insights across your tenants, including health status, t
 
 1. Use the tenant selector in the top-right corner to choose which tenants to include. ​
 Optionally, click **Edit selection** to select specific workspaces in that tenant. ​
-Ensure your home tenant is included in the scope and has threat intelligence data in the selected workspace. ​
+Ensure your home tenant is included in the scope and has threat intelligence data in the selected workspace, ans select **Apply**.
 
     :::image type="content" source="./media/mto-workbooks/tenant-scope.png" alt-text="Screenshot of tenant selector.":::
-
-1. Click **Apply** ​
 
 ## Explore the Workbook ​
 

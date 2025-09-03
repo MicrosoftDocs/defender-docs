@@ -103,7 +103,7 @@ Threat Explorer and Real-time detections contain the following elements:
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
-  |**Content malware**|✔|✔|Information about files detected by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
+  |**Content malware**|✔|✔|Information about files processed by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
   |**URL clicks**|✔||Information about user clicks on URLs in email messages, Teams messages, SharePoint files, and OneDrive files.|
 
   These views are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
