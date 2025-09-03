@@ -9,6 +9,7 @@ author: limwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
 ms.date: 09/03/2025
+appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
 # What's new in Microsoft Defender for Endpoint?
