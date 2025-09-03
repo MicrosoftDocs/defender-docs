@@ -46,6 +46,10 @@ Learn more:
 |---------|------------|-------------|
 |[Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview)     |GA         |- Microsoft Defender Core service, now in GA, helps with the stability and performance of Microsoft Defender Antivirus.<br>- Support for Azure Stack HCI OS is rolling out across commercial and government clouds.|
 
+## July 2025
+
+- (Preview) Added support for Azure Stack HCI OS, version 23H2 and later. This support will roll out gradually across all clouds and regions in July.
+
 ## April 2025
 
 |Feature  |Preview/GA  |Description  |
