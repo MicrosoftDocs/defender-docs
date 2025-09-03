@@ -44,7 +44,7 @@ For UEBA tenants without a Microsoft Defender for Identity license, synchronizat
 
 ### New security assessment: Remove inactive service accounts (Preview)
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 90 days, to help you mitigate security risks associated with unused accounts.
 
 For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
 
