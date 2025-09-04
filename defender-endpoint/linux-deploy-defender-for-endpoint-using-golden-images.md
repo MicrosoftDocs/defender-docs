@@ -96,7 +96,7 @@ For on-premises environments, configure your virtualization platform so that eac
 
 **VMware**
 
-- During cloning, VMware prompts whether to keep the existing UUID or to create a new one. Always select "Create", or configure `uuid.action = "create"` in the virtual machine's *.vmx* file.
+- During cloning, VMware prompts whether to keep the existing UUID or to create a new one. Always select **Create**, or configure `uuid.action = "create"` in the virtual machine's *.vmx* file.
 
 - In VMware Cloud Director, set `backend.cloneBiosUuidOnVmCopy = 0` to force the creation of new UUIDs.
 
