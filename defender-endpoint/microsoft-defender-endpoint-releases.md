@@ -38,7 +38,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## Release updates
 
-### Release 10.8797.25857.1000
+### Release 10.8797.25857.1000 updates
 
 | Feature area | Update summary |
 |-------------|---------------|
