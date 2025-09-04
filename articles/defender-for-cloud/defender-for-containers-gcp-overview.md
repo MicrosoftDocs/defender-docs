@@ -3,6 +3,7 @@ title: Defender for Containers on GCP (GKE) - Overview
 description: Learn about Microsoft Defender for Containers capabilities for Google Kubernetes Engine (GKE) clusters.
 ms.topic: overview
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Containers on GCP (GKE) - Overview

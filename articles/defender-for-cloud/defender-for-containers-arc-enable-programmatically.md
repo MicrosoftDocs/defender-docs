@@ -3,6 +3,7 @@ title: Deploy Defender for Containers on Arc-Enabled Kubernetes Programmatically
 description: Learn how to enable Microsoft Defender for Containers on Arc-enabled Kubernetes clusters using CLI, API, or Infrastructure as Code.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Containers on Arc-enabled Kubernetes programmatically

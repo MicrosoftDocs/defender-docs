@@ -3,6 +3,7 @@ title: Remove Defender for Containers from Azure (AKS)
 description: Learn how to disable and remove Microsoft Defender for Containers from your AKS clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Remove Defender for Containers from Azure (AKS)

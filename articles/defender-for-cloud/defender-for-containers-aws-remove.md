@@ -3,6 +3,7 @@ title: Remove Defender for Containers from AWS (EKS)
 description: Learn how to remove Microsoft Defender for Containers components from your Amazon EKS clusters and disable the service.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Remove Defender for Containers from AWS (EKS)

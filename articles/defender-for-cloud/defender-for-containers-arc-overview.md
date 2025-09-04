@@ -3,6 +3,7 @@ title: Defender for Containers on Arc-enabled Kubernetes - Overview
 description: Learn about Microsoft Defender for Containers capabilities for Arc-enabled Kubernetes clusters.
 ms.topic: overview
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Containers on Arc-enabled Kubernetes - Overview

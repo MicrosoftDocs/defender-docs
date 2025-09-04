@@ -3,6 +3,7 @@ title: Verify Defender for Containers Deployment on Arc-Enabled Kubernetes
 description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Verify Defender for Containers deployment on Arc-enabled Kubernetes

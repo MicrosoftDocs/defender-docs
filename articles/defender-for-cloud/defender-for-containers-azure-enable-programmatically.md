@@ -3,6 +3,7 @@ title: Deploy Defender for Containers on Azure (AKS) programmatically
 description: Learn how to programmatically deploy Microsoft Defender for Containers components on AKS clusters using Azure CLI, REST API, and automation tools.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Containers on Azure (AKS) programmatically

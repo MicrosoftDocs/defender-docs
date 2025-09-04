@@ -3,6 +3,7 @@ title: Verify Defender for Containers deployment on AWS (EKS)
 description: Learn how to verify that Microsoft Defender for Containers is properly deployed on your Amazon EKS clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Verify Defender for Containers deployment on AWS (EKS)

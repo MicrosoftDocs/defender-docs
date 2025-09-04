@@ -4,6 +4,7 @@ ms.topic: include
 ms.date: 07/27/2022
 ms.author: dacurwin
 author: dcurwin
+ai-usage: ai-assisted
 ---
 
 ## Network requirements

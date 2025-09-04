@@ -3,6 +3,7 @@ title: Configure Defender for Containers on AWS (EKS)
 description: Learn how to configure and customize Microsoft Defender for Containers settings for your Amazon EKS clusters, including how to add or remove components after initial deployment.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Configure Defender for Containers on AWS

@@ -3,6 +3,7 @@ title: Enable Defender for Containers on GCP (GKE) via portal
 description: Learn how to enable Microsoft Defender for Containers on your GKE clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for Containers on GCP (GKE) via portal

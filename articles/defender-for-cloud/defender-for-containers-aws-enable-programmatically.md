@@ -3,6 +3,7 @@ title: Deploy Defender for Containers Components on AWS (EKS) Programmatically
 description: Learn how to deploy Microsoft Defender for Containers components on Amazon EKS clusters using CLI, REST API, and automation tools.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Containers components on AWS (EKS) programmatically

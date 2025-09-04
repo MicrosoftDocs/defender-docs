@@ -3,6 +3,7 @@ title: Configure Defender for Containers on Arc-enabled Kubernetes
 description: Learn how to configure advanced settings for Microsoft Defender for Containers on Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Configure Defender for Containers on Arc-enabled Kubernetes

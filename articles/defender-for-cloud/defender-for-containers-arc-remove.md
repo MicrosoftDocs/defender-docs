@@ -3,6 +3,7 @@ title: Remove Defender for Containers From Arc-Enabled Kubernetes
 description: Learn how to disable and remove Microsoft Defender for Containers from your Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.date: 06/04/2025
+ai-usage: ai-assisted
 ---
 
 # Remove Defender for Containers from Arc-enabled Kubernetes
