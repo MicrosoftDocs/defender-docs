@@ -170,7 +170,7 @@ This article lists the security alerts you might get for AI services from Micros
 
 **Severity**: Medium
 
-### (Preview) **Anomalous tool invocation**
+### **Anomalous tool invocation**
 
 (AI.Azure_AnomalousToolInvocation)
 
