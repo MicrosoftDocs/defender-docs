@@ -63,9 +63,9 @@ The following steps describe the Security Administrator’s required actions to 
 
 1. Make sure to collaborate with the following administrators:
 
-   - The **Microsoft Entra Administrator** needs to create [a Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [Authorize the Microsoft Entra application with your provider of choice](https://learn.microsoft.com/microsoft-copilot-studio/external-security-provider#authorize-the-microsoft-entra-application-with-your-provider-of-choice).
+   - The **Microsoft Entra Administrator** needs to create [a Microsoft Entra ID application](/microsoft-copilot-studio/external-security-provider#step-1-configure-microsoft-entra-application) and configure a Federated Identity Credential (FIC) using the URL provided in the Microsoft Defender portal. For more information, see: [Authorize the Microsoft Entra application with your provider of choice](/microsoft-copilot-studio/external-security-provider#authorize-the-microsoft-entra-application-with-your-provider-of-choice).
 
-   - The **Power Platform Administrator** needs to  enter the Application ID and URL in the Power Platform settings page. For more information see: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#authorize-the-microsoft-entra-application-with-your-provider-of-choice).
+   - The **Power Platform Administrator** needs to  enter the Application ID and URL in the Power Platform settings page. For more information see: [Enable external threat detection and protection for Copilot Studio custom agents](/microsoft-copilot-studio/external-security-provider#step-2-configure-the-threat-detection-system).
 1. Enter the App ID provided by your Power Platform administrator. The Application (client) ID, uniquely identifies your application and is used in your application's code as part of validating the security tokens it receives from the Microsoft identity platform.
 1. Select **Save**.
 1. Copy the URL provided.
