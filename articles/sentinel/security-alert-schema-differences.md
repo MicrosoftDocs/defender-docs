@@ -12,12 +12,12 @@ ms.author: guywild
 
 # Alert schema differences: Legacy vs. XDR connector
 
-This page describes differences between alerts ingested through legacy connectors and the XDR connector in Microsoft Sentinel. Schema changes may affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
+This page describes differences between alerts ingested through legacy connectors and the Extended Detection and Response (XDR) connector in Microsoft Sentinel. Schema changes may affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
 
 For the full alert schema, see the [Security alert schema reference](./security-alert-schema.md).
 
 > [!NOTE]
-> Fields marked as *Not available* are not included in alerts ingested through the XDR connector. If your queries, analytic rules, or workbooks reference these fields, they won’t return results and should be updated.
+> Fields marked as *Not available* aren't included in alerts ingested through the XDR connector. If your queries, analytic rules, or workbooks reference these fields, they won’t return results and should be updated.
 
 
 ## Microsoft Defender for Endpoint (MDE)
@@ -36,7 +36,7 @@ For the full alert schema, see the [Security alert schema reference](./security-
 |----------------------------------|-----------------------------------------------------|
 | ExtendedProperties.InvestigationName | Not available                                     |
 | ExtendedProperties.Status        | Different value set (values differ from legacy)     |
-| Non-security alerts              | Excluded (only security alerts ingested)            |
+| Nonsecurity alerts              | Excluded (only security alerts ingested)            |
 
 ---
 
@@ -65,9 +65,12 @@ For the full alert schema, see the [Security alert schema reference](./security-
 
 ## Microsoft Defender for Cloud (MDC)
 
-| Legacy behavior        | XDR behavior        |
-|------------------------|---------------------|
-| Subscription-level scope | Tenant-level scope (scope mismatch) |
+The Microsoft Defender for Cloud connector does not have field-level schema differences. 
+
+However, it uses different scoping in XDR:
+
+- **Legacy connector:** subscription level  
+- **XDR connector:** tenant level
 
 ## What’s next
 
