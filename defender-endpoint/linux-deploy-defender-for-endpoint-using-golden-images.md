@@ -102,7 +102,7 @@ For on-premises environments, configure your virtualization platform so that eac
 
 **Hyper-V**
 
-Hyper-V automatically generates a new hardware UUID when you create a virtual machine using Hyper-V Manager or PowerShell ([New-VM](/powershell/module/hyper-v/new-vm?view=windowsserver2025-ps)). 
+Hyper-V automatically generates a new hardware UUID when you create a virtual machine using Hyper-V Manager or PowerShell ([New-VM](/powershell/module/hyper-v/new-vm)). 
 
 ### Cloud virtual machines
 
