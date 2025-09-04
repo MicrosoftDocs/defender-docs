@@ -88,7 +88,7 @@ For on-premises environments, configure your virtualization platform so that eac
 
 **KVM/libvirt**
 
-- Do not hard-code the `<uuid>` element in the virtual machine's domain XML; if it's omitted, libvirt will generate a random one at definition time.
+- Don't hard-code the `<uuid>` element in the virtual machine's domain XML; if it's omitted, libvirt generates a random one at definition time.
 
 - Alternatively, explicitly create a new UUID using `uuidgen`.
 
@@ -96,13 +96,13 @@ For on-premises environments, configure your virtualization platform so that eac
 
 **VMware**
 
-- During cloning, VMware prompts whether to keep existing UUID or to create a new one. Always select “Create”, or configure `uuid.action = "create"` in the virtual machine's *.vmx* file.
+- During cloning, VMware prompts whether to keep the existing UUID or to create a new one. Always select "Create", or configure `uuid.action = "create"` in the virtual machine's *.vmx* file.
 
 - In VMware Cloud Director, set `backend.cloneBiosUuidOnVmCopy = 0` to force the creation of new UUIDs.
 
 **Hyper-V**
 
-Hyper-V automatically generates a new hardware UUID when you create a virtual machine using Hyper-V Manager or PowerShell ([New-VM](/powershell/module/hyper-v/new-vm)). 
+Hyper-V automatically generates a new hardware UUID when you create a virtual machine using Hyper-V Manager or PowerShell ([New-VM](/powershell/module/hyper-v/new-vm)).
 
 ### Cloud virtual machines
 
