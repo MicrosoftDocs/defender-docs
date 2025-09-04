@@ -86,8 +86,8 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Manage incidents using tasks
-        href: manage-incidents-using-tasks.md
+      - name: Split incidents into tasks
+        href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
         items:
         - name: Plan incident response

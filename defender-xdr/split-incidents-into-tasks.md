@@ -1,5 +1,5 @@
 ---
-title: Manage incidents using tasks in the Microsoft Defender portal
+title: Split incidents into tasks in the Microsoft Defender portal
 description: Create and assign tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively.
 search.appverid: met150
 ms.service: unified-secops-platform
@@ -15,7 +15,7 @@ ms.topic: how-to
 # customer intent: As a security operations analyst, I want to manage incidents using tasks in the Microsoft Defender portal so that I can improve collaboration, efficiency, and accountability in incident investigations.    
 ---
 
-# Manage incidents using tasks in the Microsoft Defender portal
+# Split incidents into tasks in the Microsoft Defender portal
 
 Use tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively across your operations teams. Managing incidents with tasks helps to improve efficiency in incident response and ensure accountability for investigation outcomes. 
 
