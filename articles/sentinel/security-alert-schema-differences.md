@@ -65,7 +65,7 @@ For the full alert schema, see the [Security alert schema reference](./security-
 
 ## Microsoft Defender for Cloud (MDC)
 
-The Microsoft Defender for Cloud connector does not have field-level schema differences. 
+The Microsoft Defender for Cloud connector doesn't have field-level schema differences. 
 
 However, it uses different scoping in XDR:
 
@@ -74,5 +74,5 @@ However, it uses different scoping in XDR:
 
 ## What’s next
 
-- [Create and manage analytic rules](../sentinel/analytic-rules.md)  
-- [Use workbooks in Microsoft Sentinel](../sentinel/monitor-your-data.md)   
+- [Create and manage analytic rules](./create-analytics-rules.md)  
+- [Use workbooks in Microsoft Sentinel](./monitor-your-data.md)   
