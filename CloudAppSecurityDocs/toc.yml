@@ -430,6 +430,10 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
+- name: AI agents
+  items:
+  - name: Protect Copilot Studio agents in real time
+    href: real-time-agent-protection-during-runtime.md
 - name: View and manage applications
   items:
     - name: Assets
