@@ -3,11 +3,11 @@ title: What's new in Microsoft Defender for Endpoint on Windows
 description: Learn about the latest feature releases of Microsoft Defender for Endpoint on Windows Client and Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: medium
 ms.date: 06/11/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
