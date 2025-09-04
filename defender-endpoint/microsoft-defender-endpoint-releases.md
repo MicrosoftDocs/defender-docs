@@ -25,7 +25,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 |---------|---------|---------|---------|---------|
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108797258571000---may-2025) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108760276171006---july-2024) |
-|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429 |[Release details and updates](#release-101250720011---september-2025) |
+|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429 |[Release details and updates](#101250720011---september-2025) |
 
 ## Windows releases
 
@@ -75,7 +75,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## macOS releases
 
-### Release 101.25072.0011 - September 2025
+### 101.25072.0011 - September 2025
 
 # [Releases](#tab/macos-releases)
 
