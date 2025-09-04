@@ -25,22 +25,22 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## July 2025
 
-|Platform  |Preview/GA  |Release|Updates  |
-|---------|------------|---------|---------|
-| **Windows** | Preview |Non-release specific | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
-| **Windows** | GA |Non-release specific | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
+|Platform  |Preview/GA  |Updates  |
+|---------|------------|---------|
+| **Windows** | Preview | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
+| **Windows** | GA | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
 
 ## June 2025
 
-|Platform  |Preview/GA  |Release|Updates  |
-|---------|------------|---------|---------|
-| **macOS** | GA | Non-release specific |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
+|Platform  |Preview/GA  |Updates  |
+|---------|------------|---------|
+| **macOS** | GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
 
 ## May 2025
 
-|Platform  |Preview/GA  |Release |Updates  |
+|Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|---------|
-|**Windows** |GA |10.8797.25857.1000 |See [updates for this release](microsoft-defender-endpoint-releases.md#release-108797258571000-updates). |
+|**Windows** |GA |Version 10.8797.25857.1000 released: See [updates for this release](microsoft-defender-endpoint-releases.md#release-108797258571000-updates). |
 
 ## April 2025
 
@@ -70,11 +70,11 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 ## July 2024
 
-|Platform  |Preview/GA  |Release |Updates  |
+|Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|---------|
-| General | Preview | Non-release specific | You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery).<br><br>- Added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.<br>- Added **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some filters are only visible on specific tabs and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).<br>- Added ability to search Mac devices and Mac addresses.<br>- Added a system tag showing the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).<br><br> **Note**: If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data and a message indicating the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view). |
-| General | GA | Non-release specific | Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).<br><br>- Access Microsoft Defender XDR Ninja training, learning paths, training modules and more.<br>- Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. |
-| **Windows** (see [specific platforms and KBs](microsoft-defender-endpoint-releases.md#release-versions)) | GA |10.8760.27617.1006 |See [updates for this release](microsoft-defender-endpoint-releases.md#release-108797258571000-updates). |
+| General | Preview | You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery).<br><br>- Added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.<br>- Added **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some filters are only visible on specific tabs and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).<br>- Added ability to search Mac devices and Mac addresses.<br>- Added a system tag showing the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).<br><br> **Note**: If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data and a message indicating the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view). |
+| General | GA | Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).<br><br>- Access Microsoft Defender XDR Ninja training, learning paths, training modules and more.<br>- Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. |
+| **Windows** (see [specific platforms and KBs](microsoft-defender-endpoint-releases.md#release-versions)) | GA |Version 10.8760.27617.1006 released: See [updates for this release](microsoft-defender-endpoint-releases.md#release-108797258571000-updates). |
 
 ## Next steps
 
