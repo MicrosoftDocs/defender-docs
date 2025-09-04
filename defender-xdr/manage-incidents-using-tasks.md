@@ -38,15 +38,6 @@ Each task can be categorized, prioritized, assigned, and tracked to ensure stand
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-## View and manage tasks
-
-To view and manage tasks:
-
-1. Navigate to the incident page in the Microsoft Defender portal.
-1. Open the **Tasks** side panel to see a list of all tasks associated with the incident.
-
-:::image type="content" source="media/manage-incidents-using-tasks/add-task-page-defender-portal.png" alt-text="Screenshot showing the Add task pane in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/add-task-page-defender-portal.png":::
-
 ## Create and assign tasks
 
 To create a task:
@@ -55,7 +46,15 @@ To create a task:
 1. Select **Task** to launch the side pane
 1. Select **Add task**.
 
-:::image type="content" source="media/manage-incidents-using-tasks/create-task-defender-portal.png" alt-text="Screenshot showing the Tasks side panel and incident details in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/create-task-defender-portal.png":::
+    :::image type="content" source="media/manage-incidents-using-tasks/create-task-defender-portal.png" alt-text="Screenshot showing the Tasks side panel and incident details in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/create-task-defender-portal.png":::
 
+## View and manage tasks
+
+To view and manage tasks:
+
+1. Navigate to the incident page in the Microsoft Defender portal.
+1. Open the **Tasks** side panel to see a list of all tasks associated with the incident.
+
+    :::image type="content" source="media/manage-incidents-using-tasks/add-task-page-defender-portal.png" alt-text="Screenshot showing the Add task pane in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/add-task-page-defender-portal.png":::
 
 
