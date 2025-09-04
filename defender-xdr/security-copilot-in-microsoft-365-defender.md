@@ -4,8 +4,8 @@ description: Learn about Microsoft Security Copilot capabilities embedded in Mic
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
