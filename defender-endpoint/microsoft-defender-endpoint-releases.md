@@ -19,12 +19,9 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-## Releases
+## Windows releases
 
-- [Windows releases](#windows-releases)
-- [macOS releases](#macos-releases)
-
-### Windows releases
+# [Releases](#tab/releases)
 
 | OS | KB |
 | -------- | -------- |
@@ -41,7 +38,9 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
 | Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
-### Release 10.8797.25857.1000 updates
+# [Updates](#tab/releases)
+
+## Release 10.8797.25857.1000 updates
 
 | Feature area | Update summary |
 |-------------|---------------|
@@ -51,18 +50,24 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
-### Release 10.8760.27617.1006 updates
+## Release 10.8760.27617.1006 updates
 
 | Feature area | Update summary |
 |-------------|---------------|
 | Data Loss Prevention (DLP) | Scoped classification (Know Your Data policy) and activity events across workloads; device group discovery and scoping for custom policy; OCR URL caching for improved image classification performance. |
 
-### macOS releases
+---
+
+## macOS releases
+
+# [Releases](#tab/macos-releases)
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 | Build **101.25072.0011** - September 2025 (see [updates](#release-20125072110-updates)) |
 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
+
+# [Updates](#tab/macos-updates)
 
 ## Release 20.125072.11.0 updates
 
@@ -72,6 +77,8 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Diagnostics | Improved diagnostic capabilities and error reporting. |
 | Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
 | General | Bug fixes. |
+
+---
 
 ## Operating system information
 
