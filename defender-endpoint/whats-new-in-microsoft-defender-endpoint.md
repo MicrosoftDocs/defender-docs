@@ -34,31 +34,7 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 |Platform  |Preview/GA  |Release |Updates  |
 |---------|------------|---------|---------|
-|**Windows** (see [specific platforms and KBs](microsoft-defender-endpoint-releases.md#release-versions)) |GA |10.8797.25857.1000 |See [updates for this release](#release-108797258571000-updates). |
-
-### Release 10.8797.25857.1000 updates
-
-#### Data Loss Prevention (DLP)
-
-- On-Demand Scan: Improved the functionality, performance, and reliability of the Cold Data Scan feature. This enhancement enables deeper, more consistent scanning of archived or infrequently accessed data, helping organizations uncover potential data risks hidden in long-term storage. 
-- General Stability and Performance Improvements: Additional under-the-hood optimizations to improve overall system performance, reliability, and stability.
-
-#### Identity 
-
-- Entity sync enrichment: Expanded the capabilities of the SenseIdentity client to enhance Active Directory (AD) entity synchronization. This update introduces support for syncing new entity types including Group Policy Objects, Authentication Silos, and Domain Controller computer accounts for all Domain Controllers within trusted domains. Additionally, the update enriches existing synced entities (Domain, Account, and Group) with a broader set of attributes, enabling more comprehensive visibility and detection capabilities. 
-
-#### Threat protection
-
-- User contaminant improvements 
-
-#### Network Detection and Response (NDR) 
-
-- Improved data telemetry providing better visibility and insights 
-
-#### SOC experience 
-
-- Improved Data Completeness and Detection: Enhancements have been made to improve the completeness of data collected and reduce the time it takes to detect potential data loss incidents. These improvements enable faster and more accurate identification of data exfiltration attempts across monitored endpoints. 
-- Improved Handling for Offline Network Environments: Refined the handling of scenarios where devices operate in offline or restricted network environments. Specifically addresses cases where result uploads to blob storage fail due to offline Certificate Revocation List (CRL) checks, ensuring better reliability and continuity in data collection.
+|**Windows** |GA |10.8797.25857.1000 |See [updates for this release](microsoft-defender-endpoint-releases.md#release-108797258571000-updates). |
 
 ## April 2025
 
