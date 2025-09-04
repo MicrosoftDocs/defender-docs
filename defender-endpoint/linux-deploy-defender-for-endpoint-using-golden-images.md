@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 09/02/2025
+ms.date: 09/04/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux using golden images
@@ -78,17 +78,31 @@ This guide walks you through:
 
 ## Step 2: Prepare the golden image for cloning
 
+When deploying Defender for Endpoint on virtual machines, the hardware UUID reported by the system (system-uuid from dmidecode) is used to uniquely identify each instance.
+
 Before making a snapshot of the virtual machine, ensure that each virtual machine clone gets a unique hardware UUID, as described in the following sections.
 
 ### On-premises machines
 
-For on-premises machines, make sure to configure the golden image so that each clone gets a unique hardware UUID.
+For on-premises environments, configure your virtualization platform so that each clone receives a unique hardware UUID from the underlying hypervisor. Follow these guidelines:
 
-If you're using **KVM/libvirt** or **VMware/Hyper-V** as the virtualization platform, it's recommended to use the following instructions:
+**KVM/libvirt**
 
-- **KVM/libvirt**: Omit the \<uuid\> element in domain XML or set a fresh UUID using: uuidgen
+- Do not hard-code the `<uuid>` element in the virtual machine's domain XML; if it's omitted, libvirt will generate a random one at definition time.
 
-- **VMware/Hyper-V**: Enable platform settings to generate a new BIOS GUID during clone or conversion.
+- Alternatively, explicitly create a new UUID using `uuidgen`.
+
+- For streamlined cloning, use `virt-clone` or `virt-manager`, which automatically assign unique UUIDs.
+
+**VMware**
+
+- During cloning, VMware prompts whether to keep existing UUID or to create a new one. Always select “Create”, or configure `uuid.action = "create"` in the virtual machine's *.vmx* file.
+
+- In VMware Cloud Director, set `backend.cloneBiosUuidOnVmCopy = 0` to force the creation of new UUIDs.
+
+**Hyper-V**
+
+Hyper-V automatically generates a new hardware UUID when you create a virtual machine using Hyper-V Manager or PowerShell ([New-VM](/powershell/module/hyper-v/new-vm?view=windowsserver2025-ps)). 
 
 ### Cloud virtual machines
 
