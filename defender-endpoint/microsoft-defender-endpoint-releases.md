@@ -29,7 +29,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Windows 11 24H2 | [KB5058499](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058499-os-build-26100-4202-preview-d4c2f1ee-8138-4038-b705-546945076f92) |
 | Windows 11 23H2 | [KB5058502](https://support.microsoft.com/en-us/topic/may-27-2025-kb5058502-os-22621-5413-and-22631-5413-preview-6291789c-1eea-4227-9740-a701af6de688) |
 | Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058481-os-build-19045-5917-preview-7698d6e7-dd65-494d-b523-aa4c6aa913a2) |
-| Windows: **10.8760.27617.1006** - July 2024 (see [updates](#release-108760276171006-updates)) |
+| **10.8760.27617.1006** - July 2024 (see [updates](#release-108760276171006-updates)) |
 | Windows 11 24H2 | [KB5041865](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552) |
 | Windows 11 23H2 <br/> Windows 11 22H | [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) |
 | Windows 11 21H2 | [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
