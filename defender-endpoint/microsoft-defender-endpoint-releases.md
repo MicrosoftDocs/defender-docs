@@ -59,20 +59,20 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ### Release 10.8760.27617.1006 updates
 
-DLP:
-
-- Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
-- Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
-- OCR URL Caching: Performance improvement for already classified images by having client side caching.
+| Feature area | Update summary |
+|-------------|---------------|
+| Data Loss Prevention (DLP) | Scoped classification (Know Your Data policy) and activity events across workloads; device group discovery and scoping for custom policy; OCR URL caching for improved image classification performance. |
 
 ## macOS release updates
 
 ### Release 20.125072.11.0 updates
 
-- Enhanced malware detection timing and archive scanning improvements
-- Improved diagnostic capabilities and error reporting
-- Performance and diagnostic improvements for endpoint Data Loss Prevention (DLP)
-- Bug fixes
+| Feature area | Update summary |
+|--------------|---------------|
+| Malware detection | Enhanced detection timing and archive scanning improvements. |
+| Diagnostics | Improved diagnostic capabilities and error reporting. |
+| Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
+| General | Bug fixes. |
 
 ## Operating system information
 
