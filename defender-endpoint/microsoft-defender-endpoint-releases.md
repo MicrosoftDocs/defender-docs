@@ -110,7 +110,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
---
+---
 
 ## Operating system information
 
