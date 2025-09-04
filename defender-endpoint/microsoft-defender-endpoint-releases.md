@@ -75,7 +75,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | -------- | -------- |-------- |
 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
-# [20.125072.11.0 updates](#tab/macos-updates)
+# [Updates](#tab/macos-updates)
 
 | Feature area | Update summary |
 |--------------|---------------|
