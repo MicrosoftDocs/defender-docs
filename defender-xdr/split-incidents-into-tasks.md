@@ -23,7 +23,7 @@ This article explains how tasks work and how to use tasks to manage incidents in
 
 ## How tasks work
 
-Divide your incident response into individual tasks that you can assign and track. Managing incidents with tasks facilitates comprehensive incident handling at scale, and is particularly useful when onboarding junior analysts, working with managed security service providers (MSSPs), or tracking work in compliance-oriented organizations.  
+Divide your incident response into individual tasks that you can assign and track. Using tasks is particularly useful when onboarding junior analysts, working with managed security service providers (MSSPs), or tracking work in compliance-oriented organizations.  
 
 Use the incident's task list to assess what's been done and what needs to be done next. View your team's overall progress by looking at the status bar and task preview cards.
 
