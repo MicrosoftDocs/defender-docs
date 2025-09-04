@@ -67,11 +67,12 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## macOS releases
 
+### Release 101.25072.0011 - September 2025
+
 # [Releases](#tab/macos-releases)
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-| Build **101.25072.0011** - September 2025 (see [updates](#release-20125072110-updates)) |
 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
 # [20.125072.11.0 updates](#tab/macos-updates)
