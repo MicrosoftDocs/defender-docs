@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Endpoint versions and releases
-description: This article describes new releases and versions of Microsoft Defender for Endpoint on Windows, macOS, Linux, Android, and iOS.
+title: Microsoft Defender for Endpoint versions and releases - option 2
+description: Option 2 - This article describes new releases and versions of Microsoft Defender for Endpoint on Windows, macOS, Linux, Android, and iOS.
 ms.topic: whats-new
 ms.service: defender-endpoint
 author: lwainstein
@@ -11,7 +11,7 @@ ms.date: 09/03/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
-# Microsoft Defender for Endpoint versions and releases
+# Microsoft Defender for Endpoint versions and releases - option 2
 
 This article describes releases and versions of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS.
 
