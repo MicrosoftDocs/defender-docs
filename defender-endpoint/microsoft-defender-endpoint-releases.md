@@ -21,7 +21,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## Windows releases
 
-## 10.8797.25857.1000 - May 2025
+### 10.8797.25857.1000 - May 2025
 
 # [Releases](#tab/releases)
 
@@ -43,7 +43,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ---
 
-## 10.8760.27617.1006 - July 2024
+### 10.8760.27617.1006 - July 2024
 
 # [Releases](#tab/releases-06)
 
