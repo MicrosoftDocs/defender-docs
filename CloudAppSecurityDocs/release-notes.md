@@ -27,7 +27,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
-For more information, see: [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md)
+For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md).
 
 
 ## July 2025
@@ -97,7 +97,7 @@ To ensure continuity and access to data currently available through Microsoft De
 - For Microsoft Graph Security Alerts API, see: [List alerts_v2](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-For detailed guidance, see: [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md)
+For detailed guidance, see [Migrate from Defender for Cloud Apps SIEM agent to supported APIs](migrate-to-supported-api-solutions.md).
 
 
 ### New and improved Cloud App Catalog page
