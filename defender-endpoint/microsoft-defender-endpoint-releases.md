@@ -36,29 +36,17 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) | July 2024 | [Updates](whats-new-in-microsoft-defender-endpoint.md#release-108760276171006-updates) |
 | Windows Server 2016 <br/> Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | July 2024 | [Updates](whats-new-in-microsoft-defender-endpoint.md#release-108760276171006-updates) |
 
-### Release 10.8797.25857.1000 updates
+## Release updates
 
-#### Data Loss Prevention (DLP)
+### Release 10.8797.25857.1000
 
-- On-Demand Scan: Improved the functionality, performance, and reliability of the Cold Data Scan feature. This enhancement enables deeper, more consistent scanning of archived or infrequently accessed data, helping organizations uncover potential data risks hidden in long-term storage. 
-- General Stability and Performance Improvements: Additional under-the-hood optimizations to improve overall system performance, reliability, and stability.
-
-#### Identity 
-
-- Entity sync enrichment: Expanded the capabilities of the SenseIdentity client to enhance Active Directory (AD) entity synchronization. This update introduces support for syncing new entity types including Group Policy Objects, Authentication Silos, and Domain Controller computer accounts for all Domain Controllers within trusted domains. Additionally, the update enriches existing synced entities (Domain, Account, and Group) with a broader set of attributes, enabling more comprehensive visibility and detection capabilities. 
-
-#### Threat protection
-
-- User contaminant improvements 
-
-#### Network Detection and Response (NDR) 
-
-- Improved data telemetry providing better visibility and insights 
-
-#### SOC experience 
-
-- Improved Data Completeness and Detection: Enhancements have been made to improve the completeness of data collected and reduce the time it takes to detect potential data loss incidents. These improvements enable faster and more accurate identification of data exfiltration attempts across monitored endpoints. 
-- Improved Handling for Offline Network Environments: Refined the handling of scenarios where devices operate in offline or restricted network environments. Specifically addresses cases where result uploads to blob storage fail due to offline Certificate Revocation List (CRL) checks, ensuring better reliability and continuity in data collection.
+| Feature area | Update summary |
+|-------------|---------------|
+| Data Loss Prevention (DLP) | Improved Cold Data Scan performance and reliability; general stability enhancements. |
+| Identity | Expanded AD entity sync; more entity types and attributes for better visibility. |
+| Threat protection | User contaminant improvements. |
+| Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
+| SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
 ### Release 10.8760.27617.1006 updates
 
@@ -68,7 +56,9 @@ DLP:
 - Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
 - OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
-## Windows versions
+## Operating system information
+
+### Windows
 
 This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
@@ -77,3 +67,18 @@ This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions.
 - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 - [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
+
+### macOS
+
+> [!TIP]
+> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
+
+To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
+
+### Sequoia support
+
+- Microsoft Defender for Endpoint supports version 15.0.1 or newer.
+
+### macOS Deprecation
+
+- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
