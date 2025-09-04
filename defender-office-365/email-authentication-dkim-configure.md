@@ -603,7 +603,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
 - **Use the test in Microsoft 365 help**: This feature requires a Global Administrator<sup>\*</sup> account, and isn't available in Microsoft 365 Government Community Cloud (GCC), GCC High, DoD, or Office 365 operated by 21Vianet.
 
   > [!IMPORTANT]
-  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+  > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
   <div class="nextstepaction">
   <p><a href="https://admin.microsoft.com/AdminPortal/?searchSolutions=DKIM#/homepage" data-linktype="external">Run Tests: DKIM</a></p>
