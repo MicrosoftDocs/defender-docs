@@ -21,10 +21,12 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## Releases
 
+ OPTION 1
+
 - [Windows releases](#windows-releases)
 - [macOS releases](#macos-releases)
 
-### Windows releases - OPTION 1
+### Windows releases
 
 | OS | KB |
 | -------- | -------- |
@@ -107,6 +109,8 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Threat protection | User contaminant improvements. |
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
+
+--
 
 ## Operating system information
 
