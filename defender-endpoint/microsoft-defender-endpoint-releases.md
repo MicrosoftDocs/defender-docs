@@ -50,7 +50,8 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## Windows release updates
 
-### Release 10.8797.25857.1000 updates
+<details>
+<summary>Release 10.8797.25857.1000 updates</summary>
 
 | Feature area | Update summary |
 |-------------|---------------|
@@ -60,15 +61,21 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
-### Release 10.8760.27617.1006 updates
+</details>
+
+<details>
+<summary>Release 10.8760.27617.1006 updates</summary>
 
 | Feature area | Update summary |
 |-------------|---------------|
 | Data Loss Prevention (DLP) | Scoped classification (Know Your Data policy) and activity events across workloads; device group discovery and scoping for custom policy; OCR URL caching for improved image classification performance. |
 
+</details>
+
 ## macOS release updates
 
-### Release 20.125072.11.0 updates
+<details>
+<summary>Release 20.125072.11.0 updates</summary>
 
 | Feature area | Update summary |
 |--------------|---------------|
@@ -76,6 +83,8 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Diagnostics | Improved diagnostic capabilities and error reporting. |
 | Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
 | General | Bug fixes. |
+
+</details>
 
 ## Operating system information
 
