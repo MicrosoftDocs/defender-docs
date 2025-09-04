@@ -19,9 +19,12 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-## Release versions
+## Releases
 
-## Windows
+- [Windows releases](#windows-releases)
+- [macOS releases](#macos-releases)
+
+### Windows releases
 
 | OS | KB |
 | -------- | -------- |
@@ -38,7 +41,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
 | Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
-## macOS
+### macOS releases
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
