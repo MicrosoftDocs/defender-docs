@@ -76,7 +76,7 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 > [!TIP]
 > End-user spam notifications and system generated messages aren't available in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
