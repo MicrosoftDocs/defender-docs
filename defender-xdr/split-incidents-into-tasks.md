@@ -43,18 +43,11 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 To view and manage tasks:
 
-1. Navigate to the incident page in the Microsoft Defender portal.
+1. Select **Incidents** to open the Incident queue.
 1. Open the **Tasks** side panel to see a list of all tasks associated with the incident.
 
    :::image type="content" source="media/manage-incidents-using-tasks/create-task-defender-portal.png" alt-text="Screenshot showing the Tasks side panel and incident details in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/create-task-defender-portal.png":::
-
-## Create and assign tasks
-
-To create a task:
-
-1. Select an incident from the Sentinel (Azure portal) Incident queue.
-1. Select **Task** to launch the side pane
-1. Select **Add task**.
+1. Select **Add task** to create a new task.
 
     :::image type="content" source="media/manage-incidents-using-tasks/add-task-page-defender-portal.png" alt-text="Screenshot showing the Add task pane in Microsoft Defender portal." lightbox="media/manage-incidents-using-tasks/add-task-page-defender-portal.png":::
 
