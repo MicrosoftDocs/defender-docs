@@ -30,6 +30,12 @@ This article describes features available in Microsoft Defender for Endpoint acr
 | **Windows** | Preview |Non-release specific | Defender for Endpoint now supports Azure Stack HCI OS, version 23H2 and later. Support is rolling out across commercial and government clouds. |
 | **Windows** | GA |Non-release specific | [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available. This service helps with the stability and performance of Microsoft Defender Antivirus. |
 
+## June 2025
+
+|Platform  |Preview/GA  |Release|Updates  |
+|---------|------------|---------|---------|
+| **macOS** | GA | Non-release specific |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
+
 ## May 2025
 
 |Platform  |Preview/GA  |Release |Updates  |
