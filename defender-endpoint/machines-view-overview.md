@@ -288,6 +288,9 @@ You can sort the entries by clicking on an available column header. Select :::im
 > - Narrow the width of appropriate columns.
 > - Zoom out in your web browser.
 
+> [!TIP]
+> The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.
+
 ## Related articles
 
 [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).

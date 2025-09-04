@@ -2,8 +2,8 @@
 title: Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Manage permissions and access to the Microsoft Defender portal experiences using unified role-based access control (RBAC).
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -54,7 +54,7 @@ Centralized permissions management is supported for the following services:
 |**Microsoft Defender XDR**|Centralized permissions management for Microsoft Defender XDR experiences.|
 |**Microsoft Defender for Endpoint**|Full support for all endpoint data and actions. All roles are compatible with the device group's scope as defined on the device groups page. Limiting permissions to different device groups is accomplished in the Devices Groups page.|
 |**Microsoft Defender Vulnerability Management**|Centralized permissions management for all  Defender Vulnerability Management capabilities.|
-|**Microsoft Defender for Office 365**|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender XDR RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender XDR Unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li><li>Azure B2B invited guests aren't supported by all experiences that were previously under Exchange Online RBAC.</li></ul>|
+|**Microsoft Defender for Office 365**|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender XDR RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender XDR Unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li></ul>|
 |**Microsoft Defender for Identity**|Full support for all identity data and actions. All roles are compatible with [Microsoft Defender for Identity scoped access](/defender-for-identity/configure-scoped-access).</br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |**Microsoft Defender for Cloud**|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
 |**Microsoft Security Exposure Management**|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
