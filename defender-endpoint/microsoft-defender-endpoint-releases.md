@@ -24,7 +24,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 - [Windows releases](#windows-releases)
 - [macOS releases](#macos-releases)
 
-### Windows releases
+### Windows releases - OPTION 1
 
 | OS | KB |
 | -------- | -------- |
@@ -85,6 +85,28 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | General | Bug fixes. |
 
 </details>
+
+## Windows releases - OPTION 2
+
+## Release 10.8797.25857.1000
+
+#### [Builds](#tab/versions)
+
+| OS | KB |
+| -------- | -------- |
+| Windows 11 24H2 | [KB5058499](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058499-os-build-26100-4202-preview-d4c2f1ee-8138-4038-b705-546945076f92) |
+| Windows 11 23H2 | [KB5058502](https://support.microsoft.com/en-us/topic/may-27-2025-kb5058502-os-22621-5413-and-22631-5413-preview-6291789c-1eea-4227-9740-a701af6de688) |
+| Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/en-us/topic/may-28-2025-kb5058481-os-build-19045-5917-preview-7698d6e7-dd65-494d-b523-aa4c6aa913a2) |
+
+#### [Updates](#tab/updates)
+
+| Feature area | Update summary |
+|-------------|---------------|
+| Data Loss Prevention (DLP) | Improved Cold Data Scan performance and reliability; general stability enhancements. |
+| Identity | Expanded AD entity sync; more entity types and attributes for better visibility. |
+| Threat protection | User contaminant improvements. |
+| Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
+| SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
 ## Operating system information
 
