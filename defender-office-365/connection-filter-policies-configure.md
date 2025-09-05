@@ -193,6 +193,9 @@ For example, the source email server 192.168.1.25 sends email from the domains c
 
 ### Scenarios where messages from sources in the IP Allow List are still filtered
 
+> [!NOTE]  
+> These scenarios apply to all environments (standalone, hybrid, multi-geo, and cross-forest), and the filtering behavior is based on security checks such as malware detection, phishing protection, or transport rules, not on the deployment model.
+
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
 
 - An IP address in your IP Allow List is also configured in an on-premises, IP-based inbound connector in _any_ Microsoft 365 organization, **and** that Microsoft 365 organization and the first Microsoft 365 server that encounters the message both happen to be in _the same_ forest in the Microsoft datacenters. In this scenario, **IPV:CAL** _is_ added to the message's [anti-spam message headers](message-headers-eop-mdo.md) (indicating the message bypassed spam filtering), but the message is still subject to spam filtering.
