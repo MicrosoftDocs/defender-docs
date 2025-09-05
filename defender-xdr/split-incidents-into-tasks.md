@@ -23,11 +23,21 @@ This article explains how tasks work and how to use tasks to manage incidents in
 
 ## How tasks work
 
-Divide your incident response into individual tasks that you can assign and track. Using tasks is particularly useful when onboarding junior analysts, working with managed security service providers (MSSPs), or tracking work in compliance-oriented organizations.  
+Divide your incident response into individual tasks that you can assign and track. 
 
-Use the incident's task list to assess what's been done and what needs to be done next. View your team's overall progress by looking at the status bar and task preview cards.
+Using tasks is particularly useful for: 
 
-Each task can be categorized, prioritized, assigned, and tracked to ensure standardization, comprehensiveness, collaboration, and accountability. When closing a task, you can add *Closing notes* to document results from each task, making it easy for colleagues and supervisors to conduct full postmortems and reviews of investigations and draw lessons for future cases.
+- Onboarding junior analysts
+- Working with managed security service providers (MSSPs)
+- Tracking work in compliance-oriented organizations
+
+### Manage incident response with a unified view of tasks and Security Copilot insights 
+
+Use the incident's task panel to assess what's been done and what needs to be done next. View your team's overall progress by looking at the status bar and task preview cards.
+
+The task panel presents [Security Copilot summaries, guided responses, and reports](./security-copilot-in-microsoft-365-defender.md) side by side with tasks to provide a unified to-do list.  
+
+Categorize, prioritize, assign, and track each task to ensure consistency, collaboration, and accountability. When you close a task, add Closing notes to document the outcome. These notes support thorough postmortems and help teams learn from each investigation.
 
 ## Permissions required 
 
