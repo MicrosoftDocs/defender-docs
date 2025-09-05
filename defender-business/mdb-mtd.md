@@ -23,7 +23,7 @@ audience: Admin
 
 Microsoft Defender for Business provides advanced threat protection capabilities for devices, such as Windows and Mac clients. **Defender for Business capabilities now include mobile threat defense**! Mobile threat defense capabilities help protect Android and iOS devices, without requiring you to use Microsoft Intune to onboard mobile devices.
 
-In addition, mobile threat defense capabilities integrate with [Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-overview), where Cloud Solution Providers (CSPs) can view information about vulnerable devices and help mitigate detected threats.
+In addition, mobile threat defense capabilities integrate with [Microsoft 365 Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-overview), where Cloud Solution Providers (CSPs) can view information about vulnerable devices and help mitigate detected threats.
 
 ## What's included in mobile threat defense?
 
@@ -68,4 +68,4 @@ Mobile threat defense capabilities are now generally available to [Defender for 
 
 - [Set up and configure Microsoft Defender for Business](mdb-setup-configuration.md)
 - [View and edit security policies and settings in Microsoft Defender for Business](mdb-configure-security-settings.md)
-- [What's new in Microsoft 365 Business Premium and Microsoft Defender for Business](/Microsoft-365/business-premium/m365bp-mdb-whats-new)
+- [What's new in Microsoft 365 Business Premium and Microsoft Defender for Business](/microsoft-365/business-premium/m365bp-mdb-whats-new)

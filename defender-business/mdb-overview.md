@@ -31,7 +31,7 @@ Defender for Business is available in the following subscriptions:
   - Microsoft 365 Business Basic
   - Microsoft 365 Business Standard
   - Office 365 E1
-- **Microsoft 365 Business Premium**: [Business Premium](/Microsoft-365/business-premium/m365bp-overview) includes Defender for Business.
+- **Microsoft 365 Business Premium**: [Business Premium](/microsoft-365/business-premium/m365bp-overview) includes Defender for Business.
 
 Watch the following video to learn more about Defender for Business:
 
@@ -54,7 +54,7 @@ With Defender for Business, you can help protect the devices and data your busin
 - **Flexibility for your environment**: Defender for Business can work with your business environment, whether you're using Microsoft Intune or you're brand new to the Microsoft Cloud. Defender for Business works with components that are built into Windows, and with apps for Mac, iOS, and Android devices.
 
 - **Integration with Microsoft 365 Lighthouse, RMM tools, and PSA software**:
-  - Microsoft cloud solution providers (CSPs) using [Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-overview) can view security incidents and alerts across customer organizations. For more information, see [Microsoft 365 Lighthouse and Defender for Business](mdb-lighthouse-integration.md)
+  - Microsoft cloud solution providers (CSPs) using [Microsoft 365 Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-overview) can view security incidents and alerts across customer organizations. For more information, see [Microsoft 365 Lighthouse and Defender for Business](mdb-lighthouse-integration.md)
   - Microsoft managed service providers (MSPs) can integrate Defender for Business with remote monitoring and management (RMM) tools and professional service automation (PSA) software. For more information, see [Defender for Business and MSP resources](mdb-partners.md).
 
 ## How does Defender for Business compare to Microsoft Defender for Endpoint?
@@ -101,4 +101,4 @@ For more detailed information about what's included in each subscription, see th
 - [Learn more about the simplified configuration process in Defender for Business](mdb-setup-configuration.md)
 - [Find out how to get Defender for Business](get-defender-business.md)
 - [Learn about security, privacy, and compliance in Microsoft Defender for Business](mdb-security-privacy-compliance.md)
-- [Get an overview of Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
+- [Get an overview of Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview)

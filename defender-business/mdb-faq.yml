@@ -29,7 +29,7 @@ sections:
         answer: |
           We recommend working with a [Microsoft partner](https://www.microsoft.com/security/business/find-a-partner). 
 
-          If you prefer to try or buy Defender for Business on your own, go to the [Defender for Business](https://www.microsoft.com/security/business/threat-protection/microsoft-defender-business) product page, and select the option to try or buy Defender for Business.
+          If you prefer to try or buy Defender for Business on your own, go to the [Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business) product page, and select the option to try or buy Defender for Business.
 
           For more information, see [Get Defender for Business](get-defender-business.md).
 
@@ -90,7 +90,7 @@ sections:
 
           |OS|Method|Notes|
           |---|---|---|
-          |Windows|[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
+          |Windows|[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment)|On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium/). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md)|
           |Mac|Jamf or Intune|You can use Jamf or Intune to set up device control on Mac. For more information, see [Device Control for macOS](/defender-endpoint/mac-device-control-overview).|
 
       - question: How do I run custom reports with Defender for Business?
@@ -121,7 +121,7 @@ sections:
 
           For more information, see the following articles:
 
-          - [Set up, review, and edit your security policies and settings in Microsoft Defender for Business](/defender-business/mdb-configure-security-settings)
+          - [Set up, review, and edit your security policies and settings in Microsoft Defender for Business](mdb-configure-security-settings.md)
           - [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy)
 
       - question: If I'm already using Microsoft 365 Business Premium, why do I need Defender for Business?
@@ -161,7 +161,7 @@ sections:
 
           - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/E5) (includes Defender for Endpoint Plan 2 plus Defender for Office 365 Plan 2)
           - [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/E3) (includes Defender for Endpoint Plan 1)
-          - [Defender for Endpoint Plan 1 or 2](https://www.microsoft.com/security/business/threat-protection/endpoint-defender)
+          - [Defender for Endpoint Plan 1 or 2](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint)
 
           For details about licenses and product terms, see [Licensing and product terms for Microsoft 365 subscriptions](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 

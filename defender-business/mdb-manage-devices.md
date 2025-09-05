@@ -84,7 +84,7 @@ Microsoft Defender Antivirus has one of the following states on devices:
 
 When Microsoft Defender Antivirus detects threat, the following things happen:
 
-- Users receive [notifications in Windows](https://support.microsoft.com/windows/8942c744-6198-fe56-4639-34320cf9444e).
+- Users receive [notifications in Windows](https://support.microsoft.com/windows/feeca47f-0baf-5680-16f0-8801db1a8466).
 - Detections are listed in the [Windows Security app](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) on the **Protection history** page.
 - If you [secured your Windows devices](/microsoft-365/business-premium/m365bp-protect-managed-devices), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
 

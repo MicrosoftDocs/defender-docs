@@ -20,7 +20,7 @@ ms.collection:
 
 # Firewall in Microsoft Defender for Business
 
-Defender for Business includes firewall capabilities through [Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). Firewall protection helps secure devices by establishing rules that determine what network traffic is permitted to flow to and from devices.
+Defender for Business includes firewall capabilities through [Windows Defender Firewall](/windows/security/operating-system-security/network-security/windows-firewall/). Firewall protection helps secure devices by establishing rules that determine what network traffic is permitted to flow to and from devices.
 
 You can use firewall protection to specify whether to allow or to block connections on devices in various locations. For example, your firewall settings can allow inbound connections on devices that are connected to your company's internal network but prevent connections when the device is on a network with untrusted devices.
 
@@ -158,7 +158,7 @@ Defender for Business includes firewall protection through Windows Defender Fire
 ## Next steps
 
 - [Manage firewall settings in Defender for Business](mdb-firewall.md)
-- [Learn more about Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
+- [Learn more about Windows Defender Firewall](/windows/security/operating-system-security/network-security/windows-firewall/)
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)

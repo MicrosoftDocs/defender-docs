@@ -34,7 +34,7 @@ Your organization's security team needs certain permissions to perform tasks, su
 - Viewing incidents and alerts
 - Taking response actions on detected threats
 
-Permissions are granted through certain roles in the [Microsoft Entra ID](/azure/active-directory/roles/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
+Permissions are granted through certain roles in the [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
 
 ## What to do
 
@@ -53,13 +53,13 @@ The following table describes the main roles that are assigned in Defender for B
 
 For more information about roles, see the following articles:
 
-- [About admin roles](/Microsoft-365/admin/add-users/about-admin-roles)
+- [About admin roles](/microsoft-365/admin/add-users/about-admin-roles)
 - [Security guidelines for assigning roles](/microsoft-365/admin/add-users/about-admin-roles#security-guidelines-for-assigning-roles)
 
 ## View and edit role assignments
 
 > [!IMPORTANT]
-> Microsoft recommends that you grant people access to only what they need to perform their tasks. We call this concept *least privilege* for permissions. To learn more, see [Best practices for least-privileged access for applications](/azure/active-directory/develop/secure-least-privileged-access).
+> Microsoft recommends that you grant people access to only what they need to perform their tasks. We call this concept *least privilege* for permissions. To learn more, see [Best practices for least-privileged access for applications](/entra/identity-platform/secure-least-privileged-access).
 
 You can use the Microsoft 365 admin center or the Microsoft Entra admin center to view and edit role assignments.
 

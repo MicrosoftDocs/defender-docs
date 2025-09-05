@@ -22,7 +22,7 @@ audience: ITPro
 
 # Use the streaming API with Microsoft Defender for Business
 
-If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](/defender-endpoint/api/raw-data-export) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
+If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](/defender-endpoint/api/raw-data-export) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
 
 - [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel), a scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities.
 - [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
@@ -33,7 +33,7 @@ With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hu
 ## Use the streaming API with Microsoft Sentinel
 
 > [!NOTE]
-> [Microsoft Sentinel](/azure/sentinel/overview) is a paid service. Several plans and pricing options are available. See [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/microsoft-sentinel/).
+> [Microsoft Sentinel](/azure/sentinel/overview) is a paid service. Several plans and pricing options are available. See [Microsoft Sentinel pricing](https://www.microsoft.com/security/pricing/microsoft-sentinel/).
 
 1. Make sure that Defender for Business is set up and configured, and that devices are already onboarded. See [Set up and configure Microsoft Defender for Business](mdb-setup-configuration.md).
 
