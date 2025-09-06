@@ -40,7 +40,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
+   1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
    
    2. Select Windows 10 or Windows 11 as the operating system.
    
@@ -105,7 +105,7 @@ For security reasons, the package used to offboard devices expires seven days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+   1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
    
    2. Select Windows 10 or Windows 11 as the operating system.
    
