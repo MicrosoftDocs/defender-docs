@@ -33,6 +33,7 @@ And add the following request body:
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
                     "CapGBPerMonthPerStorageAccount": "10000",
+					"blobScanResultsOptions": "BlobIndexTags"/"None"
 					
                 }
             },
@@ -91,7 +92,8 @@ And add the following request body:
                     "excludeBlobsLargerThan": 2147483648
 				}
             },
-            "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
+            
+			"scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
             "isEnabled": true

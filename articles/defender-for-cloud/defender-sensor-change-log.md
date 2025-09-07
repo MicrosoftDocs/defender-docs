@@ -13,20 +13,38 @@ The Sensor for Microsoft Defender for Containers changelog provides a detailed v
 
 For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable.md).
 
+To see the version of the sensor run:
+
+`kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}`
+
+
 ## Sensor versions available per release
 
-### Sensor v0.9.17 Preview
+### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
 
-- **Released:** June 17, 2025
+- **Sensor v0.8.30**
+
+- **Released:** August, 2025
+- **What's included:**
+
+  - Better memory efficiency and reduction of CPU consumption
+    
+  - Bug fixes and security enhancements
+
+
+### Sensor v0.9 (deployed by Helm or Arc for K8s via Preview mode)
+
+- **Sensor v0.9.17-Preview**
+
+- **Released:** June, 2025
+
 - **What's included:**
 
   - **Helm-based deployment support**
   Introduces a new deployment method for the sensor using Helm. This option lets you deploy and manage the sensor more easily, and access the latest capabilities in Public Preview or GA.
   
-      To see your version of Helm, run `kubectl get -n mdc daemonsets/microsoft-defender-collectors-ds -o jsonpath='{.metadata.labels.chart}'`.
-
       For setup instructions and more details, see [Install Defender for Containers sensor using Helm](deploy-helm.md).
-
+    
   - **DNS threat detections**
     This version includes new DNS-based detection capabilities, enabling the sensor to generate alerts on suspicious or malicious domains using threat intelligence (TI) feeds. This enhancement improves visibility into potential network-based threats.
 
