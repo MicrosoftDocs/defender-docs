@@ -12,12 +12,12 @@ ms.author: guywild
 
 # Alert schema differences: Legacy vs. XDR connector
 
-This page describes differences between alerts ingested through legacy connectors and the Extended Detection and Response (XDR) connector in Microsoft Sentinel. Schema changes may affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
+This page describes differences between alerts ingested through legacy connectors and the Extended Detection and Response (XDR) connector in Microsoft Sentinel. Schema changes might affect your existing queries, analytic rules, and workbooks. To migrate to the XDR connector, review these differences.
 
-For the full alert schema, see the [Security alert schema reference](./security-alert-schema.md).
+To view the full alert schema, go to the [Security alert schema reference](./security-alert-schema.md).
 
 > [!NOTE]
-> Fields marked as *Not available* aren't included in alerts ingested through the XDR connector. If your queries, analytic rules, or workbooks reference these fields, they won’t return results and should be updated.
+> Fields marked as *Not available* don't appear in alerts ingested through the XDR connector. If your queries, analytic rules, or workbooks use these fields, they won’t return results and should be updated.
 
 
 ## Microsoft Defender for Endpoint (MDE)
@@ -36,7 +36,7 @@ For the full alert schema, see the [Security alert schema reference](./security-
 |----------------------------------|-----------------------------------------------------|
 | ExtendedProperties.InvestigationName | Not available                                     |
 | ExtendedProperties.Status        | Different value set (values differ from legacy)     |
-| Nonsecurity alerts              | Excluded (only security alerts ingested)            |
+| Nonsecurity alerts              | Not included (XDR ingests only security alerts)            |
 
 ---
 
@@ -61,7 +61,7 @@ For the full alert schema, see the [Security alert schema reference](./security-
 
 ## Microsoft Information Protection (IRM)
 
-- Schema differences not yet documented.
+- We haven't documented schema differences yet.
 
 ## Microsoft Defender for Cloud (MDC)
 
