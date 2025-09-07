@@ -98,56 +98,56 @@
             items:
               - name: Defender for Azure SQL Databases
                 items:
-              - name: Overview
-                displayName: database
-                href: defender-for-sql-introduction.md
-              - name: Deploy Defender for Azure SQL Databases
-                displayName: database
-                href: enable-sql-database-plan.md
-              - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
-                href: sql-azure-vulnerability-assessment-enable.md
-              - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
-                href: sql-azure-vulnerability-assessment-enable-classic.md
-              - name: Advanced Threat Protection for Azure SQL Database
-                displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
-                href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
-            - name: Defender for SQL Servers on Machines
-              items:
-              - name: Overview
-                displayName: SQL, SQL servers, defender, machines
-                href: defender-for-sql-servers-introduction.md
-              - name: Enable Defender for SQL Servers on Machines
-                displayName: hybrid, arc, Azure Defender
-                href: defender-for-sql-usage.md
-              - name: Update Defender for SQL Servers on Machines plan configuration
-                displayName: SQL, SQL servers, defender, machines
-                href: update-sql-machine-configuration.md
-              - name: Verify SQL machine protection
-                displayName: SQL, SQL servers, defender, machines
-                href: verify-machine-protection.md
-              - name: Troubleshoot SQL machine protection configuration
-                displayName: Troubleshoot guide, SQL, servers, machines
-                href: troubleshoot-sql-machines-guide.md
-              - name: Disable Defender for SQL Servers on Machines
-                displayName: SQL, SQL servers, defender, machines, disable
-                href: disable-sql-on-machines.md
-              - name: Government clouds
+                - name: Overview
+                  displayName: database
+                  href: defender-for-sql-introduction.md
+                - name: Deploy Defender for Azure SQL Databases
+                  displayName: database
+                  href: enable-sql-database-plan.md
+                - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+                  href: sql-azure-vulnerability-assessment-enable.md
+                - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+                  href: sql-azure-vulnerability-assessment-enable-classic.md
+                - name: Advanced Threat Protection for Azure SQL Database
+                  displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+                  href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
+              - name: Defender for SQL Servers on Machines
                 items:
-                - name: Enable Defender for SQL Servers on Machines government
-                  displayName: hybrid, arc, Azure Defender
-                  href: defender-for-sql-usage-gov.md
-                - name: Enable Defender for SQL servers on machines at scale
-                  displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
-                  href: enable-defender-sql-at-scale.md
-                - name: Verify SQL machine protection government
+                - name: Overview
                   displayName: SQL, SQL servers, defender, machines
-                  href: verify-machine-protection-gov.md
-                - name: Troubleshoot SQL machine protection configuration government
+                  href: defender-for-sql-servers-introduction.md
+                - name: Enable Defender for SQL Servers on Machines
+                  displayName: hybrid, arc, Azure Defender
+                  href: defender-for-sql-usage.md
+                - name: Update Defender for SQL Servers on Machines plan configuration
+                  displayName: SQL, SQL servers, defender, machines
+                  href: update-sql-machine-configuration.md
+                - name: Verify SQL machine protection
+                  displayName: SQL, SQL servers, defender, machines
+                  href: verify-machine-protection.md
+                - name: Troubleshoot SQL machine protection configuration
                   displayName: Troubleshoot guide, SQL, servers, machines
-                  href: troubleshoot-sql-machines-guide-gov.md
-                - name: Migrate to AMA
-                  displayName: vulnerability, assessment, findings, migrate
-                  href: defender-for-sql-autoprovisioning.md
+                  href: troubleshoot-sql-machines-guide.md
+                - name: Disable Defender for SQL Servers on Machines
+                  displayName: SQL, SQL servers, defender, machines, disable
+                  href: disable-sql-on-machines.md
+                - name: Government clouds
+                  items:
+                  - name: Enable Defender for SQL Servers on Machines government
+                    displayName: hybrid, arc, Azure Defender
+                    href: defender-for-sql-usage-gov.md
+                  - name: Enable Defender for SQL servers on machines at scale
+                    displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
+                    href: enable-defender-sql-at-scale.md
+                  - name: Verify SQL machine protection government
+                    displayName: SQL, SQL servers, defender, machines
+                    href: verify-machine-protection-gov.md
+                  - name: Troubleshoot SQL machine protection configuration government
+                    displayName: Troubleshoot guide, SQL, servers, machines
+                    href: troubleshoot-sql-machines-guide-gov.md
+                  - name: Migrate to AMA
+                    displayName: vulnerability, assessment, findings, migrate
+                    href: defender-for-sql-autoprovisioning.md
         - name: Defender for Storage
           items:
             - name: Protect storage accounts with Defender for Storage
