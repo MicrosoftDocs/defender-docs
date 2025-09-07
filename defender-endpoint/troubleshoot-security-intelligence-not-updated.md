@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom: 
 - partner-contribution
-ms.reviewer: ewalsh
+ms.reviewer:
 search.appverid: MET150
 f1.keywords: NOCSH
 audience: ITPro
