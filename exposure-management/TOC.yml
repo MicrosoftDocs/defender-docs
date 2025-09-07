@@ -52,6 +52,10 @@
              href: crowdstrike-data-connector.md
            - name: SentinelOne
              href: sentinel-one-data-connector.md
+       - name: Cloud Security data connectors
+         items:
+           - name: Wiz
+             href: wiz-data-connector.md
        - name: Vulnerability Management data connectors
          items:
            - name: Qualys
@@ -60,8 +64,6 @@
              href: rapid7-data-connector.md
            - name: Tenable
              href: tenable-data-connector.md
-           - name: Wiz
-             href: wiz-data-connector.md
        - name: Getting value from your data connectors
          href: value-data-connectors.md
     - name: Work with attack paths
