@@ -3,10 +3,10 @@ title: Resources for Microsoft Defender for Endpoint for mobile devices
 description: Learn about the configurations and privacy settings for all the features in Defender for Endpoint on mobile devices.
 ms.service: defender-endpoint
 ms.reviewer: priyankagill
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,10 +2,10 @@
 title: Get user-related machines API
 description: Learn how to use the Get user-related machines API to retrieve a collection of devices related to a user ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

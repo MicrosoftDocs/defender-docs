@@ -1,13 +1,13 @@
 ---
 title: Automation levels in automated investigation and remediation
 description: Get an overview of automation levels and how they work in Microsoft Defender for Endpoint
-author: emmwalshh
+author: batamig
 ms.service: defender-endpoint
 ms.subservice: edr
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

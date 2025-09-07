@@ -3,10 +3,10 @@ title: Migrate devices to use the streamlined onboarding method
 description: Learn how to migrate devices to Defender for Endpoint using the streamlined connectivity method.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

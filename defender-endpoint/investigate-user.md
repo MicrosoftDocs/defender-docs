@@ -2,10 +2,10 @@
 title: Investigate a user account in Microsoft Defender for Endpoint
 description: Investigate a user account for potential compromised credentials or pivot on the associated user account during an investigation.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

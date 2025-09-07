@@ -4,11 +4,11 @@ description: Test how Microsoft Defender for Endpoint SmartScreen helps you iden
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: ewalsh 
-author: emmwalshh
+ms.author: bagol 
+author: batamig
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
