@@ -92,6 +92,9 @@
           displayName: Databases, Cosmos, DB, SQL servers, Azure SQL, SQL, Open-source
             relational databases
           href: tutorial-enable-databases-plan.md
+        - name: Enable Defender for Databases plans
+          items:
+            - name: 
         - name: Defender for Storage
           items:
             - name: Protect storage accounts with Defender for Storage
