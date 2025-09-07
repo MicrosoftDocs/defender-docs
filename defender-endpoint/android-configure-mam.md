@@ -3,7 +3,7 @@ title: Configure Microsoft Defender for Endpoint on Android risk signals using A
 description: Describes how to configure Microsoft Defender for Endpoint risk signals using App Protection policies
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 manager: deniseb
 ms.localizationpriority: medium

@@ -2,7 +2,7 @@
 title: Schedule antivirus scans using Microsoft Intune
 description: Schedule antivirus scans using Intune
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to

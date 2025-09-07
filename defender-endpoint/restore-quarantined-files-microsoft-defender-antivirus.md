@@ -4,7 +4,7 @@ description: You can restore quarantined files and folders in Microsoft Defender
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 03/26/2025
 ms.reviewer: yongrhee, pahuijbr

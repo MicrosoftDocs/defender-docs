@@ -2,7 +2,7 @@
 title: Pilot ring deployment using Group Policy and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus pilot clients using Group Policy and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: ewalsh
+ms.author: bagol
 author: emmwalshh
 ms.reviewer: yongrhee
 ms.localizationpriority: high

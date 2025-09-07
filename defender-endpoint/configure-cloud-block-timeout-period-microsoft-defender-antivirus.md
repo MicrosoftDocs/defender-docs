@@ -4,7 +4,7 @@ description: You can configure how long Microsoft Defender Antivirus blocks a fi
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb

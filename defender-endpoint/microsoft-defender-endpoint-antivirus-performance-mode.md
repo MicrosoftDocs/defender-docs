@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: pricci, yongrhee
 manager: deniseb
 ms.custom: nextgen02

@@ -3,7 +3,7 @@ title: Deploy and manage Device Control using Intune
 description: Learn how to deploy and manage device control policies using Intune.
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium

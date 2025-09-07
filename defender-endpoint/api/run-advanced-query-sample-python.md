@@ -3,7 +3,7 @@ title: Advanced Hunting with Python API Guide
 ms.reviewer: 
 description: Learn how to query using the Microsoft Defender for Endpoint API, by using Python, with examples.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

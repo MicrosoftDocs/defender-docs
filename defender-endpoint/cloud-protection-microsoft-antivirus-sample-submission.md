@@ -4,7 +4,7 @@ description: Learn about cloud-delivered protection and Microsoft Defender Antiv
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: mkaminska, yongrhee
 manager: deniseb
 ms.subservice: ngp

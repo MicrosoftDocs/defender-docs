@@ -4,7 +4,7 @@ description: Turn on the block at first sight feature to detect and block malwar
 ms.service: defender-endpoint
 ms.localizationpriority: high
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: marcmcc
 manager: deniseb
 ms.custom: nextgen

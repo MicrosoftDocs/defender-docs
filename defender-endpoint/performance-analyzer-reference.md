@@ -2,7 +2,7 @@
 title: Microsoft Defender Antivirus Performance Analyzer reference
 description: Microsoft Defender Antivirus Performance Analyzer reference
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting

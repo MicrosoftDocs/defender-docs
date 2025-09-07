@@ -2,7 +2,7 @@
 title: Authenticated scan methods and properties
 description: The API response contains Microsoft Defender Vulnerability Management authenticated scans created in your tenant. You can request all the scans, all the scan definitions or add a new network our authenticated scan.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

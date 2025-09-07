@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ms.date: 06/16/2025
 ms.topic: overview
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: mkaminska, yonghree, pahuijbr
 manager: deniseb
 ms.custom: nextgen

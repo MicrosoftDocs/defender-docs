@@ -6,7 +6,7 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman

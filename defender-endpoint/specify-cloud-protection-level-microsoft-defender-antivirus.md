@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 ms.date: 11/10/2024
 manager: deniseb

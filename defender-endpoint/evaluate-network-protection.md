@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 manager: deniseb
 ms.subservice: asr

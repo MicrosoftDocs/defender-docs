@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 ms.topic: concept-article
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb

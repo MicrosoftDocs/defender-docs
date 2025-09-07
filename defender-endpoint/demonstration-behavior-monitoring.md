@@ -4,7 +4,7 @@ description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: deniseb

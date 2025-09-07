@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/05/2025
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 audience: ITPro
 ms.reviewer: sugamar 
 manager: deniseb

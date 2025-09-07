@@ -4,7 +4,7 @@ description: Run Microsoft Defender Antivirus scans and configure next-generatio
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: deniseb

@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 manager: deniseb
 ms.custom: asr
 ms.subservice: asr

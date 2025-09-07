@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 04/08/2025
 audience: ITPro
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: ericlaw
 manager: deniseb
 ms.custom: asr

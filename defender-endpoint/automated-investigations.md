@@ -4,7 +4,7 @@ description: Understand the automated investigation flow in Microsoft Defender f
 ms.service: defender-endpoint
 ms.subservice: edr
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 03/25/2025
 manager: deniseb

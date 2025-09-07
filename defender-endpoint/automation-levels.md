@@ -4,7 +4,7 @@ description: Get an overview of automation levels and how they work in Microsoft
 author: emmwalshh
 ms.service: defender-endpoint
 ms.subservice: edr
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 04/04/2025
 manager: deniseb

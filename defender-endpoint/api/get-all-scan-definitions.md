@@ -2,7 +2,7 @@
 title: Get scan definitions
 description: Learn how to use the Get all scan definition APIs
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

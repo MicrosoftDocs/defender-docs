@@ -9,7 +9,7 @@ ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER

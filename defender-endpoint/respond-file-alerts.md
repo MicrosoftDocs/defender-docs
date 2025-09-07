@@ -2,7 +2,7 @@
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
-ms.author: diannegali
+ms.author: bagol
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb

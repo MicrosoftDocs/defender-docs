@@ -2,7 +2,7 @@
 title: Get missing KBs by device ID
 description: Retrieves missing security updates by device ID
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

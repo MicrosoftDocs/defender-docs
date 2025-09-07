@@ -7,7 +7,7 @@ ms.date: 05/08/2025
 audience: ITPro
 ms.topic: concept-article
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 manager: deniseb
 ms.subservice: asr
 ms.collection: 

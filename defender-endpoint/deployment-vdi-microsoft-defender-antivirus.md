@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.date: 12/30/2024
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: jesquive
 manager: deniseb

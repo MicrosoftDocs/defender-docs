@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.subservice: reference
 ms.reviewer: itsela
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 ms.collection: 

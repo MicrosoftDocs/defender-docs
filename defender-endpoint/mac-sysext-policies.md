@@ -4,7 +4,7 @@ description: This topic describes the changes that are must be made in order to 
 search.appverid: met150
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium

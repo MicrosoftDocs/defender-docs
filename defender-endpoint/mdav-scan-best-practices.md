@@ -7,7 +7,7 @@ ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution

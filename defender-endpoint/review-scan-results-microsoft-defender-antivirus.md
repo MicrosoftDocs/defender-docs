@@ -4,7 +4,7 @@ description: Review the results of scans using Microsoft Endpoint Configuration 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen

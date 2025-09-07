@@ -4,7 +4,7 @@ description: Enable the potentially unwanted application (PUA) antivirus feature
 ms.service: defender-endpoint
 ms.localizationpriority: high
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih

@@ -4,7 +4,7 @@ description: You can configure Microsoft Defender Antivirus to scan email storag
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb

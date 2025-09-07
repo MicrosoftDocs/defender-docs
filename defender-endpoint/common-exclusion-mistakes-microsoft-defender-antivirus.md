@@ -4,7 +4,7 @@ description: Avoid common mistakes when defining exclusions for Microsoft Defend
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: deniseb

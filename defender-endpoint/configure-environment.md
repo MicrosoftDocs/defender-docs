@@ -3,7 +3,7 @@ title: Configure your network environment to ensure connectivity with Defender f
 description: Learn how to configure your network environment to connect with the Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium

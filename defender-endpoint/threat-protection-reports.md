@@ -2,7 +2,7 @@
 title: Microsoft Defender for Endpoint reports
 description: Access the various reports for devices, protection features, and more in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

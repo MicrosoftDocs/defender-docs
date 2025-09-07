@@ -2,7 +2,7 @@
 title: Investigate Microsoft Defender for Endpoint files
 description: Use the investigation options to get details on files associated with alerts, behaviors, or events.
 ms.service: defender-endpoint
-ms.author: diannegali
+ms.author: bagol
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb

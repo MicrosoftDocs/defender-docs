@@ -7,7 +7,7 @@ ms.date: 07/23/2025
 audience: ITPro
 ms.topic: reference
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr, tudobril, yongrhee
 manager: deniseb

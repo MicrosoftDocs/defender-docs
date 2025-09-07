@@ -4,7 +4,7 @@ description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 04/29/2025
 ms.reviewer: pauhijbr, ksarens

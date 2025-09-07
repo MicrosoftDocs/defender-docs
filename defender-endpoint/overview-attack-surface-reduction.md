@@ -4,7 +4,7 @@ ms.reviewer: niwelton, joshbregman
 description: Learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

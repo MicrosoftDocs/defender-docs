@@ -2,7 +2,7 @@
 title: List all recommendations
 description: Retrieves a list of all security recommendations affecting the organization.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

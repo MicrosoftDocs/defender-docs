@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: conceptual
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution

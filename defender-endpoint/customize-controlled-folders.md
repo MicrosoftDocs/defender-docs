@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
 manager: deniseb
 ms.subservice: asr

@@ -9,7 +9,7 @@ ms.date: 06/06/2025
 audience: ITPro
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER

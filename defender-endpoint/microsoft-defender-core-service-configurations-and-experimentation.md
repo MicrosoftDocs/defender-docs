@@ -4,7 +4,7 @@ description: Understand the interaction between Microsoft Defender Core Service 
 search.appverid: met150
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: yongrhee
 manager: deniseb
 ms.localizationpriority: medium

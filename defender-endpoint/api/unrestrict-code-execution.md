@@ -2,7 +2,7 @@
 title: Remove app restriction API
 description: Use this API to create calls related to removing a restriction from applications from executing.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

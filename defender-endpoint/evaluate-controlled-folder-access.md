@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 ms.topic: article
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: sugamar, moeghasemi
 manager: deniseb
 ms.subservice: asr

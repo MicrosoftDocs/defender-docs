@@ -2,7 +2,7 @@
 title: User resource type
 description: Retrieve recent Microsoft Defender for Endpoint alerts related to users.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

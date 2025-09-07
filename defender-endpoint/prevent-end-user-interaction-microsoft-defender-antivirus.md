@@ -4,7 +4,7 @@ description: You can hide virus and threat protection tile in the Windows Securi
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 03/26/2025
 ms.reviewer: pahuijbr

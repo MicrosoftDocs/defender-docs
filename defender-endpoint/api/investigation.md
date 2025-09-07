@@ -2,7 +2,7 @@
 title: Investigation resource type
 description: Microsoft Defender for Endpoint Investigation entity.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

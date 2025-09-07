@@ -5,7 +5,7 @@ search.appverid: met150
 f1.keywords:
 - NOCSH
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium

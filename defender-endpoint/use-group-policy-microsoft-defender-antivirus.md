@@ -4,7 +4,7 @@ description: Learn how to use a Group Policy to configure and manage Microsoft D
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 04/11/2025
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee

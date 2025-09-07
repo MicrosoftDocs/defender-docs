@@ -2,7 +2,7 @@
 title: Configure general Defender for Endpoint settings 
 description: Use the settings page to configure general settings, permissions, APIs, and rules.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

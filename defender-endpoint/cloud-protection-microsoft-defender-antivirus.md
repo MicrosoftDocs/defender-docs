@@ -4,7 +4,7 @@ description: Learn about cloud protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: mkaminska
 manager: deniseb
 ms.custom: nextgen

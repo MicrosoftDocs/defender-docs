@@ -2,7 +2,7 @@
 title: Get alert related machine information
 description: Retrieve all devices related to a specific alert using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

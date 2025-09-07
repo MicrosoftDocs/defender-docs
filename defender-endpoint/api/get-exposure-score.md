@@ -3,7 +3,7 @@ title: Get exposure score
 description: Retrieves the organizational exposure score.
 ms.service: defender-endpoint
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

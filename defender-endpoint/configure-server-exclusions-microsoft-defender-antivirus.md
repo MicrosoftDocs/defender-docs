@@ -8,7 +8,7 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 05/01/2025
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 

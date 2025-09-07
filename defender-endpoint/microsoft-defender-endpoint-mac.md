@@ -4,7 +4,7 @@ ms.reviewer: joshbregman
 description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 ms.topic: install-set-up-deploy
 author: denisebmsft
-ms.author: deniseb
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: thdoucet
 manager: deniseb

@@ -4,7 +4,7 @@ description: Review alert information, including a visualized alert story and de
 ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
+ms.author: bagol
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb

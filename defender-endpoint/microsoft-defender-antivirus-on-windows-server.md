@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: how-to

@@ -3,7 +3,7 @@ title: Troubleshoot performance issues for Microsoft Defender for Endpoint on ma
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: joshbregman
 manager: deniseb
 ms.localizationpriority: medium

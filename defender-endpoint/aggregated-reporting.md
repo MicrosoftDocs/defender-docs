@@ -2,7 +2,7 @@
 title: Aggregated reporting in Microsoft Defender for Endpoint
 description: Learn how you collect important telemetry in Microsoft Defender for Endpoint by turning on aggregated reporting.
 ms.service: defender-endpoint
-ms.author: diannegali
+ms.author: bagol
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb

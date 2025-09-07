@@ -2,7 +2,7 @@
 title: Get recommendation by Id
 description: Retrieves a security recommendation by its ID.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

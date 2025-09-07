@@ -2,7 +2,7 @@
 title: List devices by software
 description: Retrieve a list of devices that has this software installed.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

@@ -2,7 +2,7 @@
 title: List software
 description: Retrieves a list of software inventory
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

@@ -4,7 +4,7 @@ description: Read this article to get an overview of how to migrate your servers
 search.appverid: met150
 ms.service: defender-endpoint
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 04/16/2025
 manager: deniseb

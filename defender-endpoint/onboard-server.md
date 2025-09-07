@@ -2,7 +2,7 @@
 title: Onboard servers through Microsoft Defender for Endpoint's onboarding experience
 description: Learn how to onboard servers running Windows Server or Linux to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

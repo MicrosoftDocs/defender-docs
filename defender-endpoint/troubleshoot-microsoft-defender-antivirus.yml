@@ -3,7 +3,7 @@ metadata:
   title: Microsoft Defender Antivirus event IDs and error codes
   description: Look up the causes and solutions for Microsoft Defender Antivirus event IDs and errors.
   author: emmwalshh
-  ms.author: ewalsh
+  ms.author: bagol
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting

@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 03/26/2025

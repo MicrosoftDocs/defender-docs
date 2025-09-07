@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 05/19/2025
 ms.topic: how-to
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.reviewer: tdoucett
 manager: deniseb
 ms.subservice: asr

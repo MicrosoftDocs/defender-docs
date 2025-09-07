@@ -4,7 +4,7 @@ description: Set up your automated investigation and remediation capabilities in
 ms.service: defender-endpoint
 ms.subservice: edr
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

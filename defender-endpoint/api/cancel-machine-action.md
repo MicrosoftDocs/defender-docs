@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.subservice: reference
 f1.keywords:
 - NOCSH
-ms.author: deniseb
+ms.author: bagol
 author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb

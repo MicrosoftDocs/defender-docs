@@ -4,7 +4,7 @@ description: Use the action center to view details and results following an auto
 ms.service: defender-endpoint
 ms.subservice: edr
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

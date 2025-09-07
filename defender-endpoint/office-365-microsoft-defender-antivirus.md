@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 ms.topic: conceptual
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER

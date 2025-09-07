@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 03/26/2025
 ms.topic: install-set-up-deploy
 author: emmwalshh
-ms.author: ewalsh
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb
