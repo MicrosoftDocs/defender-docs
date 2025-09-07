@@ -35,7 +35,7 @@ To view the full alert schema, go to the [Security alert schema reference](./sec
 | Legacy field/property             | XDR behavior                                        |
 |----------------------------------|-----------------------------------------------------|
 | ExtendedProperties.InvestigationName | Not available                                     |
-| ExtendedProperties.Status        | Different value set (values differ from legacy)     |
+| ExtendedProperties.Status        | Different value set from legacy     |
 | Nonsecurity alerts              | Not included (XDR ingests only security alerts)            |
 
 ---
@@ -49,7 +49,7 @@ To view the full alert schema, go to the [Security alert schema reference](./sec
 
 ## Microsoft Cloud App Security (MCAS)
 
-- No schema differences identified.
+The Microsoft Cloud App Security connector has no schema differences between the legacy and XDR connectors.
 
 ## Microsoft Defender for Identity (MDI)
 
@@ -58,10 +58,6 @@ To view the full alert schema, go to the [Security alert schema reference](./sec
 | CompromisedEntity      | Not available  |
 | ResourceAccessInfo     | Not available  |
 | DomainResourceIdentifier | Not available |
-
-## Microsoft Information Protection (IRM)
-
-- We haven't documented schema differences yet.
 
 ## Microsoft Defender for Cloud (MDC)
 
@@ -73,6 +69,8 @@ However, it uses different scoping in XDR:
 - **XDR connector:** tenant level
 
 ## What’s next
+
+Next, explore how to update your rules and workbooks in Microsoft Sentinel:
 
 - [Create and manage analytic rules](./create-analytics-rules.md)  
 - [Use workbooks in Microsoft Sentinel](./monitor-your-data.md)   
