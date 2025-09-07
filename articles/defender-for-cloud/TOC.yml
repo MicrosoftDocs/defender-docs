@@ -16,16 +16,15 @@
 - name: Experience in Defender portal
   expanded: true
   items:
-    - name: Defender for Cloud in the Defender portal
+    - name: Complete overview - four-column guide
+      displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
+      href: defender-portal/defender-portal-four-column-overview.md
+    - name: Defender for Cloud in the Defender portal - Integration and Dashboard Overview
+      displayName: defender portal, integration, dashboard, overview, mdc, cloud security
       href: defender-portal/defender-for-cloud-in-defender-portal.md
     - name: Getting started in the Defender Portal
       displayName: get started, onboarding, defender portal, mdc, introduction
       href: defender-portal/getting-started-defender-portal.md
-    - name: Complete overview - four-column guide
-      displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
-      href: defender-portal/defender-portal-four-column-overview.md
-    - name: Overview dashboard in the Defender portal
-      href: defender-portal/defender-for-cloud-overview-dashboard.md
     - name: Azure portal vs Defender portal feature comparison
       displayName: comparison, features, azure portal, defender portal, capabilities, differences
       href: azure-portal-vs-defender-portal-comparison.md
