@@ -33,9 +33,9 @@ Using tasks is particularly useful for:
 
 ### Manage incident response with a unified view of tasks and Security Copilot insights 
 
-Use the incident's task panel to assess what's been done and what needs to be done next. View your team's overall progress by looking at the status bar and task preview cards.
-
 The task panel presents [Security Copilot summaries, guided responses, and reports](./security-copilot-in-microsoft-365-defender.md) side by side with tasks to provide a unified to-do list.  
+
+Use task panel's status bar and task preview cards to view your team's overall progress.
 
 Categorize, prioritize, assign, and track each task to ensure consistency, collaboration, and accountability. When you close a task, add Closing notes to document the outcome. These notes support thorough postmortems and help teams learn from each investigation.
 
