@@ -4,10 +4,10 @@ description: Use the device health report to track device health, OS platforms, 
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

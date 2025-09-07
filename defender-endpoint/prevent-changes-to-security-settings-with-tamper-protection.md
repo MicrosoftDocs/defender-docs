@@ -1,14 +1,14 @@
 ---
 title: Protect security settings with tamper protection
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, gberecz, ksarens
-manager: deniseb
+manager: bagol
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 02/28/2025
 audience: ITPro
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: 
 - nextgen

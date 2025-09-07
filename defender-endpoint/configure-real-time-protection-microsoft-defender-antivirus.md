@@ -4,12 +4,12 @@ description: Enable and configure Microsoft Defender Antivirus real-time protect
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
 ms.topic: how-to
 ms.date: 06/27/2025
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security

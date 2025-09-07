@@ -4,11 +4,11 @@ description: You can exclude files (including files modified by specified proces
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/06/2025
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.audience: ITPro
 ms.topic: how-to

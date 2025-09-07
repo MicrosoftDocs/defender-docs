@@ -1,9 +1,9 @@
 ---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
-author: denisebmsft
+author: batamig
 ms.author: bagol
-manager: deniseb
+manager: bagol
 ms.date: 02/05/2025
 ms.topic: overview
 ms.service: defender-endpoint

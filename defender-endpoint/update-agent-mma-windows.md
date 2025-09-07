@@ -4,10 +4,10 @@ description: Learn about your options for updating or replacing your MMA agent o
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

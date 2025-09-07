@@ -4,13 +4,13 @@ description: Configure what Microsoft Defender Antivirus should do when it detec
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 03/26/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2

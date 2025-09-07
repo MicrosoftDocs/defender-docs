@@ -4,10 +4,10 @@ description: This article describes how to run Microsoft Defender Antivirus in a
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:

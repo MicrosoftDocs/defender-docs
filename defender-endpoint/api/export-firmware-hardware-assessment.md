@@ -3,9 +3,9 @@ title: Hardware and firmware assessment methods and properties per device
 description: Provides information about the Firmware and Hardware APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -4,10 +4,10 @@ description: Get an overview of next-generation protection in Microsoft Defender
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: concept-article
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 

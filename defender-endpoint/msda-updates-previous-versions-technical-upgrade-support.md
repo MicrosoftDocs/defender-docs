@@ -3,11 +3,11 @@ title: Microsoft Defender Antivirus updates - Previous versions for technical up
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
 ms.date: 07/23/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

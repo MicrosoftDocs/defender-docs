@@ -3,10 +3,10 @@ title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

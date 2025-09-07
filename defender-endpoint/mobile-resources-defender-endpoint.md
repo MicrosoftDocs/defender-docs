@@ -4,9 +4,9 @@ description: Learn about the configurations and privacy settings for all the fea
 ms.service: defender-endpoint
 ms.reviewer: priyankagill
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -3,9 +3,9 @@ title: Get software by ID
 description: Retrieves a list of software details by ID.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

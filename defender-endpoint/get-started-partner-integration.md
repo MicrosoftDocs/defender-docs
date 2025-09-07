@@ -5,9 +5,9 @@ description: Learn the steps and requirements to integrate your solution with Mi
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -6,13 +6,13 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 06/16/2025
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, dmcwee, yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2

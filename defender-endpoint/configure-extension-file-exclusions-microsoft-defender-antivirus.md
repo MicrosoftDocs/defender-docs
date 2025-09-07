@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 05/19/2025
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2

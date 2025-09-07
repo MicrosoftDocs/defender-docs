@@ -4,9 +4,9 @@ description: See how malicious apps and threats are evaluated and countered by M
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: yongrhee
 audience: ITPro
 ms.collection:

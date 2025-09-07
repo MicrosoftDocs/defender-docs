@@ -2,10 +2,10 @@
 title: Sign in to Jamf Pro
 description: Sign in to Jamf Pro.
 ms.service: defender-endpoint
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

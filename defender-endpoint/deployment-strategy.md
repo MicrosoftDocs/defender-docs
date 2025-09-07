@@ -3,9 +3,9 @@ title: Identify your architecture and select a deployment method for Defender fo
 description: Select the best Microsoft Defender for Endpoint deployment strategy for your environment.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
   - m365-security

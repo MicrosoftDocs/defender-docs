@@ -4,10 +4,10 @@ description: Use a local script to deploy the configuration package on devices t
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

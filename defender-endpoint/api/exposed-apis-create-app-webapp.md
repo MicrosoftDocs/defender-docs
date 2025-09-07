@@ -4,10 +4,10 @@ ms.reviewer:
 description: Learn how to design a web app to get programmatic access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

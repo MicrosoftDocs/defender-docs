@@ -4,10 +4,10 @@ description: Run the detection test script on a device recently onboarded to the
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/01/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

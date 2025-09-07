@@ -2,9 +2,9 @@
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
 search.appverid: MET150 
-author: emmwalshh
+author: batamig
 ms.author: bagol
-manager: deniseb 
+manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint

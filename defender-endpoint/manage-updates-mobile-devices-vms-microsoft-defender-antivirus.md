@@ -4,11 +4,11 @@ description: Manage how mobile devices, such as laptops, should be updated with 
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

@@ -4,10 +4,10 @@ description: Resources and sample code to troubleshoot issues with Network prote
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
+author: batamig
 ms.author: bagol
 ms.reviewer: oogunrinde, yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:

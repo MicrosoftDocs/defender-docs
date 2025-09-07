@@ -4,9 +4,9 @@ description: See the list of professional services that Microsoft Defender XDR c
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

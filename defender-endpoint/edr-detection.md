@@ -3,9 +3,9 @@ title: EDR detection test for verifying device's onboarding and reporting servic
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,10 +2,10 @@
 title: Get one remediation activity by ID
 description: Returns information for the specified remediation activity.
 ms.service: defender-endpoint
-author: denisebmsft
+author: batamig
 ms.author: bagol
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

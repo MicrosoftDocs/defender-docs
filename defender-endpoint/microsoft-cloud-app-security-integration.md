@@ -5,9 +5,9 @@ description: Microsoft Defender for Endpoint integrates with Defender for Cloud 
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

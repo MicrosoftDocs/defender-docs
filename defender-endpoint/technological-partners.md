@@ -5,9 +5,9 @@ description: View technological partners of Microsoft Defender XDR to enhance de
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

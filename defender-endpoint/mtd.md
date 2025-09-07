@@ -5,10 +5,10 @@ description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoin
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: emmwalshh  
+author: batamig  
 ms.localizationpriority: medium
 ms.date: 04/08/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

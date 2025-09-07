@@ -4,10 +4,10 @@ description: Learn how to verify client connectivity to Defender for Endpoint se
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: mkaminska
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

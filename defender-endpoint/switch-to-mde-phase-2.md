@@ -4,10 +4,10 @@ description: Move to Defender for Endpoint. Review the setup process, which incl
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
 ms.date: 05/08/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security

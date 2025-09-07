@@ -3,12 +3,12 @@ title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.date: 04/29/2025
 ms.reviewer: pauhijbr, ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 

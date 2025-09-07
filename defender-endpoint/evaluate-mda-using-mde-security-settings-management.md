@@ -4,9 +4,9 @@ ms.reviewer: yonghree
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: dolmont
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

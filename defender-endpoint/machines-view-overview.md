@@ -3,10 +3,10 @@ title: Device inventory
 description: Learn about the available features that you can use from the Devices list such as sorting, filtering, and exporting the list to enhance investigations.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

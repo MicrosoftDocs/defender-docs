@@ -3,11 +3,11 @@ title: Minimum requirements for Microsoft Defender for Endpoint
 description: Understand licensing and other requirements for onboarding devices to Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 ms.date: 06/10/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -5,9 +5,9 @@ ms.topic: upgrade-and-migration-article
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
+author: batamig
 ms.author: bagol
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.collection: 

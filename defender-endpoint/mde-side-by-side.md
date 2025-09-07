@@ -5,13 +5,13 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: conceptual
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2

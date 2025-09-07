@@ -4,9 +4,9 @@ description: Troubleshoot issues that might arise when using SIEM tools with Mic
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

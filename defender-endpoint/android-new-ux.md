@@ -3,9 +3,9 @@ title: User experiences in Microsoft Defender for Endpoint on Android
 description: Learn about the newest updates to Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:

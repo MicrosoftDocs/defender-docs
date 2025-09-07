@@ -4,9 +4,9 @@ description: Turn on the Microsoft Defender for Endpoint troubleshooting mode to
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: pricci
 audience: ITPro
 ms.collection: 

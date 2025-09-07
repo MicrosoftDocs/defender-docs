@@ -4,9 +4,9 @@ ms.reviewer:
 description: Learn how to query using the Microsoft Defender for Endpoint API, by using Python, with examples.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

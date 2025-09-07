@@ -5,9 +5,9 @@ description: Use Microsoft Defender for Endpoint Flow connector to create a flow
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

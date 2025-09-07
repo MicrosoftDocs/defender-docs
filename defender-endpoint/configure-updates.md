@@ -6,9 +6,9 @@ ms.subservice: onboard
 f1.keywords:
 - NOCSH
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

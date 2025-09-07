@@ -4,9 +4,9 @@ ms.reviewer:
 description: Describes how to install and use Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

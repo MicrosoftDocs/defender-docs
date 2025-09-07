@@ -2,10 +2,10 @@
 title: Remediation activity methods and properties
 description: The API response contains Microsoft Defender Vulnerability Management remediation activities created in your tenant. You can request all the remediation activities, only one remediation activity, or information about exposed devices for a selected remediation task.
 ms.service: defender-endpoint
-author: denisebmsft
+author: batamig
 ms.author: bagol
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

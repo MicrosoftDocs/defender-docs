@@ -3,10 +3,10 @@ title: Enable block at first sight to detect malware in seconds
 description: Turn on the block at first sight feature to detect and block malware within seconds.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: marcmcc
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.date: 07/25/2024
 ms.subservice: ngp

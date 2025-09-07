@@ -4,13 +4,13 @@ description: Learn how to configure and customize both standard and other Micros
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.topic: how-to
 ms.author: bagol
 ms.custom: nextgen
 ms.date: 02/19/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2

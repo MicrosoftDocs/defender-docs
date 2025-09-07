@@ -4,10 +4,10 @@ description: Deploy the configuration package on virtual desktop infrastructure 
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

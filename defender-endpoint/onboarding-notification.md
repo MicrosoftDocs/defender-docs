@@ -4,9 +4,9 @@ description: Get a notification when a local onboarding or offboarding script is
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

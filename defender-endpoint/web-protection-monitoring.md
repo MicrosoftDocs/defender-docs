@@ -4,9 +4,9 @@ description: Use web protection in Microsoft Defender for Endpoint to monitor we
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalsh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

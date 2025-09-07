@@ -4,11 +4,11 @@ description: Learn about the Microsoft Defender for Endpoint for US Government c
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 05/30/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

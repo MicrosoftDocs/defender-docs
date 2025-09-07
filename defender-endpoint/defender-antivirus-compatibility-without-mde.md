@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
 description: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
-author: denisebmsft
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint

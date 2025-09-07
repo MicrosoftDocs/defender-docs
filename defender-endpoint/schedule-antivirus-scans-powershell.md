@@ -3,12 +3,12 @@ title: Schedule antivirus scans using PowerShell
 description: Schedule antivirus scans using PowerShell
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.date: 04/30/2025
 ms.reviewer: pauhijbr, ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 

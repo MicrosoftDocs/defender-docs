@@ -4,9 +4,9 @@ ms.reviewer:
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

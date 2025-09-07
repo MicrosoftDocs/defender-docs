@@ -4,10 +4,10 @@ description: Use the Microsoft Defender for Endpoint troubleshooting mode to add
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.reviewer: pricci
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

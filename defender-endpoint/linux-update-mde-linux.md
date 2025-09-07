@@ -3,10 +3,10 @@ title: How to schedule an update for Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

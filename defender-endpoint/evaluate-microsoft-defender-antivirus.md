@@ -4,10 +4,10 @@ description: Businesses of all sizes can use this guide to evaluate and test the
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: article
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.date: 01/28/2025
 ms.subservice: ngp

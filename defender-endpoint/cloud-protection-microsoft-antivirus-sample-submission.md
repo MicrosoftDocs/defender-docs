@@ -3,10 +3,10 @@ title: Cloud protection and sample submission at Microsoft Defender Antivirus
 description: Learn about cloud-delivered protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: mkaminska, yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
 ms.date: 04/16/2025

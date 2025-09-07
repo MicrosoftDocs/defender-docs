@@ -4,8 +4,8 @@ description: Configure and test your connection to the Microsoft Defender Antivi
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-manager: deniseb
+author: batamig
+manager: bagol
 ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen

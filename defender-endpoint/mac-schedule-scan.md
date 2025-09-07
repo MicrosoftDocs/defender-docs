@@ -2,10 +2,10 @@
 title: How to schedule scans with Microsoft Defender for Endpoint on macOS
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint in macOS to better protect your organization's assets.
 ms.service: defender-endpoint
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 ms.date: 10/23/2024
 audience: ITPro

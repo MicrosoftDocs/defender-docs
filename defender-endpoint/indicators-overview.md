@@ -3,9 +3,9 @@ title: Overview of indicators in Microsoft Defender for Endpoint
 description: Create indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
 ms.author: bagol
-author: diannegali
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: ericlaw
 audience: ITPro
 ms.collection: 

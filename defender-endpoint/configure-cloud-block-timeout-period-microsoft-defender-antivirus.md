@@ -3,11 +3,11 @@ title: Configure the Microsoft Defender Antivirus cloud block time-out period
 description: You can configure how long Microsoft Defender Antivirus blocks a file from running while waiting for a cloud determination.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.date: 11/10/2024

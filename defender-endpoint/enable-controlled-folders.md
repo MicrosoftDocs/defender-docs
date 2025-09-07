@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.topic: how-to
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: sugamar; moeghasemi
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security

@@ -4,9 +4,9 @@ ms.reviewer:
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS using an app.
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

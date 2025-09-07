@@ -2,10 +2,10 @@
 title: Get the device secure score
 description: Retrieves the organizational device secure score.
 ms.service: defender-endpoint
-author: denisebmsft
+author: batamig
 ms.author: bagol
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

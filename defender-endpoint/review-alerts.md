@@ -5,9 +5,9 @@ ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
 ms.author: bagol
-author: diannegali
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
   - m365-security

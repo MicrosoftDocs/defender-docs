@@ -1,9 +1,9 @@
 ---
 title: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 description: Behavior Monitoring in Microsoft Defender Antivirus on macOS
-author: emmwalshh
+author: batamig
 ms.author: bagol
-manager: deniseb
+manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 06/27/2025

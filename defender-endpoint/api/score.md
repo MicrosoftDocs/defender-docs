@@ -3,9 +3,9 @@ title: Score methods and properties
 description: Retrieves your organization's exposure score, device secure score, and exposure score by device group
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

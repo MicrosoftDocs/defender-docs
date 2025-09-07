@@ -4,11 +4,11 @@ description: Define when and how updates should be applied for out of date endpo
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

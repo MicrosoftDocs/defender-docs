@@ -3,11 +3,11 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yonghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

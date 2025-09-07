@@ -3,9 +3,9 @@ title: Investigate domains and URLs associated with an alert
 description: Use the investigation options to see if devices and servers have been communicating with malicious domains.
 ms.service: defender-endpoint
 ms.author: bagol
-author: diannegali
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

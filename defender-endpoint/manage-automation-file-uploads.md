@@ -3,9 +3,9 @@ title: Manage automation file uploads
 description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
 ms.service: defender-endpoint
 ms.author: bagol
-author: diannegali
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

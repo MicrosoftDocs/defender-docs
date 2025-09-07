@@ -3,9 +3,9 @@ title: Add or remove a tag for multiple machines
 description: Learn how to use the Add or Remove machine tags API to add or remove a tag for multiple devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

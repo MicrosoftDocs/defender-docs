@@ -3,9 +3,9 @@ title: Run antivirus scan API
 description: Use this API to create calls related to running an antivirus scan on a device.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

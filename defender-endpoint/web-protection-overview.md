@@ -4,11 +4,11 @@ description: Learn about the web protection in Microsoft Defender for Endpoint a
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 04/02/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

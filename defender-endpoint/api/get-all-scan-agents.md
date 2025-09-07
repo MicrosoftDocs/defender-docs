@@ -3,9 +3,9 @@ title: Get all scan agents
 description: Learn how to use the Get all scan agents API
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

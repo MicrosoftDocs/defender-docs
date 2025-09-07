@@ -2,10 +2,10 @@
 title: Deploy updates for Microsoft Defender for Endpoint on macOS
 description: Control updates for Microsoft Defender for Endpoint on macOS in enterprise environments.
 ms.service: defender-endpoint
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

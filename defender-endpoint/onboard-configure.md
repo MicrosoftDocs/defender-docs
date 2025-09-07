@@ -3,9 +3,9 @@ title: Onboard devices and configure Microsoft Defender for Endpoint capabilitie
 description: Onboard Windows 10 and Windows 11 devices, servers, non-Windows devices and learn how to run a detection test.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

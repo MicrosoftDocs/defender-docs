@@ -9,8 +9,8 @@ ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: bagol
-author: emmwalshh
-manager: deniseb
+author: batamig
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 06/16/2025
 ms.topic: overview
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 

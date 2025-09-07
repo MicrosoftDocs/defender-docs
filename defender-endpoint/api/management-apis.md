@@ -4,9 +4,9 @@ ms.reviewer:
 description: Learn about the management tools and API categories in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

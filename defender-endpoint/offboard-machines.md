@@ -3,9 +3,9 @@ title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

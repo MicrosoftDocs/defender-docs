@@ -3,9 +3,9 @@ title: Fetch alerts from MSSP customer tenant
 description: Learn how to fetch alerts from a customer tenant
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

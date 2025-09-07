@@ -4,8 +4,8 @@ description: Describes how to configure Microsoft Defender for Endpoint risk sig
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
-manager: deniseb
+author: batamig
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:

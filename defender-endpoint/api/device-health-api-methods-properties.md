@@ -3,10 +3,10 @@ title: Microsoft Defender Antivirus export device antivirus health details API m
 description: "Learn how to export a list of Microsoft Defender Antivirus device health details." 
 ms.service: defender-endpoint
 ms.author: bagol 
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium 
 ms.date: 03/21/2025
-manager: deniseb 
+manager: bagol 
 ms.reviewr: mkaminska
 audience: ITPro 
 ms.collection:

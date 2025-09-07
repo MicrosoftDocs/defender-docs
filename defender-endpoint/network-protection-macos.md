@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 04/08/2025
 audience: ITPro
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: ericlaw
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.subservice: macos
 ms.topic: overview

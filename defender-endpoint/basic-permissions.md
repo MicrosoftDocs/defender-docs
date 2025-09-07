@@ -4,12 +4,12 @@ description: Learn how to use basic permissions to access the Microsoft Defender
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done 
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

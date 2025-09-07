@@ -4,10 +4,10 @@ description: This article describes how to report and troubleshoot Microsoft Def
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.custom: 
 - mde-asr
 - admindeeplinkDEFENDER

@@ -5,8 +5,8 @@ search.appverid: met150
 ms.date: 05/06/2024
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
-manager: deniseb
+author: batamig
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to

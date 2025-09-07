@@ -4,10 +4,10 @@ description: Use the Microsoft Defender Antivirus report to track antivirus stat
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
 ms.date: 04/08/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

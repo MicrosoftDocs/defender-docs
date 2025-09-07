@@ -5,10 +5,10 @@ description: Learn how you can use APIs to automate workflows and innovate based
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

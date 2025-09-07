@@ -3,9 +3,9 @@ title: Troubleshoot Microsoft Defender for Endpoint live response issues
 description: Troubleshoot issues that might arise when using live response in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,9 +2,9 @@
 title: Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
 description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 ms.service: defender-endpoint
-author: emmwalshh
+author: batamig
 ms.author: bagol
-manager: deniseb
+manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro

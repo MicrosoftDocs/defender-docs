@@ -6,11 +6,11 @@ search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 03/26/2025
 ms.topic: how-to
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

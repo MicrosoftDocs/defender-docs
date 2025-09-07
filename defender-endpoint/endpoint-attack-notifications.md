@@ -4,9 +4,9 @@ ms.reviewer:
 description: Endpoint Attack Notifications provides proactive hunting for the most important threats to your network.
 ms.service: defender-endpoint
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: dolmont
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

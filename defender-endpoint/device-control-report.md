@@ -5,9 +5,9 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/25/2024
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.topic: article
-manager: deniseb
+manager: bagol
 ms.reviewer: joshbregman
 audience: ITPro
 ms.subservice: asr

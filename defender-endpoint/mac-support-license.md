@@ -2,10 +2,10 @@
 title: Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot license issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
 description: Learn how to troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated.
-author: emmwalshh
+author: batamig
 ms.author: bagol
-manager: ewalsh 
+manager: bagol 
 ms.date: 01/10/2025
 ms.topic: troubleshooting
 ms.service: defender-endpoint

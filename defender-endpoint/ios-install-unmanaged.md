@@ -3,10 +3,10 @@ title: Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Man
 description: Describes how to deploy Microsoft Defender for Endpoint on unenrolled iOS devices.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.reviewer: sunasing
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

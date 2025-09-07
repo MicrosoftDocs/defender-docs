@@ -3,9 +3,9 @@ title: Get all vulnerabilities
 description: Retrieves a list of all the vulnerabilities affecting the organization
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

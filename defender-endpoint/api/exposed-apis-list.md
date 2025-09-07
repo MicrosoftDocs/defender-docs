@@ -4,10 +4,10 @@ ms.reviewer:
 description: Learn about the specific supported Microsoft Defender for Endpoint entities where you can create API calls to.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

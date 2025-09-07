@@ -3,9 +3,9 @@ title: Indicator resource type
 description: Specify the entity details and define the expiration of the indicator using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

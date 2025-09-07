@@ -5,11 +5,11 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
 ms.topic: install-set-up-deploy
-author: emmwalshh
+author: batamig
 ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

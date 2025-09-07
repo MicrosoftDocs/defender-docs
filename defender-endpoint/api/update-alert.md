@@ -3,9 +3,9 @@ title: Update alert entity API
 description: Learn how to update a Microsoft Defender for Endpoint alert by using this API. You can update the status, determination, classification, and assignedTo properties.
 ms.service: defender-endpoint
 ms.author: bagol
-author: denisebmsft
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -4,9 +4,9 @@ description: Answers frequently asked questions about device control in Defender
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.author: bagol
-author: emmwalshh
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
