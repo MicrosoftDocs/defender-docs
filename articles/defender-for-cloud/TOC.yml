@@ -92,9 +92,23 @@
           displayName: Databases, Cosmos, DB, SQL servers, Azure SQL, SQL, Open-source
             relational databases
           href: tutorial-enable-databases-plan.md
-        - name: Enable Defender for Databases plans
+        - name: Deploy specific Defender for Databases plans
           items:
-            - name: 
+            - name: Defender for Azure SQL Databases
+              items:
+            - name: Overview
+              displayName: database
+              href: defender-for-sql-introduction.md
+            - name: Deploy Defender for Azure SQL Databases
+              displayName: database
+              href: enable-sql-database-plan.md
+            - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
+              href: sql-azure-vulnerability-assessment-enable.md
+            - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
+              href: sql-azure-vulnerability-assessment-enable-classic.md
+            - name: Advanced Threat Protection for Azure SQL Database
+              displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
+              href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
         - name: Defender for Storage
           items:
             - name: Protect storage accounts with Defender for Storage
@@ -804,24 +818,8 @@
       - name: Advanced threat protection
         displayName: threat, detection
         href: /azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json
-      - name: Deploy all Defender for Databases plans
-        displayName: database
-        href: tutorial-enable-databases-plan.md
-      - name: Defender for Azure SQL Databases
-        items:
-        - name: Overview
-          displayName: database
-          href: defender-for-sql-introduction.md
-        - name: Deploy Defender for Azure SQL Databases
-          displayName: database
-          href: enable-sql-database-plan.md
-        - name: Deploy vulnerability assessment on your Azure SQL databases (Express)
-          href: sql-azure-vulnerability-assessment-enable.md
-        - name: Deploy vulnerability assessment on your Azure SQL databases (Classic)
-          href: sql-azure-vulnerability-assessment-enable-classic.md
-        - name: Advanced Threat Protection for Azure SQL Database
-          displayName: ATP, SQL, SQL database, SQL databases, SQL server, SQL servers
-          href: /azure/azure-sql/database/threat-detection-configure?view=azuresql&toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&preserve-view=true
+
+      
       - name: Defender for SQL Servers on Machines
         items:
         - name: Overview
