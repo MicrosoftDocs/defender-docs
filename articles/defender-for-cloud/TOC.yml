@@ -148,6 +148,19 @@
                   - name: Migrate to AMA
                     displayName: vulnerability, assessment, findings, migrate
                     href: defender-for-sql-autoprovisioning.md
+          - name: Defender for Open-Source Relational Databases
+            items:
+            - name: Overview
+              displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+              href: defender-for-databases-introduction.md
+            - name: Deploy
+              items:
+              - name: Enable on Azure
+                displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                href: enable-defender-for-databases-azure.md
+              - name: Enable on AWS (Preview)
+                displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                href: enable-defender-for-databases-aws.md
         - name: Defender for Storage
           items:
             - name: Protect storage accounts with Defender for Storage
@@ -896,19 +909,6 @@
           - name: Migrate to AMA
             displayName: vulnerability, assessment, findings, migrate
             href: defender-for-sql-autoprovisioning.md
-      - name: Defender for Open-Source Relational Databases
-        items:
-        - name: Overview
-          displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-          href: defender-for-databases-introduction.md
-        - name: Deploy
-          items:
-          - name: Enable on Azure
-            displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-            href: enable-defender-for-databases-azure.md
-          - name: Enable on AWS (Preview)
-            displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
-            href: enable-defender-for-databases-aws.md
       - name: Defender for Azure Cosmos DB
         items:
         - name: Defender for Azure Cosmos DB
