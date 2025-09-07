@@ -25,7 +25,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
-### ### Microsoft Defender for Identity sensor version updates
+### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
 |---------|---------|
