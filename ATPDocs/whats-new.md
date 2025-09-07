@@ -27,7 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 
-Several Defender for Identity detections are being updated to reduce noise and improve accuracy. These updates reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout progresses, the number of alerts raised may decrease.
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you may see a decrease in the number of alerts raised.
 
 The improvements will gradually take effect across the following detections:
 
