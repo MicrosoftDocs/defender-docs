@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -23,7 +23,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 07/22/2025
+ms.date: 09/08/2025
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
@@ -83,39 +83,8 @@ In the unified portal, in addition to viewing the schema column names and descri
 
 :::image type="content" source="/defender/media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-schema.png":::
 
-
-## Hunting with graph
-
-Hunting graph is a feature in advanced hunting in the Microsoft Defender portal, designed to enhance threat hunting and incident response. Hunting graph provides built-in visualization tools that display threat scenarios as interactive graphs. This approach helps SOC analysts, threat hunters, and security researchers quickly uncover connections and patterns, streamlining investigations and reducing the risk of missing critical insights.
-
-Hunting graph enables an easier, and a more intuitive exploration and analysis of the security data without having to write KQL queries. Hunting graph provides the following benefits:
-+ Visualization of complex relationships between devices, users assets and IPs.
-+ Faster incident investigation performed by tracing paths, and identities choke points.
-+ Filters that can be applied to reduce noise and focus on what matters most.
-+ Threats are contextually exposed, surfacing insights that tabular queries might miss.
-
-### Prerequisites for hunting graph
-The following prerequisites are required for hunting graph:
-+ Onboarding to Microsoft Sentinel Data Lake
-+ Onboarding to the Defender portal
-+ Exposure management (read) permission or higher.
-
-### Using hunting graph
-
-Hunting graph is available in the Microsoft Defender portal. Select **Search with predefined scenarios** to get started.
-
-
-:::image type="content" source="media/advanced-hunting-microsoft-defender/hunting-graph.png"  lightbox="media/advanced-hunting-microsoft-defender/hunting-graph.png" alt-text="Screenshot of the hunting graph feature in the Microsoft Defender portal.":::
-
-The predefined scenarios are pre-built queries enabling users to visualize paths to answer common questions for specific use cases. Predefined scenarios allow further filtering to be defined on them and further narrow down results based on your desire to focus on.<<<<>>>>
-Grouped items can be expanded and entities can be isolated and reviewed specifically.
-Criticality level for entities is labeled on the graph by simply hovering over the nodes with the mouse.
-
-
-
 ## Known issues
 
-- The `IdentityInfo table` from [Microsoft Sentinel](/azure/sentinel/ueba-reference#identityinfo-table) isn't available, as the `IdentityInfo` table remains as is in Defender XDR. Microsoft Sentinel features like analytics rules that query this table aren't impacted as they're querying the Log Analytics workspace directly.
 - The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While SecurityAlert isn't available in the schema tab, you can still use it in queries using the advanced hunting editor. This provision is made so as not to break existing queries from Microsoft Sentinel that use this table. 
 - Guided hunting mode and take actions capabilities are supported for Defender XDR data only.
 - Custom detections have the following limitations:
