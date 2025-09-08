@@ -251,8 +251,3 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
-
-## Enable streamlined connectivity for US government environments
-
-Devices in GCC, GCC High, and DoD environments can use streamlined connectivity to simplify endpoint configuration. This reduces the number of required service endpoints and supports improved performance and reliability.
-
