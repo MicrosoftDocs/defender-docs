@@ -24,7 +24,8 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
-For US government devices, see [Onboarding devices using streamlined connectivity for US government environments](configure-device-connectivity-gov.md).
+> [!NOTE]
+> The procedure described in this article is supported for US government devices. The US government tabs in the relevant sections contain instructions specific to US government devices. All other sections apply to both commercial and US government devices unless otherwise noted.
 
 To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
@@ -107,8 +108,6 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 The following illustration shows the streamlined connectivity process and the corresponding stages:
 
 :::image type="content" source="media/streamlined-connectivity-process.png" alt-text="Illustration of  streamlined connectivity process":::
-
-For US government devices, see [Onboarding devices using streamlined connectivity for US government environments](configure-device-connectivity-gov.md).
 
 ### Stage 1. Configure your network environment for cloud connectivity 
 
