@@ -27,7 +27,11 @@ The Defender for Endpoint client might require the use of proxied connections to
 > [!NOTE]
 > The procedure described in this article is supported for US government devices. The US government tabs in the relevant sections contain instructions specific to US government devices. All other sections apply to both commercial and US government devices unless otherwise noted.
 
-To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
+To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
+
+## Prepare your environment
+
+# [Commercial devices](#tab/commercial-domain)
 
 The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` consolidates connectivity to the following core Defender for Endpoint services:
 
@@ -44,6 +48,25 @@ To support network devices without hostname resolution or wildcard support, you 
 > [!NOTE] 
 > - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
 > - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
+> - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
+
+# [US government devices](#tab/government-domain)
+
+The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.us` consolidates connectivity to the following core Defender for Endpoint services:
+
+- Cloud-delivered protection
+- Malware sample submission storage
+- Auto-IR sample storage
+- Defender for Endpoint command & control
+- Defender for Endpoint cyber and diagnostic data
+
+For more information on preparing your environment and the updated list of destinations, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+
+To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
+
+> [!NOTE] 
+> - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
+> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.us` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
 > - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
 
 ## Before you begin 
