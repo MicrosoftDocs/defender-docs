@@ -3,6 +3,7 @@ title: Enrich cloud discovery data with Microsoft Entra usernames
 description: This article provides information about how to enrich Defender for Cloud Apps Discovery data with Microsoft Entra usernames.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Enrich cloud discovery data with Microsoft Entra usernames
 

@@ -3,6 +3,7 @@ title: Onboard non-Microsoft IdP custom apps for Conditional Access app control 
 description: Learn how to deploy Conditional Access app control with Microsoft Defender for Cloud Apps, for custom apps with a non-Microsoft IdP.
 ms.date: 01/04/2024
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # Onboard non-Microsoft IdP custom apps for Conditional Access app control
