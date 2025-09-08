@@ -3,10 +3,10 @@ title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/26/2025
+ms.date: 09/08/2025
 
 ---
 
@@ -23,6 +23,29 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## September 2025
+
+### New predefined classifications
+
+The following predefined **Device** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| SharePoint Server | The SharePoint server is responsible for secure content management, collaboration, and document sharing across teams. It hosts intranet portals and enterprise search within an organization. Compromise could lead to unauthorized access to sensitive information and disruption of content services. |
+| Microsoft Entra ID Cloud Sync | The Microsoft Entra ID Cloud Sync agent is responsible for syncing on-premises directory data to the Microsoft Entra ID tenant using lightweight infrastructure. Compromise could disrupt identity synchronization, leading to authentication issues and potential security breaches. |
+
+Microsoft Entra ID Cloud Sync has been introduced alongside Microsoft Entra ID Connect. While both support identity synchronization, Microsoft Entra ID Connect is designed for hybrid environments with on-premises Active Directory, whereas Microsoft Entra ID Cloud Sync offers a lightweight, cloud-native solution optimized for cloud-only setups.
+
+Additionally, SharePoint device role is now available, introduced in response to recent vulnerability events. This role enhances tracking and management of SharePoint-related assets.
+
+For more information, see [Predefined classification](predefined-classification-rules-and-levels.md).
+
+### Migration from AzureAdConnectServer to EntraConnectServer
+
+The legacy Azure AD Connect asset rule has been removed from Critical Assets. Its associated device role, AzureADConnectServer, will be deprecated in December 2025. Ensure all relevant custom rules are transitioned to use the new device role, EntraConnectServer, to maintain compliance and visibility.
+
+For more information, see [Predefined classification](predefined-classification-rules-and-levels.md).
 
 ## May 2025
 
