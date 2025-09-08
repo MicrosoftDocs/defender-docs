@@ -3,10 +3,10 @@ title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,10 +2,10 @@
 title: Investigate agent health issues
 description: Learn about the values returned when running the mdatp health command
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
