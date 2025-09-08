@@ -24,6 +24,7 @@ Microsoft Defender for Cloud provides comprehensive cloud security through the u
       - [Defender for Servers](../defender-for-servers-overview.md)
       - [Defender for Containers](../defender-for-containers-introduction.md)
       - [Defender for Storage](../defender-for-storage-introduction.md)
+      - [Defender for AI](../ai-threat-protection.md)
    :::column-end:::
    :::column span="":::
       ## Security Posture

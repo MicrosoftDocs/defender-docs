@@ -30,6 +30,31 @@ Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform 
 2. Sign in with your organizational account
 3. In the navigation pane, select **Cloud Security** to access Defender for Cloud features
 
+## Understanding your trial experience in the Defender portal
+
+When accessing Microsoft Defender for Cloud through the Defender portal, your trial experience differs from the traditional standalone approach:
+
+### Defender portal trial benefits
+- **Unified security experience**: Access cloud security alongside endpoint, identity, and email security in one portal
+- **Enhanced correlation**: See how cloud threats relate to broader organizational security events
+- **Integrated workflows**: Streamlined incident response across all Microsoft security solutions
+- **Advanced analytics**: Access to cross-solution attack path analysis and unified hunting capabilities
+
+### What's included in your trial
+- **Free foundational CSPM**: Basic security posture management for all Azure subscriptions
+- **30-day enhanced plan trials**: Full access to advanced features like Defender for Servers, Containers, and Databases
+- **Defender portal integration**: Complete access to unified security operations capabilities
+- **Cross-solution insights**: Correlation with other Defender workloads (if available in your tenant)
+
+### Trial limitations and graduation
+- Enhanced plan trials automatically expire after 30 days unless upgraded to paid plans
+- Free CSPM capabilities continue indefinitely for Azure subscriptions
+- Multicloud (AWS/GCP) capabilities require paid plan activation
+- Some advanced Defender portal features may require specific license combinations
+
+> [!TIP]
+> To maximize your trial value, connect multiple environment types early and explore the unified incident response capabilities unique to the Defender portal experience.
+
 ## Step 2: Connect your environments
 
 Connect your cloud and on-premises environments to begin monitoring:
@@ -40,6 +65,33 @@ Connect your cloud and on-premises environments to begin monitoring:
 | **AWS Accounts** | Connect Amazon Web Services accounts | [Connect AWS accounts](../quickstart-onboard-aws.md) |
 | **GCP Projects** | Connect Google Cloud Platform projects | [Connect GCP projects](../quickstart-onboard-gcp.md) |
 | **On-Premises Machines** | Connect on-premises and hybrid environments | [Connect on-premises machines](../quickstart-onboard-machines.md)<br>[Onboard machines with Defender for Endpoint](../onboard-machines-with-defender-for-endpoint.md) |
+
+## Plan your costs before enabling protection plans
+
+Before enabling paid Defender plans, it's important to understand the cost implications and plan your budget accordingly:
+
+### Cost planning considerations
+- **Resource-based pricing**: Most Defender plans are priced per protected resource (VMs, storage accounts, databases, etc.)
+- **Usage-based components**: Some features like agentless scanning and malware detection have consumption-based pricing
+- **Multicloud pricing**: AWS and GCP resources may have different pricing models than Azure
+- **Regional variations**: Costs can vary by geographic region
+
+### Use the cost calculator
+Estimate your monthly costs before plan activation:
+
+1. **Access the calculator**: Use the [Defender for Cloud cost calculator](../cost-calculator.md) to estimate expenses
+2. **Input your environment**: Add details about your resources across Azure, AWS, and GCP
+3. **Select plans**: Choose which Defender plans you want to enable for cost estimation
+4. **Review scenarios**: Model different protection levels to find the right balance of security and cost
+
+### Cost optimization tips
+- **Start with critical workloads**: Enable plans for your most important resources first
+- **Leverage free capabilities**: Use foundational CSPM features while evaluating paid plans
+- **Monitor usage**: Track actual costs after enablement and adjust as needed
+- **Consider prepaid plans**: Explore prepurchase options for predictable workloads
+
+> [!TIP]
+> After connecting your environments in Step 2, spend time with the cost calculator before proceeding to plan enablement. This helps ensure you make informed decisions about which protections to activate.
 
 ## Step 3: Enable Defender plans
 
@@ -53,6 +105,7 @@ Choose the right protection plans for your workloads:
 | **Defender for Databases** | SQL databases, PostgreSQL, MySQL, Cosmos DB | [Protect your databases](../tutorial-enable-databases-plan.md) |
 | **Defender for Storage** | Blob storage, file shares, data lakes | [Deploy Defender for Storage](../tutorial-enable-storage-plan.md) |
 | **Defender for App Service** | Web applications and APIs | [Protect App Service apps](../tutorial-enable-app-service-plan.md) |
+| **Defender for AI** | AI and machine learning workloads | [Enable threat protection for AI services](../ai-onboarding.md) |
 
 > [!NOTE]
 > All Azure subscriptions include free foundational CSPM capabilities. Enhanced plans provide advanced threat protection and additional features.

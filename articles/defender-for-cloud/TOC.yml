@@ -43,8 +43,6 @@
           href: support-matrix-cloud-environment.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
-        - name: Prepare for retirement of the Log Analytics agent
-          href: prepare-deprecation-log-analytics-mma-agent.md
     - name: Connect environments and enable all plans
       expanded: false
       items:
