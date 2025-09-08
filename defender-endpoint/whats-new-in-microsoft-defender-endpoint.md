@@ -34,11 +34,16 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
 - [Preview features](/defender-xdr/preview)
 
-## August 2025
+## September 2025
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
 |[Streamline connectivity support for Government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US Government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
+
+## August 2025
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
 |[Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md) |Preview |Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
 
 ## July 2025
