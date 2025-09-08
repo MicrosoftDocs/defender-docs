@@ -23,6 +23,15 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2025
+
+### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
+
 ## August 2025
 
 ### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
@@ -33,12 +42,11 @@ Previously, Defender for Identity tenants received Entra ID risk level in the Id
 
 For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
 
+### New security assessment: Remove stale service accounts (Preview)
 
-### New security assessment: Remove inactive service accounts (Preview)
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been stale for the past 90 days, to help you mitigate security risks associated with unused accounts.
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
-
-For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+For more information, see: Security Assessment: [Remove Stale Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account)
 
 ### New Graph based API for response actions (preview) 
 
@@ -60,13 +68,12 @@ The new security posture assessment highlights unsecured Active Directory attrib
 
 For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
 
-
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
 |---------|---------|
 |2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
@@ -151,10 +158,6 @@ Bug Fixes:
 
 
 ## May 2025
-
-###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-sensor.md).
-
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.

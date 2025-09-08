@@ -2,8 +2,8 @@
 title: Alert policies in the Microsoft Defender portal
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 manager: deniseb
 ms.date: 03/21/2025
 audience: Admin

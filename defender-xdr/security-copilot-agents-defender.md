@@ -4,8 +4,8 @@ description: Learn about Security Copilot agents in Microsoft Defender that can 
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -72,4 +72,4 @@ The following plugins must be enabled in Security Copilot:
 
 #### Roles with access
 
-The **Security Administrator** role is required to set up and manage the agent. Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict.                                                                                                                                                                                                                                                     
+The **Security Administrator** role is required to set up and manage the agent. Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict.
