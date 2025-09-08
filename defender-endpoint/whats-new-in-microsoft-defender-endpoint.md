@@ -38,11 +38,8 @@ Learn more:
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
+|[Streamline connectivity support for Government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US Government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
 |[Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md) |Preview |Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
-
-## August 2025
-
-- (Preview) **Streamline connectivity support for Government environments (GCC, GCC High, DoD)**: Defender for Endpoint now supports streamlined connectivity for US Government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For configuration details, see [Onboarding devices using streamlined connectivity](configure-device-connectivity-gov.md#enable-streamlined-connectivity-for-us-government-environments) and [Required connectivity settings](gov.md#required-connectivity-settings).
 
 ## July 2025
 
