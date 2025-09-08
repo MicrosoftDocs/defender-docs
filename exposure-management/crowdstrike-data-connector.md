@@ -17,18 +17,6 @@ This article describes how to configure the CrowdStrike Falcon data connector fo
 
 Before you configure the CrowdStrike data connector, ensure you have:
 
-### Environmental Requirements
-
-- Make sure your tenant has access to Microsoft Security Exposure Management
-- Make sure the user with which you logged in to Microsoft portal has one of the following roles on the provided tenant:
-  - Global Administrator
-  - Security Administrator
-  - Security Operator
-  - Or alternatively, you can use [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) with the following permissions:
-    - **Exposure Management (read)** for read-only access to Exposure Management experiences
-    - **Exposure Management (manage)** for full access to manage Exposure Management experiences
-    - **Core security settings (manage)** for connecting or changing vendor configurations (located under Authorization and settings category)
-
 ### CrowdStrike Requirements
 
 - A CrowdStrike Falcon environment
