@@ -33,10 +33,7 @@ To simplify network configuration and management, you can now onboard new device
 
 ## Defender for Endpoint-recognized simplified domain
 
-The Defender for Endpoint-recognized simplified domain consolidates connectivity to the following core Defender for Endpoint services:
-
-- `*.endpoint.security.microsoft.com` for commercial devices
-- `*.endpoint.security.microsoft.us*` for government devices
+The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for government devices) consolidates connectivity to the following core Defender for Endpoint services:
 
 - Cloud-delivered protection
 - Malware sample submission storage
