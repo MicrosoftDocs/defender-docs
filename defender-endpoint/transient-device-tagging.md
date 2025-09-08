@@ -1,8 +1,8 @@
 ---
 title: Overview of transient device tagging in Microsoft Defender for Endpoint
 description: Learn how transient device tagging is designed in Microsoft Defender for Endpoint
-ms.author: raynew
-author: rayne-wiselman
+ms.author: lwainstein
+author: limwainstein
 ms.topic: overview
 ms.service: exposure-management
 ms.date: 03/11/2024

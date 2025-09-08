@@ -7,8 +7,8 @@ ms.subservice: unified-security-operations
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: diannegali
-author: vpattnaik
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.collection: 

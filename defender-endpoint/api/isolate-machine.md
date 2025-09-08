@@ -2,10 +2,10 @@
 title: Isolate machine API
 description: Learn how to use the Isolate machine API to isolate a device from accessing external network in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

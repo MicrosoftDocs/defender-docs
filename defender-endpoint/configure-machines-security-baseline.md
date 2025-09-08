@@ -3,10 +3,10 @@ title: Increase compliance to the Microsoft Defender for Endpoint security basel
 description: The Microsoft Defender for Endpoint security baseline sets security controls to provide optimal protection.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

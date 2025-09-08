@@ -2,12 +2,12 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: lwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
 ms.date: 08/19/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -42,6 +42,22 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 ## Releases for Defender for Endpoint on Linux
+
+### September-2025 Build: 101.25072.0003 | Release version: 30.125072.0003.0
+
+|Build:             |**101.25072.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 02, 2025**|
+|Published:         |**September 02, 2025**|
+|Expiry:            |**May 06, 2026**|
+|Release version:   |**30.125072.0003.0**|
+|Engine version:    |**1.1.25060.4000**|
+|Signature version: |**1.431.4.0**|
+
+What's new
+- Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Microsoft Defender via Golden image](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images).
+
+- Other stability enhancements and bug fixes.
 
 ### August-2025 Build: 101.25062.0003 | Release version: 30.125062.0003.0
 
