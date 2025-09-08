@@ -81,12 +81,12 @@ To support network devices without hostname resolution or wildcard support, you 
 
 | Platform / Component | Minimum Version / Update | Notes |
 |---------------------|-------------------------|-------|
-| Windows (SENSE) | 10.8040.* / March 8, 2022 or higher | See KB table below |
-| Windows (Antimalware Client) | 4.18.2211.5 | |
-| Windows (Engine) | 1.1.19900.2 | |
-| Windows (Security Intelligence) | 1.391.345.0 | |
-| macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+ | |
-| Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+ | |
+| Windows (SENSE) | 10.8040.* / March 8, 2022 or higher | See [KB table](#required-kb-versions-windows). |
+| Microsoft Defender Antivirus - Windows (Antimalware Client) | 4.18.2211.5 | |
+| Microsoft Defender Antivirus - Windows (Engine) | 1.1.19900.2 | |
+| Microsoft Defender Antivirus - Windows (Security Intelligence) | 1.391.345.0 | |
+| Microsoft Defender Antivirus - macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+ | |
+| Microsoft Defender Antivirus - Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+ | |
 
 ### Supported Operating Systems
 
