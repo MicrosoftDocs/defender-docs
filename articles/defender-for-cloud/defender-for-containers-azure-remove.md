@@ -67,6 +67,20 @@ Set-AzSecurityPricing `
     -PricingTier "Free"
 ```
 
+### Disable using REST API
+
+```bash
+curl -X PUT \
+  "https://management.azure.com/subscriptions/${SUBSCRIPTION_ID}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": {
+      "pricingTier": "Free"
+    }
+  }'
+```
+
 ## Remove Defender components from clusters
 
 ### Remove the Defender sensor
@@ -100,7 +114,7 @@ az aks disable-addons \
 
 ### Remove diagnostic settings via Azure portal
 
-1. Navigate to your AKS cluster.
+1. Go to your AKS cluster.
 1. Select **Diagnostic settings** under **Monitoring**.
 1. Select the diagnostic setting created for Defender.
 1. Select **Delete**.
@@ -144,10 +158,10 @@ az policy set-definition delete \
 
 ## Remove managed identities
 
-Defender for Containers creates managed identities in Azure Active Directory for various operations. These identities should be reviewed and removed if they're no longer needed after disabling the service.
+Defender for Containers creates managed identities in Azure Active Directory for various operations. Review these identities and remove them if they're no longer needed after disabling the service.
 
 > [!WARNING]
-> Before removing any managed identity, verify that it's not being used by other services or applications.
+> Before removing any managed identity, verify that other services or applications aren't using it.
 
 ## Remove vulnerability scanning configuration
 
@@ -212,7 +226,7 @@ az security pricing show --name 'Containers'
 
 ### Security monitoring gaps
 
-When you remove Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your AKS clusters without real-time protection against active threats. Container image vulnerability scanning in ACR stops, so new vulnerabilities in your container images go undetected. Security recommendations based on Kubernetes best practices no longer update, which might leave configuration weaknesses unaddressed. Additionally, compliance reporting for standards like CIS Kubernetes Benchmark stops, which might affect your ability to demonstrate adherence to regulatory requirements.
+When you remove Defender for Containers, your security posture changes significantly. Runtime threat detection stops immediately, leaving your AKS clusters without real-time protection against active threats. Container image vulnerability scanning in ACR stops, so new vulnerabilities in the container images go undetected. Security recommendations based on Kubernetes best practices no longer update, which might leave configuration weaknesses unaddressed. Additionally, compliance reporting for standards like CIS Kubernetes Benchmark stops, which might affect your ability to demonstrate adherence to regulatory requirements.
 
 ### Alternative security solutions
 
@@ -224,18 +238,18 @@ Understanding data retention is important for compliance and forensic purposes. 
 
 ### Future re-enablement planning
 
-If you decide to re-enable Defender for Containers in the future, the process is straightforward. All components can be redeployed following the standard deployment guides, and protection will resume from that point forward. Historical data (if not purged) remains accessible according to retention policies. However, there will be a gap in security coverage for the period when Defender was disabled, which should be considered in any security audit or incident investigation.
+If you decide to re-enable Defender for Containers in the future, the process is straightforward. You can redeploy all components following the standard deployment guides, and protection resumes from that point forward. Historical data (if not purged) remains accessible according to retention policies. However, there's a gap in security coverage for the period when Defender was disabled, which you should consider in any security audit or incident investigation.
 
 ## Re-enable Defender for Containers
 
 To re-enable Defender for Containers in the future:
 
 1. Follow the deployment guide: [Enable all Defender for Containers components on Azure (AKS)](defender-for-containers-azure-enable-portal.md)
-2. All security features will be restored
-3. Historical data (if not purged) will remain available
+1. All security features are restored.
+1. Historical data remains available if you didn't purge it.
 
 ## Related content
 
 - [Learn more about AKS security](/azure/aks/concepts-security)
-- [View the Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md).
+- [View the Containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md)
 - [Re-deploy Defender for Containers](defender-for-containers-azure-enable-portal.md) - To restore protection

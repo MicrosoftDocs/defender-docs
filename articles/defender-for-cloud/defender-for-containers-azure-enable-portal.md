@@ -70,6 +70,10 @@ After you enable the plan, review and configure the components. By default, all 
 
 1. Review the configuration summary and select **Save**.
 
+### Roles and permissions
+
+Learn more about the [roles for provisioning Defender for Containers extensions](permissions.md#roles-used-to-automatically-configure-agents-and-extensions).
+
 ## Monitor deployment progress
 
 After saving, Defender for Cloud automatically begins deploying the selected components to your AKS clusters:
@@ -86,9 +90,9 @@ After saving, Defender for Cloud automatically begins deploying the selected com
 
 ## Deploy the Defender sensor
 
-The Defender sensor provides runtime threat detection for your AKS clusters. If the sensor isn't automatically deployed after you enable the plan, manually trigger the deployment:
+When you enable the Defender sensor setting, it automatically deploys to all AKS clusters in your subscription. If you disable automatic deployment, you can manually deploy the sensor by using the following methods:
 
-### Deploy to all AKS clusters
+### Deploy to a group of selected AKS clusters
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
@@ -96,7 +100,7 @@ The Defender sensor provides runtime threat detection for your AKS clusters. If 
 
     :::image type="content" source="media/tutorial-enable-containers-azure/recommendation-search.png" alt-text="Screenshot of the recommendations page that shows where to search for and find the Azure Kubernetes service cluster recommendation is located." lightbox="media/tutorial-enable-containers-azure/recommendation-search.png":::
 
-1. Select all AKS clusters that need the sensor.
+1. Select AKS clusters that need the sensor.
 
 1. Select **Fix**.
 
@@ -107,9 +111,9 @@ The Defender sensor provides runtime threat detection for your AKS clusters. If 
 1. Select **Fix X resources** to deploy.
 
 > [!NOTE]
-> You can also deploy the Defender sensor using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy the Defender sensor using Helm](defender-for-containers-azure-enable-programmatically.md#deploy-the-defender-sensor).
+> You can also deploy the Defender sensor by using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy the Defender sensor using Helm](defender-for-containers-azure-enable-programmatically.md#deploy-the-defender-sensor).
 
-### Deploy to specific clusters
+### Deploy to a specific AKS cluster
 
 To deploy the Defender sensor to specific AKS clusters:
 
@@ -117,70 +121,13 @@ To deploy the Defender sensor to specific AKS clusters:
 
 1. In the left menu under the cluster name, select **Microsoft Defender for Cloud**.
 
-1. On the Microsoft Defender for Cloud page for your cluster, locate the **Defender sensor** row and toggle it to **On**.
+1. On the Microsoft Defender for Cloud page for your cluster, select **Settings** in the top row, locate the **Defender sensor** row, and toggle it to **On**.
 
-1. Configure any additional settings as needed:
-   - Resource limits
-   - Namespace exclusions
-   - Custom workspace
+   :::image type="content" source="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png" alt-text="Defender sensor toggled to on." lightbox="media/defender-for-containers-enable-plan-aks/defender-sensor-on.png":::
 
 1. Select **Save**.
 
-## Deploy specific components (optional)
-
-If you need to deploy only specific components instead of all components:
-
-### Deploy Azure Policy for Kubernetes only
-
-To enable only the Azure Policy add-on for security recommendations without runtime protection:
-
-1. Go to your AKS cluster in the Azure portal.
-
-1. Under **Settings**, select **Policies**.
-
-1. Select **Enable Azure Policy**.
-
-1. Wait for the policy add-on to install (typically 5-10 minutes).
-
-### Enable vulnerability scanning only
-
-To enable only vulnerability scanning without runtime protection:
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select your subscription.
-
-1. In the Containers plan row, select **Settings**.
-
-1. Enable only **Agentless container vulnerability assessment**.
-
-1. Disable other components.
-
-1. Select **Continue** and then **Save**.
-
-## Enable diagnostic logs (recommended)
-
-For the best runtime protection, enable diagnostic logs:
-
-1. Go to your AKS cluster.
-
-1. Under **Monitoring**, select **Diagnostic settings**.
-
-1. Select **+ Add diagnostic setting**.
-
-1. Configure the following settings:
-   - Name: Enter a descriptive name
-   - Select these log categories:
-     - kube-apiserver
-     - kube-audit
-     - kube-controller-manager
-     - kube-scheduler
-     - guard
-   - Destination: Send to Log Analytics workspace
-
-1. Select **Save**.
-
-## Configure custom workspace (optional)
+### Configure custom workspace (optional)
 
 By default, Defender for Containers uses a default Log Analytics workspace. To use a custom workspace:
 
@@ -192,7 +139,7 @@ By default, Defender for Containers uses a default Log Analytics workspace. To u
 
 1. Enter your custom workspace ID in the policy parameters.
 
-## Exclude specific clusters (optional)
+### Exclude specific clusters (optional)
 
 You can exclude specific AKS clusters from automatic provisioning by applying tags:
 
@@ -208,18 +155,10 @@ You can exclude specific AKS clusters from automatic provisioning by applying ta
 
 After setup, regularly:
 
+1. **Manage vulnerabilities** - Review findings of container image vulnerability scans
 1. **Review recommendations** - Address security issues identified for your AKS clusters
 1. **Investigate alerts** - Respond to runtime threats detected by the Defender sensor
 1. **Track compliance** - Monitor adherence to security standards and benchmarks
-1. **Scan images** - Review vulnerability findings for container images
-
-## Best practices
-
-1. **Enable all components** - Get comprehensive protection by enabling all available features
-1. **Regular monitoring** - Check the Containers dashboard weekly for new findings
-1. **Automated remediation** - Use Azure Policy to enforce security configurations
-1. **Image hygiene** - Regularly update base images and remove vulnerable packages
-1. **Network segmentation** - Implement network policies to limit container communication
 
 ## Clean up resources
 

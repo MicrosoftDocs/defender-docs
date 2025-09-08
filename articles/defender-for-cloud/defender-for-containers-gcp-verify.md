@@ -268,6 +268,24 @@ Expected alert: "Sensitive host path mounted"
 > [!NOTE]
 > GKE-specific alerts might include Binary Authorization violations and Workload Identity issues.
 
+## View alerts for GKE clusters
+
+To view security alerts specifically for your GKE clusters:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+
+1. Select the :::image type="icon" source="media/defender-for-containers-enable-plan-gke/add-filter.png" border="false"::: button.
+
+1. On the **Filter** dropdown menu, select **Resource type**.
+
+1. On the **Value** dropdown menu, select **GCP GKE Cluster**.
+
+1. Select **Ok**.
+
+You should now see only alerts related to your GKE clusters, making it easier to focus on GCP-specific security issues.
+
 ## Verify security recommendations
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.

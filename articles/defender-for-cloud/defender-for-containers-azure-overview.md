@@ -12,7 +12,7 @@ Microsoft Defender for Containers provides enterprise-grade security for Azure K
 
 ## What is Defender for Containers?
 
-Defender for Containers is a cloud-native security solution that protects containerized applications throughout their lifecycle. For Azure environments, it provides seamless integration with AKS to deliver real-time protection, continuous security assessments, and actionable recommendations without requiring complex configurations or third-party tools.
+Defender for Containers is a cloud-native security solution that protects containerized applications throughout their lifecycle. For Azure environments, it provides seamless integration with ACR and AKS to deliver real-time protection, continuous security assessments, and actionable recommendations without requiring complex configurations or third-party tools.
 
 > [!TIP]
 > For a comprehensive overview of Defender for Containers capabilities across all environments, see [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md).
@@ -25,8 +25,8 @@ Defender for Containers leverages native Azure integrations to provide security 
 
 - Automatically discovers all AKS clusters and container registries in your Azure subscriptions
 - Deploys a lightweight security sensor, natively integrated in AKS Resource Provider (RP), used for runtime threat protection and AKS deployment gating
-- Scans container images in Azure Container Registry (ACR) for vulnerabilities
-- Monitors runtime behavior by using Azure-native telemetry
+- Scans container images in Azure Container Registry (ACR) for vulnerabilities, automatically upon push to the registry and continually
+- Monitors runtime behavior by using Azure-native telemetry, in addition to data collected by the sensor
 - Provides security recommendations aligned with Azure security and industry best practices
 - Generates alerts that integrate with Microsoft XDR and Microsoft Sentinel
 
@@ -38,16 +38,16 @@ Defender for Containers provides security across three critical areas:
 
 | Capability | Description | Key Features |
 |------------|-------------|--------------|
-| **Vulnerability assessment** | Scans container images throughout their lifecycle - in registries, runtime environments, and CI/CD pipelines | • Registry scanning (ACR push and periodic)<br>• Runtime vulnerability discovery<br>• CLI tool for pipeline integration<br>• Support for Linux and Windows images<br>• CVSS scoring and detailed remediation |
-| **Runtime threat protection** | Monitors AKS clusters in real-time for malicious activities and anomalies | • Kubernetes audit log analysis<br>• Container behavior monitoring<br>• Network anomaly detection<br>• Integration with Microsoft Sentinel |
-| **Security posture management** | Evaluates cluster configurations against security benchmarks | • CIS Kubernetes Benchmark<br>• Azure Security Benchmark<br>• Custom compliance policies<br>• Automated remediation options |
+| **Vulnerability assessment** | Scans container images throughout their lifecycle - in registries, runtime environments, and CI/CD pipelines | • Registry scanning (ACR push and periodic)<br>• Runtime agentless scanning<br>• CLI tool for pipeline integration<br>• Support for Linux and Windows images<br>• CVSS scoring and detailed remediation |
+| **Runtime threat protection** | Monitors AKS clusters in real-time for malicious activities and anomalies<br>Investigation and response capabilities | • Kubernetes audit log analysis<br>• Container behavior monitoring and process analysis<br>• Network anomaly detection<br>• Drift protection<br>• Custom alerts<br>• Integration with Microsoft Sentinel and Microsoft XDR, including investigation and response features |
+| **Security posture management** | Evaluates cluster configurations against security benchmarks | • CIS Kubernetes Benchmark<br>• Azure Security Benchmark and industry best practices<br>• Custom compliance policies<br>• Automated remediation options |
 | **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
 
 ## Architecture overview
 
 For detailed architecture information, see [Container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
-Defender for Containers on AKS uses lightweight, Azure-managed components with outbound-only connectivity (no inbound access required):
+Defender for Containers on AKS uses lightweight, Azure-managed components:
 
 - **Defender sensor (DaemonSet):** Runs on AKS nodes, collects runtime telemetry (Kubernetes events, process, network) and sends it securely to Defender for Cloud.
 - **Azure Policy:** A web hook to Kubernetes admission control. Runs as a pod in the cluster. Provides the option to enforce configuration rules.
@@ -73,6 +73,7 @@ Before deploying Defender for Containers on AKS, ensure you meet these requireme
 
 - AKS clusters running Kubernetes 1.19 or later
 - Network connectivity for outbound HTTPS to Azure endpoints
+- By default, AKS clusters have unrestricted outbound (egress) internet access. Clusters with restricted egress, must allow specific endpoints. See: [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers)
 
 > [!NOTE]
 > For detailed prerequisites and setup instructions, see:

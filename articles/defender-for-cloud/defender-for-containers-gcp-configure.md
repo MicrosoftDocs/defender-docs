@@ -204,6 +204,33 @@ gcloud container clusters update CLUSTER_NAME \
     --logging=SYSTEM,WORKLOAD,API_SERVER
 ```
 
+### Component details for GCP
+
+#### Agentless threat detection
+
+Uses GCP Cloud Logging to monitor cluster activities without requiring an agent installation. This feature:
+
+- Analyzes audit logs from GKE clusters
+- Detects suspicious activities and potential threats
+- Provides security alerts without performance impact
+
+#### Kubernetes API access
+
+Enables Defender for Cloud to query the Kubernetes API for:
+
+- Configuration assessment
+- Security posture evaluation
+- Compliance monitoring against CIS GKE benchmark
+
+#### Registry access for GAR and GCR
+
+Provides vulnerability scanning for images stored in:
+
+- Google Container Registry (GCR)
+- Google Artifact Registry (GAR)
+- Automatically scans new images on push
+- Identifies vulnerabilities with severity ratings
+
 ## Configure runtime protection
 
 ### Enable or disable plan components

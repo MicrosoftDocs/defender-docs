@@ -94,7 +94,11 @@ kubectl get daemonset -n mdc
    - Microsoft Defender for Containers
    - Azure Policy for Kubernetes (if deployed)
 
-1. Select each extension to view configuration details.
+   :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png" alt-text="Screenshot that shows the Azure Arc page for checking the status of all installed extensions on a Kubernetes cluster." lightbox="media/defender-for-kubernetes-azure-arc/extension-installed-clusters-page.png":::
+
+1. Select each extension to view configuration details:
+
+   :::image type="content" source="media/defender-for-kubernetes-azure-arc/extension-details-page.png" alt-text="Screenshot that shows full details of an Azure Arc extension on a Kubernetes cluster.":::
 
 ## Verify sensor deployment
 

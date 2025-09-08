@@ -48,6 +48,20 @@ To see which components are currently deployed:
    - Defender extension status
    - Policy extension status
 
+### Enable or disable components through portal settings
+
+1. In Defender for Cloud, select **Environment Settings**, then select the relevant subscription.
+
+1. In **Defender plans**, select **Containers** > **Settings**.
+
+1. Turn on or off the relevant components:
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+
+    > [!NOTE]
+    > - When you turn off Defender for Containers, the components are set to **Off****.** They're not deployed to any more containers, but they're not removed from containers where they're already installed.
+    > - To disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
+
 ### Deploy missing components
 
 If you deployed specific components initially and want to add others:
@@ -65,6 +79,9 @@ If you deployed specific components initially and want to add others:
 1. Under **Settings**, select **Extensions**.
 1. Select **+ Add**.
 1. Search for and add **Azure Policy for Kubernetes**.
+
+> [!TIP]
+> You can also use the **azure-defender-extension-arm-template.json** Resource Manager template from the Defender for Cloud [installation examples](https://aka.ms/kubernetes-extension-installation-examples) for automated deployment.
 
 ### Remove specific components
 
@@ -109,6 +126,41 @@ Apply the configuration:
 kubectl apply -f defender-config.yaml
 kubectl rollout restart deployment/microsoft-defender-controller -n mdc
 ```
+
+## Configure custom workspace assignment
+
+By default, Defender for Containers uses a default Log Analytics workspace. You can assign a custom workspace through Azure Policy for consistent workspace assignment across multiple clusters:
+
+### Using Azure Policy
+
+1. Go to **Azure Policy** in the Azure portal.
+
+1. Search for the policy definition "Configure Arc-enabled Kubernetes clusters to use Log Analytics workspace for Defender".
+
+1. Create a new assignment with these parameters:
+   - **Scope**: Your subscription or resource group containing Arc clusters
+   - **Workspace Resource Id**: Your custom Log Analytics workspace ID
+   - **Effect**: DeployIfNotExists
+
+1. Save the assignment. The policy configures all Arc-enabled clusters in scope to use the specified workspace.
+
+### Using Azure CLI
+
+```azurecli
+# Assign custom workspace via policy
+az policy assignment create \
+    --name "DefenderWorkspaceAssignment" \
+    --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>" \
+    --policy "/providers/Microsoft.Authorization/policyDefinitions/[workspace-policy-id]" \
+    --params '{
+        "workspaceResourceId": {
+            "value": "/subscriptions/<subscription-id>/resourceGroups/<rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+        }
+    }'
+```
+
+> [!TIP]
+> For deployment-time workspace configuration, you can specify the workspace when deploying the Defender extension. See [Enable Defender for Containers on Arc-enabled Kubernetes](defender-for-containers-arc-enable-portal.md#configure-log-analytics-workspace).
 
 ## Configure runtime protection
 
@@ -428,7 +480,7 @@ data:
     flushInterval: 300s
 ```
 
-## Configure multi-cluster policies
+## Configure multicluster policies
 
 For organizations with multiple Arc clusters:
 

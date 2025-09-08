@@ -45,6 +45,12 @@ GCP-specific requirements:
 
     :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png" alt-text="Screenshot showing how to connect a GCP project to Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png":::
 
+    :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-environment.png" alt-text="Screenshot showing adding GCP environment." lightbox="media/defender-for-kubernetes-intro/add-gcp-environment.png":::
+
+1. Select the relevant GCP connector if you have multiple:
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/relevant-connector.png" alt-text="Screenshot that shows an example GCP connector." lightbox="media/defender-for-containers-enable-plan-gke/relevant-connector-expanded.png":::
+
 ## Configure connector details
 
 1. In the **Account details** section, enter:
@@ -52,15 +58,19 @@ GCP-specific requirements:
    - **GCP project ID**: Your GCP project identifier
    - **Resource group**: Select or create a resource group
 
+   :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-account-details.png" alt-text="Screenshot showing GCP account details configuration." lightbox="media/defender-for-kubernetes-intro/add-gcp-account-details.png":::
+
 1. Select **Next: Select plans**.
 
 ## Enable Defender for Containers features
 
-1. In the **Select plans** page, toggle **Containers** to **On**.
+1. In **Select plans**, toggle **Containers** to **On**.
 
     :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot of enabling Defender for Containers for a GCP connector." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
 
 1. Select **Configure** to access the plan settings.
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png" alt-text="Screenshot of settings for the Containers plan in the Defender for Cloud environment settings." lightbox="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png":::
 
 1. Choose your deployment approach:
    - **Enable all components** (recommended): Enable all features for comprehensive protection
@@ -96,7 +106,11 @@ GCP-specific requirements:
 
 1. Copy the service account email from the script output.
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/copy-button.png" alt-text="Screenshot that shows the location of the copy button.":::
+
 1. Return to Azure portal and paste the service account email.
+
+   :::image type="content" source="media/defender-for-kubernetes-intro/configure-access-gcp.png" alt-text="Screenshot showing GCP access configuration." lightbox="media/defender-for-kubernetes-intro/configure-access-gcp.png":::
 
 1. Select **Next: Review and create**.
 
@@ -132,12 +146,18 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Search for "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/recommendation-search.png" alt-text="Screenshot that shows searching for a recommendation." lightbox="media/defender-for-containers-enable-plan-gke/recommendation-search-expanded.png":::
+
+    :::image type="content" source="media/defender-for-kubernetes-intro/enable-sensor-for-azure-arc-gcp.png" alt-text="Screenshot showing sensor enablement for Arc-connected GKE clusters." lightbox="media/defender-for-kubernetes-intro/enable-sensor-for-azure-arc-gcp.png":::
+
 1. Select your GKE clusters.
 
 1. Select **Fix** to deploy the sensor.
 
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot that shows the location of the Fix button.":::
+
 > [!NOTE]
-> You can also deploy the Defender sensor using Helm for more control. See [Deploy Defender sensor using Helm](defender-for-containers-gcp-enable-programmatically.md#deploy-defender-sensor).
+> You can also deploy the Defender sensor by using Helm for more control. For more information, see [Deploy Defender sensor using Helm](defender-for-containers-gcp-enable-programmatically.md#deploy-defender-sensor).
 
 ### Configure container registry scanning
 
@@ -149,7 +169,7 @@ For Google Container Registry (GCR) and Artifact Registry:
 
 1. Verify **Agentless container vulnerability assessment** is enabled.
 
-1. Images are automatically scanned when pushed to the registry.
+1. Images are automatically scanned when you push them to the registry.
 
 ### Enable audit logging
 
@@ -222,13 +242,17 @@ For private clusters:
 
 To exclude specific GKE clusters from automatic provisioning:
 
-1. Go to your Arc-enabled GKE cluster in Azure portal.
+1. Go to your GKE cluster in GCP Console.
 
-1. Under **Overview**, select **Tags**.
+1. Add labels to the cluster:
+   - For Defender sensor: `ms_defender_container_exclude_agents` = `true`  
+   - For agentless deployment: `ms_defender_container_exclude_agentless` = `true`
 
-1. Add one of these tags:
-   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
-   - For Azure Policy: `ms_defender_container_exclude_azurepolicy` = `true`
+> [!NOTE]
+> For Arc-connected clusters, you can also use Azure tags:
+>
+> - `ms_defender_container_exclude_sensors` = `true`
+> - `ms_defender_container_exclude_azurepolicy` = `true`
 
 ## Configure additional settings
 
@@ -292,7 +316,7 @@ After setup, regularly:
 
 ### Arc connection issues
 
-1. Check cluster connectivity:
+1. Check cluster connectivity.
 
    ```bash
    kubectl get pods -n azure-arc
@@ -300,7 +324,7 @@ After setup, regularly:
 
 1. Verify outbound connectivity to Azure.
 
-1. Review Arc agent logs:
+1. Review Arc agent logs.
 
    ```bash
    kubectl logs -n azure-arc -l app.kubernetes.io/component=connect-agent
@@ -312,7 +336,7 @@ After setup, regularly:
 
 1. Check that images were recently pushed.
 
-1. Ensure vulnerability scanning API is enabled:
+1. Ensure vulnerability scanning API is enabled.
 
    ```bash
    gcloud services enable containeranalysis.googleapis.com

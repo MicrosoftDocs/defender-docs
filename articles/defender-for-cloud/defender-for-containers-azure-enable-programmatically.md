@@ -47,7 +47,7 @@ az security pricing update \
 SUBSCRIPTION_ID="<subscription-id>"
 TOKEN="<bearer-token>"
 
-# Enable the plan
+# Enable the plan with all settings
 curl -X PUT \
   "https://management.azure.com/subscriptions/${SUBSCRIPTION_ID}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
   -H "Authorization: Bearer ${TOKEN}" \
@@ -62,7 +62,7 @@ curl -X PUT \
           "isEnabled": "True"
         },
         {
-          "name": "ContainerRegistriesVulnerabilityAssessments",
+          "name": "ContainerRegistriesVulnerabilityAssessments", 
           "isEnabled": "True"
         }
       ]
@@ -99,12 +99,14 @@ Set-AzSecurityWorkspaceSetting `
 ### Choose your deployment method
 
 **AKS built-in addon:**
+
 - Automatically provisioned and updated by Azure
 - Managed through AKS security profile
 - Simplest deployment option
 - Updates handled automatically with AKS cluster updates
 
 **Helm chart deployment:**
+
 - Provides flexible deployment options for DevOps and infrastructure-as-code scenarios
 - Allows integration into CI/CD pipelines
 - Gives you control over sensor updates and versioning
@@ -266,7 +268,7 @@ resource "azurerm_kubernetes_cluster" "main" {
 
 Unlike other options that are autoprovisioned and updated automatically, Helm lets you flexibly deploy the Defender sensor. This approach is especially useful in DevOps and infrastructure-as-code scenarios. With Helm, you can integrate deployment into CI/CD pipelines and control all sensor updates. You can also choose to receive preview and GA versions.
 
-You can deploy the sensor by using:
+Use the following methods to deploy the sensor:
 
 #### [Installation script](#tab/helm-script)
 
@@ -606,6 +608,60 @@ resource "azurerm_kubernetes_cluster" "main" {
 ```
 
 ---
+
+## Deploy components by using recommendations
+
+You can also deploy capabilities manually by using Defender for Cloud recommendations:
+
+| Sensor | Recommendation |
+|--|--|
+| Defender sensor for Kubernetes | [Azure Kubernetes Service clusters should have Defender profile enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9) |
+| Defender sensor for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6) |
+| Azure Policy agent for Kubernetes | [Azure Kubernetes Service clusters should have the Azure Policy Add-on for Kubernetes installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/08e628db-e2ed-4793-bc91-d13e684401c3) |
+| Azure Policy agent for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0642d770-b189-42ef-a2ce-9dcc3ec6c169) |
+
+To deploy by using recommendations programmatically:
+
+```azurecli
+# Trigger remediation for a specific recommendation
+az security assessment remediate \
+    --assessment-name "56a83a6e-c417-42ec-b567-1e6fcb3d09a9" \
+    --resource-id "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.ContainerService/managedClusters/{clusterName}"
+```
+
+## Configure custom workspace
+
+You can assign a custom workspace for the Defender sensor through Azure Policy instead of using the default workspace:
+
+### [Azure CLI](#tab/azure-cli-workspace)
+
+```azurecli
+# Create policy assignment for custom workspace
+az policy assignment create \
+    --name "DefenderWorkspaceAssignment" \
+    --scope "/subscriptions/{subscriptionId}" \
+    --policy "/providers/Microsoft.Authorization/policyDefinitions/64def556-fbad-4622-930e-72d1d5589bf5" \
+    --params '{
+        "workspaceResourceId": {
+            "value": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}"
+        }
+    }'
+```
+
+### [PowerShell](#tab/powershell-workspace)
+
+```powershell
+# Assign custom workspace via policy
+$workspace = Get-AzOperationalInsightsWorkspace `
+    -ResourceGroupName "myRG" `
+    -Name "myWorkspace"
+
+New-AzPolicyAssignment `
+    -Name "DefenderWorkspaceAssignment" `
+    -Scope "/subscriptions/$((Get-AzContext).Subscription.Id)" `
+    -PolicyDefinition (Get-AzPolicyDefinition -Id "/providers/Microsoft.Authorization/policyDefinitions/64def556-fbad-4622-930e-72d1d5589bf5") `
+    -PolicyParameterObject @{"workspaceResourceId"=$workspace.ResourceId}
+```
 
 ## Next steps
 

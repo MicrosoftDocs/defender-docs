@@ -83,6 +83,11 @@ If your Kubernetes cluster isn't already connected to Azure Arc, follow these st
    - **Enable all components** (recommended): Enable all features for comprehensive protection
    - **Enable specific components**: Select only the components you need
 
+   :::image type="content" source="media/defender-for-containers-enable-plan-gke/container-components-on.png" alt-text="Screenshot that shows turning on components." lightbox="media/defender-for-containers-enable-plan-gke/container-components-on.png":::
+
+   > [!NOTE]
+   > If you want to disable automatic installation of components during the onboarding process, select **Edit configuration** for the **Containers** plan. The advanced options appear, and you can disable automatic installation for each component.
+
    Available components:
    - **Agentless discovery for Kubernetes** - Discovers all Kubernetes clusters
    - **Agentless container vulnerability assessment** - Scans container images
@@ -113,6 +118,8 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
     > Select the checkbox next to the cluster name, not the hyperlinked name itself.
 
 1. Select **Fix** to automatically deploy the extensions.
+
+   :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Animated screenshot that shows deploying a Defender sensor for Azure Arc by using remediation in Defender for Cloud.":::
 
 #### Option 2: Deploy manually
 
@@ -231,6 +238,13 @@ If you need selective deployment or to fix issues with existing deployments:
 1. Go to **Recommendations** and search for Arc-specific recommendations.
 
 ### Deploy missing components
+
+If you disable automatic installation of any component, you can deploy it using these recommendations:
+
+| Component | Recommendation |
+|--|--|
+| Defender extension for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Defender extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/3ef9848c-c2c8-4ff3-8b9c-4c8eb8ddfce6) |
+| Azure Policy extension for Azure Arc-enabled Kubernetes | [Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0642d770-b189-42ef-a2ce-9dcc3ec6c169) |
 
 #### Deploy the Defender sensor to specific clusters
 

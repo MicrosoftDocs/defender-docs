@@ -43,6 +43,37 @@ az security pricing show --name 'Containers' --query pricingTier
 
 # Check extensions
 az security pricing extension list --name 'Containers'
+
+# Verify all extensions are enabled
+az security pricing show --name 'Containers' --query "properties.extensions[].isEnabled"
+```
+
+### Using PowerShell
+
+```powershell
+# Check plan status
+Get-AzSecurityPricing -Name "Containers"
+
+# Verify workspace configuration
+Get-AzSecurityWorkspaceSetting -Name "default"
+
+# Check if auto-provisioning is enabled
+Get-AzSecurityAutoProvisioningSetting | Where-Object {$_.Name -eq "default"}
+```
+
+### Using REST API
+
+```bash
+# Set variables
+SUBSCRIPTION_ID="<subscription-id>"
+TOKEN="<bearer-token>"
+
+# Check plan configuration
+curl -X GET \
+  "https://management.azure.com/subscriptions/${SUBSCRIPTION_ID}/providers/Microsoft.Security/pricings/Containers?api-version=2024-01-01" \
+  -H "Authorization: Bearer ${TOKEN}"
+
+# Verify response shows pricingTier as "Standard" and extensions as enabled
 ```
 
 ## Verify sensor deployment
@@ -55,6 +86,18 @@ kubectl get daemonset -n kube-system | grep defender
 
 # Expected output:
 # microsoft-defender-collector-ds   3         3         3       3            3           <none>          5m
+```
+
+### Check using Azure CLI
+
+```azurecli
+# Verify Defender profile is enabled on AKS cluster
+az aks show \
+    --name <cluster-name> \
+    --resource-group <resource-group> \
+    --query "securityProfile.defender"
+
+# Expected output shows securityMonitoring.enabled as true
 ```
 
 ### Check pod status
