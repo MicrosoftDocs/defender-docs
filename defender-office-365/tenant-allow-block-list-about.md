@@ -108,6 +108,9 @@ Unnecessary allow entries expose your organization to malicious email that the s
 
 - **IP Addresses**: You can proactively create an [an allow entry for an IP address](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses) on the **IP addresses** tab in the Tenant Allow/Block List to override the IP filters for incoming messages.
 
+>[!NOTE]
+>Adding an IP address to the Allow List bypasses IP-based filtering checks (such as connection filtering or IP reputation checks). This does not change message throttling behavior. In contrast, adding an IP address to the Block List causes messages from that IP to be rejected at the service edge.
+
 The following list describes what happens in the Tenant Allow/Block List when you submit something to Microsoft as a false positive on the **Submissions** page:
 
 - **Email attachments** and **URLs**: An allow entry is created and the entry appears on the **Files** or **URLs** tab in the Tenant Allow/Block List respectively.
