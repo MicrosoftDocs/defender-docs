@@ -135,12 +135,22 @@ Streamlined connectivity allows you to use the following option to configure clo
 
 - [Option 1: Use the simplified domain](#option-1-configure-connectivity-using-the-simplified-domain)
 - [Option 2: Use static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges)
- 
+
 #### Option 1: Configure connectivity using the simplified domain
+
+# [Commercial devices](#tab/commercial-option-1)
 
 Configure your environment to allow connections to the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+You must maintain connectivity with remaining required services listed under the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+
+# [US government devices](#tab/government-option-1)
+
+Configure your environment to allow connections to the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+
+You must maintain connectivity with remaining required services listed under the [streamlined URL sheet](https://aka.ms/MDE-gov-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+
+---
 
 #### Option 2: Configure connectivity using static IP ranges 
 
