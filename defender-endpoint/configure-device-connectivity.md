@@ -133,7 +133,7 @@ Configure your environment to allow connections to the simplified Defender for E
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL sheet](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL sheet](https://aka.ms/MDE-gov-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
