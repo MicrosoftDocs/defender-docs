@@ -90,9 +90,9 @@ To support network devices without hostname resolution or wildcard support, you 
 
 ### Supported Operating Systems
 
-# [Commercial devices](#tab/commercial)
-
-- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
+- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list: 
+    - For commercial devices, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
+    - For US government devices, see [streamlined URL sheet](https://aka.ms/MDE-gov-urls)
 - Windows 11
 - Windows Server 2025
 - Windows Server 2022
@@ -103,28 +103,12 @@ To support network devices without hostname resolution or wildcard support, you 
 - Azure Stack HCI OS, version 23H2 and later.
 
 > [!IMPORTANT]
-> - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
-> - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
-
-# [US government devices](#tab/us-government)
-
-- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-gov-urls)
-- Windows 11
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
-- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
-- [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
-- Azure Stack HCI OS, version 23H2 and later.
-
-> [!IMPORTANT]
-> - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
-> - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-gov-urls).
-
----
+>
+> - **Devices running on the MMA agent are not supported** on the streamlined connectivity method and need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent).
+> - Windows Server 2012 R2 and Server 2016 need to upgrade to a unified agent to leverage the new method. <br/>
+> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but use a longer list: 
+>     - For commercial devices, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
+>    - For US government devices, see the [streamlined URL sheet](https://aka.ms/MDE-gov-urls).
 
 ### Required KB versions (Windows)
 
