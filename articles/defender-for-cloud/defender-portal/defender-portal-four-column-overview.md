@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Cloud in the Defender Portal - Complete Overview
-description: Quick navigation guide to Microsoft Defender for Cloud capabilities in the unified Microsoft Defender portal.
+title: Defender for Cloud Navigation Hub
+description: Quick navigation hub for Microsoft Defender for Cloud key capabilities and features in the unified Microsoft Defender portal.
 author: dlanger
 ms.author: dlanger
 ms.topic: overview
@@ -8,9 +8,9 @@ ms.date: 09/01/2025
 ms.service: defender-for-cloud
 ---
 
-# What is Microsoft Defender for Cloud in the Defender Portal?
+# Defender for Cloud Navigation Hub
 
-Microsoft Defender for Cloud provides comprehensive cloud security through the unified Microsoft Defender portal. This navigation guide organizes key capabilities and documentation links.
+Navigate quickly to Microsoft Defender for Cloud's key capabilities and features in the unified Microsoft Defender portal.
 
 :::row:::
    :::column span="":::
@@ -20,14 +20,7 @@ Microsoft Defender for Cloud provides comprehensive cloud security through the u
       - [Getting started in the Defender portal](getting-started-defender-portal.md)
       - [Defender for Cloud in the Defender Portal](defender-for-cloud-in-defender-portal.md)
       - [Cost calculator](../cost-calculator.md)
-      - [Connect Azure subscriptions](../connect-azure-subscription.md)
-      - [Connect AWS accounts](../quickstart-onboard-aws.md)
-      - [Connect GCP projects](../quickstart-onboard-gcp.md)
-      - [Defender CSPM](../concept-cloud-security-posture-management.md)
-      - [Defender for Servers](../defender-for-servers-overview.md)
-      - [Defender for Containers](../defender-for-containers-introduction.md)
-      - [Defender for Storage](../defender-for-storage-introduction.md)
-      - [Defender for AI](../ai-threat-protection.md)
+      - [Planning and operations guide](../defender-for-cloud-planning-and-operations-guide.md)
    :::column-end:::
    :::column span="":::
       ## Security Posture Management
@@ -41,6 +34,9 @@ Microsoft Defender for Cloud provides comprehensive cloud security through the u
       - [Email notifications](../configure-email-notifications.md?pivots=defender-portal)
       - [Data security posture management](../concept-data-security-posture.md)
    :::column-end:::
+:::row-end:::
+
+:::row:::
    :::column span="":::
       ## Threat Detection & Response
 
