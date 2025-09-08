@@ -2,10 +2,10 @@
 title: Set device value API
 description: Learn how to specify the value of a device using a Microsoft Defender for Endpoint API.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

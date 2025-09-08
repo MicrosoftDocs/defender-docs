@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general

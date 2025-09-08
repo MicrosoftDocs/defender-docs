@@ -4,12 +4,12 @@ description: During and after an automated investigation, you can view the resul
 search.appverid: met150
 f1.keywords:
 - NOCSH
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

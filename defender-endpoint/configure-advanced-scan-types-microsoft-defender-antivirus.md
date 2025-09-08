@@ -3,11 +3,11 @@ title: Configure scanning options for Microsoft Defender Antivirus
 description: You can configure Microsoft Defender Antivirus to scan email storage files, back-up or reparse points, network files, and archived files (such as .zip files).
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.date: 02/18/2025
 ms.collection: 

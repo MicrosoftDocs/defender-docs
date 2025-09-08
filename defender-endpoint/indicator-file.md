@@ -3,11 +3,11 @@ title: Create indicators for files
 ms.reviewer: yongrhee
 description: Create indicators for a file hash that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 07/30/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
