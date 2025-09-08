@@ -224,4 +224,4 @@ Defender for Cloud is deeply integrated with Microsoft Defender XDR, providing:
 - [Investigate attack paths in the Defender portal](../concept-attack-path.md?pivots=defender-portal)
 - [Set up vulnerability management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal)
 - [Configure enhanced email notifications](../configure-email-notifications.md?pivots=defender-portal)
-- [Compare Azure portal vs Defender portal features](azure-portal-vs-defender-portal-comparison.md)
+- [Compare Azure portal vs Defender portal features](../azure-portal-vs-defender-portal-comparison.md)

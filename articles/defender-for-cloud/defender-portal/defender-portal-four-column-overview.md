@@ -16,7 +16,7 @@ Navigate quickly to Microsoft Defender for Cloud's key capabilities and features
    :::column span="":::
       ## Getting Started
 
-      - [Microsoft Defender for Cloud](https://review.learn.microsoft.com/en-us/azure/defender-for-cloud/)
+      - [Microsoft Defender for Cloud](../defender-for-cloud-introduction.md)
       - [Getting started in the Defender portal](getting-started-defender-portal.md)
       - [Defender for Cloud in the Defender Portal](defender-for-cloud-in-defender-portal.md)
       - [Cost calculator](../cost-calculator.md)
@@ -40,11 +40,8 @@ Navigate quickly to Microsoft Defender for Cloud's key capabilities and features
       - [Attack Path Management](../how-to-manage-attack-path.md?pivots=defender-portal)
       - [Security alerts overview](../alerts-overview.md)
       - [Microsoft Defender XDR integration](../concept-integration-365.md)
-      - [Incident response](../managing-and-responding-alerts.md)
       - [Alert validation](../alert-validation.md)
       - [Microsoft Security Copilot](../copilot-security-in-defender-for-cloud.md)
-      - [Advanced hunting](../advanced-hunting.md)
       - [Automated response](../continuous-export.md)
-      - [ServiceNow integration](../connect-servicenow.md)
    :::column-end:::
 :::row-end:::

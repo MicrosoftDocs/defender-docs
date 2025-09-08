@@ -20,24 +20,9 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ::: zone pivot="azure-portal"
 
-## In this article
-
-- [Prerequisites](#prerequisites)
-- [Identify attack paths](#identify-attack-paths)
-- [Remediate attack paths](#remediate-attack-paths)
-- [Remediate all recommendations within an attack path](#remediate-all-recommendations-within-an-attack-path)
-
 ::: zone-end
 
 ::: zone pivot="defender-portal"
-
-## In this article
-
-- [Prerequisites](#prerequisites)
-- [Identify attack paths in the Defender portal](#identify-attack-paths)
-- [Remediate attack paths in the Defender portal](#remediate-attack-paths)
-- [Remediate all recommendations within an attack path](#remediate-all-recommendations-within-an-attack-path)
-- [Enhanced exposure management capabilities](#enhanced-exposure-management-capabilities)
 
 ::: zone-end
 

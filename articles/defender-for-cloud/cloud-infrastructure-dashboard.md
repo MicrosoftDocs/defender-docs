@@ -142,7 +142,7 @@ The Cloud Infrastructure Overview Dashboard serves as a central hub that connect
 
 ::: zone pivot="azure-portal"
 
-# Cloud Infrastructure Overview Dashboard
+## Cloud Infrastructure Overview Dashboard
 
 The Cloud Infrastructure Overview Dashboard is primarily available through the Microsoft Defender portal experience, where it provides unified visibility across Azure, AWS, and GCP environments integrated with Defender XDR capabilities.
 

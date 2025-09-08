@@ -115,7 +115,7 @@ After creating cloud scopes, you can:
 
 ::: zone pivot="azure-portal"
 
-# Cloud scopes and unified RBAC
+## Cloud scopes and unified RBAC
 
 Cloud scopes and unified RBAC capabilities are primarily available through the Microsoft Defender portal experience. For the full cloud scopes management functionality, including creation, configuration, and advanced filtering across multi-cloud environments, access the Microsoft Defender portal.
 

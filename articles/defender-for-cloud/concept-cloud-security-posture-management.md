@@ -54,6 +54,18 @@ Defender for Cloud offers two CSPM plans:
 | API security posture management | – | ✔️ | Azure |
 | AKS security dashboard | – | ✔️ | Azure |
 
+## Plan availability
+
+Defender CSPM is available across multiple deployment models and cloud environments:
+
+- **Commercial clouds**: Available in all Azure commercial regions
+- **Government clouds**: Available in Azure Government and Azure Government Secret
+- **Multi-cloud**: Support for Azure, AWS, and GCP environments
+- **Hybrid**: On-premises resources through Azure Arc
+- **DevOps**: GitHub and Azure DevOps integration
+
+For specific regional availability and government cloud support details, see the [support matrix for cloud environments](support-matrix-cloud-environment.md).
+
 ## Plan Pricing
 
 - See [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and use the [cost calculator](cost-calculator.md) to estimate costs.
