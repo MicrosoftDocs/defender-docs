@@ -4,9 +4,9 @@ description: Learn how to use the unified submissions feature in Microsoft Defen
 search.appverid: met150
 ms.date: 05/06/2024
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
+ms.author: bagol
+author: batamig
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to

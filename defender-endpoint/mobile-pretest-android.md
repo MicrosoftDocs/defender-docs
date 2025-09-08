@@ -2,10 +2,10 @@
 title: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 description: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

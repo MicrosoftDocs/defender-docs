@@ -4,11 +4,11 @@ description: Turn on cloud protection to benefit from fast and advanced protecti
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.date: 11/10/2024
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: asr
 ms.collection: 
