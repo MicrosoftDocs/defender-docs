@@ -12,25 +12,11 @@ Use app governance to manage OAuth policies for Microsoft 365, Google Workspace,
 You might need to manage your app policies as follows to keep up-to-date with your organization's apps, respond to new app-based attacks, and for ongoing changes to your app compliance needs:
 
 - Create new policies targeted at new apps
-- Change the status of an existing policy (active, inactive, audit mode)
+- Change the status of an existing policy (active or disable)
 - Change the conditions of an existing policy
 - Change the actions of an existing policy for auto-remediation of alerts
 
 <a name='manage-oauth-app-policies-for-azure-ad'></a>
-
-## Manage OAuth app policies for Microsoft Entra ID
-
-Here's an example of a process for managing an existing policy for Microsoft Entra apps:
-
-1. Edit the settings of the policy.
-
-1. Check for expected behavior, such as alerts generated.
-1. If the behavior isn't expected, go back to step 1.
-1. If the behavior is expected, edit the policy and change its status to active (if needed).
-
-For example:
-
-:::image type="content" source="media/app-governance/mapg-manage-policy-process.png" alt-text="Diagram of the manage app policy workflow." lightbox="media/app-governance/mapg-manage-policy-process.png" border="false":::
 
 > [!NOTE]
 > Following the change in the **Activity type** filter, policies with the previous filter will have a "LEGACY" label attached to the filter and if the policies are edited or deleted the filter can't be restored.
