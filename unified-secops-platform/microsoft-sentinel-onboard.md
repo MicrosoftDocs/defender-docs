@@ -25,7 +25,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 07/16/2025
+ms.date: 09/02/2025
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -98,19 +98,10 @@ If applicable, complete these prerequisites:
 This procedure describes how to onboard a Microsoft Sentinel-enabled workspace to the Defender portal.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
-
-1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel.
-
-    In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. This step isn't needed for any subsequent workspaces you onboard to Defender.
-  
-1. Select **Home** > **Connect a workspace**.
-
+1. Select **System** > **Settings** > **Microsoft Sentinel** > **Connect a workspace**.
 1. Select the workspaces you want to connect and select **Next**.
-
 1. Select the **Primary workspace**.
-
-1. Read and understand the product changes associated with connecting your workspace. 
-
+1. Read and understand the product changes associated with connecting your workspace.
 1. Select **Connect**.
 
 After your workspace is connected, the banner on the **Home** page shows that your environment is ready. The **Home** page is updated with new sections that include metrics from Microsoft Sentinel, like the number of data connectors and automation rules.
@@ -151,7 +142,7 @@ If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/con
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
 1. On the **Workspaces** page, select the connected workspace and **Disconnect workspace**.
-1. Provide a reason why you're disconnecting the workspace. 
+1. Provide a reason why you're disconnecting the workspace.
 1. Confirm your selection.
 
    When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.

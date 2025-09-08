@@ -2,12 +2,12 @@
 title: User experiences in Microsoft Defender for Endpoint on iOS
 description: Learn about major user experience changes for versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

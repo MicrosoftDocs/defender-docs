@@ -110,7 +110,7 @@ Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<Initi
 - **\<CustomDomainWithDashes\>**: The custom domain or subdomain with periods replaced by dashes. For example, `contoso.com` becomes `contoso-com`, or `marketing.contoso.com` becomes `marketing-contoso-com`.
 - **\<InitialDomainPrefix\>**: The custom part of the \*.onmicrosoft.com you used to enroll in Microsoft 365. For example, if you used `contoso.onmicrosoft.com`, the value is `contoso`.
 - **\<DynamicPartitionCharacter\>**: A dynamically generated character that's used for both selectors (for example, r or n). The value is automatically assigned by Microsoft when you add a new custom domain and enable DKIM. The value is determined by Microsoft's internal routing logic and isn't configurable.
-  - This value is part of the updated DKIM record format for new custom domains in Microsoft 365 introduced in May 2025. Existing custom domains and initial domains continue to use the old DKIM format:
+  - **This value is part of the updated DKIM record format for new custom domains in Microsoft 365 introduced in May 2025**. Existing custom domains and initial domains continue to use the old DKIM format:
 
     ```text
     Hostname: selector1._domainkey
@@ -193,7 +193,7 @@ Proceed if the domain satisfies these requirements.
    |Microsoft.Exchange.ManagementTasks.ValidationException|CNAME record does not
    exist for this config. Please publish the following two CNAME records first. Domain Name
    : contoso.com Host Name : selector1._domainkey Points to address or value: selector1-
-   contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft.com Host Name : selector2._domainkey
+   contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft Host Name : selector2._domainkey
    Points to address or value: selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft .
    If you have already published the CNAME records, sync will take a few minutes to as
    many as 4 days based on your specific DNS. Return and retry this step later.
@@ -603,7 +603,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
 - **Use the test in Microsoft 365 help**: This feature requires a Global Administrator<sup>\*</sup> account, and isn't available in Microsoft 365 Government Community Cloud (GCC), GCC High, DoD, or Office 365 operated by 21Vianet.
 
   > [!IMPORTANT]
-  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+  > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
   <div class="nextstepaction">
   <p><a href="https://admin.microsoft.com/AdminPortal/?searchSolutions=DKIM#/homepage" data-linktype="external">Run Tests: DKIM</a></p>
