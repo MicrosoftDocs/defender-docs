@@ -3,11 +3,11 @@ title: Microsoft Defender for Endpoint device timeline
 description: Use Microsoft Defender for Endpoint device timeline and timeline event flags.
 keywords: Defender for Endpoint device timeline, event flags
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: efratka, alonshar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

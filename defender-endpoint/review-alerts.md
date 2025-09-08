@@ -4,10 +4,10 @@ description: Review alert information, including a visualized alert story and de
 ms.service: defender-endpoint
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
   - m365-security

@@ -2,10 +2,10 @@
 title: Troubleshoot system extension issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalsh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

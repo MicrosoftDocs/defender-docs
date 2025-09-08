@@ -2,9 +2,9 @@
 title: Built-in protection helps guard against ransomware
 description: Learn how built-in protection protects against ransomware as part of Microsoft Defender for Endpoint.
 search.appverid: MET150
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb 
+author: batamig
+ms.author: bagol
+manager: bagol 
 audience: IT Pro
 ms.topic: overview
 ms.date: 06/24/2024

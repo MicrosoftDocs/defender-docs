@@ -6,13 +6,13 @@ ms.localizationpriority: high
 ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: bsabetghadam
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
