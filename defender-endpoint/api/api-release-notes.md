@@ -3,10 +3,10 @@ title: Microsoft Defender for Endpoint API release notes
 description: Release notes for updates made to the Microsoft Defender for Endpoint set of APIs.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

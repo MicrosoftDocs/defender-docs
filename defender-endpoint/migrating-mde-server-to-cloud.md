@@ -1,9 +1,9 @@
 ---
 title: Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
 description: Learn how to migrate servers from Microsoft Defender for Endpoint for servers to Microsoft Defender for Servers.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-endpoint

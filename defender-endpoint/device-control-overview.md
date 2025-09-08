@@ -1,9 +1,9 @@
 ---
 title: Device control in Microsoft Defender for Endpoint
 description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.date: 08/28/2024
 ms.topic: overview
 ms.service: defender-endpoint

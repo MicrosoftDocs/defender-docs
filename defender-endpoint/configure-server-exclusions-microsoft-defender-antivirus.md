@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 description: Windows Server includes automatic exclusions, based on server role. You can also add custom exclusions.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 05/01/2025
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -260,7 +260,7 @@ Because Microsoft Defender Antivirus is built into Windows, it doesn't require e
 
 ### Windows Update files or Automatic Update files
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
 - `%windir%\SoftwareDistribution\Datastore\*\edb\*.log`
 - `%windir%\SoftwareDistribution\Datastore\*\Edb\*.jrs`
