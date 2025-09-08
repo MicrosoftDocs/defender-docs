@@ -34,9 +34,6 @@ Navigate quickly to Microsoft Defender for Cloud's key capabilities and features
       - [Email notifications](../configure-email-notifications.md?pivots=defender-portal)
       - [Data security posture management](../concept-data-security-posture.md)
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
       ## Threat Detection & Response
 
@@ -49,17 +46,5 @@ Navigate quickly to Microsoft Defender for Cloud's key capabilities and features
       - [Advanced hunting](../advanced-hunting.md)
       - [Automated response](../continuous-export.md)
       - [ServiceNow integration](../connect-servicenow.md)
-   :::column-end:::
-   :::column span="":::
-      ## Advanced Features
-
-      - [Cloud security explorer](../concept-attack-path.md)
-      - [Regulatory compliance dashboard](../regulatory-compliance-dashboard.md)
-      - [Governance rules](../governance-rules.md)
-      - [Risk prioritization](../risk-prioritization.md)
-      - [DevOps security](../defender-for-devops-introduction.md)
-      - [AI Security Posture](../ai-security-posture.md)
-      - [Data sensitivity settings](../data-sensitivity-settings.md)
-      - [Custom dashboards](../custom-dashboards-azure-workbooks.md)
    :::column-end:::
 :::row-end:::
