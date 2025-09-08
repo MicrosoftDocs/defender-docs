@@ -25,7 +25,9 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
 > [!NOTE]
-> The procedure described in this article is supported for US government devices. The US government tabs in the relevant sections contain instructions specific to US government devices. All other sections apply to both commercial and US government devices unless otherwise noted.
+> - The streamlined connectivity method does **not change Defender for Endpoint functionality or end-user experience**; only the URLs or IPs used for service connectivity are different.
+> - No plans to deprecate old service URLs; devices onboarded with standard connectivity will continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.us` for future services.
+> - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated; enforcing proxy (user) authentication will break connectivity.
 
 To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
@@ -45,10 +47,11 @@ For more information on preparing your environment and the updated list of desti
 
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
-> [!NOTE] 
-> - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
-> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
-> - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
+> [!NOTE]
+>
+> - The streamlined connectivity method **doesn't change Defender for Endpoint functionality or end-user experience**. Only the URLs or IPs used for service connectivity have changed.
+> - There are no plans to deprecate old service URLs. devices onboarded with standard connectivity will continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` for future services.
+> - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated. Enforcing proxy (user) authentication breaks connectivity.
 
 # [US government devices](#tab/government-domain)
 
@@ -64,10 +67,11 @@ For more information on preparing your environment and the updated list of desti
 
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
-> [!NOTE] 
-> - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
-> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.us` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
-> - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
+> [!NOTE]
+>
+> - The streamlined connectivity method **doesn't change Defender for Endpoint functionality or end-user experience**. Only the URLs or IPs used for service connectivity have changed.
+> - There are no plans to deprecate old service URLs. devices onboarded with standard connectivity will continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.us` for future services.
+> - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated. Enforcing proxy (user) authentication breaks connectivity.
 
 ---
 
@@ -250,4 +254,4 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
-For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
+For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.
