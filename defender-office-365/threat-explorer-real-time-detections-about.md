@@ -232,19 +232,25 @@ The filterable properties that are available in the **Delivery action** box in t
 |Composite|Select one or more values: <ul><li>**Fail**</li><li>**None**</li><li>**Pass**</li><li>**Soft pass**</li></ul>|
 
 > [!TIP]
-> ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
+> **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
 > There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
 >
 > - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
 > - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
 >
-> ² By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+> By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
 >
 > - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
 > - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
 > - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
 > - `/` at the end of the **URL** field is ignored.
+>   
+> **Sender IP** values are sometimes logged as empty or 0.0.0.0 for the following cases but the IP address might be visible in Exchange Message Trace:
+>
+> - Automatic replies
+> - Undelivered emails where delivery has failed
+> - Emails where sender IP is Microsoft internal IP (such as system generated notifications or alerts, forwarded messages delivered from Microsoft IP etc.)
 
 ### Pivots for the chart in the All email view in Threat Explorer
 
