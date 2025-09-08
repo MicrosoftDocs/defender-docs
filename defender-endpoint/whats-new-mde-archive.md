@@ -4,11 +4,11 @@ description: See what features were available for Microsoft Defender for Endpoin
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

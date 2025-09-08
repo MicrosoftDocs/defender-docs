@@ -2,11 +2,11 @@
 title: Deploy updates for Microsoft Defender for Endpoint on Linux
 description: Describes how to deploy updates for Microsoft Defender for Endpoint on Linux in enterprise environments.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
