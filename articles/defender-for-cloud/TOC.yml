@@ -16,13 +16,13 @@
 - name: Experience in Defender portal
   expanded: true
   items:
-    - name: Complete overview - four-column guide
-      displayName: overview, complete guide, four column, intro, get started, security posture, threat protection
+    - name: Navigation hub
+      displayName: navigation, hub, guide, intro, get started, security posture, threat protection
       href: defender-portal/defender-portal-four-column-overview.md
-    - name: Defender for Cloud in the Defender portal - Integration and Dashboard Overview
+    - name: Defender for Cloud in the Defender portal - integration and dashboard overview
       displayName: defender portal, integration, dashboard, overview, mdc, cloud security
       href: defender-portal/defender-for-cloud-in-defender-portal.md
-    - name: Getting started in the Defender Portal
+    - name: Getting started in the Defender portal
       displayName: get started, onboarding, defender portal, mdc, introduction
       href: defender-portal/getting-started-defender-portal.md
     - name: Azure portal vs Defender portal feature comparison
@@ -683,21 +683,6 @@
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
-    - name: Plan 
-      items:
-        - name: Get started
-          displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, adaptive application controls, adaptive network hardening, docker, fileless attack detection, auditd, simulate alerts
-          href: plan-defender-for-servers.md
-        - name: Plan roles and permissions
-          href: plan-defender-for-servers-roles.md
-        - name: Choose a plan and deployment scope
-          href: plan-defender-for-servers-select-plan.md
-        - name: Understand data collection
-          href: plan-defender-for-servers-agents.md
-        - name: Understand data storage and workspaces
-          href: plan-defender-for-servers-data-workspace.md
-        - name: Scale a deployment
-          href: plan-defender-for-servers-scale.md  
     - name: Configure
       items:
       - name: Defender integration
