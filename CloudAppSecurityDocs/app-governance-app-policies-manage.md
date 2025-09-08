@@ -20,10 +20,9 @@ You might need to manage your app policies as follows to keep up-to-date with yo
 
 ## Editing an app policy configuration
 
-To change the configuration of an existing app policy:
+To change the configuration of a user defined app policy:
 
 - Select the policy in the policy list, and then select **Edit** on the app policy pane.
-- Select the vertical ellipses for the policy in the list, and then select **Edit**.
 
 For the **Edit policy** page, step through the pages and make the appropriate changes:
 
@@ -38,9 +37,8 @@ For the **Edit policy** page, step through the pages and make the appropriate ch
 To delete an app policy, you can:
 
 - Select the policy in the policy list, and then select **Delete** on the app policy pane.
-- Select the vertical ellipses for the policy in the list, and then select **Delete**.
 
-An alternative to deleting an app policy is to change its status to inactive. Once inactive, the policy doesn't generate alerts. For example, rather than deleting an app policy for an app with a specific set of conditions that are useful for a future policy, rename the app policy to indicate its usefulness and set its status to inactive. You can later return to the policy and modify it for a similar app and set its status to audit mode or inactive.
+An alternative to deleting an app policy is to change its status to disabled. Once disabled, the policy doesn't generate alerts. For example, rather than deleting an app policy for an app with a specific set of conditions that are useful for a future policy, rename the app policy to indicate its usefulness and set its status to disabled. 
 
 ## Next steps
 
