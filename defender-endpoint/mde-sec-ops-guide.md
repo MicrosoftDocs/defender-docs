@@ -1,15 +1,15 @@
 ---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
-manager: deniseb
+manager: bagol
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
