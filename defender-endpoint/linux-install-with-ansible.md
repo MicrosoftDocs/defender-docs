@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

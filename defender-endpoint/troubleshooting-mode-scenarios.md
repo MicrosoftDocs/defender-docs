@@ -3,11 +3,11 @@ title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: pricci
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
