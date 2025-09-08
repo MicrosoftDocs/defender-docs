@@ -3,11 +3,11 @@ title: Use automated investigations to investigate and remediate threats
 description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: edr
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

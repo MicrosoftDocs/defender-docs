@@ -2,10 +2,10 @@
 title: Get scan history by definition
 description: Learn how to use the get scan history by definition API
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -3,10 +3,10 @@ title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 08/12/2025
+ms.date: 09/05/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -31,6 +31,16 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## Releases for Defender for Endpoint on iOS
 
+#### September 2025
+
+| Build| 1.1.68200103 |
+| -------- | -------- |
+| Release Date | September 4, 2025   |
+
+**What's New**
+
+- [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads.
+
 #### August 2025
 
 | Build| 1.1.68140102|
@@ -38,6 +48,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 | Release Date| August 19, 2025|
 
 **What's New**
+
+- Fixed push notification bug to ensure heartbeat signals are sent reliably
 
 - Performance improvements and bug fixes
 
