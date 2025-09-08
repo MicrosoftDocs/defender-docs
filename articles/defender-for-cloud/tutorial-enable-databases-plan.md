@@ -62,5 +62,5 @@ When all of these plans are enabled, you protect all supported databases types i
 ## Related content
 
 - [SQL vulnerability assessment helps you identify database vulnerabilities](sql-azure-vulnerability-assessment-overview.md)
-- [SQL Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview?view=azuresql&branch=main)
+- [SQL Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview?toc=/azure/defender-for-cloud/toc.json)
 - [Common questions about Microsoft Defender for Databases](faq-defender-for-databases.yml)
