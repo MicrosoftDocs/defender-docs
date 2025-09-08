@@ -18,6 +18,7 @@ The Defender sensor must connect to Microsoft Defender for Cloud to send securit
 | *.ods.opinsights.azure.com | *.ods.opinsights.azure.us | *.ods.opinsights.azure.cn  | 443  |
 | *.oms.opinsights.azure.com | *.oms.opinsights.azure.us | *.oms.opinsights.azure.cn | 443 |
 | login.microsoftonline.com  | login.microsoftonline.us | login.chinacloudapi.cn  | 443  |
+| *.cloud.defender.microsoft.com| N/A                          | N/A                                | 443  |
 
 ### Other requirements
 
