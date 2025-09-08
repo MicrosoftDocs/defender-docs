@@ -29,8 +29,6 @@ The Defender for Endpoint client might require the use of proxied connections to
 
 To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
-## Before you begin
-
 ## Defender for Endpoint-recognized simplified domain
 
 # [Commercial devices](#tab/commercial-domain)
@@ -73,24 +71,20 @@ To support network devices without hostname resolution or wildcard support, you 
 
 ---
 
-### Prerequisites
+## Prerequisites
 
-**Minimum KB update (Windows)**
+### Version and OS requirements
 
-- SENSE version: 10.8040.*/ March 8, 2022 or higher (see table)
+| Platform / Component | Minimum Version / Update | Notes |
+|---------------------|-------------------------|-------|
+| Windows (SENSE) | 10.8040.* / March 8, 2022 or higher | See KB table below |
+| Windows (Antimalware Client) | 4.18.2211.5 | |
+| Windows (Engine) | 1.1.19900.2 | |
+| Windows (Security Intelligence) | 1.391.345.0 | |
+| macOS | [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+ | |
+| Linux | [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+ | |
 
-**Microsoft Defender Antivirus versions (Windows)**
-
-- **Antimalware Client:** `4.18.2211.5` 
-- **Engine:** `1.1.19900.2` 
-- **Antivirus (Security Intelligence):** `1.391.345.0`
-
-**Defender Antivirus versions (macOS/Linux)**
-
-- [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
-- [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
-
-**Supported Operating Systems**
+### Supported Operating Systems
 
 # [Commercial devices](#tab/commercial)
 
@@ -128,7 +122,7 @@ To support network devices without hostname resolution or wildcard support, you 
 
 ---
 
-**Required KB versions (Windows)**
+### Required KB versions (Windows)
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
 |:---|:---|
@@ -141,6 +135,14 @@ To support network devices without hostname resolution or wildcard support, you 
 |     Windows 10 1709*    |     < end of   service >     |
 |     Windows Server   2022    |     KB5011497   (March 8, 2022)    |
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
+
+### Additional prerequisites (government devices only)
+
+To enable streamlined connectivity for US government environments:
+
+1. Ensure your tenant is enrolled in a supported government cloud.
+1. Validate that required endpoints listed in the [connectivity settings](gov.md#required-connectivity-settings) are accessible.
+1. Use the [onboarding script](configure-endpoints-script.md) with the `-UseStreamlinedConnectivity` flag.
 
 ## Streamlined connectivity process
 
@@ -254,8 +256,3 @@ For migrating devices already onboarded to Defender for Endpoint, see [Migrating
 
 Devices in GCC, GCC High, and DoD environments can use streamlined connectivity to simplify endpoint configuration. This reduces the number of required service endpoints and supports improved performance and reliability.
 
-To enable streamlined connectivity for US government environments:
-
-1. Ensure your tenant is enrolled in a supported government cloud.
-1. Validate that required endpoints listed in the [connectivity settings](gov.md#required-connectivity-settings) are accessible.
-1. Use the [onboarding script](configure-endpoints-script.md) with the `-UseStreamlinedConnectivity` flag.
