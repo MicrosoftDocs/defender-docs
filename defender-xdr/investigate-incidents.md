@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 03/27/2025
+ms.date: 08/26/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -105,10 +105,10 @@ If the incident or related alerts were the result of an analytics rule you've se
 
 ### Blast radius analysis
 
-Blast radius analysis is an advanced visualization integrated into incident investigation experience. It generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions. Blast radius analysis provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, blast radius analysis helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage.
+Blast radius analysis is an advanced visualization integrated into incident investigation experience. It generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions. Blast radius analysis provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, blast radius analysis helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
 
 The following prerequisites are required for blast radius analysis:
-+	Onboarding to Microsoft Sentinel Data Lake. For more information see [Onboarding to Microsoft Sentinel Data Lake](/azure/sentinel/datalake/sentinel-lake-onboarding).
++	You must be onboarded to Microsoft Sentinel Data Lake. For more information see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
 +	Exposure management (read) permission or higher.
 
 > [!NOTE]
@@ -118,8 +118,8 @@ The following table summarizes the blast radius analysis use cases for different
 
 |User role| Use case|
 |---|---|
-|Security analyst| Use the blast radius analysis while investigating an incident, to immediately visualize the compromised component at the center of the graph and paths leading to the potentially impacted targets. The graph enables a clear understanding the incident scope at a glance. Based on the target in scope the analyst understands the incident can rapidly escalate and can trigger actions for disruption and isolation and containment for remediation on the nodes on the path to the target.|
-|IT administrators and SOC engineers| Use the blast radius analysis to prioritize the most critical vulnerabilities to attend to immediately. By examining multiple nodes indicated with vulnerabilities on the map, the engineer can proactively allocate the required resources based on the blast radius reach to critical targets in the organization. The engineer can clearly communicate what was protected and what was impacted. The engineer can plan and prioritize additional defenses and network segmentations required to reduce further impact of future potential attacks.|
+|Security analyst| Use blast radius analysis to investigate an incident. Instantly see the compromised component at the center of the graph and the paths to potentially compromised targets. The graph provides an intuitive visual understanding of the incident and helps you quickly learn the potential scope of a breach. Based on the target and paths, you can escalate, and trigger actions to disrupt, isolate, and contain the incident on nodes along the paths to the target.|
+|IT administrators and SOC engineers| Use blast radius analysis to mobilize resource based on business impact and potential damage estimation.  Engineers can prioritize the most critical vulnerabilities that require immediate attention. By examining multiple nodes marked with vulnerabilities on the map, the engineer can proactively allocate the required resources based on the blast radius reach to critical targets in the organization. The engineer can clearly communicate what was protected and what was impacted and plan and prioritize additional defenses and network segmentations required to reduce further impact of future potential attacks.|
 |Incident response team| Quickly determine the scope of incident, with a dynamic visual incident map enabling them to take targeted action on the systems indicated on the graph.|
 |CISO or security leaders| Use the blast radius feature to indicate current status, set goals and metrics indicators and use this to report and audit for compliance reasons. The feature can be used to track progress of defending actions and protection measures investments.|
 
