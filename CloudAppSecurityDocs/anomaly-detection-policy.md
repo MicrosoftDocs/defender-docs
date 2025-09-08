@@ -3,6 +3,7 @@ title: Create anomaly detection policies | Microsoft Defender for Cloud Apps
 description: This article provides a description of Anomaly detection policies and provides reference information about the building blocks of an anomaly detection policy.
 ms.date: 03/01/2023
 ms.topic: how-to
+ms.reviewer: Ronen-Refaeli
 ---
 
 # Create Defender for Cloud Apps anomaly detection policies

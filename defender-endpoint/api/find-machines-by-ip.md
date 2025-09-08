@@ -2,10 +2,10 @@
 title: Find devices by internal IP API
 description: Find devices seen with the requested internal IP in the time range of 15 minutes prior and after a given timestamp
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

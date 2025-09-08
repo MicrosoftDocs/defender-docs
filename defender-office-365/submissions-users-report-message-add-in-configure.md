@@ -4,11 +4,11 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 03/07/2025
+ms.date: 08/27/2025
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -38,7 +38,7 @@ Microsoft uses these user reported messages to improve the effectiveness of emai
 
 The following table describes the advantages of the built-in **Report** button over the Report Message and Report Phishing add-ins:
 
-|Benefits|In-build report button|Report add-ins|
+|Benefits|Built-in Report button|Report add-ins|
 |---|:---:|:---:|
 |Works out of the box|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Consistent across consumer and enterprise accounts|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
@@ -48,12 +48,14 @@ The following table describes the advantages of the built-in **Report** button o
 |Message reporting from preview panel|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from reading window|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Message reporting from context menu|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
-|Supports shared and delegate mailboxes|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+|Supports shared and delegate mailboxes<sup>\*</sup>|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Pre-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup customization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Post-reporting popup localization|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
 |Works flawlessly with firewalls|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
+
+<sup>\*</sup>User reporting from shared and delegate mailboxes is available in [select supported clients](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
 The rest of this article describes how to remove the Report Message and Report Phishing add-ins.
 
@@ -66,7 +68,7 @@ The rest of this article describes how to remove the Report Message and Report P
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> role gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 

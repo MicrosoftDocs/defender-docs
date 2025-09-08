@@ -3,11 +3,11 @@ title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
 description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -28,12 +28,8 @@ ms.subservice: onboard
 - Virtual desktop infrastructure (VDI) devices
 - Windows 11
 - Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008
+- Windows Server 2012 R2 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)

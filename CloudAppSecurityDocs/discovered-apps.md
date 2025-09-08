@@ -3,6 +3,7 @@ title: View discovered apps on the Cloud discovery dashboard | Microsoft Defende
 description: This article describes the process for identifying and remediating risky cloud discovery apps in Defender for Cloud Apps.
 ms.date: 06/02/2024
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # View discovered apps with the Cloud discovery dashboard
@@ -111,6 +112,7 @@ The best way to get an overview of Shadow IT use across your organization is by 
    
 > [!NOTE]
 > The executive summary report is revamped to a six-pager report with a goal to provide a clear, concise & actionable overview while preserving the depth and integrity of the original analysis.
+> Starting September 1, 2025, the Cloud Discovery Alerts data point will no longer be included in the Executive Summary Report.
 
 ## Exclude entities
 

@@ -5,10 +5,10 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -87,6 +87,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
   - **Windows Server 2022**
 
 - **Windows Server 2025**
+- **Azure Stack HCI OS, version 23H2 and later**
 
   - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
       - 13 (Ventura)

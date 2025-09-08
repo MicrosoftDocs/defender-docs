@@ -3,6 +3,7 @@ title: Protect your Google Cloud Platform environment | Microsoft Defender for C
 description: Learn how about connecting your Google Cloud Platform app to Defender for Cloud Apps using the API connector.
 ms.date: 03/04/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
 

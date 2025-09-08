@@ -6,13 +6,13 @@ ms.topic: how-to
 #customer intent: As a security administrator, I want to improve security posture in my organization by removing inactive service accounts
 ---
 
-# Security Assessment: Remove Inactive Service Accounts (Preview)
+# Security Assessment: Remove Stale Service Accounts (Preview)
 
-This recommendation lists Active Directory service accounts detected as inactive (stale) within the past 180 days. 
+This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
 
-## Why do inactive service accounts pose a risk?
+## Why do stale service accounts pose a risk?
 
-Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Dormant service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
+Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
 This exposure creates several risks:
 
@@ -25,10 +25,9 @@ This exposure creates several risks:
 
 To use this security assessment effectively, follow these steps:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions ) for Remove inactive service account.
-1. Review the list of exposed entities to discover which of your service account is inactive.
+1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions) for Remove stale service account.
 
-    :::image type="content" source="media/okta-integration/remove-inactive-service-accounts.png" alt-text="Screenshot that shows the recommendation action to remove inactive service accounts." lightbox="media/okta-integration/remove-inactive-service-accounts.png":::
+1. Review the list of exposed entities to discover which of your service accounts are stale and have not performed any login activity in the last 90 days.
 
 1. Take appropriate actions on those entities by removing the service account. For example:
 

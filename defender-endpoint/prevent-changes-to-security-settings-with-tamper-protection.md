@@ -1,15 +1,15 @@
 ---
 title: Protect security settings with tamper protection
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, gberecz, ksarens
-manager: deniseb
+manager: bagol
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 02/28/2025
 audience: ITPro
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -55,14 +55,14 @@ When tamper protection is turned on, these tamper-protected settings can't be ch
 - Automatic actions are taken on detected threats.
 - Notifications are visible in the Windows Security app on Windows devices.
 - Archived files are scanned.
-- [Exclusions can't be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions) (Applies to devices managed by Intune only or by Configuration Manager only. Co-Managed devices aren't supported)
+- [Exclusions can't be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions) 
 
 *As of signature release `1.383.1159.0`, due to confusion around the default value for "Allow Scanning Network Files", tamper protection no longer locks this setting to its default value. In managed environments, the default value is `enabled`.*
 
 > [!IMPORTANT]
-> When tamper protection is turned on, tamper-protected settings can't be changed. To avoid breaking management experiences, including [Intune](manage-tamper-protection-intune.md) and [Configuration Manager](manage-tamper-protection-configuration-manager.md), keep in mind that changes made to tamper-protected settings might appear to succeed but are actually blocked by tamper protection. Depending on your particular scenario, you have several options available: 
-> - If you must make changes to a device and those changes are blocked by tamper protection, you can use [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device.
-> - You can use Intune or Configuration Manager to exclude devices from tamper protection. 
+> When tamper protection is turned on, tamper-protected settings can't be changed. To avoid breaking management experiences, including [Intune](manage-tamper-protection-intune.md), [Microsoft Defender for Endpoint](/defender-endpoint/manage-tamper-protection-microsoft-365-defender) and [Configuration Manager](manage-tamper-protection-configuration-manager.md), keep in mind that changes made to tamper-protected settings might appear to succeed but are actually blocked by tamper protection. Depending on your particular scenario, you have several options available: 
+- If you must make changes to a device and those changes are blocked by tamper protection, you can use [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device.
+> - You can use Intune, Microsoft Defender for Endpoint or Configuration Manager to exclude devices from tamper protection. 
 
 Tamper protection doesn't prevent you from viewing your security settings. And, tamper protection doesn't affect how non-Microsoft antivirus apps register with the Windows Security app. If your organization is using Defender for Endpoint, individual users can't change the tamper protection setting; in those cases, your security team manages tamper protection. For more information, see [How do I configure or manage tamper protection](#how-do-i-configure-or-manage-tamper-protection)?
 
@@ -71,8 +71,10 @@ Tamper protection doesn't prevent you from viewing your security settings. And, 
 Tamper protection is available for devices that are running one of the following versions of Windows:
 
 - Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server, version 1803 or later
-- Windows Server 2016 and Windows Server 2012 R2 (using the modern, unified solution)
+- Windows Server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (using the modern, unified solution)
+- Azure Stack HCI OS, version 23H2 and later.
 
 Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
 
@@ -102,7 +104,7 @@ You can use Microsoft Intune and other methods to configure or manage tamper pro
 
 | Method | What you can do |
 |:---|:---|
-| Use the [Microsoft Defender portal](https://security.microsoft.com). | Turn tamper protection on (or off), tenant wide. See [Manage tamper protection for your organization using Microsoft Defender XDR](manage-tamper-protection-microsoft-365-defender.md). <br/><br/>*This method doesn't override settings that are managed in Microsoft Intune or Configuration Manager.* |
+| Use the [Microsoft Defender portal](https://security.microsoft.com). |Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using Microsoft Defender XDR](manage-tamper-protection-microsoft-365-defender.md). <br/><br/>|
 | Use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). | Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using Intune](manage-tamper-protection-intune.md).<br/><br/>Protect Microsoft Defender Antivirus exclusions from tampering if you're using Intune only or Configuration Manager only. See [Tamper protection for antivirus exclusions](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions).  |
 | Use [Configuration Manager with tenant attach](manage-tamper-protection-configuration-manager.md). | Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using tenant attach with Configuration Manager, version 2006](manage-tamper-protection-configuration-manager.md). |
 | Use the [Windows Security app](manage-tamper-protection-individual-device.md). | Turn tamper protection on (or off) on an individual device that isn't managed by a security team (such as devices for home use). See [Manage tamper protection on an individual device](manage-tamper-protection-individual-device.md).<br/><br/>*This method doesn't override tamper protection settings that are set in the Microsoft Defender portal, Intune, or Configuration Manager, and it isn't intended to be used by organizations.* |

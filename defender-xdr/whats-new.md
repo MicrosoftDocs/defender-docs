@@ -3,8 +3,8 @@ title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 08/01/2025
 manager: deniseb

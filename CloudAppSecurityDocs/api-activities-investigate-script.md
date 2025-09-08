@@ -3,6 +3,7 @@ title: Investigate activities using the API
 description: This article provides information on how to use the API to investigate user activity in Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Naama-Goldbart
 ---
 # Investigate activities using the API
 
@@ -18,7 +19,7 @@ The activities API mode is optimized for scanning and retrieval of large quantit
 ## To use the activity scan script
 
 1. Run the query on your data.
-1. If there are more records than could be listed in a single scan, you will get a return command with `nextQueryFilters` that you should run. You will get this command each time you scan until the query has returned all the results.
+1. If there are more records than could be listed in a single scan, you'll get a return command with `nextQueryFilters` that you should run. You'll get this command each time you scan until the query has returned all the results.
 
 ## Request body parameters
 
@@ -32,9 +33,9 @@ The activities API mode is optimized for scanning and retrieval of large quantit
 
 ## Response parameters
 
-- "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records will be dropped to ensure that all data is listed only once.
+- "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records are dropped to ensure that all data is listed only once.
 - "hasNext": Boolean. Denotes whether another iteration on the data is needed.
-- "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use this as the "filters" parameter in the next request. Note that if the "hasNext" parameter is set to False, this parameter will be missing since you've iterated over all of the data.
+- "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use this as the "filters" parameter in the next request. If the "hasNext" parameter is set to False, this parameter will be missing since you've iterated over all of the data.
 
 The following Python example gets all the activities from the past day from Exchange Online.
 

@@ -4,10 +4,10 @@ description: This article describes how to run Microsoft Defender Antivirus in a
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:
@@ -45,7 +45,7 @@ Before you begin, you must meet the following requirements:
 
 - Microsoft Defender Antivirus (active mode)
 - Windows client devices must be running Windows 11 or Windows 10 version 1703 or newer
-- Windows server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+- Windows server devices must be running Windows Server 2016 and later, or Azure Stack HCI OS, version 23H2 and later
 
 ## Why run Microsoft Defender Antivirus in a sandbox?
 
