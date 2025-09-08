@@ -24,7 +24,7 @@ To see your list of current app policies, go to the **Microsoft Defender XDR > A
 
 For example:
 
-:::image type="content" source="media/app-governance-app-policies-get-started/app-governance-app-policies.png" alt-text="Screenshot that shows the app governance app polcies" lightbox="media/app-governance-app-policies-get-started/app-governance-app-policies.png":::
+:::image type="content" source="media/app-governance-app-policies-get-started/app-governance-app-policies.png" alt-text="Screenshot that shows the app governance app polcies." lightbox="media/app-governance-app-policies-get-started/app-governance-app-policies.png":::
 
 > [!NOTE]
 > Built-in threat detection policies aren't listed on the **Policies** tab. For more information, see [Investigate threat detection alerts](app-governance-anomaly-detection-alerts.md).
