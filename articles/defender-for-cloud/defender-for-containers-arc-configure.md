@@ -34,7 +34,7 @@ Jump to the configuration you need:
 
 - [Configure alerts](#configure-alerts-and-notifications)
 - [Resource optimization](#configure-resource-optimization)
-- [Multi-cluster policies](#configure-multi-cluster-policies)
+- [Multi-cluster policies](#configure-multicluster-policies)
 
 ## Add or remove components
 
