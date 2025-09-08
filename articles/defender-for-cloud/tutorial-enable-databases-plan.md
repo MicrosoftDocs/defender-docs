@@ -45,7 +45,7 @@ Enabling database protection activates all four Defender plans and protects all 
 
 ## Enable and modify specific database plans
 
-Defender for Databases protect different types of supported databases within your subscription. You can enable or disable each subplan to protect your relevant database types. The subplans are:
+Defender for Databases protects different types of supported databases in your subscription. You can enable or disable each subplan to protect the relevant database types. The subplans include:
 
 - [Defender for Azure SQL Databases](enable-sql-database-plan.md) protection.
 - [Defender for SQL Servers on Machines](defender-for-sql-usage.md) protection. You can also [enable on a Log Analytics workspace](enable-plan-workspace.md).
