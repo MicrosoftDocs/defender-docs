@@ -35,7 +35,7 @@ Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 - Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
 
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2
+- Server devices must be running Windows Server 2008 R2, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
 - [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
 

@@ -3,6 +3,7 @@ title: Configure automatic log upload using on-premises Podman on Linux | Micros
 description: This article describes how to configure automatic log upload for continuous reports in Defender for Cloud Apps using a Podman container on Linux in an on-premises server.
 ms.date: 12/21/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Configure automatic log upload using Podman
