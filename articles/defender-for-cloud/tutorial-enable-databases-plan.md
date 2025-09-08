@@ -10,12 +10,17 @@ ms.date: 09/08/2025
 
 Defender for Databases in Microsoft Defender for Cloud helps you protect your entire database estate. It provides attack detection and threat response for the most popular database types in Azure. Defender for Cloud protects database engines and data types based on their attack surface and security risks.
 
-Database protection includes:
+Defender for Databases includes four offerings that relate to database types:
 
-- [Microsoft Defender for Azure SQL databases](defender-for-sql-introduction.md)
-- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md) (You can also [enable on a Log Analytics workspace](enable-plan-workspace.md))
-- [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md)
-- [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md)
+- [Microsoft Defender for Azure SQL Databases](defender-for-sql-introduction.md): Offers threat protection for Azure SQL databases by detecting and responding to potential security threats.
+
+- [Microsoft Defender for SQL Servers on Machines](defender-for-sql-usage.md): Offers security for SQL servers running on virtual machines or physical servers. You can also [enable it on a Log Analytics workspace](enable-plan-workspace.md) for enhanced monitoring and threat detection.
+
+- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL, MySQL, and MariaDB by providing continuous monitoring and threat detection.
+
+- [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md): Offers security for Azure Cosmos DB by providing threat protection and real-time alerts to help safeguard your data.
+
+Each of these database protection plans is priced separately. For more information, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 These four database protection plans are priced separately. Find more info about Defender for Cloud's pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
@@ -56,7 +61,6 @@ When all of these plans are enabled, you protect all supported databases types i
 
 ## Related content
 
-- [Overview of Microsoft Defender for Azure SQL](defender-for-sql-introduction.md)
-- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
-- [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md)
-- [Overview of Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md)
+- [SQL vulnerability assessment helps you identify database vulnerabilities](sql-azure-vulnerability-assessment-overview.md)
+- [SQL Advanced Threat Protection](/azure/azure-sql/database/threat-detection-overview?view=azuresql&branch=main)
+- [Common questions about Microsoft Defender for Databases](faq-defender-for-databases.yml)
