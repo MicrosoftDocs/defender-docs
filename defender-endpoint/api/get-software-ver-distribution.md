@@ -2,10 +2,10 @@
 title: List software version distribution
 description: Retrieves a list of your organization's software version distribution
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

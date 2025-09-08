@@ -4,10 +4,10 @@ description: Learn how to analyze the Microsoft Defender for Endpoint Client Ana
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
