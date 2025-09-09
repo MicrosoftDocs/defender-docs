@@ -72,7 +72,7 @@ To collect even more event properties, you have the option of turning on [aggreg
 
 ### **Entity data**
 
-Entity data populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated every hour to insert a record that contains the latest, most comprehensive data set about each entity, including other useful information such as device health status and tags.
+Entity data populates tables with information about users and devices. This data comes from both relatively static data sources and dynamic sources, such as Active Directory entries and event logs. To provide fresh data, tables are updated every hour to insert a record that contains the latest, most comprehensive data set about each entity, including other useful information such as health status and tags.
 
 
 ## Time zone
