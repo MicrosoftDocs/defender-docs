@@ -29,11 +29,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 |Version number |Updates |
 |---------|---------|
-|2.248|Improved event log query method, allowing us to capture a broader range of unique events at scale. You may notice an increase in captured activities. This update also includes additional security enhancements and performance improvements.|
+|2.248|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
 
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 
-Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you may see a decrease in the number of alerts raised.
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
 
 The improvements will gradually take effect across the following detections:
 
@@ -54,6 +54,7 @@ The improvements will gradually take effect across the following detections:
 - Suspicious modification of Resource Based Constrained Delegation by a machine account
 
 - Remote code execution attempt
+
 
 ### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
 
