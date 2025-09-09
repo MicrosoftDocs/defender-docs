@@ -2,11 +2,11 @@
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on Linux. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: ratujdange, ardeshmukh
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -70,7 +70,7 @@ The following table shows the exclusion types supported by Defender for Endpoint
 |File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`|
 |File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`|
 |Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`|
-|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>*We recommend using full and trusted process launch path.*|`/bin/cat`<br/>`cat`<br/>`c?t`|
+|Process|A specific process (specified either by the full path or file name) and all files opened by it.<br/>Antivirus exclusions can be added using either a full path or file name, but for global exclusions, only use full and trusted process launch paths. In both the cases, it is recommended to use the full path.|`/bin/cat`<br/>`cat`<br/>`c?t`|
 
 > [!IMPORTANT]
 > The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`. When implementing global process exclusions, exclude only what is necessary to ensure system reliability and security. Verify that the process is known and trusted, specify the complete path to the process location, and confirm that the process will consistently launch from the same trusted full path.
