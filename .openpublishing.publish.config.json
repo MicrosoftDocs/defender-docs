@@ -14,7 +14,7 @@
     },
     {
       "docset_name": "ATP-Docs",
-      "build_source_folder": "ATPDocs",
+      "build_source_folder": "defender-for-identity",
       "build_output_subfolder": "ATP-Docs",
       "locale": "en-us",
       "monikers": [],
