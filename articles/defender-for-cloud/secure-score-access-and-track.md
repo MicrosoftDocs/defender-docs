@@ -4,20 +4,48 @@ description: Learn about the multiple ways to access and track your secure score
 ms.topic: how-to
 ms.date: 07/15/2025
 ms.custom: sfi-image-nochange
+zone_pivot_groups: defender-portal-experience
 ---
 
 # Track secure score
 
-You can find your overall secure score, and your score per subscription, through the Azure portal or programmatically as described in the following sections:
+You can find your overall secure score, and your score per subscription, through the portal or programmatically as described in the following sections:
 
 > [!TIP]
 > For a detailed explanation of how your scores are calculated, see [Calculations - understanding your score](secure-score-security-controls.md).
 
 ## Get your secure score from the portal
 
-Defender for Cloud displays your score prominently in the portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+::: zone pivot="defender-portal"
 
-Your secure score is shown in the following locations in Defender for Cloud's portal pages.
+Defender for Cloud displays your score prominently in the Microsoft Defender portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+
+Your secure score is shown in the following locations in the Microsoft Defender portal:
+
+- On the Defender for Cloud **Overview** dashboard:
+
+    :::image type="content" source="./media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="The secure score on Defender for Cloud's dashboard in the Microsoft Defender portal":::
+
+- In the dedicated **Secure score** page you can see the secure score for your subscription and your management groups:
+
+    :::image type="content" source="./media/secure-score-defender-portal/secure-score-widgets-environment-workload.png" alt-text="The secure score widgets showing environment and workload scores in the Microsoft Defender portal" lightbox="media/secure-score-defender-portal/secure-score-widgets-environment-workload.png":::
+
+    :::image type="content" source="./media/secure-score-defender-portal/understand-secure-score.png" alt-text="Understanding your secure score in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/understand-secure-score.png":::
+
+    > [!NOTE]
+    > Any management groups for which you don't have sufficient permissions, will show their score as "Restricted."
+
+- In the **Cloud initiative** section showing secure score breakdown:
+
+    :::image type="content" source="./media/secure-score-defender-portal/cloud-initative-secure-score.png" alt-text="The cloud initiative secure score view in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/cloud-initative-secure-score.png":::
+
+::: zone-end
+
+::: zone pivot="azure-portal"
+
+Defender for Cloud displays your score prominently in the Azure portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+
+Your secure score is shown in the following locations in Defender for Cloud's Azure portal pages:
 
 - In a tile on Defender for Cloud's **Overview** (main dashboard):
 
@@ -30,11 +58,13 @@ Your secure score is shown in the following locations in Defender for Cloud's po
     :::image type="content" source="./media/secure-score-security-controls/secure-score-management-groups.png" alt-text="The secure score for management groups on Defender for Cloud's secure score page"  lightbox="media/secure-score-security-controls/secure-score-management-groups.png":::
 
     > [!NOTE]
-    > Any management groups for which you don't have sufficient permissions, will show their score as “Restricted.”
+    > Any management groups for which you don't have sufficient permissions, will show their score as "Restricted."
 
 - At the top of the **Recommendations** page:
 
     :::image type="content" source="./media/secure-score-security-controls/score-on-recommendations-page.png" alt-text="The secure score on Defender for Cloud's recommendations page"  lightbox="media/secure-score-security-controls/score-on-recommendations-page.png":::
+
+::: zone-end
 
 ## Get your secure score from the REST API
 
@@ -45,6 +75,8 @@ You can access your score via the secure score API. The API methods provide the 
 For examples of tools built on top of the secure score API, see [the secure score area of our GitHub community](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score).
 
 ## Get your secure score from Azure Resource Graph
+
+::: zone pivot="azure-portal"
 
 Azure Resource Graph provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. It's a quick and efficient way to query information across Azure subscriptions programmatically or from within the Azure portal. [Learn more about Azure Resource Graph](/azure/governance/resource-graph/).
 
@@ -75,6 +107,34 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
         ```
 
 1. Select **Run query**.
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+Azure Resource Graph provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can use Azure Resource Graph to query secure score information programmatically. While the Azure Resource Graph Explorer is available in the Azure portal, you can also use the Resource Graph REST API or SDK to query secure score data. [Learn more about Azure Resource Graph](/azure/governance/resource-graph/).
+
+To access the secure score for multiple subscriptions with Azure Resource Graph programmatically, you can use queries like these:
+
+- This query returns the subscription ID, the current score in points and as a percentage, and the maximum score for the subscription:
+
+    ```kusto
+    SecurityResources 
+    | where type == 'microsoft.security/securescores' 
+    | extend current = properties.score.current, max = todouble(properties.score.max)
+    | project subscriptionId, current, max, percentage = ((current / max)*100)
+    ```
+
+- This query returns the status of all the security controls. For each control, you get the number of unhealthy resources, the current score, and the maximum score:
+
+    ```kusto
+    SecurityResources 
+    | where type == 'microsoft.security/securescores/securescorecontrols'
+    | extend SecureControl = properties.displayName, unhealthy = properties.unhealthyResourceCount, currentscore = properties.score.current, maxscore = properties.score.max
+    | project SecureControl , unhealthy, currentscore, maxscore
+    ```
+
+::: zone-end
 
 ## Track your secure score over time
 

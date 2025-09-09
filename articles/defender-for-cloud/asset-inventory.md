@@ -1,16 +1,23 @@
 ---
 title: Asset inventory in Defender for Cloud
 description: Learn about the asset inventory in Microsoft Defender for Cloud
-ms.date: 02/19/2025
+ms.date: 09/03/2025
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
+zone_pivot_groups: defender-portal-experience
 ---
 # Review the asset inventory
 
 The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you connected to Defender for Cloud. Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
 
 Defender for Cloud periodically analyzes the security state of resources connected to it. When resources have active [security recommendations](security-policy-concept.md) or [security alerts](alerts-overview.md) associated with it, they appear in the inventory.
+
+::: zone pivot="azure-portal"
+
+## Access asset inventory in the Azure portal
+
+In the Azure portal, navigate to **Microsoft Defender for Cloud** > **Inventory**.
 
 The Inventory page provides information about:
 
@@ -22,6 +29,47 @@ The Inventory page provides information about:
 - **Software**. You can review resources by installed applications. To take advantage of the software inventory, either the Defender Cloud Security Posture Management (CSPM) plan, or a Defender for Servers plan must be enabled.
 
 The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+## Access cloud infrastructure assets in the Defender portal
+
+In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure** to access the enhanced cloud infrastructure asset experience.
+
+### Cloud Infrastructure Assets overview
+
+The Cloud Infrastructure Assets experience provides:
+
+- **Unified multi-cloud view**: See all cloud assets across your Azure, AWS, and GCP environments in a single interface
+- **Workload-specific insights**: Organize assets by workload type using dedicated tabs:
+  - **VMs**: Virtual machines and compute instances
+  - **Data**: Databases, storage accounts, and data repositories
+  - **Containers**: Kubernetes clusters, container images, and container registries
+  - **AI**: AI and machine learning workloads and models
+  - **API**: API management services and endpoints
+  - **DevOps**: Development and deployment pipeline resources
+  - **Identity**: Identity and access management resources
+  - **Serverless**: Functions, Lambda functions, and serverless compute
+
+### Enhanced features in the Defender portal
+
+- **Contextual health data**: Each asset displays comprehensive health information including security posture, vulnerability status, and compliance state
+- **Device actions integration**: Seamlessly integrate with device management actions for hybrid cloud scenarios
+- **Risk factor analysis**: Assets are analyzed for internet exposure, lateral movement potential, and sensitive data access
+- **Scoping filters**: Use the global scope filter to focus on specific cloud scopes or device groups
+- **Exposure Management integration**: Assets are contextualized within the broader Exposure Management framework for unified risk assessment
+
+### Workload-specific capabilities
+
+Each workload tab provides specialized insights:
+- **Security recommendations** tailored to the specific workload type
+- **Threat detection alerts** relevant to the workload
+- **Compliance status** against workload-specific security standards
+- **Attack path involvement** showing how assets participate in potential attack scenarios
+
+::: zone-end
 
 ## Review the inventory
 

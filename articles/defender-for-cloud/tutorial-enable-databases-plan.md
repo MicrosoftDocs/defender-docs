@@ -50,14 +50,14 @@ Enabling database protection activates all four Defender plans and protects all 
 
 ## Enable and modify specific database plans
 
-Defender for Databases protects different types of supported databases in your subscription. You can enable or disable each subplan to protect the relevant database types. The subplans include:
+Enabling database protection activates the following four Defender plans:
 
-- [Defender for Azure SQL Databases](enable-sql-database-plan.md) protection.
-- [Defender for SQL Servers on Machines](defender-for-sql-usage.md) protection. You can also [enable on a Log Analytics workspace](enable-plan-workspace.md).
-- [Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md) protection.
-- [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md) protection.
+- [Enable Defender for Azure SQL Databases](enable-sql-database-plan.md)
+- [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md) (You can also [enable on a Log Analytics workspace](enable-plan-workspace.md))
+- [Enable Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md)
+- [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md)
 
-When all of these plans are enabled, you protect all supported databases types in your subscription. 
+These plans protect all supported databases in your subscription. 
 
 ## Related content
 
