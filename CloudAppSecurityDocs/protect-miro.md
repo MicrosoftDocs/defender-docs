@@ -3,6 +3,7 @@ title: Protect your Miro environment
 description: This article provides information about the benefits of connecting your Miro app to Defender for Cloud Apps using the API connector for visibility and control over use.
 ms.date: 12/06/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 
 # How Defender for Cloud Apps helps protect your Miro environment

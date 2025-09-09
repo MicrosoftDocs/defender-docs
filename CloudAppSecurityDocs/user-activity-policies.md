@@ -3,6 +3,7 @@ title: Create activity policies | Microsoft Defender for Cloud Apps
 description: This article provides instructions for creating and working with activity policies.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Ronen-Refaeli
 ---
 
 # Create Microsoft Defender for Cloud Apps activity policies
@@ -14,7 +15,7 @@ Activity policies allow you to enforce a wide range of automated processes using
 After you set an activity detection policy, it starts to generate alerts - alerts are only generated on activities that occur after you create the policy.
 
 > [!NOTE]
->  - Policies that trigger more than 200,000 matches per day, or 100,000 matches per 3 hours, may be disabled automatically. You can try refining policies by adding additional filters or, if you are using policies for reporting purposes, consider [saving them as queries](activity-filters-queries.md#activity-queries) instead.
+>  - Policies that trigger more than 200,000 matches per day, or 100,000 matches per 3 hours, may be disabled automatically. You can try refining policies by adding additional filters or, if you're using policies for reporting purposes, consider [saving them as queries](activity-filters-queries.md#activity-queries) instead.
 >   - It may take up to 15 minutes from setting up a new policy to deployment.
 
 ## Custom alerts
@@ -31,24 +32,31 @@ To create a new activity policy, follow this procedure:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Then select the **Threat detections** tab.
 
-1. Click **Create policy** and select **Activity policy**.
+1. Select **Create policy** and select **Activity policy**.
 
     ![Create a Threat Detection policy.](media/create-policy-from-threat-detection-tab.png)
 
 1. Give your policy a name and description, if you want you can base it on a template, for more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
-1. To set which actions or other metrics will trigger this policy, work with the **Activity filters**.
+1. To set which actions or other metrics trigger this policy, work with the **Activity filters**.
 
    To ensure that you only include results where the specified filter field has a value, we recommend adding the same field again using the **is set** test. For example, when filtering by **Location** *does not equal* a specified list of countries/regions, also add a filter for **Location** *is set*. You can also preview the filter results by selecting **Edit and preview results**. For example:
 
    ![Screenshot of filter settings, showing location field is set.](media/activity-example-location-isset.png)
 
-   When a filter is set to *does not equal* and the attribute does not exist on the event, the event will not be filtered out. For example, filtering on **Device Tag does not equal Microsoft Entra hybrid joined** doesn't filter out events that do not contain **Device tag**, even if the device is Microsoft Entra joined.
+   When a filter is set to *does not equal* and the attribute doesn't exist on the event, the event won't be filtered out. For example, filtering on **Device Tag does not equal Microsoft Entra hybrid joined** doesn't filter out events that don't contain **Device tag**, even if the device is Microsoft Entra joined.
 
    In case of a guest user, there may be cases where the **User From Group** filter doesn't recognize the account by its domain. To make sure all guest users are included, use the **External users** as the group, if it meets your needs for the policy.
                  
 1. Under **Create filters for the policy**, select when a policy violation will be triggered. Choose to trigger when a **Single activity** matches the filters or only when a specified number of **Repeated activities** are detected.
-    - If you choose **Repeated activity**, you can set **In a single app**. This setting will trigger a policy match only when the repeated activities occur in the same app. For example, five downloads in 30 minutes from Box trigger a policy match.
+    - If you choose **Repeated activity**, you can set **In a single app**. This setting triggers a policy match only when the repeated activities occur in the same app. For example, five downloads in 30 minutes from Box trigger a policy match.
+
+1. In the **Alerts** section, configure any of the following actions as needed:
+
+    - **Create an alert for each matching event with the policy's severity**
+    - **Send an alert as email**
+    - **Daily alert limit per policy**. Note that governance actions are not impacted by the daily alert limit.
+    - **Send alerts to Power Automate**
 
 1. Configure the **Actions** that should be taken when a match is found.
 
@@ -77,7 +85,7 @@ Each policy is composed of the following parts:
 
 - Activity filters – Enable you to create granular conditions based on metadata.
 
-- Activity match parameters – Enable you to set a threshold for the number of times an activity repeats to be considered to match the policy.  Specify the number of repeated activities required to match the policy. For example, set a policy to alert when a user has 10 unsuccessful login attempts in a 2-minute time frame. By default, **Activity match parameters** raise a match for every single activity that meets all of the activity filters.
+- Activity match parameters – Enable you to set a threshold for the number of times an activity repeats to be considered to match the policy. Specify the number of repeated activities required to match the policy. For example, set a policy to alert when a user has 10 unsuccessful login attempts in a 2-minute time frame. By default, **Activity match parameters** raise a match for every single activity that meets all of the activity filters.
 
   - Using **Repeated activity** you can set the number of repeated activities, the duration of the time frame in which the activities are counted. You can also specify that all activities should be performed by the same user and in the same cloud app.
 

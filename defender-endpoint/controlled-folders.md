@@ -4,11 +4,11 @@ description: Files in default folders can be protected from changes through mali
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/05/2025
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 audience: ITPro
 ms.reviewer: sugamar 
-manager: deniseb
+manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
@@ -51,7 +51,7 @@ Controlled folder access is supported on:
 
 - Windows 11
 - Windows 10
-- Windows Server 2025
+- Windows Server 2025Azure Stack HCI OS, version 23H2 and later.
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016

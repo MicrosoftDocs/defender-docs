@@ -3,10 +3,10 @@ title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrat
 description: See how malicious apps and threats are evaluated and countered by Microsoft Defender Antivirus.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 ms.reviewer: yongrhee
 audience: ITPro
 ms.collection:

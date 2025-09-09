@@ -3,10 +3,10 @@ title: Microsoft Defender for Endpoint Network protection demonstrations
 description: Shows how Network protection prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -31,7 +31,7 @@ Network Protection helps reduce the attack surface of your devices from Internet
 ## Scenario requirements and setup
 
 - Client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, or macOS
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 (with the new unified client), or Linux.
+- Server devices must be running Windows Server 2012 R2 (with the new unified client) and later, Linux, or Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Defender Antivirus
 
 ## Windows
@@ -58,7 +58,7 @@ Get-MpPreference
 
 Scenario
 
-1. Turn on Network Protection using powershell command:
+1. Turn on Network Protection using PowerShell command:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled

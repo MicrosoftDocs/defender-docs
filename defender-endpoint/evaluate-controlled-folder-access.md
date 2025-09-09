@@ -5,17 +5,17 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: article
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: sugamar, moeghasemi
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 03/25/2025
+ms.date: 08/14/2025
 ---
 
 # Evaluate controlled folder access
@@ -34,7 +34,7 @@ ms.date: 03/25/2025
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2025, Windows Server 2022, Windows Server 2019, and client devices running Windows 10 or Windows 11.
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019 and later, Azure Stack HCI OS, version 23H2 and later and client devices running Windows 10 or Windows 11.
 
 It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 

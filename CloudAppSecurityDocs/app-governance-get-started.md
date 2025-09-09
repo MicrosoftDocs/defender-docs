@@ -1,7 +1,8 @@
 ---
 title: Turn on app governance in Microsoft Defender for Cloud Apps
-ms.date: 05/23/2025
+ms.date: 08/12/2025
 ms.topic: how-to
+ms.reviewer: anandd512
 description: Get started with app governance capabilities to govern your apps in  Microsoft Defender for Cloud Apps.
 ---
 
@@ -62,7 +63,7 @@ You must have at least one of these roles to turn on app governance:
 - Security Admin          
 - Compliance Admin  
 - Compliance Data Admin
-- Cloud App Security admin
+- Cloud App Security Admin
 
 The following table lists the app governance capabilities for each role.
 
