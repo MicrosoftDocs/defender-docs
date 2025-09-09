@@ -3,12 +3,12 @@ title: Block potentially unwanted applications with Microsoft Defender Antivirus
 description: Enable the potentially unwanted application (PUA) antivirus feature to block unwanted software such as adware.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -36,15 +36,13 @@ ms.date: 06/10/2025
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
 
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2016 and later
 - Windows Server, version 1803 or later
-- Windows Server 2016
 - Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
 - Windows 11
 - Windows 10
 - Windows 8.1
+- Azure Stack HCI OS, version 23H2 and later
 
 For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
 

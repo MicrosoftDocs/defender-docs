@@ -4,11 +4,11 @@ description: Test how Microsoft Defender for Endpoint SmartScreen helps you iden
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: ewalsh 
-author: emmwalshh
+ms.author: bagol 
+author: batamig
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -39,6 +39,7 @@ Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing
    - Windows Server 2016
    - Windows Server 2012 R2
    - Windows Server 2008 R2 
+   - Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Edge or Internet Explorer browser required. 
 
 ## Scenario Demos

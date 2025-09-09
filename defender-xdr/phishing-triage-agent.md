@@ -7,7 +7,6 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -55,10 +54,11 @@ The Phishing Triage Agent is a [Security Copilot agent](/copilot/security/agents
 
 | Action                        | Permission required                                                                                           |
 |:------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| Set up, pause, remove or the agent              | **Security Administrator** in Microsoft Entra ID                                                            |
-| View and manage agent settings and activity        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
+| Set up, pause, or remove the agent, and manage agent identity              | **Security Administrator** in Microsoft Entra ID                                                            |
+| View and manage agent settings        | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal                     |
 | View and manage feedback   | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal|
 |Reject feedback|**Security Administrator** in Microsoft Entra ID|
+| View agent results |**Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**,  **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal|
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
@@ -138,17 +138,6 @@ To assign the appropriate permissions to the agent:
 
    > [!TIP]
    > Microsoft advises assigning a role to the agent's identity that includes only the minimum permissions necessary. 
-
-1. Assign the agent's identity contributor access to your Microsoft Security Copilot workspace.
-
-    1. Sign in to Security Copilot (https://securitycopilot.microsoft.com).
-    1. Select the home menu icon. 
-    1. Make sure you're in your default workspace.
-    1. Select **Role assignment > Add members**.
-    1. Start typing the name of agent identity in the **Add members** dialog box.
-    1. Select the identity.
-    1. Select **Contributor**.
-    1. Select **Add**.
 
 After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 

@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure whether users can report malicious message in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 07/24/2025
+ms.date: 08/21/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -28,7 +28,7 @@ appliesto:
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. Admins can also get visibility into the Teams messages that users are reporting.
 
-Users can report messages in Teams from chats, standard and private channels, and meeting conversations. Users can only report messages as malicious.
+Users can report messages in Teams from chats, standard, private and shared channels, and meeting conversations. Users can only report messages as malicious.
 
 > [!NOTE]
 > User reporting of messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
@@ -48,7 +48,7 @@ User reporting of messages in Teams is made of two separate settings:
 To view or configure this setting, you need to be a member of the **Global Administrator**<sup>\*</sup> or **Teams Administrator** roles. For more information about permissions in Teams, see [Use Microsoft Teams administrator roles to manage Teams](/microsoftteams/using-admin-roles).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. In the Teams admin center at <https://admin.teams.microsoft.com>, go to **Settings & policies** and than **Messaging**. Or, to go directly to the **Messaging policies** page, use <https://admin.teams.microsoft.com/one-policy/settings/messaging>.
 
@@ -104,7 +104,7 @@ For more information about user reported message settings in the Defender portal
 
 What happens to a user reported Teams message depends on the settings in the **Reported message destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
 
-- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: For Microsoft 365 organizations created after March 1 2023, this value is the default. The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
+- **Send the reported messages to** \> **Microsoft and my reporting mailbox**: The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
 - **Send the reported messages to** \> **Microsoft only**
 - **Send the reported messages to** \> **My reporting mailbox only**
 
@@ -112,6 +112,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
 
 **Notes**:
 
+- For shared channel user reports, the report goes to the organization that owns/created the channel. 
 - If you select **Send the reported messages to** \> **My reporting mailbox only**, reported messages don't go to Microsoft for analysis unless an admin manually submits the message from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. Reporting messages to Microsoft is an important part of training the service to help improve the accuracy of filtering (reduce false positives and false negatives). That's why we use **Send the reported messages to** \> **Microsoft and my reporting mailbox** as the default.
 - Regardless of the **Send the reported messages to** setting, the following actions occur when a user reports a Teams message:
   - Metadata from the reported Teams message (for example, senders, recipients, reported by, and message details) is available on the **User reported** tab on the **Submissions** page.

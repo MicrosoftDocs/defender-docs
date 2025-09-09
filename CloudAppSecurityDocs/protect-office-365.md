@@ -3,6 +3,7 @@ title: Protect your Microsoft 365 environment | Microsoft Defender for Cloud App
 description: Learn how about connecting your Microsoft 365 app to Defender for Cloud Apps using the API connector.
 ms.date: 12/06/2023
 ms.topic: how-to
+ms.reviewer: AmitMishaeli
 ---
 # How Defender for Cloud Apps helps protect your Microsoft 365 environment
 
@@ -138,6 +139,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must [enable auditing in Power BI](/power-bi/admin/service-admin-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 - You must [enable auditing in Dynamics 365](/power-platform/admin/enable-use-comprehensive-auditing#enable-auditing) to get the logs from there. Once auditing is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 
+- You must [enable the service principal](/graph/api/serviceprincipal-get?view=graph-rest-1.0&tabs=http) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
+
 **To connect Microsoft 365 to Defender for Cloud Apps**:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
@@ -162,7 +165,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
 
     > [!NOTE]
-    > After connecting Microsoft 365, you see data from the past week, including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that aren't pulling APIs before connection, you see events starting from when you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that are off by default.
+    > - After connecting Microsoft 365, you see data from the past week, including any third-party applications connected to Microsoft 365 that are pulling APIs. For third-party apps that aren't pulling APIs before connection, you see events starting from when you connect Microsoft 365 because Defender for Cloud Apps turns on any APIs that are off by default.
+    > - Files and folders that are publicly shared (shared with ‘anyone’) in SharePoint or OneDrive may incorrectly show up as private.
 
     If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

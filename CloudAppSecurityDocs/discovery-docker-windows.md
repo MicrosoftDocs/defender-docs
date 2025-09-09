@@ -14,7 +14,7 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 
     |Specification  |Description  |
     |---------|---------|
-    |**Operating system**     |  One of the following:  <li> Windows 10 (Fall creators update) <li> Windows Server version 1709+ (SAC) <li> Windows Server 2019 (LTSC)       |
+    |**Operating system**     |  Windows 10 (Fall creators update)       |
     |**Disk space**     |    250 GB     |
     |**CPU cores**     |    2     |
     |**CPU architecture**     |  Intel 64 and AMD 64       |
@@ -110,7 +110,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 1. Run the following command to download the Windows Docker installer PowerShell script file: 
 
     ```powershell
-    Invoke-WebRequest https://adaprodconsole.blob.core.windows.net/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1)
+   Invoke-WebRequest https://discoveryresources-cdn-prod.cloudappsecurity.com/prod-1/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1) 
     ```
 
     To validate that the installer is signed by Microsoft, see [Validate installer signature](#optional---validate-installer-signature).

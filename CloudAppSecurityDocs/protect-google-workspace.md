@@ -1,14 +1,15 @@
 ---
 title: Protect your Google Workspace environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Workspace app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 08/18/2025
 ms.topic: how-to
+ms.reviewer: AmitMishaeli 
 ---
 # How Defender for Cloud Apps helps protect your Google Workspace environment
 
 
 
-As a cloud file storage and collaboration tool, Google Workspace enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Google Workspace may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees. Google Workspace also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
+As a cloud file storage and collaboration tool, Google Workspace enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Google Workspace might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees. Google Workspace also provides a large third-party app eco-system to help boost productivity. Using these apps can expose your organization to the risk of malicious apps or use of apps with excessive permissions.
 
 Connecting Google Workspace to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections, information protection detections (such as detecting external information sharing), enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
 
@@ -136,7 +137,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
        ![Create key.](media/connect-google-workspace/14.jpg)
 
-1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you have just created - you'll need it later.
+1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you created - you'll need it later.
 
      ![Copy client ID.](media/connect-google-workspace/16.jpg)
 
@@ -194,7 +195,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     1. Enter the email address of your **Google Workspace Super Admin**.
 
-        Deploying with an account that is not a Google Workspace Super Admin will lead to failure in the API test and does not allow Defender for Cloud Apps to correctly function. We request specific scopes so even as Super Admin, Defender for Cloud Apps is still limited.
+        Deploying with an account that isn't a Google Workspace Super Admin will lead to failure in the API test and doesn't allow Defender for Cloud Apps to correctly function. We request specific scopes so even as Super Admin, Defender for Cloud Apps is still limited.
 
     1. If you have a Google Workspace Business or Enterprise account, select the check box. For information about which features are available in Defender for Cloud Apps for Google Workspace Business or Enterprise, see [Enable instant visibility, protection, and governance actions for your apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 

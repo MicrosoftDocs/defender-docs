@@ -4,7 +4,7 @@ description: Use the Microsoft Defender for Endpoint Antivirus and Intune integr
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:

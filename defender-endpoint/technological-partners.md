@@ -4,10 +4,10 @@ ms.reviewer:
 description: View technological partners of Microsoft Defender XDR to enhance detection, investigation, and threat intelligence capabilities of the platform.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,11 +2,11 @@
 title: Production ring deployment using Group Policy and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus production clients using Group Policy and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -45,7 +45,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 This article assumes that you have experience with Windows Server Update Services (WSUS) and/or already have WSUS installed. If you aren't already familiar with WSUS, see the following articles for important configuration details:
 
-- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+- [Configure WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus) - Applies to: Windows Server 2012 and later, and  Azure Stack HCI OS, version 23H2 and later.
 - [Configure Windows Server Update Services (WSUS) in Analytics Platform System][/sql/analytics-platform-system/configure-windows-server-update-services-wsus.md] - Analytics Platform System
 
 ## Setting up the production environment

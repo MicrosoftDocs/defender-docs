@@ -2,10 +2,10 @@
 title: Manage automation file uploads
 description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -51,6 +51,10 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 3. Configure the following extension names and separate extension names with a comma:
 
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
+
+> [!NOTE]
+> By default you will see several extension names are automatically filled. One of them is **_double quotes (")_**, this will include files that don't have any file extensions at all.
+
 
 ## Related topics
 
