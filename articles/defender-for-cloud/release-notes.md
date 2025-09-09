@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 07/17/2025
+ms.date: 09/09/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -26,6 +26,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## September 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| September 9, 2025 | Update | [New refined attack paths](#attack-paths-now-reflect-real-externally-driven-and-exploitable-risks) |
+
+### New refined attack paths
+
+September 9, 2025
+
+Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
 ## August 2025
 
