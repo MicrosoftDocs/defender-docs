@@ -31,7 +31,7 @@ Microsoft Defender for Storage is now enabled for this subscription, and is full
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection, you can select **Settings** and change the status of the relevant feature to **Off** and save the changes.
 
-If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, or enable soft delete malicious blobs, change the settings in **Edit configuration** and save the changes.
+If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, or enable soft delete malicious blobs, cgo to **Edit configuration**, adjust the settings as needed, and save your changes.
 
 If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
 
