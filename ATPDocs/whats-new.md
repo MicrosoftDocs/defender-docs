@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 |Version number |Updates |
 |---------|---------|
-|2.248 |Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.248|Improved event log query method, allowing us to capture a broader range of unique events at scale. You might notice an increase in captured activities. This update also includes additional security enhancements and performance improvements.|
 
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 
