@@ -37,7 +37,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 September 9, 2025
 
-Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
 ## August 2025
 
