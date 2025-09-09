@@ -6,7 +6,7 @@ ms.author: kesharab
 author: KesemSharabi
 ms.date: 09/08/2025
 ms.topic: how-to
-ms.subservice: api
+ms.subservice: reference
 ms.appliesTo: 
 - Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
 search.appverid: met150
