@@ -31,8 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| August 12, 2025 | GA | [General availability of Defender for Storage in Azure Government cloud](#general-availability-of-defender-for-storage-in-azure-government-cloud) |
 | August 11, 2025 | GA | [General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud](#general-availability-of-defender-cspm-and-defender-for-servers-plan-2-in-azure-government-cloud) |
+| August 6, 2025 | GA | [AKS Security Dashboard](#aks-security-dashboard) |
 | August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
+
+### General availability of Defender for Storage in Azure Government cloud
+
+August 12, 2025
+
+Microsoft [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) is generally available to government cloud customers. The service helps U.S. federal and government agencies, secure their storage accounts.
+All features of [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) are available in government clouds, aligning the feature coverage with commercial cloud services.
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
 
 ### General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud
 
@@ -43,12 +53,20 @@ Microsoft Defender for Cloud's [Cloud Security Posture Management (CSPM)](/azure
 All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
 Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
- 
+
+### AKS Security Dashboard
+
+August 6, 2025
+
+The AKS Security Dashboard provides a centralized view of security posture and runtime threat protection for AKS cluster within the Azure portal. It highlights software vulnerabilities, compliance gaps, and active threats, helping you prioritize remediation. Use this dashboard to monitor AKS workload protection, cluster configuration, and threat detection in real time.
+
+For more information, see [Azure Kubernetes Service (AKS) Security Dashboard](cluster-security-dashboard.md).
+
 ### Storage aggregated logs in XDR's Advanced Hunting (Preview)
 
 August 5, 2025
 
-The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation. 
+The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation.
 
 The logs are available at no additional cost as part of the new per-storage account plan in Defender for Storage. For more information, visit [CloudStorageAggregatedEvents (Preview)](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table).
 
@@ -94,13 +112,13 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 
 **What's included:**
 
-- **Helm-based deployment support** 
+- **Helm-based deployment support**
 
   For setup instructions and more details, see [Install Defender for Containers sensor using Helm](/azure/defender-for-cloud/deploy-helm).
   
-- **DNS threat detections** 
+- **DNS threat detections**
 
-- Improves memory efficiency and reduces CPU consumption for large cluster deployments.
+  Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
 For more information, see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
@@ -108,7 +126,7 @@ For more information, see: [Sensor for Defender for Containers Changelog](/azure
 
 June 25, 2025
 
-Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. 
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags.
 Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)
@@ -135,17 +153,18 @@ Agentless File Integrity Monitoring (FIM) is now available in preview. This capa
 Agentless FIM enables organizations to monitor file and registry changes across their environment without deploying other agents. It provides a lightweight, scalable alternative while maintaining compatibility with the existing agent-based solution.
 
 Key capabilities include:
+
 - **Custom monitoring**: Meet specific compliance and security requirements by defining and monitoring custom file paths and registry keys.
 - **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
 
 Learn more about [File integrity monitoring](file-integrity-monitoring-overview.md) and how to [Enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
-
 
 ### Agentless code scanning – GitHub support and customizable coverage now available (Preview)
 
 June 18, 2025
 
 We have updated the agentless code scanning feature to include key capabilities that extend both coverage and control. These updates include:
+
 - Support for GitHub repositories, in addition to Azure DevOps
 - Customizable scanner selection – select which tools (e.g., Bandit, Checkov, ESLint) to run
 - Granular scope configuration – include or exclude specific organizations, projects, or repositories
@@ -282,7 +301,7 @@ The Defender for SQL Server on machines plan in Microsoft Defender for Cloud pro
 
 Starting today, we're gradually releasing an enhanced agent solution for the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to make the onboarding processes easier and improve protection coverage.
 
-**Required customer actions**
+**Required customer actions**:
 
 1. [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): Customers who enabled Defender for SQL Server on machines plan before today are required to follow these instructions to update their configuration, following the enhanced agent release.
 
@@ -416,7 +435,6 @@ For information on how to enable FIM over Defender for Endpoint, see [File Integ
 
 > [!IMPORTANT]
 > The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
-
 
 ## Next steps
 

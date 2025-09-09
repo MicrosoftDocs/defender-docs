@@ -17,6 +17,7 @@ ms.author: elkrieger
 If you enable Defender for SQL Server on Machines and some SQL instances aren't in a protected state, use this article to troubleshoot deployment issues.
 
 Before starting the troubleshooting steps, ensure you have:
+
 - Followed the steps to [enable Defender for SQL on Machines](defender-for-sql-usage-gov.md).
 - Reviewed the [protection status of databases running on protected machines](verify-machine-protection-gov.md).
 
@@ -40,20 +41,20 @@ Resources are summarized in the table:
 
 ## Step 2: Make sure extensions are allowed
 
-To ensure protection works as expected, make sure your organizational deny policy doesn't block these extensions: 
+To ensure protection works as expected, make sure your organizational deny policy doesn't block these extensions:
 
 - Defender for SQL (IaaS and Arc)
-    - Publisher: Microsoft.Azure.AzureDefenderForSQL
-    - Type: AdvancedThreatProtection.Windows 
-- SQL IaaS Extension (IaaS) 
-    - Publisher: Microsoft.SqlServer.Management
-    -  Type: SqlIaaSAgent 
+  - Publisher: Microsoft.Azure.AzureDefenderForSQL
+  - Type: AdvancedThreatProtection.Windows
+- SQL IaaS Extension (IaaS)
+  - Publisher: Microsoft.SqlServer.Management
+  - Type: SqlIaaSAgent
 - SQL IaaS Extension (Arc)
-    - Publisher: Microsoft.AzureData
-    - Type: WindowsAgent.SqlServer
+  - Publisher: Microsoft.AzureData
+  - Type: WindowsAgent.SqlServer
 - AMA extension (IaaS and Arc)
-    - Publisher: Microsoft.Azure.Monitor
-    - Type: AzureMonitorWindowsAgent 
+  - Publisher: Microsoft.Azure.Monitor
+  - Type: AzureMonitorWindowsAgent
 
 ## Step 3: Ensure East US region is allowed
 
@@ -63,12 +64,12 @@ When you enable the plan, Azure creates a resource group in the East US region. 
 
 Defender for SQL Server on Machines uses specific naming conventions for resources. Ensure your organization doesn't block these naming conventions and don't modify any automatically created resources.
 
-- DCR: `MicrosoftDefenderForSQL--dcr` 
-- DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` 
-- Resource group: `DefaultResourceGroup-` 
+- DCR: `MicrosoftDefenderForSQL--dcr`
+- DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation`
+- Resource group: `DefaultResourceGroup-`
 - Log Analytics workspace: `D4SQL--`
 
-Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag. 
+Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag.
 
 ## Step 5: Identify misconfigurations at subscription level
 
@@ -78,7 +79,7 @@ To identify which subscriptions have misconfigurations, use the [SQL Servers on 
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide-gov/ama-helper-workbook.png" alt-text="Screenshot of the SQL Servers on Machines AMA Helper workbook main page." lightbox="media/troubleshoot-sql-machines-guide-gov/ama-helper-workbook.png":::
 
-1. In **Subscriptions Overview** review misconfigurations at subscription level. 
+1. In **Subscriptions Overview** review misconfigurations at subscription level.
 
     - **SQL Servers on Azure Virtual Machines** - shows subscriptions that contain Azure VMs.
     - **Arc-Enabled SQL Servers** - shows subscriptions that contain Azure Arc-enabled VMs.
@@ -86,7 +87,7 @@ To identify which subscriptions have misconfigurations, use the [SQL Servers on 
     Subscriptions appear on these tabs in accordance with your specific environment.
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide-gov/navigate-sections.png" alt-text="Screenshot that shows where to navigate to on the SQL Servers on Azure Virtual Machines workbook page." lightbox="media/troubleshoot-sql-machines-guide-gov/navigate-sections.png":::
-    
+
 1. Review component configurations for each subscription.
 
     - The number of SQL Server instances in the subscription.
@@ -99,7 +100,7 @@ To identify which subscriptions have misconfigurations, use the [SQL Servers on 
     - AMA autoprovisioning enabled for the subscription.
     - Defender for SQL enabled for the subscription.
 
-1. For each subscription, check which component doesn't match the expected configuration, such as 0/1, 10/15, or No. In our example screenshot, the Demo subscription has misconfigurations in DCRA 0/1. 
+1. For each subscription, check which component doesn't match the expected configuration, such as 0/1, 10/15, or No. In our example screenshot, the Demo subscription has misconfigurations in DCRA 0/1.
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide-gov/ama-helper-workbook-results.png" alt-text="Screenshot of the SQL Servers on Machines AMA Helper workbook results." lightbox="media/troubleshoot-sql-machines-guide-gov/ama-helper-workbook-results.png":::
 
@@ -111,11 +112,10 @@ After identifying misconfigurations, start by fixing DCR issues, then workspace 
 
 Fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, they aren't resolved.
 
-
 1. Navigate to **Policy** > **Compliance**.
 
 1. Select **Scope**.
-    
+
     :::image type="content" source="media/troubleshoot-sql-machines-guide-gov/scope.png" alt-text="Screenshot that shows where to select scope on the policy and compliance page." lightbox="media/troubleshoot-sql-machines-guide-gov/scope.png":::
 
 1. In Scope, select the relevant subscription.
@@ -134,7 +134,7 @@ Fix misconfigurations in the correct order. DCR resolution relies on workspace r
     - **DCR** - `Configure SQL Virtual Machines to automatically install Microsoft Defender for SQL and DCR with a Log Analytics workspace` or `Configure Arc-enabled SQL Servers to automatically install Microsoft Defender for SQL and DCR with a Log Analytics workspace`.
 
 1. For each policy that is noncompliant, review the compliance reason and select **Create remediation task** to resolve it.
-    
+
     :::image type="content" source="media/troubleshoot-sql-machines-guide-gov/remediation-task.png" alt-text="Screenshot that shows where to create a remediation task on the page." lightbox="media/troubleshoot-sql-machines-guide-gov/remediation-task.png":::
 
 1. Fill in the relevant information.
@@ -163,7 +163,7 @@ After resolving misconfigurations at the subscription level, resolve misconfigur
 
 1. Select the noncompliant policy name.
 
-    - **Defender for SQL extension** - `Create and assign a built-in user-assigned managed identity`. 
+    - **Defender for SQL extension** - `Create and assign a built-in user-assigned managed identity`.
     - **AMA extension**: - `Configure SQL Virtual Machines to automatically install Azure Monitor Agent` or `Configure Arc-enabled SQL Servers to automatically install Azure Monitor Agent`.
 
 1. For each policy that is noncompliant, review the compliance reason and select **Create remediation task** to resolve it.
