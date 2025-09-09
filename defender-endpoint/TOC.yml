@@ -267,20 +267,22 @@
               href: mde-linux-prerequisites.md
             - name: Choose a deployment method
               items:
-              - name: Installer script based deployment
-                href: linux-installer-script.md
               - name: Enabling deployment to a custom location
                 href: linux-custom-location-installation.md
+              - name: Installer script based deployment
+                href: linux-installer-script.md
               - name: Ansible based deployment
                 href: linux-install-with-ansible.md
               - name: Chef based deployment
                 href: linux-deploy-defender-for-endpoint-with-chef.md
               - name: Puppet based deployment
                 href: linux-install-with-puppet.md
-              - name: Saltstack-based deployment
+              - name: Saltstack based deployment
                 href: linux-install-with-saltack.md
               - name: Manual deployment
                 href: linux-install-manually.md
+              - name: Golden image based deployment
+                href: linux-deploy-defender-for-endpoint-using-golden-images.md
               - name: Direct onboarding with Defender for Cloud
                 href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
           - name: Configure Defender for Endpoint on Linux

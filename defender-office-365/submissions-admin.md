@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 08/27/2025
+ms.date: 09/05/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -354,7 +354,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -368,7 +368,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 > [!IMPORTANT]
 >
-> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the file is encountered again during mail flow, [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks and all other file-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all file-based filters, including [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks are overridden, allowing user access to the file.
 
@@ -412,7 +412,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -426,7 +426,7 @@ After a few moments, the allow entry is available on the **URL** tab on the **Te
 
 > [!NOTE]
 >
-> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the URL is encountered again during mail flow, [Safe Links](safe-links-about.md) detonation or URL reputation checks and all other URL-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all URL-based filters, including [Safe Links](safe-links-about.md) detonation or URL reputation checks are overridden, allowing user access to content at the URL.
 
@@ -899,7 +899,7 @@ You can use the procedures in this section to dispute admin submitted items that
    - **Upload as screenshot**: Select this option to upload a JPG or PNG image less than one MB.
 
    > [!IMPORTANT]
-   > If you don't select **Reason**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Values other than **Reason** are taken as feedback.
+   > If you don't select **Result**, the item isn't sent to Microsoft for reevaluation. Instead, an entry is created on the **Emails** or **URLs** tab without resubmitting the item. Values other than **Result** are taken as feedback.
 
    When you're finished on the **Dispute details** flyout, select **Submit dispute**.
 
@@ -1198,7 +1198,7 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
         - **30 days**
         - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
       - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 

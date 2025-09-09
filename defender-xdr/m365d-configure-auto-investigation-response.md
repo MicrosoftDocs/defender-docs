@@ -2,8 +2,8 @@
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
 description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
 search.appverid: MET150
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.topic: how-to

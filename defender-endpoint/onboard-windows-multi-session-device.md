@@ -5,11 +5,11 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: install-set-up-deploy
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier3
