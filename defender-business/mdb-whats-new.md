@@ -18,7 +18,7 @@ search.appverid: MET150
 audience: Admin
 ---
 
-# What's new in Microsoft 365 Defender for Business
+# What's new in Microsoft Defender for Business
 
 This article lists new features in the latest releases of Microsoft Defender for Business. Features that are currently in preview are denoted with **(preview)**.
 
