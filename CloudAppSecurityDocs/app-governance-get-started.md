@@ -63,7 +63,7 @@ You must have at least one of these roles to turn on app governance:
 - Security Admin          
 - Compliance Admin  
 - Compliance Data Admin
-- Cloud App Security admin
+- Cloud App Security Admin
 
 The following table lists the app governance capabilities for each role.
 
