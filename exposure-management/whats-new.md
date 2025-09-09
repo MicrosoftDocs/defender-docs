@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/26/2025
+ms.date: 09/09/2025
 
 ---
 
@@ -28,9 +28,11 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ### Refined attack path experience
 
-Microsoft Security Exposure Management has introduced a refined attack path experience that focuses on real, externally-driven and exploitable risks. This enhancement helps security teams cut through the noise and act faster by emphasizing threats that adversaries could actually use to compromise your organization.
+Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
 
-The attack path experience now highlights only the most urgent, externally initiated, and exploitable threats, and for on-premises paths, attack chains automatically end when reaching critical assets like Domain Admins or Domain Controllers—helping security teams focus on high-impact risks and reduce noise.
+On-premises Attack Path now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
 For more information, see [Overview of attack paths](work-attack-paths-overview.md) and [Review attack paths](review-attack-paths.md).
 
