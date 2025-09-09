@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 |Version number |Updates |
 |---------|---------|
-|2.248|Improved event log query method captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+|2.248|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
 
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 
