@@ -10,3 +10,16 @@ ms.date: 09/09/2025
 
 You can disable Microsoft Defender for Cloud plans on your connected environments to manage your security costs. Disabling a plan stops the associated security features, recommendations and alerts for that plan from appearing in Defender for Cloud.
 
+Each of Defender for Cloud's plans have different pricing structures which can depend on attached resources or sub plans that are enabled. For additional information you can review [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
+## Disable plans on your environment
+
+When you disable a plan, the associated security features, recommendations and alerts for that plan will stop appearing in Defender for Cloud. Any resources and environments protected by a plan will no longer be protected by that plan. All associated recommendations and alerts will stop appearing in Defender for Cloud.
+
+If you created an affiliated resource, such as a Log Analytics workspace or Storage Account, to support a plan, you will need to manually delete that resource if it is no longer needed.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. 

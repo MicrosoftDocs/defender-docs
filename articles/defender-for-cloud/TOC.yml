@@ -90,7 +90,7 @@
               displayName: azure stack, ash, windows, linux, hybrid, defender for endpoint
               href: onboard-machines-with-defender-for-endpoint.md
             - name: Connect machines with Azure Arc
-              displayName: azure stack, ash, windows, linux, hybrid, arc, on-premises, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
+              displayName: Disable Defender for Cloud plansazure stack, ash, windows, linux, hybrid, arc, on-premises, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
               href: quickstart-onboard-machines.md
     - name: Enable specific plans
       expanded: false
@@ -230,7 +230,7 @@
     - name: Disable plans
       expanded: false
       items:
-        - name: Disable Defender for Cloud plans
+        - name: 
           displayName: disable, turn off, deactivate
           href: disable-plans.md
 
