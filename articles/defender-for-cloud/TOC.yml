@@ -227,7 +227,12 @@
               - name: Overview Microsoft Copilot for Security integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
-
+    - name: Disable plans
+      expanded: false
+      items:
+        - name: Disable Defender for Cloud plans
+          displayName: disable, turn off, deactivate
+          href: disable-plans.md
 
 - name: Tutorials
   items:
