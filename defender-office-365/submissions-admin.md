@@ -354,7 +354,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email attachment is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email attachment is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -368,7 +368,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 > [!IMPORTANT]
 >
-> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for files are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the file is encountered again during mail flow, [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks and all other file-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all file-based filters, including [Safe Attachments](safe-attachments-about.md) detonation or file reputation checks are overridden, allowing user access to the file.
 
@@ -412,7 +412,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
        - **30 days**
        - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious URL is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the URL is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
      - **Allow entry note (optional)**: Enter optional information about why you're allowing this item.
 
@@ -426,7 +426,7 @@ After a few moments, the allow entry is available on the **URL** tab on the **Te
 
 > [!NOTE]
 >
-> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+> - By default, allow entries for URLs are kept for 45 days after the filtering system determines that the entity is clean, and then the allow entry is removed. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 > - When the URL is encountered again during mail flow, [Safe Links](safe-links-about.md) detonation or URL reputation checks and all other URL-based filters are overridden. If the filtering system determines that all other entities in the email message are clean, the message are delivered.
 > - During selection, all URL-based filters, including [Safe Links](safe-links-about.md) detonation or URL reputation checks are overridden, allowing user access to content at the URL.
 
@@ -1198,7 +1198,7 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
         - **30 days**
         - **Specific date**: The maximum value is 30 days from today.
 
-       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date. 
+       When **45 days after last used date** is selected, the last used date of the allow entry is updated when the malicious email message is encountered during mail flow. The allow entry is kept for 45 days after the filtering system determines that the email message is clean. For all other values like 1 day, 7 days, 30 days, specific date the allow entry expire at the defined date.
 
       - **Allow entry note (optional)**: Enter optional information about why you're allowing this item. For spoofed senders, any value you enter here isn't shown in the allow entry on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
