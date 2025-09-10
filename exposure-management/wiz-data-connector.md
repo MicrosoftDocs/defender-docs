@@ -30,7 +30,7 @@ First, you need to create a service account with the required permissions to get
 1. Choose the **Type** of service account to add. It should be **Custom Integration (GraphQL API)**
 1. You can select to limit access to specific projects only by choosing up to 50 projects from the drop-down list. If you aren't sure which project to choose, it's better to leave it empty.
 1. You can set an **Expiration date** for the service account although the recommendation is to leave it empty.
-1. Set the **API Scopes** to "Read all entities".
+1. Set the **API Scopes** to **Read graph resource** and **Read vulnerabilities**
 
    > [!Note]
    > At minimum, the Service Account should have permissions of Read graph resources and Read vulnerabilities, though we recommend Read:all permissions as we may retrieve additional data as we further develop connector.
