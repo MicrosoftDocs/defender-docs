@@ -23,7 +23,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 09/08/2025
+ms.date: 09/10/2025
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
