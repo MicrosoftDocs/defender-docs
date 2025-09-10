@@ -68,7 +68,7 @@ To support network devices without hostname resolution or wildcard support, you 
 
 - Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list. See one of the following lists: 
     - [Commercial devices streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
-    - [US government devices streamlined URL sheet](https://aka.ms/MDE-gov-urls)
+    - [US government devices streamlined URL sheet](https://aka.ms/MDE-streamlined-gov-urls)
 - Windows 11
 - Windows Server 2025
 - Windows Server 2022
@@ -83,7 +83,7 @@ To support network devices without hostname resolution or wildcard support, you 
 > - **Devices running on the MMA agent are not supported** on the streamlined connectivity method and need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent).
 > - Windows Server 2012 R2 and Server 2016 need to upgrade to a unified agent to leverage the new method. <br/>
 > - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but use a longer list. For more information, see the [commercial devices streamlined URL sheet](https://aka.ms/MDE-streamlined-urls) or the
->[US government devices streamlined URL sheet](https://aka.ms/MDE-gov-urls).
+>[US government devices streamlined URL sheet](https://aka.ms/MDE-streamlined-gov-urls).
 
 ### Required KB versions (Windows)
 
@@ -133,7 +133,7 @@ Configure your environment to allow connections to the simplified Defender for E
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL sheet](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL sheet](https://aka.ms/MDE-gov-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL sheet](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL sheet](https://aka.ms/MDE-streamlined-gov-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
