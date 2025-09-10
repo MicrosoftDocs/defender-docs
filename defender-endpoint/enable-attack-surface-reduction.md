@@ -98,7 +98,7 @@ You can enable attack surface reduction rules by using any of the following meth
 
 Enterprise-level management such as Intune or Microsoft Configuration Manager is recommended. Enterprise-level management overwrites any conflicting group policy or PowerShell settings on startup.
 
-### Excluding files and folders from attack surface reduction rules
+### Exclude files and folders from attack surface reduction rules
 
 You can exclude files and folders from being evaluated by most attack surface reduction rules. This means that even if an attack surface reduction rule determines the file or folder contains malicious behavior, it doesn't block the file from running.
 
