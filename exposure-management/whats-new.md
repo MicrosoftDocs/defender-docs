@@ -26,7 +26,7 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ## September 2025
 
-### New data connectors: Wiz, Palo Alto Prisma, CrowdStrike Falcon, and SentinelOne
+### New data connectors
 
 We have added new data connectors for Wiz, Palo Alto Prisma, CrowdStrike Falcon, and SentinelOne. These connectors enable seamless integration of vulnerability and asset data from leading cloud and endpoint security platforms into Microsoft Security Exposure Management, providing enhanced visibility and context for your environments.
 
