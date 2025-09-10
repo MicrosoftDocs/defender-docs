@@ -59,7 +59,7 @@ Review critical assets as follows.
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Microsoft XDR > Rules > Critical asset management**.
 1. On the **Critical asset management** page, review predefined and custom critical asset classifications, including the number of assets in the classification, whether assets are on or off, and criticality levels.
 
-:::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
+   :::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
 > [!NOTE]
 > You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
@@ -121,7 +121,7 @@ Edit custom classifications as follows.
 
 1. On the **Critical asset management** page, select the relevant asset classification. The **Pending Approval** column helps find classifications with assets that didn't meet the automatic classification threshold and require user approval.
 
-  :::image type="content" source="media/classify-critical-assets/add-assets.png" alt-text="Screenshot of predefined classifications in the asset management interface.":::
+    :::image type="content" source="media/classify-critical-assets/add-assets.png" alt-text="Screenshot of predefined classifications in the asset management interface.":::
 
 1. To see all assets in the classification that are currently considered critical, select the **Assets** tab.
 1. To approve assets that fit the classification but are out of threshold, browse to **Pending Approval**.
