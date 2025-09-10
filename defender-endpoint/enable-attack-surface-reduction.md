@@ -55,7 +55,7 @@ You can set attack surface reduction rules for devices that are running any of t
 
 ### Requirements
 
-To use the entire feature-set of attack surface reduction rules:
+To use the entire feature-set of attack surface reduction rules, the following requirements must be met:
 
 - Microsoft Defender Antivirus must be set as the primary antivirus. It must not be running in passive mode or be disabled.
 
@@ -74,13 +74,11 @@ To use the entire feature-set of attack surface reduction rules:
    To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
 
 > [!NOTE]
-> The following ASR rules are only enforced if Office executables are installed under the system-defined `%ProgramFiles%` or `%ProgramFiles(x86)%` directories (on most systems, `%ProgramFiles%` points to `C:\Program Files`).
+> The following attack surface reduction rules are only enforced if Office executables are installed under the system-defined %ProgramFiles% or %ProgramFiles(x86)% directories (on most systems, %ProgramFiles% points to C:\Program Files). If Office is installed in a custom path outside one of these system-defined directories, the rules won't apply.
 >
 > - Block Office communication applications from creating child processes (26190899-1602-49e8-8b27-eb1d0a1ce869)
 > - Block all Office applications from creating child processes (D4F940AB-401B-4EFC-AADC-AD5F3C50688A)
 > - Block Office applications from injecting code into other processes (75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84)
->
->If Office is installed in a custom path outside one of the above-mentioned system-defined directories, these rules won't apply.
 
 ## Enabling attack surface reduction rules
 
