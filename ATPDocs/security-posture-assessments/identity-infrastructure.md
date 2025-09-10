@@ -13,7 +13,8 @@ Learn about Microsoft Defender for Identity security posture assessments for ide
 
 |Recommended action  |Description  |
 |---------|---------|
-|[Built-in Active Directory Guest account is enabled](##remediation-for-built-in-active-directory-guest-account-is-enabled)  |This recommendation indicates whether an AD Guest account is enabled in your environment. The goal is to ensure that the Guest account of the domain isn't enabled. The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat. |
+|[Remediation for Built-in Active Directory Guest account is enabled](#remediation-for-built-in-active-directory-guest-account-is-enabled) |This recommendation indicates whether an AD Guest account is enabled in your environment. The goal is to ensure that the Guest account of the domain isn't enabled. The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat. |
+|
 
 
 ## Remediation for Built-in Active Directory Guest account is enabled
