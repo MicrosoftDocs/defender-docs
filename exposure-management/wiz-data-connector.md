@@ -27,7 +27,7 @@ First, you need to create a service account with the required permissions to get
 
 1. Go to the **Settings** > **Access Management** > **Service Accounts** page, then select **Add Service Account**.
 1. Enter a meaningful **Name** for the account.
-1. Choose the **Type** of service account to add.
+1. Choose the **Type** of service account to add. It should be **Custom Integration (GraphQL API)**
 1. You can select to limit access to specific projects only by choosing up to 50 projects from the drop-down list. If you aren't sure which project to choose, it's better to leave it empty.
 1. You can set an **Expiration date** for the service account although the recommendation is to leave it empty.
 1. Set the **API Scopes** to "Read all entities".
