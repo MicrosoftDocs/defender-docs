@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 07/23/2025
+ms.date: 09/08/2025
 ---
 
 # Review and classify critical assets
@@ -33,6 +33,9 @@ Understanding and categorizing assets based on their criticality helps prioritiz
 Impact analysis and crown jewels analysis are essential methodologies for identifying and prioritizing critical assets. The National Institute of Standards and Technology (NIST) provides guidelines for criticality analysis, which can be found in [NIST IR 8179](https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8179.pdf).
 
 The NIST Cybersecurity Framework (CSF) 800-53 also emphasizes guidance for asset management and criticality analysis, as outlined in ID.AM-05, which can be found at: [https://csf.tools/reference/nist-cybersecurity-framework/v2-0/id/id-am/id-am-05/](https://csf.tools/reference/nist-cybersecurity-framework/v2-0/id/id-am/id-am-05/).
+
+> [!NOTE]
+> When multiple classification rules apply to an asset, the rule with the highest criticality level takes precedence. This classification remains in effect until the asset no longer meets the criteria for that rule, at which point it will automatically revert to the next applicable classification level.
 
 ## Prerequisites
 
