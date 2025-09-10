@@ -14,7 +14,10 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-appliesto: Microsoft Defender for Endpoint Plan 1 and Plan 2, Microsoft Defender XDR, Microsoft Defender Antivirus
+appliesto:
+- Microsoft Defender for Endpoint Plan 1 and Plan 2
+- Microsoft Defender XDR
+- Microsoft Defender Antivirus
 search.appverid: met150
 ms.date: 09/10/2025
 ---
