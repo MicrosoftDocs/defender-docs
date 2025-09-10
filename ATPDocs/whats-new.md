@@ -25,6 +25,18 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
+### New API support for unified agent 
+We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+This capability is currently in preview and available in API Beta version.
+
+This API allows customers to:
+
+* Monitor the status of unified agent servers
+* Enable or disable the automatic activation of eligible servers
+* Activate or deactivate the agent on eligible servers
+ ​
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
