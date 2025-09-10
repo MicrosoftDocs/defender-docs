@@ -164,27 +164,14 @@ items:
     items:
     - name: Remediation actions
       href: remediation-actions.md
-  - name: Security posture
+  - name: Security posture assessments
     items:
      - name: Identity security initiative (Preview)
        href: identity-security-initiative.md
      - name: Overview
        href: security-assessment.md
-     - name: Hybrid security
-       items:
-       - name: Change password for Microsoft Entra seamless SSO account
-         href: change-password-microsoft-entra-seamless-single-sign-on.md
-         displayName: Microsoft Entra connect
-       - name: Rotate password for Microsoft Entra Connect connector account
-         href: rotate-password-microsoft-entra-connect.md
-         displayName: Microsoft Entra Connect
-       - name: Remove unnecessary replication permissions for Microsoft Entra Connect connector account
-         href: remove-replication-permissions-microsoft-entra-connect.md
-       - name: Remove unsafe permissions on sensitive Entra Connect accounts
-         href: remove-unsafe-permissions-sensitive-entra-connect.md
-         displayName: MDI
-       - name: Replace Enterprise or Domain Admin account for Entra Connect AD DS Connector account
-         href: replace-entra-connect-default-admin.md
+     - name: Hybrid security 
+       href: hybrid-security.md
      - name: Identity infrastructure
        items:
        - name: Built-in Active Directory Guest account is enabled
