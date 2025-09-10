@@ -59,7 +59,7 @@ Only devices that were active in the last 90 days are retrieved, based on the la
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Cloud provider information<br>- Resource type<br>- IP address<br>- Operating system<br>- Configuration details<br>- Wiz criticality data |
+| **Assets/devices**      | - Cloud provider information<br>- Network Interfaces<br>- VirtualMachine Properties<br>- IP address<br>- Operating system<br>- Configuration details<br>- Wiz criticality data |
 | **Vulnerability findings** | Wiz retrieves CVE findings on the assets that it ingests. |
 
 ## Troubleshooting the Wiz data connector
