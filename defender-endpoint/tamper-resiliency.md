@@ -99,7 +99,7 @@ A common technique used by attackers is to make unauthorized changes to anti-vir
 
 For more information, see [Tamper protection for antivirus exclusions](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions).
 
-Attackers can be preventing from discovering existing antivirus exclusions by enabling [HideExclusionsFromLocalAdmin](/windows/client-management/mdm/defender-csp#configurationhideexclusionsfromlocaladmins).
+Attackers can be preventing from discovering existing antivirus exclusions by enabling [HideExclusionsFromLocalAdmins](/windows/client-management/mdm/defender-csp#configurationhideexclusionsfromlocaladmins).
 
 <a name='detecting-potential-tampering-activity-in-the-microsoft-365-defender-portal'></a>
 
