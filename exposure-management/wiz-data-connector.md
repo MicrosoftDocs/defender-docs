@@ -41,8 +41,8 @@ First, you need to create a service account with the required permissions to get
 
 ### Getting the Authentication Endpoint URL
 
-1. Go to the **Settings** > **Access Management** > **Service Accounts** page, then select on the question mark icon next to the "Add Service Account" button.
-1. Copy the URL, this is the Authentication endpoint URL.
+1. At the top right of the Wiz portal, click **Profile** > **Tenant Info** [Direct link](https://app.wiz.io/tenant-info/general)
+1. `API Endpoint URL` - Copy the endpoint in the following form: `https://api.<TENANT_DATA_CENTER>.app.wiz.io/`
 
 ## Establish Wiz connection in Exposure Management
 
