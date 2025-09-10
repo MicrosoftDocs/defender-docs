@@ -64,7 +64,7 @@ Only devices that were active in the last 90 days are retrieved, based on the la
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Device information<br>- Operating system details<br>- Network interfaces<br>- Agent status<br>- Device classification<br>- CrowdStrike criticality data |
+| **Assets/devices**      | - Device information<br>- Operating system details<br>- Network interfaces<br>- Agent status<br>- CrowdStrike criticality data |
 | **Vulnerability findings** | CrowdStrike retrieves CVE findings on the assets that it ingests. |
 
 ## Troubleshooting the CrowdStrike data connector
