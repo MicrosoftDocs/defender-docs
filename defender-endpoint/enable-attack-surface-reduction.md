@@ -97,7 +97,7 @@ Each attack surface reduction rule contains one of four settings:
 - **Audit**: Evaluate how the attack surface reduction rule would impact your organization if enabled
 - **Warn**: Enable the attack surface reduction rule but allow the end user to bypass the block
 
-You can enable attack surface reduction rules by using any of these methods:
+You can enable attack surface reduction rules by using any of the following methods:
 
 - [Microsoft Intune](#intune)
 - [Mobile Device Management (MDM)](#mdm)
