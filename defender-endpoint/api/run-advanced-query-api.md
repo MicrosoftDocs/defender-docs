@@ -3,10 +3,10 @@ title: Advanced Hunting API
 ms.reviewer:
 description: Learn to use the advanced hunting API to run advanced queries on Microsoft Defender for Endpoint. Find out about limitations and see an example.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 08/18/2025
 ---
 
 # Advanced hunting API
@@ -105,13 +105,11 @@ POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
 ```
 
 ```json
+
 {
-    "Query":"DeviceProcessEvents
-|where InitiatingProcessFileName =~ 'powershell.exe'
-|where ProcessCommandLine contains 'appdata'
-|project Timestamp, FileName, InitiatingProcessFileName, DeviceId
-|limit 2"
+    "Query":"DeviceProcessEvents |where InitiatingProcessFileName =~ 'powershell.exe' |where ProcessCommandLine contains 'appdata'|project Timestamp, FileName, InitiatingProcessFileName, DeviceId|limit 2"
 }
+
 ```
 
 ### Response example

@@ -4,8 +4,8 @@ description: Learn about Microsoft Security Copilot capabilities embedded in Mic
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -44,14 +44,13 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 - [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Understand authentication in Security Copilot](/security-copilot/authentication)
 - [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
-- [Responsible AI](/copilot/security/responsible-ai-overview-security-copilot)
-- [FAQs on Responsible AI](/copilot/security/rai-faqs-security-copilot)
+- [Responsible AI FAQs](responsible-ai-copilot-defender.md)
 
 ## Microsoft Copilot integration in Microsoft Defender
 
 [Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
-Security Copilot operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). To know more, see the [Security Copilot Responsible AI FAQs](/copilot/security/rai-faqs-security-copilot).
+Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
 
 ## Key features
 
@@ -183,7 +182,7 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 
 - [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Privacy and data security in Copilot](/security-copilot/privacy-data-security)
-- [Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
+- [Security Copilot Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
 - Other [Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

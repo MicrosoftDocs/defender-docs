@@ -2,11 +2,11 @@
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-ms.date: 03/21/2025
-manager: deniseb
+ms.date: 08/19/2025
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -257,7 +257,7 @@ See: [1.4 Export device antivirus health details API properties \(via files\)](d
 Here's an example request:
 
 ```HTTP
-GET https://api-us.securitycenter.contoso.com/api/machines/InfoGatheringExport
+GET https://api-us.securitycenter.windows.com/api/machines/InfoGatheringExport
 ```
 
 #### 2.6.2 Response example

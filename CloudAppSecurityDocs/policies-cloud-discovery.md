@@ -3,6 +3,7 @@ title: Cloud discovery policies
 description: This article outlines the steps to configure many cloud discovery policies in Defender for Cloud Apps.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 # Cloud discovery policies
 

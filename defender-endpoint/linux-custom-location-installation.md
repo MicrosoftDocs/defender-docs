@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: meghapriya
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -77,6 +77,9 @@ This section describes the additional steps required for deploying Defender for 
 ### Manual installation: preinstallation setup
 
 In the [manual deployment steps](linux-install-manually.md#manual-deployment-steps), you need to complete an additional preinstallation setup to enable custom location installation. Follow the steps below as part of the [preinstall setup for custom location installation](linux-install-manually.md#preinstall-setup-for-custom-location-installation).
+
+> [!IMPORTANT]
+> It's strongly recommended to choose a new, dedicated (empty) directory for the custom install path. During uninstall/cleanup, the process attempts to recursively remove that directory and all its contents - therefore, it's important not to use a shared or existing directory that contains other data you might need to retain.
 
 1. **Set your custom path variable**:
 

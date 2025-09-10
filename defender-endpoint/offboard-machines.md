@@ -2,10 +2,10 @@
 title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -33,11 +33,8 @@ ms.date: 03/17/2025
 **Platforms**
 
 - Windows client devices
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2012 R2 and later
+- Azure Stack HCI OS, version 23H2 and later
 - Mac devices
 - Linux servers
 

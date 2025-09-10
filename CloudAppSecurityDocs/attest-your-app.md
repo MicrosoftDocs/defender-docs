@@ -3,13 +3,14 @@ title: Attest your apps
 description: This article provides instructions for attesting your apps in Defender for Cloud Apps.
 ms.date: 06/30/2025
 ms.topic: article
+ms.reviewer: Mravela 
 ---
 # Attest your apps
 
 
 Microsoft Defender for Cloud Apps enables you to attest your app, so that you make sure that the compliance and security details we use to rate your app in our cloud app catalog are up to date.
 
-Whether your app is already listed in the cloud app catalog, or it's new, submit a [self-attestation questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR4CRHM-U7CtKpJma_QJAnSlUMEpLQzBaQ1hWNDMxUEhRNFI3Q0FZUkdWRC4u). For details on the self-attestation process, contact casfeedback@microsoft.com.
+Whether your app is already listed in the cloud app catalog, or it's new, submit a [self-attestation questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR4CRHM-U7CtKpJma_QJAnSlUMEpLQzBaQ1hWNDMxUEhRNFI3Q0FZUkdWRC4u). For details on the self-attestation process, contact mscac@microsoft.com.
 
 Follow the service attributes described below to successfully complete the submission of the questionnaire:
 
@@ -21,7 +22,7 @@ Follow the service attributes described below to successfully complete the submi
 | Headquarters | General | Country code | Close list - provided in questionnaire | The country/region of the provider's headquarters.|
 | Data center| General | Country code array* | Close list - provided in questionnaire (Multi selection) | The country/region in which your data center resides (can be multiple locations) |
 | Hosting company | General | String | Free text | The name of the company that provides server hosting for the app. |
-| Founded | General | Integer | YYYY (no later than 2019) | The year in which the provider was founded. |
+| Founded | General | Integer | YYYY (no later than 2025) | The year in which the provider was founded. |
 | Holding | General | String | Private, Public | Displays whether the provider is a publicly or privately held company |
 | App domain | General | URL array* | Free text | The list of specific domains that are used to interact with the service. For example, 'teams.microsoft.com' for Microsoft Teams and not the generic domain 'microsoft.com'. |
 | Terms of service | General | URL | Free text | Does this app provide a set of regulations that users must agree to follow in order to use the app? |
@@ -31,7 +32,7 @@ Follow the service attributes described below to successfully complete the submi
 | Data types | General | String | Close list - provided in questionnaire | Which data types can be uploaded by the user to the app?|
 | Homepage | General | URL | Free text | The provider's home page URL. |
 | Disaster recovery plan | General | Boolean | True, False | Does this app have a disaster recovery plan that includes a backup and restore strategy? |
-| Latest breach | Security | Date | MMM-dd-YYYY | Most recent incident in which sensitive, protected, or confidential data owned by the app was viewed, stolen, or used by an individual unauthorized to do so. |
+| Latest breach | Security | Date | MM-dd-YYYY | Most recent incident in which sensitive, protected, or confidential data owned by the app was viewed, stolen, or used by an individual unauthorized to do so. |
 | Data-at-rest encryption method | Security | String | Close list - provided in questionnaire | The type of encryption of data-at-rest performed on the app. |
 | Multifactor authentication | Security | Boolean | True, False | Does this app support multifactor authentication solutions? |
 | IP address restriction | Security | Boolean | True, False | Does this app support restriction of specific IP addresses by the app? |
@@ -40,7 +41,7 @@ Follow the service attributes described below to successfully complete the submi
 | Data audit trail | Security | Boolean | True, False | Does this app support availability of a data audit trail in the app? |
 | User can upload data | Security | Boolean | True, False | Does this app support user uploaded data? |
 | Data classification | Security | Boolean | True, False | Does this app enable the option for classification of the data uploaded to the app? |
-| Remember password | Security | Boolean | True, False | Does this app enable the option for remembering and saving user passwords in the app? |
+| Remember password | Security | Boolean | True, False, N/A | Does this app enable the option for remembering and saving user passwords in the app? |
 | User-roles support | Security | Boolean | True, False | Does this app support distribution of users by roles and levels of permission? |
 | File sharing | Security | Boolean | True, False | Does this app include features that allow file sharing between users? |
 | Supports SAML | Security | Boolean | True, False | Does this app support the SAML standard for exchanging authentication and authorization data? |
@@ -61,12 +62,12 @@ Follow the service attributes described below to successfully complete the submi
 | ISO 27001 | Compliance | Boolean | True, False | Is this app ISO 27001 certified, a certificate given to companies upholding internationally recognized guidelines and general principles for initiating, implementing, maintaining, and improving information security management within an organization? |
 | ITAR | Compliance | Boolean | True, False, N/A | Does this app comply with ITAR, regulations controlling the export and import of defense-related articles and services found on the US Munitions List? |
 | SOC 1 | Compliance | Boolean | True, False, N/A | Does this app comply with SOC 1, reporting on controls at a service organization which are relevant to user entities' internal control over financial reporting? |
-| SOC 2 | Compliance | Boolean | True, False | Does this app comply with SOC 2, reporting on non-financial processing based on one or more of the Trust service criteria on security, privacy, availability, confidentiality, and processing integrity? |
-| SOC 3 | Compliance | Boolean | True, False | Does this app comply with SOC 3, reporting based on the Trust service criteria, that may be distributed freely and only contain management's assertion that they have met the requirements of the chosen criteria? |
+| SOC 2 | Compliance | Boolean |  True, False, N/A | Does this app comply with SOC 2, reporting on non-financial processing based on one or more of the Trust service criteria on security, privacy, availability, confidentiality, and processing integrity? |
+| SOC 3 | Compliance | Boolean | True, False, N/A | Does this app comply with SOC 3, reporting based on the Trust service criteria, that may be distributed freely and only contain management's assertion that they have met the requirements of the chosen criteria? |
 | SOX | Compliance | Boolean | True, False, N/A | Does this app comply with SOX, US legislation aimed at protecting shareholders and the general public from accounting errors and frauds, as well as improving the accuracy of corporate disclosures? |
 | SP 800-53 | Compliance | Boolean | True, False | Does this app comply with SP80053, recommended security controls for federal information systems and organizations? |
 | SSAE 16 | Compliance | Boolean | True, False, N/A | Does this app comply with the SSAE 16 standard for auditing a service organization's internal compliance controls and reporting processes? |
-| PCI DSS version | Compliance | String | 1, 2, 3, 3.1, 3.2, N/A | The version of the PCI-DSS protocol supported by this app. |
+| PCI DSS version | Compliance | String | 4.0, 3.2.1, N/A | The version of the PCI-DSS protocol supported by this app. |
 | ISO 27018 | Compliance | Boolean | True, False, N/A | Does this app comply with ISO 27018, which establishes commonly accepted controls and guidelines for processing and protecting Personally Identifiable Information (PII) in a public cloud computing environment? |
 | GLBA | Compliance | Boolean | True, False, N/A | Does this app comply with the Gramm-Leach-Bliley Act (GLBA), which requires financial institutions to establish standards for protecting the security and confidentiality of customers' personal information? |
 | FedRAMP level | Compliance | String | High, Moderate, Low, Li-SaaS | The level of the FedRAMP-compliant solution provided by this app. |
@@ -76,14 +77,14 @@ Follow the service attributes described below to successfully complete the submi
 | COBIT | Compliance | Boolean | True, False | Does this app comply with COBIT, which sets best practices for the governance and control of information systems and technology, and aligns IT with business principles? |
 | COPPA | Compliance | Boolean | True, False, N/A | Does this app comply with COPPA, which defines requirements on website and online services operators that provide content to children under 13 years of age? |
 | FERPA | Compliance | Boolean | True, False, N/A | Does this app comply with FERPA, a federal law that protects the privacy of student education records? |
-| GAPP | Compliance | Boolean | True, False, N/A | Does this app comply with GAPP, a collection of commonly followed rules that address privacy risks in an organization? |
+| GAPP | Compliance | Boolean | True, False| Does this app comply with GAPP, a collection of commonly followed rules that address privacy risks in an organization? |
 | HITRUST CSF | Compliance | Boolean | True, False, N/A | Does this app comply with HITRUST CSF, a set of controls that harmonizes the requirements of information security regulations and standards? |
-| Jericho Forum Commandments | Compliance | Boolean | True, False | Does this app follow Jericho Forum Commandments, a set if principles to be observed when architecting systems for secure operation in de-perimeterized environments? |
-| ISO 27002 | Compliance | Boolean | True, False, N/A | Does this app comply with ISO 27002, which establishes common guidelines for organizational information security standards and information security management practices? |
+| Jericho Forum Commandments | Compliance | Boolean | True, False | Does this app follow Jericho Forum Commandments, a set of principles to be observed when architecting systems for secure operation in de-perimeterized environments? |
+| ISO 27002 | Compliance | Boolean | True, False| Does this app comply with ISO 27002, which establishes common guidelines for organizational information security standards and information security management practices? |
 | FFIEC | Compliance | Boolean | True, False, N/A | Does this app comply with the Federal Financial Institutions Examination Council's guidance on the risk management controls necessary to authenticate services in an Internet banking environment? |
-| Data ownership | Legal | Boolean | True, False | Does this app fully preserve the user's ownership of uploaded data? |
-| DMCA | Legal | Boolean | True, False | Does this app comply with the Digital Millennium Copyright Act (DMCA), which criminalizes any attempt to unlawfully access copyrighted material? |
-| Data retention policy | Legal | Boolean | True, False | What is the app's policy for user data retention after account termination? |
+| Data ownership | Legal | Boolean | True, False, N/A | Does this app fully preserve the user's ownership of uploaded data? |
+| DMCA | Legal | Boolean | True, False, N/A | Does this app comply with the Digital Millennium Copyright Act (DMCA), which criminalizes any attempt to unlawfully access copyrighted material? |
+| Data retention policy | Legal | String | Deleted immediately, Within 2 weeks, Within 1 month, Within 3 months, Within more than 3 months, Retained| What is the app's policy for user data retention after account termination? |
 | GDPR readiness statement | Legal | URL | Free text | A link to your website, when relevant, relating how this provider plans to handle GDPR compliance. |
 | GDPR - Right to erasure | Legal | Boolean | True, False, N/A | Does this app stop processing and delete an individual's personal data upon request? |
 | GDPR - Report data breaches | Legal | Boolean | True, False, N/A | Does this app report data breaches to supervisory authorities and individuals affected by the breach, within 72 hours of breach detection? |

@@ -2,12 +2,12 @@
 title: Minimum requirements for Microsoft Defender for Endpoint
 description: Understand licensing and other requirements for onboarding devices to Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 ms.date: 06/10/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -70,15 +70,12 @@ Devices on your network must be running one of the operating systems listed in t
 - [Windows Enterprise multi-session](/azure/virtual-desktop/windows-multisession-faq)
 
 - Windows Server
-  - Windows Server 2012 R2
-  - Windows Server 2016
-  - Windows Server Semi-Annual Channel, version 1803 and above
-    
-  - Windows Server 2019 and later (including Core installation type)
+  - Windows Server 2012 R2 and later (including Core installation type)
+  - Windows Server Semi-Annual Channel, version 1803 and later
     
 - [Windows 365](/windows-365/) Cloud PCs and supported [Azure (Windows) Virtual Desktop](/azure/virtual-desktop/) machines running one of the previously listed operating systems/versions
 
-- [Azure Local](/azure/azure-local) Nodes running Azure Stack HCI OS, version 23H2 and above
+- [Azure Local](/azure/azure-local) Nodes running Azure Stack HCI OS, version 23H2 and later
 
 The following Windows operating systems work with Defender for Endpoint, provided you're using the [Log Analytics](/azure/azure-monitor/agents/log-analytics-agent) / [Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA):
 

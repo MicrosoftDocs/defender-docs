@@ -3,6 +3,7 @@ title: Govern discovered apps
 description: This article describes the procedure for governing your discovered apps by blocking their usage in your organization.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.reviewer: Mravela
 ---
 
 # Govern discovered apps

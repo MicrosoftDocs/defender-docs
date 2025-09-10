@@ -1,8 +1,9 @@
 ---
 title: File policies
 description: This article describes the procedure for setting up a data policy to monitor and control the data and files in your organization's cloud app use.
-ms.date: 02/15/2023
+ms.date: 09/01/2025
 ms.topic: how-to
+ms.reviewer: MayaAbelson
 ---
 
 # File policies in Microsoft Defender for Cloud Apps
@@ -83,12 +84,22 @@ To create a new file policy, follow this procedure:
 
     When content is matched against the selected expression, the violation text is replaced with "X" characters. By default, violations are masked and shown in their context displaying 100 characters before and after the violation. Numbers in the context of the expression are replaced with "#" characters and are never stored within Defender for Cloud Apps. You can select the option to **Unmask the last four characters of a violation** to unmask the last four characters of the violation itself. It's necessary to set which data types the regular expression searches: content, metadata and/or file name. By default it searches the content and the metadata.
 
-1. Choose the **Governance** actions you want Defender for Cloud Apps to take when a match is detected.
 
-1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately. Take extra care when you set governance actions, they could lead to irreversible loss of access permissions to your files. It's recommended to narrow down the filters to exactly represent the files that you wish to act upon, using multiple search fields. The narrower the filters, the better. For guidance, you can use the **Edit and preview results** button next to the filters.
+1. In the **Alerts** section, configure any of the following actions as needed:
 
-    ![File policy edit and preview results.](media/file-policy-edit-and-preview-results.png)
-   
+    - **Create an alert for each matching event with the policy's severity**
+    - **Send an alert as email**
+    - **Daily alert limit per policy**. Note that governance actions are not impacted by the daily alert limit.
+    - **Send alerts to Power Automate**
+    -
+1. Choose the **Governance** actions you want Defender for Cloud Apps to take when a match is detected. Be careful when you set governance actions, they could lead to irreversible loss of access permissions to your files.
+
+1. Once you've created your policy, you can view it by filtering for the **File policy** type. You can always edit a policy, calibrate its filters, or change the automated actions. The policy is automatically enabled upon creation and starts scanning your cloud files immediately.  We recommended narrowing down the filters using multiple search fields to get the files that you want to work with, . The narrower the filters, the better. You can use the **Edit and preview results** button next to the filters.
+
+:::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
+
+
+
 1. To view file policy matches, files that are suspected to violate the policy, go to **Policies** -> **Policy management**. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**.  This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
 
 ## Limitations

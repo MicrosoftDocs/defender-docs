@@ -3,11 +3,11 @@ title: Onboard Windows Servers using a local script
 description: Use a local script to deploy the configuration package on devices to enable onboarding of the devices to the service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -2,7 +2,8 @@
 title: SaaS Security Posture Management (SSPM) - Overview 
 description: Learn about SaaS security posture management (SSPM) in Microsoft Defender for Cloud Apps.
 ms.topic: how-to
-ms.date: 11/17/2024
+ms.date: 04/07/2025
+ms.reviewer: iidogGedanken
 ---
 
 # SaaS security posture management (SSPM) overview 
