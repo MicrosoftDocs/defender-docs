@@ -105,7 +105,7 @@ Set levels as follows.
 1. In the **Overview** tab, select the desired criticality level.
 1. Select **Save**.
 
-:::image type="content" source="./media/classify-critical-assets/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+   :::image type="content" source="./media/classify-critical-assets/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
 
 > [!NOTE]
 > You can set critical levels manually in the device inventory. We recommend creating criticality rules that allow broad application of critical levels across assets.
@@ -127,10 +127,10 @@ Edit custom classifications as follows.
 1. To approve assets that fit the classification but are out of threshold, browse to **Pending Approval**.
 1. Review the listed assets. Select the **plus** button next to the assets you want to add.
 
-> [!NOTE]
-> **Pending Approval** only displays when there are assets to review.
+    > [!NOTE]
+    > **Pending Approval** only displays when there are assets to review.
 
-:::image type="content" source="media/classify-critical-assets/pending-approval.png" alt-text="Screenshot of the pending approval tab in asset management.":::
+   :::image type="content" source="media/classify-critical-assets/pending-approval.png" alt-text="Screenshot of the pending approval tab in asset management.":::
 
 You can change the criticality levels and turn off the classification for all assets. You can also edit and delete custom critical assets.
 
@@ -140,14 +140,14 @@ You can change the criticality levels and turn off the classification for all as
 1. To see all assets in the classification that are currently considered critical, select the **Assets** tab.
 1. Select the **X** next to the assets you want to remove.
 
-:::image type="content" source="media/classify-critical-assets/assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
+   :::image type="content" source="media/classify-critical-assets/assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
 
 ## Sort by criticality
 
 1. Select **Devices** in the **Device Inventory**.
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
-:::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="Screenshot of the Device inventory window showing criticality sorting.":::
+   :::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="Screenshot of the Device inventory window showing criticality sorting.":::
 
 ## Prioritize recommendations for critical assets
 
