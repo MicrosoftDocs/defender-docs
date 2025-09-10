@@ -14,24 +14,12 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
+appliesto: Microsoft Defender for Endpoint Plan 1 and Plan 2, Microsoft Defender XDR, Microsoft Defender Antivirus
 search.appverid: met150
 ms.date: 09/10/2025
 ---
 
 # Enable attack surface reduction rules
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
-> [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [Attack surface reduction rules](attack-surface-reduction.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules via:
 
@@ -40,6 +28,9 @@ ms.date: 09/10/2025
 - [Microsoft Configuration Manager](#microsoft-configuration-manager)
 - [Group policy (GP)](#group-policy)
 - [PowerShell](#powershell)
+
+> [!TIP]
+> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Prerequisites
 
