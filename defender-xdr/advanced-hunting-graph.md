@@ -155,7 +155,7 @@ The following table describes the predefined scenarios in the hunting graph and 
 
 #### Step 2: Apply filters
 
-You can add relevant filters to make the map view of your selected scenario more precise. For example, if you want to **Show only the shortest paths**, tick this checkbox.
+You can add relevant filters to make the map view of your selected scenario more precise. For example, if you want to **Show only the shortest paths**, tick this option.
 
 :::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-filter.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the Show only the shortest paths filter." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-filter.png":::
 
@@ -163,7 +163,7 @@ You can add relevant filters to make the map view of your selected scenario more
 
 By default, the predefined scenarios automatically apply certain filters, which you can view in the **Advanced Filters** section of the side panel. You can remove these filters or add new ones to further refine the graph you want to generate. 
 
-To remove filters, select the **Remove filter** icon [icon] beside each filter or select **Clear all** to remove them all at once.
+To remove filters, select the **Remove filter** icon ![Screenshot of the remove filter icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-remove-filter-icon.png) beside each filter or select **Clear all** to remove them all at once.
 
 To add a filter, select **Add filter** then the select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters not might not be available as options.  
 
@@ -180,3 +180,5 @@ To add a filter, select **Add filter** then the select any of the supported node
 After selecting a scenario and applying the necessary filters, select **Run** to render the graph. Once the graph is rendered, you can then explore it further by selecting nodes and edges to view more information about entities and relationships, or expand or focus on certain entities.
 
 ## See also
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)
+- [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md)
