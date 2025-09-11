@@ -25,6 +25,10 @@ Current asset types are:
 
 > [!Note]
 > The critical asset out-of-the-box classification logic classifies your assets based on asset behavior accumulated from Microsoft Defender workloads and  third-party integrations set up in your environment.
+> 
+> When multiple classification rules apply to an asset, the rule with the highest criticality level takes precedence. This classification remains in effect until the asset no longer meets the criteria for that rule, at which point it will automatically revert to the next applicable classification level.
+
+
 
 ##### Device
 

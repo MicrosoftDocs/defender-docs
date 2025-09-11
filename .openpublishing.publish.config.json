@@ -2,7 +2,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "ATA-Docs",
-      "build_source_folder": "ATADocs",
+      "build_source_folder": "advanced-threat-analytics",
       "build_output_subfolder": "ATA-Docs",
       "locale": "en-us",
       "monikers": [],

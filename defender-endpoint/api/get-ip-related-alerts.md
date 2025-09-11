@@ -2,10 +2,10 @@
 title: Get IP related alerts API
 description: Retrieve a collection of alerts related to a given IP address using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

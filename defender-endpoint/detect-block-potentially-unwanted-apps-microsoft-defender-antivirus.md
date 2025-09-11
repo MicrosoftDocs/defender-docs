@@ -3,12 +3,12 @@ title: Block potentially unwanted applications with Microsoft Defender Antivirus
 description: Enable the potentially unwanted application (PUA) antivirus feature to block unwanted software such as adware.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 

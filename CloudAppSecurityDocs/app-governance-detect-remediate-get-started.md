@@ -1,8 +1,9 @@
 ---
 title: Get started with app governance threat detection and remediation | Microsoft Defender for Cloud Apps
-ms.date: 05/28/2023
+ms.date: 08/31/2025
 ms.topic: overview
 description: Get started with app governance threat detection and remediation in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
+ms.reviewer: shragar456
 ---
 
 # Get started with app threat detection and remediation
@@ -13,7 +14,8 @@ To view the latest incidents associated with these alerts, go to the **App gover
 
 For example:
 
-:::image type="content" source="media/app-governance/mapg-cc-overview-alerts.png" alt-text="Screenshot of the App governance > Overview tab with the Latest alerts section highlighted." lightbox="media/app-governance/mapg-cc-overview-alerts.png":::
+:::image type="content" source="media/app-governance/app-governance-overview.png" alt-text="Screenshot that shows the App Governance overview tab." lightbox="media/app-governance/app-governance-overview.png":::
+
 
 On the **Overview** tab, the **Latest alerts** section lists the most recent alerts. You can use these recent alerts to quickly see the current app alert activity for your tenant.
 
