@@ -2,8 +2,8 @@
 title: User experiences in Microsoft Defender for Endpoint on Android
 description: Learn about the newest updates to Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: denishdonga
@@ -15,68 +15,79 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/19/2025
+ms.date: 09/15/2025
 ---
 
-# User experiences in Microsoft Defender for Endpoint on Android
+# UX V3 Enhancement - MDE Mobile Android
 
-As part of our ongoing commitment to deliver exceptional user experiences, we're excited to announce a series of upcoming changes to the user interface and overall experience of our **Microsoft Defender for Endpoint (MDE)** mobile app.
+As part of our ongoing commitment to delivering an exceptional user experience, we are excited to announce a series of upcoming changes to the user interface and overall experience of our MDE mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users. This document outlines the planned updates for MDE Mobile users.
 
-The new updates are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
+We are pleased to introduce the new Onboarding screens that come up when the user starts onboarding after sign-in.
 
-## Key Changes
+The primary changes are as follows:
 
-We're pleased to introduce the Device Protection feature card for our enterprise users which includes **App Security**, **Web Protection**, **Security History** features are designed to be more user-friendly and accessible.
+1.  EULA Screen Revamp
 
-The updated **feature cards** also include recommendation cards, which prominently display any active alerts, ensuring you stay informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
+2.  Permission consolidation screen changes
 
-**The primary changes are as follows**:
+3.  Intermediate screens that come up during the permission flow: Optional VPN, TVM Privacy consent screen and NP Consent screen.
 
-1. Main Dashboard changes
-1. List the features inside one Feature Card
-1. Detailed Feature Experience
-1. Alerts
+4.  Support for Dark Mode for other screens
 
-### Main Dashboard changes
+## EULA Screen Revamp
 
-The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application. The following image illustrates the previous and new version of the main dashboard.
+**Before** **After**
 
-:::image type="content" source="media/mde-android-dash-changes.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices before the new update." lightbox="media/mde-android-dash-changes.png":::
+<img src="media/4375344170b6b028a5976d3e6897052811d8b697.png" style="width:4.72917in;height:10.47917in" alt="image" /> <img src="media/9768d277178d42feced6ed34cb80775543b567d9.png" style="width:4.6875in;height:10.45833in" alt="image" />
 
-### List the features inside one Feature Card
+**Before** **(Dark Mode)** **After(Dark Mode)**
 
-The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The following image displays the new version of the **Device Protection** feature card.
+<img src="media/927c667ec1d20eed18386f2e278037acc62155ca.png" style="width:4.66667in;height:10.47917in" alt="image" /> <img src="media/105561d03dea7bcfff46ab87be7c82cc2e30f025.png" style="width:4.6875in;height:10.41667in" alt="image" />
 
-:::image type="content" source="media/mde-android-list.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Feature Card before the new updates." lightbox="media/mde-android-list.png":::
+## Permission Consolidation Screen Changes
 
-### Detailed Feature Experience
+**Before** **After**
 
-We updated all the subordinating screens associated with the feature
+<img src="media/39c0fc1665bf84d9fa2a0d889d519a91235cca40.png" style="width:4.6875in;height:10.45833in" alt="image" />. <img src="media/b4cccba18d1309743af96c663fe836ec375fb861.png" style="width:2.48611in;height:5.375in" alt="image" />.
 
-1. **Web Protection**:
+**Before** **(Dark Mode)** **After(Dark Mode)**
 
-   :::image type="content" source="media/mde-android-web-protection-after.png" alt-text="Screensot showing the web protection feature on the MDE Android app." lightbox="media/mde-android-web-protection-after.png":::
+<img src="media/3e479d7fad6d69084185d946df102c9f10e59e27.png" style="width:4.75in;height:10.41667in" alt="image" /> <img src="media/e4325c481d8449cac9e347eaec1c4f749651f225.png" style="width:2.5in;height:5.43056in" alt="image" />
 
-2. **App Security** and **App Scanning**:
-    
-   :::image type="content" source="media/mde-android-app-security-and-app-scanning.png" alt-text="Screensot showing the app security feature on the MDE Android app." lightbox="media/mde-android-app-security-and-app-scanning.png":::
+New Bottom Sheet for Permission Information
 
-3. **Threat found**:
+**Light Mode** **Dark Mode**
 
-   The following image highlights the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
+<img src="media/de186b82f93f690d1b516548fa3170b20ea7cfd2.png" style="width:4.70833in;height:10.39583in" alt="image" /> <img src="media/5c91458449b7a0875f52898c8faaa6370fcb1ed3.png" style="width:2.47222in;height:5.375in" alt="image" />
 
-   :::image type="content" source="media/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app." lightbox="media/mde-android-threat-found.png":::
-   
-4. **Uninstall threat**:
+## Intermediate screens that come up during the permission flow
 
-   :::image type="content" source="media/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app." lightbox="media/mde-android-uninstall.png":::
+These are the following screens that have been shifted from old Enterprise screen to new look and feel screens similar to Consumer.
 
-5. **Security History**:
+## Optional VPN Consent screen
 
-   :::image type="content" source="media/mde-android-security-history.png" alt-text="Screensot showing the uninstall threat feature on the MDE Android app." lightbox="media/mde-android-security-history.png":::
+**Before** **After**
 
-### Alerts
+<img src="media/ae9df2663d364b97ddaf6688b44cf300855b646e.png" style="width:4.70833in;height:10.41667in" alt="image" /> <img src="media/af7210660a803ad3473d5e53e23d0906ecaf1315.png" style="width:3.95833in;height:8.79167in" alt="image" />
 
-We added a new section to show **multiple alerts** together on dashboard.
+**Before** **(Dark Mode)** **After(Dark Mode)**
 
-:::image type="content" source="media/mde-android-alerts.png" alt-text="Screensot showing the new updates to the alerts feature on the MDE Android app." lightbox="media/mde-android-alerts.png":::
+<img src="media/7ad37e89373c44424566a3a2a6ecb02056280de0.png" style="width:4.70833in;height:10.45833in" alt="image" />. <img src="media/befefb230bcf1163a3e049c8768d379be7b5f57b.png" style="width:3.91667in;height:8.8125in" alt="image" />
+
+## NP Consent Screen
+
+**Before** **After**<img src="media/c7f2be6c85289135ff25a2147f2f218c9b1641a9.png" style="width:4.70833in;height:10.4375in" alt="image" /> <img src="media/9fc30220f9bf16882583db2b407fa78ecd9684d6.png" style="width:3.70833in;height:8.25in" alt="image" />
+
+**Before** **(Dark Mode)** **After(Dark Mode)**
+
+<img src="media/e47f1cd8ab1167264be7b21b7662062ce694aa81.png" style="width:4.70833in;height:10.47917in" alt="image" /> <img src="media/67c955236f0de42b6aece2c042dfb20bf647c21e.png" style="width:3.72917in;height:8.1875in" alt="image" />
+
+## TVM Consent Screen
+
+**Before** **After**
+
+<img src="media/dc0d74d24bb59f0386bb620ec0197e199bf81d2d.png" style="width:4.72917in;height:10.45833in" alt="image" />. <img src="media/7e2cde8c6513d9fa452a5c78040824f89989b3ee.png" style="width:4.6875in;height:10.45833in" alt="image" />
+
+**Before** **(Dark Mode)** **After(Dark Mode)**
+
+<img src="media/38ca88a8a77dc0f19fd00981193eea2a641579ad.png" style="width:4.70833in;height:10.47917in" alt="image" /> ****<img src="media/84f7489e06d4137efc3225177b9bcf0821eb9e2d.png" style="width:4.08333in;height:8.97917in" alt="image" />
