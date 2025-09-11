@@ -35,56 +35,60 @@ The primary changes are as follows:
 
 **Light mode**
 
-:::image type="content" source="media/android-new-ux/eula-screen-light-mode.png" alt-text="Screenshot showing EULA screen after redesign in light mode." border="false":::
+:::image type="content" source="media/android-new-ux/eula-screen-light.png" alt-text="Screenshot showing EULA screen after redesign in light mode." border="false":::
 
 **Dark mode**
 
-:::image type="content" source="media/android-new-ux/eula-screen-dark-mode.png" alt-text="EULA screen after redesignin dark mode." border="false":::
+:::image type="content" source="media/android-new-ux/eula-screen-dark.png" alt-text="EULA screen after redesignin dark mode." border="false":::
 
 ## Permission consolidation screen changes
 
-**Before** **After**
+**Light mode**
 
-:::image type="content" source="media/android-new-ux/permissions-consolidation-light-mode.png" alt-text="Permission consolidation screen after redesign in light mode." border="false":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-light.png" alt-text="Permission consolidation screen after redesign in light mode." border="false":::
 
-**Before** **(Dark Mode)** **After(Dark Mode)**
+**Dark mode**
 
-:::image type="content" source="media/android-new-ux/permissions-consolidation-dark-mode.png" alt-text="Permissions consolidation screen after redesign in dark mode." border="false":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-dark.png" alt-text="Permissions consolidation screen after redesign in dark mode." border="false":::
+
+:::image type="content" source="media/android-new-ux/permissions-consolidation-dark.png" alt-text="Permissions consolidation screen after redesign in dark mode." border="false":::
 
 ## New bottom sheet for permission information
 
-**Light Mode** **Dark Mode**
-
-:::image type="content" source="media/android-new-ux/permissions-information.png" alt-text="Permissions information bottom sheet.":::
+:::image type="content" source="media/android-new-ux/permissions-information.png" alt-text="Permissions information bottom sheet." border="false":::
 
 ## Intermediate screens that come up during the permission flow
 
 These are the following screens that have been shifted from old Enterprise screen to new look and feel screens similar to the consumer screens.
 
-## Optional VPN consent screen
+### Optional VPN consent screen
 
-**Before** **After**
+**Light mode**
 
-:::image type="content" source="media/android-new-ux/vpn-consent-screen-light-mode.png" alt-text="Optional VPN consent screen in light mode.":::
+:::image type="content" source="media/android-new-ux/vpn-consent-screen-light.png" alt-text="Optional VPN consent screen in light mode." border="false":::
 
-**Before** **(Dark Mode)** **After(Dark Mode)**
+**Dark mode**
 
-:::image type="content" source="media/android-new-ux/vpn-consent-screen-dark-mode.png" alt-text="Optional VPN consent screen in dark mode.":::
+:::image type="content" source="media/android-new-ux/vpn-consent-screen-dark.png" alt-text="Optional VPN consent screen in dark mode." border="false":::
 
-## NP consent screen
+:::image type="content" source="media/android-new-ux/vpn-consent-screen-dark.png" alt-text="Optional VPN consent screen in dark mode." border="false":::
 
-:::image type="content" source="media/android-new-ux/np-consent-screen-light-mode.png" alt-text="NP consent screen in light mode.":::
+### NP consent screen
 
-**Before** **(Dark Mode)** **After(Dark Mode)**
+**Light mode**
 
-:::image type="content" source="media/android-new-ux/np-consent-screen-dark-mode.png" alt-text="NP consent screen in dark mode.":::
+:::image type="content" source="media/android-new-ux/np-consent-screen-light.png" alt-text="NP consent screen in light mode." border="false":::
 
-## TVM consent screen
+**Dark mode**
 
-**Before** **After**
+:::image type="content" source="media/android-new-ux/np-consent-screen-dark.png" alt-text="NP consent screen in dark mode." border="false":::
 
-:::image type="content" source="media/android-new-ux/tvm-consent-screen-light-mode.png" alt-text="TVM consent screen in light mode.":::
+### TVM consent screen
 
-**Before** **(Dark Mode)** **After(Dark Mode)**
+**Light mode**
 
-:::image type="content" source="media/android-new-ux/tvm-consent-screen-dark-mode.png" alt-text="TVM consent screen in dark mode.":::
+:::image type="content" source="media/android-new-ux/discover-vulnerable-apps-consent-screen-light.png" alt-text="Discover vulnerable apps consent screen in light mode." border="false":::
+
+**Dark mode**
+
+:::image type="content" source="media/android-new-ux/discover-vulnerable-apps-consent-screen-dark.png" alt-text="Discover vulnerable apps consent screen in dark mode." border="false":::
