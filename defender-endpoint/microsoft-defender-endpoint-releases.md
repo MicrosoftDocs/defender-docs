@@ -28,19 +28,19 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
 | macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
 
-## All releases
+## All supported versions
 
-|OS  |Build |Release month|Release details  |Learn more  |
+|OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108797258571000---may-2025) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#108760276171006---july-2024) |
 |macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429 |[Release details and updates](#101250720011---september-2025) |
 
-## Windows releases
+## Windows versions
 
 ### 10.8797.25857.1000 - May 2025
 
-# [Releases](#tab/releases)
+# [Versions](#tab/versions)
 
 | OS | KB |
 | -------- | -------- |
