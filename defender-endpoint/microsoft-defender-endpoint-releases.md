@@ -96,19 +96,9 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ## Operating system information
 
-### [Windows](#tab/windows)
-
-- This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions.
-- You can also check the file information section in the monthly cumulative rollup updates in the following articles:
-  - [Windows 11 release information](/windows/release-health/windows11-release-information)
-  - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
-  - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
-  - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
-  - [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
-
-### [macOS](#tab/macos)
-
-- If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** > **Send feedback**.
-- To get the latest features, including preview capabilities (such as endpoint detection and response for your macOS devices), configure your macOS device running Microsoft Defender for Endpoint to be a Beta channel (formerly Insider-Fast) device.
-- Microsoft Defender for Endpoint supports version 15.0.1 or newer (Sequoia support).
-- Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur) and 12 (Monterey).
+| OS |Note| Learn more |
+|---------|---------|---------|
+| Windows | This article covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles | - [Windows 11 release information](/windows/release-health/windows11-release-information)<br>- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br>- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br>- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) |
+| macOS   | To share feedback feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
+| macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
+| macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
