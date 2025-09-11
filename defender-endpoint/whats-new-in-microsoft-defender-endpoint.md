@@ -40,7 +40,7 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 |Platform  |Preview/GA  |Updates  |
 |---------|------------|---------|---------|
-|**Windows** |GA |Version 10.8797.25857.1000 released: See [updates for this release](microsoft-defender-endpoint-releases.md#108797258571000---may-2025). |
+|**Windows** |GA |Version 10.8797.25857.1000 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#108797258571000---may-2025). |
 
 ## April 2025
 
@@ -74,7 +74,7 @@ This article describes features available in Microsoft Defender for Endpoint acr
 |---------|------------|---------|---------|
 | General | Preview | You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery).<br><br>- Added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.<br>- Added **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some filters are only visible on specific tabs and only for customers with a Defender for IoT license. [Learn more](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views).<br>- Added ability to search Mac devices and Mac addresses.<br>- Added a system tag showing the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature, as part of the [device group](/defender-for-iot/set-up-sites#add-device-group).<br><br> **Note**: If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data and a message indicating the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view). |
 | General | GA | Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).<br><br>- Access Microsoft Defender XDR Ninja training, learning paths, training modules and more.<br>- Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. |
-| Windows | GA |Version 10.8760.27617.1006 released: See [updates for this release](microsoft-defender-endpoint-releases.md#108760276171006---july-2024). |
+| Windows | GA |Version 10.8760.27617.1006 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#108760276171006---july-2024). |
 
 ## Next steps
 
