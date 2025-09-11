@@ -2,167 +2,167 @@
   "redirections": [
     {
       "source_path": "ATPDocs/security-assessment-do-not-expire-passwords.md",
-      "redirect_url": "security-assessment",
+      "redirect_url": "/defender-for-identity/security-assessment",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/security-assessment-old-passwords.md",
-      "redirect_url": "security-assessment",
+      "redirect_url": "/defender-for-identity/security-assessment",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/active-directory-federation-services.md",
-      "redirect_url": "deploy/active-directory-federation-services",
+      "redirect_url": "/defender-for-identity/deploy/active-directory-federation-services",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/deploy/quick-installation-guide.md",
-      "redirect_url": "deploy-defender-identity",
+      "redirect_url": "/defender-for-identity/deploy/deploy-defender-identity",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/deploy/prerequisites.md",
-      "redirect_url": "prerequisites-sensor-version-2",
+      "redirect_url": "/defender-for-identity/deploy/prerequisites-sensor-version-2",
       "redirect_document_id": false
     },
         {
       "source_path": "ATPDocs/deploy/activate-capabilities.md",
-      "redirect_url": "activate-sensor",
+      "redirect_url": "/defender-for-identity/deploy/activate-sensor",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-event-collection.md",
-      "redirect_url": "deploy/configure-event-collection",
+      "redirect_url": "/defender-for-identity/deploy/configure-event-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-event-forwarding.md",
-      "redirect_url": "deploy/configure-event-forwarding",
+      "redirect_url": "/defender-for-identity/deploy/configure-event-forwarding",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-port-mirroring.md",
-      "redirect_url": "deploy/configure-port-mirroring",
+      "redirect_url": "/defender-for-identity/deploy/configure-port-mirroring",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/manage-action-accounts.md",
-      "redirect_url": "deploy/manage-action-accounts",
+      "redirect_url": "/defender-for-identity/deploy/manage-action-accounts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/multi-forest.md",
-      "redirect_url": "deploy/multi-forest",
+      "redirect_url": "/defender-for-identity/deploy/multi-forest",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/remote-calls-sam.md",
-      "redirect_url": "deploy/remote-calls-sam",
+      "redirect_url": "/defender-for-identity/deploy/remote-calls-sam",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/capacity-planning.md",
-      "redirect_url": "deploy/capacity-planning",
+      "redirect_url": "/defender-for-identity/deploy/capacity-planning",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-proxy.md",
-      "redirect_url": "deploy/configure-proxy",
+      "redirect_url": "/defender-for-identity/deploy/configure-proxy",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-sensor-settings.md",
-      "redirect_url": "deploy/configure-sensor-settings",
+      "redirect_url": "/defender-for-identity/deploy/configure-sensor-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/configure-windows-event-collection.md",
-      "redirect_url": "deploy/configure-windows-event-collection",
+      "redirect_url": "/defender-for-identity/deploy/configure-windows-event-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/deploy-defender-identity.md",
-      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_url": "/defender-for-identity/deploy/deploy-defender-identity",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/directory-service-accounts.md",
-      "redirect_url": "deploy/directory-service-accounts",
+      "redirect_url": "/defender-for-identity/deploy/directory-service-accounts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/download-sensor.md",
-      "redirect_url": "deploy/download-sensor",
+      "redirect_url": "/defender-for-identity/deploy/download-sensor",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/install-sensor.md",
-      "redirect_url": "deploy/install-sensor",
+      "redirect_url": "/defender-for-identity/deploy/install-sensor",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/prerequisites.md",
-      "redirect_url": "deploy/prerequisites",
+      "redirect_url": "/defender-for-identity/deploy/prerequisites",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/quick-installation-guide.md",
-      "redirect_url": "deploy/quick-installation-guide",
+      "redirect_url": "/defender-for-identity/deploy/quick-installation-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbooks.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbook-lab-overview.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbook-setup-lab.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbook-reconnaissance.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbook-lateral-movement.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/playbook-domain-dominance.md",
-      "redirect_url": "manage-security-alerts",
+      "redirect_url": "/defender-for-identity/manage-security-alerts",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/credential-access-alerts.md",
-      "redirect_url": "alerts-overview",
+      "redirect_url": "/defender-for-identity/alerts-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/persistence-privilege-escalation-alerts.md",
-      "redirect_url": "alerts-overview",
+      "redirect_url": "/defender-for-identity/alerts-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/reconnaissance-discovery-alerts.md",
-      "redirect_url": "alerts-overview",
+      "redirect_url": "/defender-for-identity/alerts-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/lateral-movement-alerts.md",
-      "redirect_url": "alerts-overview",
+      "redirect_url": "/defender-for-identity/alerts-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "ATPDocs/other-alerts.md",
-      "redirect_url": "alerts-overview",
+      "redirect_url": "/defender-for-identity/alerts-overview",
       "redirect_document_id": false
     },
     {
