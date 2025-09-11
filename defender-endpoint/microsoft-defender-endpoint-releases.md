@@ -86,13 +86,13 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ### 101.25072.0011 - September 2025
 
-# [Releases](#tab/macos-releases)
+# [Versions](#tab/macos-versions)
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
-# [Updates](#tab/macos-updates)
+# [Enhancements and features](#tab/macos-features)
 
 | Feature area | Update summary |
 |--------------|---------------|
