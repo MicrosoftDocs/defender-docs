@@ -22,14 +22,16 @@ ms.date: 09/15/2025
 
 As part of our ongoing commitment to delivering an exceptional user experience, we're excited to announce a series of upcoming changes to the user interface and overall experience of our Microsoft Defender for Endpoint mobile app. These enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users. This document outlines the planned updates for Microsoft Defender for Endpoint Mobile users.
 
+## Key changes
+
 We're pleased to introduce the new Onboarding screens that come up when the user starts onboarding after sign-in.
 
 The primary changes are as follows:
 
--  EULA Screen Revamp
--  Permission consolidation screen changes
--  Intermediate screens that come up during the permission flow: Optional VPN, TVM Privacy consent screen and NP Consent screen.
--  Support for Dark Mode for other screens
+-  [EULA screen revamp](#eula-screen-revamp)
+-  [Permission consolidation screen changes](#permission-consolidation-screen-changes)
+-  [Intermediate screens during permission flow](#intermediate-screens-during-permission-flow)
+-  Dark mode support
 
 ## EULA screen revamp
 
