@@ -17,6 +17,8 @@ This article describes features available in Microsoft Defender for Endpoint acr
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+To learn about Microsoft Defender for Endpoint features specific to different OSs, by versions and builds, see [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-releases.md).
+
 ## August 2025
 
 |Platform  |Preview/GA  |Features  |
