@@ -33,23 +33,23 @@ The primary changes are as follows:
 
 ## EULA screen revamp
 
-**Before** **After**
+**Light mode**
 
-:::image type="content" source="media/android-new-ux/eula-screen-light-mode.png" alt-text="Screenshot showing EULA screen in light mode.":::
+:::image type="content" source="media/android-new-ux/eula-screen-light-mode.png" alt-text="Screenshot showing EULA screen after redesign in light mode." border="false":::
 
-**Before** **(Dark Mode)** **After(Dark Mode)**
+**Dark mode**
 
-:::image type="content" source="media/android-new-ux/eula-screen-dark-mode.png" alt-text="EULA screen in dark mode.":::
+:::image type="content" source="media/android-new-ux/eula-screen-dark-mode.png" alt-text="EULA screen after redesignin dark mode." border="false":::
 
 ## Permission consolidation screen changes
 
 **Before** **After**
 
-:::image type="content" source="media/android-new-ux/permissions-consolidation-light-mode.png" alt-text="Permission consolidation screen after redesign in light mode.":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-light-mode.png" alt-text="Permission consolidation screen after redesign in light mode." border="false":::
 
 **Before** **(Dark Mode)** **After(Dark Mode)**
 
-:::image type="content" source="media/android-new-ux/permissions-consolidation-dark-mode.png" alt-text="Permissions consolidation screen after redesign in dark mode.":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-dark-mode.png" alt-text="Permissions consolidation screen after redesign in dark mode." border="false":::
 
 ## New bottom sheet for permission information
 
