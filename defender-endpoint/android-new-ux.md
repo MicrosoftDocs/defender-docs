@@ -45,17 +45,17 @@ The primary changes are as follows:
 
 **Before** **After**
 
-:::image type="content" source="media/android-new-ux/permission-consolidation-light-mode.png" alt-text="Permission consolidation screen after redesign in light mode.":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-light-mode.png" alt-text="Permission consolidation screen after redesign in light mode.":::
 
 **Before** **(Dark Mode)** **After(Dark Mode)**
 
-:::image type="content" source="media/android-new-ux/permission-consolidation-dark-mode.png" alt-text="Permission consolidation screen after redesign in dark mode.":::
+:::image type="content" source="media/android-new-ux/permissions-consolidation-dark-mode.png" alt-text="Permissions consolidation screen after redesign in dark mode.":::
 
 ## New bottom sheet for permission information
 
 **Light Mode** **Dark Mode**
 
-:::image type="content" source="media/android-new-ux/permission-information.png" alt-text="Permission information bottom sheet.":::
+:::image type="content" source="media/android-new-ux/permissions-information.png" alt-text="Permissions information bottom sheet.":::
 
 ## Intermediate screens that come up during the permission flow
 
