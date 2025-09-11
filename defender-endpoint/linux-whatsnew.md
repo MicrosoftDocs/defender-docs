@@ -73,9 +73,8 @@ What's new
 - Defender for Endpoint on Linux now supports installation to a custom location (preview). For more information, see [Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)](/defender-endpoint/linux-custom-location-installation). Support for this feature is being added to the installer script.
 - The `mdatp threat quarantine add` command now requires superuser (root) privileges.
 - Custom definition path can now be updated without stopping Defender for Endpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
-
-- Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, Defender for Endpoint can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
-
+- Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, MDE can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
+- Both the binary and Python versions of Client Analyzer are now included in the local package. There is no longer a need to download it separately, as it comes bundled by default. You can find it at the location `/opt/microsoft/mdatp/conf/client_analyzer/`.
 - Other stability enhancements and bug fixes.
 
 ### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
