@@ -27,6 +27,37 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+| September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+
+### Trivy dependency scanning for code repositories (Update)
+
+September 11, 2025  
+
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem vulnerabilities mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This strengthens your security posture by automatically detecting OS and library vulnerabilities across code repositories.  
+
+**Where it applies:**  
+- [In-pipeline (CLI) scanning](https://learn.microsoft.com/azure/defender-for-cloud/cli-cicd-integration)  
+- [Agentless code scanning (preview)](https://learn.microsoft.com/azure/defender-for-cloud/agentless-code-scanning)
+
+**What to do:**  
+- For [Azure DevOps](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-devops) or [GitHub](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-github), create or edit a connector.  
+- For in-pipeline scanning, add the [Microsoft Security DevOps (MSDO) CLI](https://learn.microsoft.com/azure/defender-for-cloud/cli-cicd-integration) tool to your pipeline definition.  
+
+**Where results appear:**  
+- Pipeline logs and SARIF files.  
+
+- Defender for Cloud recommendations:  
+  - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](https://learn.microsoft.com/azure/defender-for-cloud/recommendations-reference-devops#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+  - *[GitHub repositories should have dependency vulnerability scanning findings resolved](https://learn.microsoft.com/azure/defender-for-cloud/recommendations-reference-devops#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+
+If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces those results.  
+
+**Effective date:** September 15, 2025. 
+
 ## August 2025
 
 |Date | Category | Update|
@@ -35,8 +66,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | August 12, 2025 | GA | [General availability of Defender for Storage in Azure Government cloud](#general-availability-of-defender-for-storage-in-azure-government-cloud) |
 | August 11, 2025 | GA | [General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud](#general-availability-of-defender-cspm-and-defender-for-servers-plan-2-in-azure-government-cloud) |
 | August 6, 2025 | GA | [AKS Security Dashboard](#aks-security-dashboard) |
-| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
-
+| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) | 
 
 ### General availability of Defender for Storage Optional index tags for storing malware scanning results
 
