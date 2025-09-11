@@ -54,11 +54,11 @@ These are the following screens that have been shifted from old Enterprise scree
 
 :::image type="content" source="media/android-new-ux/vpn-consent-screen-light.png" alt-text="Optional VPN consent screen in light mode." border="false":::
 
-#### NP consent screen
+#### Network Protection consent screen
 
 :::image type="content" source="media/android-new-ux/np-consent-screen-light.png" alt-text="NP consent screen in light mode." border="false":::
 
-#### TVM consent screen
+#### Microsoft Defender Vulnerability Management consent screen
 
 :::image type="content" source="media/android-new-ux/discover-vulnerable-apps-consent-screen-light.png" alt-text="Discover vulnerable apps consent screen in light mode." border="false":::
 
