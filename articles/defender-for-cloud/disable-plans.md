@@ -20,6 +20,19 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Microsoft Defender for Cloud**.
+1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. 
+1. Select the relevant Azure, Amazon Web Services (AWS), or Google Cloud Project (GCP) subscription.
+
+    :::image type="content" source="media/disable-plans/environment-settings-screen.png" alt-text="Screenshot of the environment settings page that shows where the link to the page is located.":::
+
+    ### [Azure](#tab/Azure)
+    
+    1. Locate the plan you want to disable and toggle the switch to **Off**.
+
+    ### [AWS](#tab/AWS)
+    
+    ### [GCP](#tab/GCP)
+    
+    ---
+
