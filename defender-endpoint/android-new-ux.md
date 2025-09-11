@@ -68,7 +68,7 @@ We're pleased to introduce the Device Protection feature card for our enterprise
 
 The updated **feature cards** also include recommendation cards, which prominently display any active alerts, ensuring you stay informed. Features are now displayed as tiles on L2 screens to improve user experience and navigation efficiency.
 
-**The primary changes are as follows**:
+The primary changes are as follows:
 
 - [Main dashboard changes](#main-dashboard-changes)
 - [List the features inside one feature card](#list-the-features-inside-one-feature-card)
