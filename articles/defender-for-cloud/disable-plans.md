@@ -26,7 +26,7 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 
     :::image type="content" source="media/disable-plans/environment-settings-screen.png" alt-text="Screenshot of the environment settings page that shows where the link to the page is located." lightbox="media/disable-plans/environment-settings-screen.png":::
 
-    ### [Azure](#tab/Azure)
+### [Azure](#tab/Azure)
     
     1. Locate the plan you want to disable and toggle the switch to **Off**.
     
@@ -40,9 +40,13 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
     
     1. Select **Save**.
 
-    ### [AWS](#tab/AWS)
+---
+
+### [AWS](#tab/AWS)
+
+---
     
-    ### [GCP](#tab/GCP)
+### [GCP](#tab/GCP)
     
-    ---
+---
 
