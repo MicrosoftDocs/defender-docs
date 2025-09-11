@@ -140,7 +140,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Repository discovery**: The system automatically identifies all repositories linked through the Azure DevOps and GitHub connector immediately after connector creation and then every 8 hours.
 
-1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then every 3-4 days.
+1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then daily.
 
 1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates.
 
@@ -152,7 +152,8 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 - **Scan frequency**:
     - The security posture of repositories, pipelines, and service connections is assessed when you create the connector and then every eight hours.
-    - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then every 2-4 days. 
+  - The system scans code and infrastructure-as-code (IaC) templates for vulnerabilities after you create the connector and then daily. 
+    
 - **Scan duration**: Scans typically finish within 15 to 60 minutes, depending on the size and complexity of the repository.
 
 ## View and manage scan results
@@ -183,7 +184,7 @@ Agentless code scanning and in-pipeline scanning using the Microsoft Security De
 | **Aspect**                     | **Agentless code scanning**                                | **In-pipeline scanning**                                   |  
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |  
 | **Use case fit**               | Offers broad coverage with minimal disruption to developers  | Provides detailed, pipeline-integrated scans with customizable controls |  
-| **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC) and code vulnerability scanning, scheduled every 2-4 days | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
+| **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC) and code vulnerability scanning, scheduled daily | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
 | **Setup and configuration**    | Requires no further setup after creating the connector    | Requires manual installation and configuration in each CI/CD pipeline |  
 | **Pipeline integration**       | Runs independently of (CI/CD) pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring configuration in each pipeline |  
 | **Scanner customization**      | Allows you to select which scanners run             | Allows customization with specific scanners, categories, languages, sensitivity levels, and non-Microsoft tools |  
@@ -210,7 +211,7 @@ These measures ensure a secure, compliant, and efficient code scanning process, 
 During the **public preview** phase, the following limitations apply:  
 
 - **No binary scanning**: Only code (SAST) and IaC scanning tools are executed.  
-- **Scan frequency**: It scans repositories upon enablement, and then after every 2-4 days.  
+- **Scan frequency**: It scans repositories upon enablement, and then daily.  
 
 - **Repository size**: It limits scanning to repositories under 1 GB.
 
@@ -220,4 +221,5 @@ During the **public preview** phase, the following limitations apply:
 ## Related content
 
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
+
 - [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)
