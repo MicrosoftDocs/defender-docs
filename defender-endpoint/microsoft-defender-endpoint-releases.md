@@ -15,7 +15,7 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 This article describes supported versions of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS.
 
-To learn about new features in Microsoft Defender for Endpoint, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
+To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
