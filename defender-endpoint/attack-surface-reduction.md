@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: sugamar
-manager: deniseb
+manager: bagol
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.collection:
