@@ -46,8 +46,23 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 
 #### Quick steps to create a DCR
 
-1. Go to the [Azure portal](https://portal.azure.com) ▸ *Monitor* ▸ **Data Collection Rules** ▸ **+ Create**.
-2. **Add data source**  
+To create a DCR:
+
+1. Sign into the [Azure portal](https://portal.azure.com).
+1. Go to ▸ *Monitor* ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
+1. In the *Basics* tab:
+    - Enter a name and a subscription.
+    - Choose or create a resource group.
+    - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
+1. In the *Resources* tab:
+    - Add your target machines. Make sure the Azure Monitor Agent (AMA) is installed on those machines, or the rule won’t work.
+    - Optionally, select any Data Collection Endpoints (DCEs) if you are using Private Links or advanced network setups.
+1. In the *Collect and deliver* tab:
+    - Click **+ Add data source**. In the new window:
+        - Choose Basic (all standard logs) or Custom (specific logs and levels).
+        - Under **Security**, check **Audit success** (successful security-related events) and/or **Audit failure** (failed security events).
+        -
+1. **Add data source** 
    - *Type*: **Windows event logs**  
    - *Log name*: `Security`  
    - *Stream*: Enter either:
@@ -60,8 +75,8 @@ Security Events are free, up to **500 MB per server per day**, but only when the
      *[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
      ```
 
-3. **Destination** ▸ Select the Log Analytics workspace that has **Defender for Servers Plan 2** enabled.
-4. **Review + create** ▸ **Assign** the rule to Windows machines running the Azure Monitor Agent (AMA).
+1. **Destination** ▸ Select the Log Analytics workspace that has **Defender for Servers Plan 2** enabled.
+1. **Review + create** ▸ **Assign** the rule to Windows machines running the Azure Monitor Agent (AMA).
 
 #### Sample JSON fragment
 
