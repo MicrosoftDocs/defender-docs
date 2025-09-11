@@ -103,12 +103,17 @@ If the incident or related alerts were the result of an analytics rule you've se
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-### Blast radius graph
+### Blast radius analysis
 
-Blast radius graph is an advanced visualization integrated into incident investigation experience. It generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions. The blast radius graph provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
+Blast radius analysis is an advanced graph visualization integrated into incident investigation experience. Built on the Microsoft Sentinel data lake and graph infrastructure, it generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
 
-The following prerequisites are required for the blast radius graph:
-+	You must be onboarded to Microsoft Sentinel Data Lake. For more information see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
+> [!NOTE]
+> Blast radius analysis extends and replaces Attack path analysis. 
+
+The blast radius graph provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
+
+The following prerequisites are required to use the blast radius graph:
++	You must be onboarded to Microsoft Sentinel data lake. For more information see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
 +	Exposure management (read) permission or higher.
 
 > [!IMPORTANT]
@@ -158,26 +163,6 @@ The following limitations apply to the blast radius graph:
 - **Island nodes:** Nonconnected nodes may appear on the graph due to changes that may occur between the time the data is collected and the calculation of the blast radius.
  
 
-### Attack paths
-
-> [!NOTE]
-> To view the details of an attack path, you must have read access permissions in the Microsoft Defender portal and the license for [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). </br></br>
-> To view attack path details with Microsoft Sentinel in the Defender portal, a *Sentinel Reader* role is required. To create new attack paths, the *Security Administrator* role is required.
-
-The incident graph also contains information about **attack paths**. These paths allow security analysts to identify what other entities an attacker is likely to target next. To view an attack path, you can click on an entity in the incident graph and select **View attack paths**. The top attack paths are shown within the incident graph. Here's an example.
-
-:::image type="content" source="./media/investigate-incidents/attack-path-small.png" alt-text="Highlighting a critical asset and a top attack path in the incident graph" lightbox="./media/investigate-incidents/attack-path.png":::
-
-To view all the possible attack paths, select **View all attack paths** on the incident graph. A flyout pane opens containing the list of all possible attack paths for the selected entity. The attack paths can be filtered based on the attack path name, entry point, entry point type, target, target type, and target criticality. Here's an example.
-
-:::image type="content" source="./media/investigate-incidents/attack-paths-flyout-small.png" alt-text="Screenshot highlighting the view attack paths option and the flyout pane list of attack paths" lightbox="./media/investigate-incidents/attack-paths-flyout.png":::
-
-Selecting an attack path from the list displays the details of that attack path, showing the attack path from the entry point, possible entities involved, and the target. Selecting **View map** opens a new window to view the attack path in full.
-
-:::image type="content" source="./media/investigate-incidents/attack-path-pane-small.png" alt-text="An example of the attack path graph shown in the side pane." lightbox="./media/investigate-incidents/attack-path-pane.png":::
-
-> [!TIP]
-> To view the details of an attack path, you must have permissions for the workloads that are part of the attack path. For example, to view an attack path that includes a managed device, you must have permissions for Microsoft Defender for Endpoint.
 
 ### Incident details
 
