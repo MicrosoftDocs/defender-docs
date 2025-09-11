@@ -82,7 +82,7 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 ---
 
-## macOS releases
+## macOS versions
 
 ### 101.25072.0011 - September 2025
 
