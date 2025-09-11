@@ -62,7 +62,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 
 ### 10.8760.27617.1006 - July 2024
 
-# [Releases](#tab/releases-06)
+# [Versions](#tab/versions-06)
 
 | OS | KB |
 | -------- | -------- |
@@ -74,7 +74,7 @@ To learn about new features in Microsoft Defender for Endpoint, see [What's new 
 | Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
 | Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
-# [Updates](#tab/updates-06)
+# [Enhancements and features](#tab/features-06)
 
 | Feature area | Update summary |
 |-------------|---------------|
