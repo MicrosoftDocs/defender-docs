@@ -3,6 +3,8 @@ title: Enable threat protection for AI services
 description: Learn how to enable threat protection for AI services on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.date: 05/20/2025
+ms.author: elkrieger
+author: Elazark
 ---
 
 # Enable threat protection for AI services
