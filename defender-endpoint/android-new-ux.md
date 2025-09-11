@@ -30,7 +30,7 @@ The primary changes are as follows:
 
 -  [EULA screen revamp](#eula-screen-revamp)
 -  [Permission consolidation screen changes](#permission-consolidation-screen-changes)
--  [Intermediate screens during permission flow](#intermediate-screens-during-permission-flow)
+-  [Intermediate screens during permission flow](#intermediate-screens-that-come-up-during-the-permission-flow)
 -  Dark mode support
 
 ## EULA screen revamp
