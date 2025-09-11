@@ -62,7 +62,7 @@ These are the following screens that have been shifted from old Enterprise scree
 
 :::image type="content" source="media/android-new-ux/discover-vulnerable-apps-consent-screen-light.png" alt-text="Discover vulnerable apps consent screen in light mode." border="false":::
 
-## Key Changes - March 2025
+## Key changes - March 2025
  
 We're pleased to introduce the Device Protection feature card for our enterprise users which includes **App Security**, **Web Protection**, **Security History** features are designed to be more user-friendly and accessible.
 
@@ -70,10 +70,10 @@ The updated **feature cards** also include recommendation cards, which prominent
 
 **The primary changes are as follows**:
 
-1. Main Dashboard changes
-1. List the features inside one Feature Card
-1. Detailed Feature Experience
-1. Alerts
+- [Main dashboard changes](#main-dashboard-changes)
+- [List the features inside one feature card](#list-the-features-inside-one-feature-card)
+- [Detailed feature experience](#detailed-feature-experience)
+- [Alerts](#alerts)
 
 ### Main dashboard changes
 
