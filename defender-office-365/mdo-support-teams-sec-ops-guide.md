@@ -70,10 +70,9 @@ SecOps team members can use threat hunting or information from external threat i
 SecOps team members can triage and respond to false positive Teams messages (good messages blocked) on the **Quarantine** page in Defender for Office 365 at <https://security.microsoft.com/quarantine>. Teams messages detected by zero-hour auto protection (ZAP) are available on the **Teams messages** tab. SecOps team members can [take action](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-teams-messages) on these messages. For example, preview messages, download messages, submit messages to Microsoft for review, and release the messages from quarantine.
 
 SecOps team members can also use allow entries in the Tenant Allow/Block List to allow the misclassified indicators:
--  URLs mis-identified by Defender for Office 365. URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
+
+- URLs misidentified by Defender for Office 365. URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
 - Files by using the SHA256 hash value.
-
-
 
 > [!TIP]
 > Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.
