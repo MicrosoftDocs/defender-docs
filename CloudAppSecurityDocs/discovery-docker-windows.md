@@ -14,7 +14,7 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 
     |Specification  |Description  |
     |---------|---------|
-    |**Operating system**     |  One of the following:  <li> Windows 10 (Fall creators update) <li> Windows Server version 1709+ (SAC) <li> Windows Server 2019 (LTSC)       |
+    |**Operating system**     |  Windows 10 (Fall creators update)       |
     |**Disk space**     |    250 GB     |
     |**CPU cores**     |    2     |
     |**CPU architecture**     |  Intel 64 and AMD 64       |

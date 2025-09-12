@@ -3,9 +3,9 @@ title: Deployment with a different Mobile Device Management (MDM) system for Mic
 description: Install Microsoft Defender for Endpoint on macOS on other management solutions.
 ms.service: defender-endpoint
 ms.reviewer: joshbregman
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

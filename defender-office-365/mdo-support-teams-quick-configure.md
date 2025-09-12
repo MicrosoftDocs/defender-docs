@@ -1,6 +1,6 @@
 ---
 title: Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2
-f1.keywords: 
+f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
@@ -8,10 +8,10 @@ manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
   - MET150
   - MOE150
-ms.collection: 
+ms.collection:
   - m365-security
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
@@ -21,7 +21,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
-# Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 
+# Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365
 
 Even if you aren't using Microsoft Defender for Office 365 for email protection, you can still use it for Microsoft Teams protection.
 
@@ -38,7 +38,7 @@ This article contains the quick steps to turn on and configure Defender for Offi
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - Allow up to 30 minutes for a new or updated policy to be applied.
 
@@ -77,7 +77,25 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!TIP]
 > Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
 
-## Step 3: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
+## Step 3: Verify warnings for unsafe links are shown in Microsoft Teams messages
+
+> [!NOTE]
+> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
+
+You need to be assigned permissions before you can do the following procedure. Specifically, you need to be a member of the **Teams Administrator** or **Global Administrator**<sup>\*</sup> roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
+
+For more information about near real-time warning messages on known bad links in Microsoft Teams messages, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
+
+1. In the Microsoft Teams admin center, go to the **Message settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
+
+2. On the **Message settings** page, go to the **Messaging safety** section and verify the **Scan messages for unsafe links** toggle is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+:::image type="content" source="media/teams-message-url-warning-on-off.png" alt-text="Screenshot of the Scan messages for unsafe links toggle in the Microsoft Teams admin center." lightbox="media/teams-message-url-warning-on-off.png":::
+
+## Step 4: Defender for Office 365 Plan 2: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
@@ -90,7 +108,7 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 > [!TIP]
 > When ZAP for Microsoft Teams is turned on, you can use **Exclude these participants** on the **Microsoft Teams protection** page to exclude users from Teams protection. For more information, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 
-## Step 4: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
+## Step 5: Defender for Office 365 Plan 2: Configure user reported settings for Microsoft Teams
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 

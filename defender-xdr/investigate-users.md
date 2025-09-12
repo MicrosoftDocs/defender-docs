@@ -5,8 +5,8 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.collection:

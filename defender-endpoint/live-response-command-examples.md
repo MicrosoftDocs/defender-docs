@@ -2,10 +2,10 @@
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -93,16 +93,16 @@ fileinfo C:\Windows\notepad.exe
 findfile test.txt
 ```
 
-## `getfile`
+## `get`
 
 ```console
 # Download a file from a machine
-getfile c:\Users\user\Desktop\work.txt
+get c:\Users\user\Desktop\work.txt
 ```
 
 ```console
 # Download a file from a machine, automatically run prerequisite commands
-getfile c:\Users\user\Desktop\work.txt -auto
+get c:\Users\user\Desktop\work.txt -auto
 ```
 
 > [!NOTE]

@@ -59,7 +59,7 @@ Use the following procedures to configure auditing on the domain controllers tha
 
 This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity via the UI.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
+**Related health issue:** [Directory Services Advanced Auditing isn't enabled as required](../health-alerts.md)
 
 To configure your Advanced Audit Policy settings:
 
@@ -100,7 +100,7 @@ To configure your Advanced Audit Policy settings:
 
 1. From an elevated command prompt, enter `gpupdate`.
 
-1. After you apply the policy via GPO, conform that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
+1. After you apply the policy via GPO, confirm that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
 
     To test your audit policies from the command line, run the following command:
 
@@ -114,7 +114,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
-**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md)
+**Related health issue:** [Directory Services Advanced Auditing isn't enabled as required](../health-alerts.md)
 
 To configure your settings, run:
 
@@ -167,7 +167,7 @@ This section describes the extra configuration steps that you need for auditing 
 > - Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
 > - When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data.
 
-**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md)
+**Related health issue:** [NTLM Auditing isn't enabled](../health-alerts.md)
 
 To configure NTLM auditing:
 
@@ -192,7 +192,7 @@ To collect events for object changes, such as for event 4662, you must also conf
 > [!IMPORTANT]
 > Review and audit your policies (via the [UI](#configure-advanced-audit-policy-settings-from-the-ui) or [PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)) before you enable event collection, to ensure that the domain controllers are properly configured to record the necessary events. If this auditing is configured properly, it should have a minimal effect on server performance.
 
-**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md)
+**Related health issue:** [Directory Services Object Auditing isn't enabled as required](../health-alerts.md)
 
 To configure domain object auditing:
 
@@ -233,7 +233,7 @@ To configure domain object auditing:
 
         ![Screenshot of selecting permissions.](../media/select-permissions.png)
 
-        Now, all relevant changes to directory services appear as 4662 events when they're triggered.
+        Now, all relevant changes to directory services appear as 4,662 events when they're triggered.
 
 1. Repeat the steps in this procedure, but for **Applies to**, select the following object types <sup>1</sup>
    - **Descendant Group Objects**
@@ -368,7 +368,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1644 events. If you have either of the following settings enabled, you can remove them from the registry.
+Defender for Identity no longer requires logging 1,644 events. If you have either of the following settings enabled, you can remove them from the registry.
 
 ```reg
 Windows Registry Editor Version 5.00
