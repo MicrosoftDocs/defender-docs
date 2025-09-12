@@ -50,7 +50,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## July 2025
 
-- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ## June 2025
 
