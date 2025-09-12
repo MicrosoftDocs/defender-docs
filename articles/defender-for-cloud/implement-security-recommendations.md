@@ -19,7 +19,7 @@ Before you attempt to remediate a recommendation, you should review it in detail
 
 ## <a name = "remediate-recommendations"></a> Remediate a recommendation
 
-Recommendations are prioritized based on the risk level of the security issue by default.
+By default, recommendations are prioritized based on the risk level of the security issue.
 
 In addition to risk level, we recommend that you prioritize the security controls in the default [Microsoft cloud security benchmark](concept-regulatory-compliance.md) standard in Defender for Cloud. These controls affect your [Microsoft Secure Score](secure-score-security-controls.md).
 
@@ -55,7 +55,7 @@ To simplify the remediation process, a button labeled **Fix** might appear in a 
 
 After remediation completes, it can take several minutes for the change to take place.
 
-## Use the automated remediation scripts
+## Use automated remediation scripts
 
 Security admins can also fix issues at scale with automatic script generation in AWS and GCP CLI script language. When you select **Take action** > **Fix** on a recommendation where an automated script is available, the following window opens.
 
