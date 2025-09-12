@@ -227,7 +227,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
       - `2`: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
       - `6`: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
 
-   :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal" lightbox="media/mem05-add-row-oma-uri.png":::
+      :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal." lightbox="media/mem05-add-row-oma-uri.png":::
 
 7. Select **Save**. **Add Row** closes. In **Custom**, select **Next**. In step **3 Scope tags**, scope tags are optional. Do one of the following:
 
@@ -252,11 +252,11 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
    3. In **Value**, enter the applicable value or value range.
 
-   :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
+      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
 
 11. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
 
-   :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+    :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
 
    Rules are active and live within minutes.
 
