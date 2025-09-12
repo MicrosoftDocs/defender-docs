@@ -114,21 +114,25 @@ For complete instructions, see [User reported message settings in Microsoft Team
 
 1. In the Teams admin center, go to the **Settings & policies** page at <https://admin.teams.microsoft.com/one-policy/settings>.
 
-2. Select either the **Global (Org-wide) default** policy for all users or **Custom policies for users & groups** for a specific user.
+2. On the **Settings & policies** page, select either the **Global (Org-wide) default settings** tab for all users or **Custom policies for users & groups** for specific users.
 
-3. Verify that the **Messaging** option is selected under that tab. If you selected **Custom policies for users & groups** earlier:
-   - Select the link in the **Name** column.
-   - Select the policy by clicking anywhere in the row other than the **Name** column, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+3. On the tab, go to the **Messaging** section and select **Messaging**. If you selected the **Custom policies for users & groups** tab in the previous step, do one of the following steps to edit the specific policy:
+   - Click on the policy name in the **Name** column.
+   - Click anywhere in the row other than the **Name** column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
 4. In the policy details page that opens, find the **Report a security concern** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-5.  Select the **Global (Org-wide) default** policy for all users and select the **Messaging** option
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk.png":::
 
-6. In the policy details page that opens, find the **Report incorrect security detections** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+5. In the Teams admin center, go to the **Messaging settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
+
+6. On the **Messaging settings** page, go to the **Messaging safety** section, find the **Report incorrect security detections** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
+
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report incorrect security detections' toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
 
 7. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
 

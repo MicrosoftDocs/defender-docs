@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure whether users can report malicious message in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 08/21/2025
+ms.date: 09/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -28,7 +28,7 @@ appliesto:
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report messages in Microsoft Teams. Admins can also get visibility into the Teams messages that users are reporting.
 
-Users can report messages in Teams from chats, standard, private and shared channels, and meeting conversations. Users can report messages as malicious or non malicious.
+Users can report messages in Teams from chats, standard, private and shared channels, and meeting conversations. Users can report messages as malicious or non-malicious.
 
 > [!NOTE]
 > User reporting of messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
@@ -39,15 +39,20 @@ Users can report messages in Teams from chats, standard, private and shared chan
 
 User reporting of messages in Teams is made of two separate settings:
 
-- **In the Teams admin center**: On by default and controls whether users are able to report messages from Teams. When these two setting is turned off, users can't report messages within Teams, so the corresponding setting in the Microsoft Defender portal is irrelevant.
+- **In the Teams admin center**: On by default and controls whether users are able to report messages from Teams. When these two setting are turned off, users can't report messages within Teams, so the corresponding setting in the Microsoft Defender portal is irrelevant.
 
 - **In the Microsoft Defender portal**: On by default for new tenants. Existing tenants need to enable it. If user reporting of messages is turned on in the Teams admin center, it also needs to be turned on the Defender portal for user reported messages to show up correctly on the **User reported** tab on the **Submissions** page.
 
 > [!IMPORTANT]
 >
-> When a user reports a Teams message to Microsoft, everything associated with the message is copied to include in the continual algorithm reviews. This copy includes the all the data associated with the message, including: message content, headers, any attachments, related data about routing and all other data directly associated with the submission.
+> - When a user reports a Teams message to Microsoft, everything associated with the message is copied for inclusion in the continual algorithm reviews. This copy contains all data associated with the message, including:
+>   - Message content.
+>   - Headers.
+>   - Any attachments.
+>   - Related data about routing.
+>   - All other data directly associated with the submission.
 >
-> Microsoft treats your feedback as your organization's permission to analyze all the information to fine tune the submission hygiene algorithms. Your message is held in secured and audited data centers in the USA. The submission is deleted as soon as it's no longer required. Microsoft personnel might read your submitted messages and files, which is normally not permitted for Teams messages in Microsoft 365. However, your message is still treated as confidential between you and Microsoft, and your message or file isn't shared with any other party as part of the review process. Microsoft might also use AI to evaluate and create responses tailored to your submissions.
+> - Microsoft treats your feedback as your organization's permission to analyze all information to fine tune the submission hygiene algorithms. Your message is held in secured and audited data centers in the United States. The submission is deleted as soon as it's no longer required. Microsoft personnel might read your submitted messages and files, which is normally not permitted for Teams messages in Microsoft 365. However, your message is still treated as confidential between you and Microsoft, and your message or file isn't shared with any other party as part of the review process. Microsoft might also use AI to evaluate and create responses tailored to your submissions.
 
 ### Turn off or turn on user reporting in the Teams admin center
 
@@ -58,25 +63,25 @@ To view or configure this setting, you need to be a member of the **Global Admin
 
 1. In the Teams admin center, go to the **Settings & policies** page at <https://admin.teams.microsoft.com/one-policy/settings>.
 
-2. Select either the **Global (Org-wide) default** policy for all users or **Custom policies for users & groups** for a specific user.
+2. On the **Settings & policies** page, select either the **Global (Org-wide) default settings** tab for all users or **Custom policies for users & groups** for specific users.
 
-3. Verify that the **Messaging** option is selected under that tab. If you selected **Custom policies for users & groups** earlier:
-   - Select the link in the **Name** column.
-   - Select the policy by clicking anywhere in the row other than the **Name** column, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+3. On the tab, go to the **Messaging** section and select **Messaging**. If you selected the **Custom policies for users & groups** tab in the previous step, do one of the following steps to edit the specific policy:
+   - Click on the policy name in the **Name** column.
+   - Click anywhere in the row other than the **Name** column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
 4. In the policy details page that opens, find the **Report a security concern** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-:::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk.png":::
 
-5. Select the **Global (Org-wide) default** policy for all users and select the **Messaging** option
+5. In the Teams admin center, go to the **Messaging settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
 
-6. In the policy details page that opens, find the **Report incorrect security detections** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+6. On the **Messaging settings** page, go to the **Messaging safety** section, find the **Report incorrect security detections** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-:::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report a not security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report incorrect security detections' toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
 
 For more information about messaging policies in Teams, see [Manage messaging policies in Teams](/microsoftteams/messaging-policies-in-teams).
 
