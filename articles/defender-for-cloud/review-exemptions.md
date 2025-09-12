@@ -32,7 +32,7 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
 1. Select a resource to review it.
 
-### Review exempted resources on the inventory page
+### Review exempted resources on the Inventory page
 
 You can also find all exempted resources on the **Inventory** page.
 
