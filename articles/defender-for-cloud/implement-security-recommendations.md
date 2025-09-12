@@ -17,7 +17,7 @@ This article describes how to remediate security recommendations in your Defende
 
 Before you attempt to remediate a recommendation, you should review it in detail. Learn how to [review security recommendations](review-security-recommendations.md).
 
-## Remediate a recommendation
+## <a name = "remediate-recommendations"></a> Remediate a recommendation
 
 Recommendations are prioritized based on the risk level of the security issue by default.
 
