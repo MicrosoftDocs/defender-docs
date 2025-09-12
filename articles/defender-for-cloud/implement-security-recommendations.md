@@ -55,7 +55,7 @@ To simplify the remediation process, a button labeled **Fix** might appear in a 
 
 After remediation completes, it can take several minutes for the change to take place.
 
-## <a name = "use-the-automated-remediation scripts"></a> Use automated remediation scripts
+## <a name = "use-the-automated-remediation-scripts"></a> Use automated remediation scripts
 
 Security admins can also fix issues at scale with automatic script generation in AWS and GCP CLI script language. When you select **Take action** > **Fix** on a recommendation where an automated script is available, the following window opens.
 
