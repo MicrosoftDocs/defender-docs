@@ -8,7 +8,7 @@ ms.date: 05/25/2025
 #customer intent: As a user, I want to learn how to exempt recommendations in Microsoft Defender for Cloud so that I can customize the security recommendations for my environment.
 ---
 
-# Review resources exempted from recommendations
+# Review resources that are exempted from recommendations
 
 In Microsoft Defender for Cloud, you can [exempt protected resources from Defender for Cloud security recommendations](exempt-resource.md). This article describes how to review and work with exempted resources.
 
@@ -40,7 +40,7 @@ You can also find all exempted resources on the **Inventory** page.
 
 1. Go to **Defender for Cloud** > **Inventory**.
 
-1. Select **Add filter**
+1. Select **Add filter**.
 
     :::image type="content" source="media/review-exemptions/inventory-exemptions.png" alt-text="Screenshot that shows the Defender for Cloud asset inventory page and the filter to find resources with exemptions."  lightbox="media/review-exemptions/inventory-exemptions.png":::
 
