@@ -189,7 +189,7 @@ We recommend that you address these recommendations immediately. They indicate t
 Examples of high severity recommendations include:
 
 - Unprotected secrets on a machine.
-- Overly permissive inbound NSG rules.
+- Overly permissive inbound network security group rules.
 - Clusters that allow images to be deployed from untrusted registries.
 - Unrestricted public access to storage accounts or databases.
 
