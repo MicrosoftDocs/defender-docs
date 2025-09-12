@@ -19,8 +19,8 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 - You must [enable Defender Cloud Security Posture Management (Defender CSPM)](enable-enhanced-security.md) on your environment.
 
-> [!NOTE]
-> Recommendations are included by default with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+  > [!NOTE]
+  > Recommendations are included by default with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
@@ -59,7 +59,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. In the recommendation, you can perform these actions:
 
-    - To view detailed information about the affected resources with an Azure Resource Graph Explorer query, select **Open query**.
+    - To view detailed information about the affected resources with an Azure Resource Graph explorer query, select **Open query**.
     - To view the Azure Policy entry for the underlying recommendation (if relevant), select **View policy definition**.
     - To view all resources the recommendation applies to, select **View recommendation for all resources**.
 
@@ -142,6 +142,9 @@ To make changes to an assignment, complete the following steps:
   
 1. Select **Save**.
 
+   > [!NOTE]
+   > When you change the expected completion date, the due date for the recommendation doesn't change, but security partners can see that you plan to update the resources by the specified date.
+
 By default, the owner of the resource receives a weekly email that shows all the recommendations assigned to them.
 
 You can also use the **Set email notifications** option to:
@@ -150,8 +153,7 @@ You can also use the **Set email notifications** option to:
 - Notify owners weekly with a list of open or overdue tasks.
 - Notify the owner's direct manager with an open task list.
 
-> [!NOTE]
-> When you change the expected completion date, the due date for the recommendation doesn't change, but security partners can see that you plan to update the resources by the specified date.
+
 
 ## Review recommendations in Azure Resource Graph
 
@@ -172,7 +174,7 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Select **run query**.
 
-   :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
+   :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
 
 1. Review the results.
 
@@ -222,9 +224,9 @@ An organization's internal policies might differ from Microsoft’s classificati
 
 In this example, this **Recommendation details** page shows 15 affected resources:
 
-:::image type="content" source="./media/review-security-recommendations/open-query.png" alt-text="Screenshot of the Open Query button on the Recommendation details page." lightbox="media/review-security-recommendations/open-query.png":::
+:::image type="content" source="./media/review-security-recommendations/open-query.png" alt-text="Screenshot of the Open query button on the Recommendation details page." lightbox="media/review-security-recommendations/open-query.png":::
 
-When you open and run the underlying query, Azure Resource Graph Explorer returns the same affected resources for this recommendation.
+When you open and run the underlying query, Azure Resource Graph explorer returns the same affected resources for this recommendation.
 
 ## Next step
 
