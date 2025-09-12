@@ -35,7 +35,7 @@ In addition to risk level, we recommend that you prioritize the security control
 
 1. Locate the **Remediate** section and follow the remediation instructions.
 
-    :::image type="content" source="./media/implement-security-recommendations/remediate-recommendation.png" alt-text="This screenshot shows manual remediation steps for a recommendation." lightbox="./media/implement-security-recommendations/remediate-recommendation.png":::
+    :::image type="content" source="./media/implement-security-recommendations/remediate-recommendation.png" alt-text="Screenshot that shows manual remediation steps for a recommendation." lightbox="./media/implement-security-recommendations/remediate-recommendation.png":::
 
 ## Use the Fix option
 
