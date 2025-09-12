@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 08/21/2025
+ms.date: 09/11/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
@@ -112,18 +112,26 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
-1. In the Teams admin center, go to the **Messaging policies** page at <https://admin.teams.microsoft.com/policies/messaging>.
+1. In the Teams admin center, go to the **Settings & policies** page at <https://admin.teams.microsoft.com/one-policy/settings>.
 
-2. On the **Manage policies** tab of the **Messaging policies** page, verify that the **Manage policies** tab is selected, and do either of the following actions to edit the appropriate policy (the **Global (Org-wide) default** policy for all users or a custom policy for specific users):
+2. Select either the **Global (Org-wide) default** policy for all users or **Custom policies for users & groups** for a specific user.
+
+3. Verify that the **Messaging** option is selected under that tab. If you selected **Custom policies for users & groups** earlier:
    - Select the link in the **Name** column.
    - Select the policy by clicking anywhere in the row other than the **Name** column, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
 
-3. In the policy details page that opens, find the **Report a security concern** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+4. In the policy details page that opens, find the **Report a security concern** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-4. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+5.  Select the **Global (Org-wide) default** policy for all users and select the **Messaging** option
 
-5. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported messages in Microsoft Teams** is selected.
+6. In the policy details page that opens, find the **Report incorrect security detections** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+   If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
+
+7. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+
+8. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported messages in Microsoft Teams** is selected.
 
    If it's not selected, select the check box, and then select **Save**.
