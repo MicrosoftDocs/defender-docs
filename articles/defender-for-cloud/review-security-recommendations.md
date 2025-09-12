@@ -26,8 +26,6 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 Review all of the details related to a recommendation before trying to understand the process needed to resolve the recommendation. Ensure that all of the recommendation details are correct before resolving the recommendation.
 
-**To review a recommendation's details**:
-
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Defender for Cloud** > **Recommendations**.
@@ -174,7 +172,7 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Select **run query**.
 
-    :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
+   :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
 
 1. Review the results.
 
