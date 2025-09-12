@@ -7,7 +7,7 @@ manager: dolmont
 ms.service: threat-intelligence 
 ms.collection: essentials-overview
 ms.topic: overview
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
