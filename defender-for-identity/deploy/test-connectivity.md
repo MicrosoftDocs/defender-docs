@@ -29,7 +29,7 @@ For more information, see [Required ports](../prerequisites.md#ports).
     > [!IMPORTANT]
     > You must specify `HTTPS`, not `HTTP`, to properly test connectivity.
 
-    **Result**: You should get an *Ok* message displayed (HTTP status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. 
+    **Result**: You should get an *Ok* message displayed (HTTP status 200) and the latest sensor version number, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result.
 
     For some older workspaces, the message returned could be *Error 503 The service is unavailable*. This is a temporary state that still indicates success. For example:
 
