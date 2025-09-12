@@ -101,9 +101,19 @@ The value of this setting is meaningful only if message reporting is turned on i
 
 For more information about user reported message settings in the Defender portal, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
-## How users report malicious messages in Teams
+<a name="how-users-report-messages-in-teams"></a>
 
-1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select **... More options** \> **Report this message**.
+## How users report messages in Teams
+
+> [!TIP]
+>
+> - Reported messages remain visible to users.
+> - Users can report the same message multiple times.
+> - Message senders aren't notified their messages were reported.
+
+### Report malicious messages in Teams
+
+1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Report this message**.
 
    :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the Select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
 
@@ -116,25 +126,12 @@ For more information about user reported message settings in the Defender portal
 
 3. In the confirmation dialog that opens, select **Close**.
 
-   > [!NOTE]
-   > - The reported message remains visible to the user in the Teams client.
-   > - Users can report the same message multiple times.
-   > - The message sender isn't notified that messages were reported.
+### Report non-malicious messages in Teams
 
-## How users report non malicious messages in Teams
+1. In the Teams chat or channel, hover over the message without selecting it, and then select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Report this message**.
 
-1. In the Teams chat or channel, locate the message that was flagged.
-2. Hover over the message without selecting it.
-3. Select ... More options > Report this message.
-4. In the report dialog that opens, select Not a security concern.
-5. Select Report to submit your feedback.
+2. In the **report this message** dialog that opens, select **Not a security concern**, and then select **Report**.
 
-
-   > [!NOTE]
-   > - The reported message remains visible to the user in the Teams client.
-   > - Users can report the same message multiple times.
-   > - The message sender isn't notified that messages were reported.
-   
 ## What happens after a user reports a message from Teams?
 
 What happens to a user reported Teams message depends on the settings in the **Reported message destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
@@ -151,11 +148,9 @@ For more information, see [User reported settings](submissions-user-reported-mes
 - If you select **Send the reported messages to** \> **My reporting mailbox only**, reported messages don't go to Microsoft for analysis unless an admin manually submits the message from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. Reporting messages to Microsoft is an important part of training the service to help improve the accuracy of filtering (reduce false positives and false negatives). That's why we use **Send the reported messages to** \> **Microsoft and my reporting mailbox** as the default.
 - Regardless of the **Send the reported messages to** setting, the following actions occur when a user reports a Teams message:
   - Metadata from the reported Teams message (for example, senders, recipients, reported by, and message details) is available on the **User reported** tab on the **Submissions** page.
-  - The alert policies named **Teams message reported by user as a security risk** and **Teams message reported by user as a not security risk** generates an alert by default. For more information, see [Manage alerts](/defender-xdr/alert-policies#manage-alerts).
+  - The alert policies named **Teams message reported by user as a security risk** and **Teams message reported by user as a not security risk** generate alerts by default. For more information, see [Manage alerts](/defender-xdr/alert-policies#manage-alerts).
 
   To view the corresponding alert for a user reported message in Teams, go to the **User reported** tab on the **Submission** page, and then double-click the message to open the submission flyout. Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** and then select **View alert**.
-
-
 
 ## View and triage user reported messages in Teams
 
