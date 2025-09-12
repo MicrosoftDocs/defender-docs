@@ -74,11 +74,11 @@ In **Take action**:
 
 In **Findings**, you can review affiliated findings by severity.
 
-     :::image type="content" source="media/review-security-recommendations/recommendation-findings.png" alt-text="Screenshot that shows the findings tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-findings.png":::
+:::image type="content" source="media/review-security-recommendations/recommendation-findings.png" alt-text="Screenshot that shows the findings tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-findings.png":::
 
 In **Graph**, you can view and investigate all context that is used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
 
-     :::image type="content" source="media/review-security-recommendations/recommendation-graph.png" alt-text="Screenshot that shows the Graph tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-graph.png":::
+:::image type="content" source="media/review-security-recommendations/recommendation-graph.png" alt-text="Screenshot that shows the Graph tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-graph.png":::
 
 1. To view more details, select a node.
 
