@@ -1,6 +1,6 @@
 ---
 title: Review Resources Exempted from Recommendations
-description: Learn how to exempt recommendations so they're not taken into account in Microsoft Defender for Cloud.
+description: Learn how to exempt resources in Microsoft Defender for Cloud so they're not taken into account.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
