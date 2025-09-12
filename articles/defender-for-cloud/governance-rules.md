@@ -25,7 +25,7 @@ Track the progress of remediation tasks by sorting by subscription, recommendati
 
 ### Assignments
 
-Governance rules can identify resources that require remediation according to specific recommendations or severities. The rule assigns an owner and due date to ensure the recommendations are handled. Many governance rules can apply to the same recommendations, so the rule with highest priority is the one that assigns the owner and due date.
+Governance rules can identify resources that require remediation according to specific recommendations or severities. The rule assigns an owner and due date to ensure the recommendations are handled. Many governance rules can apply to the same recommendations, so the rule with the highest priority assigns the owner and due date.
 
 ### Due dates
 
@@ -103,15 +103,15 @@ When you delete or disable a rule, all existing assignments and notifications re
 
 ## See the effects of rules
 
-You can view the effect of governance rules in your environment.
+You can view the effect that governance rules have in your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Governance rules**.
 
-1. Review governance rules. The default list shows all the governance rules applicable in your environment.
+1. Review the governance rules. The default list shows all the governance rules that are applicable in your environment.
 
-1. You can search for rules, or filter rules. There are several different ways to filter rules.
+1. You can search for rules or filter rules. There are several different ways to filter rules.
 
    - Filter on **Environment** to identify rules for Azure, AWS, and GCP.
    - Filter on rule name, owner, or time between the recommendation being issued and due date.
