@@ -38,13 +38,13 @@ procedureSection:
       - |
         From the Defender for Cloud sidebar, select **Workflow automation**.
 
-          :::image type="content" source="./media/workflow-automation/list-of-workflow-automations.png" alt-text="Screenshot that shows the workflow automation page with the list of defined automations." lightbox="./media/workflow-automation/list-of-workflow-automations.png":::
+          :::image type="content" source="./media/workflow-automation/list-of-workflow-automations.png" alt-text="Screenshot that shows the workflow automation pane with the list of defined automations." lightbox="./media/workflow-automation/list-of-workflow-automations.png":::
       - |
-        From this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the workflow automation is deployed.
+        From this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the Workflow automation is deployed.
       - |
         To define a new workflow, select **Add workflow automation**. The options pane for your new automation opens.
 
-          :::image type="content" source="./media/workflow-automation/add-workflow.png" alt-text="Screenshot that shows the workflow automation pane." lightbox="media/workflow-automation/add-workflow.png":::
+          :::image type="content" source="./media/workflow-automation/add-workflow.png" alt-text="Screenshot that shows the Workflow automation pane." lightbox="media/workflow-automation/add-workflow.png":::
       - |
         Enter the following:
 
@@ -130,7 +130,7 @@ procedureSection:
       - |
         In the **Parameters** tab, enter the required information.
 
-          :::image type="content" source="media/workflow-automation/parameters-tab.png" alt-text="Screenshot that shows the parameters tab.":::
+          :::image type="content" source="media/workflow-automation/parameters-tab.png" alt-text="Screenshot that shows the Parameters tab.":::
       - |
         (Optional) Apply this assignment to an existing subscription in the **Remediation** tab and select the option to create a remediation task.
       - |
