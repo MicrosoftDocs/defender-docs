@@ -65,20 +65,20 @@ procedureSection:
       - |
         Fill out all required fields and select **Review + Create**.
 
-          The message **Deployment is in progress** appears. Wait for the deployment complete notification to appear and select **Go to resource** from the notification.
+          The message **Deployment is in progress** appears. Wait for the **Deployment complete** notification to appear and select **Go to resource** from the notification.
       - |
         Review the information you entered and select **Create**.
 
           In your new logic app, you can choose from built-in, predefined templates from the security category. Or you can define a custom flow of events that occur when this process is triggered.
 
           > [!TIP]
-          > Sometimes, in a logic app, parameters are included in the connector as part of a string and not in their own field. For an example of how to extract parameters, see step 14 of [Working with logic app parameters while building Microsoft Defender for Cloud workflow automations](https://techcommunity.microsoft.com/t5/azure-security-center/working-with-logic-app-parameters-while-building-azure-security/ba-p/1342121).
+          > Sometimes, parameters are included in a logic app in the connector as part of a string and not in their own field. For an example of how to extract parameters, see step 14 of [Working with logic app parameters while building Microsoft Defender for Cloud workflow automations](https://techcommunity.microsoft.com/t5/azure-security-center/working-with-logic-app-parameters-while-building-azure-security/ba-p/1342121).
   - title: |
       Supported triggers
     summary: |
       The logic app designer supports the following Defender for Cloud triggers:
 
-      - **When a Microsoft Defender for Cloud Recommendation is created or triggered**: If your logic app relies on a recommendation that gets deprecated or replaced, your automation stops working and you need to update the trigger. To track changes to recommendations, use the [release notes](release-notes.md).
+      - **When a Microsoft Defender for Cloud recommendation is created or triggered**: If your logic app relies on a recommendation that gets deprecated or replaced, your automation stops working and you need to update the trigger. To track changes to recommendations, use the [release notes](release-notes.md).
 
       - **When a Defender for Cloud Alert is created or triggered**: You can customize the trigger so that it relates only to alerts with the severity levels that interest you.
 
@@ -88,11 +88,11 @@ procedureSection:
       > If you're using the legacy trigger **When a response to a Microsoft Defender for Cloud alert is triggered**, your logic apps aren't launched by the Workflow Automation feature. Instead, use either of the triggers mentioned previously.
     steps: 
       - |
-        After you define your logic app, return to the workflow automation definition pane ("Add workflow automation").
+        After you define your logic app, return to the **Add workflow automation** pane.
       - |  
         Select **Refresh** to ensure your new logic app is available for selection.
       - |
-        Select your logic app and save the automation. The logic app dropdown only shows logic apps that have supporting Defender for Cloud connectors.
+        Select your logic app and save the automation. The logic app dropdown menu only shows logic apps that have supporting Defender for Cloud connectors.
   - title: |
       Manually trigger a logic app
     summary: |
@@ -132,7 +132,7 @@ procedureSection:
 
           :::image type="content" source="media/workflow-automation/parameters-tab.png" alt-text="Screenshot that shows the Parameters tab.":::
       - |
-        (Optional) Apply this assignment to an existing subscription in the **Remediation** tab and select the option to create a remediation task.
+        (Optional) Apply this assignment to an existing subscription in the **Remediation** tab, and then select the option to create a remediation task.
       - |
         Review the summary page and select **Create**.
 
