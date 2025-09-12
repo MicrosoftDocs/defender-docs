@@ -136,9 +136,9 @@ procedureSection:
       - |
         Review the summary page and select **Create**.
 
-        ### Data types schemas
+    ### Data types schemas
 
-        To view the raw event schemas of the security alerts or recommendations events that are passed to the logic app, go to the [Workflow automation data types schemas](https://aka.ms/ASCAutomationSchemas). This process can be useful in cases where you aren't using the Defender for Cloud built-in Logic Apps connectors (mentioned previously), but instead are using the generic HTTP connector. You can use the event JSON schema to manually parse it as you see fit.
+    To view the raw event schemas of the security alerts or recommendations events that are passed to the logic app, go to the [Workflow automation data types schemas](https://aka.ms/ASCAutomationSchemas). This process can be useful in cases where you aren't using the Defender for Cloud built-in Logic Apps connectors (mentioned previously), but instead are using the generic HTTP connector. You can use the event JSON schema to manually parse it as you see fit.
 
 relatedContent:
   - text: Use workflow automation to automate a security response
