@@ -153,10 +153,10 @@ Organization allows and blocks are able to override some filtering stack verdict
   |---|---|---|
   |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined except in complex routing|**Filter wins**: Email quarantined|
-  |Phishing|**Organization wins**: Email delivered to mailbox|**Organization wins**: Phishing action in the applicable anti-spam policy|
-  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
-  |Spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
-  |Bulk|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Phishing|**Organization wins**: Email delivered to mailbox|**filter wins**: Phishing action in the applicable anti-spam policy|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|**filter wins**: Email delivered to user's Junk Email folder|
+  |Spam|**Organization wins**: Email delivered to mailbox|**Filter wins**: Email delivered to user's Junk Email folder|
+  |Bulk|**Organization wins**: Email delivered to mailbox|**Filter wins**: Email delivered to user's Junk Email folder|
   |Not spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
 
   <sup>\*</sup> Organizations that use a non-Microsoft security service or device in front of Microsoft 365 should consider using [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) (contact the service for availability) and [Enhanced Filtering for Connectors (also known as skip listing)](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) instead of an SCL=-1 mail flow rule. These improved methods reduce email authentication issues and encourage [defense-in-depth](step-by-step-guides/defense-in-depth-guide.md) email security.
