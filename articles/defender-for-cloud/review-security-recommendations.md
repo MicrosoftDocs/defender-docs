@@ -24,7 +24,7 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 ## Review the recommendations page
 
-Review all of the details related to a recommendation before trying to understand the process needed to resolve the recommendation. Ensure that all of the recommendation details are correct before resolving the recommendation.
+Review all of the details related to a recommendation before trying to understand what you need to do to resolve the recommendation. Ensure that all of the recommendation details are correct before resolving the recommendation.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -42,9 +42,9 @@ Review all of the details related to a recommendation before trying to understan
    - **Scope**: The affected subscription or resource.
    - **Freshness**: The freshness interval of the recommendation.
    - **Last change date**: The date this recommendation was last changed.
-   - **Severity**: The severity of the recommendation (High, Medium, or Low). More details are provided.
+   - **Severity**: The severity of the recommendation (High, Medium, or Low). More details are provided later in this article.
    - **Owner**: The person assigned to the recommendation.
-   - **Due date**: The assigned due date for resolving the recommendation.
+   - **Due date**: The assigned due date to resolve the recommendation.
    - **Tactics & techniques**: The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
@@ -138,7 +138,7 @@ To make changes to an assignment, complete the following steps:
 
 1. Select **Edit assignment** to change the recommendation owner or due date.
 
-1. If you select a new remediation date, specify reasons for remediation by that date in **Justification**.
+1. If you select a new remediation date, specify why remediation should be completed by that date in **Justification**.
   
 1. Select **Save**.
 
@@ -212,8 +212,8 @@ Examples of low severity recommendations include:
 
 - The use of local authentication instead of Microsoft Entra ID.
 - Health issues with your endpoint protection solution.
-- Best practices aren't being followed with network security groups.
-- Logging settings are misconfigured, which might make it harder to detect and respond to security incidents.
+- Best practices not being followed with network security groups.
+- Misconfigured logging settings, which might make it harder to detect and respond to security incidents.
 
 An organization's internal policies might differ from Microsoft’s classification of a specific recommendation. It's always a good idea to carefully review each recommendation and consider its potential effect on your security posture before you decide how to address it.
 
