@@ -1,5 +1,5 @@
 ---
-title: Drive Remediation of Recommendations by Using Governance Rules
+title: Drive Recommendation Remediation by Using Governance Rules
 description: Learn how to drive remediation of security recommendations by using governance rules in Microsoft Defender for Cloud.
 services: defender-for-cloud
 ms.service: defender-for-cloud
@@ -7,9 +7,9 @@ ms.topic: how-to
 ms.date: 05/18/2025
 ---
 
-# Drive remediation of recommendations by using governance rules
+# Drive recommendation remediation by using governance rules
 
-The security team is responsible for improving security posture, but team members might not always follow through to implement security recommendations. The security team can set governance rules to help drive accountability and a service level agreement (SLA) around the remediation process.
+Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and a service level agreement (SLA) around the remediation process.
 
 For an in-depth discussion around why governance rules are helpful, watch [this episode](episode-fifteen.md) of the Defender for Cloud in the field video series.
 
@@ -65,36 +65,30 @@ Conflicting rules are applied in scope order. For example, rules on a management
 
     :::image type="content" source="./media/governance-rules/add-rule.png" alt-text="Screenshot that shows the page where you add a governance rule." lightbox="media/governance-rules/add-rule.png":::
 
-1. Specify a rule name and scope in which to apply the rule.
-
-   Rules for management scope (Azure management groups, AWS master accounts, GCP organizations) are applied before the rules on a single scope.
+1. Specify a rule name and scope in which to apply the rule. Rules for management scope (Azure management groups, AWS master accounts, GCP organizations) are applied before the rules on a single scope.
 
    > [!NOTE]
    > Exclusions can't be created by using the portal wizard. To define exclusions, use the API.
 
-1. Set a priority level.
-
-   Rules are run in priority order from the highest (1) to the lowest (1000).
+1. Set a priority level. Rules are run in priority order from the highest (1) to the lowest (1000).
 
 1. Specify a description to help you identify the rule.
 
-1. Select **Next**
+1. Select **Next**.
 
 1. Specify how the rule affects recommendations.
 
    - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date.
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
-    :::image type="content" source="./media/governance-rules/create-rule-conditions.png" alt-text="Screenshot that shows the page where you add conditions for a governance rule." lightbox="media/governance-rules/create-rule-conditions.png":::
+     :::image type="content" source="./media/governance-rules/create-rule-conditions.png" alt-text="Screenshot that shows the page where you add conditions for a governance rule." lightbox="media/governance-rules/create-rule-conditions.png":::
 
 1. To specify who's responsible for fixing recommendations covered by the rule, set the owner.
 
    - **By resource tag**: On your resources, enter the resource tag for the resource owner.
    - **By email address**: Enter the owner's email address.
 
-1. Specify a remediation time frame that spans from when remediation recommendations are identified to when the remediation is due.
-
-   If recommendations were issued according to the Microsoft cloud security benchmark, and you don't want the resources to affect your Secure Score until they're overdue, select **Apply grace period**.
+1. Specify a remediation time frame that spans from when remediation recommendations are identified to when the remediation is due. If recommendations were issued according to the Microsoft cloud security benchmark, and you don't want the resources to affect your Secure Score until they're overdue, select **Apply grace period**.
 
 1. (Optional) By default, owners and their managers are notified weekly about open and overdue tasks. If you don't want them to receive these weekly emails, clear the notification options.
 
@@ -107,9 +101,9 @@ If there are existing recommendations that match the definition of the governanc
 
 When you delete or disable a rule, all existing assignments and notifications remain.
 
-## View effective rules
+## See the effects of rules
 
-You can view the effect of government rules in your environment.
+You can view the effect of governance rules in your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -126,7 +120,7 @@ You can view the effect of government rules in your environment.
 
     :::image type="content" source="./media/governance-rules/view-filter-rules.png" alt-text="Screenshot that shows the page where you can view and filter rules." lightbox="media/governance-rules/view-filter-rules.png":::
 
-## Review the g=Governance report
+## Review the Governance report
 
 You can use a Governance report to see recommendations by rule and owner that are completed on time, overdue, or unassigned. You can use this feature for any subscription that has governance rules.
 
@@ -134,7 +128,7 @@ You can use a Governance report to see recommendations by rule and owner that ar
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Governance rules** > **Governance report**.
 
-    :::image type="content" source="media/governance-rules/governance-report.png" alt-text="Screenshot that shows the  Governance rules page where the Governance report button is located." lightbox="media/governance-rules/governance-report.png":::
+    :::image type="content" source="media/governance-rules/governance-report.png" alt-text="Screenshot that shows the Governance rules page where the Governance report button is located." lightbox="media/governance-rules/governance-report.png":::
 
 1. Select a subscription.
 
