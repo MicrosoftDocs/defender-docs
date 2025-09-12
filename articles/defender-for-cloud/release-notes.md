@@ -37,11 +37,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem vulnerabilities mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This strengthens your security posture by automatically detecting OS and library vulnerabilities across code repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem ](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
-- [In-pipeline (CLI) scanning](https://learn.microsoft.com/azure/defender-for-cloud/cli-cicd-integration)  
-- [Agentless code scanning (preview)](https://learn.microsoft.com/azure/defender-for-cloud/agentless-code-scanning)
+- [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
+
+- [Agentless code scanning (preview)](/azure/defender-for-cloud/agentless-code-scanning).
 
 **What to do:**  
 - For [Azure DevOps](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-devops) or [GitHub](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-github), create or edit a connector.  
