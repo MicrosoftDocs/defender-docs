@@ -31,7 +31,7 @@ The Accounts tab shows all accounts linked to a single identity across your envi
 
 You can manually link or unlink accounts to an identity directly from the Accounts tab in the identity details page. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
 
-For more information, see [Link or Unlink an Account to an Identity](../ATPDocs/link-unlink-account-to-identity.md).
+For more information, see [Link or Unlink an Account to an Identity](link-unlink-account-to-identity.md).
 
 ### New API support for unified agent 
 We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
