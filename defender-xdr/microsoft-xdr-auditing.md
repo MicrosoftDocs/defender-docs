@@ -2,8 +2,8 @@
 title: Search the audit log for events in Microsoft Defender XDR
 description: Learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

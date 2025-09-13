@@ -4,11 +4,11 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 07/28/2025
+ms.date: 09/08/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -106,7 +106,10 @@ Unnecessary allow entries expose your organization to malicious email that the s
   - If spoof intelligence already blocked the message as spoofing, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to [report the email to Microsoft](submissions-admin.md#report-good-email-to-microsoft) as **I've confirmed it's clean**, and then select **Allow this message**.
   - You can proactively create [an allow entry for a spoofed sender](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) on the **Spoofed sender** tab in the Tenant Allow/Block List before [spoof intelligence](anti-spoofing-spoof-intelligence.md) identifies and blocks the message as spoofing.
 
-- **IP Addresses**: You can proactively create an [an allow entry for an IP address](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses) on the **IP addresses** tab in the Tenant Allow/Block List to override the IP filters for incoming messages.
+- **IP Addresses**: You can proactively create [an allow entry for an IP address](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses) on the **IP addresses** tab in the Tenant Allow/Block List to override the IP filters for incoming messages.
+  - An IP address allow entry bypasses IP-based filtering checks (for example, connection filtering or IP reputation checks).
+  - An IP address allow entry doesn't change message throttling behavior.
+  - An IP address block entry rejects messages at the service edge.
 
 The following list describes what happens in the Tenant Allow/Block List when you submit something to Microsoft as a false positive on the **Submissions** page:
 

@@ -23,22 +23,73 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2025
+
+### New API support for unified agent 
+We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+This capability is currently in preview and available in API Beta version.
+
+This API allows customers to:
+
+* Monitor the status of unified agent servers
+* Enable or disable the automatic activation of eligible servers
+* Activate or deactivate the agent on eligible servers
+ ​
+For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.248|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+
+### Updates to multiple detections to reduce noise and improve alert accuracy
+
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
+
+The improvements will gradually take effect across the following detections:
+
+- Suspicious communication over DNS
+
+- Suspected Netlogon privilege elevation attempt (CVE-2020-1472)
+
+- Honeytoken authentication activity
+
+- Remote code execution attempt over DNS
+
+- Suspicious password reset by Microsoft Entra Connect account
+
+- Data exfiltration over SMB
+
+- Suspected skeleton key attack (encryption downgrade)
+
+- Suspicious modification of Resource Based Constrained Delegation by a machine account
+
+- Remote code execution attempt
+
+
+### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
+
 ## August 2025
 
 ### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
 
-Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
+Microsoft Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Microsoft Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
 
-Previously, Defender for Identity tenants received Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
+Previously, Defender for Identity tenants received Microsoft Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Microsoft Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
 
-For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Entra ID risk level to the IdentityInfo table remains unchanged.
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
 
+### New security assessment: Remove stale service accounts (Preview)
 
-### New security assessment: Remove inactive service accounts (Preview)
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been stale for the past 90 days, to help you mitigate security risks associated with unused accounts.
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive (stale) for the past 180 days, to help you mitigate security risks associated with unused accounts.
-
-For more information, see: [Security Assessment: Remove Inactive Service Accounts (Preview)](remove-inactive-service-account.md)
+For more information, see: Security Assessment: [Remove Stale Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account)
 
 ### New Graph based API for response actions (preview) 
 
@@ -60,13 +111,12 @@ The new security posture assessment highlights unsecured Active Directory attrib
 
 For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](remove-discoverable-passwords-active-directory-account-attributes.md)
 
-
 ### Microsoft Defender for Identity sensor version updates
 
 |Version number |Updates |
 |---------|---------|
 |2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.    |
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
 
@@ -132,7 +182,7 @@ For prerequisites and configuration steps, see [Integrate Okta with Microsoft De
 ### Service account classification rules now available
 
 You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
-For more information, see [Service account discovery](service-account-discovery.md)
+For more information, see [Service account discovery](service-account-discovery.md).
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
 
@@ -151,10 +201,6 @@ Bug Fixes:
 
 
 ## May 2025
-
-###  Expanded New Sensor Deployment Support for Domain Controllers (Preview)
-Defender for Identity now supports deploying its new sensor on Domain Controllers without requiring Defender for Endpoint onboarding. This simplifies sensor activation and expands deployment flexibility. [Learn more](deploy/activate-sensor.md).
-
 
 ### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
 The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
@@ -277,7 +323,7 @@ Defender for Identity has added the new **Prevent Certificate Enrollment with ar
 
 This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
 
-The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
 
 For more information, see:
 
@@ -475,7 +521,7 @@ Defender for Identity added the new **Edit insecure ADCS certificate enrollment 
 
 Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv). Insecure configurations of the CES or Certsrv IIS endpoints might create vulnerabilities to relay attacks (ESC8).
 
-The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation is added to other AD CS-related recommendations recently released. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation is added to other AD CS-related recommendations recently released. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
 
 For more information, see:
 

@@ -25,12 +25,17 @@ Current asset types are:
 
 > [!Note]
 > The critical asset out-of-the-box classification logic classifies your assets based on asset behavior accumulated from Microsoft Defender workloads and  third-party integrations set up in your environment.
+> 
+> When multiple classification rules apply to an asset, the rule with the highest criticality level takes precedence. This classification remains in effect until the asset no longer meets the criteria for that rule, at which point it will automatically revert to the next applicable classification level.
+
+
 
 ##### Device
 
 | Classification             | Asset type | Default criticality level | Description                                                  |
 | -------------------------- | ---------- | ------------------------- | ------------------------------------------------------------ |
 | Microsoft Entra ID Connect | Device     | High                    | The Microsoft Entra ID Connect server is responsible for syncing on-premises directory data and passwords to the Microsoft Entra ID tenant. Compromise could disrupt identity synchronization, leading to authentication issues and potential security breaches. |
+| Microsoft Entra ID Cloud Sync | Device     | High                    | The Microsoft Entra ID Cloud Sync agent is responsible for syncing on-premises directory data to the Microsoft Entra ID tenant using lightweight infrastructure. Compromise could disrupt identity synchronization, leading to authentication issues and potential security breaches. |
 | ADCS                       | Device     | High                    | The ADCS server allows administrators to fully implement a public key infrastructure (PKI) and issue digital certificates for securing multiple network resources. Compromise could undermine SSL encryption, user authentication, and secure email, leading to significant security vulnerabilities. |
 | ADFS                       | Device     | High                      | The ADFS server provides users with single sign-on access to systems and applications across organizational boundaries. It uses a claims-based access control authorization model to maintain application security and implement federated identity. Compromise could lead to unauthorized access and data breaches. |
 | Backup                     | Device     | Medium                    | The Backup server is responsible for safeguarding data through regular backups, ensuring data protection and disaster recovery readiness. Compromise could result in data loss and hinder disaster recovery efforts, affecting business continuity.  |

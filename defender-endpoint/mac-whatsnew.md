@@ -2,9 +2,9 @@
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: paulinbar
-ms.author: painbar
-manager: orspodek
+author: lwainstein
+ms.author: lwainstein
+manager: bagol
 ms.localizationpriority: medium
 ms.date: 08/20/2025
 audience: ITPro
@@ -44,6 +44,8 @@ To get the latest features, including preview capabilities (such as endpoint det
 
 ## Known issues
 
+- In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
+
 - Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
 
 - In [macOS Sonoma 14.3.1](https://developer.apple.com/documentation/macos-release-notes/macos-14_3-release-notes), Apple made a change to the handling of Bluetooth devices that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
@@ -73,6 +75,22 @@ This feature enables organizations to configure offline updates for security int
 ### Behavior Monitoring for macOS is now generally available
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
+
+### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
+
+| Build:             | **101.25072.0011**         |
+|--------------------|-----------------------|
+| Release version:   | **20.125072.11.0** |
+| Engine version:    | **1.1.25060.3000**       |
+| Signature version: | **1.429.309.0**      |
+
+##### What's new
+
+- Enhanced malware detection timing and archive scanning improvements
+- Improved diagnostic capabilities and error reporting
+- Performance and diagnostic improvements for endpoint Data Loss Prevention (DLP)
+
+- Bug fixes
 
 ### Aug-2025 (Build: 101.25062.0006  | Release version: 20.125062.6.0)
 

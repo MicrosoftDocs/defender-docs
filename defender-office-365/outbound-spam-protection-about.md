@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the outbound spam controls in Microsoft 365, and what to do if you need to send mass mailings.
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 09/03/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -33,6 +33,9 @@ appliesto:
 In all organizations with cloud mailboxes, we take managing outbound spam seriously. Even if one customer intentionally or unintentionally sends spam from their organization, that action can degrade the reputation of the whole service and can affect email delivery for other customers.
 
 This article describes the controls and notifications that are designed to help prevent outbound spam, and what you can do if you need to send mass mailings.
+
+> [!TIP]
+> If you're an end-user and your email is blocked or fails to send due to outbound spam protection, you receive a non-delivery report (also known as an NDR or bounce message). This behavior is expected. Only admins can review and resolve these issues, so contact your email admin for assistance.
 
 ## What admins can do to control outbound spam
 
