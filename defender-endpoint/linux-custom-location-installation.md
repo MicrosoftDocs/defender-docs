@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: meghapriya
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

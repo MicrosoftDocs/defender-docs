@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 05/19/2025
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: tdoucett
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
