@@ -68,12 +68,11 @@ To create a DCR:
               - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
               - Select **Application** or **System** levels if needed. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
           - **Custom**:
-              - Under **Use XPath queries to filter event logs and limit data collection**, enter your XPath and select **Add** (each entry appears under **Event logs**).  
-          
-              Examples:  
-              - `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]` → Windows Security events (`SecurityEvent` table)          -  **Custom** to control which event logs and levels are collected.
-              - `Application!*[System[(Level=1)]]` → Application (Critical) (`Event` table)
-            
+              - Under **Use XPath queries to filter event logs and limit data collection**, enter an XPath query and select **Add**. For example:  
+                ```xpath
+                Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
+                ```
+                This filters the Windows Security events you collect and sends them to the `SecurityEvent` table.
       - Click **Next: Destination >**.
     - In the **Destination** tab:
       - Click **+ Add destination**.      
@@ -84,7 +83,7 @@ To create a DCR:
 1. In the **Review + create** tab:
     - Review the settings.
     - Click **Create** to deploy the DCR.
-1. After a few minutes, verify data in the Log Analytics workspace by running a simple KQL query such as:
+1. After a few minutes you can verify data in the Log Analytics workspace by running a simple KQL query such as:
     ```kusto
     SecurityEvent
     | take 10
