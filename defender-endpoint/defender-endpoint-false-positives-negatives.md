@@ -315,6 +315,10 @@ In general, you shouldn't need to define exclusions for Microsoft Defender Antiv
 
 You can submit entities, such as files and fileless detections, to Microsoft for analysis. Microsoft security researchers analyze all submissions, and their results help inform Defender for Endpoint threat protection capabilities. When you sign in at the submission site, you can track your submissions.
 
+### Submit hashes for analysis
+
+To investigate hashes, use the https://aka.ms/wdsi web portal. A maximum of 100 hashes can be submitted. The source of the Indicator of Compromise (IOC), must be provided. This can be a blog post, security article, or any other relevant source.
+
 ### Submit a file for analysis
 
 If you have a file that was either wrongly detected as malicious or was missed, follow these steps to submit the file for analysis.
