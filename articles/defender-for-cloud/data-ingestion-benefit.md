@@ -50,21 +50,26 @@ To create a DCR:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
-1. In the **Basics* tab:
+1. In the **Basics** tab:
     - Enter a name and a subscription.
     - Choose or create a resource group.
     - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
+    - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** only if you also plan to collect logs from those operating systems.)*
+    - Under **Data Collection Endpoint**, leave **\<none\>** unless you have created a Data Collection Endpoint for Private Link or other advanced network setups.
 1. In the **Resources** tab:
-    - Add the virtual machines or other resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those machines, or the rule won’t work.
-    - Optionally, select any Data Collection Endpoints (DCEs) if you are using Private Links or advanced network setups.
+    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources, or the rule won’t collect data.
+    - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
 1. In the **Collect and deliver** tab:
-    - Click **+ Add data source**, and in the **Add data source** window:
-        - Set **Data source type** to **Windows Event Logs**.
-        -  Choose **Custom** to control which logs and levels are collected.
-        - Under **Security**, select **Audit success** (successful security-related events) and/or **Audit failure** (failed security events) to collect Window Security Events.
-        - (Optional) Select **Application** or **System** log levels if you need them. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
-        - Click **Add** to save.
-    - Select the Log Analytics workspace where the events will be sent. Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day SecurityEvent ingestion benefit.
+    - Click **+ Add data source**. 
+    - In the **Add data source** window:
+        - For **Data source type**, select **Windows Event Logs**.
+        -  Choose **Custom** to control which event logs and levels are collected.
+        - Under **Security**, select **Audit success** (successful security-related events) and/or **Audit failure** (failed security events) to collect Windows Security Events.
+        - Select **Application** or **System** log levels if you need them. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
+        - Click **Next: Destination >**.
+        - For **Destination type**, choose **Azure Monitor Logs**
+        - Select at least one Log Analytics workspace where the events will be sent. Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day `SecurityEvent` ingestion benefit.
+        - Click **Add data source** to save.
 1. In the **Review + create** tab:
     - Review the settings.
     - Click **Create** to deploy the DCR.
