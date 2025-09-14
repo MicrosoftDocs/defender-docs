@@ -14,6 +14,7 @@ This article describes Microsoft Defender for Identity's **Certificates** securi
 > - While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as __Completed__.
 > - Make sure to test your settings in a controlled environment before turning them on in production.
 
+
 |Recommended action  |Description  |
 |---------|---------|
 |[Remediation for Enforce encryption for RPC certificate enrollment interface (ESC11)](#remediation-for-enforce-encryption-for-rpc-certificate-enrollment-interface-esc11)| This action enforces encryption for the RPC certificate enrollment interface to protect sensitive information during the enrollment process. |Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy. <br> If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol. <br> If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC11). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. |
@@ -31,7 +32,7 @@ This article describes Microsoft Defender for Identity's **Certificates** securi
 ## Remediation for Enforce encryption for RPC certificate enrollment interface (ESC11)
 
 > [!NOTE]
-> This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+> This assessment is available only to customers who have installed a sensor on an AD CS server.
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for enforcing encryption for RPC certificate enrollment. For example:
@@ -76,7 +77,7 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 ## Remediation for Edit misconfigured Certificate Authority ACL (ESC7)
 
 > [!NOTE]
-> This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+> This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACLs. For example:
@@ -119,7 +120,7 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU. For example:
 
-    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
+    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="../media/secure-score/permissive-certificate-template.png":::
 
 1. Research why the templates have a privileged EKU.
 1. Remediate the issue by doing the following:
@@ -144,7 +145,7 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 
    For example:  
 
-   :::image type="content" source="../media/prevent-certificate-enrollment-esc15/image.png" alt-text="Screenshot of servers." lightbox="media/prevent-certificate-enrollment-esc15/image.png":::
+    :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::
 
 ## Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
 
@@ -169,7 +170,7 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 
 ## Remediation for Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
 
-This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings. For example:
