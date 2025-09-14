@@ -42,11 +42,9 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 ### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
 
-Security Events are free, up to **500 MB per server per day**, but only when they reach the **SecurityEvent** table.  A DCR must therefore use the **Microsoft-SecurityEvent** stream to ensure compliance with the data ingestion benefit.
+Security Events are free, up to **500 MB per server per day**, but only when they reach the **SecurityEvent** table.  To take advantage of this benefit, you need a Data Collection Rule (DCR) that sends Windows Security events to the `SecurityEvent` table.  
 
 #### Quick steps to create a DCR
-
-To create a DCR:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
@@ -57,7 +55,7 @@ To create a DCR:
     - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
     - Under **Data Collection Endpoint**, leave **\<none\>** unless you have created a Data Collection Endpoint for Private Link or other advanced network setups.
 1. In the **Resources** tab:
-    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources..
+    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources.
     - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
 1. In the **Collect and deliver** tab:
     - Click **+ Add data source**. 
@@ -120,14 +118,16 @@ To create a DCR:
 
 #### Deploy at scale
 
-Automate creation and assignment of a compliant DCR across subscriptions with the Azure Policy initiative [Deploy AMA DCR for Security Events collection](
-https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection).
+Use the Azure Policy initiative [Deploy AMA DCR for Security Events collection](
+https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection)to automatically create and assign a DCR that collects Windows Security events across multiple subscriptions.
 
 ## Configure a workspace
 
 Azure Monitor describes how to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
 
 ## Enable Defender for Servers Plan 2 on the workspace
+
+To receive the 500 MB/day `SecurityEvent` ingestion benefit, the Log Analytics workspace that receives the data must have Defender for Servers Plan 2 enabled.
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 
