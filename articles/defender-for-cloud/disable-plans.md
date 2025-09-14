@@ -2,7 +2,7 @@
 title: Disable Defender for Cloud plans
 description: Learn how to disable Defender for Cloud plans on your connected environments subscription.
 ms.topic: how-to
-ms.date: 09/09/2025
+ms.date: 09/14/2025
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---
 
@@ -28,7 +28,7 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 
 ### [Azure](#tab/Azure)
         
-1. Locate the plan you want to disable and toggle the switch to **Off**.
+1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
         
     :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off." lightbox="media/disable-plans/plans-disabled.png":::
     
@@ -42,7 +42,7 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
     
 ### [AWS](#tab/AWS)
 
-1. Locate the plan you want to disable and toggle the switch to **Off**.
+1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
     
     :::image type="content" source="media/disable-plans/disable-amazon-plans.png" alt-text="Screenshot that shows all of the available Defender for Cloud plans disabled on an AWS connector.":::
 
@@ -66,6 +66,8 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 1. Select **Create**.
         
 ### [GCP](#tab/GCP)
-        
+
+1. Locate the plan, or plans you want to disable and toggle the switch to **Off**.
+  
 ---
 
