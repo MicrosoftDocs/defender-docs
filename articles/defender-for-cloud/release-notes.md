@@ -45,15 +45,15 @@ Defender for Cloud now includes **open-source dependency vulnerability scanning*
 - [Agentless code scanning (preview)](/azure/defender-for-cloud/agentless-code-scanning).
 
 **What to do:**  
-- For [Azure DevOps](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-devops) or [GitHub](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-github), create or edit a connector.  
-- For in-pipeline scanning, add the [Microsoft Security DevOps (MSDO) CLI](https://learn.microsoft.com/azure/defender-for-cloud/cli-cicd-integration) tool to your pipeline definition.  
+- For [Azure DevOps](quickstart-onboard-devops.md) or [GitHub](quickstart-onboard-github.md), create or edit a connector.  
+- For in-pipeline scanning, add the [Microsoft Security DevOps (MSDO) CLI](cli-cicd-integration.md) tool to your pipeline definition.  
 
 **Where results appear:**  
 - Pipeline logs and SARIF files.  
 
 - Defender for Cloud recommendations:  
-  - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](https://learn.microsoft.com/azure/defender-for-cloud/recommendations-reference-devops#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
-  - *[GitHub repositories should have dependency vulnerability scanning findings resolved](https://learn.microsoft.com/azure/defender-for-cloud/recommendations-reference-devops#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+  - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+  - *[GitHub repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
 
 If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces those results.  
 
