@@ -28,23 +28,23 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 
     ### [Azure](#tab/Azure)
         
-        1. Locate the plan you want to disable and toggle the switch to **Off**.
+    1. Locate the plan you want to disable and toggle the switch to **Off**.
         
         :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off." lightbox="media/disable-plans/plans-disabled.png":::
     
-        1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you will be able to close the 4 sub plans of Defender for Databases.
+    1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you will be able to close the 4 sub plans of Defender for Databases.
         
         :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
     
-        1. (Optional) Select **Continue**.
+    1. (Optional) Select **Continue**.
         
-        1. Select **Save**.
+    1. Select **Save**.
     
     ### [AWS](#tab/AWS)
 
     1. Locate the plan you want to disable and toggle the switch to **Off**.
     
-    :::image type="content" source="media/disable-plans/disable-amazon-plans.png" alt-text="Screenshot that shows all of the available Defender for Cloud plans disabled on an AWS connector.":::
+        :::image type="content" source="media/disable-plans/disable-amazon-plans.png" alt-text="Screenshot that shows all of the available Defender for Cloud plans disabled on an AWS connector.":::
 
     1. Select **Next: Configure access**.:
 
@@ -55,9 +55,9 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
     
     1. Select a deployment method: **AWS CloudFormation** or **Terraform**.
     
-    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
+        :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
-    1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. If you're onboarding a management account, you need to run the CloudFormation template both as Stack and as StackSet. Connectors are created for the member accounts up to 24 hours after the onboarding.
+    1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
     
     1. Put a check in the checkbox, confirming you followed the instructions.
 
