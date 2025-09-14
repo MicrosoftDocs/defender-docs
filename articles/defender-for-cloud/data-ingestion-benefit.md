@@ -54,10 +54,10 @@ To create a DCR:
     - Enter a name and a subscription.
     - Choose or create a resource group.
     - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
-    - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** only if you also plan to collect logs from those operating systems.)*
+    - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
     - Under **Data Collection Endpoint**, leave **\<none\>** unless you have created a Data Collection Endpoint for Private Link or other advanced network setups.
 1. In the **Resources** tab:
-    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources, or the rule won’t collect data.
+    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources..
     - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
 1. In the **Collect and deliver** tab:
     - Click **+ Add data source**. 
@@ -72,8 +72,6 @@ To create a DCR:
                 ```xpath
                 Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
                 ```
-                This filters the Windows Security events you collect and sends them to the `SecurityEvent` table.
-      - Click **Next: Destination >**.
     - In the **Destination** tab:
       - Click **+ Add destination**.      
       - For **Destination type**, choose **Azure Monitor Logs**.
@@ -88,7 +86,6 @@ To create a DCR:
     SecurityEvent
     | take 10
     ```
-
 #### Sample JSON fragment
 
 ```json
