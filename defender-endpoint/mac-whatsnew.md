@@ -32,10 +32,11 @@ ms.reviewer: mavel
 
 For more information on Microsoft Defender for Endpoint on other operating systems:
 
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
-- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-- [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md]
+
 
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on macOS devices and navigating to **Help** \> **Send feedback**.
