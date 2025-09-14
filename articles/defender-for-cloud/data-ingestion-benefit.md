@@ -55,7 +55,7 @@ To receive up to **500 MB per server per day of free Security Events data**, use
     - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
     - Under **Data Collection Endpoint**, leave **\<none\>** unless you have created a Data Collection Endpoint for Private Link or other advanced network setups.
 1. In the **Resources** tab:
-    - Click **+ Add resources** and select the resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those resources.
+    - Click **+ Add resources** and select the resources where you want this rule applied.
     - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
 1. In the **Collect and deliver** tab:
     - Click **+ Add data source**. 
@@ -73,7 +73,7 @@ To receive up to **500 MB per server per day of free Security Events data**, use
     - In the **Destination** tab:
       - Click **+ Add destination**.      
       - For **Destination type**, choose **Azure Monitor Logs**.
-      - Select at least one Log Analytics workspace (same region as the DCR). Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day `SecurityEvent` ingestion benefit.
+      - Select at least one Log Analytics workspace (same region as the DCR).
       - Click **Save**.
 1. In the **Tags** tab add any tags you need for resource organization or cost management.
 1. In the **Review + create** tab:
