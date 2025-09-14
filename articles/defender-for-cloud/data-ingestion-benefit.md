@@ -15,7 +15,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 - The 500 MB allowance applies per machine, per day, for specific security data types collected directly by Defender for Cloud.
 - Data ingestion is calculated per machine, per reported workspace, and daily.
 - The total daily free limit equals number of machines × 500 MB.
-- The allowance is averaged across all machines in the subscription.
+- The allowance is averaged across all machines in the subscription each day.
 - You aren’t charged extra if the total remains within the daily free limit, even if some machines send only 100 MB and others send 800 MB.
 - The benefit is applied to the Log Analytics workspace where the machine reports.
 - The benefit might not appear on your invoice because it has zero cost. You can see it in the product UI and in Microsoft Cost Management exports. Learn how to  [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
@@ -24,7 +24,7 @@ When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you
 
 - Each machine must run the Azure Monitor Agent (AMA) in a subscription with Defender for Servers Plan 2 enabled.
 - Each Log Analytics workspace where machines report must have Defender for Servers Plan 2 enabled.
-- If a machine reports to more than one workspace, the ingestion benefit is applied to only one workspace.
+- If a machine reports to more than one workspace, the ingestion benefit is applied to only one of them.
 
 The following subset of  [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
 
@@ -42,7 +42,7 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 
 ### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
 
-Security Events are free, up to **500 MB per server per day**, but only when they reach the **SecurityEvent** table.  To take advantage of this benefit, you need a Data Collection Rule (DCR) that sends Windows Security events to the `SecurityEvent` table.  
+To receive up to **500 MB of free Security Events data per server per day**, you must use a Data Collection Rule (DCR) that routes Windows Security events to the `SecurityEvent` table.
 
 #### Quick steps to create a DCR
 
@@ -111,7 +111,7 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 
 | Requirement | Why it matters |
 |-------------|----------------|
-| **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the **SecurityEvent** table covered by the allowance. |
+| **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the `SecurityEvent` table covered by the allowance. |
 | **Security solution enabled on workspace** | Ensures the ingestion benefit is applied (same as Defender for Servers Plan 2). |
 | **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
 | **Azure Monitor Agent (AMA)** installed | Required to apply custom DCRs. |
@@ -119,7 +119,7 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 #### Deploy at scale
 
 Use the Azure Policy initiative [Deploy AMA DCR for Security Events collection](
-https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection)to automatically create and assign a DCR that collects Windows Security events across multiple subscriptions.
+https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection) to automatically create and assign a DCR that collects Windows Security events across multiple subscriptions.
 
 ## Configure a workspace
 
