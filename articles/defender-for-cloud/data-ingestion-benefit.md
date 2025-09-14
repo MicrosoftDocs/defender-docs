@@ -64,15 +64,15 @@ To create a DCR:
     - In the **Data source** tab of the **Add data source** window:
       - For **Data source type**, select **Windows Event Logs**.
       -  Choose **Basic** or **Custom**:
-        - **Basic**:
-          - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
-          - Select **Application** or **System** levels if needed. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
-        - **Custom**:
-          - Under **Use XPath queries to filter event logs and limit data collection**, enter your XPath and select **Add** (each entry appears under **Event logs**).  
+          - **Basic**:
+              - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
+              - Select **Application** or **System** levels if needed. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
+          - **Custom**:
+              - Under **Use XPath queries to filter event logs and limit data collection**, enter your XPath and select **Add** (each entry appears under **Event logs**).  
           
-            Examples:  
-            - `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]` → Windows Security events (`SecurityEvent` table)          -  **Custom** to control which event logs and levels are collected.
-            - `Application!*[System[(Level=1)]]` → Application (Critical) (`Event` table)
+              Examples:  
+              - `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]` → Windows Security events (`SecurityEvent` table)          -  **Custom** to control which event logs and levels are collected.
+              - `Application!*[System[(Level=1)]]` → Application (Critical) (`Event` table)
             
       - Click **Next: Destination >**.
     - In the **Destination** tab:
