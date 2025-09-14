@@ -86,7 +86,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 | Build:             | **101.25072.0011**         |
 |--------------------|-----------------------|
 | Release version:   | **20.125072.11.0** |
-| Engine version:    | **1.1.25060.3000**       |
+| Engine version:    | **1.1.25070.3000**       |
 | Signature version: | **1.429.309.0**      |
 
 ##### What's new
@@ -102,7 +102,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 | Build:             | **101.25062.0006**   |
 |--------------------|----------------------|
 | Release version:   | **20.125062.6.0**    |
-| Engine version:    | **1.1.25050.3000**   |
+| Engine version:    | **1.1.25070.3000**   |
 | Signature version: | **1.435.357.0**      |
 
 ##### What's new
