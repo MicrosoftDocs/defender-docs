@@ -133,7 +133,7 @@ Learn about Microsoft Defender for Identity security posture assessments for ide
 
 1. Review the recommended action at https://security.microsoft.com/securescore?viewid=actions to discover which of your Microsoft Entra Connect servers are unmonitored.
 
-    :::image type="content" source="../media/unmonitored-entra-connect-servers/recommended-actions-unmonitored-entra-connect-server.png" alt-text="Screenshot that shows the recommended actions for an unmonitored Entra Connect server." lightbox="media/unmonitored-entra-connect-servers" lightbox="media/unmonitored-entra-connect-servers/recommended-actions-unmonitored-entra-connect-server.png":::
+    :::image type="content" source="../media/unmonitored-entra-connect-servers/recommended-actions-unmonitored-entra-connect-server.png" alt-text="Screenshot that shows the recommended actions for an unmonitored Entra Connect server." lightbox="../media/unmonitored-entra-connect-servers/recommended-actions-unmonitored-entra-connect-server.png":::
 
 1. Go to the **Microsoft Defender portal > Settings > Identities > Sensors**. You can view the already installed sensors in your environment and download the install package to deploy them on your remaining servers.
 1. Take appropriate action on those servers by [configuring monitoring sensors](/defender-for-identity/deploy/active-directory-federation-services).
