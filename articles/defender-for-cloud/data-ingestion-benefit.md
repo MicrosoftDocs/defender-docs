@@ -49,34 +49,30 @@ Security Events are free, up to **500 MB per server per day**, but only when the
 To create a DCR:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
-1. Go to ▸ *Monitor* ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
-1. In the *Basics* tab:
+1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
+1. In the **Basics* tab:
     - Enter a name and a subscription.
     - Choose or create a resource group.
     - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
-1. In the *Resources* tab:
-    - Add your target machines. Make sure the Azure Monitor Agent (AMA) is installed on those machines, or the rule won’t work.
+1. In the **Resources** tab:
+    - Add the virtual machines or other resources where you want this rule applied. Make sure the Azure Monitor Agent (AMA) is installed on those machines, or the rule won’t work.
     - Optionally, select any Data Collection Endpoints (DCEs) if you are using Private Links or advanced network setups.
-1. In the *Collect and deliver* tab:
-    - Click **+ Add data source**. In the new window:
-        - Choose Basic (all standard logs) or Custom (specific logs and levels).
-        - Under **Security**, check **Audit success** (successful security-related events) and/or **Audit failure** (failed security events).
-        -
-1. **Add data source** 
-   - *Type*: **Windows event logs**  
-   - *Log name*: `Security`  
-   - *Stream*: Enter either:
-        - `Microsoft-Event` - The Azure portal UI supports `Microsoft-Event` only. This stream option sends logs to the Event table. 
-        or,
-        - `Microsoft-SecurityEvent` - This option sends logs to the SecurityEvent table, which is included in the Defender for Servers 500 MB ingestion benefit. This stream option also defines the stream as using a custom DCR JSON, ARM template, Bicep file, or Azure Policy.
-   - *(Optional)* filter with XPath, for example:
-
-     ```xpath
-     *[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
-     ```
-
-1. **Destination** ▸ Select the Log Analytics workspace that has **Defender for Servers Plan 2** enabled.
-1. **Review + create** ▸ **Assign** the rule to Windows machines running the Azure Monitor Agent (AMA).
+1. In the **Collect and deliver** tab:
+    - Click **+ Add data source**, and in the **Add data source** window:
+        - Set **Data source type** to **Windows Event Logs**.
+        -  Choose **Custom** to control which logs and levels are collected.
+        - Under **Security**, select **Audit success** (successful security-related events) and/or **Audit failure** (failed security events) to collect Window Security Events.
+        - (Optional) Select **Application** or **System** log levels if you need them. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
+        - Click **Add** to save.
+    - Select the Log Analytics workspace where the events will be sent. Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day SecurityEvent ingestion benefit.
+1. In the **Review + create** tab:
+    - Review the settings.
+    - Click **Create** to deploy the DCR.
+1. After a few minutes, verify data in the Log Analytics workspace by running a simple KQL query such as:
+    ```kusto
+    SecurityEvent
+    | take 10
+    ```
 
 #### Sample JSON fragment
 
