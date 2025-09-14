@@ -42,6 +42,11 @@ This article describes how to deploy Microsoft Defender for Endpoint on macOS ma
 
 Before you get started, see [the main Microsoft Defender for Endpoint on macOS page](microsoft-defender-endpoint-mac.md) for a description of prerequisites and system requirements for the current software version.
 
+> [!IMPORTANT]
+> Manual installation of Microsoft Defender for Endpoint on macOS requires changes to the Privacy & Security Settings on macOS.  Please consult Apple's documentation for details.  
+> [Change Privacy & Security settings on MacOS Sonoma 14](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/14.0/mac/14.0)
+> [Change Privacy & Security settings on MacOS Sequoia 15](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/15.0/mac/15.0)
+> 
 ## Download installation and onboarding packages
 
 Download the installation and onboarding packages from Microsoft Defender portal.
@@ -95,7 +100,7 @@ To complete this process, you must have admin privileges on the device.
 
 8. Enter the password, when prompted.
 
-9. Select **Install Software**.
+1. Select **Install Software**.
 
 10. At the end of the installation process, for macOS Ventura (13.0) or latest version, you're prompted to approve the system extensions used by the product. Select **Open Security Preferences**.
 
