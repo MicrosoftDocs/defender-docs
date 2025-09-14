@@ -1,11 +1,9 @@
 ---
 title: 'Hybrid security posture assessments'
 description: View all hybrid security posture assessments for Microsoft Defender for Identity.
-author:      LiorShapiraa # GitHub alias
-ms.author:  liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: how-to
-ms.date:     09/10/2025
+ms.date: 09/10/2025
 ms.reviewer: LiorShapiraa
 ---
 
