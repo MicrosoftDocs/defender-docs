@@ -63,7 +63,7 @@ To create a DCR:
     - Click **+ Add data source**. 
     - In the **Data source** tab of the **Add data source** window:
       - For **Data source type**, select **Windows Event Logs**.
-      -  Choose**Basic** or **Custom**:
+      -  Choose **Basic** or **Custom**:
         - **Basic**:
           - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
           - Select **Application** or **System** levels if needed. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
@@ -73,11 +73,13 @@ To create a DCR:
             Examples:  
             - `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]` → Windows Security events (`SecurityEvent` table)          -  **Custom** to control which event logs and levels are collected.
             - `Application!*[System[(Level=1)]]` → Application (Critical) (`Event` table)
-        - Click **Next: Destination >**.
+            
+      - Click **Next: Destination >**.
     - In the **Destination** tab:
-      - For **Destination type**, choose **Azure Monitor Logs**
-      - Select at least one Log Analytics workspace where the events will be sent. Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day `SecurityEvent` ingestion benefit.
-        - Click **Add data source** to save.
+      - Click **+ Add destination**.      
+      - For **Destination type**, choose **Azure Monitor Logs**.
+      - Select at least one Log Analytics workspace (same region as the DCR). Ensure the workspace has Microsoft Defender for Servers Plan 2 enabled if you want the 500 MB/day `SecurityEvent` ingestion benefit.
+      - Click **Save**.
 1. In the **Tags** tab add any tags you need for resource organization or cost management.
 1. In the **Review + create** tab:
     - Review the settings.
