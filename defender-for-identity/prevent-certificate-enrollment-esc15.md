@@ -41,7 +41,7 @@ This assessment is available only to customers who installed a sensor on an AD C
 
    For example:  
 
-   :::image type="content" source="media/prevent-certificate-enrollment-esc15/image.png" alt-text="Screenshot of servers." lightbox="media/prevent-certificate-enrollment-esc15/image.png":::
+   :::image type="content" source="../media/prevent-certificate-enrollment-esc15/image.png" alt-text="Screenshot of servers." lightbox="media/prevent-certificate-enrollment-esc15/image.png":::
 
 ## Next steps
 
