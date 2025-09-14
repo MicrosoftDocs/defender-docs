@@ -11,6 +11,9 @@ ms.reviewer: LiorShapiraa
 
 Learn about Microsoft Defender for Identity security posture assessments for identity infrastructure.
 
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.
+
 |Recommended action  |Description  |
 |---------|---------|
 |[Remediation for Built-in Active Directory Guest account is enabled](#remediation-for-built-in-active-directory-guest-account-is-enabled) |This recommendation indicates whether an AD Guest account is enabled in your environment. The goal is to ensure that the Guest account of the domain isn't enabled. The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat. |
