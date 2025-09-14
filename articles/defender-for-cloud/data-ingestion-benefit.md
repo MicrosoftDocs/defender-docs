@@ -10,21 +10,21 @@ ai-usage: ai-assisted
 
 # Use the data ingestion benefit
 
-When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you take advantage of 500 MB of free data ingestion daily. Here's how it works.
+When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you receive 500 MB of free data ingestion per node daily.
 
-- Defender for Servers Plan 2 provides an allowance of 500 MB per node daily for specific security data types directly collected by Defender for Cloud.
+- The 500 MB allowance applies per machine, per day, for specific security data types collected directly by Defender for Cloud.
 - Data ingestion is calculated per machine, per reported workspace, and daily.
-- The total daily free limit equals [number of machines] x 500 MB.
-- The allowance is a daily rate averaged across all machines.
-- You don't get charged extra if the total doesn't exceed your daily free limit, even if some machines send 100 MB and others send 800 MB.
-- The benefit is granted to the Log Analytics workspace where the machine reports.
-- The benefit might not appear on your invoice, since it has zero cost. The benefit is visible in the product and in exports from Microsoft Cost Management. Learn how to  [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
+- The total daily free limit equals number of machines × 500 MB.
+- The allowance is averaged across all machines in the subscription.
+- You aren’t charged extra if the total remains within the daily free limit, even if some machines send only 100 MB and others send 800 MB.
+- The benefit is applied to the Log Analytics workspace where the machine reports.
+- The benefit might not appear on your invoice because it has zero cost. You can see it in the product UI and in Microsoft Cost Management exports. Learn how to  [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
 
 ## Prerequisites
 
-- Every machine running the Azure Monitor agent (AMA) in a subscription with Defender for Servers Plan 2 enabled gets the benefit.
-- Every workspace where machines report must have Defender for Servers Plan 2 enabled.
-- Every machine reporting to more than one workspace gets the benefit granted to only one of them.
+- Each machine must run the Azure Monitor Agent (AMA) in a subscription with Defender for Servers Plan 2 enabled.
+- Each Log Analytics workspace where machines report must have Defender for Servers Plan 2 enabled.
+- If a machine reports to more than one workspace, the ingestion benefit is applied to only one workspace.
 
 The following subset of  [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
 
