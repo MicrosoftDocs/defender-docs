@@ -110,14 +110,13 @@ Blast radius analysis is an advanced graph visualization integrated into inciden
 > [!NOTE]
 > Blast radius analysis extends and replaces Attack path analysis. 
 
-The blast radius graph provides a unique unified view of both pre-breach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
+The blast radius graph provides a unique unified view of both prebreach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
 
 The following prerequisites are required to use the blast radius graph:
-+	You must be onboarded to Microsoft Sentinel data lake. For more information see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
-+	Exposure management (read) permission or higher.
-
++	You must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
++	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)](../exposure-management/prerequisites.md#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
 > [!IMPORTANT]
-> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined, attack path and blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
+> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined,blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
 
 The following table summarizes the blast radius analysis use cases for different user roles:
 
@@ -132,16 +131,18 @@ The following table summarizes the blast radius analysis use cases for different
 
 After selecting an incident from the list in the **Incidents** page, a graph view is displayed showing the entities and assets involved in the incident.
 
-Select a node to open the context menu, then select **View blast radius**. 
+Select a node to open the context menu, then select **View blast radius**.  To view the blast radius of any node of a group in the graph, use the **ungroup** toggle above the grid to present all nodes.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius.png" lightbox="./media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
 
-A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius** above the graph to the right. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target. 
+A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius** above the graph to the right. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target.  Some nodes may not have paths associated with them.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
 Select **View blast radius list** to see a list of target assets. 
-Select a target asset from the list to view its details and potential attack paths.
+Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
+
+When paths lead to grouped targets of the same types, to view discrete paths to targets, select the grouped icons. A right-side panel opens showing all the targets in the group. Selecting the check box on the left and selecting the **Expand** button on top displays each target and its paths separately.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-list.png" lightbox="./media/investigate-incidents/blast-radius-list.png" alt-text="Screenshot showing the blast radius list." :::
 
