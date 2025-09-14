@@ -26,27 +26,23 @@ If you created an affiliated resource, such as a Log Analytics workspace or Stor
 
     :::image type="content" source="media/disable-plans/environment-settings-screen.png" alt-text="Screenshot of the environment settings page that shows where the link to the page is located." lightbox="media/disable-plans/environment-settings-screen.png":::
 
-### [Azure](#tab/Azure)
+    ### [Azure](#tab/Azure)
+        
+        1. Locate the plan you want to disable and toggle the switch to **Off**.
+        
+            :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off." lightbox="media/disable-plans/plans-disabled.png":::
     
-    1. Locate the plan you want to disable and toggle the switch to **Off**.
+        1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you will be able to close the 4 sub plans of Defender for Databases.
+        
+            :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
     
-        :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off." lightbox="media/disable-plans/plans-disabled.png":::
-
-    1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you will be able to close the 4 sub plans of Defender for Databases.
+        1. (Optional) Select **Continue**.
+        
+        1. Select **Save**.
     
-        :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
-
-    1. (Optional) Select **Continue**.
-    
-    1. Select **Save**.
-
----
-
-### [AWS](#tab/AWS)
-
----
-    
-### [GCP](#tab/GCP)
-    
----
+    ### [AWS](#tab/AWS)
+        
+    ### [GCP](#tab/GCP)
+        
+    ---
 
