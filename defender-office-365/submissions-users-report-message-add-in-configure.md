@@ -178,7 +178,7 @@ We recommend that you try the built-in **Report** button. If you're still facing
 
 ### Q: I can't scope the built-in Report button, which prevents me from rolling it out. What can I do?
 
-A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button smoothly without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
+A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
 
 If you're looking to scope the functionality for experimentation, we recommend using a test environment.
 
