@@ -76,7 +76,7 @@ A **node** pertains to an entity in your environment (for example, a device, use
 | | IP address | |
 | | Subscriptions | |
 
-Selecting a node opens a side panel that provides more details about the chosen entity, including entity name, type, last updated date, and discovery source. This panel might also display additional information such as attack paths, depending on the selected node and its relationship to other nodes in the graph.
+Selecting a node opens a side panel that provides more details about the chosen entity, including entity name, type, last updated date, and discovery source. This panel might also display additional information such as attack paths and blast radius, depending on the selected node and its relationship to other nodes in the graph.
 
 :::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png" alt-text="Screenshot of the side panel in the hunting graph containing node details." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png":::
 
@@ -140,7 +140,7 @@ The following table describes the predefined scenarios in the hunting graph and 
 
 | **Scenario** | **Description** | **Inputs** |
 |---|---|---|
-| **Paths between two entities** | Provide two entities (nodes) to view the paths between them. |<ul><li>Start Entity<li>End Entity</ul> |
+| **Paths between two entities** | Provide two entities (nodes) to view the paths between them. |<ul><li>Start Entity<li>End Entity</ul>**Note:** Make sure to identify and input the correct start and end entities, as the generated graph will be directional. |
 | **Entities that have access to a key vault** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it. | Target key vault |
 | **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it. | Target storage account |
 | **Critical users with access to storage accounts containing sensitive data** | This scenario identifies critical users with access to storage resources containing sensitive data. | (None) |
