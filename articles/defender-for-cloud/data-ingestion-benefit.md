@@ -44,9 +44,12 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
 - [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
 
+> [!NOTE]
+> Although `WindowsEvent` is listed, only security events from the `Microsoft-SecurityEvent` stream that go to the `SecurityEvent` table qualify for the 500 MB/day allowance. Application, System, or other event log channels are not covered and are billed as regular ingestion.
+
 ### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
 
-To receive up to **500 MB of free Security Events data per server per day**, use a Data Collection Rule (DCR) to route Windows Security events to the `SecurityEvent` table.
+To receive up to **500 MB of free security events data per server per day**, use a Data Collection Rule (DCR) to route Windows Security events to the `SecurityEvent` table.
 
 #### Steps to create a DCR
 
@@ -60,7 +63,7 @@ To receive up to **500 MB of free Security Events data per server per day**, use
     - Under **Data Collection Endpoint**, leave **\<none\>** unless you're using a Data Collection Endpoint for Private Link or another advanced network setup.
 1. On the **Resources** tab:
     - Select **+ Add resources** and choose the resources for this rule.
-    - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
+    - If you are using Private Links or advanced network setups, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint.
 1. On the **Collect and deliver** tab:
     - Select **+ Add data source**. 
     - In **Data source**:
@@ -68,8 +71,8 @@ To receive up to **500 MB of free Security Events data per server per day**, use
       -  Choose **Basic** or **Custom**:
       :::image type="content" source="media/data-ingestion-benefit/dcr-add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
           - **Basic**:
-              - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
-              - Select **Application** or **System** levels if needed. These logs go to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
+              - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table.  
+              - Select **Application** or **System** levels if needed. These logs go to the `Event` table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
           - **Custom**:
               - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**, then select **Add**. For example:  
                 ```xpath
@@ -117,10 +120,9 @@ To receive up to **500 MB of free Security Events data per server per day**, use
 
 | Requirement | Why it matters |
 |-------------|----------------|
-| **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the `SecurityEvent` table covered by the allowance. |
-| **Security solution enabled on workspace** | Ensures the ingestion benefit is applied (same as Defender for Servers Plan 2). |
-| **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
+| **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
 | **Azure Monitor Agent (AMA)** installed | Required to apply custom DCRs. |
+| **`Microsoft-SecurityEvent`** stream in the DCR | Routes security events to the `SecurityEvent` table that qualifies for the free allowance. |
 
 #### Deploy at scale
 
