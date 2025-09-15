@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 12/12/2024
+ms.date: 09/12/2025
 ms.reviewer: efratka, nehabha, muktaagarwal
 f1.keywords: NOCSH
 ms.collection:
@@ -187,7 +187,7 @@ When you run the local script on Mac, it creates a trust with Microsoft Entra ID
    ```bash
    /usr/bin/unzip WindowsDefenderATPOnboardingPackage.zip \
    && /bin/chmod +x MicrosoftDefenderATPOnboardingMacOs.sh \
-   && /bin/bash -c MicrosoftDefenderATPOnboardingMacOs.sh
+   && Sudo bash -x MicrosoftDefenderATPOnboardingMacOs.sh
    ```
 
 After Mac is enrolled in Intune, you can add it to a device group. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
