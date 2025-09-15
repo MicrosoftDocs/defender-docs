@@ -20,11 +20,11 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 - You must [enable Defender Cloud Security Posture Management (Defender CSPM)](enable-enhanced-security.md) on your environment.
 
   > [!NOTE]
-  > Recommendations are included by default with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
+  > By default, recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
-Review all of the details related to a recommendation before trying to understand what you need to do to resolve the recommendation. Ensure that all of the recommendation details are correct before resolving the recommendation.
+Review recommendations and make sure all the details are correct before you resolve them.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -33,18 +33,18 @@ Review all of the details related to a recommendation before trying to understan
 1. Select a recommendation.
 
 1. On the recommendation page, review the following details:
-   - **Risk level**: The vulnerability and business effect of the underlying security issue, considering environmental resource context such as internet exposure, sensitive data, lateral movement, and more.
-   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
+   - **Risk level**: The vulnerability and business effect of the underlying security issue, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
+   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influence the vulnerability and business effect of the underlying security issue. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
    - **Resource**: The name of the affected resource.
-   - **Status**: The status of the recommendation, such as unassigned, on time, or overdue.
+   - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
    - **Description**: A brief description of the security issue.
    - **Attack Paths**: The number of attack paths.
    - **Scope**: The affected subscription or resource.
    - **Freshness**: The freshness interval of the recommendation.
    - **Last change date**: The date this recommendation was last changed.
-   - **Severity**: The severity of the recommendation (High, Medium, or Low). More details are provided later in this article.
+   - **Severity**: The severity of the recommendation: **High**, **Medium**, or **Low**. More details are provided later in this article.
    - **Owner**: The person assigned to the recommendation.
-   - **Due date**: The assigned due date to resolve the recommendation.
+   - **Due date**: The date to resolve the recommendation by.
    - **Tactics & techniques**: The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
@@ -76,7 +76,7 @@ In **Findings**, you can review affiliated findings by severity.
 
 :::image type="content" source="media/review-security-recommendations/recommendation-findings.png" alt-text="Screenshot that shows the findings tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-findings.png":::
 
-In **Graph**, you can view and investigate all context that is used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
+In **Graph**, you can view and investigate all the context that's used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
 
 :::image type="content" source="media/review-security-recommendations/recommendation-graph.png" alt-text="Screenshot that shows the Graph tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-graph.png":::
 
@@ -153,11 +153,9 @@ You can also use the **Set email notifications** option to:
 - Notify owners weekly with a list of open or overdue tasks.
 - Notify the owner's direct manager with an open task list.
 
-
-
 ## Review recommendations in Azure Resource Graph
 
-You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) to query Defender for Cloud security posture data across multiple subscriptions. Azure Resource Graph provides an efficient way to query at scale across cloud environments by viewing, filtering, grouping, and sorting data.
+You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) query to query Defender for Cloud security posture data across multiple subscriptions. Azure Resource Graph provides an efficient way to query at scale across cloud environments by viewing, filtering, grouping, and sorting data.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -212,17 +210,17 @@ Examples of low severity recommendations include:
 
 - The use of local authentication instead of Microsoft Entra ID.
 - Health issues with your endpoint protection solution.
-- Best practices not being followed with network security groups.
+- Users not following best practices with network security groups.
 - Misconfigured logging settings, which might make it harder to detect and respond to security incidents.
 
-An organization's internal policies might differ from Microsoft’s classification of a specific recommendation. It's always a good idea to carefully review each recommendation and consider its potential effect on your security posture before you decide how to address it.
+An organization's internal policies might differ from Microsoft's classification of a specific recommendation. We recommend that you always carefully review each recommendation and consider its potential effect on your security posture before you decide how to address it.
 
 > [!NOTE]
 > Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md).
 
 ### Example
 
-In this example, this **Recommendation details** page shows 15 affected resources:
+In this example, the **Recommendation details** page shows 15 affected resources:
 
 :::image type="content" source="./media/review-security-recommendations/open-query.png" alt-text="Screenshot of the Open query button on the Recommendation details page." lightbox="media/review-security-recommendations/open-query.png":::
 
