@@ -35,6 +35,7 @@ This API allows customers to:
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the agent on eligible servers
  ​
+
 For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
 
 ### Microsoft Defender for Identity sensor version updates
