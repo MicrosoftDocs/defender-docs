@@ -27,7 +27,7 @@ In addition to risk level, we recommend that you prioritize the security control
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-    :::image type="content" source="media/implement-security-recommendations/recommendations-page.png" alt-text="Screenshot of the recommendations page that shows all of the affected resources by their risk level." lightbox="media/implement-security-recommendations/recommendations-page.png":::
+    :::image type="content" source="media/implement-security-recommendations/recommendations-page.png" alt-text="Screenshot of the recommendations page that shows all the affected resources by their risk level." lightbox="media/implement-security-recommendations/recommendations-page.png":::
 
 1. Select a recommendation.
 
