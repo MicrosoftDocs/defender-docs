@@ -35,7 +35,7 @@ This API allows customers to:
 * Enable or disable the automatic activation of eligible servers
 * Activate or deactivate the agent on eligible servers
  ​
-For more information, see [Managing response actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -182,7 +182,7 @@ For prerequisites and configuration steps, see [Integrate Okta with Microsoft De
 ### Service account classification rules now available
 
 You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
-For more information, see [Service account discovery](service-account-discovery.md)
+For more information, see [Service account discovery](service-account-discovery.md).
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
 
@@ -323,7 +323,7 @@ Defender for Identity has added the new **Prevent Certificate Enrollment with ar
 
 This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
 
-The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
 
 For more information, see:
 
