@@ -36,15 +36,14 @@ To enable and configure Defender for Storage at scale by using an Azure built-in
 
 1. Select **Create** to assign the policy.
 
-### Malware scanning
-
-You can configure malware scanning to send scanning results to the following places:
-
-- [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
-- [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
-
-[Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
+> [!TIP]
+> You can configure malware scanning to send scanning results to:
+>
+> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
+>
+> [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
 ## Related content
 
-- Learn how to [enable and configure Microsoft Defender for Storage with IaC templates](defender-for-storage-infrastructure-as-code-enablement.md).
+- Learn how to [enable and configure Microsoft Defender for Storage by using IaC templates](defender-for-storage-infrastructure-as-code-enablement.md).

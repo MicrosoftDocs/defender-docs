@@ -27,7 +27,7 @@ Before you enable Defender for Storage, ensure that you have the necessary permi
 To enable and configure Defender for Storage and to ensure maximum protection and cost optimization, you can use these available options:
 
 - Enable or disable Defender for Storage at the subscription level or the storage account level.
-- Enable or disable the configurable features for malware scanning or sensitive-data threat detection.
+- Enable or disable the configurable features for malware scanning and sensitive-data threat detection.
 - Set a monthly cap on the malware scanning per storage account per month for controlling costs. (The default value is 10,000 GB.)
 - Configure methods to set up a response to malware scanning results.
 - Configure methods for logging malware scanning results. The malware scanning feature has advanced configurations to help security teams support various workflows and requirements.
@@ -43,11 +43,11 @@ There are several ways to enable and configure Defender for Storage. The followi
   - [Bicep](defender-for-storage-infrastructure-as-code-enablement.md?tabs=enable-subscription#bicep-template)
   - [Azure Resource Manager](defender-for-storage-infrastructure-as-code-enablement.md?tabs=enable-subscription#azure-resource-manager-template)
 - [Azure portal](defender-for-storage-azure-portal-enablement.md?tabs=enable-subscription)
-- [PowerShell](defender-for-storage-powershell-enablement.md??tabs=enable-subscription)
+- [Azure PowerShell](defender-for-storage-powershell-enablement.md??tabs=enable-subscription)
 - [REST API](defender-for-storage-rest-api-enablement.md?tabs=enable-subscription)
 
 We recommend that you enable Defender for Storage via a policy. This method facilitates enablement at scale. It also ensures that a consistent security policy is applied across all existing and future storage accounts within the defined scope, such as entire management groups. This approach keeps the storage accounts protected with Defender for Storage according to your organization's defined configuration.
 
 ## Related content
 
-- Learn how to [enable and configure the Defender for Storage plan at scale with an Azure built-in policy](defender-for-storage-policy-enablement.md).
+- Learn how to [enable and configure the Defender for Storage plan at scale by using an Azure built-in policy](defender-for-storage-policy-enablement.md).

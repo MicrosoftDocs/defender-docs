@@ -12,22 +12,24 @@ We recommend that you enable Microsoft Defender for Storage on the subscription 
 > [!TIP]
 > You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
+## Set up Azure PowerShell
+
 Before you work with Azure PowerShell, perform the following steps:
 
 1. If you don't have it already, [install the Az PowerShell module](/powershell/azure/install-azure-powershell).
 
 1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. [Learn more about signing in to Azure by using Azure PowerShell](/powershell/azure/authenticate-azureps).
 
-1. Use these commands to register your subscription to the Microsoft Defender for Cloud resource provider:
+1. Use the following commands to register your subscription to the Microsoft Defender for Cloud resource provider. Replace `<subscriptionId>` with your subscription ID.
 
     ```powershell
     Set-AzContext -Subscription <subscriptionId>
     Register-AzResourceProvider -ProviderNamespace 'Microsoft.Security'
     ```
 
-    Replace `<subscriptionId>` with your subscription ID.
+## Enable and configure Defender for Storage
 
-## [Enable on a subscription](#tab/enable-subscription/)
+### [Enable on a subscription](#tab/enable-subscription/)
 
 Enable Defender for Storage at the subscription level with per-transaction pricing by using the `Set-AzSecurityPricing` cmdlet:
 
@@ -46,7 +48,7 @@ Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "
     }]'
 ```
 
-If no extension properties are provided for the cmdlet, both malware scanning and sensitive data discovery are enabled by default.
+If you don't provide extension properties for the cmdlet, both malware scanning and sensitive data discovery are enabled by default.
 
 By customizing this code, you can:
 
@@ -59,9 +61,9 @@ By customizing this code, you can:
 
 For more information about the `Set-AzSecurityPricing` cmdlet, see the [Azure PowerShell reference](/powershell/module/az.security/set-azsecuritypricing).
 
-## [Enable on a storage account](#tab/enable-storage-account/)
+### [Enable on a storage account](#tab/enable-storage-account/)
 
-Enable and configure Defender for Storage at the storage account level by using the `Update-AzSecurityDefenderForStorage` cmdlet. In this example, replace the `<SubscriptionId>`, `<ResourceGroupName>`, and `<StorageAccountName>` values with your own Azure subscription ID, resource group, and storage account name.
+Enable and configure Defender for Storage at the storage account level by using the `Update-AzSecurityDefenderForStorage` cmdlet. In the following example, replace the `<SubscriptionId>`, `<ResourceGroupName>`, and `<StorageAccountName>` values with your own Azure subscription ID, resource group, and storage account name.
 
 ```powershell
 Update-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>" -IsEnabled -OverrideSubscriptionLevelSetting -OnUploadIsEnabled -OnUploadCapGbPerMonth 7000 -SensitiveDataDiscoveryIsEnabled
@@ -72,8 +74,8 @@ With Defender for Storage enabled at the subscription level, the `-OverrideSubsc
 By customizing this code, you can:
 
 - **Modify the monthly threshold for malware scanning**: Adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data to be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
-- **Send malware scan results to Azure Event Grid**: Supply the Event Grid topic resource ID in the parameter  `-MalwareScanningScanResultsEventGridTopicResourceId "<resourceId>"`.
-- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Set `-OnUploadIsEnabled:$false` or `-SensitiveDataDiscoveryIsEnabled:$false` accordingly.
+- **Send malware scan results to Azure Event Grid**: Supply the Event Grid topic's resource ID in the parameter  `-MalwareScanningScanResultsEventGridTopicResourceId "<resourceId>"`.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Set `-OnUploadIsEnabled:$false` or `-SensitiveDataDiscoveryIsEnabled:$false`, respectively.
 - **Disable the entire Defender for Storage plan**: Set `IsEnabled:$false`, `-OnUploadIsEnabled:$false`, and `-SensitiveDataDiscoveryIsEnabled:$false`.
 
 > [!TIP]
@@ -82,8 +84,6 @@ By customizing this code, you can:
 For more information about the `Update-AzSecurityDefenderForStorageRefer` cmdlet, see the [Azure PowerShell reference](/powershell/module/az.security/update-azsecuritydefenderforstorage).
 
 ---
-
-[Learn more about using PowerShell with Defender for Cloud](powershell-onboarding.md).
 
 > [!TIP]
 > You can configure malware scanning to send scanning results to:
@@ -95,4 +95,5 @@ For more information about the `Update-AzSecurityDefenderForStorageRefer` cmdlet
 
 ## Related content
 
-- Learn how to [enable and configure the Defender for Storage plan at scale with an Azure built-in policy](defender-for-storage-policy-enablement.md).
+- Learn how to [enable and configure the Defender for Storage plan at scale by using an Azure built-in policy](defender-for-storage-policy-enablement.md).
+- Learn more about [using PowerShell with Defender for Cloud](powershell-onboarding.md).

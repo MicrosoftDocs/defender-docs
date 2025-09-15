@@ -220,14 +220,6 @@ By customizing this code, you can:
 
 For more information, see the [Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
-> [!TIP]
-> You can configure malware scanning to send scanning results to:
->
-> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
-> - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
->
-> [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
-
 ### ARM template
 
 To enable and configure Defender for Storage at the storage account level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
@@ -262,6 +254,14 @@ By customizing this code, you can:
 - **Disable the entire Defender for Storage plan**: Set the `isEnabled` property value to `False`, and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
 ---
+
+> [!TIP]
+> You can configure malware scanning to send scanning results to:
+>
+> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
+>
+> [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
 ## Related content
 

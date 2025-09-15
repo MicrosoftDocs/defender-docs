@@ -14,7 +14,7 @@ We recommend that you enable Microsoft Defender for Storage on the subscription 
 
 ## [Enable on a subscription](#tab/enable-subscription/)
 
-To enable and configure Defender for Storage at the subscription level by using the REST API, create a `PUT` request with this endpoint. Replace the `subscriptionId` value in the endpoint URL with your own Azure subscription ID.
+To enable and configure Defender for Storage at the subscription level by using the REST API, create a `PUT` request with the following endpoint. Replace the `subscriptionId` value in the endpoint URL with your own Azure subscription ID.
 
 ```rest
 PUT
@@ -59,7 +59,7 @@ By customizing this code, you can:
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-To enable and configure Defender for Storage at the storage account level  by using the REST API, create a `PUT` request with this endpoint. Replace the `subscriptionId`, `resourceGroupName`, and `accountName` values in the endpoint URL with your own Azure subscription ID, resource group, and storage account name.
+To enable and configure Defender for Storage at the storage account level  by using the REST API, create a `PUT` request with the following endpoint. Replace the `subscriptionId`, `resourceGroupName`, and `accountName` values in the endpoint URL with your own Azure subscription ID, resource group, and storage account name.
 
 ```rest
 PUT
@@ -127,4 +127,4 @@ For more information, see the [Microsoft.Security/DefenderForStorageSettings API
 
 ## Related content
 
-- Learn how to [enable and configure the Defender for Storage plan at scale with an Azure built-in policy](defender-for-storage-policy-enablement.md).
+- Learn how to [enable and configure the Defender for Storage plan at scale by using an Azure built-in policy](defender-for-storage-policy-enablement.md).
