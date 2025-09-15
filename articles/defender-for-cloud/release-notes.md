@@ -29,9 +29,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2025
 
-|Date | Category | Update|
-| -------- | -------- | -------- |
-| September 9, 2025 | Update | [New refined attack paths](#attack-paths-now-reflect-real-externally-driven-and-exploitable-risks) |
+|September 15, 2025 | Update | [New refined attack paths](#attack-paths-now-reflect-real-externally-driven-and-exploitable-risks) |
+|September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
+|September 14, 2025|GA|Exposure width for Internet exposure analysis|
+|September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
 
 ### New refined attack paths
 
@@ -39,14 +40,59 @@ September 9, 2025
 
 Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
+### Trusted Exposure
+
+September 14, 2025 
+
+Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration via [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configure, internet-facing resources (Azure VM/VMSS, AWS EC2, GCP Compute Instances) exposed only to these trusted IPs are treated as trusted and no attack paths are generated. This reduces false positives and enhances the quality of attack path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+
+### Exposure Width 
+
+September 14, 2025 
+
+**Defender for Cloud now includes Exposure Width (GA)** that calculates how broadly or narrowly a resource is exposed to the public internet based on its networking rules. It helps security teams prioritize and remediate the most critical findings in attack paths and recommendations by factoring in the extent of exposure. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+
+### Trivy dependency scanning for code repositories (Update)
+
+September 11, 2025  
+
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem ](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+
+**Where it applies:**  
+- [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
+
+- [Agentless code scanning (preview)](/azure/defender-for-cloud/agentless-code-scanning).
+
+**What to do:**  
+- For [Azure DevOps](quickstart-onboard-devops.md) or [GitHub](quickstart-onboard-github.md), create or edit a connector.  
+- For in-pipeline scanning, add the [Microsoft Security DevOps (MSDO) CLI](cli-cicd-integration.md) tool to your pipeline definition.  
+
+**Where results appear:**  
+- Pipeline logs and SARIF files.  
+
+- Defender for Cloud recommendations:  
+  - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+  - *[GitHub repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+
+If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces those results.  
+
+**Effective date:** September 15, 2025. 
+
 ## August 2025
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| August 27, 2025 | GA | [General availability of Optional index tags for storing malware scanning results](#general-availability-of-defender-for-storage-optional-index-tags-for-storing-malware-scanning-results) |
 | August 12, 2025 | GA | [General availability of Defender for Storage in Azure Government cloud](#general-availability-of-defender-for-storage-in-azure-government-cloud) |
 | August 11, 2025 | GA | [General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud](#general-availability-of-defender-cspm-and-defender-for-servers-plan-2-in-azure-government-cloud) |
 | August 6, 2025 | GA | [AKS Security Dashboard](#aks-security-dashboard) |
-| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
+| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) | 
+
+### General availability of Defender for Storage Optional index tags for storing malware scanning results
+
+August 27, 2025
+
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### General availability of Defender for Storage in Azure Government cloud
 
