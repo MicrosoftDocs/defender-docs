@@ -29,6 +29,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2025
 
+|Date | Category | Update|
+| -------- | -------- | -------- |
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
 |September 14, 2025|GA|Exposure width for Internet exposure analysis|
