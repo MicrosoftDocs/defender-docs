@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 09/12/2025
+ms.date: 09/15/2025
 audience: ITPro
 ms.collection:
   - m365-security
@@ -48,7 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
   - Standard, shared, and private channels
   - Meeting conversations
 
-[User reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether reported messages are sent to the specified reporting mailbox, to Microsoft, or both.
+[User reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether reported messages are sent to the specified reporting mailbox, to Microsoft, or both. Have also added support for Teams message reporting on Teams mobile client.
 
 ## Aug 2025
 
