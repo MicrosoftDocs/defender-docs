@@ -37,7 +37,7 @@ In order to remove the preferences that contain passwords data, use Group Policy
 1. Navigate to the preference configuration that contains password data and delete the object. Click **Apply** and **OK** to save your changes.    
 For example:  
 
-    :::image type="content" source="../media/reversible-passwords-group-policy/screenshot-of-group-policy-objects.png" alt-text="Screenshot that shows how to delete a group policy object." lightbox="../media/reversible-passwords-group-policy/screenshot-of-grou-policy-objects.png":::
+    :::image type="content" source="../media/reversible-passwords-group-policy/screenshot-of-group-policy-objects.png" alt-text="Screenshot that shows how to delete a group policy object." lightbox="../media/reversible-passwords-group-policy/screenshot-of-group-policy-objects.png":::
 
 1. Wait a Group Policy refresh cycle to allow changes to propagate to clients (usually up to 120 minutes) .
 
