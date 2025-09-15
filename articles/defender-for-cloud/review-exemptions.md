@@ -52,7 +52,7 @@ You can also find all exempted resources on the **Inventory** page.
 
 ## Review exempted resources with Azure Resource Graph
 
-[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [query information](/azure/governance/resource-graph/first-query-portal) by using  [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
+[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [query information](/azure/governance/resource-graph/first-query-portal) by using [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
 
 To view all recommendations that have exemption rules:
 
