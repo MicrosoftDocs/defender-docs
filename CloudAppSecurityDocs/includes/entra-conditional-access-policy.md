@@ -14,21 +14,22 @@ ms.custom: include file
 
 This procedure provides a high-level example of how to create a Conditional Access policy for use with Defender for Cloud Apps.
 
-1. In Microsoft Entra ID Conditional Access, select **Create new policy**.
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) as at least a [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+1. Browse to **Entra ID** > **Conditional Access** > **Policies**.
+1. Select **New policy**.
+1. Give your policy a name. We recommend that organizations create a meaningful standard for the names of their policies.
+1. Under **Assignments**, select **Users or workload identities**.
+   1. Under **Include**, select **All users**
+   1. Under **Exclude**, select **Users and groups** and choose your organization's emergency access or break-glass accounts.
+1. Under **Target resources** > **Resources (formerly cloud apps)**, select the following options:
+   1. Under **Include**, choose **Select resources**.
+   1. Select the client apps that you want to include in your policy.
+1. Under **Conditions**, select any conditions that you want to include in your policy.
+1. Under **Access controls** > **Session**, select **Use app enforced restrictions**, then select **Select**.
+1. Confirm your settings and set **Enable policy** to **Report-only**.
+1. Select **Create** to create to enable your policy.
 
-1. Enter a meaningful name for your policy, and then select the link under **Session** to add controls to your policy.
-
-1. In the **Session** area, select **Use Conditional Access App Control**.
-
-1. In the **Users** area, select to include all users, or specific users and groups only.
-
-1. In the **Conditions** and **Client apps** areas, select the conditions and client apps that you want to include in your policy.
-
-1. Save the policy by toggling **Report-only** to **On**, and then selecting **Create**.
-
-Microsoft Entra ID supports both browser-based and non browser-based policies. We recommend that you create both types for increased security coverage.
-
-Repeat this procedure to create a nonbrowser based Conditional Access policy. In the **Client apps** area, toggle the **Configure** option to **Yes**. Then, under **Modern authentication clients**, clear the **Browser** option. Leave all other default selections selected.
+After confirming your settings using [policy impact or report-only mode](/entra/identity/conditional-access/concept-conditional-access-report-only#reviewing-results), move the **Enable policy** toggle from **Report-only** to **On**.
 
 For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
 
