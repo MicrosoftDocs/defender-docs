@@ -31,7 +31,7 @@ Regularly updating the built-in Administrator account's password is essential du
 
    For example:
 
-   ![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-of-report.png)
+   :::image type="content" source="media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts.":::
 
 ## Next steps
 

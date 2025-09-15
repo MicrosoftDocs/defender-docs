@@ -28,7 +28,8 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your sensitive accounts are dormant.
 
-    ![Remediate dormant entities ini sensitive groups.](media/cas-isp-dormant-entities-sensitive-groups-1.png)
+    :::image type="content" source="media/cas-isp-dormant-entities-sensitive-groups-1.png" alt-text="Screenshot that shows improvement actions for Remove dormant accounts from sensitive groups.":::
+
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
 > [!NOTE]

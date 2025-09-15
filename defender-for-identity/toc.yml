@@ -179,17 +179,8 @@ items:
      - name: Group policy 
        href: \security posture assessments\group-policy.md
      - name: Accounts
+       href: \security posture assessments\accounts.md
        items: 
-         - name: Accounts with non-default Primary Group ID
-           href: accounts-with-non-default-pgid.md 
-         - name: Admin SDHolder permissions
-           href: security-assessment-remove-suspicious-access-rights.md
-         - name: Change password for krbtgt account
-           href: change-password-krbtgt-account.md
-         - name: Change password of built-in domain Administrator account
-           href: change-password-domain-administrator-account.md
-         - name: Dormant entities in sensitive groups assessment
-           href: security-assessment-dormant-entities.md
          - name: DCSync permissions
            href: security-assessment-non-admin-accounts-dcsync.md
          - name: Ensure privileged accounts are not delegated
