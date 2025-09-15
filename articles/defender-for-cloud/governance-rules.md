@@ -9,7 +9,7 @@ ms.date: 05/18/2025
 
 # Drive recommendation remediation by using governance rules
 
-Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and a service level agreement (SLA) around the remediation process.
+Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and create a service level agreement (SLA) around the remediation process.
 
 For an in-depth discussion around why governance rules are helpful, watch [this episode](episode-fifteen.md) of the Defender for Cloud in the field video series.
 
@@ -33,7 +33,7 @@ The due date for remediation of a recommendation is based on a time frame of 7, 
 
 ### Owners
 
-You can also set owners of resources that recommendations relate to.
+You can also set resource owners, which helps you find the right person to handle a recommendation.
 
 In organizations that use resource tags to associate resources with an owner, you can specify the tag key. The governance rule reads the name of the resource owner from the tag.
 
@@ -65,7 +65,7 @@ Conflicting rules are applied in scope order. For example, rules on a management
 
     :::image type="content" source="./media/governance-rules/add-rule.png" alt-text="Screenshot that shows the page where you add a governance rule." lightbox="media/governance-rules/add-rule.png":::
 
-1. Specify a rule name and scope in which to apply the rule. Rules for management scope (Azure management groups, AWS master accounts, GCP organizations) are applied before the rules on a single scope.
+1. Specify a rule name and scope in which to apply the rule. Rules for management scope (Azure management groups, AWS master accounts, and GCP organizations) are applied before the rules on a single scope.
 
    > [!NOTE]
    > Exclusions can't be created by using the portal wizard. To define exclusions, use the API.
@@ -114,7 +114,7 @@ You can view the effect that governance rules have in your environment.
 1. You can search for rules or filter rules. There are several different ways to filter rules.
 
    - Filter on **Environment** to identify rules for Azure, AWS, and GCP.
-   - Filter on rule name, owner, or time between the recommendation being issued and due date.
+   - Filter on rule name, owner, or the time between when the recommendation was issued and the due date.
    - Filter on **Grace period** to find Microsoft cloud security benchmark recommendations that don't affect your Secure Score.
    - Identify by status.
 
