@@ -63,8 +63,8 @@ To receive up to **500 MB per server per day of free Security Events data**, use
       - For **Data source type**, select **Windows Event Logs**.
       -  Choose **Basic** or **Custom**:
       
-      :::image type="content" source="media/data-ingestion-benefit/dcr-add-data-source-window.png" 
-      alt-text="Add data source window in the DCR wizard showing Data source type set to Windows Event Logs and the Basic / Custom options.":::
+      :::image type="content" source="media/data-ingestion-benefit/dcr-add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
+s
 
           - **Basic**:
               - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
