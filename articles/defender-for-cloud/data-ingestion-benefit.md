@@ -48,20 +48,24 @@ To receive up to **500 MB per server per day of free Security Events data**, use
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
-1. In the **Basics** tab:
+1. On the **Basics** tab:
     - Enter a name and a subscription.
     - Choose or create a resource group.
     - Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
     - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
     - Under **Data Collection Endpoint**, leave **\<none\>** unless you have created a Data Collection Endpoint for Private Link or other advanced network setups.
-1. In the **Resources** tab:
+1. On the **Resources** tab:
     - Click **+ Add resources** and select the resources where you want this rule applied.
     - Optionally, select **Enable Data Collection Endpoints**, then choose or create a Data Collection Endpoint if you are using Private Links or advanced network setups.
-1. In the **Collect and deliver** tab:
+1. On the **Collect and deliver** tab:
     - Click **+ Add data source**. 
-    - In the **Data source** tab of the **Add data source** window:
+    - In **Data source**:
       - For **Data source type**, select **Windows Event Logs**.
       -  Choose **Basic** or **Custom**:
+      
+      :::image type="content" source="media/data-ingestion-benefit/dcr-add-data-source-window.png" 
+      alt-text="Add data source window in the DCR wizard showing Data source type set to Windows Event Logs and the Basic / Custom options.":::
+
           - **Basic**:
               - Under **Security**, select **Audit success** and/or **Audit failure** to collect Windows Security events (routes to the `SecurityEvent` table).  
               - Select **Application** or **System** levels if needed. These logs are sent to the Event table and are billed as regular ingestion. They are not covered by the Defender for Servers ingestion benefit.
@@ -70,13 +74,13 @@ To receive up to **500 MB per server per day of free Security Events data**, use
                 ```xpath
                 Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
                 ```
-    - In the **Destination** tab:
+    - In **Destination**:
       - Click **+ Add destination**.      
       - For **Destination type**, choose **Azure Monitor Logs**.
       - Select at least one Log Analytics workspace (same region as the DCR).
       - Click **Save**.
-1. In the **Tags** tab add any tags you need for resource organization or cost management.
-1. In the **Review + create** tab:
+1. On the **Tags** tab add any tags you need for resource organization or cost management.
+1. On the **Review + create** tab:
     - Review the settings.
     - Click **Create** to deploy the DCR.
 1. After a few minutes you can verify data in the Log Analytics workspace by running a simple KQL query such as:
