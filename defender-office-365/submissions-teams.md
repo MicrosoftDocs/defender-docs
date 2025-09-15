@@ -26,12 +26,14 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report messages in Microsoft Teams from Teams desktop, web and mobile clients. Admins can also get visibility into the Teams messages that users are reporting.
+In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report messages in Microsoft Teams. The following clients support message reporting:
 
-- For iOS, minimum version of the Teams app is 7.15 for the feature to be available.
-- For Android, the minimum version of the Teams app is 1416/1.0.0.2025153104 for the feature to be available. 
+- The Microsoft Teams desktop client.
+- The Microsoft Teams Web App.
+- The Microsoft Teams app for iOS/iPadOS: Version 7.15 or later.
+- The Microsoft Teams for Android: Version 1416/1.0.0.2025153104 or later. 
 
-Users can report messages in Teams from chats, standard, private and shared channels, and meeting conversations. Users can report messages as malicious or non-malicious.
+Users can report mmessages as malicious or non-malicious in Teams from chats, standard, private and shared channels, and meeting conversations. Admins can also get visibility into Teams messages that users are reporting.
 
 > [!NOTE]
 > User reporting of messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
