@@ -1,17 +1,17 @@
 ---
-title: Enable Defender for Storage with Infrastructure as Code
-description: Learn how to enable and configure Microsoft Defender for Storage with infrastructure as code (IaC) templates.
+title: Enable Defender for Storage by Using Infrastructure as Code
+description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates.
 ms.date: 07/01/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
 ---
 
-# Enable and configure Microsoft Defender for Storage with IaC templates
+# Enable and configure Defender for Storage by using IaC templates
 
 We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
 
 > [!TIP]
-> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## [Enable on a subscription](#tab/enable-subscription/)
 
@@ -223,7 +223,7 @@ For more information, see the [Microsoft.Security/DefenderForStorageSettings API
 > [!TIP]
 > You can configure malware scanning to send scanning results to:
 >
-> - [Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
 > - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
 >
 > [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).

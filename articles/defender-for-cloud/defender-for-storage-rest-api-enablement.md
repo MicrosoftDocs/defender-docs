@@ -1,16 +1,16 @@
 ---
-title: Enable Microsoft Defender for Storage Using REST API
-description: Learn how to enable Defender for Storage on your Azure subscription for Microsoft Defender for Cloud by using the REST API.
+title: Enable Defender for Storage by Using the REST API
+description: Learn how to enable Microsoft Defender for Storage on your Azure subscription for Microsoft Defender for Cloud by using the REST API.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
 ---
 
-# Enable and configure Microsoft Defender for Storage with the REST API
+# Enable and configure Defender for Storage by using the REST API
 
 We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
 
 > [!TIP]
-> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## [Enable on a subscription](#tab/enable-subscription/)
 
@@ -18,7 +18,7 @@ To enable and configure Defender for Storage at the subscription level by using 
 
 ```rest
 PUT
-https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2023-01-01
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2024-01-01
 
 ```
 
@@ -33,8 +33,8 @@ Add the following request body:
                 "isEnabled": "True",
                 "additionalExtensionProperties": {
                     "CapGBPerMonthPerStorageAccount": "10000",
-                    "blobScanResultsOptions": "BlobIndexTags"/"None"
-          
+          "BlobScanResultsOptions": "BlobIndexTags"/"None"
+          "AutomatedResponse": "BlobSoftDelete"/"None"
                 }
             },
             {
@@ -63,7 +63,7 @@ To enable and configure Defender for Storage at the storage account level  by us
 
 ```rest
 PUT
-https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2025-02-01-preview
+https://management.azure.com/{resourceId}/providers/Microsoft.Security/defenderForStorageSettings/current?api-version=2025-07-01-preview
 
 ```
 
@@ -92,6 +92,7 @@ Add the following request body:
         }
             },
             
+      "automatedResponse": "BlobSoftDelete",
       "scanResultsEventGridTopicResourceId": "/subscriptions/<Subscription>/resourceGroups/<resourceGroup>/providers/Microsoft.EventGrid/topics/<topicName>"
         },
         "sensitiveDataDiscovery": {
@@ -119,7 +120,7 @@ For more information, see the [Microsoft.Security/DefenderForStorageSettings API
 > [!TIP]
 > You can configure malware scanning to send scanning results to:
 >
-> - [Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
 > - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
 >
 > [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).

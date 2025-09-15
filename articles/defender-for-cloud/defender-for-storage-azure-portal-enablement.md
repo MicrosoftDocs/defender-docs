@@ -1,79 +1,83 @@
 ---
-title: Enable Defender for Storage using the Azure portal
-description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using the Azure portal.
+title: Enable Defender for Storage by Using the Azure portal
+description: Learn how to enable Microsoft Defender for Storage on your Azure subscription for Microsoft Defender for Cloud by using the Azure portal.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
 ---
 
-# Enable and configure with the Azure portal
+# Enable and configure Defender for Storage by using the Azure portal
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription are protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
+We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
 
 > [!TIP]
-> You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## [Enable on a subscription (recommended)](#tab/enable-subscription/)
 
-To enable Defender for Storage at the subscription level using the Azure portal:
+To enable Defender for Storage at the subscription level by using the Azure portal:
 
 1. Sign in to the Azure portal.
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
 1. Select the subscription for which you want to enable Defender for Storage.
 
-    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png" alt-text="Screenshot that shows where to select the subscription." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png":::
+    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png" alt-text="Screenshot that shows the selection of a subscription on the pane for environment settings." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png":::
 
-1. Select the three dots on the right and then choose the **Edit settings** option.
-1. On the Defender plans page, locate **Storage** in the list and select **On** and **Save**. If you currently have Defender for Storage enabled with per-transaction pricing, select the **New pricing plan available** link and confirm the pricing change.
+1. Select the three dots on the right, and then select **Edit settings**.
 
-    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png" alt-text="Screenshot that shows where to turn on Storage plan." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png":::
+1. On the **Defender plans** pane, locate **Storage** in the list. Then select **On** > **Save**.
 
-Microsoft Defender for Storage is now enabled for this subscription, and is fully protected, including on-upload malware scanning and sensitive data threat detection.
+    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png" alt-text="Screenshot that shows the toggle for turning on a Defender for Storage plan." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png":::
 
-If you want to turn off the on-upload malware scanning or sensitive data threat detection, you can select **Settings** and change the status of the relevant feature to **Off** and save the changes.
+    If you currently have Defender for Storage enabled with per-transaction pricing, select the **New pricing plan available** link and confirm the pricing change.
 
-If you want to change the malware scanning size capping per storage account per month for malware, or the use of index tags for storing malware scan results, change the settings in **Edit configuration** and save the changes.
+Defender for Storage is now enabled for this subscription, including on-upload malware scanning and sensitive-data threat detection. Here are a few more options at this point:
 
-If you want to disable the plan, turn status button to **Off** for the Storage plan on the Defender plans page and save the changes.
+- If you want to turn off on-upload malware scanning or sensitive-data threat detection, select **Settings** and change the status of the feature to **Off**. Then save the changes.
+- If you want to change the size capping per storage account per month for malware scanning, or the use of index tags for storing malware scan results, or enable soft deletion of malicious blobs, go to **Edit configuration**. Adjust the settings as needed, and then save your changes.
+- If you want to disable the Defender for Storage plan, turn the status to **Off** for the plan on the **Defender plans** pane. Then save the changes.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-To enable and configure Microsoft Defender for Storage for a specific account using the Azure portal:
+To enable and configure Defender for Storage for a specific account by using the Azure portal:
 
 1. Sign in to the Azure portal.
-1. Navigate to your storage account.
-In the storage account menu, in the **Security + networking** section, select **Microsoft Defender for Cloud**.
-1. **On-upload Malware scanning** and Sensitive data threat detection are enabled by default. You can disable the features by unselecting them.
-1. Select  **Enable on storage account**. Microsoft Defender for Storage is now enabled on this storage account.
 
-    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-on-storage-account.png" alt-text="Screenshot that shows where to enable the storage account." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-on-storage-account.png":::
+1. Go to your storage account. On the left menu, in the **Security + networking** section, select **Microsoft Defender for Cloud**.
+
+1. **On-upload malware scanning** and **Sensitive data threat detection** are enabled by default. You can disable the features by clearing their checkboxes.
+
+1. Select **Enable on storage account**. Defender for Storage is now enabled on this storage account.
+
+    :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-on-storage-account.png" alt-text="Screenshot that shows the pane for enabling Defender for Storage." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-on-storage-account.png":::
 
     > [!TIP]
-    > To configure On-upload malware scanning settings, such as monthly capping, select Settings after Defender for Storage was enabled.
+    > To configure on-upload malware scanning settings, such as monthly capping, select **Settings** after you enable Defender for Storage.
 
-You can disable Defender for Storage on storage accounts or modify one of the features –
+You can disable Defender for Storage on storage accounts or modify one of the features:
 
 - On-upload malware scanning
+- Sensitive-data threat detection
+- Limit of gigabytes scanned per month
+- Filtering of on-upload scans
+- Storage of scan results as blob index tags
+- Soft deletion of malicious blobs
+- Sending scan results to an Azure Event Grid topic
+- Sending scan results to Log Analytics
 
-- Sensitive data threat detection
-
-- Set limit of GB scanned per month
-
-- Filter on-upload scans
-
-- Store scan results as Blob Index Tags
-
-- Send scan results to Event Grid topic
-
-- Send scan results to Log Analytics
-
-Select __Settings__, edit the settings, and select __Save__.
+Select **Settings**, edit the settings, and then select **Save**.
 
 ---
 
 > [!TIP]
-> Malware scanning can be configured to send scanning results to the following actions: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
+> You can configure malware scanning to send scanning results to:
+>
+> - [Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
+>
+> [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
-## Next steps
+## Related content
 
-- Learn how to [enable and Configure the Defender for Storage plan at scale with an Azure built-in policy](defender-for-storage-policy-enablement.md).
-- Learn more on how to [set up response for malware scanning](defender-for-storage-configure-malware-scan.md) results.
+- Learn how to [enable and configure the Defender for Storage plan at scale with an Azure built-in policy](defender-for-storage-policy-enablement.md).

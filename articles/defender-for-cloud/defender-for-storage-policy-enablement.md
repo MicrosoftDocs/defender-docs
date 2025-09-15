@@ -1,16 +1,16 @@
 ---
-title: Enable Defender for Storage with an Azure Built-in Policy
-description: Learn how to enable and configure the Microsoft Defender for Storage plan at scale with an Azure built-in policy.
+title: Enable Defender for Storage by Using an Azure Built-in Policy
+description: Learn how to enable and configure the Microsoft Defender for Storage plan at scale by using an Azure built-in policy.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
 ---
 
-# Enable and configure Microsoft Defender for Storage at scale with an Azure built-in policy
+# Enable and configure Defender for Storage at scale by using an Azure built-in policy
 
 You should enable Microsoft Defender for Storage via a built-in policy. This method facilitates enablement at scale. It also ensures that a consistent security policy is applied across all existing and future storage accounts within the defined scope, such as entire management groups. This approach keeps the storage accounts protected with Defender for Storage according to your organization's defined configuration.
 
 > [!TIP]
-> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## Azure built-in policy
 
@@ -40,7 +40,7 @@ To enable and configure Defender for Storage at scale by using an Azure built-in
 
 You can configure malware scanning to send scanning results to the following places:
 
-- [Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+- [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
 - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
 
 [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
