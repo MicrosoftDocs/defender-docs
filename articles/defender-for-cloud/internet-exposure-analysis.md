@@ -76,9 +76,7 @@ Internet Exposure Width represents the risks based on how broadly a resource (e.
 
 ### How It Works
 
-Defender for cloud automatically analyzes your internet facing resources and categorizes them based on their exposure level.
-- **Wide exposure:** Resources open to the internet with no network access restrictions.
-- **Narrow exposure:** Resources accessible only from specific IP ranges, ports, or protocols.
+Defender for cloud automatically analyzes your internet facing resources and tags them as **wide exposure** or **narrow exposure** according to the networking rules. The output is tagged either as wide exposure and  
 - Attack paths that involve widely exposed resources now clearly indicate this in the title, such as "Widely internet exposed virtual machines has high permissions to storage account".
 - The exposure width calculated is then used to determine the attack path generation and risk based recommendation that helps you to rightly prioritize the severity of the findings by adding specific labels to the following experiences.
 - A new "Exposure width" insight is available on the Cloud Security Explorer, allowing users to query all supported resources that are widely exposed.
