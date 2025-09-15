@@ -29,7 +29,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2025
 
-|September 15, 2025 | Update | [New refined attack paths](#attack-paths-now-reflect-real-externally-driven-and-exploitable-risks) |
+|September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
 |September 14, 2025|GA|Exposure width for Internet exposure analysis|
 |September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
