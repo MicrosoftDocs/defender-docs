@@ -41,7 +41,7 @@ The exposure map gives you visibility into asset connections.
     - **Search**: Helps you to discover items by node type. By selecting **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
     - **Discovery source**: Use the layer option to show or hide the origin of the data directly on the attack surface map.
 
-:::image type="content" source="media/value-data-connectors/attack map data connectors.png" alt-text="Screenshot of the attack surface exposure map." lightbox="media/value-data-connectors/attack map data connectors.png":::
+    :::image type="content" source="media/value-data-connectors/attack map data connectors.png" alt-text="Screenshot of the attack surface exposure map." lightbox="media/value-data-connectors/attack map data connectors.png":::
 
 1. Open the side panel to view asset details.
    - **General**: View general information about the asset, including **Type**, **IDs**, and **Discovery source**.
@@ -49,7 +49,7 @@ The exposure map gives you visibility into asset connections.
    - **Top Vulnerabilities**: View up to the top 100 CVEs (by severity) on the asset.
    - **Findings**: View all the security findings on the asset.
 
-    :::image type="content" source="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png" alt-text="Screenshot of attack surface map side pane" lightbox="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png":::
+    :::image type="content" source="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png" alt-text="Screenshot of attack surface map side pane." lightbox="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png":::
 
 ## Next steps
 
