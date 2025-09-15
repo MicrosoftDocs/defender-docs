@@ -10,11 +10,11 @@ ms.date: 05/06/2025
 
 # Assign a recommendation to an active user
 
-Defender for Cloud features an Active User feature that helps security administrators identify the most active users who handle remediation recommendations. Security administrators must monitor and address potential threats such as attack paths and their associated recommendations to secure cloud resources.
+Microsoft Defender for Cloud has an active user feature that helps security administrators identify the most active users who handle remediation recommendations. To secure cloud resources, security administrators must monitor and address potential threats and their associated recommendations.
 
-The Active User feature suggests up to three potential active users. Defender for Cloud makes suggestions based on the users' control plane activities on the specific resource, its related resource group, or the associated subscription. This feature improves the speed and efficiency of the remediation process and strengthens overall security posture.
+The active user feature suggests up to three potential active users. Defender for Cloud makes suggestions based on the users' control plane activities on the specific resource, its related resource group, or the associated subscription. This feature improves the speed and efficiency of the remediation process and strengthens overall security posture.
 
-Security administrators can assign the recommendation directly to the most appropriate user from the suggested active user list. The assigned user receives a notification and a due date for remediation, which eliminates the need for manual investigation to determine responsibility. This approach streamlines the workflow and saves time for security teams.
+Security administrators can directly assign the recommendation to the most appropriate user from the suggested active user list. The assigned user receives a notification and a due date for remediation, and no one needs to determine responsibility. This approach streamlines the workflow and saves time for security teams.
 
 ## Prerequisites
 
@@ -29,8 +29,6 @@ Security administrators can assign the recommendation directly to the most appro
 
 ## Assign a recommendation to an active user
 
-The Defender for Cloud Active User feature suggests up to three potential Active Users. It bases its suggestions on their control plane activities on the specific resource, its related resource group, or the associated subscription per recommendation.
-
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Defender for Cloud** > **Recommendations**.
@@ -39,7 +37,7 @@ The Defender for Cloud Active User feature suggests up to three potential Active
 
     :::image type="content" source="media/active-user/recommended-owner.png" alt-text="Screenshot that shows the Recommended owner column on the Recommendations page." lightbox="media/active-user/recommended-owner.png":::
 
-1. Select a recommendation with a suggested owner.
+1. Select a recommendation that has a suggested owner.
 
 1. In the **Recommendation owner and set due date** section, Defender for Cloud suggests the top active user on the affected resource.
 
@@ -47,11 +45,11 @@ The Defender for Cloud Active User feature suggests up to three potential Active
 
 1. Select **Assign owner & set due date**.
 
-1. Review the activity and confidence assigned to the top three suggested users.
+1. Review the activity details and confidence of the top three suggested users.
 
-    :::image type="content" source="media/active-user/select-active-user.png" alt-text="Screenshot that shows the activity and confidence assigned to the top three suggested users." lightbox="media/active-user/select-active-user-zoom.png":::
+    :::image type="content" source="media/active-user/select-active-user.png" alt-text="Screenshot that shows the activity and confidence of the top three suggested users." lightbox="media/active-user/select-active-user-zoom.png":::
 
-1. Select **More info** to view more information about the user. You can see a user's name, email address, manager, department, role, and last activities.
+1. To view more information about the user, select **More info**. You can see a user's name, email address, manager, department, role, and last activities.
 
 1. (Recommended) Select an owner from the list of suggested users.
 
@@ -67,7 +65,6 @@ The Defender for Cloud Active User feature suggests up to three potential Active
 
 If you set an email notification, the active user receives an email with recommendation details and a link to the recommendation in Defender for Cloud.
 
-## Next step
+## Related content
 
-> [!div class="nextstep"]
-> [Remediate recommendations](implement-security-recommendations.md)
+[Remediate recommendations](implement-security-recommendations.md)

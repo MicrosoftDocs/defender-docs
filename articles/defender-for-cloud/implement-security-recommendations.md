@@ -17,9 +17,9 @@ This article describes how to remediate security recommendations in your Defende
 
 Before you attempt to remediate a recommendation, you should review it in detail. Learn how to [review security recommendations](review-security-recommendations.md).
 
-## Remediate a recommendation
+## <a name = "remediate-recommendations"></a> Remediate a recommendation
 
-Recommendations are prioritized based on the risk level of the security issue by default.
+By default, recommendations are prioritized based on the risk level of the security issue.
 
 In addition to risk level, we recommend that you prioritize the security controls in the default [Microsoft cloud security benchmark](concept-regulatory-compliance.md) standard in Defender for Cloud. These controls affect your [Microsoft Secure Score](secure-score-security-controls.md).
 
@@ -27,7 +27,7 @@ In addition to risk level, we recommend that you prioritize the security control
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-    :::image type="content" source="media/implement-security-recommendations/recommendations-page.png" alt-text="Screenshot of the recommendations page that shows all of the affected resources by their risk level." lightbox="media/implement-security-recommendations/recommendations-page.png":::
+    :::image type="content" source="media/implement-security-recommendations/recommendations-page.png" alt-text="Screenshot of the recommendations page that shows all the affected resources by their risk level." lightbox="media/implement-security-recommendations/recommendations-page.png":::
 
 1. Select a recommendation.
 
@@ -35,7 +35,7 @@ In addition to risk level, we recommend that you prioritize the security control
 
 1. Locate the **Remediate** section and follow the remediation instructions.
 
-    :::image type="content" source="./media/implement-security-recommendations/remediate-recommendation.png" alt-text="This screenshot shows manual remediation steps for a recommendation." lightbox="./media/implement-security-recommendations/remediate-recommendation.png":::
+    :::image type="content" source="./media/implement-security-recommendations/remediate-recommendation.png" alt-text="Screenshot that shows manual remediation steps for a recommendation." lightbox="./media/implement-security-recommendations/remediate-recommendation.png":::
 
 ## Use the Fix option
 
@@ -55,7 +55,7 @@ To simplify the remediation process, a button labeled **Fix** might appear in a 
 
 After remediation completes, it can take several minutes for the change to take place.
 
-## Use the automated remediation scripts
+## <a name = "use-the-automated-remediation-scripts"></a> Use automated remediation scripts
 
 Security admins can also fix issues at scale with automatic script generation in AWS and GCP CLI script language. When you select **Take action** > **Fix** on a recommendation where an automated script is available, the following window opens.
 
@@ -63,7 +63,6 @@ Security admins can also fix issues at scale with automatic script generation in
 
 To remediate the recommendation, copy and run the script.
 
-## Next step
+## Related content
 
-> [!div class="nextstepaction"]
-> [Governance rules in your remediation processes](governance-rules.md)
+[Governance rules in your remediation processes](governance-rules.md)

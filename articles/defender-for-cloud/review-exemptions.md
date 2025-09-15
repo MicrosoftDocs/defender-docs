@@ -1,6 +1,6 @@
 ---
 title: Review Resources Exempted from Recommendations
-description: Learn how to exempt recommendations so they're not taken into account in Microsoft Defender for Cloud.
+description: Learn how to exempt resources in Microsoft Defender for Cloud so they're not taken into account.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
@@ -8,7 +8,7 @@ ms.date: 05/25/2025
 #customer intent: As a user, I want to learn how to exempt recommendations in Microsoft Defender for Cloud so that I can customize the security recommendations for my environment.
 ---
 
-# Review resources exempted from recommendations
+# Review resources that are exempted from recommendations
 
 In Microsoft Defender for Cloud, you can [exempt protected resources from Defender for Cloud security recommendations](exempt-resource.md). This article describes how to review and work with exempted resources.
 
@@ -32,7 +32,7 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
 1. Select a resource to review it.
 
-### Review exempted resources on the inventory page
+### Review exempted resources on the Inventory page
 
 You can also find all exempted resources on the **Inventory** page.
 
@@ -40,7 +40,7 @@ You can also find all exempted resources on the **Inventory** page.
 
 1. Go to **Defender for Cloud** > **Inventory**.
 
-1. Select **Add filter**
+1. Select **Add filter**.
 
     :::image type="content" source="media/review-exemptions/inventory-exemptions.png" alt-text="Screenshot that shows the Defender for Cloud asset inventory page and the filter to find resources with exemptions."  lightbox="media/review-exemptions/inventory-exemptions.png":::
 
@@ -52,7 +52,7 @@ You can also find all exempted resources on the **Inventory** page.
 
 ## Review exempted resources with Azure Resource Graph
 
-[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [query information](/azure/governance/resource-graph/first-query-portal) by using  [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
+[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [query information](/azure/governance/resource-graph/first-query-portal) by using [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
 
 To view all recommendations that have exemption rules:
 
@@ -91,7 +91,6 @@ To keep track of how users exempt resources from recommendations, we created an 
 - Locate the ARM template in the [Microsoft Defender for Cloud GitHub repository](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation/Notify-ResourceExemption).
 - [Use this automated process](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Security-Center%2Fmaster%2FWorkflow%2520automation%2FNotify-ResourceExemption%2Fazuredeploy.json) to deploy all components.
 
-## Next step
+## Related content
 
-> [!div class="nextstep"]
-> [Review security recommendations](review-security-recommendations.md)
+[Review security recommendations](review-security-recommendations.md)
