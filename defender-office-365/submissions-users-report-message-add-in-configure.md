@@ -192,7 +192,7 @@ A: No. Unfortunately, due to the previously stated reasons, the add-ins will be 
 
 ### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 
-A: After you remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in as per their instructions.
+A: After you remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in according to their instructions.
 
 On the [User reported settings page](submissions-user-reported-messages-custom-mailbox.md) in the Defender portal, you need to do the following steps:
 
