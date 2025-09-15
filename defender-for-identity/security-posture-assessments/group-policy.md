@@ -7,9 +7,9 @@ ms.date: 09/15/2025
 ms.reviewer: LiorShapiraa
 ---
 
-## Group policy security assessments
+# Group policy security assessments
 
-This section provides security assessments related to Group Policy Objects (GPOs).
+This article provides security assessments related to Group Policy Objects (GPOs). 
 
 
 |Recommended action  |Description  |
