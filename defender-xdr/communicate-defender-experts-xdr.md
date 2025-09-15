@@ -46,7 +46,7 @@ The **Chat** tab within the Microsoft Defender XDR portal provides you with a sp
 
 Apart from using the in-portal chat, you can also engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. This capability provides you and your security operations center (SOC) team more flexibility when responding to incidents that require managed response. [Learn more about turning on notifications and chat on Teams](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
 
-Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar to mention or tag *@Defender Experts* and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](../defender-xdr/teams-restrictions-dexapp.md).
+Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](../defender-xdr/teams-restrictions-dexapp.md).
 
 :::image type="content" source="/defender/media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="/defender/media/xdr/teams-chat-managed-response-01.png":::
 
@@ -55,7 +55,7 @@ Once you turn on chat on Teams, a new team named **Defender Experts team** is cr
 - Our experts have access to messages in **Defender Experts team** through the Defender Experts Teams app so you don't have to explicitly add them to this team. 
 
 - Our experts only see replies to existing posts created by Defender Experts regarding a managed response. If you create a new post, our experts won't be able to see it.
-- While Defender Experts might have access to all messages in any channel in **Defender Experts team**, tag or mention our experts by typing *@Defender Experts* in your replies, so they're notified to join the chat conversation.
+- While Defender Experts might have access to all messages in any channel in **Defender Experts team**, type a message in your replies so they're notified to join the chat conversation.
 - Don't attach any attachments (for example, files for analysis) in the chat. For security reasons, Defender Experts won't be able to view the attachments. Instead, send them to appropriate submissions channels or provide links where they can be found in Microsoft Defender XDR portal.
 - Conversations in the Teams chat about an incident are also synchronized with the incident's **Chat** tab in the Microsoft Defender XDR portal so that you can see messages and updates about an investigation wherever you go.
 
