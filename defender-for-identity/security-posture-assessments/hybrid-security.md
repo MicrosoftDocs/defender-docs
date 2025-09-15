@@ -92,3 +92,7 @@ This article lists all hybrid security posture assessments for Microsoft Defende
    - Remove MSOL_ user account user from privileged groups, ensuring it retains the necessary permissions to function as the Microsoft Entra Connect Connector account.
    
    - Change the Microsoft Entra Connect AD DS Connector account (MSOL_) to a lower-privileged account. 
+
+## Next steps
+
+[Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
