@@ -177,13 +177,7 @@ items:
      - name: Certificates
        href: \security posture assessments\certificates.md
      - name: Group policy 
-       items: 
-        - name: GPO assigns unprivileged identities to local groups with elevated privileges
-          href: gpo-assigns-unprivileged-identities.md
-        - name: GPO can be modified by unprivileged accounts
-          href: modified-unprivileged-accounts-gpo.md
-        - name: Reversible passwords found in GPOs
-          href: reversible-passwords-group-policy.md
+       href: \security posture assessments\group-policy.md
      - name: Accounts
        items: 
          - name: Accounts with non-default Primary Group ID
