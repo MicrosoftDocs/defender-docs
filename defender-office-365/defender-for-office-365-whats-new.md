@@ -48,7 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
   - Standard, shared, and private channels
   - Meeting conversations
 
-[User reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether reported messages are sent to the specified reporting mailbox, to Microsoft, or both. Have also added support for Teams message reporting on Teams mobile client.
+[User reported settings](submissions-user-reported-messages-custom-mailbox.md) determine whether reported messages are sent to the specified reporting mailbox, to Microsoft, or both. Also added support for Teams message reporting on Teams mobile client.
 
 ## Aug 2025
 
