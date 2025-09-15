@@ -21,7 +21,7 @@ introduction: |
 prerequisites:
   summary: |
     Before you start:
-    - You need **Security admin role** or **Owner** on the resource group.
+    - You need to have **Security admin role** or **Owner** on the resource group.
     - You must also have write permissions for the target resource.
     - To work with Azure Logic Apps workflows, you must also have the following Logic Apps roles or permissions:
 
@@ -40,7 +40,7 @@ procedureSection:
 
           :::image type="content" source="./media/workflow-automation/list-of-workflow-automations.png" alt-text="Screenshot that shows the workflow automation pane with the list of defined automations." lightbox="./media/workflow-automation/list-of-workflow-automations.png":::
       - |
-        From this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the Workflow automation is deployed.
+        From this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the workflow automation is deployed.
       - |
         To define a new workflow, select **Add workflow automation**. The options pane for your new automation opens.
 
@@ -49,7 +49,7 @@ procedureSection:
         Enter the following:
 
           - A name and description for the automation.
-          - The triggers that will initiate this automatic workflow. For example, you might want your logic app to run when a security alert generates that contains the phrase *SQL*.
+          - The triggers that initiate this automatic workflow. For example, you might want your logic app to run when a security alert generates that contains the phrase *SQL*.
       - |
         Specify the consumption logic app that will run when your trigger conditions are met.
       - |
@@ -82,7 +82,7 @@ procedureSection:
 
       - **When a Defender for Cloud Alert is created or triggered**: You can customize the trigger so that it relates only to alerts with the severity levels that interest you.
 
-      - **When a Defender for Cloud regulatory compliance assessment is created or triggered**: Trigger automations based on updates to regulatory compliance assessments.
+      - **When a Defender for Cloud regulatory compliance assessment is created or triggered**: You want to trigger automations based on updates to regulatory compliance assessments.
 
       > [!NOTE]
       > If you're using the legacy trigger **When a response to a Microsoft Defender for Cloud alert is triggered**, your logic apps aren't launched by the Workflow Automation feature. Instead, use either of the triggers mentioned previously.
@@ -96,7 +96,7 @@ procedureSection:
   - title: |
       Manually trigger a logic app
     summary: |
-      You can also run logic apps manually when you view any security alert or recommendation.
+      You can also manually run logic apps when you view any security alert or recommendation.
 
       To manually run a logic app, open an alert or a recommendation and select **Trigger logic app**.
 
