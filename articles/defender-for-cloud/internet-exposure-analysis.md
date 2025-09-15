@@ -22,7 +22,7 @@ Defender for Cloud determines if a resource is exposed to the internet by analyz
 1.	Control-plane configuration (e.g., public IPs, load balancers)
 2.	Network-path reachability (analyzing routing, security and firewall rules) 
 
-Detecting internet exposure can be as simple as checking if a virtual machine (VM) has a public IP address. However, the process can be more complex. Defender for Cloud attempts to locate internet-exposed resources in complex multi-cloud architectures. For example, a VM might not be directly exposed to the internet but could be behind a load balancer, which distributes network traffic across multiple servers to ensure no single server becomes overwhelmed.
+Detecting internet exposure can be as simple as checking if a virtual machine (VM) has a public IP address. However, the process can be more complex. Defender for Cloud attempts to locate internet-exposed resources in complex multicloud architectures. For example, a VM might not be directly exposed to the internet but could be behind a load balancer, which distributes network traffic across multiple servers to ensure no single server becomes overwhelmed.
 
 The following table lists the resources that Defender for Cloud assesses for internet exposure: 
 
@@ -47,7 +47,7 @@ The following table lists the network components that Defender for Cloud assesse
 ## Trusted Exposure (Public Preview)
 
 > [!NOTE]
-> Trusted Exposure currently supports multi-cloud virtual machines only including Azure VMs/VMSS, AWS EC2, and GCP compute instance.
+> Trusted Exposure currently supports multicloud virtual machines only including Azure VMs/VMSS, AWS EC2, and GCP compute instance.
 
 Trusted Exposure, now available in Public Preview, allows organizations to define CIDRs (IP ranges/blocks) and individual IP addresses that are known and trusted. If a resource is exposed only to these trusted IPs, it is not considered internet-facing. In Defender CSPM, such resources are treated as having no internet exposure risk, equivalent to internal-only cloud resources.
 
@@ -59,9 +59,9 @@ When Trusted IPs are configured, Defender for Cloud will:
 ### How it Works
 - Define and apply IP addresses that are trusted using [Azure Policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs) applied across your tenant scope.
 - The new policy creates an IP group that contains the CIDR/IP addresses.
-- Defender for Cloud reads the policy and applies it across supported resource types (currently: multi-cloud virtual machines).
-- Attack Paths will not be created for exposures that originate from virtual machines exposed only to IP addressess that are “Trusted”.
-- Security recommendations is deprioritized if a resource is exposed only to Trusted IPs.
+- Defender for Cloud reads the policy and applies it across supported resource types (currently: multicloud virtual machines).
+- Attack Paths will not be created for exposures that originate from virtual machines exposed only to IP addresses that are “Trusted”.
+- Security recommendations are deprioritized if a resource is exposed only to Trusted IPs.
 
 - A new "Trusted Exposure" insight is available on the Cloud Security Explorer, allowing users to query all supported resources flagged as Trusted.
 
@@ -70,13 +70,13 @@ When Trusted IPs are configured, Defender for Cloud will:
 ## Internet Exposure Width
 
 > [!NOTE]
-> Internet Exposure Width including the risk factors are applied to only multi-cloud compute instances that include - Azure VMs/VMSS, AWS EC2, and GCP compute instance. 
+> Internet Exposure Width including the risk factors are applied to only multicloud compute instances that include - Azure VMs/VMSS, AWS EC2, and GCP compute instance. 
 
 Internet Exposure Width represents the risks based on how broadly a resource (e.g. virtual machine) is exposed to the public internet. It plays a critical role in helping security teams understand not just whether a resource is internet-exposed, but how wide or narrow that exposure is, influencing the criticality and prioritization of security insights presented in attack paths and security recommendations.
 
 ### How It Works
 
-Defender for cloud automatically analyzes your internet facing resources and tags them as **wide exposure** or **narrow exposure** according to the networking rules. The output is tagged either as wide exposure and  
+Defender for cloud automatically analyzes your internet-facing resources and tags them as **wide exposure** or **narrow exposure** according to the networking rules. The output is tagged either as wide exposure and  
 - Attack paths that involve widely exposed resources now clearly indicate this in the title, such as "Widely internet exposed virtual machines has high permissions to storage account".
 - The exposure width calculated is then used to determine the attack path generation and risk based recommendation that helps you to rightly prioritize the severity of the findings by adding specific labels to the following experiences.
 - A new "Exposure width" insight is available on the Cloud Security Explorer, allowing users to query all supported resources that are widely exposed.
