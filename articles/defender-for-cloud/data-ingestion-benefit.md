@@ -72,7 +72,8 @@ To receive up to **500 MB per server per day of free Security Events data**, use
                 Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
                 ```
     - In **Destination**:
-      - Click **+ Add destination**.      
+      - Click **+ Add destination**:
+      :::image type="content" source="media/data-ingestion-benefit/dcr-add-data-source-destination-tab.png" alt-text="Screenshot of the Add data source pane showing the Destination tab, where you click + Add destination." lightbox="media/data-ingestion-benefit/dcr-add-data-source-destination-tab.png":::
       - For **Destination type**, choose **Azure Monitor Logs**.
       - Select at least one Log Analytics workspace (same region as the DCR).
       - Click **Save**.
