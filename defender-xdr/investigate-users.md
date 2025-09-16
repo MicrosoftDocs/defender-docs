@@ -48,7 +48,7 @@ When you investigate a specific user entity, you see the following tabs on its e
 - [Incidents and alerts](#incidents-and-alerts) tab
 - [Observed in organization](#observed-in-organization) tab
 - [Timeline](#timeline) tab
-- [Sentinel events](#sentinel-events) tab
+- [Microsoft Sentinel events](#sentinel-events) tab
 
 The identity page shows the Microsoft Entra organization and groups, helping you understand the groups and permissions associated with a user.
 
@@ -60,7 +60,7 @@ The identity page shows the Microsoft Entra organization and groups, helping you
 The **Entity details** panel on the left side of the page provides information about the user, such as the Microsoft Entra identity risk level, the insider risk severity level (Preview), the number of devices the user is signed in to, when the user was first and last seen, the user's accounts, groups that the user belongs to, contact information, and more. You see other details depending on the integration features you enabled.
 
 > [!NOTE]
-> **Investigation Priority Score** has been deprecated on December 3, 2024. As a result, both the Investigation Priority Score breakdown and the Scored activities cards have been removed from the UI. 
+> **Investigation Priority Score** was deprecated on December 3, 2024. The Investigation Priority Score breakdown and the Scored activities cards are no longer available.
 
 > [!NOTE]
 > (Preview) Microsoft Defender XDR users with access to [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can now see a user's insider risk severity and gain insights on a user's suspicious activities in the user page. Select the **insider risk severity** under Entity details to see the risk insights about the user.
@@ -70,7 +70,7 @@ This card includes all incidents and alerts associated with the user entity, gro
 
 ### Active directory account controls
 
-This card surfaces Microsoft Defender for Identity security settings that may need your attention. You can see important flags about the user's account settings, such as if the user can press enter to bypass the password, and if the user has a password that never expires, etc.
+This card highlights important Microsoft Defender for Identity security settings for the user's account. For example, it shows if the user can bypass the password by pressing enter, or if the user's password never expires. Review these flags to identify account settings that might need your attention.
 
 For more information, see [User Account Control flags](/windows/win32/adschema/a-useraccountcontrol).
 
@@ -87,8 +87,8 @@ Microsoft Defender for Identity pulls tags out of Active Directory to give you a
 | **New** | Indicates that the entity was created less than 30 days ago. |
 | **Deleted** | Indicates that the entity was permanently deleted from Active Directory. |
 | **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object isn't currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
-| **Enabled** | Indicates that the entity is currently enabled in Active Directory, indicating that the entity is currently in use, and can be used to sign in or perform actions in the domain.  |
-| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is essentially treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access may also be affected, depending on how they're configured. |
+| **Enabled** | Indicates that the entity is currently enabled in Active Directory. The entity is currently in use, and can be used to sign in or perform actions in the domain.  |
+| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access might also be affected, depending on how they're configured. |
 | **Honeytoken** |   Indicates that the entity is manually tagged as a honeytoken. |
 | **Locked** |  Indicates that the entity supplied the wrong password too many times, and is now locked. |
 | **Partial** | Indicates that the user, device, or group isn't in synch with the domain, and is partially resolved via a global catalog. In this case, some attributes aren't available. |
@@ -104,7 +104,13 @@ For more information, see [Defender for Identity entity tags in Microsoft Defend
 
 ## Incidents and alerts
 
-You can see all active incidents and alerts involving the user from the last six months in this tab. All the information from the main incidents and alerts queues is shown here. This list is a filtered version of the [incidents queue](incidents-overview.md), and shows a short description of the incident or alert, its severity (high, medium, low, informational), its status in the queue (new, in progress, resolved), its classification (not set, false alert, true alert), investigation state, category, who is assigned to address it, and last activity observed.
+You can see all active incidents and alerts involving the user from the last six months. All the information from the main incidents and alerts queues is shown here. 
+This list is a filtered version of the [incidents queue](incidents-overview.md), and shows the following details: 
+- A short description of the incident or alert
+- The alert severity (high, medium, low, informational)
+- The alert status in the queue (new, in progress, resolved)
+- The alert classification (not set, false alert, true alert)
+- The investigation state, category, who is assigned to address it, and last activity observed.
 
 You can customize the number of items displayed and which columns are displayed for each item. The default behavior is to list 30 items per page. You can also filter the alerts by severity, status, or any other column in the display.
 
@@ -166,7 +172,7 @@ For example:
 
     :::image type="content" source="/defender/media/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="/defender/media/image.png":::
 
-- **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that is relevant for the specific user.
+- **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that's relevant for the specific user.
 
 - **Export button:** You can export the timeline to a CSV file. Export is limited to the first 5,000 records and contains the data as it displays in the UI (same filters and columns).
 
@@ -208,11 +214,11 @@ For example:
 >
 > To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
 
-## Sentinel events
+## Microsoft Sentinel events
 
 If your organization onboarded Microsoft Sentinel to the Defender portal, this additional tab is on the user entity page. This tab imports the [Account entity page from Microsoft Sentinel](/azure/sentinel/entity-pages).
 
-### Sentinel timeline
+### Microsoft Sentinel timeline
 
 This timeline shows alerts associated with the user entity. These alerts include those seen on the **Incidents and alerts** tab and those created by Microsoft Sentinel from third-party, non-Microsoft data sources.
 
@@ -249,7 +255,7 @@ The insights are based on the following data sources:
 - Heartbeat (Azure Monitor Agent)
 - CommonSecurityLog (Microsoft Sentinel)
 
-:::image type="content" source="/defender/media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of Sentinel events tab in user entity page.":::
+:::image type="content" source="/defender/media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of Microsoft Sentinel events tab in user entity page.":::
 
 If you want to further explore any of the insights in this panel, select the link accompanying the insight. The link takes you to the **Advanced hunting** page, where it displays the query underlying the insight, along with its raw results. You can modify the query or drill down into the results to expand your investigation or just satisfy your curiosity.
 
@@ -257,7 +263,7 @@ If you want to further explore any of the insights in this panel, select the lin
 
 ## Remediation actions
 
-From the Overview page, you can do these additional actions:
+From the Overview page, you can perform these actions:
 
 - Enable, disable, or suspend the user in Microsoft Entra ID
 - Direct user to do certain actions such as require the user to sign in again or force password reset
