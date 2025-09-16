@@ -70,7 +70,7 @@ The following describes the needed steps to start using the new cloud scopes and
 
 :::image type="content" source="media/cloud-scopes-unified-rbac/getting-started-steps.png" alt-text="Diagram showing the steps to get started with cloud scopes and unified RBAC." lightbox="media/cloud-scopes-unified-rbac/getting-started-steps.png":::
 
-### 1. Cloud scope management
+### Cloud scope management
 
 Global admin, Global reader, security admin, and security reader roles can access the cloud scopes management interface. Only global admins at the tenant level have full view and manage (CRUD) permissions.
 
@@ -85,12 +85,7 @@ In this management experience, the security teams can create cloud scopes that a
 
 This management experience enables users with appropriate management permissions to create and modify cloud scopes.
 
-> [!NOTE]
-> **Next phase**: As part of Ring 1, we will support container resources such as: Cluster, Namespace, Registry and Repository.
-> 
-> **North star**: We plan to add additional environments in M2 such as Azure management group.
-
-#### To create a cloud scope:
+##### To create a cloud scope:
 
 1. Click **Create new cloud scope** and enter the wizard.
 
@@ -108,7 +103,7 @@ This management experience enables users with appropriate management permissions
 
    :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Screenshot showing the review and finish step for creating a cloud scope." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
 
-### 2. Cloud scopes activation & assignment
+### Cloud scopes activation & assignment
 
 To enable cloud scopes for the first time, you must configure permissions for roles associated with Defender for Cloud data sources. This step also controls access to shared assets like VMs via Device Groups or Cloud Scope. Begin by completing the activation process, which guides Authorization admins through RBAC configuration in the unified RBAC experience. 
 
@@ -119,7 +114,7 @@ As cloud scopes provide more granular access management and permissions for clou
 > [!NOTE]
 > If there are no device groups or unified RBAC roles in the Microsoft Defender for Cloud data source, you can skip the activation wizard and go straight to assigning roles with cloud scopes.
 
-#### Assign cloud scopes to all relevant roles in the activation & assignment wizard:
+##### Assign cloud scopes to all relevant roles in the activation & assignment wizard:
 
 :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot showing the cloud scopes activation wizard interface." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
 
@@ -131,7 +126,7 @@ As cloud scopes provide more granular access management and permissions for clou
 - If there are no existing cloud scopes, you will need to create at least one before you can continue
 - Once all relevant roles have been assigned to the appropriate cloud scopes, you will need to approve and activate the configuration. This process cannot be rolled back or reverted - you can manually manage and modify permissions as needed
 
-### 3. Unified RBAC management & assignment
+### Unified RBAC management & assignment
 
 Cloud scopes are primarily used for role-based access control (RBAC) and filtering. They allow users to restrict access management at the tenant level, enabling security personnel to manage only the specific cloud environments assigned to them through cloud scopes.
 
@@ -140,7 +135,7 @@ During the unified RBAC assignment process, you can select relevant cloud scopes
 > [!IMPORTANT]
 > Unified RBAC operates in the Defender portal and uses a different RBAC model from Azure. Permissions are not transferred between portals; instead, security administrators must create separate unified RBAC permissions for their teams, independent of their Azure portal permissions.
 
-For further information on unified RBAC permissions, please refer to the documentation available here: [Microsoft Defender XDR Unified role-based access control (RBAC)](https://learn.microsoft.com/microsoft-365/security/defender/manage-rbac)
+For further information on unified RBAC permissions, please refer to the documentation available here: [Microsoft Defender XDR Unified role-based access control (RBAC)](/microsoft-365/security/defender/manage-rbac)
 
 Create a unified RBAC role for any user needing portal access. Refer to the documentation to add or update custom roles. You can now assign roles with cloud scopes for more granular access.
 
@@ -148,7 +143,7 @@ Create a unified RBAC role for any user needing portal access. Refer to the docu
 
 Select **Create custom role** to initiate the creation of a new role. In the permissions step of the resulting wizard, choose the appropriate permission group to configure the necessary permissions. There are two permission groups relevant to Microsoft Defender for Cloud (cloud data):
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/urbac-permissions-1.png" alt-text="Screenshot showing the unified RBAC role creation wizard with permission groups." lightbox="media/cloud-scopes-unified-rbac/urbac-permissions-1.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Screenshot showing the unified RBAC role creation wizard with permission groups." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
 
 1. **Security operations** – grants the SOC persona access to incidents and alerts, as well as Microsoft Defender for Cloud cloud inventory
 2. **Security posture** – provides access to posture management features, including recommendations, vulnerability management, security score, and additional capabilities
@@ -158,7 +153,7 @@ Select **Create custom role** to initiate the creation of a new role. In the per
 
 The next step in the wizard is assignment. Role assignment allows you to assign users and data sources during custom role creation. You can also set scope assignments in this step.
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/urbac-permissions-2.png" alt-text="Screenshot showing the role assignment step with data source selection." lightbox="media/cloud-scopes-unified-rbac/urbac-permissions-2.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot showing the role assignment step with data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
 
 On the assignment page, under Data source selection, choose the relevant data sources to view Microsoft Defender for Cloud data by selecting 'All', 'MDC', or 'Exposure Management (XSPM)'. Some Microsoft Defender for Cloud features are integrated with Exposure Management experiences.
 
@@ -167,14 +162,12 @@ On the assignment page, under Data source selection, choose the relevant data so
 
 You can restrict access using cloud scopes selection:
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/urbac-permissions-3.png" alt-text="Screenshot showing cloud scopes selection options in role assignment." lightbox="media/cloud-scopes-unified-rbac/urbac-permissions-3.png":::
+:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot showing cloud scopes selection options in role assignment." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
 - **All**: Grants access to all cloud scopes
 - **Custom**: Allows selection of specific cloud scopes
 
-## 4. Scoping filtering
-
-### Scope filter
+## Scope filters
 
 In addition to access management and RBAC, cloud scopes also function as filters.
 
