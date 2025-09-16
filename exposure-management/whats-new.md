@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/26/2025
+ms.date: 09/09/2025
 
 ---
 
@@ -23,6 +23,20 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## September 2025
+
+### Refined attack path experience
+
+Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
+
+On-premises Attack Path now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Overview of attack paths](work-attack-paths-overview.md) and [Review attack paths](review-attack-paths.md).
 
 ## May 2025
 
