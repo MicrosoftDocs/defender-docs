@@ -13,7 +13,7 @@ ms.custom: sfi-image-nochange
 
 In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security standards, which are applied in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
-Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on each resource's risk factors. The context of the environment, like the resource's configuration, network connections, and security posture, determines these risk factors.
+Defender for Cloud proactively uses a dynamic engine that assesses the risks in your environment, while it considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors. This context includes the resource's configuration, network connections, and security posture.
 
 ## Prerequisites
 
@@ -41,10 +41,10 @@ Review recommendations and make sure all the details are correct before you reso
    - **Attack Paths**: The number of attack paths.
    - **Scope**: The affected subscription or resource.
    - **Freshness**: The freshness interval of the recommendation.
-   - **Last change date**: The date this recommendation was last changed.
+   - **Last change date**: The date when this recommendation was last changed.
    - **Severity**: The severity of the recommendation: **High**, **Medium**, or **Low**. More details are provided later in this article.
    - **Owner**: The person assigned to the recommendation.
-   - **Due date**: The date to resolve the recommendation by.
+   - **Due date**: The assigned due date for resolving the recommendation.
    - **Tactics & techniques**: The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
@@ -59,11 +59,11 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. In the recommendation, you can perform these actions:
 
-    - To view detailed information about the affected resources with an Azure Resource Graph explorer query, select **Open query**.
+    - To view detailed information about the affected resources with an Azure Resource Graph Explorer query, select **Open query**.
     - To view the Azure Policy entry for the underlying recommendation (if relevant), select **View policy definition**.
     - To view all resources the recommendation applies to, select **View recommendation for all resources**.
 
-In **Take action**:
+1. In **Take action**:
 
 - **Remediate**: A description of the manual steps required to resolve the security issue on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
 - **Recommendation owner and set due date**: If you enable a [governance rule](governance-rules.md) for the recommendation, you can assign an owner and due date.
@@ -72,11 +72,11 @@ In **Take action**:
 
     :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the Take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
 
-In **Findings**, you can review affiliated findings by severity.
+1. In **Findings**, you can review affiliated findings by severity.
 
 :::image type="content" source="media/review-security-recommendations/recommendation-findings.png" alt-text="Screenshot that shows the findings tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-findings.png":::
 
-In **Graph**, you can view and investigate all the context that's used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
+1. In **Graph**, you can view and investigate all the context that's used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
 
 :::image type="content" source="media/review-security-recommendations/recommendation-graph.png" alt-text="Screenshot that shows the Graph tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-graph.png":::
 
@@ -110,7 +110,7 @@ You can group recommendations by title with the Defender for Cloud recommendatio
 
 Defender for Cloud supports governance rules for recommendations. You can assign a recommendation owner or a due date. You can help ensure accountability by using governance rules, which also support a service-level agreement (SLA) for recommendations.
 
-- Recommendations appear as **On time** until their due date passes. Then they update to **Overdue**.
+- Recommendations appear as **On time** until their due date passes. Then they change to **Overdue**.
 - When a recommendation isn't classified as **Overdue**, it doesn't affect your Microsoft Secure Score.
 - You can also apply a grace period so that overdue recommendations don't affect your Secure Score.
 
@@ -134,7 +134,7 @@ To see all of your assigned recommendations:
 
 To make changes to an assignment, complete the following steps:
 
-1. Go to **Take action** > **Change owner & due date**. 
+1. Go to **Take action** > **Change owner & due date**.
 
 1. Select **Edit assignment** to change the recommendation owner or due date.
 
@@ -167,18 +167,18 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. You can open the query in one of two ways:
 
-   - **Query returning affected resource**: Returns a list of all of the resources affected by this recommendation.
-   - **Query returning security findings**: Returns a list of all security issues found by the recommendation.
+   - **Query returning affected resource**: Returns a list of all of the resources that the recommendation affects.
+   - **Query returning security findings**: Returns a list of all security issues that the recommendation found.
 
 1. Select **run query**.
 
-   :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
+   :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
 
 1. Review the results.
 
 ## How are recommendations classified?
 
-Every security recommendation from Defender for Cloud is given one of three severity ratings:
+Every security recommendation from Defender for Cloud is given one of three severity ratings.
 
 ### High severity
 
@@ -216,7 +216,7 @@ Examples of low severity recommendations include:
 An organization's internal policies might differ from Microsoft's classification of a specific recommendation. We recommend that you always carefully review each recommendation and consider its potential effect on your security posture before you decide how to address it.
 
 > [!NOTE]
-> Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md).
+> Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md).
 
 ### Example
 
@@ -224,8 +224,8 @@ In this example, the **Recommendation details** page shows 15 affected resources
 
 :::image type="content" source="./media/review-security-recommendations/open-query.png" alt-text="Screenshot of the Open query button on the Recommendation details page." lightbox="media/review-security-recommendations/open-query.png":::
 
-When you open and run the underlying query, Azure Resource Graph explorer returns the same affected resources for this recommendation.
+When you open and run the underlying query, Azure Resource Graph Explorer returns the same affected resources for this recommendation.
 
 ## Related content
 
-[Remediate security recommendations](implement-security-recommendations.md)
+- [Remediate security recommendations](implement-security-recommendations.md)

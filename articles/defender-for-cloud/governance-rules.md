@@ -47,7 +47,7 @@ By default, the resource owner's manager receives an email that shows overdue re
 
 ### Conflicts
 
-Conflicting rules are applied in scope order. For example, rules on a management scope for Azure management groups, Amazon Web  s (AWS) accounts, and Google Cloud Platform (GCP) organizations take effect before rules on scopes, like Azure subscriptions, AWS accounts, or GCP projects.
+Conflicting rules are applied in scope order. For example, rules on a management scope for Azure management groups, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) organizations take effect before rules on scopes, like Azure subscriptions, AWS accounts, or GCP projects.
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ Conflicting rules are applied in scope order. For example, rules on a management
    - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date.
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
-     :::image type="content" source="./media/governance-rules/create-rule-conditions.png" alt-text="Screenshot that shows the page where you add conditions for a governance rule." lightbox="media/governance-rules/create-rule-conditions.png":::
+   :::image type="content" source="./media/governance-rules/create-rule-conditions.png" alt-text="Screenshot that shows the page where you add conditions for a governance rule." lightbox="media/governance-rules/create-rule-conditions.png":::
 
 1. To specify who's responsible for fixing recommendations covered by the rule, set the owner.
 
@@ -147,4 +147,4 @@ From the Governance report, you can drill down into recommendations by the follo
 
 ## Related content
 
-[Implement security recommendations](implement-security-recommendations.md)
+- [Implement security recommendations](implement-security-recommendations.md)

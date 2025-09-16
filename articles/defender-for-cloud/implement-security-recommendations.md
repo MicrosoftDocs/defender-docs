@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Remediate recommendations in Microsoft Defender for Cloud
 
-When you protect your resources and workloads with Microsoft Defender for Cloud, they're assessed against built-in and custom security standards enabled in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
+When you use Microsoft Defender for Cloud to help protect your resources and workloads, they're assessed against built-in and custom security standards enabled in your Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects. Based on those assessments, security recommendations provide practical steps to remediate security issues and improve security posture.
 
 This article describes how to remediate security recommendations in your Defender for Cloud deployment.
 
@@ -53,7 +53,7 @@ To simplify the remediation process, a button labeled **Fix** might appear in a 
 
 1. Follow the rest of the remediation steps.
 
-After remediation completes, it can take several minutes for the change to take place.
+After remediation finishes, it can take several minutes for the change to take place.
 
 ## <a name = "use-the-automated-remediation-scripts"></a> Use automated remediation scripts
 
@@ -65,4 +65,4 @@ To remediate the recommendation, copy and run the script.
 
 ## Related content
 
-[Governance rules in your remediation processes](governance-rules.md)
+- [Governance rules in your remediation processes](governance-rules.md)

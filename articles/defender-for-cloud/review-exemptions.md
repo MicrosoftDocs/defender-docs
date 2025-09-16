@@ -34,8 +34,6 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
 ### Review exempted resources on the Inventory page
 
-You can also find all exempted resources on the **Inventory** page.
-
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Defender for Cloud** > **Inventory**.
@@ -93,4 +91,4 @@ To keep track of how users exempt resources from recommendations, we created an 
 
 ## Related content
 
-[Review security recommendations](review-security-recommendations.md)
+- [Review security recommendations](review-security-recommendations.md)

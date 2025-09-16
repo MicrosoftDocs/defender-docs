@@ -67,4 +67,4 @@ If you set an email notification, the active user receives an email with recomme
 
 ## Related content
 
-[Remediate recommendations](implement-security-recommendations.md)
+- [Remediate recommendations](implement-security-recommendations.md)

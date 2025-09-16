@@ -12,7 +12,7 @@ metadata:
 title: |
   Automate remediation responses
 introduction: |
-  Every security program includes multiple workflows for incident response. These processes might include notifying relevant stakeholders, launching a change management process, and applying specific remediation steps. 
+  Every security program includes multiple workflows for incident response. These processes might include notifying relevant stakeholders, starting a change management process, and applying specific remediation steps. 
   
   Security experts recommend that you automate as many steps of security procedures as you can. Automation reduces overhead. It can also improve your security by ensuring process steps are done quickly, consistently, and according to your predefined requirements.
 
@@ -22,8 +22,8 @@ prerequisites:
   summary: |
     Before you start:
     - You need to have **Security admin role** or **Owner** on the resource group.
-    - You must also have write permissions for the target resource.
-    - To work with Azure Logic Apps workflows, you must also have the following Logic Apps roles or permissions:
+    - You must have write permissions for the target resource.
+    - To work with Azure Logic Apps workflows, you must have the following Logic Apps roles or permissions:
 
       - [Logic App Operator](/azure/role-based-access-control/built-in-roles#logic-app-operator) permissions are required or Logic App read or trigger access. Users with this role can't create or edit logic apps. They can only *run* existing ones.
       - [Logic App Contributor](/azure/role-based-access-control/built-in-roles#logic-app-contributor) permissions are required for logic app creation and modification.
@@ -36,11 +36,11 @@ procedureSection:
       Follow these steps:
     steps: 
       - |
-        From the Defender for Cloud sidebar, select **Workflow automation**.
+        On the Defender for Cloud sidebar, select **Workflow automation**.
 
           :::image type="content" source="./media/workflow-automation/list-of-workflow-automations.png" alt-text="Screenshot that shows the workflow automation pane with the list of defined automations." lightbox="./media/workflow-automation/list-of-workflow-automations.png":::
       - |
-        From this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the workflow automation is deployed.
+        On this page, you can create new automation rules or enable, disable, or delete existing ones. A scope refers to the subscription where the workflow automation is deployed.
       - |
         To define a new workflow, select **Add workflow automation**. The options pane for your new automation opens.
 
@@ -53,21 +53,21 @@ procedureSection:
       - |
         Specify the consumption logic app that will run when your trigger conditions are met.
       - |
-        From the **Actions** section, select **visit the Logic Apps page** to begin the logic app creation process.
+        On the **Actions** section, select **visit the Logic Apps page** to begin the process to create a logic app.
 
           :::image type="content" source="media/workflow-automation/visit-logic.png" alt-text="Screenshot that shows the Actions section of the Add workflow automation screen and the link to go to Azure Logic Apps." border="true":::
 
-        You'll be taken to Azure Logic Apps.
+        You are taken to Azure Logic Apps.
       - |
         Select **(+) Add**.
-
-          :::image type="content" source="media/workflow-automation/logic-apps-create-new.png" alt-text="Screenshot that shows where to create a logic app." lightbox="media/workflow-automation/logic-apps-create-new.png":::
       - |
-        Fill out all required fields and select **Review + Create**.
+        Fill out all required fields, and then select **Review + Create**.
 
-          The message **Deployment is in progress** appears. Wait for the **Deployment complete** notification to appear and select **Go to resource** from the notification.
+        :::image type="content" source="media/workflow-automation/logic-apps-create-new.png" alt-text="Screenshot that shows where to create a logic app." lightbox="media/workflow-automation/logic-apps-create-new.png":::
+          
+          The message **Deployment is in progress** appears. Wait for the **Deployment complete** notification to appear, and then select **Go to resource**.
       - |
-        Review the information you entered and select **Create**.
+        Review the information you entered, and then select **Create**.
 
           In your new logic app, you can choose from built-in, predefined templates from the security category. Or you can define a custom flow of events that occur when this process is triggered.
 
@@ -85,20 +85,20 @@ procedureSection:
       - **When a Defender for Cloud regulatory compliance assessment is created or triggered**: You want to trigger automations based on updates to regulatory compliance assessments.
 
       > [!NOTE]
-      > If you're using the legacy trigger **When a response to a Microsoft Defender for Cloud alert is triggered**, your logic apps aren't launched by the Workflow Automation feature. Instead, use either of the triggers mentioned previously.
+      > If you're using the legacy trigger **When a response to a Microsoft Defender for Cloud alert is triggered**, the Workflow Automation feature doesn't open your logic apps. Instead, use either of the triggers mentioned previously.
     steps: 
       - |
         After you define your logic app, return to the **Add workflow automation** pane.
       - |  
         Select **Refresh** to ensure your new logic app is available for selection.
       - |
-        Select your logic app and save the automation. The logic app dropdown menu only shows logic apps that have supporting Defender for Cloud connectors.
+        Select your logic app, and then save the automation. The dropdown menu shows only logic apps that have supporting Defender for Cloud connectors.
   - title: |
       Manually trigger a logic app
     summary: |
       You can also manually run logic apps when you view any security alert or recommendation.
 
-      To manually run a logic app, open an alert or a recommendation and select **Trigger logic app**.
+      To manually run a logic app, open an alert or a recommendation, and then select **Trigger logic app**.
 
       [![Screenshot that shows how to manually trigger a logic app.](media/workflow-automation/manually-trigger-logic-app.png)](media/workflow-automation/manually-trigger-logic-app.png#lightbox)
 
@@ -113,7 +113,7 @@ procedureSection:
       To implement these policies:
     steps:
       - |
-        From the following table, select the policy you want to apply:
+        On the following table, select the policy that you want to apply:
 
           |Goal  |Policy  |Policy ID  |
           |---------|---------|---------|
@@ -121,24 +121,24 @@ procedureSection:
           |Workflow automation for security recommendations     |[Deploy Workflow Automation for Microsoft Defender for Cloud recommendations](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F73d6ab6c-2475-4850-afd6-43795f3492ef)|73d6ab6c-2475-4850-afd6-43795f3492ef|
           |Workflow automation for regulatory compliance changes|[Deploy Workflow Automation for Microsoft Defender for Cloud regulatory compliance](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F509122b9-ddd9-47ba-a5f1-d0dac20be63c)|509122b9-ddd9-47ba-a5f1-d0dac20be63c|
 
-        You can also find policies by searching Azure Policy. In Azure Policy, select **Definitions** and search for them by name.
+        You can also find policies by searching Azure Policy. In Azure Policy, select **Definitions**, and then search for them by name.
       - |
-        From the relevant Azure Policy page, select **Assign**.
+        On the relevant Azure Policy page, select **Assign**.
           :::image type="content" source="./media/workflow-automation/export-policy-assign.png" alt-text="Screenshot that shows how to assign the Azure policy.":::
       - |
-        In the **Basics** tab, set the scope for the policy. To use centralized management, assign the policy to the **Management Group** that contains the subscriptions that use the workflow automation configuration.
+        On the **Basics** tab, set the scope for the policy. To use centralized management, assign the policy to the **Management Group** that contains the subscriptions that use the workflow automation configuration.
       - |
-        In the **Parameters** tab, enter the required information.
+        On the **Parameters** tab, enter the required information.
 
           :::image type="content" source="media/workflow-automation/parameters-tab.png" alt-text="Screenshot that shows the Parameters tab.":::
       - |
-        (Optional) Apply this assignment to an existing subscription in the **Remediation** tab, and then select the option to create a remediation task.
+        (Optional) Apply this assignment to an existing subscription on the **Remediation** tab, and then select the option to create a remediation task.
       - |
-        Review the summary page and select **Create**.
+        Review the summary page, and then select **Create**.
 
         ### Data types schemas
 
-        To view the raw event schemas of the security alerts or recommendations events that are passed to the logic app, go to the [Workflow automation data types schemas](https://aka.ms/ASCAutomationSchemas). This process can be useful in cases where you aren't using the Defender for Cloud built-in Logic Apps connectors (mentioned previously), but instead are using the generic HTTP connector. You can use the event JSON schema to manually parse it as you see fit.
+        To view the raw event schemas of the security alerts or recommendations events that are passed to the logic app, go to the [data types schemas for workflow automation](https://aka.ms/ASCAutomationSchemas). This process can be useful in cases where you aren't using the Defender for Cloud built-in Logic Apps connectors (mentioned previously), but instead are using the generic HTTP connector. You can use the event JSON schema to manually parse it as you see fit.
 
 relatedContent:
   - text: Use workflow automation to automate a security response
