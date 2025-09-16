@@ -34,6 +34,8 @@ On-premises Attack Path now terminate automatically when they reach End Game ass
 
 The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
 For more information, see [Overview of attack paths](work-attack-paths-overview.md) and [Review attack paths](review-attack-paths.md).
 
 ## May 2025
