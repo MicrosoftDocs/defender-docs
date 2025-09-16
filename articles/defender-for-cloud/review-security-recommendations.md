@@ -70,7 +70,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
    - **Exempt**: You can exempt resources from the recommendation or disable specific findings by using disable rules.
    - **Workflow automation**: Set a logic app to trigger with the recommendation.
 
-     :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the Take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
+   :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the Take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
 
 1. In **Findings**, you can review affiliated findings by severity.
 
