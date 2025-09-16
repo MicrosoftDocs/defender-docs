@@ -60,11 +60,9 @@ To establish a connection with CrowdStrike Falcon in Exposure Management, follow
 
 CrowdStrike connector retrieves data on compute devices, including endpoints and servers monitored by CrowdStrike Falcon, along with vulnerability findings from CrowdStrike on those assets. It also retrieves network and configuration information to identify those devices.
 
-Only devices that were active in the last 90 days are retrieved, based on the last activity timestamp in CrowdStrike Falcon.
-
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Device information<br>- Operating system details<br>- Network interfaces<br>- Agent status<br>- CrowdStrike criticality data |
+| **Assets/devices**      | - Device information<br>- Cloud platform information<br>- Host name<br>- Operating system details<br>- Network interfaces<br>- IP address<br>- Mac address<br>- CrowdStrike criticality data<br>- Firmware version and vendor<br>- Internet facing |
 | **Vulnerability findings** | CrowdStrike retrieves CVE findings on the assets that it ingests. |
 
 ## Troubleshooting the CrowdStrike data connector

@@ -40,8 +40,6 @@ To establish a connection with ServiceNow in Exposure Management, follow these s
 
 Exposure Management currently retrieves data on devices, their business application association, and business criticality. Additional data is also retrieved that helps identify the device, such as network adapter information and OS data.
 
-Only devices that were active in the last 90 days are retrieved, based on assessing the "sys_updated_on" field in the ServiceNow CI.
-
 The following fields are ingested via the connector:
 
 | **Category**          | **Properties**                                                                 |

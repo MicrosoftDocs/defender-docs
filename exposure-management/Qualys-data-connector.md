@@ -48,8 +48,6 @@ To establish a connection with Qualys in Exposure Management, follow these steps
 
 Qualys connector retrieves data on compute devices, including machines and virtual machines, and vulnerability findings from Qualys on those assets. It also retrieves some networking data to identify those devices.
 
-Only devices that were modified in the last 90 days are retrieved, based on assessing the "modified" field in the Qualys asset.
-
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
 | **Assets/devices**      | - Gateway address<br>- FQDN<br>- IP address<br>- MAC address<br>- OS information<br>- Qualys criticality data |

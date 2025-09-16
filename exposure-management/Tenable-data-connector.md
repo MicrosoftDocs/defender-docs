@@ -44,8 +44,6 @@ To establish a connection with Tenable in Exposure Management, follow these step
 
 Exposure Management retrieves data on compute devices from Tenable, including machines and virtual machines. It also retrieves some networking data to identify those devices.
 
-Only devices that were modified in the last 90 days are retrieved, based on assessing the "updated_at" field in the Tenable asset.
-
 Exposure Management also retrieves vulnerability findings from Tenable on those assets.
 
 The vulnerability data retrieved for Tenable is applicable to CVEs only, and not other types of vulnerabilities or misconfigurations. Tenable shows total vulnerability counts that include other non-CVE misconfigurations as well, so these counts aren't applicable to the numbers of vulnerabilities ingested to Exposure Management.

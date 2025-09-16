@@ -51,13 +51,11 @@ To establish a connection with SentinelOne in Exposure Management, follow these 
 
 ## Retrieved data
 
-SentinelOne connector retrieves data on compute devices, including endpoints, servers, and other managed assets, along with security findings and threat detection data from SentinelOne on those assets. It also retrieves network information to identify those devices.
-
-Only devices that were active in the last 90 days are retrieved, based on the last activity timestamp in SentinelOne.
+SentinelOne connector retrieves data on compute devices, including endpoints, servers, and other managed assets. It also retrieves network information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Endpoint information<br>- Operating system details<br>- Network interfaces<br>- Agent status<br>- Device classification<br>- SentinelOne criticality data |
+| **Assets/devices**      | - Endpoint information<br>- Operating system details<br>- Account ID<br>- UUID<br>- Domain<br>- Cpu ID<br>- Machine type<br>- Machine SID<br>- Network interfaces<br>- External IP address<br>- Last logged in user details<br>- Active threats<br>- Detection state<br>- Serial number<br>- Site name<br>- Firewall enabled<br>- Active directory information |
 | **Security findings**   | SentinelOne retrieves CVE findings on the assets that it ingests. |
 
 ## Troubleshooting the SentinelOne data connector

@@ -45,7 +45,7 @@ The Palo Alto Prisma connector retrieves data on your IT assets and risks, provi
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Cloud provider information<br>- Resource type<br>- IP address<br>- Operating system<br>- Configuration details<br>- Palo Alto criticality data |
+| **Assets/devices**      | - Cloud provider information<br>- Resource type<br>- Network interfaces<br>- IP address<br>- Public DNS name<br>- Operating system details<br>- Internet facing<br>- Palo Alto criticality data |
 | **Vulnerability findings** | Palo Alto Prisma retrieves CVE findings on the assets that it ingests. |
 
 ## Troubleshooting the Palo Alto Prisma data connector
