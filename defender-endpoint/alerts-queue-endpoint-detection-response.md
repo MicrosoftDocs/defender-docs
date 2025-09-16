@@ -22,7 +22,7 @@ ms.subservice: edr
 search.appverid: met150
 ---
 
-## Alerts queue in Microsoft Defender XDR
+# Alerts queue in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

@@ -15,16 +15,14 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/21/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # How to use Power Automate Connector to set up a Flow for events
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -86,5 +84,6 @@ The Alert trigger provides only the Alert ID and the Machine ID. You can use the
 You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
 ## Related topic
+
 - [Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
