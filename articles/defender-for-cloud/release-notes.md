@@ -31,10 +31,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage](#malware-automated-remediation-in-defender-for-storage)
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
 |September 14, 2025|GA|Exposure width for Internet exposure analysis|
 |September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+
+### Malware automated remediation in Defender for Storage
+
+September 16, 2025
+
+Malware automated remediation for Defender for Storage is now available in public preview. 
+
+With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
+
+You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
+
+For more information, see [Set up automated remediation for malware detection](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan).  
 
 ### New refined attack paths
 
