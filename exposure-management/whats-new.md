@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 09/08/2025
+ms.date: 09/16/2025
 
 ---
 
@@ -46,6 +46,18 @@ For more information, see [Predefined classification](predefined-classification-
 The legacy Azure AD Connect asset rule has been removed from Critical Assets. Its associated device role, AzureADConnectServer, will be deprecated in December 2025. Ensure all relevant custom rules are transitioned to use the new device role, EntraConnectServer, to maintain compliance and visibility.
 
 For more information, see [Predefined classification](predefined-classification-rules-and-levels.md).
+
+### Refined attack path experience
+
+Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
+
+On-premises Attack Path now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+The changes bring greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Overview of attack paths](work-attack-paths-overview.md) and [Review attack paths](review-attack-paths.md).
 
 ## May 2025
 
