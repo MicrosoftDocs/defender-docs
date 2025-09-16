@@ -32,7 +32,8 @@ Manual linking helps organizations:
 
 Follow these steps to manually link accounts to a selected identity.
 
-1. Go to **Identity Inventory**.
+1. Navigate to the **Identity Inventory**.
+1. Select an **Identity** from the list.
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
 1. Select one or more accounts from the table. You must select at least one account to continue.

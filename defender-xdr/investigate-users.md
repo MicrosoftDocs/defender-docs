@@ -50,7 +50,7 @@ When you investigate a specific user entity, you see the following tabs on its e
 - [Timeline](#timeline) tab
 - [Sentinel events](#sentinel-events) tab
 
-The user page shows the Microsoft Entra organization and groups, helping you understand the groups and permissions associated with a user.
+The identity page shows the Microsoft Entra organization and groups, helping you understand the groups and permissions associated with a user.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 ## Overview
@@ -124,7 +124,7 @@ To see a full page view of an incident or alert, select its title.
 
 - **Groups**: this section shows all observed on-premises groups for the user entity, as reported by Microsoft Defender for Identity.
 
-- **Accounts**: this section shows all observed accounts for the user entity, as reported by Microsoft Defender for Identity.
+- **Accounts**: this section shows all observed accounts for the identity entity, as reported by Microsoft Defender for Identity.
 
 - **Lateral movement paths**: this section shows all profiled lateral movement paths from the on-premises environment, as detected by Defender for Identity.
 
