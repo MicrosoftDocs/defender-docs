@@ -1192,7 +1192,7 @@
                 href: on-demand-malware-scanning.md
               - name: Advanced configurations for malware scanning
                 href: advanced-configurations-for-malware-scanning.md
-              - name: Set up responses to malware scanning
+              - name: Set up automated remediation for malware detection
                 href: defender-for-storage-configure-malware-scan.md
       - name: Sensitive data threat detection
         items:
