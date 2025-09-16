@@ -20,7 +20,7 @@
       displayName: navigation, hub, guide, intro, get started, security posture, threat protection
       href: defender-portal/defender-portal-four-column-overview.md
     - name: Defender for Cloud in the Defender portal - integration and dashboard overview
-      displayName: defender portal, integration, dashboard, overview, mdc, cloud security
+      displayName: defender portal, integration, dashboard, overview, mdc, Cloud security
       href: defender-portal/defender-for-cloud-in-defender-portal.md
     - name: Getting started in the Defender portal
       displayName: get started, onboarding, defender portal, mdc, introduction
@@ -36,9 +36,9 @@
         - name: User roles and permissions
           href: permissions.md
         - name: Defender for Cloud support matrices
-          displayName: coverage, supported platforms, cloud services, roles, permissions
+          displayName: coverage, supported platforms, Cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
-        - name: Defender for Cloud cloud support matrices
+        - name: Defender for Cloud Cloud support matrices
           displayName: matrices, gov, government, 21via, net, support
           href: support-matrix-cloud-environment.md
         - name: Regional availability for Defender for Cloud plans
@@ -67,7 +67,7 @@
       expanded: false
       items:
         - name: Protect resources with Defender CSPM
-          displayName: CSPM, cloud security posture management, enable
+          displayName: CSPM, Cloud security posture management, enable
           href: tutorial-enable-cspm-plan.md
         - name: Defender for Servers
           items:
@@ -309,230 +309,221 @@
 
 - name: Cloud Security Posture Management (CSPM)
   items:
-    - name: Overview Cloud Security Posture Management (CSPM)
-      displayName: CSPM, cloud security posture management, overview
-      href: concept-cloud-security-posture-management.md
-    - name: Security policies
-      displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
-      href: security-policy-concept.md
-    - name: Risk prioritization
-      displayName: risk, prioritization, security, posture, management, prioritization
-      href: risk-prioritization.md
-    - name: Review cloud security posture
-      displayName: overview, compliance, inventory
-      href: overview-page.md
-    - name: Secure score
-      displayName: security, posture, secure, score, calculate, control, improve
-      href: secure-score-security-controls.md
-    - name: Track secure score
-      displayName: secure score, rest api, resource graph
-      href: secure-score-access-and-track.md
-    - name: Regulatory compliance standards
-      href: concept-regulatory-compliance-standards.md
-    - name: Microsoft Cloud Security Benchmark (MCSB)
-      displayName: mcsb, azure, security, benchmark 
-      href: concept-regulatory-compliance.md
-    - name: Investigating risks with security explorer/attack paths
-      displayName: cloud security graph, attack path analysis, cloud security explorer, attack, path, graph, security, explorer
-      href: concept-attack-path.md
-    - name: Cloud Infrastructure Overview Dashboard
-      displayName: dashboard, overview, cloud infrastructure, multi-cloud, visibility
-      href: cloud-infrastructure-dashboard.md
-    - name: Cloud Scopes and Unified RBAC
-      displayName: cloud scopes, unified RBAC, permissions, access control, multi-cloud
-      href: cloud-scopes-unified-rbac.md
-    - name: External attack surface management in Defender for Cloud
-      displayName: EASM, attack surface management, integration
-      href: concept-easm.md
-    - name: Critical assets protection
-      href: critical-assets-protection.md
-    - name: Review the asset inventory
-      displayName: asset, inventory, resources
-      href: asset-inventory.md
-    - name: Cloud infrastructure entitlement management (CIEM)
-      displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-      href: permissions-management.md
-    - name: Agentless machine scanning
-      href: concept-agentless-data-collection.md
-    - name: Internet exposure analysis
-      displayName: internet, exposure, analysis
-      href: internet-exposure-analysis.md
-    - name: Data security posture management
+    - name: Get started
       items:
-        - name: About data security posture management
-          href: concept-data-security-posture.md
-        - name: Support and prerequisites
-          href: concept-data-security-posture-prepare.md
-        - name: Supported sensitive data information types
-          href: sensitive-info-types.md
-        - name: Discover sensitive data
-          href: discover-sensitive-data.md
-        - name: Review data security alerts
-          href: review-data-security-alerts.md
-    - name: Container security posture management
+        - name: Overview Cloud Security Posture Management (CSPM)
+          displayName: CSPM, Cloud security posture management, overview
+          href: concept-cloud-security-posture-management.md
+        - name: Protect resources with Defender CSPM
+          displayName: CSPM, Cloud security posture management, enable
+          href: tutorial-enable-cspm-plan.md
+        - name: Cloud infrastructure entitlement management (CIEM)
+          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
+          href: permissions-management.md
+        - name: Enable Cloud infrastructure entitlement management (CIEM)
+          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
+          href: enable-permissions-management.md
+        - name: Agentless machine scanning
+          href: concept-agentless-data-collection.md
+    - name: Assess your security posture
       items:
-        - name: Agentless container posture in Defender CSPM
-          href: concept-agentless-containers.md
-    - name: AI security posture management
-      items:
-      - name: Overview
-        href: ai-security-posture.md
-      - name: Discover generative AI workloads
-        href: identify-ai-workload-model.md
-      - name: Explore risks to pre-deployment generative AI artifacts
-        href: explore-ai-risk.md
-    - name: API security posture management
-      items:
-        - name: Overview
-          href: api-security-posture-overview.md
-    - name: Secrets protection
-      items:
-        - name: Overview
-          href: secrets-scanning.md
-        - name: Protecting VM secrets
-          href: secrets-scanning-servers.md
-        - name: Protecting cloud deployment secrets
-          href: secrets-scanning-cloud-deployment.md
-        - name: Protecting code repository secrets
-          href: secrets-scanning-code.md
-    - name: Integrations
-      items:
-        - name: ServiceNow
-          items:
-          - name: Overview ServiceNow integration
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: integration-servicenow.md
-          - name: Connect ServiceNow to Defender for Cloud
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: connect-servicenow.md
-          - name: Create a ticket in Defender for Cloud 
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: create-ticket-servicenow.md
-          - name: Create automatic tickets with governance rules
-            displayName: CSPM, cloud security, posture, management, ServiceNow
-            href: create-governance-rule-servicenow.md
-        - name: Power BI
-          items:
-            - name: Overview Power BI integration
-              displayName: CSPM, cloud security, posture, management, Power BI
-              href: integration-power-bi.md
-            - name: Add Defender for Cloud data to Power BI
-              displayName: CSPM, cloud security, posture, management, Power BI
-              href: add-data-power-bi.md
-    - name: Cloud security posture how-to guides
-      items:
+        - name: Security policies and standards
+          displayName: policies, security, initiative, Microsoft cloud security benchmark, mcsb, recommendation
+          href: security-policy-concept.md
+        - name: Microsoft Cloud Security Benchmark (MCSB)
+          displayName: mcsb, azure, security, benchmark 
+          href: concept-regulatory-compliance.md
+        - name: Regulatory compliance standards
+          href: concept-regulatory-compliance-standards.md
         - name: Review cloud security posture
           displayName: overview, compliance, inventory
           href: overview-page.md
-        - name: Review workload protection
-          displayName: workloads, dashboard, protections
-          href: workload-protections-dashboard.md
+        - name: Cloud infrastructure overview dashboard
+          displayName: dashboard, overview, cloud infrastructure, multi-cloud, visibility
+          href: cloud-infrastructure-dashboard.md
+        - name: Cloud scopes and unified RBAC
+          displayName: rbac, permissions, scopes, access control, unified
+          href: cloud-scopes-unified-rbac.md
+        - name: Secure score
+          displayName: security, posture, secure, score, calculate, control, improve
+          href: secure-score-security-controls.md
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Enable cloud infrastructure entitlement management (CIEM)
-          displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
-          href: enable-permissions-management.md
-    - name: API security posture how-to guides
-      items:
-        - name: Enable API security posture with Defender CSPM
-          href: enable-api-security-posture.md
-    - name: AI security posture how-to guides
-      items:
-        - name: Discover generative AI workloads
-          displayName: AI, workloads, models, applications, apps, AI BOM
-          href: identify-ai-workload-model.md
-        - name: Explore risks to pre-deployment generative AI artifacts
-          displayName: AI, risks, generative, applications, apps
-          href: explore-ai-risk.md
-    - name: Data security posture how-to guides
-      items:
-        - name: Enable data security posture management
-          href: data-security-posture-enable.md
-        - name: Explore risks to sensitive data
-          href: data-security-review-risks.md
-        - name: Customize sensitivity settings
-          href: data-sensitivity-settings.md
-    - name: Container security posture how-to guides
-      items:
-        - name: Onboard agentless containers for CSPM
-          href: how-to-enable-agentless-containers.md
-        - name: Attack path analysis and enhanced risk-hunting for containers
-          displayName: attack paths, paths, security explorer, test
-          href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
-        - name: Configure a Docker Hub external container registry
-          href: defender-for-containers-enable-external-registry-for-docker-hub.md
-    - name: Secrets security posture how-to guides
-      items: 
-      - name: Remediate issues with VM secrets
-        href: remediate-server-secrets.md
-      - name: Remediate cloud deployment secrets
-        href: remediate-cloud-deployment-secrets.md
-    - name: Manage security standards and recommendations
-      items:
-      - name: Choose compliance standards 
-        href: update-regulatory-compliance-packages.yml
-      - name: Create custom standards/recommendations
-        href: create-custom-recommendations.md
-      - name: Manage MCSB recommendations
-        href: manage-mcsb.md
-      - name: Exempt resources from recommendations
-        displayName: disable, resource, exempt, recommendation
-        href: exempt-resource.md
-      - name: Exempt resources at scale
-        displayName: policy, resource, exemptions, create, exempt, at scale, resources
-        href: exempt-resources-at-scale.md
-    - name: Investigate and remediate security posture
-      items:
-      - name: Investigate security recommendations
-        items:
-        - name: Review security recommendations
-          displayName: security, recommendations, owner, azure, resource, graph, azure
-            resource graph, csv report
-          href: review-security-recommendations.md
-        - name: Review resources exempted from recommendations
-          href: review-exemptions.md
-        - name: Assign a recommendation to an active user
-          displayName: assign, recommendation, user, owner
-          href: active-user.md
-        - name: Remediate recommendations
-          displayName: remediation, steps, recommendations, fix, actions, activity log
-          href: implement-security-recommendations.md
-        - name: Drive remediation with governance rules
-          displayName: security, posture, recommendation, governance, automated, rules,
-            owners, status, progress
-          href: governance-rules.md
-      - name: Improve regulatory compliance
-        href: regulatory-compliance-dashboard.md
-      - name: Investigate with security explorer and attack path
-        items:
-        - name: Identify and remediate attack paths
-          displayName: attack paths, paths, investigate, easm,
-          href: how-to-manage-attack-path.md
-        - name: Retrieve attack path data with API
-          displayName: attack paths, paths, investigate, easm, rest api
-          href: attack-path-api.md
-        - name: Build queries with cloud security explorer
-          displayName: queries, security explorer, explorer, templates, query
-          href: how-to-manage-cloud-security-explorer.md
-        - name: Detect internet exposed IP addresses
-          displayName: exposed, ip, addresses, easm
-          href: detect-exposed-ip-addresses.md
-    - name: Built-in security protections
-      items:
-        - name: Use Purview to protect sensitive data
-          displayName: sensitivity, data, purview, inventory, information protection
-          href: information-protection.md
-        - name: Mitigate risks on specific resources in the asset inventory
+        - name: Review the asset inventory
           displayName: asset, inventory, resources
           href: asset-inventory.md
-        - name: Protect network resources
-          displayName: map, network map
-          href: protect-network-resources.md
-        - name: Other threat protections
-          displayName: network layer, display recommendations, stream, security, alerts,
-            DDoS, Entra
-          href: other-threat-protections.md
+        - name: Internet exposure analysis
+          displayName: internet, exposure, analysis
+          href: internet-exposure-analysis.md
+    - name: Identify critical risks
+      items:
+        - name: Risk prioritization
+          displayName: risk, prioritization, security, posture, management, prioritization
+          href: risk-prioritization.md
+        - name: Investigate risks with security explorer and attack paths
+          displayName: Cloud security graph, attack path analysis, Cloud security explorer, attack, path, graph, security, explorer
+          href: concept-attack-path.md
+        - name: Critical assets protection
+          href: critical-assets-protection.md
+        - name: External attack surface management in Defender for Cloud
+          displayName: EASM, attack surface management, integration
+          href: concept-easm.md
+    - name: Specialized security areas
+      items:
+        - name: Data Security Posture Management
+          items:
+            - name: About Data Security Posture Management
+              href: concept-data-security-posture.md
+            - name: Support and prerequisites
+              href: concept-data-security-posture-prepare.md
+            - name: Enable Data Security Posture Management
+              href: data-security-posture-enable.md
+            - name: Supported sensitive data information types
+              href: sensitive-info-types.md
+            - name: Discover sensitive data
+              href: discover-sensitive-data.md
+            - name: Explore risks to sensitive data
+              href: data-security-review-risks.md
+            - name: Customize sensitivity settings
+              href: data-sensitivity-settings.md
+            - name: Review data security alerts
+              href: review-data-security-alerts.md
+            - name: Data and AI security dashboard
+              displayName: data security, AI security, dashboard, overview
+              href: data-aware-security-dashboard-overview.md
+        - name: Container Security Posture Management
+          items:
+            - name: Agentless container posture in Defender CSPM
+              href: concept-agentless-containers.md
+            - name: Onboard agentless containers for CSPM
+              href: how-to-enable-agentless-containers.md
+            - name: Attack path analysis and enhanced risk-hunting for containers
+              displayName: attack paths, paths, security explorer, test
+              href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
+            - name: Configure a Docker Hub external container registry
+              href: defender-for-containers-enable-external-registry-for-docker-hub.md
+        - name: AI Security Posture Management
+          items:
+            - name: Overview
+              href: ai-security-posture.md
+            - name: Discover generative AI workloads
+              displayName: AI, workloads, models, applications, apps, AI BOM
+              href: identify-ai-workload-model.md
+            - name: Explore risks to pre-deployment generative AI artifacts
+              displayName: AI, risks, generative, applications, apps
+              href: explore-ai-risk.md
+        - name: API security posture management
+          items:
+            - name: Overview
+              href: api-security-posture-overview.md
+            - name: Enable API security posture with Defender CSPM
+              href: enable-api-security-posture.md
+        - name: Secrets protection
+          items:
+            - name: Overview
+              href: secrets-scanning.md
+            - name: Protect VM secrets
+              href: secrets-scanning-servers.md
+            - name: Protect Cloud deployment secrets
+              href: secrets-scanning-cloud-deployment.md
+            - name: Protect code repository secrets
+              href: secrets-scanning-code.md
+            - name: Remediate issues with VM secrets
+              href: remediate-server-secrets.md
+            - name: Remediate Cloud deployment secrets
+              href: remediate-cloud-deployment-secrets.md
+    - name: Investigate and remediate
+      items:
+        - name: Review workload protection
+          displayName: workloads, dashboard, protections
+          href: workload-protections-dashboard.md
+        - name: Improve regulatory compliance
+          href: regulatory-compliance-dashboard.md
+        - name: Investigate with security explorer and attack path
+          items:
+            - name: Identify and remediate attack paths
+              displayName: attack paths, paths, investigate, easm,
+              href: how-to-manage-attack-path.md
+            - name: Retrieve attack path data with API
+              displayName: attack paths, paths, investigate, easm, rest api
+              href: attack-path-api.md
+            - name: Build queries with Cloud security explorer
+              displayName: queries, security explorer, explorer, templates, query
+              href: how-to-manage-cloud-security-explorer.md
+            - name: Detect internet exposed IP addresses
+              displayName: exposed, ip, addresses, easm
+              href: detect-exposed-ip-addresses.md
+        - name: Investigate security recommendations
+          items:
+            - name: Review security recommendations
+              displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
+              href: review-security-recommendations.md
+            - name: Review resources exempted from recommendations
+              href: review-exemptions.md
+            - name: Assign a recommendation to an active user
+              displayName: assign, recommendation, user, owner
+              href: active-user.md
+            - name: Remediate recommendations
+              displayName: remediation, steps, recommendations, fix, actions, activity log
+              href: implement-security-recommendations.md
+            - name: Drive remediation with governance rules
+              displayName: security, posture, recommendation, governance, automated, rules, owners, status, progress
+              href: governance-rules.md
+    - name: Advanced configuration and standards
+      items:
+        - name: Manage security standards and recommendations
+          items:
+            - name: Choose compliance standards 
+              href: update-regulatory-compliance-packages.yml
+            - name: Create custom standards and recommendations
+              href: create-custom-recommendations.md
+            - name: Manage MCSB recommendations
+              href: manage-mcsb.md
+            - name: Exempt resources from recommendations
+              displayName: disable, resource, exempt, recommendation
+              href: exempt-resource.md
+            - name: Exempt resources at scale
+              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance
+              href: exempt-resources-at-scale.md
+        - name: Built-in security protections
+          items:
+            - name: Use Purview to protect sensitive data
+              displayName: sensitivity, data, purview, inventory, information protection
+              href: information-protection.md
+            - name: Mitigate risks on specific resources in the asset inventory
+              displayName: asset, inventory, resources
+              href: asset-inventory.md
+            - name: Protect network resources
+              displayName: map, network map
+              href: protect-network-resources.md
+            - name: Other threat protections
+              displayName: network layer, display recommendations, stream, security, alerts, DDoS, Entra
+              href: other-threat-protections.md
+        - name: Integrations
+          items:
+            - name: ServiceNow
+              items:
+                - name: ServiceNow integration overview
+                  displayName: CSPM, Cloud security, posture, management, ServiceNow
+                  href: integration-servicenow.md
+                - name: Connect ServiceNow to Defender for Cloud
+                  displayName: CSPM, Cloud security, posture, management, ServiceNow
+                  href: connect-servicenow.md
+                - name: Create a ticket in Defender for Cloud 
+                  displayName: CSPM, Cloud security, posture, management, ServiceNow
+                  href: create-ticket-servicenow.md
+                - name: Create automatic tickets with governance rules
+                  displayName: CSPM, Cloud security, posture, management, ServiceNow
+                  href: create-governance-rule-servicenow.md
+            - name: Power BI
+              items:
+                - name: Power BI integration overview
+                  displayName: CSPM, Cloud security, posture, management, Power BI
+                  href: integration-power-bi.md
+                - name: Add Defender for Cloud data to Power BI
+                  displayName: CSPM, Cloud security, posture, management, Power BI
+                  href: add-data-power-bi.md
     - name: Common questions about CSPM
       displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
       href: faq-cspm.yml
@@ -556,10 +547,10 @@
           - name: Endor Labs
             items:
             - name: Overview 
-              displayName: CSPM, cloud security, posture, management, Endor labs
+              displayName: CSPM, Cloud security, posture, management, Endor labs
               href: integration-endor-labs.md
             - name: Connect Endor Labs to Defender for Cloud
-              displayName: CSPM, cloud security, posture, management, Endor labs
+              displayName: CSPM, Cloud security, posture, management, Endor labs
               href: connect-endor-labs.md
             - name: Common questions 
               displayName: FAQ, questions, endor labs
@@ -567,18 +558,18 @@
           - name: ServiceNow
             items:
             - name: Overview ServiceNow integration
-              displayName: CSPM, cloud security, posture, management, ServiceNow
+              displayName: CSPM, Cloud security, posture, management, ServiceNow
               href: integration-servicenow.md
             - name: Connect ServiceNow to Defender for Cloud
-              displayName: CSPM, cloud security, posture, management, ServiceNow
+              displayName: CSPM, Cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
           - name: Mend.io
             items:
             - name: Overview Mend.io integration
-              displayName: CSPM, cloud security, posture, management, Mend.io
+              displayName: CSPM, Cloud security, posture, management, Mend.io
               href: integration-mend-io.md
             - name: Connect Mend.io to Defender for Cloud
-              displayName: CSPM, cloud security, posture, management, Mend.io
+              displayName: CSPM, Cloud security, posture, management, Mend.io
               href: connect-mend-io.md
           - name: API security testing partners
             items:
@@ -599,33 +590,33 @@
           - name: Power BI
             items:
             - name: Overview Power BI integration
-              displayName: CSPM, cloud security, posture, management, Power BI
+              displayName: CSPM, Cloud security, posture, management, Power BI
               href: integration-power-bi.md
             - name: Add Defender for Cloud data to Power BI
-              displayName: CSPM, cloud security, posture, management, Power BI
+              displayName: CSPM, Cloud security, posture, management, Power BI
               href: add-data-power-bi.md
           - name: Microsoft Defender for Endpoint
             items:
               - name: Overview Microsoft Defender for Endpoint integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
                 href: integration-defender-for-endpoint.md
               - name: Enable the Defender for Endpoint integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+                displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
                 href: enable-defender-for-endpoint.md
           - name: Microsoft Defender XDR
             items:
               - name: Overview Microsoft Defender XDR integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Defender XDR
+                displayName: CSPM, Cloud security, posture, management, Microsoft Defender XDR
                 href: concept-integration-365.md
           - name: Microsoft Defender external attack surface management (EASM)
             items:
               - name: Overview Microsoft Defender EASM integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
+                displayName: CSPM, Cloud security, posture, management, Microsoft Defender EASM
                 href: concept-easm.md
           - name: Microsoft Copilot for Security
             items:
               - name: Overview Microsoft Copilot for Security integration
-                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
+                displayName: CSPM, Cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
               - name: Summarize recommendations with Microsoft Security Copilot
                 displayName: copilot, security, recommendations, summarize
@@ -1035,7 +1026,7 @@
           displayName: manage, access, harden
           href: tutorial-protect-resources.md
         - name: Cloud Security Explorer software queries
-          displayName: sample, query, cloud security explorer
+          displayName: sample, query, Cloud security explorer
           href: cloud-security-explorer-software-vulnerabilities.md
     - name: Defender for Databases
       items:
@@ -1250,7 +1241,7 @@
           href: episode-seven.md
         - name: Microsoft Defender for IoT
           href: episode-eight.md
-        - name: Microsoft Defender for Containers in a multicloud environment
+        - name: Microsoft Defender for Containers in a multiCloud environment
           href: episode-nine.md
         - name: Protecting containers in GCP with Defender for Containers
           href: episode-ten.md
