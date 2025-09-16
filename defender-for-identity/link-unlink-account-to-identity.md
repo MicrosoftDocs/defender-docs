@@ -39,6 +39,9 @@ Follow these steps to manually link accounts to a selected identity.
 
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
+
+    :::image type="content" source="media/link-unlink-account-to-identity/accounts-observed-in-organization.png" alt-text="Screenshot that shows the accounts observed in an organization." lightbox="media/link-unlink-account-to-identity/accounts-observed-in-organization.png":::
+
 1. Select one or more accounts from the table. You must select at least one account to continue.
 1. You can search by:
     - Display name
@@ -68,7 +71,7 @@ Follow these steps to manually unlink accounts from a selected identity.
 1. Review the message and select **Unlink accounts** to confirm.
 
 
-## What to expect after linking or unlinking
+## What to expect after linking or unlinking an account
 
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
