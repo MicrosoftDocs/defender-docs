@@ -42,6 +42,10 @@ September 9, 2025
 
 Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+
 ### Trusted Exposure
 
 September 14, 2025 
