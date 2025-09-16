@@ -116,7 +116,7 @@ You can customize the number of items displayed and which columns are displayed 
 
 The *impacted entities* column refers to all the device and user entities referenced in the incident or alert.
 
-When an incident or alert is selected, a fly-out appears. From this panel you can manage the incident or alert and view more details such as incident/alert number and related devices. Multiple alerts can be selected at a time.
+When an incident or alert is selected, a fly-out appears. You can manage the incident or alert and view more details such as incident/alert number and related devices. Multiple alerts can be selected at a time.
 
 To see a full page view of an incident or alert, select its title.
 
