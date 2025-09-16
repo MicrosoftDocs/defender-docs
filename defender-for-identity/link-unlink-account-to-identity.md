@@ -32,8 +32,11 @@ Manual linking helps organizations:
 
 Follow these steps to manually link accounts to a selected identity.
 
-1. Navigate to the **Identity Inventory**.
+1. Navigate to **Assets** > **Identity Inventory**.
 1. Select an **Identity** from the list.
+
+    :::image type="content" source="media/identity-inventory/inventory11.png" alt-text="Screenshot of the Identity Inventory page in the Defender portal. " lightbox="media/identity-inventory/inventory11.png":::
+
 1. Select the **Observed in organization** tab.
 1. Open the **Accounts** tab.
 1. Select one or more accounts from the table. You must select at least one account to continue.
