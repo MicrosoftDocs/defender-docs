@@ -19,7 +19,8 @@ The **Activation** page displays all servers from your device inventory. Defende
 
 You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
 
-   [![Screenshot that shows the Defender for Identity sensor activation page.](media/activate-capabilities/activation-page.png)](media/activate-capabilities/activation-page.png#lightbox)
+   
+[![Screenshot that shows how to auto and manual activation.](media/activate-sensor/1.png)](media/activate-sensor/1.png#lightbox)
 
 |Activation State  |Next steps  |
 |---------|---------|
@@ -39,12 +40,13 @@ The process for activating the sensor depends on your configuration.
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
-   [![Screenshot that shows how to activate the new sensor.](media/activate-capabilities/activate.png)](media/activate-capabilities/activate.png#lightbox)
-
+   [![Screenshot that shows how to activate an new server.](media/activate-sensor/image.png)](media/activate-sensor/image.png#lightbox)
+   
+   
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
-
-    [![Screenshot that shows how to see the onboarded servers.](media/activate-capabilities/successfully-activated.png)](media/activate-capabilities/successfully-activated.png#lightbox)
-
+   
+   [![Screenshot that shows successful activation.](media/activate-sensor/image1.png)](media/activate-sensor/image1.png#lightbox)
+   
 <!--## Onboard the domain controller 
 
 If the domain controller has not been onboarded to Defender for Endpoint for Servers, follow these steps to activate the sensor.
