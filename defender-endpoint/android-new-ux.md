@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 search.appverid: met150
-ms.date: 09/15/2025
+ms.date: 09/16/2025
 ---
 
 # User experiences in Microsoft Defender for Endpoint on Android
@@ -42,17 +42,17 @@ The primary changes are as follows:
 
 :::image type="content" source="media/android-new-ux/permissions-consolidation-light.png" alt-text="Permission consolidation screen after redesign in light mode." border="false":::
 
-### New bottom sheet for permission information
+#### New bottom sheet for permission information
 
 :::image type="content" source="media/android-new-ux/permissions-information.png" alt-text="Permissions information bottom sheet." border="false":::
+
+### Optional VPN consent screen
+
+:::image type="content" source="media/android-new-ux/vpn-consent-screen-light.png" alt-text="Optional VPN consent screen in light mode." border="false":::
 
 ### Intermediate screens that come up during the permission flow
 
 These are the following screens that have been shifted from old Enterprise screen to new look and feel screens similar to the consumer screens.
-
-#### Optional VPN consent screen
-
-:::image type="content" source="media/android-new-ux/vpn-consent-screen-light.png" alt-text="Optional VPN consent screen in light mode." border="false":::
 
 #### Network Protection consent screen
 
