@@ -16,10 +16,10 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/26/2025
 appliesto:
-   - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-   - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
+ms.date: 03/26/2025
 ---
 
 # Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
