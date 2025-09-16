@@ -37,7 +37,7 @@ Your secure score is shown in the following locations in the Microsoft Defender 
 
 - In the **Cloud initiative** section showing secure score breakdown:
 
-    :::image type="content" source="./media/secure-score-defender-portal/cloud-initative-secure-score.png" alt-text="The cloud initiative secure score view in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/cloud-initative-secure-score.png":::
+    :::image type="content" source="./media/secure-score-defender-portal/cloud-initiative-secure-score.png" alt-text="The cloud initiative secure score view in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/cloud-initiative-secure-score.png":::
 
 ::: zone-end
 
