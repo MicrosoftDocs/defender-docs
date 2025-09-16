@@ -113,7 +113,7 @@ procedureSection:
       To implement these policies:
     steps:
       - |
-        On the following table, select the policy that you want to apply:
+        In the following table, select the policy that you want to apply:
 
           |Goal  |Policy  |Policy ID  |
           |---------|---------|---------|
