@@ -369,7 +369,7 @@
         - name: External attack surface management in Defender for Cloud
           displayName: EASM, attack surface management, integration
           href: concept-easm.md
-    - name: Specialized security areas
+    - name: Asset-specific security
       items:
         - name: Data Security Posture Management
           items:
@@ -419,7 +419,7 @@
               href: api-security-posture-overview.md
             - name: Enable API security posture with Defender CSPM
               href: enable-api-security-posture.md
-        - name: Secrets protection
+        - name: Secrets management
           items:
             - name: Overview
               href: secrets-scanning.md
