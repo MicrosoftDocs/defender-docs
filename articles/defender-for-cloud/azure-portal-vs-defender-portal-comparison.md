@@ -147,7 +147,7 @@ The Defender portal represents the future direction for Microsoft Defender for C
 
 ## Related articles
 
-- [What is Defender for Cloud in the Defender portal?](defender-portal/defender-for-cloud-in-defender-portal.md)
+- [What is Defender for Cloud in the Defender portal?](defender-portal/defender-for-cloud-defender-portal.md)
 - [Cloud Infrastructure Overview Dashboard](cloud-infrastructure-dashboard.md)
 - [Cloud Scopes and Unified RBAC](cloud-scopes-unified-rbac.md)
 - [Attack Path Analysis](concept-attack-path.md)

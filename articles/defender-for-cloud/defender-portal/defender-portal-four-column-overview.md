@@ -18,7 +18,7 @@ Navigate quickly to Microsoft Defender for Cloud's key capabilities and features
 
       - [Microsoft Defender for Cloud](../defender-for-cloud-introduction.md)
       - [Getting started in the Defender portal](getting-started-defender-portal.md)
-      - [Defender for Cloud in the Defender Portal](defender-for-cloud-in-defender-portal.md)
+      - [Defender for Cloud in the Defender Portal](defender-for-cloud-defender-portal.md)
       - [Cost calculator](../cost-calculator.md)
       - [Planning and operations guide](../defender-for-cloud-planning-and-operations-guide.md)
    :::column-end:::

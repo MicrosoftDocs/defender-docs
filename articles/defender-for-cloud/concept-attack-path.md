@@ -3,6 +3,7 @@ title: Investigate risks with security explorer/attack paths in Microsoft Defend
 description: Learn about investigating risks with security explorer/attack paths in Microsoft Defender for Cloud.
 ms.topic: concept-article
 ms.date: 09/10/2025
+zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 
