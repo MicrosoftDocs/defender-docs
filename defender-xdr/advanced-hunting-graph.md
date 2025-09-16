@@ -52,73 +52,11 @@ A new hunting graph page appears as tab labeled **New hunt** in the advanced hun
 
 ## Hunting graph features
 
-The interactive graphs generated in the hunting graph are composed of [**nodes**](#nodes) and [**edges**](#edges). The lower right-hand corner of the graph also has control buttons that let you **Zoom in** and **Zoom out**, and view the graph's **Layers**.
+The interactive graphs generated in the hunting graph are composed of **nodes** and **edges** to represent entities in your environment (for example, a device, user account, or IP address, among others) and their relationships or connection properties, respectively. [Learn more about graphs and visualizations in Microsoft Defender](understand-graph-icons.md)
+
+The lower right-hand corner of the graph also has control buttons that let you **Zoom in** and **Zoom out**, and view the graph's **Layers**.
 
 :::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-render.png" alt-text="Screenshot of a rendered graph in the hunting graph page." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-render.png":::
-
-### Nodes
-
-A **node** pertains to an entity in your environment (for example, a device, user account, or IP address, among others). The hunting graph depicts nodes as any of the following circular icons:
-
-| **Icon** | **Node type** | **Entity type examples** |
-|---|---|---|
-| | General | App service plan |
-| | Compute | Device, virtual machine, Microsoft Azure Logic App |
-| | Networking | Interface, public IP address, network security group |
-| | Data | SQL data store, Azure Monitor Log Analytics workspace, storage account, Azure Event Hubs |
-| | Containers | Kubernetes cluster |
-| | Keys & secrets | Key vault |
-| | DevOps | Azure DevOps repositories |
-| | APIs | Cloud applications |
-| | Identity & access | User account, Microsoft Entra ID service principal |
-| | IoT | |
-| | Certificate | |
-| | IP address | |
-| | Subscriptions | |
-
-Selecting a node opens a side panel that provides more details about the chosen entity, including entity name, type, last updated date, and discovery source. This panel might also display additional information such as attack paths and blast radius, depending on the selected node and its relationship to other nodes in the graph.
-
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png" alt-text="Screenshot of the side panel in the hunting graph containing node details." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-node-details.png":::
-
-A node might also have any of the following indicators around it:
-
-- **Critical asset** [icon]  - Indicates that an entity is classified as business-critical or valuable, as identified in the [critical asset management](/security-exposure-management/critical-asset-management) in Microsoft Security Exposure Management. The nodes representing critical assets also have a golden halo surrounding them. If the entity has more than one critical asset, the number of assets appears next to the indicator.
-- **Vulnerability** [icon] - Indicates that at least one vulnerability was detected on the entity.
-- **Explore connected assets** [icon] - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones.
-- **Discovery source** - Indicates the entity's data source. This indicator appears as the icon of the Defender product protecting the entity in blue (for example, [icon]).
-
-    >[!TIP]
-    >You can turn off this indicator by selecting **Layers** at lower right-hand corner of the hunting graph and toggling the **Discovery Source** switch.   
-
-### Edges
-
-An **edge** indicates the relationship or connection properties between two nodes. The hunting graph depicts an edge as lines with the following icons: 
-
-| **Icon** | **Edge type** |
-|---|---|
-| | Contains |
-| | Routes traffic to |
-| | Has permission to |
-| | Can authenticate as / Can authenticate to |
-| | Pushes |
-| | Maintains |
-| | Application |
-| | Moves data to |
-| | Exposed to internet |
-| | Can interactive logon to |
-| | Can logon over the network to |
-| | Can remote interactive logon to |
-| | Runs on |
-| | Provisions |
-| | Identified as owner of |
-| | Member of |
-| | Is running |
-| | Generic / Affecting |
-| | Created from / Used to create |
-
-Selecting an edge opens a side panel that provides more details about the connection properties. If two nodes have more than one relationship, a number appears on the edge, in place of an icon. You can find more information about these nodes' relationships by hovering over the number or opening the side panel.
-
-:::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-edge-details.png" alt-text="Screenshot of the side panel in the hunting graph containing edge details." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-edge-details.png":::
 
 ## Get started with hunting graph
 
@@ -140,14 +78,14 @@ The following table describes the predefined scenarios in the hunting graph and 
 
 | **Scenario** | **Description** | **Inputs** |
 |---|---|---|
-| **Paths between two entities** | Provide two entities (nodes) to view the paths between them. |<ul><li>Start Entity<li>End Entity</ul>**Note:** Make sure to identify and input the correct start and end entities, as the generated graph will be directional. |
-| **Entities that have access to a key vault** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it. | Target key vault |
-| **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it. | Target storage account |
-| **Critical users with access to storage accounts containing sensitive data** | This scenario identifies critical users with access to storage resources containing sensitive data. | (None) |
-| **Data exfiltration by a device** | Provide a device ID to view paths to storage accounts it has access to; for instance, to check what storage accounts a certain device can access in a bring your own device (BYOD) environment. | Source device |
-| **Paths to a highly critical Kubernetes cluster** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it. | Target Kubernetes cluster |
-| **Identities with access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository. | Target ADO repository |
-| **Identify nodes in the highest number of paths to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores. | (None) |
+| **Paths between two entities** | Provide two entities (nodes) to view the paths between them.<br><br>Use this scenario if you want to discover if there’s a path leading from one entity to another. |<ul><li>Start Entity<li>End Entity</ul>**Note:** Make sure to identify and input the correct start and end entities, as the generated graph will be directional. |
+| **Entities that have access to a key vault** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it.<br><br>Use this scenario in case of a breach, maintenance work, or assessment of the impact of entities that might have access to a sensitive asset like a key vault. | Target key vault |
+| **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it.<br><br>Use this scenario if you want to know which entities have access to sensitive data, especially in cases when an incident indicates unusual access to confidential files. | Target storage account |
+| **Critical users with access to storage accounts containing sensitive data** | This scenario identifies critical users with access to storage resources containing sensitive data.<br><br>Use this scenario to prevent, assess, and monitor unauthorized access, exposure risk, and breach impact based on the privileged users. | (None) |
+| **Data exfiltration by a device** | Provide a device ID to view paths to storage accounts it has access to; for instance, to check what storage accounts a certain device can access in a bring your own device (BYOD) environment.<br><br>Use this scenario when investigating suspicious or unauthorized data transfer from corporate devices and to external sources. | Source device |
+| **Paths to a highly critical Kubernetes cluster** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it.<br><br>Use this scenario to assess, analyze and prioritize handling of attack paths leading to highly critical Kubernetes cluster. | Target Kubernetes cluster |
+| **Identities with access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository |
+| **Identify nodes in the highest number of paths to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) |
 
 :::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-select-scenario.png":::
 
@@ -165,7 +103,7 @@ By default, the predefined scenarios automatically apply certain filters, which 
 
 To remove filters, select the **Remove filter** icon ![Screenshot of the remove filter icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-remove-filter-icon.png) beside each filter or select **Clear all** to remove them all at once.
 
-To add a filter, select **Add filter** then the select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters not might not be available as options.  
+To add a filter, select **Add filter** then the select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters might not be available as options.  
 
 | **Filter type** | **Operator** | **Filters** |
 |---|---|---|
