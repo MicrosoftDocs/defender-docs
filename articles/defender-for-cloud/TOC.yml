@@ -19,7 +19,7 @@
     - name: Navigation hub
       displayName: navigation, hub, guide, intro, get started, security posture, threat protection
       href: defender-portal/defender-portal-four-column-overview.md
-    - name: Defender for Cloud in the Defender portal - integration and dashboard overview
+    - name: Defender for Cloud in the Defender portal
       displayName: defender portal, integration, dashboard, overview, mdc, Cloud security
       href: defender-portal/defender-for-cloud-defender-portal.md
     - name: Getting started in the Defender portal
