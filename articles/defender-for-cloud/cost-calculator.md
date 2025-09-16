@@ -28,7 +28,7 @@ On the first page of the calculator, select the **Add Assets** button to start a
 :::image type="content" source="media/cost-calculator/add-assets-cost-calculator.png" alt-text="Screenshot of how to add assets in cost calculator." lightbox="media/cost-calculator/add-assets-cost-calculator.png":::
 
 > [!NOTE]
-> The cost calculator doesn't consider reservation plans (P3) for Defender for Cloud.
+> The cost calculator doesn't consider reservation plans for Defender for Cloud.
 
 ### Add assets from onboarded environments  
 
