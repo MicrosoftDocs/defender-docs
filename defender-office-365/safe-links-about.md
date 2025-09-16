@@ -165,7 +165,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 > [!NOTE]
 > When you turn on or turn off Safe Links protection for Teams, it might take up to 24 hours for the change to take effect.
 >
-> Safe Links protection for Teams is supported in Teams desktop, web and mobile (android and iOS) instances.
+> Safe Links protection for Teams is supported in Teams desktop, web, and mobile (android and iOS) apps.
 >
 > Websites opened from Teams might require re-authentication when `SameSite=Strict` cookies are required for authentication by the target page. This behavior occurs because the intermediary page that does Safe Links validation redirects to the target page, which is treated as a cross-site request. The same issue applies to links opened from Teams for Web with Safe Links disabled.
 
