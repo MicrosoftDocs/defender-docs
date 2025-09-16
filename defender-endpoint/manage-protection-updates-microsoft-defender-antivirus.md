@@ -132,8 +132,8 @@ See [Configure Security intelligence Updates for Endpoint Protection](/configmgr
 Use the following PowerShell cmdlets to set the update order.
 
 ```PowerShell
-Set-MpPreference -SignatureFallbackOrder {LOCATION|LOCATION|LOCATION|LOCATION}
-Set-MpPreference -SignatureDefinitionUpdateFileSharesSource {\\UNC SHARE PATH|\\UNC SHARE PATH}
+Set-MpPreference -SignatureFallbackOrder "LOCATION|LOCATION|LOCATION|LOCATION"
+Set-MpPreference -SignatureDefinitionUpdateFileSharesSource "\\UNC\PATH1|\\UNC\PATH2"
 ```
 
 For more information, see the following articles:
