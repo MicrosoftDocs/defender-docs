@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 09/16/2025
 ---
 
 # Activator based deployment for Microsoft Defender for Endpoint on Linux
