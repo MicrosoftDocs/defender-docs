@@ -132,15 +132,15 @@ The **Accounts** tab displays all accounts linked to a specific identity across 
 
 The table shows the following fields:
 
-- Linkage type: shows how the account was linked to the identity (manual, StrongIDs, API, or rule). 
+- ****Linkage type**:**shows how the account was linked to the identity (manual, StrongIDs, API, or rule). 
 
-- Date of last linkage: records the most recent date an account was linked to the identity.
+- **Date of last linkage:** records the most recent date an account was linked to the identity.
 
-- Linked by: identifies who created the link (StrongIDs, user ID, or rule name).
+-**Linked by:** identifies who created the link (StrongIDs, user ID, or rule name).
 
-- Linkage comment: provides a short description that explains why the accounts were linked. The comment is limited to 25 characters.
+- **Linkage comment:** provides a short description that explains why the accounts were linked. The comment is limited to 25 characters.
 
-- Primary account: indicates whether the system designates this account as the primary one for the identity.
+- **Primary account:** indicates whether the system designates this account as the primary one for the identity.
 
 [INSERT UI SCREENSHOT]
 
