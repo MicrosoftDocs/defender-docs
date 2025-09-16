@@ -16,9 +16,9 @@ ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
 ms.date: 03/24/2025
-appliesto: |
-   - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-   - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+appliesto: 
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune

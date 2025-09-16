@@ -4,7 +4,7 @@ description: Provide feedback on the Microsoft Defender for Endpoint client anal
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: Batami Gold
+ms.author: bagol
 author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
