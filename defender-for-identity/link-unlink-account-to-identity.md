@@ -12,9 +12,9 @@ ms.reviewer: Almog Omrad
 
 ## Overview
 
-In complex enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, such as personal, privileged, legacy, or cloud-based accounts. This fragmentation makes it difficult to maintain a unified view of identity across the organization. The Manual Link or Unlink Accounts feature in Microsoft Defender for Identity helps you correlate accounts to identities.
+In enterprise environments, identity data is often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, or cloud-based accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or third-party identity providers such as Okta and Ping. Users may also maintain multiple accounts within the same system, such as a standard business account (john@acme.com) and a privileged administrative account (john_adm@acme.com). This fragmentation makes it difficult to maintain a unified view of identity across the organization. The **Manual link or unlink accounts** feature in Microsoft Defender for Identity helps you correlate accounts with identities to build a complete identity footprint.
 
-For example, let's say you have a user named John Doe. John has an Azure Active Directory account, a Ping account, and an Okta account. By manually linking these accounts to John's identity in Defender for Identity, you can create a comprehensive view of his identity footprint across the organization.
+Consider a user named John Doe who has an Azure Active Directory account, an Okta account, and a Ping account. By manually linking these accounts to John’s identity in Microsoft Defender for Identity, you can create a consolidated view that supports identity-centric protection and investigation.
 
 ## Why use manual linking
 
