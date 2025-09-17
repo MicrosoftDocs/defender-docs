@@ -148,7 +148,6 @@ The table shows the following fields:
 
 - **Primary account:** indicates whether the system designates this account as the primary one for the identity.
 
-[INSERT UI SCREENSHOT]
 
 > [!NOTE]
 > Groups and lateral movement paths are available when a Microsoft Defender for Identity license is available.
