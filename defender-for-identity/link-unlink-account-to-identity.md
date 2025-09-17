@@ -24,6 +24,30 @@ Manual linking helps organizations:
 - Improve protection by creating a complete identity context
 - Support investigations and response actions with unified identity views
 
+### Scenarios and examples 
+
+- **Personal and privileged accounts**: A user might have two accounts, one for everyday work and another with elevated permissions for administrative tasks.  
+  **Example**  
+  - john.smith@company.com (regular account)  
+  - john.smith.admin@company.com (privileged account)  
+
+- **Multiple domains**: Large organizations often manage several domains. Linking accounts across these domains provides full visibility into a user’s activity.  
+  **Example**  
+  - user@acme.com  
+  - user@contoso.com  
+
+- **Personal and service accounts**: A user may have both a personal account and a service account they own or manage. Linking them helps connect ownership and responsibility to the same identity.  
+  **Example**  
+  - david.lee@company.com (personal account)  
+  - backup.service@company.com (service account)  
+
+- **Legacy accounts**: A user might still have an active account in a legacy system. Linking it ensures the account is monitored and tied back to the correct identity.  
+  **Example**  
+  - sarah.jones@company.com (current account)  
+  - sjones@oldsystem.local (legacy account)  
+
+
+
 ## Prerequisites
 
 - You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage)
