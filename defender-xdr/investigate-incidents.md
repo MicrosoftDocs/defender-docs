@@ -131,16 +131,15 @@ The following table summarizes the blast radius analysis use cases for different
 
 After selecting an incident from the list in the **Incidents** page, a graph view is displayed showing the entities and assets involved in the incident.
 
-Select a node to open the context menu, then select **View blast radius**.  To view the blast radius of any node of a group in the graph, use the **ungroup** toggle above the grid to present all nodes.
+Select a node to open the context menu, then select **View blast radius**.  To view the blast radius of a single node in a group, use the **ungroup** toggle above the grid to present all nodes.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius.png" lightbox="./media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
 
-A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius** above the graph to the right. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target.  Some nodes may not have paths associated with them.
+A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius list** above the graph. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target.  Some nodes may not have paths associated with them.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
-Select **View blast radius list** to see a list of target assets. 
-Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
+Select **View blast radius list** to see a list of target assets.  Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
 
 When paths lead to grouped targets of the same types, to view discrete paths to targets, select the grouped icons. A right-side panel opens showing all the targets in the group. Selecting the check box on the left and selecting the **Expand** button on top displays each target and its paths separately.
 
@@ -153,7 +152,7 @@ Hide the blast radius graph and return to the original incident graph by selecti
 The following limitations apply to the blast radius graph:
 
 - **Path length limitations (scope of analysis):** Blast radius graph length calculations are bounded up to 7 hops from the source node. The blast radius is an approximation of the full attack reach. The maximum number of hops depends on the environment:
-    - 7 hops for cloud
+    - 5 hops for cloud
     - 5 hops for on-premises
     - 3 hops for hybrid
 
