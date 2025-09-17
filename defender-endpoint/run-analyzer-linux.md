@@ -58,13 +58,13 @@ Follow the below steps if you are using Defender for Endpoint older than `101.25
 1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the Linux machine that you're to investigating. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
-    wget --quiet -O XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
+    wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2336125"
     ```
 
 2. Verify the download.
 
     ```bash
-    echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '042692269A7208AB30B4355A6FC1CD0A25FE59356D96CCD2E7F1F61DF9B4B85D XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -81,13 +81,13 @@ Follow the below steps if you are using Defender for Endpoint older than `101.25
 
 5. Two new zip files are produced:
 
-   - **SupportToolLinuxBinary.zip**: For all Linux devices
-   - **SupportToolMacOSBinary.zip**: For Mac devices
+   - **SupportToolLinuxamd64Binary.zip**: For x86 Linux devices
+   - **SupportToolLinuxarm64Binary.zip**: For ARM Linux devices
 
-6. Unzip `SupportToolLinuxBinary.zip` file.
+6. Unzip the sepecific zip based on your Linux OS architecture. For example, we will be using `SupportToolLinuxamd64Binary.zip` file.
 
      ```bash
-     unzip -q SupportToolLinuxBinary.zip
+     unzip -q SupportToolLinuxamd64Binary.zip
      ```
 7. Run the tool as _root_ to generate diagnostic package:
 
@@ -131,25 +131,25 @@ To run this client analyzer follow the steps:
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool on the Linux machine you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
     ```bash
-    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
+    wget --quiet -O XMDEClientAnalyzerPython.zip "https://go.microsoft.com/fwlink/?linkid=2336046"
     ```
 
 2. Verify the download.
 
     ```bash
-    echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c
+    echo '9F29043CD3034DD4DF30B0EA25B37B5EE7BE5D81D5848CF047F9842B76C831EA XMDEClientAnalyzerPython.zip' | sha256sum -c
     ```
 
 3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
 
     ```bash
-    unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
+    unzip -q XMDEClientAnalyzerPython.zip -d XMDEClientAnalyzerPython
     ```
 
 4. Change the directory.
 
     ```bash
-    cd XMDEClientAnalyzer
+    cd XMDEClientAnalyzerPython
     ```
 
 5. Give the tool executable permission.
