@@ -31,16 +31,33 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage](#malware-automated-remediation-in-defender-for-storage)
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
 |September 14, 2025|GA|Exposure width for Internet exposure analysis|
 |September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+
+### Malware automated remediation in Defender for Storage
+
+September 16, 2025
+
+Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
+
+With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
+
+You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
+
+For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
 
 ### New refined attack paths
 
 September 9, 2025
 
 Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ### Trusted Exposure
 
