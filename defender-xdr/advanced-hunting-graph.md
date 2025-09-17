@@ -42,9 +42,9 @@ You must also have the following access or permissions:
 
 ## Where to find hunting graph
 
-You can find the **hunting graph** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Investigation & response** > **Hunting** > **Hunting graph**. 
+You can find the **hunting graph** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Investigation & response** > **Hunting** > **Advanced hunting**. 
 
-The hunting graph page also appears in the **advanced hunting** page by selecting the hunting graph icon ![Screenshot of the hunting graph icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-icon.png) at the top of the page or selecting the **Create new** icon ![Screenshot of the Create new icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-create-icon.png) and choosing **Hunting graph**.
+In the advanced hunting page, select the hunting graph icon ![Screenshot of the hunting graph icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-icon.png) at the top of the page or select the **Create new** icon ![Screenshot of the Create new icon.](/defender-xdr/media/ah-hunting-graph/hunting-graph-create-icon.png) and choose **Hunting graph**.
 
 :::image type="content" source="/defender-xdr/media/ah-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="/defender-xdr/media/ah-hunting-graph/hunting-graph-new.png":::
 
