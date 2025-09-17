@@ -359,7 +359,7 @@ If you select an entry in the **Attachments** view by selecting the check box ne
 
 ### URL view
 
-The **URL** view shows information about all original or reweritten URLs in the message, along with the scanning results for each URL.
+The **URL** view shows information about all original or rewritten URLs in the message, along with the scanning results for each URL.
 
 The following attachment information is available in this view. Select a column header to sort by that column. To add or remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
 
