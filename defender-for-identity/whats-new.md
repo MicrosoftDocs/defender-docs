@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 The Accounts tab shows all accounts linked to a single identity across your environment. By consolidating these details, the Accounts tab helps you understand how an identity appears in different systems and streamlines investigations by providing a unified view of all associated accounts.
 
-You can manually link or unlink accounts to an identity directly from the Accounts tab in the identity details page. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
+You can manually link or unlink accounts to an identity. This gives you more flexibility in managing identity relationships and supports more accurate investigations.
 
 For more information, see [Link or Unlink an Account to an Identity](link-unlink-account-to-identity.md).
 
