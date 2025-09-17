@@ -33,7 +33,7 @@ In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defe
 - The Microsoft Teams app for iOS/iPadOS: Version 7.15 or later.
 - The Microsoft Teams for Android: Version 1416/1.0.0.2025153104 or later. 
 
-Users can report mmessages as malicious or non-malicious in Teams from chats, standard, private and shared channels, and meeting conversations. Admins can also get visibility into Teams messages that users are reporting.
+Users can report messages as malicious or non-malicious in Teams from chats, standard, private and shared channels, and meeting conversations. Admins can also get visibility into Teams messages that users are reporting.
 
 > [!NOTE]
 > User reporting of messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
