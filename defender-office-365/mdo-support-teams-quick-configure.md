@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 09/11/2025
+ms.date: 09/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
@@ -74,8 +74,8 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 
    Repeat these steps on every custom Safe Links policy.
 
-> [!TIP]
-> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page).
+> [!IMPORTANT]
+> Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page). So, ensure that Teams protection is enabled in these policies.
 
 ## Step 3: Verify warnings for unsafe links are shown in Microsoft Teams messages
 
