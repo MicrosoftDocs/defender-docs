@@ -41,13 +41,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 September 16, 2025
 
-Malware automated remediation for Defender for Storage is now available in public preview. 
+Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
 
 With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
 
 You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
 
-For more information, see [Set up automated remediation for malware detection](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan).  
+For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
 
 ### New refined attack paths
 
