@@ -10,7 +10,9 @@ ms.reviewer: Himanch
 
 # Security assessments for cloud identities
 
-## Security assessment: Assign multifactor authentication to Okta privileged user accounts
+This article describes the various security assessments available in Microsoft Defender for Identity related to cloud identities, specifically Okta. Each assessment highlights potential security risks and provides recommendations for mitigating these risks.
+
+## Assign multifactor authentication to Okta privileged user accounts
 
 This report lists any Okta privileged accounts that don't have any multifactor authentication (MFA) methods assigned. 
 
