@@ -64,6 +64,9 @@ A node might also have any of the following indicators around it:
 - **Explore connected assets** ![Explore connected asset icon.](/defender-xdr/media/ah-hunting-graph/explore-icon.png) - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones.
 - **Discovery source** - Indicates the entity's data source. This indicator appears as the icon of the Defender product protecting the entity in blue (for example, ![Defender for Endpoint icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-endpoint.png) for Microsoft Defender for Endpoint, or ![Defender for Cloud icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-cloud.png) for Microsoft Defender for Cloud).
 
+  >[!TIP]
+  > You can turn this indicator on and off a graph by toggling the **Discovery Source** switch in the graph's **Layers**.
+
 ## Edges
 
 An **edge**  indicates the relationship or connection properties between two nodes. The Defender portal graphs depicts an edge as lines or directional arrows that might have the following icons:  
