@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage](#malware-automated-remediation-in-defender-for-storage-preview)
+|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
 |September 14, 2025|GA|Exposure width for Internet exposure analysis|
