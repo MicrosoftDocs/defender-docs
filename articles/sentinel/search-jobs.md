@@ -50,7 +50,7 @@ Go to **Search** in Microsoft Sentinel from the Azure portal or the Microsoft De
  
 1. When you're satisfied with the query and the search results preview, select the ellipses **...** and select **Search job** to open the **Search Job Mode** window.
 
-   :::image type="content" source="media/search-jobs/search-job-advanced-kql-ellipsis-new.png" alt-text="Screenshot of KQL editor with revised search with ellipsis highlighted for Search job mode."lightbox="media/search-jobs/search-job-advanced-kql-ellipsis-new.png":::
+   :::image type="content" source="media/search-jobs/search-job-advanced-kql-ellipsis.png" alt-text="Screenshot of KQL editor with revised search with ellipsis highlighted in order to select Search job, which will open the Search Job Mode window." lightbox="media/search-jobs/search-job-advanced-kql-ellipsis.png":::
 
 1. Specify the search job date range using the **Time range** selector. If your query also specifies a time range, Microsoft Sentinel runs the search job on the union of the time ranges.
 
