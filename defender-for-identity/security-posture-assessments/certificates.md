@@ -10,33 +10,30 @@ ms.reviewer: LiorShapiraa
 
 This article describes Microsoft Defender for Identity's **Certificates** security posture assessment report.
 
-
-|Recommended actions  |Description  |
-|---------|---------|
-|[Remediation for Enforce encryption for RPC certificate enrollment interface (ESC11)](#remediation-for-enforce-encryption-for-rpc-certificate-enrollment-interface-esc11)| This action enforces encryption for the RPC certificate enrollment interface to protect sensitive information during the enrollment process.    |         |
-|[Remediation for Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](#remediation-for-edit-insecure-adcs-certificate-enrollment-iis-endpoints-esc8)   | Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv). If the IIS endpoint allows NTLM authentication without enforcing protocol signing (HTTPS) or without enforcing Extended Protection for Authentication (EPA), it becomes vulnerable to NTLM relay attacks (ESC8). Relay attacks can lead to complete domain takeover if an attacker manages to pull it off successfully. |         |
-|[Remediation for Edit misconfigured certificate templates owner (ESC4)](#remediation-for-edit-misconfigured-certificate-templates-owner-esc4)| A certificate template is an Active Directory object with an owner, who controls access to the object and the ability to edit the object. If the owner permissions grant a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*. |
-| [Remediation for Edit misconfigured Certificate Authority ACL (ESC7)](#remediation-for-edit-misconfigured-certificate-authority-acl-esc7)| Certificate Authorities (CAs) maintain access control lists (ACLs) that outline roles and permissions for the CA. If access control isn't configured correctly, any user might be allowed to interfere with the CA settings, circumventing security measures, and potentially compromise the entire domain. The effect of a misconfigured ACL varies based on the type of permission applied. <br> For example: <br> - If an unprivileged user holds the *Manage Certificates* right, they can approve pending certificate requests, bypassing the *Manager approval* requirement. <br> - With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that might later lead to a complete domain compromise.| 
-|[Remediation for Edit misconfigured certificate templates ACL (ESC4)](#remediation-for-edit-misconfigured-certificate-templates-acl-esc4) |Certificate templates are Active Directory objects with an ACL controlling the access to the object. Besides determining enrollment permissions, the ACL also determines permissions for editing the object itself. <br> If for any reason, there's an entry in the ACL that grants a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. <br> Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
-|[Remediation for Edit misconfigured enrollment agent certificate template (ESC3)](#remediation-for-edit-misconfigured-enrollment-agent-certificate-template-esc3)| Typically, users have an Enrollment Agent that enrolls their certificates for them. Under specific circumstances, Enrollment Agent certificates can enroll certificates for any eligible user, posing a risk to your organization. When Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization, risky Enrollment Agent templates are listed on the **Exposed entities** pane. |
-|[Remediation for Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](#remediation-for-edit-overly-permissive-certificate-template-with-privileged-eku-any-purpose-eku-or-no-eku-esc2)| Digital certificates play a vital role in establishing trust and preserving integrity throughout an organization. This is true not only in Kerberos domain authentication, but also in other areas, such as code integrity, server integrity, and technologies that rely on certificates like Active Directory Federation Services (AD FS) and IPSec. <br> When a certificate template has no EKUs or has an *Any Purpose* EKU, and it's enrolled for any unprivileged user, certificates issued based on that template can be used maliciously by an adversary, compromising trust. <br> Even though the certificate can’t be used for impersonating user authentication, it compromises other components that relieve digital certificates for their trust model. Adversaries can craft TLS certificates and impersonate any website.|
-|[Remediation for Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](#remediation-for-prevent-certificate-enrollment-with-arbitrary-application-policies-esc15) | This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.<br> Certificate templates that are vulnerable to [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019) allow an attacker to issue a certificate with arbitrary Application Policies and Subject Alternative Name. The certificate can be used to escalate privileges, possibly resulting with full domain compromise. These certificate templates expose organizations to significant risks, as they enable attackers to issue certificates with arbitrary Application Policies and Subject Alternative Names (SANs). Such certificates can be exploited to escalate privileges and potentially compromise the entire domain. In particular, these vulnerabilities allow non-privileged users to issue certificates that can authenticate as high-privileged accounts, posing a severe security threat.| 
-|[Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)](#remediation-for-prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1-preview)| Each certificate is associated with an entity through its subject field. However, certificates also include a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities. The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts. If a certificate template has the *Supply in the request* option turned on, the template is vulnerable, and attackers might be able to enroll a certificate that's valid for arbitrary users.|
-|[Remediation for Edit vulnerable Certificate Authority setting (ESC6)  (Preview)](#remediation-for-edit-vulnerable-certificate-authority-setting-esc6--preview) | Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy. <br> If the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, users can specify arbitrary values in the Subject Alternative Name (SAN) field when requesting a certificate. This can lead to security vulnerabilities, as attackers might exploit this capability to create certificates that impersonate other users or services, potentially leading to unauthorized access and domain compromise.|
-
 > [!NOTE]
-> - While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as __Completed__.
-> - Make sure to test your settings in a controlled environment before turning them on in production.
+> Make sure to test your settings in a controlled environment before turning them on in production.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
 
-## Remediation for Enforce encryption for RPC certificate enrollment interface (ESC11)
-
-> [!NOTE]
-> This assessment is available only to customers who have installed a sensor on an AD CS server.
+## Enforce encryption for RPC certificate enrollment interface (ESC11)
 
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for enforcing encryption for RPC certificate enrollment. For example:
+### What is encryption with RPC certificate enrollment?
 
-    :::image type="content" source="../media/secure-score/enforce-encryption-rpc-certificate.png" alt-text="Screenshot of the Enforce encryption for RPC certificate enrollment interface (ESC11) recommendation." lightbox="../media/secure-score/enforce-encryption-rpc-certificate.png":::
+Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy.
+
+If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol.
+
+If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC11). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
+
+### Prerequisites
+
+This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for enforcing encryption for RPC certificate enrollment.
+
+    :::image type="content" source="../media/secure-score/enforce-encryption-rpc-certificate.png" alt-text="Screenshot of the Enforce encryption for RPC certificate enrollment interface (ESC11) recommendation.":::
 
 
 1. Research why the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned off.
@@ -55,7 +52,23 @@ This article describes Microsoft Defender for Identity's **Certificates** securi
     net stop certsvc & net start certsvc
     ```
 
-## Remediation for Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
+Make sure to test your settings in a controlled environment before turning them on in production.
+
+
+## Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
+
+
+### What are insecure AD CS certificate enrollment IIS endpoints?
+
+Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv).
+
+If the IIS endpoint allows NTLM authentication without enforcing protocol signing (HTTPS) or without enforcing Extended Protection for Authentication (EPA), it becomes vulnerable to NTLM relay attacks (ESC8). Relay attacks can lead to complete domain takeover if an attacker manages to pull it off successfully.
+
+### Prerequisites
+
+This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
+
+### Remediation steps
 
 Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for insecure AD CS certificate enrollment IIS endpoints.
 
@@ -63,47 +76,89 @@ The assessment lists the problematic HTTP endpoints in your organization and gui
 
 Once handled, the ESC8 attack risk is mitigated, reducing your attack surface significantly.
 
-## Remediation for Edit misconfigured certificate templates owner (ESC4)
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner. For example:
+## Edit misconfigured certificate templates owner (ESC4)
 
-    :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-owner.png":::
+This article provides an overview of Microsoft Defender for Identity's **Misconfigured certificate templates owner (ESC4)** security posture assessment report.
+
+### What is a misconfigured certificate template owner?
+
+A certificate template is an Active Directory object with an owner, who controls access to the object and the ability to edit the object.
+
+If the owner permissions grant a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. 
+
+Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
+
+
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.
+
+
+
+    :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="media/secure-score/misconfigured-owner.png":::
 
 1. Research why the template owner might be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.
 
+## Edit misconfigured Certificate Authority ACL (ESC7)
 
-## Remediation for Edit misconfigured Certificate Authority ACL (ESC7)
 
-> [!NOTE]
-> This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+### What is a misconfigured Certificate Authority ACL?
 
+Certificate Authorities (CAs) maintain access control lists (ACLs) that outline roles and permissions for the CA. If access control isn't configured correctly, any user might be allowed to interfere with the CA settings, circumventing security measures, and potentially compromise the entire domain.
+
+The effect of a misconfigured ACL varies based on the type of permission applied. For example:
+
+- If an unprivileged user holds the *Manage Certificates* right, they can approve pending certificate requests, bypassing the *Manager approval* requirement. 
+- With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that might later lead to a complete domain compromise.
+
+### Prerequisites
+
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
+## Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACLs. For example:
 
-    :::image type="content" source="../media/secure-score/misconfigured-certificate-authority.png" alt-text="Screenshot of the Edit misconfigured Certificate Authority ACL (ESC7) recommendation." lightbox="../media/secure-score/misconfigured-certificate-authority.png":::
+    :::image type="content" source="media/secure-score/misconfigured-certificate-authority.png" alt-text="Screenshot of the Edit misconfigured Certificate Authority ACL (ESC7) recommendation." lightbox="media/secure-score/misconfigured-certificate-authority.png":::
 
 1. Research why the CA ACL is misconfigured.
 1. Remediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.
 
+## Edit misconfigured certificate templates ACL (ESC4)
 
-## Remediation for Edit misconfigured certificate templates ACL (ESC4)
+### What is a misconfigured certificate template ACL?
+
+Certificate templates are Active Directory objects with an ACL controlling the access to the object. Besides determining enrollment permissions, the ACL also determines permissions for editing the object itself.
+
+If for any reason, there's an entry in the ACL that grants a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. 
+
+Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
+
+### Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template ACL. For example:
 
-    :::image type="content" source="../media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-certificate-acl.png":::
+    :::image type="content" source="../media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="media/secure-score/misconfigured-certificate-acl.png":::
 
 1. Research why the template ACL might be misconfigured.
 1. Remediate the issue by removing any entry that grants unprivileged group permissions that allow tampering with the template.
 1. Remove the certificate template from being published by any CA if they're not needed.
 
+## Edit misconfigured enrollment agent certificate template (ESC3)
 
-## Remediation for Edit misconfigured enrollment agent certificate template (ESC3)
+### What are misconfgured enrollment agent certificate templates?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured enrollment agent certificate templates. For example:
+Typically, users have an Enrollment Agent that enrolls their certificates for them. Under specific circumstances, Enrollment Agent certificates can enroll certificates for any eligible user, posing a risk to your organization. 
 
+When Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization, risky Enrollment Agent templates are listed on the **Exposed entities** pane.
 
-    :::image type="content" source="../media/secure-score/misconfigured-enrollment-agent.png" alt-text="Screenshot of the Edit misconfigured enrollment agent certificate template (ESC3) recommendation." lightbox="../media/secure-score/misconfigured-enrollment-agent.png":::
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfgured enrollment agent certificate templates.  For example:
+
+    :::image type="content" source="../media/secure-score/misconfigured-enrollment-agent.png" alt-text="Screenshot of the Edit misconfigured enrollment agent certificate template (ESC3) recommendation." lightbox="media/secure-score/misconfigured-enrollment-agent.png":::
 
 1. Remediate the issues by performing at least one of the following steps:
 
@@ -113,13 +168,21 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
     - Remove the certificate template from being published by any CA. Templates that aren't published can't be requested, and therefore can't be exploited.
     - Use Enrollment Agent restrictions on the Certificate Authority level. For example, you might want to restrict which users are allowed to act as an Enrollment Agent, and which templates can be requested.
 
+## Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)
 
-## Remediation for Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)
+### What is an overly permissive certificate template with privileged EKU?
 
+Digital certificates play a vital role in establishing trust and preserving integrity throughout an organization. This is true not only in Kerberos domain authentication, but also in other areas, such as code integrity, server integrity, and technologies that rely on certificates like Active Directory Federation Services (AD FS) and IPSec.
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU. For example:
+When a certificate template has no EKUs or has an *Any Purpose* EKU, and it's enrollable for any unprivileged user, certificates issued based on that template can be used maliciously by an adversary, compromising trust.
 
-    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="../media/secure-score/permissive-certificate-template.png":::
+Even though the certificate can’t be used for impersonating user authentication, it compromises other components that relieve digital certificates for their trust model. Adversaries can craft TLS certificates and impersonate any website.
+
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.  For example:
+
+    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
 
 1. Research why the templates have a privileged EKU.
 1. Remediate the issue by doing the following:
@@ -127,30 +190,56 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
     - Restrict the template's overly permissive permissions.
     - Enforce extra mitigations like adding *Manager approval* and signing requirements if possible.
 
+## Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
 
-## Remediation for Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
 
+### Why is it important to review the Certificate templates?
 
-> [!NOTE]
-> This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new).
+This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019)__,__ which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
 
-1. Review the recommended action at [Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](https://security.microsoft.com/securescore?viewid=actions).
+Certificate templates that are vulnerable to [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019) allow an attacker to issue a certificate with arbitrary Application Policies and Subject Alternative Name. The certificate can be used to escalate privileges, possibly resulting with full domain compromise. 
+
+These certificate templates expose organizations to significant risks, as they enable attackers to issue certificates with arbitrary Application Policies and Subject Alternative Names (SANs). Such certificates can be exploited to escalate privileges and potentially compromise the entire domain. In particular, these vulnerabilities allow non-privileged users to issue certificates that can authenticate as high-privileged accounts, posing a severe security threat.
+
+### Prerequisites
+
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new).
+
+### Remediation steps
+
+1. Review the recommended action at [Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](https://security.microsoft.com/securescore?viewid=actions).  
 
 2. **Identify the vulnerable certificate templates:**  
    - Remove enrollment permission for unprivileged users.  
    - Disable the **“Supply in the request”** option.
 
-3. Identify the AD CS servers that are vulnerable to CVE-2024-49019 and apply the relevant patch. 
-
-:::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::
+3. Identify the AD CS servers which are vulnerable to CVE-2024-49019 and apply the relevant patch. 
 
 
-## Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) (Preview)
+:::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot of exposed entities for Identified AD CS servers that are vulnerable.":::
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. 
+## Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
 
-    :::image type="content" source="../media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="../media/secure-score/prevent-certificate-arbitrary-users.png":::
 
+### What are certificate requests for arbitrary users?
+
+Each certificate is associated with an entity through its subject field. However, certificates also include a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.
+
+The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts.
+
+If a certificate template has the *Supply in the request* option turned on, the template is vulnerable, and attackers might be able to enroll a certificate that's valid for arbitrary users.
+
+> [!IMPORTANT]
+> If the certificate is also permitted for authentication and there aren't any mitigation measures enforced, such as *Manager approval* or required authorized signatures, the certificate template is dangerous as it allows any unprivileged user to take over any arbitrary user, including a domain admin user.
+>
+> This specific setting is one of the most common misconfigurations.
+> 
+
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. For example:
+
+    :::image type="content" source="media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="media/secure-score/prevent-certificate-arbitrary-users.png":::
 
 1. To remediate certificate requests for arbitrary users, perform at least one of the following steps:
 
@@ -165,16 +254,30 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
     - Turn on the CA certificate *Manager approval* requirement.
 
     - Remove the certificate template from being published by any CA. Templates that aren't published can't be requested, and therefore can't be exploited.
+    
+## Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
 
+### What are vulnerable Certificate Authority settings?
 
-## Remediation for Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
+Each certificate is associated with an entity through its subject field. However, a certificate also includes a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.
 
-This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](/defender-for-identity/whats-new#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts.
 
+Unprivileged users that can specify the users in the SAN settings can lead to immediate compromise, and post a great risk to your organization.
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings. For example:
+If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, each user can specify the SAN settings for their certificate request. This, in turn affects all certificate templates, whether they have the `Supply in the request` option turned on or not.
 
-    :::image type="content" source="../media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="../media/secure-score/vulnerable-certificate-authority-settings.png":::
+If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, and the template is valid for authentication, an attacker can enroll a certificate that can impersonate any arbitrary account.
+
+### Prerequisites
+
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
+### Remediation steps
+
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings.  For example:
+
+    :::image type="content" source="media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="media/secure-score/vulnerable-certificate-authority-settings.png":::
 
 1. Research why the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on.
 
@@ -189,7 +292,6 @@ This assessment is available only to customers who installed a sensor on an AD C
     ```cmd
     net stop certsvc & net start certsvc
     ```
-
 
 ## Next steps
 
