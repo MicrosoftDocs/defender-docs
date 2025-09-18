@@ -43,7 +43,7 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 
 This article describes the **Remove access rights on suspicious accounts with the Admin SDHolder permission** security assessment, which highlights risky access rights on suspicious accounts.
 
-## Why might the Admin SDHolder permission be risky?
+### Why might the Admin SDHolder permission be risky?
 
 Having non-sensitive accounts with **Admin SDHolder** (security descriptor holder) permissions can have significant security implications, including:
 
@@ -163,7 +163,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 To achieve the maximum score, remediate all exposed entities.
 
 
-## Security Assessment: Ensure privileged accounts are not delegated
+## Ensure privileged accounts are not delegated
 
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
@@ -196,7 +196,7 @@ The safest approach is to use a PowerShell script to configure the device to pre
 
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
 
-## Security assessment: Entities exposing credentials in clear text
+## Entities exposing credentials in clear text
 
 ### What information does the prevent clear text security assessment provide?
 
@@ -224,7 +224,7 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 > This assessment is updated in near real time.
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
 
-## Security assessment: Microsoft LAPS usage
+## Microsoft LAPS usage
 
 ### What is Microsoft LAPS?
 
@@ -242,7 +242,7 @@ LAPS simplifies password management while helping customers implement more recom
 > In some cases, [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) machines may still appear in the security posture assessment even if LAPS is configured in Microsoft Entra ID. This can be due to how the policy is applied or how the device reports its state.
 > If this occurs, we suggest reviewing the LAPS configuration in Microsoft Entra ID to confirm everything is set up as expected. You can find more details [here](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/windows-local-administrator-password-solution-with-microsoft-entra-id-now-genera/3911999).
 
-### How do I use this security assessment?
+### Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have some (or all) compatible Windows devices that aren't protected by LAPS, or that haven't had their LAPS managed password changed in the last 60 days.
 
@@ -257,7 +257,7 @@ LAPS simplifies password management while helping customers implement more recom
 
    :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS.":::
 
-## Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+## Remove discoverable passwords in Active Directory account attributes (Preview)
 
 
 ### Why do discoverable passwords in Active Directory account attributes pose a risk?
@@ -308,7 +308,7 @@ To address this security assessment, follow these steps:
 1. Remove sensitive information from the listed attribute fields using standard directory management tools (for example, PowerShell or ADSI Edit).
 1. Fully remove the sensitive information. Don’t just mask the value. Partial obfuscation (for example, P@ssw***) can still offer useful clues to attackers.
 
-## Security Assessment: Remove Stale Service Accounts (Preview)
+## Remove Stale Service Accounts (Preview)
 
 This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
 
@@ -323,7 +323,7 @@ This exposure creates several risks:
 - Lateral movement across the network without detection.
 
 
-### How do I use this security assessment to improve my organizational security posture? 
+### Remediation steps
 
 To use this security assessment effectively, follow these steps:
 
@@ -339,7 +339,7 @@ To use this security assessment effectively, follow these steps:
 
     - **Delete the account:** If no issues are observed, delete the account and fully remove its access.
 
-## Security assessment: Riskiest lateral movement paths (LMP)
+## Riskiest lateral movement paths (LMP)
 
 ### What are Risky lateral movement paths?
 
@@ -368,7 +368,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
-## Security assessment: Unsecure Kerberos delegation
+## Unsecure Kerberos delegation
 
 ### What is Kerberos delegation?
 
@@ -421,7 +421,7 @@ Resource-based constrained delegation restricts which entities can impersonate t
 1. Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Microsoft Entra Domain Services](/azure/active-directory-domain-services/deploy-kcd).
 
 
-## Security assessment: Unsecure SID History attributes
+## Unsecure SID History attributes
 
 ### What is an unsecure SID History attribute?
 
