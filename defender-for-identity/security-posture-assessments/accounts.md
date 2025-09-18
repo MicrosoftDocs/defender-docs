@@ -16,7 +16,7 @@ This article lists all security assessments for accounts.
 >
 
 
-## Security Assessment: Accounts with non-default Primary Group ID
+## Accounts with non-default Primary Group ID
 
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute is not the default for domain users and computers in Active Directory.
 
@@ -39,7 +39,7 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
   - Read-only domain controller (RODC) accounts: 521 (Read-only Domain Controllers).
 
 
-### Security assessment: Remove access rights on suspicious accounts with the Admin SDHolder permission
+###  Remove access rights on suspicious accounts with the Admin SDHolder permission
 
 This article describes the **Remove access rights on suspicious accounts with the Admin SDHolder permission** security assessment, which highlights risky access rights on suspicious accounts.
 
@@ -72,7 +72,7 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 To achieve the full score, remediate all exposed entities.
 
 
-## Security Assessment: Change password for krbtgt account
+## Change password for krbtgt account
 
 This recommendation lists any krbtgt account within your environment with password last set over 180 days ago.
 
@@ -91,7 +91,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. It is recommended to use the [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1)  
 > When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
 
-## Security assessment: Change password of built-in domain Administrator account
+## Change password of built-in domain Administrator account
 
 This recommendation lists any built-in domain Administrator accounts within your environment with password last set over 180 days ago. 
 
@@ -109,9 +109,10 @@ Regularly updating the built-in Administrator account's password is essential du
 
    For example:
 
-   :::image type="content" source="media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts.":::
+:::image type="content" source="../media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts.":::
 
-## Security assessment: Dormant entities in sensitive groups
+
+## Dormant entities in sensitive groups
 
 ### What are sensitive dormant entities?
 
@@ -119,9 +120,9 @@ Microsoft Defender for Identity discovers if particular users are **sensitive** 
 
 However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant sensitive entities are targets of opportunity for malicious actors to gain sensitive access to your organization. 
 
-For more information, see [Default sensitive entities](entity-tags.md#default-sensitive-entities).
+For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](../entity-tags.md#default-sensitive-entities).
 
-## What risk do dormant entities create in sensitive groups?
+### What risk do dormant entities create in sensitive groups?
 
 Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.
 
@@ -129,15 +130,16 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most sensitive entities vulnerable and exposed.
 
-## How do I use this security assessment?
+### Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your sensitive accounts are dormant.
 
-    :::image type="content" source="media/cas-isp-dormant-entities-sensitive-groups-1.png" alt-text="Screenshot that shows improvement actions for Remove dormant accounts from sensitive groups.":::
+    :::image type="content" source="../media/cas-isp-dormant-entities-sensitive-groups-1.png" alt-text="Screenshot that shows improvement actions for Remove dormant accounts from sensitive groups.":::
+
 
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
-## Security assessment: Remove non-admin accounts with DCSync permissions
+## Remove non-admin accounts with DCSync permissions
 
 This article describes the **Remove non-admin accounts with DCSync permissions** security assessment, which identifies risky DCSync permission settings.
 
@@ -147,13 +149,14 @@ Accounts with the DCSync permission can initiate domain replication. Attackers c
 
 It's crucial to carefully manage and restrict the membership of this group to ensure the security and integrity of your domain replication process.
 
-### How do I use this security assessment to improve my organizational security posture?
+### Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
     For example:
 
-    :::image type="content" source="media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
+    :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
+
 
 1. Review this list of exposed entities to discover which of your accounts have DCSync permissions and are also nondomain admins.
 
@@ -344,9 +347,9 @@ To use this security assessment effectively, follow these steps:
 
 Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
 
-Learn more about LMP:
+For more information about lateral movement paths, see:
 
-- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md)
+- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
 ### What risk do risky lateral movement paths pose?
@@ -456,13 +459,13 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
         Set-ADUser -Identity <account> -Remove @{SIDHistory='S-1-5-21-...'}
         ```
 
-# Security assessment: Unsecure account attributes
+## Unsecure account attributes
 
-## What are unsecure account attributes?
+### What are unsecure account attributes?
 
 Microsoft Defender for Identity continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
-## What risk do unsecure account attributes pose?
+### What risk do unsecure account attributes pose?
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -470,7 +473,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 For example, if the **PasswordNotRequired** attribute is enabled, an attacker can easily access the account. This is especially risky if the account has privileged access to other resources.
 
-## Remediation steps
+### Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have unsecure attributes.
 
