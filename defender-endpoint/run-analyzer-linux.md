@@ -36,15 +36,15 @@ If you have issues with Microsoft Defender for Endpoint on Linux and need suppor
 
 ## Running the binary version of the client analyzer
 
-### Run ClientAnalyzer binary shipped MDE:
+### Run ClientAnalyzer binary shipped with MDE:
 > [!NOTE]
-> Starting with the Defender for Endpoint version `101.25062.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/conf/client_analyzer/binary`
+> Starting with the Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/tools/client_analyzer/binary`
 
 To run this client analyzer follow the steps:
-1. Go to directory `/opt/microsoft/mdatp/conf/client_analyzer/binary`:
+1. Go to directory `/opt/microsoft/mdatp/tools/client_analyzer/binary`:
 
     ```bash
-    cd /opt/microsoft/mdatp/conf/client_analyzer/binary
+    cd /opt/microsoft/mdatp/tools/client_analyzer/binary
     ```
 2. Run the tool as _root_ to generate diagnostic package:
 
@@ -105,15 +105,15 @@ Follow the below steps if you are using Defender for Endpoint older than `101.25
 > [!WARNING]
 > Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, we recommend that you install the packages into a user PIP environment.
 
-### Run ClientAnalyzer python version shipped MDE
+### Run ClientAnalyzer python version shipped with MDE
 > [!NOTE]
-> Starting with the Defender for Endpoint version `101.25062.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/conf/client_analyzer/python`
+> Starting with the Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with agent. It can be found at the location `/opt/microsoft/mdatp/tools/client_analyzer/python`
 
 To run this client analyzer follow the steps:
-1. Go to directory `/opt/microsoft/mdatp/conf/client_analyzer/python`:
+1. Go to directory `/opt/microsoft/mdatp/tools/client_analyzer/python`:
 
     ```bash
-    cd /opt/microsoft/mdatp/conf/client_analyzer/python
+    cd /opt/microsoft/mdatp/tools/client_analyzer/python
     ```
 2. Run as a root user to install required dependencies.
 
