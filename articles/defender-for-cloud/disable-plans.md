@@ -36,11 +36,11 @@ To continue the disablement process, select the relevant multicloud environment.
         
     :::image type="content" source="media/disable-plans/plans-disabled.png" alt-text="Screenshot that shows all of the Defender for Cloud plans toggled to off in an Azure environment." lightbox="media/disable-plans/plans-disabled.png":::
     
-1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you're able to close the four sub plans of Defender for Databases.
+    1. (Optional) If you want to disable the Defender for Databases plan, a pop-up where you're able to close the four sub plans of Defender for Databases.
         
-    :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
+        :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
     
-1. (Optional) Select **Continue**.
+    1. Select **Continue**.
         
 1. Select **Save**.
     
