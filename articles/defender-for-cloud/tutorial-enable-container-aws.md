@@ -56,16 +56,15 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
         > If you disable this configuration, then the `Threat detection (control plane)` feature will be disabled. Learn more about [features availability](supported-machines-endpoint-solutions-clouds-containers.md).
 
    - **[K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work)** sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
-     > [!NOTE]
-     > In case your EKS cluster public endpoint is restricted, the cluster's settings will be automatically updated to include Microsoft Defender for Cloud's CIDR block.
-     > Defender for Cloud requires allowing access to the Kubernetes API server from the following IP ranges: 172.212.245.192/28, 48.209.1.192/28.
-     > If you would like to control the access, you can remove the Allow "eks:UpdateClusterConfig" from the generated script and run this command on your environment:
-     > `aws eks update-cluster-config \`
-     > `  --name $CLUSTER_NAME `
-     > `  --region $REGION `
-     > `  --resources-vpc-config endpointPublicAccess=true,publicAccessCidrs=172.212.245.192/28,48.209.1.192/28`
-     
-     
+      > [!NOTE]
+      >In case your EKS cluster public endpoint is restricted, the cluster's settings will be automatically updated to include Microsoft Defender for Cloud's CIDR block.
+      >Defender for Cloud requires allowing access to the Kubernetes API server from the following IP ranges: 172.212.245.192/28, 48.209.1.192/28.
+      >If you would like to control the access, you can remove the Allow "eks:UpdateClusterConfig" from the generated scrip and run this command on your environment:
+      >`aws eks update-cluster-config \`
+      >`  --name $CLUSTER_NAME `
+      >`  --region $REGION `
+      >`  --resources-vpc-config endpointPublicAccess=true,publicAccessCidrs=172.212.245.192/28,48.209.1.192/28`
+      
     - [**Registry access**](agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR. To enable, set the **Registry access** toggle to **On**.
 
 2. Select **Next: Review and generate**.
