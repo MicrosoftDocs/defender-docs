@@ -85,7 +85,9 @@ To continue the disablement process, select the relevant multicloud environment.
 1. Select a deployment method: **GCP Cloud shell** or **Terraform**.
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
-    
+
+    :::image type="content" source="media/disable-plans/disable-google-configuration.png" alt-text="Screenshot that shows the Google configure access screen." lightbox="media/disable-plans/disable-google-configuration.png":::
+
 1. Put a check in the checkbox, confirming you followed the instructions.
 
 1. Select **Next: Review and generate**.
@@ -93,6 +95,10 @@ To continue the disablement process, select the relevant multicloud environment.
 1. Select **Create**.
 
 ---
+
+Once all plans have been disabled on your environment, all of your resources will no longer be monitored, or onboarded with Defender for Cloud. 
+
+If you want to completely cancel your Microsoft Defender for Cloud subscription, you'll need to go through the subscription cancellation process in addition to disabling the plans. 
 
 ## Next step
 
