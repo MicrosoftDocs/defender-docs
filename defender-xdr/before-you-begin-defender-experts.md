@@ -69,7 +69,7 @@ Customers who wish to have Defender Experts hunting coverage for Microsoft Defen
 -	Defender for Servers Plan 1 or Plan 2 in Microsoft Defender for Cloud
 
 > [!NOTE]
-> Defender Experts for Hunting coverage is applied at the tenant level and all identities and devices will be included.
+> Defender Experts for Hunting cannot be purchased for partial coverage. It must be applied at the tenant level and all identities and devices will be automatically included
 
 ### Defender Experts for Hunting coverage
 
