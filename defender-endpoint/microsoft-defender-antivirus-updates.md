@@ -10,7 +10,7 @@ author: KesemSharabi
 ms.author: kesharab
 ms.subservice: ngp
 search.appverid: met150
-ms.appliesto:
+appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 ---
