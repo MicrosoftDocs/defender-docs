@@ -26,6 +26,24 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ## September 2025
 
+### Purview eDLP tagging for Critical Assets (Private Preview)
+
+Microsoft Security Exposure Management now integrates with Microsoft Purview Endpoint Data Loss Prevention (eDLP) to automatically identify and classify critical assets based on their interaction with sensitive documents. This new capability introduces dynamic criticality reclassification where endpoints accessing high-sensitivity documents are automatically tagged as high criticality.
+
+Key features include:
+
+- **Dynamic reclassification**: Endpoints are automatically elevated to high criticality when accessing sensitive content
+- **Automatic reversion**: Asset classification reverts to baseline after 5 consecutive days of inactivity with sensitive content
+- **Out-of-the-box detection**: Built-in detection rules for three Purview Classifier Sensitive Information Types:
+  - Azure Document DB Auth Key
+  - Azure Redis Cache Connection String  
+  - Azure Storage Account Key
+- **Enhanced visibility**: Critical assets are surfaced across Microsoft Defender XDR experiences for improved security posture management
+
+This integration provides the first offering to combine the experience between Purview and Microsoft Defender Portal for classifying critical assets and gathering important pre-breach insights.
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+
 ### Refined attack path experience
 
 Cloud Attack Paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
