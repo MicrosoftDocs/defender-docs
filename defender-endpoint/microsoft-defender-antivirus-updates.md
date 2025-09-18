@@ -3,70 +3,45 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 07/23/2025
+ms.date: 09/18/2025
 audience: ITPro
 ms.topic: reference
-author: batamig
-ms.author: bagol
-ms.custom: nextgen
-ms.reviewer: pahuijbr, tudobril, yongrhee
-manager: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.subservice: ngp
-ms.collection: 
-- m365-security
-- tier2
-- mde-ngp
 search.appverid: met150
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Microsoft Defender Antivirus security intelligence and product updates
 
-**Applies to:**
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices have the latest technology and features needed to protect against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). This article includes information about the two types of updates for keeping Microsoft Defender Antivirus current:
+This article is aimed at **Windows** devices, and includes information about the following two types of updates:
 
 - [Security intelligence updates](#security-intelligence-updates)
+
 - [Product updates](#product-updates)
-
-This article also includes:
-
-- [Microsoft Defender Antivirus platform support](#microsoft-defender-antivirus-platform-and-engine-support)
-- [How to roll back an update](#how-to-roll-back-an-update) (if necessary)
-- [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)
-- [Updates for Deployment Image Servicing and Management (DISM)](#updates-for-deployment-image-servicing-and-management-dism)
-
-To see the most current engine, platform, and signature date, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
-
-[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Security intelligence updates
 
-Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (also called the *Microsoft Advanced Protection Service*, or MAPS) and periodically downloads dynamic security intelligence updates to provide more protection. These dynamic updates don't take the place of regular security intelligence updates via security intelligence update KB2267602.
+Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md), also known as *Microsoft Advanced Protection Service*, or *MAPS*. Defender Antivirus periodically downloads dynamic security [intelligence updates](https://www.microsoft.com/en-us/wdsi/defenderupdates). These updates don't replace regular security intelligence updates. Engine updates are included with security intelligence updates and are released monthly.
 
-> [!NOTE]
-> Updates are released under the following KBs:
->
-> - Microsoft Defender Antivirus: KB2267602
-> - System Center Endpoint Protection: KB2461484
+Updates are released under the following KBs:
 
-Cloud-delivered protection is always on and requires an active connection to the Internet to function. Security intelligence updates occur on a scheduled cadence (configurable via policy). For more information, see [Use Microsoft cloud-provided protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
+- Microsoft Defender Antivirus: KB2267602
 
-For a list of recent security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+- System Center Endpoint Protection: KB2461484
 
-Engine updates are included with security intelligence updates and are released on a monthly cadence.
+[Cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) is always on and requires an active connection to the internet to function. Security intelligence updates occur on a scheduled cadence which you can configure using a policy.
 
 ## Product updates
 
 Microsoft Defender Antivirus requires monthly updates (KB4052623) known as *platform updates*.
 
-You can manage the distribution of updates through one of the following methods:
+You can manage the distribution of updates using one of the following methods:
 
 - [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
 - [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
@@ -99,6 +74,17 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
+
+- Security intelligence update version: **1.437.1.0**
+- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
+- Platform: **4.18.25080.5**
+- Engine: **1.1.25080.5**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
 
 ### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
 
