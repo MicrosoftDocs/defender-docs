@@ -29,7 +29,7 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 1. Take appropriate action on those accounts:
 
 - For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.    
-![Screenshot of user profile.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
+:::image type="content" source="media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png" alt-text="Screenshot of the user profile.":::
 
 - For device accounts:  
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
@@ -42,8 +42,9 @@ The safest approach is to use a PowerShell script to configure the device to pre
   Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
   
   For example:  
+
+    :::image type="content" source="media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
   
-    ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png)
   
 ## Next steps
 

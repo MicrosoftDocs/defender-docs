@@ -8,7 +8,6 @@ ms.reviewer: LiorShapiraa
 
 # Security assessment: Entities exposing credentials in clear text
 
-![Prevent clear text credentials exposure.](media/cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?
 
@@ -24,7 +23,10 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions>.
 
-    ![Review top impacted entities and create an action plan.](media/cas-isp-clear-text-2.png)
+    :::image type="content" source="media/cas-isp-clear-text-1.png" alt-text="Screenshot that shows the improvement actions for stop clear text credentials exposure.":::
+
+    :::image type="content" source="media/cas-isp-clear-text-2.png" alt-text="Screenshot that shows exposed entities.":::
+
 1. Research why those entities are using LDAP in clear text.
 1. Remediate the issues and stop the exposure.
 1. After confirming remediation, we recommend you require domain controller level LDAP signing. To learn more about LDAP server signing, see [Domain controller LDAP server signing requirements](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
