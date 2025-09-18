@@ -153,8 +153,6 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
-    For example:
-
     :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
 
 

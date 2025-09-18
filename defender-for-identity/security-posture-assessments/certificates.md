@@ -146,14 +146,15 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 
    For example:  
 
-    :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::
+    :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text=":::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::":::
 
 
 ## Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) (Preview)
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. For example:
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. 
 
     :::image type="content" source="../media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="../media/secure-score/prevent-certificate-arbitrary-users.png":::
+
 
 1. To remediate certificate requests for arbitrary users, perform at least one of the following steps:
 
