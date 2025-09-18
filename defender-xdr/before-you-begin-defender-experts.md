@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ean
 search.appverid: met150
-ms.date: 08/01/2025
+ms.date: 09/18/2025
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -69,7 +69,7 @@ Customers who wish to have Defender Experts hunting coverage for Microsoft Defen
 -	Defender for Servers Plan 1 or Plan 2 in Microsoft Defender for Cloud
 
 > [!NOTE]
-> Defender Experts for Hunting cannot be purchased for partial coverage. It must be applied at the tenant level and all identities and devices will be automatically included
+> You can't purchase partial Defender Experts for Hunting for partial coverage. You must apply it at the tenant level. All identities and devices are automatically included.
 
 ### Defender Experts for Hunting coverage
 
