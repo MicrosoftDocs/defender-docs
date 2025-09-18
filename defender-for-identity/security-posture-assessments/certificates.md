@@ -27,7 +27,7 @@ If the RPC enrollment interface doesn't require packet privacy, it becomes vulne
 
 ### Prerequisites
 
-This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs)
 
 ### Remediation steps
 
@@ -66,7 +66,7 @@ If the IIS endpoint allows NTLM authentication without enforcing protocol signin
 
 ### Prerequisites
 
-This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
+This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [Configure sensors for AD FS, AD CS, and Microsoft Entra Connect](../deploy/active-directory-federation-services.md).
 
 ### Remediation steps
 
@@ -94,9 +94,8 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.
 
+    :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-owner.png":::
 
-
-    :::image type="content" source="../media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="media/secure-score/misconfigured-owner.png":::
 
 1. Research why the template owner might be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.
@@ -115,13 +114,12 @@ The effect of a misconfigured ACL varies based on the type of permission applied
 
 ### Prerequisites
 
-This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
-
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 ## Remediation steps
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACLs. For example:
 
-    :::image type="content" source="media/secure-score/misconfigured-certificate-authority.png" alt-text="Screenshot of the Edit misconfigured Certificate Authority ACL (ESC7) recommendation." lightbox="media/secure-score/misconfigured-certificate-authority.png":::
+    :::image type="content" source="../media/secure-score/misconfigured-certificate-authority.png" alt-text="Screenshot of the Edit misconfigured Certificate Authority ACL (ESC7) recommendation." lightbox="../media/secure-score/misconfigured-certificate-authority.png":::
 
 1. Research why the CA ACL is misconfigured.
 1. Remediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.
@@ -140,7 +138,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template ACL. For example:
 
-    :::image type="content" source="../media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="media/secure-score/misconfigured-certificate-acl.png":::
+    :::image type="content" source="../media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="../media/secure-score/misconfigured-certificate-acl.png":::
 
 1. Research why the template ACL might be misconfigured.
 1. Remediate the issue by removing any entry that grants unprivileged group permissions that allow tampering with the template.
@@ -158,7 +156,7 @@ When Microsoft Defender for Identity reports about Enrollment Agent certificate 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfgured enrollment agent certificate templates.  For example:
 
-    :::image type="content" source="../media/secure-score/misconfigured-enrollment-agent.png" alt-text="Screenshot of the Edit misconfigured enrollment agent certificate template (ESC3) recommendation." lightbox="media/secure-score/misconfigured-enrollment-agent.png":::
+    :::image type="content" source="../media/secure-score/misconfigured-enrollment-agent.png" alt-text="Screenshot of the Edit misconfigured enrollment agent certificate template (ESC3) recommendation." lightbox="../media/secure-score/misconfigured-enrollment-agent.png":::
 
 1. Remediate the issues by performing at least one of the following steps:
 
@@ -182,7 +180,7 @@ Even though the certificate can’t be used for impersonating user authenticatio
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.  For example:
 
-    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
+    :::image type="content" source="../media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="../media/secure-score/permissive-certificate-template.png":::
 
 1. Research why the templates have a privileged EKU.
 1. Remediate the issue by doing the following:
@@ -239,7 +237,7 @@ If a certificate template has the *Supply in the request* option turned on, the 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. For example:
 
-    :::image type="content" source="media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="media/secure-score/prevent-certificate-arbitrary-users.png":::
+    :::image type="content" source="../media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="../media/secure-score/prevent-certificate-arbitrary-users.png":::
 
 1. To remediate certificate requests for arbitrary users, perform at least one of the following steps:
 
@@ -277,7 +275,7 @@ This assessment is available only to customers who installed a sensor on an AD C
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings.  For example:
 
-    :::image type="content" source="media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="media/secure-score/vulnerable-certificate-authority-settings.png":::
+    :::image type="content" source="../media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="../media/secure-score/vulnerable-certificate-authority-settings.png":::
 
 1. Research why the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on.
 
