@@ -144,9 +144,7 @@ Once handled, the ESC8 attack risk is mitigated, reducing your attack surface si
 
 3. Identify the AD CS servers that are vulnerable to CVE-2024-49019 and apply the relevant patch. 
 
-   For example:  
-
-    :::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text=":::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::":::
+:::image type="content" source="../media/prevent-certificate-enrollment-esc15/exposed-entities-identitified.png" alt-text="Screenshot that shows a list of exposed entities.":::
 
 
 ## Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) (Preview)

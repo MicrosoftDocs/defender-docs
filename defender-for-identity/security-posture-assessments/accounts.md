@@ -153,7 +153,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
-    :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
+    :::image type="content" source="../media/secure-score/dcsync-permissions.png" alt-text="Screenshot that shows the recommended action to remove non-admin accounts with DCsync permissions.":::
 
 
 1. Review this list of exposed entities to discover which of your accounts have DCSync permissions and are also nondomain admins.
