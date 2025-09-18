@@ -10,10 +10,6 @@ ms.reviewer: LiorShapiraa
 
 This article describes Microsoft Defender for Identity's **Certificates** security posture assessment report.
 
-> [!NOTE]
-> - While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as __Completed__.
-> - Make sure to test your settings in a controlled environment before turning them on in production.
-
 
 |Recommended actions  |Description  |
 |---------|---------|
@@ -28,7 +24,9 @@ This article describes Microsoft Defender for Identity's **Certificates** securi
 |[Remediation for Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)](#remediation-for-prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1-preview)| Each certificate is associated with an entity through its subject field. However, certificates also include a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities. The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts. If a certificate template has the *Supply in the request* option turned on, the template is vulnerable, and attackers might be able to enroll a certificate that's valid for arbitrary users.|
 |[Remediation for Edit vulnerable Certificate Authority setting (ESC6)  (Preview)](#remediation-for-edit-vulnerable-certificate-authority-setting-esc6--preview) | Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy. <br> If the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, users can specify arbitrary values in the Subject Alternative Name (SAN) field when requesting a certificate. This can lead to security vulnerabilities, as attackers might exploit this capability to create certificates that impersonate other users or services, potentially leading to unauthorized access and domain compromise.|
 
-
+> [!NOTE]
+> - While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as __Completed__.
+> - Make sure to test your settings in a controlled environment before turning them on in production.
 
 ## Remediation for Enforce encryption for RPC certificate enrollment interface (ESC11)
 
