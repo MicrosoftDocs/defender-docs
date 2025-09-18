@@ -15,6 +15,7 @@ ms.custom: intro-overview
 ms.topic: article
 search.appverid: met150
 ms.date: 05/07/2025
+#customer intent:  As an IT security leader or SOC engineer responsible for endpoint protection, I want a concise overview of Microsoft Defender for Endpoint's capabilities, integrations, and deployment considerations so I can evaluate its fit for my organization and plan onboarding and operations.
 ---
 
 # Microsoft Defender for Endpoint
