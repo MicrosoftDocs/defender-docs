@@ -53,7 +53,7 @@ To run this client analyzer follow the steps:
    ```
 ### Download and run ClientAnalyzer binary
 
-Follow the below steps if you are using Defender for Endpoint older than `101.25062.0000`
+Follow the below steps to use the standalone ClientAnalyzer binary
 
 1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the Linux machine that you're to investigating. If you're using a terminal, download the tool by entering the following command:
 
