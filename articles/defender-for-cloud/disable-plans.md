@@ -75,5 +75,24 @@ To continue the disablement process, select the relevant multicloud environment.
   
     :::image type="content" source="media/disable-plans/disable-google-plans.png" alt-text="Screenshot that shows the Defender for Cloud plans disabled in a Google environment." lightbox="media/disable-plans/disable-google-plans.png":::
 
+1. Select **Next: Configure access**.
+
+1. Select a deployment type:
+    
+    - **Default access**: Allows Defender for Cloud to scan your resources and automatically include future capabilities.
+    - **Least privilege access**: Grants Defender for Cloud access only to the current permissions needed for the selected plans. If you select the least privileged permissions, you receive notifications on any new roles and permissions that are required to get full functionality for connector health.
+
+1. Select a deployment method: **GCP Cloud shell** or **Terraform**.
+
+1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
+    
+1. Put a check in the checkbox, confirming you followed the instructions.
+
+1. Select **Next: Review and generate**.
+        
+1. Select **Create**.
+
 ---
+
+## Next step
 
