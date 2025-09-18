@@ -15,6 +15,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
  - Requires that Defender for Endpoint is deployed
+ - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed
  - Doesn't currently support VPN integration
  - Doesn't currently support ExpressRoute
  - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
@@ -42,10 +43,10 @@ The following table summarizes the server requirements and recommendations for t
 |Prerequisite / Recommendation |Description  |
 |---------|---------|
 |Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.|
+|Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have Defender for Identity sensor V2.x already deployed.|
 |Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM|
 |Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
 |Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
-|Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have another Defender for Identity sensor already deployed.|
 |Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 |ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
 
