@@ -46,12 +46,6 @@
          items:
            - name: ServiceNow
              href: ServiceNow-data-connector.md
-       - name: Endpoint protection data connectors
-         items:
-           - name: CrowdStrike Falcon
-             href: crowdstrike-data-connector.md
-           - name: SentinelOne
-             href: sentinel-one-data-connector.md
        - name: Cloud Security data connectors
          items:
            - name: Wiz
