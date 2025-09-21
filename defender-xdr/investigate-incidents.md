@@ -4,8 +4,8 @@ description: Investigate incidents on various assets from correlated signals of 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: guywild
-author: guywi-ms
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 08/26/2025
+ms.date: 09/21/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -139,6 +139,9 @@ A new graph view loads showing the 8 top-rated attack paths. A full list of the 
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
+For an explanation of the icons used for nodes and edges in the blast radius graph, see [Understanding graphs and visualizations in Microsoft Defender](understand-graph-icons.md).
+
+
 Select **View blast radius list** to see a list of target assets.  Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
 
 When paths lead to grouped targets of the same types, to view discrete paths to targets, select the grouped icons. A right-side panel opens showing all the targets in the group. Selecting the check box on the left and selecting the **Expand** button on top displays each target and its paths separately.
@@ -159,7 +162,7 @@ The following limitations apply to the blast radius graph:
 - **Data freshness:** Latencies may exist between a change in the organization's environment and the reflection of that change in the blast radius graph. During this time, the model might be incomplete.
 - **Possible paths:** The blast radius graph shows possible paths. It doesn't guarantee that an attacker would take every path shown.
 - **Known attack vectors:** The graph relies on known attack vectors. If attackers find a new lateral movement or new technique that has yet to be modeled, it won't be shown in the blast radius graph.
-- **User scopes:** The graph displayed is based on the allowed scopes for the viewing user. Only nodes and edges that are scoped for the user based on the defined RBAC and scoping settings are visible on the graph. Paths containing out of scope nodes or edges aren't visible. A notification indicates scoping was enabled on the graph view, resulting in partial data display.
+- **User scopes:** The graph displayed is based on the allowed scopes for the viewing user. Only nodes and edges that are scoped for the user based on the defined RBAC and scoping settings are visible on the graph. Paths containing out of scope nodes or edges aren't visible.
 - **Island nodes:** Nonconnected nodes may appear on the graph due to changes that may occur between the time the data is collected and the calculation of the blast radius.
  
 
