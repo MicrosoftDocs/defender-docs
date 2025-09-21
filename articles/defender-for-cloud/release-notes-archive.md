@@ -880,7 +880,7 @@ Defender for Cloud alert [integration](other-threat-protections.md#display-azure
 
 August 1, 2024
 
-You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
+You can now enable Microsoft Defender for SQL servers on machines at scale on government clouds. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
 
 Learn how to [enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
