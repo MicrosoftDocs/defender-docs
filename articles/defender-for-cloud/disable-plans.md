@@ -2,7 +2,7 @@
 title: Disable Defender for Cloud plans
 description: Learn how to disable Defender for Cloud plans on your connected environments subscription.
 ms.topic: how-to
-ms.date: 09/15/2025
+ms.date: 09/21/2025
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---
 
