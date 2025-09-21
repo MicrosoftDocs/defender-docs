@@ -4,8 +4,8 @@ description: Investigate incidents on various assets from correlated signals of 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: guywild
-author: guywi-ms
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 08/26/2025
+ms.date: 09/21/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
