@@ -32,7 +32,7 @@ We have added new data connectors for Wiz and Palo Alto Prisma. These connectors
 
 For more information, see:
 - [Wiz data connector](wiz-data-connector.md)
-- [Palo Alto Prisma data connector](palo-alto-data-connector.md)
+- [Palo Alto Prisma data connector](palo-alto-prisma-data-connector.md)
 
 ### Refined attack path experience
 

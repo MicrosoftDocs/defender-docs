@@ -48,7 +48,7 @@ To establish a connection with any of the supported external products, follow th
      - [Rapid7 VM](Rapid7-data-connector.md)
      - [Tenable](Tenable-data-connector.md)
      - [Wiz](wiz-data-connector.md)
-     - [Palo Alto Prisma](palo-alto-data-connector.md)
+     - [Palo Alto Prisma](palo-alto-prisma-data-connector.md)
 
 2. Go to **Data Connectors** in the Exposure Management navigation.
 3. Select **Connect** on the selected data connector from the external connectors catalog.

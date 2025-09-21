@@ -51,7 +51,7 @@
            - name: Wiz
              href: wiz-data-connector.md
            - name: Palo Alto Prisma
-             href: palo-alto-data-connector.md
+             href: palo-alto-prisma-data-connector.md
        - name: Vulnerability Management data connectors
          items:
            - name: Qualys
