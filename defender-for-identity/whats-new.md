@@ -25,9 +25,28 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
+### New API support for unified agent 
+We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
+This capability is currently in preview and available in API Beta version.
+
+This API allows customers to:
+
+* Monitor the status of unified agent servers
+* Enable or disable the automatic activation of eligible servers
+* Activate or deactivate the agent on eligible servers
+ ​
+
+For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number |Updates |
+|---------|---------|
+|2.248|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+
 ### Updates to multiple detections to reduce noise and improve alert accuracy
 
-Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you may see a decrease in the number of alerts raised.
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
 
 The improvements will gradually take effect across the following detections:
 
@@ -48,6 +67,7 @@ The improvements will gradually take effect across the following detections:
 - Suspicious modification of Resource Based Constrained Delegation by a machine account
 
 - Remote code execution attempt
+
 
 ### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
 
@@ -163,7 +183,7 @@ For prerequisites and configuration steps, see [Integrate Okta with Microsoft De
 ### Service account classification rules now available
 
 You can now create custom classification rules to identify service accounts based on your organization’s specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
-For more information, see [Service account discovery](service-account-discovery.md)
+For more information, see [Service account discovery](service-account-discovery.md).
 
 ### Defender For Identity PowerShell module updates (version 1.0.0.4)
 
@@ -304,7 +324,7 @@ Defender for Identity has added the new **Prevent Certificate Enrollment with ar
 
 This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
 
-The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
 
 For more information, see:
 

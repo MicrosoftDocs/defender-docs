@@ -37,7 +37,7 @@
         ]
       }
     ],
-    "dest": "ATADocs",
+    "dest": "advanced-threat-analytics",
     "template": "docs.html",
     "globalMetadata": {
       "feedback_system": "Standard",

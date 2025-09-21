@@ -70,10 +70,10 @@ There are several methods and deployment tools that you can use to install and c
 
 These three most recent major releases of macOS are supported.
 
+- 26 (Tahoe)
+
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
-- 13 (Ventura)
-
 - Supported processors: x64 and ARM64 (Mx processors)
 
 - Disk space: 1GB
