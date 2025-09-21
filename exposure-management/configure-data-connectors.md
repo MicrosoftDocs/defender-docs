@@ -47,8 +47,8 @@ To establish a connection with any of the supported external products, follow th
      - [Qualys VM](Qualys-data-connector.md)
      - [Rapid7 VM](Rapid7-data-connector.md)
      - [Tenable](Tenable-data-connector.md)
-     - Wiz (coming soon)
-     - Palo Alto (coming soon)
+     - [Wiz](wiz-data-connector.md)
+     - [Palo Alto Prisma](palo-alto-data-connector.md)
 
 2. Go to **Data Connectors** in the Exposure Management navigation.
 3. Select **Connect** on the selected data connector from the external connectors catalog.
@@ -86,4 +86,4 @@ Select the external data connector you want to configure and follow the steps to
 
 - [CMDB data connectors](ServiceNow-data-connector.md)
 - [Vulnerability management data connectors](Qualys-data-connector.md)
-- Cloud security data connectors (coming soon)
+- [Cloud security data connectors](wiz-data-connector.md)
