@@ -84,9 +84,10 @@ Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernet
 
 1. Select an unhealthy cluster.
 
-   > [!IMPORTANT]
-   > You must select the clusters one at a time.
-> > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
+> [!IMPORTANT]
+> You must select the clusters one at a time.
+>
+> Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
    
 1. Select **Fix**.
 
