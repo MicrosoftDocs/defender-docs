@@ -15,6 +15,7 @@ ms.collection:
 - tier2
 search.appverid: met150
 ms.date: 10/28/2024
+#customer intent: As a developer or endpoint engineer using Dev Drive on Windows 11, I want guidance on enabling and managing Microsoft Defender Antivirus performance mode so I can improve developer workload performance while maintaining acceptable threat protection.
 ---
 
 # Protect Dev Drive using performance mode
