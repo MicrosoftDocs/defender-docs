@@ -222,9 +222,9 @@
               - name: Overview Microsoft Defender EASM integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
                 href: concept-easm.md
-          - name: Microsoft Copilot for Security
+          - name: Microsoft Security Copilot
             items:
-              - name: Overview Microsoft Copilot for Security integration
+              - name: Overview Microsoft Security Copilot integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
 
