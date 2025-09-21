@@ -44,7 +44,7 @@ The following are examples of file policies that can be created:
 
 * **Sensitive file extension** - Receive an alert about files with specific extensions that are highly exposed. Select the specific extension (for example, crt for certificates) or filename and exclude those files with private sharing level.
 
-##Prerequisites
+## Prerequisites
 
 To set up the first File Policy in a tenant, you need Microsoft Entra **Service Principal** permissions. **Service Principal** permissions are only automatically given if no file policy exists yet. After the first file policy is created, you can create more  without needing those permissions.
 
