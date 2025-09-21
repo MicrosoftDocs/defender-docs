@@ -139,7 +139,7 @@ A new graph view loads showing the 8 top-rated attack paths. A full list of the 
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
-For an explanation of the icons used for nodes and edges in the blast radius graph, see [Understanding graphs and visualizations in Microsoft Defender](../understand-graph-icons.md).
+For an explanation of the icons used for nodes and edges in the blast radius graph, see [Understanding graphs and visualizations in Microsoft Defender](understand-graph-icons.md).
 
 
 Select **View blast radius list** to see a list of target assets.  Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
