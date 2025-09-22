@@ -297,7 +297,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 
 If you select an entry in the **Attachments** view by clicking on the **Attachment filename** value, a details flyout opens that contains the following information:
 
-- **Deep analysis** tab: Information is available on this tab if [Safe Attachments](safe-attachments-about.md) scanned (detonated) the attachment. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **File detonation**.
+- **Deep analysis** tab: Information is available on this tab if [Safe Attachments](safe-attachments-about.md) scanned (detonated) the attachment and it is identified as malicious through detonation. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **File detonation**. Alternatively, you can check for the **"Detonation available"** indicator in the **Details** column and with the detonation count shown in the Email Summary Panel.
 
   - **Detonation chain** section: Safe Attachments detonation of a single file can trigger multiple detonations. The _detonation chain_ tracks the path of detonations, including the original malicious file that caused the verdict, and all other files affected by the detonation. These attached files might not be directly present in the email. But, including the analysis is important to determining why the file was found to be malicious.
 
@@ -378,7 +378,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 
 If you select an entry in the **URL** view by clicking on the **URL** value, a details flyout opens that contains the following information:
 
-- **Deep analysis** tab: Information is available on this tab if [Safe Links](safe-links-about.md) scanned (detonated) the URL. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **URL detonation**.
+- **Deep analysis** tab: Information is available on this tab if [Safe Links](safe-links-about.md) scanned (detonated) the URL and it is identified as malicious through detonation. You can identify these messages in Threat Explorer by using the query filter **Detection technology** with the value **URL detonation**. Alternatively, you can check for the **"Detonation available"** indicator in the **Details** column and with the detonation count shown in the Email Summary Panel.
 
   - **Detonation chain** section: Safe Links detonation of a single URL can trigger multiple detonations. The _detonation chain_ tracks the path of detonations, including the original malicious URL that caused the verdict, and all other URLs affected by the detonation. These URLs might not be directly present in the email. But, including the analysis is important to determining why the URL was found to be malicious.
 
