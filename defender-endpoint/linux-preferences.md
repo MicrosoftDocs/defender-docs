@@ -446,7 +446,8 @@ Configure filesystems to be unmonitored/excluded from real-time protection (RTP)
 > [!NOTE] 
 > Configured filesystem is unmonitored only if it's present in Microsoft's list of permitted unmonitored filesystems.
 
-By default, `cifs`, `fuse`, `nfs`, `nfs4` and `smb` are unmonitored from RTP, Quick, and Full scans. However, they can still be scanned by a custom scan. For example, to remove NFS(all versions) from the list of unmonitored filesystems list, update the managed config file as shown below. This will automatically add NFS to the list of monitored filesystems for RTP.
+By default, `cifs`, `fuse`, `nfs`, `nfs4` and `smb` are unmonitored from RTP, Quick, and Full scans. However, they can still be scanned by a custom scan. For example, to remove NFS(all versions) from the list of unmonitored filesystems list, update the managed config file as shown below. This will automatically add `nfs`/`nfs4` to the list of monitored filesystems for RTP. 
+Currently `nfs4`, `cifs` and `smb` filesystems are in preview mode for RTP mode.
 
 ```JSON
 {
