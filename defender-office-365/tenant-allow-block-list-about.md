@@ -34,6 +34,9 @@ You might occasionally disagree with the Microsoft filtering verdict for email m
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for email, Teams, or Office apps).
 
+> [!NOTE]  
+> Tenant Allow/Block Lists (TABLs) apply to the **MAIL FROM (5321.MailFrom / envelope sender)** address, not the From (5322.From / P2 sender) address.
+
 Entries for **Domains and email addresses** and **Spoofed senders** apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 
 The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
