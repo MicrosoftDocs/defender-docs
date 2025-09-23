@@ -556,7 +556,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
 #### Python client analyzer install script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#running-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#run-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
