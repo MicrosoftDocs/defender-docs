@@ -174,7 +174,7 @@ After the scans finish, you can access security findings within Microsoft Defend
      :::image type="content" source="media/agentless-code-scanning/code-scanning-findings.png" alt-text="Screenshot of recommendation Azure DevOps repositories should have code scanning findings resolved." lightbox="media/agentless-code-scanning/code-scanning-findings.png":::
 
    - [Repositories should have infrastructure as code scanning findings resolved](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/6588c4d4-fbbb-4fb8-be45-7c2de7dc1b3b/showSecurityCenterCommandBar~/false) - Flags security misconfigurations in IaC templates.  
-   :::image:::
+     :::image type="content" source="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png" alt-text="Screenshot of recommendation Azure DevOps repositories should have infrastructure as code scanning findings resolved." lightbox="media/agentless-code-scanning/infrastructure-as-code-scanning-findings.png":::
    
    - [Repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved) - Indicates vulnerable open-source packages detected in repositories.
    
