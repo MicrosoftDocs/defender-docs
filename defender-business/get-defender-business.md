@@ -79,7 +79,7 @@ Defender for Business provides advanced security protection for devices in eligi
 
 ## [Get Microsoft 365 Business Premium](#tab/getpremium)
 
-Microsoft 365 Business Premium includes Defender for Business, Microsoft Defender for Office 365 Plan 1, and Microsoft 365 Apps (formerly known as Office apps). For more information, see [Productivity and security for small and medium-sized businesses](/microsoft-365/business-premium/why-choose-microsoft-365-business-premium).
+Microsoft 365 Business Premium includes Defender for Business, Microsoft Defender for Office 365 Plan 1, and Microsoft 365 Apps (formerly known as Office apps). For more information, see [Why should I choose Microsoft 365 Business Premium?](/microsoft-365/admin/security-and-compliance/m365bp-security-benefits).
 
 1. Go to one of the following locations:
    - The [Microsoft 365 Business Premium product page](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
@@ -93,7 +93,7 @@ Microsoft 365 Business Premium includes Defender for Business, Microsoft Defende
 
    This action initiates the provisioning of Defender for Business for your organization.
 
-5. To set up your security capabilities, follow the guidance in [Configure your security protection in Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-security-overview).
+5. Follow the guidance in [Microsoft 365 for business security best practices](/microsoft-365/admin/security-and-compliance/m365b-security-best-practices) to set up your security capabilities.
 
 > [!IMPORTANT]
 > Be sure to complete all the steps described in [What is Microsoft Defender for Business?](/microsoft-365/business-premium/m365bp-overview).

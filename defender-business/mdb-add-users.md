@@ -37,6 +37,7 @@ To verify that security defaults is enabled in your organization, see [Set up mu
 
 > [!TIP]
 > Organizations with Microsoft Entra ID P1 (for example, Microsoft 365 Business Premium or an add-on subscription) also have access to Conditional Access to enforce MFA and other security requirements. For more information, see [Multifactor authentication for Microsoft 365](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365).
+   If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](/Microsoft-365/admin/add-users/add-users).
 
 ## Next steps
 
