@@ -520,8 +520,8 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMD
 
 Download and extract the XMDE Client Analyzer. You can use either the binary or Python version, as follows:
 
-- [Binary version of the Client Analyzer](run-analyzer-linux.md#running-the-binary-version-of-the-client-analyzer)
-- [Python version of the Client Analyzer](run-analyzer-linux.md#running-the-python-based-client-analyzer)
+- [Binary version of the Client Analyzer](run-analyzer-linux.md#run-the-binary-version-of-the-client-analyzer)
+- [Python version of the Client Analyzer](run-analyzer-linux.md#run-the-python-based-client-analyzer)
 
 Due to the limited commands available in live response, the steps detailed must be executed in a bash script. By splitting the installation and execution portion of these commands, it's possible to run the install script once, and run the execution script multiple times.
 
@@ -530,7 +530,7 @@ Due to the limited commands available in live response, the steps detailed must 
 
 #### Binary client analyzer install script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](run-analyzer-linux.md#running-the-binary-version-of-the-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](run-analyzer-linux.md#run-the-binary-version-of-the-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
