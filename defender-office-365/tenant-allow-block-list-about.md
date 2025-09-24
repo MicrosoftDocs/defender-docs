@@ -8,7 +8,7 @@ manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/08/2025
+ms.date: 09/22/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -27,22 +27,21 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-> [!IMPORTANT]
-> To allow phishing URLs that are part of non-Microsoft attack simulation training, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
-
 You might occasionally disagree with the Microsoft filtering verdict for email messages, Microsoft Teams messages, or Office apps. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative), or a URL might be blocked when it shouldn't have.
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for email, Teams, or Office apps).
-
-Entries for **Domains and email addresses** and **Spoofed senders** apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios. Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 
 The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 For usage and configuration instructions, see the following articles:
 
 - **Domains and email addresses** and **spoofed senders**: [Allow or block emails using the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
+  - Entries apply to the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender), not the From address (also known as the `5322.From` address or P2 sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
+  - Entries apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios.
+  - Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 - **Files**: [Allow or block files using the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - **URLs**: [Allow or block URLs using the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md).
+  - To allow phishing URLs from non-Microsoft attack simulation training, don't use URL allow entries in the Tenant Allow/Block List. Use the [advanced delivery policy](advanced-delivery-policy-configure.md) to specify the URLs.
 - **IP addresses**: [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
 - **Teams domains**: [Block domains in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 
