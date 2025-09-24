@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 12/02/2022
+ms.date: 09/11/2025
 ms.reviewer: efratka
 f1.keywords: NOCSH
 ms.collection:

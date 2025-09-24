@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 10/10/2023
+ms.date: 09/11/2025
 ms.reviewer: nehabha
 f1.keywords: NOCSH
 ms.collection:
@@ -31,7 +31,7 @@ The Microsoft Defender portal enables your security team to respond to and mitig
 
    :::image type="content" source="/defender/media/defender-business/mdb-examplecards.png" alt-text="Screenshot of cards in the Microsoft Defender portal":::
 
-3. Select a button or link on the card to view more information and take action. As an example, our **Devices at risk** card includes a **View details** button. Selecting that button takes us to the **Devices** list, as shown in the following image:
+3. To view more information and take action, select a button or link on the card. For example, our **Devices at risk** card includes a **View details** button. Selecting that button takes us to the **Devices** list, as shown in the following image:
 
    :::image type="content" source="/defender/media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 

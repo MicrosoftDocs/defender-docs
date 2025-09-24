@@ -26,7 +26,7 @@ You can view and edit settings, such as portal settings and advanced features, i
 
 ## View settings for advanced features
 
-In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), go to **Settings** > **Endpoints** > **General** > **Advanced features**.
+In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), go to **Settings** \> **Endpoints** \> **General** \> **Advanced features**.
 
 The following table describes advanced feature settings.
 
