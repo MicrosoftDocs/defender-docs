@@ -476,7 +476,8 @@ The following actions are available at the top of the Email entity page:
 
     > [!TIP]
     > **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
-    > Email preview and Download email actions are available in **Audit Logs** and **CloudAppEvents** table of Advanced Hunting (Record type 38) for auditing and reporting purposes.
+    >
+    > **Email preview** and **Download email** actions are available in **Audit Logs** and **CloudAppEvents** table of Advanced Hunting (Record type 38) for auditing and reporting.
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role. You can assign this role in the following locations:
 
