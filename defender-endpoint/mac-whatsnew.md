@@ -57,14 +57,6 @@ To get the latest features, including preview capabilities (such as endpoint det
   
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
-## Tahoe support
-
-- Microsoft Defender for Endpoint supports version 26.0 or newer.
-
-## Sequoia support
-
-- Microsoft Defender for Endpoint supports version 15.0.1 or newer.
-
 ## macOS Deprecation
 
 - Microsoft Defender for Endpoint no longer supports macOS 11 (Big Sur), 12 (Monterey) and 13 (Ventura)

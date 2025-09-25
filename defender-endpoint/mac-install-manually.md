@@ -43,9 +43,10 @@ Before you get started, see [the main Microsoft Defender for Endpoint on macOS p
 
 > [!IMPORTANT]
 > Manual installation of Microsoft Defender for Endpoint on macOS requires changes to the Privacy & Security Settings on macOS.  Please consult Apple's documentation for details.  
-> [Change Privacy & Security settings on MacOS Sonoma 14](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/14.0/mac/14.0)
-> [Change Privacy & Security settings on MacOS Sequoia 15](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/15.0/mac/15.0)
-> 
+> - [Change Privacy & Security settings on MacOS Sonoma 14](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/14.0/mac/14.0)
+> -  [Change Privacy & Security settings on MacOS Sequoia 15](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/15.0/mac/15.0)
+> - [Change Privacy & Security settings on MacOS Tahoe 26](https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/mac)
+
 ## Download installation and onboarding packages
 
 Download the installation and onboarding packages from Microsoft Defender portal.
