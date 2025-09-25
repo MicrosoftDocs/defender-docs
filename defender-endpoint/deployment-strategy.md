@@ -22,7 +22,7 @@ appliesto:
 # Identify your architecture and select a deployment method for Defender for Endpoint
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 If you're already completed the steps to [prepare your environment for Defender for Endpoint](production-deployment.md), and you have [assigned roles and permissions for Defender for Endpoint](prepare-deployment.md), your next step is to create a plan for onboarding. This plan should begin with identifying your architecture and choosing your deployment method.
 

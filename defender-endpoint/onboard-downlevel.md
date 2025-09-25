@@ -33,7 +33,7 @@ appliesto:
 - Windows 8.1 Enterprise
 - Windows Server 2008 R2 SP1
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 

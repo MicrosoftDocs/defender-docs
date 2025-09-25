@@ -26,7 +26,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 This article provides resources for resolving issues or configuring Microsoft Defender for Endpoint on Linux. This article describes how to collect diagnostic information, log installation issues, and configure Defender for Endpoint on Linux using the command line. This article also describes how to uninstall Defender for Endpoint on Linux.
 

@@ -26,7 +26,7 @@ appliesto:
 
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Connected applications integrates with the Defender for Endpoint platform using APIs.
 

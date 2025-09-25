@@ -32,7 +32,7 @@ appliesto:
 > For the full data streaming experience available, see [Stream Microsoft Defender XDR events](/defender-xdr/streaming-api).
 > If you're using Microsoft Defender for Business, see [Use the streaming API with Microsoft Defender for Business](/defender-business/mdb-streaming-api).
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Stream Advanced Hunting events to Event Hubs and/or Azure storage account
 

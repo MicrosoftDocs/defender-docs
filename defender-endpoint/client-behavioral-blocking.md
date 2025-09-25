@@ -30,7 +30,7 @@ appliesto:
 **Platform**
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Overview
 

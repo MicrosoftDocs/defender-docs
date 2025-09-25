@@ -22,7 +22,7 @@ appliesto:
 # Collect support logs in Microsoft Defender for Endpoint using live response
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 

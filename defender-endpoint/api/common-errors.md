@@ -36,7 +36,7 @@ The error codes listed in the following table may be returned by an operation on
 
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Error code|HTTP status code|Message
 ---|---|---

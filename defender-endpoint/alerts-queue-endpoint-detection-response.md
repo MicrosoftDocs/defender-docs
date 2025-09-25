@@ -26,7 +26,7 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Learn how you can view and manage the queue so that you can effectively investigate threats seen on entities such as devices, files, or user accounts.
 

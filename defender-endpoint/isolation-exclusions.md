@@ -27,7 +27,7 @@ appliesto:
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Isolation exclusion refers to the ability to exclude specific processes, IP addresses, or services from network isolation by applying the selective isolation response action to devices.
 

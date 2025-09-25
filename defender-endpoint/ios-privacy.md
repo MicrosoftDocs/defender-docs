@@ -24,7 +24,7 @@ appliesto:
 # Privacy information - Microsoft Defender for Endpoint on iOS
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 > [!NOTE]
 > Defender for Endpoint on iOS uses a VPN to provide the Web Protection feature. This is not a regular VPN and is a local or self-looping VPN that does not take traffic outside the device. **Microsoft or your organization, does not see your browsing activity.**

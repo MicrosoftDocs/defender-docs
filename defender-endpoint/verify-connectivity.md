@@ -23,7 +23,7 @@ appliesto:
 # STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 
 Check that clients are able to connect to the Defender for Endpoint service URLs using the Defender for Endpoint Client Analyzer to ensure that endpoints are able to communicate telemetry to the service. 

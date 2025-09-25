@@ -27,7 +27,7 @@ appliesto:
 
 
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Enroll macOS devices
 
