@@ -49,7 +49,7 @@ This article is updated frequently to let you know what's new in the latest rele
 |-------------------|----------------------|
 |Released:          |**September 25, 2025**|
 |Published:         |**September 25, 2025**|
-|Expiry:            |**May 29, 2026**|
+|Expiry:            |**Jun 04, 2026**|
 |Release version:   |**30.125082.0003.0**|
 |Engine version:    |**1.1.25070.4000**|
 |Signature version: |**1.435.242.0**|
