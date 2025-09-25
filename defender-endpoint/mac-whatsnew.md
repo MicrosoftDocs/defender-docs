@@ -723,7 +723,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
+- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 ### Feb-2022 (Build: 101.59.50 | Release version: 20.122021.15950.0)
 
