@@ -1,4 +1,4 @@
----
+﻿---
 title: Use basic permissions to access the portal
 description: Learn how to use basic permissions to access the Microsoft Defender for Endpoint portal.
 ms.service: defender-endpoint
@@ -17,17 +17,15 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 06/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Use basic permissions to access the portal
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Entra ID
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -94,3 +92,4 @@ For more information, see [Add or remove group members using Microsoft Entra ID]
 - [Manage portal access using RBAC](rbac.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Device health Microsoft Defender Antivirus health report
 description: Use the Microsoft Defender Antivirus report to track antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 search.appverid: met150
@@ -16,14 +16,12 @@ ms.collection:
 ms.topic: article
 ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Device health, Microsoft Defender Antivirus health report
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
@@ -385,3 +383,4 @@ The following table lays out the possible up to date report values for **Securit
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

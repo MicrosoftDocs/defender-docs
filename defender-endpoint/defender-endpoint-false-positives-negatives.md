@@ -1,4 +1,4 @@
----
+﻿---
 title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -22,15 +22,14 @@ ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Address false positives/negatives in Microsoft Defender for Endpoint
 
-**Applies to:**
-
-- [Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -415,3 +414,4 @@ If you've worked through all the steps in this article and still need help, cont
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

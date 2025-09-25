@@ -1,4 +1,4 @@
----
+﻿---
 title: Get alert related user information
 description: Learn how to use the Get alert-related user information API to retrieve the user related to a specific alert in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -16,17 +16,16 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 12/18/2020
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Get alert related user information API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -112,3 +111,4 @@ Here is an example of the response.
 }
 ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

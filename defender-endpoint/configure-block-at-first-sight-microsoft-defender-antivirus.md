@@ -1,4 +1,4 @@
----
+﻿---
 title: Enable block at first sight to detect malware in seconds
 description: Turn on the block at first sight feature to detect and block malware within seconds.
 ms.service: defender-endpoint
@@ -16,15 +16,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Turn on block at first sight
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus 
 
 **Platforms**
 - Windows
@@ -184,3 +183,4 @@ If you have a personal device that isn't managed by an organization, you might b
 - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Enable controlled folder access
 description: Learn how to protect your important files by enabling Controlled folder access
 ms.service: defender-endpoint
@@ -16,17 +16,16 @@ ms.collection:
 - mde-asr
 search.appverid: met150
 ms.date: 05/06/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Enable controlled folder access
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -127,3 +126,4 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

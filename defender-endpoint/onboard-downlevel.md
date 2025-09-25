@@ -1,4 +1,4 @@
----
+﻿---
 title: Onboard previous versions of Windows on Microsoft Defender for Endpoint
 description: Onboard supported previous versions of Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint sensor
 ms.service: defender-endpoint
@@ -15,17 +15,15 @@ ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 03/26/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboard previous versions of Windows
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 **Platforms**
 
@@ -327,3 +325,4 @@ You can use either of the following methods:
     $AgentCfg.ReloadConfiguration()
     ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

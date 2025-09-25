@@ -1,4 +1,4 @@
----
+﻿---
 title: Get live response results
 description: Learn how to retrieve a specific live response command result by its index.
 search.appverid: met150
@@ -18,16 +18,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 06/03/2021
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get live response results
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -156,3 +155,4 @@ C:\\windows\\TEMP\\OfficeClickToRun.dmp.zip\n51 MB\n\u0000\u0000\u0000",
 - [Cancel machine action](cancel-machine-action.md)
 - [Run live response](run-live-response.md) 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

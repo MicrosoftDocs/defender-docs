@@ -1,4 +1,4 @@
----
+﻿---
 title: Partner access through Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a web app to get programmatic access to  Microsoft Defender for Endpoint on behalf of your users.
@@ -17,18 +17,17 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Partner access through Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
@@ -275,3 +274,4 @@ Confirm you received a correct token.
 - [Access Microsoft Defender for Endpoint on behalf of a user](exposed-apis-create-app-nativeapp.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

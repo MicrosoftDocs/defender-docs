@@ -1,4 +1,4 @@
----
+﻿---
 title: Ring deployment using Intune and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Intune and Microsoft Update (MU).
 ms.service: defender-endpoint
@@ -17,17 +17,15 @@ ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 07/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -111,3 +109,4 @@ After the issue is resolved, set the "Signature Update Fallback Order" back to t
 ## See also 
 
 [Microsoft Defender Antivirus ring deployment](microsoft-defender-antivirus-ring-deployment.md)
+

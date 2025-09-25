@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage Microsoft Defender for Endpoint alerts
 description: Change the status of alerts, create suppression rules to hide alerts, submit comments, and review change history for individual alerts with the Manage Alert menu.
 ms.service: defender-endpoint
@@ -15,16 +15,15 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 01/15/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage Microsoft Defender for Endpoint alerts
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -148,3 +147,4 @@ Added comments instantly appear on the pane.
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

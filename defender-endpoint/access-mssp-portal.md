@@ -1,4 +1,4 @@
----
+﻿---
 title: Access the Microsoft Defender XDR MSSP customer portal
 description: Access the Microsoft Defender XDR MSSP customer portal
 ms.service: defender-endpoint
@@ -14,15 +14,13 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/21/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Access the Microsoft Defender XDR MSSP customer portal
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -54,3 +52,4 @@ Use the following steps to obtain the MSSP customer tenant ID and then use the I
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

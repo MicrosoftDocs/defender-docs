@@ -1,4 +1,4 @@
----
+﻿---
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
@@ -15,17 +15,15 @@ ms.topic: reference
 ms.subservice: edr
 search.appverid: met150
 ms.date: 01/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Live response command examples
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -257,3 +255,4 @@ undo file c:\Users\user\Desktop\malware.exe
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

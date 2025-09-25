@@ -1,4 +1,4 @@
----
+﻿---
 title: Investigate Microsoft Defender for Endpoint files
 description: Use the investigation options to get details on files associated with alerts, behaviors, or events.
 ms.service: defender-endpoint
@@ -15,16 +15,15 @@ ms.topic: concept-article
 ms.date: 07/10/2023
 ms.subservice: edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Investigate a file
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -126,3 +125,4 @@ The file capabilities view lists a file's activities as mapped to the MITRE ATT&
 - [Investigate a user account in Microsoft Defender for Endpoint](investigate-user.md)
 - [Take response actions on a file](respond-file-alerts.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshoot Microsoft Defender for Endpoint service issues
 description: Find solutions and workarounds to known issues such as server errors when trying to access the service.
 ms.service: defender-endpoint
@@ -14,16 +14,15 @@ ms.collection:
 ms.topic: troubleshooting
 search.appverid: met150
 ms.date: 02/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot service issues
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 This section addresses issues that might arise as you use the Microsoft Defender for Endpoint service.
 
@@ -84,3 +83,4 @@ When you use Microsoft Defender for Cloud to monitor servers, a Microsoft Defend
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Review events and errors using Event Viewer](event-error-codes.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

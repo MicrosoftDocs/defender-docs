@@ -1,4 +1,4 @@
----
+﻿---
 title: Identify your architecture and select a deployment method for Defender for Endpoint
 description: Select the best Microsoft Defender for Endpoint deployment strategy for your environment.
 ms.service: defender-endpoint
@@ -14,15 +14,13 @@ ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 04/17/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Identify your architecture and select a deployment method for Defender for Endpoint
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -72,3 +70,4 @@ Once you have determined the architecture of your environment and have created a
 After choosing your Defender for Endpoint architecture and deployment method continue to [Step 4 - Onboard devices](onboarding.md).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

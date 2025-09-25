@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage Microsoft Defender for Endpoint suppression rules
 description: You might need to prevent alerts from appearing in the portal by using suppression rules. Learn how to manage your suppression rules in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -14,17 +14,16 @@ ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 06/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage suppression rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -55,3 +54,4 @@ You can view a list of all the suppression rules and manage them in one place. Y
 - [Manage alerts](manage-alerts.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

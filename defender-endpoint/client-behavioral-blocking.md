@@ -1,4 +1,4 @@
----
+﻿---
 title: Client behavioral blocking
 description: Client behavioral blocking is part of behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
 author: batamig
@@ -18,16 +18,14 @@ ms.collection:
 - tier2
 search.appverid: met150
 ms.date: 04/25/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Client behavioral blocking
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platform**
 - Windows
@@ -93,3 +91,4 @@ If your organization is using Defender for Endpoint, client behavioral blocking 
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

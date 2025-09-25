@@ -1,4 +1,4 @@
----
+﻿---
 title: Use Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a native Windows app to get programmatic access to Microsoft Defender for Endpoint without a user.
@@ -17,18 +17,17 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Use Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
@@ -210,3 +209,4 @@ Verify to make sure you got a correct token:
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

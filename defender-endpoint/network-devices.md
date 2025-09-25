@@ -1,4 +1,4 @@
----
+﻿---
 title: Network device discovery and vulnerability management
 description: Security recommendations and vulnerability detection are now available for operating systems of switches, routers, WLAN controllers, and firewalls.
 ms.service: defender-endpoint
@@ -15,17 +15,16 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/11/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Network device discovery and vulnerability management
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 

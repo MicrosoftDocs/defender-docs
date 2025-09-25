@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender for Endpoint device timeline
 description: Use Microsoft Defender for Endpoint device timeline and timeline event flags.
 keywords: Defender for Endpoint device timeline, event flags
@@ -16,14 +16,14 @@ ms.topic: article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/26/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint device timeline
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 
 > [!NOTE]
@@ -158,3 +158,4 @@ You can apply more filters by clicking on the time bar. This will only show even
 
 :::image type="content" source="media/device-flag-filter.png" alt-text="Screenshot that shows the device timeline flag with the filter switched on." lightbox="media/device-flag-filter.png":::
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

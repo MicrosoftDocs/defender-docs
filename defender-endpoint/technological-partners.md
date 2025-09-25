@@ -1,4 +1,4 @@
----
+﻿---
 title: Technological partners of Microsoft Defender XDR
 ms.reviewer:
 description: View technological partners of Microsoft Defender XDR to enhance detection, investigation, and threat intelligence capabilities of the platform.
@@ -15,20 +15,15 @@ ms.collection:
 ms.topic: article
 search.appverid: met150
 ms.date: 06/03/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Technological partners of Microsoft Defender XDR
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-- Microsoft Defender Vulnerability Management
-- Microsoft Defender for Office 365
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -181,3 +176,4 @@ The following are the solution's categories:
 - [Connect apps to get visibility and control|Microsoft Docs](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
 - [Partner applications in Microsoft Defender for Endpoint|Microsoft Docs](partner-applications.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

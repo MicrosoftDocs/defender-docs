@@ -1,4 +1,4 @@
----
+﻿---
 title: Get browser extensions permission info
 description: Retrieves a list of all permissions required for a browser extension
 ms.service: defender-endpoint
@@ -16,15 +16,14 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/05/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # Get browser extensions permission information
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
 - [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
@@ -137,3 +136,4 @@ Here is an example of the response.
 - [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

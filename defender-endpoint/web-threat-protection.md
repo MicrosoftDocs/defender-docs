@@ -1,4 +1,4 @@
----
+﻿---
 title: Protect your organization against web threats
 description: Learn about web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
@@ -15,16 +15,15 @@ ms.collection:
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Protect your organization against web threats
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -78,3 +77,4 @@ The following procedure describes how to configure web threat protection using t
 - [Respond to web threats](web-protection-response.md)
 - [Network protection](network-protection.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

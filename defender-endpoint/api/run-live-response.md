@@ -1,4 +1,4 @@
----
+﻿---
 title: Run live response commands on a device
 description: Learn how to run a sequence of live response commands on a device.
 search.appverid: met150
@@ -18,14 +18,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 04/18/2023
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Run live response commands on a device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]
@@ -249,3 +249,4 @@ Content-type: application/json
 - [Cancel machine action](cancel-machine-action.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

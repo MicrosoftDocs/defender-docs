@@ -1,4 +1,4 @@
----
+﻿---
 title: Appendices for ring deployment using Group Policy and Windows Server Update Services (WSUS)
 description: Microsoft Defender for Endpoint is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides supplemental information to the Microsoft Defender Antivirus Group Policy WSUS ring deployment guide.
 ms.service: defender-endpoint
@@ -17,17 +17,16 @@ ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 07/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Appendices for Microsoft Defender Antivirus ring deployment using Group Policy and Windows Server Update Services (WSUS)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -72,3 +71,4 @@ Platform Updates, are the .exe's, dll's, and .sys's for the Microsoft Defender A
 ## See also
 
 [Microsoft Defender Antivirus pilot ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-pilot-ring-deployment-group-policy-wsus.md)
+

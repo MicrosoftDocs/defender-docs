@@ -1,4 +1,4 @@
----
+﻿---
 title: Cloud protection and sample submission at Microsoft Defender Antivirus
 description: Learn about cloud-delivered protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
@@ -15,15 +15,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Cloud protection and sample submission at Microsoft Defender Antivirus
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plan 1 and Plan 2
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -141,3 +140,4 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 - [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

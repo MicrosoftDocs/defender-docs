@@ -1,4 +1,4 @@
----
+﻿---
 title: Optimize ASR rule deployment and detections
 description: Optimize your attack surface reduction rules to identify and prevent typical malware exploits.
 ms.service: defender-endpoint
@@ -16,16 +16,15 @@ ms.topic: article
 ms.subservice: asr
 search.appverid: met150
 ms.date: 03/27/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Optimize ASR rule deployment and detections
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -58,3 +57,4 @@ For more information about ASR rule deployment in the [Microsoft Defender portal
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
 - [Monitor compliance to the Microsoft Defender for Endpoint security baseline](configure-machines-security-baseline.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

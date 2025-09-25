@@ -1,4 +1,4 @@
----
+﻿---
 title: Onboard devices and configure Microsoft Defender for Endpoint capabilities
 description: Onboard Windows 10 and Windows 11 devices, servers, non-Windows devices and learn how to run a detection test.
 ms.service: defender-endpoint
@@ -14,17 +14,15 @@ ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 09/30/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure Microsoft Defender for Endpoint capabilities
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
@@ -55,3 +53,4 @@ Onboarding devices effectively enables the endpoint detection and response capab
 
 For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

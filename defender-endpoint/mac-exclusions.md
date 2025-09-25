@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on macOS 
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on macOS. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
@@ -16,16 +16,15 @@ ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -171,3 +170,4 @@ mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

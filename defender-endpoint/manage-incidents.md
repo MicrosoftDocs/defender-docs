@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage Microsoft Defender for Endpoint incidents
 description: Manage incidents by assigning it, updating its status, or setting its classification.
 search.appverid: met150
@@ -15,17 +15,16 @@ ms.collection:
 ms.topic: article
 ms.subservice: edr
 ms.date: 06/05/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage Microsoft Defender for Endpoint incidents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -77,3 +76,4 @@ Added comments instantly appear on the pane.
 - [Investigate incidents](investigate-incidents.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
@@ -15,17 +15,15 @@ ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 08/01/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Protect macOS security settings with tamper protection
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -550,3 +548,4 @@ $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/md
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

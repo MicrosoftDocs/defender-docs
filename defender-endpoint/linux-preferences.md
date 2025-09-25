@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure security settings in Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
@@ -16,16 +16,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 

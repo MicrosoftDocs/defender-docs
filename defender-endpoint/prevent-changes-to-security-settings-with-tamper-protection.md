@@ -1,4 +1,4 @@
----
+﻿---
 title: Protect security settings with tamper protection
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, gberecz, ksarens
 manager: bagol
@@ -19,17 +19,15 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Protect security settings with tamper protection
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-- [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 
 **Platforms**
 
@@ -138,3 +136,4 @@ To learn more about Microsoft Defender Vulnerability Management, see [Dashboard 
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Advanced Hunting with PowerShell API Guide
 ms.reviewer: 
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
@@ -17,17 +17,16 @@ ms.date: 03/21/2025
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Microsoft Defender for Endpoint APIs using PowerShell
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities aren't included in Defender for Business.
@@ -139,3 +138,4 @@ $response
 - [Advanced Hunting using Python](run-advanced-query-sample-python.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

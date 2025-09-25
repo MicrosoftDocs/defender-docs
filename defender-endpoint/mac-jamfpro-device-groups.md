@@ -1,4 +1,4 @@
----
+﻿---
 title: Set up device groups in Jamf Pro
 description: Learn how to set up device groups in Jamf Pro for Microsoft Defender for Endpoint on macOS
 ms.service: defender-endpoint
@@ -16,16 +16,15 @@ ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 05/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Set up Microsoft Defender for Endpoint on macOS device groups in Jamf Pro
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -54,3 +53,4 @@ Set up the device groups similar to Group policy  organizational unite (OUs), Mi
 ## Next step
 - [Set up Microsoft Defender for Endpoint on macOS policies in Jamf Pro](mac-jamfpro-policies.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
 description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
 search.appverid: met150
@@ -16,20 +16,13 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.date: 03/11/2025
 ms.subservice: onboard
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Virtual desktop infrastructure (VDI) devices
-- Windows 11
-- Windows 10
-- Windows Server 2012 R2 and later
-- Azure Stack HCI OS, version 23H2 and later
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -201,3 +194,4 @@ The configuration settings in this link are recommended: [Configure Microsoft De
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

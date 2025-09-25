@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender for Endpoint on iOS
 ms.reviewer: 
 description: Describes how to install and use Microsoft Defender for Endpoint on iOS
@@ -16,16 +16,15 @@ ms.topic: how-to
 ms.subservice: ios
 search.appverid: met150
 ms.date: 06/10/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint on iOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -108,3 +107,4 @@ Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft I
 - [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

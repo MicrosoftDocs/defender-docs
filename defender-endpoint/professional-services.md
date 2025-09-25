@@ -1,4 +1,4 @@
----
+﻿---
 title: Professional services supported by Microsoft Defender XDR
 description: See the list of professional services that Microsoft Defender XDR can integrate with.
 ms.service: defender-endpoint
@@ -14,19 +14,14 @@ ms.collection:
 ms.topic: article
 search.appverid: met150
 ms.date: 12/16/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Professional services supported by Microsoft Defender XDR
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Vulnerability Management
-- Microsoft Defender for Office 365
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- [Microsoft Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -195,3 +190,4 @@ Mature and maintain your internal team's security capabilities to prevent, detec
 
 - [Configure managed service security provider integration](configure-mssp-support.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

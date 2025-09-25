@@ -1,4 +1,4 @@
----
+﻿---
 title: Increase compliance to the Microsoft Defender for Endpoint security baseline
 description: The Microsoft Defender for Endpoint security baseline sets security controls to provide optimal protection.
 ms.service: defender-endpoint
@@ -14,16 +14,15 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/25/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Increase compliance to the Microsoft Defender for Endpoint security baseline
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -108,3 +107,4 @@ Device configuration management monitors baseline compliance only of Windows 10 
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
 - [Optimize ASR rule deployment and detections](configure-machines-asr.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

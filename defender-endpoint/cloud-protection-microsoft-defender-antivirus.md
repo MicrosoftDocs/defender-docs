@@ -1,4 +1,4 @@
----
+﻿---
 title: Cloud protection and Microsoft Defender Antivirus
 description: Learn about cloud protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
@@ -16,17 +16,16 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Cloud protection and Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -67,4 +66,5 @@ Cloud protection is enabled by default. However, you might need to re-enable it 
 If your subscription includes Windows 10 E5, you can take advantage of emergency dynamic intelligence updates, which provide near real-time protection from emerging threats. When you turn on cloud protection, fixes for malware issues can be delivered via the cloud within minutes, instead of waiting for the next update. See [Configure Microsoft Defender Antivirus to automatically receive new protection updates based on reports from our cloud service](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

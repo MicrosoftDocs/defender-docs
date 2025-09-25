@@ -1,4 +1,4 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on macOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
@@ -16,17 +16,15 @@ ms.topic: reference
 ms.subservice: macos
 search.appverid: met150
 ms.reviewer: mavel
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -1150,3 +1148,4 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Performance improvements & Product improvements
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

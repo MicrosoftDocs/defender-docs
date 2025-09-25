@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender Antivirus full scan considerations and best practices
 description: Understand when and how to use full scans with Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -19,14 +19,12 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus full scan considerations and best practices
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -147,3 +145,4 @@ Excluding certain locations from scanning can shorten the scan time. There are t
   - `%Windir%\Temp`
 
 - The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Don't use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: OData queries with Microsoft Defender for Endpoint
 ms.reviewer: yongrhee
 description: Use these examples of Open Data Protocol (OData) queries to help with data access protocols in Microsoft Defender for Endpoint.
@@ -17,16 +17,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # OData queries with Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business. 
@@ -517,3 +517,4 @@ json{
 
 [Microsoft Defender for Endpoint APIs](apis-intro.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

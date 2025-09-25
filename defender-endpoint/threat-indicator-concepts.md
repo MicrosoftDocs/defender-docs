@@ -1,4 +1,4 @@
----
+﻿---
 title: Understand threat intelligence concepts in Microsoft Defender for Endpoint
 description: Create custom threat alerts for your organization and learn the concepts around threat intelligence in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
@@ -14,16 +14,15 @@ ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 09/21/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Understand threat intelligence concepts
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -60,3 +59,4 @@ IOCs have a many-to-one relationship with alert definitions such that an alert d
 
 - [Overview of indicators](indicators-overview.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy and manage device control using JAMF 
 description: Learn how to use device control policies using JAMF.
 ms.service: defender-endpoint
@@ -16,18 +16,16 @@ ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Deploy and manage Device Control using JAMF
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -93,3 +91,4 @@ A new device control property is now available to add to the user experience.
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

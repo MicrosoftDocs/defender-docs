@@ -1,4 +1,4 @@
----
+﻿---
 title: Understand and use attack surface reduction
 ms.reviewer: niwelton, joshbregman
 description: Learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
@@ -17,18 +17,16 @@ ms.collection:
 - mde-asr
 ms.date: 07/30/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Understand and use attack surface reduction capabilities
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -301,3 +299,4 @@ As mentioned in the video, Defender for Endpoint includes several attack surface
 | [Web protection](web-protection-overview.md) | Web protection lets you secure your devices against web threats and helps you regulate unwanted content. |
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

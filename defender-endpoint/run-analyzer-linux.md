@@ -1,4 +1,4 @@
----
+﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
 author: paulinbar
@@ -17,15 +17,14 @@ ms.collection:
 - mde-macos
 search.appverid: met150
 audience: ITPro
-f1.keywords: NOCSH 
----
+f1.keywords: NOCSH
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Run the client analyzer on Linux
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -691,6 +690,7 @@ The Python version of the client analyzer accepts command line parameters to per
 - [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 
 

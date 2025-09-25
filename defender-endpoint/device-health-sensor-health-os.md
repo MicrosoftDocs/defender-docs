@@ -1,4 +1,4 @@
----
+﻿---
 title: Device health Sensor health & OS report
 description: Use the device health report to track device health, OS platforms, and Windows 10 versions.
 search.appverid: met150
@@ -15,14 +15,12 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 ms.reviewer: mkaminska
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Device health, Sensor health & OS report
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
@@ -156,3 +154,4 @@ The Windows version trend graph can help you quickly determine whether your orga
 [Microsoft Defender Antivirus health](device-health-microsoft-defender-antivirus-health.md#microsoft-defender-antivirus-health-tab)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

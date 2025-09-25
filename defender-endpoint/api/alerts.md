@@ -1,4 +1,4 @@
----
+﻿---
 title: Get alerts API
 description: Learn about the methods and properties of the Alert resource type in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -16,15 +16,15 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/21/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Alert resource type
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 > [!NOTE]
 > For the full available Alerts API experience across all Microsoft Defenders' products, visit: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -227,3 +227,4 @@ GET https://api.securitycenter.microsoft.com/api/alerts/da637472900382838869_136
 [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

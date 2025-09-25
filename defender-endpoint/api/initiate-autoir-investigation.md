@@ -1,4 +1,4 @@
----
+﻿---
 title: Start Investigation API
 description: Use this API to start investigation on a device.
 ms.service: defender-endpoint
@@ -16,16 +16,15 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Business
 
+---
 # Start Investigation API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -114,3 +113,4 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
 }
 ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
