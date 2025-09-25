@@ -33,9 +33,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | -------- | -------- | -------- |
 |September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
-|September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
-|September 14, 2025|GA|Exposure width for Internet exposure analysis|
-|September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+|September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-exposure)|
+|September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width)|
+|September 11, 2025 | Preview | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
 
 ### Malware automated remediation in Defender for Storage (Preview)
 
@@ -61,15 +61,15 @@ For more information, see [Identify and remediate attack paths](how-to-manage-at
 
 ### Trusted Exposure
 
-September 14, 2025 
+September 14, 2025
 
-Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration via [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configure, internet-facing resources (Azure VM/VMSS, AWS EC2, GCP Compute Instances) exposed only to these trusted IPs are treated as trusted and no attack paths are generated. This reduces false positives and enhances the quality of attack path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration through the [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configured, internet-facing resources (such as Azure VMs/VMSS instances, AWS EC2 instances, and GCP Compute instances) that are exposed only to these trusted IPs are treated as trusted, and Defender for Cloud doesn’t generate attack paths for them. This reduces false positives and improves the quality of attack-path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VMs/VMSS, AWS EC2, and GCP Compute instances.
 
-### Exposure Width 
+### Exposure Width
 
-September 14, 2025 
+September 14, 2025
 
-**Defender for Cloud now includes Exposure Width (GA)** that calculates how broadly or narrowly a resource is exposed to the public internet based on its networking rules. It helps security teams prioritize and remediate the most critical findings in attack paths and recommendations by factoring in the extent of exposure. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+Exposure Width, now generally available, measures how broadly a resource is exposed to the public internet based on its networking rules. This feature helps security teams prioritize and remediate the most critical attack-path and recommendation findings by factoring in the extent of exposure. Current support includes **multi-cloud compute resources** across Azure VMs/VMSS, AWS EC2, and GCP Compute instances.
 
 ### Trivy dependency scanning for code repositories (Update)
 
