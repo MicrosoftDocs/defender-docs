@@ -25,7 +25,7 @@ When you summarize a recommendation, you get a quick overview of the recommendat
 
 ## Summarize with Copilot
 
-After you select a recommendation, you can use Copilot to summarize it. By using prompts, you can get a better understanding of the recommendation and decide how to handle it.
+After you select a recommendation, use Copilot to summarize it. By using prompts, you can get a better understanding of the recommendation and decide how to handle it.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -45,7 +45,7 @@ After you select a recommendation, you can use Copilot to summarize it. By using
 
     :::image type="content" source="media/summarize-with-copilot/summarize-with-copilot-results.png" alt-text="Screenshot of the Copilot window that shows the summary of the recommendation." lightbox="media/summarize-with-copilot/summarize-with-copilot-results.png":::
 
-When you understand the recommendation, you can decide how to handle it. Copilot stays open so you can enter other prompts as needed.
+When you understand the recommendation, decide how to handle it. Copilot stays open so you can enter other prompts as needed.
 
 ## Next step
 
