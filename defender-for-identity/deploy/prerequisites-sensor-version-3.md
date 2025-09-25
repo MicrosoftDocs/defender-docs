@@ -34,7 +34,6 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
     - `Security setting (All permissions)`
-- We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
 ## Sensor requirements and recommendations
 
@@ -49,6 +48,7 @@ The following table summarizes the server requirements and recommendations for t
 |Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
 |Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 |ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
+|Identity and response actions|The sensor doesn't require credentials to be provided in the portal. Even if credentials are entered, the sensor uses the **Local System identity** on the server to query Active Directory and perform response actions. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled. |
 
 ### Dynamic memory requirements
 
