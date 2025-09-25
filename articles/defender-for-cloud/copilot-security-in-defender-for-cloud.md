@@ -70,7 +70,7 @@ Security Copilot in Defender for Cloud doesn't rely on any of the available plan
 1. [Have access to Azure Copilot](/azure/copilot/overview).
 1. [Have Security Compute Units assigned for Security Copilot](/copilot/security/get-started-security-copilot).
 
-To enjoy the full range of Security Copilot's capabilities in Defender for Cloud, enable the [Defender for Cloud Security Posture Management (DCSPM) plan](concept-cloud-security-posture-management.md#plan-availability) on your environments. The DCSPM plan includes many extra security features such as [Attack path analysis](how-to-manage-attack-path.md), [Risk prioritization](risk-prioritization.md), and more, all of which you can navigate and manage by using Security Copilot. Without the DCSPM plan, you can still use Security Copilot in Defender for Cloud, but with limited capacity.
+To enjoy the full range of Security Copilot's capabilities in Defender for Cloud, enable the [Defender for Cloud Security Posture Management (DCSPM) plan](concept-cloud-security-posture-management.md#plan-availability) on your environments. The DCSPM plan includes extra security. These features include [Attack path analysis](how-to-manage-attack-path.md), [Risk prioritization](risk-prioritization.md), and others. You can use Security Copilot to navigate and manage each feature. Without the DCSPM plan, you can still use Security Copilot in Defender for Cloud, but with limited capacity.
 
 ## Monitor your usage
 
@@ -80,7 +80,7 @@ Learn more about [usage limits](/copilot/security/manage-usage).
 
 ## Provide feedback
 
-Your feedback on the Defender for Cloud integration with Security Copilot helps with development. To provide feedback, in Copilot, select **How's this response?** at the bottom of each completed prompt and select any of the following options:
+Your feedback on the Defender for Cloud integration with Security Copilot helps with development. Provide feedback in Copilot, with the **How's this response** after each completed prompt, and select any of the following options:
 
 - **Looks right** - Select this option if the results are accurate, based on your assessment.
 - **Needs improvement** - Select this option if any detail in the results is incorrect or incomplete, based on your assessment.
