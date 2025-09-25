@@ -24,7 +24,7 @@ appliesto:
 # Microsoft Defender for Endpoint API release notes
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 The following information lists the updates made to the Microsoft Defender for Endpoint APIs and the dates they were made.
 

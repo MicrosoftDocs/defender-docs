@@ -30,7 +30,7 @@ appliesto:
 This article provides an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information.
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
  

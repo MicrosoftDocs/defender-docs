@@ -22,7 +22,6 @@ appliesto:
 
 # Microsoft Defender for Endpoint on Android - Privacy information
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Defender for Endpoint on Android collects information from your configured Android devices and stores it in the same tenant where you have Defender for Endpoint. The information is collected to help keep Defender for Endpoint for Android secure, up to date, performing as expected, and to support the service.
 

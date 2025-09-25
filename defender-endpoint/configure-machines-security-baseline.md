@@ -99,7 +99,7 @@ Device configuration management monitors baseline compliance only of Windows 10 
 > [!TIP]
 > Security baselines on Intune provide a convenient way to comprehensively secure and protect your devices. [Learn more about security baselines on Intune](/mem/intune/protect/security-baselines).
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Related articles
 

@@ -27,7 +27,7 @@ appliesto:
 
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 

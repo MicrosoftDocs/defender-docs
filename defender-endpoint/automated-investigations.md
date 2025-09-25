@@ -38,7 +38,7 @@ The technology in automated investigation uses various inspection algorithms and
 This article provides an overview of AIR and includes links to next steps and additional resources.
 
 > [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## How the automated investigation starts
 

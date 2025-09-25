@@ -23,7 +23,7 @@ appliesto:
 # Minimum requirements for Microsoft Defender for Endpoint
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 There are some minimum requirements for onboarding devices to Defender for Endpoint. This article describes licensing, hardware and software requirements, and other configuration settings needed to onboard devices.
 

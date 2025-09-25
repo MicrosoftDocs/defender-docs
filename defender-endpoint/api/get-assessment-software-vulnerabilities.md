@@ -27,7 +27,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 

@@ -30,7 +30,7 @@ appliesto:
 This article lists the prerequisites for installing and configuring Microsoft Defender for Endpoint on macOS. It also includes links to additional resources for more information.
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 

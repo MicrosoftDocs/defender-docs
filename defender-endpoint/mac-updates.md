@@ -27,7 +27,7 @@ appliesto:
 
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 

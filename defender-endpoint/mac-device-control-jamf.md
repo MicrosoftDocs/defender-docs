@@ -27,7 +27,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Device control in Microsoft Defender for Endpoint on macOS enables you to audit, allow, or prevent the read, write, or execute access to removable storage. Device control also allows you to manage iOS and portable devices and Bluetooth media, with or without exclusions.
 

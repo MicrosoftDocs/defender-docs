@@ -32,7 +32,7 @@ appliesto:
 > Advanced hunting capabilities are not included in Defender for Business. 
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Endpoint URI and versioning
 

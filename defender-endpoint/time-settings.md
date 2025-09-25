@@ -25,7 +25,7 @@ appliesto:
 
 
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 This article describes time zone settings and options. You can use **Time zone** menu to configure the time zone and view license information.
 
