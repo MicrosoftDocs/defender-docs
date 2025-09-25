@@ -94,7 +94,7 @@ The following are the solution's categories:
 |---|---|---|
 |[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2201878)|Aruba, a Hewlett Packard Enterprise company|Network Access Control applies consistent policies and granular security controls to wired and wireless networks|
 |[Vectra Network Detection and Response (NDR)](https://go.microsoft.com/fwlink/?linkid=2201969)|Vectra|Vectra applies AI & security research to detect and respond to cyber-attacks in real time.|
-|[Blue Hexagon for Network](https://go.microsoft.com/fwlink/?linkid=2201780)|Blue Hexagon|Blue Hexagon built the industry's first real-time deep learning platform for network threat protection.|
+|Blue Hexagon for Network|Blue Hexagon|Blue Hexagon built the industry's first real-time deep learning platform for network threat protection.|
 |[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2201880)|CyberMDX|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention, and response into your Microsoft Defender for Endpoint environment.|
 |[HYAS Protect](https://www.hyas.com/hyas-protect)|HYAS|HYAS Protect utilizes authoritative knowledge of attacker infrastructure to proactively protect MDE endpoints from cyber attacks.|
 |[Better Mobile Security Platform](https://go.microsoft.com/fwlink/?linkid=2202043)|Better Mobile Security Inc.|Provides solution for Threat, Phishing, and Privacy Protection and Simulation.|
