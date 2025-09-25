@@ -43,6 +43,24 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
+
+|Build:             |**101.25082.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 25, 2025**|
+|Published:         |**September 25, 2025**|
+|Expiry:            |**May 29, 2026**|
+|Release version:   |**30.125082.0003.0**|
+|Engine version:    |**1.1.25070.4000**|
+|Signature version: |**1.435.242.0**|
+
+What's new
+- Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8, ensuring comprehensive vulnerability coverage.
+
+- Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. This ensures consistent availability across environments and streamlines troubleshooting for customers by making diagnostic tools readily accessible out-of-the-box.
+
+- Other quality and stability fixes.
+
 ### September-2025 Build: 101.25072.0003 | Release version: 30.125072.0003.0
 
 |Build:             |**101.25072.0003**    |
@@ -74,7 +92,6 @@ What's new
 - The `mdatp threat quarantine add` command now requires superuser (root) privileges.
 - Custom definition path can now be updated without stopping Defender for Endpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
 - Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus (real-time protection) and EDR functionality to operate without conflict. For other fanotify-based tools, MDE can still be used safely by setting the antivirus enforcement level to passive, helping avoid system instability.
-- Both the binary and Python versions of Client Analyzer are now included in the local package. There is no longer a need to download it separately, as it comes bundled by default. You can find it at the location `/opt/microsoft/mdatp/conf/client_analyzer/`.
 - Other stability enhancements and bug fixes.
 
 ### July-2025 Build: 101.25052.0007 | Release version: 30.125052.0007.0
