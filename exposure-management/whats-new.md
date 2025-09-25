@@ -26,6 +26,14 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ## September 2025
 
+### New data connectors
+
+We have added new data connectors for Wiz and Palo Alto Prisma. These connectors enable seamless integration of vulnerability and asset data from leading cloud security platforms into Microsoft Security Exposure Management, providing enhanced visibility and context for your environments.
+
+For more information, see:
+- [Wiz data connector](wiz-data-connector.md)
+- [Palo Alto Prisma data connector](palo-alto-prisma-data-connector.md)
+
 ### New predefined classifications
 
 The following predefined **Device** classification rules were added to the critical assets list:
