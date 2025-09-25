@@ -56,7 +56,7 @@ To see the version of the sensor run:
 
  
 
-The support policy here applies to all Helm-based and multi-cloud installations. For scenarios where the sensor is deployed as part of AKS, please refer to: [Supported Kubernetes versions in Azure Kubernetes Service (AKS). - Azure Kubernetes Service | Microsoft Learn](/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
+The support policy here applies to all Helm-based and multicloud installations. For scenarios where the sensor is deployed as part of AKS, please refer to: [Supported Kubernetes versions in Azure Kubernetes Service (AKS) - Azure Kubernetes Service | Microsoft Learn](/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
 
 |Version|Preview Date|GA Date|End of Life (EoL)|
 | -------- | -------- | -------- | -------- |
