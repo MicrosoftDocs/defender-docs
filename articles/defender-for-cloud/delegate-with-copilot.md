@@ -40,7 +40,7 @@ Use Copilot to delegate recommendations so the right person or team handles the 
 
 1. Select **Generate message with Copilot**.
 
-1. Follow the prompts to delegate the recommendation.
+1. Delegate the recommendation with the provided prompts.
 
 After you delegate the recommendation, you can monitor the progress of the remediation on Defender for Cloud's recommendations page. Copilot stays open, and you can enter other prompts as needed.
 
