@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 04/30/2025
+ms.date: 09/25/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
@@ -12,7 +12,7 @@ ms.date: 04/30/2025
 
 Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you remediate recommendations on the recommendations page with natural language prompts. Remediating recommendations with Microsoft Security Copilot lets you improve your security posture by addressing the risks and vulnerabilities in your environment.
 
-Once a recommendation is summarized with Microsoft Security Copilot in Defender for Cloud, you can decide how best to handle it. Using prompts, you can have Microsoft Security Copilot assist you in the remediation process.
+Once Microsoft Security Copilot summarizes a recommendation in Defender for Cloud, you can decide how to handle it. By using prompts, you can have Microsoft Security Copilot assist you in the remediation process.
 
 ## Prerequisites
 
@@ -24,13 +24,13 @@ Once a recommendation is summarized with Microsoft Security Copilot in Defender 
 
 ## Remediate a recommendation
 
-Copilot in Defender for Cloud can assist with the remediation process for recommendations.
+Copilot in Defender for Cloud can help you remediate recommendations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Select a recommendation.
 
@@ -44,7 +44,7 @@ Copilot in Defender for Cloud can assist with the remediation process for recomm
 
 1. (Optional) If a script is presented, select **Run** to apply the remediation.
 
-If you're unable or unsure how to remediate a recommendation, you can ask Copilot for additional information to assist you with more prompts. You can also delegate the recommendation to an appropriate person if needed.
+If you're unable or unsure how to remediate a recommendation, you can ask Copilot for more information. You can also delegate the recommendation to an appropriate person if needed.
 
 ## Next step
 
