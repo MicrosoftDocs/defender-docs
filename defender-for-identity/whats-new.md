@@ -25,6 +25,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
+### Identity posture recommendations view on the identity page (preview)
+
+We've added a new tab on the Identity profile page that contains all active identity-related identity security posture assessments (ISPMs). This feature consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.   
+For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
+
 ### New API support for unified agent 
 We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
