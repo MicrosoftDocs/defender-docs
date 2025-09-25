@@ -71,7 +71,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Configuration management** > **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**).
+2. In the navigation pane, choose **Configuration management** \> **Device configuration**. Policies are organized by operating system (such as **Windows client**) and policy type (such as **Next-generation protection** and **Firewall**).
 
 3. Select an operating system tab (for example, **Windows clients**), and then review the list of policies under each category (such as **Next-generation protection** and **Firewall**).
 

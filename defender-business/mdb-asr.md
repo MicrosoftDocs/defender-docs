@@ -39,7 +39,7 @@ These rules help protect your network and devices but shouldn't cause disruption
 
 ## Set up ASR rules using Intune
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Attack surface reduction**.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** \> **Attack surface reduction**.
 
 2. Choose **Create policy** to create a new policy.
 

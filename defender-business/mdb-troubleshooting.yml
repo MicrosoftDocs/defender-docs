@@ -46,7 +46,7 @@ sections:
 
           1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-          2. In the navigation bar, go to **Assets** > **Devices**.
+          2. In the navigation bar, go to **Assets** \> **Devices**.
 
              - If you see a message that says, "Hang on! We're preparing new spaces for your data and connecting them," it means that Defender for Business isn't finished provisioning. This process is happening now, and can take up to 24 hours to complete.
 
@@ -98,7 +98,7 @@ sections:
 
           1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-          2. Choose **Settings** > **Endpoints**. Under **Configuration management**, select **Enforcement scope**.
+          2. Choose **Settings** \> **Endpoints**. Under **Configuration management**, select **Enforcement scope**.
 
           3. Under **OS platform**, turn on **Windows Client devices**.
 

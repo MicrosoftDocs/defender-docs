@@ -67,7 +67,7 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
 1. Go to the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and sign in.
 
-2. In the navigation pane, go to **Users** > **Active users**.
+2. In the navigation pane, go to **Users** \> **Active users**.
 
 3. Select a user account to open their flyout pane.
 

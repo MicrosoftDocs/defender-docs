@@ -34,7 +34,7 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Choose **Settings** > **Endpoints** > **Licenses**.
+2. Choose **Settings** \> **Endpoints** \> **Licenses**.
 
 3. Review your available and assigned licenses. The calculation is based on detected users who accessed devices that are onboarded to Defender for Business (or Defender for Endpoint).
 

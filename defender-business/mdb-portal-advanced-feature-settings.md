@@ -66,8 +66,8 @@ The following table describes settings you can view and  edit in Defender for Bu
 |**Microsoft Defender XDR**|**Account**|View details such where your data is stored, your tenant ID, and your organization (org) ID.|
 |**Microsoft Defender XDR**|**Preview features**|Turn on preview features to try upcoming features and new capabilities. You can be among the first to preview new features and provide feedback.|
 |**Endpoints**|**Email notifications**|Set up or edit your email notification rules. When vulnerabilities are detected or an alert is created, the recipients specified in your email notification rules receive an email notification. [Learn more about email notifications](mdb-email-notifications.md).|
-|**Endpoints**|**Device management** > **Onboarding**|Onboard devices to Defender for Business by using a downloadable script. For more information, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).|
-|**Endpoints**|**Device management** > **Offboarding**|Offboard (remove) devices from Defender for Business. Offboarded devices no longer send data to Defender for Business. Data from when the device was onboarded is retained. For more information, see [Offboarding a device](mdb-offboard-devices.md).|
+|**Endpoints**|**Device management** \> **Onboarding**|Onboard devices to Defender for Business by using a downloadable script. For more information, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).|
+|**Endpoints**|**Device management** \> **Offboarding**|Offboard (remove) devices from Defender for Business. Offboarded devices no longer send data to Defender for Business. Data from when the device was onboarded is retained. For more information, see [Offboarding a device](mdb-offboard-devices.md).|
 
 <a name='access-your-settings-in-the-microsoft-365-defender-portal'></a>
 

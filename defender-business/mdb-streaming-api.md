@@ -46,7 +46,7 @@ With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hu
 ## Use the streaming API with Event Hubs
 
 > [!NOTE]
-> [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your organization. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** > **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
+> [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your organization. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -89,7 +89,7 @@ Each event hub message in Azure Event Hubs contains a list of records. Each reco
 
 ## Use the streaming API with Azure Storage
 
-Azure Storage requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your organization. Then, sign in to your [Azure organization](https://ms.portal.azure.com/), and go to **Subscriptions** > **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
+Azure Storage requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your organization. Then, sign in to your [Azure organization](https://ms.portal.azure.com/), and go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
 ### Enable raw data streaming
 
