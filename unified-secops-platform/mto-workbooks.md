@@ -35,6 +35,7 @@ Before using Workbooks in MTO, ensure you have the following prerequisites:
 * Access to Microsoft Sentinel. ​
 * Onboarded to the Defender portal. ​
 * Access to more than one tenant using B2B/GDAP.
+* For the workbook aggregated view, at least one workbook must be available on one or more target tenants.
 * For the Situational Awareness workbook, your home tenant (primary workspace) must have threat intelligence data. ​
 
 ## Access a workbook​
@@ -53,7 +54,7 @@ To navigate to the multitenant Organization (MTO) portal in Microsoft Sentinel. 
 
 ## Open the situational awareness workbook
 
-Use the workbook to get insights across your tenants, including health status, trends, and metrics.
+Use the workbook to get insights across your tenants, including health status, trends, and metrics. This workbook is multi tenant supported, so you can select which tenants to include.
 
 1. From the MTO portal, select the button below the Situational Awareness card
 
@@ -75,3 +76,4 @@ Ensure your home tenant is included in the scope and has threat intelligence dat
 
 * The Workbooks page doesn't currently support editing or creating workbooks. ​
 * The Situational Awareness workbook uses threat intelligence data exclusively from the home tenant, and this setting can't be changed.
+* Workbook templates are currently not supported in the aggregated view. ​

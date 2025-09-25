@@ -3,11 +3,11 @@ title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/03/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -314,6 +314,10 @@ In general, you shouldn't need to define exclusions for Microsoft Defender Antiv
 ## Part 4: Submit a file for analysis
 
 You can submit entities, such as files and fileless detections, to Microsoft for analysis. Microsoft security researchers analyze all submissions, and their results help inform Defender for Endpoint threat protection capabilities. When you sign in at the submission site, you can track your submissions.
+
+### Submit hashes for analysis
+
+To investigate hashes, use the https://aka.ms/wdsi web portal. A maximum of 100 hashes can be submitted. The source of the Indicator of Compromise (IOC), must be provided. This can be a blog post, security article, or any other relevant source.
 
 ### Submit a file for analysis
 

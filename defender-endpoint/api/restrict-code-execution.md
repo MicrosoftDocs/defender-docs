@@ -2,10 +2,10 @@
 title: Restrict app execution API
 description: Use this API to create calls related to restricting an application from executing.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

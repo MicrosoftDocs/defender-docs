@@ -30,7 +30,7 @@ appliesto:
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!IMPORTANT]
-> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtuall all consumer and entrprise Outlook clients. For more information, see the [Frequently asked questions](#frequently-asked-questions) section in this article.
+> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtually all consumer and enterprise Outlook clients. For more information, see the [Frequently asked questions](#frequently-asked-questions) section in this article.
 
 The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
@@ -68,7 +68,7 @@ The rest of this article describes how to remove the Report Message and Report P
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> role gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
@@ -178,7 +178,7 @@ We recommend that you try the built-in **Report** button. If you're still facing
 
 ### Q: I can't scope the built-in Report button, which prevents me from rolling it out. What can I do?
 
-A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leavs a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the the built-in **Report** button smoothly without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
+A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
 
 If you're looking to scope the functionality for experimentation, we recommend using a test environment.
 
@@ -192,7 +192,7 @@ A: No. Unfortunately, due to the previously stated reasons, the add-ins will be 
 
 ### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 
-A: After you, remove the add-in from the integrated apps from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in as per their instructions.
+A: After you remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in according to their instructions.
 
 On the [User reported settings page](submissions-user-reported-messages-custom-mailbox.md) in the Defender portal, you need to do the following steps:
 
