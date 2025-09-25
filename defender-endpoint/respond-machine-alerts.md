@@ -103,19 +103,19 @@ Or, use this alternate procedure:
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
    
-2. Add comments and then select **Confirm**.
+1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
    
-3. Select **Action center** from the response actions section of the device page.
+1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
    
-4. Select **Package collection package available** to download the collection package.
+1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-
-   > [!NOTE]
+   
+      > [!NOTE]
    > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
    
 ### Investigation package contents for Windows devices
@@ -216,7 +216,8 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 - You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](mde-linux-prerequisites.md). Ensure that the following prerequisites are enabled:
    - `iptables`
    - `ip6tables`
-   - Linux kernel with `CONFIG_NETFILTER`, `CONFID_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER`
+   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+    
 - Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
