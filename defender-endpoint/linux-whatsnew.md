@@ -43,6 +43,24 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
+
+|Build:             |**101.25082.0003**    |
+|-------------------|----------------------|
+|Released:          |**September 25, 2025**|
+|Published:         |**September 25, 2025**|
+|Expiry:            |**May 29, 2026**|
+|Release version:   |**30.125082.0003.0**|
+|Engine version:    |**1.1.25070.4000**|
+|Signature version: |**1.435.242.0**|
+
+What's new
+- Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8, ensuring comprehensive vulnerability coverage.
+
+- Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. This ensures consistent availability across environments and streamlines troubleshooting for customers by making diagnostic tools readily accessible out-of-the-box.
+
+- Other quality and stability fixes.
+
 ### September-2025 Build: 101.25072.0003 | Release version: 30.125072.0003.0
 
 |Build:             |**101.25072.0003**    |
