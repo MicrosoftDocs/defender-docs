@@ -59,9 +59,9 @@ Entities and might also appear as **grouped nodes**, which have numerical indica
 
 A node might also have any of the following indicators around it:
 
-- **Critical asset** ![Critical asset icon.](/defender-xdr/media/ah-hunting-graph/critical-asset-icon.png)  - Indicates that an entity is classified as business-critical or valuable, as identified in the [critical asset management](/security-exposure-management/critical-asset-management) in Microsoft Security Exposure Management. The nodes representing critical assets also have a golden halo surrounding them. 
-- **Vulnerability** [icon] - Indicates that at least one vulnerability was detected on the entity.
-- **Explore connected assets** ![Explore connected asset icon.](/defender-xdr/media/ah-hunting-graph/explore-icon.png) - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones.
+- **Critical asset** - Indicates that an entity is classified as business-critical or valuable, as identified in the [critical asset management](/security-exposure-management/critical-asset-management) in Microsoft Security Exposure Management. This indicator appears as a golden crown ![Critical asset icon.](/defender-xdr/media/ah-hunting-graph/critical-asset-icon.png). The nodes representing critical assets also have a golden halo surrounding them. 
+- **Vulnerability** - Indicates that at least one vulnerability was detected on the entity. This indicator appears as a red bug ![Vulnerability icon.](/defender-xdr/media/ah-hunting-graph/vulnerability-icon.png).
+- **Explore connected assets** - Indicates that the node can expand the hunting graph further beyond the initial results. Expanding the graph lets you explore other relationships the selected entity has with the other ones. This indicator appears as a blue plus sign ![Explore connected asset icon.](/defender-xdr/media/ah-hunting-graph/explore-icon.png). 
 - **Discovery source** - Indicates the entity's data source. This indicator appears as the icon of the Defender product protecting the entity in blue (for example, ![Defender for Endpoint icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-endpoint.png) for Microsoft Defender for Endpoint, or ![Defender for Cloud icon.](/defender-xdr/media/ah-hunting-graph/discovery-source-cloud.png) for Microsoft Defender for Cloud).
 
   >[!TIP]
