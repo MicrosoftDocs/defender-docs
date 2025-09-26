@@ -27,7 +27,7 @@ ms.date: 09/30/2025
 ---
 # Understanding graphs and visualizations in Microsoft Defender
 
-Microsoft Defender use interactive graphs to visualize attack paths, [blast radius](investigate-incidents.md), and relationships between entities in your environment. These visualizations provide a bird’s eye view of a possible threat or attack, letting you and your security operations (SOC) team to investigate and [hunt](advanced-hunting-graph.md) them quickly.
+Microsoft Defender use interactive graphs to visualize attack paths, [blast radius](investigate-incidents.md#view-blast-radius-graphs), and relationships between entities in your environment. These visualizations provide a bird’s eye view of a possible threat or attack, letting you and your security operations (SOC) team to investigate and [hunt](advanced-hunting-graph.md) them quickly.
 
 The graphs generated in the Defender portal are composed of [nodes](#nodes) and [edges](#edges). This article enumerates and defines the commonly used icons for graph these elements.
 

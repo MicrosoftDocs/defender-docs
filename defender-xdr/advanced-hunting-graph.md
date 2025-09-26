@@ -25,7 +25,10 @@ search.appverid: met150
 ms.date: 09/30/2025
 
 ---
-# Hunt for threats using the hunting graph
+# Hunt for threats using the hunting graph (Preview)
+
+> [!IMPORTANT]
+> Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The **hunting graph** provides visualization capabilities in [advanced hunting](advanced-hunting-overview.md) by rendering threat scenarios as interactive graphs. This feature allows security operations center (SOC) analysts, threat hunters, and security researchers conduct threat hunting and incident response easily and more intuitively, improving their efficiency and ability to assess possible security issues. 
 
