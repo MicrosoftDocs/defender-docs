@@ -560,9 +560,9 @@ In the **View data by Email \> Spam** and **Chart breakdown by Detection Technol
 - **Fingerprint matching**: The message closely resembles a previous detected malicious message.
 - **General filter**
 - **IP reputation**: The message was from a source that was previously identified as sending spam in other Microsoft 365 organizations.
+- **Mail bombing**: Messages detected as part of a mail bombing attack where attackers flood targeted email addresses with an overwhelming volume of messages.
 - **Mixed analysis detection**: Multiple filters contributed to the verdict for the message.
 - **URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.
-- **Mail bombing**: Messages detected as part of a mail bombing attack where attackers flood targeted email addresses with an overwhelming volume of messages.
 
 In the details table below the chart, the following information is available:
 
