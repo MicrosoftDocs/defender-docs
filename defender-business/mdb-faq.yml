@@ -67,10 +67,10 @@ sections:
 
           If you have more than 60 servers, you need a different kind of license. For example:
 
-         - Microsoft Defender for Endpoint Server.
-         - Microsoft Defender for Servers Plan 1 or Plan 2.
+          - Microsoft Defender for Endpoint Server.
+          - Microsoft Defender for Servers Plan 1 or Plan 2.
 
-         For more information, see [Onboard servers to Microsoft Defender for Endpoint](/defender-endpoint/onboard-server).
+          For more information, see [Onboard servers to Microsoft Defender for Endpoint](/defender-endpoint/onboard-server).
 
       - question: What's different between Microsoft Defender for Business servers and Microsoft Defender for Servers Plan 1 and Plan 2?
         answer: |
