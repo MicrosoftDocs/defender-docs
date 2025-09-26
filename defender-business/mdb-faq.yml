@@ -113,6 +113,10 @@ sections:
 
           [Device control in Microsoft Defender for Endpoint](/defender-endpoint/device-control-overview) prevents users, endpoints, or both from using unauthorized removable storage media.
 
+      - question: How do I configure attack surface reduction rules and capabilities in Defender for Business?
+        answer: |
+          Use Intune to configure your attack surface reduction rules. Other attack surface reduction capabilities can be configured in the Microsoft Defender portal. See [Attack surface reduction capabilities in Defender for Business](mdb-asr.md).
+
       - question: How do I run custom reports with Defender for Business?
         answer: |
           Defender for Business uses Defender for Endpoint APIs for all available capabilities. You can use the APIs with a reporting tool. As an example scenario, you can use a Power BI connector and schedule a PowerShell script to generate executive summaries formatted in HTML, and send those summaries via email

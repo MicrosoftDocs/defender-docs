@@ -38,7 +38,7 @@ As threats are detected and alerts are triggered, incidents are created. Your co
 
 2. Select an alert to open its flyout pane, where you can learn more about the alert.
 
-   :::image type="content" source="/defender/media/defender-business/mdb-incident-flyout.png" alt-text="Screenshot of incident selected with flyout open":::
+   :::image type="content" source="media/mdb-incident-flyout.png" alt-text="Screenshot of incident selected with flyout open":::
 
 3. In the flyout pane, you can do the following tasks:
    - See the alert title.

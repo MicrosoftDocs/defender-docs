@@ -31,7 +31,7 @@ In Defender for Business, you can manage devices as follows:
 
 ## View the list of onboarded devices
 
-:::image type="content" source="/defender/media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
+:::image type="content" source="media/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, you can see the list of devices and view some information about them.
@@ -41,7 +41,7 @@ If no devices are listed, see [Onboard devices to Defender for Business](mdb-onb
 
 ## Take action on a device that has threat detections
 
-:::image type="content" source="/defender/media/defender-business/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available.":::
+:::image type="content" source="media/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available.":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, select a device from the list.
