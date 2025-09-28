@@ -63,7 +63,7 @@ For more information, see [Identify and remediate attack paths](how-to-manage-at
 
 September 14, 2025
 
-Defender for Cloud now lets you define trusted IP ranges to reduce false positives in internet-exposure analysis. Resources reachable only from trusted IPs are considered trusted, so Defender for Cloud doesn't generate attack paths for them.
+Defender for Cloud allows you to define trusted internet protocol (IP) ranges to reduce false positives in internet-exposure analysis. Resources that are only accessible from trusted IPs are considered trusted. Defender for Cloud won't generate attack paths for trusted IPs.
 
 Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-public-preview).
 
