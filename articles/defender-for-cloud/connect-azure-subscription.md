@@ -2,7 +2,7 @@
 title: Connect your Azure subscriptions
 description: Learn how to connect your Azure subscriptions to Microsoft Defender for Cloud and protect your cloud-based applications.
 ms.topic: install-set-up-deploy
-ms.date: 05/13/2025
+ms.date: 09/28/2025
 ms.custom: mode-other
 ---
 
@@ -94,6 +94,12 @@ If you want to disable any of the plans, toggle the individual plan to **off**. 
 
 > [!TIP]
 > To enable Defender for Cloud on all subscriptions within a management group, see [Enable Defender for Cloud on multiple Azure subscriptions](onboard-management-group.md).
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Integrate with Microsoft Defender XDR
 
