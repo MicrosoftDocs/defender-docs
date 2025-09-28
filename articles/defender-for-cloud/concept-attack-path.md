@@ -2,7 +2,7 @@
 title: Investigate risks with security explorer/attack paths in Microsoft Defender for Cloud
 description: Learn about investigating risks with security explorer/attack paths in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 02/03/2025
+ms.date: 09/10/2025
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 
@@ -27,9 +27,11 @@ Defender for Cloud uses the generated graph to perform an attack path analysis a
 
 ## What is an attack path?
 
-An attack path is a series of steps a potential attacker uses to breach your environment and access your assets. An attack path starts at an entry point, such as a vulnerable resource. The attack path follows available lateral movement within your multicloud environment, such as using attached identities with permissions to other resources. The attack path continues until the attacker reaches a critical target, such as databases containing sensitive data.
+An attack path is a series of steps a potential attacker uses to breach your environment and access your assets. Attack paths focus on real, externally-driven and exploitable threats that adversaries could use to compromise your organization. An attack path starts at an external entry point, such as an internet-exposed vulnerable resource. The attack path follows available lateral movement within your multicloud environment, such as using attached identities with permissions to other resources. The attack path continues until the attacker reaches a critical target, such as databases containing sensitive data.
 
-Defender for Cloud's attack path analysis feature uses the cloud security graph and a proprietary algorithm to find exploitable entry points and the steps an attacker can take to reach your vital assets. The algorithm exposes attack paths and suggests recommendations to fix issues, breaking the attack path and preventing a breach.
+Defender for Cloud's attack path analysis feature uses the cloud security graph and a proprietary algorithm to find exploitable entry points that begin outside your organization and the steps an attacker can take to reach your vital assets. This helps you cut through the noise and act faster by emphasizing only the most urgent, externally initiated, and exploitable threats. The algorithm exposes attack paths and suggests recommendations to fix issues, breaking the attack path and preventing a breach.
+
+Attack Path expands cloud threat detection to cover a broad range of cloud resources, including storage accounts, containers, serverless environments, unprotected repositories, unmanaged APIs, and AI agents. Each attack path is built from a real, exploitable weakness such as exposed endpoints, misconfigured access settings, or leaked credentials, ensuring that identified threats reflect genuine risk scenarios. By analyzing cloud configuration data and performing active reachability scans, the system validates whether exposures are accessible from outside the environment, reducing false positives and emphasizing threats that are both real and actionable.
 
 :::image type="content" source="media/concept-cloud-map/attack-path.png" alt-text="Image that shows a sample attack path from attacker to your sensitive data.":::
 
