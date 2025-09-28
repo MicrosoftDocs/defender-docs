@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/09/2025
+ms.date: 09/28/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -33,8 +33,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | -------- | -------- | -------- |
 |September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
-|September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-exposure)|
-|September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width)|
+|September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-ips-support-for-internet-exposure-analysis)|
+|September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width-for-internet-exposure-analysis)|
 |September 11, 2025 | Preview | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
 
 ### Malware automated remediation in Defender for Storage (Preview)
@@ -59,13 +59,13 @@ Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World
 
 For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
  
-### Trusted Exposure
+### Trusted IPs support for internet-exposure analysis
 
 September 14, 2025
 
 Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration through the [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configured, internet-facing resources (such as Azure VMs/VMSS instances, AWS EC2 instances, and GCP Compute instances) that are exposed only to these trusted IPs are treated as trusted, and Defender for Cloud doesn’t generate attack paths for them. This reduces false positives and improves the quality of attack-path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VMs/VMSS, AWS EC2, and GCP Compute instances.
 
-### Exposure Width
+### Exposure width for internet-exposure analysis
 
 September 14, 2025
 
