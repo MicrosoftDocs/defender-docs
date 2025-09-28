@@ -73,7 +73,7 @@ September 14, 2025
 
 Exposure width is now generally available in Microsoft Defender for Cloud. Exposure width shows how a resource is exposed to the public internet based on its network rules. This feature helps security teams find and fix critical attack paths.
 
-For more information, see [Internet Exposure Width](internet-exposure-analysis.md#internet-exposure-width).
+Learn more about [internet exposure width](internet-exposure-analysis.md#internet-exposure-width).
 
 ### Trivy dependency scanning for code repositories (Update)
 
