@@ -2,7 +2,7 @@
 title: Protect your databases with Defender for Databases
 description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud to enhance your database security.
 ms.topic: how-to
-ms.date: 09/08/2025
+ms.date: 09/28/2025
 #customer intent: As a database administrator, I want to enable Defender for Databases so that I can enhance the security of my databases.
 ---
 
@@ -58,6 +58,12 @@ Defender for Databases protects different types of supported databases in your s
 - [Enable Defender for Azure Cosmos DB](defender-for-databases-enable-cosmos-protections.md) protection.
 
 When all of these plans are enabled, you protect all supported databases types in your subscription. 
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Related content
 
