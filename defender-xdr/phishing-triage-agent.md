@@ -430,10 +430,11 @@ It's important to ensure that your organization has sufficient SCUs for healthy 
 - **Cost per email processed**
 - **Capacity consumption over time**
 
-For more information, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
+You can also export the dashboard data into Excel for more detailed analysis.
+
+For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
 
 If the agent is already running and you have sufficient capacity in your organization, no further action is required and the agent will keep running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent) in the documentation.
-
 
 ## Related content
 
