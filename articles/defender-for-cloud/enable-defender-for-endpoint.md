@@ -222,4 +222,4 @@ When a Windows device is onboarded through Microsoft Defender for Cloud, Defende
     - `SecurityAgentId`
 
 > [!IMPORTANT]
-> Editing the registry incorrectly can cause serious problems. Back up the registry before you make any changes.
+> Editing the registry incorrectly can cause serious problems. Back up the registry or create a system restore point before making any changes.
