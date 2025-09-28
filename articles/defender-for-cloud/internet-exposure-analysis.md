@@ -44,12 +44,12 @@ The following table lists the network components that Defender for Cloud assesse
 | AWS      | Elastic load balancer |
 | GCP      | Load balancer |
 
-## Trusted Exposure (Public Preview)
+## Trusted Exposure (Preview)
 
 > [!NOTE]
 > Trusted Exposure currently supports multicloud virtual machines only including Azure VMs/VMSS, AWS EC2, and GCP compute instance.
 
-Trusted Exposure, now available in Public Preview, allows organizations to define CIDRs (IP ranges/blocks) and individual IP addresses that are known and trusted. If a resource is exposed only to these trusted IPs, it is not considered internet-facing. In Defender CSPM, such resources are treated as having no internet exposure risk, equivalent to internal-only cloud resources.
+Trusted Exposure, now available in Preview, allows organizations to define CIDRs (IP ranges/blocks) and individual IP addresses that are known and trusted. If a resource is exposed only to these trusted IPs, it is not considered internet-facing. In Defender CSPM, such resources are treated as having no internet exposure risk, equivalent to internal-only cloud resources.
 
 When Trusted IPs are configured, Defender for Cloud will:
 
