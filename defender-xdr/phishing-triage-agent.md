@@ -418,19 +418,19 @@ The Phishing Triage Agent operates within a zero-trust environment. The system e
 
 To try the agent, you must first have access to **Security Copilot in Microsoft Defender**. If you don’t yet have Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
 
-After you enable Security Copilot, the agent setup option appears in the Microsoft Defender portal if your environment meets the necessary [prerequisites](#prerequisites). For more information on initiating see [setup documentation](#set-up-the-phishing-triage-agent):
+After you enable Security Copilot, the agent setup option appears in the Microsoft Defender portal if your environment meets the necessary [prerequisites](#prerequisites). For more information on agent setup, see [Set up the Phishing Triage Agent](#set-up-the-phishing-triage-agent):
 
  
 ### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?**
 
-If you've been using the trial, when your offer ends, the agent automatically starts to consume SCUs provisioned for the workspace in which it's deployed.
+If you joined the limited-time trial, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
 
-To evaluate SCU usage and plan capacity, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
+It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
 
 - **Cost per email processed**
 - **Capacity consumption over time**
 
-Ensure your organization has sufficient SCUs for healthy agent operation. For guidance, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
+For more information, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
 
 If the agent is already running and you have sufficient capacity in your organization, no further action is required and the agent will keep running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent) in the documentation.
 
