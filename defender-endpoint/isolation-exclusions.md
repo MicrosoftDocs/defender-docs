@@ -17,7 +17,7 @@ search.appverid: met150
 ms.date: 07/01/2025
 ---
 
-# Isolation exclusions (preview)
+# Isolation exclusions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -25,8 +25,6 @@ ms.date: 07/01/2025
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-[!include[Prerelease information](../includes/prerelease.md)]
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
