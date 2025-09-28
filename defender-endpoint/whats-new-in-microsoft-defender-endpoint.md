@@ -34,6 +34,12 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
 - [Preview features](/defender-xdr/preview)
 
+## September 2025
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|Isolation exclusions |GA |Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions (for example, remote remediation or monitoring) continue while limiting broader network exposure. |
+
 ## August 2025
 
 |Feature  |Preview/GA  |Description  |
