@@ -421,7 +421,7 @@ To try the agent, you must first have access to **Security Copilot in Microsoft 
 After you enable Security Copilot, the agent setup option appears in the Microsoft Defender portal if your environment meets the necessary [prerequisites](#prerequisites). For more information on agent setup, see [Set up the Phishing Triage Agent](#set-up-the-phishing-triage-agent):
 
  
-### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?**
+### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
 
 If you joined the limited-time trial, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
 
