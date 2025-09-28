@@ -29,7 +29,7 @@ Defender for Identity sensors can be directly installed on the following servers
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.
 - **Defender for Identity cloud service**  
-Defender for Identity is a cloud-based service that operates on Azure infrastructure and is currently deployed across [multiple regions](privacy-compliance.md/#data-location)
+Defender for Identity is a cloud-based service that operates on Azure infrastructure and is currently deployed across [multiple regions](/privacy-compliance.md/#data-location)
 
 ## Microsoft Defender portal
 
