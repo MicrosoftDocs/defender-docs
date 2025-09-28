@@ -202,16 +202,24 @@ To remove the Defender for Endpoint solution from your machines:
 1. Remove the `MDE.Windows` or `MDE.Linux` extension from the machine.
 1. [Offboard the device from the Microsoft Defender for Endpoint service](/defender-endpoint/offboard-machines).
 
-### Remove Defender for Endpoint integration tags
+### Remove Defender for Endpoint integration tags (Windows only)
 
-When a device is onboarded through Microsoft Defender for Cloud, Defender for Endpoint adds registry-based integration tags. These tags remain on the device after offboarding and don’t affect functionality. If you want to completely remove them:
+When a Windows device is onboarded through Microsoft Defender for Cloud, Defender for Endpoint creates Defender-for-Cloud–specific registry values. These tags remain on the device after offboarding and don’t affect functionality. 
 
-1. Open **Registry Editor** (`regedit.exe`).
-2. Go to:
+> [!NOTE]
+> This cleanup step applies only to Windows devices. On Linux, the product stores this information internally and doesn't show it in the registry.
 
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\DeviceTags`
+**Remove the tags**
 
-3. Delete the `mdatp` EDR tags.
+1. On the Windows desktop, open **Registry Editor**.
+1. In the left pane, navigate to: 
+
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\DeviceTags`
+    
+1. In the right pane, delete the following value names if they exist:
+    - `AzureResourceId`
+    - `SecurityWorkspaceId`
+    - `SecurityAgentId`
 
 > [!IMPORTANT]
-> Editing the registry incorrectly can cause serious problems. Back up the registry before making any changes.
+> Editing the registry incorrectly can cause serious problems. Back up the registry before you make any changes.
