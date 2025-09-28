@@ -48,7 +48,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Continues Export |GA|GA|NA|
 | Workflow automation |GA|GA|NA|
 | Quick Fix |GA|GA|NA|
-| Agentless VM vulnerability scanning |GA|GA|NA|
+| Agentless Virtual Machine (VM) vulnerability scanning |GA|GA|NA|
 | Agentless VM secrets scanning |GA|GA|NA|
 | Attack path analysis |GA|GA|NA|
 | Risk prioritization |GA|GA|NA|
@@ -58,7 +58,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | PR annotations |GA|NA|NA|
 | Internet exposure analysis |GA|GA|NA|
 | External attack surface management |GA|NA|NA|
-| CIEM |GA|NA|NA|
+| Cloud Infrastructure Entitlement Management (CIEM) |GA|NA|NA|
 | Regulatory compliance |GA|GA|NA|
 | ServiceNow Integration |GA|NA|NA|
 | Critical assets protection |GA|GA|NA|
