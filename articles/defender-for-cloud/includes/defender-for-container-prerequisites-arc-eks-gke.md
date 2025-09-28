@@ -15,5 +15,6 @@ Validate that the following endpoints for public cloud deployments are configure
 | *.ods.opinsights.azure.com | *.ods.opinsights.azure.us | *.ods.opinsights.azure.cn  | 443  |
 | *.oms.opinsights.azure.com | *.oms.opinsights.azure.us | *.oms.opinsights.azure.cn | 443 |
 | login.microsoftonline.com  | login.microsoftonline.us | login.chinacloudapi.cn  | 443  |
+| *.cloud.defender.microsoft.com| N/A                          | N/A                                | 443  |
 
 You also need to validate the [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/network-requirements).
