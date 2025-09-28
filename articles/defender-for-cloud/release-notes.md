@@ -63,13 +63,17 @@ For more information, see [Identify and remediate attack paths](how-to-manage-at
 
 September 14, 2025
 
-Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration through the [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configured, internet-facing resources (such as Azure VMs/VMSS instances, AWS EC2 instances, and GCP Compute instances) that are exposed only to these trusted IPs are treated as trusted, and Defender for Cloud doesn’t generate attack paths for them. This reduces false positives and improves the quality of attack-path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VMs/VMSS, AWS EC2, and GCP Compute instances.
+Defender for Cloud allows you to define trusted internet protocol (IP) ranges to reduce false positives in internet-exposure analysis. Resources that are only accessible from trusted IPs are considered trusted. Defender for Cloud won't generate attack paths for trusted IPs.
+
+Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-preview).
 
 ### Exposure width for internet-exposure analysis
 
 September 14, 2025
 
-Exposure Width, now generally available, measures how broadly a resource is exposed to the public internet based on its networking rules. This feature helps security teams prioritize and remediate the most critical attack-path and recommendation findings by factoring in the extent of exposure. Current support includes **multi-cloud compute resources** across Azure VMs/VMSS, AWS EC2, and GCP Compute instances.
+Exposure width is now generally available in Microsoft Defender for Cloud. Exposure width shows how a resource is exposed to the public internet based on its network rules. This feature helps security teams find and fix critical attack paths.
+
+Learn more about [internet exposure width](internet-exposure-analysis.md#internet-exposure-width).
 
 ### Trivy dependency scanning for code repositories (Update)
 

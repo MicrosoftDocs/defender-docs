@@ -812,7 +812,7 @@
     - name: Deploy
       displayName: hybrid, arc, Defender for Servers
       items:
-      - name: Deploy Defender for Servers
+      - name: Protect your servers with Defender for Servers
         href: tutorial-enable-servers-plan.md
       - name: Set up the free data ingestion benefit
         href: data-ingestion-benefit.md
