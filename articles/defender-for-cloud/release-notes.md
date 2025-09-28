@@ -65,7 +65,7 @@ September 14, 2025
 
 Defender for Cloud allows you to define trusted internet protocol (IP) ranges to reduce false positives in internet-exposure analysis. Resources that are only accessible from trusted IPs are considered trusted. Defender for Cloud won't generate attack paths for trusted IPs.
 
-Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-public-preview).
+Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-preview).
 
 ### Exposure width for internet-exposure analysis
 
