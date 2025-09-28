@@ -71,7 +71,7 @@ For more information, see Trusted Exposure [Public Preview](internet-exposure-an
 
 September 14, 2025
 
-Exposure Width, now generally available in Defender for Cloud, shows how broadly a resource is exposed to the public internet based on its network rules. This feature helps security teams prioritize and remediate critical attack paths.
+Exposure width is now generally available in Microsoft Defender for Cloud. Exposure width shows how a resource is exposed to the public internet based on its network rules. This feature helps security teams find and fix critical attack paths.
 
 For more information, see [Internet Exposure Width](internet-exposure-analysis.md#internet-exposure-width).
 
