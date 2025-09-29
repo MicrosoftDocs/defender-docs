@@ -42,7 +42,7 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 > [!NOTE]  
-> Microsoft Defender for Endpoint on Linux is updated regularly. Security fixes are included as part of monthly releases, but they may not always be listed as a separate "Security Patch" item in these notes. If a release contains security-related updates, they will be reflected under the version changes below. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
+> Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Releases for Defender for Endpoint on Linux
 
