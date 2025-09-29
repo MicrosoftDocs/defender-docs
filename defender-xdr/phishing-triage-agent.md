@@ -427,7 +427,7 @@ If you haven’t onboarded to Security Copilot, see [Get started with Security C
 
 If you joined the limited-time trial, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
 
-It's important to ensure that your organization has sufficient SCUs for uninterrupted, healthy agent operation after the trial. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
+It's important to ensure that your organization has sufficient SCUs for healthy agent operation after the trial. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
 
 - **Cost per email processed**
 - **Capacity consumption over time**
