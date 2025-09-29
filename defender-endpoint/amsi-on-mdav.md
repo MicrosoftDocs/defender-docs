@@ -6,6 +6,11 @@ ms.author: bagol
 manager: bagol
 ms.reviewer: yongrhee
 ms.date: 12/05/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -23,13 +28,6 @@ ai-usage: ai-assisted
 
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
 
-**Applies to**:
-
-- Microsoft Defender XDR
-- Microsoft Defender Antivirus
-- Microsoft Defender for Endpoint P1 & P2
-- Microsoft Defender for Business
-- Microsoft Defender for Individuals
 
 **Platforms**:
 

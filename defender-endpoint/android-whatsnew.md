@@ -1,4 +1,4 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint on Android
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
@@ -16,15 +16,14 @@ ms.topic: reference
 ms.subservice: android
 search.appverid: met150
 ms.date: 09/05/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # What's new in Microsoft Defender for Endpoint on Android
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
@@ -286,3 +285,4 @@ Notify your users and help desk (as applicable) that end users must accept the n
 ## See also
 
 [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
+
