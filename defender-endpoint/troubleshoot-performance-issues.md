@@ -73,12 +73,6 @@ If you can readily identify the software affecting system performance, go to the
 
 We recommend that software vendors follow the various guidelines in [Partnering with the industry to minimize false positives](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). The vendor can submit their software through the [Microsoft Security Intelligence portal](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
 
-## What if I still have an issue?
-
-You can submit a ticket to [Microsoft support](/defender-endpoint/contact-support).
-
-Follow the steps in [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
-
 ## See also
 
 - [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md)
