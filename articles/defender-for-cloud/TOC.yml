@@ -613,10 +613,10 @@
               - name: Overview Microsoft Defender EASM integration
                 displayName: CSPM, Cloud security, posture, management, Microsoft Defender EASM
                 href: concept-easm.md
-          - name: Microsoft Copilot for Security
+          - name: Microsoft Security Copilot
             items:
-              - name: Overview Microsoft Copilot for Security integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Copilot for Security
+              - name: Overview Microsoft Security Copilot integration
+                displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
               - name: Summarize recommendations with Microsoft Security Copilot
                 displayName: copilot, security, recommendations, summarize
@@ -674,6 +674,32 @@
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
+    - name: Plan 
+      items:
+        - name: Get started
+          displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, adaptive application controls, adaptive network hardening, docker, fileless attack detection, auditd, simulate alerts
+          href: plan-defender-for-servers.md
+        - name: Plan roles and permissions
+          href: plan-defender-for-servers-roles.md
+        - name: Choose a plan and deployment scope
+          displayName: plan, defender for servers, plan 1, plan 2, plans, scope, deployment, p1, p2
+          href: plan-defender-for-servers-select-plan.md
+        - name: Understand data collection
+          href: plan-defender-for-servers-agents.md
+        - name: Understand data storage and workspaces
+          href: plan-defender-for-servers-data-workspace.md
+        - name: Scale a deployment
+          href: plan-defender-for-servers-scale.md  
+    - name: Deploy
+      displayName: hybrid, arc, Defender for Servers
+      items:
+      - name: Protect your servers with Defender for Servers
+        href: tutorial-enable-servers-plan.md
+      - name: Set up the free data ingestion benefit
+        href: data-ingestion-benefit.md
+      - name: Modify plan settings
+        displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
+        href: configure-servers-coverage.md
     - name: Configure
       items:
       - name: Defender integration
@@ -914,7 +940,7 @@
                 href: on-demand-malware-scanning.md
               - name: Advanced configurations for malware scanning
                 href: advanced-configurations-for-malware-scanning.md
-              - name: Set up responses to malware scanning
+              - name: Set up automated remediation for malware detection
                 href: defender-for-storage-configure-malware-scan.md
       - name: Sensitive data threat detection
         items:

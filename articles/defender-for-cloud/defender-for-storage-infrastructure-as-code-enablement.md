@@ -1,23 +1,23 @@
 ---
-title: Enable Defender for Storage with Infrastructure as Code
-description: Learn how to enable and configure Microsoft Defender for Storage with Infrastructure as Code (IaC) templates.
+title: Enable Defender for Storage by Using Infrastructure as Code
+description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates.
 ms.date: 07/01/2025
 ms.topic: how-to
-#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage using Infrastructure as Code templates so that I can ensure all storage accounts are protected.
+#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
 ---
 
-# Enable and configure with Infrastructure as Code templates
+# Enable and configure Defender for Storage by using IaC templates
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription are protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
+We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
 
 > [!TIP]
-> You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## [Enable on a subscription](#tab/enable-subscription/)
 
 ### Terraform template
 
-To enable and configure Microsoft Defender for Storage at the subscription level using Terraform, you can use the following code snippet:
+To enable and configure Defender for Storage at the subscription level by using Terraform, you can use the following code snippet:
 
 ```terraform
 resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
@@ -39,23 +39,17 @@ resource "azurerm_security_center_subscription_pricing" "DefenderForStorage" {
 }
 ```
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
+- **Modify the monthly cap for malware scanning**: Adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Remove the corresponding extension block from the Terraform code.
+- **Disable the entire Defender for Storage plan**: Set the `tier` property value to `"Free"`, and remove the `subPlan` and `extension` properties.
 
-**Disabling features**:
-
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can remove the corresponding extension block from the Terraform code.
-
-**Disabling the entire Defender for Storage plan**:
-
-To disable the entire Defender for Storage plan, set the `tier` property value to **"Free"** and remove the `subPlan` and `extension` properties.
-
-Learn more about the `azurerm_security_center_subscription_pricing` resource by referring to the [azurerm_security_center_subscription_pricing documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). Additionally, you can find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+To learn more about the `azurerm_security_center_subscription_pricing` resource, refer to the [its Terraform documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
 ### Bicep template
 
-To enable and configure Microsoft Defender for Storage at the subscription level using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to subscription](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription), and add the following to your Bicep template:
+To enable and configure Defender for Storage at the subscription level by using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to `subscription`](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription). Add the following code to your Bicep template:
 
 ```terraform
 targetScope = 'subscription'
@@ -83,23 +77,17 @@ resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
 }
 ```
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly cap for malware scanning per storage account, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
+- **Modify the monthly cap for malware scanning**: Adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` under `SensitiveDataDiscovery`.
+- **Disable the entire Defender for Storage plan**: Set the `pricingTier` property value to `Free`, and remove the `subPlan` and `extensions` properties.
 
-**Disabling features**:
-
-If you want to turn off the On-upload malware scanning or Sensitive data threat detection features, you can change the `isEnabled` value to **False** under sensitive data discovery.
-
-**Disabling the entire Defender for Storage plan**:
-
-To disable the entire Defender for Storage plan, set the `pricingTier` property value to **Free** and remove the `subPlan` and `extensions` properties.
-
-Learn more about the [Bicep template in the Microsoft security/pricings documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
+Learn more about the Bicep template in the [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
 
 ### Azure Resource Manager template
 
-To enable and configure Microsoft Defender for Storage at the subscription level using an Azure Resource Manager (ARM) template, add this JSON snippet to the resources section of your ARM template:
+To enable and configure Defender for Storage at the subscription level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
 
 ```json
 {
@@ -127,25 +115,19 @@ To enable and configure Microsoft Defender for Storage at the subscription level
 }
 ```
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
+- **Modify the monthly cap for malware scanning**: Adjust the `CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` under `SensitiveDataDiscovery`.
+- **Disable the entire Defender for Storage plan**: Set the `pricingTier` property value to `Free`, and remove the `subPlan` and `extension` properties.
 
-**Disabling features**:
-
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under sensitive data discovery.
-
-**Disabling the entire Defender for Storage plan**:
-
-To disable the entire Defender plan, set the `pricingTier` property value to **Free** and remove the `subPlan` and `extension` properties.
-
-Learn more about the ARM template in the Microsoft.Security/Pricings documentation.
+Learn more about the ARM template in the [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template&source=docs).
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-### Terraform template - storage account
+### Terraform template
 
-To enable and configure Microsoft Defender for Storage at the storage account level using Terraform, import the [AzAPI provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs) and use the following code snippet:
+To enable and configure Defender for Storage at the storage account level by using Terraform, import the [AzAPI provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs) and use the following code snippet:
 
 ```terraform
 resource "azurerm_storage_account" "example" { ... }
@@ -174,44 +156,38 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
 }
 ```
 
-> [!NOTE]
-> The `azapi_resource_action` used here is an action that is specific to the configuration of Microsoft Defender for Storage. It's different from the typical resource declarations in Terraform, and it's used to perform specific actions on the resource, such as enabling or disabling features.
+In this code, `azapi_resource_action` is an action that's specific to the configuration of Defender for Storage. It's different from the typical resource declarations in Terraform. It's used to perform specific actions on the resource, such as enabling or disabling features.
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
+- **Modify the monthly cap for malware scanning**: Adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` in the section for the `malwareScanning` or `sensitiveDataDiscovery` property.
+- **Disable the entire Defender for Storage plan**: Use the following code snippet:
 
-**Disabling features**:
+  ```terraform
+  resource "azurerm_storage_account" "example" { ... }
 
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
+  resource "azapi_resource_action" "disable_defender_for_Storage" {
+    type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
+    resource_id = "${azurerm_storage_account.example.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
+    method      = "PUT"
 
-**Disabling the entire Defender for Storage plan**:
+    body = jsonencode({
+      properties = {
+        isEnabled = false
+        overrideSubscriptionLevelSettings = false
+      }
+    })
+  }
+  ```
 
-To disable the entire Defender for Storage plan for the storage account, you can use the following code snippet:
+  If you want to disable the Defender for Storage plan for the storage account under subscriptions with Defender for Storage enabled at the subscription level, you can change the value of `overrideSubscriptionLevelSettings` to `True`. If you want to keep some features enabled, you can modify the properties accordingly.
 
-```terraform
-resource "azurerm_storage_account" "example" { ... }
+For further customization and control over your storage account's security settings, see the [Microsoft.Security/defenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
-resource "azapi_resource_action" "disable_defender_for_Storage" {
-  type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
-  resource_id = "${azurerm_storage_account.example.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
-  method      = "PUT"
+### Bicep template
 
-  body = jsonencode({
-    properties = {
-      isEnabled = false
-      overrideSubscriptionLevelSettings = false
-    }
-  })
-}
-```
-
-You can change the value of `overrideSubscriptionLevelSettings` to **True** to disable Defender for Storage plan for the storage account under subscriptions with Defender for Storage enabled at the subscription level. If you want to keep some features enabled, you can modify the properties accordingly.
-Learn more about the [Microsoft.Security/defenderForStorageSettings](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) API documentation for further customization and control over your storage account's security settings. Additionally, you can find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
-
-### Bicep template - storage account
-
-To enable and configure Microsoft Defender for Storage at the storage account level using Bicep, add the following to your Bicep template:
+To enable and configure Defender for Storage at the storage account level by using Bicep, add the following code to your Bicep template:
 
 ```terraform
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' ...
@@ -236,28 +212,17 @@ resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettin
 }
 ```
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth parameter` to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 10,000 GB.
+- **Modify the monthly cap for malware scanning**: Adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` in the section for the `malwareScanning` or `sensitiveDataDiscovery` property.
+- **Disable the entire Defender for Storage plan**: Set the `isEnabled` property value to `False`, and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
-**Disabling features**:
+For more information, see the [Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
-If you want to turn off the On-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
+### ARM template
 
-**Disabling the entire Defender for Storage plan**:
-
-To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
-
-Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) documentation.
-
-> [!TIP]
-> Malware scanning can be configured to send scanning results to: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
-
-Learn more on how to [set up response for malware scanning results.](defender-for-storage-configure-malware-scan.md)
-
-### ARM template - storage account
-
-To enable and configure Microsoft Defender for Storage at the storage account level using an ARM template, add this JSON snippet to the resources section of your ARM template:
+To enable and configure Defender for Storage at the storage account level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
 
 ```terraform
 {
@@ -282,20 +247,22 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 }
 ```
 
-**Modifying the monthly cap for malware scanning**:
+By customizing this code, you can:
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value *-1*. The default limit is set at 10,000 GB.
-
-**Disabling features**:
-
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
-
-**Disabling the entire Defender for Storage plan**:
-
-To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
+- **Modify the monthly cap for malware scanning**: Adjust the `capGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value `-1`. The default limit is 10,000 GB.
+- **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` in the section for the `malwareScanning` or `sensitiveDataDiscovery` property.
+- **Disable the entire Defender for Storage plan**: Set the `isEnabled` property value to `False`, and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
 ---
 
-## Next step
+> [!TIP]
+> You can configure malware scanning to send scanning results to:
+>
+> - [Azure Event Grid custom topic](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-event-grid-for-malware-scanning): For near-real-time automatic response based on every scanning result.
+> - [Log Analytics workspace](/azure/defender-for-cloud/advanced-configurations-for-malware-scanning#set-up-logging-for-malware-scanning): For storing every scan result in a centralized log repository for compliance and audit.
+>
+> [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
-Learn more about the [Microsoft.Security/DefenderForStorageSettings](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true) API documentation.
+## Related content
+
+- Review the [Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).

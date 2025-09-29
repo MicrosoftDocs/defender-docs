@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/09/2025
+ms.date: 09/28/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,10 +31,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
-|September 14, 2025|Preview update|Trusted IPs support for Internet exposure analysis|
-|September 14, 2025|GA|Exposure width for Internet exposure analysis|
-|September 11, 2025 | Preview update | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+|September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-ips-support-for-internet-exposure-analysis)|
+|September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width-for-internet-exposure-analysis)|
+|September 11, 2025 | Preview | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+
+### Malware automated remediation in Defender for Storage (Preview)
+
+September 16, 2025
+
+Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
+
+With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
+
+You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
+
+For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
 
 ### New refined attack paths
 
@@ -42,23 +55,31 @@ September 9, 2025
 
 Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
 
-### Trusted Exposure
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
 
-September 14, 2025 
+For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+ 
+### Trusted IPs support for internet-exposure analysis
 
-Organizations can now define known safe IP ranges as part of the new Trusted IPs configuration via [Azure DINE policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Define%20MDC%20Trusted%20IPs). When configure, internet-facing resources (Azure VM/VMSS, AWS EC2, GCP Compute Instances) exposed only to these trusted IPs are treated as trusted and no attack paths are generated. This reduces false positives and enhances the quality of attack path analysis and exposure findings in recommendations. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+September 14, 2025
 
-### Exposure Width 
+Defender for Cloud allows you to define trusted internet protocol (IP) ranges to reduce false positives in internet-exposure analysis. Resources that are only accessible from trusted IPs are considered trusted. Defender for Cloud won't generate attack paths for trusted IPs.
 
-September 14, 2025 
+Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-preview).
 
-**Defender for Cloud now includes Exposure Width (GA)** that calculates how broadly or narrowly a resource is exposed to the public internet based on its networking rules. It helps security teams prioritize and remediate the most critical findings in attack paths and recommendations by factoring in the extent of exposure. Current support includes **multi-cloud compute resources** across Azure VM/VMSS, AWS EC2, and GCP Compute Instances.
+### Exposure width for internet-exposure analysis
+
+September 14, 2025
+
+Exposure width is now generally available in Microsoft Defender for Cloud. Exposure width shows how a resource is exposed to the public internet based on its network rules. This feature helps security teams find and fix critical attack paths.
+
+Learn more about [internet exposure width](internet-exposure-analysis.md#internet-exposure-width).
 
 ### Trivy dependency scanning for code repositories (Update)
 
 September 11, 2025  
 
-Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem ](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/)[mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
 
 **Where it applies:**  
 - [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
@@ -76,7 +97,7 @@ Defender for Cloud now includes **open-source dependency vulnerability scanning*
   - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
   - *[GitHub repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
 
-If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces those results.  
+If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces, those results.  
 
 **Effective date:** September 15, 2025. 
 

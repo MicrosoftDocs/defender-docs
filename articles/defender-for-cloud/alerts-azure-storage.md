@@ -68,18 +68,6 @@ Learn more about [Microsoft's threat intelligence capabilities](https://www.micr
 
 **Severity**: High
 
-### **Storage account identified as source for distribution of malware**
-
-(Storage.Files_WidespreadeAm)
-
-**Description**: Antimalware alerts indicate that an infected file(s) is stored in an Azure file share that is mounted to multiple VMs. If attackers gain access to a VM with a mounted Azure file share, they can use it to spread malware to other VMs that mount the same share.
-
-**Applies to**: Azure Files
-
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Execution
-
-**Severity**: Medium
-
 ### **The access level of a potentially sensitive storage blob container was changed to allow unauthenticated public access**
 
 (Storage.Blob_OpenACL)
