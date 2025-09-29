@@ -19,8 +19,6 @@ ms.date: 04/25/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Antivirus
-
 ---
 # Behavioral blocking and containment
 
