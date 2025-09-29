@@ -30,9 +30,6 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 Blast radius analysis is an advanced graph visualization integrated into incident investigation experience. Built on the Microsoft Sentinel data lake and graph infrastructure, it generates an interactive graph showing possible propagation paths from the selected node to predefined critical targets scoped to the user’s permissions.
 
-> [!NOTE]
-> Blast radius analysis extends and replaces Attack path analysis.
-
 For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis).
 
 ### New data connectors
