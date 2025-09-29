@@ -54,7 +54,7 @@ Customer data stored by integrated services might also be stored in the followin
 
 ## Data retention
 
-Microsoft Defender XDR data is retained for 180 days, and is visible across the Microsoft Defender portal during that time, except for in **Advanced hunting** queries. 
+Microsoft Defender XDR data is retained for 180 days, and is visible across the Microsoft Defender portal during that time, except for in **Advanced hunting** queries. Cases are an exception and are not deleted.
 
 In the Microsoft Defender portal's **Advanced hunting** page, data is accessible via queries for only 30 days, unless it's streamed through [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration?toc=%2Fdefender-xdr%2Ftoc.json&bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json&tabs=defender-portal), where retention periods may be longer.
 
