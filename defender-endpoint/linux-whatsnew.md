@@ -17,16 +17,14 @@ ms.custom: partner-contribution
 ms.topic: reference
 ms.subservice: linux
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Server
 ---
 
 # What's new in Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to**:
-
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Endpoint on Linux.
 
