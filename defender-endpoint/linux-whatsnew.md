@@ -1412,8 +1412,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 #### What's new
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
-
+- This version contains a security update for [CVE-2022-23278](https://www.microsoft.com/msrc/blog/2022/03/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint)
 
 ### Mar-2022 Build: 101.60.05 | Release version: 30.122012.16005.0
 
