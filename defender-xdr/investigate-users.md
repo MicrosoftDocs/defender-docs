@@ -48,7 +48,7 @@ When you investigate a specific user entity, you see the following tabs on its e
 - [Incidents and alerts](#incidents-and-alerts) tab
 - [Observed in organization](#observed-in-organization) tab
 - [Timeline](#timeline) tab
-- [Sentinel events](#sentinel-events) tab
+- [Microsoft Sentinel events](#microsoft-sentinel-events) tab
 
 The user page shows the Microsoft Entra organization as well as groups, helping you understand the groups and permissions associated with a user.
 
@@ -141,7 +141,7 @@ The lateral movement path report, which can be viewed by date, is always availab
 
 The timeline displays user activities and alerts observed from a user's identity in the last 180 days. It unifies the user's identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint workloads. By using the timeline, you can focus on activities a user performed or were performed on them in specific timeframes.
 
-For users of the unified SOC platform to see alerts from Microsoft Sentinel based on data sources other than the ones in the previous paragraph, they can find these alerts and other information in the **Sentinel events** tab, [described below](#sentinel-events).
+For users of the unified SOC platform to see alerts from Microsoft Sentinel based on data sources other than the ones in the previous paragraph, they can find these alerts and other information in the **Microsoft Sentinel events** tab, [described below](#microsoft-sentinel-events).
 
 - **Custom time range picker:** You can choose a timeframe to focus your investigation on the last 24 hours, the last 3 days and so on. Or you can choose a specific timeframe by clicking on **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.  
 For example:
