@@ -40,7 +40,7 @@ Defender for Cloud requires the following service accounts to be enabled in your
 
 1. Add the Defender for Cloud organization ID `principalSet://iam.googleapis.com/organizations/517615557103` to the list of allowed principals.
 
-1. Alternativy, you can add Defender organization Customer ID `C03um0klj`
+1. Alternatively, you can add Defender organization Customer ID `C03um0klj`
 
 1. Select **Save**.
 
