@@ -192,9 +192,9 @@ For example:
 
 ## Security recommendations 
 
-This tab displays all active security posture assessments (ISPMs) associated with an identity account. It includes Defender for Identity recommendations across available identity providers such as Active Directory, Okta, and others. Selecting an ISPM pivots you to the recommendation page in Microsoft Secure Score for additional details.    
+This tab displays all active security posture assessments (ISPMs) associated with an identity account. It includes Defender for Identity recommendations across available identity providers such as Active Directory, Okta, and others. Selecting an ISPM pivots you to the recommendation page in Microsoft Secure Score for additional details.  
 
-:::image type="content" source="../media/screenshot-of-posture-recommendations.png" alt-text="Screenshot of posture recommendations.":::
+:::image type="content" source="media/screenshot-of-posture-recommendations.png" alt-text="Screenshot that shows the security posture recommendation.":::  
 
 ## Attack paths
 
