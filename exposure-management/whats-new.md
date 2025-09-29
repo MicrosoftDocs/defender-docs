@@ -33,7 +33,7 @@ Blast radius analysis is an advanced graph visualization integrated into inciden
 > [!NOTE]
 > Blast radius analysis extends and replaces Attack path analysis.
 
-For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis)
+For more information, see [Blast radius analysis](/defender-xdr/investigate-incidents?branch=release-preview-sentinel-graph#blast-radius-analysis).
 
 ### New predefined classifications
 
