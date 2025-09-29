@@ -86,12 +86,12 @@ Microsoft Defender for Identity pulls tags out of Active Directory to give you a
 |-----|-------------|
 | **New** | Indicates that the entity was created less than 30 days ago. |
 | **Deleted** | Indicates that the entity was permanently deleted from Active Directory. |
-| **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object is not currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
+| **Disabled** | Indicates that the entity is currently disabled in Active Directory. The *disabled* attribute is an Active Directory flag that's available for user accounts, computer accounts, and other objects to indicate that the object isn't currently in use. <br><br>When an object is disabled, it can't be used to sign in or perform actions in the domain.|
 | **Enabled** | Indicates that the entity is currently enabled in Active Directory, indicating that the entity is currently in use, and can be used to sign in or perform actions in the domain.  |
-| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is essentially treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access may also be affected, depending on how they are configured. |
+| **Expired** |  Indicates that the entity is expired in Active Directory. When a user account is expired, the user is no longer able to log in to the domain or access any network resources. The expired account is treated as if it were disabled, but with an explicit expiration date set. <br><br>Any services or applications that the user was authorized to access might also be affected, depending on how they're configured. |
 | **Honeytoken** |   Indicates that the entity is manually tagged as a honeytoken. |
 | **Locked** |  Indicates that the entity supplied the wrong password too many times, and is now locked. |
-| **Partial** | Indicates that the user, device, or group is not in synch with the domain, and is partially resolved via a global catalog. In this case, some attributes aren't available. |
+| **Partial** | Indicates that the user, device, or group isn't in synch with the domain, and is partially resolved via a global catalog. In this case, some attributes aren't available. |
 | **Unresolved** |  Indicates that the device doesn't resolve to a valid identity in the Active Directory forest. No directory information is available. |
 | **Sensitive** |  Indicates that the entity is considered as sensitive. |
 
@@ -148,9 +148,9 @@ For example:
 
     :::image type="content" source="/defender/media/image.png" alt-text="Screenshot that shows how to choose time frame." lightbox="/defender/media/image.png":::
 
-- **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that is relevant for the specific user.
+- **Timeline filters:** In order to improve your investigation experience, you can use the timeline filters: Type (Alerts and/or user's related activities), Alert severity, Activity type, App, Location, Protocol. Each filter depends on the others, and the options in each filter (drop-down) only contains the data that's relevant for the specific user.
 
-- **Export button:** You can export the timeline to a CSV file. Export is limited to the first 5000 records and contains the data as it displays in the UI (same filters and columns).
+- **Export button:** You can export the timeline to a CSV file. Export is limited to the first 5,000 records and contains the data as it displays in the UI (same filters and columns).
 
 - **Customized columns:** You can choose which columns to expose in the timeline by selecting the **Customize columns** button. For example:
 
@@ -186,10 +186,9 @@ For example:
 :::image type="content" source="/defender/media/investigate-users/user-incident-timeline.png" alt-text="Screenshot of the Timeline tab." lightbox="/defender/media/investigate-users/user-incident-timeline.png":::
 
 > [!NOTE]
-> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone will apply to all date and time information shown in the Identity timeline.
+> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
 >
 > To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
-
 
 ## Security recommendations 
 
@@ -201,7 +200,7 @@ This tab displays all active security posture assessments (ISPMs) associated wit
 
 This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview)
 
-## Sentinel events
+## Microsoft Sentinel events
 
 If your organization onboarded Microsoft Sentinel to the Defender portal, this additional tab is on the user entity page. This tab imports the [Account entity page from Microsoft Sentinel](/azure/sentinel/entity-pages).
 
