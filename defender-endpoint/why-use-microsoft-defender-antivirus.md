@@ -20,7 +20,6 @@ ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Antivirus
 
 ---
 # Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint

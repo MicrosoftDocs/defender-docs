@@ -21,7 +21,6 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Antivirus
 
 ---
 # Microsoft Defender Antivirus compatibility with other security products

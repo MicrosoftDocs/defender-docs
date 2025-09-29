@@ -19,7 +19,6 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Antivirus
 
 ---
 # Common mistakes to avoid when defining exclusions

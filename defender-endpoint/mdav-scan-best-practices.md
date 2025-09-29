@@ -19,9 +19,6 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-appliesto:
-  - Microsoft Defender Antivirus
-
 ---
 # Microsoft Defender Antivirus full scan considerations and best practices
 

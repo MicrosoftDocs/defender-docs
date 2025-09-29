@@ -21,7 +21,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
-  - Microsoft Defender Antivirus
 
 ---
 # Cloud protection and Microsoft Defender Antivirus

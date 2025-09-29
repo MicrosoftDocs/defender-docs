@@ -21,7 +21,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
-  - Microsoft Defender Antivirus
 
 ---
 # Collect Microsoft Defender Antivirus diagnostic data

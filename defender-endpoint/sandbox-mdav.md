@@ -21,7 +21,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-  - Microsoft Defender Antivirus
 
 ---
 # Run Microsoft Defender Antivirus in a sandbox

@@ -20,7 +20,6 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-  - Microsoft Defender Antivirus
 
 ---
 # Configure custom exclusions for Microsoft Defender Antivirus

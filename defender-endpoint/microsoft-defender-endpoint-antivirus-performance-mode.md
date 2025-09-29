@@ -17,7 +17,6 @@ search.appverid: met150
 ms.date: 10/28/2024
 appliesto:
   - Microsoft Defender for Business
-  - Microsoft Defender Antivirus
 
 ---
 # Protect Dev Drive using performance mode

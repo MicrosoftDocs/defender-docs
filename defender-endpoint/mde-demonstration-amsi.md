@@ -19,7 +19,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-  - Microsoft Defender Antivirus
 
 ---
 # AMSI demonstrations with Microsoft Defender for Endpoint

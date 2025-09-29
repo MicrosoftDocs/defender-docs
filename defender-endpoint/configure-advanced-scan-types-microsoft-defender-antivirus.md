@@ -13,7 +13,6 @@ ms.date: 02/18/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
-- Microsoft Defender Antivirus
 ms.collection: 
 - m365-security
 - tier2
