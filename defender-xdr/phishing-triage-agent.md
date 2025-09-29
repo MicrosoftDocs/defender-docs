@@ -418,9 +418,9 @@ The Phishing Triage Agent operates within a zero-trust environment. The system e
 
 To try the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). 
 
-If you've onboarded to Security Copilot and meet the prerequisites, the agent setup option appears in the Microsoft Defender portal. For more information on agent setup options and how they appear in the portal, see [Begin agent setup](#begin-the-setup).
+If you've onboarded to Security Copilot and meet the prerequisites, the agent setup option will appear in the Microsoft Defender portal. For more information on agent setup options and how they appear in the portal, see [Begin agent setup](#begin-the-setup).
 
-If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot and meet the agent prerequisites, contact your Microsoft representative to ask to open the setup option for you. 
+If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot and meet the agent prerequisites, contact your Microsoft representative to open the setup option for you. 
 
  
 ### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
