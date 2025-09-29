@@ -75,21 +75,21 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 1. In the side panel:
 
-   - Select a **name** for the rule
+   1. Select a **name** for the rule
    
-   - Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
+   1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
    
-    - Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
+   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
     
-    - Matching should primarily target **domain controllers** with the V3.x sensor installed.
+   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
     
 1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.  
-![Screenshot that shows how to add the tag.](https://github.com/user-attachments/assets/e0f1e034-fa95-4879-babc-1722af2b6e8d)
+   ![Screenshot that shows how to add the tag.](https://github.com/user-attachments/assets/e0f1e034-fa95-4879-babc-1722af2b6e8d)
 
 
-1. Click **Submit** to save the rule
+1. Click **Submit** to save the rule.
 
-Offboarding a device from this configuration can be done by **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
+   Offboarding a device from this configuration can be done by **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
 
 ## Configure Windows auditing
 
