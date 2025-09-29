@@ -41,6 +41,9 @@ This article is updated frequently to let you know what's new in the latest rele
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
+> [!NOTE]  
+> Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 ## Releases for Defender for Endpoint on Linux
 
 ### September-2025 Build: 101.25082.0003 | Release version: 30.125082.0003.0
@@ -1426,8 +1429,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 #### What's new
 
-- This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
-
+- This version contains a security update for [CVE-2022-23278](https://www.microsoft.com/msrc/blog/2022/03/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint).
 
 ### Mar-2022 Build: 101.60.05 | Release version: 30.122012.16005.0
 
