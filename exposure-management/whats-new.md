@@ -26,7 +26,7 @@ Learn more about MSEM by reading the blogs, [here](https://techcommunity.microso
 
 ## September 2025
 
-### Purview eDLP tagging for Critical Assets (Private Preview)
+### Critical assets classified based on interaction with sensitive documents (Purview eDLP)
 
 Microsoft Security Exposure Management now integrates with Microsoft Purview Endpoint Data Loss Prevention (eDLP) to automatically identify and classify critical assets based on their interaction with sensitive documents. This new capability introduces dynamic criticality reclassification where endpoints accessing high-sensitivity documents are automatically tagged as high criticality.
 
