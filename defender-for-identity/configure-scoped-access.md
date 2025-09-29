@@ -45,9 +45,9 @@ To enable identity scoping, follow these steps:​
 
 
 
-### Known limitations (Preview)
+### Known limitations
 
-Defender for Identity scoping is currently in Public preview. The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
+The following table lists the current limitations and supported scenarios for scoped access in Microsoft Defender for Identity.
 
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
