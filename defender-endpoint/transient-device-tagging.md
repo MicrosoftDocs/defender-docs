@@ -34,7 +34,7 @@ Transient device tagging uses an internal algorithm to tag transient devices in 
 > Transient tagging doesn't delete any devices from the network. It tags them, and then it filters them out of the device inventory by default.
 
 > [!IMPORTANT]
-> Transient device tagging is automatically enforced by Microsoft Defender for Endpoint using an internal algorithm. Administrators cannot configure or disable the tagging itself but can adjust whether transient devices are visible in the inventory by changing the filter settings.
+> Defender for Endpoint automatically enforces transient device tagging using an internal algorithm. While administrators can't configure or disable tagging, they can define whether transient devices are visible in the inventory by changing the filter settings.
 
 ## How do I work with transient tagging?
 
