@@ -68,7 +68,7 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 **Steps to apply the configuration:**
 
-1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Managment**.
+1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 2. Create a new rule.
 3. In the side panel:
 
