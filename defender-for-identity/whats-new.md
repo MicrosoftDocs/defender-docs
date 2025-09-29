@@ -30,6 +30,10 @@ For updates about versions and features released six months ago or earlier, see 
 We've added a new tab on the Identity profile page that contains all active identity-related identity security posture assessments (ISPMs). This feature consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.   
 For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
 
+### New Regional Availability: United Arab Emirates
+Defender for Identity data centers are now also deployed in the United Arab Emirates, North and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
+
+
 ### New API support for unified agent 
 We are excited to announce the availability of a new Graph-based API for managing unified agent server actions in Microsoft Defender for Identity.
 This capability is currently in preview and available in API Beta version.
@@ -41,7 +45,7 @@ This API allows customers to:
 * Activate or deactivate the agent on eligible servers
  ​
 
-For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+For more information, see [Managing unified agent actions through Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
 
 ### Microsoft Defender for Identity sensor version updates
 
