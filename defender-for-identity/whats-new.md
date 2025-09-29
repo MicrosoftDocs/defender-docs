@@ -25,6 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
+### Unlock additional security value in the unified agent (Preview)
+Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](prerequisites-sensor-version-3.md)
+
 ### Identity posture recommendations view on the identity page (preview)
 
 We've added a new tab on the Identity profile page that contains all active identity-related identity security posture assessments (ISPMs). This feature consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.   
