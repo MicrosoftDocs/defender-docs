@@ -86,7 +86,7 @@ When Microsoft Defender Antivirus detects threat, the following things happen:
 
 - Users receive [notifications in Windows](https://support.microsoft.com/windows/8942c744-6198-fe56-4639-34320cf9444e).
 - Detections are listed in the [Windows Security app](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) on the **Protection history** page.
-- If you [secured your Windows devices](/microsoft-365/business-premium/m365bp-protect-managed-devices), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
+- If you [secured your Windows devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
 
   > [!TIP]
   > In Microsoft 365 Business Premium, if you have more than 800 devices [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll), you're prompted to view threat detections and insights from Microsoft Intune instead of from the **Threats and antivirus** page.

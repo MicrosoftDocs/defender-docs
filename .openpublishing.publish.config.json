@@ -51,7 +51,7 @@
     },
     {
       "docset_name": "defender-cloud-apps",
-      "build_source_folder": "CloudAppSecurityDocs",
+      "build_source_folder": "defender-for-cloud-apps",
       "build_output_subfolder": "defender-cloud-apps",
       "locale": "en-us",
       "monikers": [],

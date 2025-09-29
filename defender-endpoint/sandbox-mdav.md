@@ -1,4 +1,4 @@
----
+﻿---
 title: Run Microsoft Defender Antivirus in a sandbox environment
 description: This article describes how to run Microsoft Defender Antivirus in a sandbox to further strengthen against tampering.
 ms.service: defender-endpoint
@@ -17,22 +17,20 @@ ms.collection:
 search.appverid: met150
 f1.keywords: NOCSH 
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Run Microsoft Defender Antivirus in a sandbox
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 **Platforms:**
 
 - Windows
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 
 This article describes how to run Microsoft Defender Antivirus in a sandbox environment for enhanced protection against tampering. 
@@ -119,3 +117,4 @@ Lastly, a significant challenge from the security perspective is related to cont
 ### What to do while troubleshooting the MsMpEng.CP.exe process, if it starts and stops after a few minutes?
 
 Collect the [support diagnostic logs](collect-diagnostic-data.md) and any relevant dumps/crash information if there are associated Windows Error Reporting (WER) events around the time the process stops.
+
