@@ -436,7 +436,7 @@ You can also export the dashboard data into Excel for more detailed analysis, an
 
 After evaluating your SCU usage needs, update the SCU capacity for your organization. For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
 
-If the agent is already running and you have sufficient capacity in your organization, no further action is required and the agent will keep running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent) in the documentation.
+If the agent is already running and your organization has sufficient capacity, no further action is required - the agent will continue running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent).
 
 ## Related content
 
