@@ -413,6 +413,29 @@ Administrators configure the agent’s identity and access levels during install
 
 The Phishing Triage Agent operates within a zero-trust environment. The system enforces organizational policies on every agent action by evaluating the intent and scope of each operation. All decisions, reasoning, and actions taken by the agent are transparently documented as a decision tree within Defender and recorded in Microsoft Purview audit logs for traceability and compliance.
 
+
+### I want to try the Phishing Triage Agent - how do I set it up in Microsoft Defender?
+
+To try the agent, you must first have access to **Security Copilot in Microsoft Defender**. If you don’t yet have Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
+
+After you enable Security Copilot, the agent setup option appears in the Microsoft Defender portal if your environment meets the necessary [prerequisites](#prerequisites). For more information on agent setup, see [Set up the Phishing Triage Agent](#set-up-the-phishing-triage-agent):
+
+ 
+### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
+
+If you joined the limited-time trial, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
+
+It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
+
+- **Cost per email processed**
+- **Capacity consumption over time**
+
+You can also export the dashboard data into Excel for more detailed analysis.
+
+For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
+
+If the agent is already running and you have sufficient capacity in your organization, no further action is required and the agent will keep running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent) in the documentation.
+
 ## Related content
 
 - [Microsoft Security Copilot agents](/copilot/security/agents-overview)
