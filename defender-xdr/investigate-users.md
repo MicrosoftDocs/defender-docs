@@ -190,6 +190,17 @@ For example:
 >
 > To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
 
+
+## Security recommendations 
+
+This tab displays all active security posture assessments (ISPMs) associated with an identity account. It includes Defender for Identity recommendations across available identity providers such as Active Directory, Okta, and others. Selecting an ISPM pivots you to the recommendation page in Microsoft Secure Score for additional details.    
+
+:::image type="content" source="../media/screenshot-of-posture-recommendations.png" alt-text="Screenshot of posture recommendations.":::
+
+## Attack paths
+
+This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview)
+
 ## Sentinel events
 
 If your organization onboarded Microsoft Sentinel to the Defender portal, this additional tab is on the user entity page. This tab imports the [Account entity page from Microsoft Sentinel](/azure/sentinel/entity-pages).
