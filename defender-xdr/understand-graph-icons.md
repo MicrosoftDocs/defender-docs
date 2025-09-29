@@ -75,7 +75,7 @@ An **edge**  indicates the relationship or connection properties between two nod
 |---|---|
 |![Contain edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-01.png) | Contains |
 |![Route edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-02.png) | Routes traffic to |
-|![Permission edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-03.png) | Has permission to |
+|![Permission edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-03.png) | Has permission to / Has role on |
 |![Authenticate edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-04.png) | Can authenticate as / Can authenticate to |
 | ![Push edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-05.png)| Pushes |
 |![Maintain edge icon.](/defender-xdr/media/ah-hunting-graph/edge-icon-06.png) | Maintains |
