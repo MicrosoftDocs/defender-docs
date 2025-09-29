@@ -1,4 +1,4 @@
----
+﻿---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
@@ -15,16 +15,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
 
+---
 # Take response actions on a device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -428,3 +426,4 @@ All other related details are also shown, for example, submission date/time, sub
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
