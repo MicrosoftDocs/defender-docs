@@ -33,7 +33,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
-    - `Security setting (All permissions)`
+    - `Security settings (All permissions)`
 
 ## Sensor requirements and recommendations
 
