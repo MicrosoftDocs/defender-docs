@@ -1,16 +1,16 @@
 ---
-title: 'Security Assessment: Remove Inactive Service Account (Preview)'
+title: 'Security Assessment: Remove Inactive Service Account'
 description: Learn how to identify and address inactive Active Directory service accounts to mitigate security risks and improve your organization's security posture.
 ms.date: 08/17/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to improve security posture in my organization by removing inactive service accounts
 ---
 
-# Security Assessment: Remove Stale Service Accounts (Preview)
+# Security Assessment: Remove Inactive Service Accounts
 
-This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
+This recommendation lists Active Directory service accounts detected as inactive within the past 90 days. 
 
-## Why do stale service accounts pose a risk?
+## Why do inactive service accounts pose a risk?
 
 Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
