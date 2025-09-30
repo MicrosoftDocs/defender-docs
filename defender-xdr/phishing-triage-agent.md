@@ -416,25 +416,27 @@ The Phishing Triage Agent operates within a zero-trust environment. The system e
 
 ### I want to try the Phishing Triage Agent - how do I set it up in Microsoft Defender?
 
-To try the agent, you must first have access to **Security Copilot in Microsoft Defender**. If you don’t yet have Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative.
+To try the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). 
 
-After you enable Security Copilot, the agent setup option appears in the Microsoft Defender portal if your environment meets the necessary [prerequisites](#prerequisites). For more information on agent setup, see [Set up the Phishing Triage Agent](#set-up-the-phishing-triage-agent):
+If you've onboarded to Security Copilot and meet the prerequisites, the agent setup option will appear in the Microsoft Defender portal. For more information on agent setup options and how they appear in the portal, see [Begin agent setup](#begin-the-setup).
+
+If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot and meet the agent prerequisites, contact your Microsoft representative to open the setup option for you. 
 
  
 ### I've tried the Phishing Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
 
 If you joined the limited-time trial, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
 
-It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
+It's important to ensure that your organization has sufficient SCUs for healthy agent operation after the trial. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring). The dashboard shows:
 
 - **Cost per email processed**
 - **Capacity consumption over time**
 
-You can also export the dashboard data into Excel for more detailed analysis.
+You can also export the dashboard data into Excel for more detailed analysis, and to filter on agent operations only.
 
-For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
+After evaluating your SCU usage needs, update the SCU capacity for your organization. For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
 
-If the agent is already running and you have sufficient capacity in your organization, no further action is required and the agent will keep running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent) in the documentation.
+If the agent is already running and your organization has sufficient capacity, no further action is required - the agent will continue running. If you choose to discontinue use, follow the [offboarding steps](#remove-the-agent).
 
 ## Related content
 
