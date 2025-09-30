@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -18,14 +18,13 @@ ms.date: 02/12/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.subservice: onboard
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshooting issues when migrating to Microsoft Defender for Endpoint
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 This article provides troubleshooting information for security administrators who are experiencing issues when moving from a non-Microsoft endpoint protection solution to Microsoft Defender for Endpoint.
 
@@ -103,3 +102,4 @@ If you're using a non-Microsoft antivirus/antimalware solution on Windows Server
 - [Onboarding tools and methods for Windows and Mac devices in Defender for Endpoint](onboard-client.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
