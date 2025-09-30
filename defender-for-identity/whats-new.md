@@ -26,7 +26,7 @@ For updates about versions and features released six months ago or earlier, see 
 ## September 2025
 
 ### Unlock additional security value in the unified agent (Preview)
-Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](prerequisites-sensor-version-3.md)
+Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3)
 
 ### Identity posture recommendations view on the identity page (preview)
 
