@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 08/18/2025
 ---
 
-# Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)
+# Enabling deployment of Microsoft Defender for Endpoint to a custom location
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
