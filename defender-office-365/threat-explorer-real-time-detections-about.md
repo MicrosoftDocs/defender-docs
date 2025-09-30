@@ -245,7 +245,7 @@ The filterable properties that are available in the **Delivery action** box in t
 >   - Undelivered email where delivery has failed.
 >   - Email where the sender IP address is Microsoft internal. For example, system generated notifications, alerts, or forwarded messages delivered from Microsoft IP addresses.
 >
->   IP addresses in these scenarios might be visisble in Exchange message trace.
+>   IP addresses in these scenarios might be visible in Exchange message trace.
 >   
 > - ³ By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
 >   - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.

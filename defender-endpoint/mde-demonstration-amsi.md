@@ -1,4 +1,4 @@
----
+﻿---
 title: AMSI demonstrations with Microsoft Defender for Endpoint
 description: Demonstration of AMSI detection by Microsoft Defender for Endpoint
 author: paulinbar
@@ -15,16 +15,14 @@ ms.date: 09/01/2025
 search.appverid: met150
 ms.custom: 
 - partner-contribution
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # AMSI demonstrations with Microsoft Defender for Endpoint
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. In this article, we describe how to test the AMSI engine with a benign sample.
 
