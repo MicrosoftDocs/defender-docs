@@ -1,4 +1,4 @@
----
+﻿---
 title: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 description: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 ms.service: defender-endpoint
@@ -18,14 +18,13 @@ search.appverid: met150
 ms.date: 03/28/2025
 ms.custom: 
 - partner-contribution
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 This article provides deployment guidance for Microsoft Defender for Endpoint on Linux for SAP. This article includes recommended SAP OSS (Online Services System) notes, the system requirements, prerequisites, important configuration settings, recommended antivirus exclusions, and guidance on scheduling antivirus scans.
 
@@ -268,3 +267,4 @@ sudo mdatp diagnostic create
 
 - [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Microsoft Defender for Endpoint on Windows Server with SAP](mde-sap-windows-server.md)
+

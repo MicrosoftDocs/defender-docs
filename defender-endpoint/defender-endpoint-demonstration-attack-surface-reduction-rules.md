@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender for Endpoint attack surface reduction rules demonstrations
 description: See how attack surface reduction rules block various known threat types.
 search.appverid: met150
@@ -16,15 +16,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: asr
 ms.date: 03/10/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Attack surface reduction rules demonstrations
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 or Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Attack surface reduction rules target specific behaviors that are typically used by malware and malicious apps to infect machines, such as:
 
@@ -209,3 +209,4 @@ Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://de
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
