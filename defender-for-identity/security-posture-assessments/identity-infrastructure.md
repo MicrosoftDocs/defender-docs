@@ -24,7 +24,7 @@ This recommendation indicates whether an AD Guest account is enabled in your env
 The goal is to **ensure** that the Guest account of the domain is **not enabled**. 
 
 
-<a name="recommended-actions"></a><details><summary>Recommended actions</summary>
+<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
 
 1. Review the list of exposed entities to discover if there's a Guest account, which is enabled.  
 
