@@ -93,7 +93,7 @@ In a supported version of Outlook, select one or more messages in the Junk Email
 - **Outlook on the web**:
 
   > [!div class="mx-imgBorder"]
-  > :::image type="content" source="media/outlook-report-as-not-junk.png" alt-text="Screenshot of the Not junk selection from the Report button after selecting multiple messages in the Junk Email folder in Outlook on the web." lightbox="media/owa-report-as-not-junk.png":::
+  > :::image type="content" source="media/owa-report-as-not-junk.png" alt-text="Screenshot of the Not junk selection from the Report button after selecting multiple messages in the Junk Email folder in Outlook on the web." lightbox="media/owa-report-as-not-junk.png":::
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The messages are also moved out of Junk Email to the Inbox.
 
