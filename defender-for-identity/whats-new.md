@@ -25,6 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2025
 
+### Unlock additional security value in the unified agent (Preview)
+Get enhance protection by applying the ‘Unified sensor RPC audit’ tag to your V3.x sensors through the Asset rule management feature. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+
 ### Identity posture recommendations view on the identity page (preview)
 
 We've added a new tab on the Identity profile page that contains all active identity-related identity security posture assessments (ISPMs). This feature consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.   
@@ -95,11 +98,11 @@ Previously, Defender for Identity tenants received Microsoft Entra ID risk level
 
 For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
 
-### New security assessment: Remove stale service accounts (Preview)
+### New security assessment: Remove inactive service accounts
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been stale for the past 90 days, to help you mitigate security risks associated with unused accounts.
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
 
-For more information, see: Security Assessment: [Remove Stale Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account)
+For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
 
 ### New Graph based API for response actions (preview) 
 

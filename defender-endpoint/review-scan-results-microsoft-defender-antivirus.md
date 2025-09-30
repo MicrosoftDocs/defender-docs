@@ -1,4 +1,4 @@
----
+﻿---
 title: Review the results of Microsoft Defender Antivirus scans
 description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
@@ -16,18 +16,18 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Review Microsoft Defender Antivirus scan results
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 **Platforms**
 
@@ -110,3 +110,4 @@ Use the [**Get** method of the **MSFT_MpThreat** and **MSFT_MpThreatDetection**]
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
