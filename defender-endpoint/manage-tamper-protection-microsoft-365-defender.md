@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage tamper protection for your organization using Microsoft Defender XDR
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 manager: bagol
@@ -19,17 +19,15 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Manage tamper protection for your organization using Microsoft Defender portal
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-- [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 
 **Platforms**
 - Windows
@@ -87,3 +85,4 @@ search.appverid: met150
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

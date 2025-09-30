@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity – privacy
 description: Learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
-ms.date: 08/24/2025
+ms.date: 09/28/2025
 ms.topic: article
 #customerIntent: To learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
 ms.reviewer: rlitinsky
@@ -31,7 +31,7 @@ Defender for Identity operates in the Microsoft Azure data centers in the follow
 - Switzerland (Switzerland North, Switzerland West)
 - United Arab Emirates (UAE North and UAE Central)
 - United Kingdom (UK South)
-
+- United Arab Emirates (North and Central)
 
 Customer data collected by the service might be stored as follows:
 

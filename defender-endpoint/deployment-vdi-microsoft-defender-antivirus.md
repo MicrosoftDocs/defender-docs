@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
@@ -17,15 +17,14 @@ ms.collection:
 - ContentEngagementFY23
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 **Platforms**
 
@@ -358,3 +357,4 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

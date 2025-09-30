@@ -1,7 +1,7 @@
 ---
 title: Architecture | Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity system architecture and related components.
-ms.date: 08/24/2025
+ms.date: 09/28/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity user, I want to understand the relevant components and how they interact with the rest of my environment so that I can best use Defender for Identity features.
 ms.reviewer: morRubin
@@ -29,7 +29,8 @@ Defender for Identity sensors can be directly installed on the following servers
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.
 - **Defender for Identity cloud service**  
-Defender for Identity cloud service runs on Azure infrastructure and is currently deployed in Europe, UK, Switzerland, North America/Central America/Caribbean, Australia East, Asia, India, and the United Arab Emirates (UAE). Defender for Identity cloud service is connected to Microsoft's intelligent security graph.
+
+Defender for Identity is a cloud-based service that operates on Azure infrastructure and is currently deployed across [multiple regions](/defender-for-identity/privacy-compliance/#data-location).
 
 ## Microsoft Defender portal
 
