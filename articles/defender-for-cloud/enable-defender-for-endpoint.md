@@ -79,7 +79,7 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
 1. In **Missing components** > **Unified solution**, select **Enable** to automatically install the Defender for Endpoint agent on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified-small.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png":::
 
 1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
@@ -106,7 +106,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 1. In **Missing components** > **Linux machines**, select **Enable**.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux-small.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png":::
 
 1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
