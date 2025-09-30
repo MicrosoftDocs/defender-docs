@@ -24,7 +24,7 @@ This recommendation indicates whether an AD Guest account is enabled in your env
 The goal is to **ensure** that the Guest account of the domain is **not enabled**. 
 
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the list of exposed entities to discover if there's a Guest account, which is enabled.  
 
@@ -47,7 +47,7 @@ This recommendation lists all domain controller’s computer accounts with passw
 A Domain Controller (DC) is a server in an Active Directory (AD) environment that manages user authentication and authorization, enforces security policies, and stores the AD database. It handles logins, verifies permissions, and ensures secure access to network resources. Multiple DCs provide redundancy for high availability.  
 Domain Controllers with old passwords are at heightened risk of compromise and could be more easily taken over. Attackers can exploit outdated passwords, gaining prolonged access to critical resources and weakening network security. It could indicate a Domain controller that is no longer functioning in the domain.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Verify Registry Values: 
 
@@ -81,7 +81,7 @@ Due to the possibility for exposure, domain controllers and Active Directory adm
 
 While this security assessment focuses on domain controllers, any server is potentially at risk to this type of attack.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domain controllers has the **Print spooler** service enabled.
@@ -110,7 +110,7 @@ Accounts with indirect control over an identity system, such as AD FS, AD CS, Ac
 
 Every local admin on a Tier-0 system is an indirect Domain Admin from an attacker's point of view.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove local admins on identity assets**.
@@ -138,7 +138,7 @@ For this reason, Defender for Identity continuously monitors your environment to
 
 In order to operate at maximum efficiency, all domain controllers must be monitored with Defender for Identity sensors. Organizations that fail to remediate unmonitored domain controllers, reduce visibility into their environment and potentially expose their assets to malicious actors.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domain controllers are unmonitored.
@@ -155,7 +155,7 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 
 Unmonitored Active Directory Certificate Services (AD CS) servers pose a significant risk to your organization’s identity infrastructure. AD CS, the backbone of certificate issuance and trust, is a high-value target for attackers aiming to escalate privileges or forge credentials. Without proper monitoring, attackers can exploit these servers to issue unauthorized certificates, enabling stealthy lateral movement and persistent access. Deploy Microsoft Defender for Identity version 2.0 sensors on all AD CS servers to mitigate this risk. These sensors provide real-time visibility into suspicious activity, detect advanced threats, and generate actionable alerts based on security events and network behavior.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 > [!NOTE]
 > This security assessment is only available if Microsoft Defender for Endpoint detects eligible ADCS servers in the environment. In some cases, servers running ADCS might not be identified with the required role and therefore will not appear in this assessment, even if they exist in the environment.
@@ -178,7 +178,7 @@ This article describes the Microsoft Defender for Identity's unmonitored Active 
 
 Unmonitored Active Directory Federation Services (ADFS) servers are a significant security risk to organizations. ADFS controls access to both cloud and on-premises resources as the gateway for federated authentication and single sign-on. If attackers compromise an ADFS server, they can issue forged tokens and impersonate any user, including privileged accounts. Such attacks might bypass multi-factor authentication (MFA), conditional access, and other downstream security controls, making them particularly dangerous. Without proper monitoring, suspicious activity on ADFS servers might go undetected for extended periods. Deploying Microsoft Defender for Identity version 2.0 sensors on ADFS servers is essential. These sensors enable real-time detection of suspicious behavior and help prevent token forgery, abuse of trust relationships, and stealthy lateral movement within the environment.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 > [!NOTE]
 > This security assessment is only available if Microsoft Defender for Endpoint detects eligible ADFS servers in the environment. In some cases, servers running ADFS might not be identified with the required role and therefore will not appear in this assessment, even if they exist in the environment.
@@ -205,7 +205,7 @@ If an attacker compromises a Microsoft Entra Connect server, they can inject sha
 
 These servers operate at the intersection of on-premises and cloud identity, making them a prime target for privilege escalation and stealthy persistence. Without monitoring, such attacks can go undetected. Deploying Microsoft Defender for Identity version 2.0 sensors on Microsoft Entra Connect servers is critical. These sensors help detect suspicious activity in real time, protect the integrity of your hybrid identity bridge, and prevent full-domain compromise from a single point of failure.
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 > [!NOTE]
 > This security assessment is only available if Microsoft Defender for Endpoint detects eligible Microsoft Entra Connect servers in the environment. In some cases, servers running Entra Connect might not be identified with the required role and therefore will not appear in this assessment, even if they exist in the environment.
@@ -232,7 +232,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 For example, if LDAP signing isn't enforced, an attacker can compromise domain accounts. This is especially risky if the account has privileged access to other resources, as with the [KrbRelayUp attack](https://www.microsoft.com/security/blog/2022/05/25/detecting-and-preventing-privilege-escalation-attacks-leveraging-kerberos-relaying-krbrelayup/).
 
-<a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
 
