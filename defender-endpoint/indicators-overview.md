@@ -1,4 +1,4 @@
----
+﻿---
 title: Overview of indicators in Microsoft Defender for Endpoint
 description: Create indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
@@ -16,17 +16,15 @@ ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 04/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Overview of indicators in Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 ## Indicator of compromise (IoC) overview
 
@@ -159,10 +157,9 @@ The IoC API schema and the threat IDs in Advanced Hunting are updated to align w
 
 Microsoft Store apps cannot be blocked by Microsoft Defender because they're signed by Microsoft.
 
-Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. Each issue is investigated by our engineering team.
+Customers might experience issues with alerts for IoCs. The following scenarios are situations where alerts aren't created or are created with inaccurate information. 
 
-- **Block indicators**: Generic alerts with informational severity only are created. Custom alerts (that is, custom title and severity) aren't fired in these cases.
-- **Warn indicators**: Generic alerts and custom alerts are possible in this scenario; however, the results aren't deterministic due to an issue with the alert detection logic. In some cases, customers might see a generic alert, whereas a custom alert might show in other cases.
+- **Block and Warn indicators**: Generic alerts with informational severity only are created. Custom alerts (that is, custom title and severity) aren't fired in these cases.
 - **Allow**: No alerts are generated (by design).
 - **Audit**: Alerts are generated based on the severity provided by the customer (by design).
 - In some cases, alerts coming from EDR detections might take precedence over alerts stemming from antivirus blocks, in which case an information alert is generated.
@@ -176,3 +173,4 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

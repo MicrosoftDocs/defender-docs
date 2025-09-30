@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
 manager: bagol
@@ -16,15 +16,13 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus exclusions on Windows Server
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -395,3 +393,4 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
