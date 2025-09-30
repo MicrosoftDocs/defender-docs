@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
-ms.date: 05/13/2025
+ms.date: 09/28/2025
 ms.custom: sfi-image-nochange
 ---
 
@@ -125,6 +125,12 @@ After onboarding the API resources, you can track their status in the Defender f
 You can also navigate to other collections to learn about what types of insights or risks might exist in the inventory:
 
 :::image type="content" source="media/defender-for-apis-deploy/collection-overview.png" alt-text="Screenshot showing the overview of API collections." lightbox="media/defender-for-apis-deploy/collection-overview.png":::
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Next steps
 
