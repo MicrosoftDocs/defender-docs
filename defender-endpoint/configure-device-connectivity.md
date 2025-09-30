@@ -4,6 +4,7 @@ description: Learn how to use a streamlined domain or static IP ranges during on
 author: limwainstein
 ms.author: lwainstein
 manager: bagol
+ms.date: 09/29/2025
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
