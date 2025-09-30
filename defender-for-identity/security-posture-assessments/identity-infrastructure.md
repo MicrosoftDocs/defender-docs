@@ -14,7 +14,7 @@ Learn about Microsoft Defender for Identity security posture assessments for ide
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.
 
-## Security Assessment: Built-in Active Directory Guest account is enabled
+## Built-in Active Directory Guest account is enabled
 
 **Description**
 
@@ -38,7 +38,7 @@ The goal is to **ensure** that the Guest account of the domain is **not enabled*
 
 </details>
 
-## Security Assessment: Change Domain Controller computer account old password
+## Change Domain Controller computer account old password
 
 This recommendation lists all domain controller’s computer accounts with password last set over 45 days ago.
 
@@ -69,7 +69,7 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
 </details>
 
 
-## Security assessment: Domain controllers with the print spooler service available
+## Domain controllers with the print spooler service available
 
 **Description**
 
@@ -101,7 +101,7 @@ While this security assessment focuses on domain controllers, any server is pote
 
 </details>
 
-## Security assessment: Remove local admins on identity assets
+## Remove local admins on identity assets
 
 **Description**
 
@@ -128,7 +128,7 @@ Every local admin on a Tier-0 system is an indirect Domain Admin from an attacke
 
 </details>
 
-## Security assessment: Unmonitored domain controllers
+## Unmonitored domain controllers
 
 **Description**
 
@@ -149,7 +149,7 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 
 </details>
 
-## Security Assessment: Unmonitored ADCS servers
+## Unmonitored ADCS servers
 
 **Description**
 
@@ -170,7 +170,7 @@ Unmonitored Active Directory Certificate Services (AD CS) servers pose a signifi
 
 </details>
 
-## Security Assessment: Unmonitored ADFS servers
+## Unmonitored ADFS servers
 
 This article describes the Microsoft Defender for Identity's unmonitored Active Directory Federation Services (ADFS) servers security posture assessment report.
 
@@ -193,7 +193,7 @@ Unmonitored Active Directory Federation Services (ADFS) servers are a significan
 
 </details>
 
-## Security Assessment: Unmonitored Microsoft Entra Connect servers
+## Unmonitored Microsoft Entra Connect servers
 
 This article describes the Microsoft Defender for Identity's unmonitored Microsoft Entra Connect servers security posture assessment report.
 
@@ -220,7 +220,7 @@ These servers operate at the intersection of on-premises and cloud identity, mak
 
 </details>
 
-## Security Assessment: Unmonitored Microsoft Entra Connect servers
+## Unmonitored Microsoft Entra Connect servers
 
 **Description**
 
