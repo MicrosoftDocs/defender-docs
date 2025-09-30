@@ -212,11 +212,11 @@ When a Windows device is onboarded through Microsoft Defender for Cloud, Defende
 **Remove the tags**
 
 1. On the Windows desktop, open **Registry Editor**.
-1. In the left pane, navigate to: 
+1. In the left pane, go to: 
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\DeviceTags`
     
-1. In the right pane, delete the following value names if they exist:
+1. Delete these value names if they exist:
     - `AzureResourceId`
     - `SecurityWorkspaceId`
     - `SecurityAgentId`
