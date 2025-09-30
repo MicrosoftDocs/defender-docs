@@ -220,7 +220,7 @@ These servers operate at the intersection of on-premises and cloud identity, mak
 
 </details>
 
-# Unsecure domain configurations
+## Unsecure domain configurations
 
 **Description**
 
@@ -235,7 +235,9 @@ For example, if LDAP signing isn't enforced, an attacker can compromise domain a
 <a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
-    ![Review top impacted entities and create an action plan.](media/unsecure-domain-configurations.png)
+
+    :::image type="content" source="../media/unsecure-domain-configurations.png" alt-text="Screenshot that shows a description of unsecure domain configurations and how they impact the user. ":::
+
 1. Take appropriate action on these domains by modifying or removing the relevant configurations.
 
 > [!NOTE]
