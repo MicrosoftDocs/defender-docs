@@ -31,7 +31,6 @@ Defender for Identity operates in the Microsoft Azure data centers in the follow
 - Switzerland (Switzerland North, Switzerland West)
 - United Arab Emirates (UAE North and UAE Central)
 - United Kingdom (UK South)
-- United Arab Emirates (North and Central)
 
 Customer data collected by the service might be stored as follows:
 
