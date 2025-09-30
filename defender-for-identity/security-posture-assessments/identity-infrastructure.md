@@ -220,24 +220,27 @@ These servers operate at the intersection of on-premises and cloud identity, mak
 
 </details>
 
-## Unmonitored Microsoft Entra Connect servers
+# Unsecure domain configurations
 
 **Description**
 
-Unmonitored Microsoft Entra Connect servers (formerly Azure AD Connect) pose a significant security risk in hybrid identity environments. These servers synchronize identities between on-premises Active Directory and Entra ID. They can introduce, modify, or remove accounts and attributes that directly affect cloud access.
+Microsoft Defender for Identity continuously monitors your environment to identify domains with configurations values that expose a security risk, and reports on these domains to assist you in protecting your environment.
 
-If an attacker compromises a Microsoft Entra Connect server, they can inject shadow admins, manipulate group memberships, or sync malicious changes into the cloud without triggering traditional alerts.
+Organizations that fail to secure their domain configurations leave the door unlocked for malicious actors.
 
-These servers operate at the intersection of on-premises and cloud identity, making them a prime target for privilege escalation and stealthy persistence. Without monitoring, such attacks can go undetected. Deploying Microsoft Defender for Identity version 2.0 sensors on Microsoft Entra Connect servers is critical. These sensors help detect suspicious activity in real time, protect the integrity of your hybrid identity bridge, and prevent full-domain compromise from a single point of failure.
+Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Domains configured with unsecure configurations are windows of opportunity for attackers and can expose risks.
+
+For example, if LDAP signing isn't enforced, an attacker can compromise domain accounts. This is especially risky if the account has privileged access to other resources, as with the [KrbRelayUp attack](https://www.microsoft.com/security/blog/2022/05/25/detecting-and-preventing-privilege-escalation-attacks-leveraging-kerberos-relaying-krbrelayup/).
 
 <a name="recommended-actions"></a><details><summary>**Recommended actions**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
-
-      :::image type="content" source="../media/unsecure-domain-configurations.png" alt-text="Screenshot that shows unsecure domain configurations.":::
-
-
+    ![Review top impacted entities and create an action plan.](media/unsecure-domain-configurations.png)
 1. Take appropriate action on these domains by modifying or removing the relevant configurations.
+
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 1. Use the remediation appropriate to the relevant configurations as described in the following table.
 
