@@ -27,7 +27,7 @@ To use this security assessment effectively, follow these steps:
 
 1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions) for Remove stale service account.
 
-1. Review the list of exposed entities to discover which of your service accounts are stale and have not performed any login activity in the last 90 days.
+1. Review the list of exposed entities to discover which of your service accounts are stale and haven't performed any login activity in the last 90 days.
 
 1. Take appropriate actions on those entities by removing the service account. For example:
 
