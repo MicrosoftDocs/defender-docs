@@ -12,7 +12,7 @@ This recommendation lists Active Directory service accounts detected as inactive
 
 ## Why do inactive service accounts pose a risk?
 
-Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
+Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Inactive service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
 This exposure creates several risks:
 
@@ -25,9 +25,9 @@ This exposure creates several risks:
 
 To use this security assessment effectively, follow these steps:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions) for Remove stale service account.
+1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions ](https://security.microsoft.com/securescore?viewid=actions) for Remove inactive service account.
 
-1. Review the list of exposed entities to discover which of your service accounts are stale and haven't performed any login activity in the last 90 days.
+1. Review the list of exposed entities to discover which of your service accounts are inactive and haven't performed any login activity in the last 90 days.
 
 1. Take appropriate actions on those entities by removing the service account. For example:
 
