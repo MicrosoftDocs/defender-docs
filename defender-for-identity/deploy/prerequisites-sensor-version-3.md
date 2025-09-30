@@ -69,7 +69,8 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 **Steps to apply the configuration:**
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
-2. Create a new rule.
+1. Create a new rule.  
+![new rule](media/prerequisites-sensor-version-3/new-rule.png)
 3. In the side panel:
 
    1. Select a **name** for the rule.
@@ -80,7 +81,8 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
     
    1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
     
-1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.  
+1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
+![tag](media/prerequisites-sensor-version-3/tag.png)
 
 1. Click **Submit** to save the rule.
 
