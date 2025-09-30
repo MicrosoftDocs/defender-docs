@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender for Endpoint alongside other security solutions
 description: See recommendations for running Defender for Endpoint alongside other security solutions.
 ms.service: defender-endpoint
@@ -16,14 +16,13 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint alongside other security solutions
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 ## Considerations with concurrent security solutions
 
@@ -49,4 +48,5 @@ Delegating security functionality, creating exclusions, and configuring settings
 ## Customer support
 
 Commercially reasonable support is provided through Microsoft Customer Service & Support and Microsoft-managed support offerings. In troubleshooting performance, reliability, and other issues, customers might be asked to temporarily remove potentially conflicting solutions to identify the source of the issue. Depending on the issue, customers might be asked to engage with the vendor of the non-Microsoft solution.
+
 
