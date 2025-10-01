@@ -11,13 +11,9 @@ ms.reviewer: LiorShapiraa
 
 This article provides security assessments related to Group Policy Objects (GPOs). 
 
-
 ## GPO assigns unprivileged identities to local groups with elevated privileges
 
-This recommendation lists non-privileged users who are granted elevated permissions through GPO.
-
 **Description**
-
 
 Using Group Policy Objects (GPOs) to add membership to a local group can create a security risk if the target group has excessive permissions or rights. To mitigate this risk, it's important to identify any local groups, such as local administrators or terminal server access, where Authenticated Users or Everyone is granted access by a GPO.   
 Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment.  
@@ -25,9 +21,14 @@ Attackers may attempt to obtain information on Group Policy settings to uncover 
 A user, service or application that relies on these local permissions may stop functioning. 
 
 
-**Recommended actions**
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
+
+This recommendation lists non-privileged users who are granted elevated permissions through GPO.
 
 Carefully review each assigned group membership, identify any dangerous group membership granted, and modify the GPO to remove any unnecessary or excessive user rights.  
+
+</details>
 
 
 ## GPO can be modified by unprivileged accounts
@@ -38,9 +39,12 @@ This recommendation lists any Group Policy Objects in your environment that can 
 
 Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment. A user, service or application that relies on these permissions may stop functioning. 
 
-**Recommended actions**
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 Carefully review each assigned permission, identify any dangerous permission granted, and modify them to remove any unnecessary or excessive user rights. 
+
+</details>
 
 ## Reversible passwords found in GPOs
 
@@ -53,7 +57,8 @@ Group Policy Preferences (GPP) previously allowed administrators to include embe
 To prevent potential exploitation by adversaries, it is recommended to remove any existing preferences that contain embedded credentials.
 
 
-**Recommended actions**
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 In order to remove the preferences that contain passwords data, use Group Policy Management Console (GPMC) on a domain controller or from a client that has Remote Server Administration Tools (RSAT) installed. You can remove any preference following these steps: 
 
@@ -69,6 +74,8 @@ In order to remove the preferences that contain passwords data, use Group Policy
 1. After changes are applied to all clients, delete the preference.  
 
 1. Repeat steps 1 through 5 as needed to clean your whole environment.  
+
+</details>
 
 ## Next steps
 
