@@ -1,4 +1,4 @@
----
+﻿---
 title: Get scan history by session
 description: Learn how to use the get scan history by session api.
 ms.service: defender-endpoint
@@ -16,21 +16,19 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender Vulnerability Management
+  - Microsoft Defender for Business
 
+---
 # Get scan history by session
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
@@ -144,3 +142,4 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
 }
 ```
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

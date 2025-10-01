@@ -7,6 +7,9 @@ ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: article
 ms.date: 04/09/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Individuals
 ms.subservice: ngp
 search.appverid: met150
 ms.localizationpriority: medium
@@ -15,12 +18,6 @@ ms.custom:
 ---
 
 # Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint
-
-**Applies to**:
-
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint Plan 2.
 

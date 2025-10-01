@@ -1,4 +1,4 @@
----
+﻿---
 title: Define how mobile devices are updated by Microsoft Defender Antivirus
 description: Manage how mobile devices, such as laptops, should be updated with Microsoft Defender Antivirus protection updates.
 ms.service: defender-endpoint
@@ -15,18 +15,17 @@ ms.collection:
 - tier2
 search.appverid: met150
 ms.date: 03/26/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Manage updates for mobile devices and virtual machines (VMs)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -112,3 +111,4 @@ This action prevents protection updates from downloading when the PC is on batte
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)
 - [Update and manage Microsoft Defender Antivirus in Windows 10](deploy-manage-report-microsoft-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

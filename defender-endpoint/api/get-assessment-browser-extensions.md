@@ -1,4 +1,4 @@
----
+﻿---
 title: Export browser extensions assessment
 description: Returns a table with an entry for every unique combination of DeviceId, BrowserName, ExtensionID.
 ms.service: defender-endpoint
@@ -16,17 +16,14 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint
 
+---
 # Export browser extensions assessment per device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management-capabilities#vulnerability-management-capabilities-for-endpoints) (add-on for Defender for Endpoint Plan 2 or the standalone version)
-- [Microsoft Defender for Cloud Plan 2](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 Returns all known installed browser extensions and their details for all devices, on a per-device basis.
 
@@ -230,3 +227,4 @@ GET https://api.securitycenter.microsoft.com/api/machines/browserextensionsinven
 - [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+
