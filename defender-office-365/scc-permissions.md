@@ -197,6 +197,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Insider Risk Management Analysis**|Access all insider risk management alerts, cases, and notices templates.|Insider Risk Management <br/><br/> Insider Risk Management Analysts|
 |<sup>\*</sup>**Insider Risk Management Approval**|Perform investigation, remediation, and review message violations in Privacy Management solution. Can view message metadata and full messages.|Insider Risk Management <br/><br/> Insider Risk Management Approvers|
 |<sup>\*</sup>**Insider Risk Management Audit**|Allow viewing Insider Risk audit trails.|Insider Risk Management <br/><br/> Insider Risk Management Auditors|
+|<sup>\*</sup>**Insider Risk Management Graph Reader**|Allow viewing to data risk graphs for alerts.|Insider Risk Management <br/><br/> Insider Risk Management Analysts <br/><br/> Insider Risk Management Investigators|
 |<sup>\*</sup>**Insider Risk Management Investigation**|Access all insider risk management alerts, cases, notices templates, and the Content Explorer for all cases.|Insider Risk Management <br/><br/> Insider Risk Management Investigators|
 |<sup>\*</sup>**Insider Risk Management Permanent contribution**|This role group is visible, but is used by background services only.|IRM Contributors|
 |<sup>\*</sup>**Insider Risk Management Reports Administrator**||Insider Risk Management|
