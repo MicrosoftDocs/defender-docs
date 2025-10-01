@@ -1016,8 +1016,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "defender-for-cloud-apps/cloud-discovery-anomaly-detection-policy.md",
-      "redirect_url": "/defender-for-cloud-apps/cloud-discovery-policies",
+      "source_path": "defender-cloud-apps/cloud-discovery-anomaly-detection-policy.md",
+      "redirect_url": "/defender-cloud-apps/cloud-discovery-policies",
       "redirect_document_id": false
     },
   ]
