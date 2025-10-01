@@ -1,4 +1,4 @@
----
+﻿---
 title: Overview of indicators in Microsoft Defender for Endpoint
 description: Create indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
@@ -16,17 +16,15 @@ ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 04/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Overview of indicators in Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 ## Indicator of compromise (IoC) overview
 
@@ -175,3 +173,4 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
