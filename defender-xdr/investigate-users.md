@@ -164,7 +164,8 @@ The lateral movement path report, which can be viewed by date, is always availab
 
 The timeline displays user activities and alerts observed from a user's identity in the last 180 days. It unifies the user's identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint workloads. By using the timeline, you can focus on activities a user performed or were performed on them in specific timeframes.
 
-For users of the unified SOC platform to see alerts from Microsoft Sentinel based on data sources other than the ones in the previous paragraph, they can find these alerts and other information in the **Sentinel events** tab, [described below](#microsoft-sentinel-events).
+
+In the unified SOC platform, you can see Microsoft Sentinel alerts from other data sources in the **Microsoft Sentinel events** tab. For more information, see [Microsoft Sentinel Events](#microsoft-sentinel-events).
 
 - **Custom time range picker:** You can choose a timeframe to focus your investigation on the last 24 hours, the last 3 days and so on. Or you can choose a specific timeframe by clicking on **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.  
 For example:
@@ -212,6 +213,18 @@ For example:
 > Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
 >
 > To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
+
+
+## Security recommendations 
+
+This tab displays all active security posture assessments (ISPMs) associated with an identity account. It includes Defender for Identity recommendations across available identity providers such as Active Directory, Okta, and others. Selecting an ISPM pivots you to the recommendation page in Microsoft Secure Score for additional details.  
+
+:::image type="content" source="media/screenshot-of-posture-recommendations.png" alt-text="Screenshot that shows the security posture recommendation." lightbox="media/screenshot-of-posture-recommendations.png":::  
+
+## Attack paths
+
+This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview)
+
 
 ## Microsoft Sentinel events
 

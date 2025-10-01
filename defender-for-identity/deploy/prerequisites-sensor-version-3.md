@@ -14,7 +14,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
- - Requires that Defender for Endpoint is deployed
+- Requires that Defender for Endpoint is deployed
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed
  - Doesn't currently support VPN integration
  - Doesn't currently support ExpressRoute
@@ -33,7 +33,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
-    - `Security setting (All permissions)`
+    - `Security settings (All permissions)`
 
 ## Sensor requirements and recommendations
 
@@ -62,6 +62,35 @@ The following table describes memory requirements on the server used for the Def
 
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
+
+## Configure Unified Sensor to support advanced identity detections (Preview)
+
+Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
+
+**Steps to apply the configuration:**
+
+1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
+1. Create a new rule.  
+
+ ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
+
+3. In the side panel:
+
+   1. Select a **name** for the rule.
+   
+   1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
+   
+   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
+    
+   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
+    
+1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
+
+ ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
+
+5. Click **Submit** to save the rule.
+
+   Offboarding a device from this configuration can be done by **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
 
 ## Configure Windows auditing
 

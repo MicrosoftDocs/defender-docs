@@ -1,7 +1,7 @@
 ---
 title: Architecture | Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity system architecture and related components.
-ms.date: 09/14/2023
+ms.date: 09/28/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity user, I want to understand the relevant components and how they interact with the rest of my environment so that I can best use Defender for Identity features.
 ms.reviewer: morRubin
@@ -11,7 +11,7 @@ ms.reviewer: morRubin
 
 Microsoft Defender for Identity monitors your domain controllers by capturing and parsing network traffic, leveraging Windows events directly from your domain controllers, and then analyzes the data for attacks and threats.
 
-The following image shows how Defender for Identity is layered over Microsoft Defender XDR, and works together with other Microsoft services and third-party identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
+The following image shows how Defender for Identity is layered over Microsoft Defender XDR, and works together with other Microsoft services and non-Microsoft identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
 
 :::image type="content" source="media\diagram-of-the-defender-for-identity-architecture.png" alt-text="Diagram of the Defender for Identity architecture." border="false":::
 
@@ -29,7 +29,8 @@ Defender for Identity sensors can be directly installed on the following servers
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.
 - **Defender for Identity cloud service**  
-Defender for Identity cloud service runs on Azure infrastructure and is currently deployed in Europe, UK, Switzerland, North America/Central America/Caribbean, Australia East, Asia, and India. Defender for Identity cloud service is connected to Microsoft's intelligent security graph.
+
+Defender for Identity is a cloud-based service that operates on Azure infrastructure and is currently deployed across [multiple regions](/defender-for-identity/privacy-compliance/#data-location).
 
 ## Microsoft Defender portal
 
@@ -40,7 +41,7 @@ Use the Microsoft Defender portal to:
 - Manage Defender for Identity sensor configuration settings.
 - View data received from Defender for Identity sensors.
 - Monitor detected suspicious activities and suspected attacks based on the attack kill chain model.
-- **Optional**: The portal can also be configured to send emails and events when security alerts or health issues are detected.
+- **Optional**: Configure the portal to send emails and events when it detects security alerts or health issues.
 
 > [!NOTE]
 > If no sensor is installed on your Defender for Identity workspace within 60 days, the workspace may be deleted and you'll need to recreate it.
@@ -58,7 +59,7 @@ The Defender for Identity sensor has the following core functionality:
 - Transfer relevant data to the Defender for Identity cloud service
 
 
-Defender for Identity sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Defender for Identity sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
+Defender for Identity sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Defender for Identity sensor also supports Event Tracing for Windows (ETW), which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
 
 ### Domain synchronizer process
 

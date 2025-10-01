@@ -92,6 +92,8 @@
           href: /unified-secops-platform/plan-incident-response
         - name: Investigate incidents  
           href: investigate-incidents.md
+        - name: Understand graph icons and visualizations
+          href: understand-graph-icons.md
         - name: Move alerts to another incident
           href: move-alert-to-another-incident.md
         - name: Merge incidents manually
@@ -347,6 +349,8 @@
           href: advanced-hunting-limits.md
         - name: Extend data coverage
           href: advanced-hunting-extend-data.md
+        - name: Hunt using hunting graph
+          href: advanced-hunting-graph.md
       - name: Track and respond to emerging threats
         items:
         - name: Threat analytics overview

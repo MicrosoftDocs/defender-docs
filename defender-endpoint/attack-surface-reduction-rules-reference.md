@@ -1,4 +1,4 @@
----
+﻿---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
@@ -17,16 +17,12 @@ ms.collection:
 - mde-asr
 ms.date: 08/28/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Attack surface reduction rules reference
 
-**Applies to:**
-
-- [Microsoft Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms:**
 
@@ -717,3 +713,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
