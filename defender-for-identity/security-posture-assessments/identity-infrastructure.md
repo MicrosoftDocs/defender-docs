@@ -195,7 +195,6 @@ Unmonitored Active Directory Federation Services (ADFS) servers are a significan
 
 ## Unmonitored Microsoft Entra Connect servers
 
-This article describes the Microsoft Defender for Identity's unmonitored Microsoft Entra Connect servers security posture assessment report.
 
 **Description**
 
