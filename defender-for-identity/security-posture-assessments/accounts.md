@@ -18,13 +18,16 @@ This article lists all security assessments for accounts.
 
 ## Accounts with non-default Primary Group ID
 
+**Description**
+
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute is not the default for domain users and computers in Active Directory.
 
-### Why are accounts with non-default primary group ID a risk?
+**Impact**
 
 The primaryGroupId attribute of a user or computer account grants implicit membership to a group. Membership through this attribute does not appear in the list of group members in some interfaces. This attribute may be used as an attempt to hide group membership. It might be a stealthy way for an attacker to escalate privileges without triggering normal auditing for group membership changes. 
 
-### Remediation steps 
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the list of exposed entities to discover which of your accounts have a suspicious primaryGroupId.  
 
@@ -38,19 +41,20 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
   
   - Read-only domain controller (RODC) accounts: 521 (Read-only Domain Controllers).
 
+</details>
 
-###  Remove access rights on suspicious accounts with the Admin SDHolder permission
 
-This article describes the **Remove access rights on suspicious accounts with the Admin SDHolder permission** security assessment, which highlights risky access rights on suspicious accounts.
+##  Remove access rights on suspicious accounts with the Admin SDHolder permission
 
-### Why might the Admin SDHolder permission be risky?
+**Description**
 
 Having non-sensitive accounts with **Admin SDHolder** (security descriptor holder) permissions can have significant security implications, including:
 
 - Leading to unauthorized privilege escalation, where attackers can exploit these accounts to gain administrative access and compromise sensitive systems or data
 - Increasing the attack surface, making it harder to track and mitigate security incidents, potentially exposing the organization to greater risks.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove access rights on suspicious accounts with the Admin SDHolder permission**.
 
@@ -71,17 +75,22 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 
 To achieve the full score, remediate all exposed entities.
 
+</details>
+
 
 ## Change password for krbtgt account
 
+**Description**
+
 This recommendation lists any krbtgt account within your environment with password last set over 180 days ago.
 
-### Why is the krbtgt account a risk?
+**Impact**
 
 The krbtgt account in Active Directory is a built-in account used by the Kerberos authentication service. It encrypts and signs all Kerberos tickets, enabling secure authentication within the domain. The account cannot be deleted, and securing it is crucial, as compromise could allow attackers to forge authentication tickets.  
 If the KRBTGT account's password is compromised, an attacker can use its hash to generate valid Kerberos authentication tickets, allowing them to perform Golden Ticket attacks and gain access to any resource in the AD domain. Since Kerberos relies on the KRBTGT password to sign all tickets, closely monitoring and regularly changing this password is essential to mitigating the risk of such attacks.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the list of exposed entities to discover which of your krbtgt accounts have an old password. 
 
@@ -91,17 +100,21 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. It is recommended to use the [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1)  
 > When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
 
+</details>
+
 ## Change password of built-in domain Administrator account
+
+**Description**
 
 This recommendation lists any built-in domain Administrator accounts within your environment with password last set over 180 days ago. 
 
-### Organization risk
+**Impact**
 
 The built-in domain Administrator account is a default, highly privileged AD account with full control over the domain. It cannot be deleted, has unrestricted access, and is critical for managing the domain's resources.
 
 Regularly updating the built-in Administrator account's password is essential due to its high privileges, which make it a prime target for attackers. If compromised, it can grant unauthorized control over the domain. Since this account is often unused and its password may not be updated frequently, regular changes reduce exposure and enhance security. 
 
-### Remediation steps 
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the list of exposed entities to discover which of your built-in domain Administrator accounts have an old password.  
 
@@ -111,10 +124,11 @@ Regularly updating the built-in Administrator account's password is essential du
 
 :::image type="content" source="../media/change-password-domain-administrator-account/screenshot-of-report.png" alt-text="Screenshot that shows the security posture assessment for Change password for built-in domain Administrator accounts.":::
 
+</details>
 
 ## Dormant entities in sensitive groups
 
-### What are sensitive dormant entities?
+**Description**
 
 Microsoft Defender for Identity discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
 
@@ -122,7 +136,7 @@ However, **Sensitive** accounts can also become *dormant* if they are not used f
 
 For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](../entity-tags.md#default-sensitive-entities).
 
-### What risk do dormant entities create in sensitive groups?
+**Impact**
 
 Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.
 
@@ -130,7 +144,8 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most sensitive entities vulnerable and exposed.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your sensitive accounts are dormant.
 
@@ -139,17 +154,19 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
+</details>
+
 ## Remove non-admin accounts with DCSync permissions
 
-This article describes the **Remove non-admin accounts with DCSync permissions** security assessment, which identifies risky DCSync permission settings.
+**Description**
 
-### Why might the DCSync permission be a risk?
 
 Accounts with the DCSync permission can initiate domain replication. Attackers can potentially exploit domain replication to gain unauthorized access, manipulate domain data, or compromise the integrity and availability of your Active Directory environment.
 
 It's crucial to carefully manage and restrict the membership of this group to ensure the security and integrity of your domain replication process.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
@@ -162,17 +179,21 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 To achieve the maximum score, remediate all exposed entities.
 
+</details>
 
 ## Ensure privileged accounts are not delegated
 
+**Description**
+
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
-### Organization risk
+**Impact**
 
 If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
 For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and cannot be delegated."
 
@@ -196,19 +217,22 @@ The safest approach is to use a PowerShell script to configure the device to pre
 
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
 
+</details>
+
 ## Entities exposing credentials in clear text
 
-### What information does the prevent clear text security assessment provide?
+**Description**
 
 This security assessment monitors your traffic for any entities exposing credentials in clear text and alerts you to the current exposure risks (most impacted entities) in your organization with suggested remediation.
 
-### Why is clear text credential exposure risky?
+**Impact**
 
 Entities exposing credentials in clear text are risky not only for the exposed entity in question, but for your entire organization.
 
 The increased risk is because unsecure traffic such as LDAP simple-bind is highly susceptible to interception by attacker-in-the-middle attacks. These types of attacks result in malicious activities including credential exposure, in which an attacker can leverage credentials for malicious purposes.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions>.
 
@@ -224,15 +248,17 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 > This assessment is updated in near real time.
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
 
+</details>
+
 ## Microsoft LAPS usage
 
-### What is Microsoft LAPS?
+**Description**
 
 Microsoft's "Local Administrator Password Solution" (LAPS) provides management of local administrator account passwords for domain-joined computers. Passwords are randomized and stored in Active Directory (AD), protected by ACLs, so only eligible users can read it or request its reset.
 
 This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) and [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
-### What risk does not implement LAPS pose to an organization?
+**Impact**
 
 LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
 
@@ -242,7 +268,7 @@ LAPS simplifies password management while helping customers implement more recom
 > In some cases, [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) machines may still appear in the security posture assessment even if LAPS is configured in Microsoft Entra ID. This can be due to how the policy is applied or how the device reports its state.
 > If this occurs, we suggest reviewing the LAPS configuration in Microsoft Entra ID to confirm everything is set up as expected. You can find more details [here](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/windows-local-administrator-password-solution-with-microsoft-entra-id-now-genera/3911999).
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have some (or all) compatible Windows devices that aren't protected by LAPS, or that haven't had their LAPS managed password changed in the last 60 days.
 
@@ -257,10 +283,11 @@ LAPS simplifies password management while helping customers implement more recom
 
    :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS.":::
 
+</details>
+
 ## Remove discoverable passwords in Active Directory account attributes (Preview)
 
-
-### Why do discoverable passwords in Active Directory account attributes pose a risk?
+**Description**
 
 Certain free-text attributes are often overlooked during hardening but are readable by any authenticated user in the domain. When credentials or clues are mistakenly stored in these attributes, attackers can abuse them to move laterally across the environment or escalate privileges.
 
@@ -275,9 +302,7 @@ Attackers seek low-friction paths to expand access. Exposed passwords in these a
 Removing exposed credentials from these attributes reduces the risk of identity compromise and strengthens your organization’s security posture.
 
 
-### How does Microsoft Defender for Identity detect discoverable passwords?
-
-> [!NOTE] 
+> [!NOTE]
 > Findings can include false positives. Always validate the results before taking action.
 
 Microsoft Defender for Identity detects potential credential exposure in Active Directory by analyzing commonly used free-text attributes. This includes looking for common password formats, hints,  `'description'`, `'info'`, and `'adminComment'` fields, and other contextual clues that might suggest the presence of credential misuse. 
@@ -292,7 +317,8 @@ This recommendation uses GenAI-powered analysis of Active directory attributes t
 Detected matches are surfaced in **Secure Score** and the **Security Assessment report** for review and remediation.
 
 
-### Remediation steps 
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 To address this security assessment, follow these steps:
 
@@ -308,11 +334,15 @@ To address this security assessment, follow these steps:
 1. Remove sensitive information from the listed attribute fields using standard directory management tools (for example, PowerShell or ADSI Edit).
 1. Fully remove the sensitive information. Don’t just mask the value. Partial obfuscation (for example, P@ssw***) can still offer useful clues to attackers.
 
+</details>
+
 ## Remove Stale Service Accounts (Preview)
+
+**Description**
 
 This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
 
-### Why do stale service accounts pose a risk?
+**Impact**
 
 Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
@@ -322,8 +352,8 @@ This exposure creates several risks:
 
 - Lateral movement across the network without detection.
 
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
-### Remediation steps
 
 To use this security assessment effectively, follow these steps:
 
@@ -339,9 +369,11 @@ To use this security assessment effectively, follow these steps:
 
     - **Delete the account:** If no issues are observed, delete the account and fully remove its access.
 
+</details>
+
 ## Riskiest lateral movement paths (LMP)
 
-### What are Risky lateral movement paths?
+**Description**
 
 Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
 
@@ -350,7 +382,7 @@ For more information about lateral movement paths, see:
 - [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
-### What risk do risky lateral movement paths pose?
+**Impact**
 
 Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
 
@@ -358,7 +390,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 For example, the riskiest paths are more readily visible to attackers and, if compromised, can give an attacker access to your organization's most sensitive entities.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
 
@@ -368,13 +400,15 @@ For example, the riskiest paths are more readily visible to attackers and, if co
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
+</details>
+
 ## Unsecure Kerberos delegation
 
-### What is Kerberos delegation?
+**Description**
 
 Kerberos delegation is a delegation setting that allows applications to request end-user access credentials to access resources on behalf of the originating user.
 
-### What risk does unsecure Kerberos delegation pose to an organization?
+**Impact**
 
 Unsecure Kerberos delegation gives an entity the ability to impersonate you to any other chosen service. For example, imagine you have an IIS website, and the application pool account is configured with unconstrained delegation. The IIS website site also has Windows Authentication enabled, allowing native Kerberos authentication, and the site uses a back-end SQL Server for business data. With your Domain Admin account, you browse to the IIS website and authenticate to it. The website, using unconstrained delegation can get a service ticket from a domain controller to the SQL service, and do so in your name.
 
@@ -386,7 +420,8 @@ The following is a description of the risk posed by different delegation types:
 - **Constrained delegation**: Constrained entities can be abused if one of their delegation entries is sensitive.
 - **Resource-based constrained delegation (RBCD)**: Resource-based constrained entities can be abused if the entity itself is sensitive.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
+
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your non-domain controller entities are configured for **unsecure Kerberos delegation**.
 
@@ -420,16 +455,18 @@ Resource-based constrained delegation restricts which entities can impersonate t
 
 1. Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Microsoft Entra Domain Services](/azure/active-directory-domain-services/deploy-kcd).
 
+</details>
+
 
 ## Unsecure SID History attributes
 
-### What is an unsecure SID History attribute?
+**Description**
 
 SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is extremely useful to ensure users retain access when moved (migrated) from one domain to another.
 
 The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
-### What risk does unsecure SID History attribute pose?
+**Impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -437,7 +474,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. Also, if you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have an unsecure SID History attribute.
 
@@ -457,13 +494,15 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
         Set-ADUser -Identity <account> -Remove @{SIDHistory='S-1-5-21-...'}
         ```
 
+</details>
+
 ## Unsecure account attributes
 
-### What are unsecure account attributes?
+**Description**
 
 Microsoft Defender for Identity continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
-### What risk do unsecure account attributes pose?
+**Impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -471,7 +510,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 For example, if the **PasswordNotRequired** attribute is enabled, an attacker can easily access the account. This is especially risky if the account has privileged access to other resources.
 
-### Remediation steps
+<a name="implementation"></a><details><summary>**Implementation**</summary>
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have unsecure attributes.
 
@@ -498,6 +537,8 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
     - [User Properties - Account Section](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd861342(v=ws.11))
     - [Introduction to Active Directory Administrative Center Enhancements (Level 100)](/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-)
     - [Active Directory Administration Center](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd871105(v=ws.11))
+
+</details>
 
 ## Next steps
 
