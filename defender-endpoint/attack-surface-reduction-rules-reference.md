@@ -582,7 +582,7 @@ Dependencies: Microsoft Defender Antivirus
 > [!NOTE]
 > This feature isn't supported in Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show as "Not applicable" for Windows and Windows Servers.
 
-This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
+This rule prevents the execution of certain commands to restart machines in Safe Mode. In Windows' Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such abuse of Safe Mode by preventing commonly abused commands like `bcdedit` and `bootcfg` from restarting machines in Safe Mode. Safe Mode is still accessible manually from the Windows Recovery Environment.
 
 Intune Name: ` Block rebooting machine in Safe Mode`
 
