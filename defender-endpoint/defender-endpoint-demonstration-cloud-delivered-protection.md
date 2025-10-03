@@ -49,7 +49,7 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-block-view-downloads.png" alt-text="Lists the download as unsafe, but provides an option to proceed with the download":::
 
-4. You should see that "Microsoft Defender Antivirus" found a virus and deleted it.
+4. Navigate to the location where the file was downloaded. Attempt to open / execute the file by double clicking it. You should see that "Microsoft Defender Antivirus" found a virus and deleted it.
 
    > [!NOTE]
    >
@@ -57,7 +57,7 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-threat-found-notification.png" alt-text="Microsoft Defender Antivirus Threats found notification provides options to get details":::
 
-5. If the file executes, or if you see that it was blocked by Microsoft Defender SmartScreen,  cloud-delivered protection isn't working. For more information, see [Configure and validate network connections for Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/configure-network-connections-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
+5. If the file properly executes, or if you see that it was blocked by Microsoft Defender SmartScreen,  cloud-delivered protection isn't working. For more information, see [Configure and validate network connections for Microsoft Defender Antivirus](/windows/threat-protection/windows-defender-antivirus/configure-network-connections-windows-defender-antivirus?ocid=wd-av-demo-cloud-middle).
 
 ## See also
 
