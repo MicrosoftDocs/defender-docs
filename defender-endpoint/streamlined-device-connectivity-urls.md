@@ -36,6 +36,11 @@ This article includes a list of the streamlined connectivity URLs required to on
 | Microsoft Defender SmartScreen             | GCC High  | Reporting and Notifications       | 443  | unitedstates1.ss.wd.microsoft.us                     | SmartScreen protection, reporting, notifications, MDAV Network Protection, custom URL indicators  |
 | Microsoft Defender SmartScreen             | DoD       | Reporting and Notifications       | 443  | unitedstates2.ss.wd.microsoft.us                     | SmartScreen protection, reporting, notifications, MDAV Network Protection, custom URL indicators  |
 
+## URLs used for updates
+
+> [!NOTE]
+> Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
+
 | Service                        | Geography | Category | Port | Endpoint/URL                                         | Description                                                                                       |
 |--------------------------------|-----------|----------|------|------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | Microsoft Defender Antivirus    | US Gov    | MU/WU    | 443  | *.update.microsoft.com                               | Security intelligence and product updates                                                        |
