@@ -18,10 +18,13 @@ Learn about Microsoft Defender for Identity security posture assessments for ide
 
 **Description**
 
-The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat.
-
 This recommendation indicates whether an AD Guest account is enabled in your environment.   
 The goal is to **ensure** that the Guest account of the domain is **not enabled**. 
+
+
+**Impact**
+
+The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat.
 
 
 <a name="implementation"></a><details><summary>**Implementation**</summary>
@@ -40,9 +43,9 @@ The goal is to **ensure** that the Guest account of the domain is **not enabled*
 
 ## Change Domain Controller computer account old password
 
-This recommendation lists all domain controller’s computer accounts with password last set over 45 days ago.
-
 **Description**
+
+This recommendation lists all domain controller’s computer accounts with password last set over 45 days ago.
 
 A Domain Controller (DC) is a server in an Active Directory (AD) environment that manages user authentication and authorization, enforces security policies, and stores the AD database. It handles logins, verifies permissions, and ensures secure access to network resources. Multiple DCs provide redundancy for high availability.  
 Domain Controllers with old passwords are at heightened risk of compromise and could be more easily taken over. Attackers can exploit outdated passwords, gaining prolonged access to critical resources and weakening network security. It could indicate a Domain controller that is no longer functioning in the domain.
@@ -69,7 +72,7 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
 </details>
 
 
-## Domain controllers with the print spooler service available
+## Disable Print spooler service on domain controllers
 
 **Description**
 
@@ -219,7 +222,7 @@ These servers operate at the intersection of on-premises and cloud identity, mak
 
 </details>
 
-## Unsecure domain configurations
+## Resolve unsecure domain configurations
 
 **Description**
 
@@ -238,10 +241,6 @@ For example, if LDAP signing isn't enforced, an attacker can compromise domain a
     :::image type="content" source="../media/unsecure-domain-configurations.png" alt-text="Screenshot that shows a description of unsecure domain configurations and how they impact the user. ":::
 
 1. Take appropriate action on these domains by modifying or removing the relevant configurations.
-
-> [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
-> 
 
 1. Use the remediation appropriate to the relevant configurations as described in the following table.
 

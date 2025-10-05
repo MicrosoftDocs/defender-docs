@@ -9,7 +9,6 @@ ms.reviewer: LiorShapiraa
 
 # Group policy security assessments
 
-This article provides security assessments related to Group Policy Objects (GPOs). 
 
 ## GPO assigns unprivileged identities to local groups with elevated privileges
 
@@ -17,6 +16,8 @@ This article provides security assessments related to Group Policy Objects (GPOs
 
 Using Group Policy Objects (GPOs) to add membership to a local group can create a security risk if the target group has excessive permissions or rights. To mitigate this risk, it's important to identify any local groups, such as local administrators or terminal server access, where Authenticated Users or Everyone is granted access by a GPO.   
 Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment.  
+
+**Impact**
 
 A user, service or application that relies on these local permissions may stop functioning. 
 
@@ -33,11 +34,16 @@ Carefully review each assigned group membership, identify any dangerous group me
 
 ## GPO can be modified by unprivileged accounts
 
-This recommendation lists any Group Policy Objects in your environment that can be modified by standard users which can potentially lead to the compromise of the domain.
-
 **Description**
 
-Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment. A user, service or application that relies on these permissions may stop functioning. 
+This recommendation lists any Group Policy Objects in your environment that can be modified by standard users which can potentially lead to the compromise of the domain.
+
+Attackers may attempt to obtain information on Group Policy settings to uncover vulnerabilities that can be exploited to gain higher levels of access, understand the security measures in place within a domain, and identify patterns in domain objects. This information can be used to plan subsequent attacks, such as identifying potential paths to exploit within the target network or finding opportunities to blend in or manipulate the environment. 
+
+
+**Impact** 
+
+A user, service or application that relies on these permissions may stop functioning. 
 
 <a name="implementation"></a><details><summary>**Implementation**</summary>
 
@@ -53,7 +59,7 @@ This posture recommendation lists any Group policy objects in your environment t
 **Description**
 
 
-Group Policy Preferences (GPP) previously allowed administrators to include embedded credentials in domain policies. However, this feature was removed with the release of MS14-025 due to security concerns regarding the insecure storage of passwords. But files containing these credentials could still be present in the SYSVOL folder, which means that any domain user can access the files and decrypt the password using the publicly available AES key.   
+Group Policy Preferences (GPP) previously allowed administrators to include embedded credentials in domain policies. However, this feature was removed with the release of MS14-025 due to security concerns regarding the insecure storage of passwords. Files containing these credentials could still be present in the SYSVOL folder, which means that any domain user can access the files and decrypt the password using the publicly available AES key.   
 To prevent potential exploitation by adversaries, it is recommended to remove any existing preferences that contain embedded credentials.
 
 
