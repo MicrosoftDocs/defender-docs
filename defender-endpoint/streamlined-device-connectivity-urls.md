@@ -26,29 +26,32 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ## Prerequisites
 
-Prerequisites:
+### Operating systems
 
-Operating Systems
-Windows 10 version 1809+
-Windows 11
-Windows Server 2019
-Windows Server 2022
-Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through MSI) released in 2022
-macOS supported versions with Defender for Endpoint product version 101.24022.*+
-Linux supported versions with Defender for Endpoint product version 101.24022.*+
+- Windows 10 version 1809+
+- Windows 11
+- Windows Server 2019
+- Windows Server 2022
+- Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through MSI) released in 2022
+- macOS supported versions with Defender for Endpoint product version 101.24022.*+
+- Linux supported versions with Defender for Endpoint product version 101.24022.*+
 
-Windows Minimum Component Versions:
-Defender antimalware client: 4.18.2211.5 (November 2022)
-Defender antimalware engine: 1.1.19900.2
-Defender security intelligence: 1.391.315.0
-Defender detection sensor (Sense) version: >10.8040.*/ March 8th 2022+
+### Windows Minimum Component Versions
 
-Mac/Linux Minimum Component Versions:
+- Defender antimalware client: 4.18.2211.5 (November 2022)
+- Defender antimalware engine: 1.1.19900.2
+- Defender security intelligence: 1.391.315.0
+- Defender detection sensor (Sense) version: >10.8040.*/ March 8th 2022+
+
+### Mac/Linux Minimum Component Versions
+
 App/product version (macOS/Linux): 101.24022.*+
 
-Note: Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab. 
+### Notes
 
-Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but will still require a longer list of URLs. The Windows 1607 to 1803 tab lists the additional URLs required.
+- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab.
+
+- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the additional URLs required.
 
 ## US Gov URLs
 
@@ -81,7 +84,7 @@ Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using t
 ## URLs used for certificate validation checks
 
 > [!NOTE]
-> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. This means the operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. Read more at https://learn.microsoft.com/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates for more information about management of trusted root certificates in disconnected environments.
+> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. This means the operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. For more information, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|---|-----|--------|
