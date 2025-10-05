@@ -25,40 +25,65 @@ The dashboard eliminates the need to toggle between portals, enabling security t
 
 ## Dashboard components
 
-### Security Posture summary
+The unified Cloud Infrastructure Overview Dashboard consolidates security posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP. The dashboard is organized into key sections:
 
-The dashboard provides a comprehensive view of your security posture including:
+### Top Actions
 
-- **Cloud Secure Score trends**: View the progression of your cloud security score over time
-- **Security Posture trends**: Monitor improvements and degradations in your overall security posture
-- **Security Recommendations over time**: Track recommendation remediation progress with data for up to 6 months
+Quick access to high-priority security tasks:
+- **Critical attack paths**: Immediate investigation of high-risk attack scenarios
+- **High-priority security recommendations**: Focus on most impactful security improvements
+- **Urgent threat responses**: Quick access to active security incidents requiring attention
 
-### Threat Protection insights
+### Security Posture
 
-Monitor threat protection capabilities across your environment:
+Comprehensive security posture management with:
+- **Cloud Secure Score trends**: View score progression over time with built-in overtime tracking
+- **Security Recommendations**: Prioritized list of security improvements
+- **Compliance insights**: Track compliance with security standards and frameworks
+- **Remediation tracking**: Monitor progress of security improvements
 
-- **Threat Protection alerts**: View active security alerts and their severity levels
-- **Defender coverage status**: Monitor which assets are protected by Microsoft Defender for Cloud
-- **Alert trends**: Analyze threat patterns and security incidents over time
+### Threat Detection
 
-### Exposure Management integration
+Advanced threat protection monitoring:
+- **Security alerts across environments**: Unified view of threats across Azure, AWS, and GCP
+- **Alert severity breakdown**: Categorized view of High, Medium, and Low severity threats
+- **Incident correlation**: Connection between cloud threats and broader organizational security events
+- **Response workflows**: Streamlined incident response across all Microsoft security solutions
 
-The dashboard seamlessly integrates with Exposure Management to provide:
+### Workload Insights
 
-- **Attack path visibility**: View critical attack paths that could lead to compromise
-- **Top actions**: Quick access to investigating critical attack paths and high-priority security issues
-- **Risk-based prioritization**: Focus on the most critical threats based on contextual risk assessment
+Workload-specific pivots with detailed asset summary, coverage, insights, and risk level:
 
-### Workload-specific insights
+- **VMs (Virtual Machines)**: 
+  - Asset count and security coverage status
+  - Vulnerability insights and patch management
+  - Risk level assessment based on exposure factors
 
-Get detailed insights organized by workload categories and risk levels:
+- **Data**: 
+  - Database and storage security posture
+  - Data sensitivity and classification insights
+  - Access control and encryption status
 
-- **Virtual Machines**: Compute instance security and compliance status
-- **Data**: Database and storage security posture
-- **Containers**: Kubernetes and container security insights
-- **Identity**: Identity and access management risks
-- **Network**: Network security configurations and exposures
-- **Applications**: Application security and API protection status
+- **APIs**: 
+  - API security posture and threat exposure
+  - Authentication and authorization controls
+  - Traffic analysis and anomaly detection
+
+- **DevOps**: 
+  - Code repository security insights
+  - CI/CD pipeline security assessment
+  - Infrastructure as Code (IaC) security validation
+
+- **CIEM (Cloud Infrastructure Entitlement Management)**: 
+  - Identity and access rights analysis
+  - Privilege escalation risk assessment
+  - Unused and excessive permissions identification
+
+Each workload section provides:
+- **Asset Summary**: Total count and categorization of resources
+- **Coverage Status**: Defender for Cloud protection deployment status
+- **Security Insights**: Key security findings and recommendations
+- **Risk Level**: Contextual risk assessment based on environmental factors
 
 ## Dashboard filtering and customization
 

@@ -92,16 +92,30 @@ You can use Attack path analysis to locate the biggest risks to your environment
 
 1. Navigate to **Exposure Management** > **Attack surface** > **Attack paths**.
 
+    The Attack paths experience provides multiple views:
+    - **Overview tab**: View attack paths over time, top 5 choke points, top 5 attack path scenarios, top targets, and top entry points
+    - **Attack paths list**: Dynamic, filterable view of all attack paths with advanced filtering capabilities
+
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png" alt-text="Screenshot that shows the attack path analysis page in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png":::
 
     > [!NOTE]
     > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
 
-1. Select an attack path to view details.
+1. Use advanced filtering to focus on specific attack paths:
+   - **Risk level**: Filter by High, Medium, or Low risk attack paths
+   - **Asset type**: Focus on specific resource types
+   - **Remediation status**: View resolved, in-progress, or pending attack paths
+   - **Time frame**: Filter by specific time periods (e.g., last 30 days)
+
+1. Select an attack path to view the Attack Path Map, a graph-based view highlighting:
+   - **Vulnerable nodes**: Resources with security issues
+   - **Entry points**: External access points where attacks could begin
+   - **Target assets**: Critical resources attackers are trying to reach
+   - **Choke points**: Convergence points where multiple attack paths intersect
 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
 
-1. Select a node to investigate.
+1. Select a node to investigate detailed information:
 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-node-defender-portal.png" alt-text="Screenshot of the attack path screen in the Defender portal showing node selection." lightbox="media/how-to-manage-attack-path/attack-path-node-defender-portal.png":::
 
@@ -109,9 +123,14 @@ You can use Attack path analysis to locate the biggest risks to your environment
    > If you have limited permissions—especially across subscriptions—you might not see full attack path details. This is expected behavior designed to protect sensitive data.
    > To view all details, make sure you have the necessary permissions.
 
+1. Review node details including:
+   - **MITRE ATT&CK tactics and techniques**: Understanding the attack methodology
+   - **Risk factors**: Environmental factors contributing to risk
+   - **Associated recommendations**: Security improvements to mitigate the issue
+
 1. Select **Insight** to view the associated insights for that node.
 
-1. Select **Recommendations** to see actionable guidance.
+1. Select **Recommendations** to see actionable guidance with remediation status tracking.
 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png" alt-text="Screenshot that shows where to select recommendations in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png":::
 

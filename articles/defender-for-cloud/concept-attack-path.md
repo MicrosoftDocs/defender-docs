@@ -33,11 +33,27 @@ In the Azure portal, you can access these capabilities through:
 
 In the Microsoft Defender portal, these capabilities are integrated into the Exposure Management experience:
 
-- **Attack paths**: Navigate to **Exposure Management** > **Attack surface** > **Attack paths**
-- **Cloud security explorer**: Access through the enhanced Exposure Management interface
-- **Choke points identification**: View attack path convergence points to focus mitigation efforts
-- **Enhanced filtering**: Use advanced filters for risk level, asset type, remediation status, and time frames
+### Attack paths access
+
+Navigate to **Exposure Management** > **Attack surface** > **Attack paths** to access:
+
+- **Attack paths overview**: View attack paths over time, top 5 choke points, top 5 attack path scenarios, top targets, and top entry points
+- **Attack path list**: Dynamic, filterable view of attack paths with advanced filtering capabilities
+- **Attack Path Map**: Graph-based view highlighting vulnerable nodes, entry points, and target assets with drill-down capabilities
+
+### Enhanced attack path features
+
+- **Choke points identification**: Nodes where multiple attack paths converge, flagged as high-risk bottlenecks for focused mitigation efforts
+- **Real-time analysis**: Dynamic attack path generation based on real-time exposure data using Defender for Cloud's proprietary algorithm
+- **MITRE ATT&CK mapping**: Each path shows associated MITRE tactics, techniques, and remediation status
+- **Enhanced filtering**: Filter by risk level, asset type, remediation status, and time frame (e.g., last 30 days)
+- **Historical tracking**: Monitor attack path evolution and incident correlation over time
+
+### Cloud security explorer integration
+
+- **Enhanced querying**: Access through the Exposure Management interface with improved graph-based queries
 - **Cross-solution correlation**: Attack paths are correlated with incidents from Microsoft Defender XDR and other Microsoft security solutions
+- **Contextual insights**: Integration with broader security context for more informed decision-making
 
 The Defender portal provides a unified view that integrates attack path analysis with broader threat detection and incident response workflows, enabling more comprehensive security operations.
 

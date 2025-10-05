@@ -73,6 +73,8 @@ Each workload tab provides specialized insights:
 
 ## Review the inventory
 
+::: zone pivot="azure-portal"
+
 1. In Defender for Cloud in the Azure portal, select **Inventory**. By default the resources are sorted by the number of active security recommendations.
 1. Review the available settings:
     - In **Search**, you can use a free text search to find resources.
@@ -83,6 +85,38 @@ Each workload tab provides specialized insights:
 1. On the **Resource Health** page for the resource, review information about the resource.
     - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
     - The **Alerts** tab shows any relevant security alerts.
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+1. In the Microsoft Defender portal, navigate to **Assets** > **Cloud Infrastructure**.
+1. Review the unified cloud infrastructure assets overview:
+    - **Total resources** across all connected cloud environments
+    - **Security posture summary** showing healthy vs. unhealthy resources
+    - **Coverage metrics** indicating Defender for Cloud protection status
+    - **Risk distribution** showing assets by risk level
+
+1. Use workload-specific tabs to focus on particular asset types:
+    - Select **VMs** for virtual machines and compute instances
+    - Select **Data** for databases and storage resources
+    - Select **Containers** for Kubernetes and container-related assets
+    - Select **AI** for AI and machine learning workloads
+    - Select **API** for API management and endpoints
+    - Select **DevOps** for development pipeline resources
+    - Select **Identity** for identity and access management assets
+    - Select **Serverless** for functions and serverless compute
+
+1. Apply the global scope filter to focus on specific cloud scopes or organizational boundaries
+
+1. Select an asset to view detailed information:
+    - **Security recommendations** prioritized by risk level
+    - **Security alerts** with threat detection insights
+    - **Attack path involvement** showing participation in potential attack scenarios
+    - **Compliance status** against security standards
+    - **Risk factors** including internet exposure and lateral movement potential
+
+::: zone-end
 
 ## Review software inventory
 

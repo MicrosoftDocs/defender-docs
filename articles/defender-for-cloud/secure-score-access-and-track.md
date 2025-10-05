@@ -18,7 +18,7 @@ You can find your overall secure score, and your score per subscription, through
 
 ::: zone pivot="defender-portal"
 
-Defender for Cloud displays your score prominently in the Microsoft Defender portal. When you select the secure score tile on the overview page, you're taken to the dedicated secure score page, where you see the score broken down by subscription. Select a single subscription to see the detailed list of prioritized recommendations and the potential effect that remediating them will have on the subscription's score.
+Defender for Cloud displays your score prominently in the Microsoft Defender portal. The secure score is now part of the unified Exposure Management experience, providing a consolidated view of your security posture across identities, devices, cloud apps, data, and infrastructure.
 
 Your secure score is shown in the following locations in the Microsoft Defender portal:
 
@@ -26,18 +26,38 @@ Your secure score is shown in the following locations in the Microsoft Defender 
 
     :::image type="content" source="./media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="The secure score on Defender for Cloud's dashboard in the Microsoft Defender portal":::
 
-- In the dedicated **Secure score** page you can see the secure score for your subscription and your management groups:
+- In the **Exposure Management > Secure Score** experience, where you can access the unified Cloud Secure Score:
+
+    1. Navigate to **Exposure Management** > **Secure Score**
+    2. Select **View Cloud Initiative** to see the comprehensive Cloud Secure Score dashboard
 
     :::image type="content" source="./media/secure-score-defender-portal/secure-score-widgets-environment-workload.png" alt-text="The secure score widgets showing environment and workload scores in the Microsoft Defender portal" lightbox="media/secure-score-defender-portal/secure-score-widgets-environment-workload.png":::
 
-    :::image type="content" source="./media/secure-score-defender-portal/understand-secure-score.png" alt-text="Understanding your secure score in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/understand-secure-score.png":::
+- In the **Cloud Initiative** dashboard showing detailed secure score breakdown:
+
+    1. Navigate to **Exposure Management** > **Initiatives** > **Cloud Security Initiative** > **Open Initiative**
+    2. View the Cloud Initiative Overview Dashboard with:
+       - New Cloud Secure Score calculation
+       - Secure score over time trends
+       - Secure score by environment (Azure, AWS, GCP)
+       - Secure score by workload
+       - Recommendations summary by criticality
+
+    :::image type="content" source="./media/secure-score-defender-portal/cloud-initiative-secure-score.png" alt-text="The cloud initiative secure score view in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/cloud-initiative-secure-score.png":::
 
     > [!NOTE]
     > Any management groups for which you don't have sufficient permissions, will show their score as "Restricted."
 
-- In the **Cloud initiative** section showing secure score breakdown:
+- You can also access the Cloud Initiative through:
+  - **Cloud Infrastructure** > **Overview** > **View cloud initiative** (from top metrics)
+  - **Exposure Management** > **Initiatives** > **View Cloud Initiative**
 
-    :::image type="content" source="./media/secure-score-defender-portal/cloud-initiative-secure-score.png" alt-text="The cloud initiative secure score view in the Microsoft Defender portal"  lightbox="media/secure-score-defender-portal/cloud-initiative-secure-score.png":::
+The unified secure score experience provides:
+- **Consolidated scoring**: A single view across all security domains
+- **Risk-based prioritization**: Contextual recommendations based on effective risk
+- **Multi-cloud visibility**: Secure score breakdown by Azure, AWS, and GCP environments
+- **Workload-specific insights**: Detailed scoring by workload type
+- **Historical tracking**: Secure score trends over time with 14-day history
 
 ::: zone-end
 

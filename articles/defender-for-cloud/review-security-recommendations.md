@@ -25,6 +25,8 @@ Defender for Cloud proactively uses a dynamic engine that assesses the risks in 
 
 ## Review the recommendations page
 
+::: zone pivot="azure-portal"
+
 Review recommendations and make sure all the details are correct before you resolve them.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -32,6 +34,43 @@ Review recommendations and make sure all the details are correct before you reso
 1. Go to **Defender for Cloud** > **Recommendations**.
 
 1. Select a recommendation.
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+The Recommendations page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
+
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
+1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+
+1. Apply filters such as:
+   - **Exposed asset**: Filter by assets with exposure to threats
+   - **Asset risk factors**: Filter by specific risk conditions
+   - **Environment**: Filter by Azure, AWS, or GCP
+   - **Workload**: Filter by specific workload types
+   - **Recommendation maturity**: Filter by recommendation readiness level
+
+1. In the left-hand side of the page, you can choose to view:
+   - **All recommendations**: Complete list of security recommendations
+   - **Misconfigurations**: Configuration-related security issues
+   - **Vulnerabilities**: Software vulnerabilities requiring patches
+   - **Exposed Secrets**: Credentials and secrets that may be compromised
+
+1. For each view, you'll see:
+   - **Cloud secure score**: Current security posture score
+   - **Score history**: Trends over time
+   - **Recommendation by risk level**: Breakdown by High, Medium, Low severity
+   - **Risk calculation details**: How the risk level is determined
+
+1. Select a recommendation to review detailed information.
+
+Alternative access paths to recommendations:
+- **Cloud Infrastructure Overview Dashboard** > **Security Posture Security Recommendations** > **View Recommendations**
+- **Exposure Management** > **Initiatives** > **Cloud Security Initiative** > **Open Initiative** > **Security Recommendations Tab**
+
+::: zone-end
 
 1. On the recommendation page, review the following details:
    - **Risk level**: The vulnerability and business effect of the underlying security issue, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
@@ -49,6 +88,8 @@ Review recommendations and make sure all the details are correct before you reso
    - **Tactics & techniques**: The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
+
+::: zone pivot="azure-portal"
 
 You can interact with recommendations in multiple ways. If an option isn't available, that means it's not relevant to the recommendation.
 
@@ -94,6 +135,54 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 1. (Optional) To view the associated recommendation page, select **Open the vulnerability page**.
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud Assets** tab, you can explore detailed information and take action.
+
+The recommendation details page provides comprehensive information including:
+
+1. **Risk Assessment**: View the risk level calculation based on environmental context, including:
+   - Resource exposure factors
+   - Potential business impact
+   - Exploitability assessment
+   - Network connectivity context
+
+1. **Resource Context**: Review detailed information about affected resources with:
+   - Asset relationship mapping
+   - Security posture context
+   - Associated attack paths
+   - Risk factor analysis
+
+1. **Remediation Options**: Access various remediation approaches:
+   - **Automated remediation**: When available, use built-in fix capabilities
+   - **Manual remediation**: Follow step-by-step guidance for manual fixes
+   - **Governance assignment**: Assign owners and due dates for tracking
+   - **Risk acceptance**: Document accepted risks with proper justification
+
+1. **Attack Path Integration**: If the recommendation is part of attack paths:
+   - View associated attack path scenarios
+   - Understand the role in potential attack sequences
+   - See choke point analysis where applicable
+   - Access MITRE ATT&CK technique mapping
+
+1. **Filtering and Prioritization**: Use advanced filtering to focus on:
+   - Critical recommendations with high risk scores
+   - Recommendations affecting exposed assets
+   - Time-sensitive security issues
+   - Workload-specific recommendations
+
+1. **Tracking and Reporting**: Monitor remediation progress through:
+   - Status tracking (unassigned, on time, overdue)
+   - Historical trend analysis
+   - Compliance impact assessment
+   - Security score improvement potential
+
+The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
+
+::: zone-end
 
 ## Group recommendations by title
 

@@ -53,7 +53,7 @@ When accessing Microsoft Defender for Cloud through the Defender portal, your tr
 - Some advanced Defender portal features may require specific license combinations
 
 > [!TIP]
-> To maximize your trial value, connect multiple environment types early and explore the unified incident response capabilities unique to the Defender portal experience.
+> To maximize your trial value, connect multiple environment types early and explore the unified incident response capabilities unique to the Defender portal experience. Focus on exploring the new Exposure Management integration and Cloud Infrastructure Overview Dashboard to understand the enhanced capabilities.
 
 ## Step 2: Connect your environments
 
