@@ -114,14 +114,15 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ### Windows Server 2016 and Windows Server 2012 R2 (Unified Agent)
 
-| MsSense.exe              | C:\Program  Files\Windows Defender Advanced Threat Protection | Microsoft Defender for Endpoint service  executable          |
-| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| SenseCnCProxy.exe        | C:\Program Files\Windows  Defender Advanced Threat Protection | Microsoft  Defender for Endpoint communication module        |
-| SenseIR.exe              | C:\Program  Files\Windows Defender Advanced Threat Protection | Microsoft Defender for Endpoint Sense IR  (Incident Response) module |
-| SenseSampleUploader.exe  | C:\Program Files\Windows  Defender Advanced Threat Protection | Microsoft  Defender for Endpoint Sample Upload module        |
-| SenseCM.exe              | C:\Program Files\Windows Defender  Advanced Threat Protection | Microsoft  Defender for Endpoint Sense CM (Configuration Management) |
-| MpCmdRun.exe             | C:\Program Files\Windows  Defender                           | Microsoft  Defender Antivirus command-line utility           |
-| MsMpEng.exe              | C:\Program Files\Windows Defender                            | Microsoft  Defender Antivirus service executable             |
-| ConfigSecurityPolicy.exe | C:\Program Files\Windows  Defender                           | Microsoft  Security Client Policy Configuration Tool         |
-| NisSrv.exe               | C:\Program Files\Windows Defender                            | Microsoft  Defender Antivirus Network Realtime Inspection    |
-| SenseTVM.exe             | C:\Program Files\Windows Defender Advanced Threat  Protection | Microsoft Defender for Endpoint  Sense TVM (Threat Vulnerability Management) |
+|Process|Path|Comment|
+|-------|----|-------|
+|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
+|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
+|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
+|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
+|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
+|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
+|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
+|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
