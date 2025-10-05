@@ -4,6 +4,7 @@ description: Learn about the Microsoft Defender for Cloud secure score, which is
 ms.topic: concept-article
 ms.date: 03/12/2025
 ms.custom: sfi-image-nochange
+zone_pivot_groups: defender-portal-experience
 ---
 
 # Secure score in Defender for Cloud
