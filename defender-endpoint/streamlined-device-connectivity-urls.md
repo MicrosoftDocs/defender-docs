@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 08/09/2025
+ms.date: 10/05/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -23,6 +23,32 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).
+
+## Prerequisites
+
+Prerequisites:
+
+Operating Systems
+Windows 10 version 1809+
+Windows 11
+Windows Server 2019
+Windows Server 2022
+Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through MSI) released in 2022
+macOS supported versions with Defender for Endpoint product version 101.24022.*+
+Linux supported versions with Defender for Endpoint product version 101.24022.*+
+
+Windows Minimum Component Versions:
+Defender antimalware client: 4.18.2211.5 (November 2022)
+Defender antimalware engine: 1.1.19900.2
+Defender security intelligence: 1.391.315.0
+Defender detection sensor (Sense) version: >10.8040.*/ March 8th 2022+
+
+Mac/Linux Minimum Component Versions:
+App/product version (macOS/Linux): 101.24022.*+
+
+Note: Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab. 
+
+Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but will still require a longer list of URLs. The Windows 1607 to 1803 tab lists the additional URLs required.
 
 ## US Gov URLs
 
