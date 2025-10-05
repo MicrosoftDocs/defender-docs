@@ -75,7 +75,7 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
 1. Select **Fix** to see the components that aren't enabled.
 
-    :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support.":::
+    :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support." lightbox="media/integration-defender-for-endpoint/fix-defender-for-endpoint.png":::
 
 1. In **Missing components** > **Unified solution**, select **Enable** to automatically install the Defender for Endpoint agent on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
 
