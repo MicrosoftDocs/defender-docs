@@ -1,7 +1,7 @@
 ---
 title: Protect your Smartsheet | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Smartsheet app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+ms.date: 10/05/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -64,15 +64,17 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
 ### Prerequisites
 
+- You must have a Smartsheet license that is part of an Enterprise plan with the Platinum package.
 - The Smartsheet user used to log in to Smartsheet must be a System Admin.
 - Event Reporting must be enabled by Smartsheet, either through standalone purchase or via an Enterprise plan with the Advance Platinum package.
+- Smartsheet accounts must be in the **smartsheet.com** domain. These domains are not currently supported:
+    - smartsheet.au
+    - smartsheet.eu
+    - smartsheetgov.com
 
 ### Configure Smartsheet
 
->[!NOTE]
->The Smartsheet license must be an Enterprise plan with the Platinum package.
->
->Smartsheet accounts hosted in the EU region (the .eu domain suffix) aren't currently supported.
+
 
 1. Register to add Developer Tools to your existing Smartsheet account:
     1. Go to the [Developer Sandbox Account Registration](https://developers.smartsheet.com/register/) page.
