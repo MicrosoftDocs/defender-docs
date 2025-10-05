@@ -1,9 +1,9 @@
----
+﻿---
 title: Tamper resiliency with Microsoft Defender for Endpoint
 description: Learn about the anti-tampering capabilities of Microsoft Defender for Endpoint.
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: batamig
+ms.author: bagol
+manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -15,18 +15,16 @@ ms.collection:
 - mde-ngp
 f1.keywords: NOCSH
 audience: ITPro
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Protect your organization from the effects of tampering
 
 Tampering is the general term used to describe attackers attempts to impair the effectiveness of Microsoft Defender for Endpoint. The ultimate goal of attackers isn't to affect just one device, but rather to achieve their objective such as launching a ransomware attack. As such, the anti-tampering capabilities of Microsoft Defender for Endpoint extend beyond preventing tampering of a single device to detecting attacks and minimizing their impact.
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 ## Organization wide tamper resiliency is built on Zero Trust
 
@@ -135,3 +133,4 @@ If the [Block abuse of exploited vulnerable signed drivers](attack-surface-reduc
 If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

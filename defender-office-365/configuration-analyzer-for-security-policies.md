@@ -2,9 +2,9 @@
 title: Configuration analyzer for threat policies
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
@@ -51,7 +51,7 @@ The Standard and Strict policy setting values used as baselines are described in
 The configuration analyzer also checks the following non-policy settings:
 
 - **DKIM**: Whether [SPF](email-authentication-spf-configure.md) and [DKIM](email-authentication-dkim-configure.md) records for the specified domain are detected in DNS.
-- **Outlook**: Whether native Outlook external sender identifiers are [enabled](/powershell/module/exchange/set-externalinoutlook) in the organization.
+- **Outlook**: Whether native Outlook external sender identifiers are [enabled](/powershell/module/exchangepowershell/set-externalinoutlook) in the organization.
 
 ## What do you need to know before you begin?
 
@@ -68,7 +68,7 @@ The configuration analyzer also checks the following non-policy settings:
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the configuration analyzer in the Microsoft Defender portal
 

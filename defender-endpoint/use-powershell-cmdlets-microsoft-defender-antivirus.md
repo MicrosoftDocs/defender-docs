@@ -1,14 +1,14 @@
----
+﻿---
 title: Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus
 description: In Windows 10 and Windows 11, you can use PowerShell cmdlets to run scans, update Security intelligence, and change settings in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 03/26/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 audience: ITPro
 ms.topic: how-to
@@ -17,16 +17,14 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus
 
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -97,3 +95,4 @@ Omit the `-online` parameter to get locally cached help.
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender Antivirus Cmdlets](/powershell/module/defender)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

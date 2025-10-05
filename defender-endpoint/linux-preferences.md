@@ -1,13 +1,13 @@
----
+﻿---
 title: Configure security settings in Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 05/09/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,18 +16,17 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Configure your security settings
 
@@ -446,17 +445,18 @@ Configure filesystems to be unmonitored/excluded from real-time protection (RTP)
 > [!NOTE] 
 > Configured filesystem is unmonitored only if it's present in Microsoft's list of permitted unmonitored filesystems.
 
-By default, NFS and Fuse are unmonitored from RTP, Quick, and Full scans. However, they can still be scanned by a custom scan. For example, to remove NFS from the list of unmonitored filesystems list, update the managed config file as shown below. This will automatically add NFS to the list of monitored filesystems for RTP.
+By default, `cifs`, `fuse`, `nfs`, `nfs4` and `smb` are unmonitored from RTP, Quick, and Full scans. However, they can still be scanned by a custom scan. For example, to remove `nfs` and `nfs4` from the list of unmonitored filesystems list, update the managed config file as shown below. This will add `nfs`/`nfs4` to the list of monitored filesystems for RTP. 
+Currently monitoring `nfs4`, `cifs` and `smb` filesystems is in preview mode for RTP mode.
 
 ```JSON
 {
    "antivirusEngine":{
-      "unmonitoredFilesystems": ["Fuse"]
+      "unmonitoredFilesystems": ["cifs","fuse","smb"]
   }
 }
 ```
 
-To remove both NFS and Fuse from unmonitored list of filesystems, use the following snippet:
+To remove all entries from unmonitored list of filesystems, use the following snippet:
 
 ```JSON
 {

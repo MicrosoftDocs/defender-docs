@@ -1,15 +1,15 @@
----
+﻿---
 title: Manage tamper protection for your organization using Microsoft Intune
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
-manager: deniseb
+manager: bagol
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/06/2025
 audience: ITPro
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -19,17 +19,15 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Manage tamper protection for your organization using Microsoft Intune
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-- [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 
 **Platforms**
 - Windows
@@ -137,3 +135,4 @@ You can use a registry key to determine whether the functionality to protect Mic
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

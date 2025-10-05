@@ -6,10 +6,10 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.service: defender-office-365
 ms.date: 07/10/2024
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security

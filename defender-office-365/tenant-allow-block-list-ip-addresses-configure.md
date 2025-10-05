@@ -2,9 +2,9 @@
 title: Allow or block IPv6 addresses using the Tenant Allow/Block List
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -76,7 +76,7 @@ This article describes how admins can manage entries for IPv6 addresses in the M
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Create allow entries for IPv6 addresses
 
@@ -123,7 +123,7 @@ This example adds an allow entry for the specified IP address that never expires
 New-TenantAllowBlockListItems -ListType IP -Allow -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Create block entries for IPv6 addresses
 
@@ -170,7 +170,7 @@ This example adds a block entry for the specified IP address that never expires.
 New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to view entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -229,7 +229,7 @@ This example filters the results by blocked IP address.
 Get-TenantAllowBlockListItems -ListType IP -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to modify entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -275,7 +275,7 @@ This example changes the expiration date of the specified IP address block entry
 Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -ExpirationDate "9/1/2024"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to remove entries for IPv6 addresses from the Tenant Allow/Block List
 
@@ -312,7 +312,7 @@ This example removes the specified IP address block from the Tenant Allow/Block 
 Remove-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882"
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## Related articles
 

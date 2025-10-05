@@ -4,12 +4,12 @@ description: See how to get devices onboarded to Defender for Business to protec
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 12/12/2024
+ms.date: 09/12/2025
 ms.reviewer: efratka, nehabha, muktaagarwal
 f1.keywords: NOCSH
 ms.collection:
@@ -120,7 +120,7 @@ When you set up automatic enrollment, users add their work account to the device
 5. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
 
 > [!TIP]
-> To learn more, see [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll).
+> To learn more, see [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll).
 
 #### Ask users to enroll their Windows 10 and 11 devices
 
@@ -128,7 +128,7 @@ When you set up automatic enrollment, users add their work account to the device
 
    > [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]
 
-2. Share this article with users in your organization: [Enroll Windows 10/11 devices in Intune](/mem/intune/user-help/enroll-windows-10-device).
+2. Share this article with users in your organization: [Enroll Windows 10/11 devices in Intune](/intune/intune-service/user-help/enroll-windows-10-device).
 
 3. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
 
@@ -151,7 +151,7 @@ After the command runs, the Command Prompt window closes automatically. If succe
 ## Mac
 
 > [!NOTE]
-> We recommend that you use a [local script to onboard Mac](#local-script-for-mac). Although you can [set up enrollment for Mac using Intune](/mem/intune/enrollment/macos-enroll), the local script is the simplest method for onboarding Mac to Defender for Business.
+> We recommend that you use a [local script to onboard Mac](#local-script-for-mac). Although you can [set up enrollment for Mac using Intune](/intune/intune-service/enrollment/macos-enroll), the local script is the simplest method for onboarding Mac to Defender for Business.
 
 Choose one of the following options to onboard Mac:
 
@@ -187,7 +187,7 @@ When you run the local script on Mac, it creates a trust with Microsoft Entra ID
    ```bash
    /usr/bin/unzip WindowsDefenderATPOnboardingPackage.zip \
    && /bin/chmod +x MicrosoftDefenderATPOnboardingMacOs.sh \
-   && /bin/bash -c MicrosoftDefenderATPOnboardingMacOs.sh
+   && Sudo bash -x MicrosoftDefenderATPOnboardingMacOs.sh
    ```
 
 After Mac is enrolled in Intune, you can add it to a device group. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
@@ -205,9 +205,9 @@ Choose one of the following options to enroll company-managed Mac devices in Int
 
 |Option|Description|
 |---|---|
-|Apple Automated Device Enrollment|Use this method to automate enrollment on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile "over the air," so you don't need to have physical access to devices. <br/><br/>See [Automatically enroll Mac with the Apple Business Manager or Apple School Manager](/mem/intune/enrollment/device-enrollment-program-enroll-macos).|
-|Device enrollment manager (DEM)|Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.<br/><br/> See [Enroll devices in Intune by using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll).|
-|Direct enrollment|Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling. <br/><br/>See [Use Direct Enrollment for Mac](/mem/intune/enrollment/device-enrollment-direct-enroll-macos).|
+|Apple Automated Device Enrollment|Use this method to automate enrollment on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile "over the air," so you don't need to have physical access to devices. <br/><br/>See [Automatically enroll Mac with the Apple Business Manager or Apple School Manager](/intune/intune-service/enrollment/device-enrollment-program-enroll-macos).|
+|Device enrollment manager (DEM)|Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.<br/><br/> See [Enroll devices in Intune by using a device enrollment manager account](/intune/intune-service/enrollment/device-enrollment-manager-enroll).|
+|Direct enrollment|Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling. <br/><br/>See [Use Direct Enrollment for Mac](/intune/intune-service/enrollment/device-enrollment-direct-enroll-macos).|
 
 #### Ask users to enroll their own Mac in Intune
 
@@ -264,8 +264,8 @@ You can use the following methods to onboard mobile devices, such as Android and
 
 If your subscription includes Microsoft Intune, you can use it to onboard mobile devices, such as Android and iOS/iPadOS devices. See the following resources to get help enrolling these devices into Intune:
 
-- [Enroll Android devices](/mem/intune/enrollment/android-enroll)
-- [Enroll iOS or iPadOS devices](/mem/intune/enrollment/ios-enroll)
+- [Enroll Android devices](/intune/intune-service/fundamentals/deployment-guide-enrollment-android)
+- [Enroll iOS or iPadOS devices](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados)
 
 After a device is enrolled in Intune, you can add it to a device group. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
 

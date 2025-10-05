@@ -1,32 +1,28 @@
----
+﻿---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: emmwalshh
-ms.author: ewalsh
-ms.reviewer: sugamar, yongrhee
-manager: deniseb
+author: paulinbar
+ms.author: painbar
+ms.reviewer: sugamar, ericlaw
+manager: bagol
 ms.custom: asr
 ms.topic: reference
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.date: 06/10/2025
+ms.date: 08/28/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Attack surface reduction rules reference
 
-**Applies to:**
-
-- [Microsoft Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms:**
 
@@ -190,21 +186,21 @@ For rules with the "Rule State" specified:
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes) | Block  | Y   | Y  |
 |[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes) |   | N | Y |
 |[Block credential stealing from the Windows local security authority subsystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) |   | N | N |
-|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) |   | Y  | Y  |
+|[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
 |[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) |   | N | Y |
-|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts) |  Audit or Block | Y (in block mode) <br/>N (in audit mode) | Y (in block mode)  |
+|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts) |   | Y | Y (in block mode)  |
 |[Block JavaScript or VBScript from launching downloaded executable content](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Block | Y   | Y  |
 |[Block Office applications from creating executable content](#block-office-applications-from-creating-executable-content) |   | N | Y |
 |[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | Y |
 |[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
-|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode) |
+|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) |  | Y | Y (in block mode) |
 |[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)| | N | N |
-|[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
+|[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | | Y| Y (in block mode)  |
 |[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)| | N | N |
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers) |   | N | N |
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) |   | N | Y |
-|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Audit or Block | Y (in block mode) <br/> N (in audit mode) | Y (in block mode)  |
+|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) |   | Y | Y (in block mode)  |
 
 ## ASR rule to GUID matrix
 
@@ -466,7 +462,7 @@ Dependencies: Microsoft Defender Antivirus, AMSI
 
 ### Block Office applications from creating executable content
 
-This rule prevents Office apps, including Word, Excel, and PowerPoint, from creating potentially malicious executable content, by blocking malicious code from being written to disk. Malware that abuses Office as a vector might attempt to break out of Office and save malicious components to disk. These malicious components would survive a computer reboot and persist on the system. Therefore, this rule defends against a common persistence technique. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
+This rule prevents Office apps, including Word, Excel, and PowerPoint, from being used as a vector to persist malicious code on disk. Malware that abuses Office as a vector might attempt to save malicious components to disk that would survive a computer reboot and persist on the system. This rule defends against this persistence technique by blocking access (open/execute) to the code written to disk. This rule also blocks execution of untrusted files that might have been saved by Office macros that are allowed to run in Office files.
 
 Intune name: `Office apps/macros creating executable content`
 
@@ -583,7 +579,7 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block rebooting machine in Safe Mode
 
-This rule prevents the execution of commands to restart machines in Safe Mode. Safe Mode is a diagnostic mode that only loads the essential files and drivers needed for Windows to run. However, in Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such attacks by preventing processes from restarting machines in Safe Mode.
+This rule prevents the execution of certain commands to restart machines in Safe Mode. In Windows' Safe Mode, many security products are either disabled or operate in a limited capacity, which allows attackers to further launch tampering commands, or execute and encrypt all files on the machine. This rule blocks such abuse of Safe Mode by preventing commonly abused commands like `bcdedit` and `bootcfg` from restarting machines in Safe Mode. Safe Mode is still accessible manually from the Windows Recovery Environment.
 
 Intune Name: ` Block rebooting machine in Safe Mode`
 
@@ -598,6 +594,9 @@ Advanced hunting action type:
 - `AsrSafeModeRebootWarnBypassed`
 
 Dependencies: Microsoft Defender Antivirus
+
+> [!NOTE]
+> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
 
 ### Block untrusted and unsigned processes that run from USB
 
@@ -639,6 +638,9 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
+> [!NOTE]
+> This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
+
 ### Block Webshell creation for Servers
 
 This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
@@ -652,7 +654,7 @@ GUID: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
 Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
-> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
+> When managing ASR rules using Microsoft Defender for Endpoint security settings management, the setting for **Block Webshell creation for Servers** must be configured as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management. This rule is not yet recognized by Threat and Vulnerability Management, so the Attack Surface Reduction rule report will show it as "Not applicable".
 
 ### Block Win32 API calls from Office macros
 
@@ -711,3 +713,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

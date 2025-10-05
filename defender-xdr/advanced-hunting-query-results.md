@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 10/18/2024
+ms.date: 08/04/2025
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -51,6 +51,9 @@ By default, advanced hunting displays query results as tabular data. You can als
 | **Area chart** | Plots numeric values for a series of unique items and fills the sections below the plotted values |
 | **Stacked area chart** | Plots numeric values for a series of unique items and stacks the filled sections below the plotted values  |
 | **Time chart** | Plots values by count on a linear time scale |
+
+>[!IMPORTANT]
+>Microsoft Defender portal displays up to 100,000 advanced hunting query results only. [Learn more about advanced hunting quotas and usage parameters](advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters)
 
 ### Construct queries for effective charts
 

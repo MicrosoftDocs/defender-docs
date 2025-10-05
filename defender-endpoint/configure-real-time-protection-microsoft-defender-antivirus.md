@@ -1,30 +1,29 @@
----
+﻿---
 title: Enable and configure Microsoft Defender Antivirus always-on protection
 description: Enable and configure Microsoft Defender Antivirus real-time protection features such as behavior monitoring, heuristics, and machine learning.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: yongrhee
 ms.topic: how-to
 ms.date: 06/27/2025
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -141,3 +140,4 @@ If you're looking for antivirus-related information for other platforms, see:
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

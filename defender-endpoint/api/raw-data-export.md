@@ -1,11 +1,11 @@
----
+﻿---
 title: Stream Microsoft Defender for Endpoint event
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to Event Hubs or Azure storage account
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,24 +16,23 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 12/18/2020
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Business
 
+---
 # Raw Data Streaming API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/microsoft-365/security/defender-business)
 
 
 > [!TIP]
 > For the full data streaming experience available, see [Stream Microsoft Defender XDR events](/defender-xdr/streaming-api).
 > If you're using Microsoft Defender for Business, see [Use the streaming API with Microsoft Defender for Business](/defender-business/mdb-streaming-api).
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## Stream Advanced Hunting events to Event Hubs and/or Azure storage account
 
@@ -56,3 +55,4 @@ Topic|Description
 - [Azure Event Hubs documentation](/azure/event-hubs/)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

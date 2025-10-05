@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams in Attack simulation training
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -20,7 +20,7 @@ appliesto:
 # Microsoft Teams in Attack simulation training
 
 > [!IMPORTANT]
-> Microsoft Teams' Attack simulation training is currently in Private Preview. The information in this article is subject to change.
+> Microsoft Teams' Attack simulation training is currently in Private Preview and the intake for this preview is now closed. The information in this article is subject to change.
 
 In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can now use Attack simulation training to deliver simulated phishing messages in Microsoft Teams. For more information about attack simulation training, see [Get started using Attack simulation training in Defender for Office 365](attack-simulation-training-get-started.md).
 
@@ -44,7 +44,7 @@ In addition to having user reporting for Teams messages turned on as described i
 1. Identify or create a user who's a member of the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator), [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator), or [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) roles in Microsoft Entra ID. Assign a Microsoft 365, Office 365, Microsoft Teams Essentials, Microsoft 365 Business Basic, or a Microsoft 365 Business Standard license for [Microsoft Teams](/office365/servicedescriptions/teams-service-description). You need to know the password.
 
     > [!IMPORTANT]
-    > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 2. Using the account from Step 1, open the Microsoft Defender portal at <https://security.microsoft.com> and go to **Email & collaboration** \> **Attack simulation training** \> **Settings** tab. Or, to go directly to the **Settings** tab, use <https://security.microsoft.com/attacksimulator?viewid=setting>.
 3. On the **Settings** tab, select **Manager user accounts** in the **Teams simulation configuration** section.

@@ -1,14 +1,14 @@
----
+﻿---
 title: Manage the gradual rollout process for Microsoft Defender updates
 description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -17,18 +17,17 @@ ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 10/07/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Manage the gradual rollout process for Microsoft Defender updates
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -144,3 +143,4 @@ For details on how to use these tools, see [Create a custom gradual rollout proc
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

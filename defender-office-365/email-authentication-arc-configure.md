@@ -2,9 +2,9 @@
 title: Configure trusted ARC sealers
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
@@ -60,7 +60,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to add trusted ARC sealers
 
@@ -112,7 +112,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To preserve existing values, be sure to include the ARC sealers that you want to keep along with the new ARC sealers that you want to add.
 
-  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchange/set-arcconfig).
+  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig).
 
 ## Validate a trusted ARC sealer
 

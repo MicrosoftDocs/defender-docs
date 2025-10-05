@@ -1,8 +1,8 @@
 ---
 title: Manage quarantined messages and files as an admin
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -64,7 +64,7 @@ Watch this short video to learn how to manage quarantined messages as an admin.
     - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
   
       > [!IMPORTANT]
-      > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+      > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
@@ -896,11 +896,11 @@ For more information, see [Approve or deny release requests from users](#approve
 
 The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets that you use to view and manage messages and files in quarantine are described in this section.
 
-- [Delete-QuarantineMessage](/powershell/module/exchange/delete-quarantinemessage)
-- [Export-QuarantineMessage](/powershell/module/exchange/export-quarantinemessage)
-- [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
-- [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
+- [Delete-QuarantineMessage](/powershell/module/exchangepowershell/delete-quarantinemessage)
+- [Export-QuarantineMessage](/powershell/module/exchangepowershell/export-quarantinemessage)
+- [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage)
+- [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
+- [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)
 
 ## For more information
 

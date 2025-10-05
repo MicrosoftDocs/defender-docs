@@ -1,14 +1,14 @@
----
+﻿---
 title: Run live response commands on a device
 description: Learn how to run a sequence of live response commands on a device.
 search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,19 +18,19 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 ms.date: 04/18/2023
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Run live response commands on a device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -87,6 +87,7 @@ Before you can initiate a session on a device, make sure you fulfill the followi
   - **Windows Server 2022**
 
 - **Windows Server 2025**
+- **Azure Stack HCI OS, version 23H2 and later**
 
   - **macOS** [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
       - 13 (Ventura)
@@ -248,3 +249,4 @@ Content-type: application/json
 - [Cancel machine action](cancel-machine-action.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

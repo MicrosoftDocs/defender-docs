@@ -2,9 +2,9 @@
 title:  Manage incidents and alerts from Defender for Office 365 in Microsoft Defender XDR
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: concept-article
 ms.localizationpriority: medium

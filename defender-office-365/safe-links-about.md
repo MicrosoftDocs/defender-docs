@@ -2,14 +2,14 @@
 title: Complete Safe Links overview for Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 06/03/2025
+ms.date: 09/16/2025
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -135,7 +135,7 @@ The settings in Safe Links policies that apply to email messages are described i
   - **Apply real-time URL scanning for suspicious links and links that point to files**: Turns on real-time scanning of links, including links in email messages that point to downloadable content. The recommended value is selected (on).
 
     - **Wait for URL scanning to complete before delivering the message**:
-      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This is the recommended value.
+      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This value is the recommended value.
       - Not selected (off): If URL scanning can't complete, deliver the message anyway.
 
   - **Do not rewrite URLs, do checks via SafeLinks API only**: If this setting is selected (on), no URL wrapping takes place but the URLs are scanned prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called via APIs at the time of URL click for an extra scan.
@@ -165,7 +165,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 > [!NOTE]
 > When you turn on or turn off Safe Links protection for Teams, it might take up to 24 hours for the change to take effect.
 >
-> Safe Links protection for Teams is supported in Teams desktop and web instances.
+> Safe Links protection for Teams is supported in Teams desktop, web, and mobile (android and iOS) apps.
 >
 > Websites opened from Teams might require re-authentication when `SameSite=Strict` cookies are required for authentication by the target page. This behavior occurs because the intermediary page that does Safe Links validation redirects to the target page, which is treated as a cross-site request. The same issue applies to links opened from Teams for Web with Safe Links disabled.
 

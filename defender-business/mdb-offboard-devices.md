@@ -4,7 +4,7 @@ description: Learn about how to remove or offboard a device from Microsoft Defen
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -28,7 +28,7 @@ Data from a device, such as alerts, vulnerabilities, and detected threats, remai
 Devices that weren't active within the last 30 days aren't factored into your organization's [exposure score](mdb-view-tvm-dashboard.md).
 
 > [!IMPORTANT]
-> The procedures in this article describe how to remove a device from monitoring by Defender for Business. If you're using Microsoft Intune to manage devices, and you prefer to remove the device from Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](/mem/intune/remote-actions/devices-wipe).
+> The procedures in this article describe how to remove a device from monitoring by Defender for Business. If you're using Microsoft Intune to manage devices, and you prefer to remove the device from Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/intune-service/remote-actions/devices-wipe).
 
 ## What to do
 
@@ -129,7 +129,7 @@ Choose the operating system for your server:
 
 You can use Microsoft Intune to manage mobile devices, such as iOS, iPadOS, and Android devices.
 
-See [Microsoft Intune device management](/mem/intune/remote-actions/device-management).
+See [Microsoft Intune device management](/intune/intune-service/remote-actions/device-management).
 
 ---
 

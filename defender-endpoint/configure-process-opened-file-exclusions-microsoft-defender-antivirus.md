@@ -1,32 +1,29 @@
----
+﻿---
 title: Configure exclusions for files opened by specific processes
 description: You can exclude files from scans if they've been opened by a specific process.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
 ms.date: 04/07/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
-
-
-
 # Configure exclusions for files opened by processes
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows 
@@ -221,3 +218,4 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,32 +1,32 @@
----
+﻿---
 title: Apply Microsoft Defender Antivirus updates after certain events
 description: Manage how Microsoft Defender Antivirus applies security intelligence updates after startup or receiving cloud-delivered detection reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.date: 03/25/2025
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Manage event-based forced updates
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Business
 
 - Microsoft Defender Antivirus
 
@@ -208,3 +208,4 @@ If you have enabled cloud-delivered protection, Microsoft Defender Antivirus sen
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

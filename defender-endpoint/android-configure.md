@@ -2,11 +2,11 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,16 +16,13 @@ ms.topic: how-to
 ms.subservice: android
 search.appverid: met150
 ms.date: 06/05/2025
+appliesto:
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Configure Defender for Endpoint on Android features
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 ## Conditional Access with Defender for Endpoint on Android
 

@@ -2,9 +2,9 @@
 title: Configure anti-phishing policies for all cloud mailboxes
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -50,7 +50,7 @@ For anti-phishing policy procedures in organizations with Microsoft Defender for
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For our recommended settings for anti-phishing policies in Defender for Office 365, see [Anti-phishing policy settings in Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
@@ -320,7 +320,7 @@ This example creates an anti-phish policy named Research Quarantine with the fol
 New-AntiPhishPolicy -Name "Monitor Policy" -AdminDisplayName "Research department policy" -AuthenticationFailAction Quarantine
 ```
 
-For detailed syntax and parameter information, see [New-AntiPhishPolicy](/powershell/module/exchange/New-AntiPhishPolicy).
+For detailed syntax and parameter information, see [New-AntiPhishPolicy](/powershell/module/exchangepowershell/New-AntiPhishPolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policies to use in an anti-phish policy, see [Use PowerShell to specify the quarantine policy in anti-phishing policies](quarantine-policies.md#anti-phishing-policies).
@@ -343,7 +343,7 @@ This example creates an anti-phish rule named Research Department with the follo
 New-AntiPhishRule -Name "Research Department" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department"
 ```
 
-For detailed syntax and parameter information, see [New-AntiPhishRule](/powershell/module/exchange/New-AntiPhishRule).
+For detailed syntax and parameter information, see [New-AntiPhishRule](/powershell/module/exchangepowershell/New-AntiPhishRule).
 
 ### Use PowerShell to view anti-phish policies
 
@@ -365,7 +365,7 @@ This example returns all the property values for the anti-phish policy named Exe
 Get-AntiPhishPolicy -Identity "Executives"
 ```
 
-For detailed syntax and parameter information, see [Get-AntiPhishPolicy](/powershell/module/exchange/Get-AntiPhishPolicy).
+For detailed syntax and parameter information, see [Get-AntiPhishPolicy](/powershell/module/exchangepowershell/Get-AntiPhishPolicy).
 
 ### Use PowerShell to view anti-phish rules
 
@@ -397,7 +397,7 @@ This example returns all the property values for the anti-phish rule named Conto
 Get-AntiPhishRule -Identity "Contoso Executives"
 ```
 
-For detailed syntax and parameter information, see [Get-AntiPhishRule](/powershell/module/exchange/Get-AntiPhishrule).
+For detailed syntax and parameter information, see [Get-AntiPhishRule](/powershell/module/exchangepowershell/Get-AntiPhishrule).
 
 ### Use PowerShell to modify anti-phish policies
 
@@ -412,7 +412,7 @@ To modify an anti-phish policy, use this syntax:
 Set-AntiPhishPolicy -Identity "<PolicyName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powershell/module/exchange/Set-AntiPhishPolicy).
+For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powershell/module/exchangepowershell/Set-AntiPhishPolicy).
 
 > [!TIP]
 > For detailed instructions to specify the quarantine policy to use in an anti-phish policy, see [Use PowerShell to specify the quarantine policy in anti-phishing policies](quarantine-policies.md#anti-phishing-policies).
@@ -429,7 +429,7 @@ To modify an anti-phish rule, use this syntax:
 Set-AntiPhishRule -Identity "<RuleName>" <Settings>
 ```
 
-For detailed syntax and parameter information, see [Set-AntiPhishRule](/powershell/module/exchange/set-antiphishrule).
+For detailed syntax and parameter information, see [Set-AntiPhishRule](/powershell/module/exchangepowershell/set-antiphishrule).
 
 ### Use PowerShell to enable or disable anti-phish rules
 
@@ -453,7 +453,7 @@ This example enables same rule.
 Enable-AntiPhishRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Enable-AntiPhishRule](/powershell/module/exchange/enable-antiphishrule) and [Disable-AntiPhishRule](/powershell/module/exchange/disable-antiphishrule).
+For detailed syntax and parameter information, see [Enable-AntiPhishRule](/powershell/module/exchangepowershell/enable-antiphishrule) and [Disable-AntiPhishRule](/powershell/module/exchangepowershell/disable-antiphishrule).
 
 ### Use PowerShell to set the priority of anti-phish rules
 
@@ -492,7 +492,7 @@ This example removes the anti-phish policy named Marketing Department.
 Remove-AntiPhishPolicy -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-AntiPhishPolicy](/powershell/module/exchange/Remove-AntiPhishPolicy).
+For detailed syntax and parameter information, see [Remove-AntiPhishPolicy](/powershell/module/exchangepowershell/Remove-AntiPhishPolicy).
 
 ### Use PowerShell to remove anti-phish rules
 
@@ -510,7 +510,7 @@ This example removes the anti-phish rule named Marketing Department.
 Remove-AntiPhishRule -Identity "Marketing Department"
 ```
 
-For detailed syntax and parameter information, see [Remove-AntiPhishRule](/powershell/module/exchange/Remove-AntiPhishRule).
+For detailed syntax and parameter information, see [Remove-AntiPhishRule](/powershell/module/exchangepowershell/Remove-AntiPhishRule).
 
 ## How do you know these procedures worked?
 

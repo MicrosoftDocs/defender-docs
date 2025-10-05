@@ -2,9 +2,9 @@
 title: Reference Policies, practices, and guidelines
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium

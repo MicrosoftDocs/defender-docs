@@ -1,13 +1,13 @@
----
+﻿---
 title: Microsoft Defender for Endpoint Cloud-delivered protection demonstration
 description: See how Cloud-delivered protection can automatically detect and delete malicious files. 
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,16 +16,14 @@ ms.collection:
 ms.topic: article
 ms.subservice: ngp
 ms.date: 11/22/2024
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 
+---
 # Cloud-delivered protection demonstration
 
-**Applies to:**
-
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
 
 Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as Microsoft Advanced Protection Service (MAPS), provides you with strong, fast protection in addition to our standard real-time protection.
 
@@ -67,3 +65,4 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

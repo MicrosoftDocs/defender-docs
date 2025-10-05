@@ -4,7 +4,7 @@ description: Learn how to view, edit, create, and delete cybersecurity policies 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -136,7 +136,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 4. Next to **Configuration settings**, choose **Edit**.
 
-   To get help with this task, see [Edit a policy in Intune](/mem/intune/protect/endpoint-security-policy#to-edit-a-policy).
+   To get help with this task, see [Edit a policy in Intune](/intune/intune-service/protect/endpoint-security-policy#to-edit-a-policy).
 
 ---
 
@@ -201,7 +201,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
    |Windows 10, Windows 11, and Windows Server|Microsoft Defender Firewall Rules|Select this template to set up exceptions to your firewall policy. These exceptions are defined through [custom rules](mdb-firewall.md#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business).|
    |Windows 10, Windows 11, and Windows Server|Attack Surface Reduction Rules|Select this template to set up [attack surface reduction rules](mdb-asr.md) or [controlled folder access](mdb-controlled-folder-access.md).|
 
-5. Use the wizard to set up your policy. To get help, see [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy).
+5. Use the wizard to set up your policy. To get help, see [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy).
 
 ---
 

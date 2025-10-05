@@ -1,11 +1,11 @@
----
+﻿---
 title: Export software vulnerabilities assessment per device
 description: The API response is per device and contains vulnerable software installed on your exposed devices and any known vulnerabilities in these software products. This table also includes operating system information, CVE IDs, and vulnerability severity information.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,20 +16,18 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 07/09/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Export software vulnerabilities assessment per device
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The ability to export software vulnerabilities per device returns all known software vulnerabilities and their details for all devices, on a per-device basis. Different API calls get different types of data. Because the amount of data can be large, there are three ways it can be retrieved:
 
@@ -335,11 +333,12 @@ Returns a table with an entry for every unique combination of DeviceId, Software
 > [!NOTE]
 > We refresh the __Full _Software Vulnerabilities Assessment(Flat/Full VA) by Device___ export every __six hours__ and store each snapshot in blob storage; the API always serves the latest snapshot, to emphasize  calling the Get Endpoint won't to trigger a generation, call get endpoint will just read latest Flat OR Delta After sinceTime.
 > A successful completion of Full VA export will trigger __delta export__ that captures the changes from latest Flat VA processed by Delta to new Flat VA.
-> > __RBAC-scoped duplicates__
+> > > __RBAC-scoped duplicates__
 > > Because exports are scoped by __RBACGroup__, a device that moves from one RBAC group to another will appear __twice__ in a Delta export when you query with the global view (`RBACGroup=*`): once under its previous group with status "Fixed" and once under its current group with status "New". Use the `rbacGroupId` and device identifiers together (or de-duplicate on your side) if you need a single authoritative record per device.
-> 
-> Recommended pull pattern
-> 
+> > 
+
+#### 3.1.0 Recommended pull pattern
+
 1. __Baseline__ – Download the full VA(Flat VA) export on your preferred cadence (weekly is often sufficient).
 
 1. __Stay current__ – delta export between full snapshots(Delta can be queried up to 14 days into the past).
@@ -347,8 +346,6 @@ Returns a table with an entry for every unique combination of DeviceId, Software
 1. __Handle RBAC moves__ – When processing a Delta, de-duplicate entries where the same `Id(deviceId_software_` version _ cve`)`appears under multiple `rbacGroupId` values.
 
 1. When "Status" = Fix" the calcualtion of  "EventTimestamp"- "FirstSeenTimestamp" should give you an estimation on when the CVE was fixed up to a granularity of 6 hours(because of Delta worker run interval).
-
-
 #### 3.1.1 Limitations
 
 - Maximum page size is 200,000.
@@ -586,6 +583,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 - [Export secure configuration assessment per device](get-assessment-secure-config.md)
 - [Export software inventory assessment per device](get-assessment-software-inventory.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

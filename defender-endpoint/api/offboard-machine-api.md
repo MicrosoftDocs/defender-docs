@@ -1,11 +1,11 @@
----
+﻿---
 title: Offboard machine API
 description: Learn how to use an API to offboard a device from Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,18 +16,17 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 08/29/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 
+---
 # Offboard machine API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -112,3 +111,4 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
 ```
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+

@@ -2,9 +2,9 @@
 title: Bulk senders insight
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -57,7 +57,7 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
     - _Read-only access to policies_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For our recommended settings for anti-spam policies, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 

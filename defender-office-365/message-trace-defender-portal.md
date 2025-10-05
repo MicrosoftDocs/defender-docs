@@ -2,9 +2,9 @@
 title: Message trace in the Microsoft Defender portal
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.collection: 
@@ -43,14 +43,14 @@ You can use the **View in Explorer** option in the **Message trace search result
 
 ## What do you need to know before you begin?
 
-- The maximum number of messages that are displayed in the results of a message trace depends on the report type you selected (see the [Choose report type](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac#choose-report-type) section for details). The [Get-HistoricalSearch](/powershell/module/exchange/get-historicalsearch) cmdlet in Exchange Online PowerShell returns all messages in the results.
+- The maximum number of messages that are displayed in the results of a message trace depends on the report type you selected (see the [Choose report type](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac#choose-report-type) section for details). The [Get-HistoricalSearch](/powershell/module/exchangepowershell/get-historicalsearch) cmdlet in Exchange Online PowerShell returns all messages in the results.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management**, **Compliance Management** or **Help Desk** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Compliance Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Open message trace
 

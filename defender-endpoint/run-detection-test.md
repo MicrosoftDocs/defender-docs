@@ -3,11 +3,11 @@ title: Run a detection test on a device recently onboarded to Microsoft Defender
 description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
 ms.date: 03/01/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -23,14 +23,12 @@ ms.subservice: onboard
 
 **Applies to:**
 - Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2025
+- Windows Server 2016 and later
+- Azure Stack HCI OS, version 23H2 and later
 - [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
 
@@ -51,7 +49,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
 > [!NOTE]
-> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
+> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

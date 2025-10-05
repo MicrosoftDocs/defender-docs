@@ -2,8 +2,8 @@
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
 description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
 search.appverid: MET150
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.topic: how-to
@@ -41,7 +41,7 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 
 |Requirement|Details|
 |---|---|
-|Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5</li><li>Microsoft 365 A5</li><li>Microsoft 365 E3 with the Microsoft 365 E5 Security add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Office 365 E5 plus Enterprise Mobility + Security E5 plus Windows E5</li></ul> <br/> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
+|Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5</li><li>Microsoft 365 A5</li><li>Microsoft 365 E3 with the Microsoft Defender Suite add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Office 365 E5 plus Enterprise Mobility + Security E5 plus Windows E5</li></ul> <br/> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
 |Network requirements|<ul><li>[Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) enabled</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) configured</li><li>[Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration)</li></ul>|
 |Windows device requirements|<ul><li>Windows 11</li><li>Windows 10, version 1709 or later installed (See [Windows release information](/windows/release-information/))</li><li>The following threat protection services are configured:<ul><li>[Microsoft Defender for Endpoint](/defender-endpoint/onboard-windows-client)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
 |Protection for email content and Office files|<ul><li>[Microsoft Defender for Office 365 is configured](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies)</li><li>[Automated investigation and remediation capabilities in Defender for Endpoint are configured](/defender-endpoint/configure-automated-investigations-remediation) (required for manual response actions, such as deleting email messages on devices)</li></ul>|

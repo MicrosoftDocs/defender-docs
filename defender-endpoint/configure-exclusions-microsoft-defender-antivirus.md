@@ -1,14 +1,14 @@
----
+﻿---
 title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/06/2025
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: nextgen
 ms.reviewer: ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.audience: ITPro
 ms.topic: how-to
@@ -17,15 +17,13 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure custom exclusions for Microsoft Defender Antivirus
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -141,3 +139,4 @@ If exclusions can't be removed for the Exchange processes and folders, keep in m
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.date: 9/7/2023
 audience: ITPro
 ms.topic: how-to
@@ -123,7 +123,7 @@ The simplest way to verify a rules or custom forms attack is to run the [Get-All
 You need to be a member of the Global Administrator<sup>\*</sup> role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) or the Organization Management role group in [Exchange Online](/exchange/permissions-exo/permissions-exo), because the script connects to every mailbox in the organization to read rules and forms.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. Use an account with local administrator rights to sign in to the computer where you intend to run the script.
 
@@ -194,7 +194,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name" | Format-List
     ```
 
-  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchange/get-inboxrule).
+  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule).
 
 - **Remove Inbox rules from a mailbox**:
 
@@ -210,7 +210,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com | Remove-InboxRule
     ```
 
-  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchange/remove-inboxrule).
+  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchangepowershell/remove-inboxrule).
 
 - **Turn off an Inbox rule for further investigation**:
 
@@ -218,7 +218,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
   Disable-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name"
   ```
 
-  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchange/disable-inboxrule).
+  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchangepowershell/disable-inboxrule).
 
 ## How to minimize future attacks
 
