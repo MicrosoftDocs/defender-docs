@@ -63,6 +63,10 @@ Security alerts are triggered in the following scenarios:
 
 Security alerts include details of the suspicious activity, relevant investigation steps, remediation actions, and security recommendations. Alerts can be exported to Microsoft Sentinel or any other third-party SIEM/XDR tool. Learn more about [how to stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
 
+## Accelerated threat detection with Storage aggregated logs
+
+Storage aggregated logs in Defender XDR's Avanced Hunting give security teams a powerful way to spot patterns and anomalies across large volumes of storage activity. Instead of analyzing raw events one by one, the new `CloudStorageAggregatedEvents` table delivers summarized insights, such as spikes in failed operations, unusual authentication types, or suspicious access from unexpected locations, helping teams quickly identify potential threats and prioritize investigations. This capability reduces noise, accelerates detection, and strengthens protection for cloud storage at scale. For the full schema and field details, see the [CloudStorageAggregatedEvents reference table.](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)
+
 ## Related content
 
 - [Understanding malware scanning results](understand-malware-scan-results.md)
