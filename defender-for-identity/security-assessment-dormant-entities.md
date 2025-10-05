@@ -10,9 +10,9 @@ ms.reviewer: LiorShapiraa
 
 ## What are sensitive dormant entities?
 
-Microsoft Defender for Identity discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
+Microsoft Defender for Identity discovers if particular users are **sensitive** along with providing attributes that surface if they're inactive, disabled, or expired.
 
-However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant sensitive entities are targets of opportunity for malicious actors to gain sensitive access to your organization. 
+**Sensitive** accounts can also become *dormant* if they aren't used for a period of 180 days. Dormant sensitive entities are targets of opportunity for malicious actors to gain sensitive access to your organization. 
 
 For more information, see [Default sensitive entities](entity-tags.md#default-sensitive-entities).
 
@@ -33,7 +33,7 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
 > [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 > 
 
 ## See also
