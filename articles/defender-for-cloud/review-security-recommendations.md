@@ -6,6 +6,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.date: 04/22/2025
 ms.custom: sfi-image-nochange
+zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
 ---
 
