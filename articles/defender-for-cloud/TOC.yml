@@ -857,7 +857,7 @@
             href: deploy-vulnerability-assessment-byol-vm.md
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-            href: how-to-transition-to-built-in.yml
+            href: how-to-transition-to-built-in.md
       - name: Machine secrets scanning
         items:
           - name: Overview
