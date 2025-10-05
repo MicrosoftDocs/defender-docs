@@ -5,11 +5,11 @@ ms.topic: reference
 ms.date: 08/18/2024
 ---
 
-# Microsoft Defender for Containers in a Multicloud Environment
+# Microsoft Defender for Containers in a multicloud environment
 
 Maya Herskovic and Yuri Diogenes discuss the implementation of Microsoft Defender for Containers in Amazon Web Service (AWS) and Google Cloud Platform (GCP) in this episode of Defender for Cloud in the field.
 
-Maya explains about the new workload protection capabilities related to Containers when they're deployed in a multicloud environment. Maya also demonstrates the onboarding experience in GCP and how to visualize security recommendations across AWS, GCP, and Azure in a single dashboard.
+Maya explains the new workload protection capabilities related to containers when you deploy them in a multicloud environment. She also demonstrates the onboarding experience in GCP and how to visualize security recommendations across AWS, GCP, and Azure in a single dashboard.
 
 > [!VIDEO https://aka.ms/docs/player?id=f9470496-abe3-4344-8160-d6a6b65c077f]
 
