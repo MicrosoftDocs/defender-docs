@@ -43,11 +43,11 @@ This article includes a list of the streamlined connectivity URLs required to on
 > [!NOTE]
 > Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
 
-| Service                        | Geography | Category | Port | Endpoint/URL                                         | Description                                                                                       |
-|--------------------------------|-----------|----------|------|------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Microsoft Defender Antivirus    | US Gov    | MU/WU    | 443  | *.update.microsoft.com                               | Security intelligence and product updates                                                        |
-| Microsoft Defender Antivirus    | US Gov    | MU/WU    | 443  | *.delivery.mp.microsoft.com                          | Security intelligence and product updates                                                        |
-| Microsoft Defender Antivirus    | US Gov    | MU/WU    | 443  | *.windowsupdate.com                                  | Security intelligence and product updates                                                        |
-| Microsoft Defender Antivirus    | US Gov    | MU (ADL) | 443  | *.download.windowsupdate.com                         | Alternate location for Microsoft Defender Antivirus Security intelligence updates                 |
-| Microsoft Defender Antivirus    | US Gov    | MU (ADL) | 443  | *.download.microsoft.com                             | Alternate location for Microsoft Defender Antivirus Security intelligence updates                 |
-| Microsoft Defender Antivirus    | US Gov    | MU (ADL) | 443  | fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx | Alternate location for Microsoft Defender Antivirus Security intelligence updates         |
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
+|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|---|-----|--------|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
