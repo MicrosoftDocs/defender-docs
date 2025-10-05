@@ -204,14 +204,11 @@ To remove the Defender for Endpoint solution from your machines:
 
 ### Remove Defender for Endpoint integration tags (Windows only)
 
-When a Windows device is onboarded through Microsoft Defender for Cloud, Defender for Endpoint creates Defender-for-Cloud–specific registry values. These tags remain on the device after offboarding and don’t affect functionality. 
+When a Windows device is onboarded through Defender for Cloud, Defender for Endpoint creates registry values related to Defender for Cloud. These registry tags remain on the device after offboarding and don’t affect functionality. 
 
-> [!NOTE]
-> This cleanup step applies only to Windows devices. On Linux, the product stores this information internally and doesn't show it in the registry.
+To remove these tags completely, follow these steps. On Linux, the system stores this information internally and doesn't show it in the registry.
 
-**Remove the tags**
-
-1. On the Windows desktop, open **Registry Editor**.
+1. Select **Start**, type **regedit**, and press **Enter** to open **Registry Editor**. 
 1. In the left pane, go to: 
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\DeviceTags`
@@ -222,4 +219,4 @@ When a Windows device is onboarded through Microsoft Defender for Cloud, Defende
     - `SecurityAgentId`
 
 > [!IMPORTANT]
-> Editing the registry incorrectly can cause serious problems. Back up the registry or create a system restore point before making any changes.
+> Editing the registry incorrectly might cause issues on your device. 
