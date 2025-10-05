@@ -26,6 +26,8 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ## US Gov URLs
 
+### General URLs
+
 > [!NOTE]
 > Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding may be  unsuccessful. You may re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
 
@@ -36,7 +38,7 @@ This article includes a list of the streamlined connectivity URLs required to on
 | Microsoft Defender SmartScreen              | GCC High  | Reporting  and Notifications              | 443  | unitedstates1.ss.wd.microsoft.us | Used for  Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV  Network Protection and custom URL indicators | Required             | Yes                                                          |                  |                                                           | Yes  | Yes   | Microsoft  Defender SmartScreen reporting and notifications. Network Protection and  custom URL indicators |
 | Microsoft Defender  SmartScreen             | DoD       | Reporting and Notifications               | 443  | unitedstates2.ss.wd.microsoft.us | Used for Microsoft Defender SmartScreen protection,  reporting, and notifications. MDAV Network Protection and custom URL  indicators | Required             | Yes                                                          |                  |                                                           | Yes  | Yes   | Microsoft Defender SmartScreen reporting and notifications.  Network Protection and custom URL indicators |
 
-## URLs used for updates
+### URLs used for updates
 
 > [!NOTE]
 > Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
