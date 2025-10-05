@@ -20,7 +20,11 @@ This article lists all hybrid security posture assessments for Microsoft Defende
 **Description**
 
 
-Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides your users with easy access to your cloud-based applications without using any other on-premises components. When setting up Microsoft Entra Seamless SSO, a computer account named AZUREADSSOACC is created in Active Directory. By default, the password for this Azure SSO computer account is not automatically updated every 30 days. This password functions as a shared secret between AD and Microsoft Entra, enabling Microsoft Entra to decrypt Kerberos tickets used in the seamless SSO process between Active Directory and Microsoft Entra ID. If an attacker gains control of this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user within the Microsoft Entra tenant that has been synchronized from Active Directory. This could allow an attacker to move laterally from Active Directory into Microsoft Entra ID.
+This report lists all Entra seamless SSO computer accounts with password last set over 90 days ago.
+
+**Impact**
+
+Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides your users with easy access to your cloud-based applications without using any other on-premises components. When setting up Microsoft Entra Seamless SSO, a computer account named AZUREADSSOACC is created in Active Directory. By default, the password for this Azure SSO computer account is not automatically updated every 30 days. This password functions as a shared secret between AD and Microsoft Entra, enabling Microsoft Entra to decrypt Kerberos tickets used in the seamless SSO process between Active Directory and Microsoft Entra ID. If an attacker gains control of this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user within the Microsoft Entra tenant that has been synchronized from
 
 
 <a name="implementation"></a><details><summary>**Implementation**</summary>
@@ -42,9 +46,13 @@ Microsoft Entra seamless SSO automatically signs in users when they're using the
 
 **Description**
 
+This report lists all MSOL accounts in your organization with password last set over 90 days ago.
+
+**Impact**
+
 Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-premises AD with the MSOL_ prefix).
 
-This report lists all MSOL accounts in your organization with password last set over 90 days ago. It's important to change the password of MSOL accounts every 90 days to prevent attackers from allowing use of the high privileges that the connector account typically holds - replication permissions, reset password and so on.
+ It's important to change the password of MSOL accounts every 90 days to prevent attackers from allowing use of the high privileges that the connector account typically holds - replication permissions, reset password and so on.
 
 <a name="implementation"></a><details><summary>**Implementation**</summary>
 
@@ -64,13 +72,13 @@ This report lists all MSOL accounts in your organization with password last set 
 
 **Description**
 
-> [!NOTE]
-> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
-> 
-> If the Password Hash Sync (PHS) sign-on method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
-> This security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
-
 Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-premises AD with the MSOL_ prefix). In the default 'express' installation of Microsoft Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
+
+> [!NOTE]
+> - This security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
+> 
+> - If the Password Hash Sync (PHS) sign-on method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
+> -  For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. If detected that your Microsoft Entra Connect configuration doesn't utilize Password Hash Sync, which means that replication permissions aren't necessary for the accounts in the Exposed Entities list. Ensure that each exposed MSOL account isn't required for Replication Permissions by any other applications.
 
 
 <a name="implementation"></a><details><summary>**Implementation**</summary>
@@ -83,11 +91,7 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 
 :::image type="content" source="../media/remove-replication-permissions-microsoft-entra-connect/replicationconfiguration.png" alt-text="Screenshot that shows the list of permissions for Microsoft Entra Connect.":::
 
-> [!IMPORTANT]
-> For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. If detected that your Microsoft Entra Connect configuration doesn't utilize Password Hash Sync, which means that replication permissions aren't necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account isn't required for Replication Permissions by any other applications.
-
 </details>
-
 
 
 ## Remove unsafe permissions on sensitive Microsoft Entra Connect accounts

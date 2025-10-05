@@ -179,20 +179,7 @@ items:
      - name: Accounts
        href: \security posture assessments\accounts.md
      - name: Cloud identities
-       items:
-       - name: Assign multi-factor authentication to Okta privileged user accounts
-         href: assign-multi-factor-authentication-okta-privileged-user-accounts.md
-       - name: Change password for Okta privileged user accounts
-         href: change-okta-password-privileged-user-accounts.md 
-       - name: High number of Okta accounts with privileged role assigned
-         href: high-number-of-okta-accounts-with-privileged-role-assigned.md
-       - name: Highly privileged Okta API token
-         href: highly-privileged-okta-api-token.md
-       - name: Limit the number of Okta Super Admin accounts
-         href: limit-number-okta-super-admin-accounts.md
-       - name: Remove dormant Okta privileged accounts
-         href: remove-dormant-okta-privileged-accounts.md
-   
+       href: \security posture assessments\cloud-identities.md
 - name: Reference
   items:
   - name: Operations guide

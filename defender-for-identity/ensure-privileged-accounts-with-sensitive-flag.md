@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: 'Security Assessment: Ensure privileged accounts are not delegated'
-description: This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag.
+description: This recommendation lists all privileged accounts that lack the "account is sensitive and can't be delegated" flag.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
@@ -24,11 +24,13 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 
 ## Remediation steps
 
-1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and cannot be delegated."
+1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and can't be delegated."
 
 1. Take appropriate action on those accounts:
 
-- For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.    
+- For user accounts: Set the account control flags to "this account is sensitive and can't be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.  
+
+  
 :::image type="content" source="media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png" alt-text="Screenshot of the user profile.":::
 
 - For device accounts:  
