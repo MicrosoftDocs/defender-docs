@@ -2,7 +2,7 @@
 title: Microsoft Defender for Containers in a multicloud environment
 description: Learn about Microsoft Defender for Containers implementation in Amazon Web Service and Google Cloud Platform.
 ms.topic: reference
-ms.date: 08/18/2024
+ms.date: 10/05/2025
 ---
 
 # Microsoft Defender for Containers in a multicloud environment
