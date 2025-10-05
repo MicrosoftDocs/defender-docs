@@ -126,3 +126,14 @@ This article includes a list of the streamlined connectivity URLs required to on
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 |SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
+
+### Windows 7 SP1, Windows Server 2012 R2 and Windows Server 2008 R2 (MMA Based)
+
+| MonitoringHost.exe       | C:\Program  Files\Microsoft Monitoring Agent\Agent | Microsoft  Monitoring Agent Service Host Process             |
+| ------------------------ | -------------------------------------------------- | ------------------------------------------------------------ |
+| HealthService.exe        | C:\Program  Files\Microsoft Monitoring Agent\Agent | Microsoft  Monitoring Agent Service                          |
+| TestCloudConnection.exe  | C:\Program  Files\Microsoft Monitoring Agent\Agent | Microsoft  Monitoring Agent Cloud Connection Test utility    |
+| MpCmdRun.exe             | C:\Program  Files\Microsoft Security Client        | Microsoft  Defender Antivirus command-line utility (SCEP)    |
+| MsMpEng.exe              | C:\Program  Files\Microsoft Security Client        | Microsoft  Defender Antivirus service executable (SCEP)      |
+| ConfigSecurityPolicy.exe | C:\Program  Files\Microsoft Security Client        | Microsoft  Security Client Policy Configuration Tool (SCEP)  |
+| NisSrv.exe               | C:\Program  Files\Microsoft Security Client        | Microsoft  Defender Antivirus Network Realtime Inspection (SCEP) |
