@@ -90,3 +90,24 @@ This article includes a list of the streamlined connectivity URLs required to on
 |Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+
+## Microsoft Defender processes
+
+### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+
+|Process|Path|Comment|
+|-------|----|-------|
+| |Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019||
+|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
+|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
+|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
+|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
+|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
+|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
+|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
+|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
+|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
