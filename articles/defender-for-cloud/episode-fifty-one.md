@@ -2,12 +2,12 @@
 title: Defender for Open-Source Relational Databases multicloud
 description: Learn about Microsoft's Defender for Cloud Defender for Open-Source Relational Databases multicloud capabilities
 ms.topic: reference
-ms.date: 12/02/2024
+ms.date: 10/05/2025
 ---
 
 # Defender for Open-Source Relational Databases multicloud
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Catalin Esanu joins Yuri Diogenes to talk about Defender for Open-Source Relational Databases. Catalin starts giving some updates about Defender for Databases, and then he started talking about the new AWS and GCP scenario for databases. Catalin also demonstrates how to alerts are detected in Defender for Cloud that has threat protection for Open-Source Relational Databases.
+**Episode description**: In this episode of Defender for Cloud in the Field, Catalin Esanu joins Yuri Diogenes to talk about Defender for Open-Source Relational Databases. Catalin shares updates about Defender for Databases, and then he talks about the new AWS and GCP scenario for databases. Catalin also demonstrates how Defender for Cloud detects alerts with threat protection for Open-Source Relational Databases.
   
 
 > [!VIDEO https://aka.ms/docs/player?id=b500f9ce-ef69-4c97-8205-c167138ddb68]
