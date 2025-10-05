@@ -69,14 +69,14 @@ Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using t
 > [!NOTE]
 > Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
 
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|---|-----|--------|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes||||Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Comments|
+|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|--------|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
 
 ## URLs used for certificate validation checks
 
@@ -92,11 +92,11 @@ Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using t
 
 ### Other URLs
 
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|---|-----|--------|
-|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Comments|
+|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|
+|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
 
 ## Security center URLs
 
@@ -123,7 +123,6 @@ Note: Devices running Windows version 1607, 1703, 1709, 1803 can onboard using t
 
 |Process|Path|Comment|
 |-------|----|-------|
-| |Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019||
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
 |MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
