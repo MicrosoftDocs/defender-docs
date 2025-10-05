@@ -44,7 +44,7 @@ Alert policies let you categorize the alerts that are triggered by a policy, app
 > - Microsoft 365 E5/G5
 > - Microsoft 365 E1/F1/G1 or Microsoft 365 E3/F3/G3 plus one of the following add-on subscriptions:
 >   - Microsoft Defender for Office 365 Plan 2
->   - Microsoft 365 E5 Security
+>   - Microsoft Defender Suite
 >   - Microsoft 365 E5 Compliance
 >   - E5 eDiscovery and Audit add-on
 >

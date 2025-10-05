@@ -33,7 +33,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
     - `System settings (Read and manage)`
-    - `Security setting (All permissions)`
+    - `Security settings (All permissions)`
 
 ## Sensor requirements and recommendations
 
@@ -62,14 +62,18 @@ The following table describes memory requirements on the server used for the Def
 
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
-## Configure Unified Sensor to support advanced identity detections
+
+## Configure Unified Sensor to support advanced identity detections (Preview)
 
 Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
 
 **Steps to apply the configuration:**
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
-2. Create a new rule.
+1. Create a new rule.  
+
+ ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
+
 3. In the side panel:
 
    1. Select a **name** for the rule.
@@ -80,9 +84,11 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
     
    1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
     
-1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.  
+1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
-1. Click **Submit** to save the rule.
+ ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
+
+5. Click **Submit** to save the rule.
 
    Offboarding a device from this configuration can be done by **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
 
