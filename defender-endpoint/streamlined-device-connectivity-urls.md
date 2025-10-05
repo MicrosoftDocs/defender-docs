@@ -71,3 +71,22 @@ This article includes a list of the streamlined connectivity URLs required to on
 |Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes||||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+
+## Security center URLs
+
+|Service|Geography|URL|Comment|
+|-------|---------|---|-------|
+|Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|US Gov|https://secure.aadcdn.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|US Gov|https://static2.sharepointonline.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC|https://login.microsoftonline.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC|https://*.gcc.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC|https://onboardingpckgsusmvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC High|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC High|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
