@@ -202,9 +202,9 @@ To remove the Defender for Endpoint solution from your machines:
 1. Remove the `MDE.Windows` or `MDE.Linux` extension from the machine.
 1. [Offboard the device from the Microsoft Defender for Endpoint service](/defender-endpoint/offboard-machines).
 
-### Remove Defender for Endpoint integration tags (Windows only)
+### Remove Defender for Endpoint integration tags
 
-When a Windows device is onboarded through Defender for Cloud, Defender for Endpoint creates registry values related to Defender for Cloud. These registry tags remain on the device after offboarding and don’t affect functionality. 
+When a **Windows** device is onboarded through Defender for Cloud, Defender for Endpoint creates registry values related to Defender for Cloud. These registry tags remain on the device after offboarding and don’t affect functionality. 
 
 To remove these tags completely, follow these steps. On Linux, the system stores this information internally and doesn't show it in the registry.
 
