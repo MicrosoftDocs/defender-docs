@@ -89,10 +89,10 @@ You can modify a VM's just-in-time configuration by adding and configuring a new
 
 To edit the existing JIT rules for a VM:
 
-1. Open **Workload protections** and select **Just-in-time VM access**.
-1. In the **Configured** tab, right-click on a VM and select **Edit**.
-1. In the **JIT VM access configuration**, edit or add ports.
-1. When you finish editing, select **Save**.
+1. Open **Workload protections** and, in the advanced protections, select **Just-in-time VM access**.
+1. In the **Configured** virtual machines tab, right-click on a VM and select **Edit**.
+1. In the **JIT VM access configuration**, you can either edit the list of port or select Add a new custom port.
+1. When you finish editing the ports, select **Save**.
 
 ### Request access to a JIT-enabled VM from Microsoft Defender for Cloud
 
@@ -100,13 +100,14 @@ When a VM has JIT enabled, you have to request access to connect to it. You can 
 
 1. From the **Just-in-time VM access** page, select the **Configured** tab.
 1. Select the VMs you want to access.
-   - The icon in the **Connection Details** column indicates whether JIT is enabled on the network security group or firewall.
-   - The **Connection Details** column shows user and port information.
-1. Select **Request access** and configure the ports, IPs, and time window.
+   - The icon in the **Connection Details** column indicates whether JIT is enabled on the network security group or firewall. If it's enabled on both, only the firewall icon appears.
+   - The **Connection Details** column shows the user and ports that can access the VM.
+1. Select **Request access**. The **Request access** window opens.
+1. Under **Request access**, select the ports that you want to open for each VM, the source IP addresses that you want the port opened on, and the time window to open the ports.
 1. Select **Open ports**.
 
 > [!NOTE]
-> If a user requesting access is behind a proxy, you can enter the IP address range of the proxy.
+> If a user who is requesting access is behind a proxy, you can enter the IP address range of the proxy.
 
 ## Other ways to work with JIT VM access
 
@@ -117,36 +118,47 @@ When a VM has JIT enabled, you have to request access to connect to it. You can 
 You can enable JIT on a VM from the Azure virtual machines pages of the Azure portal.
 
 > [!TIP]
-> If a VM already has JIT enabled, the configuration page shows that JIT is enabled. You can open the JIT VM access page in Defender for Cloud to view and change settings.
+> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. You can use the link to open the JIT VM access page in Defender for Cloud to view and change the settings.
 
 1. From the [Azure portal](https://portal.azure.com), search for and select **Virtual machines**.
 1. Select the virtual machine you want to protect with JIT.
 1. In the menu, select **Configuration**.
 1. Under **Just-in-time access**, select **Enable just-in-time**.
 
-   By default:
-   - Windows: RDP port 3389, max access 3 hours, any IP.
-   - Linux: SSH port 22, max access 3 hours, any IP.
+   By default, just-in-time access for the VM uses these settings:
+   - Windows machines: 
+       - RDP port: 3389
+       - Maximum allowed access: 3 hours
+       - Allowed source IP addresses: Any
+   - Linux machines: 
+       - SSH port: 22
+       - Maximum allowed access: 3 hours
+       - Allowed source IP addresses: Any
 
-1. To edit values or add ports, open **Just-in-time VM access** in Defender for Cloud, select the VM, and choose **Edit**.
+1. To edit any of these values or add more ports to your JIT configuration, use Microsoft Defender for Cloud's just-in-time page:
+    1. From Defender for Cloud's menu, select **Just-in-time VM access**.
+    1. From the **Configured** tab, right-click on the VM to which you want to add a port, and select **Edit**.
 
    ![Editing a JIT VM access configuration in Microsoft Defender for Cloud.](./media/just-in-time-access-usage/jit-policy-edit-security-center.png)
 
-1. When done, select **Save**.
+    1. Under **JIT VM access configuration**, you can either edit the existing settings of an already protected port or add a new custom port.
+    1. When you've finished editing the ports, select **Save**.
 
 #### Request access to a JIT-enabled VM from the Azure virtual machine's connect page
 
-When a VM has JIT enabled, you have to request access to connect to it.
+When a VM has a JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
 
 ![Screenshot showing jit just-in-time request.](./media/just-in-time-access-usage/jit-request-vm.png)
 
+To request access from Azure virtual machines:
+
 1. In the Azure portal, open the virtual machines pages.
-1. Select the VM and open the **Connect** page.
-   - If JIT isn't enabled, you're prompted to enable it.
-   - If JIT is enabled, select **Request access**.
+1. Select the VM to which you want to connect, and open the **Connect** page.
+   - If JIT isn't enabled for the VM, you're prompted to enable it.
+   - If JIT is enabled, select **Request access** to pass an access request with the requesting IP, time range, and ports that were configured for that VM.
 
 > [!NOTE]
-> After a request is approved for a VM protected by Azure Firewall, Defender for Cloud provides port mapping connection details.
+> After a request is approved for a VM protected by Azure Firewall, Defender for Cloud provides the user with the proper connection details (the port mapping from the DNAT table) to use to connect to the VM.
 
 ### PowerShell
 
@@ -157,9 +169,9 @@ To enable just-in-time VM access from PowerShell, use the official Microsoft Def
 **Example** - Enable just-in-time VM access on a specific VM with the following rules:
 
 -   Close ports 22 and 3389
--   Set a maximum time window of 3 hours for each so they can be opened per approved request
--   Allow the user who is requesting access to control the source IP addresses
--   Allow the user who is requesting access to establish a successful session upon an approved just-in-time access request
+- Set a maximum time window of 3 hours for each so they can be opened per approved request
+- Allow the user who is requesting access to control the source IP addresses
+- Allow the user who is requesting access to establish a successful session upon an approved just-in-time access request
 
 The following PowerShell commands create this JIT configuration:
 
