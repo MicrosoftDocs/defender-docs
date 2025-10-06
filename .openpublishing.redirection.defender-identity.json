@@ -1079,6 +1079,41 @@
       "source_path": "defender-for-identity/security-assessment-weak-cipher.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/assign-multi-factor-authentication-okta-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-okta-password-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/high-number-of-okta-accounts-with-privileged-role-assigned.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/highly-privileged-okta-api-token.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/highly-privileged-okta-api-token.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/limit-number-okta-super-admin-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-dormant-okta-privileged-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
     }
   ]
 }
