@@ -1,7 +1,7 @@
 ---
 title: Protect your Google Workspace environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Workspace app to Defender for Cloud Apps using the API connector.
-ms.date: 08/18/2025
+ms.date: 10/06/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
 ---
