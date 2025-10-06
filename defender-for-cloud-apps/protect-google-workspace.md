@@ -85,15 +85,16 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Select the project dropdown in the top ribbon and then select **New Project** to start a new project.
 
-   ![New Project](media/connect-google-workspace/new-project.png)
+    :::image type="content" source="media/connect-google-workspace/new-project.png" alt-text="Screenshot that shows where to select a new project inside of your Google Workspace." lightbox="media/connect-google-workspace/new-project.png":::
+
 
 1. In the **New project** page, name your project as follows: **Defender for Cloud Apps** and select **Create**.
 
-   ![Name your project.](media/connect-google-workspace/3.jpg)
+   :::image type="content" source="media/connect-google-workspace/3.jpg" alt-text="Screenshot that shows where to name your project inside of your Google Workspace." lightbox="media/connect-google-workspace/3.jpg":::
 
 1. After the project is created, select the created project from the top ribbon. Copy the **Project number**, you'll need it later.
 
-   ![Copy the project number.](media/connect-google-workspace/2.jpg)
+   :::image type="content" source="media/connect-google-workspace/2.jpg" alt-text="Screenshot that shows where to copy the project number inside of your Google Workspace." lightbox="media/connect-google-workspace/2.jpg":::
 
 1. In the navigation menu, go to **APIs & Services** > **Library**.
     Enable the following APIs (use the search bar if the API isn't listed):
@@ -104,48 +105,48 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the navigation menu, go to **APIs & Services** > **Credentials** and do the following steps:
 
    1. Select **CREATE CREDENTIALS**.
-
-       ![Select create credentials.](media/connect-google-workspace/6.jpg)
+   
+       :::image type="content" source="media/connect-google-workspace/6.jpg" alt-text="Screenshot that shows where to select create credentials inside of your Google Workspace." lightbox="media/connect-google-workspace/6.jpg":::
 
    1. Select **Service Account**.
 
    1. **Service account details**: Provide the name as *Defender for Cloud Apps* and description as *API connector from Defender for Cloud Apps to a Google workspace account*.
 
-       ![Provide service account details.](media/connect-google-workspace/10.jpg)
+       :::image type="content" source="media/connect-google-workspace/10.jpg" alt-text="Screenshot that shows where to provide service account details inside of your Google Workspace." lightbox="media/connect-google-workspace/10.jpg":::
 
    1. Select **CREATE AND CONTINUE**.
 
    1. Under **Grant this service account access to project**, for **Role** select **Project > Editor**, and then select **Done**.
 
-       ![Grant this service account access to project.](media/connect-google-workspace/11.jpg)
+       :::image type="content" source="media/connect-google-workspace/11.jpg" alt-text="Screenshot that shows where to grant this service account access to project inside of your Google Workspace." lightbox="media/connect-google-workspace/11.jpg":::
 
    1. In the navigation menu, return to **APIs & Services** > **Credentials**.
 
    1. Under **Service Accounts**, locate and edit the service account you created earlier by selecting the pencil icon.
 
-       ![Select service account.](media/connect-google-workspace/12.jpg)
+       :::image type="content" source="media/connect-google-workspace/12.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/12.jpg":::
 
    1. Copy the email address. You'll need it later.
 
    1. Navigate to **KEYS** from the top ribbon.
 
-       ![Navigate to keys.](media/connect-google-workspace/13.jpg)
+       :::image type="content" source="media/connect-google-workspace/13.jpg" alt-text="Screenshot that shows where to navigate to keys inside of your Google Workspace." lightbox="media/connect-google-workspace/13.jpg":::
 
    1. From the **ADD KEY** menu, select **Create new key**.
 
    1. Select **P12**, and then select **CREATE**. Save the downloaded file and the password required to use the file.
 
-       ![Create key.](media/connect-google-workspace/14.jpg)
+       :::image type="content" source="media/connect-google-workspace/14.jpg" alt-text="Screenshot that shows where to create a key inside of your Google Workspace." lightbox="media/connect-google-workspace/14.jpg":::
 
 1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you created - you'll need it later.
 
-     ![Copy client ID.](media/connect-google-workspace/16.jpg)
+       :::image type="content" source="media/connect-google-workspace/16.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/16.jpg":::
 
 1. Go to [admin.google.com](https://admin.google.com/) and in the navigation menu, go to **Security** > **Access and data control** > **API Controls**. Then do the following:
 
 1. Under **Domain wide delegation**, select **MANAGE DOMAIN WIDE DELEGATION**.
 
-   ![Manage domain wide delegation.](media/connect-google-workspace/17.jpg)
+   :::image type="content" source="media/connect-google-workspace/17.jpg" alt-text="Screenshot that shows where to manage domain wide delegation inside of your Google Workspace." lightbox="media/connect-google-workspace/17.jpg":::
 
 1. Select **Add new**.
 
@@ -185,7 +186,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the **Instance name** window, give your connector a name. Then select **Next**.
 1. In the **Add Google key**, fill in the following information:
 
-    ![Google Workspace Configuration in Defender for Cloud Apps.](media/connect-google-workspace/cas-config-google-workspace.png "Google Workspace Configuration in Defender for Cloud Apps")
+    :::image type="content" source="media/connect-google-workspace/cas-config-google-workspace.png" alt-text="Screenshot that shows the Google Workspace Configuration in Defender for Cloud Apps." lightbox="media/connect-google-workspace/cas-config-google-workspace.png":::
 
     1. Enter the **Service account ID**, the **Email** that you copied earlier.
 
