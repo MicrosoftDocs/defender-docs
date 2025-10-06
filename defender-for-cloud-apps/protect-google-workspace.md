@@ -164,7 +164,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. Select **AUTHORIZE**.
 
 
-    :::image type="content" source="media/connect-google-workspace/google-workspace-authorize-new-client-id.png" alt-text="Screenshot that shows where to authorize a new client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.jpg" lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.png":::
+    :::image type="content" source="media/connect-google-workspace/google-workspace-authorize-new-client-id.png" alt-text="Screenshot that shows where to authorize a new client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.jpg":::
 
 >[!IMPORTANT]
 > In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
