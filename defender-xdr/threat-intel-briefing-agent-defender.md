@@ -27,7 +27,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!IMPORTANT]
-> Microsoft Security Copilot Phishing Triage Agent is currently in PREVIEW.
+> Microsoft Security Copilot Threat Intelligence Briefing Agent is currently in preview.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Threat intelligence analysts face several challenges in delivering insightful, actionable, contextualized intelligence. The task of developing threat intelligence briefings involves collecting information from various threat feeds, tools, and portals; filtering and correlating this information; and analyzing and mapping organizational risks. These activities happen before analysts can even start developing the report itself and generating insights for when they deliver the briefing. By then, as these processes can take anywhere from hours to days, the threats facing the organization have already evolved, which can render the briefing obsolete.  
@@ -42,7 +42,7 @@ The Threat Intelligence Briefing Agent is best suited for customers who have tur
 
 The Threat Intelligence Briefing Agent appears as a banner at the top of the [Threat analytics](threat-analytics.md) page in the Microsoft Defender portal. 
 
-[screenshot]
+[Screenshot]
 
 To access Threat analytics, from the navigation menu, select **Threat intelligence** > **Threat analytics**.
 
@@ -97,19 +97,19 @@ To run the Threat Intelligence Briefing Agent for the first time, follow these s
     - **Look back days:** How far back the agent researches threats against your vulnerabilities.
     - **Region:** Scope of geographical area the agent checks for threats.
     - **Industry:** Sector or industry vertical that the agent checks for threats.
-    - **Scheduled run / Run every:** Scheduled settings. By default, the agent will run manually only.
+    - **Scheduled run / Run every:** Scheduled settings. By default, the agent onlu runs manually.
     - **Email:** Email address of user or distribution group that the agent sends the briefing to.
 
 5. Select **Finish**.
 
 Once the agent is deployed, you can select **Go to Threat Analytics** to go back to the Threat analytics page or **Manage agent** to further manage the agent settings.
 
-## View threat intelligence briefing and manage the agent
+## View briefing and manage the agent
 The latest Threat Analytics Briefing Agent briefing summary appears in the Threat Analytics page.
 
 To open the full report, select **View full brief**. The report appears as a flyout side panel.
 
-To create an ad-hoc briefing with the most up to date information, select **Run agent**.
+To create an ad-hoc briefing with the most up-to-date information, select **Run agent**.
 
 To view and manage the agent's settings, the upper right corner of the agent banner, select the three-dot menu then select **Manage agent**. You can also access the agent settings by going to **System** > **Settings** > **Microsoft Defender XDR** > **Threat Intelligence Briefing Agent** in the Defender portal navigation menu.
 
