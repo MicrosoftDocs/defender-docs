@@ -1066,11 +1066,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-for-identity/security-assessment-unconstrained-kerberos.md",
-      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-for-identity/security-assessment-unsecure-sid-history-attribute.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
       "redirect_document_id": false
