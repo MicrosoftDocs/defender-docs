@@ -124,7 +124,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
    1. Under **Service Accounts**, locate and edit the service account you created earlier by selecting the pencil icon.
    
-    :::image type="content" source="media/connect-google-workspace/edit-service-accounts.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/edit-service-accounts.jpg":::
+       :::image type="content" source="media/connect-google-workspace/edit-service-accounts.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/edit-service-accounts.jpg":::
 
    1. Copy the email address. You'll need it later.
 
@@ -155,9 +155,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     1. In the **Client ID** box, enter the **Client ID** that you copied earlier.
     1. In the **OAuth Scopes** box, enter the following list of required scopes (copy the text and paste it in the box):
 
-        
-    ```txt
-    https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/drive.scripts,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/admin.directory.user.alias,https://www.googleapis.com/auth/admin.directory.orgunit,https://www.googleapis.com/auth/admin.directory.notifications,https://www.googleapis.com/auth/admin.directory.group.member,https://www.googleapis.com/auth/admin.directory.group,https://www.googleapis.com/auth/admin.directory.device.mobile.action,https://www.googleapis.com/auth/admin.directory.device.mobile,https://www.googleapis.com/auth/admin.directory.user
+     ```txt
+https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/drive.scripts,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/admin.directory.user.alias,https://www.googleapis.com/auth/admin.directory.orgunit,https://www.googleapis.com/auth/admin.directory.notifications,https://www.googleapis.com/auth/admin.directory.group.member,https://www.googleapis.com/auth/admin.directory.group,https://www.googleapis.com/auth/admin.directory.device.mobile.action,https://www.googleapis.com/auth/admin.directory.device.mobile,https://www.googleapis.com/auth/admin.directory.user
     ```
         
 
@@ -168,9 +167,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 >[!IMPORTANT]
 > In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
-> - Navigate to admin.google.com
-> - Select apps -> Google Workspace -> Drive and Docs
-> - Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
+> 1. Navigate to admin.google.com
+> 1. Select apps -> Google Workspace -> Drive and Docs
+> 1. Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
 
    
 
