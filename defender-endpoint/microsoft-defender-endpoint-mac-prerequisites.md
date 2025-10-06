@@ -48,10 +48,10 @@ This article lists the prerequisites for installing and configuring Microsoft De
 ### System requirements
 
 These three most recent major releases of macOS are supported.
+- 26 (Tahoe)
+
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
-- 13 (Ventura)
-
 > [!NOTE]
 > Beta versions of macOS aren't supported, but new releases of macOS are supported from day 1.
 
