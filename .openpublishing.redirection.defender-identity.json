@@ -909,7 +909,7 @@
       "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
       "redirect_document_id": false
-    }
+    },
     {
       "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
@@ -944,7 +944,73 @@
       "source_path": "defender-for-identity/security-assessment-unsecure-domain-configurations.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-enforce-encryption-rpc.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-insecure-adcs-certificate-enrollment.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-owner.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-ca-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-enrollment-agent.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-overly-permissive-template.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/prevent-certificate-enrollment-esc15.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-prevent-users-request-certificate.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-vulnerable-ca-setting.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/gpo-assigns-unprivileged-identities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/modified-unprivileged-accounts-gpo.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/reversible-passwords-group-policy.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
     }
+
 
   ]
 }
