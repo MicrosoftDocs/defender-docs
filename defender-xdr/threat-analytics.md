@@ -211,7 +211,7 @@ Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the
 
 [Screenshot]
 
-[Learn more about the Threat Intelligence Briefing Agent](threat-intelligence-briefing-agent.md)
+[Learn more about the Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md)
 
 
 ### Set up custom detections and link them to Threat analytics reports
