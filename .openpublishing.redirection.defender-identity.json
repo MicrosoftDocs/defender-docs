@@ -889,6 +889,61 @@
       "source_path": "defender-for-identity/replace-entra-connect-default-admin.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/built-in-active-directory-guest-account-is-enabled.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/domain-controller-account-password-change.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-print-spooler.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    }
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-certificate-services-server.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-federation-services-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-federation-services-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-entra-connect-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-domain-configurations.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
     }
 
   ]
