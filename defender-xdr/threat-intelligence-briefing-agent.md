@@ -1,6 +1,6 @@
 ---
-title: Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender (Preview)
-description: Learn about the Security Copilot Threat Intelligence Briefing Agent, including requirements for setup and providing feedback to the agent.
+title: Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender (preview)
+description: Learn about the Security Copilot Threat Intelligence Briefing Agent, including requirements for setup and providing feedback to the agent
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
@@ -12,9 +12,9 @@ ms.collection:
 - m365-security
 - tier1
 - security-copilot
+- msec-ai-copilot
 ms.topic: how-to
 search.appverid:
-- MOE150
 - MET150
 ms.date: 10/31/2025
 appliesto:
@@ -22,7 +22,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Threat Intelligence Briefing Agent in Microsoft Defender so that I can generate threat intelligence briefings efficiently.
 ---
 
-# Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
+# Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,9 +30,104 @@ appliesto:
 > Microsoft Security Copilot Phishing Triage Agent is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
+Threat intelligence analysts face several challenges in delivering insightful, actionable, contextualized intelligence. The task of developing threat intelligence briefings involves collecting information from various threat feeds, tools, and portals; filtering and correlating this information; and analyzing and mapping organizational risks. These activities happen before analysts can even start developing the report itself and generating insights for when they deliver the briefing. By then, as these processes can take anywhere from hours to days, the threats facing the organization have already evolved, which can render the briefing obsolete.  
+
+The [Microsoft Security Copilot Threat Intelligence Briefing Agent](/copilot/security/threat-intel-briefing-agent), now available as an embedded experience in Microsoft Defender, was developed in response to these pain points. The Threat Intelligence Briefing Agent generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information—in a matter of minutes. The agent can help security teams save time by creating a customized, relevant report that provides CISOs, security managers, and analysts with key situational awareness and a solid foundation for defense work.
+
+The agent leverages dynamic automation and deep generative AI along with its wealth of threat intelligence knowledge and signals. When building the briefing, the agent dynamically chooses the next step based on the outcome of the previous step, allowing it to decide in real-time what threat intelligence to include and prioritize. The agent then translates this technical information into a digestible report that can be consumed by various audiences.
+
+The Threat Intelligence Briefing Agent is best suited for customers who have turned on Microsoft Defender for Endpoint and Microsoft Defender External Attack Surface, as the agent relies on signals and insights from these first-party integrations to deliver accurate and context-rich reports.
+
+## Where to find the Threat Intelligence Briefing Agent
+
+The Threat Intelligence Briefing Agent appears as a banner at the top of the [Threat analytics](threat-analytics.md) page in the Microsoft Defender portal. 
+
+[screenshot]
+
+To access Threat analytics, from the navigation menu, select **Threat intelligence** > **Threat analytics**.
+
+## Prerequisites
+
+### Products
+Microsoft Security Copilot is needed to run this agent.
+
+### Security Copilot Plugins
+The following plugins are required to run this agent:
+- Microsoft Threat Intelligence
+- •	Microsoft Threat Intelligence agents
+
+The following plugin is optional but can add more context to the output:
+- Microsoft Defender External Attack Surface Management
+
+### User account permissions 
+
+>[!IMPORTANT]
+> **Identity and permissions requirement:** This agent requires connection to an existing user account. The agent can read data from Defender External Attack Surface Management and Defender Vulnerability Management. You must configure the user account with the appropriate permissions outlined below before setting up the agent.
+
+The user account connected to the agent must have these permissions:
+
+**Required permissions:**
+- **Vulnerability Management (read):** Access to Defender Vulnerability Management data
+- **Security Reader:** Access to Threat Analytics and agent results
+- **Security Admin:** Access to agent onboarding and configuration
+
+**Optional permissions:**
+- **Exposure Management (read):** Access to Microsoft Security Exposure Management insights, including External Attack Surface Management data
+
+**Role-based access:**
+- Owner and contributors can see the report generated by the Threat Intelligence Briefing Agent within the Microsoft Security Copilot agent library page
+
+>[!IMPORTANT]
+> After setting up permissions, activate the Microsoft Defender XDR Unified role-based access control (RBAC) model for the role to take effect.
+
+>[!TIP]
+> Consider using a dedicated service account for running agents to maintain separation of duties and enhance security monitoring.
+
+### Trigger
+This agent runs at the set time interval when turned on, or manually when you want to run it.
+
+## Set up the agent
+To run the Threat Intelligence Briefing Agent for the first time, follow these steps:
+
+1. In the Threat Intelligence Briefing Agent at the top of the Threat analytics page, select **Set up agent**.
+2. On Threat Intelligence Briefing Agent settings overview page, select **Set up**.
+3. Choose the user account the agent will use.
+4. Specify the parameters to customize the agent:
+    - **Insights to research:** The number of vulnerabilities the agent researches for active threats.
+    - **Look back days:** How far back the agent researches threats against your vulnerabilities.
+    - **Region:** Scope of geographical area the agent checks for threats.
+    - **Industry:** Sector or industry vertical that the agent checks for threats.
+    - **Scheduled run / Run every:** Scheduled settings. By default, the agent will run manually only.
+    - **Email:** Email address of user or distribution group that the agent sends the briefing to.
+
+5. Select **Finish**.
+
+Once the agent is deployed, you can select **Go to Threat Analytics** to go back to the Threat analytics page or **Manage agent** to further manage the agent settings.
+
+## View threat intelligence briefing and manage the agent
+The latest Threat Analytics Briefing Agent briefing summary appears in the Threat Analytics page.
+
+To open the full report, select **View full brief**. The report appears as a flyout side panel.
+
+To create an ad-hoc briefing with the most up to date information, select **Run agent**.
+
+To view and manage the agent's settings, the upper right corner of the agent banner, select the three-dot menu then select **Manage agent**. You can also access the agent settings by going to **System** > **Settings** > **Microsoft Defender XDR** > **Threat Intelligence Briefing Agent** in the Defender portal navigation menu.
 
 
-## Related content
+## Assess and provide feedback on the agent’s output
 
+The generated reports appear in the Threat Intelligence Briefing Agent page under Activity. It displays the name of the report, the start time, method of generation, and current status.
+
+Select one of the reports to assess the agent's output.
+
+The threat intelligence briefing contains a relevant summary of threat information and detailed technical analysis, including any actively exploited vulnerability and its possible organizational impact.
+
+The Threat Intelligence Briefing Agent dynamically chooses the next step based on the outcome of the previous step as it builds the briefing. You can view the agent’s progress toward producing the threat briefing by selecting View activity.
+ 
+You'll see details of the activity, providing you with transparency on the steps taken by the agent to produce the output.
+ 
+You can provide feedback about the briefing by selecting the thumbs up or thumbs down button. You can elaborate in the text box that appears after. Select Submit to give your feedback.
+
+## See also
 - [Microsoft Security Copilot agents](/copilot/security/agents-overview)
 - [Responsible AI FAQs for Security Copilot Agent](/copilot/security/rai-faqs-security-copilot-agents)

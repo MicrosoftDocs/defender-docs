@@ -199,7 +199,22 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 :::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
 
-## Set up custom detections and link them to Threat analytics reports
+
+## Stay updated with the latest reports and threat intelligence
+Threat analytics leverages and integrates various Microsoft Defender and [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)	features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+
+### Set up the Threat Intelligence Briefing Agent (preview)
+
+You can set up the Threat Intelligence Briefing Agent to get timely, relevant threat intelligence reports with detailed technical analysis based on the latest threat actor activity and both internal and external vulnerability exposure. The agent correlates Microsoft threat data and customer signals to add critical context to threat information in a matter of minutes, saving analyst teams hours or even days spent on intelligence gathering and correlation.
+
+Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the top of the Threat analytics page. 
+
+[Screenshot]
+
+[Learn more about the Threat Intelligence Briefing Agent](threat-intelligence-briefing-agent.md)
+
+
+### Set up custom detections and link them to Threat analytics reports
 
 You can set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
 
@@ -207,7 +222,7 @@ You can set up [custom detection rules](custom-detection-rules.md#2-create-new-r
 
 [Learn more about creating and managing custom detections rules](custom-detection-rules.md)
 
-## Set up email notifications for report updates
+### Set up email notifications for report updates
 
 You can set up email notifications that will send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
 
