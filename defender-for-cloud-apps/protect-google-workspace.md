@@ -140,7 +140,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you created - you'll need it later.
 
-       :::image type="content" source="media/connect-google-workspace/16.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/16.jpg":::
+
+    :::image type="content" source="media/connect-google-workspace/service-accounts-list.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace.":::
 
 1. Go to [admin.google.com](https://admin.google.com/) and in the navigation menu, go to **Security** > **Access and data control** > **API Controls**. Then do the following:
 
@@ -148,14 +149,15 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
    :::image type="content" source="media/connect-google-workspace/17.jpg" alt-text="Screenshot that shows where to manage domain wide delegation inside of your Google Workspace." lightbox="media/connect-google-workspace/17.jpg":::
 
+
 1. Select **Add new**.
 
     1. In the **Client ID** box, enter the **Client ID** that you copied earlier.
     1. In the **OAuth Scopes** box, enter the following list of required scopes (copy the text and paste it in the box):
 
-        ```txt
-        https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/drive.scripts,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/admin.directory.user.alias,https://www.googleapis.com/auth/admin.directory.orgunit,https://www.googleapis.com/auth/admin.directory.notifications,https://www.googleapis.com/auth/admin.directory.group.member,https://www.googleapis.com/auth/admin.directory.group,https://www.googleapis.com/auth/admin.directory.device.mobile.action,https://www.googleapis.com/auth/admin.directory.device.mobile,https://www.googleapis.com/auth/admin.directory.user
-        ```
+        
+    ```https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/drive.scripts,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/admin.directory.user.alias,https://www.googleapis.com/auth/admin.directory.orgunit,https://www.googleapis.com/auth/admin.directory.notifications,https://www.googleapis.com/auth/admin.directory.group.member,https://www.googleapis.com/auth/admin.directory.group,https://www.googleapis.com/auth/admin.directory.device.mobile.action,https://www.googleapis.com/auth/admin.directory.device.mobile,https://www.googleapis.com/auth/admin.directory.user```
+        
 
 1. Select **AUTHORIZE**.
 
