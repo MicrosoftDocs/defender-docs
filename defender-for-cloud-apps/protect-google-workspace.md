@@ -123,8 +123,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
    1. In the navigation menu, return to **APIs & Services** > **Credentials**.
 
    1. Under **Service Accounts**, locate and edit the service account you created earlier by selecting the pencil icon.
-
-       :::image type="content" source="media/connect-google-workspace/edit-service-account.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/edit-service-account.jpg":::
+   
+    :::image type="content" source="media/connect-google-workspace/edit-service-accounts.jpg" alt-text="Screenshot that shows where to select the service account inside of your Google Workspace." lightbox="media/connect-google-workspace/edit-service-accounts.jpg":::
 
    1. Copy the email address. You'll need it later.
 
@@ -161,13 +161,14 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Select **AUTHORIZE**.
 
-    :::image type="content" source="media/connect-google-workspace/authorize-new-client-id.jpg" alt-text="Screenshot that shows where to authorize a new client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/authorize-new-client-id.jpg":::
 
-   >[!IMPORTANT]
-   > In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
-   > - Navigate to admin.google.com
-   > - Select apps -> Google Workspace -> Drive and Docs
-   > - Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
+    :::image type="content" source="media/connect-google-workspace/google-workspace-authorize-new-client-id.png" alt-text="Screenshot that shows where to authorize a new client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.jpg" lightbox="media/connect-google-workspace/google-workspace-authorize-new-client-id.png":::
+
+>[!IMPORTANT]
+> In order for the Google connector to function correctly, enable **Google Drive** for the Super Admin user that will be used for the connector.
+> - Navigate to admin.google.com
+> - Select apps -> Google Workspace -> Drive and Docs
+> - Turn on Service status for the Super Admin user used to onboard the connector. We recommended enabling Service status for all users.
 
    
 
