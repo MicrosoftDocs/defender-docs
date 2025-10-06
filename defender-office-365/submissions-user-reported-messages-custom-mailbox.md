@@ -110,6 +110,10 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     - **Report phishing**
     - **Report junk**
     - **Report not junk**
+   > [!NOTE]
+   >
+   > If the **Ask the user to confirm before reporting** option is enabled on the User Report Settings page, Outlook will display a confirmation pop-up containing a checkbox. When this checkbox is selected, the end user will see the setting **When reporting phishing or junk, always ask me before sending a report** under Junk Email Security Settings in Outlook. This option allows end users to opt out of the confirmation pop-up when submitting reports.
+   > 
   - **Show a success message after the message is reported**: A post-reporting pop-up is shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) for the following user actions:
     - **Phishing reported**
     - **Junk reported**
