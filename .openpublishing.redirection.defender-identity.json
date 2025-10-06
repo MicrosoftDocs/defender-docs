@@ -1009,8 +1009,91 @@
       "source_path": "defender-for-identity/reversible-passwords-group-policy.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/accounts-with-non-default-pgid.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-suspicious-access-rights.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-krbtgt-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-domain-administrator-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-non-admin-accounts-dcsync.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/ensure-privileged-accounts-with-sensitive-flag.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-clear-text.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-laps.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-discoverable-passwords-active-directory-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-inactive-service-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
     }
-
-
   ]
 }
