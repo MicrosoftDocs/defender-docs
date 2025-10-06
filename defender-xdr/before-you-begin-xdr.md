@@ -35,8 +35,8 @@ This document outlines the key prerequisites you must meet and essential informa
 
 Defender Experts for XDR is a separate service from your existing Defender products. To enable us to get started with this managed service, we require the following licensing prerequisites:
 
--	**At least** Microsoft Entra ID P1 must be licensed for all users and enabled. This is required for enabling secure service provider access for Defender Experts.
--	**At least one** Microsoft Defender product (Microsoft Defender for Endpoint, Microsoft Defender for Office 365 P2, Microsoft Defender for Identity, or Microsoft Defender for Cloud Apps) must be licensed and deployed in active mode.
+-	**Access requirement:** At least Microsoft Entra ID P1 must be licensed for all users. This is required for enabling secure service provider access for Defender Experts. 
+-	**Service coverage:** **At least one** Microsoft Defender product (Microsoft Defender for Endpoint P2, Microsoft Defender for Office 365 P2, Microsoft Defender for Identity, or Microsoft Defender for Cloud Apps) or Microsoft Entra ID P2 must be licensed and deployed in active mode. 
 
 **Microsoft Defender Experts for Servers**
 
