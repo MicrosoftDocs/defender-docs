@@ -141,7 +141,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the navigation menu, go to **IAM & Admin** > **Service accounts**. Copy the **Client ID** assigned to the service account you created - you'll need it later.
 
 
-    :::image type="content" source="media/connect-google-workspace/service-accounts-list.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace.":::
+    :::image type="content" source="media/connect-google-workspace/service-accounts-list.jpg" alt-text="Screenshot that shows where to copy the client ID inside of your Google Workspace." lightbox="media/connect-google-workspace/service-accounts-list.jpg":::
 
 1. Go to [admin.google.com](https://admin.google.com/) and in the navigation menu, go to **Security** > **Access and data control** > **API Controls**. Then do the following:
 
