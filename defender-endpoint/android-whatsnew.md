@@ -29,6 +29,18 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ### Releases for Defender for Endpoint on Android
 
+#### October 2025
+
+| Build| 1.0.8201.0101|
+| -------- | -------- |
+| Release Date | October 2, 2025 |
+
+**What's New**
+
+- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux) (Roll out in Progress, ETA: Oct End)
+
+- Enhanced app experience with landscape mode support. (Roll out in Progress, ETA: Oct End)
+
 #### September 2025
 
 | Build|1.0.8102.0101|
