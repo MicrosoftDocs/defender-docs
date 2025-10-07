@@ -33,7 +33,7 @@ In all organizations with cloud mailboxes, Microsoft 365 scans all incoming mess
 
 - **X-Forefront-Antispam-Report**: Contains information about the message and about how it was processed.
 - **X-Microsoft-Antispam**: Contains additional information about bulk mail and phishing.
-- **Authentication-results**: Contains information about email authentication results including Sender Policy Framework (SPF), Domainkeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC). 
+- **Authentication-results**: Contains information about email authentication results including Sender Policy Framework (SPF), Domainkeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC).
 
 This article describes what's available in these header fields.
 
