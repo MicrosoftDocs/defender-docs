@@ -291,7 +291,7 @@ The gMSA configured for this domain controller or AD FS / AD CS server doesn't h
 
 **Resolution:**
 
-Add the gMSA to the **Performance Monitor Users** group on the server.
+Add the gMSA to the **Performance Log Users** group on the server.
 
 ## Report downloads can't contain more than 300,000 entries
 
