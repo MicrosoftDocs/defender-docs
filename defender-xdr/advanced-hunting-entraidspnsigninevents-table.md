@@ -24,10 +24,12 @@ ms.topic: reference
 ms.date: 10/15/2025
 ---
 
-# EntraIdSpnSignInEvents
+# EntraIdSpnSignInEvents (Preview)
 
 
 > [!IMPORTANT]
+> Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>
 > Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `EntraIdSpnSignInEvents` table in the advanced hunting schema contains information about Microsoft Entra service principal and managed identity sign-ins. You can learn more about the different kinds of sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).

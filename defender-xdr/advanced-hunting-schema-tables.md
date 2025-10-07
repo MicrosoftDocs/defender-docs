@@ -54,8 +54,8 @@ The following reference lists all the tables in the schema. Each table name link
 
 | Table name | Description |
 |------------|-------------|
-| **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra ID interactive and non-interactive sign-ins |
-| **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra ID service principal and managed identity sign-ins |
+| **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |
+| **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Behavior data types in Microsoft Defender for Cloud Apps (not available for GCC) |
@@ -96,8 +96,8 @@ The following reference lists all the tables in the schema. Each table name link
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |
-| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** | Microsoft Entra ID interactive and non-interactive sign-ins |
-| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** | Microsoft Entra ID service principal and managed identity sign-ins |
+| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |
+| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** | Microsoft Entra service principal and managed identity sign-ins |
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |
 | **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |

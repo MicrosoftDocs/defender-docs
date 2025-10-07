@@ -24,11 +24,13 @@ ms.topic: reference
 ms.date: 10/15/2025
 ---
 
-# EntraIdSignInEvents
+# EntraIdSignInEvents (Preview)
 
 
 
 > [!IMPORTANT]
+> Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>
 > Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `EntraIdSignInEvents` table in the advanced hunting schema contains information about Microsoft Entra interactive and non-interactive sign-ins. Learn more about sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
