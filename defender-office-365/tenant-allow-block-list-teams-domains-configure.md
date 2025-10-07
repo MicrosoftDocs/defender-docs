@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to block domains in Microsoft Teams using the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/04/2025
+ms.date: 10/06/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -53,7 +53,7 @@ This article describes how security admins can manage entries for blocked domain
 
 - Block entries for domains in Teams never expire.
 
-- An entry should be active within 5 minutes.
+- An entry should be active within 24 hours.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
