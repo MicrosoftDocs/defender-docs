@@ -40,6 +40,8 @@ Be aware of the following considerations before you start:
 
 - The plug-in is not supported on machines with an ARM64 processor.
 
+- The plug-in is not supported on multi-session variant of Windows 10/11
+
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 
 ## Software prerequisites
