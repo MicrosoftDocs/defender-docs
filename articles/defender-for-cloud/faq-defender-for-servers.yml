@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: dcurwin
   ms.author: dacurwin
-  ms.date: 06/15/2025
+  ms.date: 08/19/2025
 title: Common questions about Defender for Servers
 summary: Get answers to common questions about Microsoft Defender for Servers.
 
@@ -90,6 +90,13 @@ sections:
           - **On-premises and multicloud machines**: If you previously onboarded on-premises and AWS/GCP machines using the legacy method, [connect these machines to Azure](/azure/azure-arc/servers/deployment-options) as Azure Arc-enabled servers to the subscription with Defender for Servers Plan 2 enabled.
           - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md).
 
+      - question: |
+          Does disabling Defender for Servers Plan 2 automatically remove the plan from my workspace?
+        answer: |
+          Disabling the Defender for Servers Plan 2 on your subscription doesn't automatically disable the plan on your workspace. If Defender for Servers Plan 2 is enabled on a workspace, you need to manually disable it in the workspace settings to stop data collection and turn off the feature.
+          
+          Learn how to [disable the Defender for Servers plan](tutorial-enable-servers-plan.md#disable-defender-for-servers-on-a-subscription).
+  
   - name: Defender for Endpoint integration
     questions:
       - question: |

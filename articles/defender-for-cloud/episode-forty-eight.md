@@ -2,12 +2,12 @@
 title: Microsoft CNAPP solution | Defender for Cloud in the field
 description: Learn about Microsoft's CNAPP Defender for Cloud solution.
 ms.topic: reference
-ms.date: 06/18/2024
+ms.date: 10/05/2025
 ---
 
 # Microsoft CNAPP solution
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Miri Herszfang joins Yuri Diogenes to talk about Microsoft CNAPP solution. Miri and Yuri explore the different aspects of CNAPP, why it is important to adopt this type of platform, how to properly plan the adoption and how to choose a CNAPP solution. Miri and Yuri also talk about key considerations when adopting Defender for Cloud as your CNAPP solution.
+**Episode description**: In this episode of Defender for Cloud in the Field, Miri Herszfang joins Yuri Diogenes to talk about Microsoft CNAPP solution. Miri and Yuri explore the different aspects of CNAPP, why it's important to adopt this type of platform, how to properly plan the adoption, and how to choose a CNAPP solution. Miri and Yuri also discuss key considerations when adopting Defender for Cloud as your CNAPP solution.
   
 
 > [!VIDEO https://aka.ms/docs/player?id=d956ec66-c484-4bf2-9851-92a3df725148]

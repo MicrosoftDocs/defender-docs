@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 07/17/2025
+ms.date: 09/28/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -27,12 +27,103 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2025
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
+|September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
+|September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-ips-support-for-internet-exposure-analysis)|
+|September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width-for-internet-exposure-analysis)|
+|September 11, 2025 | Preview | [Trivy dependency scanning for code repositories (Update)](#trivy-dependency-scanning-for-code-repositories-update) |
+
+### Malware automated remediation in Defender for Storage (Preview)
+
+September 16, 2025
+
+Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
+
+With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
+
+You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
+
+For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
+
+### New refined attack paths
+
+September 9, 2025
+
+Attack paths now reflect real, externally driven and exploitable risks that adversaries could use to compromise your organization, helping you cut through the noise and act faster. The paths now focus on external entry points and how attackers could progress through your environment reaching business-critical targets. This experience brings greater clarity, focus, and prioritization empowering security teams to mitigate the most critical risks with confidence.
+
+Read more about it in this blog: [Refining Attack Paths: Prioritizing Real-World, Exploitable Threats](https://techcommunity.microsoft.com/blog/securityexposuremanagement/refining-attack-paths-prioritizing-real-world-exploitable-threats/4454051)
+
+For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+ 
+### Trusted IPs support for internet-exposure analysis
+
+September 14, 2025
+
+Defender for Cloud allows you to define trusted internet protocol (IP) ranges to reduce false positives in internet-exposure analysis. Resources that are only accessible from trusted IPs are considered trusted. Defender for Cloud won't generate attack paths for trusted IPs.
+
+Learn more about [trusted exposure](internet-exposure-analysis.md#trusted-exposure-preview).
+
+### Exposure width for internet-exposure analysis
+
+September 14, 2025
+
+Exposure width is now generally available in Microsoft Defender for Cloud. Exposure width shows how a resource is exposed to the public internet based on its network rules. This feature helps security teams find and fix critical attack paths.
+
+Learn more about [internet exposure width](internet-exposure-analysis.md#internet-exposure-width).
+
+### Trivy dependency scanning for code repositories (Update)
+
+September 11, 2025  
+
+Defender for Cloud now includes **open-source dependency vulnerability scanning** powered by [Trivy in filesystem mode](https://trivy.dev/v0.59/docs/scanner/vulnerability/). This helps you strengthen security by automatically detecting operating-system and library vulnerabilities across GitHub and Azure DevOps repositories.  
+
+**Where it applies:**  
+- [In-pipeline (CLI) scanning](/azure/defender-for-cloud/cli-cicd-integration).  
+
+- [Agentless code scanning (preview)](/azure/defender-for-cloud/agentless-code-scanning).
+
+**What to do:**  
+- For [Azure DevOps](quickstart-onboard-devops.md) or [GitHub](quickstart-onboard-github.md), create or edit a connector.  
+- For in-pipeline scanning, add the [Microsoft Security DevOps (MSDO) CLI](cli-cicd-integration.md) tool to your pipeline definition.  
+
+**Where results appear:**  
+- Pipeline logs and SARIF files.  
+
+- Defender for Cloud recommendations:  
+  - *[Azure DevOps repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+  - *[GitHub repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#github-repositories-should-have-dependency-vulnerability-scanning-findings-resolved)*  
+
+If you use [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security) dependency scanning, Defender for Cloud now enhances, not replaces, those results.  
+
+**Effective date:** September 15, 2025. 
+
 ## August 2025
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+| August 27, 2025 | GA | [General availability of Optional index tags for storing malware scanning results](#general-availability-of-defender-for-storage-optional-index-tags-for-storing-malware-scanning-results) |
+| August 12, 2025 | GA | [General availability of Defender for Storage in Azure Government cloud](#general-availability-of-defender-for-storage-in-azure-government-cloud) |
 | August 11, 2025 | GA | [General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud](#general-availability-of-defender-cspm-and-defender-for-servers-plan-2-in-azure-government-cloud) |
-| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) |
+| August 6, 2025 | GA | [AKS Security Dashboard](#aks-security-dashboard) |
+| August 5, 2025 | Preview | [Storage aggregated logs in XDR's Advanced Hunting (Preview)](#storage-aggregated-logs-in-xdrs-advanced-hunting-preview) | 
+
+### General availability of Defender for Storage Optional index tags for storing malware scanning results
+
+August 27, 2025
+
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
+
+### General availability of Defender for Storage in Azure Government cloud
+
+August 12, 2025
+
+Microsoft [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) is generally available to government cloud customers. The service helps U.S. federal and government agencies, secure their storage accounts.
+All features of [Defender for Storage](/azure/defender-for-cloud/defender-for-storage-introduction) are available in government clouds, aligning the feature coverage with commercial cloud services.
+Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
 
 ### General availability of Defender CSPM and Defender for Servers Plan 2 in Azure Government cloud
 
@@ -43,12 +134,20 @@ Microsoft Defender for Cloud's [Cloud Security Posture Management (CSPM)](/azure
 All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
 Learn more about [Defender for Cloud's government cloud coverage](support-matrix-cloud-environment.md).
- 
+
+### AKS Security Dashboard
+
+August 6, 2025
+
+The AKS Security Dashboard provides a centralized view of security posture and runtime threat protection for AKS cluster within the Azure portal. It highlights software vulnerabilities, compliance gaps, and active threats, helping you prioritize remediation. Use this dashboard to monitor AKS workload protection, cluster configuration, and threat detection in real time.
+
+For more information, see [Azure Kubernetes Service (AKS) Security Dashboard](cluster-security-dashboard.md).
+
 ### Storage aggregated logs in XDR's Advanced Hunting (Preview)
 
 August 5, 2025
 
-The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation. 
+The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation.
 
 The logs are available at no additional cost as part of the new per-storage account plan in Defender for Storage. For more information, visit [CloudStorageAggregatedEvents (Preview)](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table).
 
@@ -94,13 +193,13 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 
 **What's included:**
 
-- **Helm-based deployment support** 
+- **Helm-based deployment support**
 
   For setup instructions and more details, see [Install Defender for Containers sensor using Helm](/azure/defender-for-cloud/deploy-helm).
   
-- **DNS threat detections** 
+- **DNS threat detections**
 
-- Improves memory efficiency and reduces CPU consumption for large cluster deployments.
+  Improves memory efficiency and reduces CPU consumption for large cluster deployments.
 
 For more information, see: [Sensor for Defender for Containers Changelog](/azure/defender-for-cloud/defender-sensor-change-log).
 
@@ -108,7 +207,7 @@ For more information, see: [Sensor for Defender for Containers Changelog](/azure
 
 June 25, 2025
 
-Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. 
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags.
 Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### API discovery and security posture for APIs hosted in Function Apps and Logic Apps (Preview)
@@ -135,17 +234,18 @@ Agentless File Integrity Monitoring (FIM) is now available in preview. This capa
 Agentless FIM enables organizations to monitor file and registry changes across their environment without deploying other agents. It provides a lightweight, scalable alternative while maintaining compatibility with the existing agent-based solution.
 
 Key capabilities include:
+
 - **Custom monitoring**: Meet specific compliance and security requirements by defining and monitoring custom file paths and registry keys.
 - **Unified experience**: Events from both agentless and MDE-based FIM are stored in the same workspace table, with clear source indicators.
 
 Learn more about [File integrity monitoring](file-integrity-monitoring-overview.md) and how to [Enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
-
 
 ### Agentless code scanning – GitHub support and customizable coverage now available (Preview)
 
 June 18, 2025
 
 We have updated the agentless code scanning feature to include key capabilities that extend both coverage and control. These updates include:
+
 - Support for GitHub repositories, in addition to Azure DevOps
 - Customizable scanner selection – select which tools (e.g., Bandit, Checkov, ESLint) to run
 - Granular scope configuration – include or exclude specific organizations, projects, or repositories
@@ -282,7 +382,7 @@ The Defender for SQL Server on machines plan in Microsoft Defender for Cloud pro
 
 Starting today, we're gradually releasing an enhanced agent solution for the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to make the onboarding processes easier and improve protection coverage.
 
-**Required customer actions**
+**Required customer actions**:
 
 1. [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): Customers who enabled Defender for SQL Server on machines plan before today are required to follow these instructions to update their configuration, following the enhanced agent release.
 
@@ -416,7 +516,6 @@ For information on how to enable FIM over Defender for Endpoint, see [File Integ
 
 > [!IMPORTANT]
 > The availability of File Integrity Monitoring in Azure China 21Vianet and in GCCM clouds isn't currently planned to be supported.
-
 
 ## Next steps
 
