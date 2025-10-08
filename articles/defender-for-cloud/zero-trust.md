@@ -25,7 +25,7 @@ Zero Trust infrastructure solutions assess, monitor, and prevent security threat
 
 1. [Assess compliance](update-regulatory-compliance-packages.yml) with chosen standards and policies.
 1. [Harden configuration](recommendations-reference.md) wherever gaps are found.
-1. Employ other hardening tools such as [just-in-time (JIT)](just-in-time-access-usage.yml) VM access.
+1. Employ other hardening tools such as [just-in-time (JIT)](just-in-time-access-usage.md) VM access.
 1. Set up [threat protection](/azure/azure-sql/database/threat-detection-configure).
 1. Automatically block and flag risky behavior and take protective actions.
 

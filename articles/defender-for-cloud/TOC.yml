@@ -899,7 +899,7 @@
             href: just-in-time-access-overview.md
           - name: Enable just-in-time access 
             displayName: jit, management, ports
-            href: just-in-time-access-usage.yml
+            href: just-in-time-access-usage.md
     - name: Investigate and remediate 
       items:
       - name: Remediate EDR solutions (agentless)

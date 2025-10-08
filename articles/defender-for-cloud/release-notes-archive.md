@@ -1577,7 +1577,7 @@ January 9, 2024**
 
 **Estimated date for change: May 2024**
 
-The Defender for Servers built-in vulnerability assessment solution powered by Qualys is on a retirement path, which is estimated to complete on **May 1st, 2024**. If you're currently using the vulnerability assessment solution powered by Qualys, you should plan your [transition to the integrated Microsoft Defender vulnerability management solution](how-to-transition-to-built-in.yml).
+The Defender for Servers built-in vulnerability assessment solution powered by Qualys is on a retirement path, which is estimated to complete on **May 1st, 2024**. If you're currently using the vulnerability assessment solution powered by Qualys, you should plan your [transition to the integrated Microsoft Defender vulnerability management solution](how-to-transition-to-built-in.md).
 
 For more information about our decision to unify our vulnerability assessment offering with Microsoft Defender Vulnerability Management, you can read [this blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-cloud-unified-vulnerability-assessment-powered-by/ba-p/3990112).
 
@@ -2547,7 +2547,7 @@ The changes are listed as follows:
 |JIT firewall rule collection names | ASC-JIT | MDC-JIT |
 |JIT firewall rules names | ASC-JIT | MDC-JIT |
 
-Learn how to [secure your management ports with Just-In-Time access](just-in-time-access-usage.yml).
+Learn how to [secure your management ports with Just-In-Time access](just-in-time-access-usage.md).
 
 ### Onboard selected AWS regions
 
@@ -6549,7 +6549,7 @@ This update brings the following changes to this feature:
 
 - The recommendation is triggered only if there are open management ports.
 
-Learn more about [the JIT access feature](just-in-time-access-usage.yml).
+Learn more about [the JIT access feature](just-in-time-access-usage.md).
 
 ### Custom recommendations have been moved to a separate security control
 
