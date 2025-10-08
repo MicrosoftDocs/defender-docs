@@ -1,6 +1,5 @@
 ---
 title: 'Accounts security posture assessment'
-description: This article lists all security assessments for accounts. 
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date: 09/15/2025
