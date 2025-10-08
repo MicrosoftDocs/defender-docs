@@ -89,5 +89,5 @@ This article explained how Defender for Cloud uses Azure  Role-Based Access Cont
 
 - [Set security policies in Defender for Cloud](tutorial-security-policy.md)
 - [Manage security recommendations in Defender for Cloud](review-security-recommendations.md)
-- [Manage and respond to security alerts in Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Defender for Cloud](managing-and-responding-alerts.md)
 - [Monitor partner security solutions](./partner-integration.md)

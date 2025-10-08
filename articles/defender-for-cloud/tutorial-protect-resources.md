@@ -42,4 +42,4 @@ In this tutorial, you learned how to limit your exposure to threats by:
 Advance to the next tutorial to learn about responding to security incidents.
 
 > [!div class="nextstepaction"]
-> [Manage and respond to alerts](managing-and-responding-alerts.yml)
+> [Manage and respond to alerts](managing-and-responding-alerts.md)

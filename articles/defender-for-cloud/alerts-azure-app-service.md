@@ -14,7 +14,7 @@ This article lists the security alerts you might get for Azure App Service from 
 > [!NOTE]
 > Some of the recently added alerts powered by Microsoft Defender Threat Intelligence and Microsoft Defender for Endpoint might be undocumented.
 
-[Learn how to respond to these alerts](managing-and-responding-alerts.yml).
+[Learn how to respond to these alerts](managing-and-responding-alerts.md).
 
 [Learn how to export alerts](continuous-export.md).
 
@@ -490,5 +490,5 @@ Attackers often use this tool for probing the web application to find vulnerabil
 ## Next steps
 
 - [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml)
+- [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.md)
 - [Continuously export Defender for Cloud data](continuous-export.md)
