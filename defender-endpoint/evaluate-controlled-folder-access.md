@@ -27,12 +27,16 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Platforms**
+### Supported operating systems 
+
 - Windows
+- Windows Server 2019 and later
+-  Azure Stack HCI OS, version 23H2 and later
+- Windows 10 or Windows 11.
 
 
 
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019 and later, Azure Stack HCI OS, version 23H2 and later and client devices running Windows 10 or Windows 11.
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. 
 
 It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 

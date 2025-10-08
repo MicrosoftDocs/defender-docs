@@ -26,8 +26,24 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Platforms**
-- Windows
+## Prerequisites
+
+Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
+
+> [!NOTE]
+> - Automated investigation and response requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
+> - Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed.
+
+### Supported operating systems
+
+- Windows Server 2012 R2 (Preview)
+- Windows Server 2016 (Preview)
+- Windows Server 2019 and later
+- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
+- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
+- Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
+- Windows 11
+- Azure Stack HCI OS, version 23H2 and later
 
 Want to see how it works? Watch the following video:
 
@@ -72,28 +88,6 @@ All remediation actions, whether pending or completed, are tracked in the [Actio
 > [!TIP]
 > Check out the new, unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
 
-## Requirements for AIR
-
-Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
-
-> [!NOTE]
-> Automated investigation and response requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
-
-Currently, AIR only supports the following OS versions:
-
-- Windows Server 2012 R2 (Preview)
-- Windows Server 2016 (Preview)
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2025
-- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
-- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
-- Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
-- Windows 11
-- Azure Stack HCI OS, version 23H2 and later
-
-> [!NOTE]
-> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed. 
 
 ## Next steps
 

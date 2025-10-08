@@ -55,8 +55,15 @@ Understand the following prerequisites before you create indicators for files:
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
 - The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
-- This feature is supported on devices running Windows 10, version 1703 or later, Windows 11, Windows Server 2012 R2, Windows Server 2016 or later, and Azure Stack HCI OS, version 23H2 and later.
 - File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
+
+### Supported operating systems 
+
+- Windows 10, version 1703 or later
+- Windows 11
+-  Windows Server 2012 R2
+-  Windows Server 2016 or later
+-  Azure Stack HCI OS, version 23H2 and later.
 
 > [!NOTE]
 > File indicators support portable executable (PE) files, including `.exe` and `.dll` files only.

@@ -18,6 +18,7 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
 ---
 # Minimum requirements for Microsoft Defender for Endpoint
@@ -32,9 +33,7 @@ There are some minimum requirements for onboarding devices to Defender for Endpo
 > - For information about how Defender for Endpoint demonstrates industry-leading optics and detection capabilities, see [Insights from the MITRE ATT&CK-based evaluation](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 > - If you're looking for endpoint protection for small and medium-sized businesses, see [Microsoft Defender for Business](/defender-business/mdb-overview) and [Defender for Business requirements](/defender-business/mdb-requirements).
 
-## Licensing requirements
 
-- [Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md) (standalone or as part of other Microsoft 365 plans)
 
 - [Microsoft Defender for Business](/defender-business/mdb-overview) (for small and medium-sized businesses)
 

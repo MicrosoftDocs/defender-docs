@@ -14,6 +14,8 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1 and 2
 ---
 
 # Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
@@ -21,12 +23,11 @@ ms.subservice: onboard
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
+### Supported operating systems
+
 - Windows Server 2012 R2
 - Windows Server 2016 and later
 - Azure Stack HCI OS, version 23H2 and later
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 
 

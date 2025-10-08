@@ -26,12 +26,9 @@ appliesto:
 # Microsoft Defender Antivirus compatibility with other security products
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
-
 - Windows 11
 - Windows 10 
 - Windows Server 2016 and later 

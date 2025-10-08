@@ -45,13 +45,11 @@ Retrieves a specific live response command result by its index.
 1. Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
-## Minimum requirements
+## Prerequisites
 
-Before you can initiate a session on a device, make sure you fulfill the following requirements:
+Devices must be running one of the following versions of Windows: 
 
-- **Verify that you're running a supported version of Windows**.
-
-  Devices must be running one of the following versions of Windows
+### Supported operating systems
 
   - **Windows 11**
   

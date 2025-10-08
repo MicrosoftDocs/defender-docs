@@ -26,8 +26,6 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 
-
-
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
@@ -42,11 +40,11 @@ See [Overview of automated investigations](../automated-investigations.md) for m
 
 1. Rate limitations for this API are 50 calls per hour.
 
-## Requirements for AIR
+## Prerequisites
 
 Your organization must have Defender for Endpoint see: [Minimum requirements for Microsoft Defender for Endpoint](../minimum-requirements.md).
 
-Currently, AIR only supports the following OS versions:
+### Supported operating systems
 
 - Windows 11
 - Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later

@@ -24,7 +24,7 @@ appliesto:
 # Microsoft Defender Antivirus exclusions on Windows Server
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows Server
 

@@ -25,20 +25,16 @@ appliesto:
 # Customize controlled folder access
 
 
-**Platforms**
+**Supported operating systems**
 - Windows
-
-> [!TIP]
-
-
-Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
-
 - Windows 11
 - Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
+- Windows Server 2019 and later
 - Azure Stack HCI OS, version 23H2 and later
+
+> [!TIP]
+> Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
+
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.

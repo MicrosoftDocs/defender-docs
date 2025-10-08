@@ -26,8 +26,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-
-**Platforms**
+### Supported operating systems
 
 - Windows client devices
 - Windows Server 2012 R2 and later
