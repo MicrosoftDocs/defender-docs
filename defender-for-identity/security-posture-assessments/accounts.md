@@ -5,11 +5,11 @@ ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date: 09/15/2025
 ms.reviewer: LiorShapiraa
+description: Lists all Microsoft Defender for Identity security posture assessments for Active Directory accounts, with detailed impacts and remediation steps to help improve your Secure Score.
 ---
 
 # Accounts security posture assessments 
 
-This article lists all security assessments for accounts.
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
