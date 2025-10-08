@@ -236,7 +236,7 @@ items:
      - name: Accounts
        items: 
          - name: accounts
-           href: accounts.md  
+           href: \security-posture-assessments\accounts.md
      - name: Cloud identities
        items:
        - name: Assign multi-factor authentication to Okta privileged user accounts
