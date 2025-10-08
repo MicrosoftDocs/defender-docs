@@ -93,4 +93,4 @@ URI: `https://management.azure.com/subscriptions/<SubscriptionId>/providers/Micr
 - [Manage and respond to security alerts in Microsoft Defender for Cloud](managing-and-responding-alerts.yml) - Learn how to manage and respond to security alerts.
 - [Identify and remediate attack paths](how-to-manage-attack-path.md).
 - [Investigating risk with security explorer/attack paths](concept-attack-path.md)
-- [Workflow automation](workflow-automation.yml) - Automate responses to alerts with custom notification logic.
+- [Workflow automation](workflow-automation.md) - Automate responses to alerts with custom notification logic.

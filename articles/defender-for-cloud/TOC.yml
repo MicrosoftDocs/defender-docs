@@ -581,7 +581,7 @@
           href: governance-rules.md
         - name: Automate remediation responses
           displayName: workflow, triggers, logic app, automation, policies, breaking change
-          href: workflow-automation.yml
+          href: workflow-automation.md
       - name: Improve regulatory compliance
         href: regulatory-compliance-dashboard.md
       - name: Investigate with security explorer and attack path
@@ -679,7 +679,7 @@
           href: alert-validation.md
         - name: Automate responses to alerts
           displayName: workflow, alerts, response
-          href: workflow-automation.yml
+          href: workflow-automation.md
     - name: Resolve connector issues
       items:
       - name: Troubleshoot connectors guide
