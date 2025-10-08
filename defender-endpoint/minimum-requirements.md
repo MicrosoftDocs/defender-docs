@@ -34,9 +34,6 @@ There are some minimum requirements for onboarding devices to Defender for Endpo
 > - If you're looking for endpoint protection for small and medium-sized businesses, see [Microsoft Defender for Business](/defender-business/mdb-overview) and [Defender for Business requirements](/defender-business/mdb-requirements).
 
 
-
-- [Microsoft Defender for Business](/defender-business/mdb-overview) (for small and medium-sized businesses)
-
 - To [onboard servers](onboard-windows-server.md) to Defender for Endpoint, server licenses are required. You can choose from:   
 
    - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering

@@ -36,13 +36,11 @@ The following requirements must be met before turning on aggregated reporting:
 - Defender for Endpoint Plan 2 license
 - Permissions to enable advanced features
 
-Aggregated reporting supports the following:
-
-- Client version: Windows version 24H and later
 
 ### Supported operating systems: 
 
   - Windows 11 (22H2, Enterprise), Windows 10 (20H2, 21H1, 21H2), Windows Server 2019 and later, Windows Server version 20H2 or Azure Stack HCI OS, version 23H2 and later
+  - Client version: Windows version 24H and later
 
 ## Turn on aggregated reporting
 

@@ -29,7 +29,7 @@ ai-usage: ai-assisted
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
 
 
-**Platforms**:
+### Supported operating systems
 
 - Windows 10 and newer
 - Windows Server 2016 and newer
