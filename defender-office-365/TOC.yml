@@ -40,7 +40,7 @@
        href: trial-user-guide-defender-for-office-365.md
 
    - name: Deploy
-     items: 
+     items:
      - name: Pilot and deploy Defender for Office 365
        href: /defender-xdr/pilot-deploy-defender-office-365?toc=/defender-office-365/TOC.json&bc=/defender-office-365/breadcrumb/toc.json
      - name: Get started with Microsoft Defender for Office 365
