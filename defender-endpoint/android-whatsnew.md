@@ -37,9 +37,9 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
-- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux) (Roll out in Progress, ETA: Oct End)
+- Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
 
-- Enhanced app experience with landscape mode support. (Roll out in Progress, ETA: Oct End)
+- Performance Improvement and bug fixes.
 
 #### September 2025
 
