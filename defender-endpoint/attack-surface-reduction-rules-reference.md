@@ -24,7 +24,7 @@ appliesto:
 # Attack surface reduction rules reference
 
 
-**Platforms:**
+### Supported operating systems
 
 - Windows
 

@@ -27,7 +27,7 @@ appliesto:
 
 Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.
 
-## Scenario requirements and setup
+## Prerequisites
 
 - Client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, or macOS
 - Server devices must be running Windows Server 2012 R2 (with the new unified client) and later, Linux, or Azure Stack HCI OS, version 23H2 and later.

@@ -35,7 +35,7 @@ Network isolation in Microsoft Defender for Endpoint (MDE) restricts a compromis
 
 Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions (for example, remote remediation or monitoring) continue while limiting broader network exposure.
 
-### Prerequisites
+## Prerequisites
 
 * Isolation exclusion must be enabled. 
 * Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. 

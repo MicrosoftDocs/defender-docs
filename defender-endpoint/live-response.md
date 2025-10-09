@@ -40,13 +40,9 @@ With live response, analysts can do all of the following tasks:
 - Upload a PowerShell script or executable to the library and run it on a device from a tenant level.
 - Take or undo remediation actions.
 
-## Before you begin
+## Prerequisites
 
-Before you can initiate a session on a device, make sure you fulfill the following requirements:
-
-- **Verify that you're running a supported version of Windows**.
-
-  Devices must be running one of the following versions of Windows
+Devices must be running one of the following versions of Windows
 
   - **Windows 10 & 11**
     - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
@@ -71,9 +67,8 @@ Before you can initiate a session on a device, make sure you fulfill the followi
     - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
     - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
 
-  - **Windows Server 2022**
+  - **Windows Server 2022 and later**
 
-  - **Windows Server 2025**
   - **Azure Stack HCI OS, version 23H2 and later**
 
 - **Enable live response from the advanced settings page**.

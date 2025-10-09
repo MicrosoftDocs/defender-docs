@@ -24,7 +24,8 @@ appliesto:
 # Attack surface reduction rules overview
 
 
-**Platforms**
+### Supported operating systems 
+
 - Windows
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
