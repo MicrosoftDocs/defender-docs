@@ -110,11 +110,12 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 > [!IMPORTANT]
 > Starting May 19, 2025, alerts are no longer generated in the Microsoft Defender portal for mobile devices connecting or disconnecting to an open wireless network and for downloading/installing/deleting self-signed certificates. Instead, these activities are now generated as events and are viewable in the device timeline.
 > Here are key changes about this new experience:
-> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on mid-May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.
-> - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
-> - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
-> - Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
-> - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+- For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on Android available on mid-May 2025. Otherwise, the previous experience of generating alerts will still be in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.
+- When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.
+- Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including trusted networks, are sent to the device timeline as events.
+- Users allow-listed certificates: After the update, downloading/installing/deleting self-signed certificates events, including user-trusted certificates, are sent to the device timeline as events.
+- The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
+
 
 ## Privacy Controls
 
@@ -126,6 +127,20 @@ Following privacy controls are available for configuring the data that is sent b
 |Phish report |Admins can set up privacy control for phishing reports. If privacy is enabled, then Defender for Endpoint won't send the domain name and details of the unsafe website as part of the phishing alert report. |
 |Vulnerability assessment of apps |By default only information about apps installed in the work profile is sent for vulnerability assessment. Admins can disable privacy to include personal apps|
 |Network Protection | Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
+
+## Root Detection (Private Preview)
+
+Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, these events occur:
+
+- A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
+
+- User data on app is cleared. When user opens the app after rooted.
+
+  The feature is enabled by default; no action is required from admin or user. Any android device running Defender version **1.0.8125.0302** (or later) will have it activated.
+  
+**Prerequisite**
+
+- Company portal must be installed, and version must be >=5.0.6621.0
 
 ### Configure privacy alert report
 
