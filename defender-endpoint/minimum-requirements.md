@@ -33,6 +33,7 @@ There are some minimum requirements for onboarding devices to Defender for Endpo
 > - For information about how Defender for Endpoint demonstrates industry-leading optics and detection capabilities, see [Insights from the MITRE ATT&CK-based evaluation](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 > - If you're looking for endpoint protection for small and medium-sized businesses, see [Microsoft Defender for Business](/defender-business/mdb-overview) and [Defender for Business requirements](/defender-business/mdb-requirements).
 
+### Licensing requirements
 
 - To [onboard servers](onboard-windows-server.md) to Defender for Endpoint, server licenses are required. You can choose from:   
 

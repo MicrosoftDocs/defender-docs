@@ -26,15 +26,22 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Prerequisites
 
-**Applies to**
+Controlled folder access requires:
+
+- [Microsoft Defender Antivirus to be the primary antivirus (active mode)](configure-real-time-protection-microsoft-defender-antivirus.md).
+
+- Real-Time Protection (RTP) needs to be on.
+
+### Supported operating systems
+
 - Windows
-
-
-
-Platforms
-
-- Windows
+- Windows 11
+- Windows 10
+- Azure Stack HCI OS, version 23H2 and later.
+- Windows Server 2016 and later
+- Windows Server 2012 R2
 
 ## What is controlled folder access?
 
@@ -42,19 +49,6 @@ Controlled folder access helps protect your valuable data from malicious apps an
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
-### Supported operating systems
-
-- Windows 11
-- Windows 10
-- Azure Stack HCI OS, version 23H2 and later.
-- Windows Server 2016 and later
-- Windows Server 2012 R2
-
-Controlled folder access requires:
-
-- [Microsoft Defender Antivirus to be the primary antivirus (active mode)](configure-real-time-protection-microsoft-defender-antivirus.md).
-
-- Real-Time Protection (RTP) needs to be on.
 
 > [!TIP]
 > Controlled folder access blocks don't generate alerts in the [Alerts queue](alerts-queue.md). However, you can view information about controlled folder access blocks in the [device timeline view](investigate-machines.md), while using [advanced hunting](/defender-xdr/advanced-hunting-overview), or with [custom detection rules](/defender-xdr/custom-detection-rules).

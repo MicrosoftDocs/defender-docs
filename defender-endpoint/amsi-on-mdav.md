@@ -31,8 +31,8 @@ ai-usage: ai-assisted
 
 ### Supported operating systems
 
-- Windows 10 and newer
-- Windows Server 2016 and newer
+- Windows 10 and later
+- Windows Server 2016 and later
 
 Microsoft Defender for Endpoint utilizes the anti-malware Scan Interface (AMSI) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article describes the benefits of AMSI integration, the types of scripting languages it supports, and how to enable AMSI for improved security.
 

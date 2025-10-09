@@ -25,11 +25,15 @@ appliesto:
 # Deploy, manage, and report on Microsoft Defender Antivirus
 
 
-**Platforms**
+### Supported operating systems
 
-- Windows
+Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later.
 
-Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, and is included in Windows Server 2016 and later (Windows Server 2012 requires Microsoft Defender for Endpoint). You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
+> [NOTE]
+> Windows Server 2012 requires Microsoft Defender for Endpoint.
+
+
+You can manage and report on Microsoft Defender Antivirus using one of several tools, such as:
 
 - [Deploy, manage, and report on Microsoft Defender Antivirus](#deploy-manage-and-report-on-microsoft-defender-antivirus)
   - [Microsoft Intune](#microsoft-intune)

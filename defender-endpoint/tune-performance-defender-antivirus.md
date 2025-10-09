@@ -22,22 +22,21 @@ search.appverid: met150
 # Performance analyzer for Microsoft Defender Antivirus
 
 
-**Platforms**
+### Prerequisites 
 
-- Windows
+- Platform Version: `4.18.2108.7` or later
+- PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
+- For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
 
-## Requirements
 
-Microsoft Defender Antivirus performance analyzer has the following prerequisites:
+### Supported operating systems 
 
-- Supported Windows versions: 
    - Windows 10
    - Windows 11
    - Windows Server 2016 and later
    - Windows Server 2012 R2 (when onboarded using [modern, unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
-   - For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
-- Platform Version: `4.18.2108.7` or later
-- PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
+
+
 
 ## What is the Microsoft Defender Antivirus performance analyzer?
 
