@@ -58,7 +58,7 @@ You can assess how an attack surface reduction rule might affect your network by
 
 In the recommendation details pane, check for user impact to determine what percentage of your devices can accept a new policy enabling the rule in blocking mode without adversely affecting productivity.
 
-See [Requirements](enable-attack-surface-reduction.md#requirements) in the "Enable attack surface reduction rules" article for information about supported operating systems and other requirement information.
+See [Requirements](enable-attack-surface-reduction.md) in the "Enable attack surface reduction rules" article for information about supported operating systems and other requirement information.
 
 ## Audit mode for evaluation
 
