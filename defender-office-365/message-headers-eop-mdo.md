@@ -169,18 +169,18 @@ The following table describes the three-digit `reason` codes used with `compauth
 |002|The organization has a policy for the sender/domain pair that's explicitly prohibited from sending spoofed email. An admin manually configures this setting.|
 |010|The message failed DMARC, the DMARC policy action is `p=reject` or `p=quarantine`, and the sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing).|
 |1xx|The message passed implicit authentication (`compauth=pass`).|
-|&nbsp;&nbsp100|SPF passed or DKIM passed and the domains in the MAIL FROM and From addresses are aligned.|
-|&nbsp;&nbsp101|The message was DKIM signed by the domain used in the From address.|
-|&nbsp;&nbsp102|The MAIL FROM and From address domains were aligned, and SPF passed.|
-|&nbsp;&nbsp103|The From address domain aligns with the DNS PTR record (reverse lookup) associated with the source IP address|
-|&nbsp;&nbsp104|The DNS PTR record (reverse lookup) associated with the source IP address aligns with the From address domain.|
-|&nbsp;&nbsp108|DKIM failed due to a message body modification attributed to previous legitimate hops. For example, the message body was modified in the organization's on-premises email environment.|
-|&nbsp;&nbsp109|Although the sender's domain has no DMARC record, the message would pass, anyway.|
-|&nbsp;&nbsp111|Despite a DMARC temporary error or permanent error, the SPF or DKIM domain aligns with the From address domain.|
-|&nbsp;&nbsp112|A DNS timeout prevented the DMARC record from being retrieved.|
-|&nbsp;&nbsp115|The message was sent from a Microsoft 365 organization where the From address domain is configured as an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).|
-|&nbsp;&nbsp116|The MX record for the From address domain aligns with the PTR record (reverse lookup) of the connecting IP address.|
-|&nbsp;&nbsp130|The ARC result from a [trusted ARC sealer](email-authentication-arc-configure.md) overrode the DMARC failure.|
+|&nbsp;&nbsp;100|SPF passed or DKIM passed and the domains in the MAIL FROM and From addresses are aligned.|
+|&nbsp;&nbsp;101|The message was DKIM signed by the domain used in the From address.|
+|&nbsp;&nbsp;102|The MAIL FROM and From address domains were aligned, and SPF passed.|
+|&nbsp;&nbsp;103|The From address domain aligns with the DNS PTR record (reverse lookup) associated with the source IP address|
+|&nbsp;&nbsp;104|The DNS PTR record (reverse lookup) associated with the source IP address aligns with the From address domain.|
+|&nbsp;&nbsp;108|DKIM failed due to a message body modification attributed to previous legitimate hops. For example, the message body was modified in the organization's on-premises email environment.|
+|&nbsp;&nbsp;109|Although the sender's domain has no DMARC record, the message would pass, anyway.|
+|&nbsp;&nbsp;111|Despite a DMARC temporary error or permanent error, the SPF or DKIM domain aligns with the From address domain.|
+|&nbsp;&nbsp;112|A DNS timeout prevented the DMARC record from being retrieved.|
+|&nbsp;&nbsp;115|The message was sent from a Microsoft 365 organization where the From address domain is configured as an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).|
+|&nbsp;&nbsp;116|The MX record for the From address domain aligns with the PTR record (reverse lookup) of the connecting IP address.|
+|&nbsp;&nbsp;130|The ARC result from a [trusted ARC sealer](email-authentication-arc-configure.md) overrode the DMARC failure.|
 |2xx|The message soft-passed implicit authentication (`compauth=softpass`).|
 |3xx|The message wasn't checked for composite authentication (`compauth=none`).|
 |4xx|The message bypassed composite authentication (`compauth=none`).|

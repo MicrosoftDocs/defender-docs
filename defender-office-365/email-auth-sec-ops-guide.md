@@ -14,7 +14,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom: TopSMBIssues
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 description: Admins can learn about pass and fail scenarios for email authentication in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 10/08/2025
@@ -43,7 +43,7 @@ But first, a few definitions as described in the following table:
 |[DKIM](email-authentication-dkim-configure.md)|DomainKeys Identified Mail. Digitally signs important elements of a message (including the From address header) to verify the message wasn't altered in transit, which helps prevent spoofing.|
 |[DMARC](email-authentication-dmarc-configure.md)|Domain-based Message Authentication, Reporting, and Conformance. Uses SPF and DKIM results to verify alignment between domains in the MAIL FROM address and From address to help prevent spoofing.|
 |[ARC](email-authentication-arc-configure.md)|Authenticated Received Chain. Preserve email authentication results across intermediaries that modify messages in transit.|
-|[compauth](email-authentication-about#composite-authentication.md)|Composite authentication. A proprietary Microsoft 365 technology that combines multiple email authentication signals.|
+|[compauth](email-authentication-about.md#composite-authentication)|Composite authentication. A proprietary Microsoft 365 technology that combines multiple email authentication signals.|
 |MAIL FROM address|Also known as the `5321.MailFrom` address, P1 sender, or envelope sender. Used in the transmission of messages between SMTP email servers. Typically recorded in the **Return-Path** header field in the message header. Used as the address for non-delivery reports (also known as NDRs or bounce messages).|
 |From address|Also known as the `5322.From` address or P2 sender. The email address in the **From** header field. Shown as the sender's email address in email clients.|
 
