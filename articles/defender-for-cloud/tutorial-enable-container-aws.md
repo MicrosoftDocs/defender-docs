@@ -55,7 +55,12 @@ To protect your EKS clusters, you need to enable the Containers plan on the rele
         > [!NOTE]
         > If you disable this configuration, then the `Threat detection (control plane)` feature will be disabled. Learn more about [features availability](supported-machines-endpoint-solutions-clouds-containers.md).
 
-    - [**K8S API access**](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work) sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+   - **[K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-aws-work)** sets permissions to allow API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
+     > [!NOTE]
+     > In case your EKS cluster public endpoint is restricted, the cluster's settings will be automatically updated to include Microsoft Defender for Cloud's CIDR block.
+     > Defender for Cloud requires allowing access to the Kubernetes API server from the following IP ranges: 172.212.245.192/28, 48.209.1.192/28.
+          
+     
     - [**Registry access**](agentless-vulnerability-assessment-aws.md) sets permissions to allow vulnerability assessment of images stored in ECR. To enable, set the **Registry access** toggle to **On**.
 
 2. Select **Next: Review and generate**.
@@ -79,11 +84,11 @@ Azure Arc-enabled Kubernetes, the Defender sensor, and Azure Policy for Kubernet
 
 1. Select an unhealthy cluster.
 
-    > [!IMPORTANT]
-    > You must select the clusters one at a time.
-    >
-    > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
-
+> [!IMPORTANT]
+> You must select the clusters one at a time.
+>
+> Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
+   
 1. Select **Fix**.
 
 1. Defender for Cloud generates a script in the language of your choice:

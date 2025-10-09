@@ -3,7 +3,7 @@ title: New custom recommendations for AWS and GCP | Defender for Cloud in the fi
 
 description: Learn about new custom recommendations for AWS and GCP in Defender for Cloud
 ms.topic: reference
-ms.date: 05/14/2023
+ms.date: 10/05/2025
 ---
 
 # New custom recommendations for AWS and GCP in Defender for Cloud

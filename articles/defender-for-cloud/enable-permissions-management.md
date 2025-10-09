@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable CIEM for better access control and security in your cloud infrastructure.
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 07/31/2025
 #customer intent: As a cloud administrator, I want to learn how to enable permissions (CIEM) in order to effectively manage user access and entitlements in my cloud infrastructure.
 ---
 
@@ -17,19 +17,28 @@ ms.date: 07/15/2025
 > 
 > The deprecation of Microsoft Entra Permissions Management doesn't affect any existing CIEM capabilities in Microsoft Defender for Cloud. Learn more about [the future of CIEM in Microsoft Defender for Cloud](https://aka.ms/mdc-ciem).
 
-Microsoft Defender for Cloud provides a cloud infrastructure entitlement management (CIEM) security model that helps organizations manage and control user access and entitlements in their cloud infrastructure. CIEM is a critical component of the Cloud Native Application Protection Platform (CNAPP) solution that provides visibility into who or what has access to specific resources. It ensures that access rights adhere to the principle of least privilege (PoLP), where users or workload identities, such as apps and services, receive only the minimum levels of access necessary to perform their tasks. CIEM also helps organizations to monitor and manage permissions across multiple cloud environments, including Azure, AWS, and GCP.
+Microsoft Defender for Cloud provides a cloud infrastructure entitlement management (CIEM) security model that helps organizations manage and control user access and entitlements in their cloud infrastructure. CIEM is a critical component of the Cloud Native Application Protection Platform (CNAPP) solution that provides visibility into who or what has access to specific resources. It ensures that access rights adhere to the principle of least privilege (PoLP), where users or workload identities, such as apps and services, receive only the minimum levels of access necessary to perform their tasks. CIEM also helps organizations to monitor and manage permissions across multiple cloud environments, including Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
 ## Before you start
 
-- You must [enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
+1. Make sure you have the right roles and permissions for each cloud environment to enable the Permissions Management (CIEM) extension in Defender CSPM:
 
-- You must have the following Azure roles and permissions, depending on the cloud environment, to enable the **Permissions Management (CIEM)** extension of Defender CSPM:
-  - **AWS and GCP**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) for your tenant.
-  - **Azure**: [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) and [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) for the subscription.
+   **AWS and GCP:**
 
-- **AWS Only**: [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).
+   - [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+   - [Application.ReadWrite.All permission](/graph/permissions-reference#applicationreadwriteall) at the tenant level.  
 
-- **GCP only**: [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).
+   **Azure:**
+
+   - [Security Admin role](/azure/role-based-access-control/built-in-roles/security#security-admin) at the subscription level.  
+   - [Microsoft.Authorization/roleAssignments/write permission](/azure/role-based-access-control/permissions/management-and-governance#microsoftauthorization) at the subscription level.  
+ 
+1. Onboard your AWS or GCP environment to Defender for Cloud:  
+
+   - **AWS only:** [Connect your AWS account to Defender for Cloud](quickstart-onboard-aws.md).  
+   - **GCP only:** [Connect your GCP project to Defender for Cloud](quickstart-onboard-gcp.md).  
+
+1. [Enable Defender CSPM](tutorial-enable-cspm-plan.md) on your Azure subscription, AWS account, or GCP project.
 
 ## Enable CIEM for Azure
 
@@ -152,4 +161,6 @@ List of GCP recommendations:
 
 ## Known limitations
 
-AWS and GCP accounts that were onboarded to Permissions Management before being onboarded to Defender for Cloud can't be integrated through Microsoft Defender for Cloud.
+AWS and GCP accounts that were onboarded to Permissions Management before enabling CIEM in Defender for Cloud can't be integrated.
+
+To ensure successful integration, enable CIEM before onboarding these accounts to Permissions Management.

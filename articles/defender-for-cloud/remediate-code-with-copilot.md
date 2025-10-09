@@ -4,13 +4,13 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to remediate code with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 04/23/2025
+ms.date: 09/25/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate code in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Remediate code with Microsoft Security Copilot
 
-Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you remediate Infrastructure as Code (IaC) misconfigurations in your code repositories. Remediating IaC findings with Copilot lets you address security misconfigurations and vulnerabilities early in the development cycle by automatically generating Pull Requests (PRs) that correct the identified weaknesses. This remediation ensures that security issues in code are addressed accurately and promptly.
+Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets you remediate Infrastructure as Code (IaC) misconfigurations in your code repositories. Remediating IaC findings with Copilot lets you address security misconfigurations and vulnerabilities early in the development cycle by automatically generating pull requests (PRs) that correct the identified weaknesses. This remediation ensures that security issues in code are addressed accurately and promptly.
 
 ## Prerequisites
 
@@ -23,13 +23,13 @@ Microsoft Defender for Cloud's integration with Microsoft Security Copilot lets 
 
 ## Remediate an Infrastructure as Code scanning finding
 
-With Microsoft Security Copilot, in Defender for Cloud you can remediate recommendations.
+With Microsoft Security Copilot in Defender for Cloud, you can remediate recommendations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. Navigate to **Recommendations**.
+1. Go to **Recommendations**.
 
 1. Search for and select the **Azure DevOps repositories should have infrastructure as code scanning findings resolved** recommendation.
 

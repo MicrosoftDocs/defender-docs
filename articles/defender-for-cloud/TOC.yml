@@ -222,9 +222,9 @@
               - name: Overview Microsoft Defender EASM integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Defender EASM
                 href: concept-easm.md
-          - name: Microsoft Copilot for Security
+          - name: Microsoft Security Copilot
             items:
-              - name: Overview Microsoft Copilot for Security integration
+              - name: Overview Microsoft Security Copilot integration
                 displayName: CSPM, cloud security, posture, management, Microsoft Copilot for Security
                 href: copilot-security-in-defender-for-cloud.md
 
@@ -559,6 +559,9 @@
       - name: Exempt resources from recommendations
         displayName: disable, resource, exempt, recommendation
         href: exempt-resource.md
+      - name: Exempt resources at scale
+        displayName: policy, resource, exemptions, create, exempt, at scale, resources
+        href: exempt-resources-at-scale.md
     - name: Investigate and remediate security posture
       items:
       - name: Investigate security recommendations
@@ -809,7 +812,7 @@
     - name: Deploy
       displayName: hybrid, arc, Defender for Servers
       items:
-      - name: Deploy Defender for Servers
+      - name: Protect your servers with Defender for Servers
         href: tutorial-enable-servers-plan.md
       - name: Set up the free data ingestion benefit
         href: data-ingestion-benefit.md
@@ -1189,7 +1192,7 @@
                 href: on-demand-malware-scanning.md
               - name: Advanced configurations for malware scanning
                 href: advanced-configurations-for-malware-scanning.md
-              - name: Set up responses to malware scanning
+              - name: Set up automated remediation for malware detection
                 href: defender-for-storage-configure-malware-scan.md
       - name: Sensitive data threat detection
         items:

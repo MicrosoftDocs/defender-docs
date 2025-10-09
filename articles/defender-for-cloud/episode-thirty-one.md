@@ -3,7 +3,7 @@ title: Understanding data aware security posture capability | Defender for Cloud
 
 description: Learn about data aware security posture capabilities in Defender CSPM
 ms.topic: reference
-ms.date: 05/16/2023
+ms.date: 10/05/2025
 ---
 
 # Understanding data aware security posture capability
