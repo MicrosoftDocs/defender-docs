@@ -94,7 +94,7 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
    Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
 
 >[!NOTE]
-   > It may take up to 1 hour for changes to be reflected in the portal.
+> It may take up to 1 hour for changes to be reflected in the portal.
 
 Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules)
 
