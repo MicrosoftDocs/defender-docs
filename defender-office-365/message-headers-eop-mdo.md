@@ -168,7 +168,7 @@ The following table describes the three-digit `reason` codes used with `compauth
 |001|The message failed implicit authentication (`compauth=fail`). The sending domain didn't have email authentication records published, or if they did, they had a weaker failure policy (SPF `~all` or `?all`, or a DMARC policy of `p=none`).|
 |002|The organization has a policy for the sender/domain pair that's explicitly prohibited from sending spoofed email. An admin manually configures this setting.|
 |010|The message failed DMARC, the DMARC policy action is `p=reject` or `p=quarantine`, and the sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing).|
-|1xx|The message passed implicit authentication (`compauth=pass`).|
+|1xx|The message passed explicit or implicit authentication (`compauth=pass`).|
 |&nbsp;&nbsp;100|SPF passed or DKIM passed and the domains in the MAIL FROM and From addresses are aligned.|
 |&nbsp;&nbsp;101|The message was DKIM signed by the domain used in the From address.|
 |&nbsp;&nbsp;102|The MAIL FROM and From address domains were aligned, and SPF passed.|
@@ -182,8 +182,15 @@ The following table describes the three-digit `reason` codes used with `compauth
 |&nbsp;&nbsp;116|The MX record for the From address domain aligns with the PTR record (reverse lookup) of the connecting IP address.|
 |&nbsp;&nbsp;130|The ARC result from a [trusted ARC sealer](email-authentication-arc-configure.md) overrode the DMARC failure.|
 |2xx|The message soft-passed implicit authentication (`compauth=softpass`).|
+|&nbsp;&nbsp;201|The PTR record for the From address domain aligns with the subnet of the PTR record for the connecting IP address.|
+|&nbsp;&nbsp;202|The From address domain aligns with the domain of the PTR record for the connecting IP address.|
 |3xx|The message wasn't checked for composite authentication (`compauth=none`).|
 |4xx|The message bypassed composite authentication (`compauth=none`).|
-|6xx|The message failed implicit email authentication  (`compauth=fail`). The sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing)|
+|501|DMARC wasn't enforced. The message is a valid non-delivery report (also known as an NDR or bounce message), and contact between the sender and recipient is previously established.|
+|502|DMARC wasn't enforced. The message is a valid NDR for a message sent from this organization.|
+|6xx|The message failed implicit email authentication  (`compauth=fail`).|
+|&nbsp;&nbsp;601|The sending domain is an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in your organization (self-to-self or intra-org spoofing).|
 |7xx|The message passed implicit authentication (`compauth=pass`).|
+|&nbsp;&nbsp;701-704|DMARC wasn't enforced because this organization has a history of receiving legitimate messages from the sending infrastructure.|
 |9xx|The message bypassed composite authentication (`compauth=none`).|
+|&nbsp;&nbsp;905|DMARC wasn't enforced due to complex routing. For example, internet messages are routed through an on-premises Exchange environment or a non-Microsoft service before reaching Microsoft 365.|
