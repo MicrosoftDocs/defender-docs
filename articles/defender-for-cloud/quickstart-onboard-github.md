@@ -19,7 +19,7 @@ By connecting your GitHub environments to Defender for Cloud, you extend the sec
 
 To complete this quick start, you need:
 
-- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 ## Availability
 
