@@ -12,9 +12,9 @@ Create a [group managed service account (gMSA)](/windows-server/security/group-m
 
  
 >[!NOTE]
-> In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
->Create a universal group in each domain that includes all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
->Give each gMSA a unique name for each forest or domain.
+> - In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
+> - Create a universal group in each domain that includes all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+> - Give each gMSA a unique name for each forest or domain.
 
 ## Prerequisites
 
@@ -45,7 +45,8 @@ Create a group that can retrieve the account's password, create a gMSA account, 
 > Add-KdsRootKey -EffectiveImmediately
 > ```
 
-Update the following code with variable values for your environment, and then run the PowerShell commands as an administrator:
+1. Update the following code with variable values for your environment.
+1. Run the PowerShell commands as an administrator.
 
 ```powershell
 # Variables:
