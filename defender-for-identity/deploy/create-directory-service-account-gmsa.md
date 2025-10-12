@@ -8,13 +8,13 @@ ms.reviewer: rlitinsky
 
 # Configure a Directory Service Account for Defender for Identity with a gMSA
 
-This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for use as a Defender for Identity Directory Service Account entry. 
+Create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Defender for Identity Directory Service Account entry.
 
  
 >[!NOTE]
->In multi-forest, multi-domain environments, the sensors that need to use the gMSA need to have their computer accounts trusted by the domain where the gMSA was created.
->We recommend creating a universal group in each domain. Include all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
->We also recommend creating the gMSAs with a unique name for each forest or domain.
+> In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
+>Create a universal group in each domain that includes all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+>Give each gMSA a unique name for each forest or domain.
 
 ## Prerequisites
 
@@ -26,27 +26,16 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
     - Use a group that contains all the sensors that need to use the gMSA account.
 
-- Choose the appropriate group based on your deployment
+- Choose the appropriate group based on your deployment:
 
     - **In a single-forest, single-domain deployment**, if you aren't installing the sensor on any Active Directory Federation Services (AD FS) / Active Directory Certificate Services (AD CS) servers, use the built-in Domain Controllers security group.
 
     - **In a forest with multiple domains**, when using a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
 
-## Refresh Kerberos tickets after changing group membership
-
-If you add a computer account to the universal group after the computer received its Kerberos ticket, it won't be able to retrieve the gMSA's password until it receives a new Kerberos ticket. The Kerberos ticket has a list of groups that an entity is a member of when the ticket is issued.
-
-To refresh the Kerberos ticket, you can:
-
-- **Wait for new Kerberos ticket to be issued**. Kerberos tickets are normally valid for 10 hours.
-
-- **Reboot the server**. When the server is rebooted, a new Kerberos ticket is requested with the new group membership.
-
-- **Purge the existing Kerberos tickets** to force the domain controller to request a new Kerberos ticket. Run the following command to purge the tickets, from an administrator command prompt on the domain controller: `klist purge -li 0x3e7`
 
 ## Create the gMSA account
 
-This section describes how to create a group that can retrieve the account's password, create a gMSA account, and test that the account is ready to use.
+Create a group that can retrieve the account's password, create a gMSA account, and test that the account is ready to use.
 
 >[!NOTE]
 > If you never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
@@ -86,32 +75,44 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
  -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
 ```
 
+## Refresh Kerberos tickets after changing group membership
+
+The Kerberos ticket has a list of groups that an entity is a member of when the ticket is issued. If you add a computer account to the universal group after it already received a Kerberos ticket, it can't retrieve the gMSA's password until it receives a new Kerberos ticket.
+
+To refresh the Kerberos ticket, you can:
+
+- **Wait for new Kerberos ticket to be issued**. Kerberos tickets are typically valid for 10 hours.
+
+- **Reboot the server** to request a new Kerberos ticket with the new group membership.
+
+- **Purge the existing Kerberos tickets** to force the domain controller to request a new Kerberos ticket. Run the following command to purge the tickets, from an administrator command prompt on the domain controller: `klist purge -li 0x3e7`
+
 ## Grant required DSA permissions
 
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Verify that the gMSA account has the required rights
 
-The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* and performs impersonation of the DSA account. The impersonation fails if the *Log on as a service* policy is configured but the permission wasn't granted to the gMSA account. In that case, you see the following health issue: **Directory services user credentials are incorrect.**
+The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* that impersonates the DSA account. If the *Log on as a service* policy is configured but the permission wasn't granted to the gMSA account, the impersonation fails. In that case, you see the following health issue: **Directory services user credentials are incorrect.**
 
 If you see this alert, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
 
-- **Check the Local Policy**
-    -  Run `secpol.msc` 
-    -  Select **Local Policies** > **User Rights Assignment**
-    - Open the **Log on as a service policy** setting. 
+**Check the Local Policy**
+1. Run `secpol.msc` 
+1. Select **Local Policies** > **User Rights Assignment**
+1. Open the **Log on as a service policy** setting. 
 
     :::image type="content" source="../media/log-on-as-a-service.png" alt-text="Screenshot of the log on as a service property.":::
 
     - If the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
 
-- **Check the Group Policy setting**
-    -  Run `rsop.msc` 
-    -  Go to **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service.** 
+**Check the Group Policy setting**
+1. Run `rsop.msc` 
+1. Go to **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service.** 
     
     :::image type="content" source="../media/log-on-as-a-service-gpmc.png" alt-text="Screenshot of the Log on as a service policy in the Group Policy Management Editor." lightbox="../media/log-on-as-a-service-gpmc.png":::
 
-    - If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
+1. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
 
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
@@ -122,16 +123,18 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
 
-
-    [![Screenshot of the Identities settings in Microsoft Defender XDR.](../media/settings-identities.png)](../media/settings-identities.png#lightbox)
+:::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identities page." lightbox="../media/settings-identities.png":::
 
 1. Select **Directory Service accounts** to see which accounts are associated with which domains. 
 
-    [![Screenshot of the Directory Service accounts page.](../media/directory-service-accounts.png)](../media/directory-service-accounts.png#lightbox)
+    :::image type="content" source="../media/directory-service-accounts.png" alt-text="Screenshot that shows the Director service accounts page in the Defender portal." lightbox="../media/directory-service-accounts.png":::
 
-1. Select **Add credentials** and enter the **Account name**, **Domain**, and **Password** of the account you created earlier. You can choose if it's a **Group managed service account** (gMSA), or if it belongs to a **Single label domain**. 
 
-    [![Screenshot of the add credentials pane.](../media/new-directory-service-account.png)](../media/new-directory-service-account.png#lightbox)
+1. Select **Add credentials** 
+1. Enter the **Account name**, **Domain**, and **Password** of the account you created earlier. 
+1. You can choose if it's a **Group managed service account** (gMSA), or if it belongs to a **Single label domain**. 
+
+    :::image type="content" source="../media/new-directory-service-account.png" alt-text="Screenshot of the added credentials pane." lightbox="../media/new-directory-service-account.png":::    
 
     |Field|Comments|
     |---|---|
@@ -143,10 +146,13 @@ To connect your sensors with your Active Directory domains, configure Directory 
 1. Select **Save**.
 1. (Optional) Select an account to open the details pane and view its settings.
 
-    [![Screenshot of an account details pane.](../media/account-settings.png)](../media/account-settings.png#lightbox)
+
+    :::image type="content" source="../media/account-settings.png" alt-text="Screenshot of an account details pane." lightbox="../media/account-settings.png":::
+
 
 > [!NOTE]
-> You can use this same procedure to change the password for standard Active Directory user accounts. There's no password set for gMSA accounts.
+> You can use the same procedure to change the password for standard Active Directory user accounts. 
+> gMSA accounts don't require passwords.
 
 ## Troubleshooting
 
