@@ -89,66 +89,6 @@ For example:
 
 </details>
 
-## Remove stale Active Directory accounts
-
-**Description**
-
-
-Lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
-
-Excluded accounts:
-
-- Service accounts (covered by a separate posture recommendation). 
-
-- Disabled or deleted accounts. 
-
-
-**Impact**
-
-Stale accounts pose a security risk because they provide potential targets for attackers without being actively monitored. Compromised stale accounts can be used to gain unauthorized access, move laterally in the environment, or escalate privileges. Removing or disabling them reduces unnecessary exposure and strengthens overall security posture.
-
-<a name="implementation"></a><details><summary>**Implementation**</summary>
-
-1. Review the exposed entities to identify which stale user accounts haven't logged in for the past 90 days.
-
-1. Disable the account if it's confirmed to be unused or remove it entirely according to your retention policy.
-
-1. Disable and delete user accounts with no logons for 90 days after a monitoring period.
-
-1. Remove accounts for former employees to prevent unauthorized access.
-
-</details>
-
-##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory
-
-
-**Description**
-
-This recommendation lists any user accounts that have privileged roles in Entra ID (such as Global Administrator) and are also members of highly privileged Active Directory groups (for example, Domain Admins, Enterprise Admins). These dual-privileged accounts significantly increase the organization’s attack surface. 
- 
-> [!NOTE]
-> Guest users, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report; only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
-
-
-**Impact**
-
-Accounts with privileges in both Entra ID and Active Directory can be leveraged by attackers to gain full control over both cloud and on-premises environments. Compromise of a single account may allow lateral movement, privilege escalation, and access to sensitive resources across hybrid environments. Dual-privileged accounts are high-value targets and can accelerate attacks if not properly managed.
-
-<a name="implementation"></a><details><summary>**Implementation**</summary>
-
-1. Review the list of exposed entities to identify which accounts have privileged access in both Entra ID and Active Directory. 
-
-1. Remediate the account by reducing privileges in one or both environments to enforce least privilege. Only retain dual privileges if necessary, and document justification.
-
-1. Consider separating cloud and on-premises roles across different accounts or implementing just-in-time access to reduce standing exposure.
-
-1. Use Microsoft Entra Privileged Identity Management (PIM) to enforce approval workflows and limit standing access for accounts that must retain elevated privileges.
-
-For example: 
-
-- A user who is a Global Administrator in Microsoft Entra ID and a Domain Admin in Active Directory should have one of the roles reduced or replaced with delegated administrative access. 
-
-- If dual privileges are required for critical operations, enable MFA, monitor logins closely, and review memberships regularly.
 
 </details>
 
