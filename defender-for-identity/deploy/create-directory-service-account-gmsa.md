@@ -1,6 +1,6 @@
 ---
-title: Configure a Directory Service Account for Defender for Identity with a gMSA
-description: Learn how to configure a Directory Service Account for Defender for Identity with a group managed service account (gMSA).
+title: Configure a gMSA Directory Service account for Defender for Identity
+description: Create and configure a group managed service account (gMSA) for use as the Directory Service account in Microsoft Defender for Identity.
 ms.date: 10/12/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
@@ -8,19 +8,20 @@ ms.reviewer: rlitinsky
 
 # Configure a Directory Service Account for Defender for Identity with a gMSA
 
-Create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Defender for Identity Directory Service Account entry.
+This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity Directory Service Account entry.
 
  
 >[!NOTE]
 > - In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
-> - Create a universal group in each domain that includes all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+> - Create a universal group in each domain that includes all sensors computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
 > - Give each gMSA a unique name for each forest or domain.
 
 ## Prerequisites
 
-- Before you create the gMSA account, assign permissions that allow the sensor to retrieve the account password from Active Directory.
+-  Make sure you have permissions to create gMSAs and security groups in Active Directory.
+- Assign permissions that allow the sensor to retrieve the gMSA password.
 
--  You can configure password retrieval in one of the following ways:
+-  Choose how to configure password retrieval:
 
     - Assign the gMSA account directly to each of the sensors.
 
@@ -28,9 +29,9 @@ Create a [group managed service account (gMSA)](/windows-server/security/group-m
 
 - Choose the appropriate group based on your deployment:
 
-    - **In a single-forest, single-domain deployment**, if you aren't installing the sensor on any Active Directory Federation Services (AD FS) / Active Directory Certificate Services (AD CS) servers, use the built-in Domain Controllers security group.
+    - **Single-forest, single-domain deployment**: Use the built-in Domain Controllers security group if you're not installing sensors on Active Directory Federation Services (AD FS) or Active Directory Certificate Services (AD CS) servers.
 
-    - **In a forest with multiple domains**, when using a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
+    - **Forest with multiple domains**: When using a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
 
 
 ## Create the gMSA account
@@ -132,7 +133,10 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 
 1. Select **Add credentials** 
-1. Enter the **Account name**, **Domain**, and **Password** of the account you created earlier. 
+1. Enter the following details:
+   - **Account name**
+   -  **Domain**
+   - **Password**  
 1. You can choose if it's a **Group managed service account** (gMSA), or if it belongs to a **Single label domain**. 
 
     :::image type="content" source="../media/new-directory-service-account.png" alt-text="Screenshot of the added credentials pane." lightbox="../media/new-directory-service-account.png":::    
