@@ -32,7 +32,7 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
     - **Single-forest, single-domain deployment**: Use the built-in Domain Controllers security group if you're not installing sensors on Active Directory Federation Services (AD FS) or Active Directory Certificate Services (AD CS) servers.
 
-    - **Forest with multiple domains**: If you use a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
+    - **Forest with multiple domains**: If you use a single Directory service account (DSA), we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
 
 
 ## Create the gMSA account
@@ -84,7 +84,7 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 
 ## Refresh Kerberos tickets after changing group membership
 
-The Kerberos ticket has a list of groups that an entity is a member of when the ticket is issued. If you add a computer account to the universal group after it already received a Kerberos ticket, it can't retrieve the gMSA's password until it receives a new Kerberos ticket.
+The Kerberos ticket has a list of groups that an entity is a member of when the ticket is issued. If you add a computer account to the universal group after it already received a Kerberos ticket, it can't retrieve the gMSA's password until it gets a new ticket.
 
 To refresh the Kerberos ticket, you can:
 
