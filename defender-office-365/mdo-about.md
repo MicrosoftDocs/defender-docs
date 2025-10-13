@@ -22,7 +22,7 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/09/2025
+ms.date: 10/13/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
