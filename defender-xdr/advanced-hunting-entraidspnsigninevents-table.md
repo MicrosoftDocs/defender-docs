@@ -1,5 +1,5 @@
 ---
-title: EntraIdSpnSignInEvents table in the advanced hunting schema
+title: EntraIdSpnSignInEvents table in the advanced hunting schema (preview)
 description: Learn about information associated with Microsoft Entra service principal and managed identity sign-in events table.
 search.appverid: met150
 ms.service: defender-xdr

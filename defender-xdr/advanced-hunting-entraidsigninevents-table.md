@@ -1,5 +1,5 @@
 ---
-title: EntraIdSignInEvents table in the advanced hunting schema
+title: EntraIdSignInEvents table in the advanced hunting schema (preview)
 description: Learn about the Microsoft Entra sign-in events table of the advanced hunting schema.
 search.appverid: met150
 ms.service: defender-xdr
