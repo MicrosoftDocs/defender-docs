@@ -23,7 +23,7 @@ appliesto:
 # Cloud protection and sample submission at Microsoft Defender Antivirus
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS

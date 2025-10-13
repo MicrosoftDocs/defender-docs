@@ -127,7 +127,7 @@ The performance analyzer provides an insight into problematic files that could c
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 
-**Supported OS versions**:
+**Supported operating systems**:
 
 Windows Version 10 and later.
 

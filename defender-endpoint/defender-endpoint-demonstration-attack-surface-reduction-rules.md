@@ -33,7 +33,7 @@ Attack surface reduction rules target specific behaviors that are typically used
 - Scripts that are obfuscated or otherwise suspicious
 - Behaviors that apps undertake that aren't initiated during normal day-to-day work
 
-## Supported operating systems
+## Prerequisites
 
 - Windows client devices must be running Windows 11, Windows 10 1709 build 16273, or later
 - Windows server devices must be running Windows Server 2012 R2 and later (with the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
