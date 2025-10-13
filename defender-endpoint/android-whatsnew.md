@@ -39,6 +39,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 - Improved UX experience for the onboarding screens, for more details please visit this link - [UX Enhancement](/defender-endpoint/android-new-ux)
 
+- Global Secure Access Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. User will need to install and configure a 3rd party SSO client.
+
 - Performance Improvement and bug fixes.
 
 #### September 2025
