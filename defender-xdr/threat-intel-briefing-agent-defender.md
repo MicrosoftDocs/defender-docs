@@ -32,7 +32,7 @@ appliesto:
 
 Threat intelligence analysts face several challenges in delivering insightful, actionable, contextualized intelligence. The task of developing threat intelligence briefings involves collecting information from various threat feeds, tools, and portals; filtering and correlating this information; and analyzing and mapping organizational risks. These activities happen before analysts can even start developing the report itself and generating insights for when they deliver the briefing. By then, as these processes can take anywhere from hours to days, the threats facing the organization have already evolved, which can render the briefing obsolete.  
 
-The [Microsoft Security Copilot Threat Intelligence Briefing Agent](/copilot/security/threat-intel-briefing-agent), now available as an embedded experience in Microsoft Defender, was developed in response to these pain points. The Threat Intelligence Briefing Agent generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information—in a matter of minutes. The agent can help security teams save time by creating a customized, relevant report that provides CISOs, security managers, and analysts with key situational awareness and a solid foundation for defense work.
+The [Microsoft Security Copilot Threat Intelligence Briefing Agent](/copilot/security/threat-intel-briefing-agent), now available as an embedded experience in Microsoft Defender, was developed in response to these pain points. The Threat Intelligence Briefing Agent generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes. The agent can help security teams save time by creating a customized, relevant report that provides CISOs, security managers, and analysts with key situational awareness and a solid foundation for defense work.
 
 The agent leverages dynamic automation and deep generative AI along with its wealth of threat intelligence knowledge and signals. When building the briefing, the agent dynamically chooses the next step based on the outcome of the previous step, allowing it to decide in real-time what threat intelligence to include and prioritize. The agent then translates this technical information into a digestible report that can be consumed by various audiences.
 
@@ -54,7 +54,7 @@ Microsoft Security Copilot is needed to run this agent.
 ### Security Copilot Plugins
 The following plugins are required to run this agent:
 - Microsoft Threat Intelligence
-- •	Microsoft Threat Intelligence agents
+- Microsoft Threat Intelligence agents
 
 The following plugin is optional but can add more context to the output:
 - Microsoft Defender External Attack Surface Management
