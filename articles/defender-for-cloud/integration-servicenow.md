@@ -32,7 +32,7 @@ Defender for Cloud can create or update the following ticket types in ServiceNow
 
 Defender for Cloud supports bidirectional synchronization with ServiceNow, allowing changes in either system to stay aligned. When enabled, incidents, problems, and change tickets created in Defender for Cloud are automatically reflected in ServiceNow, and updates made in ServiceNow sync back to Defender for Cloud.
 
-You can create tickets manually or automatically by using [governance automation rules](governance-automation.md).
+You can create tickets manually or automatically by using [governance automation rules](governance-rules.md).
 
 > [!NOTE]
 > Data is synchronized every 24 hours.
@@ -50,7 +50,7 @@ By centralizing cloud configuration findings in ServiceNow, your organization ca
 
 To enable this integration, you must:
 
-**In the Azure portal**:
+**In Azure**:
 - Have an active Azure subscription with Defender for Cloud onboarded.
 - Enable [Defender CSPM or Foundational CSPM](tutorial-enable-cspm-plan.md) on the target environments.
 
