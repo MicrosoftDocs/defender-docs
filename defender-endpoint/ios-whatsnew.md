@@ -38,6 +38,8 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 **What's New**
 
+- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
+
 - Performance Improvement and Bug fixes.
 
 #### September 2025
