@@ -50,24 +50,14 @@ By centralizing cloud configuration findings in ServiceNow, your organization ca
 
 To enable this integration, you must:
 
-- **In Defender for Cloud:**
-  - Have an active Azure subscription with Defender for Cloud onboarded.
-  - Enable [Defender CSPM or Foundational CSPM](tutorial-enable-cspm-plan.md) on the target environments.
+**In the Azure portal**:
+- Have an active Azure subscription with Defender for Cloud onboarded.
+- Enable [Defender CSPM or Foundational CSPM](tutorial-enable-cspm-plan.md) on the target environments.
 
-- **In ServiceNow:**
-  - Have an [application registry configured](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
-  - Enable the [ServiceNow Configuration Compliance module](https://store.servicenow.com/sn_appstore_store.do#!/store/application/29691e1f0212471dad08668c1e39932b/14.12.4).
-  - Enable and [configure the Microsoft Defender for Cloud integration in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-security-management/page/product/secops-integration-vr/azure-security-center/task/cc_asc_install_configure.html).
-
-- **In the Azure portal**:
-  - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-  - [Enable Defender for Cloud Foundational CSPM or Defender CSPM](tutorial-enable-cspm-plan.md) on the relevant Azure subscriptions, AWS accounts or GCP projects.
-
-- **In ServiceNow**:
-  - Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
-  - [Enable the ServiceNow Configuration Compliance module](https://store.servicenow.com/sn_appstore_store.do#!/store/application/29691e1f0212471dad08668c1e39932b/14.12.4?referer=%2Fstore%2Fsearch%3Flistingtype%3Dallintegrations%25253Bancillary_app%25253Bcertified_apps%25253Bcontent%25253Bindustry_solution%25253Boem%25253Butility%25253Btemplate%25253Bgenerative_ai%25253Bsnow_solution%26q%3DConfiguration%2520Compliance&sl=sh).
-  - [Enable the ServiceNow Microsoft Defender for Cloud integration.](https://docs.servicenow.com/bundle/washingtondc-security-management/page/product/secops-integration-vr/azure-security-center/concept/cc_asc_overview.html).
-  - [Configure the Microsoft Defender for Cloud Integration in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-security-management/page/product/secops-integration-vr/azure-security-center/task/cc_asc_install_configure.html).
+**In ServiceNow:**
+- Have an [application registry configured](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
+- Enable the [ServiceNow Configuration Compliance module](https://store.servicenow.com/sn_appstore_store.do#!/store/application/29691e1f0212471dad08668c1e39932b/14.12.4).
+- Enable and [configure the Microsoft Defender for Cloud integration in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-security-management/page/product/secops-integration-vr/azure-security-center/task/cc_asc_install_configure.html).
 
 ## Related content
 
