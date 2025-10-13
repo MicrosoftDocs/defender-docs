@@ -1,14 +1,14 @@
 ---
-title: Configure a gMSA Directory Service account for Defender for Identity
+title: Configure a gMSA directory service account for Defender for Identity
 description: Create and configure a group managed service account (gMSA) for use as the Directory Service account in Microsoft Defender for Identity.
 ms.date: 10/12/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Configure a Directory Service Account for Defender for Identity with a gMSA
+# Configure a gMSA directory service account for Defender for Identity
 
-This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity Directory Service Account entry.
+This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity directory service account entry.
 
  
 >[!NOTE]
@@ -18,10 +18,11 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
 ## Prerequisites
 
--  Make sure you have permissions to create gMSAs and security groups in Active Directory.
+- Make sure you have permissions to create gMSAs and security groups in Active Directory.
+
 - Assign permissions that allow the sensor to retrieve the gMSA password.
 
--  Choose how to configure password retrieval:
+- Choose how to configure password retrieval:
 
     - Assign the gMSA account directly to each of the sensors.
 
@@ -31,15 +32,19 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
     - **Single-forest, single-domain deployment**: Use the built-in Domain Controllers security group if you're not installing sensors on Active Directory Federation Services (AD FS) or Active Directory Certificate Services (AD CS) servers.
 
-    - **Forest with multiple domains**: When using a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
+    - **Forest with multiple domains**: If you use a single Directory Service Account (DSA) account, we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
 
 
 ## Create the gMSA account
 
-Create a group that can retrieve the account's password, create a gMSA account, and test that the account is ready to use.
+To prepare the gMSA account for use:
+
+1. Create the gMSA account.
+1. Create a group that can retrieve the account's password.
+1. Test that the account is ready to use.
 
 >[!NOTE]
-> If you never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
+> If you've never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
 >
 > To generate a new root key for immediate use, run the following command:
 > ```powershell
@@ -89,7 +94,7 @@ To refresh the Kerberos ticket, you can:
 
 - **Purge the existing Kerberos tickets** to force the domain controller to request a new Kerberos ticket. Run the following command to purge the tickets, from an administrator command prompt on the domain controller: `klist purge -li 0x3e7`
 
-## Grant required DSA permissions
+## Grant required directory service account permissions
 
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
@@ -99,22 +104,24 @@ The Defender for Identity sensor service, *Azure Advanced Threat Protection Sens
 
 If you see this alert, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
 
-**Check the Local Policy**
+### Check the Local Security Policy
+
 1. Run `secpol.msc` 
 1. Select **Local Policies** > **User Rights Assignment**
 1. Open the **Log on as a service policy** setting. 
 
     :::image type="content" source="../media/log-on-as-a-service.png" alt-text="Screenshot of the log on as a service property.":::
 
-    - If the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
+1. Once the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
 
-**Check the Group Policy setting**
+### Check the Group Policy setting
+
 1. Run `rsop.msc` 
-1. Go to **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service.** 
-    
+1. Go to **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service.**
+
     :::image type="content" source="../media/log-on-as-a-service-gpmc.png" alt-text="Screenshot of the Log on as a service policy in the Group Policy Management Editor." lightbox="../media/log-on-as-a-service-gpmc.png":::
 
-1. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
+1. Once the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
 
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
@@ -125,17 +132,17 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
 
-:::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identities page." lightbox="../media/settings-identities.png":::
+:::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
 
-1. Select **Directory Service accounts** to see which accounts are associated with which domains. 
+1. Select **Directory service accounts** to see which accounts are associated with which domains. 
 
-    :::image type="content" source="../media/directory-service-accounts.png" alt-text="Screenshot that shows the Director service accounts page in the Defender portal." lightbox="../media/directory-service-accounts.png":::
+    :::image type="content" source="../media/directory-service-accounts.png" alt-text="Screenshot that shows the Directory service accounts page in the Defender portal." lightbox="../media/directory-service-accounts.png":::
 
 
 1. Select **Add credentials** 
 1. Enter the following details:
    - **Account name**
-   -  **Domain**
+   - **Domain**
    - **Password**  
 1. You can choose if it's a **Group managed service account** (gMSA), or if it belongs to a **Single label domain**. 
 
