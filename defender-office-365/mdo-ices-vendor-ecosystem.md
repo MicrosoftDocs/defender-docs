@@ -136,7 +136,7 @@ EmailEvents
 | where Timestamp > ago(7d)
 //List email detected by a non-Microsoft vendor
 | where DetectionMethods contains "Thirdparty"
-| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation 
+| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation
 ```
 
 ## Reports
