@@ -1101,11 +1101,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-for-identity/highly-privileged-okta-api-token.md",
-      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-for-identity/limit-number-okta-super-admin-accounts.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
       "redirect_document_id": false
