@@ -4,8 +4,8 @@ description: An introduction to incidents and alerts, and the differences betwee
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: yelevin
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: raynew
 audience: ITPro
