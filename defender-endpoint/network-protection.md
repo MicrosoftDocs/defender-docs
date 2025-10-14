@@ -1,4 +1,4 @@
----
+﻿---
 title: Use network protection to help prevent connections to malicious or suspicious sites
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
@@ -17,15 +17,12 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender Antivirus
 
+---
 # Use network protection to help prevent connections to malicious or suspicious sites
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -492,3 +489,4 @@ You can turn on this capability by using the following PowerShell cmdlet:
 - [Network protection for macOS](network-protection-macos.md) | To learn more about Microsoft Network protection for macOS
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
