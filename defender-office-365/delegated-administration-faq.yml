@@ -23,7 +23,7 @@ title: Frequently asked questions - Delegated administration
 summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-  This article provides frequently asked questions and answers about delegated administration tasks in Microsoft 365 for Microsoft partners and resellers. Delegated administration includes the ability to manage the default email protection settings for other tenants (companies).
+  This article provides frequently asked questions and answers about delegated administration tasks in Microsoft 365 for Microsoft partners and resellers. Delegated administration includes the ability to manage Baseline Email Protection settings for other tenants (companies).
 
 sections:
   - name: Ignored

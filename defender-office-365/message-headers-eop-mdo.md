@@ -15,12 +15,12 @@ ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the header fields that the default email protections for cloud mailboxes add to incoming email messages. These header fields provide information about the message and how it was processed.
+description: Admins can learn about the header fields added to incoming messages by Baseline Email Protection. These header fields provide information about the message and how it was processed.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 ms.date: 10/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Baseline Email Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
