@@ -90,19 +90,21 @@ The attack path page shows you an overview of all of your attack paths. You can 
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-1. Navigate to **Exposure Management** > **Attack surface** > **Attack paths**.
-
-    :::image type="content" source="media/how-to-manage-attack-path/attack-path-page-defender-portal.png" alt-text="Screenshot that shows the attack path page in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-page-defender-portal.png":::
-
-    > [!NOTE]
-    > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
-
+1. Navigate to **Exposure Management** > **Attack surface** > **Attack paths**. You will see an overview of your attack paths.
+    
     The attack paths experience provides multiple views:
     - **Overview tab**: View attack paths over time, top 5 choke points, top 5 attack path scenarios, top targets, and top entry points
     - **Attack paths list**: Dynamic, filterable view of all attack paths with advanced filtering capabilities
     - **Choke points**: List of nodes where multiple attack paths converge, flagged as high-risk bottlenecks
+    
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
 
-    :::image type="content" source="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png" alt-text="Screenshot that shows the attack path analysis page in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-blade-defender-portal.png":::
+> [!NOTE]
+    > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
+
+1. Select the **Attack paths** tab.
+
+    :::image type="content" source="media/how-to-manage-attack-path/defender-portal/attack-path-main.png" alt-text="Screenshot that shows the attack path page in the Defender portal." lightbox="media/how-to-manage-attack-path/defender-portal/attack-path-main.png.png":::
 
 1. Use advanced filtering in the Attack paths list to focus on specific attack paths:
    - **Risk level**: Filter by High, Medium, or Low risk attack paths
@@ -115,8 +117,6 @@ The attack path page shows you an overview of all of your attack paths. You can 
    - **Entry points**: External access points where attacks could begin
    - **Target assets**: Critical resources attackers are trying to reach
    - **Choke points**: Convergence points where multiple attack paths intersect
-
-    :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
 
 1. Select a node to investigate detailed information:
 
@@ -138,18 +138,21 @@ The attack path page shows you an overview of all of your attack paths. You can 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png" alt-text="Screenshot that shows where to select recommendations in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png":::
 
 1. Select a recommendation.
+   Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
+
+Once an attack path is resolved, it can take up to 24 hours for an attack path to be removed from the list.
 
 ::: zone-end
 
 ---
 
+::: zone pivot="azure-portal"
+
 ## Remediate attack paths
 
 Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
-
-::: zone pivot="azure-portal"
 
 **To remediate an attack path in the Azure portal**:
 
@@ -168,29 +171,6 @@ Once you're done with your investigation of an attack path and you review all of
 Once an attack path is resolved, it can take up to 24 hours for an attack path to be removed from the list.
 
 ::: zone-end
-
-::: zone pivot="defender-portal"
-
-**To remediate an attack path in the Defender portal**:
-
-1. Navigate to **Exposure Management** > **Attack path analysis**.
-
-1. Select an attack path.
-
-1. Select **Remediation**.
-
-    > [!NOTE]
-    > In the Defender portal, remediation steps are integrated with the broader incident management workflow, allowing you to track remediation progress across multiple security solutions.
-
-1. Select a recommendation.
-
-1. [Remediate the recommendation](implement-security-recommendations.md).
-
-Once an attack path is resolved, it can take up to 24 hours for an attack path to be removed from the list.
-
-::: zone-end
-
----
 
 ## Remediate all recommendations within an attack path
 
