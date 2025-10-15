@@ -26,14 +26,18 @@ appliesto:
 
 Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. In this article, we describe how to test the AMSI engine with a benign sample.
 
-## Scenario requirements and setup
+## Prerequsites
 
-- Windows 10 or newer
-- Windows Server 2016, or newer
 - Microsoft Defender Antivirus (as primary) and these capabilities need to be enabled:
   - Real-Time Protection (RTP) 
   - Behavior Monitoring (BM)  
   - Turn on script scanning
+
+### Supported operating systems
+
+- Windows 10 and later
+- Windows Server 2016 and later
+
     
 
 ## Testing AMSI with Defender for Endpoint

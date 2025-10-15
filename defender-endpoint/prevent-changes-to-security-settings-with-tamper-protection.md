@@ -31,8 +31,17 @@ appliesto:
 
 ### Supported operating systems
 
+Tamper protection is available for devices that are running one of the following versions of Windows:
+
 - Windows
 - [macOS](tamperprotection-macos.md)
+- Windows 10 and 11 (including Enterprise multi-session)
+- Windows Server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (using the modern, unified solution)
+- Azure Stack HCI OS, version 23H2 and later.
+
+Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
 
 ## What is tamper protection?
 
@@ -64,17 +73,6 @@ When tamper protection is turned on, these tamper-protected settings can't be ch
 
 Tamper protection doesn't prevent you from viewing your security settings. And, tamper protection doesn't affect how non-Microsoft antivirus apps register with the Windows Security app. If your organization is using Defender for Endpoint, individual users can't change the tamper protection setting; in those cases, your security team manages tamper protection. For more information, see [How do I configure or manage tamper protection](#how-do-i-configure-or-manage-tamper-protection)?
 
-## On what devices can tamper protection be enabled?
-
-Tamper protection is available for devices that are running one of the following versions of Windows:
-
-- Windows 10 and 11 (including Enterprise multi-session)
-- Windows Server 2016 and later
-- Windows Server, version 1803 or later
-- Windows Server 2012 R2 (using the modern, unified solution)
-- Azure Stack HCI OS, version 23H2 and later.
-
-Tamper protection is also available for Mac, although it works a little differently than on Windows. For more information, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).
 
 > [!TIP]
 > [Built-in protection](built-in-protection.md) includes turning tamper protection on by default. For more information, see:
