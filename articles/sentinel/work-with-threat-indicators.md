@@ -4,7 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article explains how to view, create, manage, and visualize threat intelligence in Microsoft Sentinel.
 author: guywi-ms
 ms.topic: how-to
-ms.date: 02/21/2025
+ms.date: 06/18/2025
 ms.author: guywild
 ms.reviewer: alsheheb
 appliesto:
@@ -23,6 +23,10 @@ Accelerate threat detection and remediation with streamlined creation and manage
 - Manage threat intelligence by viewing, curating, and visualizing 
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
+
+## Prerequisites
+
+- You need the permissions of a [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) or higher role assigned to your user account to manage threat intelligence.
 
 ## Access the management interface
 
@@ -239,6 +243,58 @@ Workbooks provide powerful interactive dashboards that give you insights into al
 Microsoft Sentinel workbooks are based on Azure Monitor workbooks, so extensive documentation and many more templates are available. For more information, see [Create interactive reports with Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview).
 
 There's also a rich resource for [Azure Monitor workbooks on GitHub](https://github.com/microsoft/Application-Insights-Workbooks), where you can download more templates and contribute your own templates.
+
+## Export threat intelligence
+
+This procedure describes how to export threat intelligence from Microsoft Sentinel to to other destinations, such as external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
+
+1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
+
+1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page. For example:
+
+    #### [Defender portal](#tab/defender-portal)
+
+    :::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
+
+    #### [Azure portal](#tab/azure-portal)
+
+    :::image type="content" source="media/work-with-threat-indicators/export-azure.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
+
+    ---
+
+1. In the **Export** pane, from the **Export TI** dropdown, select the server you want to export your threat intelligence to.
+
+    If there isn't a server listed, you need to configure a server for export first. Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
+
+    **To add a server for export:**
+
+    1. Select the **Configure Export to TAXII server** link below the **Export TI** dropdown. The **Data connectors** page opens, showing the **Threat intelligence - TAXII Export** data connector.
+    
+    1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
+    
+    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. For example:
+
+        #### [Defender portal](#tab/defender-portal)
+
+        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export.png":::
+
+        #### [Azure portal](#tab/azure-portal)
+
+        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export-azure.png":::
+
+        ---
+
+    1. When you're done, select **Add** to add your server.
+
+
+1. Select **Export**. This action can't be undone.
+
+**To access the export history**:
+
+1. Navigate to the exported item in either the **Intel management** (Defender portal) or **Threat intelligence** page (Azure portal).
+1. In the **Exports** column, select **View export history** to show the export history for that item.
+
+Your general export history is also listed on the **Bulk operation history** page, accessible from the toolbar by selecting **Bulk operations > View history**.
 
 ## Related content
 
