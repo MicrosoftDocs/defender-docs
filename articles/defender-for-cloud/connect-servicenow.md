@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Connect ServiceNow ITSM to Defender for Cloud
 
-Connect Microsoft Defender for Cloud to [ServiceNow’s IT Service Management (ITSM)](integration-servicenow.md##it-service-management-itsm) module to improve incident management and remediation. The integration lets you create and track ServiceNow tickets that are linked to Defender for Cloud security recommendations, helping your teams respond efficiently to issues across Azure, hybrid, and multicloud environments.
+Connect Microsoft Defender for Cloud to [ServiceNow’s IT Service Management (ITSM)](integration-servicenow.md#it-service-management-itsm) module to improve incident management and remediation. The integration lets you create and track ServiceNow tickets that are linked to Defender for Cloud security recommendations, helping your teams respond efficiently to issues across Azure, hybrid, and multicloud environments.
 
 This article shows how to connect your ServiceNow account to Defender for Cloud.
 
@@ -23,7 +23,7 @@ Before you connect ServiceNow to Defender for Cloud, make sure you:
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- You need one of the following Azure roles to create the integration:
+- Have of the following Azure role:
   - Security Admin
   - Contributor
   - Owner
@@ -38,7 +38,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
 1. Select **Integrations**.
 
-   :::image type="content" border="true" source="./media/connect-servicenow/integrations.png" alt-text="Screenshot of environment settings page that shows where to select the ServiceNow option.":::
+   :::image type="content" border="true" source="./media/connect-servicenow/integrations.png" alt-text="Screenshot of environment settings page that shows where to select the ServiceNow option." lightbox="./media/connect-servicenow/integrations.png":::
 
 1. Select **Add integration** > **ServiceNow**.
 
@@ -50,7 +50,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
 1. Select which fields to include for the Incident, Problem, and Change tables using the drop-down menus.
 
-   :::image type="content" border="true" source="./media/connect-servicenow/customize-fields.png" alt-text="Screenshot that shows the custom option selected and the accompanying fields you can enter information into.":::
+   :::image type="content" border="true" source="./media/connect-servicenow/customize-fields.png" alt-text="Screenshot that shows the custom option selected and the accompanying fields you can enter information into." lightbox="./media/connect-servicenow/customize-fields.png":::
 
 1. Select **Save**.
 
