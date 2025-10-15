@@ -11,16 +11,22 @@ ai-usage: ai-assisted
 
 # Connect ServiceNow ITSM to Defender for Cloud
 
-Microsoft Defender for Cloud's integration with ServiceNow's IT Service Management (ITSM) module, allows customers to connect their Defender for Cloud accounts to ServiceNow. ServiceNow is a powerful workflow automation and enterprise solution that helps organizations streamline and automate routine tasks, improving operational efficiencies and increasing productivity. By integrating ServiceNow with Defender for Cloud, customers can prioritize the remediation of recommendations that affect their business. This integration allows you to create and view ServiceNow tickets linked to recommendations directly from Defender for Cloud, which facilitates efficient incident management.
+You can connect Microsoft Defender for Cloud with [ServiceNow’s IT Service Management (ITSM)](integration-servicenow.md##it-service-management-itsm) module to improve incident management and remediation. The integration lets you create and track ServiceNow tickets that are linked to Defender for Cloud security recommendations, helping your teams respond efficiently to issues across Azure, hybrid, and multicloud environments.
+
+This article explains how to connect your ServiceNow account to Defender for Cloud.
 
 ## Prerequisites
 
-- Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
+Before you connect ServiceNow to Defender for Cloud, make sure you: 
+
+- Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) to generate a client ID and secret for authentication.
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- The following roles are required:
-  - To create the integration: Security Admin, Contributor, or Owner.
+- You must have one of the following Azure roles to create the integration:
+  - Security Admin
+  - Contributor
+  - Owner
 
 ## Connect a ServiceNow account to Defender for Cloud
 
@@ -38,7 +44,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
    :::image type="content" border="true" source="./media/connect-servicenow/add-servicenow.png" alt-text="Screenshot that shows where the add integration button is and the ServiceNow option." lightbox="media/connect-servicenow/add-servicenow.png":::
 
-1. Enter a name, select the scope, enter the instance URL, User name, Password, Client ID, and client secret that you [created for the application registry](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) in the ServiceNow portal.
+1. Enter a name, select the scope, enter the instance URL, User name, Password, Client ID, and client secret that you created for the [application registry](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) in the ServiceNow portal.
 
 1. Select **Next**.
 
@@ -54,3 +60,4 @@ A notice appears after successful creation of integration.
 
 > [!div class="nextstepaction"]
 > [Create a ticket in Defender for Cloud](create-ticket-servicenow.md)
+> [Automate ticket creation using governance rules](governance-rules.md)
