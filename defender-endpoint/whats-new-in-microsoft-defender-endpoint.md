@@ -26,10 +26,9 @@ appliesto:
 
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
-
 Learn more:
 
-- [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services) 
+- [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
 - [Preview features](/defender-xdr/preview)
 
 ## September 2025
