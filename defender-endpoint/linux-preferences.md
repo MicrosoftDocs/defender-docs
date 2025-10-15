@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure security settings in Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
@@ -581,10 +581,8 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 
 ### Exclusion setting preferences
 
-**Exclusion setting preferences are currently in preview**.
-
 > [!NOTE] 
-> Global exclusions are currently in public preview, and are available in Defender for Endpoint beginning with version `101.23092.0012` or later in the Insiders Slow and Production rings.
+> Global exclusions are available in Defender for Endpoint beginning with version `101.24092.0001` or above.
 
 The `exclusionSettings` section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 

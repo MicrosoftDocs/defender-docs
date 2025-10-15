@@ -110,7 +110,7 @@ Open any remediation item to view details about it, including its remediation na
 
   > [!NOTE]
   > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
-  
+
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, the total of remediable and nonremediable messages equals the total number of messages submitted. But the totals might not match because of system delays, time-outs, or expired messages. Messages expire based on the Explorer retention period for your organization.
 
   Unless you're remediating old messages after your organization's Explorer retention period, it's advisable to retry remediating items if you see number inconsistencies. For system delays, remediation updates are typically refreshed within a few hours.
