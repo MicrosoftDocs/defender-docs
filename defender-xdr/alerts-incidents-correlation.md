@@ -79,6 +79,12 @@ The contents of the incidents are handled in the following ways:
 - Analytics rules recorded as involved in the creation of the source incident are added to the rules recorded in the target incident.
 - Currently, comments and activity log entries in the source incident are *not* moved to the target incident.<br>To see the source incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
+> [!NOTE]
+> The following enhancements to incident merging in the Activity log are in public preview:
+>
+> - Migration of audits and comments
+> - New audits
+
 ### When incidents aren't merged
 
 Even when the correlation logic indicates that two incidents should be merged, Defender doesn't merge the incidents under the following circumstances:
