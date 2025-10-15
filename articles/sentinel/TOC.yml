@@ -254,6 +254,8 @@
           items:
             - name: Overview
               href: threat-detection.md
+            - name: Compare analytics rules and custom detections
+              href: compare-analytics-rules-custom-detections.
             - name: Scheduled analytics rules
               items:
                 - name: Overview

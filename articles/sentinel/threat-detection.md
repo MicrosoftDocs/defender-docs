@@ -18,6 +18,9 @@ ms.collection: usx-security
 
 # Threat detection in Microsoft Sentinel
 
+>[!IMPORTANT]
+> **Custom detections** is now the best place to create new threat detection rules across Microsoft Sentinel Security Information and Event Management (SIEM) and Microsoft Defender XDR. It lets you create new rules across Microsoft Sentinel SIEM and Defender XDR with enhanced capabilities like flexible entity mapping, dynamic alert titles and descriptions, and customizable alert frequencies. For more information, read this blog post.
+
 After [setting up Microsoft Sentinel to collect data from all over your organization](connect-data-sources.md), you need to constantly dig through all that data to detect security threats to your environment. To accomplish this task, Microsoft Sentinel provides threat detection rules that run regularly, querying the collected data and analyzing it to discover threats. These rules come in a few different flavors and are collectively known as **analytics rules**.
 
 These rules generate ***alerts*** when they find what they’re looking for. Alerts contain information about the events detected, such as the [entities](entities.md) (users, devices, addresses, and other items) involved. Alerts are aggregated and correlated into ***incidents***&mdash;case files&mdash;that you can [assign and investigate](incident-investigation.md) to learn the full extent of the detected threat and respond accordingly. You can also build predetermined, automated responses into the rules' own configuration.
