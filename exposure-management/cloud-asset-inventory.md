@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: how-to
 ms.service: exposure-management
-ms.date: 12/15/2025
+ms.date: 10/15/2025
 ---
 
 # Cloud asset inventory

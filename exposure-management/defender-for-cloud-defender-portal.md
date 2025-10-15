@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 12/15/2025
+ms.date: 10/15/2025
 ---
 
 # Defender for Cloud in the Defender portal
