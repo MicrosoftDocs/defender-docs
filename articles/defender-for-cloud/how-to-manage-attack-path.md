@@ -45,13 +45,13 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ## Identify attack paths
 
-The attack path page shows you an overview of all of your attack paths. You can also see your affected resources and a list of active attack paths.
-
-:::image type="content" source="media/concept-cloud-map/attack-path-homepage.png" alt-text="Screenshot of a sample attack path homepage." lightbox="media/concept-cloud-map/attack-path-homepage.png":::
-
 You can use Attack path analysis to locate the biggest risks to your environment and to remediate them.
 
 ::: zone pivot="azure-portal"
+
+The attack path page shows you an overview of all of your attack paths. You can also see your affected resources and a list of active attack paths.
+
+:::image type="content" source="media/concept-cloud-map/attack-path-homepage.png" alt-text="Screenshot of a sample attack path homepage." lightbox="media/concept-cloud-map/attack-path-homepage.png":::
 
 **To identify attack paths in the Azure portal**:
 
