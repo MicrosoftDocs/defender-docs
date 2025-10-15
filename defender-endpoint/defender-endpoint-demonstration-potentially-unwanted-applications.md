@@ -37,7 +37,11 @@ The Potentially Unwanted Applications (PUA) protection feature in Microsoft Defe
 ### Supported operating systems 
 
 - Windows 11 or Windows 10
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2 SP1
+- Windows Server 2022
+-  Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
+- Windows Server 2008 R2 SP1
 - macOS
 - Linux
 
