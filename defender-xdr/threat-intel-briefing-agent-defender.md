@@ -42,7 +42,7 @@ The Threat Intelligence Briefing Agent is best suited for customers who have tur
 
 The Threat Intelligence Briefing Agent appears as a banner at the top of the [Threat analytics](threat-analytics.md) page in the Microsoft Defender portal. 
 
-[Screenshot]
+:::image type="content" source="media/ti-briefing-agent/tib-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page." lightbox="media/ti-briefing-agent/tib-agent.png":::
 
 To access Threat analytics, from the navigation menu, select **Threat intelligence** > **Threat analytics**.
 
@@ -90,9 +90,22 @@ This agent runs at the set time interval when turned on, or manually when you wa
 To run the Threat Intelligence Briefing Agent for the first time, follow these steps:
 
 1. On the Threat Intelligence Briefing Agent banner at the top of the Threat analytics page, select **Set up agent**.
-2. On the pop-up window that appears, select **Next**.
-3. Choose and connect the user account the agent will use and select **Continue**.
-4. Customize the agent settings by providing the information on the following fields:
+
+   :::image type="content" source="media/ti-briefing-agent/tib-setup-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page with the Setup agent button hightlighted." lightbox="media/ti-briefing-agent/tib-setup-agent.png":::
+
+2. On the pop-up window that appears, review the agent details then select **Next**.
+
+   :::image type="content" source="media/ti-briefing-agent/tib-review-details.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing the agent details." lightbox="media/ti-briefing-agent/tib-review-details.png":::
+
+3. Connect a user account to the agent by selecting **Continue** to open a new window where you can select the user account. 
+
+   :::image type="content" source="media/ti-briefing-agent/tib-connect-user.png" alt-text="Screenshots of the Threat Intelligence Briefing Agent setup page showing the steps to connect a user account." lightbox="media/ti-briefing-agent/tib-connect-user.png":::
+
+3. Wait for the agent to finish connecting to the account then select **Continue**.
+
+   :::image type="content" source="media/ti-briefing-agent/tib-review-user.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing the user account details." lightbox="media/ti-briefing-agent/tib-review-user.png":::
+
+4. Specify the following parameters to customize the agent output:
     - **Insights:** The number of vulnerabilities the agent researches for active threats.
     - **Look back days:** The number of days the agent needs to go back to research about threats against your vulnerabilities.
     - **Region:** The geographical area that the agent needs to check for relevant threats.
@@ -100,26 +113,47 @@ To run the Threat Intelligence Briefing Agent for the first time, follow these s
     - **Scheduled runs settings:** Choose whether you want to run the agent manually or have it send briefings at regular intervals automatically. By default, the agent is set to run every seven days.
     - **Generated brief recipient:** The email address of the user or distribution group that the agent sends the briefing to.
 
-5. Select **Deploy agent**. Once the agent activates, you can go back to the Threat analytics page or select **Manage agent** to update your agent settings.
+   :::image type="content" source="media/ti-briefing-agent/tib-set-parameters.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing the different parameters." lightbox="media/ti-briefing-agent/tib-set-parameters.png":::
+
+5. Select **Deploy agent**. Once the agent activates, you can go back to the Threat analytics page or select **Manage agent** to update your agent parameters.
+ 
+   :::image type="content" source="media/ti-briefing-agent/tib-finish-setup.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent setup page showing successful agent deployment." lightbox="media/ti-briefing-agent/tib-finish-setup.png":::
 
 ## View briefing and manage the agent
 To generate an ad-hoc or the most up-to-date briefing, select **Run agent**. To view the full report, select **View full brief**.
 
-When you select **View full brief**, a side panel appears containing the summary of threat information and detailed technical analysis that includes any actively exploited vulnerabilities in your environment and their possible organizational impact. You can download the report as a markdown file or copy its contents by selecting their respective icons at the top of the panel.
+:::image type="content" source="media/ti-briefing-agent/tib-run-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page with the View full brief and Run agent buttons highlighted." lightbox="media/ti-briefing-agent/tib-run-agent.png":::
 
+When you select **View full brief**, a side panel appears containing a relevant summary of threat information and detailed technical analysis, including any actively exploited vulnerability and its possible organizational impact. You can download the report as a markdown file or copy its contents by selecting their respective icons at the top of the panel.
 
-To view and manage the agent's settings, select **Manage agent**. You can also access the agent settings by going to **System** > **Settings** > **Microsoft Defender XDR** > **Threat Intelligence Briefing Agent** in the Defender portal navigation menu.
+:::image type="content" source="media/ti-briefing-agent/tib-full-brief.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent side panel in the Threat analytics page with the Download and Copy buttons highlighted." lightbox="media/ti-briefing-agent/tib-full-brief.png":::
 
+To view and manage the agent's settings, select **Manage agent**. 
+
+:::image type="content" source="media/ti-briefing-agent/tib-manage-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent side panel in the Threat analytics page with the Manage agent button highlighted." lightbox="media/ti-briefing-agent/tib-manage-agent.png":::
+
+You can also access the agent settings by going to **System** > **Settings** > **Microsoft Defender XDR** > **Threat Intelligence Briefing Agent** in the Defender portal navigation menu.
+
+:::image type="content" source="media/ti-briefing-agent/tib-settings.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent settings page in the Defender portal." lightbox="media/ti-briefing-agent/tib-settings.png":::
 
 ## Assess and provide feedback on the agent’s output
 
 The Threat Intelligence Briefing Agent saves the reports it generates in the Security Copilot standalone portal, under **Activity**. You can access this Activity page from the Defender portal by selecting selecting **View agent activity** from Threat Intelligence Briefing Agent settings page.
 
-The Activity page displays the times the Threat Intelligence Briefing Agent started running, the method it was run, and its status. To assess the agent's output, select one of the reports.
+:::image type="content" source="media/ti-briefing-agent/tib-view-agent-activity.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent settings page in the Defender portal with View agent activity button highlighted." lightbox="media/ti-briefing-agent/tib-view-agent-activity.png":::
 
-To view the agent’s progress toward producing the threat briefing, select **View activity**. This opens an activity map where you can see the details of the activity, giving you visibility on the steps the agent took to generate the report. The Threat Intelligence Briefing Agent dynamically chooses the next step based on the outcome of the previous one as it builds the briefing.
+The Activity page displays the times the Threat Intelligence Briefing Agent ran to generate a report, the method of generation, and status. To assess the agent's output, select one of the reports.
 
-To provide feedback about the briefing, select the **thumbs up** or **thumbs down** icon. On the pop-up window that appears, enter your comments in the text provided and then select **Submit**. You can choose to provide your feedback to the Agent, so you can teach it what you like and how it can get even better, or to Microsoft, to tell us what you think about the results the agent generates what can we do to improve them. 
+:::image type="content" source="media/ti-briefing-agent/tib-agent-activity.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent activity page in the Security Copilot standalone portal." lightbox="media/ti-briefing-agent/tib-agent-activity.png":::
+
+
+To view the agent’s progress toward producing a threat briefing, select **View activity**. This opens an activity map where you can see the details of the activity, providing you with transparency on the steps taken by the agent to produce the output. The Threat Intelligence Briefing Agent dynamically chooses the next step based on the outcome of the previous one as it builds the briefing.
+
+:::image type="content" source="media/ti-briefing-agent/tib-view-activity.png" alt-text="Screenshot of a Threat Intelligence Briefing Agent report in the Security Copilot standalone portal with the View activity button highlighted." lightbox="media/ti-briefing-agent/tib-view-activity.png":::
+
+:::image type="content" source="media/ti-briefing-agent/tib-activity-map.png" alt-text="Screenshot of a Threat Intelligence Briefing Agent report activity map." lightbox="media/ti-briefing-agent/tib-activity-map.png":::
+
+To provide feedback about the briefing, select the **thumbs up** or **thumbs down** icon. On the pop-up window that appears, elaborate your feedback in the text box provided and then select **Submit**. You can choose to provide your feedback to the agent, so you can teach it what you like and how it can get even better, or to Microsoft, to tell us what you think about the results the agent generates what can we do to improve them. 
 
 
 ## See also
