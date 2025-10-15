@@ -68,11 +68,11 @@
           href: work-attack-paths-overview.md
         - name: Review attack paths
           href: review-attack-paths.md
-    - name: Vulnerability Management
+    - name: Vulnerability management
       items:
         - name: Vulnerability management integration with Exposure Management
           href: vulnerability-management-integration.md
-    - name: Defender for Cloud Integration
+    - name: Defender for Cloud integration
       items:
         - name: Defender for Cloud in the Defender portal
           href: defender-for-cloud-defender-portal.md
