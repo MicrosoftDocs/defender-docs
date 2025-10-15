@@ -26,9 +26,6 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-> [!NOTE]
-> The feature described in this article is currently in Preview, isn't available in all organizations, and is subject to change.
-
 In all organizations with Microsoft Teams and cloud mailboxes, admins can create and manage block entries for domains in Microsoft Teams using the Tenant Allow/Block List. These blocked domain entries also appear on the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications> in the **Teams and Skype for Business users in external organizations** section:
 
 :::image type="content" source="media/tenant-allow-block-list-teams-domains.png" alt-text="Screenshot of the External access page in the Microsoft Teams admin center showing blocked domains." lightbox="media/tenant-allow-block-list-teams-domains.png":::
