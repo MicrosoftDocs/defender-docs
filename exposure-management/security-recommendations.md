@@ -19,6 +19,19 @@ This article describes how to work with security recommendations in the new unif
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 - Understand that all recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one unified view in the Defender portal.
 
+## Overview of the unified recommendations catalog
+
+The unified recommendations catalog brings together all Microsoft security recommendations in a single, streamlined experience. This consolidates recommendations from:
+
+- Microsoft Secure Score
+- Microsoft Security Exposure Management Recommendations Catalog  
+- Azure Security Recommendations (for cloud recommendations)
+- Microsoft Defender for Vulnerability Management
+
+You can explore the full breadth of Microsoft's security recommendations without navigating multiple separate experiences across different Microsoft Security products.
+
+:::image type="content" source="./media/vulnerability-management/recommendations-summary.png" alt-text="Screenshot of the unified recommendations summary." lightbox="./media/vulnerability-management/recommendations-summary.png":::
+
 ## Review recommendations
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management > Exposure insights > Recommendations** to open the unified [Recommendations](https://security.microsoft.com/exposure-recommendations) page.
@@ -27,20 +40,47 @@ This article describes how to work with security recommendations in the new unif
 
 ### Navigate the new unified recommendations interface
 
-2. **Use the attack surface tabs**: The recommendations are now organized by tabs for different domains:
+1. **Use the attack surface tabs**: The recommendations are now organized by tabs for different domains:
    - **Devices** - Device-related recommendations including misconfigurations and vulnerabilities
    - **Cloud** - Azure, AWS, and GCP recommendations with risk-based prioritization
    - **Identity** - Identity-related security recommendations
    - **SaaS** - Software-as-a-Service application recommendations
    - **Data** - Data protection and governance recommendations
 
-3. **Separate views for issue types**: On the Devices tab, you'll find separate views for:
-   - **Misconfigurations** - Configuration-related security issues
-   - **Vulnerabilities** - Software vulnerabilities requiring patches
+1. **Separate views for issue types**: On the Devices tab, you'll find separate views for:
+   - **Misconfigurations** - Configuration-related security issues from MDVM, Microsoft Secure Score, and Security Exposure Management, contributing to the Devices Secure Score
+   - **Vulnerabilities** - Software vulnerabilities from MDVM requiring patches, preserving the familiar structure, fields, filters, and prioritization logic with the same exposure score
    
-   This separation aligns with different remediation workflows and makes it easier to focus on specific types of issues.
+   This separation recognizes that misconfigurations and vulnerabilities often represent distinct workflows handled by different personas, allowing for clearer prioritization and ownership.
 
-4. **Use enhanced filtering and sorting**: Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:
+## Cloud recommendations with risk-based prioritization
+
+In the Defender portal, cloud recommendations are prioritized by risk, helping you focus on what matters most. The Cloud tab presents security recommendations related to cloud assets across your environment with enhanced context.
+
+:::image type="content" source="./media/vulnerability-management/vulnerabilities-cloud.png" alt-text="Screenshot of cloud vulnerabilities with risk-based prioritization." lightbox="./media/vulnerability-management/vulnerabilities-cloud.png":::
+
+Key improvements in the cloud recommendations experience include:
+
+- **Risk factors per asset**: Assess the broader exposure context of each recommendation for informed decisions
+- **Risk-based scoring**: New scoring that weighs recommendations based on severity, asset context, and potential impact
+- **Enhanced data**: Core recommendation data from Azure Recommendations enriched with additional fields and capabilities from Exposure Management
+- **Prioritized by criticality**: Greater emphasis on critical issues that pose the highest risk to your organization
+
+## Device vulnerabilities and misconfigurations
+
+The Devices tab maintains familiar functionality while benefiting from the unified catalog structure:
+
+### Device Vulnerabilities
+- **Preserved experience**: The same table structure, fields, filters, and prioritization logic from MDVM
+- **Familiar exposure scoring**: Uses the established exposure score methodology for assessing device vulnerability
+- **Integrated workflow**: Part of the unified experience while maintaining specialized vulnerability management workflows
+
+### Device Misconfigurations  
+- **Unified data sources**: Combines device-related misconfiguration recommendations from MDVM, Microsoft Secure Score, and Security Exposure Management
+- **Secure Score contribution**: Recommendations contribute to the Devices Secure Score following Microsoft's established calculation methodology
+- **Enhanced baseline logic**: Based on MDVM's device recommendations enhanced with additional context from other sources
+
+1. **Use enhanced filtering and sorting**: Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:
     - **Name** - Recommendation name
     - **State** - Compliant or not compliant
     - **Impact** - High, low, or medium impact
@@ -52,14 +92,14 @@ This article describes how to work with security recommendations in the new unif
     - **Related initiatives** - The number of related initiatives
     - **Related metrics** - The number of related metrics
 
-5. **Apply advanced filtering**: Filter recommendations by:
+1. **Apply advanced filtering**: Filter recommendations by:
    - State (compliant, not compliant, etc.)
    - Impact level
    - Workload source
    - Domain/attack surface
    - Risk score (for cloud recommendations)
 
-6. Select a recommendation to view and review details.
+1. Select a recommendation to view and review details.
 
 You can also review recommendations on the **Recommendations** tab in a specific security initiative page in **Initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/).
 
@@ -67,13 +107,13 @@ You can also review recommendations on the **Recommendations** tab in a specific
 
 1. To remediate a recommendation, select a specific recommendation and browse to the **Remediation steps** tab.
 
-2. Review the remediation steps and select **Manage** to follow the steps in the originating workload. The unified experience directs you to the appropriate service:
+1. Review the remediation steps and select **Manage** to follow the steps in the originating workload. The unified experience directs you to the appropriate service:
    - Microsoft Defender for Cloud for cloud recommendations
    - Microsoft Defender Vulnerability Management for device vulnerabilities  
    - Microsoft Secure Score for Microsoft 365 recommendations
    - Other Microsoft workloads as appropriate
 
-3. **Note on unified workflow**: All recommendations, including those from Azure security center, are now visible in MSEM, so you can manage your entire security posture from the unified portal without needing to navigate to separate Azure portals for cloud recommendations.
+1. **Note on unified workflow**: All recommendations, including those from Azure security center, are now visible in MSEM, so you can manage your entire security posture from the unified portal without needing to navigate to separate Azure portals for cloud recommendations.
 
 ## Next steps
 

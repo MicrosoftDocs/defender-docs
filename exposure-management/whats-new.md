@@ -26,41 +26,84 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## November 2025
 
-### Integration of Defender for Cloud and Vulnerability Management into Exposure Management
+### Integration of Microsoft Defender Vulnerability Management into Exposure Management
 
-This major milestone brings comprehensive cloud security integration and unified portal experience to Microsoft Security Exposure Management, significantly expanding the scope and capabilities of the platform.
+This major milestone brings comprehensive vulnerability management integration and unified portal experience to Microsoft Security Exposure Management, significantly expanding the scope and capabilities of the platform.
 
-#### Integration of cloud security
+#### New unified recommendations c
+atalog
 
-**Defender for Cloud integration** – Cloud security posture and recommendations are now part of Exposure Management, accessible in the unified Defender portal. This integration provides support for Azure, AWS, and GCP environments in a single, consolidated view, enabling comprehensive multi-cloud exposure management.
+**One place, full coverage** – You can now explore all Microsoft security recommendations in a single, streamlined experience that consolidates recommendations from:
 
-#### Unified recommendations experience  
+- Microsoft Secure Score
+- Microsoft Security Exposure Management Recommendations Catalog  
+- Azure Security Recommendations (for cloud recommendations)
+- Microsoft Defender for Vulnerability Management
 
-**Consolidated recommendations catalog** – All recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one unified catalog view in the Defender portal. Recommendations are organized by attack surface tabs (Devices, Cloud, Identity, SaaS, Data) and categorized by issue type (misconfigurations vs vulnerabilities vs secrets), making it easier to focus on specific remediation workflows.
+**Organized by attack surfaces** – The catalog is divided into tabs based on attack surfaces:
 
-#### Risk-based prioritization
+- **Devices** - Including separate views for Misconfigurations and Vulnerabilities
+- **Cloud** - Azure, AWS, and GCP recommendations with risk-based prioritization
+- **Identity** - Identity protection recommendations
+- **SaaS Apps** - Software-as-a-Service application recommendations  
+- **Data** - Data security recommendations
 
-**Enhanced cloud recommendation scoring** – Introduction of risk-based scoring for cloud recommendations that takes into account asset value and other factors, providing more intelligent prioritization beyond traditional severity ratings to help focus on critical issues that matter most to your organization.
+**Enhanced capabilities** – Each tab incorporates unified fields and functionalities from previous experiences, providing consistent and efficient ways to discover, evaluate, and prioritize security recommendations.
 
-#### Vulnerability Management integration
+#### Devices misconfigurations and vulnerabilities
 
-**Microsoft Defender Vulnerability Management** – Microsoft Defender Vulnerability Management now operates under Exposure Management, bringing device and server vulnerabilities together in the unified experience. This includes new separate views for Devices Vulnerabilities and Cloud Vulnerabilities, aligning with different remediation approaches.
+**Separated workflows** – For the first time, misconfigurations recommendations are separated from vulnerabilities, recognizing they represent distinct workflows handled by different personas:
 
-#### Secure Score consolidation  
+- **Devices Misconfigurations**: Configuration issues from Vulnerability Management, Microsoft Secure Score, and Security Exposure Management, contributing to Devices Secure Score
+- **Devices Vulnerabilities**: Software vulnerabilities from Vulnerability Management with the same exposure score and prioritization logic customers know, preserving familiar structure and workflows
 
-**Unified Secure Score experience** – Microsoft Secure Score and a new Cloud Secure Score can now be viewed side-by-side in Exposure Management to track improvement across different domains. This provides a comprehensive view of organizational posture spanning traditional endpoints and cloud resources.
+#### Cloud Resources with Risk-Based Prioritization  
 
-#### Portal and navigation updates
+**Risk-focused approach** – For the first time in the Defender portal, cloud recommendations are prioritized by risk, helping customers focus on what matters most. The view includes:
 
-**Unified portal experience** – All exposure management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section. There's no need to use separate Azure portals for viewing exposures, though some configuration tasks like policy edits may still require Azure portal access during this initial release.
+- Risk factors per asset for broader exposure context
+- New risk-based scoring that weighs recommendations based on severity, asset context, and potential impact
+- Enhanced recommendation data from Azure Security Center enriched with Exposure Management capabilities
 
-#### Hybrid attack paths
+#### Microsoft Defender Vulnerability Management Integration
 
-**Cross-environment attack path analysis** – Attack paths now include hybrid scenarios that span on-premises and cloud contexts, enabling security teams to identify attack vectors that traverse between environments and understand the full scope of potential threats across their digital estate.
+**New home under Exposure Management** – Vulnerability Management experiences now reside in Exposure Management, including:
 
-#### Enhanced Critical Asset Management
+- Overview dashboard (focusing on vulnerabilities only)
+- Vulnerabilities (weaknesses) with side-by-side Devices and Cloud views
+- Remediation workflows
+- Inventories and baseline assessment
+- Vulnerability Management Recommendations migrated to unified recommendations page
+- Event timeline accessible via events widget
 
-**Expanded critical asset scope** – Critical asset management now covers the unified inventory spanning endpoints, cloud resources, and external assets discovered through third-party integrations, enabling comprehensive critical asset protection across all domains.
+**Unified vulnerability view** – Customers with both Defender for Cloud and Defender for Endpoint licenses can now see all vulnerabilities affecting their digital estate in one place.
+
+#### New Secure Score Integration
+
+**Side-by-side scoring** – Both Microsoft Secure Score and the newly introduced Cloud Secure Score are now available in Security Exposure Management, viewable side by side for comprehensive posture tracking.
+
+#### Defender for Cloud Integration in the Defender portal
+
+**Unified cloud security** – The Microsoft Defender for Cloud experience integrates cloud security into the Microsoft Defender portal, delivering:
+
+- Unified, cloud-agnostic security platform (Azure, AWS, GCP)
+- Enhanced visibility, performance, and scalability
+- New Cloud Security Posture Management (CSPM) capabilities
+- Streamlined threat protection across environments
+
+#### Portal and Navigation Updates
+
+**Unified portal experience** – All exposure management and vulnerability management functions are now accessible in the Microsoft Defender portal at security.microsoft.com under the Exposure Management section.
+
+#### Enhanced Attack Path Analysis
+
+**Hybrid scenarios** – Attack paths now include hybrid scenarios spanning on-premises and cloud contexts, enabling security teams to identify attack vectors that traverse between environments.
+
+#### Expanded Critical Asset Management
+
+**Comprehensive coverage** – Critical asset management now covers the unified inventory spanning endpoints, cloud resources, and external assets discovered through third-party integrations.
+
+For more information, see [Microsoft Defender Vulnerability Management integration](vulnerability-management-integration.md) and [Review security recommendations](security-recommendations.md).
 
 > [!NOTE]
 > This is an initial integration release. Some advanced configuration tasks may still require accessing Azure portals, and regulatory compliance features may be read-only in the Defender portal during this phase. Additional capabilities and full administrative functions will be added in subsequent releases.
