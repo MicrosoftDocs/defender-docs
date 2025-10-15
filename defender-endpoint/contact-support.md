@@ -1,11 +1,11 @@
----
+﻿---
 title: Contact Microsoft Defender for Endpoint support
 description: Learn how to contact Microsoft Defender for Endpoint support
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -13,17 +13,16 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 02/24/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Contact Microsoft Defender for Endpoint support
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 Defender for Endpoint has recently upgraded the support process to offer a more modern and advanced support experience.
 
@@ -92,3 +91,4 @@ Learn how to open support tickets by contacting Defender for Endpoint support.
 - [Check service health](/microsoft-365/enterprise/view-service-health)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

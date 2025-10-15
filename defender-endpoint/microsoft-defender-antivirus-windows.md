@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 06/16/2025
 ms.topic: overview
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: deniseb
+manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
@@ -16,15 +16,13 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus in Windows Overview
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plans 1 and 2
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
 
 **Platforms**
 
@@ -165,3 +163,4 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

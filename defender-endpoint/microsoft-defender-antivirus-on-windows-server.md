@@ -1,13 +1,13 @@
----
+﻿---
 title: Microsoft Defender Antivirus on Windows Server
 description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows server 2025Azure Stack HCI OS version 23H2 and later.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.reviewer: pahuijbr
-manager: deniseb
+manager: bagol
 ms.topic: how-to
 ms.date: 06/16/2025
 ms.collection: 
@@ -15,17 +15,16 @@ ms.collection:
 - tier2
 - m365initiative-defender-endpoint
 - mde-ngp
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus on Windows Server
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
 
@@ -147,3 +146,4 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

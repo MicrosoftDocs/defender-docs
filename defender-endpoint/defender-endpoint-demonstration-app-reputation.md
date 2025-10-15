@@ -1,14 +1,14 @@
----
+﻿---
 title: Microsoft Defender for Endpoint SmartScreen app reputation demonstration
 description: Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing and malware websites
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: ewalsh 
-author: emmwalshh
+ms.author: bagol 
+author: batamig
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,15 +16,14 @@ ms.collection:
 - demo
 ms.topic: article
 ms.date: 07/22/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # SmartScreen app reputation demonstration
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing and malware websites based on App reputation.
 
@@ -82,3 +81,4 @@ Launching this link should render a message similar to the following:
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 06/03/2025
+ms.date: 09/16/2025
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -62,7 +62,7 @@ Safe Links protection by Safe Links policies is available in the following locat
   > - Safe Links ignores S/MIME signed messages.
   > - Safe Links no longer wraps URLs pointing to SharePoint or OneDrive sites, but the URLs are still processed by the Safe Links service. This change doesn't degrade protection. Instead, it improves the performance of loading SharePoint or OneDrive URLs.
   > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
- 
+
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
   For more information about Safe Links protection in Teams, see the [Safe Links settings for Microsoft Teams](#safe-links-settings-for-microsoft-teams) section later in this article.
@@ -165,7 +165,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 > [!NOTE]
 > When you turn on or turn off Safe Links protection for Teams, it might take up to 24 hours for the change to take effect.
 >
-> Safe Links protection for Teams is supported in Teams desktop and web instances.
+> Safe Links protection for Teams is supported in Teams desktop, web, and mobile (android and iOS) apps.
 >
 > Websites opened from Teams might require re-authentication when `SameSite=Strict` cookies are required for authentication by the target page. This behavior occurs because the intermediary page that does Safe Links validation redirects to the target page, which is treated as a cross-site request. The same issue applies to links opened from Teams for Web with Safe Links disabled.
 

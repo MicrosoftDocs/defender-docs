@@ -1,14 +1,14 @@
----
+﻿---
 title:  Run the client analyzer on Windows
 description: Learn how to run the Microsoft Defender for Endpoint Client Analyzer on Windows.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: bagol
+author: batamig
 ms.reviewer: younghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,13 +18,13 @@ ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 04/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Run the client analyzer on Windows
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!TIP]
 > Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
@@ -129,4 +129,5 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 - [Understand the analyzer HTML report](analyzer-report.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

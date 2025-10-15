@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Defender Antivirus compatibility with other security products
 description: Learn about Microsoft Defender Antivirus with other security products and the operating systems.
 ms.service: defender-endpoint
@@ -6,27 +6,25 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 06/16/2025
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, dmcwee, yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus compatibility with other security products
 
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 **Platforms**
 
@@ -309,4 +307,5 @@ If you're looking for Antivirus related information for other platforms, see:
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

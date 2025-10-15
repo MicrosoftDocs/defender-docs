@@ -108,7 +108,7 @@ On the **Target users** page, select who receives the Training campaign. Use the
   - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. The following group types are supported:
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
-    - Mail-enabled security groups (static only) 
+    - Mail-enabled security groups (static only)
 
   The following search tools are available:
 

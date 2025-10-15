@@ -1,13 +1,13 @@
----
+﻿---
 title: Use automated investigations to investigate and remediate threats
 description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: edr
-author: emmwalshh
-ms.author: ewalsh
+author: batamig
+ms.author: bagol
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,16 +16,15 @@ ms.collection:
 ms.topic: how-to
 ms.custom: AIR
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Overview of automated investigations
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 **Platforms**
 - Windows
@@ -39,7 +38,7 @@ The technology in automated investigation uses various inspection algorithms and
 This article provides an overview of AIR and includes links to next steps and additional resources.
 
 > [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 ## How the automated investigation starts
 
@@ -108,3 +107,4 @@ Currently, AIR only supports the following OS versions:
 - [Automated investigation and response in Microsoft Defender for Office 365](/defender-office-365/air-about)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

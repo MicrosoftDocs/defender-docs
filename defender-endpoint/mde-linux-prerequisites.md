@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -178,20 +178,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 > [!NOTE]
+> For versions 101.25042.0003 and later, no external dependencies are required, whereas versions older than 101.25032.0000 require additional packages:
+> - RPM-based distributions: `mde-netfilter`, `pcre`, `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
+> - DEBIAN-based distributions: `mde-netfilter`, `libpcre3`, `libnetfilter-queue1`, `libglib2.0-0`
 > Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
 > If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or older, the following additional dependency on the auditd package exists for mdatp:
 > - The mdatp RPM package requires `audit`, `semanage`.
 > - For DEBIAN, the mdatp package requires `auditd`.
 > - For Mariner, the mdatp package requires `audit`.
-> 
-> For versions older than `101.25032.0000`, the following requirements apply:
-> - RPM package needs: `mde-netfilter` and `pcre`
-> - DEBIAN package needs: `mde-netfilter` and `libpcre3`
->
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
-> The `mde-netfilter` package also has the following package dependencies:
-> - For DEBIAN, the `mde-netfilter` package requires `libnetfilter-queue1` and `libglib2.0-0`
-> - For RPM, the `mde-netfilter` package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+
 
 ## Installation instructions 
 

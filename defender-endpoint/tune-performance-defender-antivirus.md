@@ -4,10 +4,13 @@ description: Describes the procedure to tune the performance of Microsoft Defend
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: batamig
+ms.author: bagol
 ms.date: 01/07/2025
-manager: deniseb
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+manager: bagol
 ms.collection: 
 - m365-security
 - mde-ngp
@@ -18,11 +21,6 @@ search.appverid: met150
 
 # Performance analyzer for Microsoft Defender Antivirus
 
-**Applies to**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 

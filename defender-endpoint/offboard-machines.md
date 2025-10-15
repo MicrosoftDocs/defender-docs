@@ -1,11 +1,11 @@
----
+﻿---
 title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,21 +14,18 @@ ms.topic: article
 ms.subservice: onboard
 search.appverid: met150
 ms.date: 03/17/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
+  - Microsoft Defender for Business
 
+---
 # Offboard devices
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint Plan 1 and 2
-- Microsoft Defender for Endpoint for servers Plan 1 or Plan 2
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender for Business
-- Microsoft Defender Vulnerability Management
-- Microsoft Defender XDR
 
 **Platforms**
 
@@ -87,3 +84,4 @@ To offboard an Android or iOS device, uninstall the Microsoft Defender app on th
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
