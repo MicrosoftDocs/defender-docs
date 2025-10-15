@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 09/22/2025
+ms.date: 10/08/2025
 audience: ITPro
 ms.topic: article
 ms.service: defender-office-365
@@ -261,6 +261,10 @@ The **Analysis** view contains information that helps you analyze the message in
     - `TempError`: The SPF check encountered a temporary error (for example, a DNS error). The same check later might succeed.
     - `PermError`: The SPF check encountered a permanent error. For example, the domain has a [badly formatted SPF record](email-authentication-spf-configure.md#troubleshooting-spf-txt-records).
   - **Composite authentication**: SPF, DKIM, DMARC, and other information determine if the message sender (the From address) is authentic. For more information, see [Composite authentication](email-authentication-about.md#composite-authentication).
+
+  > [!TIP]
+  > For more information about email authentication results and how to correct failures, see [Security Operations guide for email authentication in Microsoft 365](email-auth-sec-ops-guide.md).
+
 - **Related entities** section: Information about attachments and URLs in the message:
   - **Entity**: Selecting **Attachments** or **URLs** takes you to the Attachments view or the URL view of the Email entity page for the message.
   - **Total count**

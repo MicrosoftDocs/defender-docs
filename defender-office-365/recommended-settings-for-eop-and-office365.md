@@ -19,7 +19,7 @@ ms.collection:
   - tier1
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ms.service: defender-office-365
-ms.date: 08/09/2025
+ms.date: 10/06/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -50,6 +50,9 @@ This article describes the default threat policy settings, and also the recommen
 > - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
 > - [Create sender allowlists](create-safe-sender-lists-in-office-365.md)
 > - [Create sender blocklists](create-block-sender-lists-in-office-365.md)
+
+> [!TIP]
+> To see all information in the following tables in this article, use the :::image type="icon" source="media/m365-cc-sc-expand-table-icon.png" border="false"::: **Expand table** control at the top of each table.
 
 <a name='eop-anti-malware-policy-settings'></a>
 

@@ -55,6 +55,7 @@ The following products are also eligible to get Defender Experts for Hunting cov
 - Microsoft Defender for Office 365 P2
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
+- Microsoft Entra ID P2
 
 The following product is **not** covered by this service:
 
