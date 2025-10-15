@@ -36,7 +36,7 @@ Web threat protection is part of [Web protection](web-protection-overview.md) in
 
 Web threat protection uses network protection to provide web browsing security in Edge (excepting Windows devices), non-Microsoft web browsers and nonbrowser processes. On Windows devices, web threat protection in Edge uses Microsoft Defender SmartScreen and network protection isn't required to be enabled. 
 
-To turn on Microsoft Defender SmartScreen in Edge: [Configure Microsoft Defender SmartScreen](/edgeenterprise/microsoft-edge-browser-policies/SmartScreenEnabled).
+To turn on Microsoft Defender SmartScreen in Edge: [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-policies#smartscreenenabled).
 
 To turn on network protection on your devices:
 
