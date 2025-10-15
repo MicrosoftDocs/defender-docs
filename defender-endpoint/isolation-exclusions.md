@@ -22,8 +22,6 @@ appliesto:
 ---
 # Isolation exclusions
 
-[!include [Prerelease information](../includes/prerelease.md)]
-
 Isolation exclusion refers to the ability to exclude specific processes, IP addresses, or services from network isolation by applying the selective isolation response action to devices.
 
 Network isolation in Microsoft Defender for Endpoint (MDE) restricts a compromised device's communication to prevent threat spread. However, certain critical services, such as management tools or security solutions, might need to remain operational.
