@@ -1,11 +1,29 @@
+﻿---
+title: Submit or Update Indicator API
+description: Learn how to use the Submit or Update Indicator API to submit or update a new Indicator entity in Microsoft Defender for Endpoint.
+ms.service: defender-endpoint
+ms.author: bagol
+author: batamig
+ms.localizationpriority: medium
+manager: bagol
+audience: ITPro
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.subservice: reference
+ms.custom: api
+search.appverid: met150
+ms.date: 12/18/2020
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+
 ---
 # Submit or Update Indicator API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -42,29 +60,6 @@ POST https://api.securitycenter.microsoft.com/api/indicators
 
 Name|Type|Description
 :---|:---|:---
-﻿---
-title: Submit or Update Indicator API
-description: Learn how to use the Submit or Update Indicator API to submit or update a new Indicator entity in Microsoft Defender for Endpoint.
-ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
-ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
-- m365-security
-- tier3
-- must-keep
-ms.topic: reference
-ms.subservice: reference
-ms.custom: api
-search.appverid: met150
-ms.date: 12/18/2020
-appliesto:
-  - Microsoft Defender for Endpoint
-  - Microsoft Defender for Endpoint Plan 1
-
-
 Authorization|String|Bearer {token}. **Required**.
 Content-Type|string|application/json. **Required**.
 
