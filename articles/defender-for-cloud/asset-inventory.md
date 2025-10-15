@@ -9,7 +9,7 @@ zone_pivot_groups: defender-portal-experience
 ---
 # Review the asset inventory
 
-The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you connected to Defender for Cloud. Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
+The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you connected to Defender for Cloud. It offers a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP. It categorizes assets by workload, criticality, and coverage status, while integrating health data, device actions, and risk signals into a single interface.  Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
 
 Defender for Cloud periodically analyzes the security state of resources connected to it. When resources have active [security recommendations](security-policy-concept.md) or [security alerts](alerts-overview.md) associated with it, they appear in the inventory.
 
