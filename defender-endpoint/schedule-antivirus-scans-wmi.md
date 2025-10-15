@@ -26,7 +26,8 @@ appliesto:
 # Schedule antivirus scans using Windows Management Instrumentation (WMI)
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 - Windows Server
 

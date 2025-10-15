@@ -15,20 +15,17 @@ search.appverid: met150
 ms.date: 04/30/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 ---
 
 # Schedule antivirus scans using Microsoft Intune
 
-**Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 - Windows Server

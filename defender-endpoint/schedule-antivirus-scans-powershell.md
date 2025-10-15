@@ -26,7 +26,7 @@ appliesto:
 # Schedule antivirus scans using PowerShell
 
 
-**Platforms**
+### Supported operating systems
 - Windows
 - Windows Server
 

@@ -29,7 +29,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

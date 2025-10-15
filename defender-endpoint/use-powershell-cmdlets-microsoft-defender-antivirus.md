@@ -26,7 +26,7 @@ appliesto:
 # Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus
 
 
-**Platforms**
+### Supported operating systems
 - Windows
 
 You can use PowerShell to perform various functions in Microsoft Defender Antivirus. Similar to the command prompt or command line, PowerShell is a task-based command-line shell and scripting language designed especially for system administration. You can read more about it in the [PowerShell documentation](/powershell/scripting/overview).
