@@ -91,6 +91,9 @@ You can use Attack path analysis to locate the biggest risks to your environment
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. Navigate to **Exposure Management** > **Attack surface** > **Attack paths**.
+
+    :::image type="content" source="media/how-to-manage-attack-path/attack-path-page-defender-portal.png" alt-text="Screenshot that shows the attack path page in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-page-defender-portal.png":::
+
     > [!NOTE]
     > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
 
