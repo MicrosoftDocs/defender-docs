@@ -151,9 +151,6 @@ To add an attachment to a comment:
 1. Go to the comment area of the *Case* page.
 1. Go to the text editor at the bottom of the screen, and select the paperclip icon to attach a file.
 1. Select the file you want to attach from your computer.
-
-  :::image type="content" source="media/cases-overview/attach-file-to-comment.png" alt-text="Screenshot showing the paperclip icon to attach a file to a comment.":::
-
 1. Select **Send** to save the comment.
 
   :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
