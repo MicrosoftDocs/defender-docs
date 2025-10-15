@@ -89,7 +89,7 @@ This section gives you a quick snapshot of your current security status:
 - **Resource Coverage**: Number of protected resources by Defender for Cloud plans and their coverage status (Full, Partial, None).
 - All cloud and code environments that are currently connected to Defender for Cloud are presented.
 
-:::image type="content" source="../media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of dashboard highlights":::
+:::image type="content" source="../media/defender-portal-dashboard/overview-highlights.png" alt-text="Screenshot of dashboard highlights" lightbox="../media/defender-portal-dashboard/overview-highlights.png":::
 
 #### Top actions
 
@@ -100,7 +100,7 @@ This section provides prioritized, actionable recommendations to help you reduce
 - **Attack Paths**: Understand potential lateral movement.
 - **Connectivity Issues**: Identify connectivity issues preventing your connected cloud environments from being fully protected.
 
-![Top Actions](../media/defender-portal-dashboard/top-actions.png)
+:::image type="content" source="../media/defender-portal-dashboard/top-actions.png" alt-text="Screenshot of top actions" lightbox="../media/defender-portal-dashboard/top-actions.png":::
 
 #### Trends over time
 
@@ -108,11 +108,11 @@ Track how your security posture and threat detection evolve over time:
 
 - **Security Posture**: View over time of the new cloud secure score in addition to recommendations by severity.
 
-![Security Posture](../media/defender-portal-dashboard/security-posture.png)
+:::image type="content" source="../media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of security posture" lightbox="../media/defender-portal-dashboard/security-posture.png":::
 
 - **Threat Detection**: View trends in the number of alerts over time, categorized by severity.
 
-![Threat Detection](../media/defender-portal-dashboard/threat-detection.png)
+:::image type="content" source="../media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of threat detection" lightbox="../media/defender-portal-dashboard/threat-detection.png":::
 
 Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
 
@@ -131,42 +131,52 @@ Workloads include:
 
 Each tile acts as a mini dashboard, showing top issues, protection coverage, and links to detailed views—no sensitive or secret information is displayed. This helps teams focus on what matters most for each workload.
 
-:::image type="content" source="../media/defender-portal-dashboard/api.png" alt-text="Screenshot of API widgits":::
+:::image type="content" source="../media/defender-portal-dashboard/api.png" alt-text="Screenshot of API widgits" lightbox="../media/defender-portal-dashboard/api.png":::
 
-## NextGen Portal features
+## Defender for Cloud in the Defender portal features
 
 The enhanced Defender portal experience introduces several advanced capabilities:
 
 ### Cloud Infrastructure Overview Dashboard
+
 Access comprehensive cloud security insights through the [Cloud Infrastructure Overview Dashboard](../cloud-infrastructure-dashboard.md), which provides:
+
 - Unified visibility across Azure, AWS, and GCP environments
 - Security posture trends and threat protection alerts
 - Workload-specific insights with enhanced filtering capabilities
 - Integration with Exposure Management for risk-based prioritization
 
 ### Cloud Scopes and Unified RBAC
+
 Manage granular access control with [Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md):
+
 - Organize cloud resources by business value or operational structure
 - Set specific access permissions for each group
 - Apply persistent filtering across dashboards and experiences
 - Streamline permission management across multi-cloud environments
 
 ### Enhanced Asset Management
+
 The [Assets → Cloud Infrastructure](../asset-inventory.md?pivots=defender-portal) experience provides:
+
 - Workload-specific views (VMs, Data, Containers, AI, API, DevOps, Identity, Serverless)
 - Contextual health data and device actions integration
 - Risk factor analysis and scoping filters
 - Seamless integration with Exposure Management workflows
 
 ### Advanced Attack Path Analysis
+
 Enhanced [attack path capabilities](../concept-attack-path.md?pivots=defender-portal) include:
+
 - Choke points identification for focused mitigation efforts
 - Advanced filtering by risk level, asset type, and remediation status
 - Historical tracking and cross-solution correlation
 - Integration with Microsoft Defender XDR incident workflows
 
 ### Comprehensive Vulnerability Management
+
 Access vulnerability insights through [enhanced vulnerability management](../auto-deploy-vulnerability-assessment.md?pivots=defender-portal):
+
 - Centralized vulnerability dashboard (Vulnerability Management → Overview → Cloud tab)
 - Risk-based prioritization and enhanced filtering
 - Integration with cloud asset inventory and attack path analysis
