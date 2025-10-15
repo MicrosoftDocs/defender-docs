@@ -24,8 +24,8 @@ appliesto:
 ---
 # Turn on cloud protection in Microsoft Defender Antivirus
 
+### Supported operating systems
 
-**Platforms**
 - Windows
 
 [Cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) delivers accurate, real-time, and intelligent protection. Cloud protection should be enabled by default. 

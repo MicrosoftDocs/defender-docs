@@ -22,8 +22,8 @@ appliesto:
 ---
 # Manage the sources for Microsoft Defender Antivirus protection updates
 
+### Supported operating systems
 
-**Platforms**
 - Windows
 
 <a id="protection-updates"></a>

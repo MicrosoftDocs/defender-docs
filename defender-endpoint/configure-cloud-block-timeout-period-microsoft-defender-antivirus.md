@@ -25,7 +25,8 @@ appliesto:
 # Configure the cloud block time out period
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 - Windows Server
 

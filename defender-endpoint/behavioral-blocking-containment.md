@@ -23,7 +23,8 @@ appliesto:
 # Behavioral blocking and containment
 
 
-**Platforms**
+### Supported operating systems 
+
 - Windows
 
 

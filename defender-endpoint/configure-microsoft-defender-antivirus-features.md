@@ -26,7 +26,8 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 You can configure Microsoft Defender Antivirus with a number of tools, such as:

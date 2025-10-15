@@ -24,7 +24,7 @@ appliesto:
 # Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

@@ -25,7 +25,7 @@ appliesto:
 > Want to experience Microsoft Defender XDR? Learn more about how you can [evaluate and pilot Microsoft Defender XDR](/defender-xdr/eval-overview?ocid=cx-docs-MTPtriallab).
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows 11
 

@@ -26,7 +26,8 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:

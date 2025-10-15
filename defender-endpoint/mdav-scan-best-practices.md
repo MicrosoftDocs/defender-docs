@@ -23,7 +23,7 @@ search.appverid: met150
 # Microsoft Defender Antivirus full scan considerations and best practices
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

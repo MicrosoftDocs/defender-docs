@@ -26,7 +26,8 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 Microsoft Defender Antivirus uses several methods to provide threat protection:

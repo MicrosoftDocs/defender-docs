@@ -24,7 +24,7 @@ appliesto:
 # Common mistakes to avoid when defining exclusions
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS

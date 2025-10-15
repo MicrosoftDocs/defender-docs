@@ -29,7 +29,8 @@ appliesto:
 # Manage tamper protection for your organization using Microsoft Defender portal
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).

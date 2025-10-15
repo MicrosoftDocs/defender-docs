@@ -26,7 +26,7 @@ appliesto:
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

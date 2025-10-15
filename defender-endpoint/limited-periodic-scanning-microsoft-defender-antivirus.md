@@ -20,17 +20,15 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+  - Microsoft Defender for Individual
 
 ---
 # Use limited periodic scanning in Microsoft Defender Antivirus
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+### Supported operating systems
 
-
-- Microsoft Defender for Individual
-
-**Platforms**
 - Windows
 
 > [!NOTE]  

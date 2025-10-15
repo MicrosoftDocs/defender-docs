@@ -24,7 +24,7 @@ appliesto:
 # Use network protection to help prevent connections to malicious or suspicious sites
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS

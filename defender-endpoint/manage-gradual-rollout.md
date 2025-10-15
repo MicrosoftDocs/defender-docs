@@ -29,7 +29,7 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

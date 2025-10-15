@@ -25,7 +25,8 @@ appliesto:
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
 
-**Platforms**
+### Supported operating systems 
+
 - Windows
 
 Always-on protection consists of real-time protection, behavior monitoring, and heuristics to identify malware based on known suspicious and malicious activities. These activities include events, such as processes making unusual changes to existing files, modifying or creating automatic startup registry keys and startup locations (also known as autostart extensibility points, or ASEPs), and other changes to the file system or file structure. Always-on protection is an important part of your antivirus protection and should be enabled. 

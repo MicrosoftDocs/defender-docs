@@ -29,7 +29,7 @@ appliesto:
 # Protect security settings with tamper protection
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 - [macOS](tamperprotection-macos.md)

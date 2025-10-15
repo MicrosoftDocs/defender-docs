@@ -23,8 +23,9 @@ search.appverid: met150
 
 # Configure Microsoft Defender Antivirus scanning options
 
-**Platforms**
-- Windows 
+### Supported operating systems
+
+- Windows
 
 ## Use Microsoft Intune to configure scanning options
 

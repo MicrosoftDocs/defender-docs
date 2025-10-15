@@ -25,7 +25,8 @@ appliesto:
 # Configure custom exclusions for Microsoft Defender Antivirus
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. However, if necessary, you can exclude files, folders, processes, and process-opened files from Microsoft Defender Antivirus scans. These types of exclusions are known as custom exclusions. This article describes how to define custom exclusions for Microsoft Defender Antivirus with Microsoft Intune and includes links to other resources for more information.

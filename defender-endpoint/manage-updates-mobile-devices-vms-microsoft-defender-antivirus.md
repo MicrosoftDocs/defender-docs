@@ -27,7 +27,8 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.

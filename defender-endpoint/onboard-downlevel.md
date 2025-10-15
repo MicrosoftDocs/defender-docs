@@ -25,7 +25,7 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows 7 SP1 Enterprise
 - Windows 7 SP1 Pro

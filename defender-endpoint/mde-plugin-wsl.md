@@ -42,13 +42,16 @@ Be aware of the following considerations before you start:
 
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 
-## Software prerequisites
+## Prerequisites
 
 - WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
-- The Windows client device must be running Windows 10, version 2004 and later (build 19044 and later), or Windows 11 to support the WSL versions that can work with the plug-in.
+### Supported operating systems
+
+- Windows 10, version 2004 and later (build 19044 and later)
+- Windows 11 to support the WSL versions that can work with the plug-in.
 
 ## Software components and installer file names
 

@@ -26,7 +26,8 @@ appliesto:
 # Cloud protection and Microsoft Defender Antivirus
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 Next-generation technologies in Microsoft Defender Antivirus provide near-instant, automated protection against new and emerging threats. To identify new threats dynamically, next-generation technologies work with large sets of interconnected data in the Microsoft Intelligent Security Graph and powerful artificial intelligence (AI) systems driven by advanced machine learning models. Cloud protection works together with Microsoft Defender Antivirus to deliver accurate, real-time, and intelligent protection. 

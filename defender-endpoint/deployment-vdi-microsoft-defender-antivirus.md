@@ -26,7 +26,7 @@ appliesto:
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

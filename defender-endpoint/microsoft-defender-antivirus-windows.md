@@ -24,7 +24,7 @@ appliesto:
 # Microsoft Defender Antivirus in Windows Overview
 
 
-**Platforms**
+### Supported operating systems
 
 - Windows
 

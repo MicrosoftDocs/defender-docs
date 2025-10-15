@@ -27,8 +27,7 @@ appliesto:
 ---
 # Endpoint detection and response in block mode
 
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 

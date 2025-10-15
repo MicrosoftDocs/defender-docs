@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 
 ---
 # Manage event-based forced updates
@@ -27,10 +28,8 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
+### Supported operating systems
 
-- Microsoft Defender Antivirus
-
-**Platforms**
 - Windows
 
 Microsoft Defender Antivirus allows you to determine if updates should (or shouldn't) occur after certain events, such as at startup or after receiving specific reports from the cloud-delivered protection service.

@@ -25,7 +25,8 @@ appliesto:
 # Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 By default, Microsoft Defender Antivirus settings that are deployed via a Group Policy Object to the endpoints in your network will prevent users from locally changing the settings. You can change this configuration in some instances. For example, it might be necessary to allow certain user groups, such as security researchers and threat investigators, to have further control over individual settings on the endpoints they use.

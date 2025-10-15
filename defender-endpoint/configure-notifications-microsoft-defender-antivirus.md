@@ -25,7 +25,8 @@ appliesto:
 # Configure Microsoft Defender Antivirus notifications that appear on endpoints
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 
 In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.

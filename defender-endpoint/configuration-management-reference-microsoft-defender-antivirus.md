@@ -27,7 +27,8 @@ appliesto:
 
 
 
-**Platforms**
+### Supported operating systems
+
 - Windows
 - Windows Server
 

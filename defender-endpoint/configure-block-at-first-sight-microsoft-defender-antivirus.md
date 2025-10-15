@@ -23,8 +23,8 @@ appliesto:
 ---
 # Turn on block at first sight
 
+### Supported operating systems
 
-**Platforms**
 - Windows
 
 This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization.
