@@ -70,8 +70,16 @@
           href: review-attack-paths.md
     - name: Vulnerability Management
       items:
-        - name: MDVM integration with Exposure Management
+        - name: Vulnerability management integration with Exposure Management
           href: vulnerability-management-integration.md
+    - name: Defender for Cloud Integration
+      items:
+        - name: Defender for Cloud in the Defender portal
+          href: defender-for-cloud-defender-portal.md
+        - name: Cloud scopes and Unified RBAC
+          href: cloud-scopes-unified-rbac.md
+        - name: Cloud asset inventory
+          href: cloud-asset-inventory.md
     - name: Manage exposure with security insights
       items:
         - name: Overview

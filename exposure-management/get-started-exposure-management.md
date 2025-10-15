@@ -30,6 +30,16 @@ Navigate to **Exposure Management** in the Microsoft Defender XDR portal to acce
 - Exposure insights and recommendations
 - Data connectors configuration
 
+With the integration of Defender for Cloud, you also have access to:
+
+- **Cloud Infrastructure**: Unified cloud security dashboard and overview
+- **Cloud Asset Inventory**: Multi-cloud asset management across Azure, AWS, and GCP
+- **Cloud Recommendations**: Risk-based prioritization of cloud security recommendations
+- **Cloud Attack Paths**: Visualization of attack paths including cloud assets
+- **Cloud Scopes**: Granular access control and resource segmentation
+
+:::image type="content" source="./media/defender-for-cloud-defender-portal/exposure-management-overview.png" alt-text="Screenshot of the enhanced Exposure Management overview with cloud integration." lightbox="./media/defender-for-cloud-defender-portal/exposure-management-overview.png":::
+
 ## Reviewing security exposure state
 
 On the Exposure Management > **Overview** dashboard, you can review the overall state of your organizational security exposure.

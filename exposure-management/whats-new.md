@@ -26,12 +26,49 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## November 2025
 
+### Defender for Cloud Integration in the Defender portal
+
+This milestone delivers a unified, cloud-agnostic security platform that integrates Microsoft Defender for Cloud capabilities directly into the Microsoft Defender portal. This integration is part of Microsoft's CNAPP (Cloud-Native Application Protection Platform) vision, designed to be frictionless to adopt, simple to deploy, and intuitive to navigate.
+
+#### Unified Cloud Security experience
+
+**Seamless integration** – Cloud security is now fully integrated into the Microsoft Defender portal at security.microsoft.com, giving security teams a single, unified view across all workloads. This eliminates the need to switch between tools and portals, enabling SOC teams to work more efficiently with complete security posture visibility across workloads.
+
+**Cloud-agnostic architecture** – Supports Azure, AWS, GCP, and other platforms in a single interface, making it ideal for hybrid and multi-cloud organizations seeking comprehensive exposure management.
+
+#### Cloud Overview dashboard
+
+**Consolidated security insights** – New unified dashboard consolidates Security Posture, Defender coverage, cloud assets, health data, and exposure insights across Azure, AWS, and GCP environments.
+
+**Top Actions prioritization** – Dashboard provides actionable insights including:
+
+- Security Posture with Cloud Secure Score trends and security recommendations
+- Threat Detection with security alerts across environments  
+- Workload Insights for VMs, Data, APIs, DevOps, and CIEM with asset summary, coverage insights, and risk levels
+
+#### Enhanced role-based access control and scoping
+
+**Granular access control** – Security teams can now grant more granular access to security content, ensuring only relevant personas see information they need. Users can access security insights without requiring direct permissions to underlying resources, improving operational security and compliance.
+
+**Cloud scopes** – Cloud accounts can be segmented into logical groups enabling better data pivoting, access control, and multi-tenant management. Supports organization by business unit, geography, or workload with persistent filtering across dashboards and workflows.
+
+#### Performance and scalability improvements  
+
+**Scale limitations resolved** – The new portal architecture resolves previous scale limitations, enabling seamless management of large and multi-cloud environments with enhanced visibility, improved performance, and scalability.
+
+#### Cloud asset inventory and advanced reporting
+
+**Unified asset management** – Comprehensive Cloud Asset Inventory provides contextual view of cloud infrastructure across Azure, AWS, and GCP, categorized by workload, criticality, and coverage status while integrating health data, device actions, and risk signals.
+
+**Advanced visualization** – Users can filter and export data to generate detailed reports and leverage rich visualizations for attack paths, asset relationships, and security recommendations.
+
+For more information, see [Defender for Cloud in the Defender portal](defender-for-cloud-defender-portal.md) and [Cloud scopes and Unified RBAC](cloud-scopes-unified-rbac.md).
+
 ### Integration of Microsoft Defender Vulnerability Management into Exposure Management
 
 This major milestone brings comprehensive vulnerability management integration and unified portal experience to Microsoft Security Exposure Management, significantly expanding the scope and capabilities of the platform.
 
-#### New unified recommendations c
-atalog
+#### New unified recommendations catalog
 
 **One place, full coverage** – You can now explore all Microsoft security recommendations in a single, streamlined experience that consolidates recommendations from:
 

@@ -59,6 +59,16 @@ In the Defender portal, cloud recommendations are prioritized by risk, helping y
 
 :::image type="content" source="./media/vulnerability-management/vulnerabilities-cloud.png" alt-text="Screenshot of cloud vulnerabilities with risk-based prioritization." lightbox="./media/vulnerability-management/vulnerabilities-cloud.png":::
 
+With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
+
+:::image type="content" source="./media/defender-for-cloud-defender-portal/recommendations.png" alt-text="Screenshot of unified cloud recommendations in the Defender portal." lightbox="./media/defender-for-cloud-defender-portal/recommendations.png":::
+
+### Cloud Secure Score integration
+
+The Cloud Secure Score provides comprehensive scoring alongside traditional Secure Score:
+
+:::image type="content" source="./media/defender-for-cloud-defender-portal/cloud-secure-score.png" alt-text="Screenshot of Cloud Secure Score in the Defender portal." lightbox="./media/defender-for-cloud-defender-portal/cloud-secure-score.png":::
+
 Key improvements in the cloud recommendations experience include:
 
 - **Risk factors per asset**: Assess the broader exposure context of each recommendation for informed decisions
@@ -70,12 +80,14 @@ Key improvements in the cloud recommendations experience include:
 
 The Devices tab maintains familiar functionality while benefiting from the unified catalog structure:
 
-### Device Vulnerabilities
+### Device vulnerabilities
+
 - **Preserved experience**: The same table structure, fields, filters, and prioritization logic from MDVM
 - **Familiar exposure scoring**: Uses the established exposure score methodology for assessing device vulnerability
 - **Integrated workflow**: Part of the unified experience while maintaining specialized vulnerability management workflows
 
-### Device Misconfigurations  
+### Device misconfigurations  
+
 - **Unified data sources**: Combines device-related misconfiguration recommendations from MDVM, Microsoft Secure Score, and Security Exposure Management
 - **Secure Score contribution**: Recommendations contribute to the Devices Secure Score following Microsoft's established calculation methodology
 - **Enhanced baseline logic**: Based on MDVM's device recommendations enhanced with additional context from other sources
