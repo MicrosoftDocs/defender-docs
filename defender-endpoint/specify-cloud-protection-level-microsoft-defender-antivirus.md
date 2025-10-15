@@ -25,7 +25,8 @@ appliesto:
 # Specify the cloud protection level
 
 
-**Platforms**
+### Supported operating systems 
+
 - Windows
 
 Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.

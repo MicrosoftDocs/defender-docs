@@ -28,6 +28,7 @@ appliesto:
 
 
 ### Supported operating systems
+
 - Windows
 
 Microsoft Defender Antivirus lets you determine when it should look for and download updates.

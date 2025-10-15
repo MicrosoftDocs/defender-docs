@@ -29,6 +29,7 @@ appliesto:
 
 
 ### Supported operating systems
+
 - Windows
 
 Microsoft Defender Antivirus is the next-generation protection component of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Microsoft Defender for Endpoint).

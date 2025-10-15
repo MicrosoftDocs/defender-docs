@@ -29,6 +29,7 @@ appliesto:
 
 
 ### Supported operating systems
+
 - Windows
 
 You might already know that:
