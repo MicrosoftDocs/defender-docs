@@ -1,13 +1,14 @@
 ---
 title: Review attack paths in Microsoft Security Exposure Management
-description: Learn about to review and explore attack paths in Microsoft Security Exposure Management.
+description: Learn how to review and explore attack paths in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 09/09/2025
+ms.date: 11/15/2025
 
+---
 
 # Review attack paths
 
