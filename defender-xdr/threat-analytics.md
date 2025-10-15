@@ -209,7 +209,7 @@ You can set up the Threat Intelligence Briefing Agent to get timely, relevant th
 
 Once deployed, the Threat Intelligence Briefing Agent appears as a banner at the top of the Threat analytics page. 
 
-[Screenshot]
+:::image type="content" source="media/ti-briefing-agent/tib-agent.png" alt-text="Screenshot of the Threat Intelligence Briefing Agent banner on top of the Threat analytics page." lightbox="media/ti-briefing-agent/tib-agent.png":::
 
 [Learn more about the Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md)
 
