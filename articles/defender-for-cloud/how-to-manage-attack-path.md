@@ -246,6 +246,8 @@ The Defender portal provides additional capabilities for attack path analysis th
 
 These capabilities provide a more comprehensive view of your security posture and enable more effective response to potential threats identified through attack path analysis.
 
+Learn more about [Attack paths](/security-exposure-management/review-attack-paths.md) in Exposure Management.
+
 ::: zone-end
 
 ---
