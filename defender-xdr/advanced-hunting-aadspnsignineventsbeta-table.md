@@ -26,11 +26,13 @@ ms.date: 03/28/2025
 
 # AADSpnSignInEventsBeta
 
-
 > [!IMPORTANT]
-> On November 16, 2025, the `AADSpnSignInEventsBeta` table will be renamed to [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md). This change will be made to remove the table's preview status and to align it with the existing product branding.
+> On November 16, 2025, the `AADSpnSignInEventsBeta` table will be renamed to [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding.
 >
-> The `AADSpnSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. Microsoft will eventually move all sign-in schema information to the `IdentityLogonEvents` table.
+>The `EntraIdSpnSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSpnSignInEventsBeta` table to use `EntraIdSpnSignInEvents` before the previously mentioned date. 
+
+>[!IMPORTANT]
+>The `AADSpnSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `AADSpnSignInEventsBeta` table in the advanced hunting schema contains information about Microsoft Entra service principal and managed identity sign-ins. You can learn more about the different kinds of sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
 

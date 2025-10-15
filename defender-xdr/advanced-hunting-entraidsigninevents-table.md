@@ -29,13 +29,22 @@ ms.date: 10/15/2025
 
 
 > [!IMPORTANT]
+> On November 16, 2025, the `EntraIdSignInEvents` table will replace [`AADSignInEventsBeta`](advanced-hunting-aadsignineventsbeta-table.md). This change will be made to remove the latter's preview status and to align it with the existing product branding.
+>
+>To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. 
+
+> [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 >
 > Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `EntraIdSignInEvents` table in the advanced hunting schema contains information about Microsoft Entra interactive and non-interactive sign-ins. Learn more about sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
 
-Use this reference to construct queries that return information from the table. For information on other tables in the advanced hunting schema, see the [advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
+Use this reference to construct queries that return information from the table. 
+
+For information on other tables in the advanced hunting schema, see the [advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
+
+
 
 
 |Column name|Data type|Description|
