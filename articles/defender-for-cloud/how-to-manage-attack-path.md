@@ -100,11 +100,11 @@ The attack path page shows you an overview of all of your attack paths. You can 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
 
 > [!NOTE]
-    > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
+> In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
 
 1. Select the **Attack paths** tab.
 
-    :::image type="content" source="media/how-to-manage-attack-path/defender-portal/attack-path-main.png" alt-text="Screenshot that shows the attack path page in the Defender portal." lightbox="media/how-to-manage-attack-path/defender-portal/attack-path-main.png.png":::
+    :::image type="content" source="media/how-to-manage-attack-path/defender-portal/attack-paths-main.png" alt-text="Screenshot that shows the attack path page in the Defender portal." lightbox="media/how-to-manage-attack-path/defender-portal/attack-paths-main.png":::
 
 1. Use advanced filtering in the Attack paths list to focus on specific attack paths:
    - **Risk level**: Filter by High, Medium, or Low risk attack paths
