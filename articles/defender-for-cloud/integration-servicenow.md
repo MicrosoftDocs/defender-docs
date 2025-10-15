@@ -1,26 +1,28 @@
 ---
 title: Overview of the ServiceNow integration
-description: Learn about integrating ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
+description: Learn how to integrate ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 05/20/2025
+ms.date: 10/15/2025
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between ServiceNow and Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
 
 # Overview of the ServiceNow integration
 
-You can integrate Microsoft Defender for Cloud with ServiceNow to centralize security and compliance operations within a single workflow platform. This integration helps security and IT teams collaborate more efficiently by automatically creating and syncing tickets, tracking remediation progress, and aligning Defender for Cloud findings with existing IT processes.
+You can integrate Microsoft Defender for Cloud with ServiceNow to centralize security and compliance operations within a single workflow platform. This integration helps security and IT teams work together by creating and syncing tickets, tracking remediation progress, and aligning Defender for Cloud findings with existing IT processes.
 
 The integration supports the following ServiceNow modules:
 
 - **[IT Service Management (ITSM)](#it-service-management-itsm)** – Provides incident management capabilities that let you create, view, and synchronize ServiceNow tickets linked to Defender for Cloud security recommendations.  
-- **[Configuration Compliance](#configuration-compliance-module)** – Integrates Defender for Cloud’s cloud security posture management (CSPM) findings into ServiceNow’s compliance module, helping you assess and remediate configuration issues across Azure, AWS, GCP, and on-premises environments.
+- **[Configuration Compliance](#configuration-compliance-module)** – Integrates Defender for Cloud’s cloud security posture management (CSPM) findings into ServiceNow’s compliance module, helping you assess and remediate configuration issues across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments.
+
+For an overview of all supported partner integrations, see [Overview of partner integration](partner-integrations.md).
 
 ## IT Service Management (ITSM)
 
-Through the ITSM integration, you can create and manage ServiceNow tickets directly from Microsoft Defender for Cloud. This connection lets you track and remediate security recommendations as part of your organization’s existing incident management workflows.
+Use the ITSM integration to create and manage ServiceNow tickets in Microsoft Defender for Cloud. This connection lets you track and remediate security recommendations as part of your organization’s existing incident management workflows.
 
 Defender for Cloud can create or update the following ticket types in ServiceNow:
 
@@ -30,16 +32,14 @@ Defender for Cloud can create or update the following ticket types in ServiceNow
 
 ### Bidirectional synchronization
 
-Defender for Cloud supports bidirectional synchronization with ServiceNow, allowing changes in either system to stay aligned. When enabled, incidents, problems, and change tickets created in Defender for Cloud are automatically reflected in ServiceNow, and updates made in ServiceNow sync back to Defender for Cloud.
-
-You can create tickets manually or automatically by using [governance automation rules](governance-rules.md).
+Defender for Cloud synchronizes with ServiceNow bidirectionally, keeping changes in both systems aligned. When enabled, Defender for Cloud automatically creates and updates incidents, problems, and change tickets in ServiceNow, and syncs any changes made in ServiceNow back to Defender for Cloud.
 
 > [!NOTE]
-> Data is synchronized every 24 hours.
+> This synchronization applies to the ITSM module only and runs every 24 hours.
 
 ## Configuration Compliance module
 
-The ServiceNow Configuration Compliance module integrates with Microsoft Defender for Cloud to unify compliance management across on-premises and multicloud environments. This integration lets you import Defender for Cloud’s Cloud Security Posture Management (CSPM) findings into ServiceNow, so compliance teams can track, prioritize, and remediate issues directly from the ServiceNow portal.
+The ServiceNow Configuration Compliance module integrates with Microsoft Defender for Cloud to unify compliance management across on-premises and multicloud environments. Use this integration to import Cloud Security Posture Management (CSPM) findings from Defender for Cloud into ServiceNow. Compliance teams can then track, prioritize, and fix issues in the ServiceNow portal.
 
 By centralizing cloud configuration findings in ServiceNow, your organization can:
 - Gain a single view of compliance across Azure, AWS, and Google Cloud.
@@ -48,9 +48,9 @@ By centralizing cloud configuration findings in ServiceNow, your organization ca
 
 ### Requirements
 
-To enable this integration, you must:
+To set up this this integration, make sure you:
 
-**In Azure**:
+**In Azure:**
 - Have an active Azure subscription with Defender for Cloud onboarded.
 - Enable [Defender CSPM or Foundational CSPM](tutorial-enable-cspm-plan.md) on the target environments.
 
