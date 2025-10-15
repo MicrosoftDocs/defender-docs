@@ -217,6 +217,14 @@ This message only appears for Chrome users, as Microsoft Edge users benefit from
 
 If you receive a message like this, contact Microsoft’s support to address it with the relevant browser vendor.
 
+## Users encounter Entra ID Login after clicking mcas.ms links
+Attackers can craft URLs that appear to lead to trusted domains but actually redirect users to malicious sites. For users protected by the session/suffix-based solution, an attacker might attempt to bypass controls by appending the mcas.ms suffix to a malicious URL, exploiting the assumption that such URLs are safe.
+
+To mitigate this, Microsoft Defender for Cloud Apps redirects any mcas.ms URL lacking valid session context to Entra ID for authentication, effectively blocking such exploits.
+
+However, legitimate mcas.ms URLs without context can exist, for example, if a user clicks on an old browser bookmark. In such cases, the user will first be redirected to Entra ID. If their identity provider (IdP) is not Entra ID, they will need to manually remove the mcas.ms suffix to proceed.
+
+
 ## More considerations for troubleshooting apps
 
 When troubleshooting apps, there are some more things to consider:

@@ -1,4 +1,4 @@
----
+﻿---
 title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
@@ -16,16 +16,15 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 03/31/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 ## How offline security intelligence updates work
 
@@ -303,3 +302,4 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 - [Linux resources](linux-resources.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+

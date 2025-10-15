@@ -117,8 +117,6 @@ items:
       href: entity-tags.md
     - name: Configure detection exclusions
       href: exclusions.md
-    - name: Automated response exclusions
-      href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
     - name: Adjust alert thresholds

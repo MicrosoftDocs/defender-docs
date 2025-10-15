@@ -45,7 +45,7 @@ Integrating Defender for Cloud Apps with Microsoft Defender for Endpoint gives y
 **For more information**:
 
 * [Cloud discovery policies](cloud-discovery-policies.md)
-* [Cloud discovery anomaly detection policy](cloud-discovery-anomaly-detection-policy.md)
+* [Cloud discovery anomaly detection policy](cloud-discovery-policies.md#cloud-discovery-anomaly-detection)
 * [Get instantaneous behavioral analytics and anomaly detection](anomaly-detection-policy.md)
 
 ---
