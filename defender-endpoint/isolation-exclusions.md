@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+---
 # Isolation exclusions
 
 [!include [Prerelease information](../includes/prerelease.md)]
