@@ -11,9 +11,9 @@ ai-usage: ai-assisted
 
 # Connect ServiceNow ITSM to Defender for Cloud
 
-You can connect Microsoft Defender for Cloud with [ServiceNow’s IT Service Management (ITSM)](integration-servicenow.md##it-service-management-itsm) module to improve incident management and remediation. The integration lets you create and track ServiceNow tickets that are linked to Defender for Cloud security recommendations, helping your teams respond efficiently to issues across Azure, hybrid, and multicloud environments.
+Connect Microsoft Defender for Cloud to [ServiceNow’s IT Service Management (ITSM)](integration-servicenow.md##it-service-management-itsm) module to improve incident management and remediation. The integration lets you create and track ServiceNow tickets that are linked to Defender for Cloud security recommendations, helping your teams respond efficiently to issues across Azure, hybrid, and multicloud environments.
 
-This article explains how to connect your ServiceNow account to Defender for Cloud.
+This article shows how to connect your ServiceNow account to Defender for Cloud.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you connect ServiceNow to Defender for Cloud, make sure you:
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- You must have one of the following Azure roles to create the integration:
+- You need one of the following Azure roles to create the integration:
   - Security Admin
   - Contributor
   - Owner
@@ -48,16 +48,16 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
 1. Select **Next**.
 
-1. Select Incident data, Problems data, and Changes table from the drop-down menus.
+1. Select which fields to include for the Incident, Problem, and Change tables using the drop-down menus.
 
    :::image type="content" border="true" source="./media/connect-servicenow/customize-fields.png" alt-text="Screenshot that shows the custom option selected and the accompanying fields you can enter information into.":::
 
 1. Select **Save**.
 
-A notice appears after successful creation of integration.
+You'll see a confirmation notice after the integration is created.
 
-## Next step
+## Next steps
 
-> [!div class="nextstepaction"]
-> [Create a ticket in Defender for Cloud](create-ticket-servicenow.md)
-> [Automate ticket creation using governance rules](governance-rules.md)
+- [Create a ticket in Defender for Cloud](create-ticket-servicenow.md)
+
+- [Automate ticket creation using governance rules](governance-rules.md)
