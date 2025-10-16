@@ -20,77 +20,45 @@ This article lists and compares the different features supported by Microsoft Se
 >[!IMPORTANT]
 > **Custom detections** is now the best place to create new threat detection rules across Microsoft Sentinel Security Information and Event Management (SIEM) and Microsoft Defender XDR. It lets you create new rules across Microsoft Sentinel SIEM and Defender XDR with enhanced capabilities like flexible entity mapping, dynamic alert titles and descriptions, and customizable alert frequencies. For more information, read this blog post.
 
-## Configuration
+## Compare analytics rules and custom detections features
 
-| **Feature** | **Analytics rules** | **Custom detections** | **Status and plan for custom detections** |
+| **Feature** | **Capability** | **Analytics rules** | **Custom detections** |
 |---|---|---|---|
-| **Advanced entity mapping** |  Supported |  Supported |  |
-| **Automatic mapping of Defender XDR entities** |  |  Supported |  |
-| **Allow to enrich entities with extra properties** |  Supported |  | Still open; custom detections only support one identifier per linked entity. Gap will be closed. |
-| **Dynamic alert properties** |  Supported | Partially supported | Dynamic alert titles and descriptions are supported. Gap will be closed. |
-| **Custom details** |  Supported |  Supported |  |
-| **MITRE tactics and techniques** |  Supported | Partially supported | Gap will be closed. |
-| **Control alert grouping and limit group of alerts by time** |  Supported |  | Not finalized; in Microsoft Defender, correlation engine takes care of the alerts' grouping logic. |
-| **OOTB alert deduplication** |  |  Supported |  |
-| **Re-open closed matching incidents** |  Supported |  | Not finalized; usage of this feature is low. |
-| **Events grouping control** |  Supported | Partially supported | No plans to support the same configuration as analytics rules. Custom detections groups events to alerts based on predefined logic. It groups alerts with the same custom details, dynamic details, and entities; otherwise, it creates one alert per event.  |
-| **Suppression control** |  Supported |  | Not finalized; usage of this feature is low. |
-| **Threshold Control** |  Supported |  | Not finalized; usage of this feature is low. |
-| **Create alert without incident** |  Supported |  | Still open; custom detections will support a similar capability. |
-| **NRT on Sentinel data** |  Supported |  | Still open; in preview. |
-| **NRT with more than one table** |  Supported |  | Still open; gap will be closed. |
-| **Support built-in XDR functions** |  |  Supported |  |
-| **Support custom KQL functions** |  Supported |  | Still open; gap will be closed  |
-| **Support querying Defender XDR tables without ingesting into Sentinel** |  |  Supported |  |
+| **Alert enrichment** | Flexible entity mapping over Sentinel data | Supported | Supported |
+| | Link multiple MITRE tactics | Supported | Planned |
+| | Support full list of MITRE techniques and sub-techniques | Supported | Planned |
+| | Enrich alerts with custom details | Supported | Supported |
+| | Define alert title and description dynamically - Integrate query results in runtime | Supported | Supported |
+| | Define all alerts properties dynamically - Integrate query results in runtime | Supported | Planned |
+| **Rule frequency** | Support flexible and high frequency for Sentinel data | Supported | Supported |
+| | Near-real-time (NRT) rules on Sentinel data | Supported | Planned |
+| | NRT streaming technology - Test events as they stream, not sensitive to ingestion delays | Not supported. Analytics NRT rules test events after they're ingested. | Supported |
+| | Determine rule's first run | Supported | Not supported |
+| **Rule lookback** | Lookback support | Lookback is flexible:<ul><li>Up to 48 hours for frequency higher than one hour<li>Up to 14 days for frequency of one hour and less</ul> | Lookback is statically determined by the frequency: Equals four times the frequency or 30 days for a frequency of 24 hours or less.<br><br>**Parity with analytics rules is planned** |
+| **Rule data** | Defender XDR data | Not supported | Supported |
+| | Sentinel analytics tier | Supported | Supported |
+| **Automated actions** | Native Defender XDR remediation actions | Not supported | Supported |
+| | Sentinel automation rules with incident trigger | Supported | Planned |
+| | Sentinel automation rules with alert trigger | Supported | Planned |
+| **Audit and health visibility** | Rules audit logs available in advanced hunting | Supported (in the `SentinelAudit` table) | Exposed in the `CloudAppEvents` table for Microsoft Defender for Cloud Apps users.<br><br>This capability will be available for all custom detections users in the future. |
+| | Rules health logs available in advanced hunting | Supported (in the `SentinelHealth` table) | Planned |
+| **Control alerts and events grouping** | Customize alert grouping logic | Supported | Not supported. Not supported. In the SIEM and XDR solutions, the correlation engine takes care of the alerts' grouping logic and can address the need to configure the grouping logic. |
+| | Choose between all events under one alert and one alert per event | Supported | Not supported |
+| | Group events to one alert when custom details, alert dynamic details and entities are identical | Not supported | Supported |
+| **Control incidents and alerts creation** | Exclude incidents from correlation engine - Ensure that incidents from different rules remain separated | Planned | Planned |
+| | Create alerts without incidents | Supported | Not supported |
+| | Alerts suppression - Define alert suppression after the rule runs | Supported | Not supported |
+| **Rules management** | Re-run rule on demand on a previous time window | Supported | Planned |
+| | Run rule on demand | Not supported | Supported |
+| | Health and quality workbooks | Supported | Planned |
+| | Integration with Sentinel repositories | Supported | Planned |
+| | Manage rules from API | Supported | Supported |
+| | Bicep support | Supported | Planned |
+| **Content hub** | Create rules from content hub | Supported | Planned |
+| **Multi workspace** | Create custom detections on any workspaces onboarded to Defender | Supported | Planned |
+| | Cross workspaces detection using the workspace operator | Supported | Planned |
+| **Testing and validations** | Rule simulation from the rule's wizard | Supported | Planned |
 
-## Advanced hunting
-
-| **Feature** | **Analytics rules** | **Custom detections** | **Status and plan for Custom detections** |
-|---|---|---|---|
-| **Determine start time** |  Supported |  | Not finalized; usage of this feature is low. |
-| **Flexible lookback** |  Supported | Partially supported | Analytics rules support flexible lookback (up to 14 days for rules with frequency of one hour and lower) while custom detections support 30 days with one-day frequency. Parity with analytics rules is planned. |
-| **Long lookback period of 30 days** |  |  Supported |  |
-| **NRT streaming** |  |  Supported |  |
-
-## Management
-
-| **Feature** | **Analytics rules** | **Custom detections** | **Status and plan for Custom detections** |
-|---|---|---|---|
-| **Import/export** |  Supported |  | Still open; gap will be closed. |
-| **Content hub integration** |  Supported |  | Still open; gap will be closed. |
-| **Repositories integration** |  Supported |  | |
-| **Rules on secondary workspace** |  Supported |  | Still open; gap will be closed. |
-| **Cross workspace detections using the workspace() operator** |  Supported |  | Still open; gap will be closed. |
-| **API** |  Supported | Partially supported | Not all capabilities are available through API, and API is in preview. Gap will be closed. |
-| **CICD templates (AMR, Bicep)** |  Supported |  | Still open; gap will be closed. |
-| **Migration experience integration** |  Supported |  | Still open; gap will be closed. |
-| **MITRE page integration** |  Supported |  | Still open; gap will be closed. |
-| **Support content distribution in MTO** |  |  Supported |  |
-
-## Automation
-
-| **Feature** | **Analytics rules** | **Custom detections** | **Plan for Custom detections** |
-|---|---|---|---|
-| **Support native 1P action** |  |  Supported |  |
-| **Sentinel automation rules with incident trigger** |  Supported |  | Still open; gap will be closed. |
-| **Sentinel automation rules with alert trigger** |  Supported |  | Still open; gap will be closed. |
-
-## Health and audit
-
-| **Feature** | **Analytics rules** | **Custom detections** | **Plan for Custom detections** |
-|---|---|---|---|
-| **Health logs** |  Supported |  | Still open; gap will be closed. |
-| **Audit logs** |  Supported | Partially supported | Currently exposed in CloudAppEvents table for Microsoft Defender for Cloud Applications users.  |
-| **Overcome ingestion delay** |  |  Supported | Custom detections take into consideration both ingestion delay and creation delay. |
-
-## Quality control
-
-| **Feature** | **Analytics rules** | **Custom detections** | **Status and plan for Custom detections** |
-|---|---|---|---|
-| **Health UX - Insights panel** |  Supported |  | Not finalized |
-| **Rerun on interval** |  Supported |  | Still open; gap will be closed. |
-| **Rule results simulation** |  Supported |  | Still open; gap will be closed. |
-| **Health and quality workbooks** |  Supported |  | Still open; gap will be closed. |
 
 ## Related content
 - [Threat detection in Microsoft Sentinel](threat-detection.md)
