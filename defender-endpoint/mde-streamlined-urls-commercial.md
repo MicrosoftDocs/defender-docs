@@ -96,59 +96,6 @@ App/product version (macOS/Linux): 101.24022.*+
 |Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service cannot be used through a proxy.|Optional|Improves live response connection initiation speed (Direct Connection/Proxy bypass required) on Windows client (non-server) operating systems|Windows|
 |Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and above and Windows Server 2012 and above|Windows|
 
-### URLs used for updates
-
-> [!NOTE]
-> Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
-
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|--------|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.update.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.delivery.mp.microsoft.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU/WU|443|*.windowsupdate.com|Security intelligence and product updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.windowsupdate.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|*.download.microsoft.com|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|Optional if updates are managed internally (WSUS/FileShare/ConfigMgr)|
-
-## URLs used for certificate validation checks
-
-> [!NOTE]
-> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. This means the operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. For more information, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
-
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Win 7/8.1|Server (MMA)|Mac|Linux|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|------------|---|-----|--------|
-|Microsoft Defender for Endpoint|US Gov|CRL|80|crl.microsoft.com/pki/crl/*|Certificate Revocation Lists - required to validate certificates / Used by Windows when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
-|Microsoft Defender for Endpoint|US Gov|CRL|80|ctldl.windowsupdate.com|Expands on the existing automatic root update mechanism technology to let certificates that are compromised or untrusted be specifically flagged as untrusted|Required|Yes||||||
-|Microsoft Defender for Endpoint|US Gov|CRL|80|www.microsoft.com/pkiops/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
-|Microsoft Defender for Endpoint|US Gov|CRL|80|http://www.microsoft.com/pki/certs|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
-
-### Other URLs
-
-|Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|Comments|
-|--------|---------|--------|----|------------|-----------|-----------------|-------------------------|--------|
-|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.us|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-
-## Security center URLs
-
-|Service|Geography|URL|Comment|
-|-------|---------|---|-------|
-|Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|crl.microsoft.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://*.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://secure.aadcdn.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|US Gov|https://static2.sharepointonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://login.microsoftonline.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://*.gcc.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC|https://onboardingpckgsusmvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|GCC High|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|DoD|https://login.microsoftonline.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
-
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
