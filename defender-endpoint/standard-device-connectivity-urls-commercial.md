@@ -24,8 +24,6 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
-## Prerequisites
-
 ## Microsoft Defender URLs
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required or Optional|Windows 10, 11; Server 2022, 2019, 2016 (Unified Agent); Server 2012 R2 (Unified Agent) |Windows 7, 8.1|Windows Server 2008 R2, 2012 R2, 2016 (MMA Based)|Mac|Linux|Comments|
@@ -45,7 +43,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|Common (Linux)|443|packages.microsoft.com|Required to download and update the MDE Linux agent|Required|||||Yes||
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|login.windows.net|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|*.security.microsoft.com|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
-|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|*.blob.core.windows.net/networkscannerstable/*|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|\*.blob.core.windows.net/networkscannerstable/*|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Security Management|443|enterpriseregistration.windows.net|Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Security Management|443|*.dm.microsoft.com|Security Management for Microsoft Defender for Endpoint - Enrollment, check-in, and reporting|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|

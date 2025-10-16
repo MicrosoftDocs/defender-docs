@@ -51,7 +51,7 @@ App/product version (macOS/Linux): 101.24022.*+
 
 - Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent) continue to use the associated legacy method. Specifically, devices running on Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2, and 2016 devices not upgraded to the modern unified solution. For the list of additional URLs, see [Windows 7, 8.1, 2008R2 (MMA)](#windows-7-81-2008r2-mma).
 
-- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the other URLs required.
+- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The [Windows 1607 to 1803](#windows-1607-to-1803) section lists the other URLs required.
 
 ## Common endpoints
 
@@ -94,7 +94,7 @@ App/product version (macOS/Linux): 101.24022.*+
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
 |Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service can't be used through a proxy.|Optional|Improves the speed of the live response connection initiation, where a direct connection or a proxy bypass is required on Windows client (non-server) operating systems.|Windows|
-|Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and later and Windows Server 2012 and later|Windows|
+|Vulnerability management network scanner standalone tool|443|\*.security.microsoft.com<br>\*.blob.core.windows.net/networkscannerstable/*<br>login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and later and Windows Server 2012 and later|Windows|
 
 ## IP addresses
 
@@ -118,7 +118,7 @@ Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azure
 
 ## Windows 1607 to 1803
 
-This sheet lists the other URL endpoint services still required for older Windows devices - see the Common URLs tab for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Onboarding again isn't supported for migrations. Devices must first offboard and then onboard to apply the new configuration that allows for URL reduction.
+This section lists the URL endpoint services required for older Windows devices. See the [Common URLs](#common-endpoints) section for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Onboarding again isn't supported for migrations. Devices must first offboard and then onboard to apply the new configuration that allows for URL reduction.
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Comments|
 |---|---|---|---|---|---|---|---|
@@ -174,11 +174,11 @@ This section applies to URL endpoint services required for devices using Defende
 
 |Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
 |---|---|---|---|---|
-|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com<br>winatp-gw-aus.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com<br>winatp-gw-weu.microsoft.com<br>winatp-gw-neu3.microsoft.com<br>winatp-gw-weu3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com<br>winatp-gw-ukw.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>winatp-gw-cus3.microsoft.com<br>winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Monitoring Agent (MMA) / EDR Cyberdata |443 |*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net |Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016 |Required for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
+|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com<br>winatp-gw-aus.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).|
+|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com<br>winatp-gw-weu.microsoft.com<br>winatp-gw-neu3.microsoft.com<br>winatp-gw-weu3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements). |
+|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com<br>winatp-gw-ukw.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements). |
+|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>winatp-gw-cus3.microsoft.com<br>winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements). |
+|Microsoft Monitoring Agent (MMA) / EDR Cyberdata |443 |*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net |Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016 |Required for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements). |
 
 ## Defender portal URLs
 
