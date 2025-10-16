@@ -24,6 +24,8 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
+## Prerequisites
+
 ## Microsoft Defender URLs
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required or Optional|Windows 10, 11; Server 2022, 2019, 2016 (Unified Agent); Server 2012 R2 (Unified Agent) |Windows 7, 8.1|Windows Server 2008 R2, 2012 R2, 2016 (MMA Based)|Mac|Linux|Comments|
@@ -122,11 +124,11 @@ Required for Mac and Linux platforms"|
 |Microsoft Defender Antivirus|WW|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender Antivirus|WW|Common|443|*.events.data.microsoft.com|Used by Microsoft Defender Antivirus to send Diagnostic Telemetry for Microsoft Defender Core Service|Required|Yes|No|Yes|No|No|"To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. Alternatively, to wildcard, can allow: us-mobile.events.data.microsoft.com/OneCollector/1.0 eu-mobile.events.data.microsoft.com/OneCollector/1.0 uk-mobile.events.data.microsoft.com/OneCollector/1.0 au-mobile.events.data.microsoft.com/OneCollector/1.0 mobile.events.data.microsoft.com/OneCollector/1.0"|
 |Microsoft Defender Antivirus|WW|Common|443|*.ecs.office.com/config/v1/MicrosoftWindowsDefenderClient|Used by Microsoft Defender Antivirus to download internal feature configurations (ECS) for Microsoft Defender Core service|Required|Yes|No|Yes|No|No|Microsoft Defender Core service is used to enhance stability and performance of Microsoft Defender Antivirus for customers.|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes||||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes||||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.checkappexec.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes||||||Microsoft Defender SmartScreen checking application execution for trusted apps|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes||||||Microsoft Defender SmartScreen checking application execution for trusted apps|
-|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.checkappexec.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes|||||Microsoft Defender SmartScreen checking application execution for trusted apps|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes|||||Microsoft Defender SmartScreen checking application execution for trusted apps|
+|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.|
 
 ## Defender portal URLs
 

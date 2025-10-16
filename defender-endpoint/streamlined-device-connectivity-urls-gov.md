@@ -18,7 +18,7 @@ ms.date: 10/05/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
-# Microsoft Defender for Endpoint - Streamlined connectivity URLs - US government environments
+# Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
