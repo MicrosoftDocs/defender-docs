@@ -49,7 +49,7 @@ App/product version (macOS/Linux): 101.24022.*+
 
 ### Notes
 
-- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent) continue to use the associated legacy method. Specifically, devices running on Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2, and 2016 devices not upgraded to the modern unified solution. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab.
+- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent) continue to use the associated legacy method. Specifically, devices running on Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2, and 2016 devices not upgraded to the modern unified solution. For the list of additional URLs, see [Windows 7, 8.1, 2008R2 (MMA)](#windows-7-81-2008r2-mma).
 
 - Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the other URLs required.
 
@@ -174,19 +174,11 @@ This section applies to URL endpoint services required for devices using Defende
 
 |Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
 |---|---|---|---|---|
-|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-||443|winatp-gw-aus.microsoft.com|||
-|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com|||
-||443|winatp-gw-weu.microsoft.com|||
-||443|winatp-gw-neu3.microsoft.com|||
-||443|winatp-gw-weu3.microsoft.com|||
-|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com|||
-||443|winatp-gw-ukw.microsoft.com|||
-|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com|||
-||443|winatp-gw-eus.microsoft.com|||
-||443|winatp-gw-cus3.microsoft.com|||
-||443|winatp-gw-eus3.microsoft.com|||
-|Microsoft Monitoring Agent (MMA) / EDR Cyberdata|443|*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net|Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016||
+|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com<br>winatp-gw-aus.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
+|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com<br>winatp-gw-weu.microsoft.com<br>winatp-gw-neu3.microsoft.com<br>winatp-gw-weu3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
+|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com<br>winatp-gw-ukw.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
+|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>winatp-gw-cus3.microsoft.com<br>winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
+|Microsoft Monitoring Agent (MMA) / EDR Cyberdata |443 |*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net |Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016 |Required for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
 
 ## Defender portal URLs
 
