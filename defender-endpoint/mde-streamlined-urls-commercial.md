@@ -172,7 +172,21 @@ This sheet lists the additional URL endpoint services still required for older W
 
 Lists the additional URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent (Windows 7, Windows 8.1, Windows Server 2008 R2, servers not upgraded to Unified Agent - see https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/update-agent-mma-windows for more information).
 
-
+|Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
+|---|---|---|---|---|
+|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required only for devices onboarded using the MMA/LAA, not applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016 (see URLs tab). Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).|
+||443|winatp-gw-aus.microsoft.com|||
+|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com|||
+||443|winatp-gw-weu.microsoft.com|||
+||443|winatp-gw-neu3.microsoft.com|||
+||443|winatp-gw-weu3.microsoft.com|||
+|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com|||
+||443|winatp-gw-ukw.microsoft.com|||
+|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com|||
+||443|winatp-gw-eus.microsoft.com|||
+||443|winatp-gw-cus3.microsoft.com|||
+||443|winatp-gw-eus3.microsoft.com|||
+|Microsoft Monitoring Agent (MMA) / EDR Cyberdata|443|*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net|Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016||
 
 ## Microsoft Defender processes
 
