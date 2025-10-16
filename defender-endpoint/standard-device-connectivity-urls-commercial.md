@@ -144,3 +144,26 @@ Required for Mac and Linux platforms"|
 |Microsoft Defender for Endpoint|WW|https://onboardingpackagescusprd.blob.core.windows.net|Microsoft Defender Security Center Portal URL|
 |Microsoft 365 Defender|WW|https://security.microsoft.com|Microsoft 365 Defender Portal URL|
 
+## Microsoft Defender processes
+
+## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+
+|Process|Path|Comment|
+|-------|----|-------|
+|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
+|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
+|MpDefenderCoreService.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Core Service|
+|MpDlpService.exe|C:\Program Files\Windows Defender|Microsoft Purview Data Loss Prevention Service|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
+|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
+|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
+|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
+|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
+|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
+|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
+|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
+|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
+
