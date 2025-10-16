@@ -168,6 +168,10 @@ This sheet lists the additional URL endpoint services still required for older W
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
 
+## Windows 7, 8.1, 2008R2 (MMA)
+
+Lists the additional URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent (Windows 7, Windows 8.1, Windows Server 2008 R2, servers not upgraded to Unified Agent - see https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/update-agent-mma-windows for more information).
+
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
