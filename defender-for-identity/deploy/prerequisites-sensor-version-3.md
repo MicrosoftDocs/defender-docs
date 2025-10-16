@@ -14,10 +14,10 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 Before activating the Defender for Identity sensor v3.x, note that this version of the sensor is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
-- Requires that Defender for Endpoint is deployed
- - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed
- - Doesn't currently support VPN integration
- - Doesn't currently support ExpressRoute
+- Requires that Defender for Endpoint is deployed and that the WDAV (Windows Defender Antivirus) component runs in either active or passive mode.
+ - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
+ - Doesn't currently support VPN integration.
+ - Doesn't currently support ExpressRoute.
  - Doesn't currently offer full functionality of health alerts, posture recommendations, security alerts or advanced hunting data.
 
 ## Licensing requirements
