@@ -22,7 +22,7 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).
+This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ This article includes a list of the streamlined connectivity URLs required to on
 - Windows 11
 - Windows Server 2019
 - Windows Server 2022
-- Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through MSI) released in 2022
+- Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through Microsoft Installer) released in 2022
 - macOS supported versions with Defender for Endpoint product version 101.24022.*+
 - Linux supported versions with Defender for Endpoint product version 101.24022.*+
 
@@ -58,11 +58,11 @@ App/product version (macOS/Linux): 101.24022.*+
 ### URLs used for core functionality
 
 > [!NOTE]
-> Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding may be  unsuccessful. You may re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
+> Make sure your devices meet all component: app/antimalware platform, engine, Endpoint detection and response (EDR) sensor, update versions and OS requirements. Otherwise onboarding may be unsuccessful. You may re-onboard devices to switch them to streamlined connectivity if they meet these requirements.
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
-|Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core MDE services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
+|Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core Defender for Endpoint services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
 |Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
 |SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
 
@@ -75,7 +75,7 @@ App/product version (macOS/Linux): 101.24022.*+
 |-|-|-|-|-|-|-|
 |Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing/upgrading Linux installations using a different method|Linux|
 |Mac app/platform updates|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - product updates for macOS|Required|Optional if distributing/upgrading macOS installations using a different method. Leverages the Microsoft AutoUpdate app also used for updating other Microsoft apps such as Office for Mac.|macOS|
-|Windows/Mac/Linux security intelligence updates  Windows antimalware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com definitionupdates.microsoft.com https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows antimalware platform updates. Linux and macOS clients use this location as the primary download location.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  Windows clients use this location as an alternative ("MMPC") or as a fallback location when other configured sources fail, and retrieves update packages as determined by the redirection logic.|All|
+|Windows/Mac/Linux security intelligence updates  Windows antimalware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com definitionupdates.microsoft.com https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows antimalware platform updates. Linux and macOS clients use this location as the primary download location.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  Windows clients use this location as an alternative - Microsoft Malware Protection Center (MMPC) - or as a fallback location when other configured sources fail, and retrieves update packages as determined by the redirection logic.|All|
 |Windows security intelligence and antimalware platform updates, product updates to EDR sensors.   (when using Microsoft/Windows update as the source/method)|443|*.update.microsoft.com *.delivery.mp.microsoft.com *.windowsupdate.com *.download.windowsupdate.com *.download.microsoft.com|Security intelligence and antimalware platform updates, when the client is configured to download Defender updates from Windows Update, will be downloaded as they become available.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  EDR sensor updates always come as part of regular Windows update release cadence/cycle. EDR logic updates come directly from Defender cloud (command and control). For Windows Server 2012 R2 and 2016, KB5005292 is the update package used to perform periodic updates to the EDR sensor stack.|Windows|
 
 ## URLs used for certificate validation checks 
@@ -85,7 +85,7 @@ App/product version (macOS/Linux): 101.24022.*+
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
-|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the CRL|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|Windows|
+|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the certificate revocation list (CRL)|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|Windows|
 |||ctldl.windowsupdate.com|Expands on the existing automatic root update mechanism technology to let certificates that are compromised or untrusted be specifically flagged as untrusted|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
 |||crl.microsoft.com|Certificate Revocation Lists - required to validate certificates|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
 
@@ -107,13 +107,13 @@ If you are using Microsoft Defender for Cloud or Intune with the **auto from con
 
 > [!NOTE]
 > The EDR Cyberdata service (OneDsCollector) is not included under the IP adressess under the ""MicrosoftDefenderForEndpoint"" service tag. The IP ranges from both service tags are needed to allow connectivity.
-It is recommended to subscribe to the MDE Azure service tag to stay up to date on any potential IP address changes: https://azureipranges.azurewebsites.net/
+It is recommended to subscribe to the Defender for Endpoint Azure service tag to stay up to date on any potential IP address changes: https://azureipranges.azurewebsites.net/
 
 Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azureipranges.azurewebsites.net/).
 
 |Service Tag Name|Defender for Endpoint services included|Comments|
 |---|---|---|
-|MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core MDE services. Prerequisites must be met to ensure successful connections.|
+|MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core Defender for Endpoint services. Prerequisites must be met to ensure successful connections.|
 |OneDsCollector (EDR Cyberdata)|EDR Cyber data (may include diagnostic data for other Microsoft services)|Cyber data channel. Prerequisites must be met to ensure successful connections.|
 
 ## Windows 1607 to 1803
@@ -174,7 +174,7 @@ Lists the additional URL endpoint services required for devices using Defender f
 
 |Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
 |---|---|---|---|---|
-|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required only for devices onboarded using the MMA/LAA, not applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016 (see URLs tab). Perform these steps to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).|
+|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required only for devices onboarded using the MMA/LAA, not applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016 (see URLs tab). Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
 ||443|winatp-gw-aus.microsoft.com|||
 |Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com|||
 ||443|winatp-gw-weu.microsoft.com|||
@@ -210,7 +210,7 @@ Lists the URL endpoints required for administrative/security operations access t
 |Process|Path|Comment|
 |-------|----|-------|
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
