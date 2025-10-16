@@ -81,11 +81,11 @@ App/product version (macOS/Linux): 101.24022.*+
 ## URLs used for certificate validation checks 
 
 > [!NOTE]
-> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. This means the operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. Read more at https://learn.microsoft.com/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates for more information about management of trusted root certificates in disconnected environments.
+> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. This means the operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. Read more at /windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates for more information about management of trusted root certificates in disconnected environments.
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
-|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/* www.microsoft.com/pki/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|Windows|
+|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the CRL|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|Windows|
 |||ctldl.windowsupdate.com|Expands on the existing automatic root update mechanism technology to let certificates that are compromised or untrusted be specifically flagged as untrusted|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
 |||crl.microsoft.com|Certificate Revocation Lists - required to validate certificates|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
 
@@ -171,6 +171,8 @@ This sheet lists the additional URL endpoint services still required for older W
 ## Windows 7, 8.1, 2008R2 (MMA)
 
 Lists the additional URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent (Windows 7, Windows 8.1, Windows Server 2008 R2, servers not upgraded to Unified Agent - see https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/update-agent-mma-windows for more information).
+
+
 
 ## Microsoft Defender processes
 
