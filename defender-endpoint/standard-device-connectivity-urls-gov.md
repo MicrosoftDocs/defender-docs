@@ -62,7 +62,6 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|Microsoft Defender Security Center Portal URL|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
 
-
 ## Microsoft Defender processes
 
 The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list does not account for any other Windows communications requirements. 
@@ -70,8 +69,24 @@ The processes in this section are exclusively for Microsoft Defender for Endpoin
 For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
 
 While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
-## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
 
+## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+|Process|Path|Comment|
+|-------|----|-------|
+|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
+|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
+|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
+|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
+|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
+|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
+|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
+|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
+|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
+|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
 
 
 ## Windows Server 2016 and Windows Server 2012 R2 (Unified Agent)
