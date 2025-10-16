@@ -62,7 +62,7 @@ Safe Links protection by Safe Links policies is available in the following locat
   > - Safe Links ignores S/MIME signed messages.
   > - Safe Links no longer wraps URLs pointing to SharePoint or OneDrive sites, but the URLs are still processed by the Safe Links service. This change doesn't degrade protection. Instead, it improves the performance of loading SharePoint or OneDrive URLs.
   > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
- 
+
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
   For more information about Safe Links protection in Teams, see the [Safe Links settings for Microsoft Teams](#safe-links-settings-for-microsoft-teams) section later in this article.

@@ -101,7 +101,7 @@ The bulk senders insight is available in the following locations:
 - On the **Email & collaboration reports and insights** page:
 
   1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** section \> **Email & collaboration reports and insights**. Or, to go directly to the **Email & collaboration reports and insights** page, use <https://security.microsoft.com/emailandcollabreport>.
-  
+
   2. On the **Email & collaboration reports and insights** page, go to the **Email & collaboration insights** section and find the **Bulk senders insight**.
 
   :::image type="content" source="media/insights-page-bulk-senders-insight.png" alt-text="The bulk senders insight on the Email & collaboration reports and insights page in the Microsoft Defender portal." lightbox="media/insights-page-bulk-senders-insight.png":::
