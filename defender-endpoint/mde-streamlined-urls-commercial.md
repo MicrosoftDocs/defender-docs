@@ -109,7 +109,12 @@ If you are using Microsoft Defender for Cloud or Intune with the **auto from con
 > The EDR Cyberdata service (OneDsCollector) is not included under the IP adressess under the ""MicrosoftDefenderForEndpoint"" service tag. The IP ranges from both service tags are needed to allow connectivity.
 It is recommended to subscribe to the MDE Azure service tag to stay up to date on any potential IP address changes: https://azureipranges.azurewebsites.net/
 
+Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azureipranges.azurewebsites.net/).
 
+|Service Tag Name|Defender for Endpoint services included|Comments|
+|---|---|---|
+|MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core MDE services. Prerequisites must be met to ensure successful connections.|
+|OneDsCollector (EDR Cyberdata)|EDR Cyber data (may include diagnostic data for other Microsoft services)|Cyber data channel. Prerequisites must be met to ensure successful connections.|
 
 ## Microsoft Defender processes
 
