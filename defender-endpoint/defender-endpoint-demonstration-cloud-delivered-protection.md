@@ -55,7 +55,7 @@ Cloud-delivered protection for Microsoft Defender Antivirus, also referred to as
 
    :::image type="content" source="media/cloud-delivered-protection-smartscreen-block-view-downloads.png" alt-text="Lists the download as unsafe, but provides an option to proceed with the download":::
 
-4. You should see that "Microsoft Defender Antivirus" found a virus and deleted it.
+4. Navigate to the location where the file was downloaded. Attempt to open or execute the file by double clicking it. You should see that Microsoft Defender Antivirus found a virus and deleted the file.
 
    > [!NOTE]
    >
