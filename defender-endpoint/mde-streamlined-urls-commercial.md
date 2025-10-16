@@ -170,7 +170,7 @@ This sheet lists the additional URL endpoint services still required for older W
 
 ## Windows 7, 8.1, 2008R2 (MMA)
 
-Lists the additional URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent (Windows 7, Windows 8.1, Windows Server 2008 R2, servers not upgraded to Unified Agent - see https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/update-agent-mma-windows for more information).
+Lists the additional URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent (Windows 7, Windows 8.1, Windows Server 2008 R2, servers not upgraded to Unified Agent - see [Updating MMA on Windows devices for Microsoft Defender for Endpoint](update-agent-mma-windows.md).
 
 |Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
 |---|---|---|---|---|
@@ -194,7 +194,7 @@ Lists the URL endpoints required for administrative/security operations access t
 
 |URL|Comment|
 |---|---|
-|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages (https://onboardingpackagescusprd.blob.core.windows.net) and files retrieved from devices.|
+|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - https://onboardingpackagescusprd.blob.core.windows.net and files retrieved from devices.|
 |https://*.microsoftonline-p.com|Used for signing into the portal with Entra ID|
 |https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Entra ID|
 |https://static2.sharepointonline.com|Used for signing into the portal with Entra ID|
