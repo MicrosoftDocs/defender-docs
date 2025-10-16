@@ -151,7 +151,7 @@ The following table lists the security controls in Microsoft Defender for Cloud.
 
 ::: zone pivot="defender-portal"
 
-# Cloud secure score in the Defender portal
+## Cloud secure score in the Defender portal
 
 The secure score in Microsoft Defender for Cloud can help you improve your cloud security posture. The secure score aggregates security findings into a single score so that you can assess, at a glance, your current security situation. The higher the score, the lower the identified risk level is.
 

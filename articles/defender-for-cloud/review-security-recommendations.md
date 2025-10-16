@@ -68,7 +68,7 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
 1. Select a recommendation to review detailed information including remediation steps, attack surface map, related initiatives, and associated CVEs.
    
-   :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-sidepane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-sidepane.png":::
+   :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 
 Alternative access paths to recommendations:

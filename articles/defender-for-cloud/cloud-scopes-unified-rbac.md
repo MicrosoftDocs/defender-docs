@@ -9,9 +9,9 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
 ---
 
-::: zone pivot="Defender-portal"
-
 # Manage cloud scopes and unified role-based access control
+
+::: zone pivot="defender-portal"
 
 Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP and connected DevOps / registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
 - Centralized, product-wide security permissions management
