@@ -106,6 +106,7 @@ While this list will continue to be updated, Microsoft cannot provide any guaran
 |SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
 
 ## Windows 8.1 and Windows Server 2016 (MMA Based)
+
 |Path|Comment|
 |-|-|
 |C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
