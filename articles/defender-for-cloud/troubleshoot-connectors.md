@@ -89,7 +89,7 @@ To get the number of calls, go to the Athena table or the event data store and u
 
   ```sql
   SELECT awsRegion, COUNT(*) AS apiCallsCountByRegion FROM <TABLE-NAME> 
-  WHERE userIdentity.arn LIKE 'arn:aws:sts::120589537074:assumed-role/CspmMonitorAws/MicrosoftDefenderForClouds_<YOUR-AZURE-TENANT-ID>' 
+  WHERE userIdentity.arn LIKE 'arn:aws:sts::<YOUR-ACCOUNT-ID>:assumed-role/CspmMonitorAws/MicrosoftDefenderForClouds_<YOUR-AZURE-TENANT-ID>' 
   AND eventTime > TIMESTAMP '<DATETIME>' GROUP BY awsRegion
   ```
 

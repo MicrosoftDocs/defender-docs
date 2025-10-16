@@ -1,9 +1,8 @@
 ---
 title: Latest updates in the regulatory compliance dashboard | Defender for Cloud in the Field
-
 description: Learn about the latest updates in the regulatory compliance dashboard
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 10/05/2025
 ---
 
 # Latest updates in the regulatory compliance dashboard| Defender for Cloud in the Field

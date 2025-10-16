@@ -66,7 +66,7 @@ To export security alerts to Splunk and QRadar, you need to use Event Hubs and a
 
 Before you set up the Azure services for exporting alerts, make sure you have:
 
-- Azure subscription ([Create a free account](https://azure.microsoft.com/free/))
+- Azure subscription ([Create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Azure resource group ([Create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal))
 - **Owner** role on the alerts scope (subscription, management group or tenant), or these specific permissions:
   - Write permissions for event hubs and the Event Hubs Policy
