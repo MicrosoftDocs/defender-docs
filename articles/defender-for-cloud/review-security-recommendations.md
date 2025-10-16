@@ -184,6 +184,8 @@ The unified experience ensures that cloud security recommendations are contextua
 
 ::: zone-end
 
+::: zone pivot="azure-portal"
+
 ## Group recommendations by title
 
 You can group recommendations by title with the Defender for Cloud recommendation page. This feature is useful when you want to remediate a recommendation that affects multiple resources due to a specific security issue.
@@ -265,6 +267,8 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
    :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
 
 1. Review the results.
+
+::: zone-end
 
 ## How are recommendations classified?
 
