@@ -96,6 +96,21 @@ App/product version (macOS/Linux): 101.24022.*+
 |Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service cannot be used through a proxy.|Optional|Improves live response connection initiation speed (Direct Connection/Proxy bypass required) on Windows client (non-server) operating systems|Windows|
 |Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and above and Windows Server 2012 and above|Windows|
 
+## IP addresses
+
+The following Defender for Endpoint-dedicated, static IP ranges can be used as an alternative to URLs in certain scenarios without hostname resolution capability.
+
+> [!NOTE]
+> Please make sure to keep connectivity with other required services (i.e. SmartScreen, Windows Update, CRL etc.) or use an alternative approach (such as updating using ConfigMgr, WSUS, file share methods) to apply updates or to support web browsing security.  See the Common endpoints tab for more details, and ensure devices are running an operating system version and client component update level that supports streamlined connectivity.
+
+If you are using Microsoft Defender for Cloud or Intune with the **auto from connector** option to onboard new devices, ensure to toggle on the **Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud** in advanced settings on security.microsoft.com. Servers already onboarded will not automatically switch to using the new destinations as defined in the Azure service tags so ensure they can connect to the previous Standard destinations, or re-onboard them to reconfigure them to be able to use the new service tags/IP addresses.
+
+> [!NOTE]
+> The EDR Cyberdata service (OneDsCollector) is not included under the IP adressess under the ""MicrosoftDefenderForEndpoint"" service tag. The IP ranges from both service tags are needed to allow connectivity.
+It is recommended to subscribe to the MDE Azure service tag to stay up to date on any potential IP address changes: https://azureipranges.azurewebsites.net/
+
+
+
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
