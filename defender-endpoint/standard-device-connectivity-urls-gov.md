@@ -44,6 +44,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.us|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||
 
 ## Security center URLs
+
 |Service|Geography|URL|Comment|
 |---|---|---|---|
 |Microsoft Defender for Endpoint|US Gov|*.blob.core.usgovcloudapi.net|Microsoft Defender Security Center Portal URL|
