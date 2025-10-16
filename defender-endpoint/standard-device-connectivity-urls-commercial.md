@@ -146,6 +146,12 @@ Required for Mac and Linux platforms"|
 
 ## Microsoft Defender processes
 
+The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list does not account for any other Windows communications requirements. 
+
+For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
+
+While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+
 ## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
 
 |Process|Path|Comment|
@@ -181,3 +187,16 @@ Required for Mac and Linux platforms"|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 |SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
+
+## Windows 8.1 and Windows Server 2016 (MMA Based)
+
+|Process|Path|Comment|
+|-------|----|-------|
+|MonitoringHost.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
+|HealthService.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
+|TestCloudConnection.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
+|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility (SCEP)|
+|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable (SCEP)|
+|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool (SCEP)|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+
