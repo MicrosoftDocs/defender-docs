@@ -71,6 +71,7 @@ For more information on how to manage Windows connections, see [Manage connectio
 While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
 
 ## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+
 |Process|Path|Comment|
 |-------|----|-------|
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
