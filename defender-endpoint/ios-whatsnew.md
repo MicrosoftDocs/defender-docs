@@ -30,6 +30,18 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## Releases for Defender for Endpoint on iOS
 
+#### October 2025
+
+| Build | 1.1.69250104|
+| -------- | -------- |
+| Release Date | October 7, 2025  |
+
+**What's New**
+
+- Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported.  On iOS, to create and deploy profile, refer - [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings).
+
+- Performance Improvement and Bug fixes.
+
 #### September 2025
 
 | Build| 1.1.68200103 |
