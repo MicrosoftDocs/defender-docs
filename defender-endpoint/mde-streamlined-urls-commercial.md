@@ -188,6 +188,10 @@ Lists the additional URL endpoint services required for devices using Defender f
 ||443|winatp-gw-eus3.microsoft.com|||
 |Microsoft Monitoring Agent (MMA) / EDR Cyberdata|443|*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net|Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016||
 
+## Defender portal URLs
+
+Lists the URL endpoints required for administrative/security operations access the Microsoft Defender Security portals. These do not need to be accessible to all devices.
+
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
