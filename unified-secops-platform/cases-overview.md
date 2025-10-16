@@ -120,7 +120,7 @@ Add tasks to manage granular components of your cases. Each task comes with its 
 
 Linking a case to other objects in your environment helps your SecOps teams understand the broader context of a threat. You can link cases to incidents or [indicators of compromise (IoCs)](/defender-endpoint/indicators-overview).
 
-#### Linked incidents
+#### Link incidents
 
 Linking a case and an incident helps your SecOps teams collaborate in the method that works best for them. For example, a threat hunter who finds malicious activity creates an incident for the incident response (IR) team. That threat hunter links the incident to a case so it's clear they're related. Now the IR team understands the context of the hunt that found the activity.
 
@@ -130,7 +130,7 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
-#### Linked indicators
+#### Link indicators
 
 Linking a case to relevant indicators of compromise (IOCs) helps your SecOps teams understand the broader context of a threat.
 
