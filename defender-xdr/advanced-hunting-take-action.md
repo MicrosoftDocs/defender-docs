@@ -106,6 +106,20 @@ Apart from device-focused remediation steps, you can also take some actions on e
    | project NetworkMessageId,RecipientEmailAddress, EmailDirection, SenderFromAddress, LatestDeliveryAction,LatestDeliveryLocation
    ```
 
+- `Submit to Microsoft` - select this action to submit False positives or False negative emails to Microsoft. As part of the submission, you can also add URLs, Senders and their domains to Tenant block/allow lists (TABL) to immediatley resolve the issue while Microsoft works on the submission.
+
+  TABL for URLs is only supported if the query result has `Url` column by joining with `EmailUrlInfo` table on `NetworkMessageId`.
+
+   Submit to Microsoft checkbox can be disabled in cases where mandatory columns are missing. To resolve this, click on Show Empty columns and Take actions. 
+
+   :::image type="content" source="media/submit-to-microsoft.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/submit-to-microsoft.png":::
+  
+- `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient or contact recipients.
+
+   Initiate automated investigation checkbox can be disabled in cases where mandatory columns are missing. To resolve this, click on Show Empty columns and Take actions. 
+
+   :::image type="content" source="media/initiate-automated-investigation.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/submit-to-microsoft.png":::
+
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
 
 :::image type="content" source="media/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/choose-email-actions-entities.png":::
