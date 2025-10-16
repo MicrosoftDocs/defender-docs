@@ -33,7 +33,6 @@ When aggregated reporting is turned on, you can query for a summary of all suppo
 
 The following requirements must be met before turning on aggregated reporting:
 
-- Defender for Endpoint Plan 2 license
 - Permissions to enable advanced features
 
 
