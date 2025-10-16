@@ -4,7 +4,7 @@ description: Compare Microsoft Defender for Cloud features and capabilities betw
 author: dlanger
 ms.author: dlanger
 ms.topic: conceptual
-ms.date: 09/03/2025
+ms.date: 10/16/2025
 ms.service: defender-for-cloud
 zone_pivot_groups: defender-portal-experience
 ---
@@ -22,7 +22,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 
 ## Feature comparison matrix
 
-### Dashboard and Overview
+### Dashboard and overview
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -31,7 +31,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Secure Score** | Azure-focused scoring | Contextual Cloud Secure Score | Risk-based scoring with exposure context, cross-cloud calculation |
 | **Alerts Dashboard** | Basic alert listing | Integrated with Microsoft Security | Cross-solution correlation, unified incident management |
 
-### Attack Path Analysis
+### Attack path analysis
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -40,7 +40,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Path Correlation** | Azure-focused paths | Cross-cloud and cross-solution paths | Integration with endpoint data, identity insights |
 | **Remediation Tracking** | Basic recommendations | Integrated remediation workflows | Incident correlation, progress tracking across solutions |
 
-### Vulnerability Management
+### Vulnerability management
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -49,7 +49,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Remediation Guidance** | Basic recommendations | Contextual remediation with risk impact | Business context, attack path integration |
 | **Reporting** | Azure-focused reports | Unified vulnerability reporting | Cross-cloud visibility, executive dashboards |
 
-### Access Management and Scoping
+### Access management and scoping
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -58,7 +58,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Permission Management** | Separate per-service configuration | Centralized permissions management | Single pane for multi-solution access |
 | **Filtering** | Basic Azure filters | Advanced scope-based filtering | Persistent filtering, workload-context aware |
 
-### Notifications and Integration
+### Notifications and integration
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -67,7 +67,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Incident Management** | Azure-focused incidents | Unified incident management | Cross-solution correlation, automated workflows |
 | **API Access** | Azure REST APIs | Unified security APIs | Cross-solution data access, enhanced querying |
 
-### Advanced Analytics
+### Advanced analytics
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -76,7 +76,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Investigation** | Basic Azure resource investigation | Advanced cross-solution investigation | Timeline analysis, entity correlation |
 | **Response Actions** | Limited to Azure actions | Unified response capabilities | Cross-solution automated response |
 
-### Exposure Management
+### Exposure management
 
 | Feature | Azure Portal | Defender Portal | Enhanced Capabilities in Defender Portal |
 |---------|--------------|-----------------|----------------------------------------|
@@ -85,15 +85,17 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | **Recommendations** | Basic security recommendations | Risk-based recommendations | Exposure context, business impact assessment |
 | **Score History** | Limited historical data | Comprehensive score trending | 6-month historical analysis, trend insights |
 
-## Navigation and User Experience
+## Navigation and user experience
 
-### Azure Portal Navigation
+### Azure portal navigation
+
 - Integrated within Azure portal structure
 - Follows Azure resource management patterns
 - Azure-centric terminology and workflows
 - Limited cross-cloud visibility
 
-### Defender Portal Navigation
+### Defender portal navigation
+
 - Dedicated security-focused navigation
 - Unified security terminology
 - Cross-solution integration points
@@ -101,13 +103,15 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 
 ## When to use each experience
 
-### Use Azure Portal when:
+### Use Azure portal when:
+
 - Managing Azure-specific resources and configurations
 - Working primarily within Azure ecosystem
 - Need tight integration with Azure resource management
 - Performing basic security posture assessments
 
-### Use Defender Portal when:
+### Use Defender portal when:
+
 - Managing multi-cloud security environments
 - Requiring advanced threat hunting capabilities
 - Need unified incident response across solutions
@@ -117,13 +121,15 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 
 ## Migration considerations
 
-### Transitioning to Defender Portal
+### Transitioning to Defender portal
+
 1. **Gradual Adoption**: Start with enhanced features like attack paths and asset management
 2. **Training**: Familiarize teams with new navigation and enhanced capabilities
 3. **Access Control**: Configure cloud scopes and unified RBAC for your organization
 4. **Integration**: Update SIEM and automation tools to leverage enhanced APIs
 
-### Maintaining Hybrid Usage
+### Maintaining hybrid usage
+
 - Both experiences can be used simultaneously
 - Zone pivots in documentation provide seamless switching
 - Data and configurations are synchronized between experiences
@@ -132,6 +138,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 ## Feature roadmap
 
 The Defender portal represents the future direction for Microsoft Defender for Cloud, with ongoing enhancements including:
+
 - Enhanced cross-solution correlation
 - Advanced AI-powered analytics
 - Expanded cloud scope capabilities
