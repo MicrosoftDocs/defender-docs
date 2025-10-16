@@ -168,17 +168,17 @@ items:
        href: identity-security-initiative.md
      - name: Overview
        href: security-assessment.md
-     - name: Hybrid security 
+     - name: Hybrid security posture assessments
        href: \security posture assessments\hybrid-security.md
-     - name: Identity infrastructure
+     - name: Identity infrastructure security posture assessments
        href: \security posture assessments\identity-infrastructure.md
-     - name: Certificates
+     - name: Certificates security posture assessments
        href: \security posture assessments\certificates.md
-     - name: Group policy 
+     - name: Group policy security posture assessments
        href: \security posture assessments\group-policy.md
-     - name: Accounts
+     - name: Accounts security posture assessments
        href: \security posture assessments\accounts.md
-     - name: Cloud identities
+     - name: Cloud identities security posture assessments
        href: \security posture assessments\cloud-identities.md
 - name: Reference
   items:
