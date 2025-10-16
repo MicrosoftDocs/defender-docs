@@ -39,6 +39,45 @@ Cloud scopes and unified role-based access control (unified RBAC) in the Microso
 - Maintain consistent contextual filtering while navigating experiences
 - Separate operational security permissions from Azure management constructs
 
+## What are cloud scopes?
+
+Cloud scopes are tenant-level logical groupings of heterogeneous cloud environment primitives (Azure subscriptions, AWS accounts, GCP projects, DevOps organizations, container registries, artifact repositories, and more). Instead of mirroring just one provider’s native hierarchy, a cloud scope lets you assemble only the environments that matter for a specific operational or business purpose—then use that grouping consistently for:
+- Permission (unified RBAC) assignment
+- Data filtering across inventory, posture, vulnerabilities, initiatives, attack paths, and map
+- Reporting and delegated ownership boundaries
+
+Key properties:
+- Multicloud & multi–data source: A single scope can mix Azure + AWS + GCP + DevOps/org registry sources.
+- Non-hierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
+- Many‑to‑many: An environment can belong to multiple scopes; a scope can contain unlimited environments.
+- Manual membership control: Newly connected environments aren’t auto-added—preventing accidental privilege expansion.
+- Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
+
+How scopes differ from device groups:
+- Device groups focus on endpoint / machine-centric segmentation (historically for Defender for Endpoint & VM scenarios).
+- Cloud scopes span broader cloud resource and exposure contexts (posture, attack paths, multicloud asset inventory).
+- Experiences may present both; each category applies where semantically relevant (for example, Devices tab vs Cloud tab).
+
+Common design patterns for creating scopes:
+- Business unit or division (Finance, Retail, R&D)
+- Application / product line (Payments-Service, Mobile-App)
+- Environment stage (Production, Staging, Test)
+- Regional / regulatory boundary (EU-Data-Residency, US-HIPAA)
+- M&A or isolated initiative (AcquiredCo-Integration)
+- High-value / sensitive workloads (Crown-Jewels)
+
+Relationship to unified RBAC:
+- Unified RBAC roles reference one or more scopes (or “All”).
+- A user’s effective cloud data visibility and permitted actions are the union of all scopes tied to their assigned roles.
+- Scope changes (adding or removing environments) immediately alter access for users relying on that scope.
+- Least privilege: Granularity allows narrowing powerful permissions (for example, response or manage) to only the intended environments.
+
+Planning guidance:
+1. Start coarse (major org / region boundaries).
+2. Validate operational ownership and review cadence.
+3. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+4. Document purpose + owner for each scope to support lifecycle and audit.
+
 ## Prerequisites
 
 - Global Admin or Security Admin (for configuration)
