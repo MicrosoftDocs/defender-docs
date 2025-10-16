@@ -68,7 +68,7 @@ By default, when you enable Defender for Cloud, the following standards are enab
 
 The following standards are available in Defender for Cloud:
 
-|Standards|Clouds|
+|Standard|Clouds|
 |------------|--------|
 | APRA CPS 234 2019 | Azure, AWS |
 | Australian Government ISM Protected | Azure |
@@ -102,7 +102,7 @@ The following standards are available in Defender for Cloud:
 | FFIEC CAT 2017 | Azure, AWS, GCP |
 | HIPAA | Azure |
 | HITRUST CSF v11.3.0 | Azure, AWS, GCP |
-| HiTrust v11.3 | Azure, AWS (Preview) |
+| HiTrust v11.3 | Azure, AWS |
 | ISO IEC 27001:2022 | Azure, AWS, GCP |
 | ISO IEC 27002:2022 | Azure, AWS, GCP |
 | ISO IEC 27017:2015 | Azure, AWS, GCP |
@@ -110,7 +110,7 @@ The following standards are available in Defender for Cloud:
 | NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
 | NIST 800 171 Rev3 | Azure, AWS, GCP |
 | NIST CSF v2.0 | Azure, AWS, GCP |
-| NIST SP 800 53 R5 | AWS (Preview) |
+| NIST SP 800 53 R5 | AWS |
 | NIST SP 800 53 R5.1.1 | Azure, AWS, GCP |
 | NIST SP 800 172 2021 | AWS, GCP |
 | NZISM v3.7 | Azure, AWS, GCP |
@@ -122,9 +122,9 @@ The following standards are available in Defender for Cloud:
 | SOC 2 | Azure, GCP |
 | Spanish ENS | Azure |
 | SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
-| SWIFT CSP-CSCF v2020 | Global |
+| SWIFT CSP-CSCF v2020 | Azure, AWS, GCP |
 | UK OFFICIAL and UK NHS | Azure |
-| Reserve Bank of India - IT Framework for NBFC | Global |
+| Reserve Bank of India - IT Framework for NBFC | Azure, AWS, GCP |
 
 ## Related content
 
