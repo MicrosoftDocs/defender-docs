@@ -136,11 +136,11 @@ Required for Mac and Linux platforms"|
 |---|---|---|---|
 |Microsoft Defender for Endpoint|WW|*.blob.core.windows.net|Microsoft Defender Security Center Portal URL|
 |Microsoft Defender for Endpoint|WW|crl.microsoft.com|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://*.microsoftonline-p.com](https://*.microsoftonline-p.com)|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://secure.aadcdn.microsoftonline-p.com](https://secure.aadcdn.microsoftonline-p.com)|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://static2.sharepointonline.com](https://static2.sharepointonline.com)|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://login.microsoftonline.com](https://login.microsoftonline.com)|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://*.securitycenter.windows.com](https://*.securitycenter.windows.com)|Microsoft Defender Security Center Portal URL|
-|Microsoft Defender for Endpoint|WW|[https://onboardingpackagescusprd.blob.core.windows.net](https://onboardingpackagescusprd.blob.core.windows.net)|Microsoft Defender Security Center Portal URL|
-|Microsoft 365 Defender|WW|[https://security.microsoft.com](https://security.microsoft.com)|Microsoft 365 Defender Portal URL|
+|Microsoft Defender for Endpoint|WW|https://*.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|WW|https://secure.aadcdn.microsoftonline-p.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|WW|https://static2.sharepointonline.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|WW|https://login.microsoftonline.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|WW|https://*.securitycenter.windows.com|Microsoft Defender Security Center Portal URL|
+|Microsoft Defender for Endpoint|WW|https://onboardingpackagescusprd.blob.core.windows.net|Microsoft Defender Security Center Portal URL|
+|Microsoft 365 Defender|WW|https://security.microsoft.com|Microsoft 365 Defender Portal URL|
 
