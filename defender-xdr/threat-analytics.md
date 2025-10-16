@@ -5,10 +5,10 @@ description: Learn about emerging threats and attack techniques and how to stop 
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: guywild
-author: guywi-ms
+ms.author: poliveria
+author: pauloliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security 
@@ -20,11 +20,10 @@ ms.custom:
 - cx-ta
 - seo-marvel-apr2020
 search.appverid: met150
-ms.date: 04/17/2025
+ms.date: 10/22/2025
 ---
 
 # Threat analytics in Microsoft Defender XDR
-
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -62,13 +61,13 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 To access Threat analytics in the Defender portal, you need to have a license for at least one Microsoft Defender XDR product. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
 
 >[!NOTE]
-> The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and will not grant Threat analytics access.
+> The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and won't grant Threat analytics access.
 
 The following roles and permissions are also required to access Threat analytics: 
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
 - **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
-By default, access to services available in the Defender portal are managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
+By default, access to services available in the Defender portal is managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
 
 >[!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -125,6 +124,7 @@ Each threat analytics report provides information in several sections:
 - [**Impacted assets**](#impacted-assets-get-list-of-impacted-devices-users-mailboxes-apps-and-cloud-resources)
 - [**Endpoints exposure**](#endpoints-exposure-know-the-deployment-status-of-security-updates)
 - [**Recommended actions**](#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices)
+- [**Indicators**](#indicators-view-specific-infrastructure-and-evidence-behind-the-threat-preview) (preview)
 
 ### Overview: Quickly understand the threat, assess its impact, and review defenses
 
@@ -199,7 +199,19 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 :::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
 
-## Set up custom detections and link them to Threat analytics reports
+### Indicators: View specific infrastructure and evidence behind the threat (preview)
+
+The **Indicators** tab provides a list of all indicators of compromise (IOCs) associated with the threat. These IOCs are updated in real time as Microsoft researchers find new evidence related to the threat, aiding your security operations center (SOC) and threat intelligence analysts in remediation and proactive hunting. The list also retains expired IOCs, offering you historical hunting capabilities to investigate past threats and understand their impact in your environment.
+
+[Screenshot]
+
+>[!IMPORTANT]
+>Only verified customers can access the information in the Indicators tab. If you don't have access to this information, you need to verify your account. [Learn more about getting access to IOCs](threat-analytics-indicators.md)
+
+## Stay updated with the latest reports and threat intelligence
+Threat analytics leverages and integrates various Microsoft Defender features to keep you and your SOC team updated whenever a new report or new piece of threat intelligence relevant to your environment becomes available. 
+
+### Set up custom detections and link them to Threat analytics reports
 
 You can set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-provide-alert-details) and link them to Threat analytics reports. If these rules get triggered and an alert generates an incident, the report shows up in that incident and the incident appears under the **Related incidents** tab, just like any other Microsoft-defined detection. 
 
@@ -207,9 +219,9 @@ You can set up [custom detection rules](custom-detection-rules.md#2-create-new-r
 
 [Learn more about creating and managing custom detections rules](custom-detection-rules.md)
 
-## Set up email notifications for report updates
+### Set up email notifications for report updates
 
-You can set up email notifications that will send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
+You can set up email notifications that send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
 
 ## Other report details and limitations
 

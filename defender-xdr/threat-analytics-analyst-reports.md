@@ -7,10 +7,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
 - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -20,7 +20,7 @@ ms.custom:
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-ms.date: 10/18/2024
+ms.date: 10/22/2025
 ---
 
 # Understand the analyst report in threat analytics in Microsoft Defender XDR
@@ -30,8 +30,6 @@ ms.date: 10/18/2024
 **Applies to:**
 
 - Microsoft Defender XDR
-
-[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 Each [threat analytics report](threat-analytics.md) includes dynamic sections and a comprehensive written section called the _analyst report_. To access this section, open the report about the tracked threat and select the **Analyst report** tab.
 
