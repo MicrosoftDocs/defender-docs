@@ -104,7 +104,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
    When you're finished on the **Users, groups, and domains**, select **Next**.
 
 5. On the **Protection settings** page, configure the following settings:
-   - **Message limits** sections: The settings in this section configure the limits for outbound email messages from **Exchange Online** mailboxes:
+   - **Message limits** section: The settings in this section configure the limits for outbound email messages from **Exchange Online** mailboxes:
      - **Set an external message limit**: The maximum number of external recipients per hour.
      - **Set an internal message limit**: The maximum number of internal recipients per hour.
      - **Set a daily message limit**: The maximum total number of recipients per day.
