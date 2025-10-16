@@ -192,6 +192,17 @@ Lists the additional URL endpoint services required for devices using Defender f
 
 Lists the URL endpoints required for administrative/security operations access the Microsoft Defender Security portals. These do not need to be accessible to all devices.
 
+|URL|Comment|
+|---|---|
+|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages (https://onboardingpackagescusprd.blob.core.windows.net) and files retrieved from devices.|
+|https://*.microsoftonline-p.com|Used for signing into the portal with Entra ID|
+|https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Entra ID|
+|https://static2.sharepointonline.com|Used for signing into the portal with Entra ID|
+|https://login.microsoftonline.com|Used for signing into the portal with Entra ID|
+|https://*.securitycenter.windows.com|Microsoft Defender Security Center portal/APIs|
+|https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
+|https://security.microsoft.com|Microsoft Defender XDR admin portal|
+
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
