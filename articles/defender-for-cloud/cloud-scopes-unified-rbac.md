@@ -42,11 +42,13 @@ Cloud scopes and unified role-based access control (unified RBAC) in the Microso
 ## What are cloud scopes?
 
 Cloud scopes are tenant-level logical groupings of heterogeneous cloud environment primitives (Azure subscriptions, AWS accounts, GCP projects, DevOps organizations, container registries, artifact repositories, and more). Instead of mirroring just one provider’s native hierarchy, a cloud scope lets you assemble only the environments that matter for a specific operational or business purpose—then use that grouping consistently for:
+
 - Permission (unified RBAC) assignment
 - Data filtering across inventory, posture, vulnerabilities, initiatives, attack paths, and map
 - Reporting and delegated ownership boundaries
 
 Key properties:
+
 - Multicloud & multi–data source: A single scope can mix Azure + AWS + GCP + DevOps/org registry sources.
 - Non-hierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
 - Many‑to‑many: An environment can belong to multiple scopes; a scope can contain unlimited environments.
@@ -54,11 +56,13 @@ Key properties:
 - Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
 
 How scopes differ from device groups:
+
 - Device groups focus on endpoint / machine-centric segmentation (historically for Defender for Endpoint & VM scenarios).
 - Cloud scopes span broader cloud resource and exposure contexts (posture, attack paths, multicloud asset inventory).
 - Experiences may present both; each category applies where semantically relevant (for example, Devices tab vs Cloud tab).
 
 Common design patterns for creating scopes:
+
 - Business unit or division (Finance, Retail, R&D)
 - Application / product line (Payments-Service, Mobile-App)
 - Environment stage (Production, Staging, Test)
@@ -67,16 +71,18 @@ Common design patterns for creating scopes:
 - High-value / sensitive workloads (Crown-Jewels)
 
 Relationship to unified RBAC:
+
 - Unified RBAC roles reference one or more scopes (or “All”).
 - A user’s effective cloud data visibility and permitted actions are the union of all scopes tied to their assigned roles.
 - Scope changes (adding or removing environments) immediately alter access for users relying on that scope.
 - Least privilege: Granularity allows narrowing powerful permissions (for example, response or manage) to only the intended environments.
 
 Planning guidance:
+
 1. Start coarse (major org / region boundaries).
-2. Validate operational ownership and review cadence.
-3. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
-4. Document purpose + owner for each scope to support lifecycle and audit.
+1. Validate operational ownership and review cadence.
+1. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+1. Document purpose and owner for each scope to support lifecycle and audit.
 
 ## Prerequisites
 
@@ -89,6 +95,7 @@ Planning guidance:
 Navigation: **Settings > Permissions > Microsoft XDR Roles > Scopes > Cloud scopes**.
 
 Characteristics:
+
 - Unlimited scopes
 - A scope can include multiple heterogeneous environments
 - An environment can belong to multiple scopes
@@ -108,10 +115,11 @@ Characteristics:
 ## 2. Activate cloud scopes (one-time)
 
 Before scopes can be used in role assignments, run the activation wizard if prompted. This:
+
 1. Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
-2. Lets you map those roles to chosen cloud scopes
-3. Highlights manage / sensitive permissions (for example: response actions)
-4. Finalizes activation (irreversible; future changes are through normal management)
+1. Lets you map those roles to chosen cloud scopes
+1. Highlights manage / sensitive permissions (for example: response actions)
+1 Finalizes activation (irreversible; future changes are through normal management)
 
 If no device groups or unified RBAC roles exist yet, the wizard may be skipped until needed.
 
@@ -122,6 +130,7 @@ If no device groups or unified RBAC roles exist yet, the wizard may be skipped u
 :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
 
 Guidelines:
+
 - Create at least one scope if none exist
 - Review which roles include manage-level permissions (these extend VM-related capabilities)
 - Approve to complete activation
@@ -131,13 +140,15 @@ Guidelines:
 Navigation: **Settings > Permissions > Microsoft XDR Roles > Roles**.
 
 Permission groups (select one or both):
+
 1. **Security operations** – incidents, alerts, and cloud inventory
-2. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
+1. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
 
 > [!NOTE]
 > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
 
 During the role wizard:
+
 - Choose permission groups
 - Select data sources: All / MDC / Exposure Management (XSPM)
 - Assign users / groups
@@ -154,6 +165,7 @@ During the role wizard:
 ### Scope filter (global)
 
 The scopes filter (cloud scopes + device groups) persists across:
+
 - Recommendations (Cloud tab / Devices tab context)
 - Initiatives
 - Vulnerability management
@@ -163,6 +175,7 @@ The scopes filter (cloud scopes + device groups) persists across:
 - Map view
 
 Behavior:
+
 - Users see only values they are authorized for
 - Device group filtering applies where device-centric data is relevant
 - Mixed experiences apply scope category contextually (for example: Recommendations: device groups affect Devices tab; cloud scopes affect Cloud tab)
@@ -176,6 +189,7 @@ Behavior:
 Purpose: deep investigation, mitigation, remediation focus.
 
 Characteristics:
+
 - Available in cloud initiatives, overview dashboards, cloud inventory, cloud recommendations
 - Shows only permitted environments
 - With no scope selected: lists all accessible environments
@@ -189,6 +203,7 @@ Characteristics:
 ## 5. Ongoing management
 
 After creation and activation you can:
+
 - Add / remove environments from scopes
 - Adjust role assignments
 - Audit usage (who has which scope access)
@@ -223,6 +238,7 @@ After creation and activation you can:
 ## Floating (unscoped) assets
 
 Certain asset types remain globally visible (not scope-bound) due to graph model or missing hierarchical anchors:
+
 - Microsoft Entra ID users and groups
 - GCP users and groups
 - Service principals
