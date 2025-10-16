@@ -30,7 +30,7 @@ To simplify network configuration and management, you can now onboard new device
 
 ## Defender for Endpoint-recognized simplified domain
 
-The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for government devices) consolidates connectivity to the following core Defender for Endpoint services:
+The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for US government devices) consolidates connectivity to the following core Defender for Endpoint services:
 
 - Cloud-delivered protection
 - Malware sample submission storage
@@ -45,7 +45,7 @@ To support network devices without hostname resolution or wildcard support, you 
 > [!NOTE]
 >
 > - The streamlined connectivity method **doesn't change Defender for Endpoint functionality or end-user experience**. Only the URLs or IPs used for service connectivity have changed.
-> - There are no plans to deprecate old service URLs. Devices onboarded with standard connectivity continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us` (for government devices) for future services.
+> - There are no plans to deprecate old service URLs. Devices onboarded with standard connectivity continue to function. Ensure ongoing connectivity to `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us` (for US government devices) for future services.
 > - Service connections use certificate pinning and TLS. Traffic inspection is not supported. Connections are device-initiated, not user-initiated. Enforcing proxy (user) authentication breaks connectivity.
 
 ## Prerequisites
@@ -96,13 +96,9 @@ To support network devices without hostname resolution or wildcard support, you 
 |     Windows Server   2022    |     KB5011497   (March 8, 2022)    |
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
 
-### Additional prerequisites (government devices only)
+### Enable streamlined connectivity for US government environments
 
-To enable streamlined connectivity for US government environments:
-
-1. Ensure your tenant is enrolled in a supported government cloud.
-1. Validate that required endpoints listed in the [connectivity settings](gov.md#required-connectivity-settings) are accessible.
-1. Use the [onboarding script](configure-endpoints-script.md) with the `-UseStreamlinedConnectivity` flag.
+To enable streamlined connectivity for US government environments, use the [onboarding script](configure-endpoints-script.md), and select the **Streamlined** option from the dropdown.
 
 ## Streamlined connectivity process
 
@@ -126,7 +122,7 @@ Streamlined connectivity allows you to use the following option to configure clo
 Configure your environment to allow connections to the simplified Defender for Endpoint domain:
 
 - For commercial devices: `*.endpoint.security.microsoft.com`
-- For government devices: `*.endpoint.security.microsoft.us`
+- For US government devices: `*.endpoint.security.microsoft.us`
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
@@ -151,14 +147,7 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 | `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
 | `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
-The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
-
-|Geo|IP Ranges|
-|------|-------|
-|US|`20.15.141.0/24` <br/> `20.242.181.0/24` <br/>`20.10.127.0/24`<br/>`13.83.125.0/24`|
-|EU|`4.208.13.0/24` <br/>`20.8.195.0/24`|
-|UK|`20.26.63.224/28` <br/>`20.254.173.48/28`|
-|AU|`68.218.120.64/28` <br/>`20.211.228.80/28`|
+For latest service tags list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
 > [!IMPORTANT]
 > In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md).  

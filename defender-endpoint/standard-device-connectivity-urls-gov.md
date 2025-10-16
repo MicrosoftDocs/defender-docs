@@ -105,9 +105,16 @@ While this list will continue to be updated, Microsoft cannot provide any guaran
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 |SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
 
-
 ## Windows 8.1 and Windows Server 2016 (MMA Based)
-
+|Path|Comment|
+|-|-|
+|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
+|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
+|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
+|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
+|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
+|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
+|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 
 
 ## Windows 7 SP1, Windows Server 2012 R2 and Windows Server 2008 R2 (MMA Based)
