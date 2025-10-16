@@ -128,7 +128,3 @@ While this list will continue to be updated, Microsoft cannot provide any guaran
 |C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
 |C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
 |C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
-
-
-
-
