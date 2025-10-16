@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Endpoint streamlined connectivity URLs (Commercial) 
+title: Microsoft Defender for Endpoint streamlined connectivity URLs - commercial 
 description: Get a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US commercial cloud environments.         
 author: limwainstein
 ms.author: lwainstein
@@ -18,7 +18,7 @@ ms.date: 10/16/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
-# Microsoft Defender for Endpoint streamlined connectivity URLs (Commercial)
+# Microsoft Defender for Endpoint streamlined connectivity URLs - commercial
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
