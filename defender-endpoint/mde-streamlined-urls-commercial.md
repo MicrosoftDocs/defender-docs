@@ -66,7 +66,11 @@ App/product version (macOS/Linux): 101.24022.*+
 |Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
 |SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
 
-|URLs used for updates NOTE: Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.|||||||||||||||||||
+## URLs used for updates 
+
+> [!NOTE]
+> Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.
+
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|||||||||||||
 |Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing/upgrading Linux installations using a different method|Linux|||||||||||||
 |Mac app/platform updates|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - product updates for macOS|Required|Optional if distributing/upgrading macOS installations using a different method. Leverages the Microsoft AutoUpdate app also used for updating other Microsoft apps such as Office for Mac.|macOS|||||||||||||
