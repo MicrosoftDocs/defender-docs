@@ -248,6 +248,9 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 This procedure describes how to export threat intelligence from Microsoft Sentinel to to other destinations, such as external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
+> [!IMPORTANT]
+> Carefully consider both the threat intelligence data you export and its destination, which might reside in a different geographic or regulatory region. Data export cannot be undone. Ensure you own the data or have proper authorization before exporting or sharing threat intelligence with third parties.
+
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
 1. Select one or more STIX objects, and then select **Export** :::image type="icon" source="media/work-with-threat-indicators/export-icon.png" border="false"::: in the toolbar at the top of the page. For example:
@@ -272,7 +275,9 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
     
     1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
     
-    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. For example:
+    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. You can also authenticate using an API key.
+    
+        For example:
 
         #### [Defender portal](#tab/defender-portal)
 
@@ -284,17 +289,114 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
         ---
 
+        You can also enable rules that will be applied to any exported threat intelligence. Each rule is described on the connector page and can be optionally enabled. Editing existing connectors is currently not supported, if you want to change the configuration of a TAXII server or its rules, you will need to create a new one.        
+
     1. When you're done, select **Add** to add your server.
 
 
 1. Select **Export**. This action can't be undone.
+
+    > [!IMPORTANT]
+    > When you export threat intelligence objects, the system carries out a bulk operation. A known issue exists where this bulk operation sometimes fails. If this happens, you'll see a warning when you open the Export side panel, asking you to remove the failed action from the bulk operations history view. The system pauses subsequent operations until you remove the failed operation. 
 
 **To access the export history**:
 
 1. Navigate to the exported item in either the **Intel management** (Defender portal) or **Threat intelligence** page (Azure portal).
 1. In the **Exports** column, select **View export history** to show the export history for that item.
 
-Your general export history is also listed on the **Bulk operation history** page, accessible from the toolbar by selecting **Bulk operations > View history**.
+## IP allowlisting for the Microsoft Sentinel TAXII client
+
+Some TAXII servers, like FS-ISAC, have a requirement to keep the IP addresses of the Microsoft Sentinel TAXII client on the allowlist. Most TAXII servers don't have this requirement.
+
+When relevant, include these IP addresses in your allowlist:
+
+:::row:::
+    :::column span="":::
+        - 68.218.134.151
+        - 4.237.173.121
+        - 68.218.191.192
+        - 68.218.191.208
+        - 74.163.73.85
+        - 74.163.73.84
+        - 108.140.47.197
+        - 108.140.47.196
+        - 130.107.0.17
+        - 130.107.0.16
+        - 52.242.47.153
+        - 52.242.47.152
+        - 4.186.93.129
+        - 4.186.93.128
+        - 57.158.18.39
+        - 57.158.18.38
+        - 128.203.32.17
+        - 20.232.93.192
+        - 128.24.7.173
+        - 128.24.7.172
+        - 4.251.60.81
+        - 4.251.60.80
+        - 20.111.81.65
+        - 20.111.81.64
+        - 20.218.50.5
+        - 20.218.50.4
+    :::column-end:::
+    :::column span="":::
+        - 72.144.227.117
+        - 72.144.227.116
+        - 51.4.37.231
+        - 20.217.163.215
+        - 72.146.91.160
+        - 4.232.40.176
+        - 74.176.2.247
+        - 74.176.2.246
+        - 74.226.38.228
+        - 4.190.136.176
+        - 4.181.55.53
+        - 4.181.55.52
+        - 20.200.167.49
+        - 20.200.167.48
+        - 4.207.244.69
+        - 132.164.237.192
+        - 4.235.51.87
+        - 4.235.51.86
+        - 51.120.182.208
+        - 4.220.173.230
+        - 4.171.25.225
+        - 4.171.25.224
+        - 4.253.54.45
+        - 4.253.54.44
+        - 172.209.40.109
+        - 172.209.40.108
+    :::column-end:::
+    :::column span="":::
+        - 172.188.182.119
+        - 172.188.182.118
+        - 20.207.217.212
+        - 74.224.83.8
+        - 135.225.179.229
+        - 135.225.179.228
+        - 20.91.127.183
+        - 20.91.127.182
+        - 4.226.56.22
+        - 74.242.228.97
+        - 74.242.60.137
+        - 74.242.4.65
+        - 74.243.66.228
+        - 74.243.66.227
+        - 74.243.225.230
+        - 74.243.225.229
+        - 74.177.108.204
+        - 172.187.102.73
+        - 51.142.135.18
+        - 51.142.135.17
+        - 50.85.238.240
+        - 132.220.84.130
+        - 172.184.49.127
+        - 172.184.49.126
+        - 4.149.254.64
+        - 172.179.34.64
+    :::column-end:::
+:::row-end:::
+
 
 ## Related content
 

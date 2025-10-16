@@ -18,6 +18,32 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## October 2025
+
+
+
+### Export STIX threat intelligence objects (Preview)
+
+Microsoft Sentinel now supports exporting STIX threat intelligence objects to to other destinations, such as external platforms. If you've ingested threat intelligence to Microsoft Sentinel from an external platform, such as when using the **Threat Intelligence - TAXII** data connector, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
+
+Exporting TI objects is currently supported for TAXII 2.1-based platforms only. You can access the export feature from both the Defender portal and the Azure portal:
+
+#### [Defender portal](#tab/defender-portal)
+
+:::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
+
+#### [Azure portal](#tab/azure-portal)
+
+:::image type="content" source="media/work-with-threat-indicators/export-azure.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
+
+---
+
+For more information, see:
+
+- [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](connect-threat-intelligence-taxii.md)
+- [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
+
+
 ## September 2025
 
 - [Microsoft Sentinel evolves into a SIEM and platform](#microsoft-sentinel-is-evolving-into-a-siem-and-platform)
@@ -108,7 +134,6 @@ Workbooks are available in the Defender portal under **Microsoft Sentinel > Thre
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
 - [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
-- [Export STIX threat intelligence objects (Preview)](#export-stix-threat-intelligence-objects-preview)
 
 ### Microsoft Sentinel data lake
 
@@ -182,27 +207,6 @@ For more information, see:
 ### Microsoft Sentinel in the Azure portal to be retired July 2026
 
 [!INCLUDE [sentinel-azure-deprecation](includes/sentinel-azure-deprecation.md)]
-
-### Export STIX threat intelligence objects (Preview)
-
-Microsoft Sentinel now supports exporting STIX threat intelligence objects to to other destinations, such as external platforms. If you've ingested threat intelligence to Microsoft Sentinel from an external platform, such as when using the **Threat Intelligence - TAXII** data connector, you can now export threat intelligence back to that platform, enabling bi-directional intelligence sharing. This new support provides direct and secure sharing, reducing the need for manual processes or custom playbooks to distribute threat intelligence.
-
-Exporting TI objects is currently supported for TAXII 2.1-based platforms only. You can access the export feature from both the Defender portal and the Azure portal:
-
-#### [Defender portal](#tab/defender-portal)
-
-:::image type="content" source="media/work-with-threat-indicators/export-defender.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-defender.png":::
-
-#### [Azure portal](#tab/azure-portal)
-
-:::image type="content" source="media/work-with-threat-indicators/export-azure.png" alt-text="Screenshot of the Export TI option in the Defender portal."  lightbox="media/work-with-threat-indicators/export-azure.png":::
-
----
-
-For more information, see:
-
-- [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](connect-threat-intelligence-taxii.md)
-- [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
 
 ## June 2025
 
