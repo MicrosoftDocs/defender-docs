@@ -5,8 +5,8 @@ description: Learn about emerging threats and attack techniques and how to stop 
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: poliveria
-author: pauloliveria
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
