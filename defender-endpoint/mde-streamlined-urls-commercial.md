@@ -91,9 +91,10 @@ App/product version (macOS/Linux): 101.24022.*+
 
 ## Other URLs
 
-|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|||||||||||||
-|Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service cannot be used through a proxy.|Optional|Improves live response connection initiation speed (Direct Connection/Proxy bypass required) on Windows client (non-server) operating systems|Windows|||||||||||||
-|Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and above and Windows Server 2012 and above|Windows|||||||||||||
+|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
+|-|-|-|-|-|-|-|
+|Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service cannot be used through a proxy.|Optional|Improves live response connection initiation speed (Direct Connection/Proxy bypass required) on Windows client (non-server) operating systems|Windows|
+|Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and above and Windows Server 2012 and above|Windows|
 
 ### URLs used for updates
 
