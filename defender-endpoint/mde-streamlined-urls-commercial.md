@@ -116,6 +116,58 @@ Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azure
 |MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core MDE services. Prerequisites must be met to ensure successful connections.|
 |OneDsCollector (EDR Cyberdata)|EDR Cyber data (may include diagnostic data for other Microsoft services)|Cyber data channel. Prerequisites must be met to ensure successful connections.|
 
+## Windows 1607 to 1803
+
+This sheet lists the additional URL endpoint services still required for older Windows devices - see the Common URLs tab for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Re-onboarding is not supported for migrations. Devices must offboard first, then onboard to apply the new configuration that allows for URL reduction.
+
+|Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Comments|
+|---|---|---|---|---|---|---|---|
+|Microsoft Defender for Endpoint|All|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Only required for Windows 10 1703 and below. Not required on Windows Server.|
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1southeastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
+|Microsoft Defender Antivirus|All|MAPS|443|*.wdcp.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
+|Microsoft Defender Antivirus|All|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprduks.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprdukw.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaue.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
+
 ## Microsoft Defender processes
 
 ### Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
