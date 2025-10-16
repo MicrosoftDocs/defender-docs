@@ -53,9 +53,9 @@ App/product version (macOS/Linux): 101.24022.*+
 
 - Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the additional URLs required.
 
-## US Gov URLs
+## Common endpoints
 
-### General URLs
+### URLs used for core functionality
 
 > [!NOTE]
 > Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding may be  unsuccessful. You may re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
