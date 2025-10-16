@@ -22,19 +22,17 @@ appliesto:
 ---
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
 
-
-
-
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service, by allowing outbound connection and bypassings HTTPS inspection for the service URLs. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
 > [!NOTE]
+>
 > - After May 8, 2024, you have the option to keep streamlined connectivity ([consolidated set of URLs](https://aka.ms/MDE-streamlined-urls)) as the default onboarding method, or downgrade to standard connectivity through (**Settings > Endpoints > Advanced Features**). For onboarding through Intune or Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded aren't reonboarded automatically. In such cases, create a new policy in Intune, where it's recommended to first assign the policy to a set of test devices to verify connectivity is successful, and then expand the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script, while newly onboarded devices automatically receive streamlined onboarding.
 > - The new `*.endpoint.security.microsoft.com` consolidated domain needs to be reachable for all devices, for current and future functionality, regardless whether you continue to use Standard connectivity.
 > - New regions default to streamlined connectivity and can't downgrade to Standard. Read more at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server
 
-The following downloadable spreadsheet lists the services and their associated URLs that devices in your network must be able to connect to. Ensure there are no firewall or network filtering rules to deny access for these URLs. Optionally, you might need to create an *allow* rule specifically for them.
+The following articles list the services and their associated URLs that devices in your network must be able to connect to. Ensure there are no firewall or network filtering rules to deny access for these URLs. Optionally, you might need to create an *allow* rule specifically for them.
 
 |Spreadsheet of domains list| Description|
 |--|--|
