@@ -262,28 +262,61 @@ These appear in inventory, attack paths, maps, and related exposure experiences 
 | Visualization constraints | Asset-rich views honor scoping but may limit related asset detail due to permission boundaries. |
 | Future primitives | Management groups, additional container/resource primitives planned. |
 
-## FAQ (deduplicated)
+## Frequently asked questions
 
-**How do scopes differ from Azure constructs?**  
-Scopes are Defender portal logical groupings across multicloud primitives; they don't change Azure resource hierarchy or Azure RBAC.
+**Q: How do cloud scopes improve operational alignment across business units?**
 
-**When should I use multiple scopes vs one large scope?**  
-Create multiple scopes when distinct teams, compliance domains, or ownership boundaries require isolated visibility or permissions.
+Cloud scopes improve operational alignment across business units by allowing administrators to group resources according to business value, function, or organizational structure. This targeted grouping enables tailored access control and visibility, ensuring that each business unit receives the specific permissions and oversight it requires. As a result, teams can operate efficiently within their designated environments, while administrators maintain clear boundaries and flexibility when managing multicloud resources. This approach streamlines operations and supports strategic objectives across the organization.
 
-**What happens if a user is assigned roles in overlapping scopes?**  
-Effective permissions aggregate across all assigned scopes. Review overlaps periodically to avoid unintended broad access.
+**Q: What is unified RBAC in the Defender Portal?**
 
-**Why can’t I assign scopes yet?**  
-Run (or complete) the activation wizard; assignments are blocked until activation finalizes.
+Unified role-based access control (Unified role-based access control) is a centralized permissions model in the Defender Portal that allows administrators to manage user access across multiple security solutions. It is distinct from Azure role-based access control and requires separate configuration.
 
-**Can environments auto-join scopes?**  
-Not currently. New environments must be manually added to existing scopes.
+**Q: What are Cloud scopes?**
 
-**Does removing an environment from a scope revoke access immediately?**  
-Yes—once removed and saved, users relying solely on that scope lose access to its data for that environment.
+Cloud scopes are a cloud-aware scoping method that lets administrators group resources by business units, value, or strategic function. This enables tailored access control and visibility across multicloud environments.
 
-**How should I decide scope granularity?**  
-Start with major business or operational domains. Refine only where least‑privilege or compliance requirements justify increased segmentation.
+**Q: How do I manage Cloud Scopes?**
+
+Navigate to: Settings → Permissions → Microsoft XDR Roles → Roles → Cloud scopes tab
+
+From there, you can:
+- Create unlimited scopes
+- Include multiple environments per scope
+- Assign environments to multiple scopes
+- Manage scopes with full CRUD permissions (Global admin only)
+
+**Q: How do I activate and assign Cloud Scopes?**
+
+- Use the activation wizard to configure permissions for Defender for Cloud data sources
+- Assign roles to scopes during this process
+- Activation is a one-time setup and must be completed before assigning roles
+
+**Q: Why can't I assign Cloud Scopes in role assignment?**
+
+To enable cloud scopes for the first time, you must configure permissions for roles associated with Defender for Cloud data sources. This step also controls access to shared assets like VMs via Device Groups or Cloud Scope. Begin by completing the activation process, which guides Authorization admins through role-based access control configuration in the unified role-based access control experience. Cloud scopes are effective only after activation.
+
+**Q: Who can manage Cloud Scopes?**
+
+Only Global Admins have full management rights.
+
+**Q: How does unified RBAC assignment work?**
+
+- Assign roles to specific cloud scopes
+- Permissions are scoped to the selected environments
+- Unified role-based access control is not transferable from Azure; it must be configured separately in the Defender Portal
+
+**Q: How does unified RBAC differ from Azure RBAC in terms of permission granularity?**
+
+Unified role-based access control in the Defender Portal offers a permissions model that is distinct from Azure role-based access control, particularly in terms of permission granularity. While Azure role-based access control provides role assignments at the Azure resource level and is managed through Azure's centralized access control, unified role-based access control is configured separately within the Defender Portal and allows administrators to define permissions specifically for security-related resources and actions across multiple Defender solutions. This enables more targeted control within the Defender environment, such as assigning roles to specific cloud scopes or environments, rather than relying on broader Azure resource group or subscription boundaries. As a result, unified role-based access control grants administrators the flexibility to tailor security permissions with finer granularity for users who need access to Defender capabilities, independent of their Azure role-based access control roles.
+
+**Q: What are the implications of assigning roles across multiple cloud scopes?**
+
+Assigning roles across multiple cloud scopes allows users to access resources and perform actions in all environments included in those scopes. This approach enables administrators to tailor permissions for users who need visibility or control over several business units or strategic areas. However, it also increases the importance of carefully managing scope definitions and role assignments to prevent unnecessary access. Overlapping scopes can lead to complex permission models, so it's essential to regularly review and audit assignments to ensure users have only the access they require. Effective management helps maintain security boundaries and operational clarity.
+
+**Q: What criteria should be used to define cloud scopes effectively?**
+
+Cloud scopes can be leveraged to reflect your organizational hierarchy and structure. They're configurable in a flexible manner to support various criteria, such as: business unit or function, resource value and sensitivity, operational unit by geographic location, application unit, and more.
 
 ## Next steps
 
