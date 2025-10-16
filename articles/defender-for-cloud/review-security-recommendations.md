@@ -39,11 +39,13 @@ Review recommendations and make sure all the details are correct before you reso
 
 ::: zone pivot="defender-portal"
 
-The Recommendations page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
+The **Recommendations** page within Exposure Management provides a prioritized list of security actions designed to improve your cloud security posture by addressing vulnerabilities and misconfigurations. These recommendations are ranked by effective risk, helping security teams focus on the most critical threats first.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. Navigate to **Exposure Management** > **Recommendations** > **Cloud Assets** tab.
+   
+   :::image type="content" source="media/defender-portal-recommendations.png" alt-text="Screenshot of Recommendations page in Defender Portal" lightbox="media/defender-portal-recommendations.png":::
 
 1. Apply filters such as:
    - **Exposed asset**: Filter by assets with exposure to threats
@@ -64,11 +66,15 @@ The Recommendations page within Exposure Management provides a prioritized list 
    - **Recommendation by risk level**: Breakdown by High, Medium, Low severity
    - **Risk calculation details**: How the risk level is determined
 
-1. Select a recommendation to review detailed information.
+1. Select a recommendation to review detailed information including remediation steps, attack surface map, related initiatives, and associated CVEs.
+   
+   :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-sidepane.png" alt-text="Screenshot of recommendations side pane" lightbox="media/review-security-recommendations/defender-portal-recommendation-sidepane.png":::
+
 
 Alternative access paths to recommendations:
-- **Cloud Infrastructure Overview Dashboard** > **Security Posture Security Recommendations** > **View Recommendations**
-- **Exposure Management** > **Initiatives** > **Cloud Security Initiative** > **Open Initiative** > **Security Recommendations Tab**
+
+- **Cloud infrastructure**  > **Overview** > **Security posture** > **Security recommendations** > **View recommendations**
+- **Exposure Management** > **Initiatives** > **Cloud Security** > **Open initiative page** > **Security Recommendations** tab
 
 ::: zone-end
 
@@ -78,7 +84,7 @@ Alternative access paths to recommendations:
    - **Resource**: The name of the affected resource.
    - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
    - **Description**: A brief description of the security issue.
-   - **Attack Paths**: The number of attack paths.
+   - **Attack paths**: The number of attack paths.
    - **Scope**: The affected subscription or resource.
    - **Freshness**: The freshness interval of the recommendation.
    - **Last change date**: The date when this recommendation was last changed.
@@ -140,7 +146,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 ::: zone pivot="defender-portal"
 
-In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud Assets** tab, you can explore detailed information and take action.
+In the Defender portal, you can interact with recommendations in multiple ways through the Exposure Management experience. Once you've selected a recommendation from the **Exposure Management** > **Recommendations** > **Cloud assets** tab, you can explore detailed information and take action.
 
 The recommendation details page provides comprehensive information including:
 
@@ -150,31 +156,31 @@ The recommendation details page provides comprehensive information including:
    - Exploitability assessment
    - Network connectivity context
 
-1. **Resource Context**: Review detailed information about affected resources with:
+1. **Resource context**: Review detailed information about affected resources with:
    - Asset relationship mapping
    - Security posture context
    - Associated attack paths
    - Risk factor analysis
 
-1. **Remediation Options**: Access various remediation approaches:
+1. **Remediation options**: Access various remediation approaches:
    - **Automated remediation**: When available, use built-in fix capabilities
    - **Manual remediation**: Follow step-by-step guidance for manual fixes
    - **Governance assignment**: Assign owners and due dates for tracking
    - **Risk acceptance**: Document accepted risks with proper justification
 
-1. **Attack Path Integration**: If the recommendation is part of attack paths:
+1. **Attack path integration**: If the recommendation is part of attack paths:
    - View associated attack path scenarios
    - Understand the role in potential attack sequences
    - See choke point analysis where applicable
    - Access MITRE ATT&CK technique mapping
 
-1. **Filtering and Prioritization**: Use advanced filtering to focus on:
+1. **Filtering and prioritization**: Use advanced filtering to focus on:
    - Critical recommendations with high risk scores
    - Recommendations affecting exposed assets
    - Time-sensitive security issues
    - Workload-specific recommendations
 
-1. **Tracking and Reporting**: Monitor remediation progress through:
+1. **Tracking and reporting**: Monitor remediation progress through:
    - Status tracking (unassigned, on time, overdue)
    - Historical trend analysis
    - Compliance impact assessment
@@ -312,6 +318,8 @@ An organization's internal policies might differ from Microsoft's classification
 > [!NOTE]
 > Defender CSPM customers have access to a richer classification system where recommendations feature a **Risk level** determination that utilizes the *context* of the resource and all related resources. Learn more about [risk prioritization](risk-prioritization.md).
 
+::: zone pivot="azure-portal"
+
 ### Example
 
 In this example, the **Recommendation details** page shows 15 affected resources:
@@ -319,6 +327,8 @@ In this example, the **Recommendation details** page shows 15 affected resources
 :::image type="content" source="./media/review-security-recommendations/open-query.png" alt-text="Screenshot of the Open query button on the Recommendation details page." lightbox="media/review-security-recommendations/open-query.png":::
 
 When you open and run the underlying query, Azure Resource Graph Explorer returns the same affected resources for this recommendation.
+
+:::zone-end
 
 ## Related content
 
