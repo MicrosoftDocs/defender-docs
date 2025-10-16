@@ -194,7 +194,7 @@ Lists the URL endpoints required for administrative/security operations access t
 
 |URL|Comment|
 |---|---|
-|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - https://onboardingpackagescusprd.blob.core.windows.net and files retrieved from devices.|
+|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - `https://onboardingpackagescusprd.blob.core.windows.net` and files retrieved from devices.|
 |https://*.microsoftonline-p.com|Used for signing into the portal with Entra ID|
 |https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Entra ID|
 |https://static2.sharepointonline.com|Used for signing into the portal with Entra ID|
