@@ -58,7 +58,7 @@ App/product version (macOS/Linux): 101.24022.*+
 ### URLs used for core functionality
 
 > [!NOTE]
-> Make sure your devices meet all component: app/antimalware platform, engine, Endpoint detection and response (EDR) sensor, update versions and OS requirements. Otherwise onboarding may be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
+> To ensure successful onboarding, make sure that your devices meet all component update versions and OS requirements: application or antimalware platform, engine, and Endpoint detection and response (EDR) sensor. Otherwise onboarding may be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
