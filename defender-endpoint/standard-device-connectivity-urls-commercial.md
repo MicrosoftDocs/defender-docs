@@ -26,238 +26,107 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Prerequisites
 
-### Operating systems
+## Microsoft Defender URLs
 
-- Windows 10 version 1809+
-- Windows 11
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through Microsoft Installer) released in 2022
-- macOS supported versions with Defender for Endpoint product version 101.24022.*+
-- Linux supported versions with Defender for Endpoint product version 101.24022.*+
-
-### Windows Minimum Component Versions
-
-- Defender antimalware client: 4.18.2211.5 (November 2022)
-- Defender antimalware engine: 1.1.19900.2
-- Defender security intelligence: 1.391.315.0
-- Defender detection sensor (Sense) version: >10.8040.*/ March 8th 2022+
-
-### Mac/Linux Minimum Component Versions
-
-App/product version (macOS/Linux): 101.24022.*+
-
-### Notes
-
-- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent) continue to use the associated legacy method. Specifically, devices running on Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2, and 2016 devices not upgraded to the modern unified solution. For the list of additional URLs, see [Windows 7, 8.1, 2008R2 (MMA)](#windows-7-81-2008r2-mma).
-
-- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the other URLs required.
-
-## Common endpoints
-
-### URLs used for core functionality
-
-> [!NOTE]
-> To ensure successful onboarding, make sure that your devices meet all component update versions and OS requirements: application or antimalware platform, engine, and Endpoint detection and response (EDR) sensor. Otherwise onboarding may be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
-
-|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
-|-|-|-|-|-|-|-|
-|Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core Defender for Endpoint services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
-|Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications, and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
-|SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
-
-## URLs used for updates
-
-> [!NOTE]
-> You can apply updates from a file share or update server, where you don't need to allow all direct connections from devices. Otherwise, these connections are already required and allowed in your environment for other purposes such as Windows updates.
-
-|Service |Port |Endpoint or URLs |Endpoint or URL Description |Type |Comments |OS |
-|-|-|-|-|-|-|-|
-|Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing or upgrading Linux installations using a different method|Linux|
-|Mac app or platform updates|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - product updates for macOS|Required|Optional if distributing or upgrading macOS installations using a different method. Uses the Microsoft AutoUpdate app also used for updating other Microsoft apps such as Office for Mac.|macOS|
-|Windows/Mac/Linux security intelligence updates  Windows antimalware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com definitionupdates.microsoft.com https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows antimalware platform updates. Linux and macOS clients use this location as the primary download location.|Required|Optional if updates are downloaded and distributed centrally (WSUS/Mirror/ConfigMgr). Windows clients use this location as an alternative - Microsoft Malware Protection Center (MMPC). Otherwise, Windows client uses the location as a fallback when other configured sources fail. The client then retrieves update packages as determined by the redirection logic.|All|
-|Windows security intelligence and antimalware platform updates, product updates to EDR sensors. This applies when you use the Microsoft or Windows update as the source or method. |443|*.update.microsoft.com *.delivery.mp.microsoft.com *.windowsupdate.com *.download.windowsupdate.com *.download.microsoft.com|Security intelligence and antimalware platform updates, when the client is configured to download Defender updates from Windows Update, will be downloaded as they become available.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  EDR sensor updates always come as part of regular Windows update release cadence/cycle. EDR logic updates come directly from Defender cloud (command and control). For Windows Server 2012 R2 and 2016, KB5005292 is the update package used to perform periodic updates to the EDR sensor stack.|Windows|
-
-## URLs used for certificate validation checks 
-
-> [!NOTE]
-> Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. The operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. Read more at /windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates for more information about management of trusted root certificates in disconnected environments.
-
-|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
-|-|-|-|-|-|-|-|
-|Windows operating system certificate validation checks|80|www.microsoft.com/pkiops/\*<br>www.microsoft.com/pki/\* |Used when creating the SSL connection to MAPS for updating the certificate revocation list (CRL)|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path: *HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet* |Windows|
-|||ctldl.windowsupdate.com|Expands on the existing automatic root update technology. This service flags certificates that are compromised as untrusted.|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
-|||crl.microsoft.com|Certificate Revocation Lists - required to validate certificates|Required|Optional if updates to Windows root certificate trust lists are being managed through other methods in the environment. If Cloud-delivered protection is unable to connect to this destination through a proxy, add registry setting "SSLOptions" with value 0. Registry path:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet"|
-
-## Other URLs
-
-|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
-|-|-|-|-|-|-|-|
-|Live response (push notification model only)|443|login.microsoftonline.com *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service can't be used through a proxy.|Optional|Improves the speed of the live response connection initiation, where a direct connection or a proxy bypass is required on Windows client (non-server) operating systems.|Windows|
-|Vulnerability management network scanner standalone tool|443|*.security.microsoft.com *.blob.core.windows.net/networkscannerstable/* login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and later and Windows Server 2012 and later|Windows|
-
-## IP addresses
-
-The following Defender for Endpoint-dedicated, static IP ranges can be used as an alternative to URLs in certain scenarios without hostname resolution capability.
-
-> [!NOTE]
-> Keep connectivity with other required services, like SmartScreen, Windows Update, CRL. Otherwise, use a solution like ConfigMgr, WSUS, or file-share methods to apply updates or to support browsing security. See [Common endpoints](#common-endpoints) for more details, and ensure devices are running an operating system version and client component update level that supports streamlined connectivity.
-
-If you're using Microsoft Defender for Cloud or Intune with the **auto from connector** option to onboard new devices, ensure to toggle on the **Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud** in advanced settings on security.microsoft.com. Onboarded servers don't automatically switch to the new destinations as defined in the Azure service tags. Ensure the servers can connect to the previous standard destinations, or onboard them again to reconfigure them to be able to use the new service tags or IP addresses.
-
-> [!NOTE]
-> The EDR Cyberdata service (OneDsCollector) isn't included under the IP addresses under the MicrosoftDefenderForEndpoint service tag. The IP ranges from both service tags are needed to allow connectivity.
-It's recommended to subscribe to the Defender for Endpoint Azure service tag to stay up to date on any potential IP address changes: https://azureipranges.azurewebsites.net/
-
-Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azureipranges.azurewebsites.net/).
-
-|Service Tag Name|Defender for Endpoint services included|Comments|
-|---|---|---|
-|MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core Defender for Endpoint services. Prerequisites must be met to ensure successful connections.|
-|OneDsCollector (EDR Cyberdata)|EDR Cyber data (may include diagnostic data for other Microsoft services)|Cyber data channel. Prerequisites must be met to ensure successful connections.|
-
-## Windows 1607 to 1803
-
-This sheet lists the other URL endpoint services still required for older Windows devices - see the Common URLs tab for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Onboarding again isn't supported for migrations. Devices must first offboard and then onboard to apply the new configuration that allows for URL reduction.
-
-|Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Comments|
-|---|---|---|---|---|---|---|---|
-|Microsoft Defender for Endpoint|All|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Only required for Windows 10 1703 and below. Not required on Windows Server.|
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1southeastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
-|Microsoft Defender Antivirus|All|MAPS|443|*.wdcp.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
-|Microsoft Defender Antivirus|All|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprduks.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprdukw.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaue.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and later / Windows Server 2019 and later|
-|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and later / Windows Server 2019 and later|
-|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and later / Windows Server 2019 and later|
-|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and later / Windows Server 2019 and later|
-|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
-
-## Windows 7, 8.1, 2008R2 (MMA)
-
-This section applies to URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent. These endpoints run on Windows 7, Windows 8.1, Windows Server 2008 R2. For servers not upgraded to the Unified Agent, see [Updating MMA on Windows devices for Microsoft Defender for Endpoint](update-agent-mma-windows.md).
-
-|Category|Port|Endpoint/URL|Endpoint/URL Description|Comments|
-|---|---|---|---|---|
-|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com<br>winatp-gw-aus.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com<br>winatp-gw-weu.microsoft.com<br>winatp-gw-neu3.microsoft.com<br>winatp-gw-weu3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com<br>winatp-gw-ukw.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>winatp-gw-cus3.microsoft.com<br>winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-|Microsoft Monitoring Agent (MMA) / EDR Cyberdata |443 |*.oms.opinsights.azure.com<br>*.oms.opinsights.azure.com<br>*.blob.core.windows.net |Microsoft Monitoring Agent (MMA) / Log Analytics Agent (LAA) for Win 7/8.1/2008R2/2012R2/2016 |Required for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. Perform these steps to [eliminate wildcards (*)](https://aka.ms/Defender for Endpoint_network_requirements).|
-
-## Defender portal URLs
-
-Lists the URL endpoints required for administrative/security operations access the Microsoft Defender Security portals. These endpoint don't need to be accessible to all devices.
-
-|URL|Comment|
-|---|---|
-|*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - `https://onboardingpackagescusprd.blob.core.windows.net` and files retrieved from devices.|
-|https://*.microsoftonline-p.com|Used for signing into the portal with Entra ID|
-|https://secure.aadcdn.microsoftonline-p.com|Used for signing into the portal with Entra ID|
-|https://static2.sharepointonline.com|Used for signing into the portal with Entra ID|
-|https://login.microsoftonline.com|Used for signing into the portal with Entra ID|
-|https://*.securitycenter.windows.com|Microsoft Defender Security Center portal/APIs|
-|https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
-|https://security.microsoft.com|Microsoft Defender XDR admin portal|
-
-## Microsoft Defender processes
-
-The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list does not account for any other Windows communications requirements. 
-
-For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
-
-While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
-
-### Windows 11, Windows 10, Windows Server 2022, and Windows Server 2019
-
-|Process|Path|Comment|
-|-------|----|-------|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
-|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|SenseTVM.exe |C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-### Windows Server 2016 and Windows Server 2012 R2 (Unified Agent)
-
-|Process|Path|Comment|
-|-------|----|-------|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
-|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-### Windows 8.1 and Windows Server 2016 (MMA Based)
-
-|Process|Path|Comment|
-|-------|----|-------|
-|MonitoringHost.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|HealthService.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|TestCloudConnection.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|MpCmdRun.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus command-line utility (SCEP)|
-|MsMpEng.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
-|ConfigSecurityPolicy.exe|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
-
-### Windows 7 SP1, Windows Server 2012 R2 and Windows Server 2008 R2 (MMA Based)
-
-|Process|Path|Comment|
-|-------|----|-------|
-|MonitoringHost.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|HealthService.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|TestCloudConnection.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|MpCmdRun.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus command-line utility (SCEP)|
-|MsMpEng.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
-|ConfigSecurityPolicy.exe|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+|Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Windows 11 / Windows 10 / Server 2022 / 2019 / Server 2016 (Unified Agent) / Server 2012 R2 (Unified Agent)|Windows 7 / 8.1|Windows Server 2008 R2 / 2012 R2 / 2016 (MMA Based)|Mac|Linux|Comments|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|Microsoft Defender for Endpoint|WW|CRL|80|crl.microsoft.com|Certificate Revocation Lists - required to validate certificates / Used by Windows when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|CRL|80|ctldl.windowsupdate.com|Expands on the existing automatic root update mechanism technology to let certificates that are compromised or untrusted be specifically flagged as untrusted|Required|Yes||||||
+|Microsoft Defender for Endpoint|WW|CRL|80|www.microsoft.com/pkiops/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|CRL|80|www.microsoft.com/pki/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common|443|events.data.microsoft.com|Used by the Connected User Experiences and Telemetry component and connects to the Microsoft Data Management service|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|WW|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response / Vulnerability assessment for network devices / Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|Yes|Yes|||"Required for Live Response Performance (Direct Connection/Proxy bypass required). Required when using Security Management for Microsoft Defender for Endpoint"|
+|Microsoft Defender for Endpoint|WW|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|WW|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Only required for Windows 10 1703 and below. Not required on Windows Server.|
+|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|cdn.x.cp.wd.microsoft.com|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common (Linux)|443|packages.microsoft.com|Required to download and update the MDE Linux agent|Required|||||Yes||
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|login.windows.net|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|*.security.microsoft.com|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|*.blob.core.windows.net/networkscannerstable/*|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Security Management|443|enterpriseregistration.windows.net|Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
+|Microsoft Defender for Endpoint|WW|Security Management|443|*.dm.microsoft.com|Security Management for Microsoft Defender for Endpoint - Enrollment, check-in, and reporting|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.oms.opinsights.azure.com|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|*.blob.core.windows.net|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||"Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)"|
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|unitedstates.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|us-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-cus.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-eus.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-cus3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus4westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|wsus2westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|europe.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|eu-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|winatp-gw-neu.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|winatp-gw-weu.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|winatp-gw-neu3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|winatp-gw-weu3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdneu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|automatedirstrprdweu3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|usseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|EU|Microsoft Defender for Endpoint EU|443|wseu1northprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|unitedkingdom.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|winatp-gw-uks.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|winatp-gw-ukw.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprduks.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|automatedirstrprdukw.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1southprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|ussuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|wsuk1westprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|australia.x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|au-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|winatp-gw-aue.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|winatp-gw-aus.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaue.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|automatedirstrprdaus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1southeastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||||
+|Microsoft Defender Antivirus|WW|UTC|443|vortex-win.data.microsoft.com|Used by Windows to send client diagnostic data; Microsoft Defender Antivirus uses this for product quality monitoring purposes|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019|
+|Microsoft Defender Antivirus|WW|MU / WU|443|*.update.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MU / WU|443|*.delivery.mp.microsoft.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MU / WU|443|*.windowsupdate.com|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MU / WU|443|go.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
+Required for Mac and Linux platforms"|
+|Microsoft Defender Antivirus|WW|MU / WU|443|definitionupdates.microsoft.com|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes*|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
+Required for Mac and Linux platforms"|
+|Microsoft Defender Antivirus|WW|MU / WU|443|https://www.microsoft.com/security/encyclopedia/adlpackages.aspx|MU / WU - Security intelligence and product updates|Required|Yes*|Yes*|Yes|Yes|Yes|"*Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)
+Required for Mac and Linux platforms"|
+|Microsoft Defender Antivirus|WW|MU (ADL)|443|*.download.windowsupdate.com|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MU (ADL)|443|*.download.microsoft.com|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MU (ADL)|443|fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|WW|MAPS|443|*.wdcp.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender Antivirus|WW|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender Antivirus|WW|Common|443|*.events.data.microsoft.com|Used by Microsoft Defender Antivirus to send Diagnostic Telemetry for Microsoft Defender Core Service|Required|Yes|No|Yes|No|No|"To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. Alternatively, to wildcard, can allow: us-mobile.events.data.microsoft.com/OneCollector/1.0 eu-mobile.events.data.microsoft.com/OneCollector/1.0 uk-mobile.events.data.microsoft.com/OneCollector/1.0 au-mobile.events.data.microsoft.com/OneCollector/1.0 mobile.events.data.microsoft.com/OneCollector/1.0"|
+|Microsoft Defender Antivirus|WW|Common|443|*.ecs.office.com/config/v1/MicrosoftWindowsDefenderClient|Used by Microsoft Defender Antivirus to download internal feature configurations (ECS) for Microsoft Defender Core service|Required|Yes|No|Yes|No|No|Microsoft Defender Core service is used to enhance stability and performance of Microsoft Defender Antivirus for customers.|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes||||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes||||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.checkappexec.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes||||||Microsoft Defender SmartScreen checking application execution for trusted apps|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes||||||Microsoft Defender SmartScreen checking application execution for trusted apps|
+|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.
 
