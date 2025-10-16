@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 09/08/2025
+ms.date: 10/15/2025
 ---
 
 # How Microsoft names threat actors

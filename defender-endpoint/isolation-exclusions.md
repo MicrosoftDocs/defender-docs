@@ -20,14 +20,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Isolation exclusions (preview)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-[!include[Prerelease information](../includes/prerelease.md)]
-
-
+# Isolation exclusions
 
 Isolation exclusion refers to the ability to exclude specific processes, IP addresses, or services from network isolation by applying the selective isolation response action to devices.
 
