@@ -60,15 +60,12 @@ App/product version (macOS/Linux): 101.24022.*+
 > [!NOTE]
 > Make sure  your devices meet all component (app/antimalware platform, engine, EDR  sensor) update versions and OS requirements else onboarding may be  unsuccessful. You may re-onboard devices to switch them to streamlined  connectivity if they meet these requirements.
 
+|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
+|-|-|-|-|-|-|-|
+|Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core MDE services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
+|Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
+|SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
 
-|Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|||||||||||||
-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-|Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core MDE services. Prerequisites must be met to successfully connect to the new URL patterns.|All|||||||||||||
-|Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|||||||||||||
-|SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|||||||||||||
-||||||||||||||||||||
-||||||||||||||||||||
-||||||||||||||||||||
 |URLs used for updates NOTE: Depending on your environment, you may apply updates from a file share or update server and do not need to allow (all) direct connections from devices, or these connections are already required and allowed in your environment for other purposes such as Windows updates.|||||||||||||||||||
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|||||||||||||
 |Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing/upgrading Linux installations using a different method|Linux|||||||||||||
