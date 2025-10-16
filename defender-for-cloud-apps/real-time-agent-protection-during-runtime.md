@@ -44,7 +44,8 @@ Before enabling real-time agent protection during runtime, make sure:
 > [!NOTE]
 > The onboarding process for real-time protection during agent runtime involves configuration in Power Platform and collaboration with other administrators.
 > 
-
+> [!IMPORTANT]
+> This feature is currently in preview and included with your Microsoft Defender for Cloud Apps license at no extra cost. Licensing requirements may change when the feature becomes generally available. If that happens, the feature will be disabled, and you will be notified should you wish to re-enable it under the new license.
 
 ## Turn on real-time protection during agent runtime
 
