@@ -39,44 +39,43 @@ October 16, 2025
 
 The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
 
-| Standard | Clouds |
+| Standard | Cloud |
 |------------|--------|
-| NIST SP 800-53 R5 and R5.1.1 | Azure, AWS, GCP |
-| NIST 800-171 Rev 3 | Azure, AWS, GCP |
-| NIST SP 800-172: 2021 | AWS, GCP |
-| NIST CSF v2.0 | Azure, AWS, GCP |
-| HITRUST CSF v11.3.0 | Azure, AWS, GCP |
-| Azure HITRUST v11.3 | Azure |
-| CIS Controls v8.1 | Azure, AWS, GCP |
+| NIST SP 800-53 R5 and R5.1.1 | AWS, GCP |
+| NIST 800-171 Rev 3 | AWS, GCP |
+| NIST SP 800-172 2021 | AWS, GCP |
+| NIST CSF v2.0 | AWS, GCP |
+| HITRUST CSF v11.3.0 | AWS, GCP |
+| CIS Controls v8.1 | AWS, GCP |
 | CIS AWS Foundations v3.0.0 | AWS |
 | CIS GCP Foundations v3.0 | GCP |
-| ISO/IEC 27001, 27017:2015, 27002:2022 | Azure, AWS, GCP |
-| Cyber Essentials v3.1 | Azure, AWS, GCP |
-| APRA CPS 234:2019 | Azure, AWS |
-| Canada Federal PBMM 3.2020 | Azure, AWS, GCP |
-| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
-| EU 2022/2555 (NIS2) 2022 | Azure, AWS, GCP |
-| EU GDPR 2016/679 | Azure, AWS, GCP |
-| SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
-| SWIFT CSP-CSCF v2020 | Azure, AWS, GCP |
-| SOC 2023 | Azure, AWS, GCP |
-| SOC 2 | Azure, GCP |
-| CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
-| NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
-| FFIEC CAT 2017 | Azure, AWS, GCP |
-| PCI DSS v3.2.1 and v4.0.1 | Azure, AWS, GCP |
-| Sarbanes–Oxley Act 2022 (SOX) | Azure, AWS, GCP |
-| NZISM v3.7 | Azure, AWS, GCP |
+| ISO/IEC 27001 · 27017:2015 · 27002:2022 | AWS, GCP |
+| Cyber Essentials v3.1 | AWS, GCP |
+| APRA CPS 234 2019 | AWS |
+| Canada Federal PBMM 3.2020 | AWS, GCP |
+| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | AWS, GCP |
+| EU 2022/2555 (NIS2) 2022 | AWS, GCP |
+| EU GDPR 2016/679 | AWS, GCP |
+| SWIFT Customer Security Controls Framework 2024 | AWS, GCP |
+| SOC 2023 | AWS, GCP |
+| CSA Cloud Controls Matrix v4.0.12 | AWS, GCP |
+| NCSC Cyber Assurance Framework (CAF) v3.2 | AWS, GCP |
+| FFIEC CAT 2017 | AWS, GCP |
+| PCI DSS v3.2.1 and v4.0.1 | AWS, GCP |
+| Sarbanes–Oxley Act 2022 (SOX) | AWS |
+| NZISM v3.7 | AWS, GCP |
 | FedRAMP Moderate and High Baselines Rev 5 | AWS, GCP |
-| Australian Government ISM Protected | Azure |
 | Australian Government Information Security Manual 12.2023 | AWS, GCP |
+| Australian Government ISM PROTECTED (Preview) | Azure |
 | HIPAA | Azure |
+| Azure HITRUST v11.3 (Preview) | Azure |
+| SWIFT CSP-CSCF v2020 (Preview) | Azure, AWS, GCP |
+| Reserve Bank of India – IT Framework for NBFC (Preview) | Azure, AWS, GCP |
 | Spanish ENS | Azure |
 | RMIT Malaysia | Azure |
 | UK OFFICIAL and UK NHS | Azure |
-| Reserve Bank of India – IT Framework for NBFC | Azure, AWS, GCP |
 | Well-Architected Framework 2024 | AWS |
-| Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
+| Criminal Justice Information Services Security Policy v5.9.5 | AWS, GCP |
 
 ## September 2025
 

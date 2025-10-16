@@ -68,7 +68,7 @@ By default, when you enable Defender for Cloud, the following standards are enab
 
 The following standards are available in Defender for Cloud:
 
-|Standard|Clouds|
+|Standard|Cloud|
 |------------|--------|
 | APRA CPS 234 2019 | Azure, AWS |
 | Australian Government ISM Protected | Azure |
