@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
-ms.date: 07/28/2025
+ms.date: 09/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -106,11 +106,11 @@ Open any remediation item to view details about it, including its remediation na
 
       **Delete sender's copy**: Also try to soft delete the message from the sender's Sent Items folder if the sender is the organization.
 
-    - **Hard delete**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items). If you use [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac), you also need the **Email & collaboration content (read)** permission to hard delete messages.
+    - **Hard delete**: Purge the deleted message and the corresponding calendar entry for meeting invite messages. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items). If you use [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac), you also need the **Email & collaboration content (read)** permission to hard delete messages.
 
   > [!NOTE]
   > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
-  
+
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, the total of remediable and nonremediable messages equals the total number of messages submitted. But the totals might not match because of system delays, time-outs, or expired messages. Messages expire based on the Explorer retention period for your organization.
 
   Unless you're remediating old messages after your organization's Explorer retention period, it's advisable to retry remediating items if you see number inconsistencies. For system delays, remediation updates are typically refreshed within a few hours.

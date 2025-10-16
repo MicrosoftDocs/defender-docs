@@ -1,4 +1,4 @@
----
+﻿---
 title: Manage how and where Microsoft Defender Antivirus receives updates
 description: Manage the fallback order for how Microsoft Defender Antivirus receives protection updates.
 ms.service: defender-endpoint
@@ -14,16 +14,14 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 09/29/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 ---
-
 # Manage the sources for Microsoft Defender Antivirus protection updates
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -132,8 +130,8 @@ See [Configure Security intelligence Updates for Endpoint Protection](/configmgr
 Use the following PowerShell cmdlets to set the update order.
 
 ```PowerShell
-Set-MpPreference -SignatureFallbackOrder {LOCATION|LOCATION|LOCATION|LOCATION}
-Set-MpPreference -SignatureDefinitionUpdateFileSharesSource {\\UNC SHARE PATH|\\UNC SHARE PATH}
+Set-MpPreference -SignatureFallbackOrder "LOCATION|LOCATION|LOCATION|LOCATION"
+Set-MpPreference -SignatureDefinitionUpdateFileSharesSource "\\UNC\PATH1|\\UNC\PATH2"
 ```
 
 For more information, see the following articles:
@@ -312,3 +310,4 @@ KB4052623 is available for the following architectures:
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

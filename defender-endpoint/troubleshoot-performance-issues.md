@@ -1,4 +1,4 @@
----
+﻿---
 title: Troubleshoot performance issues
 description: Troubleshoot high CPU usage related to the real-time protection service in Microsoft Defender for Endpoint.
 search.appverid: met150
@@ -15,16 +15,14 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ngp
----
+appliesto:
+  - Microsoft Defender Antivirus
 
+---
 # Troubleshoot performance issues related to real-time protection
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
 
 **Platforms**
 - Windows
@@ -75,12 +73,6 @@ If you can readily identify the software affecting system performance, go to the
 
 We recommend that software vendors follow the various guidelines in [Partnering with the industry to minimize false positives](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). The vendor can submit their software through the [Microsoft Security Intelligence portal](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
 
-## What if I still have an issue?
-
-You can submit a ticket to [Microsoft support](/defender-endpoint/contact-support).
-
-Follow the steps in [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
-
 ## See also
 
 - [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md)
@@ -88,3 +80,4 @@ Follow the steps in [Collect Microsoft Defender Antivirus diagnostic data](colle
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
