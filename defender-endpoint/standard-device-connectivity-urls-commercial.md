@@ -130,3 +130,5 @@ Required for Mac and Linux platforms"|
 |Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes||||||Microsoft Defender SmartScreen checking application execution for trusted apps|
 |Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.
 
+## Defender portal URLs
+
