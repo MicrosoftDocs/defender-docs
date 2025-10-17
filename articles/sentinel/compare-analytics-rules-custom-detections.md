@@ -15,10 +15,10 @@ ms.collection: ms-security
 ---
 # Feature comparison: Microsoft Sentinel analytics rules and Microsoft Defender custom detections
 
-This article lists and compares the different features supported by Microsoft Sentinel analytics rules and Microsoft Defender [custom detections](/defender-xdr/custom-detections-overview). It also provides additional information, such as plans to support any analytics rules capabilities that aren't available in custom detections, if applicable. 
+This article lists and compares the different features supported by Microsoft Sentinel [analytics rules](threat-detection.md) and Microsoft Defender [custom detections](/defender-xdr/custom-detections-overview). It also provides additional information, such as plans to support any analytics rules capabilities that aren't available in custom detections, if applicable. 
 
 >[!IMPORTANT]
-> **Custom detections** is now the best place to create new threat detection rules across Microsoft Sentinel Security Information and Event Management (SIEM) and Microsoft Defender XDR. It lets you create new rules across Microsoft Sentinel SIEM and Defender XDR with enhanced capabilities like flexible entity mapping, dynamic alert titles and descriptions, and customizable alert frequencies. For more information, read this blog post.
+> **Custom detections** is now the best way to create new rules across Microsoft Sentinel Security Information and Event Management (SIEM) Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read this blog post.
 
 ## Compare analytics rules and custom detections features
 
@@ -26,7 +26,7 @@ This article lists and compares the different features supported by Microsoft Se
 |---|---|---|---|
 | **Alert enrichment** | Flexible entity mapping over Sentinel data | Supported | Supported |
 | | Link multiple MITRE tactics | Supported | Planned |
-| | Support full list of MITRE techniques and sub-techniques | Supported | Planned |
+| | Support full list of MITRE techniques and subtechniques | Supported | Planned |
 | | Enrich alerts with custom details | Supported | Supported |
 | | Define alert title and description dynamically - Integrate query results in runtime | Supported | Supported |
 | | Define all alerts properties dynamically - Integrate query results in runtime | Supported | Planned |
@@ -44,11 +44,11 @@ This article lists and compares the different features supported by Microsoft Se
 | | Rules health logs available in advanced hunting | Supported (in the `SentinelHealth` table) | Planned |
 | **Control alerts and events grouping** | Customize alert grouping logic | Supported | Not supported. Not supported. In the SIEM and XDR solutions, the correlation engine takes care of the alerts' grouping logic and can address the need to configure the grouping logic. |
 | | Choose between all events under one alert and one alert per event | Supported | Not supported |
-| | Group events to one alert when custom details, alert dynamic details and entities are identical | Not supported | Supported |
+| | Group events to one alert when custom details, alert dynamic details, and entities are identical | Not supported | Supported |
 | **Control incidents and alerts creation** | Exclude incidents from correlation engine - Ensure that incidents from different rules remain separated | Planned | Planned |
 | | Create alerts without incidents | Supported | Not supported |
 | | Alerts suppression - Define alert suppression after the rule runs | Supported | Not supported |
-| **Rules management** | Re-run rule on demand on a previous time window | Supported | Planned |
+| **Rules management** | Rerun rule on demand on a previous time window | Supported | Planned |
 | | Run rule on demand | Not supported | Supported |
 | | Health and quality workbooks | Supported | Planned |
 | | Integration with Sentinel repositories | Supported | Planned |
