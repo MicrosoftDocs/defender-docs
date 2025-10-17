@@ -80,7 +80,7 @@ Within the Microsoft Configuration Manager console, the onboarding process will 
 
 Any system that receives this required configuration maintains that configuration for as long as the Configuration Manager client continues to receive this policy from the management point.
 
-Follow these steps to onboard endpoints using Microsoft Configuration Manager:
+Follow these steps to create a device collection that can be used to onboard endpoints in Microsoft Defender for Endpoint:
 
 1. In the Microsoft Configuration Manager console, navigate to **Assets and Compliance \> Overview \> Device Collections**.
 
