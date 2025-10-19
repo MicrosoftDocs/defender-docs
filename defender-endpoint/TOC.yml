@@ -130,7 +130,9 @@
             - name: Onboard devices using streamlined method
               href: configure-device-connectivity.md            
             - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md            
+              href: migrate-devices-streamlined.md
+            - name: Enable access to service URLs - US government            
+              href: streamlined-device-connectivity-urls-gov.md                       
         - name: Onboard client devices
           items:
           - name: Onboard client devices running Windows or macOS
