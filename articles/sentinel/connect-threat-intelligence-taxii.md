@@ -130,18 +130,18 @@ To configure the TAXII data connector:
 
    For example:
 
-   #### [Defender portal](#tab/defender-portal)
+   ### [Defender portal](#tab/defender-portal)
 
    :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Defender portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export.png":::
 
-   #### [Azure portal](#tab/azure-portal)
+   ### [Azure portal](#tab/azure-portal)
 
    :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Azure portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png":::
 
    ---
 
-      > [!NOTE]
-      > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
+   > [!NOTE]
+   > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
 
 1. Select **Add** to add your server.
 
