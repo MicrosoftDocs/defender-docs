@@ -1,7 +1,7 @@
 ---
 title: Assign regulatory compliance standards in Microsoft Defender for Cloud
 description: Learn how to assign regulatory compliance standards in Microsoft Defender for Cloud.
-ms.date: 02/02/2025
+ms.date: 10/19/2025
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
