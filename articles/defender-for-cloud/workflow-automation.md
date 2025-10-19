@@ -3,7 +3,7 @@ title: Workflow automation
 description: Learn how to create and automate workflows in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
-ms.date: 07/14/2025
+ms.date: 10/19/2025
 ms.topic: how-to
 ms.custom:
   - ge-structured-content-pilot
