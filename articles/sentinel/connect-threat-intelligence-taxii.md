@@ -239,7 +239,6 @@ Add these IP addresses to your allowlist to ensure that your export operations d
 
 ## Related content
 
-In this article, you learned how to connect Microsoft Sentinel to threat intelligence feeds by using the TAXII protocol. To learn more about Microsoft Sentinel, see the following articles:
+In this article, you learned how to connect Microsoft Sentinel to threat intelligence feeds by using the TAXII protocol. To learn more about working with threat intelligence in Microsoft Sentinel, see the following articles:
 
-- Learn how to [get visibility into your data and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md).
+- [Work with Microsoft Sentinel threat intelligence](work-with-threat-intelligence.md).
