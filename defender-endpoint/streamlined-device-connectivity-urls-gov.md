@@ -26,7 +26,7 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ## Prerequisites
 
-See the prerequisites for [streamlined connectivity](streamlined-device-connectivity.md#prerequisites).
+See the prerequisites for [streamlined connectivity](configure-device-connectivity.md#prerequisites).
 
 ### Notes
 
