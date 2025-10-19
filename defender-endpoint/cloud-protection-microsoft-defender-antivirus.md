@@ -26,10 +26,6 @@ appliesto:
 # Cloud protection and Microsoft Defender Antivirus
 
 
-### Supported operating systems
-
-- Windows
-
 Next-generation technologies in Microsoft Defender Antivirus provide near-instant, automated protection against new and emerging threats. To identify new threats dynamically, next-generation technologies work with large sets of interconnected data in the Microsoft Intelligent Security Graph and powerful artificial intelligence (AI) systems driven by advanced machine learning models. Cloud protection works together with Microsoft Defender Antivirus to deliver accurate, real-time, and intelligent protection. 
 
 [:::image type="content" source="media/mde-cloud-protection.png" alt-text="Diagram showing how cloud protection works together with Microsoft Defender Antivirus" lightbox="media/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
@@ -58,6 +54,13 @@ The following blog posts illustrate how cloud protection works:
 
 > [!NOTE]
 > The Microsoft Defender Antivirus cloud service is a mechanism for delivering updated protection to your network and endpoints. As a cloud service, it is not simply protection for files stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection to your endpoints at a rate that is far faster than traditional security intelligence updates.
+
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## How to get cloud protection 
 

@@ -23,12 +23,6 @@ appliesto:
 # Behavioral blocking and containment
 
 
-### Supported operating systems 
-
-- Windows
-
-
-
 ## Overview
 
 Today's threat landscape is overrun by [fileless malware](malware/fileless-threats.md) and that lives off the land, highly polymorphic threats that mutate faster than traditional solutions can keep up with, and human-operated attacks that adapt to what adversaries find on compromised devices. Traditional security solutions aren't sufficient to stop such attacks; you need artificial intelligence (AI) and device learning (ML) backed capabilities, such as behavioral blocking and containment, included in [Defender for Endpoint](/windows/security).
@@ -48,6 +42,13 @@ With these capabilities, more threats can be prevented or blocked, even if they 
 The following image shows an example of an alert that was triggered by behavioral blocking and containment capabilities:
 
 :::image type="content" source="media/blocked-behav-alert.png" alt-text="The Alerts page with an alert through behavioral blocking and containment" lightbox="media/blocked-behav-alert.png":::
+
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Components of behavioral blocking and containment
 

@@ -24,10 +24,6 @@ appliesto:
 # Attack surface reduction rules overview
 
 
-### Supported operating systems 
-
-- Windows
-
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Why attack surface reduction rules are important
@@ -49,6 +45,12 @@ For a sequential, end-to-end process of how to manage attack surface reduction r
 - [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 - [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Assess rules before deployment
 

@@ -24,10 +24,6 @@ appliesto:
 # Attack surface reduction rules reference
 
 
-### Supported operating systems
-
-- Windows
-
 This article provides information about Microsoft Defender for Endpoint attack surface reduction rules (ASR rules):
 
 - [ASR rules supported operating system versions](#asr-rules-supported-operating-systems)
@@ -40,6 +36,12 @@ This article provides information about Microsoft Defender for Endpoint attack s
 [!Include[Prerelease information](../includes/prerelease.md)]
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Attack surface reduction rules by type
 

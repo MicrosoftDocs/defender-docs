@@ -24,10 +24,6 @@ appliesto:
 # Configure and manage Microsoft Defender Antivirus with the mpcmdrun.exe command-line tool
 
 
-### Supported operating systems
-
-- Windows
-
 You can perform various functions in Microsoft Defender Antivirus using the dedicated command-line tool **mpcmdrun.exe**. This utility is useful when you want to automate Microsoft Defender Antivirus tasks. You can find the utility in `%ProgramFiles%\Windows Defender\MpCmdRun.exe`. Run it from a command prompt.
 
 > [!TIP]
@@ -82,6 +78,11 @@ In our example, the MpCmdRun utility starts a full antivirus scan on the device.
 > - Scheduled Full Scans or MpCmdRun -scan: Seven day limit
 > - Scheduled Quick Scans or MpCmdRun -scan: One day limit
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Common errors in running commands via mpcmdrun.exe
 
