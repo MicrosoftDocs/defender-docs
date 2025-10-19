@@ -17,13 +17,13 @@ ms.custom: sfi-image-nochange
 
 ---
 
-# Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds
+# Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel
 
-The most widely adopted industry standard for the transmission of threat intelligence is a [combination of the STIX data format and the TAXII protocol](https://oasis-open.github.io/cti-documentation/). If your organization receives threat indicators from solutions that support the current STIX/TAXII version (2.0 or 2.1), you can use the Threat Intelligence - TAXII data connector to bring your threat indicators into Microsoft Sentinel. This connector enables a built-in TAXII client in Microsoft Sentinel to import threat intelligence from TAXII 2.x servers.
+[The STIX data format and the TAXII protocol](https://oasis-open.github.io/cti-documentation/) are the most widely adopted industry standards for transmitting threat intelligence. Microsoft Sentinel supports integration with threat intelligence platforms using the standards, and provides built-in connectors for importing and exporting threat intelligence.
 
-:::image type="content" source="media/connect-threat-intelligence-taxii/threat-intel-taxii-import-path.png" alt-text="Screenshot that shows a TAXII import path.":::
+Use the Threat Intelligence – TAXII data connector to import threat indicators from TAXII 2.0 or 2.1 servers into your Sentinel workspace. To share threat intelligence externally, configure the Threat Intelligence – TAXII Export connector, which enables secure, standards-based export to supported TAXII 2.1 platforms.
 
-To import STIX-formatted threat indicators to Microsoft Sentinel from a TAXII server, you must get the TAXII server API root and collection ID. Then you enable the Threat Intelligence - TAXII data connector in Microsoft Sentinel.
+This article walks you through both processes - connecting to STIX/TAXII feeds for import and configuring export to TAXII servers.
 
 Learn more about [threat intelligence](understand-threat-intelligence.md) in Microsoft Sentinel, and specifically about the [TAXII threat intelligence feeds](threat-intelligence-integration.md#taxii-threat-intelligence-feeds) that you can integrate with Microsoft Sentinel.
 
@@ -36,7 +36,6 @@ For more information, see [Connect your threat intelligence platform (TIP) to Mi
 ## Prerequisites
 
 - To install, update, and delete standalone content or solutions in the **Content hub**, you need the Microsoft Sentinel Contributor role at the resource group level.
-- You must have read and write permissions to the Microsoft Sentinel workspace to store or export threat indicators.
 - You must have a TAXII 2.0 or TAXII 2.1 API root URI and collection ID.
 
 ## Get the TAXII server API root and collection ID

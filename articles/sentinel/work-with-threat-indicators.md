@@ -27,6 +27,7 @@ Accelerate threat detection and remediation with streamlined creation and manage
 ## Prerequisites
 
 - You need the permissions of a [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) or higher role assigned to your user account to manage threat intelligence.
+- To import and export threat intelligence, you need to install the Threat Intelligence solution in Microsoft Sentinel and enable the relevant connectors, as described in [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md#enable-the-threat-intelligence---taxii-export-data-connector).
 
 ## Access the management interface
 
@@ -246,10 +247,12 @@ There's also a rich resource for [Azure Monitor workbooks on GitHub](https://git
 
 ## Export threat intelligence
 
-This procedure describes how to export threat intelligence from Microsoft Sentinel to to other destinations, such as external platforms. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, export threat intelligence back to that platform to use bi-directional intelligence sharing. This feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
+Microsoft Sentinel lets you export threat intelligence from to other destinations. For example, if you've ingested threat intelligence using the **Threat Intelligence - TAXII** data connector, you can export threat intelligence back to the source platform for bi-directional intelligence sharing. The export feature reduces the need for manual processes or custom playbooks to distribute threat intelligence.
 
 > [!IMPORTANT]
 > Carefully consider both the threat intelligence data you export and its destination, which might reside in a different geographic or regulatory region. Data export cannot be undone. Ensure you own the data or have proper authorization before exporting or sharing threat intelligence with third parties.
+
+To export threat threat intelligence:
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Threat intelligence > Intel management**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select **Threat management > Threat intelligence**.
 
@@ -269,7 +272,7 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
     If there isn't a server listed, you need to configure a server for export first, as described in [Enable the Threat intelligence - TAXII Export data connector](./connect-threat-intelligence-taxii.md#enable-the-threat-intelligence---taxii-export-data-connector). Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
     
-1. Select **Export**. This action can't be undone.
+1. Select **Export**. 
 
     > [!IMPORTANT]
     > When you export threat intelligence objects, the system carries out a bulk operation. A known issue exists where this bulk operation sometimes fails. If this happens, you'll see a warning when you open the Export side panel, asking you to remove the failed action from the bulk operations history view. The system pauses subsequent operations until you remove the failed operation. 
