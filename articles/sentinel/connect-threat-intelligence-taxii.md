@@ -121,7 +121,12 @@ To configure the TAXII data connector:
 
     :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII Export data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png":::
 
-1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. You can also authenticate using an API key.
+1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page: 
+
+   - Enter a name for this TAXII server collection in the **Friendly name (for server)** text box. 
+   - Fill in the textboxes for **API root URL**, **Collection ID**. For more information, see [Get the TAXII server API root and collection ID](#get-the-taxii-server-api-root-and-collection-id). 
+   - Select an **Basic authentication** or **API key** from the **Authentication type** dropdown and provide the relevant authentication details.
+   - Select **Enable rules** to apply the rules described on the connector page to all exported threat intelligence.
 
    For example:
 
@@ -135,7 +140,8 @@ To configure the TAXII data connector:
 
    ---
 
-   You can also enable rules that will be applied to any exported threat intelligence. Each rule is described on the connector page and can be optionally enabled. Editing existing connectors is currently not supported, if you want to change the configuration of a TAXII server or its rules, you will need to create a new one.        
+   > [!NOTE]
+   > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
 
 1. When you're done, select **Add** to add your server.
 
