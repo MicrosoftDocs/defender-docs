@@ -304,11 +304,9 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 1. Navigate to the exported item in either the **Intel management** (Defender portal) or **Threat intelligence** page (Azure portal).
 1. In the **Exports** column, select **View export history** to show the export history for that item.
 
-## IP allowlisting for the Microsoft Sentinel TAXII client
+### IP allowlisting for the Threat Intelligence - TAXII Export connector
 
-Some TAXII servers, like FS-ISAC, have a requirement to keep the IP addresses of the Microsoft Sentinel TAXII client on the allowlist. Most TAXII servers don't have this requirement.
-
-When relevant, include these IP addresses in your allowlist:
+Add these IP addresses to your allowlist to ensure that your export operations don't get blocked:
 
 :::row:::
     :::column span="":::
