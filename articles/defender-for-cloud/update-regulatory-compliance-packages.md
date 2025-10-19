@@ -6,7 +6,6 @@ ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
 ms.custom:
-  - ignite-2023
   - ge-structured-content-pilot
 ---
 
