@@ -127,11 +127,11 @@ To configure the TAXII data connector:
 
    #### [Defender portal](#tab/defender-portal)
 
-   :::image type="content" source="media/work-with-threat-indicators/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export.png":::
+   :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Defender portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export.png":::
 
    #### [Azure portal](#tab/azure-portal)
 
-   :::image type="content" source="media/work-with-threat-indicators/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export-azure.png":::
+   :::image type="content" source="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII Export server for export in the Azure portal."  lightbox="media/connect-threat-intelligence-taxii/add-taxi-export-azure.png":::
 
    ---
 
