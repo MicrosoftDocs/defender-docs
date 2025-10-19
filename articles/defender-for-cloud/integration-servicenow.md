@@ -44,7 +44,7 @@ When you ingest Defender for Cloud's findings into ServiceNow's Configuration Co
 To integrate Defender for Cloud's findings into ServiceNow's Configuration Compliance module:
 
 - **In the Azure portal**:
-  - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+  - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
   - [Enable Defender for Cloud Foundational CSPM or Defender CSPM](tutorial-enable-cspm-plan.md) on the relevant Azure subscriptions, AWS accounts or GCP projects.
 
 - **In ServiceNow**:
