@@ -68,7 +68,7 @@ To configure the TAXII data connector:
 
 1. Find and select the **Threat Intelligence - TAXII** data connector, and then select **Open connector page**.
 
-    :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-data-connector.png":::
+    :::image type="content" source="media/connect-threat-intelligence-taxii/taxi-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxi-data-connector.png":::
 
 1. Enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). Choose the group of indicators and the polling frequency you want. Select **Add**.
 
