@@ -6,7 +6,7 @@ ms.date: 10/19/2025
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
-# What is Cloud security posture management (CSPM)
+# What is Cloud Security Posture Management (CSPM)
 
 One of the main features of Microsoft Defender for Cloud is cloud security posture management (CSPM). CSPM provides detailed visibility into the security state of your assets and workloads and offers hardening guidance to help you improve your security posture.
 
