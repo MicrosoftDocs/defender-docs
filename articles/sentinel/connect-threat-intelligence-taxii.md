@@ -48,7 +48,7 @@ TAXII 2.x servers advertise API roots, which are URLs that host collections of t
 
 ## Install the Threat Intelligence solution in Microsoft Sentinel
 
-To import threat indicators into Microsoft Sentinel from a TAXII server:
+To import threat indicators into Microsoft Sentinel from a TAXII server or export threat indicatorsfrom Microsoft Sentinel, install the Threat Intelligence solution:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
 
@@ -114,6 +114,8 @@ When relevant, the following IP addresses are the addresses to include in your a
 ## Enable the Threat intelligence - TAXII Export data connector 
 
 To configure the TAXII data connector:
+
+1. Make sure you have the latest version of the Threat Intelligence solution in Microsoft Sentinel. For more information, see [Install the Threat Intelligence solution in Microsoft Sentinel](#install-the-threat-intelligence-solution-in-microsoft-sentinel).
 
 1. Select the **Data connectors** menu.
 
