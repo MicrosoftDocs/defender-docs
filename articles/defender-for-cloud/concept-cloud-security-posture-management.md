@@ -10,9 +10,9 @@ ms.date: 10/19/2025
 
 One of the main features of Microsoft Defender for Cloud is cloud security posture management (CSPM). CSPM provides detailed visibility into the security state of your assets and workloads and offers hardening guidance to help you improve your security posture.
 
-Defender for Cloud continually assesses your resources against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations based on these assessments.
+Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
 
-By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) compliance standard is enabled and provides recommendations to secure your multicloud environments. Defender for Cloud provides an aggregated [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations. A higher score indicates a lower identified risk level.
+By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) iance standard is enabled and provides recommendations to secure your multicloud environment [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations to help monitor cloud compliance. A higher score indicates a lower identified risk level.
 
 ## CSPM plans
 
@@ -20,7 +20,7 @@ Defender for Cloud offers two CSPM plan options:
 
 - **Foundational CSPM** - A free plan enabled by default for subscriptions and accounts that onboard to Defender for Cloud.
 
-- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
+- **Defender CSPM** - A paid plan that provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
 
 ## Plan availability
 
