@@ -6,7 +6,6 @@ ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
 ms.custom:
-  - ge-structured-content-pilot
 ---
 
 # Assign security standards
