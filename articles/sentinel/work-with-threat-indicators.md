@@ -27,7 +27,7 @@ Accelerate threat detection and remediation with streamlined creation and manage
 ## Prerequisites
 
 - You need the permissions of a [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) or higher role assigned to your user account to manage threat intelligence.
-- To import and export threat intelligence, you need to install the Threat Intelligence solution in Microsoft Sentinel and enable the relevant connectors, as described in [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md#enable-the-threat-intelligence---taxii-export-data-connector).
+- To import and export threat intelligence, you need to install the Threat Intelligence solution in Microsoft Sentinel and enable the relevant connectors, as described in [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](./connect-threat-intelligence-taxii.md#enable-the-threat-intelligence---taxii-export-data-connector).
 
 ## Access the management interface
 
