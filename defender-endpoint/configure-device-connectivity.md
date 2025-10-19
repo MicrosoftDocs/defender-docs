@@ -96,10 +96,6 @@ To support network devices without hostname resolution or wildcard support, you 
 |     Windows Server   2022    |     KB5011497   (March 8, 2022)    |
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
 
-### Enable streamlined connectivity for US government environments
-
-To enable streamlined connectivity for US government environments, use the [onboarding script](configure-endpoints-script.md), and select the **Streamlined** option from the dropdown.
-
 ## Streamlined connectivity process
 
 The following illustration shows the streamlined connectivity process and the corresponding stages:

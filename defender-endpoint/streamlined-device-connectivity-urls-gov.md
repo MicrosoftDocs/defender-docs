@@ -26,26 +26,7 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ## Prerequisites
 
-### Operating systems
-
-- Windows 10 version 1809+
-- Windows 11
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2012 R2, Server 2016 R2, fully updated running the modern unified solution (installation through MSI) released in 2022
-- macOS supported versions with Defender for Endpoint product version 101.24022.*+
-- Linux supported versions with Defender for Endpoint product version 101.24022.*+
-
-### Windows Minimum Component Versions
-
-- Defender antimalware client: 4.18.2211.5 (November 2022)
-- Defender antimalware engine: 1.1.19900.2
-- Defender security intelligence: 1.391.315.0
-- Defender detection sensor (Sense) version: >10.8040.*/ March 8th 2022+
-
-### Mac/Linux Minimum Component Versions
-
-App/product version (macOS/Linux): 101.24022.*+
+See the prerequisites for [streamlined connectivity](streamlined-device-connectivity.md#prerequisites).
 
 ### Notes
 
