@@ -267,33 +267,8 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
 1. In the **Export** pane, from the **Export TI** dropdown, select the server you want to export your threat intelligence to.
 
-    If there isn't a server listed, you need to configure a server for export first. Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
-
-    **To add a server for export:**
-
-    1. Select the **Configure Export to TAXII server** link below the **Export TI** dropdown. The **Data connectors** page opens, showing the **Threat intelligence - TAXII Export** data connector.
+    If there isn't a server listed, you need to configure a server for export first, as described in [Enable the Threat intelligence - TAXII Export data connector](./connect-threat-intelligence-taxii.md#enable-the-threat-intelligence---taxii-export-data-connector). Microsoft Sentinel currently supports exporting to TAXII 2.1-based platforms only.
     
-    1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
-    
-    1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. You can also authenticate using an API key.
-    
-        For example:
-
-        #### [Defender portal](#tab/defender-portal)
-
-        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export.png":::
-
-        #### [Azure portal](#tab/azure-portal)
-
-        :::image type="content" source="media/work-with-threat-indicators/add-taxi-export-azure.png" alt-text="Screenshot that shows configuring the TAXII server for export."  lightbox="media/work-with-threat-indicators/add-taxi-export-azure.png":::
-
-        ---
-
-        You can also enable rules that will be applied to any exported threat intelligence. Each rule is described on the connector page and can be optionally enabled. Editing existing connectors is currently not supported, if you want to change the configuration of a TAXII server or its rules, you will need to create a new one.        
-
-    1. When you're done, select **Add** to add your server.
-
-
 1. Select **Export**. This action can't be undone.
 
     > [!IMPORTANT]
@@ -303,98 +278,6 @@ This procedure describes how to export threat intelligence from Microsoft Sentin
 
 1. Navigate to the exported item in either the **Intel management** (Defender portal) or **Threat intelligence** page (Azure portal).
 1. In the **Exports** column, select **View export history** to show the export history for that item.
-
-### IP allowlisting for the Threat Intelligence - TAXII Export connector
-
-Add these IP addresses to your allowlist to ensure that your export operations don't get blocked:
-
-:::row:::
-    :::column span="":::
-        - 68.218.134.151
-        - 4.237.173.121
-        - 68.218.191.192
-        - 68.218.191.208
-        - 74.163.73.85
-        - 74.163.73.84
-        - 108.140.47.197
-        - 108.140.47.196
-        - 130.107.0.17
-        - 130.107.0.16
-        - 52.242.47.153
-        - 52.242.47.152
-        - 4.186.93.129
-        - 4.186.93.128
-        - 57.158.18.39
-        - 57.158.18.38
-        - 128.203.32.17
-        - 20.232.93.192
-        - 128.24.7.173
-        - 128.24.7.172
-        - 4.251.60.81
-        - 4.251.60.80
-        - 20.111.81.65
-        - 20.111.81.64
-        - 20.218.50.5
-        - 20.218.50.4
-    :::column-end:::
-    :::column span="":::
-        - 72.144.227.117
-        - 72.144.227.116
-        - 51.4.37.231
-        - 20.217.163.215
-        - 72.146.91.160
-        - 4.232.40.176
-        - 74.176.2.247
-        - 74.176.2.246
-        - 74.226.38.228
-        - 4.190.136.176
-        - 4.181.55.53
-        - 4.181.55.52
-        - 20.200.167.49
-        - 20.200.167.48
-        - 4.207.244.69
-        - 132.164.237.192
-        - 4.235.51.87
-        - 4.235.51.86
-        - 51.120.182.208
-        - 4.220.173.230
-        - 4.171.25.225
-        - 4.171.25.224
-        - 4.253.54.45
-        - 4.253.54.44
-        - 172.209.40.109
-        - 172.209.40.108
-    :::column-end:::
-    :::column span="":::
-        - 172.188.182.119
-        - 172.188.182.118
-        - 20.207.217.212
-        - 74.224.83.8
-        - 135.225.179.229
-        - 135.225.179.228
-        - 20.91.127.183
-        - 20.91.127.182
-        - 4.226.56.22
-        - 74.242.228.97
-        - 74.242.60.137
-        - 74.242.4.65
-        - 74.243.66.228
-        - 74.243.66.227
-        - 74.243.225.230
-        - 74.243.225.229
-        - 74.177.108.204
-        - 172.187.102.73
-        - 51.142.135.18
-        - 51.142.135.17
-        - 50.85.238.240
-        - 132.220.84.130
-        - 172.184.49.127
-        - 172.184.49.126
-        - 4.149.254.64
-        - 172.179.34.64
-    :::column-end:::
-:::row-end:::
-
 
 ## Related content
 

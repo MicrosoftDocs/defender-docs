@@ -36,7 +36,7 @@ For more information, see [Connect your threat intelligence platform (TIP) to Mi
 ## Prerequisites
 
 - To install, update, and delete standalone content or solutions in the **Content hub**, you need the Microsoft Sentinel Contributor role at the resource group level.
-- You must have read and write permissions to the Microsoft Sentinel workspace to store your threat indicators.
+- You must have read and write permissions to the Microsoft Sentinel workspace to store or export threat indicators.
 - You must have a TAXII 2.0 or TAXII 2.1 API root URI and collection ID.
 
 ## Get the TAXII server API root and collection ID
@@ -140,10 +140,10 @@ To configure the TAXII data connector:
 
    ---
 
-   > [!NOTE]
-   > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
+      > [!NOTE]
+      > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
 
-1. When you're done, select **Add** to add your server.
+1. Select **Add** to add your server.
 
 ### IP allowlisting for the Threat Intelligence - TAXII Export connector
 
