@@ -40,7 +40,7 @@ Exporting TI objects is currently supported for TAXII 2.1-based platforms only. 
 
 For more information, see:
 
-- [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](connect-threat-intelligence-taxii.md)
+- [Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel](connect-threat-intelligence-taxii.md)
 - [Export threat intelligence](work-with-threat-indicators.md#export-threat-intelligence)
 
 
