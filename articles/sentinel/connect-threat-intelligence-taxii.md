@@ -48,7 +48,7 @@ TAXII 2.x servers advertise API roots, which are URLs that host collections of t
 
 ## Install the Threat Intelligence solution in Microsoft Sentinel
 
-To import threat indicators into Microsoft Sentinel from a TAXII server, follow these steps:
+To import threat indicators into Microsoft Sentinel from a TAXII server:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
 
@@ -62,7 +62,9 @@ For more information about how to manage the solution components, see [Discover 
 
 ## Enable the Threat Intelligence - TAXII data connector
 
-1. To configure the TAXII data connector, select the **Data connectors** menu.
+To configure the TAXII data connector:
+
+1. Select the **Data connectors** menu.
 
 1. Find and select the **Threat Intelligence - TAXII** data connector, and then select **Open connector page**.
 
@@ -109,12 +111,15 @@ When relevant, the following IP addresses are the addresses to include in your a
    :::column-end:::
 :::row-end:::
 
-## Enable the Threat intelligence - TAXII Export connector 
+## Enable the Threat intelligence - TAXII Export data connector 
 
+To configure the TAXII data connector:
 
-1. Select the **Configure Export to TAXII server** link below the **Export TI** dropdown. The **Data connectors** page opens, showing the **Threat intelligence - TAXII Export** data connector.
+1. Select the **Data connectors** menu.
 
 1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
+
+    :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII Export data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png":::
 
 1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page, enter a name for this TAXII server collection in the **Friendly name (for server)** text box. Fill in the text boxes for **API root URL**, **Collection ID**, and **Username** and **Password** if necessary. You can also authenticate using an API key.
 
