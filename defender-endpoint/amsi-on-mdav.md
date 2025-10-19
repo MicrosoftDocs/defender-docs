@@ -62,11 +62,6 @@ Microsoft Defender Antivirus blocks most malware using generic, heuristic, and b
    - Detecting and remediating WMI persistence techniques by scanning the WMI repository, both periodically and whenever anomalous behavior is observed
    - Detecting reflective DLL injection through enhanced memory scanning techniques and behavioral monitoring
 
-## Why AMSI?
-
-AMSI provides a deeper level of inspection for malicious software that employs obfuscation and evasion techniques on Windows' built-in scripting hosts. By integrating AMSI, Microsoft Defender for Endpoint offers extra layers of protection against advanced threats.
-
-
 ## Prerequisites 
 
 ### Supported operating systems
@@ -86,6 +81,11 @@ AMSI provides a deeper level of inspection for malicious software that employs o
 If you use Microsoft 365 Apps, AMSI also supports JavaScript, VBA, and XLM.
 
 AMSI doesn't currently support Python or Perl.
+
+## Why AMSI?
+
+AMSI provides a deeper level of inspection for malicious software that employs obfuscation and evasion techniques on Windows' built-in scripting hosts. By integrating AMSI, Microsoft Defender for Endpoint offers extra layers of protection against advanced threats.
+
 
 ### Enabling AMSI
 
