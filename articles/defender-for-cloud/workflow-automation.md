@@ -5,7 +5,6 @@ author: dcurwin
 ms.author: dacurwin
 ms.date: 10/19/2025
 ms.topic: how-to
-ms.custom:
 ---
 
 # Automate remediation responses
