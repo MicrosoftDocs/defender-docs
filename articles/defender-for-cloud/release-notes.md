@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/28/2025
+ms.date: 10/19/2025
 ---
 
 # What's new in Defender for Cloud features
@@ -31,51 +31,80 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 |------|---------|-------|
-| October 16, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
+| October 19, 2025 | GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks) |
 
 ### General availability of compliance frameworks
 
-October 16, 2025
+October 19, 2025
 
 The following regulatory compliance standards, previously available in preview, are now generally available in Microsoft Defender for Cloud.
 
-| Standard | Cloud |
+|Standard|Cloud|
 |------------|--------|
-| NIST SP 800-53 R5 and R5.1.1 | AWS, GCP |
-| NIST 800-171 Rev 3 | AWS, GCP |
-| NIST SP 800-172 2021 | AWS, GCP |
-| NIST CSF v2.0 | AWS, GCP |
-| HITRUST CSF v11.3.0 | AWS, GCP |
-| CIS Controls v8.1 | AWS, GCP |
-| CIS AWS Foundations v3.0.0 | AWS |
-| CIS GCP Foundations v3.0 | GCP |
-| ISO/IEC 27001 · 27017:2015 · 27002:2022 | AWS, GCP |
-| Cyber Essentials v3.1 | AWS, GCP |
-| APRA CPS 234 2019 | AWS |
-| Canada Federal PBMM 3.2020 | AWS, GCP |
-| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | AWS, GCP |
-| EU 2022/2555 (NIS2) 2022 | AWS, GCP |
-| EU GDPR 2016/679 | AWS, GCP |
-| SWIFT Customer Security Controls Framework 2024 | AWS, GCP |
-| SOC 2023 | AWS, GCP |
-| CSA Cloud Controls Matrix v4.0.12 | AWS, GCP |
-| NCSC Cyber Assurance Framework (CAF) v3.2 | AWS, GCP |
-| FFIEC CAT 2017 | AWS, GCP |
-| PCI DSS v3.2.1 and v4.0.1 | AWS, GCP |
-| Sarbanes–Oxley Act 2022 (SOX) | AWS |
-| NZISM v3.7 | AWS, GCP |
-| FedRAMP Moderate and High Baselines Rev 5 | AWS, GCP |
+| APRA CPS 234 2019 | Azure, AWS |
+| Australian Government ISM PROTECTED | Azure |
 | Australian Government Information Security Manual 12.2023 | AWS, GCP |
-| Australian Government ISM PROTECTED (Preview) | Azure |
+| AWS Foundational Security Best Practices | AWS |
+| AWS Well-Architected Framework 2024 | AWS |
+| Brazil General Data Protection Law (LGPD) 2018 | Azure, AWS, GCP |
+| California Consumer Privacy Act (CCPA) | AWS, GCP |
+| Canada Federal PBMM 3.2020 | Azure, AWS, GCP |
+| CIS Amazon Elastic Kubernetes Service (EKS) Benchmark | AWS |
+| CIS AWS Foundations v3.0.0 | AWS |
+| CIS Azure Foundations v2.1.0 | Azure |
+| CIS Azure Kubernetes Service (AKS) Benchmark | Azure |
+| CIS Controls v8.1 | Azure, AWS, GCP |
+| CIS GCP Foundations v3.0 | GCP |
+| CIS Google Cloud Platform Foundation Benchmark | GCP |
+| CIS Google Kubernetes Engine (GKE) Benchmark | GCP |
+| (CIS) Microsoft Azure Foundations Benchmark v3.0 | Azure |
+| CRI Profile | AWS, GCP |
+| Criminal Justice Information Services Security Policy v5.9.5 | Azure, AWS, GCP |
+| CSA Cloud Controls Matrix v4.0.12 | Azure, AWS, GCP |
+| Cyber Essentials v3.1 | Azure, AWS, GCP |
+| Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
+| Digital Operational Resilience Act (DORA) | Azure, AWS, GCP |
+| EU 2022/2555 (NIS2) 2022 | Azure, AWS, GCP |
+| EU General Data Protection Regulation (GDPR) 2016/679 | Azure, AWS, GCP |
+| European Union Artificial Intelligence Act (EU AI Act) (Preview) | Azure, AWS, GCP |
+| FedRAMP ‘H’ & ‘M’ | Azure |
+| FedRAMP High Baseline Rev5 | AWS, GCP |
+| FedRAMP Moderate Baseline Rev5 | AWS, GCP |
+| FFIEC CAT 2017 | Azure, AWS, GCP |
 | HIPAA | Azure |
-| Azure HITRUST v11.3 (Preview) | Azure |
-| SWIFT CSP-CSCF v2020 (Preview) | Azure, AWS, GCP |
-| Reserve Bank of India – IT Framework for NBFC (Preview) | Azure, AWS, GCP |
-| Spanish ENS | Azure |
+| HITRUST CSF v11.3.0 | Azure, AWS, GCP |
+| ISO/IEC 27001:2022 | Azure, AWS, GCP |
+| ISO/IEC 27002:2022 | Azure, AWS, GCP |
+| ISO/IEC 27017:2015 | Azure, AWS, GCP |
+| Korean Information Security Management System for Public Cloud (k-ISMS-P) | Azure, AWS, GCP |
+| NCSC Cyber Assurance Framework (CAF) v3.2 | Azure, AWS, GCP |
+| NIST 800-171 Rev 3 | Azure, AWS, GCP |
+| NIST CSF v2.0 | Azure, AWS, GCP |
+| NIST SP 800-53 R5 | AWS |
+| NIST SP 800-53 R5.1.1 | Azure, AWS, GCP |
+| NIST SP 800-172 2021 | AWS, GCP |
+| NZISM v3.7 | Azure, AWS, GCP |
+| PCI DSS 3.2.1 | GCP |
+| PCI DSS v4.0.1 | Azure, AWS, GCP |
 | RMIT Malaysia | Azure |
+| Sarbanes–Oxley Act 2022 (SOX) | Azure, AWS, GCP |
+| SOC 2023 | Azure, AWS, GCP |
+| SOC 2 | Azure, GCP |
+| Spanish ENS | Azure |
+| SWIFT Customer Security Controls Framework 2024 | Azure, AWS, GCP |
+| SWIFT CSP-CSCF v2020 | Azure |
 | UK OFFICIAL and UK NHS | Azure |
-| Well-Architected Framework 2024 | AWS |
-| Criminal Justice Information Services Security Policy v5.9.5 | AWS, GCP |
+| Reserve Bank of India – IT Framework for NBFC | Azure |
+| Cybersecurity Maturity Model Certification (CMMC) Level 3 (Preview) | Azure, AWS, GCP |
+| ISO/IEC 27018:2019 (Preview) | Azure, AWS, GCP |
+| ISO/IEC 27019:2020 (Preview) | Azure, AWS, GCP |
+| NIST SP 800-53 R6 (Preview) | Azure, AWS, GCP |
+| NIST SP 800-82 R3 (Preview) | Azure, AWS, GCP |
+| NIST AI Risk Management Framework (AI RMF 1.0) (Preview) | Azure, AWS, GCP |
+| US Executive Order 14028 (Preview) | Azure, AWS, GCP |
+| Singapore MTCS SS 584:2015 (Preview) | Azure, AWS, GCP |
+| Thailand PDPA 2019 (Preview) | Azure, AWS, GCP |
+| Japan ISMAP (Preview) | Azure, AWS, GCP |
 
 ## September 2025
 
