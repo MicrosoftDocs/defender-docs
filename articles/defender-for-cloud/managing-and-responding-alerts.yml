@@ -160,7 +160,7 @@ relatedContent:
   - text: Configure alert suppression rules
     url: alerts-suppression-rules.md
   - text: Automate responses to Defender for Cloud triggers
-    url: workflow-automation.md
+    url: workflow-automations.md
   - text: Security alerts - a reference guide
     url: alerts-reference.md
 
